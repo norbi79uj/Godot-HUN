@@ -2,6 +2,12 @@
 
 **Állapot: döntésre vár.** Ez a dokumentum önmagában nem helyez semmilyen saját fordítást új licenc alá, és nem módosítja a Godot motor meglévő jogi feltételeit.
 
+## Tulajdonosi döntés – 2026. november 8.
+
+A tulajdonos elfogadta, hogy **a Godot HUN projekt letöltése mindig ingyenes legyen**, és az MIT-licenc megengedi másoknak a kereskedelmi továbbfelhasználást is. A cél az MIT-licencű, közösen javítható fordítás, **a fordításszövegek eredetének és a szükséges jogosultságoknak az ellenőrzése után**.
+
+**Ez még nem végleges licencbevezetés:** a jogosultsági ellenőrzőlista továbbra is nyitott, és a projekt nem vált nyilvánossá.
+
 ## Miért javasoljuk az MIT-licencet?
 
 1. A Godot Engine maga MIT/Expat licencű: https://godotengine.org/license/
