@@ -42,3 +42,15 @@ A hivatalos Godot Engine fejlesztésétől független közösségi kísérlet. N
 ## Mi a következő lépés?
 
 A dokumentáció és a licencszabályok pontosítása után a hátralévő, másik Windows-gépen végzett kompatibilitási próba és a többosztályos F1-fordítás ellenőrzése **későbbi tesztkörbe** tartozhat. Ezeket nem tekintjük teljesítettnek. Az első kiadást következetesen **nem hivatalos, részleges, előzetes tesztkiadásnak** kell nevezni. A nyilvános megosztás külön döntést és a jogi ellenőrzések lezárását igényli.
+
+## A csomag sértetlenségének ellenőrzése
+
+A GitHubon a `kiadasok/4.7.2-hu-test.1/SHA256SUMS.txt` tartalmazza a Release-hez feltöltött ZIP **SHA-256 ellenőrzőösszegét**. Ez a csomag sértetlenségét segít ellenőrizni, de önmagában nem hitelesíti a kiadó személyazonosságát, és nem helyettesíti a vírusellenőrzést.
+
+Windows PowerShellben, a ZIP-et tartalmazó mappában:
+
+```powershell
+(Get-FileHash -Algorithm SHA256 -Path '.\\Godot-HUN-4.7.2-Teszt.zip').Hash.ToLower()
+```
+
+A kapott érték egyezzen a `SHA256SUMS.txt` első mezőjével. Ha nem egyezik, ne futtasd a letöltött programot.
