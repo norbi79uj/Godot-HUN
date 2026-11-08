@@ -2,7 +2,7 @@
 
 **Tervezett címke:** `4.7.2-hu-test.1`  
 **Állapot:** előzetes / tesztkiadás  
-**Nyilvános kiadás:** még nincs jóváhagyva
+**Nyilvános kiadás:** még nincs jóváhagyva; a GitHub Release jelenleg piszkozat és a tárhely privát
 
 ## Mi készült el?
 
@@ -25,7 +25,7 @@
 
 ## Tartalom
 
-`Godot-HUN-4.7.2-Teszt.zip` – helyben elkészített ZIP. A ZIP-et **még nem töltöttük fel GitHub Release-hez**.
+`Godot-HUN-4.7.2-Teszt.zip` – helyben elkészített ZIP. A ZIP-et **feltöltöttük a privát GitHub Release-piszkozathoz**, de a kiadást még nem publikáltuk. A feltöltött fájl mérete **81 579 340 bájt**, SHA-256: `aa421ee6dc8accf65c4f1b05f3594d3e9eec2db5d0a8b09657433990bd14533e`.
 
 A ZIP-ben:
 - `Godot-HUN-4.7.2-Teszt/godot.windows.editor.x86_64.exe`
@@ -38,3 +38,7 @@ A ZIP-ben:
 A fordítás **nem teljes**. Több osztály angol, az Inspector számos tulajdonságcsoportja szintén angol. A kódazonosítókat szándékosan nem fordítjuk le.
 
 A hivatalos Godot Engine fejlesztésétől független közösségi kísérlet. Ne állítsuk be hivatalos Godot-kiadásként.
+
+## Mi a következő lépés?
+
+A dokumentáció és a licencszabályok pontosítása után a hátralévő, másik Windows-gépen végzett kompatibilitási próba és a többosztályos F1-fordítás ellenőrzése **későbbi tesztkörbe** tartozhat. Ezeket nem tekintjük teljesítettnek. Az első kiadást következetesen **nem hivatalos, részleges, előzetes tesztkiadásnak** kell nevezni. A nyilvános megosztás külön döntést és a jogi ellenőrzések lezárását igényli.
