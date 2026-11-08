@@ -32,6 +32,12 @@ Ezeket az állományokat az előző `Smaragd-Editor` projekttárból **másolatk
 
 A projektgazda engedélyezi a projekt keretein belül létrehozott magyar munkafordítás közösségi felhasználását a tervezett MIT-feltételekkel, **amennyiben** nem sérülnek az alapanyag és esetleges harmadik felek jogai. A közösségi javítók saját hozzájárulásait külön szabályozzuk.
 
+## Projektgazdai eredetnyilatkozat (2026. november 8.)
+
+A projektgazda a beszélgetésben **kifejezetten megerősítette**, hogy a Godot HUN magyar fordítását a Godot eredeti angol osztályreferenciája alapján, a ChatGPT-vel közösen készítettük, és **nem másoltunk át magyar fordításokat más weboldalakról vagy más kész magyarításokból**.
+
+Ez a munkafolyamat ismert eredetét tisztázza és a nyilvános tesztkiadás dokumentációjának része. Nem tekinthető minden lehetséges szövegegyezést kizáró független jogi vizsgálatnak. Ha konkrét harmadik féltől átvett, külön jogosultságot igénylő tartalomra derülne fény, annak feltételeit továbbra is külön kell rendezni.
+
 ## A ChatGPT-kimenet felhasználásának feltételei – ellenőrizve
 
 Az OpenAI közzétett felhasználási feltételei szerint a felhasználó és az OpenAI egymás közötti viszonyában a felhasználót illetik meg a kimenethez fűződő jogok a vonatkozó jogszabályok által megengedett mértékben; az OpenAI az esetleg őt megillető jogokat átruházza. Emiatt **önmagában a ChatGPT felhasználása miatt nem szükséges az OpenAI külön közzétételi engedélye**.
@@ -60,7 +66,7 @@ A projektgazda **jóváhagyta az MIT-licenc elvét**, és vállalta, hogy a Godo
 
 - [x] A jelen projekt munkafolyamatának eredete dokumentálva: ChatGPT-asszisztált magyarítás a projektgazda irányításával.
 - [x] A projektgazda dokumentálta, hogy a magyar munkafordítást ChatGPT-vel készítettük az MIT-licencű Godot angol szövege alapján; az OpenAI feltételeiben külön kimenet-felhasználási engedély nem szükséges.
-- [ ] Ha konkrét, külső fordításból átvett részre utaló adat merül fel, annak jogosultságát külön tisztázni kell.
+- [x] A projektgazda megerősítette, hogy nem másoltunk át külső, kész magyar fordítást. Ha később konkrét, más jogosulttól átvett részre utaló adat merül fel, annak jogosultságát külön tisztázni kell.
 - [ ] A jogosultak tényleges hozzájárulása minden olyan szövegrészhez, amely nem kizárólag a projektgazda saját munkája vagy jogszerűen újrahasznosítható MIT-tartalom.
 - [x] A saját fordításokhoz MIT-licencszöveg van a `LICENSE-TRANSLATIONS.txt` fájlban, a jövőbeni közreműködők feltételei a `CONTRIBUTING.md` dokumentumban szerepelnek.
 - [ ] Közzététel előtt a csomag végső attribúciós és működési ellenőrzése.
