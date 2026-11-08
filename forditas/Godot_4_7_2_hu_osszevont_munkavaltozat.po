@@ -116,7 +116,7 @@ msgstr "Ha [code]false[/code], teljesen letiltja ezt a [TileMapLayer] réteget (
 #. TileMapLayer.tile_set
 #: doc/classes/TileMapLayer.xml
 msgid "The [TileSet] used by this layer. The textures, collisions, and additional behavior of all available tiles are stored here."
-msgstr "A réteg által használt [TileSet]. Ez tartalmazza az összes elérhető csempe textúráját, ütközéseit és további viselkedési beállításait."
+msgstr "A réteg által használt [TileSet]. Ez tárolja az elérhető csempék textúráit, ütközési adatait és egyéb viselkedési beállításait."
 
 #. TileMapLayer.is_cell_flipped_h
 #: doc/classes/TileMapLayer.xml
@@ -1346,7 +1346,7 @@ msgstr "Általános célú sprite-csomópont."
 #. Sprite2D.description
 #: doc/classes/Sprite2D.xml
 msgid "A node that displays a 2D texture. The texture displayed can be a region from a larger atlas texture, or a frame from a sprite sheet animation."
-msgstr "2D textúrát megjelenítő csomópont. A megjelenített textúra lehet egy nagyobb atlasztextúra kijelölt területe vagy egy sprite-lapos animáció valamelyik képkockája."
+msgstr "2D textúrát megjelenítő csomópont. A megjelenített textúra lehet egy nagyobb atlasztextúra kijelölt területe vagy egy sprite-lap animációjának valamelyik képkockája."
 
 #. Sprite2D.centered
 #: doc/classes/Sprite2D.xml
