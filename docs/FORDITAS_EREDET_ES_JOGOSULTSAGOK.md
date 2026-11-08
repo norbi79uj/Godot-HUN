@@ -32,6 +32,18 @@ Ezeket az állományokat az előző `Smaragd-Editor` projekttárból **másolatk
 
 A projektgazda engedélyezi a projekt keretein belül létrehozott magyar munkafordítás közösségi felhasználását a tervezett MIT-feltételekkel, **amennyiben** nem sérülnek az alapanyag és esetleges harmadik felek jogai. A közösségi javítók saját hozzájárulásait külön szabályozzuk.
 
+## A ChatGPT-kimenet felhasználásának feltételei – ellenőrizve
+
+Az OpenAI közzétett felhasználási feltételei szerint a felhasználó és az OpenAI egymás közötti viszonyában a felhasználót illetik meg a kimenethez fűződő jogok a vonatkozó jogszabályok által megengedett mértékben; az OpenAI az esetleg őt megillető jogokat átruházza. Emiatt **önmagában a ChatGPT felhasználása miatt nem szükséges az OpenAI külön közzétételi engedélye**.
+
+Ez **nem** szavatolja az AI-kimenet egyediségét, szerzői jogi védettségét vagy azt, hogy semmilyen részlete nem egyezhet más jogosult tartalmával. A projektgazda továbbra is felelős az alapul használt anyagok és harmadik felek jogainak tiszteletben tartásáért.
+
+Források:
+- OpenAI Terms of Use, „Your content”, „Ownership of content” és „Similarity of content”: https://openai.com/en-GB/policies/row-terms-of-use/
+- Godot fordítási tárhely MIT-nyilatkozata: https://github.com/godotengine/godot-editor-l10n
+
+**Következtetés:** a dokumentált munkafolyamat (Godot angol osztályreferencia → ChatGPT-asszisztált magyar fordítás → projektgazdai jóváhagyás) a megvizsgált feltételek alapján nem igényel külön OpenAI-licencet. Egy nem azonosított külső forrás esetleges jogát ez nem írja felül. Ez tájékoztató megfelelőségi megállapítás, nem jogi szakvélemény.
+
 ## Alapul szolgáló angol anyag jogi státusza
 
 A Godot Engine hivatalos `godot-editor-l10n` repója szerint a szerkesztő és osztályreferencia katalógusainak `msgid` és `msgstr` tartalma **MIT-licencű**.
@@ -47,9 +59,10 @@ A projektgazda **jóváhagyta az MIT-licenc elvét**, és vállalta, hogy a Godo
 ### Tisztázandó pontok a nyilvános kiadás előtt
 
 - [x] A jelen projekt munkafolyamatának eredete dokumentálva: ChatGPT-asszisztált magyarítás a projektgazda irányításával.
-- [ ] Az esetleges külső fordítások és átvett részek tételes tisztázása, ha erre utaló adat felmerül.
+- [x] A projektgazda dokumentálta, hogy a magyar munkafordítást ChatGPT-vel készítettük az MIT-licencű Godot angol szövege alapján; az OpenAI feltételeiben külön kimenet-felhasználási engedély nem szükséges.
+- [ ] Ha konkrét, külső fordításból átvett részre utaló adat merül fel, annak jogosultságát külön tisztázni kell.
 - [ ] A jogosultak tényleges hozzájárulása minden olyan szövegrészhez, amely nem kizárólag a projektgazda saját munkája vagy jogszerűen újrahasznosítható MIT-tartalom.
-- [ ] A `forditas/` könyvtár licencét és hozzájárulási szabályait egyértelműen rögzítő végleges fájl.
+- [x] A saját fordításokhoz MIT-licencszöveg van a `LICENSE-TRANSLATIONS.txt` fájlban, a jövőbeni közreműködők feltételei a `CONTRIBUTING.md` dokumentumban szerepelnek.
 - [ ] Közzététel előtt a csomag végső attribúciós és működési ellenőrzése.
 
 **Fontos:** A munkafolyamat eredete a projektgazda beszámolója alapján ismert, de ebből önmagában nem következik, hogy minden egyes megfogalmazás jogilag kizárólagosan saját eredetű. A pontos jogosultságokat szükség esetén külön ellenőrizzük.
