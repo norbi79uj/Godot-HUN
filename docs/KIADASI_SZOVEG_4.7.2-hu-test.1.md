@@ -6,7 +6,7 @@ A **Godot HUN** a Godot Engine **4.7.2-stable** forrására épülő **nem hivat
 
 - Külön összeállított Godot Windows-szerkesztőt.
 - **Részleges magyar F1-súgót**: például a `Node2D` osztály magyar leírása és több metódusmagyarázata már működő tesztben megjelent.
-- Eredeti `LICENSE.txt` és `COPYRIGHT.txt` dokumentumokat, valamint egy magyar `OLVASS_EL_Godot_HUN_4.7.2.txt` útmutatót.
+- Eredeti `LICENSE.txt` és `COPYRIGHT.txt` dokumentumokat, a magyar fordítás `LICENSE-TRANSLATIONS.txt` MIT-nyilatkozatát, valamint egy magyar `OLVASS_EL_Godot_HUN_4.7.2.txt` útmutatót.
 - A GitHubon külön `.po` munkafájlokat a fordítás további javításához.
 
 ### Mi NEM része?
@@ -17,7 +17,7 @@ A **Godot HUN** a Godot Engine **4.7.2-stable** forrására épülő **nem hivat
 
 ### Használat
 
-1. Töltsd le a `Godot-HUN-4.7.2-Teszt.zip` fájlt **a később közzétett kiadásból**.
+1. Töltsd le a `Godot-HUN-4.7.2-Teszt.1.zip` fájlt **a később közzétett kiadásból**.
 2. Csomagold ki egy saját, új mappába; **ne írd felül** a jelenlegi Godot-telepítésedet.
 3. Indítsd a `godot.windows.editor.x86_64.exe` fájlt.
 4. A Godot F1 osztályreferenciájában keresd meg például a `Node2D` osztályt.
@@ -26,9 +26,9 @@ A tesztverzió használata előtt érdemes biztonsági mentést készíteni a fo
 
 ### Ellenőrzött adatok
 
-- ZIP: `Godot-HUN-4.7.2-Teszt.zip`
-- Méret: **81 579 340 bájt**
-- SHA-256: `aa421ee6dc8accf65c4f1b05f3594d3e9eec2db5d0a8b09657433990bd14533e`
+- ZIP: `Godot-HUN-4.7.2-Teszt.1.zip`
+- Méret: **81 616 373 bájt**
+- SHA-256: `f44ff14ceb5f1fe8beb0746c0430547498961aa25ff77385504d19c93c346421`
 - A helyi Windows-próbán az EXE elindult és a `Node2D` F1-fordítása megjelent. Ez nem általános kompatibilitási garancia.
 
 ### Licenc és hozzáférés
