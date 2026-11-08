@@ -1,0 +1,29 @@
+name: Magyar fordítás ellenőrzése
+
+on:
+  push:
+    paths:
+      - 'forditas/**'
+      - '.github/workflows/forditas-ellenorzes.yml'
+  pull_request:
+    paths:
+      - 'forditas/**'
+      - '.github/workflows/forditas-ellenorzes.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  po-ellenorzes:
+    name: PO-katalógusok ellenőrzése
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Forráskód letöltése
+        uses: actions/checkout@v4
+      - name: GNU gettext telepítése
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gettext
+      - name: Fordítások és jelölések ellenőrzése
+        run: python3 forditas/ellenorzes.py --require-msgfmt
