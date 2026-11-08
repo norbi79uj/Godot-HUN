@@ -16,8 +16,8 @@ A tárhely nyilvánossá tétele után az **Issues** fülön nyiss hibabejelent�
 2. A `forditas/` könyvtárban javítsd a megfelelő `.po` szövegeket.
 3. **Ne fordítsd le vagy módosítsd** a programozási azonosítókat, például `Node2D`, `global_position`, `[code]` és más jelöléseket.
 4. Ha a TextEdit szövegeit módosítod, az összevont katalógusban is vezesd át az egyező `msgid` értékhez.
-5. Futtasd a `python ellenorzes.py --require-msgfmt` ellenőrzést a `forditas/` mappában. Ehhez GNU gettext szükséges.
-6. Nyiss Pull Requestet a változtatás rövid magyarázatával.
+5. Ha van telepített Python és GNU gettext, a tárhely gyökeréből futtasd: `python forditas/ellenorzes.py --require-msgfmt`.
+6. Nyiss Pull Requestet a változtatás rövid magyarázatával. A GitHub Actions automatikusan ellenőrzi a PO-katalógusokat; a zöld ellenőrzés a fájlok szerkezetét igazolja, **nem** a fordítások nyelvi helyességét.
 
 ## Milyen fordítási elveket követünk?
 
