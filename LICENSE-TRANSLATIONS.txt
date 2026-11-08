@@ -1,0 +1,42 @@
+Godot HUN – Translation Files License (MIT)
+
+Godot HUN Hungarian translation contributions:
+Copyright (c) 2026 Godot HUN contributors, to the extent applicable to their
+respective original contributions.
+
+Original Godot Engine and class reference content:
+Copyright (c) 2014-present Godot Engine contributors (see AUTHORS.md).
+Copyright (c) 2007-2014 Juan Linietsky, Ariel Manzur.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+Scope:
+- This file documents the intended MIT licensing of translation content
+  created or lawfully contributed to the Godot HUN project.
+- Pre-existing Godot source strings and third-party material remain subject to
+  their respective copyright notices and licenses.
+- Godot HUN does not claim exclusive ownership over the Godot Engine, its
+  English class reference, or independent third-party contributions.
+- The project aims to provide its own downloads free of charge. The MIT
+  license itself does not prohibit commercial redistribution.
+- For the Godot Windows binary, see the separate upstream LICENSE.txt and
+  COPYRIGHT.txt distributed in the release ZIP.
+
+Upstream translation project:
+https://github.com/godotengine/godot-editor-l10n
