@@ -34,8 +34,12 @@ A `COPYRIGHT.txt` a Godot és külső függőségek eltérő licenceit is részl
 
 ### Ami még nincs lezárva
 
+**Megkülönböztetés:** a hivatalos Godot-útmutató szerinti licencfájlok meglétét már igazoltuk; az opcionális függőség-audit nem jelenti automatikusan, hogy hiányzik egy kötelező irat. A `COPYRIGHT.txt` megőrzése a Godot hivatalosan ajánlott eljárása. Forrás: https://docs.godotengine.org/en/stable/about/complying_with_licenses.html
+
+
 - [ ] Az esetleges harmadik féltől átvett magyar szövegek, illetve az AI-segített fordítások jogi eredetének végleges tisztázása. A GitHubon jelen lévő MIT-nyilatkozat nem ad jogot mások nem engedélyezett tartalmára.
-- [ ] Külső könyvtárak terjesztési követelményeinek végső tételes összevetése az adott Windows-builddel. A `COPYRIGHT.txt` összesíti őket, de nem garantálja önmagában minden feltétel teljesítését.
+- [x] A Godot hivatalos, asztali terjesztésre javasolt eljárása szerinti `LICENSE.txt` és `COPYRIGHT.txt` a kiadási ZIP-ben szerepel. Ez **dokumentációs megfelelési ellenőrzés**, nem független jogi szakvélemény.
+- [ ] Csak akkor szükséges további összetevő-specifikus ellenőrzés vagy nyilatkozat, ha a saját build az eredeti `COPYRIGHT.txt` által nem fedett, külön hozzáadott külső összetevőt tartalmaz. Ilyen kiegészítőt a jelen dokumentáció nem azonosít, de az összes buildfüggőség tételes auditja nem történt meg.
 - [ ] Másik, tiszta Windows-környezetben való indítási teszt.
 - [ ] Több F1-osztály, grafikai mód, fájlmegnyitás és hiányzó fordítás részletes ellenőrzése.
 - [ ] Nyilvános megosztás jóváhagyása és az első kiadás világos, **nem hivatalos / részleges / teszt** címkézése.
