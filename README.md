@@ -6,6 +6,20 @@ A projekt célja a Godot játékmotor magyar nyelvű használatának megkönnyí
 
 > **Állapot (2026. november 8.):** a Godot 4.7.2-stable forrásból fordított Windows-szerkesztő helyben sikeresen elindult. A Node2D osztály súgójában magyar leírások és metódusmagyarázatok látszanak. Ez **részleges fordítás**, nem teljes magyar felület, és még nem publikus, ellenőrzött kiadás. A korábbi teszt nem igazolja, hogy minden osztály vagy panel magyarul működik.
 
+## Kipróbálás Windows alatt – előzetes útmutató
+
+**A kiadás jelenleg még nem nyilvános.** Amikor a `4.7.2-hu-test.1` tesztkiadást publikáljuk:
+
+1. A GitHub **Releases** oldaláról töltsd le a `Godot-HUN-4.7.2-Teszt.zip` csomagot.
+2. Csomagold ki **külön mappába**. Ne írd felül a meglévő Godot-telepítésedet.
+3. Indítsd a `godot.windows.editor.x86_64.exe` fájlt.
+4. A beépített **F1-súgóban** keresd meg például a `Node2D` osztályt. A magyar súgó **részleges**; sok rész továbbra is angol.
+5. Ha hibát találsz, a később megnyitott GitHub **Issues** részben külön **Fordítási hiba** és **Működési hiba** sablon segít a bejelentésben.
+
+**Ellenőrzőösszeg:** [SHA256SUMS.txt](kiadasok/4.7.2-hu-test.1/SHA256SUMS.txt). A letöltés ellenőrzésének részletes menete: [kiadási útmutató](docs/KIADAS_4.7.2-hu-test.1.md).
+
+A projekt a saját letöltési helyén ingyenes marad. A Godot HUN **nem hivatalos Godot-kiadás**, és a tesztváltozat nem teljes magyarítás.
+
 ## Mi van itt?
 
 | Fájl | Tartalom |
