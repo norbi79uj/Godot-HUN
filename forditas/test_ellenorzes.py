@@ -9,7 +9,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from ellenorzes import parse
+from ellenorzes import parse, check_textedit_subset
 
 
 class ForditasEllenorzesProba(unittest.TestCase):
@@ -42,6 +42,17 @@ class ForditasEllenorzesProba(unittest.TestCase):
         sample = 'msgid "Hello"\nmsgstr\n'
         with self.assertRaisesRegex(ValueError, "hibás vagy nem támogatott PO-blokk"):
             self.parse_sample(sample)
+
+    def test_textedit_reszhalmaz_helyes(self):
+        check_textedit_subset({"A": "Á", "B": "Bé"}, {"A": "Á"})
+
+    def test_textedit_hianyzo_azonosito_elutasitva(self):
+        with self.assertRaisesRegex(ValueError, "hiányzó vagy eltérő"):
+            check_textedit_subset({"A": "Á"}, {"B": "Bé"})
+
+    def test_textedit_eltero_forditas_elutasitva(self):
+        with self.assertRaisesRegex(ValueError, "hiányzó vagy eltérő"):
+            check_textedit_subset({"A": "Á"}, {"A": "Más"})
 
     def test_po_fejlec_kimarad(self):
         sample = 'msgid ""\nmsgstr ""\n"Language: hu\\n"\n\nmsgid "Hi"\nmsgstr "Szia"\n'
