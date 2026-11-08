@@ -1,0 +1,60 @@
+GODOT HUN 4.7.2 – MAGYAR TESZTKIADÁS
+===================================
+
+ÁLLAPOT: NEM HIVATALOS, RÉSZLEGES MAGYARÍTÁS – TESZTVERZIÓ
+Dátum: 2026. november 8.
+
+MI EZ?
+-------
+A Godot Engine 4.7.2-stable Windowsra összeállított, módosított
+szerkesztője, részben magyar nyelvű, beépített F1 osztálysúgóval.
+Ez közösségi kezdeményezés, nem a Godot Engine hivatalos magyar kiadása.
+
+INDÍTÁS
+-------
+1. Csomagold ki a teljes ZIP-et egy tetszőleges mappába.
+2. Indítsd el a godot.windows.editor.x86_64.exe fájlt.
+3. Válassz ki egy meglévő projektet, vagy hozz létre egy újat.
+4. A nyelvet a szerkesztő beállításaiban magyarra állíthatod.
+5. A beépített osztálysúgót az F1 billentyűvel vagy a súgó
+   keresésével nyithatod meg. Próbáld ki például a Node2D osztályt.
+
+FONTOS: MI MAGYAR, ÉS MI NEM?
+---------------------------
+- A magyar F1-súgó jelenleg csak részleges. A Node2D osztálynál
+  magyar bevezető és metódusmagyarázatok helyi tesztje sikerült.
+- Más osztályok leírásai még angolul lehetnek.
+- A szerkesztő egyes menüi a Godot meglévő magyar fordításának
+  köszönhetően magyarok, a jobb oldali Inspector több mezője angol.
+- Programozási azonosítók (pl. Node2D, Sprite2D, global_position)
+  szándékosan angolul maradnak.
+- A csomag nem tartalmaz külön játékprojektet vagy export-sablonokat.
+- A tesztcsomag a fejlesztői gépen kipróbált Windows x86_64 verzió;
+  más számítógépeken való működését még külön ellenőrizni kell.
+
+KÖZÖSSÉGI HIBAJELENTÉS, FORDÍTÁSJAVÍTÁS
+---------------------------------------
+Projekt: https://github.com/norbi79uj/Godot-HUN
+A tárhely jelenleg privát. Nyilvános megnyitása után az Issues
+(Hibajelentések) felületen lehet majd jelezni például:
+- melyik osztályban vagy menüben található hiba;
+- az eredeti angol és a javasolt magyar szöveget;
+- a Godot verzióját és lehetőleg egy képernyőképet.
+A módosításokat a közösség Pull Requestként is beküldheti.
+
+LICENC ÉS SZERZŐI JOG
+--------------------
+A Godot Engine és szerzői a mellékelt LICENSE.txt és COPYRIGHT.txt
+fájlokban szereplő feltételek szerint biztosítják a felhasználási
+jogokat. A dokumentumok a csomag részét képezik.
+Godot Engine: https://godotengine.org/
+Forrás: https://github.com/godotengine/godot
+
+FIGYELMEZTETÉS
+--------------
+Ez a változat előzetes tesztkiadás, nem teljes magyarítás.
+A forráskód összeállításának sikere és a helyi Node2D-teszt még
+nem helyettesíti a teljes körű kiadási és jogi ellenőrzést.
+A jelen útmutató nem állítja, hogy a csomag már nyilvánosan elérhető.
+
+Köszönjük, hogy segítesz a Godot magyarításában!
