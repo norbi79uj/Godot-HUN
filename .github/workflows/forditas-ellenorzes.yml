@@ -27,3 +27,5 @@ jobs:
           sudo apt-get install -y gettext
       - name: Fordítások és jelölések ellenőrzése
         run: python3 forditas/ellenorzes.py --require-msgfmt
+      - name: Fordítási statisztika a futás összefoglalójában
+        run: python3 forditas/statisztika.py >> "$GITHUB_STEP_SUMMARY"
