@@ -2,11 +2,11 @@
 
 **Ellenőrzés dátuma:** 2026. november 8.  
 **Célkiadás:** `4.7.2-hu-test.1`  
-**Állapot:** privát GitHub-tárhely, **mentett Release-piszkozat**; nincs publikálva.
+**Állapot (frissítve 2026. november 8-án):** nyilvános GitHub-tárhely, **publikált előzetes tesztkiadás**.
 
 ## Igazolt eredmények
 
-- [x] A GitHub Release jelenleg **draft=true**, **prerelease=true**; tag: `4.7.2-hu-test.1`.
+- [x] A GitHub Release publikálva: **draft=false**, **prerelease=true**; tag: `4.7.2-hu-test.1`.
 - [x] Pontosan egy GitHub-melléklet: `Godot-HUN-4.7.2-Teszt.1.zip` (a javított csomag).
 - [x] A GitHubon lévő ZIP mérete: **81 616 373 bájt**; SHA-256: `f44ff14ceb5f1fe8beb0746c0430547498961aa25ff77385504d19c93c346421`.
 - [x] A javított helyi ZIP és a GitHub-melléklet **mérete és SHA-256 ellenőrzőösszege egyezik**.
@@ -37,7 +37,7 @@ A `COPYRIGHT.txt` a Godot és külső függőségek eltérő licenceit is részl
 - [x] A fordítás saját MIT-nyilatkozata (`LICENSE-TRANSLATIONS.txt`) bekerült a ZIP-be.
 - [x] A magyar útmutató frissítve, az eredeti Godot-licencek megőrizve.
 - [x] Az ötfájlos ZIP sértetlenségét helyben ellenőriztük; az EXE változatlan maradt.
-- [x] A javított csomag a GitHub Release-piszkozat egyetlen melléklete.
+- [x] A javított csomag a nyilvános GitHub Release egyetlen melléklete.
 - [x] A GitHub API szerint a melléklet **81 616 373 bájt**, SHA-256: `f44ff14ceb5f1fe8beb0746c0430547498961aa25ff77385504d19c93c346421`; ez egyezik a javított helyi csomaggal.
 - [x] A GitHubon tárolt SHA256SUMS és kiadási dokumentáció az új melléklethez igazítva.
 
@@ -71,7 +71,7 @@ A `COPYRIGHT.txt` a Godot és külső függőségek eltérő licenceit is részl
 
 - [x] **A projektgazda 2026. november 8-án kifejezetten megerősítette:** a magyar fordítás a Godot eredeti angol szövege alapján, ChatGPT segítségével készült; más weboldalakról vagy kész magyarításokból nem másoltunk át magyar fordításokat. Ez projektgazdai nyilatkozat, **nem** független plágium- vagy jogi audit. Ha később ellenkező konkrét adat merül fel, azt kiadás előtt vagy után külön megvizsgáljuk.
 - [x] **Projektgazdai megerősítés (2026. november 8.):** a Windows-buildbe a hivatalos Godot-forráson és a saját magyar fordításon/dokumentáción kívül **nem került külön külső forrás vagy összetevő**. A mellékelt eredeti `LICENSE.txt` és `COPYRIGHT.txt` változatlan. Ez a projektgazda nyilatkozata, **nem** a fordítói eszközlánc és valamennyi beépített függőség független, tételes auditja.
-- [x] **Projektgazdai jóváhagyás (2026. november 8.):** a projektgazda a kérdésre igennel válaszolva jóváhagyta a GitHub-tárhely nyilvánossá tételét és az első, nem hivatalos, részleges tesztkiadás megjelentetését az ismert tesztkorlátok feltüntetésével. **A két GitHub-művelet még nem történt meg**; a tárhely privát, a Release továbbra is piszkozat. A közzététel állapotát külön ellenőrizni kell.
+- [x] **Projektgazdai jóváhagyás (2026. november 8.):** a projektgazda a kérdésre igennel válaszolva jóváhagyta a GitHub-tárhely nyilvánossá tételét és az első, nem hivatalos, részleges tesztkiadás megjelentetését az ismert tesztkorlátok feltüntetésével. **Mindkét GitHub-művelet megtörtént és API-adatokkal ellenőrizve:** a tárhely public, a kiadás draft=false, prerelease=true.
 
 **Tesztkiadásként vállalható, nyíltan jelzett korlátok (nem állítjuk teljesítettnek):**
 
@@ -85,4 +85,4 @@ A `COPYRIGHT.txt` a Godot és külső függőségek eltérő licenceit is részl
 
 ## Következő javasolt teendő
 
-A közösségi licenc szabályai már dokumentáltak. A nyilvános terjesztés előtt a **valóban nyitott** harmadik fél / attribúciós és működési kérdéseket kell lezárni, majd a projektgazda külön jóváhagyását kérni. A GitHub Release-piszkozatot addig ne publikáljuk; a privát tárhely és a helyi programok változatlanok maradhatnak.
+A közösségi licenc szabályai már dokumentáltak. A nyilvános terjesztés előtt a **valóban nyitott** harmadik fél / attribúciós és működési kérdéseket kell lezárni, majd a projektgazda külön jóváhagyását kérni. A tesztkiadás 2026. november 8-án publikálásra került. A még hátralévő kompatibilitási és részletességi teszteket a következő fejlesztési körökben lehet elvégezni; ezeket ne tekintsük lezártnak.
