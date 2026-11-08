@@ -36,6 +36,12 @@ A magyar fordítások tervezett licence **MIT**, amely a szabad használaton és
 
 **Licencelési státusz:** a projektelvet a tulajdonos jóváhagyta, de a fordításszövegek eredetét és a jogosultak hozzájárulását még ellenőrizni kell. A közösségi fordításokra vonatkozó végleges licencnyilatkozat még nem készült el. A GitHub kiadási piszkozat továbbra sem nyilvános.
 
+## A fordítás eredete és licencellenőrzése
+
+Az előzetes forrás- és jogosultsági vizsgálat eredménye: [Fordítás eredetének ellenőrzése](docs/FORDITAS_EREDET_ES_JOGOSULTSAGOK.md).
+
+Az alapul szolgáló Godot osztályreferencia és hivatalos fordítások MIT-licencűek, de a saját magyar `msgstr` szövegek eredetét még tételesen ellenőrizni kell. A teljes katalógus 2185 magyarított bejegyzése nem azonos a teljes Godot-dokumentáció fordításával.
+
 ## Kapcsolódó oldalak
 
 - [Godot Engine](https://godotengine.org/)
