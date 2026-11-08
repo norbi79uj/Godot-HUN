@@ -24,9 +24,17 @@ A mellékelt eredeti `LICENSE.txt` a Godot Engine hozzájárulóinak szerzői jo
 
 A `COPYRIGHT.txt` a Godot és külső függőségek eltérő licenceit is részletezi. A mellékelése helyes lépés a szerzői jogi tájékoztatáshoz.
 
+### Azóta igazolt előrelépések (2026. november 8.)
+
+- [x] A projektgazda elfogadta a magyar fordítás MIT-licencű, ingyenesen hozzáférhető közzétételét, beleértve az MIT által engedélyezett kereskedelmi felhasználást.
+- [x] A `LICENSE-TRANSLATIONS.txt` elkészült; a `CONTRIBUTING.md` a jövőbeni közreműködők MIT-feltételeit ismerteti.
+- [x] A Godot hivatalos licencoldala szerint a Godot MIT-licencű, módosított változatban is terjeszthető, a licenc- és szerzői jogi nyilatkozatok megtartásával: https://godotengine.org/license/
+- [x] A hivatalos szerkesztő- és osztályreferencia-fordítások `msgid`/`msgstr` tartalma MIT-licencű: https://github.com/godotengine/godot-editor-l10n
+- [x] A Godot hivatalos megfelelőségi útmutatója a motorhoz csatolt `COPYRIGHT.txt`-t javasolja a külső könyvtárak nyilatkozatainak dokumentálására: https://docs.godotengine.org/en/stable/about/complying_with_licenses.html
+
 ### Ami még nincs lezárva
 
-- [ ] **Közösségi fordítások saját felhasználási engedélye:** a repóban szereplő `.po` munkafájlokra és később elfogadott külső hozzájárulásokra még nincs végleges, a jogosultak által jóváhagyott licenc-/hozzájárulási szabály. A Godot `LICENSE.txt` *önmagában nem dönti el* a külön elkészített fordítás saját jogállását.
+- [ ] Az esetleges harmadik féltől átvett magyar szövegek, illetve az AI-segített fordítások jogi eredetének végleges tisztázása. A GitHubon jelen lévő MIT-nyilatkozat nem ad jogot mások nem engedélyezett tartalmára.
 - [ ] Külső könyvtárak terjesztési követelményeinek végső tételes összevetése az adott Windows-builddel. A `COPYRIGHT.txt` összesíti őket, de nem garantálja önmagában minden feltétel teljesítését.
 - [ ] Másik, tiszta Windows-környezetben való indítási teszt.
 - [ ] Több F1-osztály, grafikai mód, fájlmegnyitás és hiányzó fordítás részletes ellenőrzése.
@@ -43,4 +51,4 @@ A `COPYRIGHT.txt` a Godot és külső függőségek eltérő licenceit is részl
 
 ## Következő javasolt teendő
 
-A nyilvános terjesztés előtt tisztázni kell a fordítás jogállását, és a közösség számára egységes közreműködési licencet választani a jogosultak jóváhagyásával. A GitHub Release-piszkozatot addig ne publikáljuk. A privát tárhely és a helyi programok változatlanok maradhatnak.
+A közösségi licenc szabályai már dokumentáltak. A nyilvános terjesztés előtt a **valóban nyitott** harmadik fél / attribúciós és működési kérdéseket kell lezárni, majd a projektgazda külön jóváhagyását kérni. A GitHub Release-piszkozatot addig ne publikáljuk; a privát tárhely és a helyi programok változatlanok maradhatnak.
