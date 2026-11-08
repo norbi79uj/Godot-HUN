@@ -26,7 +26,7 @@ msgstr "Törli az összes cellát."
 #. TileMapLayer.erase_cell
 #: doc/classes/TileMapLayer.xml
 msgid "Erases the cell at coordinates [param coords]."
-msgstr "Törli a [param coords] koordinátáknál található cellát."
+msgstr "Törli a [param coords] koordinátájú cellát."
 
 #. TileMapLayer.fix_invalid_tiles
 #: doc/classes/TileMapLayer.xml
@@ -701,7 +701,7 @@ msgstr "A textúrában található alapcsempe mérete (képpontban). Ennek legal
 #. TileSetAtlasSource.margins
 #: doc/classes/TileSetAtlasSource.xml
 msgid "Margins, in pixels, to offset the origin of the grid in the texture."
-msgstr "A margók képpontban, amelyek eltolják a rács kezdőpontját a textúrán."
+msgstr "A textúrán lévő rács kezdőpontjának eltolására szolgáló margók, képpontban megadva."
 
 #. TileSetAtlasSource.separation
 #: doc/classes/TileSetAtlasSource.xml
@@ -1651,7 +1651,7 @@ msgstr "Módosítja az éppen lejátszott szakasz kezdő- és végidejét. Az ak
 #. SpriteFrames.brief
 #: doc/classes/SpriteFrames.xml
 msgid "Sprite frame library for AnimatedSprite2D and AnimatedSprite3D."
-msgstr "Sprite-képkockák könyvtára az AnimatedSprite2D és az AnimatedSprite3D számára."
+msgstr "Sprite-képkockák gyűjteménye az AnimatedSprite2D és AnimatedSprite3D csomópontokhoz."
 
 #. SpriteFrames.description
 #: doc/classes/SpriteFrames.xml
