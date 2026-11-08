@@ -25,6 +25,8 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y gettext
+      - name: Regressziós próbák futtatása
+        run: python3 -m unittest discover -s forditas -p 'test_*.py' -v
       - name: Fordítások és jelölések ellenőrzése
         run: python3 forditas/ellenorzes.py --require-msgfmt
       - name: Fordítási statisztika a futás összefoglalójában
