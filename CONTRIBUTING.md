@@ -10,6 +10,12 @@ A tárhely nyilvánossá tétele után az **Issues** fülön nyiss hibabejelent�
 3. Eredeti angol szöveg és a hibás magyar fordítás.
 4. Javasolt javítás és – ha lehet – képernyőkép.
 
+## Hogyan jelents működési hibát?
+
+Ha a program nem indul, lefagy vagy hibásan működik, az **Issues** fülön válaszd a **Működési hiba** sablont. Add meg a tesztverziót, a Windows verzióját, a hiba előidézésének lépéseit és – ha van – a hibaüzenetet. A naplókból és képernyőképekből előbb távolítsd el a személyes és bizalmas adatokat.
+
+A fordítási hibákhoz továbbra is a külön **Fordítási hiba** sablont használd.
+
 ## Hogyan küldj fordításjavítást?
 
 1. Készíts forkot, majd egy új ágat a módosításokhoz.
