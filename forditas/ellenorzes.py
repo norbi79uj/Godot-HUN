@@ -41,6 +41,15 @@ def parse(path: Path) -> dict[str, str]:
         result[original] = translated
     return result
 
+def check_textedit_subset(combined: dict[str, str], textedit: dict[str, str]) -> None:
+    """A TextEdit külön katalógusa az összevont fordítás részhalmaza legyen."""
+    problems = [src[:100] for src, hu in textedit.items() if combined.get(src) != hu]
+    if problems:
+        raise ValueError(
+            f"TextEdit: {len(problems)} hiányzó vagy eltérő bejegyzés, pl. {problems[0]!r}"
+        )
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Godot F1 magyar munkakatalógus ellenőrzése")
     parser.add_argument("--require-msgfmt", action="store_true",
@@ -49,9 +58,7 @@ def main() -> int:
     try:
         combined = parse(MERGED)
         textedit = parse(TEXTEDIT)
-        problems = [src[:100] for src, hu in textedit.items() if combined.get(src) != hu]
-        if problems:
-            raise ValueError(f"TextEdit: {len(problems)} hiányzó vagy eltérő bejegyzés, pl. {problems[0]!r}")
+        check_textedit_subset(combined, textedit)
         print(f"Előzetes ellenőrzés rendben: {len(combined)} összes magyarított bejegyzés; "
               f"ebből {len(textedit)} TextEdit-bejegyzés (nem hozzáadandó).")
         binary = shutil.which("msgfmt")
