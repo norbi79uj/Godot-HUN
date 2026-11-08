@@ -65,6 +65,24 @@ A `COPYRIGHT.txt` a Godot és külső függőségek eltérő licenceit is részl
 | `LICENSE.txt` | `b0435e3b3e4e55238f05f4b306f30524a1b2e20147810d436eaa554fa6855c80` |
 | `OLVASS_EL_Godot_HUN_4.7.2.txt` | Frissített változat a javított ZIP-ben; a korábbi hash már nem érvényes |
 
+## Kiadási döntés: szükséges feltételek és vállalt tesztkorlátok
+
+**Szükséges, még megerősítendő feltételek:**
+
+- [ ] A projektgazda megerősíti: nem került a kiadásba olyan külső magyar fordítás vagy egyéb harmadik féltől átvett tartalom, amelynek terjesztési joga rendezetlen. A meglévő dokumentáció AI-segített, Godot-forráson alapuló munkafolyamatot ír le, de az egyes korábbi átvételeket nem tudja teljes bizonyossággal kizárni.
+- [ ] A projektgazda megerősíti: a Godot hivatalos forrásán és saját dokumentációján/fordításán kívül nem került külön, a meglévő `COPYRIGHT.txt` által nem fedett külső összetevő a Windows-buildbe. Ha került, annak feltételeit előbb rendezzük.
+- [ ] A projektgazda külön jóváhagyja **a tárhely nyilvánossá tételét és a tesztkiadás publikálását**. A két művelet külön lépés; egyik sem történik meg automatikusan.
+
+**Tesztkiadásként vállalható, nyíltan jelzett korlátok (nem állítjuk teljesítettnek):**
+
+- [ ] Másik, tiszta Windows-gépen végzett indítási próba: **nem történt meg**. Az első kiadást nem szabad általánosan kompatibilisnek nevezni.
+- [ ] Több F1-osztály, különféle grafikus módok és projektek részletes vizsgálata: **nem történt meg**. A kiadás részleges, visszajelzésekre nyitott teszt.
+- [ ] A GitHubon időközben tovább szerkesztett `.po` munkakatalógus és a már lefordított EXE teljes egyezése: **nincs igazolva**. A kiadott EXE korábbi pillanatfelvétel; az újabb PO-javításokhoz új build szükséges. Ne hirdessük úgy, mintha minden jelenlegi munkafordítás a kiadott EXE-ben lenne.
+
+**Csomagvizsgálat (2026. november 8.):** a javított helyi ZIP újra megnyitható és a ZIP-fájlok CRC-ellenőrzése sikeres; az útmutató már hivatkozik a `LICENSE-TRANSLATIONS.txt` fájlra. Ez **nem** helyettesíti a Windows-on végzett futási próbát.
+
+**Fontos:** az első két megerősítési pont nem független jogi audit; akkor tekinthető rendben lévőnek, ha a projektgazda a tényleges források ismeretében jóhiszeműen meg tudja erősíteni, és nincs ismert ellentmondás.
+
 ## Következő javasolt teendő
 
 A közösségi licenc szabályai már dokumentáltak. A nyilvános terjesztés előtt a **valóban nyitott** harmadik fél / attribúciós és működési kérdéseket kell lezárni, majd a projektgazda külön jóváhagyását kérni. A GitHub Release-piszkozatot addig ne publikáljuk; a privát tárhely és a helyi programok változatlanok maradhatnak.
