@@ -49,7 +49,7 @@ A `COPYRIGHT.txt` a Godot és külső függőségek eltérő licenceit is részl
 
 
 - [x] **AI-segített fordítás jogalapja dokumentálva:** az angol forrás MIT-licencű Godot-osztályreferencia; az OpenAI felhasználási feltételei szerint a kimenetet a felhasználó felhasználhatja, az esetleges harmadik fél jogainak tiszteletben tartásával. Részletek: [fordítás eredete](FORDITAS_EREDET_ES_JOGOSULTSAGOK.md).
-- [ ] Ha konkrét külső magyar fordítás vagy más forrásból átvett védett szöveg azonosítható, annak jogosultságát a kiadás előtt külön tisztázni kell. A forráskatalógus puszta vizsgálata nem bizonyít minden lehetséges szövegegyezés hiányát.
+- [x] A projektgazda megerősítette, hogy **nem másoltunk át kész magyar fordításokat** más forrásokból. Ez alapján nincs jelenleg azonosított, külön engedélyre váró külső magyar fordítás. **Feltételes megjegyzés:** ha később konkrét külső, védett szöveg átvétele derül ki, annak jogát külön rendezni kell; minden lehetséges szövegegyezés hiánya nem igazolt.
 - [x] A Godot hivatalos, asztali terjesztésre javasolt eljárása szerinti `LICENSE.txt` és `COPYRIGHT.txt` a kiadási ZIP-ben szerepel. Ez **dokumentációs megfelelési ellenőrzés**, nem független jogi szakvélemény.
 - [ ] Csak akkor szükséges további összetevő-specifikus ellenőrzés vagy nyilatkozat, ha a saját build az eredeti `COPYRIGHT.txt` által nem fedett, külön hozzáadott külső összetevőt tartalmaz. Ilyen kiegészítőt a jelen dokumentáció nem azonosít, de az összes buildfüggőség tételes auditja nem történt meg.
 - [ ] Másik, tiszta Windows-környezetben való indítási teszt.
@@ -69,7 +69,7 @@ A `COPYRIGHT.txt` a Godot és külső függőségek eltérő licenceit is részl
 
 **Szükséges, még megerősítendő feltételek:**
 
-- [ ] A projektgazda megerősíti: nem került a kiadásba olyan külső magyar fordítás vagy egyéb harmadik féltől átvett tartalom, amelynek terjesztési joga rendezetlen. A meglévő dokumentáció AI-segített, Godot-forráson alapuló munkafolyamatot ír le, de az egyes korábbi átvételeket nem tudja teljes bizonyossággal kizárni.
+- [x] **A projektgazda 2026. november 8-án kifejezetten megerősítette:** a magyar fordítás a Godot eredeti angol szövege alapján, ChatGPT segítségével készült; más weboldalakról vagy kész magyarításokból nem másoltunk át magyar fordításokat. Ez projektgazdai nyilatkozat, **nem** független plágium- vagy jogi audit. Ha később ellenkező konkrét adat merül fel, azt kiadás előtt vagy után külön megvizsgáljuk.
 - [ ] A projektgazda megerősíti: a Godot hivatalos forrásán és saját dokumentációján/fordításán kívül nem került külön, a meglévő `COPYRIGHT.txt` által nem fedett külső összetevő a Windows-buildbe. Ha került, annak feltételeit előbb rendezzük.
 - [ ] A projektgazda külön jóváhagyja **a tárhely nyilvánossá tételét és a tesztkiadás publikálását**. A két művelet külön lépés; egyik sem történik meg automatikusan.
 
