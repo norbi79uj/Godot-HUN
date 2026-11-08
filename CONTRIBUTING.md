@@ -26,4 +26,12 @@ A tárhely nyilvánossá tétele után az **Issues** fülön nyiss hibabejelent�
 - A `.po` jelöléseket, kódpéldákat és hivatkozásokat meg kell őrizni.
 - A javaslatokat az összevonás előtt átnézzük.
 
-A projekt nem tartozik a Godot hivatalos fejlesztőcsapatához. A közösségi közreműködések licencelését a nyilvános megnyitás előtt rendezzük.
+## Közreműködők jogai és licence
+
+A fordítási javítás beküldésével a közreműködő kijelenti, hogy a beküldött szöveghez rendelkezik a szükséges felhasználási jogokkal, és hozzájárul, hogy az elfogadott hozzájárulás a [Godot HUN fordítási MIT-licence](LICENSE-TRANSLATIONS.txt) szerint legyen terjeszthető.
+
+Ne másolj be engedély nélkül védett szöveget más fordításokból, dokumentációból vagy weboldalakról. AI-val készített javaslatnál is ellenőrizni kell az eredetet, a pontosságot és az esetleges harmadik fél jogait.
+
+A szerzők a saját hozzájárulásukhoz fűződő jogaikat nem veszítik el pusztán a beküldéssel; a projekt számára az MIT-feltételek szerinti felhasználást engedélyezik.
+
+A projekt **nem hivatalos Godot-kiadás**, és a saját tárhelyéről a letöltéseket ingyenesen biztosítja. A fordítások és a külön Windows-csomag jogi státuszát a README és a csomaglicencek ismertetik.
