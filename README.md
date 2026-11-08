@@ -25,7 +25,7 @@ A tervezett nyilvános kiadás után hibabejelentéseket és pull requesteket sz
 
 - A jelenlegi tárhely **privát**; a magyar Windows-kiadás még nincs közzétéve.
 - Ne keverd össze ezt a projektet a hivatalos Godot Engine kiadással; ez **nem hivatalos közösségi magyarítás**.
-- Közzététel előtt ellenőrizni kell a Godot és a terjesztett összetevők licencfeltételeit, valamint a fordítások felhasználási jogait. Ennek lezárásáig nem adunk hozzá találomra licencet.
+- A saját fordítási hozzájárulásokhoz létrehoztuk a [MIT-licencnyilatkozatot](LICENSE-TRANSLATIONS.txt); az eredeti Godot- és harmadik fél jogi nyilatkozatokat ez nem helyettesíti. A nyilvános kiadás előtti attribúciós és működési ellenőrzések még folyamatban vannak.
 - A lefordított program helyi biztonsági másolata külön található a fejlesztő gépén, **nem** ebben a tárhelyben.
 
 ## Ingyenesség és közösségi licenc – elfogadott projektelv
@@ -34,7 +34,7 @@ A tervezett nyilvános kiadás után hibabejelentéseket és pull requesteket sz
 
 A magyar fordítások tervezett licence **MIT**, amely a szabad használaton és módosításon túl a kereskedelmi újrafelhasználást is megengedi. Ez tudatos döntés; mások esetleges kereskedelmi felhasználása nem változtat a mi ingyenes terjesztési vállalásunkon.
 
-**Licencelési státusz:** a projektelvet a tulajdonos jóváhagyta, de a fordításszövegek eredetét és a jogosultak hozzájárulását még ellenőrizni kell. A közösségi fordításokra vonatkozó végleges licencnyilatkozat még nem készült el. A GitHub kiadási piszkozat továbbra sem nyilvános.
+**Licencelési státusz:** a projektgazda jóváhagyta a fordítások MIT-licencű közreadását, és elkészült a [fordítási licencnyilatkozat](LICENSE-TRANSLATIONS.txt). A fordítási szövegek és esetleges külső tartalmak jogosultságait a nyilvános kiadás előtt tovább ellenőrizzük. A GitHub kiadási piszkozat továbbra sem nyilvános.
 
 ## A fordítás eredete és licencellenőrzése
 
