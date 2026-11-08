@@ -71,7 +71,7 @@ A `COPYRIGHT.txt` a Godot és külső függőségek eltérő licenceit is részl
 
 - [x] **A projektgazda 2026. november 8-án kifejezetten megerősítette:** a magyar fordítás a Godot eredeti angol szövege alapján, ChatGPT segítségével készült; más weboldalakról vagy kész magyarításokból nem másoltunk át magyar fordításokat. Ez projektgazdai nyilatkozat, **nem** független plágium- vagy jogi audit. Ha később ellenkező konkrét adat merül fel, azt kiadás előtt vagy után külön megvizsgáljuk.
 - [x] **Projektgazdai megerősítés (2026. november 8.):** a Windows-buildbe a hivatalos Godot-forráson és a saját magyar fordításon/dokumentáción kívül **nem került külön külső forrás vagy összetevő**. A mellékelt eredeti `LICENSE.txt` és `COPYRIGHT.txt` változatlan. Ez a projektgazda nyilatkozata, **nem** a fordítói eszközlánc és valamennyi beépített függőség független, tételes auditja.
-- [ ] A projektgazda külön jóváhagyja **a tárhely nyilvánossá tételét és a tesztkiadás publikálását**. A két művelet külön lépés; egyik sem történik meg automatikusan.
+- [x] **Projektgazdai jóváhagyás (2026. november 8.):** a projektgazda a kérdésre igennel válaszolva jóváhagyta a GitHub-tárhely nyilvánossá tételét és az első, nem hivatalos, részleges tesztkiadás megjelentetését az ismert tesztkorlátok feltüntetésével. **A két GitHub-művelet még nem történt meg**; a tárhely privát, a Release továbbra is piszkozat. A közzététel állapotát külön ellenőrizni kell.
 
 **Tesztkiadásként vállalható, nyíltan jelzett korlátok (nem állítjuk teljesítettnek):**
 
