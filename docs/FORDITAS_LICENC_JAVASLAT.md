@@ -1,12 +1,12 @@
-# Fordítási licenc – javaslat, még NEM elfogadott
+# Fordítási licenc – elfogadott MIT-alapelv, további ellenőrzéssel
 
-**Állapot: döntésre vár.** Ez a dokumentum önmagában nem helyez semmilyen saját fordítást új licenc alá, és nem módosítja a Godot motor meglévő jogi feltételeit.
+**Állapot: a projektgazda jóváhagyta a saját hozzájárulások MIT-licencű megosztását.** A [LICENSE-TRANSLATIONS.txt](../LICENSE-TRANSLATIONS.txt) tartalmazza a nyilatkozatot. A Godot motor és harmadik felek jogi feltételeit ez nem módosítja. A források eredetére és a terjeszthetőségre vonatkozó ellenőrzések még nem zárultak le.
 
 ## Tulajdonosi döntés – 2026. november 8.
 
 A tulajdonos elfogadta, hogy **a Godot HUN projekt letöltése mindig ingyenes legyen**, és az MIT-licenc megengedi másoknak a kereskedelmi továbbfelhasználást is. A cél az MIT-licencű, közösen javítható fordítás, **a fordításszövegek eredetének és a szükséges jogosultságoknak az ellenőrzése után**.
 
-**Ez még nem végleges licencbevezetés:** a jogosultsági ellenőrzőlista továbbra is nyitott, és a projekt nem vált nyilvánossá.
+**A saját fordítási hozzájárulásokhoz elkészült az MIT-licencszöveg**, de a jogosultsági ellenőrzőlista továbbra is nyitott, és a projekt nem vált nyilvánossá.
 
 ## Miért javasoljuk az MIT-licencet?
 
@@ -22,8 +22,8 @@ A licenc engedélyezi a használatot, másolást, módosítást és újraterjesz
 
 - [ ] A fordítás saját szövegei felett rendelkezésre jogosult személyek hozzájárulása az MIT feltételekhez.
 - [ ] A fordítás eredetének és esetleges korábbi közreműködőinek áttekintése; olyan szöveget nem szabad újralicencelni, amelyre nincs jogunk.
-- [ ] A jövőbeni javításbeküldők előzetes, jól látható tájékoztatása, hogy a beküldött fordítások az MIT alatt kerülnek közzétételre.
-- [ ] A teljes MIT-licencszöveg és megfelelő attribúció elhelyezése a repóban, **csak a döntés után**.
+- [x] A jövőbeni javításbeküldők előzetes tájékoztatását a `CONTRIBUTING.md` tartalmazza.
+- [x] A teljes MIT-licencszöveg és attribúciós kiegészítés elhelyezve a `LICENSE-TRANSLATIONS.txt` fájlban.
 - [ ] A már elkészült Windows-tesztcsomagban a Godot eredeti `LICENSE.txt` és `COPYRIGHT.txt` változatlanul maradjon.
 
 ## A Godot HUN hivatalos státusza
