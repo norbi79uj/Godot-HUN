@@ -44,6 +44,23 @@ Ezek **csomagolási és dokumentációs teendők**, a működő Godot EXE újraf
 
 Hivatalos tájékoztatás: https://godotengine.org/license/ és https://docs.godotengine.org/en/stable/about/complying_with_licenses.html
 
+### Frissített csomag elkészült – GitHub-melléklet cseréje még hátravan
+
+2026. november 8-án a helyi kiadási ZIP új változata elkészült, de **még nincs feltöltve a GitHub Release-be**. A javított csomagban már **öt fájl** található: az eredeti EXE, a Godot eredeti `LICENSE.txt` és `COPYRIGHT.txt`, a frissített magyar útmutató és a saját `LICENSE-TRANSLATIONS.txt`.
+
+- **Új ZIP:** `Godot-HUN-4.7.2-Teszt.zip`
+- **Méret:** `81 616 373` bájt
+- **SHA-256:** `f44ff14ceb5f1fe8beb0746c0430547498961aa25ff77385504d19c93c346421`
+- **ZIP-teszt:** sikeres.
+- **EXE SHA-256:** `bf5542ea21d011ee87448daa191741a8b08b0ddfac0320c98b867c3d6fe2e5da` – **változatlan**.
+- A Godot eredeti licenc- és szerzői jogi fájljainak ellenőrzőösszege szintén változatlan.
+- [x] Helyi javított ZIP előállítva és tartalma ellenőrizve.
+- [ ] A GitHub Release-piszkozatban a **régi** melléklet lecserélése az új ZIP-re.
+- [ ] Feltöltés után a GitHubon lévő új melléklet méretének és ellenőrzőösszegének visszaellenőrzése.
+- [ ] Csak **a csere igazolása után** frissítendő a repó `kiadasok/4.7.2-hu-test.1/SHA256SUMS.txt` fájlja és a közzétételi ismertető korábbi SHA-256 adata.
+
+**Figyelem:** a dokumentum korábbi részében és a GitHubon még a régi, `81 579 340` bájtos ZIP szerepel; ez nem a frissített csomag. A két állapotot nem szabad összekeverni.
+
 ### Ami még nincs lezárva
 
 **Megkülönböztetés:** a hivatalos Godot-útmutató szerinti licencfájlok meglétét már igazoltuk; az opcionális függőség-audit nem jelenti automatikusan, hogy hiányzik egy kötelező irat. A `COPYRIGHT.txt` megőrzése a Godot hivatalosan ajánlott eljárása. Forrás: https://docs.godotengine.org/en/stable/about/complying_with_licenses.html
