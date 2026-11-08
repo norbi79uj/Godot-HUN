@@ -52,7 +52,8 @@ def main() -> int:
         problems = [src[:100] for src, hu in textedit.items() if combined.get(src) != hu]
         if problems:
             raise ValueError(f"TextEdit: {len(problems)} hiányzó vagy eltérő bejegyzés, pl. {problems[0]!r}")
-        print(f"Előzetes ellenőrzés rendben: {len(combined)} közös + {len(textedit)} TextEdit fordítás.")
+        print(f"Előzetes ellenőrzés rendben: {len(combined)} összes magyarított bejegyzés; "
+              f"ebből {len(textedit)} TextEdit-bejegyzés (nem hozzáadandó).")
         binary = shutil.which("msgfmt")
         if binary is None:
             print("FIGYELEM: msgfmt nincs telepítve, a szabványos gettext ellenőrzés NEM történt meg.")
