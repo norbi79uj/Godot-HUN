@@ -49,32 +49,3 @@ A később nyilvános GitHub-tárhelyen az **Issues** fülön lehet majd bejelen
 
 További útmutató: [CONTRIBUTING.md](../CONTRIBUTING.md).
 
----
-
-## Összevetés a GitHub tényleges Release-piszkozatával (2026. november 8.)
-
-A GitHubon jelenleg mentett **Release-piszkozat** rövidebb a fenti ajánlott szövegnél; **a tényleges GitHub Release leírását ez a fájl nem módosítja**.
-
-| Ellenőrzés | Eredmény |
-| --- | --- |
-| GitHub címke | `4.7.2-hu-test.1` |
-| Állapot | `draft=true`, `prerelease=true` |
-| ZIP-melléklet | 1 darab: `Godot-HUN-4.7.2-Teszt.zip` |
-| ZIP méret és SHA-256 | A fent közölt adatokkal egyezik |
-| Nem hivatalos, részleges magyarítás jelzése | Már szerepel a tényleges Release-leírásban |
-| Letöltés és indítás részletes útmutatója | Ebben az előkészített dokumentumban szerepel; a GitHub Release szövegébe még nem került be |
-| SHA-256 ellenőrzőösszeg közlése | Ebben a dokumentumban szerepel; a GitHub Release szövegében még nincs |
-| Hibabejelentési útmutató | Ebben a dokumentumban szerepel; a GitHub Release szövegében még nincs |
-
-**Következő teendő:** a nyilvános megnyitás előtt a GitHub Release-szerkesztőben a rövid leírást kiegészíteni vagy erre a részletes dokumentumra hivatkozni. Nem szükséges új ZIP-et feltölteni vagy újra lefordítani a programot.
-
----
-
-## Kiadás előtti teendők
-
-- [x] A release-csomag feltöltése és digitális egyezésének ellenőrzése.
-- [x] A projekt ingyenes hozzáférési elvének és saját fordítási MIT-nyilatkozatának dokumentálása.
-- [x] A tesztkiadás ismert korlátainak egyértelmű megfogalmazása.
-- [ ] Külső komponensek és fordítási eredet szükséges jogi ellenőrzéseinek lezárása.
-- [ ] Szükség esetén további kompatibilitási próba, illetve a még nem próbált részek világos megjelölése.
-- [ ] A projektgazda külön engedélye a publikus GitHub-tárhelyre és a kiadás publikálására.
