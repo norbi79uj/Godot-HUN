@@ -35,6 +35,13 @@ Az itt tárolt `.po` állományok **munkakatalógusok**, nem a teljes, hivatalos
 
 A tervezett nyilvános kiadás után hibabejelentéseket és pull requesteket szeretnénk fogadni. A javaslatok ellenőrzése után kerülhetnek be a fordításba. Programozási azonosítók (például `Node2D`, `global_position`) maradjanak változatlanok.
 
+**Két külön hibabejelentő kész:**
+
+- [Fordítási hiba – hibás vagy hiányzó magyar szöveg](.github/ISSUE_TEMPLATE/forditasi_hiba.md)
+- [Működési hiba – indítás, fagyás, programhiba](.github/ISSUE_TEMPLATE/mukodesi_hiba.md)
+
+A közösségi bejelentések a tárhely nyilvános megnyitása után használhatók. Az útmutató: [CONTRIBUTING.md](CONTRIBUTING.md).
+
 ## Biztonság és terjesztés
 
 - A jelenlegi tárhely **privát**; a magyar Windows-kiadás még nincs közzétéve.
