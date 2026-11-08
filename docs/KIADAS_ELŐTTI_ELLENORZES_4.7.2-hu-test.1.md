@@ -32,6 +32,18 @@ A `COPYRIGHT.txt` a Godot és külső függőségek eltérő licenceit is részl
 - [x] A hivatalos szerkesztő- és osztályreferencia-fordítások `msgid`/`msgstr` tartalma MIT-licencű: https://github.com/godotengine/godot-editor-l10n
 - [x] A Godot hivatalos megfelelőségi útmutatója a motorhoz csatolt `COPYRIGHT.txt`-t javasolja a külső könyvtárak nyilatkozatainak dokumentálására: https://docs.godotengine.org/en/stable/about/complying_with_licenses.html
 
+### Konkrét javítás a terjesztési ZIP-hez
+
+**A jelenlegi négyfájlos ZIP nem tartalmazza a projekt saját `LICENSE-TRANSLATIONS.txt` nyilatkozatát.** Az eredeti Godot `LICENSE.txt` és `COPYRIGHT.txt` már benne van. Az MIT licencszöveg és a szerzői jogi nyilatkozat megőrzése a fordítási tartalom továbbterjesztésekor is fontos; ezért a **nyilvános terjesztés előtt ajánlott a `LICENSE-TRANSLATIONS.txt` fájlt is beletenni** a ZIP-be, változatlan néven. A forrásban lévő eredeti licenceket nem szabad eltávolítani.
+
+- [ ] A ZIP-be mellékelni a saját `LICENSE-TRANSLATIONS.txt` fájlt a repó gyökeréből.
+- [ ] A ZIP-ben lévő magyar `OLVASS_EL_Godot_HUN_4.7.2.txt` szövegét a megjelenésnek megfelelően frissíteni, mert jelenleg még a privát tárhelyről ír.
+- [ ] A frissített ZIP-et helyben ellenőrizni és **a GitHub Release-piszkozatban** lecserélni, majd a méretet és az SHA-256 összeget a `SHA256SUMS.txt` fájlban és a kiadási szövegben hozzáigazítani.
+
+Ezek **csomagolási és dokumentációs teendők**, a működő Godot EXE újrafordítását nem igénylik. Eddig **nem** módosítottuk az eredeti ZIP-et vagy a GitHub Release-mellékletet.
+
+Hivatalos tájékoztatás: https://godotengine.org/license/ és https://docs.godotengine.org/en/stable/about/complying_with_licenses.html
+
 ### Ami még nincs lezárva
 
 **Megkülönböztetés:** a hivatalos Godot-útmutató szerinti licencfájlok meglétét már igazoltuk; az opcionális függőség-audit nem jelenti automatikusan, hogy hiányzik egy kötelező irat. A `COPYRIGHT.txt` megőrzése a Godot hivatalosan ajánlott eljárása. Forrás: https://docs.godotengine.org/en/stable/about/complying_with_licenses.html
