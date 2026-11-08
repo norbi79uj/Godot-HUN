@@ -10,7 +10,7 @@ A projekt célja a Godot játékmotor magyar nyelvű használatának megkönnyí
 
 **A kiadás jelenleg még nem nyilvános.** Amikor a `4.7.2-hu-test.1` tesztkiadást publikáljuk:
 
-1. A GitHub **Releases** oldaláról töltsd le a `Godot-HUN-4.7.2-Teszt.zip` csomagot.
+1. A GitHub **Releases** oldaláról töltsd le a `Godot-HUN-4.7.2-Teszt.1.zip` csomagot.
 2. Csomagold ki **külön mappába**. Ne írd felül a meglévő Godot-telepítésedet.
 3. Indítsd a `godot.windows.editor.x86_64.exe` fájlt.
 4. A beépített **F1-súgóban** keresd meg például a `Node2D` osztályt. A magyar súgó **részleges**; sok rész továbbra is angol.
