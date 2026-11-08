@@ -1,10 +1,4 @@
-# Kiadási szöveg – Godot HUN 4.7.2-hu-test.1
-
-> **ELŐKÉSZÍTETT SZÖVEG – NEM PUBLIKÁLT KIADÁS.**
->
-> Ezt a dokumentumot a későbbi GitHub Release-hez készítettük. A Release jelenleg piszkozat, a tárhely privát. Nyilvános megosztáshoz külön jóváhagyás és a függő ellenőrzések lezárása kell.
-
-## Godot HUN 4.7.2 – első részleges magyar F1-teszt
+# Godot HUN 4.7.2 – első részleges magyar F1-teszt
 
 A **Godot HUN** a Godot Engine **4.7.2-stable** forrására épülő **nem hivatalos**, Windows x86_64 tesztváltozat. A cél, hogy a Godot beépített **F1 osztályreferenciája** fokozatosan magyarul legyen olvasható.
 
