@@ -9,14 +9,14 @@
 - A Godot Engine 4.7.2-stable Windows x86_64 módosított, külön összeállított szerkesztője.
 - Részleges magyar beépített F1-osztálysúgó. A `Node2D` leírását és több metódusát sikeresen ellenőriztük magyarul.
 - Egyetlen EXE-fájl, amely önállóan elindult az eredeti fordítási mappától függetlenül.
-- `LICENSE.txt`, `COPYRIGHT.txt` és magyar `OLVASS_EL_Godot_HUN_4.7.2.txt` a ZIP-ben.
+- `LICENSE.txt`, `COPYRIGHT.txt`, `LICENSE-TRANSLATIONS.txt` és magyar `OLVASS_EL_Godot_HUN_4.7.2.txt` a ZIP-ben.
 
 ## Helyi ellenőrzések (2026-11-08)
 
 - [x] SCons-fordítás sikeres: `scons: done building targets.`
 - [x] A szerkesztő elindult a külön biztonsági mentésből.
 - [x] A Node2D osztály magyar dokumentációja megjelent.
-- [x] A négyfájlos ZIP sértetlen (`unzip -t`).
+- [x] A frissített ötfájlos ZIP sértetlen (`unzip -t`).
 - [x] A ZIP-ből új helyre kicsomagolt EXE elindult a felhasználó Windows-gépén.
 - [ ] Teszt külön, tiszta Windows-környezetben.
 - [ ] Teljesebb fordítási és működési teszt.
@@ -25,12 +25,13 @@
 
 ## Tartalom
 
-`Godot-HUN-4.7.2-Teszt.zip` – helyben elkészített ZIP. A ZIP-et **feltöltöttük a privát GitHub Release-piszkozathoz**, de a kiadást még nem publikáltuk. A feltöltött fájl mérete **81 579 340 bájt**, SHA-256: `aa421ee6dc8accf65c4f1b05f3594d3e9eec2db5d0a8b09657433990bd14533e`.
+`Godot-HUN-4.7.2-Teszt.1.zip` – helyben elkészített ZIP. A ZIP-et **feltöltöttük a privát GitHub Release-piszkozathoz**, de a kiadást még nem publikáltuk. A feltöltött fájl mérete **81 616 373 bájt**, SHA-256: `f44ff14ceb5f1fe8beb0746c0430547498961aa25ff77385504d19c93c346421`.
 
 A ZIP-ben:
 - `Godot-HUN-4.7.2-Teszt/godot.windows.editor.x86_64.exe`
 - `Godot-HUN-4.7.2-Teszt/LICENSE.txt`
 - `Godot-HUN-4.7.2-Teszt/COPYRIGHT.txt`
+- `Godot-HUN-4.7.2-Teszt/LICENSE-TRANSLATIONS.txt`
 - `Godot-HUN-4.7.2-Teszt/OLVASS_EL_Godot_HUN_4.7.2.txt`
 
 ## Korlátok
@@ -50,7 +51,7 @@ A GitHubon a `kiadasok/4.7.2-hu-test.1/SHA256SUMS.txt` tartalmazza a Release-hez
 Windows PowerShellben, a ZIP-et tartalmazó mappában:
 
 ```powershell
-(Get-FileHash -Algorithm SHA256 -Path '.\\Godot-HUN-4.7.2-Teszt.zip').Hash.ToLower()
+(Get-FileHash -Algorithm SHA256 -Path '.\\Godot-HUN-4.7.2-Teszt.1.zip').Hash.ToLower()
 ```
 
 A kapott érték egyezzen a `SHA256SUMS.txt` első mezőjével. Ha nem egyezik, ne futtasd a letöltött programot.
