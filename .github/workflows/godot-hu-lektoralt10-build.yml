@@ -44,7 +44,8 @@ jobs:
         shell: pwsh
         run: |
           New-Item -ItemType Directory -Force -Path 'Godot-HUN-4.7.2-Lektoralt10' | Out-Null
-          $exe = Get-ChildItem -Path 'godot-source/bin' -Filter '*.exe' | Select-Object -First 1
+          $exe = Get-Item 'godot-source/bin/godot.windows.editor.x86_64.exe' -ErrorAction Stop
+          if ($exe.Length -lt 30000000) { throw "Tul kicsi Godot editor EXE: $($exe.Length) byte" }
           if (-not $exe) { throw 'Nem keszult EXE a bin mappaban.' }
           Copy-Item $exe.FullName 'Godot-HUN-4.7.2-Lektoralt10/godot.windows.editor.x86_64.exe'
           Copy-Item 'godot-source/LICENSE.txt' 'Godot-HUN-4.7.2-Lektoralt10/LICENSE.txt'
@@ -60,6 +61,7 @@ jobs:
             'Forras: https://github.com/norbi79uj/Godot-HUN'
           )
           Compress-Archive -Path 'Godot-HUN-4.7.2-Lektoralt10' -DestinationPath 'Godot-HUN-4.7.2-Lektoralt10.zip' -Force
+          if ((Get-Item 'Godot-HUN-4.7.2-Lektoralt10.zip').Length -lt 10000000) { throw 'Tul kicsi teszt ZIP, hibas csomagolas.' }
           (Get-FileHash 'Godot-HUN-4.7.2-Lektoralt10.zip' -Algorithm SHA256).Hash.ToLower() |
             Set-Content -Path 'Godot-HUN-4.7.2-Lektoralt10.sha256.txt'
 
