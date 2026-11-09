@@ -29,5 +29,7 @@ jobs:
         run: python3 -m unittest discover -s forditas -p 'test_*.py' -v
       - name: Fordítások és jelölések ellenőrzése
         run: python3 forditas/ellenorzes.py --require-msgfmt
+      - name: Lektorált 10. munkafordítás külön ellenőrzése
+        run: python3 forditas/ellenorzes_lektoralt.py
       - name: Fordítási statisztika a futás összefoglalójában
         run: python3 forditas/statisztika.py >> "$GITHUB_STEP_SUMMARY"
