@@ -4153,12 +4153,12 @@ msgstr "A [member texture] méretezési tényezője."
 #. LightOccluder2D.brief
 #: doc/classes/LightOccluder2D.xml
 msgid "Occludes light cast by a Light2D, casting shadows."
-msgstr "Kitakarja a [Light2D] által kibocsátott fényt, így árnyékot hoz létre."
+msgstr "Kitakarja a Light2D által kibocsátott fényt, így árnyékot hoz létre."
 
 #. LightOccluder2D.description
 #: doc/classes/LightOccluder2D.xml
 msgid "Occludes light cast by a Light2D, casting shadows. The LightOccluder2D must be provided with an [OccluderPolygon2D] in order for the shadow to be computed."
-msgstr "Kitakarja a [Light2D] által kibocsátott fényt, így árnyékot hoz létre. Az árnyék kiszámításához a LightOccluder2D csomóponthoz [OccluderPolygon2D] erőforrást kell rendelni."
+msgstr "Kitakarja a Light2D által kibocsátott fényt, így árnyékot hoz létre. Az árnyék kiszámításához a LightOccluder2D csomóponthoz [OccluderPolygon2D] erőforrást kell rendelni."
 
 #. LightOccluder2D.occluder
 #: doc/classes/LightOccluder2D.xml
