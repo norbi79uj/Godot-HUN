@@ -31,5 +31,7 @@ jobs:
         run: python3 forditas/ellenorzes.py --require-msgfmt
       - name: Lektorált 10. munkafordítás külön ellenőrzése
         run: python3 forditas/ellenorzes_lektoralt.py
+      - name: Lektorált 11. bővítés ellenőrzése (42 új bejegyzés)
+        run: python3 forditas/ellenorzes_lektoralt_11.py
       - name: Fordítási statisztika a futás összefoglalójában
         run: python3 forditas/statisztika.py >> "$GITHUB_STEP_SUMMARY"
