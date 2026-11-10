@@ -1,0 +1,55 @@
+name: Godot HUN - Lektoralt 10 tesztkiadas kozzetetele
+
+on:
+  push:
+    paths:
+      - '.github/workflows/kozzetetel-lektoralt10.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  kozzetetel:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Kizarolag a jo munkaverzio ellenorzese
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -eu
+          release_json=$(gh api "repos/${{ github.repository }}/releases/440130717")
+          echo "$release_json" | jq -e '
+            .id == 440130717 and
+            .tag_name == "4.7.2-hu-lektoralt10-preview" and
+            .draft == true and
+            .prerelease == true and
+            ([.assets[] | select(.name == "Godot-HUN-4.7.2-Lektoralt10.zip" and .size > 50000000)] | length) == 1 and
+            ([.assets[] | select(.name == "Godot-HUN-4.7.2-Lektoralt10.sha256.txt" and .size > 0)] | length) == 1
+          '
+          cat > release-notes.md <<'NOTES'
+          ## Godot HUN 4.7.2 – Lektorált 10 – nyilvános tesztkiadás
+
+          **Nem hivatalos, fejlesztés alatt álló magyar Godot 4.7.2 (Windows x86-64) szerkesztő.**
+          A magyarítás jelenleg részleges. A Godot F1 osztálysúgójának egy része már magyar, de több súgóleírás, az Inspector és egyes szerkesztőfeliratok még angolok. A program működése tesztelés alatt áll, nem végleges kiadás.
+
+          ### Letöltés és próba
+          1. Az alábbi *Assets* résznél töltsd le a **Godot-HUN-4.7.2-Lektoralt10.zip** csomagot.
+          2. Ellenőrizd a ZIP SHA-256 ellenőrzőösszegét a mellékelt **Godot-HUN-4.7.2-Lektoralt10.sha256.txt** fájl alapján.
+          3. Bontsd ki egy külön mappába, és ha a biztonsági ellenőrzések nem jeleznek problémát, indítsd a `godot.windows.editor.x86_64.exe` fájlt. A meglévő Godotot ne írd felül.
+          4. Az F1 súgóban nyisd meg például a `Sprite2D` osztályt.
+
+          ### Biztonság
+          A kiadás ZIP-je egyezik a korábban elkészült és ellenőrzőösszeggel azonosított tesztcsomaggal. Egy Microsoft Defender-felhasználói vizsgálat és egy GitHubon futtatott ClamAV-vizsgálat (5 fájl, 0 találat) nem jelzett kártevőt. Ezek **nem garantálják a fájl teljes biztonságát**. A Firefox egy korábbi, GitHub Actionsből letöltött ZIP-re riasztást adott; ennek okát tovább vizsgáljuk. **Ne kapcsold ki és ne kerüld meg a biztonsági védelmeket.**
+
+          ### Licenc
+          A Godot motor MIT-licencű, a kísérő licenceket és szerzői jogi tájékoztatókat a csomag tartalmazza. A magyarítás közösségi, nem hivatalos tesztprojekt.
+          NOTES
+          gh release edit 4.7.2-hu-lektoralt10-preview \
+            --repo "${{ github.repository }}" \
+            --draft=false \
+            --prerelease \
+            --title "Godot HUN 4.7.2 - Lektoralt 10 (TESZT)" \
+            --notes-file release-notes.md
+          test "$(gh api "repos/${{ github.repository }}/releases/440130717" --jq '.draft')" = "false"
+          echo "Tesztkiadas kozzeteve: https://github.com/${{ github.repository }}/releases/tag/4.7.2-hu-lektoralt10-preview" >> "$GITHUB_STEP_SUMMARY"
