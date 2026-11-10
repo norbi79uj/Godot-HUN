@@ -51,7 +51,7 @@ jobs:
       - name: EXE es ZIP virusvizsgalat
         run: |
           set +e
-          clamscan --infected --recursive extracted > /tmp/clamav.txt 2>&1
+          clamscan --infected --recursive --max-filesize=250M --max-scansize=400M --alert-exceeds-max=yes extracted > /tmp/clamav.txt 2>&1
           result=$?
           cat /tmp/clamav.txt
           grep -E 'Known viruses:|Scanned files:|Infected files:' /tmp/clamav.txt >> "$GITHUB_STEP_SUMMARY" || true
