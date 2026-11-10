@@ -1,0 +1,51 @@
+name: Godot HUN - biztonsagos Release-piszkozat elokeszitese
+
+on:
+  push:
+    paths:
+      - '.github/workflows/release-piszkozat-elokeszites.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  elokeszites:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Tesztelt programcsomag letoltese
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p preview
+          gh run download 42615351156 --repo "${{ github.repository }}" --name Godot-HUN-4.7.2-Lektoralt10 --dir preview
+          ls -lh preview
+
+      - name: ZIP es SHA-256 ellenorzese
+        run: |
+          set -eu
+          zip_file=preview/Godot-HUN-4.7.2-Lektoralt10.zip
+          sha_file=preview/Godot-HUN-4.7.2-Lektoralt10.sha256.txt
+          test -s "$zip_file"
+          test -s "$sha_file"
+          actual=$(sha256sum "$zip_file" | awk '{print $1}')
+          expected=$(tr -d '\r\n ' < "$sha_file" | tr '[:upper:]' '[:lower:]')
+          test "$actual" = "$expected"
+          test "$(stat -c %s "$zip_file")" -gt 50000000
+          unzip -t "$zip_file" >/dev/null
+          echo "A felkeszitett release es a korabban ellenorzott build ZIP-je egyezik." >> "$GITHUB_STEP_SUMMARY"
+          echo "SHA-256: $actual" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Nem nyilvanos Release piszkozat letrehozasa
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          tag='4.7.2-hu-lektoralt10-preview'
+          if gh release view "$tag" --repo "${{ github.repository }}" >/dev/null 2>&1; then
+            echo "Mar letezik a Release. Nem modositjuk." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          gh release create "$tag"             preview/Godot-HUN-4.7.2-Lektoralt10.zip             preview/Godot-HUN-4.7.2-Lektoralt10.sha256.txt             --repo "${{ github.repository }}"             --title "Godot HUN 4.7.2 - Lektoralt 10 (TESZT, nem nyilvanos)"             --target "${{ github.sha }}"             --draft             --prerelease             --notes "NEM HIVATALOS, RESZLEGES MAGYAR GODOT F1-SUGO. A korabbi teszt build valtozatlan ZIP-je, amely sikeres forditasi ellenorzesen es ClamAV vizsgalaton ment at. A negativ virusvizsgalat nem garantalja a biztonsagot. Jelenleg csak kiadasi piszkozat, Firefox letoltesi riasztas tesztelese elott NEM publikalandO. Ne irja felul a regi Godot telepitest."
+          echo "Nem nyilvanos, piszkozat kiadas elokeszitve, nem publikaltuk." >> "$GITHUB_STEP_SUMMARY"
