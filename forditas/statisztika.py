@@ -9,7 +9,7 @@ from collections import Counter
 from pathlib import Path
 import re
 
-CATALOG = Path(__file__).with_name("Godot_4_7_2_hu_LEKTORALT_11.po")
+CATALOG = Path(__file__).with_name("Godot_4_7_2_hu_LEKTORALT_12.po")
 CLASS = re.compile(r"(?m)^#\. ([A-Za-z_][A-Za-z0-9_]*)\.")
 MSGID = re.compile(r'(?m)^msgid "(?:\\.|[^"\\])*"$')
 MSGSTR = re.compile(r'(?m)^msgstr "((?:\\.|[^"\\])*)"$')
