@@ -1,0 +1,83 @@
+name: Godot HUN - biztonsagi elovizsgalat
+on:
+  push:
+    paths:
+      - '.github/workflows/biztonsagi-elovizsgalat.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  ellenorzes:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - name: Legutobbi elfogadott Windows-artifact lekerese
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p download
+          gh run download 42615351156 --repo "${{ github.repository }}" --name Godot-HUN-4.7.2-Lektoralt10 --dir download
+          ls -lh download
+
+      - name: Belso ZIP ellenorzese es EXE azonositas
+        run: |
+          set -eu
+          test -s download/Godot-HUN-4.7.2-Lektoralt10.zip
+          test -s download/Godot-HUN-4.7.2-Lektoralt10.sha256.txt
+          actual=$(sha256sum download/Godot-HUN-4.7.2-Lektoralt10.zip | awk '{print $1}')
+          expected=$(tr -d '\r\n ' < download/Godot-HUN-4.7.2-Lektoralt10.sha256.txt | tr '[:upper:]' '[:lower:]')
+          test "$actual" = "$expected"
+          unzip -t download/Godot-HUN-4.7.2-Lektoralt10.zip > /tmp/zipcheck.log
+          mkdir extracted
+          unzip -q download/Godot-HUN-4.7.2-Lektoralt10.zip -d extracted
+          exe=extracted/Godot-HUN-4.7.2-Lektoralt10/godot.windows.editor.x86_64.exe
+          test -f "$exe"
+          test "$(stat -c %s "$exe")" -gt 30000000
+          file "$exe" | tee /tmp/exeinfo.txt
+          sha256sum "$exe" | tee /tmp/exehash.txt
+          echo "ZIP_SHA256=$actual" >> "$GITHUB_STEP_SUMMARY"
+          echo "EXE_SHA256=$(cut -d' ' -f1 /tmp/exehash.txt)" >> "$GITHUB_STEP_SUMMARY"
+          echo "ZIP integrity and full-size editor EXE checks passed." >> "$GITHUB_STEP_SUMMARY"
+
+      - name: ClamAV telepitese es alairasok frissitese
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq clamav clamav-freshclam
+          sudo systemctl stop clamav-freshclam || true
+          sudo timeout 180 freshclam --stdout 2>&1 | tee /tmp/freshclam.log || true
+          clamscan --version
+
+      - name: EXE es ZIP virusvizsgalat
+        run: |
+          set +e
+          clamscan --infected --recursive extracted > /tmp/clamav.txt 2>&1
+          result=$?
+          cat /tmp/clamav.txt
+          grep -E 'Known viruses:|Scanned files:|Infected files:' /tmp/clamav.txt >> "$GITHUB_STEP_SUMMARY" || true
+          if [ "$result" -eq 1 ]; then
+            echo "ClamAV reported a detection; do not distribute." >> "$GITHUB_STEP_SUMMARY"
+            exit 1
+          elif [ "$result" -ne 0 ]; then
+            echo "ClamAV scan inconclusive or failed." >> "$GITHUB_STEP_SUMMARY"
+            exit 2
+          fi
+          if ! grep -E 'Known viruses: [1-9][0-9]+' /tmp/clamav.txt; then
+            echo "No usable ClamAV signatures confirmed; scan INCONCLUSIVE." >> "$GITHUB_STEP_SUMMARY"
+            exit 2
+          fi
+          echo "ClamAV did not detect a threat; this is not a guarantee of safety." >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Vizsgalati naplok megorzese
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: godot-hun-security-scan-report
+          path: |
+            /tmp/zipcheck.log
+            /tmp/exeinfo.txt
+            /tmp/exehash.txt
+            /tmp/freshclam.log
+            /tmp/clamav.txt
+          if-no-files-found: ignore
+          retention-days: 14
