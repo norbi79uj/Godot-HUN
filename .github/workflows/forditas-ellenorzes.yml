@@ -39,5 +39,7 @@ jobs:
         run: python3 forditas/ellenorzes_lektoralt_13.py
       - name: Lektorált 14. bővítés ellenőrzése (66 új bejegyzés)
         run: python3 forditas/ellenorzes_lektoralt_14.py
+      - name: Lektorált 15. bővítés ellenőrzése (39 új bejegyzés)
+        run: python3 forditas/ellenorzes_lektoralt_15.py
       - name: Fordítási statisztika a futás összefoglalójában
         run: python3 forditas/statisztika.py >> "$GITHUB_STEP_SUMMARY"
