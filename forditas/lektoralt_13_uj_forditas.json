@@ -24,7 +24,7 @@
     "FileAccess.get_path_absolute": "A jelenleg megnyitott fájl abszolút útvonalát [String] formájában adja vissza.",
     "FileAccess.get_position": "Visszaadja a fájlmutató pozícióját bájtokban, a fájl elejétől számítva. Ez a [method seek] vagy [method seek_end] metódussal beállított, valamint az olvasási és írási műveletek során előrehaladó mutató.",
     "FileAccess.get_read_only_attribute": "[code]true[/code] értéket ad vissza, ha a megadott útvonalon található fájlon be van állítva a [b]csak olvasható[/b] attribútum.\n[b]Megjegyzés:[/b] A metódus iOS, BSD, macOS és Windows rendszereken érhető el.",
-    "FileAccess.get_sha256": "A megadott útvonalon lévő fájl SHA-256-ellenőrzőösszegét adja vissza [String] formájában, hiba esetén pedig üres karakterláncot.",
+    "FileAccess.get_sha256": "Visszaadja a megadott útvonalon lévő fájl SHA-256-ellenőrzőösszegét [String] formájában, hiba esetén pedig üres [String] értéket.",
     "FileAccess.get_size": "Visszaadja a megadott útvonalon lévő fájl méretét bájtokban, hiba esetén pedig [code]-1[/code] értéket.",
     "FileAccess.get_unix_permissions": "Visszaadja a fájl UNIX-jogosultságait.\n[b]Megjegyzés:[/b] A metódus iOS, Linux/BSD és macOS rendszereken érhető el.",
     "FileAccess.is_open": "[code]true[/code] értéket ad vissza, ha a fájl jelenleg nyitva van.",
