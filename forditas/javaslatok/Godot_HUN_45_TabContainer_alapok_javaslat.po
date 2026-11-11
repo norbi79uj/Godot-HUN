@@ -1,0 +1,100 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. TabContainer.brief
+#: doc/classes/TabContainer.xml
+msgid "A container that creates a tab for each child control, displaying only the active tab's control."
+msgstr "Olyan tároló, amely minden gyermek vezérlőelemhez külön fület hoz létre, és csak az aktív fül tartalmát jeleníti meg."
+
+#. TabContainer.description
+#: doc/classes/TabContainer.xml
+msgid ""
+"Arranges child controls into a tabbed view, creating a tab for each one. The active tab's corresponding control is made visible, while all other child controls are hidden. Ignores non-control children.\n"
+"[b]Note:[/b] The drawing of the clickable tabs is handled by this node; [TabBar] is not needed."
+msgstr ""
+"A gyermek vezérlőelemeket fülekre osztva jeleníti meg, és mindegyikhez külön fület hoz létre. Az aktív fülhöz tartozó vezérlőelem látható, a többi gyermek vezérlőelem rejtve marad. A nem vezérlő típusú gyermekeket figyelmen kívül hagyja.\n"
+"[b]Megjegyzés:[/b] A kattintható fülek megjelenítését ez a csomópont kezeli; külön [TabBar] nem szükséges."
+
+#. TabContainer.get_current_tab_control
+#: doc/classes/TabContainer.xml
+msgid "Returns the child [Control] node located at the active tab index."
+msgstr "Visszaadja az aktív fül indexéhez tartozó gyermek [Control] csomópontot."
+
+#. TabContainer.get_previous_tab
+#: doc/classes/TabContainer.xml
+msgid "Returns the previously active tab index."
+msgstr "Visszaadja a korábban aktív fül indexét."
+
+#. TabContainer.get_tab_button_icon
+#: doc/classes/TabContainer.xml
+msgid "Returns the button icon from the tab at index [param tab_idx]."
+msgstr "Visszaadja a [param tab_idx] indexű fül gombikonját."
+
+#. TabContainer.get_tab_control
+#: doc/classes/TabContainer.xml
+msgid "Returns the [Control] node from the tab at index [param tab_idx]."
+msgstr "Visszaadja a [param tab_idx] indexű fülhöz tartozó [Control] csomópontot."
+
+#. TabContainer.get_tab_count
+#: doc/classes/TabContainer.xml
+msgid "Returns the number of tabs."
+msgstr "Visszaadja a fülek számát."
+
+#. TabContainer.get_tab_icon
+#: doc/classes/TabContainer.xml
+msgid "Returns the [Texture2D] for the tab at index [param tab_idx] or [code]null[/code] if the tab has no [Texture2D]."
+msgstr "Visszaadja a [param tab_idx] indexű fül [Texture2D] ikonját, vagy [code]null[/code] értéket, ha nincs hozzárendelt [Texture2D]."
+
+#. TabContainer.get_tab_icon_max_width
+#: doc/classes/TabContainer.xml
+msgid "Returns the maximum allowed width of the icon for the tab at index [param tab_idx]."
+msgstr "Visszaadja a [param tab_idx] indexű fül ikonjának megengedett legnagyobb szélességét."
+
+#. TabContainer.get_tab_idx_at_point
+#: doc/classes/TabContainer.xml
+msgid "Returns the index of the tab at local coordinates [param point]. Returns [code]-1[/code] if the point is outside the control boundaries or if there's no tab at the queried position."
+msgstr "Visszaadja a [param point] helyi koordinátán található fül indexét. [code]-1[/code] értéket ad vissza, ha a pont a vezérlőelem határain kívül esik, vagy a megadott helyen nincs fül."
+
+#. TabContainer.get_tab_idx_from_control
+#: doc/classes/TabContainer.xml
+msgid "Returns the index of the tab tied to the given [param control]. The control must be a child of the [TabContainer]."
+msgstr "Visszaadja a megadott [param control] vezérlőelemhez tartozó fül indexét. A vezérlőelemnek a [TabContainer] gyermekének kell lennie."
+
+#. TabContainer.get_tab_metadata
+#: doc/classes/TabContainer.xml
+msgid "Returns the metadata value set to the tab at index [param tab_idx] using [method set_tab_metadata]. If no metadata was previously set, returns [code]null[/code] by default."
+msgstr "Visszaadja a [param tab_idx] indexű fülhöz a [method set_tab_metadata] metódussal beállított metaadatot. Ha korábban nem állítottak be metaadatot, alapértelmezetten [code]null[/code] értéket ad vissza."
+
+#. TabContainer.get_tab_title
+#: doc/classes/TabContainer.xml
+msgid "Returns the title of the tab at index [param tab_idx]. Tab titles default to the name of the indexed child node, but this can be overridden with [method set_tab_title]."
+msgstr "Visszaadja a [param tab_idx] indexű fül címét. Alapértelmezés szerint a fül címe a megfelelő gyermekcsomópont neve, de a [method set_tab_title] metódussal felülírható."
+
+#. TabContainer.get_tab_tooltip
+#: doc/classes/TabContainer.xml
+msgid "Returns the tooltip text of the tab at index [param tab_idx]."
+msgstr "Visszaadja a [param tab_idx] indexű fül eszköztippjének szövegét."
+
+#. TabContainer.is_tab_disabled
+#: doc/classes/TabContainer.xml
+msgid "Returns [code]true[/code] if the tab at index [param tab_idx] is disabled."
+msgstr "[code]true[/code] értéket ad vissza, ha a [param tab_idx] indexű fül le van tiltva."
+
+#. TabContainer.is_tab_hidden
+#: doc/classes/TabContainer.xml
+msgid "Returns [code]true[/code] if the tab at index [param tab_idx] is hidden."
+msgstr "[code]true[/code] értéket ad vissza, ha a [param tab_idx] indexű fül rejtett."
+
+#. TabContainer.select_next_available
+#: doc/classes/TabContainer.xml
+msgid "Selects the first available tab with greater index than the currently selected. Returns [code]true[/code] if tab selection changed."
+msgstr "Kijelöli az aktuálisnál nagyobb indexű, első elérhető fület. Ha megváltozott a kijelölés, [code]true[/code] értéket ad vissza."
+
+#. TabContainer.select_previous_available
+#: doc/classes/TabContainer.xml
+msgid "Selects the first available tab with lower index than the currently selected. Returns [code]true[/code] if tab selection changed."
+msgstr "Kijelöli az aktuálisnál kisebb indexű, első elérhető fület. Ha megváltozott a kijelölés, [code]true[/code] értéket ad vissza."
