@@ -1,0 +1,85 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. SplitContainer.brief
+#: doc/classes/SplitContainer.xml
+msgid "A container that arranges child controls horizontally or vertically and provides grabbers for adjusting the split ratios between them."
+msgstr "Olyan tároló, amely vízszintesen vagy függőlegesen rendezi el a gyermek vezérlőelemeket, és húzható fogantyúkkal teszi állíthatóvá a köztük lévő felosztást."
+
+#. SplitContainer.description
+#: doc/classes/SplitContainer.xml
+msgid "A container that arranges child controls horizontally or vertically and creates grabbers between them. The grabbers can be dragged around to change the size relations between the child controls."
+msgstr "Olyan tároló, amely vízszintesen vagy függőlegesen rendezi el a gyermek vezérlőelemeket, és húzható fogantyúkat helyez közéjük. A fogantyúk elhúzásával módosítható az elemek egymáshoz viszonyított mérete."
+
+#. SplitContainer.collapsed
+#: doc/classes/SplitContainer.xml
+msgid "If [code]true[/code], the draggers will be disabled and the children will be sized as if all [member split_offsets] were [code]0[/code]."
+msgstr "Ha [code]true[/code], a húzófogantyúk letiltódnak, és a gyermekelemek úgy méreteződnek, mintha minden [member split_offsets] értéke [code]0[/code] lenne."
+
+#. SplitContainer.drag_area_highlight_in_editor
+#: doc/classes/SplitContainer.xml
+msgid "Highlights the drag area [Rect2] so you can see where it is during development. The drag area is gold if [member dragging_enabled] is [code]true[/code], and red if [code]false[/code]."
+msgstr "Kiemeli a húzható területet ([Rect2]), hogy szerkesztés közben látható legyen a helye. A terület aranyszínű, ha a [member dragging_enabled] értéke [code]true[/code], és piros, ha [code]false[/code]."
+
+#. SplitContainer.drag_area_margin_begin
+#: doc/classes/SplitContainer.xml
+msgid "Reduces the size of the drag area and split bar [theme_item split_bar_background] at the beginning of the container."
+msgstr "Csökkenti a húzható terület és az elválasztósáv [theme_item split_bar_background] méretét a tároló elején."
+
+#. SplitContainer.drag_area_margin_end
+#: doc/classes/SplitContainer.xml
+msgid "Reduces the size of the drag area and split bar [theme_item split_bar_background] at the end of the container."
+msgstr "Csökkenti a húzható terület és az elválasztósáv [theme_item split_bar_background] méretét a tároló végén."
+
+#. SplitContainer.drag_area_offset
+#: doc/classes/SplitContainer.xml
+msgid "Shifts the drag area in the axis of the container to prevent the drag area from overlapping the [ScrollBar] or other selectable [Control] of a child node."
+msgstr "A tároló tengelye mentén eltolja a húzható területet, hogy ne fedje át a gyermekcsomópont [ScrollBar] görgetősávját vagy más kijelölhető [Control] elemét."
+
+#. SplitContainer.dragger_visibility
+#: doc/classes/SplitContainer.xml
+msgid "Determines the dragger's visibility. This property does not determine whether dragging is enabled or not. Use [member dragging_enabled] for that."
+msgstr "Meghatározza a húzófogantyú láthatóságát. Nem azt szabályozza, hogy a húzás engedélyezett-e; erre a [member dragging_enabled] tulajdonság szolgál."
+
+#. SplitContainer.dragging_enabled
+#: doc/classes/SplitContainer.xml
+msgid "Enables or disables split dragging."
+msgstr "Engedélyezi vagy letiltja az elválasztó húzását."
+
+#. SplitContainer.split_offset
+#: doc/classes/SplitContainer.xml
+msgid "The first element of [member split_offsets]."
+msgstr "A [member split_offsets] tömb első eleme."
+
+#. SplitContainer.vertical
+#: doc/classes/SplitContainer.xml
+msgid ""
+"If [code]true[/code], the [SplitContainer] will arrange its children vertically, rather than horizontally.\n"
+"Can't be changed when using [HSplitContainer] and [VSplitContainer]."
+msgstr ""
+"Ha [code]true[/code], a [SplitContainer] vízszintes helyett függőlegesen rendezi el a gyermekelemeit.\n"
+"A [HSplitContainer] és a [VSplitContainer] használatakor ez nem módosítható."
+
+#. HSplitContainer.brief
+#: doc/classes/HSplitContainer.xml
+msgid "A container that splits two child controls horizontally and provides a grabber for adjusting the split ratio."
+msgstr "Olyan tároló, amely két gyermek vezérlőelemet vízszintesen választ el, és húzófogantyúval teszi állíthatóvá a méretarányukat."
+
+#. HSplitContainer.description
+#: doc/classes/HSplitContainer.xml
+msgid "A container that accepts only two child controls, then arranges them horizontally and creates a divisor between them. The divisor can be dragged around to change the size relation between the child controls."
+msgstr "Olyan tároló, amely legfeljebb két gyermek vezérlőelemet fogad, vízszintesen rendezi el őket, és elválasztót helyez közéjük. Az elválasztó húzásával módosítható az elemek egymáshoz viszonyított mérete."
+
+#. VSplitContainer.brief
+#: doc/classes/VSplitContainer.xml
+msgid "A container that splits two child controls vertically and provides a grabber for adjusting the split ratio."
+msgstr "Olyan tároló, amely két gyermek vezérlőelemet függőlegesen választ el, és húzófogantyúval teszi állíthatóvá a méretarányukat."
+
+#. VSplitContainer.description
+#: doc/classes/VSplitContainer.xml
+msgid "A container that accepts only two child controls, then arranges them vertically and creates a divisor between them. The divisor can be dragged around to change the size relation between the child controls."
+msgstr "Olyan tároló, amely legfeljebb két gyermek vezérlőelemet fogad, függőlegesen rendezi el őket, és elválasztót helyez közéjük. Az elválasztó húzásával módosítható az elemek egymáshoz viszonyított mérete."
