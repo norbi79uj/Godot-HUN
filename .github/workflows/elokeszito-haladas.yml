@@ -1,0 +1,47 @@
+name: Fordítás-előkészítő és haladásfigyelő
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'forditas/Godot_4_7_2_hu_LEKTORALT_*.po'
+      - 'forditas/forditas_elokeszito.py'
+      - 'forditas/haladasfigyelo.py'
+      - 'forditas/test_bot_jelentesek.py'
+      - '.github/workflows/elokeszito-haladas.yml'
+  pull_request:
+    paths:
+      - 'forditas/Godot_4_7_2_hu_LEKTORALT_*.po'
+      - 'forditas/forditas_elokeszito.py'
+      - 'forditas/haladasfigyelo.py'
+      - 'forditas/test_bot_jelentesek.py'
+      - '.github/workflows/elokeszito-haladas.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  botok:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Botok egységtesztjei
+        run: python3 -m unittest discover -s forditas -p 'test_bot_jelentesek.py' -v
+      - name: Következő fordítási csomag
+        run: python3 forditas/forditas_elokeszito.py --limit 40 --output forditasi-csomag.md
+      - name: Haladásjelentés
+        run: python3 forditas/haladasfigyelo.py --output haladasjelentes.md
+      - name: GitHub összefoglaló
+        run: |
+          cat haladasjelentes.md >> "$GITHUB_STEP_SUMMARY"
+          printf '\n---\n\n' >> "$GITHUB_STEP_SUMMARY"
+          cat forditasi-csomag.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Jelentések letölthetők
+        uses: actions/upload-artifact@v4
+        with:
+          name: godot-hun-forditas-elokeszites-haladas
+          path: |
+            forditasi-csomag.md
+            haladasjelentes.md
+          retention-days: 30
