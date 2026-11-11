@@ -1,0 +1,46 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. MarginContainer.brief
+#: doc/classes/MarginContainer.xml
+msgid "A container that keeps a margin around its child controls."
+msgstr "Olyan tároló, amely margót hagy a gyermek vezérlőelemei körül."
+
+#. MarginContainer.margin_bottom
+#: doc/classes/MarginContainer.xml
+msgid "Offsets towards the inside direct children of the container by this amount of pixels from the bottom."
+msgstr "Ennyi képponttal beljebb helyezi a tároló közvetlen gyermekelemeit az alsó széltől."
+
+#. MarginContainer.margin_left
+#: doc/classes/MarginContainer.xml
+msgid "Offsets towards the inside direct children of the container by this amount of pixels from the left."
+msgstr "Ennyi képponttal beljebb helyezi a tároló közvetlen gyermekelemeit a bal széltől."
+
+#. MarginContainer.margin_right
+#: doc/classes/MarginContainer.xml
+msgid "Offsets towards the inside direct children of the container by this amount of pixels from the right."
+msgstr "Ennyi képponttal beljebb helyezi a tároló közvetlen gyermekelemeit a jobb széltől."
+
+#. MarginContainer.margin_top
+#: doc/classes/MarginContainer.xml
+msgid "Offsets towards the inside direct children of the container by this amount of pixels from the top."
+msgstr "Ennyi képponttal beljebb helyezi a tároló közvetlen gyermekelemeit a felső széltől."
+
+#. CenterContainer.brief
+#: doc/classes/CenterContainer.xml
+msgid "A container that keeps child controls in its center."
+msgstr "Olyan tároló, amely középen tartja a gyermek vezérlőelemeket."
+
+#. CenterContainer.description
+#: doc/classes/CenterContainer.xml
+msgid "[CenterContainer] is a container that keeps all of its child controls in its center at their minimum size."
+msgstr "A [CenterContainer] olyan tároló, amely minden gyermek vezérlőelemét a középpontjában, azok minimális méretén tartja."
+
+#. CenterContainer.use_top_left
+#: doc/classes/CenterContainer.xml
+msgid "If [code]true[/code], centers children relative to the [CenterContainer]'s top left corner."
+msgstr "Ha [code]true[/code], a gyermekelemeket a [CenterContainer] bal felső sarkához viszonyítva helyezi középre."
