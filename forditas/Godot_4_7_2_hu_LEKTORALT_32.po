@@ -5916,7 +5916,7 @@ msgstr "Ha [code]true[/code], a csomópont szélességén túlnyúló füleket e
 #. TabContainer.brief
 #: doc/classes/TabContainer.xml
 msgid "A container that creates a tab for each child control, displaying only the active tab's control."
-msgstr "Minden gyermek vezérlőelemhez fület létrehozó tároló, amely csak az aktív fülhöz tartozó vezérlőt jeleníti meg."
+msgstr "Olyan tároló, amely minden gyermek vezérlőelemhez külön fület hoz létre, és csak az aktív fül tartalmát jeleníti meg."
 
 #. TabContainer.description
 #: doc/classes/TabContainer.xml
@@ -5926,7 +5926,7 @@ msgstr "A gyermek vezérlőelemeket fülekre rendezi, minden gyermekhez egy fül
 #. TabContainer.get_current_tab_control
 #: doc/classes/TabContainer.xml
 msgid "Returns the child [Control] node located at the active tab index."
-msgstr "Visszaadja az aktív fül indexén található gyermek [Control] csomópontot."
+msgstr "Visszaadja az aktív fül indexéhez tartozó gyermek [Control] csomópontot."
 
 #. TabContainer.get_tab_count
 #: doc/classes/TabContainer.xml
@@ -6420,7 +6420,9 @@ msgstr "Visszaadja a [Popup] csomópont példányát, ha azt korábban beállít
 #. TabContainer.get_tab_bar
 #: doc/classes/TabContainer.xml
 msgid "Returns the [TabBar] contained in this container.\n[b]Warning:[/b] This is a required internal node, removing and freeing it or editing its tabs may cause a crash. If you wish to edit the tabs, use the methods provided in [TabContainer]."
-msgstr "Visszaadja a tárolóban található [TabBar] csomópontot.\n[b]Figyelmeztetés:[/b] Ez egy szükséges belső csomópont; eltávolítása és felszabadítása, illetve füleinek közvetlen szerkesztése összeomlást okozhat. A fülek módosításához a [TabContainer] által biztosított metódusokat használd."
+msgstr ""
+"Visszaadja a tárolóban található [TabBar] elemet.\n"
+"[b]Figyelmeztetés:[/b] Ez egy szükséges belső csomópont; eltávolítása, felszabadítása vagy füleinek közvetlen szerkesztése összeomlást okozhat. A fülek módosításához a [TabContainer] metódusait használd."
 
 
 #. TabContainer.get_tab_button_icon
@@ -6462,7 +6464,7 @@ msgstr "Ha a [param disabled] értéke [code]true[/code], letiltja a [param tab_
 #. TabContainer.set_tab_hidden
 #: doc/classes/TabContainer.xml
 msgid "If [param hidden] is [code]true[/code], hides the tab at index [param tab_idx], making it disappear from the tab area."
-msgstr "Ha a [param hidden] értéke [code]true[/code], elrejti a [param tab_idx] indexű fület a fülsávról."
+msgstr "Ha a [param hidden] értéke [code]true[/code], elrejti a [param tab_idx] indexű fület a fülsávból."
 
 
 #. ItemList.center_on_current
@@ -7135,7 +7137,7 @@ msgstr "Az egérmutató alatt lévő fül stílusa.\n[b]Megjegyzés:[/b] Ezt a s
 #. TabContainer.tabbar_background
 #: doc/classes/TabContainer.xml
 msgid "The style for the background fill of the [TabBar] area."
-msgstr "A [TabBar] területe háttérkitöltésének stílusa."
+msgstr "A [TabBar] terület háttérkitöltésének stílusa."
 
 #. ItemList.allow_reselect
 #: doc/classes/ItemList.xml
