@@ -1,0 +1,104 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. ScrollContainer.ensure_control_visible
+#: doc/classes/ScrollContainer.xml
+msgid ""
+"Ensures the given [param control] is visible (must be a direct or indirect child of the ScrollContainer). Used by [member follow_focus].\n"
+"[b]Note:[/b] This will not work on a node that was just added during the same frame. If you want to scroll to a newly added child, you must wait until the next frame using [signal SceneTree.process_frame]:\n"
+"[codeblock]\n"
+"add_child(child_node)\n"
+"await get_tree().process_frame\n"
+"ensure_control_visible(child_node)\n"
+"[/codeblock]"
+msgstr ""
+"Biztosítja, hogy a megadott [param control] látható legyen (a ScrollContainer közvetlen vagy közvetett gyermekének kell lennie). A [member follow_focus] használja.\n"
+"[b]Megjegyzés:[/b] Ez nem működik olyan csomóponton, amelyet ugyanabban a képkockában adtunk hozzá. Egy új gyermekelemhez görgetés előtt a [signal SceneTree.process_frame] segítségével meg kell várni a következő képkockát:\n"
+"[codeblock]\n"
+"add_child(child_node)\n"
+"await get_tree().process_frame\n"
+"ensure_control_visible(child_node)\n"
+"[/codeblock]"
+
+#. ScrollContainer.get_h_scroll_bar
+#: doc/classes/ScrollContainer.xml
+msgid ""
+"Returns the horizontal scrollbar [HScrollBar] of this [ScrollContainer].\n"
+"[b]Warning:[/b] This is a required internal node, removing and freeing it may cause a crash. If you wish to disable or hide a scrollbar, you can use [member horizontal_scroll_mode]."
+msgstr ""
+"Visszaadja a [ScrollContainer] vízszintes görgetősávját ([HScrollBar]).\n"
+"[b]Figyelmeztetés:[/b] Ez egy szükséges belső csomópont. Az eltávolítása és felszabadítása összeomlást okozhat. A görgetősáv letiltásához vagy elrejtéséhez a [member horizontal_scroll_mode] tulajdonságot használd."
+
+#. ScrollContainer.get_v_scroll_bar
+#: doc/classes/ScrollContainer.xml
+msgid ""
+"Returns the vertical scrollbar [VScrollBar] of this [ScrollContainer].\n"
+"[b]Warning:[/b] This is a required internal node, removing and freeing it may cause a crash. If you wish to disable or hide a scrollbar, you can use [member vertical_scroll_mode]."
+msgstr ""
+"Visszaadja a [ScrollContainer] függőleges görgetősávját ([VScrollBar]).\n"
+"[b]Figyelmeztetés:[/b] Ez egy szükséges belső csomópont. Az eltávolítása és felszabadítása összeomlást okozhat. A görgetősáv letiltásához vagy elrejtéséhez a [member vertical_scroll_mode] tulajdonságot használd."
+
+#. ScrollContainer.scroll_hint_mode
+#: doc/classes/ScrollContainer.xml
+msgid ""
+"The way which scroll hints (indicators that show that the content can still be scrolled in a certain direction) will be shown.\n"
+"[b]Note:[/b] Hints won't be shown if the content can be scrolled both vertically and horizontally."
+msgstr ""
+"A görgetési jelzések megjelenítési módja. Ezek a jelzések mutatják, hogy a tartalom egy adott irányba még tovább görgethető.\n"
+"[b]Megjegyzés:[/b] Ha a tartalom vízszintesen és függőlegesen is görgethető, a jelzések nem jelennek meg."
+
+#. ScrollContainer.scroll_horizontal_by_default
+#: doc/classes/ScrollContainer.xml
+msgid ""
+"If [code]true[/code], the mouse wheel scrolls the view horizontally, and holding [kbd]Shift[/kbd] scrolls vertically.\n"
+"If [code]false[/code] (default), the mouse wheel scrolls the view vertically, and holding [kbd]Shift[/kbd] scrolls horizontally."
+msgstr ""
+"Ha [code]true[/code], az egérgörgő vízszintesen görget, a [kbd]Shift[/kbd] nyomva tartásával pedig függőlegesen.\n"
+"Ha [code]false[/code] (alapértelmezett), az egérgörgő függőlegesen görget, a [kbd]Shift[/kbd] nyomva tartásával pedig vízszintesen."
+
+#. ScrollContainer.scroll_horizontal_custom_step
+#: doc/classes/ScrollContainer.xml
+msgid "Overrides the [member ScrollBar.custom_step] used when clicking the internal scroll bar's horizontal increment and decrement buttons or when using arrow keys when the [ScrollBar] is focused."
+msgstr "Felülírja a [member ScrollBar.custom_step] értékét, amelyet a belső görgetősáv vízszintes növelő- és csökkentőgombjai, illetve a nyílbillentyűk használnak, amikor a [ScrollBar] fókuszban van."
+
+#. ScrollContainer.scroll_vertical_custom_step
+#: doc/classes/ScrollContainer.xml
+msgid "Overrides the [member ScrollBar.custom_step] used when clicking the internal scroll bar's vertical increment and decrement buttons or when using arrow keys when the [ScrollBar] is focused."
+msgstr "Felülírja a [member ScrollBar.custom_step] értékét, amelyet a belső görgetősáv függőleges növelő- és csökkentőgombjai, illetve a nyílbillentyűk használnak, amikor a [ScrollBar] fókuszban van."
+
+#. ScrollContainer.scroll_started
+#: doc/classes/ScrollContainer.xml
+msgid ""
+"Emitted when scrolling starts when dragging the scrollable area [i]with a touch event[/i]. This signal is [i]not[/i] emitted when scrolling by dragging the scrollbar, scrolling with the mouse wheel or scrolling with keyboard/gamepad events.\n"
+"[b]Note:[/b] This signal is only emitted on Android or iOS, or on desktop/web platforms when [member ProjectSettings.input_devices/pointing/emulate_touch_from_mouse] is enabled."
+msgstr ""
+"Akkor bocsátódik ki, amikor a görgethető terület [i]érintéses húzásával[/i] megkezdődik a görgetés. A jelzés [i]nem[/i] bocsátódik ki a görgetősáv húzásakor, az egérgörgő használatakor, illetve billentyűzettel vagy játékvezérlővel történő görgetéskor.\n"
+"[b]Megjegyzés:[/b] Ez a jelzés csak Androidon vagy iOS-en, illetve asztali és webes platformon akkor bocsátódik ki, ha a [member ProjectSettings.input_devices/pointing/emulate_touch_from_mouse] engedélyezve van."
+
+#. ScrollContainer.scroll_ended
+#: doc/classes/ScrollContainer.xml
+msgid ""
+"Emitted when scrolling stops when dragging the scrollable area [i]with a touch event[/i]. This signal is [i]not[/i] emitted when scrolling by dragging the scrollbar, scrolling with the mouse wheel or scrolling with keyboard/gamepad events.\n"
+"[b]Note:[/b] This signal is only emitted on Android or iOS, or on desktop/web platforms when [member ProjectSettings.input_devices/pointing/emulate_touch_from_mouse] is enabled."
+msgstr ""
+"Akkor bocsátódik ki, amikor a görgethető terület [i]érintéses húzásával[/i] végzett görgetés leáll. A jelzés [i]nem[/i] bocsátódik ki a görgetősáv húzásakor, az egérgörgő használatakor, illetve billentyűzettel vagy játékvezérlővel történő görgetéskor.\n"
+"[b]Megjegyzés:[/b] Ez a jelzés csak Androidon vagy iOS-en, illetve asztali és webes platformon akkor bocsátódik ki, ha a [member ProjectSettings.input_devices/pointing/emulate_touch_from_mouse] engedélyezve van."
+
+#. ScrollContainer.SCROLL_MODE_RESERVE
+#: doc/classes/ScrollContainer.xml
+msgid "Combines [constant SCROLL_MODE_AUTO] and [constant SCROLL_MODE_SHOW_ALWAYS]. The scrollbar is only visible if necessary, but the content size is adjusted as if it was always visible. It's useful for ensuring that content size stays the same regardless if the scrollbar is visible."
+msgstr "A [constant SCROLL_MODE_AUTO] és a [constant SCROLL_MODE_SHOW_ALWAYS] működését egyesíti. A görgetősáv csak szükség esetén látható, de a tartalom méretezése úgy történik, mintha mindig megjelenne. Így a tartalom mérete a görgetősáv láthatóságától függetlenül változatlan maradhat."
+
+#. ScrollContainer.SCROLL_MODE_MAXIMIZE_FIRST
+#: doc/classes/ScrollContainer.xml
+msgid "Behaves like [constant SCROLL_MODE_AUTO], but makes the [ScrollContainer] report a minimum size based on its content (limited by [member Control.custom_maximum_size] when set on the corresponding axis). This allows it to grow first and only start scrolling once constrained."
+msgstr "A [constant SCROLL_MODE_AUTO] módhoz hasonlóan működik, de a [ScrollContainer] a tartalma alapján határozza meg a minimális méretét (amelyet az adott tengelyre beállított [member Control.custom_maximum_size] korlátozhat). Így először növekedhet, és csak akkor kezd görgetni, amikor már nincs elegendő hely."
+
+#. ScrollContainer.SCROLL_HINT_MODE_ALL
+#: doc/classes/ScrollContainer.xml
+msgid "Scroll hints will be shown at the top and bottom (if vertical), or left and right (if horizontal)."
+msgstr "A görgetési jelzések függőleges görgetésnél felül és alul, vízszintes görgetésnél bal és jobb oldalon jelennek meg."
