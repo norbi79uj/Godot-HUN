@@ -13,7 +13,7 @@ from pathlib import Path
 import re
 import sys
 
-from ellenorzes import parse
+from katalogus_olvaso import read_draft
 
 ROOT = Path(__file__).resolve().parent
 PRINTF = re.compile(r"%(?:\d+\$)?[-+#0 ]*(?:\d+|\*)?(?:\.(?:\d+|\*))?[hlLzjt]*[diuoxXfFeEgGaAcsp]")
@@ -70,17 +70,21 @@ def main() -> int:
     args = parser.parse_args()
     try:
         source_file = args.catalog or latest_catalog()
-        entries = parse(source_file)
+        entries = read_draft(source_file)
         glossary = json.loads((ROOT / "godot_szotar.json").read_text(encoding="utf-8"))
         errors = []
         for source, target in entries.items():
+            if not target:
+                continue  # Not yet translated; list as unfinished, not a structural error.
             for issue in placeholder_problems(source, target):
                 errors.append(f"{issue} | {source[:130]}")
-        warnings = glossary_warnings(entries, glossary)
+        warnings = glossary_warnings({s: t for s, t in entries.items() if t}, glossary)
+        untranslated = sum(not t for t in entries.values())
         lines = [
             "# Godot-HUN: szótárbot és hibavadász",
             "", f"- Katalógus: `{source_file.name}`",
-            f"- Ellenőrzött bejegyzések: **{len(entries)}**",
+            f"- Katalógusbejegyzések: **{len(entries)}**",
+            f"- Még üres magyar fordítások: **{untranslated}**",
             f"- Szerkezeti eltérések: **{len(errors)}**",
             f"- Szótári lektorálási javaslatok: **{len(warnings)}**",
             "",
