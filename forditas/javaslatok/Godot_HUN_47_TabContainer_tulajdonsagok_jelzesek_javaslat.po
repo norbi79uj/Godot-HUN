@@ -1,0 +1,149 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. TabContainer.all_tabs_in_front
+#: doc/classes/TabContainer.xml
+msgid "This doesn't do anything."
+msgstr "Ez a beállítás már nincs hatással a működésre."
+
+#. TabContainer.clip_tabs
+#: doc/classes/TabContainer.xml
+msgid "If [code]true[/code], tabs overflowing this node's width will be hidden, displaying two navigation buttons instead. Otherwise, this node's minimum size is updated so that all tabs are visible."
+msgstr "Ha [code]true[/code], a csomópont szélességén túlnyúló fülek rejtve maradnak, helyettük két navigációs gomb jelenik meg. Ellenkező esetben a csomópont minimális mérete úgy változik, hogy minden fül látható legyen."
+
+#. TabContainer.current_tab
+#: doc/classes/TabContainer.xml
+msgid ""
+"The current tab index. When set, this index's [Control] node's [code]visible[/code] property is set to [code]true[/code] and all others are set to [code]false[/code].\n"
+"A value of [code]-1[/code] means that no tab is selected."
+msgstr ""
+"Az aktuális fül indexe. Beállításakor az adott indexhez tartozó [Control] csomópont [code]visible[/code] tulajdonsága [code]true[/code] lesz, a többié pedig [code]false[/code].\n"
+"A [code]-1[/code] azt jelenti, hogy nincs kijelölt fül."
+
+#. TabContainer.deselect_enabled
+#: doc/classes/TabContainer.xml
+msgid ""
+"If [code]true[/code], all tabs can be deselected so that no tab is selected. Click on the [member current_tab] to deselect it.\n"
+"Only the tab header will be shown if no tabs are selected."
+msgstr ""
+"Ha [code]true[/code], minden fül kijelölése megszüntethető, így egyik sem marad kijelölve. Az aktuális fül kijelölésének megszüntetéséhez kattints a [member current_tab] fülre.\n"
+"Ha nincs kijelölt fül, csak a fülek fejléce látható."
+
+#. TabContainer.drag_to_rearrange_enabled
+#: doc/classes/TabContainer.xml
+msgid "If [code]true[/code], tabs can be rearranged with mouse drag."
+msgstr "Ha [code]true[/code], a fülek egérrel húzva átrendezhetők."
+
+#. TabContainer.switch_on_drag_hover
+#: doc/classes/TabContainer.xml
+msgid "If [code]true[/code], hovering over a tab while dragging something will switch to that tab. Does not have effect when hovering another tab to rearrange."
+msgstr "Ha [code]true[/code], egy elem húzása közben a mutatót egy fül fölé helyezve a tároló arra a fülre vált. Ez nem érvényes, amikor egy másik fület húzunk átrendezés céljából."
+
+#. TabContainer.tab_alignment
+#: doc/classes/TabContainer.xml
+msgid "The position at which tabs will be placed."
+msgstr "Meghatározza, hogy a fülek hol helyezkedjenek el."
+
+#. TabContainer.tab_focus_mode
+#: doc/classes/TabContainer.xml
+msgid "The focus access mode for the internal [TabBar] node."
+msgstr "A belső [TabBar] csomópont fókuszálási módja."
+
+#. TabContainer.tab_{index}/disabled
+#: doc/classes/TabContainer.xml
+msgid ""
+"If [code]true[/code], the tab at [code]index[/code] is disabled.\n"
+"[b]Note:[/b] [code]index[/code] is a value in the [code]0 .. get_tab_count() - 1[/code] range."
+msgstr ""
+"Ha [code]true[/code], a [code]index[/code] indexű fül le van tiltva.\n"
+"[b]Megjegyzés:[/b] Az [code]index[/code] értéke a [code]0 .. get_tab_count() - 1[/code] tartományba esik."
+
+#. TabContainer.tab_{index}/hidden
+#: doc/classes/TabContainer.xml
+msgid ""
+"If [code]true[/code], the tab at [code]index[/code] is hidden.\n"
+"[b]Note:[/b] [code]index[/code] is a value in the [code]0 .. get_tab_count() - 1[/code] range."
+msgstr ""
+"Ha [code]true[/code], a [code]index[/code] indexű fül rejtett.\n"
+"[b]Megjegyzés:[/b] Az [code]index[/code] értéke a [code]0 .. get_tab_count() - 1[/code] tartományba esik."
+
+#. TabContainer.tab_{index}/icon
+#: doc/classes/TabContainer.xml
+msgid ""
+"The title text of the tab at [code]index[/code].\n"
+"[b]Note:[/b] [code]index[/code] is a value in the [code]0 .. get_tab_count() - 1[/code] range."
+msgstr ""
+"A [code]index[/code] indexű fül címének szövege.\n"
+"[b]Megjegyzés:[/b] Az [code]index[/code] értéke a [code]0 .. get_tab_count() - 1[/code] tartományba esik."
+
+#. TabContainer.tab_{index}/title
+#: doc/classes/TabContainer.xml
+msgid ""
+"The tooltip text of the tab at [code]index[/code].\n"
+"[b]Note:[/b] [code]index[/code] is a value in the [code]0 .. get_tab_count() - 1[/code] range."
+msgstr ""
+"A [code]index[/code] indexű fül eszköztippjének szövege.\n"
+"[b]Megjegyzés:[/b] Az [code]index[/code] értéke a [code]0 .. get_tab_count() - 1[/code] tartományba esik."
+
+#. TabContainer.tabs_position
+#: doc/classes/TabContainer.xml
+msgid "The horizontal alignment of the tabs."
+msgstr "A fülek vízszintes igazítása."
+
+#. TabContainer.tabs_rearrange_group
+#: doc/classes/TabContainer.xml
+msgid ""
+"[TabContainer]s with the same rearrange group ID will allow dragging the tabs between them. Enable drag with [member drag_to_rearrange_enabled].\n"
+"Setting this to [code]-1[/code] will disable rearranging between [TabContainer]s."
+msgstr ""
+"Az azonos átrendezési csoportazonosítójú [TabContainer] elemek között a fülek áthúzhatók. A húzást a [member drag_to_rearrange_enabled] tulajdonsággal engedélyezheted.\n"
+"A [code]-1[/code] érték letiltja a fülek átrendezését a különböző [TabContainer] elemek között."
+
+#. TabContainer.tabs_visible
+#: doc/classes/TabContainer.xml
+msgid "If [code]true[/code], tabs are visible. If [code]false[/code], tabs' content and titles are hidden."
+msgstr "Ha [code]true[/code], a fülek láthatók. Ha [code]false[/code], a fülek tartalma és címei rejtve maradnak."
+
+#. TabContainer.use_hidden_tabs_for_min_size
+#: doc/classes/TabContainer.xml
+msgid "If [code]true[/code], child [Control] nodes that are hidden have their minimum size take into account in the total, instead of only the currently visible one."
+msgstr "Ha [code]true[/code], a rejtett gyermek [Control] csomópontok minimális mérete is beleszámít a tároló teljes minimális méretébe, nem csak az éppen látható elemé."
+
+#. TabContainer.active_tab_rearranged
+#: doc/classes/TabContainer.xml
+msgid "Emitted when the active tab is rearranged via mouse drag. See [member drag_to_rearrange_enabled]."
+msgstr "Akkor bocsátódik ki, amikor az aktív fület egérrel húzva átrendezik. Lásd: [member drag_to_rearrange_enabled]."
+
+#. TabContainer.pre_popup_pressed
+#: doc/classes/TabContainer.xml
+msgid "Emitted when the [TabContainer]'s [Popup] button is clicked. See [method set_popup] for details."
+msgstr "Akkor bocsátódik ki, amikor a [TabContainer] [Popup] gombjára kattintanak. További részletek: [method set_popup]."
+
+#. TabContainer.tab_button_pressed
+#: doc/classes/TabContainer.xml
+msgid "Emitted when the user clicks on the button icon on this tab."
+msgstr "Akkor bocsátódik ki, amikor a felhasználó a fül gombikonjára kattint."
+
+#. TabContainer.tab_changed
+#: doc/classes/TabContainer.xml
+msgid "Emitted when switching to another tab."
+msgstr "Akkor bocsátódik ki, amikor egy másik fülre váltanak."
+
+#. TabContainer.tab_clicked
+#: doc/classes/TabContainer.xml
+msgid "Emitted when a tab is clicked, even if it is the current tab."
+msgstr "Akkor bocsátódik ki, amikor a felhasználó rákattint egy fülre, akkor is, ha az már aktív."
+
+#. TabContainer.tab_hovered
+#: doc/classes/TabContainer.xml
+msgid "Emitted when a tab is hovered by the mouse."
+msgstr "Akkor bocsátódik ki, amikor az egérmutató egy fül fölé kerül."
+
+#. TabContainer.tab_selected
+#: doc/classes/TabContainer.xml
+msgid "Emitted when a tab is selected via click, directional input, or script, even if it is the current tab."
+msgstr "Akkor bocsátódik ki, amikor egy fület kattintással, irányvezérléssel vagy szkriptből kijelölnek, akkor is, ha az már az aktuális fül."
