@@ -1,0 +1,26 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. HFlowContainer.brief
+#: doc/classes/HFlowContainer.xml
+msgid "A container that arranges its child controls horizontally and wraps them around at the borders."
+msgstr "Olyan tároló, amely vízszintesen rendezi el a gyermek vezérlőelemeket, és ha elérik a tároló szélét, új sorban folytatja az elrendezést."
+
+#. HFlowContainer.description
+#: doc/classes/HFlowContainer.xml
+msgid "A variant of [FlowContainer] that can only arrange its child controls horizontally, wrapping them around at the borders. This is similar to how text in a book wraps around when no more words can fit on a line."
+msgstr "A [FlowContainer] olyan változata, amely vízszintesen rendezi el a gyermek vezérlőelemeket, és a tároló szélén új sorba töri az elrendezést. Ez ahhoz hasonlít, ahogyan a könyv szövege új sorban folytatódik, ha már nem fér több szó az adott sorba."
+
+#. VFlowContainer.brief
+#: doc/classes/VFlowContainer.xml
+msgid "A container that arranges its child controls vertically and wraps them around at the borders."
+msgstr "Olyan tároló, amely függőlegesen rendezi el a gyermek vezérlőelemeket, és ha elérik a tároló szélét, új oszlopban folytatja az elrendezést."
+
+#. VFlowContainer.description
+#: doc/classes/VFlowContainer.xml
+msgid "A variant of [FlowContainer] that can only arrange its child controls vertically, wrapping them around at the borders. This is similar to how text in a book wraps around when no more words can fit on a line, except vertically."
+msgstr "A [FlowContainer] olyan változata, amely függőlegesen rendezi el a gyermek vezérlőelemeket, és a tároló szélén új oszlopba töri az elrendezést. Ez ahhoz hasonlít, ahogyan a könyv szövege új sorban folytatódik, ha elfogy a hely, csak itt az elrendezés függőleges irányú."
