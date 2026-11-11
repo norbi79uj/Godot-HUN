@@ -1,0 +1,35 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. GridContainer.brief
+#: doc/classes/GridContainer.xml
+msgid "A container that arranges its child controls in a grid layout."
+msgstr "Olyan tároló, amely rácsos elrendezésben helyezi el a gyermek vezérlőelemeit."
+
+#. GridContainer.description
+#: doc/classes/GridContainer.xml
+msgid ""
+"[GridContainer] arranges its child controls in a grid layout. The number of columns is specified by the [member columns] property, whereas the number of rows depends on how many are needed for the child controls. The number of rows and columns is preserved for every size of the container.\n"
+"[b]Note:[/b] [GridContainer] only works with child nodes inheriting from [Control]. It won't rearrange child nodes inheriting from [Node2D]."
+msgstr ""
+"A [GridContainer] rácsos elrendezésben helyezi el a gyermek vezérlőelemeit. Az oszlopok számát a [member columns] tulajdonság határozza meg, a sorok száma pedig a gyermek vezérlőelemek elhelyezéséhez szükséges sorok számától függ. A sorok és oszlopok száma a tároló méretétől függetlenül megmarad.\n"
+"[b]Megjegyzés:[/b] A [GridContainer] kizárólag a [Control] osztályból származó gyermekcsomópontokkal működik. A [Node2D] osztályból származó gyermekcsomópontokat nem rendezi át."
+
+#. GridContainer.columns
+#: doc/classes/GridContainer.xml
+msgid "The number of columns in the [GridContainer]. If modified, [GridContainer] reorders its Control-derived children to accommodate the new layout."
+msgstr "A [GridContainer] oszlopainak száma. Ha megváltozik, a [GridContainer] az új elrendezésnek megfelelően átrendezi a Control osztályból származó gyermekelemeit."
+
+#. GridContainer.h_separation
+#: doc/classes/GridContainer.xml
+msgid "The horizontal separation of child nodes."
+msgstr "A gyermekcsomópontok közötti vízszintes térköz."
+
+#. GridContainer.v_separation
+#: doc/classes/GridContainer.xml
+msgid "The vertical separation of child nodes."
+msgstr "A gyermekcsomópontok közötti függőleges térköz."
