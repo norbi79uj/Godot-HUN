@@ -1,0 +1,26 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. HBoxContainer.brief
+#: doc/classes/HBoxContainer.xml
+msgid "A container that arranges its child controls horizontally."
+msgstr "A gyermek vezérlőelemeket vízszintesen elrendező tároló."
+
+#. HBoxContainer.description
+#: doc/classes/HBoxContainer.xml
+msgid "A variant of BoxContainer that can only arrange its child controls horizontally. Child controls are rearranged automatically when their minimum size changes."
+msgstr "A BoxContainer olyan változata, amely a gyermek vezérlőelemeket kizárólag vízszintesen rendezi el. Ha egy gyermek vezérlőelem minimális mérete megváltozik, az elrendezés automatikusan frissül."
+
+#. VBoxContainer.brief
+#: doc/classes/VBoxContainer.xml
+msgid "A container that arranges its child controls vertically."
+msgstr "A gyermek vezérlőelemeket függőlegesen elrendező tároló."
+
+#. VBoxContainer.description
+#: doc/classes/VBoxContainer.xml
+msgid "A variant of BoxContainer that can only arrange its child controls vertically. Child controls are rearranged automatically when their minimum size changes."
+msgstr "A BoxContainer olyan változata, amely a gyermek vezérlőelemeket kizárólag függőlegesen rendezi el. Ha egy gyermek vezérlőelem minimális mérete megváltozik, az elrendezés automatikusan frissül."
