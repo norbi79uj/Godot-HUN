@@ -1,0 +1,32 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. TabContainer.tab_{index}/icon
+#. Célzott tartalmi javítás: az eredeti Godot 4.7 angol leírásának feltételezett pontatlansága.
+#: doc/classes/TabContainer.xml
+msgid ""
+"The title text of the tab at [code]index[/code].\n"
+"[b]Note:[/b] [code]index[/code] is a value in the [code]0 .. get_tab_count() - 1[/code] range."
+msgstr ""
+"A [code]index[/code] indexű fül ikonja.\n"
+"[b]Megjegyzés:[/b] Az [code]index[/code] értéke a [code]0 .. get_tab_count() - 1[/code] tartományba esik."
+
+#. TabContainer.tab_{index}/title
+#. Célzott tartalmi javítás: az eredeti Godot 4.7 angol leírásának feltételezett pontatlansága.
+#: doc/classes/TabContainer.xml
+msgid ""
+"The tooltip text of the tab at [code]index[/code].\n"
+"[b]Note:[/b] [code]index[/code] is a value in the [code]0 .. get_tab_count() - 1[/code] range."
+msgstr ""
+"A [code]index[/code] indexű fül címszövege.\n"
+"[b]Megjegyzés:[/b] Az [code]index[/code] értéke a [code]0 .. get_tab_count() - 1[/code] tartományba esik."
+
+#. TabContainer.tabs_position
+#. Célzott tartalmi javítás: az eredeti Godot 4.7 angol leírásának feltételezett pontatlansága.
+#: doc/classes/TabContainer.xml
+msgid "The horizontal alignment of the tabs."
+msgstr "A fülsáv elhelyezkedése: a tároló felső vagy alsó részén."
