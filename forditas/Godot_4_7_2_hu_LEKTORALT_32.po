@@ -6671,7 +6671,7 @@ msgstr "Ha [code]true[/code], egy elem húzása közben egy másik fül fölé m
 #. TabBar.tab_alignment
 #: doc/classes/TabBar.xml
 msgid "The horizontal alignment of the tabs."
-msgstr "A fülek vízszintes igazítása."
+msgstr "A fülsáv elhelyezkedése: a tároló felső vagy alsó részén."
 
 
 #. TabBar.tab_close_display_policy
@@ -7035,13 +7035,17 @@ msgstr "Ha [code]true[/code], a [code]index[/code] indexű fül el van rejtve.\n
 #. TabContainer.tab_{index}/icon
 #: doc/classes/TabContainer.xml
 msgid "The title text of the tab at [code]index[/code].\n[b]Note:[/b] [code]index[/code] is a value in the [code]0 .. get_tab_count() - 1[/code] range."
-msgstr "A [code]index[/code] indexű fül címszövege.\n[b]Megjegyzés:[/b] Az [code]index[/code] értéke a [code]0 .. get_tab_count() - 1[/code] tartományba esik."
+msgstr ""
+"A [code]index[/code] indexű fül ikonja.\n"
+"[b]Megjegyzés:[/b] Az [code]index[/code] értéke a [code]0 .. get_tab_count() - 1[/code] tartományba esik."
 
 
 #. TabContainer.tab_{index}/title
 #: doc/classes/TabContainer.xml
 msgid "The tooltip text of the tab at [code]index[/code].\n[b]Note:[/b] [code]index[/code] is a value in the [code]0 .. get_tab_count() - 1[/code] range."
-msgstr "A [code]index[/code] indexű fül eszköztippszövege.\n[b]Megjegyzés:[/b] Az [code]index[/code] értéke a [code]0 .. get_tab_count() - 1[/code] tartományba esik."
+msgstr ""
+"A [code]index[/code] indexű fül címszövege.\n"
+"[b]Megjegyzés:[/b] Az [code]index[/code] értéke a [code]0 .. get_tab_count() - 1[/code] tartományba esik."
 
 
 #. TabContainer.tabs_rearrange_group
