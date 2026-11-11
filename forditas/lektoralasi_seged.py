@@ -5,7 +5,7 @@ from __future__ import annotations
 import argparse
 from collections import Counter
 from pathlib import Path
-from ellenorzes import parse
+from katalogus_olvaso import read_draft
 
 ROOT = Path(__file__).resolve().parent
 
@@ -23,12 +23,13 @@ def latest_pair() -> tuple[Path, Path]:
 
 
 def report(previous: Path, current: Path) -> str:
-    before, after = parse(previous), parse(current)
+    before, after = read_draft(previous), read_draft(current)
     added = [(source, after[source]) for source in after if source not in before]
     removed = [source for source in before if source not in after]
     changed = [(source, before[source], after[source]) for source in before
                if source in after and before[source] != after[source]]
     unchanged = len(before) - len(removed) - len(changed)
+    untranslated = sum(not value for value in after.values())
     suspicious = [(s, t) for s, t in added if s.strip() == t.strip()]
     rows = [
         "# Godot-HUN – automatikus lektorálási jelentés",
@@ -36,7 +37,8 @@ def report(previous: Path, current: Path) -> str:
         f"- Előző katalógus: `{previous.name}`",
         f"- Aktuális katalógus: `{current.name}`",
         f"- Változatlan fordítás: **{unchanged}**",
-        f"- Új fordítás: **{len(added)}**",
+        f"- Új bejegyzés: **{len(added)}**",
+        f"- Még üres magyar fordítások: **{untranslated}**",
         f"- Megváltozott fordítás: **{len(changed)}**",
         f"- Eltűnt bejegyzés: **{len(removed)}**",
         f"- Az angollal teljesen egyező új magyar szöveg: **{len(suspicious)}** (kézi vizsgálat, nem feltétlenül hiba)",
