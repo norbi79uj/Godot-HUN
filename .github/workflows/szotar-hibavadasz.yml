@@ -1,0 +1,38 @@
+name: Szótárbot és hibavadász
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'forditas/Godot_4_7_2_hu_LEKTORALT_*.po'
+      - 'forditas/botok.py'
+      - 'forditas/godot_szotar.json'
+      - '.github/workflows/szotar-hibavadasz.yml'
+  pull_request:
+    paths:
+      - 'forditas/Godot_4_7_2_hu_LEKTORALT_*.po'
+      - 'forditas/botok.py'
+      - 'forditas/godot_szotar.json'
+      - '.github/workflows/szotar-hibavadasz.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  minosegellenorzes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Szótár- és helyőrző-ellenőrzés
+        run: |
+          python3 forditas/botok.py --output bot-jelentes.md
+          cat bot-jelentes.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Jelentés megőrzése
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: godot-hun-bot-jelentes
+          path: bot-jelentes.md
+          if-no-files-found: ignore
+          retention-days: 30
