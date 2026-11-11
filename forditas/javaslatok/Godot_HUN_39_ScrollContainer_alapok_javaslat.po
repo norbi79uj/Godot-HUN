@@ -1,0 +1,66 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. ScrollContainer.brief
+#: doc/classes/ScrollContainer.xml
+msgid "A container used to provide scrollbars to a child control when needed."
+msgstr "Olyan tároló, amely szükség esetén görgetősávokat biztosít egy gyermek vezérlőelemhez."
+
+#. ScrollContainer.description
+#: doc/classes/ScrollContainer.xml
+msgid "A container used to provide a child control with scrollbars when needed. Scrollbars will automatically be drawn at the right (for vertical) or bottom (for horizontal) and will enable dragging to move the viewable Control (and its children) within the ScrollContainer. Scrollbars will also automatically resize the grabber based on the [member Control.custom_minimum_size] of the Control relative to the ScrollContainer."
+msgstr "Olyan tároló, amely szükség esetén görgetősávokat biztosít egy gyermek vezérlőelemhez. A függőleges görgetősáv automatikusan a jobb oldalon, a vízszintes pedig alul jelenik meg. A görgetősáv húzásával a Control és gyermekelemei látható területe elmozdítható a ScrollContainer belsejében. A görgetősáv csúszkájának mérete automatikusan igazodik a Control [member Control.custom_minimum_size] értékéhez a ScrollContainer méretéhez viszonyítva."
+
+#. ScrollContainer.draw_focus_border
+#: doc/classes/ScrollContainer.xml
+msgid "If [code]true[/code], [theme_item focus] is drawn when the ScrollContainer or one of its descendant nodes is focused."
+msgstr "Ha [code]true[/code], a [theme_item focus] keret jelenik meg, amikor a ScrollContainer vagy valamelyik leszármazott csomópontja fókuszba kerül."
+
+#. ScrollContainer.follow_focus
+#: doc/classes/ScrollContainer.xml
+msgid "If [code]true[/code], the ScrollContainer will automatically scroll to focused children (including indirect children) to make sure they are fully visible."
+msgstr "Ha [code]true[/code], a ScrollContainer automatikusan a fókuszba került gyermekelemhez görget (a közvetett gyermekelemeket is beleértve), hogy az teljes egészében látható legyen."
+
+#. ScrollContainer.horizontal_scroll_mode
+#: doc/classes/ScrollContainer.xml
+msgid "Controls whether horizontal scrollbar can be used and when it should be visible."
+msgstr "Meghatározza, hogy használható-e a vízszintes görgetősáv, és mikor jelenjen meg."
+
+#. ScrollContainer.vertical_scroll_mode
+#: doc/classes/ScrollContainer.xml
+msgid "Controls whether vertical scrollbar can be used and when it should be visible."
+msgstr "Meghatározza, hogy használható-e a függőleges görgetősáv, és mikor jelenjen meg."
+
+#. ScrollContainer.scroll_deadzone
+#: doc/classes/ScrollContainer.xml
+msgid "Deadzone for touch scrolling. Lower deadzone makes the scrolling more sensitive."
+msgstr "Az érintéses görgetés holtzónája. Kisebb holtzóna esetén a görgetés érzékenyebben reagál a mozdulatokra."
+
+#. ScrollContainer.SCROLL_MODE_DISABLED
+#: doc/classes/ScrollContainer.xml
+msgid "Scrolling disabled, scrollbar will be invisible."
+msgstr "A görgetés le van tiltva, a görgetősáv nem látható."
+
+#. ScrollContainer.SCROLL_MODE_AUTO
+#: doc/classes/ScrollContainer.xml
+msgid "Scrolling enabled, scrollbar will be visible only if necessary, i.e. container's content is bigger than the container."
+msgstr "A görgetés engedélyezett, de a görgetősáv csak szükség esetén jelenik meg, amikor a tartalom nagyobb a tárolónál."
+
+#. ScrollContainer.SCROLL_MODE_SHOW_ALWAYS
+#: doc/classes/ScrollContainer.xml
+msgid "Scrolling enabled, scrollbar will be always visible."
+msgstr "A görgetés engedélyezett, és a görgetősáv mindig látható."
+
+#. ScrollContainer.SCROLL_MODE_SHOW_NEVER
+#: doc/classes/ScrollContainer.xml
+msgid "Scrolling enabled, scrollbar will be hidden."
+msgstr "A görgetés engedélyezett, de a görgetősáv rejtve marad."
+
+#. ScrollContainer.SCROLL_HINT_MODE_DISABLED
+#: doc/classes/ScrollContainer.xml
+msgid "Scroll hints will never be shown."
+msgstr "A görgetési jelzések soha nem jelennek meg."
