@@ -1,0 +1,34 @@
+name: Lektorálási segédjelentés
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'forditas/Godot_4_7_2_hu_LEKTORALT_*.po'
+      - 'forditas/lektoralasi_seged.py'
+      - '.github/workflows/lektoralasi-seged.yml'
+  pull_request:
+    paths:
+      - 'forditas/Godot_4_7_2_hu_LEKTORALT_*.po'
+      - 'forditas/lektoralasi_seged.py'
+      - '.github/workflows/lektoralasi-seged.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  lektoralasi-jelentes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Jelentés készítése az új és módosult fordításokról
+        run: |
+          python3 forditas/lektoralasi_seged.py --output lektoralasi-jelentes.md
+          cat lektoralasi-jelentes.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Lektorálási lista letölthető csatolmányként
+        uses: actions/upload-artifact@v4
+        with:
+          name: godot-hun-lektoralasi-jelentes
+          path: lektoralasi-jelentes.md
+          retention-days: 30
