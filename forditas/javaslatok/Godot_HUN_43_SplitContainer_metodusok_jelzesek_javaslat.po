@@ -1,0 +1,81 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. SplitContainer.clamp_split_offset
+#: doc/classes/SplitContainer.xml
+msgid "Clamps the [member split_offsets] values to ensure they are within valid ranges and do not overlap with each other. When overlaps occur, this method prioritizes one split offset (at index [param priority_index]) by clamping any overlapping split offsets to it."
+msgstr "A [member split_offsets] értékeit az érvényes tartományba korlátozza, és megakadályozza, hogy az elválasztók átfedjék egymást. Átfedés esetén a [param priority_index] indexű elválasztó eltolása élvez elsőbbséget, a többi átfedő eltolás ehhez igazodik."
+
+#. SplitContainer.drag_nested_intersections
+#: doc/classes/SplitContainer.xml
+msgid "Adds extra draggers at the intersection of the draggers of two SplitContainers to allow dragging both at once. This must be set to [code]true[/code] for both SplitContainers, and one needs to be a descendant of the other. They also must be orthogonal (their [member vertical] are different) and the descendant must be next to at least one of the ancestor's draggers (within [theme_item minimum_grab_thickness])."
+msgstr "További húzófogantyúkat helyez el két SplitContainer fogantyúinak metszéspontjában, így a két elválasztó egyszerre mozgatható. Ehhez mindkét SplitContainer esetében [code]true[/code] értékre kell állítani a tulajdonságot, és az egyiknek a másik leszármazottjának kell lennie. A két tárolónak egymásra merőleges irányúnak kell lennie (eltérő [member vertical] értékkel), a leszármazott fogantyújának pedig az őstároló legalább egyik fogantyúja mellett kell lennie (a [theme_item minimum_grab_thickness] által megadott távolságon belül)."
+
+#. SplitContainer.touch_dragger_enabled
+#: doc/classes/SplitContainer.xml
+msgid "If [code]true[/code], a touch-friendly drag handle will be enabled for better usability on smaller screens. Unlike the standard grabber, this drag handle overlaps the [SplitContainer]'s children and does not affect their minimum separation. The standard grabber will no longer be drawn when this option is enabled."
+msgstr "Ha [code]true[/code], az érintőképernyőn könnyebben kezelhető húzófogantyú jelenik meg, ami kisebb képernyőkön is megkönnyíti a használatot. A hagyományos fogantyúval ellentétben ez átfedi a [SplitContainer] gyermekelemeit, és nem befolyásolja a köztük lévő minimális térközt. A beállítás engedélyezésekor a hagyományos fogantyú nem jelenik meg."
+
+#. SplitContainer.drag_ended
+#: doc/classes/SplitContainer.xml
+msgid "Emitted when the user ends dragging."
+msgstr "Akkor bocsátódik ki, amikor a felhasználó befejezi a húzást."
+
+#. SplitContainer.drag_started
+#: doc/classes/SplitContainer.xml
+msgid "Emitted when the user starts dragging."
+msgstr "Akkor bocsátódik ki, amikor a felhasználó megkezdi a húzást."
+
+#. SplitContainer.dragged
+#: doc/classes/SplitContainer.xml
+msgid "Emitted when any dragger is dragged by user."
+msgstr "Akkor bocsátódik ki, amikor a felhasználó valamelyik húzófogantyút mozgatja."
+
+#. SplitContainer.DRAGGER_VISIBLE
+#: doc/classes/SplitContainer.xml
+msgid ""
+"The split dragger icon is always visible when [theme_item autohide] is [code]false[/code], otherwise visible only when the cursor hovers it.\n"
+"The size of the grabber icon determines the minimum [theme_item separation].\n"
+"The dragger icon is automatically hidden if the length of the grabber icon is longer than the split bar."
+msgstr ""
+"Az elválasztó húzófogantyújának ikonja mindig látható, ha a [theme_item autohide] értéke [code]false[/code]; ellenkező esetben csak akkor jelenik meg, amikor a mutató fölé kerül.\n"
+"A fogantyú ikonjának mérete határozza meg a minimális [theme_item separation] értéket.\n"
+"Az ikon automatikusan eltűnik, ha hosszabb az elválasztósávnál."
+
+#. SplitContainer.DRAGGER_HIDDEN
+#: doc/classes/SplitContainer.xml
+msgid ""
+"The split dragger icon is never visible regardless of the value of [theme_item autohide].\n"
+"The size of the grabber icon determines the minimum [theme_item separation]."
+msgstr ""
+"Az elválasztó fogantyúikonja a [theme_item autohide] értékétől függetlenül soha nem látható.\n"
+"Az ikon mérete ettől függetlenül meghatározza a minimális [theme_item separation] értéket."
+
+#. SplitContainer.DRAGGER_HIDDEN_COLLAPSED
+#: doc/classes/SplitContainer.xml
+msgid "The split dragger icon is not visible, and the split bar is collapsed to zero thickness."
+msgstr "Az elválasztó fogantyúikonja nem látható, az elválasztósáv vastagsága pedig nullára csökken."
+
+#. SplitContainer.touch_dragger_color
+#: doc/classes/SplitContainer.xml
+msgid "The color of the touch dragger."
+msgstr "Az érintéses húzófogantyú színe."
+
+#. SplitContainer.touch_dragger_hover_color
+#: doc/classes/SplitContainer.xml
+msgid "The color of the touch dragger when hovered."
+msgstr "Az érintéses húzófogantyú színe, amikor a mutató fölé kerül."
+
+#. SplitContainer.touch_dragger_pressed_color
+#: doc/classes/SplitContainer.xml
+msgid "The color of the touch dragger when pressed."
+msgstr "Az érintéses húzófogantyú színe lenyomáskor."
+
+#. SplitContainer.split_bar_background
+#: doc/classes/SplitContainer.xml
+msgid "Determines the background of the split bar if its thickness is greater than zero."
+msgstr "Meghatározza az elválasztósáv hátterét, ha a vastagsága nagyobb nullánál."
