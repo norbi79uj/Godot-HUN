@@ -1,0 +1,100 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. SplitContainer.get_drag_area_control
+#: doc/classes/SplitContainer.xml
+msgid ""
+"Returns the drag area [Control]. For example, you can move a pre-configured button into the drag area [Control] so that it rides along with the split bar. Try setting the [Button] anchors to [code]center[/code] prior to the [code]reparent()[/code] call.\n"
+"[codeblock]\n"
+"$BarnacleButton.reparent($SplitContainer.get_drag_area_control())\n"
+"[/codeblock]\n"
+"[b]Note:[/b] The drag area [Control] is drawn over the [SplitContainer]'s children, so [CanvasItem] draw objects called from the [Control] and children added to the [Control] will also appear over the [SplitContainer]'s children. Try setting [member Control.mouse_filter] of custom children to [constant Control.MOUSE_FILTER_IGNORE] to prevent blocking the mouse from dragging if desired.\n"
+"[b]Warning:[/b] This is a required internal node, removing and freeing it may cause a crash."
+msgstr ""
+"Visszaadja a húzható terület [Control] elemét. Például egy előre beállított gombot áthelyezhetsz a húzható terület [Control] elemébe, hogy együtt mozogjon az elválasztósávval. A [code]reparent()[/code] hívása előtt állítsd a [Button] horgonyait [code]center[/code] értékre.\n"
+"[codeblock]\n"
+"$BarnacleButton.reparent($SplitContainer.get_drag_area_control())\n"
+"[/codeblock]\n"
+"[b]Megjegyzés:[/b] A húzható terület [Control] eleme a [SplitContainer] gyermekelemei fölött jelenik meg, így a [Control] elemből kezdeményezett [CanvasItem] rajzolási műveletek és a [Control] elemhez hozzáadott gyermekek is a [SplitContainer] gyermekei fölött láthatók. Az egérrel történő húzás akadályozásának elkerüléséhez az egyéni gyermekelemek [member Control.mouse_filter] tulajdonságát érdemes [constant Control.MOUSE_FILTER_IGNORE] értékre állítani.\n"
+"[b]Figyelmeztetés:[/b] Ez egy szükséges belső csomópont; eltávolítása és felszabadítása összeomlást okozhat."
+
+#. SplitContainer.get_drag_area_controls
+#: doc/classes/SplitContainer.xml
+msgid ""
+"Returns an [Array] of the drag area [Control]s. These are the interactable [Control] nodes between each child. For example, this can be used to add a pre-configured button to a drag area [Control] so that it rides along with the split bar. Try setting the [Button] anchors to [code]center[/code] prior to the [method Node.reparent] call.\n"
+"[codeblock]\n"
+"$BarnacleButton.reparent($SplitContainer.get_drag_area_controls()[0])\n"
+"[/codeblock]\n"
+"[b]Note:[/b] The drag area [Control]s are drawn over the [SplitContainer]'s children, so [CanvasItem] draw objects called from a drag area and children added to it will also appear over the [SplitContainer]'s children. Try setting [member Control.mouse_filter] of custom children to [constant Control.MOUSE_FILTER_IGNORE] to prevent blocking the mouse from dragging if desired.\n"
+"[b]Warning:[/b] These are required internal nodes, removing or freeing them may cause a crash."
+msgstr ""
+"Visszaadja a húzható területek [Control] elemeinek [Array] tömbjét. Ezek a gyermekelemek között található, kezelhető [Control] csomópontok. Például egy előre beállított gombot áthelyezhetsz a húzható terület [Control] elemébe, hogy együtt mozogjon az elválasztósávval. A [method Node.reparent] hívása előtt állítsd a [Button] horgonyait [code]center[/code] értékre.\n"
+"[codeblock]\n"
+"$BarnacleButton.reparent($SplitContainer.get_drag_area_controls()[0])\n"
+"[/codeblock]\n"
+"[b]Megjegyzés:[/b] A húzható területek [Control] elemei a [SplitContainer] gyermekelemei fölé rajzolódnak, ezért a húzható területről indított [CanvasItem] rajzolási műveletek és az oda hozzáadott gyermekelemek is a [SplitContainer] gyermekelemei fölött jelennek meg. Az egyéni gyermekelemek [member Control.mouse_filter] tulajdonságát [constant Control.MOUSE_FILTER_IGNORE] értékre állíthatod, hogy ne akadályozzák az egérrel végzett húzást.\n"
+"[b]Figyelmeztetés:[/b] Ezek szükséges belső csomópontok; eltávolításuk vagy felszabadításuk összeomlást okozhat."
+
+#. SplitContainer.split_offsets
+#: doc/classes/SplitContainer.xml
+msgid ""
+"Offsets for each dragger in pixels. Each one is the offset of the split between the [Control] nodes before and after the dragger, with [code]0[/code] being the default position. The default position is based on the [Control] nodes expand flags and minimum sizes. See [member Control.size_flags_horizontal], [member Control.size_flags_vertical], and [member Control.size_flags_stretch_ratio].\n"
+"If none of the [Control] nodes before the dragger are expanded, the default position will be at the start of the [SplitContainer]. If none of the [Control] nodes after the dragger are expanded, the default position will be at the end of the [SplitContainer]. If the dragger is in between expanded [Control] nodes, the default position will be in the middle, based on the [member Control.size_flags_stretch_ratio]s and minimum sizes.\n"
+"[b]Note:[/b] If the split offsets cause [Control] nodes to overlap, the first split will take priority when resolving the positions."
+msgstr ""
+"Az egyes fogantyúk eltolása képpontban. Minden érték a fogantyú előtti és utáni [Control] csomópont közötti elválasztó eltolását jelenti; az alaphelyzet [code]0[/code]. Ezt a [Control] csomópontok bővítési jelzői és minimális méretei határozzák meg. Lásd: [member Control.size_flags_horizontal], [member Control.size_flags_vertical] és [member Control.size_flags_stretch_ratio].\n"
+"Ha a fogantyú előtti [Control] csomópontok egyike sem bővül, az alaphelyzet a [SplitContainer] elején lesz. Ha az utána következő [Control] csomópontok egyike sem bővül, az alaphelyzet a [SplitContainer] végén lesz. Ha a fogantyú bővülő [Control] csomópontok között van, az alaphelyzetet a [member Control.size_flags_stretch_ratio] értékek és a minimális méretek alapján középre számítja.\n"
+"[b]Megjegyzés:[/b] Ha az eltolások miatt a [Control] csomópontok átfedik egymást, a pozíciók rendezésekor az első elválasztó élvez elsőbbséget."
+
+#. SplitContainer.autohide
+#: doc/classes/SplitContainer.xml
+msgid "Boolean value. If [code]1[/code] ([code]true[/code]), the grabbers will hide automatically when they aren't under the cursor. If [code]0[/code] ([code]false[/code]), the grabbers are always visible. The [member dragger_visibility] must be [constant DRAGGER_VISIBLE]."
+msgstr "Logikai érték. Ha [code]1[/code] ([code]true[/code]), a fogantyúk automatikusan eltűnnek, amikor a mutató nincs fölöttük. Ha [code]0[/code] ([code]false[/code]), mindig láthatók. A [member dragger_visibility] értékének [constant DRAGGER_VISIBLE] beállításúnak kell lennie."
+
+#. SplitContainer.minimum_grab_thickness
+#: doc/classes/SplitContainer.xml
+msgid "The minimum thickness of the area users can click on to grab a split bar. This ensures that the split bar can still be dragged if [theme_item separation] or [theme_item h_grabber] / [theme_item v_grabber]'s size is too narrow to easily select."
+msgstr "Az elválasztósáv megragadására kattintható terület minimális vastagsága. Ez biztosítja, hogy a sáv akkor is húzható legyen, ha a [theme_item separation] vagy a [theme_item h_grabber] / [theme_item v_grabber] mérete túl kicsi a kényelmes kijelöléshez."
+
+#. SplitContainer.separation
+#: doc/classes/SplitContainer.xml
+msgid ""
+"The split bar thickness, i.e., the gap between each child of the container. This is overridden by the size of the grabber icon if [member dragger_visibility] is set to [constant DRAGGER_VISIBLE], or [constant DRAGGER_HIDDEN], and [theme_item separation] is smaller than the size of the grabber icon in the same axis.\n"
+"[b]Note:[/b] To obtain [theme_item separation] values less than the size of the grabber icon, for example a [code]1 px[/code] hairline, set [theme_item h_grabber] or [theme_item v_grabber] to a new [ImageTexture], which effectively sets the grabber icon size to [code]0 px[/code]."
+msgstr ""
+"Az elválasztósáv vastagsága, vagyis a tároló gyermekelemei közötti térköz. Ezt felülírja a fogantyúikon mérete, ha a [member dragger_visibility] értéke [constant DRAGGER_VISIBLE] vagy [constant DRAGGER_HIDDEN], és a [theme_item separation] az adott tengelyen kisebb az ikon méreténél.\n"
+"[b]Megjegyzés:[/b] Az ikon méreténél kisebb [theme_item separation] értékhez, például [code]1 px[/code] vastag vonalhoz, állítsd a [theme_item h_grabber] vagy [theme_item v_grabber] értékét egy új [ImageTexture] objektumra. Ezzel az ikon mérete gyakorlatilag [code]0 px[/code] lesz."
+
+#. SplitContainer.grabber
+#: doc/classes/SplitContainer.xml
+msgid "The icon used for the grabbers drawn in the separations. This is only used in [HSplitContainer] and [VSplitContainer]. For [SplitContainer], see [theme_item h_grabber] and [theme_item v_grabber] instead."
+msgstr "Az elválasztókban megjelenő húzófogantyúk ikonja. Csak a [HSplitContainer] és a [VSplitContainer] használja. A [SplitContainer] esetében helyette a [theme_item h_grabber] és a [theme_item v_grabber] beállítást lásd."
+
+#. SplitContainer.h_grabber
+#: doc/classes/SplitContainer.xml
+msgid "The icon used for the grabbers drawn in the separations when [member vertical] is [code]false[/code]."
+msgstr "Az elválasztókban megjelenő húzófogantyúk ikonja, ha a [member vertical] értéke [code]false[/code]."
+
+#. SplitContainer.h_touch_dragger
+#: doc/classes/SplitContainer.xml
+msgid "The icon used for the drag handle when [member touch_dragger_enabled] is [code]true[/code] and [member vertical] is [code]false[/code]."
+msgstr "Az érintéses húzófogantyú ikonja, ha a [member touch_dragger_enabled] értéke [code]true[/code], a [member vertical] értéke pedig [code]false[/code]."
+
+#. SplitContainer.touch_dragger
+#: doc/classes/SplitContainer.xml
+msgid "The icon used for the drag handle when [member touch_dragger_enabled] is [code]true[/code]. This is only used in [HSplitContainer] and [VSplitContainer]. For [SplitContainer], see [theme_item h_touch_dragger] and [theme_item v_touch_dragger] instead."
+msgstr "Az érintéses húzófogantyú ikonja, ha a [member touch_dragger_enabled] értéke [code]true[/code]. Csak a [HSplitContainer] és a [VSplitContainer] használja. A [SplitContainer] esetében helyette a [theme_item h_touch_dragger] és a [theme_item v_touch_dragger] beállítást lásd."
+
+#. SplitContainer.v_grabber
+#: doc/classes/SplitContainer.xml
+msgid "The icon used for the grabbers drawn in the separations when [member vertical] is [code]true[/code]."
+msgstr "Az elválasztókban megjelenő húzófogantyúk ikonja, ha a [member vertical] értéke [code]true[/code]."
+
+#. SplitContainer.v_touch_dragger
+#: doc/classes/SplitContainer.xml
+msgid "The icon used for the drag handle when [member touch_dragger_enabled] is [code]true[/code] and [member vertical] is [code]true[/code]."
+msgstr "Az érintéses húzófogantyú ikonja, ha a [member touch_dragger_enabled] értéke [code]true[/code], a [member vertical] értéke pedig [code]true[/code]."
