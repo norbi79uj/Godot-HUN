@@ -6671,7 +6671,7 @@ msgstr "Ha [code]true[/code], egy elem húzása közben egy másik fül fölé m
 #. TabBar.tab_alignment
 #: doc/classes/TabBar.xml
 msgid "The horizontal alignment of the tabs."
-msgstr "A fülsáv elhelyezkedése: a tároló felső vagy alsó részén."
+msgstr "A fülek vízszintes igazítása."
 
 
 #. TabBar.tab_close_display_policy
