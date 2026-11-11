@@ -5951,7 +5951,7 @@ msgstr "Egyéni címet állít be a [param tab_idx] indexű fülhöz (a fül cí
 #. TabContainer.set_tab_icon
 #: doc/classes/TabContainer.xml
 msgid "Sets an icon for the tab at index [param tab_idx]."
-msgstr "Ikont állít be a [param tab_idx] indexű fülhöz."
+msgstr "Beállítja a [param tab_idx] indexű fül ikonját."
 
 #. TabContainer.current_tab
 #: doc/classes/TabContainer.xml
@@ -6428,7 +6428,7 @@ msgstr ""
 #. TabContainer.get_tab_button_icon
 #: doc/classes/TabContainer.xml
 msgid "Returns the button icon from the tab at index [param tab_idx]."
-msgstr "Visszaadja a [param tab_idx] indexű fül gombjának ikonját."
+msgstr "Visszaadja a [param tab_idx] indexű fül gombikonját."
 
 
 #. TabContainer.get_tab_icon
@@ -6440,7 +6440,7 @@ msgstr "Visszaadja a [param tab_idx] indexű fül [Texture2D] ikonját, vagy [co
 #. TabContainer.get_tab_idx_from_control
 #: doc/classes/TabContainer.xml
 msgid "Returns the index of the tab tied to the given [param control]. The control must be a child of the [TabContainer]."
-msgstr "Visszaadja a [param control] vezérlőelemhez társított fül indexét. A vezérlőelemnek a [TabContainer] gyermekének kell lennie."
+msgstr "Visszaadja a megadott [param control] vezérlőelemhez tartozó fül indexét. A vezérlőelemnek a [TabContainer] gyermekének kell lennie."
 
 
 #. TabContainer.set_popup
@@ -6452,7 +6452,7 @@ msgstr "Ha egy [Popup] csomópontot adsz meg, a [TabContainer] jobb felső sark�
 #. TabContainer.set_tab_button_icon
 #: doc/classes/TabContainer.xml
 msgid "Sets the button icon from the tab at index [param tab_idx]."
-msgstr "Beállítja a [param tab_idx] indexű fül gombjának ikonját."
+msgstr "Beállítja a [param tab_idx] indexű fül gombikonját."
 
 
 #. TabContainer.set_tab_disabled
@@ -7071,7 +7071,7 @@ msgstr "Akkor bocsátódik ki, amikor a [TabContainer] [Popup] gombjára kattint
 #. TabContainer.tab_button_pressed
 #: doc/classes/TabContainer.xml
 msgid "Emitted when the user clicks on the button icon on this tab."
-msgstr "Akkor bocsátódik ki, amikor a felhasználó a fül gombjának ikonjára kattint."
+msgstr "Akkor bocsátódik ki, amikor a felhasználó a fül gombikonjára kattint."
 
 
 #. TabContainer.POSITION_TOP
