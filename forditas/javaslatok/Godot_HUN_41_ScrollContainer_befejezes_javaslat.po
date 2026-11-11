@@ -1,0 +1,95 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. ScrollContainer.scroll_horizontal
+#: doc/classes/ScrollContainer.xml
+msgid ""
+"The current horizontal scroll value.\n"
+"[b]Note:[/b] If you are setting this value in the [method Node._ready] function or earlier, it needs to be wrapped with [method Object.set_deferred], since scroll bar's [member Range.max_value] is not initialized yet.\n"
+"[codeblock]\n"
+"func _ready():\n"
+"\tset_deferred(\"scroll_horizontal\", 600)\n"
+"[/codeblock]"
+msgstr ""
+"A vízszintes görgetés aktuális értéke.\n"
+"[b]Megjegyzés:[/b] Ha ezt az értéket a [method Node._ready] függvényben vagy korábban állítod be, a [method Object.set_deferred] segítségével el kell halasztani a beállítást, mert a görgetősáv [member Range.max_value] értéke ekkor még nincs inicializálva.\n"
+"[codeblock]\n"
+"func _ready():\n"
+"\tset_deferred(\"scroll_horizontal\", 600)\n"
+"[/codeblock]"
+
+#. ScrollContainer.scroll_vertical
+#: doc/classes/ScrollContainer.xml
+msgid ""
+"The current vertical scroll value.\n"
+"[b]Note:[/b] Setting it early needs to be deferred, just like in [member scroll_horizontal].\n"
+"[codeblock]\n"
+"func _ready():\n"
+"\tset_deferred(\"scroll_vertical\", 600)\n"
+"[/codeblock]"
+msgstr ""
+"A függőleges görgetés aktuális értéke.\n"
+"[b]Megjegyzés:[/b] A korai beállítását a [member scroll_horizontal] tulajdonsághoz hasonlóan el kell halasztani.\n"
+"[codeblock]\n"
+"func _ready():\n"
+"\tset_deferred(\"scroll_vertical\", 600)\n"
+"[/codeblock]"
+
+#. ScrollContainer.tile_scroll_hint
+#: doc/classes/ScrollContainer.xml
+msgid "If [code]true[/code], the scroll hint texture will be tiled instead of stretched. See [member scroll_hint_mode]."
+msgstr "Ha [code]true[/code], a görgetési jelzés textúrája nyújtás helyett ismétlődő mintázatként jelenik meg. Lásd: [member scroll_hint_mode]."
+
+#. ScrollContainer.SCROLL_HINT_MODE_TOP_AND_LEFT
+#: doc/classes/ScrollContainer.xml
+msgid "Scroll hints will be shown at the top (if vertical), or the left (if horizontal)."
+msgstr "A görgetési jelzések függőleges görgetésnél felül, vízszintes görgetésnél bal oldalon jelennek meg."
+
+#. ScrollContainer.SCROLL_HINT_MODE_BOTTOM_AND_RIGHT
+#: doc/classes/ScrollContainer.xml
+msgid "Scroll hints will be shown at the bottom (if horizontal), or the right (if horizontal)."
+msgstr "A görgetési jelzések az alsó vagy a jobb szélen jelennek meg, a görgetés irányának megfelelően."
+
+#. ScrollContainer.scroll_hint_horizontal_color
+#: doc/classes/ScrollContainer.xml
+msgid "[Color] used to modulate the [theme_item scroll_hint_horizontal] texture."
+msgstr "A [theme_item scroll_hint_horizontal] textúrájának színezéséhez használt [Color]."
+
+#. ScrollContainer.scroll_hint_vertical_color
+#: doc/classes/ScrollContainer.xml
+msgid "[Color] used to modulate the [theme_item scroll_hint_vertical] texture."
+msgstr "A [theme_item scroll_hint_vertical] textúrájának színezéséhez használt [Color]."
+
+#. ScrollContainer.scrollbar_h_separation
+#: doc/classes/ScrollContainer.xml
+msgid "The space between the ScrollContainer's vertical scroll bar and its content, in pixels. No space will be added when the content's minimum size is larger than the ScrollContainer's size."
+msgstr "A ScrollContainer függőleges görgetősávja és a tartalom közötti távolság képpontban. Nem ad hozzá térközt, ha a tartalom minimális mérete nagyobb a ScrollContainer méreténél."
+
+#. ScrollContainer.scrollbar_v_separation
+#: doc/classes/ScrollContainer.xml
+msgid "The space between the ScrollContainer's horizontal scroll bar and its content, in pixels. No space will be added when the content's minimum size is larger than the ScrollContainer's size."
+msgstr "A ScrollContainer vízszintes görgetősávja és a tartalom közötti távolság képpontban. Nem ad hozzá térközt, ha a tartalom minimális mérete nagyobb a ScrollContainer méreténél."
+
+#. ScrollContainer.scroll_hint_horizontal
+#: doc/classes/ScrollContainer.xml
+msgid "The indicator that will be shown when the content can still be scrolled horizontally. See [member scroll_hint_mode]."
+msgstr "Az a jelzés, amely akkor jelenik meg, ha a tartalom vízszintesen még tovább görgethető. Lásd: [member scroll_hint_mode]."
+
+#. ScrollContainer.scroll_hint_vertical
+#: doc/classes/ScrollContainer.xml
+msgid "The indicator that will be shown when the content can still be scrolled vertically. See [member scroll_hint_mode]."
+msgstr "Az a jelzés, amely akkor jelenik meg, ha a tartalom függőlegesen még tovább görgethető. Lásd: [member scroll_hint_mode]."
+
+#. ScrollContainer.focus
+#: doc/classes/ScrollContainer.xml
+msgid "The focus border [StyleBox] of the [ScrollContainer]. Only used if [member draw_focus_border] is [code]true[/code]."
+msgstr "A [ScrollContainer] fókuszkeretének [StyleBox] stílusa. Csak akkor használatos, ha a [member draw_focus_border] értéke [code]true[/code]."
+
+#. ScrollContainer.panel
+#: doc/classes/ScrollContainer.xml
+msgid "The background [StyleBox] of the [ScrollContainer]."
+msgstr "A [ScrollContainer] hátterének [StyleBox] stílusa."
