@@ -1,0 +1,581 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. TabContainer.brief
+#. Forrásjavaslat: 45. szakasz
+#: doc/classes/TabContainer.xml
+msgid "A container that creates a tab for each child control, displaying only the active tab's control."
+msgstr "Olyan tároló, amely minden gyermek vezérlőelemhez külön fület hoz létre, és csak az aktív fül tartalmát jeleníti meg."
+
+#. TabContainer.description
+#. Forrásjavaslat: 45. szakasz
+#: doc/classes/TabContainer.xml
+msgid ""
+"Arranges child controls into a tabbed view, creating a tab for each one. The active tab's corresponding control is made visible, while all other child controls are hidden. Ignores non-control children.\n"
+"[b]Note:[/b] The drawing of the clickable tabs is handled by this node; [TabBar] is not needed."
+msgstr ""
+"A gyermek vezérlőelemeket fülekre osztva jeleníti meg, és mindegyikhez külön fület hoz létre. Az aktív fülhöz tartozó vezérlőelem látható, a többi gyermek vezérlőelem rejtve marad. A nem vezérlő típusú gyermekeket figyelmen kívül hagyja.\n"
+"[b]Megjegyzés:[/b] A kattintható fülek megjelenítését ez a csomópont kezeli; külön [TabBar] nem szükséges."
+
+#. TabContainer.get_current_tab_control
+#. Forrásjavaslat: 45. szakasz
+#: doc/classes/TabContainer.xml
+msgid "Returns the child [Control] node located at the active tab index."
+msgstr "Visszaadja az aktív fül indexéhez tartozó gyermek [Control] csomópontot."
+
+#. TabContainer.get_previous_tab
+#. Forrásjavaslat: 45. szakasz
+#: doc/classes/TabContainer.xml
+msgid "Returns the previously active tab index."
+msgstr "Visszaadja a korábban aktív fül indexét."
+
+#. TabContainer.get_tab_button_icon
+#. Forrásjavaslat: 45. szakasz
+#: doc/classes/TabContainer.xml
+msgid "Returns the button icon from the tab at index [param tab_idx]."
+msgstr "Visszaadja a [param tab_idx] indexű fül gombikonját."
+
+#. TabContainer.get_tab_control
+#. Forrásjavaslat: 45. szakasz
+#: doc/classes/TabContainer.xml
+msgid "Returns the [Control] node from the tab at index [param tab_idx]."
+msgstr "Visszaadja a [param tab_idx] indexű fülhöz tartozó [Control] csomópontot."
+
+#. TabContainer.get_tab_count
+#. Forrásjavaslat: 45. szakasz
+#: doc/classes/TabContainer.xml
+msgid "Returns the number of tabs."
+msgstr "Visszaadja a fülek számát."
+
+#. TabContainer.get_tab_icon
+#. Forrásjavaslat: 45. szakasz
+#: doc/classes/TabContainer.xml
+msgid "Returns the [Texture2D] for the tab at index [param tab_idx] or [code]null[/code] if the tab has no [Texture2D]."
+msgstr "Visszaadja a [param tab_idx] indexű fül [Texture2D] ikonját, vagy [code]null[/code] értéket, ha nincs hozzárendelt [Texture2D]."
+
+#. TabContainer.get_tab_icon_max_width
+#. Forrásjavaslat: 45. szakasz
+#: doc/classes/TabContainer.xml
+msgid "Returns the maximum allowed width of the icon for the tab at index [param tab_idx]."
+msgstr "Visszaadja a [param tab_idx] indexű fül ikonjának megengedett legnagyobb szélességét."
+
+#. TabContainer.get_tab_idx_at_point
+#. Forrásjavaslat: 45. szakasz
+#: doc/classes/TabContainer.xml
+msgid "Returns the index of the tab at local coordinates [param point]. Returns [code]-1[/code] if the point is outside the control boundaries or if there's no tab at the queried position."
+msgstr "Visszaadja a [param point] helyi koordinátán található fül indexét. [code]-1[/code] értéket ad vissza, ha a pont a vezérlőelem határain kívül esik, vagy a megadott helyen nincs fül."
+
+#. TabContainer.get_tab_idx_from_control
+#. Forrásjavaslat: 45. szakasz
+#: doc/classes/TabContainer.xml
+msgid "Returns the index of the tab tied to the given [param control]. The control must be a child of the [TabContainer]."
+msgstr "Visszaadja a megadott [param control] vezérlőelemhez tartozó fül indexét. A vezérlőelemnek a [TabContainer] gyermekének kell lennie."
+
+#. TabContainer.get_tab_metadata
+#. Forrásjavaslat: 45. szakasz
+#: doc/classes/TabContainer.xml
+msgid "Returns the metadata value set to the tab at index [param tab_idx] using [method set_tab_metadata]. If no metadata was previously set, returns [code]null[/code] by default."
+msgstr "Visszaadja a [param tab_idx] indexű fülhöz a [method set_tab_metadata] metódussal beállított metaadatot. Ha korábban nem állítottak be metaadatot, alapértelmezetten [code]null[/code] értéket ad vissza."
+
+#. TabContainer.get_tab_title
+#. Forrásjavaslat: 45. szakasz
+#: doc/classes/TabContainer.xml
+msgid "Returns the title of the tab at index [param tab_idx]. Tab titles default to the name of the indexed child node, but this can be overridden with [method set_tab_title]."
+msgstr "Visszaadja a [param tab_idx] indexű fül címét. Alapértelmezés szerint a fül címe a megfelelő gyermekcsomópont neve, de a [method set_tab_title] metódussal felülírható."
+
+#. TabContainer.get_tab_tooltip
+#. Forrásjavaslat: 45. szakasz
+#: doc/classes/TabContainer.xml
+msgid "Returns the tooltip text of the tab at index [param tab_idx]."
+msgstr "Visszaadja a [param tab_idx] indexű fül eszköztippjének szövegét."
+
+#. TabContainer.is_tab_disabled
+#. Forrásjavaslat: 45. szakasz
+#: doc/classes/TabContainer.xml
+msgid "Returns [code]true[/code] if the tab at index [param tab_idx] is disabled."
+msgstr "[code]true[/code] értéket ad vissza, ha a [param tab_idx] indexű fül le van tiltva."
+
+#. TabContainer.is_tab_hidden
+#. Forrásjavaslat: 45. szakasz
+#: doc/classes/TabContainer.xml
+msgid "Returns [code]true[/code] if the tab at index [param tab_idx] is hidden."
+msgstr "[code]true[/code] értéket ad vissza, ha a [param tab_idx] indexű fül rejtett."
+
+#. TabContainer.select_next_available
+#. Forrásjavaslat: 45. szakasz
+#: doc/classes/TabContainer.xml
+msgid "Selects the first available tab with greater index than the currently selected. Returns [code]true[/code] if tab selection changed."
+msgstr "Kijelöli az aktuálisnál nagyobb indexű, első elérhető fület. Ha megváltozott a kijelölés, [code]true[/code] értéket ad vissza."
+
+#. TabContainer.select_previous_available
+#. Forrásjavaslat: 45. szakasz
+#: doc/classes/TabContainer.xml
+msgid "Selects the first available tab with lower index than the currently selected. Returns [code]true[/code] if tab selection changed."
+msgstr "Kijelöli az aktuálisnál kisebb indexű, első elérhető fület. Ha megváltozott a kijelölés, [code]true[/code] értéket ad vissza."
+
+#. TabContainer.get_popup
+#. Forrásjavaslat: 46. szakasz
+#: doc/classes/TabContainer.xml
+msgid ""
+"Returns the [Popup] node instance if one has been set already with [method set_popup].\n"
+"[b]Warning:[/b] This is a required internal node, removing and freeing it may cause a crash. If you wish to hide it or any of its children, use their [member Window.visible] property."
+msgstr ""
+"Visszaadja a [Popup] csomópontot, ha azt korábban beállították a [method set_popup] metódussal.\n"
+"[b]Figyelmeztetés:[/b] Ez egy szükséges belső csomópont; eltávolítása és felszabadítása összeomlást okozhat. Ha el szeretnéd rejteni ezt vagy valamely gyermekét, használd a [member Window.visible] tulajdonságot."
+
+#. TabContainer.get_tab_bar
+#. Forrásjavaslat: 46. szakasz
+#: doc/classes/TabContainer.xml
+msgid ""
+"Returns the [TabBar] contained in this container.\n"
+"[b]Warning:[/b] This is a required internal node, removing and freeing it or editing its tabs may cause a crash. If you wish to edit the tabs, use the methods provided in [TabContainer]."
+msgstr ""
+"Visszaadja a tárolóban található [TabBar] elemet.\n"
+"[b]Figyelmeztetés:[/b] Ez egy szükséges belső csomópont; eltávolítása, felszabadítása vagy füleinek közvetlen szerkesztése összeomlást okozhat. A fülek módosításához a [TabContainer] metódusait használd."
+
+#. TabContainer.set_popup
+#. Forrásjavaslat: 46. szakasz
+#: doc/classes/TabContainer.xml
+msgid "If set on a [Popup] node instance, a popup menu icon appears in the top-right corner of the [TabContainer] (setting it to [code]null[/code] will make it go away). Clicking it will expand the [Popup] node."
+msgstr "Ha egy [Popup] csomópontra állítod, felugrómenü-ikon jelenik meg a [TabContainer] jobb felső sarkában (a [code]null[/code] érték eltünteti). Az ikonra kattintva megnyílik a [Popup] csomópont."
+
+#. TabContainer.set_tab_button_icon
+#. Forrásjavaslat: 46. szakasz
+#: doc/classes/TabContainer.xml
+msgid "Sets the button icon from the tab at index [param tab_idx]."
+msgstr "Beállítja a [param tab_idx] indexű fül gombikonját."
+
+#. TabContainer.set_tab_disabled
+#. Forrásjavaslat: 46. szakasz
+#: doc/classes/TabContainer.xml
+msgid "If [param disabled] is [code]true[/code], disables the tab at index [param tab_idx], making it non-interactable."
+msgstr "Ha a [param disabled] értéke [code]true[/code], letiltja a [param tab_idx] indexű fület, így az nem használható."
+
+#. TabContainer.set_tab_hidden
+#. Forrásjavaslat: 46. szakasz
+#: doc/classes/TabContainer.xml
+msgid "If [param hidden] is [code]true[/code], hides the tab at index [param tab_idx], making it disappear from the tab area."
+msgstr "Ha a [param hidden] értéke [code]true[/code], elrejti a [param tab_idx] indexű fület a fülsávból."
+
+#. TabContainer.set_tab_icon
+#. Forrásjavaslat: 46. szakasz
+#: doc/classes/TabContainer.xml
+msgid "Sets an icon for the tab at index [param tab_idx]."
+msgstr "Beállítja a [param tab_idx] indexű fül ikonját."
+
+#. TabContainer.set_tab_icon_max_width
+#. Forrásjavaslat: 46. szakasz
+#: doc/classes/TabContainer.xml
+msgid "Sets the maximum allowed width of the icon for the tab at index [param tab_idx]. This limit is applied on top of the default size of the icon and on top of [theme_item icon_max_width]. The height is adjusted according to the icon's ratio."
+msgstr "Beállítja a [param tab_idx] indexű fül ikonjának megengedett legnagyobb szélességét. Ez a korlát az ikon alapértelmezett méretén és a [theme_item icon_max_width] beállításon felül érvényesül. Az ikon magassága a képarányához igazodik."
+
+#. TabContainer.set_tab_metadata
+#. Forrásjavaslat: 46. szakasz
+#: doc/classes/TabContainer.xml
+msgid "Sets the metadata value for the tab at index [param tab_idx], which can be retrieved later using [method get_tab_metadata]."
+msgstr "Beállítja a [param tab_idx] indexű fül metaadatát, amely később a [method get_tab_metadata] metódussal kérdezhető le."
+
+#. TabContainer.set_tab_title
+#. Forrásjavaslat: 46. szakasz
+#: doc/classes/TabContainer.xml
+msgid "Sets a custom title for the tab at index [param tab_idx] (tab titles default to the name of the indexed child node). Set it back to the child's name to make the tab default to it again."
+msgstr "Egyéni címet állít be a [param tab_idx] indexű fülhöz (alapértelmezés szerint a megfelelő gyermekcsomópont neve a fül címe). Az alapértelmezett név visszaállításához add meg ismét a gyermekcsomópont nevét."
+
+#. TabContainer.set_tab_tooltip
+#. Forrásjavaslat: 46. szakasz
+#: doc/classes/TabContainer.xml
+msgid ""
+"Sets a custom tooltip text for tab at index [param tab_idx].\n"
+"[b]Note:[/b] By default, if the [param tooltip] is empty and the tab text is truncated (not all characters fit into the tab), the title will be displayed as a tooltip. To hide the tooltip, assign [code]\" \"[/code] as the [param tooltip] text."
+msgstr ""
+"Egyéni eszköztippszöveget állít be a [param tab_idx] indexű fülhöz.\n"
+"[b]Megjegyzés:[/b] Ha a [param tooltip] üres, és a fül felirata nem fér ki teljesen, alapértelmezés szerint a teljes cím jelenik meg eszköztippként. Az eszköztipp elrejtéséhez állítsd a [param tooltip] szövegét [code]\" \"[/code] értékre."
+
+#. TabContainer.all_tabs_in_front
+#. Forrásjavaslat: 47. szakasz
+#: doc/classes/TabContainer.xml
+msgid "This doesn't do anything."
+msgstr "Ez a beállítás már nincs hatással a működésre."
+
+#. TabContainer.clip_tabs
+#. Forrásjavaslat: 47. szakasz
+#: doc/classes/TabContainer.xml
+msgid "If [code]true[/code], tabs overflowing this node's width will be hidden, displaying two navigation buttons instead. Otherwise, this node's minimum size is updated so that all tabs are visible."
+msgstr "Ha [code]true[/code], a csomópont szélességén túlnyúló fülek rejtve maradnak, helyettük két navigációs gomb jelenik meg. Ellenkező esetben a csomópont minimális mérete úgy változik, hogy minden fül látható legyen."
+
+#. TabContainer.current_tab
+#. Forrásjavaslat: 47. szakasz
+#: doc/classes/TabContainer.xml
+msgid ""
+"The current tab index. When set, this index's [Control] node's [code]visible[/code] property is set to [code]true[/code] and all others are set to [code]false[/code].\n"
+"A value of [code]-1[/code] means that no tab is selected."
+msgstr ""
+"Az aktuális fül indexe. Beállításakor az adott indexhez tartozó [Control] csomópont [code]visible[/code] tulajdonsága [code]true[/code] lesz, a többié pedig [code]false[/code].\n"
+"A [code]-1[/code] azt jelenti, hogy nincs kijelölt fül."
+
+#. TabContainer.deselect_enabled
+#. Forrásjavaslat: 47. szakasz
+#: doc/classes/TabContainer.xml
+msgid ""
+"If [code]true[/code], all tabs can be deselected so that no tab is selected. Click on the [member current_tab] to deselect it.\n"
+"Only the tab header will be shown if no tabs are selected."
+msgstr ""
+"Ha [code]true[/code], minden fül kijelölése megszüntethető, így egyik sem marad kijelölve. Az aktuális fül kijelölésének megszüntetéséhez kattints a [member current_tab] fülre.\n"
+"Ha nincs kijelölt fül, csak a fülek fejléce látható."
+
+#. TabContainer.drag_to_rearrange_enabled
+#. Forrásjavaslat: 47. szakasz
+#: doc/classes/TabContainer.xml
+msgid "If [code]true[/code], tabs can be rearranged with mouse drag."
+msgstr "Ha [code]true[/code], a fülek egérrel húzva átrendezhetők."
+
+#. TabContainer.switch_on_drag_hover
+#. Forrásjavaslat: 47. szakasz
+#: doc/classes/TabContainer.xml
+msgid "If [code]true[/code], hovering over a tab while dragging something will switch to that tab. Does not have effect when hovering another tab to rearrange."
+msgstr "Ha [code]true[/code], egy elem húzása közben a mutatót egy fül fölé helyezve a tároló arra a fülre vált. Ez nem érvényes, amikor egy másik fület húzunk átrendezés céljából."
+
+#. TabContainer.tab_alignment
+#. Forrásjavaslat: 47. szakasz
+#: doc/classes/TabContainer.xml
+msgid "The position at which tabs will be placed."
+msgstr "Meghatározza, hogy a fülek hol helyezkedjenek el."
+
+#. TabContainer.tab_focus_mode
+#. Forrásjavaslat: 47. szakasz
+#: doc/classes/TabContainer.xml
+msgid "The focus access mode for the internal [TabBar] node."
+msgstr "A belső [TabBar] csomópont fókuszálási módja."
+
+#. TabContainer.tab_{index}/disabled
+#. Forrásjavaslat: 47. szakasz
+#: doc/classes/TabContainer.xml
+msgid ""
+"If [code]true[/code], the tab at [code]index[/code] is disabled.\n"
+"[b]Note:[/b] [code]index[/code] is a value in the [code]0 .. get_tab_count() - 1[/code] range."
+msgstr ""
+"Ha [code]true[/code], a [code]index[/code] indexű fül le van tiltva.\n"
+"[b]Megjegyzés:[/b] Az [code]index[/code] értéke a [code]0 .. get_tab_count() - 1[/code] tartományba esik."
+
+#. TabContainer.tab_{index}/hidden
+#. Forrásjavaslat: 47. szakasz
+#: doc/classes/TabContainer.xml
+msgid ""
+"If [code]true[/code], the tab at [code]index[/code] is hidden.\n"
+"[b]Note:[/b] [code]index[/code] is a value in the [code]0 .. get_tab_count() - 1[/code] range."
+msgstr ""
+"Ha [code]true[/code], a [code]index[/code] indexű fül rejtett.\n"
+"[b]Megjegyzés:[/b] Az [code]index[/code] értéke a [code]0 .. get_tab_count() - 1[/code] tartományba esik."
+
+#. Godot 4.7 eredeti súgójának tartalmi pontatlansága: a magyar fordítás a tulajdonság tényleges funkcióját írja le.
+#. TabContainer.tab_{index}/icon
+#. Forrásjavaslat: 47. szakasz
+#: doc/classes/TabContainer.xml
+msgid ""
+"The title text of the tab at [code]index[/code].\n"
+"[b]Note:[/b] [code]index[/code] is a value in the [code]0 .. get_tab_count() - 1[/code] range."
+msgstr ""
+"A [code]index[/code] indexű fül ikonja.\n"
+"[b]Megjegyzés:[/b] Az [code]index[/code] értéke a [code]0 .. get_tab_count() - 1[/code] tartományba esik."
+
+#. Godot 4.7 eredeti súgójának tartalmi pontatlansága: a magyar fordítás a tulajdonság tényleges funkcióját írja le.
+#. TabContainer.tab_{index}/title
+#. Forrásjavaslat: 47. szakasz
+#: doc/classes/TabContainer.xml
+msgid ""
+"The tooltip text of the tab at [code]index[/code].\n"
+"[b]Note:[/b] [code]index[/code] is a value in the [code]0 .. get_tab_count() - 1[/code] range."
+msgstr ""
+"A [code]index[/code] indexű fül címszövege.\n"
+"[b]Megjegyzés:[/b] Az [code]index[/code] értéke a [code]0 .. get_tab_count() - 1[/code] tartományba esik."
+
+#. Godot 4.7 eredeti súgójának tartalmi pontatlansága: a magyar fordítás a tulajdonság tényleges funkcióját írja le.
+#. TabContainer.tabs_position
+#. Forrásjavaslat: 47. szakasz
+#: doc/classes/TabContainer.xml
+msgid "The horizontal alignment of the tabs."
+msgstr "A fülsáv elhelyezkedése: a tároló felső vagy alsó részén."
+
+#. TabContainer.tabs_rearrange_group
+#. Forrásjavaslat: 47. szakasz
+#: doc/classes/TabContainer.xml
+msgid ""
+"[TabContainer]s with the same rearrange group ID will allow dragging the tabs between them. Enable drag with [member drag_to_rearrange_enabled].\n"
+"Setting this to [code]-1[/code] will disable rearranging between [TabContainer]s."
+msgstr ""
+"Az azonos átrendezési csoportazonosítójú [TabContainer] elemek között a fülek áthúzhatók. A húzást a [member drag_to_rearrange_enabled] tulajdonsággal engedélyezheted.\n"
+"A [code]-1[/code] érték letiltja a fülek átrendezését a különböző [TabContainer] elemek között."
+
+#. TabContainer.tabs_visible
+#. Forrásjavaslat: 47. szakasz
+#: doc/classes/TabContainer.xml
+msgid "If [code]true[/code], tabs are visible. If [code]false[/code], tabs' content and titles are hidden."
+msgstr "Ha [code]true[/code], a fülek láthatók. Ha [code]false[/code], a fülek tartalma és címei rejtve maradnak."
+
+#. TabContainer.use_hidden_tabs_for_min_size
+#. Forrásjavaslat: 47. szakasz
+#: doc/classes/TabContainer.xml
+msgid "If [code]true[/code], child [Control] nodes that are hidden have their minimum size take into account in the total, instead of only the currently visible one."
+msgstr "Ha [code]true[/code], a rejtett gyermek [Control] csomópontok minimális mérete is beleszámít a tároló teljes minimális méretébe, nem csak az éppen látható elemé."
+
+#. TabContainer.active_tab_rearranged
+#. Forrásjavaslat: 47. szakasz
+#: doc/classes/TabContainer.xml
+msgid "Emitted when the active tab is rearranged via mouse drag. See [member drag_to_rearrange_enabled]."
+msgstr "Akkor bocsátódik ki, amikor az aktív fület egérrel húzva átrendezik. Lásd: [member drag_to_rearrange_enabled]."
+
+#. TabContainer.pre_popup_pressed
+#. Forrásjavaslat: 47. szakasz
+#: doc/classes/TabContainer.xml
+msgid "Emitted when the [TabContainer]'s [Popup] button is clicked. See [method set_popup] for details."
+msgstr "Akkor bocsátódik ki, amikor a [TabContainer] [Popup] gombjára kattintanak. További részletek: [method set_popup]."
+
+#. TabContainer.tab_button_pressed
+#. Forrásjavaslat: 47. szakasz
+#: doc/classes/TabContainer.xml
+msgid "Emitted when the user clicks on the button icon on this tab."
+msgstr "Akkor bocsátódik ki, amikor a felhasználó a fül gombikonjára kattint."
+
+#. TabContainer.tab_changed
+#. Forrásjavaslat: 47. szakasz
+#: doc/classes/TabContainer.xml
+msgid "Emitted when switching to another tab."
+msgstr "Akkor bocsátódik ki, amikor egy másik fülre váltanak."
+
+#. TabContainer.tab_clicked
+#. Forrásjavaslat: 47. szakasz
+#: doc/classes/TabContainer.xml
+msgid "Emitted when a tab is clicked, even if it is the current tab."
+msgstr "Akkor bocsátódik ki, amikor a felhasználó rákattint egy fülre, akkor is, ha az már aktív."
+
+#. TabContainer.tab_hovered
+#. Forrásjavaslat: 47. szakasz
+#: doc/classes/TabContainer.xml
+msgid "Emitted when a tab is hovered by the mouse."
+msgstr "Akkor bocsátódik ki, amikor az egérmutató egy fül fölé kerül."
+
+#. TabContainer.tab_selected
+#. Forrásjavaslat: 47. szakasz
+#: doc/classes/TabContainer.xml
+msgid "Emitted when a tab is selected via click, directional input, or script, even if it is the current tab."
+msgstr "Akkor bocsátódik ki, amikor egy fület kattintással, irányvezérléssel vagy szkriptből kijelölnek, akkor is, ha az már az aktuális fül."
+
+#. TabContainer.POSITION_TOP
+#. Forrásjavaslat: 48. szakasz
+#: doc/classes/TabContainer.xml
+msgid "Places the tab bar at the top."
+msgstr "A fülsávot felül helyezi el."
+
+#. TabContainer.POSITION_BOTTOM
+#. Forrásjavaslat: 48. szakasz
+#: doc/classes/TabContainer.xml
+msgid "Places the tab bar at the bottom. The tab bar's [StyleBox] will be flipped vertically."
+msgstr "A fülsávot alul helyezi el. A fülsáv [StyleBox] stílusa függőlegesen tükröződik."
+
+#. TabContainer.POSITION_MAX
+#. Forrásjavaslat: 48. szakasz
+#: doc/classes/TabContainer.xml
+msgid "Represents the size of the [enum TabPosition] enum."
+msgstr "A [enum TabPosition] felsorolás méretét jelöli."
+
+#. TabContainer.drop_mark_color
+#. Forrásjavaslat: 48. szakasz
+#: doc/classes/TabContainer.xml
+msgid "Modulation color for the [theme_item drop_mark] icon."
+msgstr "A [theme_item drop_mark] ikon színezéséhez használt szín."
+
+#. TabContainer.font_disabled_color
+#. Forrásjavaslat: 48. szakasz
+#: doc/classes/TabContainer.xml
+msgid "Font color of disabled tabs."
+msgstr "A letiltott fülek betűszíne."
+
+#. TabContainer.font_hovered_color
+#. Forrásjavaslat: 48. szakasz
+#: doc/classes/TabContainer.xml
+msgid "Font color of the currently hovered tab. Does not apply to the selected tab."
+msgstr "Az egérmutató alatt lévő fül betűszíne. A kijelölt fülre nem vonatkozik."
+
+#. TabContainer.font_outline_color
+#. Forrásjavaslat: 48. szakasz
+#: doc/classes/TabContainer.xml
+msgid "The tint of text outline of the tab name."
+msgstr "A fülcím szövegkörvonalának színe."
+
+#. TabContainer.font_selected_color
+#. Forrásjavaslat: 48. szakasz
+#: doc/classes/TabContainer.xml
+msgid "Font color of the currently selected tab."
+msgstr "Az aktuálisan kijelölt fül betűszíne."
+
+#. TabContainer.font_unselected_color
+#. Forrásjavaslat: 48. szakasz
+#: doc/classes/TabContainer.xml
+msgid "Font color of the other, unselected tabs."
+msgstr "A többi, nem kijelölt fül betűszíne."
+
+#. TabContainer.icon_disabled_color
+#. Forrásjavaslat: 48. szakasz
+#: doc/classes/TabContainer.xml
+msgid "Icon color of disabled tabs."
+msgstr "A letiltott fülek ikonjának színe."
+
+#. TabContainer.icon_hovered_color
+#. Forrásjavaslat: 48. szakasz
+#: doc/classes/TabContainer.xml
+msgid "Icon color of the currently hovered tab. Does not apply to the selected tab."
+msgstr "Az egérmutató alatt lévő fül ikonjának színe. A kijelölt fülre nem vonatkozik."
+
+#. TabContainer.icon_selected_color
+#. Forrásjavaslat: 48. szakasz
+#: doc/classes/TabContainer.xml
+msgid "Icon color of the currently selected tab."
+msgstr "Az aktuálisan kijelölt fül ikonjának színe."
+
+#. TabContainer.icon_unselected_color
+#. Forrásjavaslat: 48. szakasz
+#: doc/classes/TabContainer.xml
+msgid "Icon color of the other, unselected tabs."
+msgstr "A többi, nem kijelölt fül ikonjának színe."
+
+#. TabContainer.icon_max_width
+#. Forrásjavaslat: 48. szakasz
+#: doc/classes/TabContainer.xml
+msgid "The maximum allowed width of the tab's icon. This limit is applied on top of the default size of the icon, but before the value set with [method TabBar.set_tab_icon_max_width]. The height is adjusted according to the icon's ratio."
+msgstr "A fül ikonjának megengedett legnagyobb szélessége. A korlát az ikon alapértelmezett méretén felül, de a [method TabBar.set_tab_icon_max_width] metódussal beállított érték előtt érvényesül. A magasság az ikon képarányához igazodik."
+
+#. TabContainer.icon_separation
+#. Forrásjavaslat: 48. szakasz
+#: doc/classes/TabContainer.xml
+msgid "Space between tab's name and its icon."
+msgstr "A fül neve és ikonja közötti térköz."
+
+#. TabContainer.outline_size
+#. Forrásjavaslat: 48. szakasz
+#: doc/classes/TabContainer.xml
+msgid ""
+"The size of the tab text outline.\n"
+"[b]Note:[/b] If using a font with [member FontFile.multichannel_signed_distance_field] enabled, its [member FontFile.msdf_pixel_range] must be set to at least [i]twice[/i] the value of [theme_item outline_size] for outline rendering to look correct. Otherwise, the outline may appear to be cut off earlier than intended."
+msgstr ""
+"A fül felirata körvonalának mérete.\n"
+"[b]Megjegyzés:[/b] Ha a [member FontFile.multichannel_signed_distance_field] engedélyezett, a [member FontFile.msdf_pixel_range] értékének legalább a [theme_item outline_size] érték [i]kétszeresének[/i] kell lennie, különben a körvonal levágódhat."
+
+#. TabContainer.side_margin
+#. Forrásjavaslat: 48. szakasz
+#: doc/classes/TabContainer.xml
+msgid ""
+"The space at the left or right edges of the tab bar, accordingly with the current [member tab_alignment].\n"
+"The margin is ignored with [constant TabBar.ALIGNMENT_RIGHT] if the tabs are clipped (see [member clip_tabs]) or a popup has been set (see [method set_popup]). The margin is always ignored with [constant TabBar.ALIGNMENT_CENTER]."
+msgstr ""
+"A fülsáv bal vagy jobb szélén hagyott térköz az aktuális [member tab_alignment] szerint.\n"
+"A margó figyelmen kívül marad [constant TabBar.ALIGNMENT_RIGHT] esetén, ha a füleket levágja a rendszer (lásd: [member clip_tabs]), vagy felugró menü van beállítva (lásd: [method set_popup]). [constant TabBar.ALIGNMENT_CENTER] esetén a margó mindig figyelmen kívül marad."
+
+#. TabContainer.tab_separation
+#. Forrásjavaslat: 48. szakasz
+#: doc/classes/TabContainer.xml
+msgid "The space between tabs in the tab bar."
+msgstr "A fülsáv fülei közötti térköz."
+
+#. TabContainer.font
+#. Forrásjavaslat: 48. szakasz
+#: doc/classes/TabContainer.xml
+msgid "The font used to draw tab names."
+msgstr "A fülek neveinek megjelenítéséhez használt betűkészlet."
+
+#. TabContainer.font_size
+#. Forrásjavaslat: 48. szakasz
+#: doc/classes/TabContainer.xml
+msgid "Font size of the tab names."
+msgstr "A fülek neveinek betűmérete."
+
+#. TabContainer.decrement
+#. Forrásjavaslat: 48. szakasz
+#: doc/classes/TabContainer.xml
+msgid "Icon for the left arrow button that appears when there are too many tabs to fit in the container width. When the button is disabled (i.e. the first tab is visible), it appears semi-transparent."
+msgstr "A balra mutató nyílgomb ikonja, amely akkor jelenik meg, ha a fülek nem férnek el a tároló szélességében. Letiltott állapotban, amikor az első fül látható, félig átlátszó."
+
+#. TabContainer.decrement_highlight
+#. Forrásjavaslat: 48. szakasz
+#: doc/classes/TabContainer.xml
+msgid "Icon for the left arrow button that appears when there are too many tabs to fit in the container width. Used when the button is being hovered with the cursor."
+msgstr "A balra mutató nyílgomb ikonja, amely akkor látható, ha túl sok fül van, és az egérmutató a gomb fölött áll."
+
+#. TabContainer.drop_mark
+#. Forrásjavaslat: 48. szakasz
+#: doc/classes/TabContainer.xml
+msgid "Icon shown to indicate where a dragged tab will be dropped (see [member drag_to_rearrange_enabled])."
+msgstr "A húzott fül várható leejtési helyét jelző ikon (lásd: [member drag_to_rearrange_enabled])."
+
+#. TabContainer.increment
+#. Forrásjavaslat: 48. szakasz
+#: doc/classes/TabContainer.xml
+msgid "Icon for the right arrow button that appears when there are too many tabs to fit in the container width. When the button is disabled (i.e. the last tab is visible) it appears semi-transparent."
+msgstr "A jobbra mutató nyílgomb ikonja, amely akkor jelenik meg, ha a fülek nem férnek el a tároló szélességében. Letiltott állapotban, amikor az utolsó fül látható, félig átlátszó."
+
+#. TabContainer.increment_highlight
+#. Forrásjavaslat: 48. szakasz
+#: doc/classes/TabContainer.xml
+msgid "Icon for the right arrow button that appears when there are too many tabs to fit in the container width. Used when the button is being hovered with the cursor."
+msgstr "A jobbra mutató nyílgomb ikonja, amely akkor látható, ha túl sok fül van, és az egérmutató a gomb fölött áll."
+
+#. TabContainer.menu
+#. Forrásjavaslat: 48. szakasz
+#: doc/classes/TabContainer.xml
+msgid "The icon for the menu button (see [method set_popup])."
+msgstr "A menügomb ikonja (lásd: [method set_popup])."
+
+#. TabContainer.menu_highlight
+#. Forrásjavaslat: 48. szakasz
+#: doc/classes/TabContainer.xml
+msgid "The icon for the menu button (see [method set_popup]) when it's being hovered with the cursor."
+msgstr "A menügomb ikonja (lásd: [method set_popup]), amikor az egérmutató fölé kerül."
+
+#. TabContainer.panel
+#. Forrásjavaslat: 48. szakasz
+#: doc/classes/TabContainer.xml
+msgid "The style for the background fill."
+msgstr "A háttérkitöltés stílusa."
+
+#. TabContainer.tab_disabled
+#. Forrásjavaslat: 48. szakasz
+#: doc/classes/TabContainer.xml
+msgid "The style of disabled tabs."
+msgstr "A letiltott fülek stílusa."
+
+#. TabContainer.tab_focus
+#. Forrásjavaslat: 48. szakasz
+#: doc/classes/TabContainer.xml
+msgid "[StyleBox] used when the [TabBar] is focused. The [theme_item tab_focus] [StyleBox] is displayed [i]over[/i] the base [StyleBox] of the selected tab, so a partially transparent [StyleBox] should be used to ensure the base [StyleBox] remains visible. A [StyleBox] that represents an outline or an underline works well for this purpose. To disable the focus visual effect, assign a [StyleBoxEmpty] resource. Note that disabling the focus visual effect will harm keyboard/controller navigation usability, so this is not recommended for accessibility reasons."
+msgstr "A [TabBar] fókuszba kerülésekor használt [StyleBox]. A [theme_item tab_focus] [StyleBox] a kijelölt fül alap [StyleBox] stílusa [i]fölött[/i] jelenik meg, ezért részben átlátszó [StyleBox] ajánlott, hogy az alap [StyleBox] látható maradjon. Egy körvonalat vagy aláhúzást megjelenítő [StyleBox] megfelelő erre. A fókuszjelzés kikapcsolásához rendelj hozzá [StyleBoxEmpty] erőforrást. Ez azonban rontja a billentyűzetes és játékvezérlős navigáció használhatóságát, ezért akadálymentességi okból nem ajánlott."
+
+#. TabContainer.tab_hovered
+#. Forrásjavaslat: 48. szakasz
+#: doc/classes/TabContainer.xml
+msgid ""
+"The style of the currently hovered tab.\n"
+"[b]Note:[/b] This style will be drawn with the same width as [theme_item tab_unselected] at minimum."
+msgstr ""
+"Az egérmutató alatt lévő fül stílusa.\n"
+"[b]Megjegyzés:[/b] Ez a stílus legalább a [theme_item tab_unselected] szélességével jelenik meg."
+
+#. TabContainer.tab_selected
+#. Forrásjavaslat: 48. szakasz
+#: doc/classes/TabContainer.xml
+msgid "The style of the currently selected tab."
+msgstr "Az aktuálisan kijelölt fül stílusa."
+
+#. TabContainer.tab_unselected
+#. Forrásjavaslat: 48. szakasz
+#: doc/classes/TabContainer.xml
+msgid "The style of the other, unselected tabs."
+msgstr "A többi, nem kijelölt fül stílusa."
+
+#. TabContainer.tabbar_background
+#. Forrásjavaslat: 48. szakasz
+#: doc/classes/TabContainer.xml
+msgid "The style for the background fill of the [TabBar] area."
+msgstr "A [TabBar] terület háttérkitöltésének stílusa."
