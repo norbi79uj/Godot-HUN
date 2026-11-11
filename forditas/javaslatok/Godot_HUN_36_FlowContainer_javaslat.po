@@ -1,0 +1,94 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. FlowContainer.brief
+#: doc/classes/FlowContainer.xml
+msgid "A container that arranges its child controls horizontally or vertically and wraps them around at the borders."
+msgstr "Olyan tároló, amely vízszintesen vagy függőlegesen rendezi el a gyermek vezérlőelemeket, és a tároló szélén új sorba vagy oszlopba töri az elrendezést."
+
+#. FlowContainer.description
+#: doc/classes/FlowContainer.xml
+msgid "A container that arranges its child controls horizontally or vertically and wraps them around at the borders. This is similar to how text in a book wraps around when no more words can fit on a line."
+msgstr "Olyan tároló, amely vízszintesen vagy függőlegesen rendezi el a gyermek vezérlőelemeket, és a tároló szélén új sorba vagy oszlopba töri az elrendezést. Hasonlóan működik, mint a könyvben a szöveg: ha egy sorba már nem fér több szó, a folytatás a következő sorba kerül."
+
+#. FlowContainer.get_line_count
+#: doc/classes/FlowContainer.xml
+msgid "Returns the current line count."
+msgstr "Visszaadja a sorok aktuális számát."
+
+#. FlowContainer.alignment
+#: doc/classes/FlowContainer.xml
+msgid "The alignment of the container's children (must be one of [constant ALIGNMENT_BEGIN], [constant ALIGNMENT_CENTER], or [constant ALIGNMENT_END])."
+msgstr "A tároló gyermekelemeinek igazítása ([constant ALIGNMENT_BEGIN], [constant ALIGNMENT_CENTER] vagy [constant ALIGNMENT_END] lehet)."
+
+#. FlowContainer.last_wrap_alignment
+#: doc/classes/FlowContainer.xml
+msgid "The wrap behavior of the last, partially filled row or column (must be one of [constant LAST_WRAP_ALIGNMENT_INHERIT], [constant LAST_WRAP_ALIGNMENT_BEGIN], [constant LAST_WRAP_ALIGNMENT_CENTER], or [constant LAST_WRAP_ALIGNMENT_END])."
+msgstr "Az utolsó, részben kitöltött sor vagy oszlop igazítása a sortörés után ([constant LAST_WRAP_ALIGNMENT_INHERIT], [constant LAST_WRAP_ALIGNMENT_BEGIN], [constant LAST_WRAP_ALIGNMENT_CENTER] vagy [constant LAST_WRAP_ALIGNMENT_END] lehet)."
+
+#. FlowContainer.reverse_fill
+#: doc/classes/FlowContainer.xml
+msgid ""
+"If [code]true[/code], reverses fill direction. Horizontal [FlowContainer]s will fill rows bottom to top, vertical [FlowContainer]s will fill columns right to left.\n"
+"When using a vertical [FlowContainer] with a right to left [member Control.layout_direction], columns will fill left to right instead."
+msgstr ""
+"Ha [code]true[/code], megfordítja a kitöltés irányát. A vízszintes [FlowContainer] alulról felfelé tölti fel a sorokat, a függőleges [FlowContainer] pedig jobbról balra az oszlopokat.\n"
+"Ha egy függőleges [FlowContainer] esetén a [member Control.layout_direction] jobbról balra haladó elrendezést határoz meg, az oszlopok ehelyett balról jobbra töltődnek fel."
+
+#. FlowContainer.vertical
+#: doc/classes/FlowContainer.xml
+msgid ""
+"If [code]true[/code], the [FlowContainer] will arrange its children vertically, rather than horizontally.\n"
+"Can't be changed when using [HFlowContainer] and [VFlowContainer]."
+msgstr ""
+"Ha [code]true[/code], a [FlowContainer] a gyermekelemeket vízszintes helyett függőleges irányban rendezi el.\n"
+"A [HFlowContainer] és a [VFlowContainer] használatakor nem módosítható."
+
+#. FlowContainer.ALIGNMENT_BEGIN
+#: doc/classes/FlowContainer.xml
+msgid "The child controls will be arranged at the beginning of the container, i.e. top if orientation is vertical, left if orientation is horizontal (right for RTL layout)."
+msgstr "A gyermek vezérlőelemek a tároló elejére kerülnek: függőleges elrendezésnél felülre, vízszintesnél balra (jobbról balra haladó elrendezésnél jobbra)."
+
+#. FlowContainer.ALIGNMENT_CENTER
+#: doc/classes/FlowContainer.xml
+msgid "The child controls will be centered in the container."
+msgstr "A gyermek vezérlőelemek a tároló közepére kerülnek."
+
+#. FlowContainer.ALIGNMENT_END
+#: doc/classes/FlowContainer.xml
+msgid "The child controls will be arranged at the end of the container, i.e. bottom if orientation is vertical, right if orientation is horizontal (left for RTL layout)."
+msgstr "A gyermek vezérlőelemek a tároló végére kerülnek: függőleges elrendezésnél alulra, vízszintesnél jobbra (jobbról balra haladó elrendezésnél balra)."
+
+#. FlowContainer.LAST_WRAP_ALIGNMENT_INHERIT
+#: doc/classes/FlowContainer.xml
+msgid "The last partially filled row or column will wrap aligned to the previous row or column in accordance with [member alignment]."
+msgstr "Az utolsó, részben kitöltött sor vagy oszlop a [member alignment] beállításának megfelelően, az előző sorhoz vagy oszlophoz igazodik."
+
+#. FlowContainer.LAST_WRAP_ALIGNMENT_BEGIN
+#: doc/classes/FlowContainer.xml
+msgid "The last partially filled row or column will wrap aligned to the beginning of the previous row or column."
+msgstr "Az utolsó, részben kitöltött sor vagy oszlop az előző sor vagy oszlop elejéhez igazodik."
+
+#. FlowContainer.LAST_WRAP_ALIGNMENT_CENTER
+#: doc/classes/FlowContainer.xml
+msgid "The last partially filled row or column will wrap aligned to the center of the previous row or column."
+msgstr "Az utolsó, részben kitöltött sor vagy oszlop az előző sor vagy oszlop közepéhez igazodik."
+
+#. FlowContainer.LAST_WRAP_ALIGNMENT_END
+#: doc/classes/FlowContainer.xml
+msgid "The last partially filled row or column will wrap aligned to the end of the previous row or column."
+msgstr "Az utolsó, részben kitöltött sor vagy oszlop az előző sor vagy oszlop végéhez igazodik."
+
+#. FlowContainer.h_separation
+#: doc/classes/FlowContainer.xml
+msgid "The horizontal separation of child nodes."
+msgstr "A gyermekcsomópontok közötti vízszintes térköz."
+
+#. FlowContainer.v_separation
+#: doc/classes/FlowContainer.xml
+msgid "The vertical separation of child nodes."
+msgstr "A gyermekcsomópontok közötti függőleges térköz."
