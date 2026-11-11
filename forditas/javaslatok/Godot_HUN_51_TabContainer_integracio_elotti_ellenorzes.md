@@ -9,13 +9,16 @@ Vizsgált fájl: `forditas/javaslatok/Godot_HUN_50_TabContainer_osszevont_lektor
 - Eredeti Godot 4.7 súgóbejegyzés: **86**.
 - Hiányzó vagy az eredetihez nem illeszkedő bejegyzések: **0**.
 - Duplikált teljes angol `msgid`: **0**.
+- Külön kategóriában ismétlődő rövid tagnevek: **2** (nem hibák).
 - BBCode-jelöléseltérések: **0**.
 - Felismert PO-szerkezeti hibák a saját soronkénti feldolgozóban: **0**.
 
-### Feltárt problémák
+### Nem hibás névegyezések
 
-- duplicate id tab_hovered
-- duplicate id tab_selected
+- `tab_hovered`: külön eseményjelzés és témastílus.
+- `tab_selected`: külön eseményjelzés és témastílus.
+
+Mindkét pár különböző teljes angol `msgid` értéket használ, ezért a PO-katalógusban nincs ütközés.
 
 
 ## Lektorálási megjegyzések
