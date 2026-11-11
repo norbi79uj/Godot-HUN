@@ -1,0 +1,188 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. TabContainer.POSITION_TOP
+#: doc/classes/TabContainer.xml
+msgid "Places the tab bar at the top."
+msgstr "A fülsávot felül helyezi el."
+
+#. TabContainer.POSITION_BOTTOM
+#: doc/classes/TabContainer.xml
+msgid "Places the tab bar at the bottom. The tab bar's [StyleBox] will be flipped vertically."
+msgstr "A fülsávot alul helyezi el. A fülsáv [StyleBox] stílusa függőlegesen tükröződik."
+
+#. TabContainer.POSITION_MAX
+#: doc/classes/TabContainer.xml
+msgid "Represents the size of the [enum TabPosition] enum."
+msgstr "A [enum TabPosition] felsorolás méretét jelöli."
+
+#. TabContainer.drop_mark_color
+#: doc/classes/TabContainer.xml
+msgid "Modulation color for the [theme_item drop_mark] icon."
+msgstr "A [theme_item drop_mark] ikon színezéséhez használt szín."
+
+#. TabContainer.font_disabled_color
+#: doc/classes/TabContainer.xml
+msgid "Font color of disabled tabs."
+msgstr "A letiltott fülek betűszíne."
+
+#. TabContainer.font_hovered_color
+#: doc/classes/TabContainer.xml
+msgid "Font color of the currently hovered tab. Does not apply to the selected tab."
+msgstr "Az egérmutató alatt lévő fül betűszíne. A kijelölt fülre nem vonatkozik."
+
+#. TabContainer.font_outline_color
+#: doc/classes/TabContainer.xml
+msgid "The tint of text outline of the tab name."
+msgstr "A fülcím szövegkörvonalának színe."
+
+#. TabContainer.font_selected_color
+#: doc/classes/TabContainer.xml
+msgid "Font color of the currently selected tab."
+msgstr "Az aktuálisan kijelölt fül betűszíne."
+
+#. TabContainer.font_unselected_color
+#: doc/classes/TabContainer.xml
+msgid "Font color of the other, unselected tabs."
+msgstr "A többi, nem kijelölt fül betűszíne."
+
+#. TabContainer.icon_disabled_color
+#: doc/classes/TabContainer.xml
+msgid "Icon color of disabled tabs."
+msgstr "A letiltott fülek ikonjának színe."
+
+#. TabContainer.icon_hovered_color
+#: doc/classes/TabContainer.xml
+msgid "Icon color of the currently hovered tab. Does not apply to the selected tab."
+msgstr "Az egérmutató alatt lévő fül ikonjának színe. A kijelölt fülre nem vonatkozik."
+
+#. TabContainer.icon_selected_color
+#: doc/classes/TabContainer.xml
+msgid "Icon color of the currently selected tab."
+msgstr "Az aktuálisan kijelölt fül ikonjának színe."
+
+#. TabContainer.icon_unselected_color
+#: doc/classes/TabContainer.xml
+msgid "Icon color of the other, unselected tabs."
+msgstr "A többi, nem kijelölt fül ikonjának színe."
+
+#. TabContainer.icon_max_width
+#: doc/classes/TabContainer.xml
+msgid "The maximum allowed width of the tab's icon. This limit is applied on top of the default size of the icon, but before the value set with [method TabBar.set_tab_icon_max_width]. The height is adjusted according to the icon's ratio."
+msgstr "A fül ikonjának megengedett legnagyobb szélessége. A korlát az ikon alapértelmezett méretén felül, de a [method TabBar.set_tab_icon_max_width] metódussal beállított érték előtt érvényesül. A magasság az ikon képarányához igazodik."
+
+#. TabContainer.icon_separation
+#: doc/classes/TabContainer.xml
+msgid "Space between tab's name and its icon."
+msgstr "A fül neve és ikonja közötti térköz."
+
+#. TabContainer.outline_size
+#: doc/classes/TabContainer.xml
+msgid ""
+"The size of the tab text outline.\n"
+"[b]Note:[/b] If using a font with [member FontFile.multichannel_signed_distance_field] enabled, its [member FontFile.msdf_pixel_range] must be set to at least [i]twice[/i] the value of [theme_item outline_size] for outline rendering to look correct. Otherwise, the outline may appear to be cut off earlier than intended."
+msgstr ""
+"A fül felirata körvonalának mérete.\n"
+"[b]Megjegyzés:[/b] Ha a [member FontFile.multichannel_signed_distance_field] engedélyezett, a [member FontFile.msdf_pixel_range] értékének legalább a [theme_item outline_size] érték [i]kétszeresének[/i] kell lennie, különben a körvonal levágódhat."
+
+#. TabContainer.side_margin
+#: doc/classes/TabContainer.xml
+msgid ""
+"The space at the left or right edges of the tab bar, accordingly with the current [member tab_alignment].\n"
+"The margin is ignored with [constant TabBar.ALIGNMENT_RIGHT] if the tabs are clipped (see [member clip_tabs]) or a popup has been set (see [method set_popup]). The margin is always ignored with [constant TabBar.ALIGNMENT_CENTER]."
+msgstr ""
+"A fülsáv bal vagy jobb szélén hagyott térköz az aktuális [member tab_alignment] szerint.\n"
+"A margó figyelmen kívül marad [constant TabBar.ALIGNMENT_RIGHT] esetén, ha a füleket levágja a rendszer (lásd: [member clip_tabs]), vagy felugró menü van beállítva (lásd: [method set_popup]). [constant TabBar.ALIGNMENT_CENTER] esetén a margó mindig figyelmen kívül marad."
+
+#. TabContainer.tab_separation
+#: doc/classes/TabContainer.xml
+msgid "The space between tabs in the tab bar."
+msgstr "A fülsáv fülei közötti térköz."
+
+#. TabContainer.font
+#: doc/classes/TabContainer.xml
+msgid "The font used to draw tab names."
+msgstr "A fülek neveinek megjelenítéséhez használt betűkészlet."
+
+#. TabContainer.font_size
+#: doc/classes/TabContainer.xml
+msgid "Font size of the tab names."
+msgstr "A fülek neveinek betűmérete."
+
+#. TabContainer.decrement
+#: doc/classes/TabContainer.xml
+msgid "Icon for the left arrow button that appears when there are too many tabs to fit in the container width. When the button is disabled (i.e. the first tab is visible), it appears semi-transparent."
+msgstr "A balra mutató nyílgomb ikonja, amely akkor jelenik meg, ha a fülek nem férnek el a tároló szélességében. Letiltott állapotban, amikor az első fül látható, félig átlátszó."
+
+#. TabContainer.decrement_highlight
+#: doc/classes/TabContainer.xml
+msgid "Icon for the left arrow button that appears when there are too many tabs to fit in the container width. Used when the button is being hovered with the cursor."
+msgstr "A balra mutató nyílgomb ikonja, amely akkor látható, ha túl sok fül van, és az egérmutató a gomb fölött áll."
+
+#. TabContainer.drop_mark
+#: doc/classes/TabContainer.xml
+msgid "Icon shown to indicate where a dragged tab will be dropped (see [member drag_to_rearrange_enabled])."
+msgstr "A húzott fül várható leejtési helyét jelző ikon (lásd: [member drag_to_rearrange_enabled])."
+
+#. TabContainer.increment
+#: doc/classes/TabContainer.xml
+msgid "Icon for the right arrow button that appears when there are too many tabs to fit in the container width. When the button is disabled (i.e. the last tab is visible) it appears semi-transparent."
+msgstr "A jobbra mutató nyílgomb ikonja, amely akkor jelenik meg, ha a fülek nem férnek el a tároló szélességében. Letiltott állapotban, amikor az utolsó fül látható, félig átlátszó."
+
+#. TabContainer.increment_highlight
+#: doc/classes/TabContainer.xml
+msgid "Icon for the right arrow button that appears when there are too many tabs to fit in the container width. Used when the button is being hovered with the cursor."
+msgstr "A jobbra mutató nyílgomb ikonja, amely akkor látható, ha túl sok fül van, és az egérmutató a gomb fölött áll."
+
+#. TabContainer.menu
+#: doc/classes/TabContainer.xml
+msgid "The icon for the menu button (see [method set_popup])."
+msgstr "A menügomb ikonja (lásd: [method set_popup])."
+
+#. TabContainer.menu_highlight
+#: doc/classes/TabContainer.xml
+msgid "The icon for the menu button (see [method set_popup]) when it's being hovered with the cursor."
+msgstr "A menügomb ikonja (lásd: [method set_popup]), amikor az egérmutató fölé kerül."
+
+#. TabContainer.panel
+#: doc/classes/TabContainer.xml
+msgid "The style for the background fill."
+msgstr "A háttérkitöltés stílusa."
+
+#. TabContainer.tab_disabled
+#: doc/classes/TabContainer.xml
+msgid "The style of disabled tabs."
+msgstr "A letiltott fülek stílusa."
+
+#. TabContainer.tab_focus
+#: doc/classes/TabContainer.xml
+msgid "[StyleBox] used when the [TabBar] is focused. The [theme_item tab_focus] [StyleBox] is displayed [i]over[/i] the base [StyleBox] of the selected tab, so a partially transparent [StyleBox] should be used to ensure the base [StyleBox] remains visible. A [StyleBox] that represents an outline or an underline works well for this purpose. To disable the focus visual effect, assign a [StyleBoxEmpty] resource. Note that disabling the focus visual effect will harm keyboard/controller navigation usability, so this is not recommended for accessibility reasons."
+msgstr "A [TabBar] fókuszba kerülésekor használt [StyleBox]. A [theme_item tab_focus] [StyleBox] a kijelölt fül alap [StyleBox] stílusa [i]fölött[/i] jelenik meg, ezért részben átlátszó [StyleBox] ajánlott, hogy az alap [StyleBox] látható maradjon. Egy körvonalat vagy aláhúzást megjelenítő [StyleBox] megfelelő erre. A fókuszjelzés kikapcsolásához rendelj hozzá [StyleBoxEmpty] erőforrást. Ez azonban rontja a billentyűzetes és játékvezérlős navigáció használhatóságát, ezért akadálymentességi okból nem ajánlott."
+
+#. TabContainer.tab_hovered
+#: doc/classes/TabContainer.xml
+msgid ""
+"The style of the currently hovered tab.\n"
+"[b]Note:[/b] This style will be drawn with the same width as [theme_item tab_unselected] at minimum."
+msgstr ""
+"Az egérmutató alatt lévő fül stílusa.\n"
+"[b]Megjegyzés:[/b] Ez a stílus legalább a [theme_item tab_unselected] szélességével jelenik meg."
+
+#. TabContainer.tab_selected
+#: doc/classes/TabContainer.xml
+msgid "The style of the currently selected tab."
+msgstr "Az aktuálisan kijelölt fül stílusa."
+
+#. TabContainer.tab_unselected
+#: doc/classes/TabContainer.xml
+msgid "The style of the other, unselected tabs."
+msgstr "A többi, nem kijelölt fül stílusa."
+
+#. TabContainer.tabbar_background
+#: doc/classes/TabContainer.xml
+msgid "The style for the background fill of the [TabBar] area."
+msgstr "A [TabBar] terület háttérkitöltésének stílusa."
