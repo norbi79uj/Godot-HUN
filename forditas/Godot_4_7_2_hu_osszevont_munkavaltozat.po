@@ -716,12 +716,12 @@ msgstr "Ha [code]true[/code], létrehoz egy belső textúrát, amelyben minden c
 #. TileSetAtlasSource.create_tile
 #: doc/classes/TileSetAtlasSource.xml
 msgid "Creates a new tile at coordinates [param atlas_coords] with the given [param size]."
-msgstr "Új csempét hoz létre az [param atlas_coords] koordinátáknál, a megadott [param size] mérettel."
+msgstr "Új csempét hoz létre a [param atlas_coords] koordinátáknál, a megadott [param size] mérettel."
 
 #. TileSetAtlasSource.create_alternative_tile
 #: doc/classes/TileSetAtlasSource.xml
 msgid "Creates an alternative tile for the tile at coordinates [param atlas_coords]. If [param alternative_id_override] is -1, give it an automatically generated unique ID, or assigns it the given ID otherwise.\nReturns the new alternative identifier, or -1 if the alternative could not be created with a provided [param alternative_id_override]."
-msgstr "Alternatív csempét hoz létre az [param atlas_coords] koordinátáknál található csempéhez. Ha [param alternative_id_override] értéke -1, automatikusan egyedi azonosítót hoz létre, egyébként a megadott azonosítót állítja be.\nVisszaadja az új alternatív azonosítót, vagy -1-et, ha az alternatíva nem hozható létre a megadott [param alternative_id_override] értékkel."
+msgstr "Alternatív csempét hoz létre a [param atlas_coords] koordinátáknál található csempéhez. Ha [param alternative_id_override] értéke -1, automatikusan egyedi azonosítót hoz létre, egyébként a megadott azonosítót állítja be.\nVisszaadja az új alternatív azonosítót, vagy -1-et, ha az alternatíva nem hozható létre a megadott [param alternative_id_override] értékkel."
 
 #. TileSetAtlasSource.has_room_for_tile
 #: doc/classes/TileSetAtlasSource.xml
@@ -746,7 +746,7 @@ msgstr "Visszaadja azon csempék atlaszkoordináta-azonosítóinak tömbjét, am
 #. TileSetAtlasSource.remove_tile
 #: doc/classes/TileSetAtlasSource.xml
 msgid "Remove a tile and its alternative at coordinates [param atlas_coords]."
-msgstr "Eltávolítja az [param atlas_coords] koordinátáknál található csempét és annak alternatíváit."
+msgstr "Eltávolítja a [param atlas_coords] koordinátáknál található csempét és annak alternatíváit."
 
 #. TileSetAtlasSource.remove_alternative_tile
 #: doc/classes/TileSetAtlasSource.xml
@@ -771,22 +771,22 @@ msgstr "Visszaadja az atlaszrács méretét, amely attól függ, hány csempe f�
 #. TileSetAtlasSource.get_tile_animation_frames_count
 #: doc/classes/TileSetAtlasSource.xml
 msgid "Returns how many animation frames has the tile at coordinates [param atlas_coords]."
-msgstr "Visszaadja az [param atlas_coords] koordinátáknál található csempe animációs képkockáinak számát."
+msgstr "Visszaadja a [param atlas_coords] koordinátáknál található csempe animációs képkockáinak számát."
 
 #. TileSetAtlasSource.get_tile_animation_speed
 #: doc/classes/TileSetAtlasSource.xml
 msgid "Returns the animation speed of the tile at coordinates [param atlas_coords]."
-msgstr "Visszaadja az [param atlas_coords] koordinátáknál található csempe animációs sebességét."
+msgstr "Visszaadja a [param atlas_coords] koordinátáknál található csempe animációs sebességét."
 
 #. TileSetAtlasSource.set_tile_animation_speed
 #: doc/classes/TileSetAtlasSource.xml
 msgid "Sets the animation speed of the tile at coordinates [param atlas_coords] has."
-msgstr "Beállítja az [param atlas_coords] koordinátáknál található csempe animációs sebességét."
+msgstr "Beállítja a [param atlas_coords] koordinátáknál található csempe animációs sebességét."
 
 #. TileSetAtlasSource.get_tile_animation_total_duration
 #: doc/classes/TileSetAtlasSource.xml
 msgid "Returns the sum of the sum of the frame durations of the tile at coordinates [param atlas_coords]. This value needs to be divided by the animation speed to get the actual animation loop duration."
-msgstr "Visszaadja az [param atlas_coords] koordinátáknál található csempe animációs képkockái időtartamainak összegét. A tényleges animációs ciklus hosszának meghatározásához ezt az értéket el kell osztani az animáció sebességével."
+msgstr "Visszaadja a [param atlas_coords] koordinátáknál található csempe animációs képkockái időtartamainak összegét. A tényleges animációs ciklus hosszának meghatározásához ezt az értéket el kell osztani az animáció sebességével."
 
 #. TileData.brief
 #: doc/classes/TileData.xml
