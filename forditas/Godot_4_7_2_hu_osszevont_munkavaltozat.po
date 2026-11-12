@@ -551,12 +551,12 @@ msgstr "Törli az összes csempehelyettesítési szabályt."
 #. TileSet.get_alternative_level_tile_proxy
 #: doc/classes/TileSet.xml
 msgid "Returns the alternative-level proxy for the given identifiers. The returned array contains the three proxie's target identifiers (source ID, atlas coords ID and alternative tile ID).\nIf the TileSet has no proxy for the given identifiers, returns an empty Array."
-msgstr "Visszaadja a megadott azonosítókhoz tartozó alternatívszintű helyettesítési szabályt. A kapott tömb a célcsempe három azonosítóját tartalmazza: forrásazonosító, atlaszkoordináta-azonosító és alternatív csempeazonosító.\nHa a TileSet nem tartalmaz ilyen szabályt, üres Array tömböt ad vissza."
+msgstr "Visszaadja a megadott azonosítókhoz tartozó alternatívszintű helyettesítési szabályt. A visszaadott tömb a célcsempe három azonosítóját tartalmazza: a forrásazonosítót, az atlaszkoordináta-azonosítót és az alternatív csempeazonosítót.\nHa a TileSet nem tartalmaz ilyen szabályt, üres tömböt ad vissza."
 
 #. TileSet.get_coords_level_tile_proxy
 #: doc/classes/TileSet.xml
 msgid "Returns the coordinate-level proxy for the given identifiers. The returned array contains the two target identifiers of the proxy (source ID and atlas coordinates ID).\nIf the TileSet has no proxy for the given identifiers, returns an empty Array."
-msgstr "Visszaadja a megadott azonosítókhoz tartozó koordinátaszintű helyettesítési szabályt. A kapott tömb a két célazonosítót tartalmazza: forrásazonosító és atlaszkoordináta-azonosító.\nHa a TileSet nem tartalmaz ilyen szabályt, üres Array tömböt ad vissza."
+msgstr "Visszaadja a megadott azonosítókhoz tartozó koordinátaszintű helyettesítési szabályt. A visszaadott tömb a két célazonosítót tartalmazza: a forrásazonosítót és az atlaszkoordináta-azonosítót.\nHa a TileSet nem tartalmaz ilyen szabályt, üres tömböt ad vissza."
 
 #. TileSet.get_navigation_layer_layer_value
 #: doc/classes/TileSet.xml
@@ -596,7 +596,7 @@ msgstr "Megadja, hogy létezik-e forrásszintű helyettesítési szabály a mega
 #. TileSet.map_tile_proxy
 #: doc/classes/TileSet.xml
 msgid "According to the configured proxies, maps the provided identifiers to a new set of identifiers. The source ID, atlas coordinates ID and alternative tile ID are returned as a 3 elements Array.\nThis function first look for matching alternative-level proxies, then coordinates-level proxies, then source-level proxies.\nIf no proxy corresponding to provided identifiers are found, returns the same values the ones used as arguments."
-msgstr "A beállított helyettesítési szabályok alapján új azonosítókra képezi le a megadott csempeazonosítókat. Háromelemű Array tömbben adja vissza a forrásazonosítót, az atlaszkoordináta-azonosítót és az alternatív csempeazonosítót.\nElőször az alternatívszintű, majd a koordinátaszintű, végül a forrásszintű szabályok között keres egyezést.\nHa egyik szabály sem illeszkedik, a bemenetként megadott azonosítókat adja vissza."
+msgstr "A beállított helyettesítési szabályok alapján új azonosítókra képezi le a megadott csempeazonosítókat. Háromelemű tömbben adja vissza a forrásazonosítót, az atlaszkoordináta-azonosítót és az alternatív csempeazonosítót.\nElőször az alternatívszintű, majd a koordinátaszintű, végül a forrásszintű szabályok között keres egyezést.\nHa egyik szabály sem illeszkedik, változtatás nélkül adja vissza a bemeneti azonosítókat."
 
 #. TileSet.move_custom_data_layer
 #: doc/classes/TileSet.xml
