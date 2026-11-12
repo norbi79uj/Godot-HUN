@@ -386,7 +386,7 @@ msgstr "Navigációs réteget ad a TileSet készlethez a tömb [param to_positio
 #. TileSet.add_occlusion_layer
 #: doc/classes/TileSet.xml
 msgid "Adds an occlusion layer to the TileSet at the given position [param to_position] in the array. If [param to_position] is -1, adds it at the end of the array.\nOcclusion layers allow assigning occlusion polygons to atlas tiles."
-msgstr "Fénykitakarási réteget ad a TileSet készlethez a tömb [param to_position] pozíciójára. Ha [param to_position] értéke -1, a tömb végére illeszti.\nA fénykitakarási rétegekkel kitakarási sokszögek rendelhetők az atlaszcsempékhez."
+msgstr "Fénykitakarási réteget ad a TileSet készlethez a tömb [param to_position] pozíciójára. Ha [param to_position] értéke -1, a tömb végére illeszti.\nA fénykitakarási rétegek segítségével fénykitakarási sokszögeket rendelhetsz az atlaszcsempékhez."
 
 #. TileSet.clear_terrains
 #: doc/classes/TileSet.xml
@@ -406,7 +406,7 @@ msgstr "Visszaadja a megadott indexű egyediadatréteg típusát."
 #. TileSet.get_navigation_layer_layers
 #: doc/classes/TileSet.xml
 msgid "Returns the navigation layers (as in the Navigation server) of the given TileSet navigation layer."
-msgstr "Visszaadja a megadott TileSet-navigációs réteg navigációs rétegeit (a navigációs kiszolgáló rendszerében)."
+msgstr "Visszaadja a megadott TileSet-navigációs réteghez tartozó navigációs rétegmaszkot, a navigációs kiszolgálóban használt formában."
 
 #. TileSet.get_navigation_layers_count
 #: doc/classes/TileSet.xml
@@ -426,22 +426,22 @@ msgstr "Visszaadja a TileSet által kezelt [TileMapPattern] minták számát."
 #. TileSet.get_physics_layer_collision_layer
 #: doc/classes/TileSet.xml
 msgid "Returns the collision layer (as in the physics server) bodies on the given TileSet's physics layer are in."
-msgstr "Visszaadja a megadott TileSet-fizikai réteg testeihez tartozó ütközési réteget (a fizikai kiszolgáló rendszerében)."
+msgstr "Visszaadja a megadott TileSet fizikai rétegéhez tartozó testek ütközési rétegét a fizikai kiszolgálóban használt formában."
 
 #. TileSet.get_physics_layer_collision_mask
 #: doc/classes/TileSet.xml
 msgid "Returns the collision mask of bodies on the given TileSet's physics layer."
-msgstr "Visszaadja a megadott TileSet-fizikai réteg testeihez tartozó ütközési maszkot."
+msgstr "Visszaadja a megadott TileSet fizikai rétegéhez tartozó testek ütközési maszkját."
 
 #. TileSet.get_physics_layer_collision_priority
 #: doc/classes/TileSet.xml
 msgid "Returns the collision priority of bodies on the given TileSet's physics layer."
-msgstr "Visszaadja a megadott TileSet-fizikai réteg testeihez tartozó ütközési prioritást."
+msgstr "Visszaadja a megadott TileSet fizikai rétegéhez tartozó testek ütközési prioritását."
 
 #. TileSet.get_physics_layer_physics_material
 #: doc/classes/TileSet.xml
 msgid "Returns the physics material of bodies on the given TileSet's physics layer."
-msgstr "Visszaadja a megadott TileSet-fizikai réteg testeihez tartozó fizikai anyagot."
+msgstr "Visszaadja a megadott TileSet fizikai rétegéhez tartozó testek fizikai anyagát."
 
 #. TileSet.get_terrain_color
 #: doc/classes/TileSet.xml
