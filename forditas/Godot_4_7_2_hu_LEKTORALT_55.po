@@ -16550,7 +16550,7 @@ msgstr "Az élsimítás a szélek köré egy vékony, fokozatosan áttetszővé 
 #. StyleBoxFlat.anti_aliasing_size
 #: doc/classes/StyleBoxFlat.xml
 msgid "This changes the size of the antialiasing effect. [code]1.0[/code] is recommended for an optimal result at 100% scale, identical to how rounded rectangles are rendered in web browsers and most vector drawing software.\n[b]Note:[/b] Higher values may produce a blur effect but can also create undesired artifacts on small boxes with large-radius corners."
-msgstr "Az élsimítás hatásának méretét módosítja. A [code]1.0[/code] érték ajánlott a legjobb eredményhez 100%-os méretarány mellett; ez megfelel annak, ahogyan a webböngészők és a legtöbb vektorgrafikus rajzolóprogram megjeleníti a lekerekített téglalapokat.\n[b]Megjegyzés:[/b] A nagyobb értékek elmosódást eredményezhetnek, de nem kívánt képhibákat is okozhatnak kis méretű, nagy saroksugarú kereteknél."
+msgstr "Az élsimítás hatásának méretét módosítja. A [code]1.0[/code] érték ajánlott a legjobb eredményhez 100% skálázási arány mellett; ez megfelel annak, ahogyan a webböngészők és a legtöbb vektorgrafikus rajzolóprogram megjeleníti a lekerekített téglalapokat.\n[b]Megjegyzés:[/b] A nagyobb értékek elmosódást eredményezhetnek, de nem kívánt képhibákat is okozhatnak kis méretű, nagy saroksugarú kereteknél."
 
 #. StyleBoxFlat.bg_color
 #: doc/classes/StyleBoxFlat.xml
