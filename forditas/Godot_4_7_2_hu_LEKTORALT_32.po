@@ -5921,7 +5921,9 @@ msgstr "Olyan tároló, amely minden gyermek vezérlőelemhez külön fület hoz
 #. TabContainer.description
 #: doc/classes/TabContainer.xml
 msgid "Arranges child controls into a tabbed view, creating a tab for each one. The active tab's corresponding control is made visible, while all other child controls are hidden. Ignores non-control children.\n[b]Note:[/b] The drawing of the clickable tabs is handled by this node; [TabBar] is not needed."
-msgstr "A gyermek vezérlőelemeket fülekre rendezi, minden gyermekhez egy fület létrehozva. Az aktív fülhöz tartozó vezérlőelem látható, az összes többi rejtett. A nem vezérlőelem típusú gyermekeket figyelmen kívül hagyja.\n[b]Megjegyzés:[/b] A kattintható füleket ez a csomópont rajzolja ki, nincs szükség külön [TabBar] csomópontra."
+msgstr ""
+"A gyermek vezérlőelemeket fülekre osztva jeleníti meg, és mindegyikhez külön fület hoz létre. Az aktív fülhöz tartozó vezérlőelem látható, a többi gyermek vezérlőelem rejtve marad. A nem vezérlő típusú gyermekeket figyelmen kívül hagyja.\n"
+"[b]Megjegyzés:[/b] A kattintható fülek megjelenítését ez a csomópont kezeli; külön [TabBar] nem szükséges."
 
 #. TabContainer.get_current_tab_control
 #: doc/classes/TabContainer.xml
@@ -5941,7 +5943,7 @@ msgstr "Visszaadja a [param tab_idx] indexű fülhöz tartozó [Control] csomóp
 #. TabContainer.get_tab_title
 #: doc/classes/TabContainer.xml
 msgid "Returns the title of the tab at index [param tab_idx]. Tab titles default to the name of the indexed child node, but this can be overridden with [method set_tab_title]."
-msgstr "Visszaadja a [param tab_idx] indexű fül címét. Alapértelmezés szerint a cím az adott gyermekcsomópont neve, de ezt a [method set_tab_title] segítségével felülírhatod."
+msgstr "Visszaadja a [param tab_idx] indexű fül címét. Alapértelmezés szerint a fül címe a megfelelő gyermekcsomópont neve, de a [method set_tab_title] metódussal felülírható."
 
 #. TabContainer.set_tab_title
 #: doc/classes/TabContainer.xml
@@ -5961,7 +5963,7 @@ msgstr "Az aktuális fül indexe. Beállításakor az adott fül [Control] csom�
 #. TabContainer.tabs_visible
 #: doc/classes/TabContainer.xml
 msgid "If [code]true[/code], tabs are visible. If [code]false[/code], tabs' content and titles are hidden."
-msgstr "Ha [code]true[/code], a fülek láthatók. Ha [code]false[/code], a fülek tartalma és címei rejtettek."
+msgstr "Ha [code]true[/code], a fülek láthatók. Ha [code]false[/code], a fülek tartalma és címei rejtve maradnak."
 
 #. ItemList.brief
 #: doc/classes/ItemList.xml
@@ -6989,13 +6991,15 @@ msgstr "A többi, nem kijelölt fül stílusa."
 #. TabContainer.set_tab_tooltip
 #: doc/classes/TabContainer.xml
 msgid "Sets a custom tooltip text for tab at index [param tab_idx].\n[b]Note:[/b] By default, if the [param tooltip] is empty and the tab text is truncated (not all characters fit into the tab), the title will be displayed as a tooltip. To hide the tooltip, assign [code]\" \"[/code] as the [param tooltip] text."
-msgstr "A [param tab_idx] indexű fül egyéni eszköztippszövegét állítja be.\n[b]Megjegyzés:[/b] Alapértelmezés szerint, ha a [param tooltip] üres, és a fül szövege le van vágva (nem fér ki minden karakter), a teljes cím jelenik meg eszköztippként. Az eszköztipp elrejtéséhez a [param tooltip] szövegének [code]\" \"[/code] értéket adj meg."
+msgstr ""
+"Egyéni eszköztippszöveget állít be a [param tab_idx] indexű fülhöz.\n"
+"[b]Megjegyzés:[/b] Ha a [param tooltip] üres, és a fül felirata nem fér ki teljesen, alapértelmezés szerint a teljes cím jelenik meg eszköztippként. Az eszköztipp elrejtéséhez állítsd a [param tooltip] szövegét [code]\" \"[/code] értékre."
 
 
 #. TabContainer.all_tabs_in_front
 #: doc/classes/TabContainer.xml
 msgid "This doesn't do anything."
-msgstr "Ennek nincs semmilyen hatása."
+msgstr "Ez a beállítás már nincs hatással a működésre."
 
 
 #. TabContainer.deselect_enabled
@@ -7083,7 +7087,7 @@ msgstr "A fülsávot felül helyezi el."
 #. TabContainer.POSITION_BOTTOM
 #: doc/classes/TabContainer.xml
 msgid "Places the tab bar at the bottom. The tab bar's [StyleBox] will be flipped vertically."
-msgstr "A fülsávot alul helyezi el. A fülsáv [StyleBox] eleme függőlegesen tükröződik."
+msgstr "A fülsávot alul helyezi el. A fülsáv [StyleBox] stílusa függőlegesen tükröződik."
 
 
 #. TabContainer.POSITION_MAX
@@ -7125,7 +7129,7 @@ msgstr "A menügomb ikonja (lásd: [method set_popup]), amikor az egérmutató f
 #. TabContainer.panel
 #: doc/classes/TabContainer.xml
 msgid "The style for the background fill."
-msgstr "A háttér kitöltésének stílusa."
+msgstr "A háttérkitöltés stílusa."
 
 
 #. TabContainer.tab_hovered
