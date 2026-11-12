@@ -36,7 +36,7 @@ msgstr "Törli azokat a cellákat, amelyek a [member tile_set] készletben nem l
 #. TileMapLayer.get_cell_source_id
 #: doc/classes/TileMapLayer.xml
 msgid "Returns the tile source ID of the cell at coordinates [param coords]. Returns [code]-1[/code] if the cell does not exist."
-msgstr "Visszaadja a [param coords] koordinátáknál található cella csempeforrás-azonosítóját. Ha a cella nem létezik, [code]-1[/code] értéket ad vissza."
+msgstr "Visszaadja a [param coords] koordinátájú cella csempeforrás-azonosítóját. Ha a cella nem létezik, [code]-1[/code] értéket ad vissza."
 
 #. TileMapLayer.get_cell_atlas_coords
 #: doc/classes/TileMapLayer.xml
@@ -91,7 +91,7 @@ msgstr "Visszaadja a cella középpontjának helyét a [TileMapLayer] helyi koor
 #. TileMapLayer.collision_enabled
 #: doc/classes/TileMapLayer.xml
 msgid "Enable or disable collisions."
-msgstr "Engedélyezi vagy letiltja az ütközéseket."
+msgstr "Engedélyezi vagy letiltja az ütközéskezelést."
 
 #. TileMapLayer.collision_visibility_mode
 #: doc/classes/TileMapLayer.xml
@@ -101,12 +101,12 @@ msgstr "Megjeleníti vagy elrejti a [TileMapLayer] ütközési alakzatait. A [co
 #. TileMapLayer.navigation_enabled
 #: doc/classes/TileMapLayer.xml
 msgid "If [code]true[/code], navigation regions are enabled."
-msgstr "Ha [code]true[/code], a navigációs területek engedélyezve vannak."
+msgstr "Ha az értéke [code]true[/code], a navigációs területek engedélyezettek."
 
 #. TileMapLayer.occlusion_enabled
 #: doc/classes/TileMapLayer.xml
 msgid "Enable or disable light occlusion."
-msgstr "Engedélyezi vagy letiltja a fény kitakarását."
+msgstr "Engedélyezi vagy letiltja a fénykitakarást."
 
 #. TileMapLayer.enabled
 #: doc/classes/TileMapLayer.xml
