@@ -271,12 +271,12 @@ msgstr "A csempe alakja."
 #. TileSet.tile_layout
 #: doc/classes/TileSet.xml
 msgid "For all half-offset shapes (Isometric, Hexagonal and Half-Offset square), changes the way tiles are indexed in the [TileMapLayer] grid."
-msgstr "A féleltolásos alakzatoknál (izometrikus, hatszögletű és féleltolásos négyzetes) megváltoztatja a csempék indexelését a [TileMapLayer] rácsában."
+msgstr "A féleltolásos csempealakzatoknál (izometrikus, hatszögletű és féleltolásos négyzet) megváltoztatja a csempék indexelésének módját a [TileMapLayer] rácsában."
 
 #. TileSet.tile_offset_axis
 #: doc/classes/TileSet.xml
 msgid "For all half-offset shapes (Isometric, Hexagonal and Half-Offset square), determines the offset axis."
-msgstr "A féleltolásos alakzatoknál (izometrikus, hatszögletű és féleltolásos négyzetes) meghatározza az eltolás tengelyét."
+msgstr "A féleltolásos csempealakzatoknál (izometrikus, hatszögletű és féleltolásos négyzet) meghatározza az eltolás tengelyét."
 
 #. TileSet.uv_clipping
 #: doc/classes/TileSet.xml
@@ -331,12 +331,12 @@ msgstr "Visszaadja a fizikai rétegek számát."
 #. TileSet.set_physics_layer_collision_layer
 #: doc/classes/TileSet.xml
 msgid "Sets the collision layer (as in the physics server) for bodies in the given TileSet physics layer."
-msgstr "Beállítja az adott TileSet-féle fizikai rétegben lévő testek ütközési rétegét (a fizikai kiszolgáló rendszerének megfelelően)."
+msgstr "Beállítja az adott TileSet fizikai rétegéhez tartozó testek ütközési rétegét a fizikai kiszolgálóban használt módon."
 
 #. TileSet.set_physics_layer_collision_mask
 #: doc/classes/TileSet.xml
 msgid "Sets the collision mask for bodies in the given TileSet physics layer."
-msgstr "Beállítja az adott TileSet-féle fizikai rétegben lévő testek ütközési maszkját."
+msgstr "Beállítja az adott TileSet fizikai rétegéhez tartozó testek ütközési maszkját."
 
 #. TileSet.add_custom_data_layer
 #: doc/classes/TileSet.xml
@@ -361,7 +361,7 @@ msgstr "Visszaadja az egyediadatrétegek számát."
 #. TileSet.add_pattern
 #: doc/classes/TileSet.xml
 msgid "Adds a [TileMapPattern] to be stored in the TileSet resource. If provided, insert it at the given [param index]."
-msgstr "Eltárol egy [TileMapPattern] mintát a TileSet erőforrásban. Ha megadtad a [param index] értékét, a mintát a megfelelő helyre illeszti."
+msgstr "Eltárol egy [TileMapPattern] mintát a TileSet erőforrásban. Ha meg van adva a [param index], a mintát a megadott indexű helyre illeszti."
 
 #. TileSet.get_pattern
 #: doc/classes/TileSet.xml
