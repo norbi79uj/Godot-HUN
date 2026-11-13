@@ -1446,7 +1446,7 @@ msgstr "Segédtulajdonság, amellyel a [member global_rotation] értéke radián
 #. Node2D.scale
 #: doc/classes/Node2D.xml
 msgid "The node's scale, relative to the node's parent. Unscaled value: [code](1, 1)[/code]. See also [member global_scale].\n[b]Note:[/b] Negative X scales in 2D are not decomposable from the transformation matrix. Due to the way scale is represented with transformation matrices in Godot, negative scales on the X axis will be changed to negative scales on the Y axis and a rotation of 180 degrees when decomposed."
-msgstr "A csomópont méretezése a szülőjéhez viszonyítva. A méretezetlen érték: [code](1, 1)[/code]. Lásd még: [member global_scale].\n[b]Megjegyzés:[/b] 2D-ben a negatív X irányú méretezés nem bontható fel közvetlenül a transzformációs mátrixból. A Godot mátrixos ábrázolása miatt a negatív X skála felbontáskor negatív Y skálává és 180 fokos elforgatássá alakul."
+msgstr "A csomópont méretezése a szülőjéhez viszonyítva. A méretezés nélküli alapérték [code](1, 1)[/code]. Lásd még: [member global_scale].\n[b]Megjegyzés:[/b] 2D-ben a negatív X irányú méretezés nem bontható fel közvetlenül a transzformációs mátrixból. A Godot mátrixos ábrázolása miatt a negatív X skála felbontáskor negatív Y skálává és 180 fokos elforgatássá alakul."
 
 #. Node2D.global_scale
 #: doc/classes/Node2D.xml
@@ -1456,7 +1456,7 @@ msgstr "Globális méretezés. Lásd még: [member scale]."
 #. Node2D.skew
 #: doc/classes/Node2D.xml
 msgid "If set to a non-zero value, slants the node in one direction or another. This can be used for pseudo-3D effects. See also [member global_skew].\n[b]Note:[/b] Skew is performed on the X axis only, and [i]between[/i] rotation and scaling.\n[b]Note:[/b] This property is edited in the inspector in degrees. If you want to use degrees in a script, use [code]skew = deg_to_rad(value_in_degrees)[/code]."
-msgstr "Ha nem nulla az értéke, a csomópontot az egyik vagy a másik irányba ferdíti. Ez ál-3D hatásokhoz is használható. Lásd még: [member global_skew].\n[b]Megjegyzés:[/b] A nyírás csak az X tengely mentén történik, és a műveleti sorrendben az elforgatás [i]és[/i] a méretezés közé esik.\n[b]Megjegyzés:[/b] A tulajdonság a Felügyelőben fokban szerkeszthető. Ha scriptben fokokat szeretnél használni, írd ezt: [code]skew = deg_to_rad(value_in_degrees)[/code]."
+msgstr "Ha az értéke nem nulla, a csomópontot a megadott irányba ferdíti. Ez ál-3D hatásokhoz is használható. Lásd még: [member global_skew].\n[b]Megjegyzés:[/b] A nyírás csak az X tengely mentén történik, és a műveleti sorrendben az elforgatás [i]és[/i] a méretezés közé esik.\n[b]Megjegyzés:[/b] A tulajdonság a Felügyelőben fokban szerkeszthető. Ha scriptben fokokat szeretnél használni, írd ezt: [code]skew = deg_to_rad(value_in_degrees)[/code]."
 
 #. Node2D.global_skew
 #: doc/classes/Node2D.xml
@@ -1476,7 +1476,7 @@ msgstr "Globális [Transform2D] transzformáció. Lásd még: [member transform]
 #. Node2D.apply_scale
 #: doc/classes/Node2D.xml
 msgid "Multiplies the current scale by the [param ratio] vector."
-msgstr "Megszorozza az aktuális méretezést a [param ratio] vektorral."
+msgstr "Az aktuális méretezési vektor összetevőit megszorozza a [param ratio] vektor megfelelő összetevőivel."
 
 #. Node2D.get_angle_to
 #: doc/classes/Node2D.xml
@@ -1501,12 +1501,12 @@ msgstr "Elforgatja a csomópontot úgy, hogy a helyi +X tengelye a globális koo
 #. Node2D.move_local_x
 #: doc/classes/Node2D.xml
 msgid "Applies a local translation on the node's X axis with the amount specified in [param delta]. If [param scaled] is [code]false[/code], normalizes the movement to occur independently of the node's [member scale]."
-msgstr "A csomópontot helyi X tengelye mentén eltolja a [param delta] értékkel. Ha [param scaled] értéke [code]false[/code], a mozgást normalizálja, hogy ne függjön a csomópont [member scale] értékétől."
+msgstr "A csomópontot a saját X tengelye mentén tolja el a [param delta] értékkel. Ha [param scaled] értéke [code]false[/code], a mozgást normalizálja, hogy ne függjön a csomópont [member scale] értékétől."
 
 #. Node2D.move_local_y
 #: doc/classes/Node2D.xml
 msgid "Applies a local translation on the node's Y axis with the amount specified in [param delta]. If [param scaled] is [code]false[/code], normalizes the movement to occur independently of the node's [member scale]."
-msgstr "A csomópontot helyi Y tengelye mentén eltolja a [param delta] értékkel. Ha [param scaled] értéke [code]false[/code], a mozgást normalizálja, hogy ne függjön a csomópont [member scale] értékétől."
+msgstr "A csomópontot a saját Y tengelye mentén tolja el a [param delta] értékkel. Ha [param scaled] értéke [code]false[/code], a mozgást normalizálja, hogy ne függjön a csomópont [member scale] értékétől."
 
 #. Node2D.rotate
 #: doc/classes/Node2D.xml
