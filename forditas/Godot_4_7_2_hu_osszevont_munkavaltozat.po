@@ -1309,17 +1309,17 @@ msgstr "Olyan csomópont, amely szerkeszthető [Shape2D] alakzatot biztosít a s
 #. CollisionShape2D.shape
 #: doc/classes/CollisionShape2D.xml
 msgid "The actual shape owned by this collision shape."
-msgstr "Az ütközési alakzathoz tartozó tényleges alakzat."
+msgstr "Az ütközési alakzat által használt alakzaterőforrás."
 
 #. CollisionShape2D.disabled
 #: doc/classes/CollisionShape2D.xml
 msgid "A disabled collision shape has no effect in the world. This property should be changed with [method Object.set_deferred]."
-msgstr "A letiltott ütközési alakzat nincs hatással a világra. Ezt a tulajdonságot a [method Object.set_deferred] metódussal célszerű módosítani."
+msgstr "A letiltott ütközési alakzat nem vesz részt az ütközéskezelésben. Ezt a tulajdonságot a [method Object.set_deferred] metódussal célszerű módosítani."
 
 #. CollisionShape2D.one_way_collision
 #: doc/classes/CollisionShape2D.xml
 msgid "Sets whether this collision shape should only detect collision on one side (top or bottom).\n[b]Note:[/b] This property has no effect if this [CollisionShape2D] is a child of an [Area2D] node.\n[b]Note:[/b] The one way collision direction can be configured by setting [member one_way_collision_direction]."
-msgstr "Meghatározza, hogy az ütközési alakzat csak az egyik oldalán (fent vagy lent) érzékeljen-e ütközést.\n[b]Megjegyzés:[/b] Ennek a tulajdonságnak nincs hatása, ha a [CollisionShape2D] egy [Area2D] csomópont gyermeke.\n[b]Megjegyzés:[/b] Az egyirányú ütközés iránya a [member one_way_collision_direction] tulajdonsággal állítható be."
+msgstr "Meghatározza, hogy az ütközési alakzat csak az egyik oldalán (fent vagy lent) érzékeljen-e ütközést.\n[b]Megjegyzés:[/b] Ez a tulajdonság hatástalan, ha a [CollisionShape2D] egy [Area2D] csomópont gyermeke.\n[b]Megjegyzés:[/b] Az egyirányú ütközés iránya a [member one_way_collision_direction] tulajdonsággal állítható be."
 
 #. CollisionShape2D.one_way_collision_direction
 #. CollisionPolygon2D.one_way_collision_direction
@@ -1331,7 +1331,7 @@ msgstr "Az egyirányú ütközéshez használt irány."
 #. CollisionShape2D.one_way_collision_margin
 #: doc/classes/CollisionShape2D.xml
 msgid "The margin used for one-way collision (in pixels). Higher values will make the shape thicker, and work better for colliders that enter the shape at a high velocity."
-msgstr "Az egyirányú ütközéshez használt margó képpontban. A nagyobb érték vastagabbá teszi az alakzatot, és jobb eredményt adhat, amikor az ütköző testek nagy sebességgel lépnek be az alakzatba."
+msgstr "Az egyirányú ütközéshez használt ráhagyás képpontban. Nagyobb értéknél az alakzat az ütközésérzékelés szempontjából vastagabb lesz, ami segíthet a nagy sebességgel érkező testek ütközésének észlelésében."
 
 #. CollisionShape2D.debug_color
 #: doc/classes/CollisionShape2D.xml
