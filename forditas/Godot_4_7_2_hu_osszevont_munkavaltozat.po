@@ -471,7 +471,7 @@ msgstr "Visszaadja a megadott terepkészlet tereptípusainak számát."
 #. TileSet.has_custom_data_layer_by_name
 #: doc/classes/TileSet.xml
 msgid "Returns if there is a custom data layer named [param layer_name]."
-msgstr "Megadja, hogy létezik-e [param layer_name] nevű egyediadatréteg."
+msgstr "Megadja, hogy létezik-e a [param layer_name] nevű egyediadatréteg."
 
 #. TileSet.move_navigation_layer
 #: doc/classes/TileSet.xml
@@ -821,7 +821,7 @@ msgstr "Eltolja a csempe kirajzolási helyét."
 #. TileData.modulate
 #: doc/classes/TileData.xml
 msgid "Color modulation of the tile."
-msgstr "A csempe színének módosító szorzója."
+msgstr "A csempe színmodulációs értéke."
 
 #. TileData.probability
 #: doc/classes/TileData.xml
@@ -831,7 +831,7 @@ msgstr "A csempe relatív kiválasztási valószínűsége véletlenszerű csemp
 #. TileData.y_sort_origin
 #: doc/classes/TileData.xml
 msgid "Vertical point of the tile used for determining y-sorted order."
-msgstr "A csempe azon függőleges referenciapontja, amely alapján az Y szerinti kirajzolási sorrend meghatározásra kerül."
+msgstr "A csempe függőleges referenciapontja, amely az Y szerinti kirajzolási sorrend meghatározására szolgál."
 
 #. TileData.z_index
 #: doc/classes/TileData.xml
@@ -851,12 +851,12 @@ msgstr "Visszaadja a [param layer_name] nevű egyediadatréteghez tartozó ért�
 #. TileData.set_custom_data
 #: doc/classes/TileData.xml
 msgid "Sets the tile's custom data value for the TileSet custom data layer with name [param layer_name]."
-msgstr "Beállítja a csempe egyedi adatának értékét a [param layer_name] nevű TileSet-egyediadatrétegben."
+msgstr "Beállítja a csempe egyedi adatértékét a [param layer_name] nevű TileSet-egyediadatrétegben."
 
 #. TileData.has_custom_data
 #: doc/classes/TileData.xml
 msgid "Returns whether there exists a custom data layer named [param layer_name]."
-msgstr "Megadja, hogy létezik-e [param layer_name] nevű egyediadatréteg."
+msgstr "Megadja, hogy létezik-e a [param layer_name] nevű egyediadatréteg."
 
 #. TileData.get_collision_polygons_count
 #: doc/classes/TileData.xml
@@ -901,7 +901,7 @@ msgstr "Az animációkat tartalmazó [SpriteFrames] erőforrás. Lehetővé tesz
 #. AnimatedSprite2D.animation
 #: doc/classes/AnimatedSprite2D.xml
 msgid "The current animation from the [member sprite_frames] resource. If this value is changed, the [member frame] counter and the [member frame_progress] are reset."
-msgstr "A [member sprite_frames] erőforrás aktuális animációja. Az érték módosításakor a [member frame] számláló és a [member frame_progress] előrehaladás visszaáll."
+msgstr "A [member sprite_frames] erőforrás aktuális animációja. Az érték módosításakor a [member frame] képkockaszámláló és a [member frame_progress] előrehaladási érték alaphelyzetbe áll."
 
 #. AnimatedSprite2D.autoplay
 #. AnimationPlayer.autoplay
