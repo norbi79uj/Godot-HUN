@@ -1346,7 +1346,7 @@ msgstr "Általános célú sprite-csomópont."
 #. Sprite2D.description
 #: doc/classes/Sprite2D.xml
 msgid "A node that displays a 2D texture. The texture displayed can be a region from a larger atlas texture, or a frame from a sprite sheet animation."
-msgstr "2D textúrát megjelenítő csomópont. A megjelenített textúra lehet egy nagyobb atlasztextúra kijelölt területe vagy egy sprite-lap animációjának valamelyik képkockája."
+msgstr "2D textúrát megjelenítő csomópont. A megjelenített kép származhat egy nagyobb atlasztextúra kijelölt területéről vagy egy sprite-lapon lévő animáció valamelyik képkockájából."
 
 #. Sprite2D.centered
 #: doc/classes/Sprite2D.xml
@@ -1356,12 +1356,12 @@ msgstr "Ha [code]true[/code], a textúra középre kerül.\n[b]Megjegyzés:[/b] 
 #. Sprite2D.frame
 #: doc/classes/Sprite2D.xml
 msgid "Current frame to display from sprite sheet. [member hframes] or [member vframes] must be greater than 1. This property is automatically adjusted when [member hframes] or [member vframes] are changed to keep pointing to the same visual frame (same column and row). If that's impossible, this value is reset to [code]0[/code]."
-msgstr "A sprite-lapról megjelenítendő aktuális képkocka. A [member hframes] vagy a [member vframes] értékének 1-nél nagyobbnak kell lennie. Ha a [member hframes] vagy [member vframes] megváltozik, a tulajdonság automatikusan igazodik, hogy ugyanarra a látható képkockára (ugyanarra a sorra és oszlopra) mutasson. Ha ez nem lehetséges, az érték [code]0[/code] lesz."
+msgstr "A sprite-lapról megjelenítendő aktuális képkocka. A [member hframes] vagy a [member vframes] értékének 1-nél nagyobbnak kell lennie. Ha a [member hframes] vagy [member vframes] megváltozik, a tulajdonság automatikusan igazodik, hogy ugyanarra a látható képkockára (ugyanarra a sorra és oszlopra) mutasson. Ha ez nem lehetséges, a képkocka indexe [code]0[/code]-ra áll vissza."
 
 #. Sprite2D.frame_coords
 #: doc/classes/Sprite2D.xml
 msgid "Coordinates of the frame to display from sprite sheet. This is as an alias for the [member frame] property. [member hframes] or [member vframes] must be greater than 1."
-msgstr "A sprite-lapról megjelenítendő képkocka koordinátái. Ez a [member frame] tulajdonság másik elérési módja. A [member hframes] vagy a [member vframes] értékének 1-nél nagyobbnak kell lennie."
+msgstr "A sprite-lapról megjelenítendő képkocka koordinátái. Ez a [member frame] tulajdonság alternatív elérési módja, amely a képkockát koordinátákkal adja meg. A [member hframes] vagy a [member vframes] értékének 1-nél nagyobbnak kell lennie."
 
 #. Sprite2D.hframes
 #: doc/classes/Sprite2D.xml
@@ -1376,7 +1376,7 @@ msgstr "A sprite-lap sorainak száma. A tulajdonság módosításakor a [member 
 #. Sprite2D.offset
 #: doc/classes/Sprite2D.xml
 msgid "The texture's drawing offset.\n[b]Note:[/b] When you increase [member offset].y in Sprite2D, the sprite moves downward on screen (i.e., +Y is down)."
-msgstr "A textúra kirajzolási eltolása.\n[b]Megjegyzés:[/b] Ha a Sprite2D [member offset].y értékét növeled, a sprite lefelé mozdul a képernyőn (vagyis a pozitív Y irány lefelé mutat)."
+msgstr "A textúra kirajzolási eltolása.\n[b]Megjegyzés:[/b] A Sprite2D [member offset].y értékének növelése lefelé mozdítja a sprite-ot a képernyőn, mert a pozitív Y irány lefelé mutat."
 
 #. Sprite2D.region_enabled
 #: doc/classes/Sprite2D.xml
@@ -1401,7 +1401,7 @@ msgstr "A kirajzolandó [Texture2D] objektum."
 #. Sprite2D.is_pixel_opaque
 #: doc/classes/Sprite2D.xml
 msgid "Returns [code]true[/code] if the pixel at the given position is opaque, [code]false[/code] otherwise. Also returns [code]false[/code] if the given position is out of bounds or this sprite's [member texture] is [code]null[/code]. [param pos] is in local coordinates."
-msgstr "[code]true[/code] értéket ad vissza, ha a megadott pozíció képpontja átlátszatlan, egyébként [code]false[/code] értéket. Akkor is [code]false[/code] értéket ad vissza, ha a pozíció kívül esik a határokon, vagy a sprite [member texture] értéke [code]null[/code]. A [param pos] helyi koordinátákban értendő."
+msgstr "[code]true[/code] értéket ad vissza, ha a megadott pozíció képpontja átlátszatlan, egyébként [code]false[/code] értéket. Akkor is [code]false[/code] értéket ad vissza, ha a pozíció kívül esik a határokon, vagy a sprite [member texture] értéke [code]null[/code]. A [param pos] paraméter helyi koordinátákat használ."
 
 #. Node2D.brief
 #: doc/classes/Node2D.xml
