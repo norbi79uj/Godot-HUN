@@ -1179,7 +1179,7 @@ msgstr "Szabályozza, hogy a kamera aktívvá válhat-e. Ha [code]true[/code], a
 #. Camera2D.limit_enabled
 #: doc/classes/Camera2D.xml
 msgid "If [code]true[/code], the limits will be enabled. Disabling this will allow the camera to focus anywhere, when the four [code]limit_*[/code] properties will not work."
-msgstr "Ha [code]true[/code], a kamerakorlátok érvényesek. Letiltáskor a kamera bárhová fókuszálhat, és a négy [code]limit_*[/code] tulajdonság nem működik."
+msgstr "Ha [code]true[/code], a kamera mozgási korlátai érvényesek. Ha letiltod, a kamera bárhová irányítható, és a négy [code]limit_*[/code] tulajdonság nem érvényesül."
 
 #. Camera2D.limit_left
 #: doc/classes/Camera2D.xml
@@ -1204,12 +1204,12 @@ msgstr "A kamera alsó görgetési korlátja képpontban. A kamera e határ elé
 #. Camera2D.limit_smoothed
 #: doc/classes/Camera2D.xml
 msgid "If [code]true[/code], the camera smoothly stops when reaches its limits.\nThis property has no effect if [member position_smoothing_enabled] is [code]false[/code].\n[b]Note:[/b] To immediately update the camera's position to be within limits without smoothing, even with this setting enabled, invoke [method reset_smoothing]."
-msgstr "Ha [code]true[/code], a kamera a korlátokhoz közeledve fokozatosan áll meg.\nA tulajdonságnak nincs hatása, ha a [member position_smoothing_enabled] értéke [code]false[/code].\n[b]Megjegyzés:[/b] A kamera helyzetének azonnali, simítás nélküli korlátok közé igazításához hívd meg a [method reset_smoothing] metódust, még akkor is, ha ez a beállítás engedélyezett."
+msgstr "Ha [code]true[/code], a kamera a mozgási korlátokhoz érve fokozatosan áll meg.\nA tulajdonságnak nincs hatása, ha a [member position_smoothing_enabled] értéke [code]false[/code].\n[b]Megjegyzés:[/b] A kamera helyzetének azonnali, simítás nélküli korlátok közé igazításához hívd meg a [method reset_smoothing] metódust, még akkor is, ha ez a beállítás engedélyezett."
 
 #. Camera2D.position_smoothing_enabled
 #: doc/classes/Camera2D.xml
 msgid "If [code]true[/code], the camera's view smoothly moves towards its target position at [member position_smoothing_speed]."
-msgstr "Ha [code]true[/code], a kamera nézete a [member position_smoothing_speed] sebesség szerint, finoman közelít a célpozícióhoz."
+msgstr "Ha [code]true[/code], a kamera nézete a [member position_smoothing_speed] értékének megfelelő sebességgel, egyenletesen közelít a célpozícióhoz."
 
 #. Camera2D.position_smoothing_speed
 #: doc/classes/Camera2D.xml
@@ -1269,7 +1269,7 @@ msgstr "Ha [code]true[/code], a szerkesztőben kirajzolja a kamera képernyőter
 #. Camera2D.get_screen_center_position
 #: doc/classes/Camera2D.xml
 msgid "Returns the center of the screen from this camera's point of view, in global coordinates.\n[b]Note:[/b] The exact targeted position of the camera may be different. See [method get_target_position]."
-msgstr "Visszaadja a képernyő középpontját e kamera nézőpontjából, globális koordinátákkal.\n[b]Megjegyzés:[/b] A kamera pontos célpozíciója ettől eltérhet. Lásd: [method get_target_position]."
+msgstr "Visszaadja a képernyő középpontjának helyét a kamera nézőpontjából, globális koordinátákban.\n[b]Megjegyzés:[/b] A kamera pontos célpozíciója ettől eltérhet. Lásd: [method get_target_position]."
 
 #. Camera2D.make_current
 #: doc/classes/Camera2D.xml
@@ -1279,12 +1279,12 @@ msgstr "Ezt a [Camera2D] csomópontot teszi az aktuális aktív kamerává. Ehhe
 #. Camera2D.reset_smoothing
 #: doc/classes/Camera2D.xml
 msgid "Sets the camera's position immediately to its current smoothing destination.\nThis method has no effect if [member position_smoothing_enabled] is [code]false[/code]."
-msgstr "A kamera pozícióját azonnal az aktuális simítási célpontra állítja.\nA metódusnak nincs hatása, ha a [member position_smoothing_enabled] értéke [code]false[/code]."
+msgstr "A kamerát azonnal a pozíciósimítás aktuális célpontjára helyezi.\nA metódusnak nincs hatása, ha a [member position_smoothing_enabled] értéke [code]false[/code]."
 
 #. Camera2D.offset
 #: doc/classes/Camera2D.xml
 msgid "The camera's relative offset. Useful for looking around or camera shake animations. The offsetted camera can go past the limits defined in [member limit_top], [member limit_bottom], [member limit_left] and [member limit_right]."
-msgstr "A kamera relatív eltolása. Hasznos a körbenézéshez vagy a kamerarázás animálásához. Az eltolt kamera túlléphet a [member limit_top], [member limit_bottom], [member limit_left] és [member limit_right] tulajdonságokkal megadott korlátokon."
+msgstr "A kamera relatív eltolása. Körbenézéshez és kamerarázási animációkhoz is használható. Az eltolt kamera túlléphet a [member limit_top], [member limit_bottom], [member limit_left] és [member limit_right] tulajdonságokkal megadott korlátokon."
 
 #. Camera2D.anchor_mode
 #: doc/classes/Camera2D.xml
