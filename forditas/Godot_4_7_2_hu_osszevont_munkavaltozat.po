@@ -1761,7 +1761,7 @@ msgstr "Az animáció teljes hossza másodpercben.\n[b]Megjegyzés:[/b] A hossz 
 #. Animation.loop_mode
 #: doc/classes/Animation.xml
 msgid "Determines the behavior of both ends of the animation timeline during animation playback. This indicates whether and how the animation should be restarted, and is also used to correctly interpolate animation cycles."
-msgstr "Meghatározza az animáció idővonalának két végén érvényes működést lejátszás közben. Szabályozza, hogy az animáció újraindul-e, és ha igen, hogyan; az animációs ciklusok megfelelő interpolációját is segíti."
+msgstr "Meghatározza az animáció idővonalának elején és végén érvényes viselkedést lejátszás közben. Szabályozza, hogy az animáció újraindul-e, és ha igen, hogyan; az animációs ciklusok megfelelő interpolációját is segíti."
 
 #. Animation.step
 #: doc/classes/Animation.xml
@@ -1771,7 +1771,7 @@ msgstr "Az animáció lépésköze."
 #. Animation.clear
 #: doc/classes/Animation.xml
 msgid "Clear the animation (clear all tracks and reset all)."
-msgstr "Törli az animációt (az összes sávot és beállítást visszaállítja)."
+msgstr "Kiüríti az animációt: eltávolítja az összes sávot, és alaphelyzetbe állítja a beállításokat."
 
 #. Animation.add_track
 #: doc/classes/Animation.xml
@@ -1791,7 +1791,7 @@ msgstr "Visszaadja az animáció sávjainak számát."
 #. Animation.remove_track
 #: doc/classes/Animation.xml
 msgid "Removes a track by specifying the track index."
-msgstr "Eltávolítja az indexével megadott sávot."
+msgstr "Eltávolítja a megadott indexű animációs sávot."
 
 #. Animation.add_marker
 #: doc/classes/Animation.xml
@@ -1806,7 +1806,7 @@ msgstr "[code]true[/code] értéket ad vissza, ha az animáció tartalmazza a me
 #. Animation.get_marker_names
 #: doc/classes/Animation.xml
 msgid "Returns every marker in this Animation, sorted ascending by time."
-msgstr "Visszaadja az animáció összes jelölőjének nevét, idő szerint növekvő sorrendben."
+msgstr "Visszaadja az animáció jelölőinek neveit a jelölők időpontja szerint növekvő sorrendben."
 
 #. Animation.get_marker_time
 #: doc/classes/Animation.xml
@@ -1846,7 +1846,7 @@ msgstr "Általános kulcsképkockát illeszt be a megadott sávba. Visszaadja a 
 #. Animation.track_remove_key
 #: doc/classes/Animation.xml
 msgid "Removes a key by index in a given track."
-msgstr "Eltávolítja a megadott sáv indexével azonosított kulcsképkockát."
+msgstr "Eltávolítja a megadott sávból az indexével azonosított kulcsképkockát."
 
 #. Animation.track_set_path
 #: doc/classes/Animation.xml
