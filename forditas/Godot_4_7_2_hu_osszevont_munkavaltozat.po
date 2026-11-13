@@ -1209,7 +1209,7 @@ msgstr "Ha [code]true[/code], a kamera a mozgási korlátokhoz érve fokozatosan
 #. Camera2D.position_smoothing_enabled
 #: doc/classes/Camera2D.xml
 msgid "If [code]true[/code], the camera's view smoothly moves towards its target position at [member position_smoothing_speed]."
-msgstr "Ha [code]true[/code], a kamera nézete a [member position_smoothing_speed] értékének megfelelő sebességgel, egyenletesen közelít a célpozícióhoz."
+msgstr "Ha [code]true[/code], a kamera nézete a [member position_smoothing_speed] értékének megfelelően, finoman közelít a célpozícióhoz."
 
 #. Camera2D.position_smoothing_speed
 #: doc/classes/Camera2D.xml
