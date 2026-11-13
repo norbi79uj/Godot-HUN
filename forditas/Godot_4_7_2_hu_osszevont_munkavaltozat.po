@@ -925,12 +925,12 @@ msgstr "Visszafelé játssza le a [param name] kulcsú animációt.\nEz a [metho
 #. AnimatedSprite2D.stop
 #: doc/classes/AnimatedSprite2D.xml
 msgid "Stops the currently playing animation. The animation position is reset to [code]0[/code] and the [code]custom_speed[/code] is reset to [code]1.0[/code]. See also [method pause]."
-msgstr "Leállítja az éppen futó animációt. A lejátszási pozíció visszaáll [code]0[/code] értékre, a [code]custom_speed[/code] pedig [code]1.0[/code] lesz. Lásd még: [method pause]."
+msgstr "Leállítja az éppen futó animációt. A lejátszási pozíció [code]0[/code]-ra, a [code]custom_speed[/code] pedig [code]1.0[/code]-ra áll vissza. Lásd még: [method pause]."
 
 #. AnimatedSprite2D.pause
 #: doc/classes/AnimatedSprite2D.xml
 msgid "Pauses the currently playing animation. The [member frame] and [member frame_progress] will be kept and calling [method play] or [method play_backwards] without arguments will resume the animation from the current playback position.\nSee also [method stop]."
-msgstr "Szünetelteti az éppen futó animációt. A [member frame] és a [member frame_progress] megmarad; a [method play] vagy [method play_backwards] paraméter nélküli meghívása az aktuális pozíciótól folytatja a lejátszást.\nLásd még: [method stop]."
+msgstr "Szünetelteti az éppen lejátszott animációt. A [member frame] és a [member frame_progress] értéke megmarad; a [method play] vagy [method play_backwards] paraméter nélküli meghívása az aktuális pozíciótól folytatja a lejátszást.\nLásd még: [method stop]."
 
 #. AnimatedSprite2D.is_playing
 #. AnimationPlayer.is_playing
@@ -960,12 +960,12 @@ msgstr "Ha [code]true[/code], függőlegesen tükrözi a textúrát."
 #. AnimatedSprite2D.frame
 #: doc/classes/AnimatedSprite2D.xml
 msgid "The displayed animation frame's index. Setting this property also resets [member frame_progress]. If this is not desired, use [method set_frame_and_progress]."
-msgstr "A megjelenített animációs képkocka indexe. A tulajdonság beállítása a [member frame_progress] értékét is visszaállítja. Ha ezt el akarod kerülni, használd a [method set_frame_and_progress] metódust."
+msgstr "A megjelenített animációs képkocka indexe. A tulajdonság módosítása a [member frame_progress] értékét is alaphelyzetbe állítja. Ha ezt el akarod kerülni, használd a [method set_frame_and_progress] metódust."
 
 #. AnimatedSprite2D.frame_progress
 #: doc/classes/AnimatedSprite2D.xml
 msgid "The progress value between [code]0.0[/code] and [code]1.0[/code] until the current frame transitions to the next frame. If the animation is playing backwards, the value transitions from [code]1.0[/code] to [code]0.0[/code]."
-msgstr "Az aktuális képkockáról a következőre váltásig eltelt előrehaladás értéke [code]0.0[/code] és [code]1.0[/code] között. Ha az animáció visszafelé játszódik, az érték [code]1.0[/code] felől [code]0.0[/code] felé halad."
+msgstr "Az aktuális képkocka lejátszásának előrehaladása [code]0.0[/code] és [code]1.0[/code] között, a következő képkockára váltásig. Visszafelé játszott animációnál az érték [code]1.0[/code]-ról [code]0.0[/code]-ra csökken."
 
 #. AnimatedSprite2D.speed_scale
 #. AnimationPlayer.speed_scale
