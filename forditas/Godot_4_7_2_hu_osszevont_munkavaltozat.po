@@ -1856,7 +1856,7 @@ msgstr "Beállítja a sáv útvonalát. Az útvonalnak érvényes jelenetfa-útv
 #. Area2D.brief
 #: doc/classes/Area2D.xml
 msgid "A region of 2D space that detects other [CollisionObject2D]s entering or exiting it."
-msgstr "Olyan 2D térbeli terület, amely érzékeli, amikor más [CollisionObject2D] objektumok belépnek oda vagy elhagyják."
+msgstr "A 2D tér olyan területe, amely érzékeli, amikor más [CollisionObject2D] objektumok belépnek, vagy kilépnek belőle."
 
 #. Area2D.description
 #: doc/classes/Area2D.xml
@@ -1881,17 +1881,17 @@ msgstr "A terület prioritása. A nagyobb prioritású területeket előbb dolgo
 #. Area2D.gravity
 #: doc/classes/Area2D.xml
 msgid "The area's gravity intensity (in pixels per second squared). This value multiplies the gravity direction. This is useful to alter the force of gravity without altering its direction."
-msgstr "A terület gravitációjának erőssége (képpont/másodperc négyzetben). Ez az érték megszorozza a gravitáció irányát. Így a gravitáció erőssége az irány megváltoztatása nélkül módosítható."
+msgstr "A terület gravitációs gyorsulásának nagysága (képpont/másodperc² egységben). Ez az érték a gravitáció irányvektorának szorzója, így a gravitáció erőssége az irány megváltoztatása nélkül szabályozható."
 
 #. Area2D.gravity_direction
 #: doc/classes/Area2D.xml
 msgid "The area's gravity vector (not normalized)."
-msgstr "A terület gravitációvektora (nem normalizált)."
+msgstr "A terület gravitációjának irányvektora (nem normalizált)."
 
 #. Area2D.gravity_point
 #: doc/classes/Area2D.xml
 msgid "If [code]true[/code], gravity is calculated from a point (set via [member gravity_point_center]). See also [member gravity_space_override]."
-msgstr "Ha [code]true[/code], a gravitációt egy pontból számítja (amelyet a [member gravity_point_center] határoz meg). Lásd még: [member gravity_space_override]."
+msgstr "Ha [code]true[/code], a gravitáció pontszerű vonzásként működik, amelynek középpontját a [member gravity_point_center] adja meg. Lásd még: [member gravity_space_override]."
 
 #. Area2D.gravity_point_center
 #: doc/classes/Area2D.xml
@@ -1901,7 +1901,7 @@ msgstr "Pontszerű gravitáció esetén (lásd [member gravity_point]) ez a vonz
 #. Area2D.gravity_space_override
 #: doc/classes/Area2D.xml
 msgid "Override mode for gravity calculations within this area."
-msgstr "A gravitáció számításának felülírási módja ezen a területen."
+msgstr "Megadja, hogyan írja felül a terület a gravitáció számítását."
 
 #. Area2D.linear_damp
 #: doc/classes/Area2D.xml
