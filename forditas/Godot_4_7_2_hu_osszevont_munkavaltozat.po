@@ -2090,12 +2090,12 @@ msgstr "Térbeli hangot játszik le 2D környezetben."
 #. AudioStreamPlayer2D.description
 #: doc/classes/AudioStreamPlayer2D.xml
 msgid "Plays audio that is attenuated with distance to the listener.\nBy default, audio is heard from the screen center. This can be changed by adding an [AudioListener2D] node to the scene and enabling it by calling [method AudioListener2D.make_current] on it.\nSee also [AudioStreamPlayer] to play a sound non-positionally.\n[b]Note:[/b] Hiding an [AudioStreamPlayer2D] node does not disable its audio output. To temporarily disable an [AudioStreamPlayer2D]'s audio output, set [member volume_db] to a very low value like [code]-100[/code] (which isn't audible to human hearing)."
-msgstr "Olyan hangot játszik le, amelynek hangereje a hallgatótól mért távolsággal csökken.\nAlapértelmezés szerint a hangot a képernyő közepéből halljuk. Ezt úgy módosíthatod, hogy [AudioListener2D] csomópontot adsz a jelenethez, majd a [method AudioListener2D.make_current] hívással aktiválod.\nHa térbeli elhelyezkedés nélkül szeretnél hangot lejátszani, lásd még: [AudioStreamPlayer].\n[b]Megjegyzés:[/b] Az [AudioStreamPlayer2D] csomópont elrejtése nem némítja el a hangot. A hangkimenet átmeneti letiltásához állítsd az [AudioStreamPlayer2D] [member volume_db] értékét nagyon alacsonyra, például [code]-100[/code] értékre (amit az emberi fül már nem hall)."
+msgstr "Olyan hangot játszik le, amelynek hangereje a hallgatótól mért távolsággal csökken.\nAlapértelmezés szerint a képernyő középpontja szolgál hallgatói pozícióként. Ezt úgy módosíthatod, hogy [AudioListener2D] csomópontot adsz a jelenethez, majd a [method AudioListener2D.make_current] hívással aktiválod.\nHa térbeli elhelyezkedés nélkül szeretnél hangot lejátszani, lásd még: [AudioStreamPlayer].\n[b]Megjegyzés:[/b] Az [AudioStreamPlayer2D] csomópont elrejtése nem némítja el a hangot. A hangkimenet átmeneti letiltásához állítsd az [AudioStreamPlayer2D] [member volume_db] értékét nagyon alacsonyra, például [code]-100[/code] értékre (amit az emberi fül már nem hall)."
 
 #. AudioStreamPlayer2D.area_mask
 #: doc/classes/AudioStreamPlayer2D.xml
 msgid "Determines which [Area2D] layers affect the sound for reverb and audio bus effects. Areas can be used to redirect [AudioStream]s so that they play in a certain audio bus. An example of how you might use this is making a \"water\" area so that sounds played in the water are redirected through an audio bus to make them sound like they are being played underwater."
-msgstr "Meghatározza, hogy mely [Area2D] rétegek befolyásolják a hangot visszhang és hangbusz-effektek szempontjából. A területek átirányíthatják az [AudioStream] hangfolyamokat egy meghatározott hangbuszra. Például létrehozhatsz egy „víz” területet, amely a vízben lejátszott hangokat olyan buszra irányítja, hogy víz alatti hangzásuk legyen."
+msgstr "Meghatározza, hogy mely [Area2D] rétegek befolyásolják a hangot visszhang és hangbusz-effektek szempontjából. A területek segítségével az [AudioStream] hangfolyamok egy adott hangbuszra irányíthatók. Például létrehozhatsz egy „víz” területet, amely a benne megszólaló hangokat olyan hangbuszra irányítja, amely víz alatti hangzást ad nekik."
 
 #. AudioStreamPlayer2D.attenuation
 #: doc/classes/AudioStreamPlayer2D.xml
@@ -2125,12 +2125,12 @@ msgstr "A csomópont által egyszerre lejátszható hangok legnagyobb száma. Ha
 #. AudioStreamPlayer2D.panning_strength
 #: doc/classes/AudioStreamPlayer2D.xml
 msgid "Scales the panning strength for this node by multiplying the base [member ProjectSettings.audio/general/2d_panning_strength] with this factor. Higher values will pan audio from left to right more dramatically than lower values."
-msgstr "A csomópont sztereó panorámázásának erősségét szorozza meg a [member ProjectSettings.audio/general/2d_panning_strength] alapértékkel. Nagyobb értéknél erősebben érzékelhető a hang balra-jobbra eltolódása, mint kisebb értéknél."
+msgstr "A csomópont sztereó panorámázásának erősségét a [member ProjectSettings.audio/general/2d_panning_strength] alapérték és ennek a szorzótényezőnek a szorzata határozza meg. Nagyobb értéknél erősebben érzékelhető a hang balra-jobbra eltolódása, mint kisebb értéknél."
 
 #. AudioStreamPlayer2D.pitch_scale
 #: doc/classes/AudioStreamPlayer2D.xml
 msgid "The pitch and the tempo of the audio, as a multiplier of the audio sample's sample rate."
-msgstr "A hang magasságának és tempójának szorzója a hangminta mintavételi frekvenciájához viszonyítva."
+msgstr "A hang magasságát és lejátszási tempóját meghatározó szorzótényező, amely a hangminta mintavételi frekvenciájára hat."
 
 #. AudioStreamPlayer2D.playback_type
 #: doc/classes/AudioStreamPlayer2D.xml
@@ -2140,7 +2140,7 @@ msgstr "A hangfolyam lejátszási típusa. Az alapértelmezettől eltérő ért�
 #. AudioStreamPlayer2D.playing
 #: doc/classes/AudioStreamPlayer2D.xml
 msgid "If [code]true[/code], audio is playing or is queued to be played (see [method play])."
-msgstr "Ha [code]true[/code], a hang éppen szól, vagy lejátszásra van előkészítve (lásd [method play])."
+msgstr "Ha [code]true[/code], a hang lejátszása folyamatban van, vagy a lejátszás már ütemezett (lásd [method play])."
 
 #. AudioStreamPlayer2D.stream
 #: doc/classes/AudioStreamPlayer2D.xml
