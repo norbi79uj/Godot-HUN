@@ -41,12 +41,12 @@ msgstr "Visszaadja a [param coords] koordinátájú cella csempeforrás-azonosí
 #. TileMapLayer.get_cell_atlas_coords
 #: doc/classes/TileMapLayer.xml
 msgid "Returns the tile atlas coordinates ID of the cell at coordinates [param coords]. Returns [code]Vector2i(-1, -1)[/code] if the cell does not exist."
-msgstr "Visszaadja a [param coords] koordinátáknál található cella atlaszbeli koordinátáit. Ha a cella nem létezik, [code]Vector2i(-1, -1)[/code] értéket ad vissza."
+msgstr "Visszaadja a [param coords] koordinátájú cellához tartozó csempe atlaszkoordináta-azonosítóját. Ha a cella nem létezik, [code]Vector2i(-1, -1)[/code] értéket ad vissza."
 
 #. TileMapLayer.get_cell_alternative_tile
 #: doc/classes/TileMapLayer.xml
 msgid "Returns the tile alternative ID of the cell at coordinates [param coords]."
-msgstr "Visszaadja a [param coords] koordinátáknál található cella alternatív csempéjének azonosítóját."
+msgstr "Visszaadja a [param coords] koordinátájú cellában használt alternatív csempe azonosítóját."
 
 #. TileMapLayer.get_used_rect
 #: doc/classes/TileMapLayer.xml
@@ -256,7 +256,7 @@ msgstr "Csempekészlet csempetérképekhez."
 #. TileSet.description
 #: doc/classes/TileSet.xml
 msgid "A TileSet is a library of tiles for a [TileMapLayer]. A TileSet handles a list of [TileSetSource], each of them storing a set of tiles.\nTiles can either be from a [TileSetAtlasSource], which renders tiles out of a texture with support for physics, navigation, etc., or from a [TileSetScenesCollectionSource], which exposes scene-based tiles.\nTiles are referenced by using three IDs: their source ID, their atlas coordinates ID, and their alternative tile ID.\nA TileSet can be configured so that its tiles expose more or fewer properties. To do so, the TileSet resources use property layers, which you can add or remove depending on your needs.\nFor example, adding a physics layer allows giving collision shapes to your tiles. Each layer has dedicated properties (physics layer and mask), so you may add several TileSet physics layers for each type of collision you need.\nSee the functions to add new layers for more information."
-msgstr "A TileSet egy [TileMapLayer] csempekönyvtára. A TileSet [TileSetSource] források listáját kezeli, amelyek mindegyike csempéket tárol.\nA csempék származhatnak [TileSetAtlasSource] forrásból, amely egy textúra részeiből rajzolja ki őket, és támogatja többek között a fizikát és a navigációt; vagy [TileSetScenesCollectionSource] forrásból, amely jelenetalapú csempéket biztosít.\nA csempékre három azonosítóval hivatkozunk: forrásazonosítóval, atlaszkoordináta-azonosítóval és alternatívcsempe-azonosítóval.\nA TileSet beállítható úgy, hogy a csempéi több vagy kevesebb tulajdonságot kínáljanak. Ehhez tulajdonságrétegeket használ, amelyeket az igények szerint hozzáadhatsz vagy eltávolíthatsz.\nPéldául egy fizikai réteg hozzáadásával ütközési alakzatokat rendelhetsz a csempékhez. Minden ilyen rétegnek saját tulajdonságai vannak (ütközési réteg és maszk), ezért különböző ütközési célokra több fizikai réteget is létrehozhatsz.\nTovábbi tudnivalókért lásd az új rétegek hozzáadására szolgáló függvényeket."
+msgstr "A TileSet a [TileMapLayer] csomópontok által használt csempekészlet. A TileSet [TileSetSource] források listáját kezeli, amelyek mindegyike csempéket tárol.\nA csempék származhatnak [TileSetAtlasSource] forrásból, amely egy textúra részeiből rajzolja ki őket, és támogatja többek között a fizikát és a navigációt; vagy [TileSetScenesCollectionSource] forrásból, amely jelenetalapú csempéket biztosít.\nA csempékre három azonosítóval hivatkozunk: forrásazonosítóval, atlaszkoordináta-azonosítóval és alternatívcsempe-azonosítóval.\nA TileSet beállítható úgy, hogy a csempéi több vagy kevesebb tulajdonságot kínáljanak. Ehhez tulajdonságrétegeket használ, amelyeket az igények szerint hozzáadhatsz vagy eltávolíthatsz.\nPéldául egy fizikai réteg hozzáadásával ütközési alakzatokat rendelhetsz a csempékhez. Minden ilyen rétegnek saját tulajdonságai vannak (ütközési réteg és maszk), ezért különböző ütközési célokra több fizikai réteget is létrehozhatsz.\nTovábbi tudnivalókért lásd az új rétegek hozzáadására szolgáló függvényeket."
 
 #. TileSet.tile_size
 #: doc/classes/TileSet.xml
