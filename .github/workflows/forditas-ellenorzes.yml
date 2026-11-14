@@ -21,6 +21,9 @@ jobs:
     steps:
       - name: Forráskód letöltése
         uses: actions/checkout@v4
+        with:
+          # A Lektorált 10 ellenőrzés a 2026-11-10-i kiadási commitot olvassa.
+          fetch-depth: 0
       - name: GNU gettext telepítése
         run: |
           sudo apt-get update
