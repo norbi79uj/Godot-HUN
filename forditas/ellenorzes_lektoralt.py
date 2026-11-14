@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
-"""Ellenőrzi a Godot-HUN eredeti és 10. szakaszban lektorált F1-PO fájlját.
+"""Ellenőrzi a 10. lektorálás változatlan, 2026-11-10-i kiadási alapját.
 
-Olvasásra használja a bemeneti fájlokat, a beépített Godot-ot nem módosítja.
+A folyamatosan frissülő munkakatalógus helyett a kiadáskor rögzített
+Git-állapotot hasonlítja a Lektorált 10 fájlhoz. A PO-fájlokat nem módosítja.
+A git history elérése szükséges (GitHub Actions: fetch-depth: 0).
 """
 from __future__ import annotations
 
@@ -15,14 +17,31 @@ from pathlib import Path
 from ellenorzes import parse
 
 ROOT = Path(__file__).resolve().parent
-ORIGINAL = ROOT / "Godot_4_7_2_hu_osszevont_munkavaltozat.po"
+# A Lektorált 10 nyilvános kiadásának változatlan forrásállapota.
+RELEASE_COMMIT = "a1684f79a028f8542b7fef541eda7a1ef1f7477d"
+RELEASE_ORIGINAL = "forditas/Godot_4_7_2_hu_osszevont_munkavaltozat.po"
+
+
+def release_original() -> dict[str, str]:
+    """A kiadáshoz tartozó eredeti PO betöltése a Git-előzményekből."""
+    with tempfile.TemporaryDirectory(prefix="godot_hu_10_alap_") as temp:
+        output = Path(temp) / "eredeti_10.po"
+        with output.open("wb") as stream:
+            subprocess.run(
+                ["git", "show", f"{RELEASE_COMMIT}:{RELEASE_ORIGINAL}"],
+                stdout=stream,
+                cwd=ROOT.parent,
+                check=True,
+            )
+        return parse(output)
+
 REVIEWED = ROOT / "Godot_4_7_2_hu_LEKTORALT_10.po"
 TEXTEDIT = ROOT / "TextEdit_4_7_2_hu_reszlet.po"
 
 
 def main() -> int:
     try:
-        old = parse(ORIGINAL)
+        old = release_original()
         new = parse(REVIEWED)
         subset = parse(TEXTEDIT)
         if old.keys() != new.keys():
@@ -50,6 +69,7 @@ def main() -> int:
                 [binary, "--check", "-o", str(dest / "lektoralt.mo"), str(dest / "lektoralt.po")],
                 check=True,
             )
+        print("Viszonyítási alap: Lektorált 10 kiadás (2026-11-10).")
         print(f"SIKER: {len(new)} bejegyzés; {len(changes)} megváltozott fordítás; "
               "TextEdit egyezik; BBCode jelölések és msgfmt rendben.")
         return 0
