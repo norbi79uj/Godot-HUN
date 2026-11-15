@@ -2519,7 +2519,7 @@ msgstr "Bejárható 2D-s terület, amelyet a [NavigationAgent2D] ügynökök út
 #. NavigationRegion2D.description
 #: doc/classes/NavigationRegion2D.xml
 msgid "A traversable 2D region based on a [NavigationPolygon] that [NavigationAgent2D]s can use for pathfinding.\nTwo regions can be connected to each other if they share a similar edge. You can set the minimum distance between two vertices required to connect two edges by using [method NavigationServer2D.map_set_edge_connection_margin].\n[b]Note:[/b] Overlapping two regions' navigation polygons is not enough for connecting two regions. They must share a similar edge.\nThe pathfinding cost of entering a region from another region can be controlled with the [member enter_cost] value.\n[b]Note:[/b] This value is not added to the path cost when the start position is already inside this region.\nThe pathfinding cost of traveling distances inside this region can be controlled with the [member travel_cost] multiplier.\n[b]Note:[/b] This node caches changes to its properties, so if you make changes to the underlying region [RID] in [NavigationServer2D], they will not be reflected in this node's properties."
-msgstr "Egy [NavigationPolygon] alapján meghatározott bejárható 2D-s terület, amelyet a [NavigationAgent2D] ügynökök útkeresésre használhatnak.\nKét terület akkor kapcsolódhat egymáshoz, ha hasonló élük van. A két él összekapcsolásához szükséges legnagyobb csúcstávolságot a [method NavigationServer2D.map_set_edge_connection_margin] metódussal állíthatod be.\n[b]Megjegyzés:[/b] Két terület navigációs sokszögeinek átfedése önmagában nem elegendő az összekapcsolásukhoz. Hasonló élen kell osztozniuk.\nA másik területről való belépés útkeresési költsége a [member enter_cost] értékkel szabályozható.\n[b]Megjegyzés:[/b] Ha a kezdőpont már ezen a területen található, ez a költség nem adódik hozzá az útvonal költségéhez.\nA területen belül megtett távolságok útkeresési költségét a [member travel_cost] szorzó szabályozza.\n[b]Megjegyzés:[/b] A csomópont gyorsítótárazza a tulajdonságainak változásait, ezért a mögöttes terület [RID] azonosítóján a [NavigationServer2D] segítségével végzett módosítások nem jelennek meg automatikusan a csomópont tulajdonságaiban."
+msgstr "Egy [NavigationPolygon] alapján meghatározott bejárható 2D-s terület, amelyet a [NavigationAgent2D] ügynökök útkeresésre használhatnak.\nKét terület akkor kapcsolódhat egymáshoz, ha az éleik megfelelően közel vannak egymáshoz. Az élek összekapcsolásához figyelembe vett csúcstávolság határértéke a [method NavigationServer2D.map_set_edge_connection_margin] metódussal állítható be.\n[b]Megjegyzés:[/b] Két terület navigációs sokszögeinek átfedése önmagában nem elegendő az összekapcsolásukhoz. Hasonló élen kell osztozniuk.\nA másik területről való belépés útkeresési költsége a [member enter_cost] értékkel szabályozható.\n[b]Megjegyzés:[/b] Ha a kezdőpont már ezen a területen található, ez a költség nem adódik hozzá az útvonal költségéhez.\nA területen belül megtett távolságok útkeresési költségét a [member travel_cost] szorzó szabályozza.\n[b]Megjegyzés:[/b] A csomópont gyorsítótárazza a tulajdonságait. Ha a [NavigationServer2D] segítségével közvetlenül módosítod a mögöttes terület [RID] azonosítóval hivatkozott adatait, a változások nem jelennek meg automatikusan a csomópont tulajdonságaiban."
 
 #. NavigationRegion2D.enabled
 #: doc/classes/NavigationRegion2D.xml
@@ -2529,7 +2529,7 @@ msgstr "Meghatározza, hogy a [NavigationRegion2D] terület engedélyezve van-e.
 #. NavigationRegion2D.enter_cost
 #: doc/classes/NavigationRegion2D.xml
 msgid "When pathfinding enters this region's navigation mesh from another regions navigation mesh the [member enter_cost] value is added to the path distance for determining the shortest path."
-msgstr "Amikor az útkeresés egy másik terület navigációs hálójából erre a területre lép, a [member enter_cost] értékét hozzáadja az út hosszához a legrövidebb út meghatározásakor."
+msgstr "Ha az útvonal egy másik navigációs területről erre a területre lép, a [member enter_cost] értéke hozzáadódik az útkeresés során számított útvonalköltséghez."
 
 #. NavigationRegion2D.navigation_layers
 #: doc/classes/NavigationRegion2D.xml
@@ -2544,29 +2544,29 @@ msgstr "A használandó [NavigationPolygon] erőforrás."
 #. NavigationRegion2D.travel_cost
 #: doc/classes/NavigationRegion2D.xml
 msgid "When pathfinding moves inside this region's navigation mesh the traveled distances are multiplied with [member travel_cost] for determining the shortest path."
-msgstr "Amikor az útkeresés ezen a területen belül halad, a megtett távolságot a [member travel_cost] értékkel szorozza meg a legrövidebb út kiszámításához."
+msgstr "Az útkeresés ezen a területen belül megtett távolságot a [member travel_cost] értékével szorozva veszi figyelembe az útvonal költségének kiszámításakor."
 
 #. NavigationRegion2D.use_edge_connections
 #: doc/classes/NavigationRegion2D.xml
 msgid "If enabled the navigation region will use edge connections to connect with other navigation regions within proximity of the navigation map edge connection margin."
-msgstr "Ha engedélyezett, a navigációs terület élkapcsolatokkal kapcsolódhat más közeli területekhez, a navigációs térkép élkapcsolati távolságán belül."
+msgstr "Ha engedélyezett, a régió élkapcsolatokon keresztül csatlakozhat más, kellően közeli navigációs régiókhoz. A megengedett távolságot a navigációs térkép élkapcsolati határértéke szabja meg."
 
 #. NavigationRegion2D.bake_navigation_polygon
 #: doc/classes/NavigationRegion2D.xml
 msgid "Bakes the [NavigationPolygon]. If [param on_thread] is set to [code]true[/code] (default), the baking is done on a separate thread."
-msgstr "Kiszámítja és előállítja a [NavigationPolygon] navigációs sokszöget. Ha a [param on_thread] értéke [code]true[/code] (ez az alapértelmezés), a művelet külön szálon fut."
+msgstr "Előállítja (süti) a [NavigationPolygon] navigációs sokszöget. Ha a [param on_thread] értéke [code]true[/code] (ez az alapértelmezés), a művelet külön szálon fut."
 
 #. NavigationRegion2D.get_bounds
 #: doc/classes/NavigationRegion2D.xml
 msgid "Returns the axis-aligned rectangle for the region's transformed navigation mesh."
-msgstr "Visszaadja a terület átalakított navigációs hálójának tengelyekkel párhuzamos határoló téglalapját."
+msgstr "Visszaadja a régió transzformációval módosított navigációs hálóját befoglaló, koordinátatengelyekkel párhuzamos téglalapot."
 
 #. NavigationRegion2D.get_navigation_layer_value
 #. NavigationLink2D.get_navigation_layer_value
 #: doc/classes/NavigationRegion2D.xml
 #: doc/classes/NavigationLink2D.xml
 msgid "Returns whether or not the specified layer of the [member navigation_layers] bitmask is enabled, given a [param layer_number] between 1 and 32."
-msgstr "Visszaadja, hogy a [member navigation_layers] bitmaszk [param layer_number] sorszámú rétege engedélyezett-e (1 és 32 között)."
+msgstr "Visszaadja, hogy a [member navigation_layers] bitmaszk [param layer_number] számú rétege engedélyezett-e. A rétegszám 1 és 32 közötti lehet."
 
 #. NavigationRegion2D.get_navigation_map
 #: doc/classes/NavigationRegion2D.xml
@@ -2581,7 +2581,7 @@ msgstr "Visszaadja ennek a területnek a [NavigationServer2D] rendszerbeli [RID]
 #. NavigationRegion2D.get_rid
 #: doc/classes/NavigationRegion2D.xml
 msgid "Returns the [RID] of this region on the [NavigationServer2D]. Combined with [method NavigationServer2D.map_get_closest_point_owner] can be used to identify the [NavigationRegion2D] closest to a point on the merged navigation map."
-msgstr "Visszaadja ennek a területnek a [NavigationServer2D] rendszerbeli [RID] azonosítóját. A [method NavigationServer2D.map_get_closest_point_owner] metódussal együtt használva megállapítható, melyik [NavigationRegion2D] van legközelebb a navigációs térkép egy pontjához."
+msgstr "Visszaadja ennek a területnek a [NavigationServer2D] rendszerbeli [RID] azonosítóját. A [method NavigationServer2D.map_get_closest_point_owner] metódussal együtt használva azonosítható, hogy az egyesített navigációs térkép adott pontjához legközelebbi navigációs pont melyik [NavigationRegion2D] régióhoz tartozik."
 
 #. NavigationRegion2D.is_baking
 #: doc/classes/NavigationRegion2D.xml
@@ -3668,12 +3668,12 @@ msgstr "Ha az értéke [code]true[/code], a test mozgása a fizikai képkockákh
 #. NavigationLink2D.brief
 #: doc/classes/NavigationLink2D.xml
 msgid "A link between two positions on [NavigationRegion2D]s that agents can be routed through."
-msgstr "Két [NavigationRegion2D] területen található pozíció közötti kapcsolat, amelyen a navigációs ügynökök útvonala áthaladhat."
+msgstr "Két, [NavigationRegion2D] régióhoz tartozó pontot összekötő navigációs kapcsolat, amelyen az ügynökök útvonala átvezethet."
 
 #. NavigationLink2D.description
 #: doc/classes/NavigationLink2D.xml
 msgid "A link between two positions on [NavigationRegion2D]s that agents can be routed through. These positions can be on the same [NavigationRegion2D] or on two different ones. Links are useful to express navigation methods other than traveling along the surface of the navigation polygon, such as ziplines, teleporters, or gaps that can be jumped across."
-msgstr "Két [NavigationRegion2D] területen található pozíció közötti kapcsolat, amelyen a navigációs ügynökök útvonala áthaladhat. A két pozíció ugyanazon a [NavigationRegion2D] területen vagy két különböző területen is lehet. A kapcsolatok olyan közlekedési módok jelölésére használhatók, amelyek nem a navigációs sokszög felületén történő haladást jelentik: például kötélpálya, teleport vagy átugorható szakadék."
+msgstr "Két, [NavigationRegion2D] régióhoz tartozó pont közötti navigációs kapcsolat, amelyen keresztül az ügynökök útvonala is vezethet. A pontok lehetnek ugyanazon a [NavigationRegion2D] régión, de két különböző régióhoz is tartozhatnak. A kapcsolatokkal olyan áthaladási módok írhatók le, amelyek nem a navigációs sokszög felszínén való haladást követik: például kötélpálya, teleportálás vagy egy átugorható szakadék."
 
 #. NavigationLink2D.get_global_end_position
 #: doc/classes/NavigationLink2D.xml
@@ -3698,12 +3698,12 @@ msgstr "Visszaadja a kapcsolat [NavigationServer2D] rendszerbeli [RID] azonosít
 #. NavigationLink2D.set_global_end_position
 #: doc/classes/NavigationLink2D.xml
 msgid "Sets the [member end_position] that is relative to the link from a global [param position]."
-msgstr "A globális [param position] alapján beállítja a kapcsolathoz viszonyított [member end_position] pozíciót."
+msgstr "A globális koordinátákban megadott [param position] alapján beállítja a kapcsolat helyi [member end_position] végpontját."
 
 #. NavigationLink2D.set_global_start_position
 #: doc/classes/NavigationLink2D.xml
 msgid "Sets the [member start_position] that is relative to the link from a global [param position]."
-msgstr "A globális [param position] alapján beállítja a kapcsolathoz viszonyított [member start_position] pozíciót."
+msgstr "A globális koordinátákban megadott [param position] alapján beállítja a kapcsolat helyi [member start_position] kezdőpontját."
 
 #. NavigationLink2D.set_navigation_map
 #: doc/classes/NavigationLink2D.xml
@@ -3713,7 +3713,7 @@ msgstr "Beállítja annak a navigációs térképnek a [RID] azonosítóját, am
 #. NavigationLink2D.bidirectional
 #: doc/classes/NavigationLink2D.xml
 msgid "Whether this link can be traveled in both directions or only from [member start_position] to [member end_position]."
-msgstr "Meghatározza, hogy a kapcsolaton mindkét irányban át lehet-e haladni, vagy csak a [member start_position] ponttól a [member end_position] pontig."
+msgstr "Meghatározza, hogy a kapcsolat mindkét irányban használható-e, vagy csak a [member start_position] kezdőponttól a [member end_position] végpontig."
 
 #. NavigationLink2D.enabled
 #: doc/classes/NavigationLink2D.xml
@@ -3723,12 +3723,12 @@ msgstr "Megadja, hogy a kapcsolat jelenleg aktív-e. Ha [code]false[/code], a [m
 #. NavigationLink2D.end_position
 #: doc/classes/NavigationLink2D.xml
 msgid "Ending position of the link.\nThis position will search out the nearest polygon in the navigation mesh to attach to.\nThe distance the link will search is controlled by [method NavigationServer2D.map_set_link_connection_radius]."
-msgstr "A kapcsolat végpozíciója.\nEz a pozíció a legközelebbi navigációs sokszöget keresi, amelyhez a kapcsolat csatlakozhat.\nA keresés távolságát a [method NavigationServer2D.map_set_link_connection_radius] szabályozza."
+msgstr "A kapcsolat végpozíciója.\nA rendszer megkeresi a végponthoz legközelebbi navigációs sokszöget, amelyhez a kapcsolat csatlakoztatható.\nA keresési sugarat a [method NavigationServer2D.map_set_link_connection_radius] metódus határozza meg."
 
 #. NavigationLink2D.enter_cost
 #: doc/classes/NavigationLink2D.xml
 msgid "When pathfinding enters this link from another regions navigation mesh the [member enter_cost] value is added to the path distance for determining the shortest path."
-msgstr "Amikor az útkeresés egy másik terület navigációs hálójából erre a kapcsolatra lép, a legrövidebb út megállapításához a [member enter_cost] értékét hozzáadja az út költségéhez."
+msgstr "Ha az útvonal egy másik régió navigációs hálójából erre a kapcsolatra lép, a [member enter_cost] értéke hozzáadódik az útkeresés során számított útvonalköltséghez."
 
 #. NavigationLink2D.navigation_layers
 #: doc/classes/NavigationLink2D.xml
@@ -3738,12 +3738,12 @@ msgstr "Bitmező, amely meghatározza, hogy a kapcsolat mely navigációs réteg
 #. NavigationLink2D.start_position
 #: doc/classes/NavigationLink2D.xml
 msgid "Starting position of the link.\nThis position will search out the nearest polygon in the navigation mesh to attach to.\nThe distance the link will search is controlled by [method NavigationServer2D.map_set_link_connection_radius]."
-msgstr "A kapcsolat kezdőpozíciója.\nEz a pozíció a legközelebbi navigációs sokszöget keresi, amelyhez a kapcsolat csatlakozhat.\nA keresés távolságát a [method NavigationServer2D.map_set_link_connection_radius] szabályozza."
+msgstr "A kapcsolat kezdőpozíciója.\nA rendszer megkeresi a kezdőponthoz legközelebbi navigációs sokszöget, amelyhez a kapcsolat csatlakoztatható.\nA keresési sugarat a [method NavigationServer2D.map_set_link_connection_radius] metódus határozza meg."
 
 #. NavigationLink2D.travel_cost
 #: doc/classes/NavigationLink2D.xml
 msgid "When pathfinding moves along the link the traveled distance is multiplied with [member travel_cost] for determining the shortest path."
-msgstr "A kapcsolaton való áthaladáskor a megtett távolságot a [member travel_cost] értékével szorozza meg a rendszer a legrövidebb út kiszámításához."
+msgstr "Az útkeresés a kapcsolaton megtett távolságot a [member travel_cost] értékével szorozva veszi figyelembe az útvonalköltség kiszámításakor."
 
 #. NavigationObstacle2D.brief
 #: doc/classes/NavigationObstacle2D.xml
