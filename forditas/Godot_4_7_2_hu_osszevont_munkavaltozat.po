@@ -541,7 +541,7 @@ msgstr "Beállítja a terepkészlet illesztési módját. Az egyes módok meghat
 #. TileSet.cleanup_invalid_tile_proxies
 #: doc/classes/TileSet.xml
 msgid "Clears tile proxies pointing to invalid tiles."
-msgstr "Törli az érvénytelen csempékre mutató csempehelyettesítési szabályokat (proxykat)."
+msgstr "Törli azokat a csempehelyettesítési szabályokat, amelyek érvénytelen csempékre mutatnak."
 
 #. TileSet.clear_tile_proxies
 #: doc/classes/TileSet.xml
@@ -576,7 +576,7 @@ msgstr "Visszaadja, hogy az adott réteg fénykitakaróinál engedélyezett-e a 
 #. TileSet.get_source_level_tile_proxy
 #: doc/classes/TileSet.xml
 msgid "Returns the source-level proxy for the given source identifier.\nIf the TileSet has no proxy for the given identifier, returns -1."
-msgstr "Visszaadja a megadott forrásazonosítóhoz tartozó forrásszintű helyettesítési szabályt.\nHa a TileSet nem tartalmaz ilyen szabályt, -1 értéket ad vissza."
+msgstr "Visszaadja a megadott forrásazonosító helyettesítéséhez beállított cél-forrásazonosítót.\nHa a TileSet nem tartalmaz ilyen szabályt, -1 értéket ad vissza."
 
 #. TileSet.has_alternative_level_tile_proxy
 #: doc/classes/TileSet.xml
@@ -791,12 +791,12 @@ msgstr "Visszaadja a [param atlas_coords] koordinátájú csempe animációs ké
 #. TileData.brief
 #: doc/classes/TileData.xml
 msgid "Settings for a single tile in a [TileSet]."
-msgstr "Egyetlen csempe beállításai egy [TileSet] készletben."
+msgstr "Egyetlen csempe beállításai egy [TileSet] erőforrásban."
 
 #. TileData.description
 #: doc/classes/TileData.xml
 msgid "[TileData] object represents a single tile in a [TileSet]. It is usually edited using the tileset editor, but it can be modified at runtime using [method TileMapLayer._tile_data_runtime_update]."
-msgstr "A [TileData] objektum egyetlen csempét képvisel egy [TileSet] készletben. Általában a csempekészlet-szerkesztőben módosítható, de futás közben is változtatható a [method TileMapLayer._tile_data_runtime_update] használatával."
+msgstr "A [TileData] objektum egyetlen csempét képvisel egy [TileSet] erőforrásban. Általában a csempekészlet-szerkesztőben módosítható, de a [method TileMapLayer._tile_data_runtime_update] segítségével futás közben is megváltoztathatók a tulajdonságai."
 
 #. TileData.flip_h
 #: doc/classes/TileData.xml
@@ -851,7 +851,7 @@ msgstr "Visszaadja a csempe [param layer_name] nevű egyediadatrétegben tárolt
 #. TileData.set_custom_data
 #: doc/classes/TileData.xml
 msgid "Sets the tile's custom data value for the TileSet custom data layer with name [param layer_name]."
-msgstr "Beállítja a csempe egyedi adatértékét a [param layer_name] nevű TileSet-egyediadatrétegben."
+msgstr "Beállítja a csempe egyedi adatának értékét a TileSet erőforrás [param layer_name] nevű egyediadatrétegében."
 
 #. TileData.has_custom_data
 #: doc/classes/TileData.xml
