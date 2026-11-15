@@ -2235,7 +2235,7 @@ msgstr "Jelenetek gyűjteményét teszi elérhetővé csempékként egy [TileSet
 #. TileSetScenesCollectionSource.create_scene_tile
 #: doc/classes/TileSetScenesCollectionSource.xml
 msgid "Creates a scene-based tile out of the given scene.\nReturns a newly generated unique ID."
-msgstr "Jelenetalapú csempét készít a megadott jelenetből.\nVisszaad egy újonnan létrehozott egyedi azonosítót."
+msgstr "Jelenetalapú csempét hoz létre a megadott jelenetből.\nVisszaad egy újonnan létrehozott egyedi azonosítót."
 
 #. TileSetScenesCollectionSource.get_next_scene_tile_id
 #: doc/classes/TileSetScenesCollectionSource.xml
@@ -2245,7 +2245,7 @@ msgstr "Visszaadja azt a jelenetazonosítót, amelyet a [method create_scene_til
 #. TileSetScenesCollectionSource.get_scene_tile_display_placeholder
 #: doc/classes/TileSetScenesCollectionSource.xml
 msgid "Returns whether the scene tile with [param id] displays a placeholder in the editor."
-msgstr "Visszaadja, hogy a [param id] azonosítójú jelenetcsempe megjelenít-e helyőrzőt a szerkesztőben."
+msgstr "Megadja, hogy a [param id] azonosítójú jelenetcsempe helyőrzővel jelenik-e meg a szerkesztőben."
 
 #. TileSetScenesCollectionSource.get_scene_tile_id
 #: doc/classes/TileSetScenesCollectionSource.xml
@@ -2260,12 +2260,12 @@ msgstr "Visszaadja a [param id] azonosítójú jelenetcsempe [PackedScene] erőf
 #. TileSetScenesCollectionSource.get_scene_tiles_count
 #: doc/classes/TileSetScenesCollectionSource.xml
 msgid "Returns the number or scene tiles this TileSet source has."
-msgstr "Visszaadja, hogy a TileSet-forrás hány jelenetcsempét tartalmaz."
+msgstr "Visszaadja a TileSet-forrásban található jelenetcsempék számát."
 
 #. TileSetScenesCollectionSource.has_scene_tile_id
 #: doc/classes/TileSetScenesCollectionSource.xml
 msgid "Returns whether this TileSet source has a scene tile with [param id]."
-msgstr "Megadja, hogy a TileSet-forrás tartalmaz-e [param id] azonosítójú jelenetcsempét."
+msgstr "Ellenőrzi, hogy a TileSet-forrás tartalmaz-e [param id] azonosítójú jelenetcsempét."
 
 #. TileSetScenesCollectionSource.remove_scene_tile
 #: doc/classes/TileSetScenesCollectionSource.xml
@@ -2280,7 +2280,7 @@ msgstr "Beállítja, hogy a [param id] azonosítójú jelenetcsempe helyőrzőve
 #. TileSetScenesCollectionSource.set_scene_tile_id
 #: doc/classes/TileSetScenesCollectionSource.xml
 msgid "Changes a scene tile's ID from [param id] to [param new_id]. This will fail if there is already a tile with an ID equal to [param new_id]."
-msgstr "A jelenetcsempe azonosítóját [param id] értékről [param new_id] értékre változtatja. A művelet sikertelen, ha már létezik [param new_id] azonosítójú csempe."
+msgstr "A jelenetcsempe azonosítóját [param id] értékről [param new_id] értékre módosítja. A művelet sikertelen, ha már van [param new_id] azonosítójú csempe."
 
 #. TileSetScenesCollectionSource.set_scene_tile_scene
 #: doc/classes/TileSetScenesCollectionSource.xml
@@ -2903,42 +2903,42 @@ msgstr "Beállítja azokat a csúcsokat, amelyek indexei alapján a [method add_
 #. TileMapPattern.brief
 #: doc/classes/TileMapPattern.xml
 msgid "Holds a pattern to be copied from or pasted into [TileMap]s."
-msgstr "Olyan csempemintát tárol, amely [TileMap] csomópontokból másolható ki, illetve azokba illeszthető be."
+msgstr "[TileMap] csomópontokból kimásolható, illetve azokba beilleszthető csempemintát tárol."
 
 #. TileMapPattern.description
 #: doc/classes/TileMapPattern.xml
 msgid "This resource holds a set of cells to help bulk manipulations of [TileMap].\nA pattern always starts at the [code](0, 0)[/code] coordinates and cannot have cells with negative coordinates."
-msgstr "Ez az erőforrás cellákból álló mintát tárol, amely megkönnyíti a [TileMap] több celláját érintő műveleteket.\nA minta mindig a [code](0, 0)[/code] koordinátáknál kezdődik, és nem tartalmazhat negatív koordinátájú cellákat."
+msgstr "Ez az erőforrás olyan cellamintát tárol, amely megkönnyíti a [TileMap] több celláját egyszerre érintő műveleteket.\nA minta mindig a [code](0, 0)[/code] koordinátáknál kezdődik, és nem tartalmazhat negatív koordinátájú cellákat."
 
 #. TileMapPattern.get_cell_alternative_tile
 #: doc/classes/TileMapPattern.xml
 msgid "Returns the tile alternative ID of the cell at [param coords]."
-msgstr "Visszaadja a [param coords] koordinátájú cellában használt alternatív csempe azonosítóját."
+msgstr "Visszaadja a [param coords] koordinátájú cella alternatív csempeazonosítóját."
 
 #. TileMapPattern.get_cell_atlas_coords
 #: doc/classes/TileMapPattern.xml
 msgid "Returns the tile atlas coordinates ID of the cell at [param coords]."
-msgstr "Visszaadja a [param coords] koordinátáknál lévő cella atlaszkoordináta-azonosítóját."
+msgstr "Visszaadja a [param coords] koordinátájú cella atlaszkoordináta-azonosítóját."
 
 #. TileMapPattern.get_cell_source_id
 #: doc/classes/TileMapPattern.xml
 msgid "Returns the tile source ID of the cell at [param coords]."
-msgstr "Visszaadja a [param coords] koordinátáknál lévő cella csempeforrás-azonosítóját."
+msgstr "Visszaadja a [param coords] koordinátájú cella csempeforrás-azonosítóját."
 
 #. TileMapPattern.get_size
 #: doc/classes/TileMapPattern.xml
 msgid "Returns the size, in cells, of the pattern."
-msgstr "Visszaadja a minta méretét cellákban."
+msgstr "Visszaadja a minta méretét cellákban megadva."
 
 #. TileMapPattern.get_used_cells
 #: doc/classes/TileMapPattern.xml
 msgid "Returns the list of used cell coordinates in the pattern."
-msgstr "Visszaadja a mintában használt cellák koordinátáinak listáját."
+msgstr "Visszaadja a mintában használt cellák koordinátáit tartalmazó listát."
 
 #. TileMapPattern.has_cell
 #: doc/classes/TileMapPattern.xml
 msgid "Returns whether the pattern has a tile at the given coordinates."
-msgstr "Megadja, hogy a minta tartalmaz-e csempét a megadott koordinátáknál."
+msgstr "Megadja, hogy a minta tartalmaz-e csempét a megadott koordinátájú cellában."
 
 #. TileMapPattern.is_empty
 #: doc/classes/TileMapPattern.xml
@@ -2948,12 +2948,12 @@ msgstr "Megadja, hogy a minta üres-e."
 #. TileMapPattern.remove_cell
 #: doc/classes/TileMapPattern.xml
 msgid "Remove the cell at the given coordinates."
-msgstr "Eltávolítja a megadott koordinátáknál található cellát."
+msgstr "Eltávolítja a megadott koordinátájú cellát."
 
 #. TileMapPattern.set_cell
 #: doc/classes/TileMapPattern.xml
 msgid "Sets the tile identifiers for the cell at coordinates [param coords]. See [method TileMap.set_cell]."
-msgstr "Beállítja a [param coords] koordinátáknál lévő cella csempeazonosítóit. Lásd: [method TileMap.set_cell]."
+msgstr "Beállítja a [param coords] koordinátájú cella csempeazonosítóit. Lásd: [method TileMap.set_cell]."
 
 #. TileMapPattern.set_size
 #: doc/classes/TileMapPattern.xml
