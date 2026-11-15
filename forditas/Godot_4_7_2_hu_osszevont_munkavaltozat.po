@@ -206,12 +206,12 @@ msgstr "Beállítja a [param coords] koordinátájú cella csempeazonosítóit. 
 #. TileMapLayer.set_cells_terrain_connect
 #: doc/classes/TileMapLayer.xml
 msgid "Update all the cells in the [param cells] coordinates array so that they use the given [param terrain] for the given [param terrain_set]. If an updated cell has the same terrain as one of its neighboring cells, this function tries to join the two. This function might update neighboring tiles if needed to create correct terrain transitions.\nIf [param ignore_empty_terrains] is [code]true[/code], empty terrains will be ignored when trying to find the best fitting tile for the given terrain constraints.\n[b]Note:[/b] To work correctly, this method requires the [TileMapLayer]'s TileSet to have terrains set up with all required terrain combinations. Otherwise, it may produce unexpected results."
-msgstr "A [param cells] koordinátatömb összes celláját frissíti, hogy a megadott [param terrain_set] terepkészlet [param terrain] tereptípusát használják. Ha valamelyik frissített cella egy szomszédos cellával azonos tereptípusú, megpróbálja összekapcsolni őket. A megfelelő terepátmenetek kialakításához szükség esetén a szomszédos csempéket is módosíthatja.\nHa a [param ignore_empty_terrains] értéke [code]true[/code], a legjobban illeszkedő csempe kiválasztásakor figyelmen kívül hagyja az üres tereptípusokat.\n[b]Megjegyzés:[/b] A helyes működéshez a [TileMapLayer] által használt TileSetben minden szükséges terepkombinációt be kell állítani. Máskülönben váratlan eredmény születhet."
+msgstr "A [param cells] koordinátatömb összes celláját frissíti, hogy a megadott [param terrain_set] terepkészlet [param terrain] tereptípusát használják. Ha valamelyik frissített cella egy szomszédos cellával azonos tereptípusú, megpróbálja összekapcsolni őket. A megfelelő terepátmenetek kialakításához szükség esetén a szomszédos csempéket is módosíthatja.\nHa a [param ignore_empty_terrains] értéke [code]true[/code], a legjobban illeszkedő csempe kiválasztásakor figyelmen kívül hagyja az üres tereptípusokat.\n[b]Megjegyzés:[/b] A helyes működéshez a [TileMapLayer] által használt TileSet erőforrásban minden szükséges terepkombinációt be kell állítani. Máskülönben váratlan eredmény születhet."
 
 #. TileMapLayer.set_cells_terrain_path
 #: doc/classes/TileMapLayer.xml
 msgid "Update all the cells in the [param path] coordinates array so that they use the given [param terrain] for the given [param terrain_set]. The function will also connect two successive cell in the path with the same terrain. This function might update neighboring tiles if needed to create correct terrain transitions.\nIf [param ignore_empty_terrains] is [code]true[/code], empty terrains will be ignored when trying to find the best fitting tile for the given terrain constraints.\n[b]Note:[/b] To work correctly, this method requires the [TileMapLayer]'s TileSet to have terrains set up with all required terrain combinations. Otherwise, it may produce unexpected results."
-msgstr "A [param path] koordinátatömb összes celláját frissíti, hogy a megadott [param terrain_set] terepkészlet [param terrain] tereptípusát használják. A függvény az útvonal két egymást követő, azonos tereptípusú celláját is összekapcsolja. Szükség esetén a szomszédos csempéket is módosíthatja a megfelelő terepátmenetekhez.\nHa a [param ignore_empty_terrains] értéke [code]true[/code], a legjobban illeszkedő csempe kiválasztásakor figyelmen kívül hagyja az üres tereptípusokat.\n[b]Megjegyzés:[/b] A helyes működéshez a [TileMapLayer] által használt TileSetben minden szükséges terepkombinációt be kell állítani. Máskülönben váratlan eredmény születhet."
+msgstr "A [param path] koordinátatömb összes celláját frissíti, hogy a megadott [param terrain_set] terepkészlet [param terrain] tereptípusát használják. A függvény az útvonal két egymást követő, azonos tereptípusú celláját is összekapcsolja. Szükség esetén a szomszédos csempéket is módosíthatja a megfelelő terepátmenetekhez.\nHa a [param ignore_empty_terrains] értéke [code]true[/code], a legjobban illeszkedő csempe kiválasztásakor figyelmen kívül hagyja az üres tereptípusokat.\n[b]Megjegyzés:[/b] A helyes működéshez a [TileMapLayer] által használt TileSet erőforrásban minden szükséges terepkombinációt be kell állítani. Máskülönben váratlan eredmény születhet."
 
 #. TileMapLayer.set_navigation_map
 #: doc/classes/TileMapLayer.xml
@@ -321,7 +321,7 @@ msgstr "Visszaad egy új, még nem használt forrásazonosítót. Ez ugyanaz az 
 #. TileSet.add_physics_layer
 #: doc/classes/TileSet.xml
 msgid "Adds a physics layer to the TileSet at the given position [param to_position] in the array. If [param to_position] is -1, adds it at the end of the array.\nPhysics layers allow assigning collision polygons to atlas tiles."
-msgstr "Fizikai réteget ad a TileSet készlethez a tömb [param to_position] pozíciójára. Ha [param to_position] értéke -1, a tömb végére illeszti.\nA fizikai rétegek segítségével ütközési sokszögeket rendelhetsz az atlaszcsempékhez."
+msgstr "Fizikai réteget ad a csempekészlethez a tömb [param to_position] pozíciójára. Ha [param to_position] értéke -1, a tömb végére illeszti.\nA fizikai rétegek segítségével ütközési sokszögeket rendelhetsz az atlaszcsempékhez."
 
 #. TileSet.get_physics_layers_count
 #: doc/classes/TileSet.xml
@@ -456,7 +456,7 @@ msgstr "Visszaadja a tereptípus nevét."
 #. TileSet.get_terrain_set_mode
 #: doc/classes/TileSet.xml
 msgid "Returns a terrain set mode."
-msgstr "Visszaadja a terepkészlet módját."
+msgstr "Visszaadja a megadott terepkészlet illesztési módját."
 
 #. TileSet.get_terrain_sets_count
 #: doc/classes/TileSet.xml
@@ -536,7 +536,7 @@ msgstr "Beállítja a tereptípus nevét."
 #. TileSet.set_terrain_set_mode
 #: doc/classes/TileSet.xml
 msgid "Sets a terrain mode. Each mode determines which bits of a tile shape is used to match the neighboring tiles' terrains."
-msgstr "Beállítja a terepkészlet módját. Az egyes módok meghatározzák, hogy a csempealakzat mely bitjeit kell figyelembe venni a szomszédos csempék tereptípusainak illesztésekor."
+msgstr "Beállítja a terepkészlet illesztési módját. Az egyes módok meghatározzák, hogy a csempék oldalainak, sarkainak vagy mindkettőnek a terepilleszkedési bitjeit veszi-e figyelembe a rendszer a szomszédos tereptípusok illesztésekor."
 
 #. TileSet.cleanup_invalid_tile_proxies
 #: doc/classes/TileSet.xml
