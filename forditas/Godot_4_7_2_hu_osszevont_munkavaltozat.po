@@ -2903,12 +2903,12 @@ msgstr "Beállítja azokat a csúcsokat, amelyek indexei alapján a [method add_
 #. TileMapPattern.brief
 #: doc/classes/TileMapPattern.xml
 msgid "Holds a pattern to be copied from or pasted into [TileMap]s."
-msgstr "[TileMap] csomópontokból kimásolható, illetve azokba beilleszthető csempemintát tárol."
+msgstr "Olyan csempemintát tárol, amely [TileMap] csomópontokból másolható ki, illetve azokba illeszthető be."
 
 #. TileMapPattern.description
 #: doc/classes/TileMapPattern.xml
 msgid "This resource holds a set of cells to help bulk manipulations of [TileMap].\nA pattern always starts at the [code](0, 0)[/code] coordinates and cannot have cells with negative coordinates."
-msgstr "Ez az erőforrás olyan cellamintát tárol, amely megkönnyíti a [TileMap] több celláját egyszerre érintő műveleteket.\nA minta mindig a [code](0, 0)[/code] koordinátáknál kezdődik, és nem tartalmazhat negatív koordinátájú cellákat."
+msgstr "Ez az erőforrás cellák együttesét tárolja, megkönnyítve a [TileMap] több celláján egyszerre végzett műveleteket.\nA minta kezdőpontja mindig a [code](0, 0)[/code] koordináta, ezért negatív koordinátájú cellákat nem tartalmazhat."
 
 #. TileMapPattern.get_cell_alternative_tile
 #: doc/classes/TileMapPattern.xml
@@ -2918,7 +2918,7 @@ msgstr "Visszaadja a [param coords] koordinátájú cella alternatív csempeazon
 #. TileMapPattern.get_cell_atlas_coords
 #: doc/classes/TileMapPattern.xml
 msgid "Returns the tile atlas coordinates ID of the cell at [param coords]."
-msgstr "Visszaadja a [param coords] koordinátájú cella atlaszkoordináta-azonosítóját."
+msgstr "Visszaadja a [param coords] helyen található cella csempeatlaszon belüli koordinátáit."
 
 #. TileMapPattern.get_cell_source_id
 #: doc/classes/TileMapPattern.xml
@@ -2933,12 +2933,12 @@ msgstr "Visszaadja a minta méretét cellákban megadva."
 #. TileMapPattern.get_used_cells
 #: doc/classes/TileMapPattern.xml
 msgid "Returns the list of used cell coordinates in the pattern."
-msgstr "Visszaadja a mintában használt cellák koordinátáit tartalmazó listát."
+msgstr "Visszaadja a mintában foglalt cellák koordinátáinak listáját."
 
 #. TileMapPattern.has_cell
 #: doc/classes/TileMapPattern.xml
 msgid "Returns whether the pattern has a tile at the given coordinates."
-msgstr "Megadja, hogy a minta tartalmaz-e csempét a megadott koordinátájú cellában."
+msgstr "Megadja, hogy található-e csempe a minta megadott koordinátáján."
 
 #. TileMapPattern.is_empty
 #: doc/classes/TileMapPattern.xml
@@ -2978,7 +2978,7 @@ msgstr "Aktívvá teszi a navigációs térképet."
 #. NavigationServer2D.map_get_path
 #: doc/classes/NavigationServer2D.xml
 msgid "Returns the navigation path to reach the destination from the origin. [param navigation_layers] is a bitmask of all region navigation layers that are allowed to be in the path."
-msgstr "Visszaadja a kiindulóponttól a célpontig vezető navigációs útvonalat. A [param navigation_layers] bitmaszk adja meg, hogy mely navigációs területi rétegeken haladhat az útvonal."
+msgstr "Visszaadja a kiindulópontból a célpontba vezető navigációs útvonalat. A [param navigation_layers] bitmaszk határozza meg, hogy az útvonal mely navigációs rétegekhez tartozó területeken haladhat át."
 
 #. NavigationServer2D.map_get_closest_point
 #: doc/classes/NavigationServer2D.xml
