@@ -696,37 +696,37 @@ msgstr "Az atlasz textúrája."
 #. TileSetAtlasSource.texture_region_size
 #: doc/classes/TileSetAtlasSource.xml
 msgid "The base tile size in the texture (in pixel). This size must be bigger than or equal to the TileSet's [code]tile_size[/code] value."
-msgstr "A textúrában található alapcsempe mérete (képpontban). Ennek legalább akkorának kell lennie, mint a TileSet [code]tile_size[/code] értéke."
+msgstr "Az alapcsempe mérete az atlasztextúrában, képpontban. Nem lehet kisebb a TileSet [code]tile_size[/code] értékénél."
 
 #. TileSetAtlasSource.margins
 #: doc/classes/TileSetAtlasSource.xml
 msgid "Margins, in pixels, to offset the origin of the grid in the texture."
-msgstr "A textúrán lévő rács kezdőpontjának eltolására szolgáló margók, képpontban megadva."
+msgstr "Az atlasztextúra rácsának kezdőpontját eltoló margók, képpontban."
 
 #. TileSetAtlasSource.separation
 #: doc/classes/TileSetAtlasSource.xml
 msgid "Separation, in pixels, between each tile texture region of the grid."
-msgstr "A rács egyes csempetextúra-területei közötti távolság, képpontban."
+msgstr "A rács szomszédos csempetextúra-területei közötti távolság, képpontban."
 
 #. TileSetAtlasSource.use_texture_padding
 #: doc/classes/TileSetAtlasSource.xml
 msgid "If [code]true[/code], generates an internal texture with an additional one pixel padding around each tile. Texture padding avoids a common artifact where lines appear between tiles.\nDisabling this setting might lead a small performance improvement, as generating the internal texture requires both memory and processing time when the TileSetAtlasSource resource is modified."
-msgstr "Ha [code]true[/code], létrehoz egy belső textúrát, amelyben minden csempe körül további egy képpontnyi szegély található. Ez megakadályozza azt a gyakori képhibát, amikor vonalak látszanak a csempék között.\nA beállítás letiltása kis teljesítménynövekedést eredményezhet, mert a belső textúra létrehozása memória- és feldolgozási időt igényel, valahányszor a TileSetAtlasSource erőforrás módosul."
+msgstr "Ha [code]true[/code], létrehoz egy belső textúrát, amelyben minden csempe körül további egy képpontnyi szegély található. Ez segít elkerülni azt a gyakori megjelenítési hibát, amikor vékony vonalak látszanak a csempék között.\nA beállítás letiltása kis teljesítménynövekedést eredményezhet, mert a belső textúra létrehozása memória- és feldolgozási időt igényel, valahányszor a TileSetAtlasSource erőforrás módosul."
 
 #. TileSetAtlasSource.create_tile
 #: doc/classes/TileSetAtlasSource.xml
 msgid "Creates a new tile at coordinates [param atlas_coords] with the given [param size]."
-msgstr "Új csempét hoz létre a [param atlas_coords] koordinátáknál, a megadott [param size] mérettel."
+msgstr "Új csempét hoz létre az atlasz [param atlas_coords] koordinátáinál, a megadott [param size] méretben."
 
 #. TileSetAtlasSource.create_alternative_tile
 #: doc/classes/TileSetAtlasSource.xml
 msgid "Creates an alternative tile for the tile at coordinates [param atlas_coords]. If [param alternative_id_override] is -1, give it an automatically generated unique ID, or assigns it the given ID otherwise.\nReturns the new alternative identifier, or -1 if the alternative could not be created with a provided [param alternative_id_override]."
-msgstr "Alternatív csempét hoz létre a [param atlas_coords] koordinátáknál található csempéhez. Ha [param alternative_id_override] értéke -1, automatikusan egyedi azonosítót hoz létre, egyébként a megadott azonosítót állítja be.\nVisszaadja az új alternatív azonosítót, vagy -1-et, ha az alternatíva nem hozható létre a megadott [param alternative_id_override] értékkel."
+msgstr "Alternatív csempét hoz létre a [param atlas_coords] koordinátáknál található csempéhez. Ha a [param alternative_id_override] értéke -1, a rendszer automatikusan egyedi azonosítót rendel az új változathoz; egyébként a megadott azonosítót használja.\nVisszaadja az új alternatív csempe azonosítóját, vagy -1-et, ha a megadott [param alternative_id_override] értékkel nem sikerül létrehozni."
 
 #. TileSetAtlasSource.has_room_for_tile
 #: doc/classes/TileSetAtlasSource.xml
 msgid "Returns whether there is enough room in an atlas to create/modify a tile with the given properties. If [param ignored_tile] is provided, act as is the given tile was not present in the atlas. This may be used when you want to modify a tile's properties."
-msgstr "Visszaadja, hogy van-e elegendő hely az atlaszban a megadott tulajdonságú csempe létrehozásához vagy módosításához. Ha [param ignored_tile] meg van adva, úgy vizsgálja a helyet, mintha ez a csempe nem lenne az atlaszban. Ez akkor hasznos, ha egy meglévő csempe tulajdonságait szeretnéd módosítani."
+msgstr "Megadja, hogy van-e elég hely az atlaszban a megadott tulajdonságokkal rendelkező csempe létrehozásához vagy módosításához. Ha a [param ignored_tile] meg van adva, a helyellenőrzés figyelmen kívül hagyja az adott csempét. Ez akkor hasznos, ha egy meglévő csempe tulajdonságait szeretnéd módosítani."
 
 #. TileSetAtlasSource.has_tiles_outside_texture
 #: doc/classes/TileSetAtlasSource.xml
@@ -741,7 +741,7 @@ msgstr "Eltávolítja az összes csempét, amely nem fér el a rendelkezésre á
 #. TileSetAtlasSource.get_tiles_to_be_removed_on_change
 #: doc/classes/TileSetAtlasSource.xml
 msgid "Returns an array of tiles coordinates ID that will be automatically removed when modifying one or several of those properties: [param texture], [param margins], [param separation] or [param texture_region_size]. This can be used to undo changes that would have caused tiles data loss."
-msgstr "Visszaadja azon csempék atlaszkoordináta-azonosítóinak tömbjét, amelyeket a rendszer automatikusan eltávolítana az alábbi tulajdonságok valamelyikének módosításakor: [param texture], [param margins], [param separation] vagy [param texture_region_size]. Ez segíthet visszavonni az olyan változtatásokat, amelyek csempeadatok elvesztéséhez vezetnének."
+msgstr "Visszaadja azoknak a csempéknek az atlaszkoordináta-azonosítóit tömbként, amelyeket a rendszer automatikusan eltávolítana az alábbi tulajdonságok módosítása esetén: [param texture], [param margins], [param separation] vagy [param texture_region_size]. Ez segíthet visszavonni az olyan változtatásokat, amelyek csempeadatok elvesztéséhez vezetnének."
 
 #. TileSetAtlasSource.remove_tile
 #: doc/classes/TileSetAtlasSource.xml
@@ -751,7 +751,7 @@ msgstr "Eltávolítja a [param atlas_coords] koordinátáknál található csemp
 #. TileSetAtlasSource.remove_alternative_tile
 #: doc/classes/TileSetAtlasSource.xml
 msgid "Remove a tile's alternative with alternative ID [param alternative_tile].\nCalling this function with [param alternative_tile] equals to 0 will fail, as the base tile alternative cannot be removed."
-msgstr "Eltávolítja a csempe [param alternative_tile] alternatív azonosítójú változatát.\nA függvény meghívása 0 értékű [param alternative_tile] paraméterrel sikertelen lesz, mert a csempe 0 azonosítójú alapváltozata nem távolítható el."
+msgstr "Eltávolítja a csempe [param alternative_tile] alternatív azonosítójú változatát.\nHa a [param alternative_tile] értéke 0, a művelet sikertelen, mert a csempe 0 azonosítójú alapváltozata nem törölhető."
 
 #. TileSetAtlasSource.get_tile_data
 #: doc/classes/TileSetAtlasSource.xml
@@ -761,12 +761,12 @@ msgstr "Visszaadja a megadott atlaszkoordinátákhoz és alternatív azonosító
 #. TileSetAtlasSource.get_tile_texture_region
 #: doc/classes/TileSetAtlasSource.xml
 msgid "Returns a tile's texture region in the atlas texture. For animated tiles, a [param frame] argument might be provided for the different frames of the animation."
-msgstr "Visszaadja a csempe textúraterületét az atlasztextúrában. Animált csempéknél a [param frame] paraméterrel megadható az animáció kívánt képkockája."
+msgstr "Visszaadja a csempéhez tartozó textúraterületet az atlaszban. Animált csempéknél a [param frame] paraméterrel kiválasztható az animáció kívánt képkockája."
 
 #. TileSetAtlasSource.get_atlas_grid_size
 #: doc/classes/TileSetAtlasSource.xml
 msgid "Returns the atlas grid size, which depends on how many tiles can fit in the texture. It thus depends on the [member texture]'s size, the atlas [member margins], and the tiles' [member texture_region_size]."
-msgstr "Visszaadja az atlaszrács méretét, amely attól függ, hány csempe fér el a textúrán. Ezt a [member texture] mérete, az atlasz [member margins] margói és a csempék [member texture_region_size] mérete határozza meg."
+msgstr "Visszaadja az atlaszrács méretét, vagyis azt, hogy a textúrában hány csempe fér el. Ezt a [member texture] mérete, az atlasz [member margins] margói és a csempék [member texture_region_size] mérete határozza meg."
 
 #. TileSetAtlasSource.get_tile_animation_frames_count
 #: doc/classes/TileSetAtlasSource.xml
@@ -786,7 +786,7 @@ msgstr "Beállítja a [param atlas_coords] koordinátáknál található csempe 
 #. TileSetAtlasSource.get_tile_animation_total_duration
 #: doc/classes/TileSetAtlasSource.xml
 msgid "Returns the sum of the sum of the frame durations of the tile at coordinates [param atlas_coords]. This value needs to be divided by the animation speed to get the actual animation loop duration."
-msgstr "Visszaadja a [param atlas_coords] koordinátájú csempe animációs képkockáihoz rendelt időtartamok összegét. A tényleges animációs ciklus időtartamának meghatározásához ezt az értéket el kell osztani az animáció sebességével."
+msgstr "Visszaadja a [param atlas_coords] koordinátájú csempe összes animációs képkockája időtartamának összegét. A tényleges animációs ciklus időtartamának meghatározásához ezt az értéket el kell osztani az animáció sebességével."
 
 #. TileData.brief
 #: doc/classes/TileData.xml
