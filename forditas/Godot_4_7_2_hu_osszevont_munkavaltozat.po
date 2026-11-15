@@ -731,12 +731,12 @@ msgstr "Megadja, hogy van-e elég hely az atlaszban a megadott tulajdonságokkal
 #. TileSetAtlasSource.has_tiles_outside_texture
 #: doc/classes/TileSetAtlasSource.xml
 msgid "Checks if the source has any tiles that don't fit the texture area (either partially or completely)."
-msgstr "Ellenőrzi, hogy van-e a forrásban olyan csempe, amely részben vagy teljesen kívül esik a textúra területén."
+msgstr "Ellenőrzi, hogy van-e a forrásban olyan csempe, amely részben vagy egészében az atlasztextúra határain kívül esik."
 
 #. TileSetAtlasSource.clear_tiles_outside_texture
 #: doc/classes/TileSetAtlasSource.xml
 msgid "Removes all tiles that don't fit the available texture area. This method iterates over all the source's tiles, so it's advised to use [method has_tiles_outside_texture] beforehand."
-msgstr "Eltávolítja az összes csempét, amely nem fér el a rendelkezésre álló textúraterületen. A metódus a forrás összes csempéjét végigvizsgálja, ezért előtte célszerű a [method has_tiles_outside_texture] metódust használni."
+msgstr "Eltávolítja az atlasztextúra területén el nem férő csempéket. Mivel a metódus a forrás minden csempéjét megvizsgálja, előtte célszerű meghívni a [method has_tiles_outside_texture] metódust."
 
 #. TileSetAtlasSource.get_tiles_to_be_removed_on_change
 #: doc/classes/TileSetAtlasSource.xml
@@ -746,7 +746,7 @@ msgstr "Visszaadja azoknak a csempéknek az atlaszkoordináta-azonosítóit töm
 #. TileSetAtlasSource.remove_tile
 #: doc/classes/TileSetAtlasSource.xml
 msgid "Remove a tile and its alternative at coordinates [param atlas_coords]."
-msgstr "Eltávolítja a [param atlas_coords] koordinátáknál található csempét és annak alternatíváit."
+msgstr "Eltávolítja a [param atlas_coords] koordinátájú csempét az alternatív változataival együtt."
 
 #. TileSetAtlasSource.remove_alternative_tile
 #: doc/classes/TileSetAtlasSource.xml
@@ -756,7 +756,7 @@ msgstr "Eltávolítja a csempe [param alternative_tile] alternatív azonosítój
 #. TileSetAtlasSource.get_tile_data
 #: doc/classes/TileSetAtlasSource.xml
 msgid "Returns the [TileData] object for the given atlas coordinates and alternative ID."
-msgstr "Visszaadja a megadott atlaszkoordinátákhoz és alternatív azonosítóhoz tartozó [TileData] objektumot."
+msgstr "Visszaadja a megadott atlaszkoordinátákkal és alternatív csempeazonosítóval kiválasztott [TileData] objektumot."
 
 #. TileSetAtlasSource.get_tile_texture_region
 #: doc/classes/TileSetAtlasSource.xml
@@ -771,17 +771,17 @@ msgstr "Visszaadja az atlaszrács méretét, vagyis azt, hogy a textúrában há
 #. TileSetAtlasSource.get_tile_animation_frames_count
 #: doc/classes/TileSetAtlasSource.xml
 msgid "Returns how many animation frames has the tile at coordinates [param atlas_coords]."
-msgstr "Visszaadja a [param atlas_coords] koordinátáknál található csempe animációs képkockáinak számát."
+msgstr "Visszaadja a [param atlas_coords] koordinátájú csempe animációs képkockáinak számát."
 
 #. TileSetAtlasSource.get_tile_animation_speed
 #: doc/classes/TileSetAtlasSource.xml
 msgid "Returns the animation speed of the tile at coordinates [param atlas_coords]."
-msgstr "Visszaadja a [param atlas_coords] koordinátáknál található csempe animációs sebességét."
+msgstr "Visszaadja a [param atlas_coords] koordinátájú csempe animációs sebességét."
 
 #. TileSetAtlasSource.set_tile_animation_speed
 #: doc/classes/TileSetAtlasSource.xml
 msgid "Sets the animation speed of the tile at coordinates [param atlas_coords] has."
-msgstr "Beállítja a [param atlas_coords] koordinátáknál található csempe animációs sebességét."
+msgstr "Beállítja a [param atlas_coords] koordinátájú csempe animációs sebességét."
 
 #. TileSetAtlasSource.get_tile_animation_total_duration
 #: doc/classes/TileSetAtlasSource.xml
@@ -2230,7 +2230,7 @@ msgstr "Beállítja az animációk frissítéséhez használt feldolgozási ért
 #. TileSetScenesCollectionSource.brief
 #: doc/classes/TileSetScenesCollectionSource.xml
 msgid "Exposes a set of scenes as tiles for a [TileSet] resource."
-msgstr "Jelenetek gyűjteményét teszi elérhetővé csempékként egy [TileSet] erőforrásban."
+msgstr "Jelenetekből álló csempegyűjteményt tesz elérhetővé egy [TileSet] erőforrás számára."
 
 #. TileSetScenesCollectionSource.create_scene_tile
 #: doc/classes/TileSetScenesCollectionSource.xml
@@ -2240,7 +2240,7 @@ msgstr "Jelenetalapú csempét hoz létre a megadott jelenetből.\nVisszaad egy 
 #. TileSetScenesCollectionSource.get_next_scene_tile_id
 #: doc/classes/TileSetScenesCollectionSource.xml
 msgid "Returns the scene ID a following call to [method create_scene_tile] would return."
-msgstr "Visszaadja azt a jelenetazonosítót, amelyet a [method create_scene_tile] következő meghívása adna vissza."
+msgstr "Visszaadja azt a jelenetcsempe-azonosítót, amelyet a [method create_scene_tile] következő hívása adna vissza."
 
 #. TileSetScenesCollectionSource.get_scene_tile_display_placeholder
 #: doc/classes/TileSetScenesCollectionSource.xml
@@ -2255,7 +2255,7 @@ msgstr "Visszaadja a [param index] indexű jelenetcsempe azonosítóját."
 #. TileSetScenesCollectionSource.get_scene_tile_scene
 #: doc/classes/TileSetScenesCollectionSource.xml
 msgid "Returns the [PackedScene] resource of scene tile with [param id]."
-msgstr "Visszaadja a [param id] azonosítójú jelenetcsempe [PackedScene] erőforrását."
+msgstr "Visszaadja a [param id] azonosítójú jelenetcsempéhez rendelt [PackedScene] erőforrást."
 
 #. TileSetScenesCollectionSource.get_scene_tiles_count
 #: doc/classes/TileSetScenesCollectionSource.xml
@@ -2275,7 +2275,7 @@ msgstr "Eltávolítja a [param id] azonosítójú jelenetcsempét."
 #. TileSetScenesCollectionSource.set_scene_tile_display_placeholder
 #: doc/classes/TileSetScenesCollectionSource.xml
 msgid "Sets whether or not the scene tile with [param id] should display a placeholder in the editor. This might be useful for scenes that are not visible."
-msgstr "Beállítja, hogy a [param id] azonosítójú jelenetcsempe helyőrzővel jelenjen-e meg a szerkesztőben. Ez olyan jeleneteknél lehet hasznos, amelyek egyébként nem láthatók."
+msgstr "Beállítja, hogy a [param id] azonosítójú jelenetcsempéhez helyőrző jelenjen-e meg a szerkesztőben. Ez különösen a nem látható jeleneteknél lehet hasznos."
 
 #. TileSetScenesCollectionSource.set_scene_tile_id
 #: doc/classes/TileSetScenesCollectionSource.xml
@@ -2285,7 +2285,7 @@ msgstr "A jelenetcsempe azonosítóját [param id] értékről [param new_id] é
 #. TileSetScenesCollectionSource.set_scene_tile_scene
 #: doc/classes/TileSetScenesCollectionSource.xml
 msgid "Assigns a [PackedScene] resource to the scene tile with [param id]. This will fail if the scene does not extend [CanvasItem], as positioning properties are needed to place the scene on the [TileMapLayer]."
-msgstr "A [param id] azonosítójú jelenetcsempéhez rendel egy [PackedScene] erőforrást. A művelet sikertelen, ha a jelenet gyökércsomópontja nem [CanvasItem] leszármazott, mert a [TileMapLayer] rétegen történő elhelyezéshez pozicionálási tulajdonságokra van szükség."
+msgstr "A [param id] azonosítójú jelenetcsempéhez rendel egy [PackedScene] erőforrást. Ha a jelenet gyökércsomópontja nem a [CanvasItem] leszármazottja, a művelet sikertelen: a [TileMapLayer] rétegen való elhelyezéshez pozicionálási tulajdonságokra van szükség."
 
 #. NavigationAgent2D.brief
 #: doc/classes/NavigationAgent2D.xml
