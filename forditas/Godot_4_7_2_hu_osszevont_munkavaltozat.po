@@ -994,17 +994,17 @@ msgstr "Visszaadja az aktuális animáció tényleges lejátszási sebességét,
 #. CharacterBody2D.brief
 #: doc/classes/CharacterBody2D.xml
 msgid "A 2D physics body specialized for characters moved by script."
-msgstr "Kifejezetten scripttel mozgatott karakterekhez készült 2D fizikai test."
+msgstr "Programkóddal mozgatott karakterekhez készült 2D-s fizikai test."
 
 #. CharacterBody2D.description
 #: doc/classes/CharacterBody2D.xml
 msgid "[CharacterBody2D] is a specialized class for physics bodies that are meant to be user-controlled. They are not affected by physics at all, but they affect other physics bodies in their path. They are mainly used to provide high-level API to move objects with wall and slope detection ([method move_and_slide] method) in addition to the general collision detection provided by [method PhysicsBody2D.move_and_collide]. This makes it useful for highly configurable physics bodies that must move in specific ways and collide with the world, as is often the case with user-controlled characters.\nFor game objects that don't require complex movement or collision detection, such as moving platforms, [AnimatableBody2D] is simpler to configure."
-msgstr "A [CharacterBody2D] olyan speciális fizikai test, amelyet a felhasználó vezérelhet. A fizikai rendszer nem mozgatja automatikusan, de a test hatással lehet az útjába kerülő más fizikai testekre. Elsősorban magas szintű mozgáskezelést kínál falak és lejtők felismerésével ([method move_and_slide]), a [method PhysicsBody2D.move_and_collide] általános ütközésérzékelése mellett. Ez különösen hasznos olyan testekhez, amelyek meghatározott módon mozognak, és ütköznek a világgal, mint például a játékos által irányított karakterek.\nAzokhoz a játékobjektumokhoz, amelyeknél nincs szükség összetett mozgásra vagy ütközésérzékelésre (például mozgó platformoknál), az [AnimatableBody2D] egyszerűbben beállítható."
+msgstr "A [CharacterBody2D] olyan speciális fizikai test, amelyet a felhasználó vezérelhet. A fizikai erők nem mozgatják automatikusan, de a test mozgása hatással lehet az útjába kerülő más fizikai testekre. Magas szintű mozgáskezelést biztosít fal- és lejtőfelismeréssel ([method move_and_slide]), kiegészítve a [method PhysicsBody2D.move_and_collide] általános ütközésvizsgálatát. Ez különösen hasznos olyan testekhez, amelyek meghatározott módon mozognak, és ütköznek a világgal, mint például a játékos által irányított karakterek.\nAzokhoz a játékobjektumokhoz, amelyeknél nincs szükség összetett mozgásra vagy ütközésérzékelésre (például mozgó platformoknál), az [AnimatableBody2D] egyszerűbben beállítható."
 
 #. CharacterBody2D.velocity
 #: doc/classes/CharacterBody2D.xml
 msgid "Current velocity vector in pixels per second, used and modified during calls to [method move_and_slide].\n[b]Note:[/b] A common mistake is setting this property to the desired velocity multiplied by [code]delta[/code], which produces a motion vector in pixels."
-msgstr "Az aktuális sebességvektor képpont/másodperc egységben. A [method move_and_slide] metódus felhasználja, és meg is változtathatja.\n[b]Megjegyzés:[/b] Gyakori hiba, hogy ezt a tulajdonságot a kívánt sebesség és a [code]delta[/code] szorzatára állítják; így képpontban megadott elmozdulásvektor keletkezik."
+msgstr "A test aktuális sebességvektora, képpont/másodperc egységben. A [method move_and_slide] metódus felhasználja, és meg is változtathatja.\n[b]Megjegyzés:[/b] Gyakori hiba a kívánt sebességet a [code]delta[/code] értékkel megszorozva megadni: ekkor sebesség helyett képpontban mért elmozdulásvektor keletkezik."
 
 #. CharacterBody2D.motion_mode
 #: doc/classes/CharacterBody2D.xml
@@ -1014,12 +1014,12 @@ msgstr "Beállítja a [method move_and_slide] működését meghatározó mozgá
 #. CharacterBody2D.move_and_slide
 #: doc/classes/CharacterBody2D.xml
 msgid "Moves the body based on [member velocity]. If the body collides with another, it will slide along the other body (by default only on floor) rather than stop immediately. If the other body is a [CharacterBody2D] or [RigidBody2D], it will also be affected by the motion of the other body. You can use this to make moving and rotating platforms, or to make nodes push other nodes.\nThis method should be used in [method Node._physics_process] (or in a method called by [method Node._physics_process]), as it uses the physics step's [code]delta[/code] value automatically in calculations. Otherwise, the simulation will run at an incorrect speed.\nModifies [member velocity] if a slide collision occurred. To get the latest collision call [method get_last_slide_collision], for detailed information about collisions that occurred, use [method get_slide_collision].\nWhen the body touches a moving platform, the platform's velocity is automatically added to the body motion. If a collision occurs due to the platform's motion, it will always be first in the slide collisions.\nThe general behavior and available properties change according to the [member motion_mode].\nReturns [code]true[/code] if the body collided, otherwise, returns [code]false[/code]."
-msgstr "A testet a [member velocity] alapján mozgatja. Ha a test egy másiknak ütközik, nem áll meg azonnal, hanem elcsúszhat annak felülete mentén (alapértelmezés szerint csak a padlón). Ha az ütközésben részt vevő másik test [CharacterBody2D] vagy [RigidBody2D], a mozgó test arra is hatással lehet. Ezzel például mozgó és forgó platformokat készíthetsz, vagy egyes csomópontokkal más csomópontokat tolathatsz.\nA metódust a [method Node._physics_process] függvényben (vagy a [method Node._physics_process] által meghívott függvényben) kell használni, mert a számításokhoz automatikusan a fizikai lépés [code]delta[/code] értékét veszi figyelembe. Egyébként a szimuláció hibás sebességgel futna.\nCsúszással járó ütközéskor módosítja a [member velocity] értékét. A legutóbbi ütközést a [method get_last_slide_collision] segítségével kérdezheted le, részletes ütközési adatokhoz pedig a [method get_slide_collision] metódust használhatod.\nHa a test mozgó platformhoz ér, a platform sebessége automatikusan hozzáadódik a test mozgásához. Ha a platform mozgása miatt ütközés történik, az mindig az első lesz a csúszásos ütközések között.\nAz általános működés és az elérhető tulajdonságok a [member motion_mode] beállítástól függnek.\nÜtközés esetén [code]true[/code], egyébként [code]false[/code] értéket ad vissza."
+msgstr "A testet a [member velocity] alapján mozgatja. Ha a test egy másiknak ütközik, nem áll meg azonnal, hanem elcsúszhat annak felülete mentén (alapértelmezés szerint csak a padlón). Ha az ütközésben részt vevő másik test [CharacterBody2D] vagy [RigidBody2D], a mozgó test arra is hatással lehet. Ezzel például mozgó vagy forgó platformokat készíthetsz, illetve a csomópontokkal más csomópontokat is eltolhatsz.\nA metódust a [method Node._physics_process] függvényben (vagy a [method Node._physics_process] által meghívott függvényben) kell használni, mert a számításokhoz automatikusan a fizikai lépés [code]delta[/code] értékét veszi figyelembe. Egyébként a szimuláció hibás sebességgel futna.\nCsúszással járó ütközéskor módosítja a [member velocity] értékét. A legutóbbi ütközést a [method get_last_slide_collision], az egyes ütközések részletes adatait pedig a [method get_slide_collision] metódussal kérdezheted le.\nHa a test mozgó platformhoz ér, a platform sebessége automatikusan hozzáadódik a test mozgásához. Ha a platform mozgása miatt ütközés történik, az mindig az első lesz a csúszásos ütközések között.\nAz általános működés és az elérhető tulajdonságok a [member motion_mode] beállítástól függnek.\nÜtközés esetén [code]true[/code], egyébként [code]false[/code] értéket ad vissza."
 
 #. CharacterBody2D.is_on_floor
 #: doc/classes/CharacterBody2D.xml
 msgid "Returns [code]true[/code] if the body collided with the floor on the last call of [method move_and_slide]. Otherwise, returns [code]false[/code]. The [member up_direction] and [member floor_max_angle] are used to determine whether a surface is \"floor\" or not."
-msgstr "[code]true[/code] értéket ad vissza, ha a test a [method move_and_slide] legutóbbi hívásakor padlóval ütközött, egyébként [code]false[/code] értéket. A padló felismeréséhez a [member up_direction] és a [member floor_max_angle] tulajdonságokat használja."
+msgstr "[code]true[/code] értéket ad vissza, ha a test a [method move_and_slide] legutóbbi hívásakor padlóval ütközött, egyébként [code]false[/code] értéket. A felületek padlóként való besorolását a [member up_direction] és a [member floor_max_angle] tulajdonságok határozzák meg."
 
 #. CharacterBody2D.is_on_wall
 #: doc/classes/CharacterBody2D.xml
@@ -1034,17 +1034,17 @@ msgstr "[code]true[/code] értéket ad vissza, ha a test a [method move_and_slid
 #. CharacterBody2D.get_real_velocity
 #: doc/classes/CharacterBody2D.xml
 msgid "Returns the current real velocity since the last call to [method move_and_slide]. For example, when you climb a slope, you will move diagonally even though the velocity is horizontal. This method returns the diagonal movement, as opposed to [member velocity] which returns the requested velocity."
-msgstr "Visszaadja a [method move_and_slide] legutóbbi hívása óta érvényes tényleges sebességet. Például lejtőn felfelé haladva a test átlósan mozoghat akkor is, ha a megadott sebesség vízszintes. Ez a metódus a tényleges átlós mozgás sebességét adja vissza, szemben a kívánt sebességet megadó [member velocity] értékkel."
+msgstr "Visszaadja a [method move_and_slide] legutóbbi hívása óta érvényes tényleges sebességet. Például lejtőn felfelé haladva a test átlósan mozoghat akkor is, ha a megadott sebesség vízszintes. A metódus a tényleges, átlós mozgás sebességét adja vissza, míg a [member velocity] a megadott sebességvektort tartalmazza."
 
 #. CharacterBody2D.get_last_motion
 #: doc/classes/CharacterBody2D.xml
 msgid "Returns the last motion applied to the [CharacterBody2D] during the last call to [method move_and_slide]. The movement can be split into multiple motions when sliding occurs, and this method return the last one, which is useful to retrieve the current direction of the movement."
-msgstr "Visszaadja a legutóbbi [method move_and_slide] hívás során a [CharacterBody2D] testre alkalmazott utolsó elmozdulást. A csúszás miatt a mozgás több részre oszolhat; ez a metódus ezek közül az utolsót adja vissza, ami segít meghatározni az aktuális mozgásirányt."
+msgstr "Visszaadja a [CharacterBody2D] utolsó elmozdulását a legutóbbi [method move_and_slide] hívásból. A csúszás miatt a mozgás több részre oszolhat; ez a metódus ezek közül az utolsót adja vissza, ami segít meghatározni az aktuális mozgásirányt."
 
 #. CharacterBody2D.get_position_delta
 #: doc/classes/CharacterBody2D.xml
 msgid "Returns the travel (position delta) that occurred during the last call to [method move_and_slide]."
-msgstr "Visszaadja a [method move_and_slide] legutóbbi hívása során megtett elmozdulást (pozícióváltozást)."
+msgstr "Visszaadja a [method move_and_slide] legutóbbi hívása során bekövetkezett teljes pozícióváltozást."
 
 #. CharacterBody2D.get_slide_collision_count
 #: doc/classes/CharacterBody2D.xml
@@ -1054,7 +1054,7 @@ msgstr "Visszaadja, hogy a test a [method move_and_slide] legutóbbi hívása so
 #. CharacterBody2D.max_slides
 #: doc/classes/CharacterBody2D.xml
 msgid "Maximum number of times the body can change direction before it stops when calling [method move_and_slide]. Must be greater than zero."
-msgstr "Megadja, hogy a [method move_and_slide] meghívásakor a test legfeljebb hányszor változtathat irányt, mielőtt megáll. Az értéknek nullánál nagyobbnak kell lennie."
+msgstr "Meghatározza, hogy a [method move_and_slide] hívásakor a test legfeljebb hányszor változtathat irányt a csúszás során, mielőtt megáll. Az értéknek nullánál nagyobbnak kell lennie."
 
 #. CharacterBody2D.floor_max_angle
 #: doc/classes/CharacterBody2D.xml
@@ -1124,12 +1124,12 @@ msgstr "Ha [code]true[/code], a test csak a padlón tud haladni. Ez megakadályo
 #. CharacterBody2D.floor_constant_speed
 #: doc/classes/CharacterBody2D.xml
 msgid "If [code]false[/code] (by default), the body will move faster on downward slopes and slower on upward slopes.\nIf [code]true[/code], the body will always move at the same speed on the ground no matter the slope. Note that you need to use [member floor_snap_length] to stick along a downward slope at constant speed."
-msgstr "Ha [code]false[/code] (ez az alapértelmezés), a test lejtőn lefelé gyorsabban, emelkedőn felfelé lassabban mozog.\nHa [code]true[/code], a test a lejtésétől függetlenül mindig azonos sebességgel halad a talajon. Fontos, hogy az állandó sebességű lefelé haladáshoz a [member floor_snap_length] segítségével kell a testet a lejtőhöz tapasztani."
+msgstr "Ha [code]false[/code] (ez az alapértelmezés), a test lejtőn lefelé gyorsabban, emelkedőn felfelé lassabban mozog.\nHa [code]true[/code], a test a lejtésétől függetlenül mindig azonos sebességgel halad a talajon. Lejtőn lefelé haladva az állandó sebesség fenntartásához a [member floor_snap_length] segítségével a testet a talajhoz kell igazítani."
 
 #. CharacterBody2D.floor_snap_length
 #: doc/classes/CharacterBody2D.xml
 msgid "Sets a snapping distance. When set to a value different from [code]0.0[/code], the body is kept attached to slopes when calling [method move_and_slide]. The snapping vector is determined by the given distance along the opposite direction of the [member up_direction].\nAs long as the snapping vector is in contact with the ground and the body moves against [member up_direction], the body will remain attached to the surface. Snapping is not applied if the body moves along [member up_direction], meaning it contains vertical rising velocity, so it will be able to detach from the ground when jumping or when the body is pushed up by something. If you want to apply a snap without taking into account the velocity, use [method apply_floor_snap]."
-msgstr "Beállítja a talajhoz igazítás távolságát. Ha az érték nem [code]0.0[/code], a test a [method move_and_slide] meghívásakor a lejtőhöz tapad. Az igazítás irányát a [member up_direction] ellentétes irányában mért megadott távolság határozza meg.\nAmíg az igazítás vektora érintkezik a talajjal, és a test a [member up_direction] irányával ellentétesen mozog, a felszínen marad. Az igazítás nem történik meg, ha a test a [member up_direction] irányában mozog, vagyis felfelé irányuló sebessége van, így ugráskor vagy felfelé lökéskor elemelkedhet a talajtól. Ha a sebesség figyelmen kívül hagyásával szeretnéd végrehajtani az igazítást, használd a [method apply_floor_snap] metódust."
+msgstr "Beállítja a talajhoz igazítás távolságát. Ha az érték nem [code]0.0[/code], a test a [method move_and_slide] meghívásakor a lejtőhöz tapad. A talajhoz igazítás vektora a [member up_direction] ellentétes irányába mutat, hossza pedig a megadott távolság.\nAmíg az igazítás vektora érintkezik a talajjal, és a test a [member up_direction] irányával ellentétesen mozog, a felszínen marad. Az igazítás nem történik meg, ha a test a [member up_direction] irányában mozog, vagyis felfelé irányuló sebessége van, így ugráskor vagy felfelé lökéskor elemelkedhet a talajtól. Ha a sebesség figyelmen kívül hagyásával szeretnéd végrehajtani az igazítást, használd a [method apply_floor_snap] metódust."
 
 #. CharacterBody2D.platform_floor_layers
 #: doc/classes/CharacterBody2D.xml
@@ -1139,7 +1139,7 @@ msgstr "Azok az ütközési rétegek, amelyek padlóként érzékelt testei köv
 #. CharacterBody2D.platform_on_leave
 #: doc/classes/CharacterBody2D.xml
 msgid "Sets the behavior to apply when you leave a moving platform. By default, to be physically accurate, when you leave the last platform velocity is applied."
-msgstr "Meghatározza a mozgó platform elhagyásakor alkalmazott működést. Alapértelmezés szerint a fizikai hűség érdekében az utolsó platform sebessége tovább hat a testre, amikor az elhagyja a platformot."
+msgstr "Meghatározza a mozgó platform elhagyásakor alkalmazott működést. Alapértelmezés szerint a valósághű mozgás érdekében a test a platform elhagyásakor megörökli annak utolsó sebességét."
 
 #. CharacterBody2D.platform_wall_layers
 #: doc/classes/CharacterBody2D.xml
@@ -1149,17 +1149,17 @@ msgstr "Azok az ütközési rétegek, amelyek falként érzékelt testei követh
 #. CharacterBody2D.safe_margin
 #: doc/classes/CharacterBody2D.xml
 msgid "Extra margin used for collision recovery when calling [method move_and_slide].\nIf the body is at least this close to another body, it will consider them to be colliding and will be pushed away before performing the actual motion.\nA higher value means it's more flexible for detecting collision, which helps with consistently detecting walls and floors.\nA lower value forces the collision algorithm to use more exact detection, so it can be used in cases that specifically require precision, e.g at very low scale to avoid visible jittering, or for stability with a stack of character bodies."
-msgstr "További biztonsági távolság az ütközések korrigálásához a [method move_and_slide] meghívásakor.\nHa a test egy másik testet ezen a távolságon belül megközelít, a rendszer ütközést feltételez, és a tényleges elmozdulás előtt eltávolítja a másik testtől.\nA nagyobb érték rugalmasabb ütközésérzékelést biztosít, ami segíti a falak és padlók következetes felismerését.\nA kisebb érték pontosabb ütközésérzékelést kényszerít ki; ez például nagyon kis méretarány esetén csökkentheti a látható remegést, vagy segíthet az egymásra helyezett karaktertestek stabilitásában."
+msgstr "További biztonsági távolság az ütközések korrigálásához a [method move_and_slide] meghívásakor.\nHa a test ennél kisebb távolságra kerül egy másik testtől, a rendszer ütközést feltételez, és még a tényleges mozgás előtt eltávolítja attól.\nA nagyobb érték rugalmasabb ütközésérzékelést biztosít, ami segíti a falak és padlók következetes felismerését.\nA kisebb érték pontosabb ütközésérzékelést kényszerít ki; ez például nagyon kis méretarány esetén csökkentheti a látható remegést, vagy segíthet az egymásra helyezett karaktertestek stabilitásában."
 
 #. CharacterBody2D.slide_on_ceiling
 #: doc/classes/CharacterBody2D.xml
 msgid "If [code]true[/code], during a jump against the ceiling, the body will slide, if [code]false[/code] it will be stopped and will fall vertically."
-msgstr "Ha [code]true[/code], a test mennyezetbe ugráskor elcsúszhat annak mentén. Ha [code]false[/code], megáll, majd függőlegesen leesik."
+msgstr "Ha az értéke [code]true[/code], a test ugrás közben a mennyezetnek ütközve továbbcsúszhat annak mentén. Ha [code]false[/code], megáll, majd függőlegesen leesik."
 
 #. CharacterBody2D.up_direction
 #: doc/classes/CharacterBody2D.xml
 msgid "Vector pointing upwards, used to determine what is a wall and what is a floor (or a ceiling) when calling [method move_and_slide]. Defaults to [constant Vector2.UP]. As the vector will be normalized it can't be equal to [constant Vector2.ZERO], if you want all collisions to be reported as walls, consider using [constant MOTION_MODE_FLOATING] as [member motion_mode]."
-msgstr "Felfelé mutató vektor, amely alapján a [method move_and_slide] meghatározza, hogy a felület fal, padló vagy mennyezet. Alapértelmezett értéke [constant Vector2.UP]. Mivel a vektort normalizálja, nem lehet [constant Vector2.ZERO]. Ha minden ütközést falként szeretnél kezelni, a [member motion_mode] tulajdonságnál használd a [constant MOTION_MODE_FLOATING] módot."
+msgstr "Felfelé mutató vektor, amely alapján a [method move_and_slide] meghatározza, hogy a felület fal, padló vagy mennyezet. Alapértelmezett értéke [constant Vector2.UP]. A rendszer normalizálja a vektort, ezért az nem lehet [constant Vector2.ZERO]. Ha minden ütközést falként szeretnél kezelni, a [member motion_mode] tulajdonságnál használd a [constant MOTION_MODE_FLOATING] módot."
 
 #. CharacterBody2D.wall_min_slide_angle
 #: doc/classes/CharacterBody2D.xml
