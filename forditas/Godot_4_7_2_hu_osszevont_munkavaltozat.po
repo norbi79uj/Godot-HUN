@@ -16,7 +16,7 @@ msgstr ""
 #. TileMapLayer.brief
 #: doc/classes/TileMapLayer.xml
 msgid "Node for 2D tile-based maps."
-msgstr "Csempékre épülő 2D térképek csomópontja."
+msgstr "Csempékre épülő 2D-s térképek csomópontja."
 
 #. TileMapLayer.clear
 #: doc/classes/TileMapLayer.xml
@@ -131,7 +131,7 @@ msgstr "[code]true[/code] értéket ad vissza, ha a [param coords] koordinátáj
 #. TileMapLayer.is_cell_transposed
 #: doc/classes/TileMapLayer.xml
 msgid "Returns [code]true[/code] if the cell at coordinates [param coords] is transposed. The result is valid only for atlas sources."
-msgstr "[code]true[/code] értéket ad vissza, ha a [param coords] koordinátájú cella transzponált. Az eredmény csak atlaszforrásoknál érvényes."
+msgstr "[code]true[/code] értéket ad vissza, ha a [param coords] koordinátájú cella transzponált (a csempe vízszintes és függőleges iránya fel van cserélve). Az eredmény csak atlaszforrásoknál érvényes."
 
 #. TileMapLayer.y_sort_origin
 #: doc/classes/TileMapLayer.xml
@@ -176,7 +176,7 @@ msgstr "Visszaadja a megadott fizikai test [RID] azonosítójához tartozó fizi
 #. TileMapLayer.get_navigation_map
 #: doc/classes/TileMapLayer.xml
 msgid "Returns the [RID] of the [NavigationServer2D] navigation used by this [TileMapLayer].\nBy default this returns the default [World2D] navigation map, unless a custom map was provided using [method set_navigation_map]."
-msgstr "Visszaadja a [TileMapLayer] által használt [NavigationServer2D] navigációs térkép [RID] azonosítóját.\nAlapértelmezés szerint a [World2D] alapértelmezett navigációs térképét adja vissza, hacsak nem adtál meg egyedit a [method set_navigation_map] segítségével."
+msgstr "Visszaadja a [TileMapLayer] által használt, a [NavigationServer2D] rendszerben kezelt navigációs térkép [RID] azonosítóját.\nHa nem állítottál be egyéni térképet a [method set_navigation_map] metódussal, a [World2D] alapértelmezett navigációs térképét adja vissza."
 
 #. TileMapLayer.get_used_cells_by_id
 #: doc/classes/TileMapLayer.xml
@@ -216,7 +216,7 @@ msgstr "A [param path] koordinátatömbben felsorolt cellákat úgy frissíti, h
 #. TileMapLayer.set_navigation_map
 #: doc/classes/TileMapLayer.xml
 msgid "Sets a custom [param map] as a [NavigationServer2D] navigation map. If not set, uses the default [World2D] navigation map instead."
-msgstr "A [param map] paraméterben megadott térképet állítja be a [NavigationServer2D] egyéni navigációs térképeként. Ha nincs megadva, a [World2D] alapértelmezett navigációs térképét használja."
+msgstr "A [param map] paraméterrel megadott térképet állítja be egyéni navigációs térképként a [NavigationServer2D] rendszerében. Ha nincs beállítva egyéni térkép, a [World2D] alapértelmezett navigációs térképét használja."
 
 #. TileMapLayer.update_internals
 #: doc/classes/TileMapLayer.xml
@@ -236,7 +236,7 @@ msgstr "A [TileMapLayer] fizikai kvadránsának mérete. Egy kvadránson belül 
 #. TileMapLayer.rendering_quadrant_size
 #: doc/classes/TileMapLayer.xml
 msgid "The [TileMapLayer]'s rendering quadrant size. A quadrant is a group of tiles to be drawn together on a single canvas item, for optimization purposes. [member rendering_quadrant_size] defines the length of a square's side, in the map's coordinate system, that forms the quadrant. Thus, the default quadrant size groups together [code]16 * 16 = 256[/code] tiles.\nThe quadrant size does not apply on a Y-sorted [TileMapLayer], as tiles are grouped by Y position instead in that case.\n[b]Note:[/b] As quadrants are created according to the map's coordinate system, the quadrant's \"square shape\" might not look like square in the [TileMapLayer]'s local coordinate system."
-msgstr "A [TileMapLayer] kirajzolási kvadránsának mérete. A kvadráns csempék olyan csoportja, amelyet teljesítményoptimalizálás céljából egyetlen vászonelemként rajzol ki a rendszer. A [member rendering_quadrant_size] a kvadráns négyzetének oldalhosszát határozza meg a térkép koordinátarendszerében. Az alapértelmezett kvadráns [code]16 * 16 = 256[/code] csempét tartalmaz.\nAz Y szerint rendezett [TileMapLayer] esetén a kirajzolási kvadránsméret beállítása nem érvényesül, mert a rendszer a csempéket az Y-pozíciójuk szerint csoportosítja.\n[b]Megjegyzés:[/b] A kvadránsok a térkép koordinátarendszerében jönnek létre, így a négyzet alakjuk a [TileMapLayer] helyi koordinátarendszerében nem feltétlenül látszik négyzetesnek."
+msgstr "A [TileMapLayer] kirajzolási kvadránsának mérete. A kvadráns olyan csempecsoport, amelyet a rendszer a teljesítmény javítása érdekében egyetlen vászonelemként rajzol ki. A [member rendering_quadrant_size] a kvadráns négyzetének oldalhosszát határozza meg a térkép koordinátarendszerében. Az alapértelmezett kvadráns [code]16 * 16 = 256[/code] csempét tartalmaz.\nAz Y szerint rendezett [TileMapLayer] esetén a kirajzolási kvadránsméret beállítása nem érvényesül, mert a rendszer a csempéket az Y-pozíciójuk szerint csoportosítja.\n[b]Megjegyzés:[/b] A kvadránsok a térkép koordinátarendszerében jönnek létre, így a négyzet alakjuk a [TileMapLayer] helyi koordinátarendszerében nem feltétlenül látszik négyzetesnek."
 
 #. TileMapLayer.tile_map_data
 #: doc/classes/TileMapLayer.xml
@@ -246,7 +246,7 @@ msgstr "A csempetérkép nyers adatai bájttömbként."
 #. TileMapLayer.x_draw_order_reversed
 #: doc/classes/TileMapLayer.xml
 msgid "If [member CanvasItem.y_sort_enabled] is enabled, setting this to [code]true[/code] will reverse the order the tiles are drawn on the X-axis."
-msgstr "Ha engedélyezett a [member CanvasItem.y_sort_enabled], a [code]true[/code] érték megfordítja a csempék X tengely menti kirajzolási sorrendjét."
+msgstr "Ha a [member CanvasItem.y_sort_enabled] engedélyezett, a [code]true[/code] érték megfordítja a csempék X tengely szerinti kirajzolási sorrendjét."
 
 #. TileSet.brief
 #: doc/classes/TileSet.xml
