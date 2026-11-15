@@ -1304,7 +1304,7 @@ msgstr "Olyan csomópont, amely [Shape2D] alakzatot biztosít a szülő [Collisi
 #. CollisionShape2D.description
 #: doc/classes/CollisionShape2D.xml
 msgid "A node that provides a [Shape2D] to a [CollisionObject2D] parent and allows it to be edited. This can give a detection shape to an [Area2D] or turn a [PhysicsBody2D] into a solid object."
-msgstr "Olyan csomópont, amely szerkeszthető [Shape2D] alakzatot biztosít a szülő [CollisionObject2D] számára. Ezzel érzékelési területet adhatsz egy [Area2D] csomóponthoz, vagy szilárd akadállyá tehetsz egy [PhysicsBody2D] testet."
+msgstr "Olyan csomópont, amely szerkeszthető [Shape2D] alakzatot biztosít a szülő [CollisionObject2D] számára. Ezzel érzékelési alakzatot adhatsz egy [Area2D] csomóponthoz, vagy ütköző alakzattal rendelkező szilárd testté tehetsz egy [PhysicsBody2D] csomópontot."
 
 #. CollisionShape2D.shape
 #: doc/classes/CollisionShape2D.xml
@@ -1314,7 +1314,7 @@ msgstr "Az ütközési alakzat által használt alakzaterőforrás."
 #. CollisionShape2D.disabled
 #: doc/classes/CollisionShape2D.xml
 msgid "A disabled collision shape has no effect in the world. This property should be changed with [method Object.set_deferred]."
-msgstr "A letiltott ütközési alakzat nem vesz részt az ütközéskezelésben. Ezt a tulajdonságot a [method Object.set_deferred] metódussal célszerű módosítani."
+msgstr "A letiltott ütközési alakzatnak nincs hatása a fizikai világban. Ezt a tulajdonságot a [method Object.set_deferred] metódussal célszerű módosítani."
 
 #. CollisionShape2D.one_way_collision
 #: doc/classes/CollisionShape2D.xml
@@ -1331,7 +1331,7 @@ msgstr "Az egyirányú ütközéshez használt irány."
 #. CollisionShape2D.one_way_collision_margin
 #: doc/classes/CollisionShape2D.xml
 msgid "The margin used for one-way collision (in pixels). Higher values will make the shape thicker, and work better for colliders that enter the shape at a high velocity."
-msgstr "Az egyirányú ütközéshez használt ráhagyás képpontban. Nagyobb értéknél az alakzat az ütközésérzékelés szempontjából vastagabb lesz, ami segíthet a nagy sebességgel érkező testek ütközésének észlelésében."
+msgstr "Az egyirányú ütközéshez használt ráhagyás képpontban. Nagyobb értéknél az alakzat az ütközésvizsgálat számára vastagabbnak számít, így a gyorsan érkező testekkel is megbízhatóbban működhet."
 
 #. CollisionShape2D.debug_color
 #: doc/classes/CollisionShape2D.xml
@@ -2603,22 +2603,22 @@ msgstr "Beállítja a navigációs térkép [RID] azonosítóját, amelyet a ter
 #. StaticBody2D.brief
 #: doc/classes/StaticBody2D.xml
 msgid "A 2D physics body that can't be moved by external forces. When moved manually, it doesn't affect other bodies in its path."
-msgstr "2D-s fizikai test, amelyet külső erők nem tudnak elmozdítani. Kézi mozgatása során nem hat az útjába kerülő más testekre."
+msgstr "2D-s fizikai test, amelyet külső erők nem tudnak elmozdítani. Közvetlen áthelyezésekor nem hat az útjába kerülő más fizikai testekre."
 
 #. StaticBody2D.description
 #: doc/classes/StaticBody2D.xml
 msgid "A static 2D physics body. It can't be moved by external forces or contacts, but can be moved manually by other means such as code, [AnimationMixer]s (with [member AnimationMixer.callback_mode_process] set to [constant AnimationMixer.ANIMATION_CALLBACK_MODE_PROCESS_PHYSICS]), and [RemoteTransform2D].\nWhen [StaticBody2D] is moved, it is teleported to its new position without affecting other physics bodies in its path. If this is not desired, use [AnimatableBody2D] instead.\n[StaticBody2D] is useful for completely static objects like floors and walls, as well as moving surfaces like conveyor belts and circular revolving platforms (by using [member constant_linear_velocity] and [member constant_angular_velocity])."
-msgstr "Statikus 2D-s fizikai test. Külső erők és érintkezések nem mozdítják el, de kézzel is mozgatható, például kóddal, [AnimationMixer] csomópontokkal (ha a [member AnimationMixer.callback_mode_process] értéke [constant AnimationMixer.ANIMATION_CALLBACK_MODE_PROCESS_PHYSICS]), illetve [RemoteTransform2D] segítségével.\nA [StaticBody2D] mozgatáskor az új pozíciójára teleportálódik, anélkül hogy az útjába eső más fizikai testekre hatna. Ha ez nem kívánatos, használj helyette [AnimatableBody2D] csomópontot.\nA [StaticBody2D] teljesen mozdulatlan tárgyakhoz, például padlókhoz és falakhoz, valamint mozgó felületekhez, például futószalagokhoz és forgó platformokhoz hasznos (a [member constant_linear_velocity] és [member constant_angular_velocity] használatával)."
+msgstr "Statikus 2D-s fizikai test. Külső erők és érintkezések nem mozdítják el, de közvetlenül áthelyezhető például kóddal, [AnimationMixer] csomópontokkal (ha a [member AnimationMixer.callback_mode_process] értéke [constant AnimationMixer.ANIMATION_CALLBACK_MODE_PROCESS_PHYSICS]), illetve [RemoteTransform2D] segítségével.\nA [StaticBody2D] áthelyezéskor közvetlenül az új pozíciójára kerül, anélkül hogy a köztes útvonalon lévő fizikai testekre hatna. Ha ez nem kívánatos, használj helyette [AnimatableBody2D] csomópontot.\nA [StaticBody2D] teljesen mozdulatlan tárgyakhoz, például padlókhoz és falakhoz, valamint mozgó felületekhez, például futószalagokhoz és forgó platformokhoz hasznos (a [member constant_linear_velocity] és [member constant_angular_velocity] használatával)."
 
 #. StaticBody2D.constant_angular_velocity
 #: doc/classes/StaticBody2D.xml
 msgid "The body's constant angular velocity. This does not rotate the body, but affects touching bodies, as if it were rotating."
-msgstr "A test állandó szögsebessége. Ez nem forgatja el magát a testet, de úgy hat az érintkező testekre, mintha forogna."
+msgstr "A test állandó szögsebessége. Az érték nem forgatja el a testet, de az érintkező testekre úgy hat, mintha az forogna."
 
 #. StaticBody2D.constant_linear_velocity
 #: doc/classes/StaticBody2D.xml
 msgid "The body's constant linear velocity. This does not move the body, but affects touching bodies, as if it were moving."
-msgstr "A test állandó lineáris sebessége. Ez nem mozgatja el magát a testet, de úgy hat az érintkező testekre, mintha mozogna."
+msgstr "A test állandó lineáris sebessége. Az érték nem mozdítja el a testet, de az érintkező testekre úgy hat, mintha az mozogna."
 
 #. StaticBody2D.physics_material_override
 #: doc/classes/StaticBody2D.xml
@@ -3653,17 +3653,17 @@ msgstr "Beállítja a [param parser] forrásgeometria-feldolgozóhoz tartozó [p
 #. AnimatableBody2D.brief
 #: doc/classes/AnimatableBody2D.xml
 msgid "A 2D physics body that can't be moved by external forces. When moved manually, it affects other bodies in its path."
-msgstr "Olyan 2D-s fizikai test, amelyet külső erők nem mozdíthatnak el. Kézi mozgatásakor azonban hatással van az útjába kerülő testekre."
+msgstr "Külső erőkkel nem mozgatható 2D-s fizikai test. Közvetlen mozgatásakor azonban hat az útjába kerülő más testekre."
 
 #. AnimatableBody2D.description
 #: doc/classes/AnimatableBody2D.xml
 msgid "An animatable 2D physics body. It can't be moved by external forces or contacts, but can be moved manually by other means such as code, [AnimationMixer]s (with [member AnimationMixer.callback_mode_process] set to [constant AnimationMixer.ANIMATION_CALLBACK_MODE_PROCESS_PHYSICS]), and [RemoteTransform2D].\nWhen [AnimatableBody2D] is moved, its linear and angular velocity are estimated and used to affect other physics bodies in its path. This makes it useful for moving platforms, doors, and other moving objects."
-msgstr "Animálható 2D-s fizikai test. Külső erők és ütközések nem mozdítják el, de például kóddal, [AnimationMixer] csomópontokkal (ha a [member AnimationMixer.callback_mode_process] értéke [constant AnimationMixer.ANIMATION_CALLBACK_MODE_PROCESS_PHYSICS]) vagy [RemoteTransform2D] segítségével mozgatható.\nAz [AnimatableBody2D] mozgatásakor a rendszer megbecsüli a lineáris és a szögsebességét, majd ezekkel hat az útjába kerülő többi fizikai testre. Emiatt mozgó platformokhoz, ajtókhoz és más mozgatható objektumokhoz is használható."
+msgstr "Animálható 2D-s fizikai test. Külső erők és ütközések nem mozdítják el, de például kóddal, [AnimationMixer] csomópontokkal (ha a [member AnimationMixer.callback_mode_process] értéke [constant AnimationMixer.ANIMATION_CALLBACK_MODE_PROCESS_PHYSICS]) vagy [RemoteTransform2D] segítségével mozgatható.\nAz [AnimatableBody2D] mozgatásakor a rendszer megbecsüli a test lineáris és szögsebességét, és ezek alapján hat az útjába kerülő más fizikai testekre. Emiatt mozgó platformokhoz, ajtókhoz és más mozgatható objektumokhoz is használható."
 
 #. AnimatableBody2D.sync_to_physics
 #: doc/classes/AnimatableBody2D.xml
 msgid "If [code]true[/code], the body's movement will be synchronized to the physics frame. This is useful when animating movement via [AnimationPlayer], for example on moving platforms. Do [b]not[/b] use together with [method PhysicsBody2D.move_and_collide]."
-msgstr "Ha [code]true[/code], a test mozgása a fizikai képkockákhoz lesz szinkronizálva. Ez például akkor hasznos, amikor a mozgást [AnimationPlayer] vezérli, mint egy mozgó platform esetén. A [method PhysicsBody2D.move_and_collide] metódussal együtt [b]ne[/b] használd."
+msgstr "Ha az értéke [code]true[/code], a test mozgása a fizikai képkockákhoz igazodik. Ez például akkor hasznos, amikor a mozgást [AnimationPlayer] vezérli, mint egy mozgó platform esetén. A [method PhysicsBody2D.move_and_collide] metódussal együtt [b]ne[/b] használd."
 
 #. NavigationLink2D.brief
 #: doc/classes/NavigationLink2D.xml
@@ -3828,7 +3828,7 @@ msgstr "A [PhysicsBody2D] a fizikai rendszer által befolyásolt 2D-s játékobj
 #. PhysicsBody2D.add_collision_exception_with
 #: doc/classes/PhysicsBody2D.xml
 msgid "Adds a body to the list of bodies that this body can't collide with."
-msgstr "Hozzáad egy testet azoknak a testeknek a listájához, amelyekkel ez a test nem ütközhet."
+msgstr "Egy testet felvesz azoknak az ütközési kivételeknek a listájára, amelyekkel ez a test nem ütközik."
 
 #. PhysicsBody2D.get_collision_exceptions
 #: doc/classes/PhysicsBody2D.xml
@@ -3848,7 +3848,7 @@ msgstr "A testet a [param motion] vektor mentén mozgatja. A [method Node._physi
 #. PhysicsBody2D.remove_collision_exception_with
 #: doc/classes/PhysicsBody2D.xml
 msgid "Removes a body from the list of bodies that this body can't collide with."
-msgstr "Eltávolít egy testet azoknak a testeknek a listájáról, amelyekkel ez a test nem ütközhet."
+msgstr "Eltávolít egy testet az ütközési kivételek listájáról, így az újra ütközhet ezzel a testtel."
 
 #. PhysicsBody2D.test_move
 #: doc/classes/PhysicsBody2D.xml
@@ -4053,7 +4053,7 @@ msgstr "Sokszög alakú ütközési alakzatot ad a szülő [CollisionObject2D] c
 #. CollisionPolygon2D.description
 #: doc/classes/CollisionPolygon2D.xml
 msgid "A node that provides a polygon shape to a [CollisionObject2D] parent and allows it to be edited. The polygon can be concave or convex. This can give a detection shape to an [Area2D], turn a [PhysicsBody2D] into a solid object, or give a hollow shape to a [StaticBody2D].\n[b]Warning:[/b] A non-uniformly scaled [CollisionPolygon2D] will likely not behave as expected. Make sure to keep its scale the same on all axes and adjust its polygon instead."
-msgstr "Olyan csomópont, amely szerkeszthető sokszög alakú ütközési alakzatot ad egy szülő [CollisionObject2D] csomóponthoz. A sokszög lehet konkáv vagy konvex. Használható [Area2D] érzékelési terület alakzataként, [PhysicsBody2D] szilárd testének alakzataként, vagy [StaticBody2D] üreges alakzatának létrehozására.\n[b]Figyelmeztetés:[/b] A nem egyenletes méretarányú [CollisionPolygon2D] valószínűleg nem a vártnak megfelelően működik. A méretarány minden tengelyen legyen azonos, és inkább a sokszög alakját módosítsd."
+msgstr "Olyan csomópont, amely szerkeszthető sokszög alakú ütközési alakzatot ad egy szülő [CollisionObject2D] csomóponthoz. A sokszög lehet konkáv (homorú) vagy konvex (domború). Használható [Area2D] érzékelési terület alakzataként, [PhysicsBody2D] szilárd testének alakzataként, vagy [StaticBody2D] üreges alakzatának létrehozására.\n[b]Figyelmeztetés:[/b] A nem egyenletes méretarányú [CollisionPolygon2D] valószínűleg nem a vártnak megfelelően működik. Azonos méretarányt használj minden tengelyen, és a kívánt formát inkább a sokszög pontjainak módosításával érd el."
 
 #. CollisionPolygon2D.build_mode
 #: doc/classes/CollisionPolygon2D.xml
@@ -4063,7 +4063,7 @@ msgstr "Az ütközési alakzat létrehozási módja."
 #. CollisionPolygon2D.disabled
 #: doc/classes/CollisionPolygon2D.xml
 msgid "If [code]true[/code], no collisions will be detected. This property should be changed with [method Object.set_deferred]."
-msgstr "Ha [code]true[/code], a rendszer nem észlel ütközéseket. Ezt a tulajdonságot a [method Object.set_deferred] segítségével ajánlott módosítani."
+msgstr "Ha az értéke [code]true[/code], az ütközésérzékelés le van tiltva. A tulajdonságot a [method Object.set_deferred] metódussal célszerű módosítani."
 
 #. CollisionPolygon2D.one_way_collision
 #: doc/classes/CollisionPolygon2D.xml
@@ -4073,12 +4073,12 @@ msgstr "Ha [code]true[/code], csak a [CollisionPolygon2D] elforgatásához viszo
 #. CollisionPolygon2D.one_way_collision_margin
 #: doc/classes/CollisionPolygon2D.xml
 msgid "The margin used for one-way collision (in pixels). Higher values will make the shape thicker, and work better for colliders that enter the polygon at a high velocity."
-msgstr "Az egyirányú ütközéshez használt ráhagyás (képpontban). A nagyobb érték vastagabbá teszi az alakzatot, és segít a nagy sebességgel érkező ütközők kezelésében."
+msgstr "Az egyirányú ütközéshez használt ráhagyás (képpontban). Nagyobb értéknél az alakzat az ütközésvizsgálat számára vastagabbnak számít, ami javíthatja a nagy sebességgel érkező testek érzékelését."
 
 #. CollisionPolygon2D.polygon
 #: doc/classes/CollisionPolygon2D.xml
 msgid "The polygon's list of vertices. Each point will be connected to the next, and the final point will be connected to the first.\n[b]Note:[/b] The returned vertices are in the local coordinate space of the given [CollisionPolygon2D]."
-msgstr "A sokszög csúcsainak listája. Minden pont a következőhöz kapcsolódik, az utolsó pedig az elsőhöz.\n[b]Megjegyzés:[/b] A visszaadott csúcsok a megadott [CollisionPolygon2D] helyi koordinátarendszerében értendők."
+msgstr "A sokszög csúcsainak listája. A pontokat a rendszer sorrendben összeköti, az utolsót pedig az elsővel, így zárt sokszög jön létre.\n[b]Megjegyzés:[/b] A visszaadott csúcsok a megadott [CollisionPolygon2D] helyi koordinátarendszerében értendők."
 
 #. RemoteTransform2D.brief
 #: doc/classes/RemoteTransform2D.xml
