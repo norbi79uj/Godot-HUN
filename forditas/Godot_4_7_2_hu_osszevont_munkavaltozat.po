@@ -2290,7 +2290,7 @@ msgstr "A [param id] azonosítójú jelenetcsempéhez rendel egy [PackedScene] e
 #. NavigationAgent2D.brief
 #: doc/classes/NavigationAgent2D.xml
 msgid "A 2D agent used to pathfind to a position while avoiding obstacles."
-msgstr "2D-s navigációs ügynök, amely akadályok elkerülésével keres útvonalat egy célponthoz."
+msgstr "2D-s navigációs ügynök, amely útvonalat keres egy célponthoz, és segít elkerülni az akadályokat."
 
 #. NavigationAgent2D.description
 #: doc/classes/NavigationAgent2D.xml
@@ -2300,12 +2300,12 @@ msgstr "Olyan 2D-s ügynök, amely statikus és mozgó akadályok elkerülésév
 #. NavigationAgent2D.avoidance_enabled
 #: doc/classes/NavigationAgent2D.xml
 msgid "If [code]true[/code] the agent is registered for an RVO avoidance callback on the [NavigationServer2D]. When [member velocity] is used and the processing is completed a [code]safe_velocity[/code] Vector2 is received with a signal connection to [signal velocity_computed]. Avoidance processing with many registered agents has a significant performance cost and should only be enabled on agents that currently require it."
-msgstr "Ha [code]true[/code], az ügynök regisztrálja magát a [NavigationServer2D] RVO-alapú akadályelkerülési visszahívásához. A [member velocity] használata és a feldolgozás befejezése után a [signal velocity_computed] jelzésen keresztül egy [code]safe_velocity[/code] Vector2 sebességvektor érkezik. Sok regisztrált ügynök akadályelkerülési számítása jelentős teljesítményigényű, ezért csak azoknál az ügynököknél engedélyezd, amelyeknek éppen szükségük van rá."
+msgstr "Ha az értéke [code]true[/code], az ügynök részt vesz a [NavigationServer2D] RVO-alapú akadályelkerülési számításaiban. A [member velocity] beállítását és a számítás befejezését követően a [signal velocity_computed] jelzés egy [code]safe_velocity[/code] nevű Vector2 sebességvektort szolgáltat. Sok regisztrált ügynök akadályelkerülési számítása jelentős teljesítményigényű, ezért csak azoknál az ügynököknél engedélyezd, amelyeknek éppen szükségük van rá."
 
 #. NavigationAgent2D.avoidance_layers
 #: doc/classes/NavigationAgent2D.xml
 msgid "A bitfield determining the avoidance layers for this NavigationAgent. Other agents with a matching bit on the [member avoidance_mask] will avoid this agent."
-msgstr "Az ügynök akadályelkerülési rétegeit meghatározó bitmező. Azok a másik ügynökök, amelyek [member avoidance_mask] értékében található egyező bit, elkerülik ezt az ügynököt."
+msgstr "Az ügynök akadályelkerülési rétegeit meghatározó bitmező. Azok a többi ügynök, amelyek [member avoidance_mask] maszkjában legalább egy megfelelő bit be van állítva, elkerülik ezt az ügynököt."
 
 #. NavigationAgent2D.avoidance_mask
 #: doc/classes/NavigationAgent2D.xml
@@ -2340,7 +2340,7 @@ msgstr "Az a távolság, amelyen belül a rendszer más ügynököket keres."
 #. NavigationAgent2D.path_desired_distance
 #: doc/classes/NavigationAgent2D.xml
 msgid "The distance threshold before a path point is considered to be reached. This allows agents to not have to hit a path point on the path exactly, but only to reach its general area. If this value is set too high, the NavigationAgent will skip points on the path, which can lead to it leaving the navigation mesh. If this value is set too low, the NavigationAgent will be stuck in a repath loop because it will constantly overshoot the distance to the next point on each physics frame update."
-msgstr "Az a távolsági küszöb, amelyen belül az útvonal egy pontját elértnek tekinti a rendszer. Így az ügynöknek nem kell pontosan a pontra érkeznie, elég annak közelébe jutnia. Ha az érték túl nagy, az ügynök átugorhat útvonali pontokat, és letérhet a navigációs hálóról. Ha túl kicsi, az ügynök újratervezési ciklusba ragadhat, mert minden fizikai képkockában túllép a következő ponthoz tartozó távolságon."
+msgstr "Az a távolsági küszöb, amelyen belül az útvonal egy pontját elértnek tekinti a rendszer. Így az ügynöknek nem kell pontosan a pontra érkeznie, elég annak közelébe jutnia. Ha az érték túl nagy, az ügynök átugorhat útvonali pontokat, és letérhet a navigációs hálóról. Ha túl kicsi, az ügynök folyamatos útvonal-újratervezésbe ragadhat, mert minden fizikai képkockában túlfuthat a következő útvonalponton."
 
 #. NavigationAgent2D.path_max_distance
 #: doc/classes/NavigationAgent2D.xml
@@ -2364,7 +2364,7 @@ msgstr "Az útvonal lekérdezéséhez használt útkereső algoritmus."
 #. NavigationAgent2D.target_position
 #: doc/classes/NavigationAgent2D.xml
 msgid "If set, a new navigation path from the current agent position to the [member target_position] is requested from the NavigationServer."
-msgstr "Ha beállítod, a NavigationServer új navigációs útvonalat kér az ügynök jelenlegi pozíciójától a [member target_position] pontig."
+msgstr "A tulajdonság beállításakor az ügynök új útvonalat kér a NavigationServer kiszolgálótól a jelenlegi pozíciójától a [member target_position] célpontig."
 
 #. NavigationAgent2D.velocity
 #: doc/classes/NavigationAgent2D.xml
@@ -2379,7 +2379,7 @@ msgstr "Visszaadja a célpozíció távolságát az ügynök globális pozíció
 #. NavigationAgent2D.get_current_navigation_path
 #: doc/classes/NavigationAgent2D.xml
 msgid "Returns this agent's current path from start to finish in global coordinates. The path only updates when the target position is changed or the agent requires a repath. The path array is not intended to be used in direct path movement as the agent has its own internal path logic that would get corrupted by changing the path array manually. Use the intended [method get_next_path_position] once every physics frame to receive the next path point for the agents movement as this function also updates the internal path logic."
-msgstr "Visszaadja az ügynök aktuális útvonalát a kezdőponttól a végpontig, globális koordinátákban. Az útvonal csak a célpozíció változásakor vagy újratervezési igény esetén frissül. A visszaadott tömböt nem szabad közvetlenül a mozgás vezérlésére használni, mert az ügynök saját belső útvonalkövetését megzavarná a kézi módosítás. A következő mozgási pont lekérésére minden fizikai képkockában egyszer használd a [method get_next_path_position] metódust, amely a belső útvonalkövetést is frissíti."
+msgstr "Visszaadja az ügynök aktuális útvonalát a kezdőponttól a végpontig, globális koordinátákban. Az útvonal csak a célpozíció változásakor vagy újratervezési igény esetén frissül. A visszaadott tömb nem a mozgás közvetlen vezérlésére szolgál: a kézi módosítása megzavarhatja az ügynök belső útvonalkövetését. A következő mozgási pont lekérésére minden fizikai képkockában egyszer használd a [method get_next_path_position] metódust, amely a belső útvonalkövetést is frissíti."
 
 #. NavigationAgent2D.get_current_navigation_path_index
 #: doc/classes/NavigationAgent2D.xml
@@ -2389,12 +2389,12 @@ msgstr "Visszaadja, hogy az ügynök jelenleg az útvonal [PackedVector2Array] t
 #. NavigationAgent2D.get_next_path_position
 #: doc/classes/NavigationAgent2D.xml
 msgid "Returns the next position in global coordinates that can be moved to, making sure that there are no static objects in the way. If the agent does not have a navigation path, it will return the position of the agent's parent. The use of this function once every physics frame is required to update the internal path logic of the NavigationAgent."
-msgstr "Visszaadja a következő elérhető pozíciót globális koordinátákban, figyelembe véve, hogy ne legyen útban statikus akadály. Ha az ügynöknek nincs útvonala, a szülőcsomópont pozícióját adja vissza. A belső útvonalkövetés frissítéséhez ezt a függvényt minden fizikai képkockában egyszer meg kell hívni."
+msgstr "Visszaadja a következő olyan útvonalpont globális koordinátáit, amely felé statikus akadályok figyelembevételével haladhat az ügynök. Ha az ügynöknek nincs útvonala, a szülőcsomópont pozícióját adja vissza. A belső útvonalkövetés frissítéséhez ezt a függvényt minden fizikai képkockában egyszer meg kell hívni."
 
 #. NavigationAgent2D.is_navigation_finished
 #: doc/classes/NavigationAgent2D.xml
 msgid "Returns [code]true[/code] if the agent's navigation has finished. If the target is reachable, navigation ends when the target is reached. If the target is unreachable, navigation ends when the last waypoint of the path is reached.\n[b]Note:[/b] While [code]true[/code] prefer to stop calling update functions like [method get_next_path_position]. This avoids jittering the standing agent due to calling repeated path updates."
-msgstr "[code]true[/code] értéket ad vissza, ha az ügynök navigációja befejeződött. Elérhető célpont esetén a navigáció akkor ér véget, amikor az ügynök eléri a célt. Ha a cél elérhetetlen, az útvonal utolsó pontjának elérésekor ér véget.\n[b]Megjegyzés:[/b] Amíg az érték [code]true[/code], ajánlott elkerülni a frissítő metódusok, például a [method get_next_path_position] ismételt meghívását, mert ez a helyben álló ügynök remegését okozhatja."
+msgstr "[code]true[/code] értéket ad vissza, ha az ügynök navigációja befejeződött. Elérhető célpont esetén a navigáció akkor ér véget, amikor az ügynök eléri a célt. Ha a cél elérhetetlen, az útvonal utolsó pontjának elérésekor ér véget.\n[b]Megjegyzés:[/b] Amikor az eredmény [code]true[/code], célszerű mellőzni a frissítő metódusok, például a [method get_next_path_position] további hívását, mert az ismételt útvonalfrissítések a helyben álló ügynök remegését okozhatják."
 
 #. NavigationAgent2D.is_target_reachable
 #: doc/classes/NavigationAgent2D.xml
@@ -3748,7 +3748,7 @@ msgstr "A kapcsolaton való áthaladáskor a megtett távolságot a [member trav
 #. NavigationObstacle2D.brief
 #: doc/classes/NavigationObstacle2D.xml
 msgid "2D obstacle used to affect navigation mesh baking or constrain velocities of avoidance controlled agents."
-msgstr "2D-s akadály, amely befolyásolhatja a navigációs háló előállítását vagy korlátozhatja az akadályelkerülést használó ügynökök sebességét."
+msgstr "2D-s akadály, amely befolyásolja a navigációs háló előállítását, illetve korlátozhatja az akadályelkerülést végző ügynökök megengedett sebességét."
 
 #. NavigationObstacle2D.description
 #: doc/classes/NavigationObstacle2D.xml
@@ -3758,7 +3758,7 @@ msgstr "A helyes működéshez az akadálynak navigációs térképre és a [mem
 #. NavigationObstacle2D.get_avoidance_layer_value
 #: doc/classes/NavigationObstacle2D.xml
 msgid "Returns whether or not the specified layer of the [member avoidance_layers] bitmask is enabled, given a [param layer_number] between 1 and 32."
-msgstr "Visszaadja, hogy a [member avoidance_layers] bitmaszk megadott rétege engedélyezett-e. A [param layer_number] 1 és 32 közé eshet."
+msgstr "Visszaadja, hogy a [member avoidance_layers] bitmaszk [param layer_number] számú rétege engedélyezett-e. A rétegszám 1 és 32 közötti lehet."
 
 #. NavigationObstacle2D.get_navigation_map
 #: doc/classes/NavigationObstacle2D.xml
@@ -3773,7 +3773,7 @@ msgstr "Visszaadja az akadály [NavigationServer2D] rendszerbeli [RID] azonosít
 #. NavigationObstacle2D.set_avoidance_layer_value
 #: doc/classes/NavigationObstacle2D.xml
 msgid "Based on [param value], enables or disables the specified layer in the [member avoidance_layers] bitmask, given a [param layer_number] between 1 and 32."
-msgstr "A [param value] alapján engedélyezi vagy letiltja a [member avoidance_layers] bitmaszk megadott rétegét. A [param layer_number] 1 és 32 közé eshet."
+msgstr "A [param value] értékétől függően engedélyezi vagy letiltja a [member avoidance_layers] bitmaszk [param layer_number] számú rétegét. A rétegszám 1 és 32 közötti lehet."
 
 #. NavigationObstacle2D.set_navigation_map
 #: doc/classes/NavigationObstacle2D.xml
@@ -3783,7 +3783,7 @@ msgstr "Beállítja a navigációs térkép [RID] azonosítóját, amelyet ez a 
 #. NavigationObstacle2D.affect_navigation_mesh
 #: doc/classes/NavigationObstacle2D.xml
 msgid "If enabled and parsed in a navigation mesh baking process the obstacle will discard source geometry inside its [member vertices] defined shape."
-msgstr "Ha engedélyezett, és az akadályt a navigációs háló előállításakor feldolgozza a rendszer, a [member vertices] által meghatározott alakzaton belüli forrásgeometriát kizárja."
+msgstr "Ha engedélyezett, és a rendszer feldolgozza az akadályt a navigációs háló előállításakor, kizárja a [member vertices] csúcsokkal meghatározott alakzat belsejébe eső forrásgeometriát."
 
 #. NavigationObstacle2D.avoidance_enabled
 #: doc/classes/NavigationObstacle2D.xml
@@ -3808,12 +3808,12 @@ msgstr "Beállítja az akadályelkerüléshez használt akadálysugarat."
 #. NavigationObstacle2D.velocity
 #: doc/classes/NavigationObstacle2D.xml
 msgid "Sets the wanted velocity for the obstacle so other agent's can better predict the obstacle if it is moved with a velocity regularly (every frame) instead of warped to a new position. Does only affect avoidance for the obstacles [member radius]. Does nothing for the obstacles static vertices."
-msgstr "Beállítja az akadály kívánt sebességét, hogy a többi ügynök jobban előre jelezhesse a mozgását, amikor a helyzete minden képkockában sebesség alapján változik, és nem teleportálódik új pozícióba. Csak az akadály [member radius] sugarával történő akadályelkerülésre van hatása, a statikus csúcspontokra nincs."
+msgstr "Beállítja az akadály kívánt sebességét, hogy a többi ügynök jobban előre jelezhesse annak mozgását, ha az akadály képkockánként, sebesség alapján mozog, nem pedig azonnal új pozícióba kerül. Csak az akadály [member radius] sugarával történő akadályelkerülésre van hatása, a statikus csúcspontokra nincs."
 
 #. NavigationObstacle2D.vertices
 #: doc/classes/NavigationObstacle2D.xml
 msgid "The outline vertices of the obstacle. If the vertices are winded in clockwise order agents will be pushed in by the obstacle, else they will be pushed out. Outlines can not be crossed or overlap. Should the vertices using obstacle be warped to a new position agent's can not predict this movement and may get trapped inside the obstacle."
-msgstr "Az akadály körvonalának csúcsai. Ha a csúcsok óramutató járásával megegyező sorrendben következnek, az ügynököket befelé tereli, ellenkező esetben kifelé. A körvonalak nem keresztezhetik és nem fedhetik át egymást. Ha a csúcsokkal meghatározott akadály hirtelen új pozícióba kerül, az ügynökök nem tudják megjósolni a mozgását, és az akadály belsejében rekedhetnek."
+msgstr "Az akadály körvonalának csúcsai. Ha a csúcsok óramutató járásával megegyező sorrendben következnek, az ügynököket befelé tereli, ellenkező esetben kifelé. A körvonalak nem keresztezhetik egymást, és nem lehetnek átfedésben. Ha a csúcsokkal meghatározott akadály hirtelen új pozícióba kerül, az ügynökök nem tudják megjósolni a mozgását, és az akadály belsejében rekedhetnek."
 
 #. PhysicsBody2D.brief
 #: doc/classes/PhysicsBody2D.xml
@@ -4413,7 +4413,7 @@ msgstr "A VisibleOnScreenNotifier2D határoló téglalapja."
 #. VisibleOnScreenNotifier2D.show_rect
 #: doc/classes/VisibleOnScreenNotifier2D.xml
 msgid "If [code]true[/code], shows the rectangle area of [member rect] in the editor with a translucent magenta fill. Unlike changing the visibility of the VisibleOnScreenNotifier2D, this does not affect the screen culling detection."
-msgstr "Ha [code]true[/code], a [member rect] által megadott téglalap áttetsző bíborszínű kitöltéssel jelenik meg a szerkesztőben. A VisibleOnScreenNotifier2D láthatóságának módosításával ellentétben ez nem befolyásolja a képernyőn való láthatóság érzékelését."
+msgstr "Ha [code]true[/code], a [member rect] által megadott téglalap áttetsző bíborszínű kitöltéssel jelenik meg a szerkesztőben. Ez a szerkesztőbeli megjelenítés nem befolyásolja a képernyőn való láthatóság érzékelését, szemben a VisibleOnScreenNotifier2D láthatóságának megváltoztatásával."
 
 #. VisibleOnScreenEnabler2D.brief
 #: doc/classes/VisibleOnScreenEnabler2D.xml
@@ -4423,7 +4423,7 @@ msgstr "Téglalap alakú 2D-s terület, amely a képernyőn láthatóvá válva 
 #. VisibleOnScreenEnabler2D.description
 #: doc/classes/VisibleOnScreenEnabler2D.xml
 msgid "[VisibleOnScreenEnabler2D] contains a rectangular region of 2D space and a target node. The target node will be automatically enabled (via its [member Node.process_mode] property) when any part of this region becomes visible on the screen, and automatically disabled otherwise. This can for example be used to activate enemies only when the player approaches them.\nSee [VisibleOnScreenNotifier2D] if you only want to be notified when the region is visible on screen.\n[b]Note:[/b] [VisibleOnScreenEnabler2D] uses the render culling code to determine whether it's visible on screen, so it won't function unless [member CanvasItem.visible] is set to [code]true[/code]."
-msgstr "A [VisibleOnScreenEnabler2D] egy téglalap alakú 2D-s területet és egy célcsomópontot tartalmaz. A célcsomópont automatikusan bekapcsol (a [member Node.process_mode] tulajdonságon keresztül), ha a terület bármely része láthatóvá válik a képernyőn, egyébként pedig kikapcsol. Így például az ellenfelek csak akkor aktiválhatók, amikor a játékos a közelükbe ér.\nHa csupán értesítést szeretnél kapni a terület láthatóvá válásáról, használd a [VisibleOnScreenNotifier2D] csomópontot.\n[b]Megjegyzés:[/b] A [VisibleOnScreenEnabler2D] a megjelenítési rendszer láthatósági vizsgálatát használja, ezért csak akkor működik, ha a [member CanvasItem.visible] értéke [code]true[/code]."
+msgstr "A [VisibleOnScreenEnabler2D] egy téglalap alakú 2D-s területet és egy célcsomópontot tartalmaz. A célcsomópont feldolgozása a [member Node.process_mode] tulajdonságon keresztül automatikusan engedélyeződik, ha a terület bármely része láthatóvá válik a képernyőn, ellenkező esetben pedig letiltódik. Így például az ellenfelek csak akkor aktiválhatók, amikor a játékos a közelükbe ér.\nHa csupán értesítést szeretnél kapni a terület láthatóvá válásáról, használd a [VisibleOnScreenNotifier2D] csomópontot.\n[b]Megjegyzés:[/b] A [VisibleOnScreenEnabler2D] a megjelenítési rendszer láthatósági vizsgálatát használja, ezért csak akkor működik, ha a [member CanvasItem.visible] értéke [code]true[/code]."
 
 #. VisibleOnScreenEnabler2D.enable_mode
 #: doc/classes/VisibleOnScreenEnabler2D.xml
