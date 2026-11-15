@@ -3038,7 +3038,7 @@ msgstr "Beállítja az ügynök pozícióját világkoordinátákban."
 #. NavigationServer2D.agent_set_velocity
 #: doc/classes/NavigationServer2D.xml
 msgid "Sets [param velocity] as the new wanted velocity for the specified [param agent]. The avoidance simulation will try to fulfill this velocity if possible but will modify it to avoid collision with other agent's and obstacles. When an agent is teleported to a new position far away use [method agent_set_velocity_forced] instead to reset the internal velocity state."
-msgstr "A [param velocity] értéket állítja be a megadott [param agent] kívánt új sebességeként. Az akadályelkerülési szimuláció lehetőség szerint ezt a sebességet használja, de a többi ügynökkel és akadállyal való ütközések elkerüléséhez módosíthatja. Ha az ügynököt messzebbre teleportálod, a belső sebességállapot visszaállításához inkább a [method agent_set_velocity_forced] metódust használd."
+msgstr "A [param velocity] értéket állítja be a megadott [param agent] új, kívánt sebességeként. Az akadályelkerülési szimuláció lehetőség szerint ezt a sebességet igyekszik elérni, de a többi ügynökkel és az akadályokkal való ütközés elkerülése érdekében módosíthatja. Ha az ügynököt távoli pozícióba teleportálod, a belső sebességállapot visszaállításához inkább a [method agent_set_velocity_forced] metódust használd."
 
 #. NavigationServer2D.agent_set_avoidance_enabled
 #: doc/classes/NavigationServer2D.xml
@@ -3048,7 +3048,7 @@ msgstr "Ha a [param enabled] értéke [code]true[/code], a megadott [param agent
 #. NavigationServer2D.agent_set_avoidance_callback
 #: doc/classes/NavigationServer2D.xml
 msgid "Sets the callback [Callable] that gets called after each avoidance processing step for the [param agent]. The calculated [code]safe_velocity[/code] will be dispatched with a signal to the object just before the physics calculations.\n[b]Note:[/b] Created callbacks are always processed independently of the SceneTree state as long as the agent is on a navigation map and not freed. To disable the dispatch of a callback from an agent use [method agent_set_avoidance_callback] again with an empty [Callable]."
-msgstr "Beállítja azt a [Callable] visszahívást, amely az ügynök minden akadályelkerülési feldolgozási lépése után fut le a [param agent] számára. A kiszámított [code]safe_velocity[/code] értéket a fizikai számítások előtt jelzésen keresztül kapja meg az objektum.\n[b]Megjegyzés:[/b] A létrehozott visszahívások a SceneTree állapotától függetlenül futnak, amíg az ügynök navigációs térképhez tartozik és nincs felszabadítva. A visszahívás letiltásához hívd meg ismét a [method agent_set_avoidance_callback] metódust üres [Callable] paraméterrel."
+msgstr "Beállítja a [Callable] visszahívást, amely a [param agent] minden akadályelkerülési feldolgozási lépése után meghívódik. A kiszámított [code]safe_velocity[/code] értéket az objektum közvetlenül a fizikai számítások előtt, jelzés útján kapja meg.\n[b]Megjegyzés:[/b] A létrehozott visszahívások a [SceneTree] állapotától függetlenül feldolgozásra kerülnek, amíg az ügynök egy navigációs térképhez tartozik, és nem szabadították fel. A visszahívás küldésének letiltásához hívd meg újra a [method agent_set_avoidance_callback] metódust egy üres [Callable] értékkel."
 
 #. NavigationServer2D.agent_get_map
 #: doc/classes/NavigationServer2D.xml
@@ -3078,7 +3078,7 @@ msgstr "Beállítja a mozgó akadály sugarát."
 #. NavigationServer2D.bake_from_source_geometry_data
 #: doc/classes/NavigationServer2D.xml
 msgid "Bakes the provided [param navigation_polygon] with the data from the provided [param source_geometry_data]. After the process is finished the optional [param callback] will be called."
-msgstr "A [param navigation_polygon] navigációs sokszöget a megadott [param source_geometry_data] forrásgeometria adataiból állítja elő. A művelet befejezése után meghívja az opcionális [param callback] visszahívást."
+msgstr "A megadott [param navigation_polygon] navigációs sokszöget a [param source_geometry_data] forrásgeometriai adatai alapján állítja elő. A folyamat befejezése után, ha megadták, meghívja a [param callback] visszahívást."
 
 #. NavigationServer2D.query_path
 #: doc/classes/NavigationServer2D.xml
@@ -3113,7 +3113,7 @@ msgstr "[code]true[/code] értéket ad vissza, ha a megadott navigációs soksz�
 #. NavigationServer2D.map_get_cell_size
 #: doc/classes/NavigationServer2D.xml
 msgid "Returns the map cell size used to rasterize the navigation mesh vertices."
-msgstr "Visszaadja a navigációs háló csúcsainak raszterezéséhez használt térképcella-méretet."
+msgstr "Visszaadja a navigációs háló csúcsainak raszterezéséhez használt térképcellák méretét."
 
 #. NavigationServer2D.map_get_edge_connection_margin
 #: doc/classes/NavigationServer2D.xml
