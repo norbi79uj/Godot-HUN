@@ -331,12 +331,12 @@ msgstr "Visszaadja a fizikai rétegek számát."
 #. TileSet.set_physics_layer_collision_layer
 #: doc/classes/TileSet.xml
 msgid "Sets the collision layer (as in the physics server) for bodies in the given TileSet physics layer."
-msgstr "Beállítja az adott TileSet fizikai rétegéhez tartozó testek ütközési rétegét a fizikai kiszolgálóban használt módon."
+msgstr "Beállítja a megadott TileSet-fizikai réteg testjeinek ütközési rétegét, a fizikai kiszolgálóban használt formában."
 
 #. TileSet.set_physics_layer_collision_mask
 #: doc/classes/TileSet.xml
 msgid "Sets the collision mask for bodies in the given TileSet physics layer."
-msgstr "Beállítja az adott TileSet fizikai rétegéhez tartozó testek ütközési maszkját."
+msgstr "Beállítja a megadott TileSet-fizikai réteg testjeinek ütközési maszkját."
 
 #. TileSet.add_custom_data_layer
 #: doc/classes/TileSet.xml
@@ -346,7 +346,7 @@ msgstr "Egyediadatréteget ad a csempekészlethez a tömb [param to_position] po
 #. TileSet.set_custom_data_layer_name
 #: doc/classes/TileSet.xml
 msgid "Sets the name of the custom data layer identified by the given index. Names are identifiers of the layer therefore if the name is already taken it will fail and raise an error."
-msgstr "Beállítja a megadott indexű egyediadatréteg nevét. A nevek a rétegek azonosítói, ezért ha egy név már foglalt, a művelet hibát jelez és sikertelen lesz."
+msgstr "Beállítja a megadott indexű egyediadatréteg nevét. A rétegek neve azonosítóként is szolgál, ezért már használt név megadásakor a művelet hibával leáll."
 
 #. TileSet.get_custom_data_layer_name
 #: doc/classes/TileSet.xml
@@ -361,7 +361,7 @@ msgstr "Visszaadja az egyediadatrétegek számát."
 #. TileSet.add_pattern
 #: doc/classes/TileSet.xml
 msgid "Adds a [TileMapPattern] to be stored in the TileSet resource. If provided, insert it at the given [param index]."
-msgstr "Eltárol egy [TileMapPattern] mintát a TileSet erőforrásban. Ha meg van adva a [param index], a mintát a megadott indexű helyre illeszti."
+msgstr "Hozzáad egy [TileMapPattern] mintát a TileSet erőforrásban tárolt mintákhoz. Ha meg van adva a [param index], a mintát a megadott indexű helyre illeszti."
 
 #. TileSet.get_pattern
 #: doc/classes/TileSet.xml
@@ -396,7 +396,7 @@ msgstr "Törli a megadott terepkészlet összes tereptulajdonságát."
 #. TileSet.get_custom_data_layer_by_name
 #: doc/classes/TileSet.xml
 msgid "Returns the index of the custom data layer identified by the given name."
-msgstr "Visszaadja a megadott nevű egyediadatréteg indexét."
+msgstr "Visszaadja a neve alapján azonosított egyediadatréteg indexét."
 
 #. TileSet.get_custom_data_layer_type
 #: doc/classes/TileSet.xml
@@ -421,27 +421,27 @@ msgstr "Visszaadja a fénykitakarási rétegek számát."
 #. TileSet.get_patterns_count
 #: doc/classes/TileSet.xml
 msgid "Returns the number of [TileMapPattern] this tile set handles."
-msgstr "Visszaadja a TileSet által kezelt [TileMapPattern] minták számát."
+msgstr "Visszaadja a csempekészletben tárolt [TileMapPattern] minták számát."
 
 #. TileSet.get_physics_layer_collision_layer
 #: doc/classes/TileSet.xml
 msgid "Returns the collision layer (as in the physics server) bodies on the given TileSet's physics layer are in."
-msgstr "Visszaadja a megadott TileSet fizikai rétegéhez tartozó testek ütközési rétegét a fizikai kiszolgálóban használt formában."
+msgstr "Visszaadja a megadott TileSet-fizikai réteg testjeinek ütközési rétegét, a fizikai kiszolgálóban használt formában."
 
 #. TileSet.get_physics_layer_collision_mask
 #: doc/classes/TileSet.xml
 msgid "Returns the collision mask of bodies on the given TileSet's physics layer."
-msgstr "Visszaadja a megadott TileSet fizikai rétegéhez tartozó testek ütközési maszkját."
+msgstr "Visszaadja a megadott TileSet-fizikai réteg testjeinek ütközési maszkját."
 
 #. TileSet.get_physics_layer_collision_priority
 #: doc/classes/TileSet.xml
 msgid "Returns the collision priority of bodies on the given TileSet's physics layer."
-msgstr "Visszaadja a megadott TileSet fizikai rétegéhez tartozó testek ütközési prioritását."
+msgstr "Visszaadja a megadott TileSet-fizikai réteg testjeinek ütközési prioritását."
 
 #. TileSet.get_physics_layer_physics_material
 #: doc/classes/TileSet.xml
 msgid "Returns the physics material of bodies on the given TileSet's physics layer."
-msgstr "Visszaadja a megadott TileSet fizikai rétegéhez tartozó testek fizikai anyagát."
+msgstr "Visszaadja a megadott TileSet-fizikai réteg testjeinek fizikai anyagát."
 
 #. TileSet.get_terrain_color
 #: doc/classes/TileSet.xml
@@ -471,7 +471,7 @@ msgstr "Visszaadja a megadott terepkészlet tereptípusainak számát."
 #. TileSet.has_custom_data_layer_by_name
 #: doc/classes/TileSet.xml
 msgid "Returns if there is a custom data layer named [param layer_name]."
-msgstr "Megadja, hogy létezik-e a [param layer_name] nevű egyediadatréteg."
+msgstr "Megadja, hogy van-e [param layer_name] nevű egyediadatréteg."
 
 #. TileSet.move_navigation_layer
 #: doc/classes/TileSet.xml
@@ -526,7 +526,7 @@ msgstr "Beállítja a megadott TileSet-navigációs réteghez tartozó navigáci
 #. TileSet.set_terrain_color
 #: doc/classes/TileSet.xml
 msgid "Sets a terrain's color. This color is used for identifying the different terrains in the TileSet editor."
-msgstr "Beállítja a tereptípus színét. Ez a szín segít megkülönböztetni a tereptípusokat a TileSet-szerkesztőben."
+msgstr "Beállítja a tereptípus színét. A TileSet-szerkesztő ezt a színt használja a tereptípusok megkülönböztetésére."
 
 #. TileSet.set_terrain_name
 #: doc/classes/TileSet.xml
@@ -666,12 +666,12 @@ msgstr "Engedélyezi vagy letiltja, hogy a megadott TileSet-fénykitakarási ré
 #. TileSet.set_physics_layer_collision_priority
 #: doc/classes/TileSet.xml
 msgid "Sets the collision priority for bodies in the given TileSet physics layer."
-msgstr "Beállítja a megadott TileSet-fizikai réteg testeihez tartozó ütközési prioritást."
+msgstr "Beállítja a megadott TileSet-fizikai réteg testjeinek ütközési prioritását."
 
 #. TileSet.set_physics_layer_physics_material
 #: doc/classes/TileSet.xml
 msgid "Sets the physics material for bodies in the given TileSet physics layer."
-msgstr "Beállítja a megadott TileSet-fizikai réteg testeihez tartozó fizikai anyagot."
+msgstr "Beállítja a megadott TileSet-fizikai réteg testjeinek fizikai anyagát."
 
 #. TileSet.set_source_id
 #: doc/classes/TileSet.xml
