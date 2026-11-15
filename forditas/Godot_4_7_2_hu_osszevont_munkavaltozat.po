@@ -1961,22 +1961,22 @@ msgstr "Absztrakt alaposztály 2D-s fizikai objektumokhoz."
 #. CollisionObject2D.description
 #: doc/classes/CollisionObject2D.xml
 msgid "Abstract base class for 2D physics objects. [CollisionObject2D] can hold any number of [Shape2D]s for collision. Each shape must be assigned to a [i]shape owner[/i]. Shape owners are not nodes and do not appear in the editor, but are accessible through code using the [code]shape_owner_*[/code] methods.\n[b]Note:[/b] Only collisions between objects within the same canvas ([Viewport] canvas or [CanvasLayer]) are supported. The behavior of collisions between objects in different canvases is undefined."
-msgstr "Absztrakt alaposztály 2D-s fizikai objektumokhoz. Egy [CollisionObject2D] tetszőleges számú [Shape2D] alakzatot tartalmazhat az ütközések kezeléséhez. Minden alakzatot hozzá kell rendelni egy [i]alakzattulajdonoshoz[/i]. Az alakzattulajdonosok nem csomópontok, ezért nem jelennek meg a szerkesztőben, de a [code]shape_owner_*[/code] metódusokkal elérhetők a kódból.\n[b]Megjegyzés:[/b] Csak az azonos vásznon ([Viewport] vászna vagy [CanvasLayer]) található objektumok közötti ütközések támogatottak. A különböző vásznakon található objektumok ütközéseinek működése nincs meghatározva."
+msgstr "Absztrakt alaposztály 2D-s fizikai objektumokhoz. Egy [CollisionObject2D] tetszőleges számú [Shape2D] alakzatot tartalmazhat az ütközések kezeléséhez. Minden ütközési alakzatot hozzá kell rendelni egy [i]alakzattulajdonoshoz[/i]. Az alakzattulajdonosok nem csomópontok, ezért nem jelennek meg a szerkesztőben, de a [code]shape_owner_*[/code] metódusokkal elérhetők a kódból.\n[b]Megjegyzés:[/b] Csak az azonos vásznon ([Viewport] vászna vagy [CanvasLayer]) található objektumok közötti ütközések támogatottak. A különböző vásznakon található objektumok ütközéseinek működése nincs meghatározva."
 
 #. CollisionObject2D.collision_layer
 #: doc/classes/CollisionObject2D.xml
 msgid "The physics layers this CollisionObject2D is in. Collision objects can exist in one or more of 32 different layers. See also [member collision_mask].\n[b]Note:[/b] Object A can detect a contact with object B only if object B is in any of the layers that object A scans. See [url=$DOCS_URL/tutorials/physics/physics_introduction.html#collision-layers-and-masks]Collision layers and masks[/url] in the documentation for more information."
-msgstr "Azok a fizikai rétegek, amelyekhez ez a CollisionObject2D tartozik. Egy ütközési objektum a 32 különböző réteg közül egyhez vagy többhöz tartozhat. Lásd még: [member collision_mask].\n[b]Megjegyzés:[/b] Az A objektum csak akkor érzékeli a B objektummal való érintkezést, ha B legalább az A által vizsgált rétegek egyikéhez tartozik. További információ: [url=$DOCS_URL/tutorials/physics/physics_introduction.html#collision-layers-and-masks]Ütközési rétegek és maszkok[/url]."
+msgstr "Azok a fizikai ütközési rétegek, amelyekhez ez a CollisionObject2D tartozik. Egy ütközési objektum a 32 különböző réteg közül egyhez vagy többhöz tartozhat. Lásd még: [member collision_mask].\n[b]Megjegyzés:[/b] Az A objektum csak akkor érzékeli a B objektummal való érintkezést, ha B legalább az A által vizsgált rétegek egyikéhez tartozik. További információ: [url=$DOCS_URL/tutorials/physics/physics_introduction.html#collision-layers-and-masks]Ütközési rétegek és maszkok[/url]."
 
 #. CollisionObject2D.collision_mask
 #: doc/classes/CollisionObject2D.xml
 msgid "The physics layers this CollisionObject2D scans. Collision objects can scan one or more of 32 different layers. See also [member collision_layer].\n[b]Note:[/b] Object A can detect a contact with object B only if object B is in any of the layers that object A scans. See [url=$DOCS_URL/tutorials/physics/physics_introduction.html#collision-layers-and-masks]Collision layers and masks[/url] in the documentation for more information."
-msgstr "Azok a fizikai rétegek, amelyeket ez a CollisionObject2D vizsgál. Egy ütközési objektum a 32 lehetséges réteg közül egyet vagy többet is figyelhet. Lásd még: [member collision_layer].\n[b]Megjegyzés:[/b] Az A objektum csak akkor érzékeli a B objektummal való érintkezést, ha B legalább az A által vizsgált rétegek egyikéhez tartozik. További információ: [url=$DOCS_URL/tutorials/physics/physics_introduction.html#collision-layers-and-masks]Ütközési rétegek és maszkok[/url]."
+msgstr "Azok a fizikai ütközési rétegek, amelyeken ez a CollisionObject2D más objektumokat érzékel. Egy ütközési objektum a 32 lehetséges réteg közül egyet vagy többet is figyelhet. Lásd még: [member collision_layer].\n[b]Megjegyzés:[/b] Az A objektum csak akkor érzékeli a B objektummal való érintkezést, ha B legalább az A által vizsgált rétegek egyikéhez tartozik. További információ: [url=$DOCS_URL/tutorials/physics/physics_introduction.html#collision-layers-and-masks]Ütközési rétegek és maszkok[/url]."
 
 #. CollisionObject2D.collision_priority
 #: doc/classes/CollisionObject2D.xml
 msgid "The priority used to solve colliding when occurring penetration. The higher the priority is, the lower the penetration into the object will be. This can for example be used to prevent the player from breaking through the boundaries of a level."
-msgstr "Az objektumok egymásba hatolásakor az ütközés feloldásához használt prioritás. Minél nagyobb a prioritás, annál kevésbé tudnak más testek behatolni ebbe az objektumba. Ez például segíthet megakadályozni, hogy a játékos áttörjön a pálya határain."
+msgstr "Az objektumok egymásba hatolásakor az ütközés feloldásához használt prioritás. Minél magasabb a prioritás, annál kisebb lesz a más testekkel való átfedés mértéke. Ez például segíthet megakadályozni, hogy a játékos áttörjön a pálya határain."
 
 #. CollisionObject2D.disable_mode
 #: doc/classes/CollisionObject2D.xml
@@ -1986,12 +1986,12 @@ msgstr "Meghatározza a fizikai működést, amikor a [member Node.process_mode]
 #. CollisionObject2D.input_pickable
 #: doc/classes/CollisionObject2D.xml
 msgid "If [code]true[/code], this object is pickable. A pickable object can detect the mouse pointer entering/leaving, and if the mouse is inside it, report input events. Requires at least one [member collision_layer] bit to be set."
-msgstr "Ha [code]true[/code], az objektum egérrel kijelölhető és érzékelhető. Érzékelheti az egérmutató belépését és kilépését, valamint bemeneti eseményeket fogadhat, amikor az egérmutató az objektumon belül van. Ehhez a [member collision_layer] legalább egy bitjének beállítottnak kell lennie."
+msgstr "Ha az értéke [code]true[/code], az objektum érzékeli az egérmutatóval végzett interakciókat. Érzékelheti az egérmutató belépését és kilépését, valamint bemeneti eseményeket fogadhat, amikor az egérmutató az objektumon belül van. Ehhez a [member collision_layer] legalább egy bitjének beállítottnak kell lennie."
 
 #. CollisionObject2D.create_shape_owner
 #: doc/classes/CollisionObject2D.xml
 msgid "Creates a new shape owner for the given object. Returns [code]owner_id[/code] of the new owner for future reference."
-msgstr "Új alakzattulajdonost hoz létre a megadott objektumhoz. Visszaadja az új tulajdonos [code]owner_id[/code] azonosítóját későbbi használatra."
+msgstr "Új alakzattulajdonost hoz létre a megadott objektumhoz, és visszaadja az új tulajdonos [code]owner_id[/code] azonosítóját."
 
 #. CollisionObject2D.get_collision_layer_value
 #: doc/classes/CollisionObject2D.xml
@@ -2013,7 +2013,7 @@ msgstr "Visszaadja az objektum [RID] azonosítóját."
 #. CollisionObject2D.get_shape_owners
 #: doc/classes/CollisionObject2D.xml
 msgid "Returns an [Array] of [code]owner_id[/code] identifiers. You can use these ids in other methods that take [code]owner_id[/code] as an argument."
-msgstr "Visszaadja az alakzattulajdonosok [code]owner_id[/code] azonosítóit tartalmazó [Array] tömböt. Ezeket az azonosítókat olyan más metódusokban is használhatod, amelyek [code]owner_id[/code] paramétert várnak."
+msgstr "Visszaadja az alakzattulajdonosok [code]owner_id[/code] azonosítóit tartalmazó [Array] tömböt. Az azonosítókat átadhatod más, [code]owner_id[/code] paramétert fogadó metódusoknak."
 
 #. CollisionObject2D.is_shape_owner_disabled
 #: doc/classes/CollisionObject2D.xml
@@ -2060,7 +2060,7 @@ msgstr "Visszaadja a megadott alakzattulajdonos szülőobjektumát."
 #. CollisionObject2D.shape_owner_get_shape
 #: doc/classes/CollisionObject2D.xml
 msgid "Returns the [Shape2D] with the given ID from the given shape owner."
-msgstr "Visszaadja a megadott alakzattulajdonoshoz tartozó, azonosítóval kiválasztott [Shape2D] alakzatot."
+msgstr "Visszaadja a megadott alakzattulajdonos megadott azonosítójú [Shape2D] alakzatát."
 
 #. CollisionObject2D.shape_owner_get_shape_count
 #: doc/classes/CollisionObject2D.xml
@@ -2414,22 +2414,22 @@ msgstr "Visszaadja az aktuális navigációs útvonal elérhető végpontját gl
 #. RayCast2D.brief
 #: doc/classes/RayCast2D.xml
 msgid "A ray in 2D space, used to find the first collision object it intersects."
-msgstr "2D-s sugár, amely megkeresi az első ütköző objektumot, amellyel metszi egymást."
+msgstr "2D-s sugár, amely érzékeli az útjába eső első ütközési objektumot."
 
 #. RayCast2D.description
 #: doc/classes/RayCast2D.xml
 msgid "A raycast represents a ray from its origin to its [member target_position] that finds the closest object along its path, if it intersects any.\n[RayCast2D] can ignore some objects by adding them to an exception list, by making its detection reporting ignore [Area2D]s ([member collide_with_areas]) or [PhysicsBody2D]s ([member collide_with_bodies]), or by configuring physics layers.\n[RayCast2D] calculates intersection every physics frame, and it holds the result until the next physics frame. For an immediate raycast, or if you want to configure a [RayCast2D] multiple times within the same physics frame, use [method force_raycast_update].\nTo sweep over a region of 2D space, you can approximate the region with multiple [RayCast2D]s or use [ShapeCast2D]."
-msgstr "A sugárvizsgálat egy sugarat jelent a kiindulópontjától a [member target_position] pontig, amely megkeresi az útjába eső legközelebbi objektumot, ha van ilyen.\nA [RayCast2D] figyelmen kívül hagyhat bizonyos objektumokat, ha kivételként felveszed őket, letiltod az [Area2D] területek ([member collide_with_areas]) vagy a [PhysicsBody2D] testek ([member collide_with_bodies]) érzékelését, illetve beállítod a fizikai rétegeket.\nA [RayCast2D] minden fizikai képkockában kiszámítja a metszéseket, és az eredményt a következő fizikai képkockáig megőrzi. Azonnali vizsgálathoz, vagy ha ugyanazon a fizikai képkockán belül többször módosítod a [RayCast2D] beállításait, használd a [method force_raycast_update] metódust.\nEgy teljes 2D-s terület vizsgálatához több [RayCast2D] sugárral közelítheted a területet, vagy használhatsz [ShapeCast2D] csomópontot."
+msgstr "A sugárvizsgálat a kiindulóponttól a [member target_position] célpontig tartó szakaszon megkeresi a legközelebbi metszett objektumot, ha van ilyen.\nA [RayCast2D] figyelmen kívül hagyhat bizonyos objektumokat, ha kivételként felveszed őket, letiltod az [Area2D] területek ([member collide_with_areas]) vagy a [PhysicsBody2D] testek ([member collide_with_bodies]) érzékelését, illetve beállítod a fizikai rétegeket.\nA [RayCast2D] minden fizikai képkockában elvégzi a metszésvizsgálatot, és az eredményt a következő fizikai képkockáig tárolja. Azonnali vizsgálathoz, vagy ha ugyanazon a fizikai képkockán belül többször módosítod a [RayCast2D] beállításait, használd a [method force_raycast_update] metódust.\nEgy teljes 2D-s terület vizsgálatához több [RayCast2D] sugárral közelítheted a területet, vagy használhatsz [ShapeCast2D] csomópontot."
 
 #. RayCast2D.collide_with_areas
 #: doc/classes/RayCast2D.xml
 msgid "If [code]true[/code], collisions with [Area2D]s will be reported."
-msgstr "Ha [code]true[/code], a rendszer jelenti az [Area2D] területekkel történő ütközéseket."
+msgstr "Ha az értéke [code]true[/code], a sugár az [Area2D] területekkel való metszéseket is jelzi."
 
 #. RayCast2D.collide_with_bodies
 #: doc/classes/RayCast2D.xml
 msgid "If [code]true[/code], collisions with [PhysicsBody2D]s will be reported."
-msgstr "Ha [code]true[/code], a rendszer jelenti a [PhysicsBody2D] testekkel történő ütközéseket."
+msgstr "Ha az értéke [code]true[/code], a sugár a [PhysicsBody2D] testekkel való metszéseket is jelzi."
 
 #. RayCast2D.collision_mask
 #: doc/classes/RayCast2D.xml
@@ -2444,17 +2444,17 @@ msgstr "Ha [code]true[/code], a rendszer jelenti az ütközéseket."
 #. RayCast2D.exclude_parent
 #: doc/classes/RayCast2D.xml
 msgid "If [code]true[/code], this raycast will not report collisions with its parent node. This property only has an effect if the parent node is a [CollisionObject2D]. See also [method Node.get_parent] and [method add_exception]."
-msgstr "Ha [code]true[/code], a sugár nem jelenti a saját szülőcsomópontjával történő ütközéseket. Ez a tulajdonság csak akkor működik, ha a szülő [CollisionObject2D]. Lásd még: [method Node.get_parent] és [method add_exception]."
+msgstr "Ha az értéke [code]true[/code], a sugár figyelmen kívül hagyja a saját szülőcsomópontjával való metszéseket. Ez a tulajdonság csak akkor működik, ha a szülő [CollisionObject2D]. Lásd még: [method Node.get_parent] és [method add_exception]."
 
 #. RayCast2D.hit_from_inside
 #: doc/classes/RayCast2D.xml
 msgid "If [code]true[/code], the ray will detect a hit when starting inside shapes. In this case the collision normal will be [code]Vector2(0, 0)[/code]. Does not affect concave polygon shapes."
-msgstr "Ha [code]true[/code], a sugár akkor is érzékeli a találatot, ha az alakzat belsejéből indul. Ilyenkor az ütközési normálvektor [code]Vector2(0, 0)[/code]. Homorú sokszög alakzatokra nincs hatással."
+msgstr "Ha az értéke [code]true[/code], a sugár akkor is találatot jelez, ha egy ütközési alakzat belsejéből indul. Ilyenkor az ütközési normálvektor [code]Vector2(0, 0)[/code]. Homorú sokszög alakzatokra nincs hatással."
 
 #. RayCast2D.target_position
 #: doc/classes/RayCast2D.xml
 msgid "The ray's destination point, relative to this raycast's [member Node2D.position]."
-msgstr "A sugár célpontja a sugárvizsgálat [member Node2D.position] pozíciójához viszonyítva."
+msgstr "A sugár célpontjának a [member Node2D.position] értékéhez viszonyított helyi pozíciója."
 
 #. RayCast2D.add_exception
 #: doc/classes/RayCast2D.xml
@@ -2474,7 +2474,7 @@ msgstr "Eltávolítja a sugár összes ütközési kivételét."
 #. RayCast2D.force_raycast_update
 #: doc/classes/RayCast2D.xml
 msgid "Updates the collision information for the ray immediately, without waiting for the next [code]_physics_process[/code] call. Use this method, for example, when the ray or its parent has changed state.\n[b]Note:[/b] [member enabled] does not need to be [code]true[/code] for this to work."
-msgstr "Azonnal frissíti a sugár ütközési adatait, anélkül hogy megvárná a következő [code]_physics_process[/code] hívást. Például akkor hasznos, ha a sugár vagy a szülője állapota megváltozott.\n[b]Megjegyzés:[/b] Ehhez a [member enabled] értékének nem kell [code]true[/code] értéken lennie."
+msgstr "Azonnal újraszámítja a sugár ütközési adatait, a következő [code]_physics_process[/code] hívás bevárása nélkül. Például akkor hasznos, ha a sugár vagy a szülője állapota megváltozott.\n[b]Megjegyzés:[/b] Ehhez a [member enabled] értékének nem kell [code]true[/code] értéken lennie."
 
 #. RayCast2D.get_collider
 #: doc/classes/RayCast2D.xml
@@ -2489,17 +2489,17 @@ msgstr "Visszaadja a sugár által metszett első objektum [RID] azonosítóját
 #. RayCast2D.get_collision_normal
 #: doc/classes/RayCast2D.xml
 msgid "Returns the normal of the intersecting object's shape at the collision point, or [code]Vector2(0, 0)[/code] if the ray starts inside the shape and [member hit_from_inside] is [code]true[/code].\n[b]Note:[/b] Check that [method is_colliding] returns [code]true[/code] before calling this method to ensure the returned normal is valid and up-to-date."
-msgstr "Visszaadja az eltalált objektum alakzatának normálvektorát az ütközési pontban, vagy [code]Vector2(0, 0)[/code] értéket, ha a sugár az alakzat belsejéből indul, és a [member hit_from_inside] értéke [code]true[/code].\n[b]Megjegyzés:[/b] Meghívás előtt ellenőrizd, hogy a [method is_colliding] [code]true[/code] értéket ad-e vissza; így a normálvektor érvényes és naprakész lesz."
+msgstr "Visszaadja az eltalált objektum alakzatának ütközési pontban mért normálvektorát, vagy [code]Vector2(0, 0)[/code] értéket, ha a sugár az alakzat belsejéből indul, és a [member hit_from_inside] értéke [code]true[/code].\n[b]Megjegyzés:[/b] Meghívás előtt ellenőrizd, hogy a [method is_colliding] [code]true[/code] értéket ad-e vissza; így a normálvektor érvényes és naprakész lesz."
 
 #. RayCast2D.get_collision_point
 #: doc/classes/RayCast2D.xml
 msgid "Returns the collision point at which the ray intersects the closest object, in the global coordinate system. If [member hit_from_inside] is [code]true[/code] and the ray starts inside of a collision shape, this function will return the origin point of the ray.\n[b]Note:[/b] Check that [method is_colliding] returns [code]true[/code] before calling this method to ensure the returned point is valid and up-to-date."
-msgstr "Visszaadja a sugár és a legközelebbi objektum metszéspontját globális koordinátákban. Ha a [member hit_from_inside] értéke [code]true[/code], és a sugár az ütközési alakzat belsejéből indul, a függvény a sugár kiindulópontját adja vissza.\n[b]Megjegyzés:[/b] Meghívás előtt ellenőrizd, hogy a [method is_colliding] [code]true[/code] értéket ad-e vissza; így a metszéspont érvényes és naprakész lesz."
+msgstr "Visszaadja a sugár és a legközelebbi eltalált objektum metszéspontjának globális koordinátáit. Ha a [member hit_from_inside] értéke [code]true[/code], és a sugár az ütközési alakzat belsejéből indul, a függvény a sugár kiindulópontját adja vissza.\n[b]Megjegyzés:[/b] Meghívás előtt ellenőrizd, hogy a [method is_colliding] [code]true[/code] értéket ad-e vissza; így a metszéspont érvényes és naprakész lesz."
 
 #. RayCast2D.is_colliding
 #: doc/classes/RayCast2D.xml
 msgid "Returns whether any object is intersecting with the ray's vector (considering the vector length)."
-msgstr "Visszaadja, hogy a sugár vektorát (annak hosszát is figyelembe véve) metszi-e bármilyen objektum."
+msgstr "Megadja, hogy a sugár meghatározott hosszúságú szakasza metsz-e bármilyen objektumot."
 
 #. RayCast2D.remove_exception
 #: doc/classes/RayCast2D.xml
