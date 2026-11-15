@@ -796,7 +796,7 @@ msgstr "Egyetlen csempe beállításai egy [TileSet] erőforrásban."
 #. TileData.description
 #: doc/classes/TileData.xml
 msgid "[TileData] object represents a single tile in a [TileSet]. It is usually edited using the tileset editor, but it can be modified at runtime using [method TileMapLayer._tile_data_runtime_update]."
-msgstr "A [TileData] objektum egyetlen csempét képvisel egy [TileSet] erőforrásban. Általában a csempekészlet-szerkesztőben módosítható, de a [method TileMapLayer._tile_data_runtime_update] segítségével futás közben is megváltoztathatók a tulajdonságai."
+msgstr "A [TileData] objektum egyetlen csempét képvisel egy [TileSet] erőforrásban. A tulajdonságait általában a csempekészlet-szerkesztőben állítjuk be, de a [method TileMapLayer._tile_data_runtime_update] metódussal futás közben is módosíthatók."
 
 #. TileData.flip_h
 #: doc/classes/TileData.xml
@@ -816,72 +816,72 @@ msgstr "Ha [code]true[/code], a csempe transzponálva jelenik meg, azaz a vízsz
 #. TileData.texture_origin
 #: doc/classes/TileData.xml
 msgid "Offsets the position of where the tile is drawn."
-msgstr "Eltolja a csempe kirajzolási helyét."
+msgstr "Meghatározza a csempe kirajzolási pozíciójának eltolását."
 
 #. TileData.modulate
 #: doc/classes/TileData.xml
 msgid "Color modulation of the tile."
-msgstr "A csempe színmodulációs értéke."
+msgstr "A csempe színét és átlátszóságát módosító színérték."
 
 #. TileData.probability
 #: doc/classes/TileData.xml
 msgid "Relative probability of this tile being selected when drawing a pattern of random tiles."
-msgstr "A csempe kiválasztásának relatív valószínűsége véletlenszerű csempeminta festésekor."
+msgstr "A csempe kiválasztásának relatív valószínűsége véletlenszerű csempékből álló minta festésekor."
 
 #. TileData.y_sort_origin
 #: doc/classes/TileData.xml
 msgid "Vertical point of the tile used for determining y-sorted order."
-msgstr "A csempe függőleges referenciapontja, amely az Y szerinti kirajzolási sorrend meghatározására szolgál."
+msgstr "A csempe Y-rendezéshez használt függőleges referenciapontja, amely befolyásolja a kirajzolási sorrendjét."
 
 #. TileData.z_index
 #: doc/classes/TileData.xml
 msgid "Ordering index of this tile, relative to [TileMapLayer]."
-msgstr "A csempe kirajzolási sorrendjét meghatározó index a [TileMapLayer] réteghez viszonyítva."
+msgstr "A csempe [TileMapLayer] csomóponthoz viszonyított kirajzolási sorrendjét meghatározó index."
 
 #. TileData.material
 #: doc/classes/TileData.xml
 msgid "The [Material] to use for this [TileData]. This can be a [CanvasItemMaterial] to use the default shader, or a [ShaderMaterial] to use a custom shader."
-msgstr "Az ehhez a [TileData] objektumhoz használt [Material]. Ez lehet [CanvasItemMaterial] az alapértelmezett shaderhez, vagy [ShaderMaterial] egyedi shader használatához."
+msgstr "A [TileData] objektumhoz rendelt [Material]. Az alapértelmezett árnyalóhoz [CanvasItemMaterial], egyéni árnyalóhoz [ShaderMaterial] használható."
 
 #. TileData.get_custom_data
 #: doc/classes/TileData.xml
 msgid "Returns the custom data value for custom data layer named [param layer_name]. To check if a custom data layer exists, use [method has_custom_data]."
-msgstr "Visszaadja a csempe [param layer_name] nevű egyediadatrétegben tárolt értékét. A réteg létezését a [method has_custom_data] metódussal ellenőrizheted."
+msgstr "Visszaadja a csempe [param layer_name] nevű egyediadatrétegében tárolt értéket. A réteg létezését a [method has_custom_data] metódussal ellenőrizheted."
 
 #. TileData.set_custom_data
 #: doc/classes/TileData.xml
 msgid "Sets the tile's custom data value for the TileSet custom data layer with name [param layer_name]."
-msgstr "Beállítja a csempe egyedi adatának értékét a TileSet erőforrás [param layer_name] nevű egyediadatrétegében."
+msgstr "Beállítja a csempe egyedi adatértékét a TileSet [param layer_name] nevű egyediadatrétegében."
 
 #. TileData.has_custom_data
 #: doc/classes/TileData.xml
 msgid "Returns whether there exists a custom data layer named [param layer_name]."
-msgstr "Megadja, hogy létezik-e a [param layer_name] nevű egyediadatréteg."
+msgstr "Megadja, hogy van-e [param layer_name] nevű egyediadatréteg."
 
 #. TileData.get_collision_polygons_count
 #: doc/classes/TileData.xml
 msgid "Returns how many polygons the tile has for TileSet physics layer with index [param layer_id]."
-msgstr "Visszaadja, hány ütközési sokszöge van a csempének a [param layer_id] indexű TileSet-fizikai rétegen."
+msgstr "Visszaadja a csempéhez tartozó ütközési sokszögek számát a [param layer_id] indexű TileSet-fizikai rétegen."
 
 #. TileData.get_collision_polygon_points
 #: doc/classes/TileData.xml
 msgid "Returns the points of the polygon at index [param polygon_index] for TileSet physics layer with index [param layer_id]."
-msgstr "Visszaadja a [param polygon_index] indexű sokszög pontjait a [param layer_id] indexű TileSet-fizikai rétegen."
+msgstr "Visszaadja a [param layer_id] indexű TileSet-fizikai réteg [param polygon_index] indexű ütközési sokszögének pontjait."
 
 #. TileData.set_collision_polygon_points
 #: doc/classes/TileData.xml
 msgid "Sets the points of the polygon at index [param polygon_index] for TileSet physics layer with index [param layer_id]."
-msgstr "Beállítja a [param polygon_index] indexű sokszög pontjait a [param layer_id] indexű TileSet-fizikai rétegen."
+msgstr "Beállítja a [param layer_id] indexű TileSet-fizikai réteg [param polygon_index] indexű ütközési sokszögének pontjait."
 
 #. TileData.get_navigation_polygon
 #: doc/classes/TileData.xml
 msgid "Returns the navigation polygon of the tile for the TileSet navigation layer with index [param layer_id].\n[param flip_h], [param flip_v], and [param transpose] allow transforming the returned polygon."
-msgstr "Visszaadja a csempe navigációs sokszögét a [param layer_id] indexű TileSet-navigációs rétegen.\nA [param flip_h], [param flip_v] és [param transpose] paraméterekkel a visszaadott sokszög átalakítható."
+msgstr "Visszaadja a csempe navigációs sokszögét a [param layer_id] indexű TileSet-navigációs rétegen.\nA visszaadott sokszög a [param flip_h], [param flip_v] és [param transpose] paraméterekkel tükrözhető vagy transzponálható."
 
 #. TileData.get_terrain_peering_bit
 #: doc/classes/TileData.xml
 msgid "Returns the tile's terrain bit for the given [param peering_bit] direction. To check that a direction is valid, use [method is_valid_terrain_peering_bit]."
-msgstr "Visszaadja a csempe terepilleszkedési bitjét a megadott [param peering_bit] irányhoz. Az irány érvényességét a [method is_valid_terrain_peering_bit] metódussal ellenőrizheted."
+msgstr "Visszaadja a csempe [param peering_bit] irányhoz tartozó terepilleszkedési bitjét. Az irány érvényességét a [method is_valid_terrain_peering_bit] metódussal ellenőrizheted."
 
 #. AnimatedSprite2D.brief
 #: doc/classes/AnimatedSprite2D.xml
