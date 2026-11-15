@@ -1024,12 +1024,12 @@ msgstr "[code]true[/code] értéket ad vissza, ha a test a [method move_and_slid
 #. CharacterBody2D.is_on_wall
 #: doc/classes/CharacterBody2D.xml
 msgid "Returns [code]true[/code] if the body collided with a wall on the last call of [method move_and_slide]. Otherwise, returns [code]false[/code]. The [member up_direction] and [member floor_max_angle] are used to determine whether a surface is \"wall\" or not."
-msgstr "[code]true[/code] értéket ad vissza, ha a test a [method move_and_slide] legutóbbi hívásakor fallal ütközött, egyébként [code]false[/code] értéket. A fal felismeréséhez a [member up_direction] és a [member floor_max_angle] tulajdonságokat használja."
+msgstr "[code]true[/code] értéket ad vissza, ha a test a [method move_and_slide] legutóbbi hívásakor fallal ütközött, egyébként [code]false[/code] értéket. A felületek falként való besorolását a [member up_direction] és a [member floor_max_angle] tulajdonságok határozzák meg."
 
 #. CharacterBody2D.is_on_ceiling
 #: doc/classes/CharacterBody2D.xml
 msgid "Returns [code]true[/code] if the body collided with the ceiling on the last call of [method move_and_slide]. Otherwise, returns [code]false[/code]. The [member up_direction] and [member floor_max_angle] are used to determine whether a surface is \"ceiling\" or not."
-msgstr "[code]true[/code] értéket ad vissza, ha a test a [method move_and_slide] legutóbbi hívásakor mennyezettel ütközött, egyébként [code]false[/code] értéket. A mennyezet felismeréséhez a [member up_direction] és a [member floor_max_angle] tulajdonságokat használja."
+msgstr "[code]true[/code] értéket ad vissza, ha a test a [method move_and_slide] legutóbbi hívásakor mennyezettel ütközött, egyébként [code]false[/code] értéket. A felületek mennyezetként való besorolását a [member up_direction] és a [member floor_max_angle] tulajdonságok határozzák meg."
 
 #. CharacterBody2D.get_real_velocity
 #: doc/classes/CharacterBody2D.xml
@@ -1074,17 +1074,17 @@ msgstr "Lehetővé teszi a test kézi talajhoz igazítását a sebességétől f
 #. CharacterBody2D.get_floor_angle
 #: doc/classes/CharacterBody2D.xml
 msgid "Returns the floor's collision angle at the last collision point according to [param up_direction], which is [constant Vector2.UP] by default. This value is always positive and only valid after calling [method move_and_slide] and when [method is_on_floor] returns [code]true[/code]."
-msgstr "Visszaadja a padló ütközési szögét a legutóbbi ütközési pontban, a [param up_direction] irányhoz viszonyítva, amely alapértelmezés szerint [constant Vector2.UP]. Az eredmény mindig pozitív, és csak a [method move_and_slide] meghívása után érvényes, amikor a [method is_on_floor] [code]true[/code] értéket ad vissza."
+msgstr "Visszaadja a legutóbbi ütközési pontnál mért padlószöget a [param up_direction] irányhoz viszonyítva. Ez az irány alapértelmezés szerint [constant Vector2.UP]. Az eredmény mindig pozitív, és csak a [method move_and_slide] meghívása után érvényes, amikor a [method is_on_floor] [code]true[/code] értéket ad vissza."
 
 #. CharacterBody2D.get_floor_normal
 #: doc/classes/CharacterBody2D.xml
 msgid "Returns the collision normal of the floor at the last collision point. Only valid after calling [method move_and_slide] and when [method is_on_floor] returns [code]true[/code].\n[b]Warning:[/b] The collision normal is not always the same as the surface normal."
-msgstr "Visszaadja a padló ütközési normálvektorát a legutóbbi ütközési pontban. Csak a [method move_and_slide] meghívása után érvényes, amikor a [method is_on_floor] [code]true[/code] értéket ad vissza.\n[b]Figyelmeztetés:[/b] Az ütközési normálvektor nem minden esetben egyezik meg a felület normálvektorával."
+msgstr "Visszaadja a padló ütközési normálvektorát a legutóbbi ütközési pontban. Csak a [method move_and_slide] meghívása után érvényes, és csak akkor, ha a [method is_on_floor] [code]true[/code] értéket ad vissza.\n[b]Figyelmeztetés:[/b] Az ütközési normálvektor nem minden esetben egyezik meg a felület normálvektorával."
 
 #. CharacterBody2D.get_last_slide_collision
 #: doc/classes/CharacterBody2D.xml
 msgid "Returns a [KinematicCollision2D] if a collision occurred. The returned value contains information about the latest collision that occurred during the last call to [method move_and_slide]. Returns [code]null[/code] if no collision occurred. See also [method get_slide_collision]."
-msgstr "Ha történt ütközés, egy [KinematicCollision2D] objektumot ad vissza, amely a legutóbbi [method move_and_slide] meghívás során történt utolsó ütközés adatait tartalmazza. Ha nem történt ütközés, [code]null[/code] értéket ad vissza. Lásd még: [method get_slide_collision]."
+msgstr "Ha történt ütközés, egy [KinematicCollision2D] objektumban visszaadja a legutóbbi [method move_and_slide] hívás utolsó ütközésének adatait. Ha nem történt ütközés, [code]null[/code] értéket ad vissza. Lásd még: [method get_slide_collision]."
 
 #. CharacterBody2D.get_platform_velocity
 #: doc/classes/CharacterBody2D.xml
@@ -1099,7 +1099,7 @@ msgstr "Visszaadja a legutóbbi [method move_and_slide] hívás során történt
 #. CharacterBody2D.get_wall_normal
 #: doc/classes/CharacterBody2D.xml
 msgid "Returns the collision normal of the wall at the last collision point. Only valid after calling [method move_and_slide] and when [method is_on_wall] returns [code]true[/code].\n[b]Warning:[/b] The collision normal is not always the same as the surface normal."
-msgstr "Visszaadja a fal ütközési normálvektorát a legutóbbi ütközési pontban. Csak a [method move_and_slide] meghívása után érvényes, amikor a [method is_on_wall] [code]true[/code] értéket ad vissza.\n[b]Figyelmeztetés:[/b] Az ütközési normálvektor nem minden esetben egyezik meg a felület normálvektorával."
+msgstr "Visszaadja a fal ütközési normálvektorát a legutóbbi ütközési pontban. Csak a [method move_and_slide] meghívása után érvényes, és csak akkor, ha a [method is_on_wall] [code]true[/code] értéket ad vissza.\n[b]Figyelmeztetés:[/b] Az ütközési normálvektor nem minden esetben egyezik meg a felület normálvektorával."
 
 #. CharacterBody2D.is_on_ceiling_only
 #: doc/classes/CharacterBody2D.xml
@@ -3978,17 +3978,17 @@ msgstr "Egy [PhysicsBody2D] mozgása során bekövetkezett ütközés adatait t�
 #. KinematicCollision2D.description
 #: doc/classes/KinematicCollision2D.xml
 msgid "Holds collision data from the movement of a [PhysicsBody2D], usually from [method PhysicsBody2D.move_and_collide]. When a [PhysicsBody2D] is moved, it stops if it detects a collision with another body. If a collision is detected, a [KinematicCollision2D] object is returned.\nThe collision data includes the colliding object, the remaining motion, and the collision position. This data can be used to determine a custom response to the collision."
-msgstr "Egy [PhysicsBody2D] mozgása során bekövetkezett ütközés adatait tárolja, rendszerint a [method PhysicsBody2D.move_and_collide] metódus eredményeként. Amikor egy [PhysicsBody2D] mozog, megáll, ha egy másik testtel ütközést észlel. Ütközés esetén egy [KinematicCollision2D] objektumot ad vissza.\nAz ütközési adatok között megtalálható az ütköző objektum, a hátralévő mozgás és az ütközés pozíciója. Ezekből egyéni ütközési reakció alakítható ki."
+msgstr "Egy [PhysicsBody2D] mozgása során bekövetkezett ütközés adatait tárolja, rendszerint a [method PhysicsBody2D.move_and_collide] metódus eredményeként. Amikor egy [PhysicsBody2D] mozog, megáll, ha egy másik testtel ütközést észlel. Ütközés esetén egy [KinematicCollision2D] objektumot ad vissza.\nAz ütközési adatok tartalmazzák az ütköző objektumot, a hátralévő elmozdulást és az ütközés helyét. Ezek alapján egyéni reakciót határozhatsz meg az ütközésre."
 
 #. KinematicCollision2D.get_angle
 #: doc/classes/KinematicCollision2D.xml
 msgid "Returns the collision angle according to [param up_direction], which is [constant Vector2.UP] by default. This value is always positive."
-msgstr "Visszaadja az ütközési szöget a [param up_direction] irányhoz viszonyítva, amely alapértelmezés szerint [constant Vector2.UP]. Az érték mindig pozitív."
+msgstr "Visszaadja az ütközési szöget a [param up_direction] irányhoz viszonyítva, amely alapértelmezés szerint [constant Vector2.UP]. A visszaadott szög mindig pozitív."
 
 #. KinematicCollision2D.get_collider
 #: doc/classes/KinematicCollision2D.xml
 msgid "Returns the colliding body's attached [Object]."
-msgstr "Visszaadja az ütköző testhez kapcsolt [Object] objektumot."
+msgstr "Visszaadja az ütköző testhez kapcsolódó [Object] példányt."
 
 #. KinematicCollision2D.get_collider_id
 #: doc/classes/KinematicCollision2D.xml
@@ -4003,12 +4003,12 @@ msgstr "Visszaadja az ütköző test [PhysicsServer2D] által használt [RID] az
 #. KinematicCollision2D.get_collider_shape
 #: doc/classes/KinematicCollision2D.xml
 msgid "Returns the colliding body's shape."
-msgstr "Visszaadja az ütköző test alakzatát."
+msgstr "Visszaadja az ütköző test ütközésben részt vevő alakzatát."
 
 #. KinematicCollision2D.get_collider_shape_index
 #: doc/classes/KinematicCollision2D.xml
 msgid "Returns the colliding body's shape index. See [CollisionObject2D]."
-msgstr "Visszaadja az ütköző test alakzatának indexét. Lásd: [CollisionObject2D]."
+msgstr "Visszaadja az ütköző test ütközésben részt vevő alakzatának indexét. Lásd: [CollisionObject2D]."
 
 #. KinematicCollision2D.get_collider_velocity
 #: doc/classes/KinematicCollision2D.xml
@@ -4018,12 +4018,12 @@ msgstr "Visszaadja az ütköző test sebességét."
 #. KinematicCollision2D.get_depth
 #: doc/classes/KinematicCollision2D.xml
 msgid "Returns the colliding body's length of overlap along the collision normal."
-msgstr "Visszaadja az ütköző testek átfedésének hosszát az ütközési normálvektor mentén."
+msgstr "Visszaadja az ütköző testek átfedésének mértékét az ütközési normálvektor mentén."
 
 #. KinematicCollision2D.get_local_shape
 #: doc/classes/KinematicCollision2D.xml
 msgid "Returns the moving object's colliding shape."
-msgstr "Visszaadja a mozgó objektum ütközésben részt vevő alakzatát."
+msgstr "Visszaadja a mozgó test ütközésben részt vevő alakzatát."
 
 #. KinematicCollision2D.get_normal
 #: doc/classes/KinematicCollision2D.xml
@@ -4033,17 +4033,17 @@ msgstr "Visszaadja az ütköző test alakzatának normálvektorát az ütközés
 #. KinematicCollision2D.get_position
 #: doc/classes/KinematicCollision2D.xml
 msgid "Returns the point of collision in global coordinates."
-msgstr "Visszaadja az ütközési pontot globális koordinátákban."
+msgstr "Visszaadja az ütközési pont globális koordinátáit."
 
 #. KinematicCollision2D.get_remainder
 #: doc/classes/KinematicCollision2D.xml
 msgid "Returns the moving object's remaining movement vector."
-msgstr "Visszaadja a mozgó objektum ütközés után hátralévő mozgásvektorát."
+msgstr "Visszaadja a mozgó objektum ütközés után hátralévő elmozdulásvektorát."
 
 #. KinematicCollision2D.get_travel
 #: doc/classes/KinematicCollision2D.xml
 msgid "Returns the moving object's travel before collision."
-msgstr "Visszaadja a mozgó objektum ütközés előtti elmozdulását."
+msgstr "Visszaadja a mozgó objektum ütközésig megtett elmozdulását."
 
 #. CollisionPolygon2D.brief
 #: doc/classes/CollisionPolygon2D.xml
