@@ -31,7 +31,7 @@ msgstr "Törli a [param coords] koordinátájú cellát."
 #. TileMapLayer.fix_invalid_tiles
 #: doc/classes/TileMapLayer.xml
 msgid "Clears cells containing tiles that do not exist in the [member tile_set]."
-msgstr "Törli azokat a cellákat, amelyek a [member tile_set] készletben nem létező csempéket tartalmaznak."
+msgstr "Törli azokat a cellákat, amelyek a [member tile_set] csempekészletben nem szereplő csempéket tartalmaznak."
 
 #. TileMapLayer.get_cell_source_id
 #: doc/classes/TileMapLayer.xml
@@ -41,17 +41,17 @@ msgstr "Visszaadja a [param coords] koordinátájú cella csempeforrás-azonosí
 #. TileMapLayer.get_cell_atlas_coords
 #: doc/classes/TileMapLayer.xml
 msgid "Returns the tile atlas coordinates ID of the cell at coordinates [param coords]. Returns [code]Vector2i(-1, -1)[/code] if the cell does not exist."
-msgstr "Visszaadja a [param coords] koordinátájú cellához tartozó csempe atlaszkoordináta-azonosítóját. Ha a cella nem létezik, [code]Vector2i(-1, -1)[/code] értéket ad vissza."
+msgstr "Visszaadja a [param coords] koordinátájú cellához tartozó csempe atlaszbeli koordinátáit. Ha a cella nem létezik, [code]Vector2i(-1, -1)[/code] értéket ad vissza."
 
 #. TileMapLayer.get_cell_alternative_tile
 #: doc/classes/TileMapLayer.xml
 msgid "Returns the tile alternative ID of the cell at coordinates [param coords]."
-msgstr "Visszaadja a [param coords] koordinátájú cellában használt alternatív csempe azonosítóját."
+msgstr "Visszaadja a [param coords] koordinátájú cella alternatív csempeazonosítóját."
 
 #. TileMapLayer.get_used_rect
 #: doc/classes/TileMapLayer.xml
 msgid "Returns a rectangle enclosing the used (non-empty) tiles of the map."
-msgstr "Visszaad egy téglalapot, amely körülhatárolja a térkép használt (nem üres) csempéit."
+msgstr "Visszaadja a térkép összes használt (nem üres) celláját körülhatároló téglalapot."
 
 #. TileMapLayer.get_used_cells
 #: doc/classes/TileMapLayer.xml
@@ -71,12 +71,12 @@ msgstr "Visszaadja a [param coords] koordinátájú cellával él mentén szomsz
 #. TileMapLayer.get_pattern
 #: doc/classes/TileMapLayer.xml
 msgid "Creates and returns a new [TileMapPattern] from the given array of cells. See also [method set_pattern]."
-msgstr "Létrehoz és visszaad egy új [TileMapPattern] mintát a megadott cellatömbből. Lásd még: [method set_pattern]."
+msgstr "A megadott cellatömb alapján létrehoz egy új [TileMapPattern] mintát, és visszaadja azt. Lásd még: [method set_pattern]."
 
 #. TileMapLayer.set_pattern
 #: doc/classes/TileMapLayer.xml
 msgid "Pastes the [TileMapPattern] at the given [param position] in the tile map. See also [method get_pattern]."
-msgstr "Beilleszti a [TileMapPattern] mintát a csempetérkép megadott [param position] pozíciójába. Lásd még: [method get_pattern]."
+msgstr "Beilleszti a [TileMapPattern] mintát a csempetérkép [param position] pozíciójába. Lásd még: [method get_pattern]."
 
 #. TileMapLayer.local_to_map
 #: doc/classes/TileMapLayer.xml
@@ -191,7 +191,7 @@ msgstr "Megadja, hogy a [param body] [RID] azonosító a [TileMapLayer] valamely
 #. TileMapLayer.map_pattern
 #: doc/classes/TileMapLayer.xml
 msgid "Returns for the given coordinates [param coords_in_pattern] in a [TileMapPattern] the corresponding cell coordinates if the pattern was pasted at the [param position_in_tilemap] coordinates (see [method set_pattern]). This mapping is required as in half-offset tile shapes, the mapping might not work by calculating [code]position_in_tile_map + coords_in_pattern[/code]."
-msgstr "Egy [TileMapPattern] minta [param coords_in_pattern] koordinátáihoz visszaadja a megfelelő cellakoordinátákat, mintha a mintát a [param position_in_tilemap] koordinátáknál illesztetted volna be (lásd [method set_pattern]). Az átalakításra azért van szükség, mert féleltolásos csempealakzatoknál az egyszerű [code]position_in_tile_map + coords_in_pattern[/code] összeadás nem feltétlenül megfelelő."
+msgstr "A [TileMapPattern] mintán belüli [param coords_in_pattern] koordinátákhoz visszaadja a megfelelő térképcella-koordinátákat, ha a mintát a [param position_in_tilemap] koordinátáknál illeszted be (lásd [method set_pattern]). Az átalakításra azért van szükség, mert féleltolásos csempealakzatoknál az egyszerű [code]position_in_tile_map + coords_in_pattern[/code] összeadás nem feltétlenül megfelelő."
 
 #. TileMapLayer.notify_runtime_tile_data_update
 #: doc/classes/TileMapLayer.xml
@@ -201,17 +201,17 @@ msgstr "Jelzi a [TileMapLayer] számára, hogy a [method _use_tile_data_runtime_
 #. TileMapLayer.set_cell
 #: doc/classes/TileMapLayer.xml
 msgid "Sets the tile identifiers for the cell at coordinates [param coords]. Each tile of the [TileSet] is identified using three parts:\n- The source identifier [param source_id] identifies a [TileSetSource] identifier. See [method TileSet.set_source_id],\n- The atlas coordinate identifier [param atlas_coords] identifies a tile coordinates in the atlas (if the source is a [TileSetAtlasSource]). For [TileSetScenesCollectionSource] it should always be [code]Vector2i(0, 0)[/code],\n- The alternative tile identifier [param alternative_tile] identifies a tile alternative in the atlas (if the source is a [TileSetAtlasSource]), and the scene for a [TileSetScenesCollectionSource].\nIf [param source_id] is set to [code]-1[/code], [param atlas_coords] to [code]Vector2i(-1, -1)[/code], or [param alternative_tile] to [code]-1[/code], the cell will be erased. An erased cell gets [b]all[/b] its identifiers automatically set to their respective invalid values, namely [code]-1[/code], [code]Vector2i(-1, -1)[/code] and [code]-1[/code]."
-msgstr "Beállítja a [param coords] koordinátájú cella csempeazonosítóit. A [TileSet] minden csempéjét három összetevő azonosítja:\n- A [param source_id] forrásazonosító, amely egy [TileSetSource] forrást jelöl. Lásd: [method TileSet.set_source_id];\n- Az [param atlas_coords] atlaszkoordináta, amely egy csempét azonosít az atlaszban ([TileSetAtlasSource] esetén). [TileSetScenesCollectionSource] forrásnál mindig [code]Vector2i(0, 0)[/code] értékű;\n- A [param alternative_tile] alternatív csempeazonosító, amely az atlaszbeli változatot jelöli ([TileSetAtlasSource] esetén), illetve a jelenetet azonosítja [TileSetScenesCollectionSource] forrásnál.\nHa a [param source_id] értéke [code]-1[/code], vagy az [param atlas_coords] értéke [code]Vector2i(-1, -1)[/code], vagy a [param alternative_tile] értéke [code]-1[/code], a cella törlődik. A törölt cella [b]összes[/b] azonosítója automatikusan érvénytelen lesz: [code]-1[/code], [code]Vector2i(-1, -1)[/code] és [code]-1[/code]."
+msgstr "Beállítja a [param coords] koordinátájú cella csempeazonosítóit. A [TileSet] minden csempéjét három összetevő azonosítja:\n- A [param source_id] forrásazonosító, amely egy [TileSetSource] forrást jelöl. Lásd: [method TileSet.set_source_id];\n- A [param atlas_coords] paraméter a csempe atlaszbeli koordinátáit adja meg ([TileSetAtlasSource] esetén). [TileSetScenesCollectionSource] forrásnál az értéke mindig [code]Vector2i(0, 0)[/code];\n- A [param alternative_tile] az atlaszbeli csempeváltozatot azonosítja ([TileSetAtlasSource] esetén), illetve a jelenetet [TileSetScenesCollectionSource] forrásnál.\nHa a [param source_id] értéke [code]-1[/code], vagy a [param atlas_coords] értéke [code]Vector2i(-1, -1)[/code], vagy a [param alternative_tile] értéke [code]-1[/code], a cella törlődik. A törölt cella [b]összes[/b] azonosítója automatikusan érvénytelen lesz: [code]-1[/code], [code]Vector2i(-1, -1)[/code] és [code]-1[/code]."
 
 #. TileMapLayer.set_cells_terrain_connect
 #: doc/classes/TileMapLayer.xml
 msgid "Update all the cells in the [param cells] coordinates array so that they use the given [param terrain] for the given [param terrain_set]. If an updated cell has the same terrain as one of its neighboring cells, this function tries to join the two. This function might update neighboring tiles if needed to create correct terrain transitions.\nIf [param ignore_empty_terrains] is [code]true[/code], empty terrains will be ignored when trying to find the best fitting tile for the given terrain constraints.\n[b]Note:[/b] To work correctly, this method requires the [TileMapLayer]'s TileSet to have terrains set up with all required terrain combinations. Otherwise, it may produce unexpected results."
-msgstr "A [param cells] koordinátatömb összes celláját frissíti, hogy a megadott [param terrain_set] terepkészlet [param terrain] tereptípusát használják. Ha valamelyik frissített cella egy szomszédos cellával azonos tereptípusú, megpróbálja összekapcsolni őket. A megfelelő terepátmenetek kialakításához szükség esetén a szomszédos csempéket is módosíthatja.\nHa a [param ignore_empty_terrains] értéke [code]true[/code], a legjobban illeszkedő csempe kiválasztásakor figyelmen kívül hagyja az üres tereptípusokat.\n[b]Megjegyzés:[/b] A helyes működéshez a [TileMapLayer] által használt TileSet erőforrásban minden szükséges terepkombinációt be kell állítani. Máskülönben váratlan eredmény születhet."
+msgstr "A [param cells] koordinátatömbben felsorolt cellákat úgy frissíti, hogy a [param terrain_set] terepkészlet [param terrain] tereptípusát használják. Ha egy módosított cella tereptípusa megegyezik valamelyik szomszédjáéval, a metódus megpróbálja összekapcsolni őket. A megfelelő terepátmenetek kialakításához szükség esetén a szomszédos csempéket is módosíthatja.\nHa a [param ignore_empty_terrains] értéke [code]true[/code], a legjobban illeszkedő csempe kiválasztásakor figyelmen kívül hagyja az üres tereptípusokat.\n[b]Megjegyzés:[/b] A helyes működéshez a [TileMapLayer] által használt TileSet erőforrásban minden szükséges terepkombinációt be kell állítani. Máskülönben váratlan eredmény születhet."
 
 #. TileMapLayer.set_cells_terrain_path
 #: doc/classes/TileMapLayer.xml
 msgid "Update all the cells in the [param path] coordinates array so that they use the given [param terrain] for the given [param terrain_set]. The function will also connect two successive cell in the path with the same terrain. This function might update neighboring tiles if needed to create correct terrain transitions.\nIf [param ignore_empty_terrains] is [code]true[/code], empty terrains will be ignored when trying to find the best fitting tile for the given terrain constraints.\n[b]Note:[/b] To work correctly, this method requires the [TileMapLayer]'s TileSet to have terrains set up with all required terrain combinations. Otherwise, it may produce unexpected results."
-msgstr "A [param path] koordinátatömb összes celláját frissíti, hogy a megadott [param terrain_set] terepkészlet [param terrain] tereptípusát használják. A függvény az útvonal két egymást követő, azonos tereptípusú celláját is összekapcsolja. Szükség esetén a szomszédos csempéket is módosíthatja a megfelelő terepátmenetekhez.\nHa a [param ignore_empty_terrains] értéke [code]true[/code], a legjobban illeszkedő csempe kiválasztásakor figyelmen kívül hagyja az üres tereptípusokat.\n[b]Megjegyzés:[/b] A helyes működéshez a [TileMapLayer] által használt TileSet erőforrásban minden szükséges terepkombinációt be kell állítani. Máskülönben váratlan eredmény születhet."
+msgstr "A [param path] koordinátatömbben felsorolt cellákat úgy frissíti, hogy a [param terrain_set] terepkészlet [param terrain] tereptípusát használják. Az útvonal egymást követő, azonos tereptípusú celláit össze is kapcsolja. Szükség esetén a szomszédos csempéket is módosíthatja a megfelelő terepátmenetekhez.\nHa a [param ignore_empty_terrains] értéke [code]true[/code], a legjobban illeszkedő csempe kiválasztásakor figyelmen kívül hagyja az üres tereptípusokat.\n[b]Megjegyzés:[/b] A helyes működéshez a [TileMapLayer] által használt TileSet erőforrásban minden szükséges terepkombinációt be kell állítani. Máskülönben váratlan eredmény születhet."
 
 #. TileMapLayer.set_navigation_map
 #: doc/classes/TileMapLayer.xml
