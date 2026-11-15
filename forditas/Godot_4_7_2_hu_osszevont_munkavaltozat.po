@@ -2608,17 +2608,17 @@ msgstr "2D-s fizikai test, amelyet külső erők nem tudnak elmozdítani. Közve
 #. StaticBody2D.description
 #: doc/classes/StaticBody2D.xml
 msgid "A static 2D physics body. It can't be moved by external forces or contacts, but can be moved manually by other means such as code, [AnimationMixer]s (with [member AnimationMixer.callback_mode_process] set to [constant AnimationMixer.ANIMATION_CALLBACK_MODE_PROCESS_PHYSICS]), and [RemoteTransform2D].\nWhen [StaticBody2D] is moved, it is teleported to its new position without affecting other physics bodies in its path. If this is not desired, use [AnimatableBody2D] instead.\n[StaticBody2D] is useful for completely static objects like floors and walls, as well as moving surfaces like conveyor belts and circular revolving platforms (by using [member constant_linear_velocity] and [member constant_angular_velocity])."
-msgstr "Statikus 2D-s fizikai test. Külső erők és érintkezések nem mozdítják el, de közvetlenül áthelyezhető például kóddal, [AnimationMixer] csomópontokkal (ha a [member AnimationMixer.callback_mode_process] értéke [constant AnimationMixer.ANIMATION_CALLBACK_MODE_PROCESS_PHYSICS]), illetve [RemoteTransform2D] segítségével.\nA [StaticBody2D] áthelyezéskor közvetlenül az új pozíciójára kerül, anélkül hogy a köztes útvonalon lévő fizikai testekre hatna. Ha ez nem kívánatos, használj helyette [AnimatableBody2D] csomópontot.\nA [StaticBody2D] teljesen mozdulatlan tárgyakhoz, például padlókhoz és falakhoz, valamint mozgó felületekhez, például futószalagokhoz és forgó platformokhoz hasznos (a [member constant_linear_velocity] és [member constant_angular_velocity] használatával)."
+msgstr "Statikus 2D-s fizikai test. Külső erők és érintkezések nem mozdítják el, de közvetlenül áthelyezhető például kóddal, [AnimationMixer] csomópontokkal (ha a [member AnimationMixer.callback_mode_process] értéke [constant AnimationMixer.ANIMATION_CALLBACK_MODE_PROCESS_PHYSICS]), illetve [RemoteTransform2D] segítségével.\nA [StaticBody2D] áthelyezéskor azonnal az új pozíciójára kerül, mintha odateleportálna, és nem hat a két pozíció közötti fizikai testekre. Ha ez nem kívánatos, használj helyette [AnimatableBody2D] csomópontot.\nA [StaticBody2D] teljesen mozdulatlan tárgyakhoz, például padlókhoz és falakhoz, valamint mozgó felületekhez, például futószalagokhoz és forgó platformokhoz hasznos (a [member constant_linear_velocity] és [member constant_angular_velocity] használatával)."
 
 #. StaticBody2D.constant_angular_velocity
 #: doc/classes/StaticBody2D.xml
 msgid "The body's constant angular velocity. This does not rotate the body, but affects touching bodies, as if it were rotating."
-msgstr "A test állandó szögsebessége. Az érték nem forgatja el a testet, de az érintkező testekre úgy hat, mintha az forogna."
+msgstr "A test állandó szögsebessége. Ettől maga a test nem forog, de a vele érintkező testekre úgy hat, mintha forogna."
 
 #. StaticBody2D.constant_linear_velocity
 #: doc/classes/StaticBody2D.xml
 msgid "The body's constant linear velocity. This does not move the body, but affects touching bodies, as if it were moving."
-msgstr "A test állandó lineáris sebessége. Az érték nem mozdítja el a testet, de az érintkező testekre úgy hat, mintha az mozogna."
+msgstr "A test állandó lineáris sebessége. Ettől maga a test nem mozdul el, de a vele érintkező testekre úgy hat, mintha mozogna."
 
 #. StaticBody2D.physics_material_override
 #: doc/classes/StaticBody2D.xml
@@ -2638,7 +2638,7 @@ msgstr "Állapotgépként működő gráf, amely az animációs állapotokat ké
 #. AnimationNodeStateMachine.allow_transition_to_self
 #: doc/classes/AnimationNodeStateMachine.xml
 msgid "If [code]true[/code], allows teleport to the self state with [method AnimationNodeStateMachinePlayback.travel]. When the reset option is enabled in [method AnimationNodeStateMachinePlayback.travel], the animation is restarted. If [code]false[/code], nothing happens on the teleportation to the self state."
-msgstr "Ha [code]true[/code], a [method AnimationNodeStateMachinePlayback.travel] segítségével engedélyezett az aktuális állapotba történő visszalépés. Ha a [method AnimationNodeStateMachinePlayback.travel] reset opciója be van kapcsolva, az animáció újraindul. Ha [code]false[/code], az aktuális állapotba történő visszalépésnek nincs hatása."
+msgstr "Ha [code]true[/code], a [method AnimationNodeStateMachinePlayback.travel] metódussal az állapotgép a már aktív állapotába is átléphet. Ha a [method AnimationNodeStateMachinePlayback.travel] reset opciója be van kapcsolva, az animáció újraindul. Ha [code]false[/code], az aktuális állapotba történő visszalépésnek nincs hatása."
 
 #. AnimationNodeStateMachine.reset_ends
 #: doc/classes/AnimationNodeStateMachine.xml
