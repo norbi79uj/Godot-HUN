@@ -56,17 +56,17 @@ msgstr "Visszaad egy téglalapot, amely körülhatárolja a térkép használt (
 #. TileMapLayer.get_used_cells
 #: doc/classes/TileMapLayer.xml
 msgid "Returns a [Vector2i] array with the positions of all cells containing a tile. A cell is considered empty if its source identifier equals [code]-1[/code], its atlas coordinate identifier is [code]Vector2(-1, -1)[/code] and its alternative identifier is [code]-1[/code]."
-msgstr "Egy [Vector2i] tömbben visszaadja az összes csempét tartalmazó cella helyét. Egy cella akkor számít üresnek, ha a forrásazonosítója [code]-1[/code], az atlaszkoordináta-azonosítója [code]Vector2(-1, -1)[/code], az alternatív azonosítója pedig [code]-1[/code]."
+msgstr "Egy [Vector2i] tömbben visszaadja az összes olyan cella pozícióját, amely csempét tartalmaz. Egy cella akkor számít üresnek, ha a forrásazonosítója [code]-1[/code], az atlaszkoordináta-azonosítója [code]Vector2(-1, -1)[/code], az alternatív azonosítója pedig [code]-1[/code]."
 
 #. TileMapLayer.get_neighbor_cell
 #: doc/classes/TileMapLayer.xml
 msgid "Returns the neighboring cell to the one at coordinates [param coords], identified by the [param neighbor] direction. This method takes into account the different layouts a TileMap can take."
-msgstr "Visszaadja a [param coords] koordinátáknál található cella [param neighbor] irány szerinti szomszédját. A metódus figyelembe veszi a csempetérkép különböző elrendezéseit."
+msgstr "Visszaadja a [param coords] koordinátájú cella [param neighbor] irányban lévő szomszédját. A metódus figyelembe veszi a csempetérkép különböző elrendezéseit."
 
 #. TileMapLayer.get_surrounding_cells
 #: doc/classes/TileMapLayer.xml
 msgid "Returns the list of all neighboring cells to the one at [param coords]. Any neighboring cell is one that is touching edges, so for a square cell 4 cells would be returned, for a hexagon 6 cells are returned."
-msgstr "Visszaadja a [param coords] koordinátáknál található cellával él mentén szomszédos cellák listáját. Négyzetes cellánál ez 4, hatszögletűnél pedig 6 cellát jelent."
+msgstr "Visszaadja a [param coords] koordinátájú cellával él mentén szomszédos cellák listáját. Négyzetes cellánál ez 4, hatszögletűnél pedig 6 cellát jelent."
 
 #. TileMapLayer.get_pattern
 #: doc/classes/TileMapLayer.xml
@@ -81,12 +81,12 @@ msgstr "Beilleszti a [TileMapPattern] mintát a csempetérkép megadott [param p
 #. TileMapLayer.local_to_map
 #: doc/classes/TileMapLayer.xml
 msgid "Returns the map coordinates of the cell containing the given [param local_position]. If [param local_position] is in global coordinates, consider using [method Node2D.to_local] before passing it to this method. See also [method map_to_local]."
-msgstr "Visszaadja annak a cellának a térképkoordinátáit, amely tartalmazza a megadott [param local_position] pontot. Ha [param local_position] globális koordinátákkal van megadva, előbb célszerű a [method Node2D.to_local] metódussal átalakítani. Lásd még: [method map_to_local]."
+msgstr "Visszaadja annak a cellának a térképkoordinátáit, amelybe a megadott [param local_position] pozíció esik. Ha a [param local_position] globális koordinátákban van megadva, előbb célszerű a [method Node2D.to_local] metódussal helyi koordinátákká alakítani. Lásd még: [method map_to_local]."
 
 #. TileMapLayer.map_to_local
 #: doc/classes/TileMapLayer.xml
 msgid "Returns the centered position of a cell in the [TileMapLayer]'s local coordinate space. To convert the returned value into global coordinates, use [method Node2D.to_global]. See also [method local_to_map].\n[b]Note:[/b] This may not correspond to the visual position of the tile, i.e. it ignores the [member TileData.texture_origin] property of individual tiles."
-msgstr "Visszaadja a cella középpontjának helyét a [TileMapLayer] helyi koordinátarendszerében. A visszaadott érték globális koordinátává alakításához használd a [method Node2D.to_global] metódust. Lásd még: [method local_to_map].\n[b]Megjegyzés:[/b] Ez nem feltétlenül egyezik meg a csempe látható helyzetével, mert figyelmen kívül hagyja az egyes csempék [member TileData.texture_origin] tulajdonságát."
+msgstr "Visszaadja a cella középpontjának pozícióját a [TileMapLayer] helyi koordinátarendszerében. A visszaadott érték globális koordinátává alakításához használd a [method Node2D.to_global] metódust. Lásd még: [method local_to_map].\n[b]Megjegyzés:[/b] Ez nem feltétlenül egyezik meg a csempe látható helyzetével, mert figyelmen kívül hagyja az egyes csempék [member TileData.texture_origin] tulajdonságát."
 
 #. TileMapLayer.collision_enabled
 #: doc/classes/TileMapLayer.xml
@@ -121,17 +121,17 @@ msgstr "A réteg által használt [TileSet]. Ez tárolja az elérhető csempék 
 #. TileMapLayer.is_cell_flipped_h
 #: doc/classes/TileMapLayer.xml
 msgid "Returns [code]true[/code] if the cell at coordinates [param coords] is flipped horizontally. The result is valid only for atlas sources."
-msgstr "[code]true[/code] értéket ad vissza, ha a [param coords] koordinátáknál található cella vízszintesen tükrözött. Az eredmény csak atlaszforrásoknál érvényes."
+msgstr "[code]true[/code] értéket ad vissza, ha a [param coords] koordinátájú cella vízszintesen tükrözött. Az eredmény csak atlaszforrásoknál érvényes."
 
 #. TileMapLayer.is_cell_flipped_v
 #: doc/classes/TileMapLayer.xml
 msgid "Returns [code]true[/code] if the cell at coordinates [param coords] is flipped vertically. The result is valid only for atlas sources."
-msgstr "[code]true[/code] értéket ad vissza, ha a [param coords] koordinátáknál található cella függőlegesen tükrözött. Az eredmény csak atlaszforrásoknál érvényes."
+msgstr "[code]true[/code] értéket ad vissza, ha a [param coords] koordinátájú cella függőlegesen tükrözött. Az eredmény csak atlaszforrásoknál érvényes."
 
 #. TileMapLayer.is_cell_transposed
 #: doc/classes/TileMapLayer.xml
 msgid "Returns [code]true[/code] if the cell at coordinates [param coords] is transposed. The result is valid only for atlas sources."
-msgstr "[code]true[/code] értéket ad vissza, ha a [param coords] koordinátáknál található cella transzponált. Az eredmény csak atlaszforrásoknál érvényes."
+msgstr "[code]true[/code] értéket ad vissza, ha a [param coords] koordinátájú cella transzponált. Az eredmény csak atlaszforrásoknál érvényes."
 
 #. TileMapLayer.y_sort_origin
 #: doc/classes/TileMapLayer.xml
@@ -181,7 +181,7 @@ msgstr "Visszaadja a [TileMapLayer] által használt [NavigationServer2D] navig�
 #. TileMapLayer.get_used_cells_by_id
 #: doc/classes/TileMapLayer.xml
 msgid "Returns a [Vector2i] array with the positions of all cells containing a tile. Tiles may be filtered according to their source ([param source_id]), their atlas coordinates ([param atlas_coords]), or alternative id ([param alternative_tile]).\nIf a parameter has its value set to the default one, this parameter is not used to filter a cell. Thus, if all parameters have their respective default values, this method returns the same result as [method get_used_cells].\nA cell is considered empty if its source identifier equals [code]-1[/code], its atlas coordinate identifier is [code]Vector2(-1, -1)[/code] and its alternative identifier is [code]-1[/code]."
-msgstr "Egy [Vector2i] tömbben visszaadja a csempét tartalmazó cellák pozícióit. A csempék szűrhetők forrásazonosító ([param source_id]), atlaszkoordináták ([param atlas_coords]) vagy alternatív azonosító ([param alternative_tile]) alapján.\nHa valamelyik paraméter az alapértelmezett értékét kapja, a rendszer nem szűr annak alapján. Ha minden paraméter alapértelmezett, a metódus ugyanazt adja vissza, mint a [method get_used_cells].\nA cella akkor üres, ha a forrásazonosítója [code]-1[/code], az atlaszkoordinátája [code]Vector2(-1, -1)[/code], az alternatív azonosítója pedig [code]-1[/code]."
+msgstr "Egy [Vector2i] tömbben visszaadja az összes olyan cella pozícióját, amely csempét tartalmaz. A csempék szűrhetők forrásazonosító ([param source_id]), atlaszkoordináták ([param atlas_coords]) vagy alternatív azonosító ([param alternative_tile]) alapján.\nHa valamelyik paraméter az alapértelmezett értékét kapja, a rendszer nem szűr annak alapján. Ha minden paraméter alapértelmezett, a metódus ugyanazt adja vissza, mint a [method get_used_cells].\nA cella akkor üres, ha a forrásazonosítója [code]-1[/code], az atlaszkoordinátája [code]Vector2(-1, -1)[/code], az alternatív azonosítója pedig [code]-1[/code]."
 
 #. TileMapLayer.has_body_rid
 #: doc/classes/TileMapLayer.xml
