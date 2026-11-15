@@ -751,7 +751,7 @@ msgstr "Eltávolítja a [param atlas_coords] koordinátáknál található csemp
 #. TileSetAtlasSource.remove_alternative_tile
 #: doc/classes/TileSetAtlasSource.xml
 msgid "Remove a tile's alternative with alternative ID [param alternative_tile].\nCalling this function with [param alternative_tile] equals to 0 will fail, as the base tile alternative cannot be removed."
-msgstr "Eltávolítja a csempe [param alternative_tile] alternatív azonosítójú változatát.\nA függvény meghívása 0 értékű [param alternative_tile] paraméterrel sikertelen lesz, mert az alapcsempe alternatívája nem távolítható el."
+msgstr "Eltávolítja a csempe [param alternative_tile] alternatív azonosítójú változatát.\nA függvény meghívása 0 értékű [param alternative_tile] paraméterrel sikertelen lesz, mert a csempe 0 azonosítójú alapváltozata nem távolítható el."
 
 #. TileSetAtlasSource.get_tile_data
 #: doc/classes/TileSetAtlasSource.xml
@@ -786,7 +786,7 @@ msgstr "Beállítja a [param atlas_coords] koordinátáknál található csempe 
 #. TileSetAtlasSource.get_tile_animation_total_duration
 #: doc/classes/TileSetAtlasSource.xml
 msgid "Returns the sum of the sum of the frame durations of the tile at coordinates [param atlas_coords]. This value needs to be divided by the animation speed to get the actual animation loop duration."
-msgstr "Visszaadja a [param atlas_coords] koordinátáknál található csempe animációs képkockái időtartamainak összegét. A tényleges animációs ciklus hosszának meghatározásához ezt az értéket el kell osztani az animáció sebességével."
+msgstr "Visszaadja a [param atlas_coords] koordinátájú csempe animációs képkockáihoz rendelt időtartamok összegét. A tényleges animációs ciklus időtartamának meghatározásához ezt az értéket el kell osztani az animáció sebességével."
 
 #. TileData.brief
 #: doc/classes/TileData.xml
@@ -826,7 +826,7 @@ msgstr "A csempe színmodulációs értéke."
 #. TileData.probability
 #: doc/classes/TileData.xml
 msgid "Relative probability of this tile being selected when drawing a pattern of random tiles."
-msgstr "A csempe relatív kiválasztási valószínűsége véletlenszerű csempékből álló minta festésekor."
+msgstr "A csempe kiválasztásának relatív valószínűsége véletlenszerű csempeminta festésekor."
 
 #. TileData.y_sort_origin
 #: doc/classes/TileData.xml
@@ -846,7 +846,7 @@ msgstr "Az ehhez a [TileData] objektumhoz használt [Material]. Ez lehet [Canvas
 #. TileData.get_custom_data
 #: doc/classes/TileData.xml
 msgid "Returns the custom data value for custom data layer named [param layer_name]. To check if a custom data layer exists, use [method has_custom_data]."
-msgstr "Visszaadja a [param layer_name] nevű egyediadatréteghez tartozó értéket. A réteg létezését a [method has_custom_data] metódussal ellenőrizheted."
+msgstr "Visszaadja a csempe [param layer_name] nevű egyediadatrétegben tárolt értékét. A réteg létezését a [method has_custom_data] metódussal ellenőrizheted."
 
 #. TileData.set_custom_data
 #: doc/classes/TileData.xml
