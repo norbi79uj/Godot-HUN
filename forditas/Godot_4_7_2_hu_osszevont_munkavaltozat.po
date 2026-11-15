@@ -1064,7 +1064,7 @@ msgstr "A legnagyobb szög (radiánban), amelynél a lejtő még padlónak (vagy
 #. CharacterBody2D.floor_stop_on_slope
 #: doc/classes/CharacterBody2D.xml
 msgid "If [code]true[/code], the body will not slide on slopes when calling [method move_and_slide] when the body is standing still.\nIf [code]false[/code], the body will slide on floor's slopes when [member velocity] applies a downward force."
-msgstr "Ha [code]true[/code], a nyugalomban lévő test a [method move_and_slide] használatakor nem csúszik le a lejtőn.\nHa [code]false[/code], a test lecsúszik a lejtőn, amikor a [member velocity] lefelé irányuló sebességösszetevőt tartalmaz."
+msgstr "Ha az értéke [code]true[/code], a nyugalomban lévő test a [method move_and_slide] hívásakor nem csúszik lefelé a lejtőn.\nHa [code]false[/code], a test akkor lecsúszhat a lejtőn, ha a [member velocity] lefelé mutató sebességösszetevőt tartalmaz."
 
 #. CharacterBody2D.apply_floor_snap
 #: doc/classes/CharacterBody2D.xml
@@ -1094,7 +1094,7 @@ msgstr "Visszaadja a platform lineáris sebességét a legutóbbi ütközési po
 #. CharacterBody2D.get_slide_collision
 #: doc/classes/CharacterBody2D.xml
 msgid "Returns a [KinematicCollision2D], which contains information about a collision that occurred during the last call to [method move_and_slide]. Since the body can collide several times in a single call to [method move_and_slide], you must specify the index of the collision in the range 0 to ([method get_slide_collision_count] - 1). See also [method get_last_slide_collision].\n[b]Example:[/b] Iterate through the collisions with a [code]for[/code] loop:\n[codeblocks]\n[gdscript]\nfor i in get_slide_collision_count():\nvar collision = get_slide_collision(i)\nprint(\"Collided with: \", collision.get_collider().name)\n[/gdscript]\n[csharp]\nfor (int i = 0; i &lt; GetSlideCollisionCount(); i++)\n{\nKinematicCollision2D collision = GetSlideCollision(i);\nGD.Print(\"Collided with: \", (collision.GetCollider() as Node).Name);\n}\n[/csharp]\n[/codeblocks]"
-msgstr "Visszaadja a legutóbbi [method move_and_slide] hívás során történt ütközés adatait tartalmazó [KinematicCollision2D] objektumot. Mivel a test egyetlen [method move_and_slide] meghívás alatt többször is ütközhet, az ütközés indexét 0 és ([method get_slide_collision_count] - 1) között kell megadni. Lásd még: [method get_last_slide_collision].\n[b]Példa:[/b] Az ütközések bejárása [code]for[/code] ciklussal:\n[codeblocks]\n[gdscript]\nfor i in get_slide_collision_count():\nvar collision = get_slide_collision(i)\nprint(\"Collided with: \", collision.get_collider().name)\n[/gdscript]\n[csharp]\nfor (int i = 0; i &lt; GetSlideCollisionCount(); i++)\n{\nKinematicCollision2D collision = GetSlideCollision(i);\nGD.Print(\"Collided with: \", (collision.GetCollider() as Node).Name);\n}\n[/csharp]\n[/codeblocks]"
+msgstr "Visszaadja a legutóbbi [method move_and_slide] hívás során történt ütközés adatait tartalmazó [KinematicCollision2D] objektumot. Mivel egyetlen [method move_and_slide] hívás során több ütközés is történhet, a kívánt ütközés indexét 0 és ([method get_slide_collision_count] - 1) között kell megadni. Lásd még: [method get_last_slide_collision].\n[b]Példa:[/b] Az ütközések bejárása [code]for[/code] ciklussal:\n[codeblocks]\n[gdscript]\nfor i in get_slide_collision_count():\nvar collision = get_slide_collision(i)\nprint(\"Collided with: \", collision.get_collider().name)\n[/gdscript]\n[csharp]\nfor (int i = 0; i &lt; GetSlideCollisionCount(); i++)\n{\nKinematicCollision2D collision = GetSlideCollision(i);\nGD.Print(\"Collided with: \", (collision.GetCollider() as Node).Name);\n}\n[/csharp]\n[/codeblocks]"
 
 #. CharacterBody2D.get_wall_normal
 #: doc/classes/CharacterBody2D.xml
@@ -1104,7 +1104,7 @@ msgstr "Visszaadja a fal ütközési normálvektorát a legutóbbi ütközési p
 #. CharacterBody2D.is_on_ceiling_only
 #: doc/classes/CharacterBody2D.xml
 msgid "Returns [code]true[/code] if the body collided only with the ceiling on the last call of [method move_and_slide]. Otherwise, returns [code]false[/code]. The [member up_direction] and [member floor_max_angle] are used to determine whether a surface is \"ceiling\" or not."
-msgstr "[code]true[/code] értéket ad vissza, ha a test a [method move_and_slide] legutóbbi hívásakor kizárólag a mennyezettel ütközött. Egyébként [code]false[/code] értéket ad vissza. A felület mennyezetként való felismerését a [member up_direction] és a [member floor_max_angle] határozza meg."
+msgstr "[code]true[/code] értéket ad vissza, ha a test a [method move_and_slide] legutóbbi hívásakor kizárólag a mennyezettel ütközött. Egyébként [code]false[/code] értéket ad vissza. A felületek mennyezetként való besorolását a [member up_direction] és a [member floor_max_angle] tulajdonságok határozzák meg."
 
 #. CharacterBody2D.is_on_floor_only
 #: doc/classes/CharacterBody2D.xml
@@ -1119,7 +1119,7 @@ msgstr "[code]true[/code] értéket ad vissza, ha a test a [method move_and_slid
 #. CharacterBody2D.floor_block_on_wall
 #: doc/classes/CharacterBody2D.xml
 msgid "If [code]true[/code], the body will be able to move on the floor only. This option avoids to be able to walk on walls, it will however allow to slide down along them."
-msgstr "Ha [code]true[/code], a test csak a padlón tud haladni. Ez megakadályozza a falon járást, de a fal mentén lefelé csúszást továbbra is engedélyezi."
+msgstr "Ha [code]true[/code], a test csak a padlón tud haladni. A beállítás megakadályozza, hogy a test falon járjon, de a fal mentén lefelé továbbra is lecsúszhat."
 
 #. CharacterBody2D.floor_constant_speed
 #: doc/classes/CharacterBody2D.xml
@@ -1134,7 +1134,7 @@ msgstr "Beállítja a talajhoz igazítás távolságát. Ha az érték nem [code
 #. CharacterBody2D.platform_floor_layers
 #: doc/classes/CharacterBody2D.xml
 msgid "Collision layers that will be included for detecting floor bodies that will act as moving platforms to be followed by the [CharacterBody2D]. By default, all floor bodies are detected and propagate their velocity."
-msgstr "Azok az ütközési rétegek, amelyek padlóként érzékelt testei követhető mozgó platformként működnek a [CharacterBody2D] számára. Alapértelmezés szerint minden padlóként érzékelt test ide tartozik, és továbbadja a sebességét."
+msgstr "Megadja, mely ütközési rétegek padlóként érzékelt testeit kövesse a [CharacterBody2D] mozgó platformként. Alapértelmezés szerint minden padlóként érzékelt test ide tartozik, és továbbadja a sebességét."
 
 #. CharacterBody2D.platform_on_leave
 #: doc/classes/CharacterBody2D.xml
@@ -1144,7 +1144,7 @@ msgstr "Meghatározza a mozgó platform elhagyásakor alkalmazott működést. A
 #. CharacterBody2D.platform_wall_layers
 #: doc/classes/CharacterBody2D.xml
 msgid "Collision layers that will be included for detecting wall bodies that will act as moving platforms to be followed by the [CharacterBody2D]. By default, all wall bodies are ignored."
-msgstr "Azok az ütközési rétegek, amelyek falként érzékelt testei követhető mozgó platformként működnek a [CharacterBody2D] számára. Alapértelmezés szerint a falak figyelmen kívül maradnak."
+msgstr "Megadja, mely ütközési rétegek falként érzékelt testeit kövesse a [CharacterBody2D] mozgó platformként. Alapértelmezés szerint a falak figyelmen kívül maradnak."
 
 #. CharacterBody2D.safe_margin
 #: doc/classes/CharacterBody2D.xml
@@ -2055,7 +2055,7 @@ msgstr "Eltávolítja a megadott alakzattulajdonoshoz rendelt összes alakzatot.
 #. CollisionObject2D.shape_owner_get_owner
 #: doc/classes/CollisionObject2D.xml
 msgid "Returns the parent object of the given shape owner."
-msgstr "Visszaadja a megadott alakzattulajdonos szülőobjektumát."
+msgstr "Visszaadja a megadott alakzattulajdonoshoz tartozó szülőobjektumot."
 
 #. CollisionObject2D.shape_owner_get_shape
 #: doc/classes/CollisionObject2D.xml
@@ -2070,12 +2070,12 @@ msgstr "Visszaadja a megadott alakzattulajdonoshoz tartozó alakzatok számát."
 #. CollisionObject2D.shape_owner_remove_shape
 #: doc/classes/CollisionObject2D.xml
 msgid "Removes a shape from the given shape owner."
-msgstr "Eltávolít egy alakzatot a megadott alakzattulajdonostól."
+msgstr "Eltávolítja a kiválasztott alakzatot a megadott alakzattulajdonosból."
 
 #. CollisionObject2D.shape_owner_set_disabled
 #: doc/classes/CollisionObject2D.xml
 msgid "If [code]true[/code], disables the given shape owner."
-msgstr "Ha [code]true[/code], letiltja a megadott alakzattulajdonost."
+msgstr "Ha az értéke [code]true[/code], letiltja a megadott alakzattulajdonost és a hozzá tartozó alakzatokat."
 
 #. CollisionObject2D.shape_owner_set_transform
 #: doc/classes/CollisionObject2D.xml
@@ -2484,7 +2484,7 @@ msgstr "Visszaadja a sugár útjába eső első objektumot, találat hiányában
 #. RayCast2D.get_collider_rid
 #: doc/classes/RayCast2D.xml
 msgid "Returns the [RID] of the first object that the ray intersects, or an empty [RID] if no object is intersecting the ray (i.e. [method is_colliding] returns [code]false[/code])."
-msgstr "Visszaadja a sugár által metszett első objektum [RID] azonosítóját, vagy üres [RID] értéket, ha nincs találat (vagyis a [method is_colliding] [code]false[/code] értéket ad vissza)."
+msgstr "Visszaadja a sugár útjába eső első objektum [RID] azonosítóját. Ha nincs találat, üres [RID] értéket ad vissza (vagyis a [method is_colliding] [code]false[/code] értéket ad vissza)."
 
 #. RayCast2D.get_collision_normal
 #: doc/classes/RayCast2D.xml
@@ -2504,12 +2504,12 @@ msgstr "Megadja, hogy a sugár meghatározott hosszúságú szakasza metsz-e bá
 #. RayCast2D.remove_exception
 #: doc/classes/RayCast2D.xml
 msgid "Removes a collision exception so the ray can report collisions with the specified [param node]."
-msgstr "Eltávolítja a megadott [param node] csomópont ütközési kivételét, így a sugár ismét jelentheti a vele való ütközést."
+msgstr "Törli a [param node] csomópontra vonatkozó ütközési kivételt, így a sugár ismét érzékelheti a csomópontot."
 
 #. RayCast2D.remove_exception_rid
 #: doc/classes/RayCast2D.xml
 msgid "Removes a collision exception so the ray can report collisions with the specified [RID]."
-msgstr "Eltávolítja a megadott [RID] azonosítójú objektum ütközési kivételét, így a sugár ismét jelentheti a vele való ütközést."
+msgstr "Törli a megadott [RID] azonosítójú objektumra vonatkozó ütközési kivételt, így a sugár ismét érzékelheti az objektumot."
 
 #. NavigationRegion2D.brief
 #: doc/classes/NavigationRegion2D.xml
@@ -3833,17 +3833,17 @@ msgstr "Egy testet felvesz azoknak az ütközési kivételeknek a listájára, a
 #. PhysicsBody2D.get_collision_exceptions
 #: doc/classes/PhysicsBody2D.xml
 msgid "Returns an array of nodes that were added as collision exceptions for this body."
-msgstr "Visszaadja azoknak a csomópontoknak a tömbjét, amelyeket a test ütközési kivételei közé felvettek."
+msgstr "Tömbben visszaadja azokat a csomópontokat, amelyekkel a test ütközése kivételként le van tiltva."
 
 #. PhysicsBody2D.get_gravity
 #: doc/classes/PhysicsBody2D.xml
 msgid "Returns the gravity vector computed from all sources that can affect the body, including all gravity overrides from [Area2D] nodes and the global world gravity."
-msgstr "Visszaadja a testre ható összes forrás alapján kiszámított gravitációvektort, beleértve az [Area2D] csomópontok gravitációs felülírásait és a világ általános gravitációját."
+msgstr "Visszaadja a testre ható gravitáció eredő vektorát. A számítás figyelembe veszi az [Area2D] csomópontok gravitációs felülírásait és a világ általános gravitációját is."
 
 #. PhysicsBody2D.move_and_collide
 #: doc/classes/PhysicsBody2D.xml
 msgid "Moves the body along the vector [param motion]. In order to be frame rate independent in [method Node._physics_process] or [method Node._process], [param motion] should be computed using [code]delta[/code].\nReturns a [KinematicCollision2D], which contains information about the collision when stopped, or when touching another body along the motion.\nIf [param test_only] is [code]true[/code], the body does not move but the would-be collision information is given.\n[param safe_margin] is the extra margin used for collision recovery (see [member CharacterBody2D.safe_margin] for more details).\nIf [param recovery_as_collision] is [code]true[/code], any depenetration from the recovery phase is also reported as a collision; this is used e.g. by [CharacterBody2D] for improving floor detection during floor snapping."
-msgstr "A testet a [param motion] vektor mentén mozgatja. A [method Node._physics_process] vagy [method Node._process] függvényben a képkockasebességtől független mozgáshoz a [param motion] értékét a [code]delta[/code] felhasználásával kell kiszámítani.\nVisszaad egy [KinematicCollision2D] objektumot, amely a megálláskor vagy a mozgás során egy másik test érintésekor bekövetkező ütközés adatait tartalmazza.\nHa a [param test_only] értéke [code]true[/code], a test nem mozdul el, de a várható ütközés adatai elérhetők.\nA [param safe_margin] az ütközésből való kiemeléshez használt további biztonsági távolság (részletek: [member CharacterBody2D.safe_margin]).\nHa a [param recovery_as_collision] értéke [code]true[/code], a helyreállítás közbeni átfedés-megszüntetést is ütközésként jelenti. Ezt például a [CharacterBody2D] használja a padló felismerésének javítására, amikor a testet a padlóhoz igazítja."
+msgstr "A testet a [param motion] vektor mentén mozgatja. A [method Node._physics_process] vagy [method Node._process] függvényben a képkockasebességtől független mozgáshoz a [param motion] értékét a [code]delta[/code] felhasználásával kell kiszámítani.\nÜtközés esetén egy [KinematicCollision2D] objektumot ad vissza, amely a mozgást megállító vagy az út során más testtel történő érintkezés adatait tartalmazza.\nHa a [param test_only] értéke [code]true[/code], a test mozdulatlan marad, de a lehetséges ütközés adatait a metódus így is visszaadja.\nA [param safe_margin] az ütközésből való kiemeléshez használt további biztonsági távolság (részletek: [member CharacterBody2D.safe_margin]).\nHa a [param recovery_as_collision] értéke [code]true[/code], a helyreállítás közbeni átfedés-megszüntetést is ütközésként jelenti. Ezt például a [CharacterBody2D] használja a padló felismerésének javítására, amikor a testet a padlóhoz igazítja."
 
 #. PhysicsBody2D.remove_collision_exception_with
 #: doc/classes/PhysicsBody2D.xml
@@ -3853,7 +3853,7 @@ msgstr "Eltávolít egy testet az ütközési kivételek listájáról, így az 
 #. PhysicsBody2D.test_move
 #: doc/classes/PhysicsBody2D.xml
 msgid "Checks for collisions without moving the body. In order to be frame rate independent in [method Node._physics_process] or [method Node._process], [param motion] should be computed using [code]delta[/code].\nVirtually sets the node's position, scale and rotation to that of the given [Transform2D], then tries to move the body along the vector [param motion]. Returns [code]true[/code] if a collision would stop the body from moving along the whole path.\n[param collision] is an optional object of type [KinematicCollision2D], which contains additional information about the collision when stopped, or when touching another body along the motion.\n[param safe_margin] is the extra margin used for collision recovery (see [member CharacterBody2D.safe_margin] for more details).\nIf [param recovery_as_collision] is [code]true[/code], any depenetration from the recovery phase is also reported as a collision; this is useful for checking whether the body would [i]touch[/i] any other bodies."
-msgstr "Ütközéseket vizsgál a test tényleges mozgatása nélkül. A [method Node._physics_process] vagy [method Node._process] függvényben a képkockasebességtől független mozgáshoz a [param motion] értékét a [code]delta[/code] használatával kell kiszámítani.\nA csomópont pozícióját, méretarányát és elforgatását ideiglenesen a megadott [Transform2D] értékre állítja, majd megpróbálja a testet a [param motion] vektor mentén elmozdítani. [code]true[/code] értéket ad vissza, ha az ütközés a teljes út bejárását megakadályozná.\nA [param collision] opcionális [KinematicCollision2D] objektum, amely az ütközésről további információkat tartalmaz.\nA [param safe_margin] az ütközésből való kiemeléshez használt további biztonsági távolság (részletek: [member CharacterBody2D.safe_margin]).\nHa a [param recovery_as_collision] értéke [code]true[/code], a helyreállítás közbeni átfedés-megszüntetést is ütközésként jelenti. Ez akkor hasznos, ha ellenőrizni kell, hogy a test [i]érintene-e[/i] más testeket."
+msgstr "Ütközéseket vizsgál a test tényleges mozgatása nélkül. A [method Node._physics_process] vagy [method Node._process] függvényben a képkockasebességtől független mozgáshoz a [param motion] értékét a [code]delta[/code] használatával kell kiszámítani.\nA megadott [Transform2D] szerinti pozíciót, méretarányt és elforgatást feltételezve szimulálja a test [param motion] vektor menti mozgását. [code]true[/code] értéket ad vissza, ha egy ütközés miatt a test nem tudná megtenni a teljes utat.\nA [param collision] opcionális [KinematicCollision2D] objektum, amely az ütközésről további információkat tartalmaz.\nA [param safe_margin] az ütközésből való kiemeléshez használt további biztonsági távolság (részletek: [member CharacterBody2D.safe_margin]).\nHa a [param recovery_as_collision] értéke [code]true[/code], a helyreállítás közbeni átfedés-megszüntetést is ütközésként jelenti. Ez akkor hasznos, ha ellenőrizni kell, hogy a test [i]érintene-e[/i] más testeket."
 
 #. NavigationPathQueryParameters2D.brief
 #: doc/classes/NavigationPathQueryParameters2D.xml
