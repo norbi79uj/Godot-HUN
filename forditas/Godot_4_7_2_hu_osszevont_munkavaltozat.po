@@ -2778,7 +2778,7 @@ msgstr "A [member baking_rect] [Rect2] téglalapra alkalmazott pozícióeltolás
 #. NavigationPolygon.border_size
 #: doc/classes/NavigationPolygon.xml
 msgid "The size of the non-navigable border around the bake bounding area defined by the [member baking_rect] [Rect2].\nIn conjunction with the [member baking_rect] the border size can be used to bake tile aligned navigation meshes without the tile edges being shrunk by [member agent_radius]."
-msgstr "A navigációs háló előállításának [member baking_rect] [Rect2] téglalap által meghatározott határa körül elhelyezkedő, nem bejárható szegély mérete.\nA [member baking_rect] tulajdonsággal együtt használva olyan, csempékhez igazodó navigációs hálók is előállíthatók, amelyek csempeszéleit a [member agent_radius] nem csökkenti."
+msgstr "A [member baking_rect] [Rect2] által kijelölt előállítási terület körüli, nem bejárható szegély mérete.\nA [member baking_rect] tulajdonsággal együtt használva csempékhez igazított navigációs háló hozható létre anélkül, hogy a [member agent_radius] a csempék széleinél összehúzná a bejárható területet."
 
 #. NavigationPolygon.cell_size
 #: doc/classes/NavigationPolygon.xml
@@ -2818,7 +2818,7 @@ msgstr "Hozzáfűz egy körvonal csúcsait tartalmazó [PackedVector2Array] töm
 #. NavigationPolygon.add_outline_at_index
 #: doc/classes/NavigationPolygon.xml
 msgid "Adds a [PackedVector2Array] that contains the vertices of an outline to the internal array that contains all the outlines at a fixed position."
-msgstr "A megadott pozícióra beszúr egy körvonal csúcsait tartalmazó [PackedVector2Array] tömböt az összes körvonalat tároló belső tömbbe."
+msgstr "Az összes körvonalat tároló belső tömb megadott helyére beszúr egy [PackedVector2Array] tömböt, amely egy körvonal csúcsait tartalmazza."
 
 #. NavigationPolygon.add_polygon
 #: doc/classes/NavigationPolygon.xml
@@ -2848,12 +2848,12 @@ msgstr "Visszaadja az ebből a navigációs sokszögből létrejövő [Navigatio
 #. NavigationPolygon.get_outline
 #: doc/classes/NavigationPolygon.xml
 msgid "Returns a [PackedVector2Array] containing the vertices of an outline that was created in the editor or by script."
-msgstr "Visszaadja a szerkesztőben vagy scriptből létrehozott körvonal csúcsait tartalmazó [PackedVector2Array] tömböt."
+msgstr "Visszaadja a szerkesztőben vagy szkriptből létrehozott körvonal csúcsait tartalmazó [PackedVector2Array] tömböt."
 
 #. NavigationPolygon.get_outline_count
 #: doc/classes/NavigationPolygon.xml
 msgid "Returns the number of outlines that were created in the editor or by script."
-msgstr "Visszaadja a szerkesztőben vagy scriptből létrehozott körvonalak számát."
+msgstr "Visszaadja a szerkesztőben vagy szkriptből létrehozott körvonalak számát."
 
 #. NavigationPolygon.get_parsed_collision_mask_value
 #: doc/classes/NavigationPolygon.xml
@@ -2878,17 +2878,17 @@ msgstr "Visszaad egy [PackedVector2Array] tömböt, amely a sokszögek létrehoz
 #. NavigationPolygon.make_polygons_from_outlines
 #: doc/classes/NavigationPolygon.xml
 msgid "Creates polygons from the outlines added in the editor or by script."
-msgstr "Sokszögeket hoz létre a szerkesztőben vagy scriptből hozzáadott körvonalak alapján."
+msgstr "Sokszögeket hoz létre a szerkesztőben vagy szkriptből hozzáadott körvonalak alapján."
 
 #. NavigationPolygon.remove_outline
 #: doc/classes/NavigationPolygon.xml
 msgid "Removes an outline created in the editor or by script. You have to call [method make_polygons_from_outlines] for the polygons to update."
-msgstr "Eltávolít egy, a szerkesztőben vagy scriptből létrehozott körvonalat. A sokszögek frissítéséhez meg kell hívni a [method make_polygons_from_outlines] metódust."
+msgstr "Eltávolít egy, a szerkesztőben vagy szkriptből létrehozott körvonalat. A sokszögek frissítéséhez meg kell hívni a [method make_polygons_from_outlines] metódust."
 
 #. NavigationPolygon.set_outline
 #: doc/classes/NavigationPolygon.xml
 msgid "Changes an outline created in the editor or by script. You have to call [method make_polygons_from_outlines] for the polygons to update."
-msgstr "Módosít egy, a szerkesztőben vagy scriptből létrehozott körvonalat. A sokszögek frissítéséhez meg kell hívni a [method make_polygons_from_outlines] metódust."
+msgstr "Módosít egy, a szerkesztőben vagy szkriptből létrehozott körvonalat. A sokszögek frissítéséhez meg kell hívni a [method make_polygons_from_outlines] metódust."
 
 #. NavigationPolygon.set_parsed_collision_mask_value
 #: doc/classes/NavigationPolygon.xml
