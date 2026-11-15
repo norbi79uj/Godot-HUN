@@ -341,7 +341,7 @@ msgstr "Beállítja az adott TileSet fizikai rétegéhez tartozó testek ütköz
 #. TileSet.add_custom_data_layer
 #: doc/classes/TileSet.xml
 msgid "Adds a custom data layer to the TileSet at the given position [param to_position] in the array. If [param to_position] is -1, adds it at the end of the array.\nCustom data layers allow assigning custom properties to atlas tiles."
-msgstr "Egyediadatréteget ad a TileSet készlethez a tömb [param to_position] pozíciójára. Ha [param to_position] értéke -1, a tömb végére illeszti.\nAz egyediadatrétegekkel saját tulajdonságokat rendelhetsz az atlaszcsempékhez."
+msgstr "Egyediadatréteget ad a csempekészlethez a tömb [param to_position] pozíciójára. Ha [param to_position] értéke -1, a tömb végére illeszti.\nAz egyediadatrétegekkel saját tulajdonságokat rendelhetsz az atlaszcsempékhez."
 
 #. TileSet.set_custom_data_layer_name
 #: doc/classes/TileSet.xml
@@ -381,12 +381,12 @@ msgstr "Új terepkészletet ad a tömb [param to_position] pozíciójára. Ha [p
 #. TileSet.add_navigation_layer
 #: doc/classes/TileSet.xml
 msgid "Adds a navigation layer to the TileSet at the given position [param to_position] in the array. If [param to_position] is -1, adds it at the end of the array.\nNavigation layers allow assigning a navigable area to atlas tiles."
-msgstr "Navigációs réteget ad a TileSet készlethez a tömb [param to_position] pozíciójára. Ha [param to_position] értéke -1, a tömb végére illeszti.\nA navigációs rétegek segítségével bejárható terület rendelhető az atlaszcsempékhez."
+msgstr "Navigációs réteget ad a csempekészlethez a tömb [param to_position] pozíciójára. Ha [param to_position] értéke -1, a tömb végére illeszti.\nA navigációs rétegek segítségével bejárható terület rendelhető az atlaszcsempékhez."
 
 #. TileSet.add_occlusion_layer
 #: doc/classes/TileSet.xml
 msgid "Adds an occlusion layer to the TileSet at the given position [param to_position] in the array. If [param to_position] is -1, adds it at the end of the array.\nOcclusion layers allow assigning occlusion polygons to atlas tiles."
-msgstr "Fénykitakarási réteget ad a TileSet készlethez a tömb [param to_position] pozíciójára. Ha [param to_position] értéke -1, a tömb végére illeszti.\nA fénykitakarási rétegek segítségével fénykitakarási sokszögeket rendelhetsz az atlaszcsempékhez."
+msgstr "Fénykitakarási réteget ad a csempekészlethez a tömb [param to_position] pozíciójára. Ha [param to_position] értéke -1, a tömb végére illeszti.\nA fénykitakarási rétegek segítségével fénykitakarási sokszögeket rendelhetsz az atlaszcsempékhez."
 
 #. TileSet.clear_terrains
 #: doc/classes/TileSet.xml
@@ -521,7 +521,7 @@ msgstr "Beállítja a megadott indexű egyediadatréteg típusát."
 #. TileSet.set_navigation_layer_layers
 #: doc/classes/TileSet.xml
 msgid "Sets the navigation layers (as in the navigation server) for navigation regions in the given TileSet navigation layer."
-msgstr "Beállítja a megadott TileSet-navigációs réteg navigációs területeinek rétegbeállításait a navigációs kiszolgálóban használt módon."
+msgstr "Beállítja a megadott TileSet-navigációs réteghez tartozó navigációs területek rétegmaszkját, a navigációs kiszolgálóban használt módon."
 
 #. TileSet.set_terrain_color
 #: doc/classes/TileSet.xml
@@ -571,7 +571,7 @@ msgstr "Visszaadja a fénykitakarási réteg fénymaszkját."
 #. TileSet.get_occlusion_layer_sdf_collision
 #: doc/classes/TileSet.xml
 msgid "Returns if the occluders from this layer use [code]sdf_collision[/code]."
-msgstr "Megadja, hogy az ezen a rétegen lévő fénykitakaró objektumok használják-e a [code]sdf_collision[/code] beállítást."
+msgstr "Visszaadja, hogy az adott réteg fénykitakaróinál engedélyezett-e a [code]sdf_collision[/code] beállítás, amely az előjeles távolságmező (SDF) létrehozásában való részvételt szabályozza."
 
 #. TileSet.get_source_level_tile_proxy
 #: doc/classes/TileSet.xml
@@ -656,12 +656,12 @@ msgstr "A [param value] alapján engedélyezi vagy letiltja a [param layer_index
 #. TileSet.set_occlusion_layer_light_mask
 #: doc/classes/TileSet.xml
 msgid "Sets the occlusion layer (as in the rendering server) for occluders in the given TileSet occlusion layer."
-msgstr "Beállítja a megadott TileSet-fénykitakarási rétegben található fénykitakarók renderelési kiszolgáló szerinti fénykitakarási rétegét."
+msgstr "Beállítja a megadott TileSet-fénykitakarási rétegben található fénykitakarók fénymaszkját, a renderelési kiszolgálóban használt módon."
 
 #. TileSet.set_occlusion_layer_sdf_collision
 #: doc/classes/TileSet.xml
 msgid "Enables or disables SDF collision for occluders in the given TileSet occlusion layer."
-msgstr "Engedélyezi vagy letiltja az SDF-alapú ütközést a megadott TileSet-fénykitakarási rétegben található fénykitakaróknál."
+msgstr "Engedélyezi vagy letiltja, hogy a megadott TileSet-fénykitakarási réteg fénykitakarói részt vegyenek az előjeles távolságmező (SDF) előállításában."
 
 #. TileSet.set_physics_layer_collision_priority
 #: doc/classes/TileSet.xml
