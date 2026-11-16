@@ -4738,12 +4738,12 @@ msgstr "Színátmenet."
 #. Gradient.description
 #: doc/classes/Gradient.xml
 msgid "This resource describes a color transition by defining a set of colored points and how to interpolate between them.\nSee also [Curve] which supports more complex easing methods, but does not support colors."
-msgstr "Ez az erőforrás színes pontok meghatározásával és a köztük történő interpoláció beállításával ír le egy színátmenetet.\nLásd még a [Curve] osztályt, amely összetettebb interpolációs módszereket támogat, de színeket nem kezel."
+msgstr "Ez az erőforrás színnel rendelkező pontok és a köztük alkalmazott interpoláció megadásával határoz meg egy színátmenetet.\nLásd még a [Curve] osztályt, amely bonyolultabb átmeneti módszereket is támogat, de nem kezel színeket."
 
 #. Gradient.add_point
 #: doc/classes/Gradient.xml
 msgid "Adds the specified color to the gradient, with the specified offset."
-msgstr "Hozzáadja a megadott színt a színátmenethez a megadott eltolással."
+msgstr "A megadott eltolásnál új színpontot ad hozzá a színátmenethez, a megadott színnel."
 
 #. Gradient.get_color
 #: doc/classes/Gradient.xml
@@ -4753,7 +4753,7 @@ msgstr "Visszaadja a színátmenet [param point] indexű pontjának színét."
 #. Gradient.get_offset
 #: doc/classes/Gradient.xml
 msgid "Returns the offset of the gradient color at index [param point]."
-msgstr "Visszaadja a színátmenet [param point] indexű színpontjának eltolását."
+msgstr "Visszaadja a színátmenet [param point] indexű színpontjának pozícióját (eltolását)."
 
 #. Gradient.get_point_count
 #: doc/classes/Gradient.xml
@@ -4768,12 +4768,12 @@ msgstr "Eltávolítja a [param point] indexű színpontot."
 #. Gradient.reverse
 #: doc/classes/Gradient.xml
 msgid "Reverses/mirrors the gradient.\n[b]Note:[/b] This method mirrors all points around the middle of the gradient, which may produce unexpected results when [member interpolation_mode] is set to [constant GRADIENT_INTERPOLATE_CONSTANT]."
-msgstr "Megfordítja, illetve tükrözi a színátmenetet.\n[b]Megjegyzés:[/b] A metódus az összes pontot a színátmenet közepe körül tükrözi, ezért váratlan eredményt adhat, ha a [member interpolation_mode] értéke [constant GRADIENT_INTERPOLATE_CONSTANT]."
+msgstr "Megfordítja a színátmenet irányát.\n[b]Megjegyzés:[/b] A metódus minden színpontot a színátmenet középpontjára tükröz, ami váratlan eredményt okozhat, ha a [member interpolation_mode] értéke [constant GRADIENT_INTERPOLATE_CONSTANT]."
 
 #. Gradient.sample
 #: doc/classes/Gradient.xml
 msgid "Returns the interpolated color specified by [param offset]. [param offset] should be between [code]0.0[/code] and [code]1.0[/code] (inclusive). Using a value lower than [code]0.0[/code] will return the same color as [code]0.0[/code], and using a value higher than [code]1.0[/code] will return the same color as [code]1.0[/code]. If your input value is not within this range, consider using [method @GlobalScope.remap] on the input value with output values set to [code]0.0[/code] and [code]1.0[/code]."
-msgstr "Visszaadja a [param offset] alapján interpolált színt. A [param offset] értéke [code]0.0[/code] és [code]1.0[/code] közé eshet (a határokat is beleértve). Ha a megadott érték kisebb, mint [code]0.0[/code], a [code]0.0[/code] értékhez tartozó színt adja vissza; ha nagyobb, mint [code]1.0[/code], akkor az [code]1.0[/code] színét. Ha a bemeneti érték nincs ebben a tartományban, érdemes a [method @GlobalScope.remap] metódussal a [code]0.0[/code] és [code]1.0[/code] közötti kimeneti tartományra átskálázni."
+msgstr "Visszaadja a színátmenet [param offset] pozíciójánál interpolált színt. A [param offset] értéke [code]0.0[/code] és [code]1.0[/code] közé eshet, a határértékeket is beleértve. Ha a megadott érték kisebb, mint [code]0.0[/code], a [code]0.0[/code] értékhez tartozó színt adja vissza; ha nagyobb, mint [code]1.0[/code], akkor az [code]1.0[/code] színét. Ha a bemeneti érték kívül esik ezen a tartományon, a [method @GlobalScope.remap] metódussal átskálázhatod a [code]0.0[/code] és [code]1.0[/code] közötti tartományra."
 
 #. Gradient.set_color
 #: doc/classes/Gradient.xml
@@ -4788,12 +4788,12 @@ msgstr "Beállítja a színátmenet [param point] indexű színpontjának eltol�
 #. Gradient.colors
 #: doc/classes/Gradient.xml
 msgid "Gradient's colors as a [PackedColorArray].\n[b]Note:[/b] Setting this property updates all colors at once. To update any color individually use [method set_color]."
-msgstr "A színátmenet színei [PackedColorArray] tömbként.\n[b]Megjegyzés:[/b] A tulajdonság beállításakor minden szín egyszerre frissül. Az egyes színek módosításához használd a [method set_color] metódust."
+msgstr "A színátmenet színei [PackedColorArray] tömbként.\n[b]Megjegyzés:[/b] A tulajdonság beállítása egyszerre módosítja az összes színt. Ha csak egyetlen színt szeretnél megváltoztatni, használd a [method set_color] metódust."
 
 #. Gradient.interpolation_color_space
 #: doc/classes/Gradient.xml
 msgid "The color space used to interpolate between points of the gradient. It does not affect the returned colors, which will always use nonlinear sRGB encoding.\n[b]Note:[/b] This setting has no effect when [member interpolation_mode] is set to [constant GRADIENT_INTERPOLATE_CONSTANT]."
-msgstr "A színátmenet pontjai közötti interpolációhoz használt színtér. A visszaadott színekre nincs hatással: azok mindig nemlineáris sRGB-kódolást használnak.\n[b]Megjegyzés:[/b] A beállításnak nincs hatása, ha a [member interpolation_mode] értéke [constant GRADIENT_INTERPOLATE_CONSTANT]."
+msgstr "A színátmenet pontjai közötti színkeveréshez használt színtér. A visszaadott színek kódolását nem módosítja: az eredmény mindig nemlineáris sRGB-kódolású.\n[b]Megjegyzés:[/b] A beállításnak nincs hatása, ha a [member interpolation_mode] értéke [constant GRADIENT_INTERPOLATE_CONSTANT]."
 
 #. Gradient.interpolation_mode
 #: doc/classes/Gradient.xml
@@ -4803,7 +4803,7 @@ msgstr "A színátmenet pontjai közötti interpolációhoz használt algoritmus
 #. Gradient.offsets
 #: doc/classes/Gradient.xml
 msgid "Gradient's offsets as a [PackedFloat32Array].\n[b]Note:[/b] Setting this property updates all offsets at once. To update any offset individually use [method set_offset]."
-msgstr "A színátmenet eltolásai [PackedFloat32Array] tömbként.\n[b]Megjegyzés:[/b] A tulajdonság beállításakor az összes eltolás egyszerre frissül. Az egyes eltolások módosításához használd a [method set_offset] metódust."
+msgstr "A színátmenet eltolásai [PackedFloat32Array] tömbként.\n[b]Megjegyzés:[/b] A tulajdonság beállítása egyszerre módosítja az összes eltolást. Egyetlen színpont eltolásának módosításához használd a [method set_offset] metódust."
 
 #. GradientTexture2D.brief
 #: doc/classes/GradientTexture2D.xml
@@ -4813,7 +4813,7 @@ msgstr "Olyan 2D-s textúra, amely [Gradient] színátmenetből származó szín
 #. GradientTexture2D.description
 #: doc/classes/GradientTexture2D.xml
 msgid "A 2D texture that obtains colors from a [Gradient] to fill the texture data. This texture is able to transform a color transition into different patterns such as a linear or a radial gradient. The texture is filled by interpolating colors starting from [member fill_from] to [member fill_to] offsets by default, but the gradient fill can be repeated to cover the entire texture.\nThe gradient is sampled individually for each pixel so it does not necessarily represent an exact copy of the gradient (see [member width] and [member height]). See also [GradientTexture1D], [CurveTexture] and [CurveXYZTexture]."
-msgstr "Olyan 2D-s textúra, amely egy [Gradient] színátmenetből vett színekkel tölti ki a textúra adatait. A színátmenetet többféle mintázattá alakíthatja, például lineáris vagy sugárirányú átmenetté. Alapértelmezés szerint a kitöltés a [member fill_from] és a [member fill_to] eltolások között interpolálja a színeket, de az átmenet ismétlésével akár a teljes textúra is lefedhető.\nA színátmenetet a rendszer minden képpontnál külön mintavételezi, ezért a kapott textúra nem feltétlenül a színátmenet pontos másolata (lásd [member width] és [member height]). Lásd még: [GradientTexture1D], [CurveTexture] és [CurveXYZTexture]."
+msgstr "Olyan 2D-s textúra, amely egy [Gradient] színátmenetből vett színekkel tölti ki a textúra adatait. A színátmenetből különböző mintázatok, például lineáris vagy sugárirányú színátmenetek hozhatók létre. Alapértelmezés szerint a kitöltés a [member fill_from] és a [member fill_to] eltolások között interpolálja a színeket, de az átmenet ismétlésével akár a teljes textúra is lefedhető.\nA rendszer a színátmenetből képpontonként vesz mintát, ezért a létrejövő textúra nem feltétlenül reprodukálja pontosan az eredeti átmenetet (lásd [member width] és [member height]). Lásd még: [GradientTexture1D], [CurveTexture] és [CurveXYZTexture]."
 
 #. GradientTexture2D.fill
 #: doc/classes/GradientTexture2D.xml
