@@ -5193,17 +5193,17 @@ msgstr "Bézier-görbét ír le a 2D-s térben."
 #. Curve2D.description
 #: doc/classes/Curve2D.xml
 msgid "This class describes a Bézier curve in 2D space. It is mainly used to give a shape to a [Path2D], but can be manually sampled for other purposes.\nIt keeps a cache of precalculated points along the curve, to speed up further calculations."
-msgstr "Ez az osztály 2D-s Bézier-görbét ír le. Elsősorban a [Path2D] útvonal alakjának meghatározására szolgál, de más célokra is használható a görbe pontjainak közvetlen mintavételezésével.\nA további számítások gyorsításához a görbe mentén előre kiszámított pontok gyorsítótárát tárolja."
+msgstr "Ez az osztály 2D-s Bézier-görbét ír le. Elsősorban a [Path2D] útvonalainak alakját határozza meg, de a görbe közvetlen mintavételezésével más célokra is használható.\nA későbbi számítások gyorsításához előre kiszámított görbepontokat tárol gyorsítótárban."
 
 #. Curve2D.add_point
 #: doc/classes/Curve2D.xml
 msgid "Adds a point with the specified [param position] relative to the curve's own position, with control points [param in] and [param out]. Appends the new point at the end of the point list.\nIf [param index] is given, the new point is inserted before the existing point identified by index [param index]. Every existing point starting from [param index] is shifted further down the list of points. The index must be greater than or equal to [code]0[/code] and must not exceed the number of existing points in the line. See [member point_count]."
-msgstr "A görbe saját pozíciójához viszonyítva hozzáad egy pontot a megadott [param position] helyen, a [param in] és [param out] vezérlőpontokkal. Az új pont alapértelmezés szerint a pontlista végére kerül.\nHa megadsz [param index] értéket, az új pont a [param index] indexű meglévő pont elé kerül. A [param index] helytől kezdve minden meglévő pont eggyel hátrébb tolódik a listában. Az index nem lehet kisebb [code]0[/code]-nál, és nem lehet nagyobb a vonal meglévő pontjainak számánál. Lásd: [member point_count]."
+msgstr "A görbe saját pozíciójához viszonyítva hozzáad egy pontot a megadott [param position] helyen, a [param in] és [param out] vezérlőpontokkal. Az új pont alapértelmezés szerint a pontlista végére kerül.\nHa megadsz [param index] értéket, az új pont a [param index] indexű meglévő pont elé kerül. A [param index] helytől kezdve minden meglévő pont eggyel hátrébb tolódik a listában. Az index értéke legalább [code]0[/code] lehet, és nem haladhatja meg a görbe meglévő pontjainak számát. Lásd: [member point_count]."
 
 #. Curve2D.get_baked_length
 #: doc/classes/Curve2D.xml
 msgid "Returns the total length of the curve, based on the cached points. Given enough density (see [member bake_interval]), it should be approximate enough."
-msgstr "Visszaadja a görbe teljes hosszát a gyorsítótárazott pontok alapján. Megfelelő pontsűrűség mellett (lásd [member bake_interval]) az eredmény elég pontos közelítés."
+msgstr "A gyorsítótárazott pontok alapján visszaadja a görbe közelítő hosszát. Megfelelő pontsűrűséggel (lásd [member bake_interval]) az eredmény kellően pontos lehet."
 
 #. Curve2D.get_baked_points
 #: doc/classes/Curve2D.xml
@@ -5213,12 +5213,12 @@ msgstr "[PackedVector2Array] tömbként visszaadja a gyorsítótárazott pontoka
 #. Curve2D.get_closest_offset
 #: doc/classes/Curve2D.xml
 msgid "Returns the closest offset to [param to_point]. This offset is meant to be used in [method sample_baked].\n[param to_point] must be in this curve's local space."
-msgstr "Visszaadja a [param to_point] ponthoz legközelebb eső, görbe menti eltolást. Az eltolást a [method sample_baked] metódussal használhatod.\nA [param to_point] pontot a görbe helyi koordinátarendszerében kell megadni."
+msgstr "Visszaadja a [param to_point] ponthoz legközelebbi görbepont görbe menti eltolását. Ezt az eltolást a [method sample_baked] metódusban használhatod.\nA [param to_point] pontot a görbe helyi koordinátarendszerében kell megadni."
 
 #. Curve2D.get_closest_point
 #: doc/classes/Curve2D.xml
 msgid "Returns the closest point on baked segments (in curve's local space) to [param to_point].\n[param to_point] must be in this curve's local space."
-msgstr "Visszaadja az előre kiszámított görbeszakaszokon a [param to_point] ponthoz legközelebb eső pontot (a görbe helyi koordinátarendszerében).\nA [param to_point] pontot a görbe helyi koordinátarendszerében kell megadni."
+msgstr "Visszaadja az előre kiszámított görbeszakaszok [param to_point] ponthoz legközelebbi pontját a görbe helyi koordinátarendszerében.\nA [param to_point] pontot a görbe helyi koordinátarendszerében kell megadni."
 
 #. Curve2D.get_point_in
 #: doc/classes/Curve2D.xml
@@ -5243,12 +5243,12 @@ msgstr "Eltávolítja a görbe [param idx] indexű pontját. Érvénytelen [para
 #. Curve2D.sample
 #: doc/classes/Curve2D.xml
 msgid "Returns the position between the vertex [param idx] and the vertex [code]idx + 1[/code], where [param t] controls if the point is the first vertex ([code]t = 0.0[/code]), the last vertex ([code]t = 1.0[/code]), or in between. Values of [param t] outside the range ([code]0.0 &lt;= t &lt;= 1.0[/code]) give strange, but predictable results.\nIf [param idx] is out of bounds it is truncated to the first or last vertex, and [param t] is ignored. If the curve has no points, the function sends an error to the console, and returns [code](0, 0)[/code]."
-msgstr "Visszaadja a [param idx] indexű csúcs és az utána következő, [code]idx + 1[/code] indexű csúcs közötti pozíciót. A [param t] szabályozza, hogy a pont az első csúcsra ([code]t = 0.0[/code]), az utolsóra ([code]t = 1.0[/code]) vagy a kettő közé essen. A megadott tartományon ([code]0.0 &lt;= t &lt;= 1.0[/code]) kívüli [param t] értékek szokatlan, de kiszámítható eredményt adnak.\nHa a [param idx] kilóg az érvényes tartományból, a rendszer az első vagy az utolsó csúcsra korlátozza, és figyelmen kívül hagyja a [param t] értékét. Ha a görbe üres, hibát ír a konzolra, és [code](0, 0)[/code] értéket ad vissza."
+msgstr "Visszaadja a [param idx] indexű csúcs és az utána következő, [code]idx + 1[/code] indexű csúcs közötti pozíciót. A [param t] határozza meg, hogy a pozíció a szakasz kezdőpontjára ([code]t = 0.0[/code]), végpontjára ([code]t = 1.0[/code]) vagy a kettő közé essen. A megadott tartományon ([code]0.0 &lt;= t &lt;= 1.0[/code]) kívüli [param t] értékek szokatlan, de kiszámítható eredményt adnak.\nHa a [param idx] kilóg az érvényes tartományból, a rendszer az első vagy az utolsó csúcsra korlátozza, és figyelmen kívül hagyja a [param t] értékét. Ha a görbe üres, hibát ír a konzolra, és [code](0, 0)[/code] értéket ad vissza."
 
 #. Curve2D.sample_baked
 #: doc/classes/Curve2D.xml
 msgid "Returns a point within the curve at position [param offset], where [param offset] is measured as a pixel distance along the curve.\nTo do that, it finds the two cached points where the [param offset] lies between, then interpolates the values. This interpolation is cubic if [param cubic] is set to [code]true[/code], or linear if set to [code]false[/code].\nCubic interpolation tends to follow the curves better, but linear is faster (and often, precise enough)."
-msgstr "Visszaadja a görbe [param offset] pozícióján lévő pontot, ahol a [param offset] eltolást a görbe mentén mért képponttávolságként értelmezi.\nEhhez megkeresi azt a két gyorsítótárazott pontot, amelyek között a [param offset] található, majd interpolálja az értékeket. Az interpoláció köbös, ha a [param cubic] értéke [code]true[/code], és lineáris, ha [code]false[/code].\nA köbös interpoláció általában pontosabban követi a görbéket, míg a lineáris gyorsabb, és sokszor kellően pontos."
+msgstr "Visszaadja a görbe [param offset] pozícióján lévő pontot, ahol a [param offset] eltolást a görbe mentén mért képponttávolságként értelmezi.\nEhhez megkeresi a [param offset] eltolást közrefogó két gyorsítótárazott pontot, majd interpolációval meghatározza a köztes pozíciót. Az interpoláció köbös, ha a [param cubic] értéke [code]true[/code], és lineáris, ha [code]false[/code].\nA köbös interpoláció általában jobban követi a görbe alakját, a lineáris viszont gyorsabb, és sok esetben elegendő pontosságú."
 
 #. Curve2D.sample_baked_with_rotation
 #: doc/classes/Curve2D.xml
@@ -5258,7 +5258,7 @@ msgstr "A [method sample_baked] metódushoz hasonlóan működik, de egy [Transf
 #. Curve2D.samplef
 #: doc/classes/Curve2D.xml
 msgid "Returns the position at the vertex [param fofs]. It calls [method sample] using the integer part of [param fofs] as [code]idx[/code], and its fractional part as [code]t[/code]."
-msgstr "Visszaadja a [param fofs] csúcspozíción lévő pontot. A [method sample] metódust hívja meg, a [param fofs] egész részét [code]idx[/code] értékként, törtrészét pedig [code]t[/code] értékként használva."
+msgstr "Visszaadja a [param fofs] törtszámos csúcsindexnek megfelelő pozíciót. A [method sample] metódust hívja meg, a [param fofs] egész részét [code]idx[/code] értékként, törtrészét pedig [code]t[/code] értékként használva."
 
 #. Curve2D.set_point_in
 #: doc/classes/Curve2D.xml
@@ -5278,17 +5278,17 @@ msgstr "Beállítja a [param idx] indexű csúcs pozícióját. Érvénytelen in
 #. Curve2D.tessellate
 #: doc/classes/Curve2D.xml
 msgid "Returns a list of points along the curve, with a curvature controlled point density. That is, the curvier parts will have more points than the straighter parts.\nThis approximation makes straight segments between each point, then subdivides those segments until the resulting shape is similar enough.\n[param max_stages] controls how many subdivisions a curve segment may face before it is considered approximate enough. Each subdivision splits the segment in half, so the default 5 stages may mean up to 32 subdivisions per curve segment. Increase with care!\n[param tolerance_degrees] controls how many degrees the midpoint of a segment may deviate from the real curve, before the segment has to be subdivided."
-msgstr "A görbe mentén elhelyezkedő pontok listáját adja vissza, ahol a pontsűrűséget a görbület határozza meg. A jobban ívelt szakaszokon több pontot használ, mint az egyenesebb részeken.\nA közelítés először egyenes szakaszokat hoz létre a pontok között, majd ezeket addig osztja tovább, amíg a kapott alakzat eléggé meg nem közelíti a görbét.\nA [param max_stages] szabályozza, hány további felosztást kaphat egy görbeszakasz, mielőtt a rendszer elég pontosnak tekinti. Minden felosztás felezi a szakaszt, így az alapértelmezett 5 lépés görbeszakaszonként akár 32 részre osztást is jelenthet. Óvatosan növeld az értéket!\nA [param tolerance_degrees] azt szabályozza, hány fokkal térhet el egy szakasz középpontja a tényleges görbétől, mielőtt újra fel kell osztani."
+msgstr "A görbe mentén elhelyezkedő pontok listáját adja vissza, a görbülethez igazodó pontsűrűséggel. Az erősebben hajló szakaszokon több pontot használ, mint az egyenesebb részeken.\nA közelítés először egyenes szakaszokat hoz létre a pontok között, majd ezeket addig osztja tovább, amíg a kapott alakzat eléggé meg nem közelíti a görbét.\nA [param max_stages] szabályozza, hány további felosztást kaphat egy görbeszakasz, mielőtt a rendszer elég pontosnak tekinti. Minden felosztás felezi a szakaszt, így az alapértelmezett 5 lépés görbeszakaszonként akár 32 részre osztást is jelenthet. Óvatosan növeld az értéket!\nA [param tolerance_degrees] azt szabályozza, hány fokkal térhet el egy szakasz középpontja a tényleges görbétől, mielőtt újra fel kell osztani."
 
 #. Curve2D.tessellate_even_length
 #: doc/classes/Curve2D.xml
 msgid "Returns a list of points along the curve, with almost uniform density. [param max_stages] controls how many subdivisions a curve segment may face before it is considered approximate enough. Each subdivision splits the segment in half, so the default 5 stages may mean up to 32 subdivisions per curve segment. Increase with care!\n[param tolerance_length] controls the maximal distance between two neighboring points, before the segment has to be subdivided."
-msgstr "A görbe mentén közel egyenletes sűrűségű pontok listáját adja vissza. A [param max_stages] szabályozza, hány további felosztást kaphat egy görbeszakasz, mielőtt a rendszer elég pontosnak tekinti. Minden felosztás felezi a szakaszt, így az alapértelmezett 5 lépés görbeszakaszonként akár 32 részre osztást is jelenthet. Óvatosan növeld az értéket!\nA [param tolerance_length] a két szomszédos pont közötti legnagyobb megengedett távolságot szabályozza, amely fölött a szakaszt tovább kell osztani."
+msgstr "A görbe mentén közel egyenletes sűrűségű pontok listáját adja vissza. A [param max_stages] szabályozza, hány további felosztást kaphat egy görbeszakasz, mielőtt a rendszer elég pontosnak tekinti. Minden felosztás felezi a szakaszt, így az alapértelmezett 5 lépés görbeszakaszonként akár 32 részre osztást is jelenthet. Óvatosan növeld az értéket!\nA [param tolerance_length] megadja a szomszédos pontok közötti maximális távolságot. Ha a távolság ennél nagyobb, a szakaszt tovább kell osztani."
 
 #. Curve2D.bake_interval
 #: doc/classes/Curve2D.xml
 msgid "The distance in pixels between two adjacent cached points. Changing it forces the cache to be recomputed the next time the [method get_baked_points] or [method get_baked_length] function is called. The smaller the distance, the more points in the cache and the more memory it will consume, so use with care."
-msgstr "A két szomszédos gyorsítótárazott pont közötti távolság képpontban. Megváltoztatásakor a következő [method get_baked_points] vagy [method get_baked_length] hívás újraszámítja a gyorsítótárat. Kisebb távolság esetén több pont kerül a gyorsítótárba, ami több memóriát igényel, ezért óvatosan módosítsd."
+msgstr "A két szomszédos gyorsítótárazott pont közötti távolság képpontban. Az érték módosítása után a következő [method get_baked_points] vagy [method get_baked_length] híváskor a rendszer újraszámítja a gyorsítótárat. Kisebb távolság esetén több pont kerül a gyorsítótárba, ami több memóriát igényel, ezért óvatosan módosítsd."
 
 #. Curve2D.point_{index}/in
 #: doc/classes/Curve2D.xml
