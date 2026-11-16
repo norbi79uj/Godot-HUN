@@ -4083,22 +4083,22 @@ msgstr "A sokszög csúcsainak listája. A pontokat a rendszer sorrendben össze
 #. RemoteTransform2D.brief
 #: doc/classes/RemoteTransform2D.xml
 msgid "RemoteTransform2D pushes its own [Transform2D] to another [Node2D] derived node in the scene."
-msgstr "A RemoteTransform2D saját [Transform2D] transzformációját átadja a jelenet egy másik [Node2D] leszármazott csomópontjának."
+msgstr "A RemoteTransform2D a saját [Transform2D] transzformációját a jelenet egy másik, [Node2D] típusból származó csomópontjára alkalmazza."
 
 #. RemoteTransform2D.description
 #: doc/classes/RemoteTransform2D.xml
 msgid "RemoteTransform2D pushes its own [Transform2D] to another [Node2D] derived node (called the remote node) in the scene.\nIt can be set to update another node's position, rotation and/or scale. It can use either global or local coordinates."
-msgstr "A RemoteTransform2D saját [Transform2D] transzformációját átadja a jelenet egy másik, [Node2D] osztályból származó csomópontjának (a távoli csomópontnak).\nBeállítható, hogy a másik csomópont pozícióját, elforgatását és/vagy méretarányát frissítse. Globális vagy helyi koordinátákat is használhat."
+msgstr "A RemoteTransform2D a saját [Transform2D] transzformációját a jelenet egy másik, [Node2D] osztályból származó csomópontjára (a távoli csomópontra) alkalmazza.\nBeállítható, hogy a távoli csomópont pozícióját, elforgatását, méretarányát vagy ezek bármely kombinációját frissítse. Globális és helyi koordinátákkal is működhet."
 
 #. RemoteTransform2D.force_update_cache
 #: doc/classes/RemoteTransform2D.xml
 msgid "[RemoteTransform2D] caches the remote node. It may not notice if the remote node disappears; [method force_update_cache] forces it to update the cache again."
-msgstr "A [RemoteTransform2D] gyorsítótárazza a távoli csomópontot. Előfordulhat, hogy nem érzékeli annak eltűnését; a [method force_update_cache] újból frissíti a gyorsítótárat."
+msgstr "A [RemoteTransform2D] gyorsítótárban tárolja a távoli csomópontot, ezért nem feltétlenül észleli, ha az eltűnik. A [method force_update_cache] kikényszeríti a gyorsítótár frissítését."
 
 #. RemoteTransform2D.remote_path
 #: doc/classes/RemoteTransform2D.xml
 msgid "The [NodePath] to the remote node, relative to the RemoteTransform2D's position in the scene."
-msgstr "A távoli csomópont [NodePath] elérési útja a RemoteTransform2D jelenetbeli pozíciójához viszonyítva."
+msgstr "A távoli csomópont [NodePath] elérési útvonala a RemoteTransform2D jeleneten belüli helyéhez viszonyítva."
 
 #. RemoteTransform2D.update_position
 #: doc/classes/RemoteTransform2D.xml
@@ -4128,17 +4128,17 @@ msgstr "Pontszerű 2D-s fényforrás."
 #. PointLight2D.description
 #: doc/classes/PointLight2D.xml
 msgid "Casts light in a 2D environment. This light's shape is defined by a (usually grayscale) texture."
-msgstr "Fényt bocsát ki egy 2D-s környezetben. A fény alakját egy (általában szürkeárnyalatos) textúra határozza meg."
+msgstr "Fényt bocsát ki egy 2D-s környezetben. A fény alakját egy rendszerint szürkeárnyalatos textúra határozza meg."
 
 #. PointLight2D.height
 #: doc/classes/PointLight2D.xml
 msgid "The height of the light. Used with 2D normal mapping. The units are in pixels, e.g. if the height is 100, then it will illuminate an object 100 pixels away at a 45° angle to the plane."
-msgstr "A fény magassága. A 2D-s normálleképezés használja. Mértékegysége képpont: például 100-as magasságnál a fény a síkhoz képest 45°-os szögben egy 100 képpont távolságra lévő objektumot világít meg."
+msgstr "A fényforrás magassága, amelyet a 2D-s normálleképezés használ. Értéke képpontban értendő: 100-as magasságnál például egy 100 képpont távolságra lévő objektumot a síkhoz képest 45°-os szögből világít meg."
 
 #. PointLight2D.offset
 #: doc/classes/PointLight2D.xml
 msgid "The offset of the light's [member texture]."
-msgstr "A fény [member texture] textúrájának eltolása."
+msgstr "A fényforráshoz tartozó [member texture] textúra pozícióeltolása."
 
 #. PointLight2D.texture
 #: doc/classes/PointLight2D.xml
@@ -4168,12 +4168,12 @@ msgstr "Az árnyék kiszámításához használt [OccluderPolygon2D]."
 #. LightOccluder2D.occluder_light_mask
 #: doc/classes/LightOccluder2D.xml
 msgid "The LightOccluder2D's occluder light mask. The LightOccluder2D will cast shadows only from Light2D(s) that have the same light mask(s)."
-msgstr "A LightOccluder2D fénykitakarási maszkja. Csak azoknak a Light2D fényforrásoknak a fényéből vet árnyékot, amelyek fényrétegmaszkja egyezik vele."
+msgstr "A LightOccluder2D fénykitakarási maszkja. Csak azok a Light2D fényforrások hoznak létre vele árnyékot, amelyek fényrétegmaszkja egyezik a kitakaró maszkjával."
 
 #. LightOccluder2D.sdf_collision
 #: doc/classes/LightOccluder2D.xml
 msgid "If enabled, the occluder will be part of a real-time generated signed distance field that can be used in custom shaders."
-msgstr "Ha engedélyezett, a fénykitakaró részt vesz egy valós időben előállított, előjeles távolságmező (SDF) létrehozásában, amely egyéni shaderekben használható."
+msgstr "Ha engedélyezett, a fénykitakaró bekerül a valós időben létrehozott előjeles távolságmezőbe (SDF), amely egyéni shaderekben használható."
 
 #. CanvasModulate.brief
 #: doc/classes/CanvasModulate.xml
