@@ -5654,47 +5654,47 @@ msgstr "A [theme_item scroll_hint_vertical] textúra színezésére használt [C
 #. ScrollContainer.theme.scrollbar_h_separation
 #: doc/classes/ScrollContainer.xml
 msgid "The space between the ScrollContainer's vertical scroll bar and its content, in pixels. No space will be added when the content's minimum size is larger than the ScrollContainer's size."
-msgstr "A ScrollContainer függőleges görgetősávja és a tartalom közötti távolság képpontban. Nem ad hozzá térközt, ha a tartalom minimális mérete nagyobb a ScrollContainer méreténél."
+msgstr "A ScrollContainer függőleges görgetősávja és a tartalma közötti vízszintes térköz képpontban. Ha a tartalom minimális mérete meghaladja a ScrollContainer méretét, a rendszer nem ad hozzá térközt."
 
 #. ScrollContainer.theme.scrollbar_v_separation
 #: doc/classes/ScrollContainer.xml
 msgid "The space between the ScrollContainer's horizontal scroll bar and its content, in pixels. No space will be added when the content's minimum size is larger than the ScrollContainer's size."
-msgstr "A ScrollContainer vízszintes görgetősávja és a tartalom közötti távolság képpontban. Nem ad hozzá térközt, ha a tartalom minimális mérete nagyobb a ScrollContainer méreténél."
+msgstr "A ScrollContainer vízszintes görgetősávja és a tartalma közötti függőleges térköz képpontban. Ha a tartalom minimális mérete meghaladja a ScrollContainer méretét, a rendszer nem ad hozzá térközt."
 
 #. ScrollContainer.theme.scroll_hint_horizontal
 #: doc/classes/ScrollContainer.xml
 msgid "The indicator that will be shown when the content can still be scrolled horizontally. See [member scroll_hint_mode]."
-msgstr "Jelzés arra, hogy a tartalom vízszintesen még tovább görgethető. Lásd: [member scroll_hint_mode]."
+msgstr "Akkor megjelenő jelzés, ha a tartalom vízszintes irányban még tovább görgethető. Lásd: [member scroll_hint_mode]."
 
 #. ScrollContainer.theme.scroll_hint_vertical
 #: doc/classes/ScrollContainer.xml
 msgid "The indicator that will be shown when the content can still be scrolled vertically. See [member scroll_hint_mode]."
-msgstr "Jelzés arra, hogy a tartalom függőlegesen még tovább görgethető. Lásd: [member scroll_hint_mode]."
+msgstr "Akkor megjelenő jelzés, ha a tartalom függőleges irányban még tovább görgethető. Lásd: [member scroll_hint_mode]."
 
 #. ScrollContainer.theme.focus
 #: doc/classes/ScrollContainer.xml
 msgid "The focus border [StyleBox] of the [ScrollContainer]. Only used if [member draw_focus_border] is [code]true[/code]."
-msgstr "A [ScrollContainer] fókuszkeretének [StyleBox] erőforrása. Csak akkor használatos, ha a [member draw_focus_border] értéke [code]true[/code]."
+msgstr "A [ScrollContainer] fókuszát jelző [StyleBox] keret. Csak akkor jelenik meg, ha a [member draw_focus_border] értéke [code]true[/code]."
 
 #. ScrollContainer.theme.panel
 #: doc/classes/ScrollContainer.xml
 msgid "The background [StyleBox] of the [ScrollContainer]."
-msgstr "A [ScrollContainer] hátterének [StyleBox] erőforrása."
+msgstr "A [ScrollContainer] háttérként használt [StyleBox] erőforrása."
 
 #. SplitContainer.brief
 #: doc/classes/SplitContainer.xml
 msgid "A container that arranges child controls horizontally or vertically and provides grabbers for adjusting the split ratios between them."
-msgstr "A gyermek vezérlőelemeket vízszintesen vagy függőlegesen elrendező tároló, amely húzható fogantyúkkal állítható méretarányt biztosít."
+msgstr "Olyan tároló, amely a gyermek vezérlőelemeket vízszintesen vagy függőlegesen rendezi el, és húzható elválasztókkal teszi állíthatóvá a méretarányukat."
 
 #. SplitContainer.description
 #: doc/classes/SplitContainer.xml
 msgid "A container that arranges child controls horizontally or vertically and creates grabbers between them. The grabbers can be dragged around to change the size relations between the child controls."
-msgstr "A gyermek vezérlőelemeket vízszintesen vagy függőlegesen elrendező tároló, amely húzható elválasztókat hoz létre közöttük. A fogantyúk áthúzásával módosíthatod a gyermek vezérlőelemek egymáshoz viszonyított méretét."
+msgstr "A gyermek vezérlőelemeket vízszintes vagy függőleges elrendezésben helyezi el, és húzható elválasztókat illeszt közéjük. Az elválasztók mozgatásával változtathatod a szomszédos gyermekelemek egymáshoz viszonyított méretét."
 
 #. SplitContainer.clamp_split_offset
 #: doc/classes/SplitContainer.xml
 msgid "Clamps the [member split_offsets] values to ensure they are within valid ranges and do not overlap with each other. When overlaps occur, this method prioritizes one split offset (at index [param priority_index]) by clamping any overlapping split offsets to it."
-msgstr "A [member split_offsets] értékeit az érvényes tartományra korlátozza, és megakadályozza, hogy az elválasztók átfedjék egymást. Átfedés esetén a [param priority_index] indexű elválasztó élvez elsőbbséget; a többi ütköző elválasztó helyzetét ehhez igazítja."
+msgstr "A [member split_offsets] eltolásait az érvényes tartományra korlátozza, hogy az elválasztók ne fedjék át egymást. Ha az eltolások ütköznek, a [param priority_index] indexű elválasztó helyzete élvez elsőbbséget, és a többi ütköző eltolást ehhez igazítja."
 
 #. SplitContainer.get_drag_area_control
 #: doc/classes/SplitContainer.xml
@@ -5714,22 +5714,22 @@ msgstr "Ha [code]true[/code], letiltja az elválasztó fogantyúkat, és úgy m�
 #. SplitContainer.drag_area_highlight_in_editor
 #: doc/classes/SplitContainer.xml
 msgid "Highlights the drag area [Rect2] so you can see where it is during development. The drag area is gold if [member dragging_enabled] is [code]true[/code], and red if [code]false[/code]."
-msgstr "A fejlesztés során kiemeli a húzási területet jelölő [Rect2] téglalapot. A terület aranyszínű, ha a [member dragging_enabled] értéke [code]true[/code], és piros, ha [code]false[/code]."
+msgstr "A szerkesztőben kiemeli a húzási területet jelölő [Rect2] téglalapot, hogy fejlesztés közben látható legyen a helye. A terület aranyszínnel jelenik meg, ha a [member dragging_enabled] értéke [code]true[/code], és pirossal, ha [code]false[/code]."
 
 #. SplitContainer.drag_area_margin_begin
 #: doc/classes/SplitContainer.xml
 msgid "Reduces the size of the drag area and split bar [theme_item split_bar_background] at the beginning of the container."
-msgstr "Csökkenti a húzási terület és az elválasztósáv [theme_item split_bar_background] méretét a tároló kezdőoldalán."
+msgstr "A tároló kezdőoldalán csökkenti a húzási terület és a [theme_item split_bar_background] elválasztósáv méretét."
 
 #. SplitContainer.drag_area_margin_end
 #: doc/classes/SplitContainer.xml
 msgid "Reduces the size of the drag area and split bar [theme_item split_bar_background] at the end of the container."
-msgstr "Csökkenti a húzási terület és az elválasztósáv [theme_item split_bar_background] méretét a tároló végoldalán."
+msgstr "A tároló végoldalán csökkenti a húzási terület és a [theme_item split_bar_background] elválasztósáv méretét."
 
 #. SplitContainer.drag_area_offset
 #: doc/classes/SplitContainer.xml
 msgid "Shifts the drag area in the axis of the container to prevent the drag area from overlapping the [ScrollBar] or other selectable [Control] of a child node."
-msgstr "A tároló tengelye mentén eltolja a húzási területet, hogy az ne fedje a gyermekcsomópont [ScrollBar] görgetősávját vagy más kijelölhető [Control] elemét."
+msgstr "A tároló főtengelye mentén eltolja a húzási területet, hogy az ne fedje le a gyermekcsomópont [ScrollBar] görgetősávját vagy más, egérrel kijelölhető [Control] vezérlőelemét."
 
 #. SplitContainer.drag_nested_intersections
 #: doc/classes/SplitContainer.xml
@@ -5739,12 +5739,12 @@ msgstr "További húzófogantyúkat helyez el két SplitContainer elválasztóin
 #. SplitContainer.dragger_visibility
 #: doc/classes/SplitContainer.xml
 msgid "Determines the dragger's visibility. This property does not determine whether dragging is enabled or not. Use [member dragging_enabled] for that."
-msgstr "Meghatározza a húzófogantyú láthatóságát. Ez a tulajdonság nem szabályozza, hogy a húzás engedélyezett-e; ehhez a [member dragging_enabled] használható."
+msgstr "A húzófogantyúk láthatóságát szabályozza, nem pedig azt, hogy mozgathatók-e az elválasztók. A húzás engedélyezését a [member dragging_enabled] tulajdonsággal állíthatod be."
 
 #. SplitContainer.dragging_enabled
 #: doc/classes/SplitContainer.xml
 msgid "Enables or disables split dragging."
-msgstr "Engedélyezi vagy letiltja az elválasztó egérrel történő húzását."
+msgstr "Engedélyezi vagy letiltja a panelek közötti elválasztók húzását."
 
 #. SplitContainer.split_offset
 #: doc/classes/SplitContainer.xml
@@ -5759,7 +5759,7 @@ msgstr "Az elválasztók eltolásai képpontban. Minden érték a fogantyú elő
 #. SplitContainer.touch_dragger_enabled
 #: doc/classes/SplitContainer.xml
 msgid "If [code]true[/code], a touch-friendly drag handle will be enabled for better usability on smaller screens. Unlike the standard grabber, this drag handle overlaps the [SplitContainer]'s children and does not affect their minimum separation. The standard grabber will no longer be drawn when this option is enabled."
-msgstr "Ha [code]true[/code], érintőképernyőhöz kényelmesebb húzófogantyú jelenik meg. A hagyományos fogantyúval szemben ez ráfed a [SplitContainer] gyermekeire, és nem növeli a minimális távolságukat. Bekapcsolásakor a hagyományos fogantyú nem rajzolódik ki."
+msgstr "Ha [code]true[/code], a kisebb képernyőkön könnyebben használható, érintéses húzófogantyút kapcsol be. Ez a hagyományos fogantyúval ellentétben ráfed a [SplitContainer] gyermekelemeire, így nem befolyásolja azok minimális távolságát. Bekapcsolásakor a hagyományos fogantyú már nem jelenik meg."
 
 #. SplitContainer.vertical
 #: doc/classes/SplitContainer.xml
