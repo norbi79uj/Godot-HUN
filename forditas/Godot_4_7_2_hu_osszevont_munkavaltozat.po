@@ -5313,7 +5313,7 @@ msgstr "Egyszínű téglalapot megjelenítő vezérlőelem."
 #. ColorRect.description
 #: doc/classes/ColorRect.xml
 msgid "Displays a rectangle filled with a solid [member color]. If you need to display the border alone, consider using a [Panel] instead."
-msgstr "A [member color] színnel kitöltött téglalapot jelenít meg. Ha csak a keretet szeretnéd kirajzolni, érdemes inkább [Panel] csomópontot használni."
+msgstr "Egyszínű, a [member color] tulajdonsággal megadott színnel kitöltött téglalapot jelenít meg. Ha csak a keretét szeretnéd megjeleníteni, használj inkább [Panel] csomópontot."
 
 #. ColorRect.color
 #: doc/classes/ColorRect.xml
@@ -5323,62 +5323,62 @@ msgstr "A téglalap kitöltési színe."
 #. Panel.brief
 #: doc/classes/Panel.xml
 msgid "A GUI control that displays a [StyleBox]."
-msgstr "[StyleBox] stíluskeretet megjelenítő grafikus vezérlőelem."
+msgstr "Grafikus felületi vezérlőelem, amely [StyleBox] stíluskeretet jelenít meg."
 
 #. Panel.description
 #: doc/classes/Panel.xml
 msgid "[Panel] is a GUI control that displays a [StyleBox]. See also [PanelContainer]."
-msgstr "A [Panel] egy [StyleBox] stíluskeretet megjelenítő grafikus vezérlőelem. Lásd még: [PanelContainer]."
+msgstr "A [Panel] grafikus felületi vezérlőelem, amely [StyleBox] stíluskeretet jelenít meg. Lásd még: [PanelContainer]."
 
 #. Panel.theme.panel
 #: doc/classes/Panel.xml
 msgid "The [StyleBox] of this control."
-msgstr "A vezérlőelem [StyleBox] stíluskerete."
+msgstr "A vezérlőelem megjelenését meghatározó [StyleBox] stíluskeret."
 
 #. PanelContainer.brief
 #: doc/classes/PanelContainer.xml
 msgid "A container that keeps its child controls within the area of a [StyleBox]."
-msgstr "Olyan tároló, amely a gyermek vezérlőelemeit egy [StyleBox] területén belül tartja."
+msgstr "Olyan tároló, amely gyermek vezérlőelemeit egy [StyleBox] által meghatározott területen belül tartja."
 
 #. PanelContainer.description
 #: doc/classes/PanelContainer.xml
 msgid "A container that keeps its child controls within the area of a [StyleBox]. Useful for giving controls an outline."
-msgstr "A gyermek vezérlőelemeket egy [StyleBox] területén belül tartó tároló. Hasznos a vezérlőelemek körüli keret megjelenítéséhez."
+msgstr "A gyermek vezérlőelemeket egy [StyleBox] által meghatározott területen belül helyezi el. Segítségével keretet adhatsz a vezérlőelemek köré."
 
 #. PanelContainer.theme.panel
 #: doc/classes/PanelContainer.xml
 msgid "The style of [PanelContainer]'s background."
-msgstr "A [PanelContainer] hátterének stílusa."
+msgstr "A [PanelContainer] hátterének megjelenését meghatározó stílus."
 
 #. MarginContainer.brief
 #: doc/classes/MarginContainer.xml
 msgid "A container that keeps a margin around its child controls."
-msgstr "A gyermek vezérlőelemek körül margót fenntartó tároló."
+msgstr "Olyan tároló, amely margót hagy a gyermek vezérlőelemek körül."
 
 #. MarginContainer.description
 #: doc/classes/MarginContainer.xml
 msgid "[MarginContainer] adds an adjustable margin on each side of its child controls. The margins are added around all children, not around each individual one. To control the [MarginContainer]'s margins, use the [code]margin_*[/code] theme properties listed below.\n[b]Note:[/b] The margin sizes are theme overrides, not normal properties. This is an example of how to change them in code:\n[codeblocks]\n[gdscript]\n# This code sample assumes the current script is extending MarginContainer.\nvar margin_value = 100\nadd_theme_constant_override(\"margin_top\", margin_value)\nadd_theme_constant_override(\"margin_left\", margin_value)\nadd_theme_constant_override(\"margin_bottom\", margin_value)\nadd_theme_constant_override(\"margin_right\", margin_value)\n[/gdscript]\n[csharp]\n// This code sample assumes the current script is extending MarginContainer.\nint marginValue = 100;\nAddThemeConstantOverride(\"margin_top\", marginValue);\nAddThemeConstantOverride(\"margin_left\", marginValue);\nAddThemeConstantOverride(\"margin_bottom\", marginValue);\nAddThemeConstantOverride(\"margin_right\", marginValue);\n[/csharp]\n[/codeblocks]"
-msgstr "A [MarginContainer] állítható margót ad a gyermek vezérlőelemek mindegyik oldalához. A margók az összes gyermek körül közösen jelennek meg, nem az egyes gyermekek körül külön-külön. A [MarginContainer] margóit az alább felsorolt [code]margin_*[/code] tématulajdonságokkal állíthatod be.\n[b]Megjegyzés:[/b] A margóméretek témafelülírások, nem hagyományos tulajdonságok. Így változtathatod meg őket kódból:\n[codeblocks]\n[gdscript]\n# This code sample assumes the current script is extending MarginContainer.\nvar margin_value = 100\nadd_theme_constant_override(\"margin_top\", margin_value)\nadd_theme_constant_override(\"margin_left\", margin_value)\nadd_theme_constant_override(\"margin_bottom\", margin_value)\nadd_theme_constant_override(\"margin_right\", margin_value)\n[/gdscript]\n[csharp]\n// This code sample assumes the current script is extending MarginContainer.\nint marginValue = 100;\nAddThemeConstantOverride(\"margin_top\", marginValue);\nAddThemeConstantOverride(\"margin_left\", marginValue);\nAddThemeConstantOverride(\"margin_bottom\", marginValue);\nAddThemeConstantOverride(\"margin_right\", marginValue);\n[/csharp]\n[/codeblocks]"
+msgstr "A [MarginContainer] mind a négy oldalon külön beállítható margót biztosít a gyermek vezérlőelemek körül. A margó az összes gyermekre együttesen vonatkozik, nem külön-külön veszi körül őket. A [MarginContainer] margóinak méretét az alább felsorolt [code]margin_*[/code] tématulajdonságokkal szabályozhatod.\n[b]Megjegyzés:[/b] Ezek az értékek témafelülírások, nem hagyományos csomóponttulajdonságok. Kódból például így módosíthatod őket:\n[codeblocks]\n[gdscript]\n# This code sample assumes the current script is extending MarginContainer.\nvar margin_value = 100\nadd_theme_constant_override(\"margin_top\", margin_value)\nadd_theme_constant_override(\"margin_left\", margin_value)\nadd_theme_constant_override(\"margin_bottom\", margin_value)\nadd_theme_constant_override(\"margin_right\", margin_value)\n[/gdscript]\n[csharp]\n// This code sample assumes the current script is extending MarginContainer.\nint marginValue = 100;\nAddThemeConstantOverride(\"margin_top\", marginValue);\nAddThemeConstantOverride(\"margin_left\", marginValue);\nAddThemeConstantOverride(\"margin_bottom\", marginValue);\nAddThemeConstantOverride(\"margin_right\", marginValue);\n[/csharp]\n[/codeblocks]"
 
 #. MarginContainer.theme.margin_bottom
 #: doc/classes/MarginContainer.xml
 msgid "Offsets towards the inside direct children of the container by this amount of pixels from the bottom."
-msgstr "A tároló közvetlen gyermekei számára ennyi képpontnyi belső eltolást alkalmaz alulról."
+msgstr "A tároló közvetlen gyermek vezérlőelemeit ennyi képponttal helyezi beljebb az alsó szélétől."
 
 #. MarginContainer.theme.margin_left
 #: doc/classes/MarginContainer.xml
 msgid "Offsets towards the inside direct children of the container by this amount of pixels from the left."
-msgstr "A tároló közvetlen gyermekei számára ennyi képpontnyi belső eltolást alkalmaz balról."
+msgstr "A tároló közvetlen gyermek vezérlőelemeit ennyi képponttal helyezi beljebb a bal szélétől."
 
 #. MarginContainer.theme.margin_right
 #: doc/classes/MarginContainer.xml
 msgid "Offsets towards the inside direct children of the container by this amount of pixels from the right."
-msgstr "A tároló közvetlen gyermekei számára ennyi képpontnyi belső eltolást alkalmaz jobbról."
+msgstr "A tároló közvetlen gyermek vezérlőelemeit ennyi képponttal helyezi beljebb a jobb szélétől."
 
 #. MarginContainer.theme.margin_top
 #: doc/classes/MarginContainer.xml
 msgid "Offsets towards the inside direct children of the container by this amount of pixels from the top."
-msgstr "A tároló közvetlen gyermekei számára ennyi képpontnyi belső eltolást alkalmaz felülről."
+msgstr "A tároló közvetlen gyermek vezérlőelemeit ennyi képponttal helyezi beljebb a felső szélétől."
 
 #. HBoxContainer.brief
 #: doc/classes/HBoxContainer.xml
