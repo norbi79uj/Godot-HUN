@@ -4338,17 +4338,17 @@ msgstr "Parallaxisgörgetésű háttér létrehozására szolgáló csomópont."
 #. Parallax2D.description
 #: doc/classes/Parallax2D.xml
 msgid "A [Parallax2D] is used to create a parallax effect. It can move at a different speed relative to the camera movement using [member scroll_scale]. This creates an illusion of depth in a 2D game. If manual scrolling is desired, the [Camera2D] position can be ignored with [member ignore_camera_scroll].\n[b]Note:[/b] Any changes to this node's position made after it enters the scene tree will be overridden if [member ignore_camera_scroll] is [code]false[/code] or [member screen_offset] is modified."
-msgstr "A [Parallax2D] parallaxis hatás létrehozására szolgál. A [member scroll_scale] segítségével a kamera mozgásától eltérő sebességgel mozoghat, így mélységérzetet kelt egy 2D-s játékban. Kézi görgetés esetén a [member ignore_camera_scroll] használatával figyelmen kívül hagyható a [Camera2D] pozíciója.\n[b]Megjegyzés:[/b] Ha a [member ignore_camera_scroll] értéke [code]false[/code], vagy megváltoztatod a [member screen_offset] értékét, a csomópont jelenetfába kerülése után kézzel végrehajtott pozíciómódosítások felülíródnak."
+msgstr "A [Parallax2D] parallaxis hatás létrehozására szolgál. A [member scroll_scale] beállítással a háttér a kamerától eltérő sebességgel mozoghat, így mélységérzetet kelt a 2D-s játékban. Kézi görgetésnél a [member ignore_camera_scroll] segítségével figyelmen kívül hagyható a [Camera2D] pozíciója.\n[b]Megjegyzés:[/b] Ha a [member ignore_camera_scroll] értéke [code]false[/code], vagy megváltoztatod a [member screen_offset] értékét, a csomópont jelenetfába kerülése után kézzel végrehajtott pozíciómódosítások felülíródnak."
 
 #. Parallax2D.autoscroll
 #: doc/classes/Parallax2D.xml
 msgid "Velocity at which the offset scrolls automatically, in pixels per second."
-msgstr "Az eltolás automatikus görgetési sebessége képpont/másodpercben."
+msgstr "Az automatikus görgetés sebessége képpont/másodpercben, amellyel a rendszer az eltolást módosítja."
 
 #. Parallax2D.follow_viewport
 #: doc/classes/Parallax2D.xml
 msgid "If [code]true[/code], this [Parallax2D] is offset by the current camera's position. If the [Parallax2D] is in a [CanvasLayer] separate from the current camera, it may be desired to match the value with [member CanvasLayer.follow_viewport_enabled]."
-msgstr "Ha [code]true[/code], a [Parallax2D] eltolását az aktuális kamera pozíciója befolyásolja. Ha a [Parallax2D] az aktuális kamerától különböző [CanvasLayer] rétegen található, célszerű lehet ezt az értéket a [member CanvasLayer.follow_viewport_enabled] beállításhoz igazítani."
+msgstr "Ha [code]true[/code], a [Parallax2D] eltolása követi az aktuális kamera pozícióját. Ha a [Parallax2D] a kamerától eltérő [CanvasLayer] rétegen van, érdemes lehet a beállítást összehangolni a [member CanvasLayer.follow_viewport_enabled] értékével."
 
 #. Parallax2D.ignore_camera_scroll
 #: doc/classes/Parallax2D.xml
@@ -4358,37 +4358,37 @@ msgstr "Ha [code]true[/code], a [Parallax2D] pozícióját nem befolyásolja a k
 #. Parallax2D.limit_begin
 #: doc/classes/Parallax2D.xml
 msgid "Top-left limits for scrolling to begin. If the camera is outside of this limit, the [Parallax2D] stops scrolling. Must be lower than [member limit_end] minus the viewport size to work."
-msgstr "A görgetés kezdetének bal felső határa. Ha a kamera ezen a határon kívül van, a [Parallax2D] leállítja a görgetést. A helyes működéshez az értéknek kisebbnek kell lennie, mint a [member limit_end] és a nézet méretének különbsége."
+msgstr "A görgetési terület bal felső határa. Ha a kamera túllép ezen a határon, a [Parallax2D] görgetése leáll. A helyes működéshez az értéknek kisebbnek kell lennie a [member limit_end] értékénél, a nézetablak méretével csökkentve azt."
 
 #. Parallax2D.limit_end
 #: doc/classes/Parallax2D.xml
 msgid "Bottom-right limits for scrolling to end. If the camera is outside of this limit, the [Parallax2D] will stop scrolling. Must be higher than [member limit_begin] and the viewport size combined to work."
-msgstr "A görgetés végének jobb alsó határa. Ha a kamera ezen a határon kívül van, a [Parallax2D] leállítja a görgetést. A helyes működéshez az értéknek nagyobbnak kell lennie, mint a [member limit_begin] és a nézet méretének összege."
+msgstr "A görgetési terület jobb alsó határa. Ha a kamera túllép ezen a határon, a [Parallax2D] görgetése leáll. A helyes működéshez az értéknek nagyobbnak kell lennie a [member limit_begin] értékének és a nézetablak méretének összegénél."
 
 #. Parallax2D.repeat_size
 #: doc/classes/Parallax2D.xml
 msgid "Repeats the [Texture2D] of each of this node's children and offsets them by this value. When scrolling, the node's position loops, giving the illusion of an infinite scrolling background if the values are larger than the screen size. If an axis is set to [code]0[/code], the [Texture2D] will not be repeated."
-msgstr "Megismétli a csomópont gyermekeihez tartozó [Texture2D] textúrákat, a megadott értékkel eltolva azokat. Görgetéskor a csomópont pozíciója körbefordul, így a képernyőnél nagyobb értékekkel végtelennek tűnő, görgethető háttér hozható létre. Ha valamelyik tengely értéke [code]0[/code], az adott [Texture2D] nem ismétlődik abban az irányban."
+msgstr "A csomópont gyermekeinek [Texture2D] textúráit ismétli, és a megadott értékkel tolja el a másolataikat. Görgetéskor a pozíció ciklikusan ismétlődik, így a képernyő méreténél nagyobb értékekkel végtelennek tűnő háttér hozható létre. Ha valamelyik tengelyen az érték [code]0[/code], abban az irányban a [Texture2D] nem ismétlődik."
 
 #. Parallax2D.repeat_times
 #: doc/classes/Parallax2D.xml
 msgid "Overrides the amount of times the texture repeats. Each texture copy spreads evenly from the original by [member repeat_size]. Useful for when zooming out with a camera."
-msgstr "Felülírja a textúra ismétlődéseinek számát. A másolatok az eredeti textúrától a [member repeat_size] érték szerint, egyenletes távolságban helyezkednek el. Különösen hasznos, amikor a kamerával távolítasz."
+msgstr "Felülírja, hogy a textúra hányszor ismétlődjön. A másolatok az eredeti textúrától a [member repeat_size] értékének megfelelő, egyenletes távolságokra helyezkednek el. Különösen hasznos a kamera távolításakor."
 
 #. Parallax2D.screen_offset
 #: doc/classes/Parallax2D.xml
 msgid "Offset used to scroll this [Parallax2D]. This value is updated automatically unless [member ignore_camera_scroll] is [code]true[/code]."
-msgstr "A [Parallax2D] görgetéséhez használt eltolás. Az érték automatikusan frissül, kivéve, ha a [member ignore_camera_scroll] értéke [code]true[/code]."
+msgstr "A [Parallax2D] görgetését meghatározó eltolás. A rendszer automatikusan frissíti, kivéve, ha a [member ignore_camera_scroll] értéke [code]true[/code]."
 
 #. Parallax2D.scroll_offset
 #: doc/classes/Parallax2D.xml
 msgid "The [Parallax2D]'s offset. Similar to [member screen_offset] and [member Node2D.position], but will not be overridden.\n[b]Note:[/b] Values will loop if [member repeat_size] is set higher than [code]0[/code]."
-msgstr "A [Parallax2D] eltolása. Hasonló a [member screen_offset] és a [member Node2D.position] tulajdonsághoz, de ezt a rendszer nem írja felül.\n[b]Megjegyzés:[/b] Az értékek körbefordulnak, ha a [member repeat_size] nagyobb, mint [code]0[/code]."
+msgstr "A [Parallax2D] eltolása. A [member screen_offset] és a [member Node2D.position] tulajdonságokhoz hasonló, de az értékét a rendszer nem írja felül.\n[b]Megjegyzés:[/b] Az értékek ciklikusan ismétlődnek, ha a [member repeat_size] értéke nagyobb, mint [code]0[/code]."
 
 #. Parallax2D.scroll_scale
 #: doc/classes/Parallax2D.xml
 msgid "Multiplier to the final [Parallax2D]'s offset. Can be used to simulate distance from the camera.\nFor example, a value of [code]1[/code] scrolls at the same speed as the camera. A value greater than [code]1[/code] scrolls faster, making objects appear closer. Less than [code]1[/code] scrolls slower, making objects appear further, and a value of [code]0[/code] stops the objects completely."
-msgstr "A [Parallax2D] végső eltolásának szorzója, amellyel a kamerától való távolság szimulálható.\nPéldául [code]1[/code] esetén a háttér a kamerával azonos sebességgel görgetődik. Az [code]1[/code]-nél nagyobb érték gyorsabb görgetést ad, amitől az objektumok közelebbinek látszanak. Az [code]1[/code]-nél kisebb érték lassabb görgetést ad, így az objektumok távolabbinak tűnnek; [code]0[/code] esetén pedig teljesen megállnak."
+msgstr "A [Parallax2D] végső eltolásának szorzója, amellyel a kamerától való látszólagos távolság szimulálható.\nA [code]1[/code] érték a kamerával azonos görgetési sebességet jelent. Az [code]1[/code] értéknél nagyobb szorzó gyorsabb görgetést eredményez, így az objektumok közelebbinek látszanak. Az [code]1[/code] értéknél kisebb szorzó lassabb görgetést eredményez, így az objektumok távolabbinak tűnnek; [code]0[/code] esetén pedig egyáltalán nem mozognak."
 
 #. VisibleOnScreenNotifier2D.brief
 #: doc/classes/VisibleOnScreenNotifier2D.xml
