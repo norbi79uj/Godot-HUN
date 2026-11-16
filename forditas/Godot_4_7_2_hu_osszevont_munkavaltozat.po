@@ -3573,17 +3573,17 @@ msgstr "Beállítja az akadály körvonalának csúcsait. Ha a csúcsok az óram
 #. NavigationServer2D.parse_source_geometry_data
 #: doc/classes/NavigationServer2D.xml
 msgid "Parses the [SceneTree] for source geometry according to the properties of [param navigation_polygon]. Updates the provided [param source_geometry_data] resource with the resulting data. The resource can then be used to bake a navigation mesh with [method bake_from_source_geometry_data]. After the process is finished the optional [param callback] will be called.\n[b]Note:[/b] This function needs to run on the main thread or with a deferred call as the SceneTree is not thread-safe.\n[b]Performance:[/b] While convenient, reading data arrays from [Mesh] resources can affect the frame rate negatively. The data needs to be received from the GPU, stalling the [RenderingServer] in the process. For performance prefer the use of e.g. collision shapes or creating the data arrays entirely in code."
-msgstr "A [param navigation_polygon] beállításai alapján feldolgozza a [SceneTree] jelenetfát, hogy kinyerje a navigációs forrásgeometriát. A kapott adatokkal frissíti a megadott [param source_geometry_data] erőforrást. Ezután az erőforrás a [method bake_from_source_geometry_data] segítségével navigációs háló előállítására használható. A feldolgozás befejezésekor meghívja az opcionális [param callback] visszahívást.\n[b]Megjegyzés:[/b] A függvényt a főszálon vagy késleltetett hívással kell futtatni, mert a SceneTree nem szálbiztos.\n[b]Teljesítmény:[/b] Bár kényelmes megoldás, a [Mesh] erőforrások adattömbjeinek beolvasása ronthatja a képkockasebességet. Az adatokat a GPU-ról kell visszaolvasni, ami közben megakaszthatja a [RenderingServer] feldolgozását. A jobb teljesítményhez inkább ütközési alakzatokat használj, vagy hozd létre az adattömböket teljes egészükben kódból."
+msgstr "A [param navigation_polygon] tulajdonságai alapján feldolgozza a [SceneTree] jelenetfát, és kinyeri belőle a navigációs forrásgeometriát. A kapott adatokkal frissíti a megadott [param source_geometry_data] erőforrást. Ezután az erőforrás a [method bake_from_source_geometry_data] segítségével navigációs háló előállítására használható. A feldolgozás befejezésekor meghívja az opcionális [param callback] visszahívást.\n[b]Megjegyzés:[/b] A függvényt a főszálon vagy késleltetett hívással kell futtatni, mert a [SceneTree] nem szálbiztos.\n[b]Teljesítmény:[/b] Bár kényelmes megoldás, a [Mesh] erőforrások adattömbjeinek beolvasása ronthatja a képkockasebességet. Az adatokat a GPU-ról kell visszaolvasni, ami a művelet idejére feltarthatja a [RenderingServer] működését. A jobb teljesítményhez inkább ütközési alakzatokat használj, vagy hozd létre az adattömböket teljes egészükben kódból."
 
 #. NavigationServer2D.region_get_bounds
 #: doc/classes/NavigationServer2D.xml
 msgid "Returns the axis-aligned rectangle for the [param region]'s transformed navigation mesh."
-msgstr "Visszaadja a [param region] átalakított navigációs hálójának tengelyekkel párhuzamos határoló téglalapját."
+msgstr "Visszaadja a [param region] transzformált navigációs hálóját befoglaló, koordinátatengelyekkel párhuzamos téglalapot."
 
 #. NavigationServer2D.region_get_closest_point
 #: doc/classes/NavigationServer2D.xml
 msgid "Returns the navigation mesh surface point closest to the provided [param to_point] on the navigation [param region]."
-msgstr "Visszaadja a [param region] navigációs terület hálófelületének a [param to_point] ponthoz legközelebbi pontját."
+msgstr "Visszaadja a [param region] navigációs hálójának felületén azt a pontot, amely a legközelebb esik a megadott [param to_point] ponthoz."
 
 #. NavigationServer2D.region_get_connection_pathway_end
 #: doc/classes/NavigationServer2D.xml
@@ -3603,12 +3603,12 @@ msgstr "Visszaadja, hogy a [param region] hány kapcsolattal rendelkezik a térk
 #. NavigationServer2D.region_get_iteration_id
 #: doc/classes/NavigationServer2D.xml
 msgid "Returns the current iteration ID of the navigation region. Every time the navigation region changes and synchronizes, the iteration ID increases. An iteration ID of [code]0[/code] means the navigation region has never synchronized.\n[b]Note:[/b] The iteration ID will wrap around to [code]1[/code] after reaching its range limit."
-msgstr "Visszaadja a navigációs terület aktuális iterációazonosítóját. A terület minden változása és szinkronizálása után az azonosító növekszik. A [code]0[/code] azt jelenti, hogy a terület még sosem szinkronizálódott.\n[b]Megjegyzés:[/b] A megengedett tartomány végén az iterációazonosító ismét [code]1[/code] értékre vált."
+msgstr "Visszaadja a navigációs terület aktuális iterációazonosítóját. Minden olyan szinkronizáláskor növekszik az azonosító, amelynek során a terület változásait érvényesíti a rendszer. A [code]0[/code] azt jelenti, hogy a terület még sosem szinkronizálódott.\n[b]Megjegyzés:[/b] A megengedett tartomány végén az iterációazonosító ismét [code]1[/code] értékre vált."
 
 #. NavigationServer2D.region_get_random_point
 #: doc/classes/NavigationServer2D.xml
 msgid "Returns a random position picked from all region polygons with matching [param navigation_layers].\nIf [param uniformly] is [code]true[/code], all region polygons and faces are weighted by their surface area (slower).\nIf [param uniformly] is [code]false[/code], just a random polygon and face is picked (faster)."
-msgstr "Véletlenszerű pozíciót ad vissza a terület azon navigációs sokszögeiből, amelyek megfelelnek a [param navigation_layers] rétegmaszknak.\nHa [param uniformly] értéke [code]true[/code], a sokszögeket és lapokat a felületük arányában súlyozza a rendszer (lassabb).\nHa [param uniformly] értéke [code]false[/code], egy véletlenszerű sokszöget és azon egy lapot választ (gyorsabb)."
+msgstr "Véletlenszerű pozíciót ad vissza a terület azon navigációs sokszögeiből, amelyek megfelelnek a [param navigation_layers] rétegmaszknak.\nHa a [param uniformly] értéke [code]true[/code], a rendszer a sokszögeket és lapokat a felületük nagysága szerint súlyozza (lassabb).\nHa a [param uniformly] értéke [code]false[/code], a rendszer véletlenszerűen választ egy sokszöget, majd azon belül egy lapot (gyorsabb)."
 
 #. NavigationServer2D.region_get_use_async_iterations
 #: doc/classes/NavigationServer2D.xml
@@ -3638,12 +3638,12 @@ msgstr "Ha a [param enabled] értéke [code]true[/code], a [param region] navig�
 #. NavigationServer2D.simplify_path
 #: doc/classes/NavigationServer2D.xml
 msgid "Returns a simplified version of [param path] with less critical path points removed. The simplification amount is in worlds units and controlled by [param epsilon]. The simplification uses a variant of Ramer-Douglas-Peucker algorithm for curve point decimation.\nPath simplification can be helpful to mitigate various path following issues that can arise with certain agent types and script behaviors. E.g. \"steering\" agents or avoidance in \"open fields\"."
-msgstr "Visszaadja a [param path] egyszerűsített változatát, amelyből eltávolítja a kevésbé fontos útvonali pontokat. Az egyszerűsítés mértéke világkoordináta-egységekben értendő, és a [param epsilon] szabályozza. A pontok ritkítására a Ramer–Douglas–Peucker-algoritmus egyik változatát használja.\nAz útvonal egyszerűsítése segíthet csökkenteni az útvonalkövetési problémákat egyes ügynöktípusok és scriptek esetén, például kormányzásalapú mozgásnál vagy nyílt területen történő akadályelkerülésnél."
+msgstr "Visszaadja a [param path] egyszerűsített változatát, amelyből eltávolítja a kevésbé fontos útvonali pontokat. Az egyszerűsítés mértéke világkoordináta-egységekben értendő, és a [param epsilon] szabályozza. A pontok ritkítására a Ramer–Douglas–Peucker-algoritmus egyik változatát használja.\nAz útvonal egyszerűsítése enyhítheti az egyes ügynöktípusok és szkriptek működéséből eredő útvonalkövetési problémákat, például a kormányzási viselkedést használó ügynököknél vagy a nyílt területeken végzett akadályelkerülésnél."
 
 #. NavigationServer2D.source_geometry_parser_create
 #: doc/classes/NavigationServer2D.xml
 msgid "Creates a new source geometry parser. If a [Callable] is set for the parser with [method source_geometry_parser_set_callback] the callback will be called for every single node that gets parsed whenever [method parse_source_geometry_data] is used."
-msgstr "Új forrásgeometria-feldolgozót hoz létre. Ha a feldolgozóhoz a [method source_geometry_parser_set_callback] segítségével [Callable] visszahívást rendelsz, a [method parse_source_geometry_data] használatakor minden feldolgozott csomópontnál meghívja a visszahívást."
+msgstr "Új forrásgeometria-feldolgozót hoz létre. Ha a [method source_geometry_parser_set_callback] metódussal [Callable] visszahívást rendelsz hozzá, a [method parse_source_geometry_data] minden használatakor minden feldolgozott csomópontnál meghívódik a visszahívás."
 
 #. NavigationServer2D.source_geometry_parser_set_callback
 #: doc/classes/NavigationServer2D.xml
