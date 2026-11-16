@@ -4583,7 +4583,7 @@ msgstr "A lekerekített csatlakozások és vonalvégek simaságát szabályozza.
 #. Line2D.sharp_limit
 #: doc/classes/Line2D.xml
 msgid "Determines the miter limit of the polyline. Normally, when [member joint_mode] is set to [constant LINE_JOINT_SHARP], sharp angles fall back to using the logic of [constant LINE_JOINT_BEVEL] joints to prevent very long miters. Higher values of this property mean that the fallback to a bevel joint will happen at sharper angles."
-msgstr "Meghatározza a hegyes csatlakozások gérillesztési korlátját. Normál esetben, ha a [member joint_mode] értéke [constant LINE_JOINT_SHARP], a nagyon hegyes szögeknél a rendszer a [constant LINE_JOINT_BEVEL] szerinti ferde illesztésre vált, hogy elkerülje a túlságosan hosszú gércsúcsokat. Nagyobb értéknél csak még hegyesebb szög esetén történik meg ez a váltás."
+msgstr "A törött vonal gérillesztési határértékét szabályozza. Ha a [member joint_mode] értéke [constant LINE_JOINT_SHARP], a rendszer a túl hegyes csatlakozásoknál a [constant LINE_JOINT_BEVEL] szerinti ferde illesztésre vált, hogy ne alakuljanak ki aránytalanul hosszú gércsúcsok. Minél nagyobb ez az érték, annál hegyesebb szögnél történik meg a váltás."
 
 #. Line2D.texture
 #: doc/classes/Line2D.xml
@@ -4603,7 +4603,7 @@ msgstr "A törött vonal vastagsága."
 #. Line2D.width_curve
 #: doc/classes/Line2D.xml
 msgid "The polyline's width curve. The width of the polyline over its length will be equivalent to the value of the width curve over its domain. The width curve should be a unit [Curve]."
-msgstr "A törött vonal vastagsággörbéje. A vonal vastagsága a teljes hosszán követi a görbe tartományában megadott értékeket. A vastagsággörbének egységnyi tartományú [Curve] erőforrásnak kell lennie."
+msgstr "A törött vonal vastagságát a hossza mentén szabályozó görbe. A vonal vastagsága az egyes pontokon a görbe megfelelő értékét követi. Ehhez egységnyi tartományú [Curve] erőforrást kell használni."
 
 #. Polygon2D.brief
 #: doc/classes/Polygon2D.xml
@@ -4613,7 +4613,7 @@ msgstr "2D-s sokszög."
 #. Polygon2D.description
 #: doc/classes/Polygon2D.xml
 msgid "A Polygon2D is defined by a set of points. Each point is connected to the next, with the final point being connected to the first, resulting in a closed polygon. Polygon2Ds can be filled with color (solid or gradient) or filled with a given texture."
-msgstr "A Polygon2D alakzatot pontok halmaza határozza meg. Minden pont a következőhöz kapcsolódik, az utolsó pedig az elsőhöz, így zárt sokszög jön létre. A Polygon2D alakzatok egyszínű vagy színátmenetes kitöltéssel, illetve megadott textúrával is megjeleníthetők."
+msgstr "A Polygon2D alakzatot pontok rendezett sorozata határozza meg. A rendszer minden pontot összeköt a következővel, az utolsót pedig az elsővel, így zárt sokszöget alkot. A Polygon2D alakzatok egyszínű vagy színátmenetes kitöltéssel, illetve megadott textúrával is megjeleníthetők."
 
 #. Polygon2D.add_bone
 #: doc/classes/Polygon2D.xml
@@ -4663,7 +4663,7 @@ msgstr "Ha [code]true[/code], a sokszög szélei élsimítást kapnak."
 #. Polygon2D.color
 #: doc/classes/Polygon2D.xml
 msgid "The polygon's fill color. If [member texture] is set, it will be multiplied by this color. It will also be the default color for vertices not set in [member vertex_colors]."
-msgstr "A sokszög kitöltési színe. Ha a [member texture] be van állítva, a textúra színét ezzel megszorozza a rendszer. A [member vertex_colors] tulajdonságban külön nem megadott csúcsoknak ez lesz az alapértelmezett színe."
+msgstr "A sokszög kitöltésének színe. Ha [member texture] is meg van adva, a rendszer a textúra színeit ezzel a színnel szorozza össze. Azoknál a csúcsoknál, amelyeknek a [member vertex_colors] tulajdonságban nincs külön színük, ez lesz az alapértelmezett szín."
 
 #. Polygon2D.internal_vertex_count
 #: doc/classes/Polygon2D.xml
@@ -4673,12 +4673,12 @@ msgstr "A belső csúcsok száma, amelyet az UV-leképezés használ."
 #. Polygon2D.invert_border
 #: doc/classes/Polygon2D.xml
 msgid "Added padding applied to the bounding box when [member invert_enabled] is set to [code]true[/code]. Setting this value too small may result in a \"Bad Polygon\" error."
-msgstr "A határoló téglalaphoz hozzáadott ráhagyás, ha a [member invert_enabled] értéke [code]true[/code]. Túl kicsi értéknél „Bad Polygon” hiba jelentkezhet."
+msgstr "A határoló téglalaphoz hozzáadott ráhagyás, amelyet a rendszer akkor használ, ha a [member invert_enabled] értéke [code]true[/code]. Ha túl kicsi értéket adsz meg, „Bad Polygon” hiba léphet fel."
 
 #. Polygon2D.invert_enabled
 #: doc/classes/Polygon2D.xml
 msgid "If [code]true[/code], the polygon will be inverted, containing the area outside the defined points and extending to the [member invert_border]."
-msgstr "Ha [code]true[/code], a sokszög kitöltése megfordul: a megadott pontokon kívüli területet foglalja magában, egészen a [member invert_border] határáig."
+msgstr "Ha [code]true[/code], a sokszög kitöltése megfordul: a csúcsokkal körülhatárolt alakzaton kívüli terület lesz kitöltve, egészen a [member invert_border] által meghatározott határig."
 
 #. Polygon2D.offset
 #: doc/classes/Polygon2D.xml
@@ -4693,12 +4693,12 @@ msgstr "A sokszög csúcsainak listája. Az utolsó pont összekapcsolódik az e
 #. Polygon2D.polygons
 #: doc/classes/Polygon2D.xml
 msgid "The list of polygons, in case more than one is being represented. Every individual polygon is stored as a [PackedInt32Array] where each [int] is an index to a point in [member polygon]. If empty, this property will be ignored, and the resulting single polygon will be composed of all points in [member polygon], using the order they are stored in."
-msgstr "A sokszögek listája, ha egynél több alakzatot ábrázol az objektum. Minden különálló sokszög egy [PackedInt32Array] tömbben tárolódik, amelynek minden [int] eleme egy, a [member polygon] tulajdonságban szereplő pontra mutató index. Ha a lista üres, a rendszer figyelmen kívül hagyja ezt a tulajdonságot, és az egyetlen eredményül kapott sokszöget a [member polygon] összes pontjából, azok tárolási sorrendjében állítja elő."
+msgstr "A sokszögek listája, ha egynél több alakzatot ábrázol az objektum. Minden különálló sokszöget egy [PackedInt32Array] tömb ír le, amelynek [int] elemei a [member polygon] tulajdonságban tárolt pontok indexei. Ha a lista üres, a rendszer figyelmen kívül hagyja ezt a tulajdonságot, és az egyetlen eredményül kapott sokszöget a [member polygon] összes pontjából, azok tárolási sorrendjében állítja elő."
 
 #. Polygon2D.skeleton
 #: doc/classes/Polygon2D.xml
 msgid "Path to a [Skeleton2D] node used for skeleton-based deformations of this polygon. If empty or invalid, skeletal deformations will not be used."
-msgstr "A sokszög csontvázalapú alakváltoztatásához használt [Skeleton2D] csomópont elérési útja. Ha üres vagy érvénytelen, a rendszer nem használ csontvázalapú alakváltoztatást."
+msgstr "A sokszög csontvázvezérelt alakváltoztatásához használt [Skeleton2D] csomópont elérési útja. Üres vagy érvénytelen útvonal esetén a rendszer nem alkalmaz csontvázvezérelt alakváltoztatást."
 
 #. Polygon2D.texture
 #: doc/classes/Polygon2D.xml
@@ -4718,7 +4718,7 @@ msgstr "A textúra elforgatása radiánban."
 #. Polygon2D.texture_scale
 #: doc/classes/Polygon2D.xml
 msgid "Amount to multiply the [member uv] coordinates when using [member texture]. Larger values make the texture smaller, and vice versa."
-msgstr "Az a szorzó, amellyel a [member uv] koordinátáit módosítja a rendszer a [member texture] használatakor. Nagyobb értéknél a textúra kisebbnek látszik, és fordítva."
+msgstr "A [member texture] használatakor a [member uv] koordinátákra alkalmazott szorzó. Nagyobb érték esetén a textúra mintázata kisebbnek, kisebb értéknél nagyobbnak látszik."
 
 #. Polygon2D.uv
 #: doc/classes/Polygon2D.xml
@@ -4728,7 +4728,7 @@ msgstr "A sokszög egyes csúcsainak textúrakoordinátái. Minden csúcshoz egy
 #. Polygon2D.vertex_colors
 #: doc/classes/Polygon2D.xml
 msgid "Color for each vertex. Colors are interpolated between vertices, resulting in smooth gradients. There should be one per polygon vertex. If there are fewer, undefined vertices will use [member color]."
-msgstr "Az egyes csúcsok színe. A rendszer a szomszédos csúcsok színeit interpolálja, így sima színátmenetek jönnek létre. Minden csúcshoz egy színnek kell tartoznia. Ha kevesebb színt adsz meg, a többi csúcs a [member color] értéket kapja."
+msgstr "A sokszög csúcsaihoz rendelt színek. A rendszer a csúcsok között interpolálja a színeket, így folyamatos színátmenet jön létre. Minden csúcshoz egy szín tartozhat; ha kevesebbet adsz meg, a hiányzó színek helyett a [member color] értékét használja."
 
 #. Gradient.brief
 #: doc/classes/Gradient.xml
