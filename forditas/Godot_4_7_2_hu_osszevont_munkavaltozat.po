@@ -5479,62 +5479,62 @@ msgstr "A gyermekcsomópontok közötti függőleges távolság."
 #. AspectRatioContainer.brief
 #: doc/classes/AspectRatioContainer.xml
 msgid "A container that preserves the proportions of its child controls."
-msgstr "A gyermek vezérlőelemek képarányát megtartó tároló."
+msgstr "Olyan tároló, amely megőrzi a gyermek vezérlőelemek szélességének és magasságának arányát."
 
 #. AspectRatioContainer.description
 #: doc/classes/AspectRatioContainer.xml
 msgid "A container type that arranges its child controls in a way that preserves their proportions automatically when the container is resized. Useful when a container has a dynamic size and the child nodes must adjust their sizes accordingly without losing their aspect ratios."
-msgstr "Olyan tároló, amely átméretezésekor automatikusan úgy rendezi el a gyermek vezérlőelemeket, hogy azok megőrizzék az arányaikat. Akkor hasznos, ha a tároló mérete dinamikusan változik, de a gyermekek méretének a képarány elvesztése nélkül kell alkalmazkodnia."
+msgstr "Átméretezéskor automatikusan úgy helyezi el és méretezi a gyermek vezérlőelemeket, hogy azok megőrizzék a képarányukat. Különösen hasznos változó méretű tárolókban, amikor a gyermekelemeknek a rendelkezésre álló helyhez kell igazodniuk a képarányuk torzulása nélkül."
 
 #. AspectRatioContainer.alignment_horizontal
 #: doc/classes/AspectRatioContainer.xml
 msgid "Specifies the horizontal relative position of child controls."
-msgstr "Meghatározza a gyermek vezérlőelemek relatív vízszintes elhelyezkedését."
+msgstr "A gyermek vezérlőelemek tárolón belüli vízszintes igazítását határozza meg."
 
 #. AspectRatioContainer.alignment_vertical
 #: doc/classes/AspectRatioContainer.xml
 msgid "Specifies the vertical relative position of child controls."
-msgstr "Meghatározza a gyermek vezérlőelemek relatív függőleges elhelyezkedését."
+msgstr "A gyermek vezérlőelemek tárolón belüli függőleges igazítását határozza meg."
 
 #. AspectRatioContainer.ratio
 #: doc/classes/AspectRatioContainer.xml
 msgid "The aspect ratio to enforce on child controls. This is the width divided by the height. The ratio depends on the [member stretch_mode]."
-msgstr "A gyermek vezérlőelemekre érvényesítendő képarány: szélesség osztva magassággal. Az arány a [member stretch_mode] értékétől is függ."
+msgstr "A gyermek vezérlőelemekre alkalmazandó képarány, amely a szélesség és a magasság hányadosa. A tényleges elrendezést a [member stretch_mode] beállítása is befolyásolja."
 
 #. AspectRatioContainer.stretch_mode
 #: doc/classes/AspectRatioContainer.xml
 msgid "The stretch mode used to align child controls."
-msgstr "A gyermek vezérlőelemek igazításához használt nyújtási mód."
+msgstr "A gyermek vezérlőelemek méretezéséhez és igazításához használt nyújtási mód."
 
 #. FlowContainer.brief
 #: doc/classes/FlowContainer.xml
 msgid "A container that arranges its child controls horizontally or vertically and wraps them around at the borders."
-msgstr "A gyermek vezérlőelemeket vízszintesen vagy függőlegesen rendezi, és a tároló szélénél új sorba vagy oszlopba tördeli őket."
+msgstr "A gyermek vezérlőelemeket vízszintesen vagy függőlegesen elrendező tároló, amely a szélénél új sorba vagy oszlopba folytatja az elrendezést."
 
 #. FlowContainer.description
 #: doc/classes/FlowContainer.xml
 msgid "A container that arranges its child controls horizontally or vertically and wraps them around at the borders. This is similar to how text in a book wraps around when no more words can fit on a line."
-msgstr "A gyermek vezérlőelemeket vízszintesen vagy függőlegesen rendező tároló, amely a széléhez érve új sorba vagy oszlopba tördeli az elemeket. Hasonló ahhoz, ahogy a könyvben a szöveg a sor végén a következő sorban folytatódik."
+msgstr "A gyermek vezérlőelemeket vízszintesen vagy függőlegesen rendezi el. Ha a következő elem már nem fér el a tároló adott sorában vagy oszlopában, új sorban vagy oszlopban folytatja az elrendezést. Hasonlóan ahhoz, ahogy a könyvben a szavak a következő sorba kerülnek, amikor betelik az előző."
 
 #. FlowContainer.get_line_count
 #: doc/classes/FlowContainer.xml
 msgid "Returns the current line count."
-msgstr "Visszaadja az elrendezés aktuális sorainak számát."
+msgstr "Visszaadja az elrendezésben jelenleg használt sorok vagy oszlopok számát."
 
 #. FlowContainer.last_wrap_alignment
 #: doc/classes/FlowContainer.xml
 msgid "The wrap behavior of the last, partially filled row or column (must be one of [constant LAST_WRAP_ALIGNMENT_INHERIT], [constant LAST_WRAP_ALIGNMENT_BEGIN], [constant LAST_WRAP_ALIGNMENT_CENTER], or [constant LAST_WRAP_ALIGNMENT_END])."
-msgstr "Az utolsó, csak részben kitöltött sor vagy oszlop igazítása; értéke a [constant LAST_WRAP_ALIGNMENT_INHERIT], [constant LAST_WRAP_ALIGNMENT_BEGIN], [constant LAST_WRAP_ALIGNMENT_CENTER] vagy [constant LAST_WRAP_ALIGNMENT_END] valamelyike lehet."
+msgstr "Meghatározza az utolsó, csak részben kitöltött sor vagy oszlop igazítását. Az értéke [constant LAST_WRAP_ALIGNMENT_INHERIT], [constant LAST_WRAP_ALIGNMENT_BEGIN], [constant LAST_WRAP_ALIGNMENT_CENTER] vagy [constant LAST_WRAP_ALIGNMENT_END] lehet."
 
 #. FlowContainer.reverse_fill
 #: doc/classes/FlowContainer.xml
 msgid "If [code]true[/code], reverses fill direction. Horizontal [FlowContainer]s will fill rows bottom to top, vertical [FlowContainer]s will fill columns right to left.\nWhen using a vertical [FlowContainer] with a right to left [member Control.layout_direction], columns will fill left to right instead."
-msgstr "Ha [code]true[/code], megfordítja a kitöltés irányát. A vízszintes [FlowContainer] sorai alulról felfelé, a függőleges [FlowContainer] oszlopai jobbról balra töltődnek fel.\nHa a függőleges [FlowContainer] a [member Control.layout_direction] alapján jobbról balra haladó elrendezést használ, az oszlopok ehelyett balról jobbra töltődnek fel."
+msgstr "Ha [code]true[/code], megfordítja a kitöltés irányát: a vízszintes [FlowContainer] sorai alulról felfelé, a függőleges [FlowContainer] oszlopai jobbról balra töltődnek fel.\nHa a függőleges [FlowContainer] [member Control.layout_direction] beállítása jobbról balra haladó elrendezést ír elő, az oszlopok ehelyett balról jobbra töltődnek fel."
 
 #. FlowContainer.vertical
 #: doc/classes/FlowContainer.xml
 msgid "If [code]true[/code], the [FlowContainer] will arrange its children vertically, rather than horizontally.\nCan't be changed when using [HFlowContainer] and [VFlowContainer]."
-msgstr "Ha [code]true[/code], a [FlowContainer] vízszintes helyett függőlegesen rendezi el a gyermekeket.\nA [HFlowContainer] és [VFlowContainer] használatakor nem módosítható."
+msgstr "Ha [code]true[/code], a [FlowContainer] a gyermekelemeket vízszintes helyett függőleges irányban rendezi el.\nA beállítás [HFlowContainer] és [VFlowContainer] használatakor nem módosítható."
 
 #. HFlowContainer.brief
 #: doc/classes/HFlowContainer.xml
@@ -5544,7 +5544,7 @@ msgstr "A gyermek vezérlőelemeket vízszintesen rendezi el, a tároló szélé
 #. HFlowContainer.description
 #: doc/classes/HFlowContainer.xml
 msgid "A variant of [FlowContainer] that can only arrange its child controls horizontally, wrapping them around at the borders. This is similar to how text in a book wraps around when no more words can fit on a line."
-msgstr "A [FlowContainer] olyan változata, amely a gyermek vezérlőelemeket csak vízszintesen rendezi el, a tároló szélénél pedig új sorba tördeli őket. Hasonló ahhoz, ahogyan a könyvben a szöveg a sor végén a következő sorban folytatódik."
+msgstr "A [FlowContainer] kizárólag vízszintes elrendezésű változata. Amikor a következő gyermek vezérlőelem már nem fér el a sorban, új sorban folytatja az elrendezést, hasonlóan a könyvek szövegének sortöréséhez."
 
 #. VFlowContainer.brief
 #: doc/classes/VFlowContainer.xml
@@ -5554,7 +5554,7 @@ msgstr "A gyermek vezérlőelemeket függőlegesen rendezi el, a tároló szél�
 #. VFlowContainer.description
 #: doc/classes/VFlowContainer.xml
 msgid "A variant of [FlowContainer] that can only arrange its child controls vertically, wrapping them around at the borders. This is similar to how text in a book wraps around when no more words can fit on a line, except vertically."
-msgstr "A [FlowContainer] olyan változata, amely a gyermek vezérlőelemeket csak függőlegesen rendezi el, a tároló szélénél pedig új oszlopba tördeli őket. Hasonló ahhoz, ahogy a könyvben a szöveg sort vált, csak függőleges irányban."
+msgstr "A [FlowContainer] kizárólag függőleges elrendezésű változata. Amikor a következő gyermek vezérlőelem már nem fér el az oszlopban, új oszlopban folytatja az elrendezést: ez a szöveges sortörés függőleges megfelelője."
 
 #. ScrollContainer.brief
 #: doc/classes/ScrollContainer.xml
