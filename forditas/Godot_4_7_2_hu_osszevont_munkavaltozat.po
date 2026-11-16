@@ -4862,29 +4862,29 @@ msgstr "A [Gradient] erőforrásból vett vízszintes színminták száma, amely
 #. CurveTexture.brief
 #: doc/classes/CurveTexture.xml
 msgid "A 1D texture where pixel brightness corresponds to points on a curve."
-msgstr "Egydimenziós textúra, amelynek képpontfényessége egy görbe pontjaihoz igazodik."
+msgstr "Egydimenziós textúra, amelyben a képpontok fényességét egy görbe értékei határozzák meg."
 
 #. CurveTexture.description
 #: doc/classes/CurveTexture.xml
 msgid "A 1D texture where pixel brightness corresponds to points on a unit [Curve] resource, either in grayscale or in red. This visual representation simplifies the task of saving curves as image files.\nIf you need to store up to 3 curves within a single texture, use [CurveXYZTexture] instead. See also [GradientTexture1D] and [GradientTexture2D]."
-msgstr "Egydimenziós textúra, amelynek képpontfényessége egy egységnyi tartományú [Curve] erőforrás pontjaihoz igazodik, szürkeárnyalatosan vagy a vörös színcsatornában. Ez a vizuális megjelenítés megkönnyíti a görbék képfájlként történő mentését.\nHa legfeljebb három görbét szeretnél egyetlen textúrában tárolni, használd helyette a [CurveXYZTexture] osztályt. Lásd még: [GradientTexture1D] és [GradientTexture2D]."
+msgstr "Egydimenziós textúra, amelyben a képpontok fényességét egy egységnyi tartományú [Curve] erőforrás értékei határozzák meg, szürkeárnyalatosan vagy a vörös színcsatornában. A görbe ilyen megjelenítése megkönnyíti a képfájlként történő mentését.\nHa legfeljebb három görbét szeretnél egyetlen textúrában tárolni, használd helyette a [CurveXYZTexture] osztályt. Lásd még: [GradientTexture1D] és [GradientTexture2D]."
 
 #. CurveTexture.curve
 #: doc/classes/CurveTexture.xml
 msgid "The [Curve] that is rendered onto the texture. Should be a unit [Curve]."
-msgstr "A textúrára rajzolt [Curve]. Egységnyi tartományú [Curve] erőforrásnak kell lennie."
+msgstr "A textúrában megjelenített [Curve]. A [Curve] erőforrásnak egységnyi értelmezési tartományúnak kell lennie."
 
 #. CurveTexture.texture_mode
 #: doc/classes/CurveTexture.xml
 msgid "The format the texture should be generated with. When passing a CurveTexture as an input to a [Shader], this may need to be adjusted."
-msgstr "A textúra létrehozásához használt formátum. Ha a CurveTexture egy [Shader] bemeneteként szolgál, ezt a beállítást szükség lehet módosítani."
+msgstr "A textúra előállításakor használt formátum. Ha a CurveTexture egy [Shader] bemeneteként szolgál, szükség lehet a formátum módosítására."
 
 #. CurveTexture.width
 #. CurveXYZTexture.width
 #: doc/classes/CurveTexture.xml
 #: doc/classes/CurveXYZTexture.xml
 msgid "The width of the texture (in pixels). Higher values make it possible to represent high-frequency data better (such as sudden direction changes), at the cost of increased generation time and memory usage."
-msgstr "A textúra szélessége képpontban. Nagyobb értékkel pontosabban ábrázolhatók a gyorsan változó adatok (például a hirtelen irányváltások), de a létrehozás hosszabb ideig tarthat, és több memóriát igényel."
+msgstr "A textúra szélessége képpontban. Nagyobb szélességgel pontosabban ábrázolhatók a gyors változások (például a hirtelen irányváltások), de a textúra előállítása több időt és memóriát igényel."
 
 #. GradientTexture1D.brief
 #: doc/classes/GradientTexture1D.xml
@@ -4894,7 +4894,7 @@ msgstr "Egydimenziós textúra, amely egy [Gradient] színátmenet színeit hasz
 #. GradientTexture1D.description
 #: doc/classes/GradientTexture1D.xml
 msgid "A 1D texture that obtains colors from a [Gradient] to fill the texture data. The texture is filled by sampling the gradient for each pixel. Therefore, the texture does not necessarily represent an exact copy of the gradient, as it may miss some colors if there are not enough pixels. See also [GradientTexture2D], [CurveTexture] and [CurveXYZTexture]."
-msgstr "Egydimenziós textúra, amely a [Gradient] színátmenetből vett színekkel tölti ki a textúra adatait. A rendszer minden képponthoz mintát vesz a színátmenetből. Emiatt a textúra nem feltétlenül adja vissza pontosan az eredeti színátmenetet: ha túl kevés képpont áll rendelkezésre, egyes színek kimaradhatnak. Lásd még: [GradientTexture2D], [CurveTexture] és [CurveXYZTexture]."
+msgstr "Egydimenziós textúra, amelynek színeit egy [Gradient] színátmenetből vett minták adják. A rendszer minden képponthoz külön mintát vesz, ezért a textúra nem feltétlenül adja vissza pontosan a teljes színátmenetet: kis felbontásnál egyes színek kimaradhatnak. Lásd még: [GradientTexture2D], [CurveTexture] és [CurveXYZTexture]."
 
 #. GradientTexture1D.width
 #: doc/classes/GradientTexture1D.xml
@@ -4904,27 +4904,27 @@ msgstr "A [Gradient] színátmenetből vett színminták száma."
 #. CurveXYZTexture.brief
 #: doc/classes/CurveXYZTexture.xml
 msgid "A 1D texture where the red, green, and blue color channels correspond to points on 3 curves."
-msgstr "Egydimenziós textúra, amelynek vörös, zöld és kék színcsatornája három görbe pontjaihoz igazodik."
+msgstr "Egydimenziós textúra, amelynek vörös, zöld és kék színcsatornáját három különálló görbe értékei határozzák meg."
 
 #. CurveXYZTexture.description
 #: doc/classes/CurveXYZTexture.xml
 msgid "A 1D texture where the red, green, and blue color channels correspond to points on 3 unit [Curve] resources. Compared to using separate [CurveTexture]s, this further simplifies the task of saving curves as image files.\nIf you only need to store one curve within a single texture, use [CurveTexture] instead. See also [GradientTexture1D] and [GradientTexture2D]."
-msgstr "Egydimenziós textúra, amelynek vörös, zöld és kék színcsatornája három egységnyi tartományú [Curve] erőforrás pontjaihoz igazodik. Három különálló [CurveTexture] használatához képest így még egyszerűbben menthetők a görbék képfájlba.\nHa csak egyetlen görbét szeretnél tárolni egy textúrában, használd inkább a [CurveTexture] osztályt. Lásd még: [GradientTexture1D] és [GradientTexture2D]."
+msgstr "Egydimenziós textúra, amelynek vörös, zöld és kék színcsatornáját három, egységnyi tartományú [Curve] erőforrás értékei határozzák meg. Három külön [CurveTexture] használata helyett így a görbék egyetlen képfájlban tárolhatók.\nHa csak egyetlen görbét szeretnél tárolni egy textúrában, használd inkább a [CurveTexture] osztályt. Lásd még: [GradientTexture1D] és [GradientTexture2D]."
 
 #. CurveXYZTexture.curve_x
 #: doc/classes/CurveXYZTexture.xml
 msgid "The [Curve] that is rendered onto the texture's red channel. Should be a unit [Curve]."
-msgstr "A textúra vörös színcsatornájára rajzolt [Curve]. Egységnyi tartományú [Curve] erőforrásnak kell lennie."
+msgstr "A textúra vörös színcsatornáján megjelenített [Curve]. A [Curve] erőforrásnak egységnyi értelmezési tartományúnak kell lennie."
 
 #. CurveXYZTexture.curve_y
 #: doc/classes/CurveXYZTexture.xml
 msgid "The [Curve] that is rendered onto the texture's green channel. Should be a unit [Curve]."
-msgstr "A textúra zöld színcsatornájára rajzolt [Curve]. Egységnyi tartományú [Curve] erőforrásnak kell lennie."
+msgstr "A textúra zöld színcsatornáján megjelenített [Curve]. A [Curve] erőforrásnak egységnyi értelmezési tartományúnak kell lennie."
 
 #. CurveXYZTexture.curve_z
 #: doc/classes/CurveXYZTexture.xml
 msgid "The [Curve] that is rendered onto the texture's blue channel. Should be a unit [Curve]."
-msgstr "A textúra kék színcsatornájára rajzolt [Curve]. Egységnyi tartományú [Curve] erőforrásnak kell lennie."
+msgstr "A textúra kék színcsatornáján megjelenített [Curve]. A [Curve] erőforrásnak egységnyi értelmezési tartományúnak kell lennie."
 
 #. Curve.brief
 #: doc/classes/Curve.xml
