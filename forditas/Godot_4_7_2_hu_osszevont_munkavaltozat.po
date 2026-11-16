@@ -4458,12 +4458,12 @@ msgstr "Pontokat mintavételező csomópont egy [Path2D] útvonalhoz."
 #. PathFollow2D.description
 #: doc/classes/PathFollow2D.xml
 msgid "This node takes its parent [Path2D], and returns the coordinates of a point within it, given a distance from the first vertex.\nIt is useful for making other nodes follow a path, without coding the movement pattern. For that, the nodes must be children of this node. The descendant nodes will then move accordingly when setting the [member progress] in this node."
-msgstr "Ez a csomópont a szülő [Path2D] útvonal első csúcsától mért távolság alapján megadja az útvonal egy pontjának koordinátáit.\nSegítségével más csomópontokat is végigmozgathatsz egy útvonalon anélkül, hogy külön meg kellene írnod a mozgásukat. Ehhez a mozgatandó csomópontoknak e csomópont gyermekeinek kell lenniük. A leszármazott csomópontok a [member progress] változtatásakor az útvonal mentén mozognak."
+msgstr "A szülő [Path2D] útvonal első csúcsától mért távolság alapján visszaadja az útvonal megfelelő pontjának koordinátáit.\nSegítségével más csomópontokat is végigmozgathatsz egy útvonalon anélkül, hogy külön meg kellene írnod a mozgásukat. Ehhez a mozgatandó csomópontoknak e csomópont gyermekeinek kell lenniük. A leszármazott csomópontok a [member progress] változtatásakor az útvonal mentén mozognak."
 
 #. PathFollow2D.cubic_interp
 #: doc/classes/PathFollow2D.xml
 msgid "If [code]true[/code], the position between two cached points is interpolated cubically, and linearly otherwise.\nThe points along the [Curve2D] of the [Path2D] are precomputed before use, for faster calculations. The point at the requested offset is then calculated interpolating between two adjacent cached points. This may present a problem if the curve makes sharp turns, as the cached points may not follow the curve closely enough.\nThere are two answers to this problem: either increase the number of cached points and increase memory consumption, or make a cubic interpolation between two points at the cost of (slightly) slower calculations."
-msgstr "Ha [code]true[/code], a gyorsítótárazott pontok közötti pozíciót köbös interpolációval számítja ki; ellenkező esetben lineáris interpolációt használ.\nA [Path2D] [Curve2D] görbéjén található pontokat a rendszer a gyorsabb számítás érdekében előre kiszámítja és gyorsítótárazza. A kért eltolásnál lévő pontot két szomszédos tárolt pont közötti interpolációval határozza meg. Éles kanyaroknál ez gondot okozhat, mert a tárolt pontok nem feltétlenül követik elég pontosan a görbét.\nKét megoldás lehetséges: növelheted a tárolt pontok számát, ami több memóriát igényel, vagy köbös interpolációt használhatsz két pont között, valamivel lassabb számítás árán."
+msgstr "Ha [code]true[/code], a gyorsítótárazott pontok közötti pozíciót köbös interpolációval számítja ki; ellenkező esetben lineáris interpolációt használ.\nA [Path2D] [Curve2D] görbéjén található pontokat a rendszer a gyorsabb számítás érdekében előre kiszámítja és gyorsítótárazza. A megadott eltoláshoz tartozó pozíciót két szomszédos, gyorsítótárazott pont közötti interpolációval számítja ki. Éles kanyaroknál ez gondot okozhat, mert a tárolt pontok nem feltétlenül követik elég pontosan a görbét.\nKét megoldás közül választhatsz: több pontot tárolhatsz el, ami növeli a memóriahasználatot, vagy köbös interpolációval számíthatod ki a köztes pozíciót, ami valamivel lassabb."
 
 #. PathFollow2D.h_offset
 #: doc/classes/PathFollow2D.xml
@@ -4483,7 +4483,7 @@ msgstr "Az útvonal mentén megtett távolság képpontban. Ennek megváltoztat�
 #. PathFollow2D.progress_ratio
 #: doc/classes/PathFollow2D.xml
 msgid "The distance along the path as a number in the range 0.0 (for the first vertex) to 1.0 (for the last). This is just another way of expressing the progress within the path, as the offset supplied is multiplied internally by the path's length.\nIt can be set or get only if the [PathFollow2D] is the child of a [Path2D] which is part of the scene tree, and that this [Path2D] has a [Curve2D] with a non-zero length. Otherwise, trying to set this field will print an error, and getting this field will return [code]0.0[/code]."
-msgstr "Az útvonal mentén megtett távolság aránya, 0.0 (első csúcs) és 1.0 (utolsó csúcs) között. Ez az útvonalon elért haladás másik megadási módja; a rendszer az értéket belül megszorozza az útvonal hosszával.\nA tulajdonság csak akkor állítható be és kérdezhető le, ha a [PathFollow2D] egy, a jelenetfában lévő [Path2D] gyermeke, és ennek a [Path2D] csomópontnak nem nulla hosszúságú [Curve2D] görbéje van. Ellenkező esetben beállításkor hibaüzenet jelenik meg, lekérdezéskor pedig [code]0.0[/code] értéket ad vissza."
+msgstr "Az útvonalon megtett távolság aránya 0.0 (első csúcs) és 1.0 (utolsó csúcs) között. A haladást arányként adja meg; a rendszer ezt az értéket az útvonal hosszával szorozza meg.\nA tulajdonság csak akkor állítható be és kérdezhető le, ha a [PathFollow2D] egy, a jelenetfában lévő [Path2D] gyermeke, és ennek a [Path2D] csomópontnak nem nulla hosszúságú [Curve2D] görbéje van. Ellenkező esetben beállításkor hibaüzenet jelenik meg, lekérdezéskor pedig [code]0.0[/code] értéket ad vissza."
 
 #. PathFollow2D.rotates
 #: doc/classes/PathFollow2D.xml
@@ -4498,17 +4498,17 @@ msgstr "A csomópont görbére merőleges eltolása."
 #. Line2D.brief
 #: doc/classes/Line2D.xml
 msgid "A 2D polyline that can optionally be textured."
-msgstr "Olyan 2D-s törött vonal, amelyhez opcionálisan textúra is rendelhető."
+msgstr "2D-s törött vonal, amely szükség esetén textúrázható."
 
 #. Line2D.description
 #: doc/classes/Line2D.xml
 msgid "This node draws a 2D polyline, i.e. a shape consisting of several points connected by segments. [Line2D] is not a mathematical polyline, i.e. the segments are not infinitely thin. It is intended for rendering and it can be colored and optionally textured.\n[b]Warning:[/b] Certain configurations may be impossible to draw nicely, such as very sharp angles. In these situations, the node uses fallback drawing logic to look decent.\n[b]Note:[/b] [Line2D] is drawn using a 2D mesh."
-msgstr "Ez a csomópont 2D-s törött vonalat rajzol, vagyis több, szakaszokkal összekötött pontból álló alakzatot. A [Line2D] nem matematikai értelemben vett vonallánc: a szakaszok nem végtelenül vékonyak. Kirajzolásra szolgál, és színezhető, illetve tetszés szerint textúrázható.\n[b]Figyelmeztetés:[/b] Egyes alakzatok, például a nagyon hegyes szögek, nem mindig rajzolhatók ki megfelelően. Ilyen esetekben a csomópont tartalék megjelenítési módszert használ az elfogadható eredményhez.\n[b]Megjegyzés:[/b] A [Line2D] kirajzolása 2D-s hálóval történik."
+msgstr "Ez a csomópont 2D-s törött vonalat rajzol, vagyis több, szakaszokkal összekötött pontból álló alakzatot. A [Line2D] nem matematikai értelemben vett vonallánc: a szakaszok nem végtelenül vékonyak. Kirajzolásra szolgál, és színezhető, illetve tetszés szerint textúrázható.\n[b]Figyelmeztetés:[/b] Egyes alakzatok, például a nagyon hegyes szögek, nem mindig rajzolhatók ki megfelelően. Ilyenkor a csomópont egy helyettesítő kirajzolási eljárással próbál elfogadható megjelenést biztosítani.\n[b]Megjegyzés:[/b] A [Line2D] kirajzolása 2D-s hálóval történik."
 
 #. Line2D.add_point
 #: doc/classes/Line2D.xml
 msgid "Adds a point with the specified [param position] relative to the polyline's own position. If no [param index] is provided, the new point will be added to the end of the points array.\nIf [param index] is given, the new point is inserted before the existing point identified by index [param index]. The indices of the points after the new point get increased by 1. The provided [param index] must not exceed the number of existing points in the polyline. See [method get_point_count]."
-msgstr "Hozzáad egy pontot a megadott [param position] pozíción, a törött vonal saját helyzetéhez viszonyítva. Ha nincs megadva [param index], az új pont a ponttömb végére kerül.\nHa megadsz [param index] értéket, az új pont az ezen az indexen található meglévő pont elé kerül. Az utána következő pontok indexe eggyel nő. A megadott [param index] nem lehet nagyobb a törött vonal meglévő pontjainak számánál. Az új pont helyét is a [param index] szabályozza. Lásd: [method get_point_count]."
+msgstr "A törött vonal saját pozíciójához viszonyítva hozzáad egy pontot a [param position] helyen. Ha nem adsz meg [param index] értéket, az új pont a ponttömb végére kerül.\nHa megadsz [param index] értéket, az új pont a [param index] által jelölt pont elé kerül, az utána következő pontok indexe pedig eggyel nő. A [param index] értéke nem lehet nagyobb a meglévő pontok számánál. Lásd: [method get_point_count]."
 
 #. Line2D.clear_points
 #: doc/classes/Line2D.xml
@@ -4538,7 +4538,7 @@ msgstr "A [param index] indexű pont pozícióját a megadott [param position] �
 #. Line2D.antialiased
 #: doc/classes/Line2D.xml
 msgid "If [code]true[/code], the polyline's border will be anti-aliased.\n[b]Note:[/b] [Line2D] is not accelerated by batching when being anti-aliased."
-msgstr "Ha [code]true[/code], a törött vonal szélei élsimítást kapnak.\n[b]Megjegyzés:[/b] Élsimítás használatakor a [Line2D] nem gyorsítható kötegelt kirajzolással."
+msgstr "Ha [code]true[/code], a törött vonal szélei élsimítást kapnak.\n[b]Megjegyzés:[/b] Élsimítás esetén a [Line2D] kirajzolását nem gyorsítja a kötegelt feldolgozás."
 
 #. Line2D.begin_cap_mode
 #: doc/classes/Line2D.xml
@@ -4578,7 +4578,7 @@ msgstr "A törött vonal pontjai helyi 2D-s koordinátákban. A rendszer a tömb
 #. Line2D.round_precision
 #: doc/classes/Line2D.xml
 msgid "The smoothness used for rounded joints and caps. Higher values result in smoother corners, but are more demanding to render and update."
-msgstr "A lekerekített csatlakozások és vonalvégek simasága. A nagyobb érték szebb, simább sarkokat eredményez, de a kirajzolás és a frissítés több erőforrást igényel."
+msgstr "A lekerekített csatlakozások és vonalvégek simaságát szabályozza. A nagyobb érték simább íveket eredményez, de több erőforrást igényel a kirajzoláshoz és a frissítéshez."
 
 #. Line2D.sharp_limit
 #: doc/classes/Line2D.xml
