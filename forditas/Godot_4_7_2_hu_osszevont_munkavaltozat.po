@@ -4393,17 +4393,17 @@ msgstr "A [Parallax2D] végső eltolásának szorzója, amellyel a kamerától v
 #. VisibleOnScreenNotifier2D.brief
 #: doc/classes/VisibleOnScreenNotifier2D.xml
 msgid "A rectangular region of 2D space that detects whether it is visible on screen."
-msgstr "Téglalap alakú 2D-s terület, amely érzékeli, hogy látható-e a képernyőn."
+msgstr "Téglalap alakú 2D-s terület, amely érzékeli, hogy a terület látható-e a képernyőn."
 
 #. VisibleOnScreenNotifier2D.description
 #: doc/classes/VisibleOnScreenNotifier2D.xml
 msgid "[VisibleOnScreenNotifier2D] represents a rectangular region of 2D space. When any part of this region becomes visible on screen or in a viewport, it will emit a [signal screen_entered] signal, and likewise it will emit a [signal screen_exited] signal when no part of it remains visible.\nIf you want a node to be enabled automatically when this region is visible on screen, use [VisibleOnScreenEnabler2D].\n[b]Note:[/b] [VisibleOnScreenNotifier2D] uses the render culling code to determine whether it's visible on screen, so it won't function unless [member CanvasItem.visible] is set to [code]true[/code]."
-msgstr "A [VisibleOnScreenNotifier2D] egy téglalap alakú 2D-s területet jelöl. Amikor a terület bármely része láthatóvá válik a képernyőn vagy egy nézetablakban, kibocsátja a [signal screen_entered] jelet. Ha a terület egyetlen része sem marad látható, kibocsátja a [signal screen_exited] jelet.\nHa azt szeretnéd, hogy egy csomópont automatikusan bekapcsoljon, amikor a terület látható, használd a [VisibleOnScreenEnabler2D] csomópontot.\n[b]Megjegyzés:[/b] A [VisibleOnScreenNotifier2D] a megjelenítési rendszer láthatósági vizsgálatát használja, ezért csak akkor működik, ha a [member CanvasItem.visible] értéke [code]true[/code]."
+msgstr "A [VisibleOnScreenNotifier2D] egy téglalap alakú 2D-s területet jelöl. Amikor a terület akár csak egy része is láthatóvá válik a képernyőn vagy egy nézetablakban, kibocsátja a [signal screen_entered] jelet. Amikor a terület teljes egészében eltűnik a képernyőről, kibocsátja a [signal screen_exited] jelet.\nHa azt szeretnéd, hogy egy csomópont automatikusan bekapcsoljon, amikor a terület látható, használd a [VisibleOnScreenEnabler2D] csomópontot.\n[b]Megjegyzés:[/b] A [VisibleOnScreenNotifier2D] a megjelenítési rendszer láthatósági vizsgálatát használja, ezért csak akkor működik, ha a [member CanvasItem.visible] értéke [code]true[/code]."
 
 #. VisibleOnScreenNotifier2D.is_on_screen
 #: doc/classes/VisibleOnScreenNotifier2D.xml
 msgid "If [code]true[/code], the bounding rectangle is on the screen.\n[b]Note:[/b] It takes one frame for the [VisibleOnScreenNotifier2D]'s visibility to be determined once added to the scene tree, so this method will always return [code]false[/code] right after it is instantiated, before the draw pass."
-msgstr "[code]true[/code] értéket ad vissza, ha a határoló téglalap látható a képernyőn.\n[b]Megjegyzés:[/b] A [VisibleOnScreenNotifier2D] láthatóságának meghatározásához a jelenetfába kerülés után egy képkockára van szükség. Ezért a metódus közvetlenül a példányosítás után, még az első kirajzolás előtt mindig [code]false[/code] értéket ad vissza."
+msgstr "[code]true[/code] értéket ad vissza, ha a határoló téglalap látható a képernyőn.\n[b]Megjegyzés:[/b] A [VisibleOnScreenNotifier2D] láthatóságának meghatározásához a jelenetfába kerülés után egy képkockára van szükség. Ezért a metódus közvetlenül a példányosítás után, az első kirajzolási menet előtt mindig [code]false[/code] értéket ad vissza."
 
 #. VisibleOnScreenNotifier2D.rect
 #: doc/classes/VisibleOnScreenNotifier2D.xml
@@ -4413,7 +4413,7 @@ msgstr "A VisibleOnScreenNotifier2D határoló téglalapja."
 #. VisibleOnScreenNotifier2D.show_rect
 #: doc/classes/VisibleOnScreenNotifier2D.xml
 msgid "If [code]true[/code], shows the rectangle area of [member rect] in the editor with a translucent magenta fill. Unlike changing the visibility of the VisibleOnScreenNotifier2D, this does not affect the screen culling detection."
-msgstr "Ha [code]true[/code], a [member rect] által megadott téglalap áttetsző bíborszínű kitöltéssel jelenik meg a szerkesztőben. Ez a szerkesztőbeli megjelenítés nem befolyásolja a képernyőn való láthatóság érzékelését, szemben a VisibleOnScreenNotifier2D láthatóságának megváltoztatásával."
+msgstr "Ha [code]true[/code], a [member rect] által megadott téglalap áttetsző bíborszínű kitöltéssel jelenik meg a szerkesztőben. A téglalap szerkesztőbeli megjelenítése nem befolyásolja a képernyőn való láthatóság észlelését, ellentétben a VisibleOnScreenNotifier2D tényleges láthatóságának módosításával."
 
 #. VisibleOnScreenEnabler2D.brief
 #: doc/classes/VisibleOnScreenEnabler2D.xml
@@ -4423,12 +4423,12 @@ msgstr "Téglalap alakú 2D-s terület, amely a képernyőn láthatóvá válva 
 #. VisibleOnScreenEnabler2D.description
 #: doc/classes/VisibleOnScreenEnabler2D.xml
 msgid "[VisibleOnScreenEnabler2D] contains a rectangular region of 2D space and a target node. The target node will be automatically enabled (via its [member Node.process_mode] property) when any part of this region becomes visible on the screen, and automatically disabled otherwise. This can for example be used to activate enemies only when the player approaches them.\nSee [VisibleOnScreenNotifier2D] if you only want to be notified when the region is visible on screen.\n[b]Note:[/b] [VisibleOnScreenEnabler2D] uses the render culling code to determine whether it's visible on screen, so it won't function unless [member CanvasItem.visible] is set to [code]true[/code]."
-msgstr "A [VisibleOnScreenEnabler2D] egy téglalap alakú 2D-s területet és egy célcsomópontot tartalmaz. A célcsomópont feldolgozása a [member Node.process_mode] tulajdonságon keresztül automatikusan engedélyeződik, ha a terület bármely része láthatóvá válik a képernyőn, ellenkező esetben pedig letiltódik. Így például az ellenfelek csak akkor aktiválhatók, amikor a játékos a közelükbe ér.\nHa csupán értesítést szeretnél kapni a terület láthatóvá válásáról, használd a [VisibleOnScreenNotifier2D] csomópontot.\n[b]Megjegyzés:[/b] A [VisibleOnScreenEnabler2D] a megjelenítési rendszer láthatósági vizsgálatát használja, ezért csak akkor működik, ha a [member CanvasItem.visible] értéke [code]true[/code]."
+msgstr "A [VisibleOnScreenEnabler2D] egy téglalap alakú 2D-s területet és egy célcsomópontot tartalmaz. A célcsomópont feldolgozását a [member Node.process_mode] tulajdonságon keresztül automatikusan engedélyezi, amikor a terület bármely része megjelenik a képernyőn; ha a terület nem látható, a feldolgozást letiltja. Ezzel például elérhető, hogy az ellenfelek csak akkor aktiválódjanak, amikor a játékos a közelükbe ér.\nHa csupán értesítést szeretnél kapni a terület láthatóvá válásáról, használd a [VisibleOnScreenNotifier2D] csomópontot.\n[b]Megjegyzés:[/b] A [VisibleOnScreenEnabler2D] a megjelenítési rendszer láthatósági vizsgálatát használja, ezért csak akkor működik, ha a [member CanvasItem.visible] értéke [code]true[/code]."
 
 #. VisibleOnScreenEnabler2D.enable_mode
 #: doc/classes/VisibleOnScreenEnabler2D.xml
 msgid "Determines how the target node is enabled. Corresponds to [enum Node.ProcessMode]. When the node is disabled, it always uses [constant Node.PROCESS_MODE_DISABLED]."
-msgstr "Meghatározza, hogyan engedélyezze a rendszer a célcsomópontot. A [enum Node.ProcessMode] felsorolásnak felel meg. Letiltott csomópont esetén mindig a [constant Node.PROCESS_MODE_DISABLED] módot használja."
+msgstr "Meghatározza, hogyan engedélyezze a rendszer a célcsomópontot. A [enum Node.ProcessMode] felsorolásnak felel meg. Amikor a célcsomópont feldolgozása le van tiltva, mindig a [constant Node.PROCESS_MODE_DISABLED] módot használja."
 
 #. VisibleOnScreenEnabler2D.enable_node_path
 #: doc/classes/VisibleOnScreenEnabler2D.xml
@@ -4443,7 +4443,7 @@ msgstr "Egy [Curve2D] útvonalat tartalmaz, amelyet a [PathFollow2D] csomóponto
 #. Path2D.description
 #: doc/classes/Path2D.xml
 msgid "Can have [PathFollow2D] child nodes moving along the [Curve2D]. See [PathFollow2D] for more information on usage.\n[b]Note:[/b] The path is considered as relative to the moved nodes (children of [PathFollow2D]). As such, the curve should usually start with a zero vector ([code](0, 0)[/code])."
-msgstr "A csomópont [PathFollow2D] gyermekei a [Curve2D] görbe mentén mozoghatnak. A használatról részletesebben a [PathFollow2D] osztály leírásában olvashatsz.\n[b]Megjegyzés:[/b] Az útvonalat a mozgatott csomópontokhoz (a [PathFollow2D] gyermekeihez) viszonyítva értelmezi a rendszer. Emiatt a görbének általában a nullvektorból ([code](0, 0)[/code]) kell indulnia."
+msgstr "A csomópont [PathFollow2D] típusú gyermekei a [Curve2D] görbe mentén mozoghatnak. A használatról részletesebben a [PathFollow2D] osztály leírásában olvashatsz.\n[b]Megjegyzés:[/b] Az útvonalat a mozgatott csomópontokhoz (a [PathFollow2D] gyermekeihez) viszonyítva értelmezi a rendszer. Emiatt a görbének általában a nullvektorból ([code](0, 0)[/code]) kell indulnia."
 
 #. Path2D.curve
 #: doc/classes/Path2D.xml
@@ -4458,7 +4458,7 @@ msgstr "Pontokat mintavételező csomópont egy [Path2D] útvonalhoz."
 #. PathFollow2D.description
 #: doc/classes/PathFollow2D.xml
 msgid "This node takes its parent [Path2D], and returns the coordinates of a point within it, given a distance from the first vertex.\nIt is useful for making other nodes follow a path, without coding the movement pattern. For that, the nodes must be children of this node. The descendant nodes will then move accordingly when setting the [member progress] in this node."
-msgstr "Ez a csomópont a szülő [Path2D] útvonal első csúcsától mért távolság alapján megadja az útvonal egy pontjának koordinátáit.\nSegítségével más csomópontokat is végigmozgathatsz egy útvonalon anélkül, hogy külön meg kellene írnod a mozgásukat. Ehhez a mozgatandó csomópontoknak ennek a csomópontnak a gyermekei kell legyenek. A leszármazott csomópontok a [member progress] változtatásakor az útvonal mentén mozognak."
+msgstr "Ez a csomópont a szülő [Path2D] útvonal első csúcsától mért távolság alapján megadja az útvonal egy pontjának koordinátáit.\nSegítségével más csomópontokat is végigmozgathatsz egy útvonalon anélkül, hogy külön meg kellene írnod a mozgásukat. Ehhez a mozgatandó csomópontoknak e csomópont gyermekeinek kell lenniük. A leszármazott csomópontok a [member progress] változtatásakor az útvonal mentén mozognak."
 
 #. PathFollow2D.cubic_interp
 #: doc/classes/PathFollow2D.xml
@@ -4473,7 +4473,7 @@ msgstr "A csomópont görbe menti eltolása."
 #. PathFollow2D.loop
 #: doc/classes/PathFollow2D.xml
 msgid "If [code]true[/code], any offset outside the path's length will wrap around, instead of stopping at the ends. Use it for cyclic paths."
-msgstr "Ha [code]true[/code], az útvonal hosszán túlnyúló eltolás visszafordul az útvonal elejére, ahelyett hogy a csomópont a végpontnál megállna. Ciklikus útvonalakhoz használható."
+msgstr "Ha [code]true[/code], az útvonal hosszán túlnyúló eltolás ciklikusan körbefordul az útvonal elejére, ahelyett hogy a csomópont a végpontnál megállna. Ismétlődő útvonalakhoz használható."
 
 #. PathFollow2D.progress
 #: doc/classes/PathFollow2D.xml
