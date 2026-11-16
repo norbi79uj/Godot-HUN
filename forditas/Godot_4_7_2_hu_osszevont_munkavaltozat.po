@@ -3118,7 +3118,7 @@ msgstr "Visszaadja a navigációs háló csúcsainak raszterezéséhez használt
 #. NavigationServer2D.map_get_edge_connection_margin
 #: doc/classes/NavigationServer2D.xml
 msgid "Returns the edge connection margin of the map. The edge connection margin is a distance used to connect two regions."
-msgstr "Visszaadja a térkép élkapcsolati tűréshatárát, amellyel két terület összekapcsolásához szükséges távolság adható meg."
+msgstr "Visszaadja a térkép élkapcsolati tűréshatárát. Ez a távolságérték két navigációs terület összekapcsolására szolgál."
 
 #. NavigationServer2D.map_get_iteration_id
 #: doc/classes/NavigationServer2D.xml
@@ -3128,7 +3128,7 @@ msgstr "Visszaadja a navigációs térkép aktuális iterációazonosítóját. 
 #. NavigationServer2D.map_get_link_connection_radius
 #: doc/classes/NavigationServer2D.xml
 msgid "Returns the link connection radius of the map. This distance is the maximum range any link will search for navigation mesh polygons to connect to."
-msgstr "Visszaadja a térkép navigációs kapcsolóelemeinek kapcsolódási sugarát. Ezen a legnagyobb távolságon belül keresnek kapcsolható navigációs sokszögeket."
+msgstr "Visszaadja a térkép navigációs kapcsolatainak kapcsolódási sugarát. A kapcsolatok legfeljebb ezen a távolságon belül keresnek olyan navigációs sokszögeket, amelyekhez csatlakozhatnak."
 
 #. NavigationServer2D.map_get_links
 #: doc/classes/NavigationServer2D.xml
@@ -3148,7 +3148,7 @@ msgstr "Visszaadja a [param map] navigációs térképhez rendelt összes navig�
 #. NavigationServer2D.map_get_random_point
 #: doc/classes/NavigationServer2D.xml
 msgid "Returns a random position picked from all map region polygons with matching [param navigation_layers].\nIf [param uniformly] is [code]true[/code], all map regions, polygons, and faces are weighted by their surface area (slower).\nIf [param uniformly] is [code]false[/code], just a random region and a random polygon are picked (faster)."
-msgstr "Véletlenszerű pozíciót ad vissza a térkép azon navigációs sokszögeiből, amelyek megfelelnek a [param navigation_layers] rétegeknek.\nHa [param uniformly] értéke [code]true[/code], a területek, sokszögek és lapok a felületük arányában kapnak súlyt (lassabb).\nHa [param uniformly] értéke [code]false[/code], egyszerűen véletlenszerű régiót és sokszöget választ (gyorsabb)."
+msgstr "Véletlenszerű pozíciót ad vissza a térkép olyan navigációs területeinek sokszögeiből, amelyek megfelelnek a [param navigation_layers] rétegbeállításnak.\nHa a [param uniformly] értéke [code]true[/code], a területek, sokszögek és lapok kiválasztását a felületük nagyságával súlyozza a rendszer (lassabb).\nHa a [param uniformly] értéke [code]false[/code], a rendszer egyszerűen kiválaszt egy véletlenszerű területet és azon belül egy véletlenszerű sokszöget (gyorsabb)."
 
 #. NavigationServer2D.map_get_use_async_iterations
 #: doc/classes/NavigationServer2D.xml
@@ -3158,7 +3158,7 @@ msgstr "[code]true[/code] értéket ad vissza, ha a [param map] szinkronizálás
 #. NavigationServer2D.map_get_use_edge_connections
 #: doc/classes/NavigationServer2D.xml
 msgid "Returns whether the navigation [param map] allows navigation regions to use edge connections to connect with other navigation regions within proximity of the navigation map edge connection margin."
-msgstr "Megadja, hogy a [param map] navigációs térkép engedi-e a közeli területek összekapcsolását az élkapcsolati távolságon belül."
+msgstr "Megadja, hogy a [param map] navigációs térkép engedélyezi-e a navigációs területek élkapcsolatokon keresztüli összekötését, ha az éleik az élkapcsolati tűréshatáron belül helyezkednek el."
 
 #. NavigationServer2D.map_is_active
 #: doc/classes/NavigationServer2D.xml
@@ -3193,7 +3193,7 @@ msgstr "Ha [param enabled] értéke [code]true[/code], a [param map] szinkroniz�
 #. NavigationServer2D.map_set_use_edge_connections
 #: doc/classes/NavigationServer2D.xml
 msgid "Set the navigation [param map] edge connection use. If [param enabled] is [code]true[/code], the navigation map allows navigation regions to use edge connections to connect with other navigation regions within proximity of the navigation map edge connection margin."
-msgstr "Beállítja a [param map] élkapcsolatainak használatát. Ha [param enabled] értéke [code]true[/code], a térkép engedi a közeli területek összekapcsolását az élkapcsolati távolságon belül."
+msgstr "Beállítja, hogy a [param map] navigációs térkép használjon-e élkapcsolatokat. Ha a [param enabled] értéke [code]true[/code], az egymáshoz az élkapcsolati tűréshatáron belül közel kerülő navigációs területek éleik mentén összekapcsolódhatnak."
 
 #. NavigationServer2D.set_active
 #: doc/classes/NavigationServer2D.xml
