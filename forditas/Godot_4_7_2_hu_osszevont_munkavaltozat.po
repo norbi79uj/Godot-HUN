@@ -3668,22 +3668,22 @@ msgstr "Ha az értéke [code]true[/code], a test mozgása a fizikai képkockákh
 #. NavigationLink2D.brief
 #: doc/classes/NavigationLink2D.xml
 msgid "A link between two positions on [NavigationRegion2D]s that agents can be routed through."
-msgstr "Két, [NavigationRegion2D] régióhoz tartozó pontot összekötő navigációs kapcsolat, amelyen az ügynökök útvonala átvezethet."
+msgstr "Két [NavigationRegion2D] területen található pozíciót összekötő navigációs kapcsolat, amelyen az ügynökök útvonalai áthaladhatnak."
 
 #. NavigationLink2D.description
 #: doc/classes/NavigationLink2D.xml
 msgid "A link between two positions on [NavigationRegion2D]s that agents can be routed through. These positions can be on the same [NavigationRegion2D] or on two different ones. Links are useful to express navigation methods other than traveling along the surface of the navigation polygon, such as ziplines, teleporters, or gaps that can be jumped across."
-msgstr "Két, [NavigationRegion2D] régióhoz tartozó pont közötti navigációs kapcsolat, amelyen keresztül az ügynökök útvonala is vezethet. A pontok lehetnek ugyanazon a [NavigationRegion2D] régión, de két különböző régióhoz is tartozhatnak. A kapcsolatokkal olyan áthaladási módok írhatók le, amelyek nem a navigációs sokszög felszínén való haladást követik: például kötélpálya, teleportálás vagy egy átugorható szakadék."
+msgstr "Két [NavigationRegion2D] területen található pozíciót köt össze, és az ügynökök útvonalai ezen a kapcsolaton is áthaladhatnak. A két pozíció tartozhat ugyanahhoz a [NavigationRegion2D] területhez, de két különbözőhöz is. A kapcsolatokkal olyan közlekedési módok írhatók le, amelyek nem a navigációs sokszög felületén történő haladáson alapulnak, például kötélpályák, teleportok vagy átugorható szakadékok."
 
 #. NavigationLink2D.get_global_end_position
 #: doc/classes/NavigationLink2D.xml
 msgid "Returns the [member end_position] that is relative to the link as a global position."
-msgstr "Visszaadja a kapcsolathoz viszonyított [member end_position] végpozíciót globális koordinátákban."
+msgstr "Visszaadja a kapcsolat helyi [member end_position] végpozícióját globális koordinátákra átszámítva."
 
 #. NavigationLink2D.get_global_start_position
 #: doc/classes/NavigationLink2D.xml
 msgid "Returns the [member start_position] that is relative to the link as a global position."
-msgstr "Visszaadja a kapcsolathoz viszonyított [member start_position] kezdőpozíciót globális koordinátákban."
+msgstr "Visszaadja a kapcsolat helyi [member start_position] kezdőpozícióját globális koordinátákra átszámítva."
 
 #. NavigationLink2D.get_navigation_map
 #: doc/classes/NavigationLink2D.xml
@@ -3713,7 +3713,7 @@ msgstr "Beállítja annak a navigációs térképnek a [RID] azonosítóját, am
 #. NavigationLink2D.bidirectional
 #: doc/classes/NavigationLink2D.xml
 msgid "Whether this link can be traveled in both directions or only from [member start_position] to [member end_position]."
-msgstr "Meghatározza, hogy a kapcsolat mindkét irányban használható-e, vagy csak a [member start_position] kezdőponttól a [member end_position] végpontig."
+msgstr "Meghatározza, hogy a kapcsolat mindkét irányban bejárható-e, vagy csak a [member start_position] kezdőpozíciótól a [member end_position] végpozícióig."
 
 #. NavigationLink2D.enabled
 #: doc/classes/NavigationLink2D.xml
@@ -3723,7 +3723,7 @@ msgstr "Megadja, hogy a kapcsolat jelenleg aktív-e. Ha [code]false[/code], a [m
 #. NavigationLink2D.end_position
 #: doc/classes/NavigationLink2D.xml
 msgid "Ending position of the link.\nThis position will search out the nearest polygon in the navigation mesh to attach to.\nThe distance the link will search is controlled by [method NavigationServer2D.map_set_link_connection_radius]."
-msgstr "A kapcsolat végpozíciója.\nA rendszer megkeresi a végponthoz legközelebbi navigációs sokszöget, amelyhez a kapcsolat csatlakoztatható.\nA keresési sugarat a [method NavigationServer2D.map_set_link_connection_radius] metódus határozza meg."
+msgstr "A kapcsolat végpozíciója.\nA rendszer megkeresi a végpozícióhoz legközelebbi navigációs sokszöget, amelyhez a kapcsolatot csatlakoztathatja.\nA keresési sugarat a [method NavigationServer2D.map_set_link_connection_radius] metódus határozza meg."
 
 #. NavigationLink2D.enter_cost
 #: doc/classes/NavigationLink2D.xml
@@ -3738,7 +3738,7 @@ msgstr "Bitmező, amely meghatározza, hogy a kapcsolat mely navigációs réteg
 #. NavigationLink2D.start_position
 #: doc/classes/NavigationLink2D.xml
 msgid "Starting position of the link.\nThis position will search out the nearest polygon in the navigation mesh to attach to.\nThe distance the link will search is controlled by [method NavigationServer2D.map_set_link_connection_radius]."
-msgstr "A kapcsolat kezdőpozíciója.\nA rendszer megkeresi a kezdőponthoz legközelebbi navigációs sokszöget, amelyhez a kapcsolat csatlakoztatható.\nA keresési sugarat a [method NavigationServer2D.map_set_link_connection_radius] metódus határozza meg."
+msgstr "A kapcsolat kezdőpozíciója.\nA rendszer megkeresi a kezdőpozícióhoz legközelebbi navigációs sokszöget, amelyhez a kapcsolatot csatlakoztathatja.\nA keresési sugarat a [method NavigationServer2D.map_set_link_connection_radius] metódus határozza meg."
 
 #. NavigationLink2D.travel_cost
 #: doc/classes/NavigationLink2D.xml
@@ -3753,7 +3753,7 @@ msgstr "2D-s akadály, amely befolyásolja a navigációs háló előállítás�
 #. NavigationObstacle2D.description
 #: doc/classes/NavigationObstacle2D.xml
 msgid "An obstacle needs a navigation map and outline [member vertices] defined to work correctly. The outlines can not cross or overlap.\nObstacles can be included in the navigation mesh baking process when [member affect_navigation_mesh] is enabled. They do not add walkable geometry, instead their role is to discard other source geometry inside the shape. This can be used to prevent navigation mesh from appearing in unwanted places. If [member carve_navigation_mesh] is enabled the baked shape will not be affected by offsets of the navigation mesh baking, e.g. the agent radius.\nWith [member avoidance_enabled] the obstacle can constrain the avoidance velocities of avoidance using agents. If the obstacle's vertices are wound in clockwise order, avoidance agents will be pushed in by the obstacle, otherwise, avoidance agents will be pushed out. Obstacles using vertices and avoidance can warp to a new position but should not be moved every single frame as each change requires a rebuild of the avoidance map."
-msgstr "A helyes működéshez az akadálynak navigációs térképre és a [member vertices] tulajdonságban meghatározott körvonalra van szüksége. A körvonalak nem keresztezhetik egymást és nem fedhetik át egymást.\nAz akadályok a navigációs háló előállításában is részt vehetnek, ha a [member affect_navigation_mesh] engedélyezett. Nem hoznak létre bejárható felületet; ehelyett az alakzatukon belüli forrásgeometriát kizárják. Így megakadályozható, hogy nem kívánt helyeken is létrejöjjön navigációs háló. Ha a [member carve_navigation_mesh] engedélyezett, a kivágott alakzatot nem befolyásolják a háló előállításának eltolásai, például az ügynök sugara.\nA [member avoidance_enabled] engedélyezésével az akadály korlátozhatja az akadályelkerülést használó ügynökök sebességét. Ha az akadály csúcsai az óramutató járásával egyező sorrendben következnek, az ügynököket befelé tereli, ellenkező esetben kifelé. A csúcsokkal meghatározott, akadályelkerülésben részt vevő akadály teleportálható új pozícióba, de nem ajánlott minden képkockában mozgatni, mert minden változás miatt újra kell építeni az akadályelkerülési térképet."
+msgstr "A megfelelő működéshez az akadálynak navigációs térképre és a [member vertices] tulajdonságban meghatározott körvonalra van szüksége. A körvonalak nem metszhetik egymást, és nem lehetnek átfedésben.\nAz akadályok a navigációs háló előállításában is részt vehetnek, ha a [member affect_navigation_mesh] engedélyezett. Az akadályok nem hoznak létre bejárható felületet, hanem kizárják az alakzatukon belüli forrásgeometriát. Így megakadályozható, hogy nem kívánt helyeken is létrejöjjön navigációs háló. Ha a [member carve_navigation_mesh] engedélyezett, a kivágott alakzatot nem befolyásolják a háló előállításának eltolásai, például az ügynök sugara.\nA [member avoidance_enabled] engedélyezésével az akadály korlátozhatja az akadályelkerülést használó ügynökök sebességét. Ha az akadály csúcsai az óramutató járásával egyező sorrendben következnek, az ügynököket befelé tereli, ellenkező esetben kifelé. A csúcsokkal meghatározott, akadályelkerülésben részt vevő akadály teleportálható új pozícióba, de nem ajánlott minden képkockában mozgatni, mert minden változás miatt újra kell építeni az akadályelkerülési térképet."
 
 #. NavigationObstacle2D.get_avoidance_layer_value
 #: doc/classes/NavigationObstacle2D.xml
@@ -3793,12 +3793,12 @@ msgstr "Ha [code]true[/code], az akadály befolyásolja az akadályelkerülést 
 #. NavigationObstacle2D.avoidance_layers
 #: doc/classes/NavigationObstacle2D.xml
 msgid "A bitfield determining the avoidance layers for this obstacle. Agents with a matching bit on the their avoidance mask will avoid this obstacle."
-msgstr "Bitmező, amely meghatározza az akadály akadályelkerülési rétegeit. Azok az ügynökök kerülik el az akadályt, amelyek elkerülési maszkjában legalább egy megfelelő bit van."
+msgstr "Bitmező, amely meghatározza az akadály akadályelkerülési rétegeit. Azok az ügynökök veszik figyelembe az akadályt az elkerülés során, amelyek elkerülési maszkjában legalább egy, az akadály rétegével egyező bit van beállítva."
 
 #. NavigationObstacle2D.carve_navigation_mesh
 #: doc/classes/NavigationObstacle2D.xml
 msgid "If enabled the obstacle vertices will carve into the baked navigation mesh with the shape unaffected by additional offsets (e.g. agent radius).\nIt will still be affected by further postprocessing of the baking process, like edge and polygon simplification.\nRequires [member affect_navigation_mesh] to be enabled."
-msgstr "Ha engedélyezett, az akadály csúcsai úgy vágnak ki területet az előállított navigációs hálóból, hogy az alakzatot nem módosítják a további eltolások (például az ügynök sugara).\nA későbbi utófeldolgozás, például az élek és sokszögek egyszerűsítése továbbra is hatással lehet rá.\nEhhez a [member affect_navigation_mesh] engedélyezése szükséges."
+msgstr "Ha engedélyezett, az akadály csúcsai által meghatározott alakzat kivágást hoz létre az előállított navigációs hálóban. A kivágás alakját a további eltolások (például az ügynök sugara) nem módosítják.\nA későbbi utófeldolgozás, például az élek és sokszögek egyszerűsítése továbbra is hatással lehet rá.\nEhhez a [member affect_navigation_mesh] engedélyezése szükséges."
 
 #. NavigationObstacle2D.radius
 #: doc/classes/NavigationObstacle2D.xml
