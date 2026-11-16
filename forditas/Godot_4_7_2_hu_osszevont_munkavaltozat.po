@@ -5383,22 +5383,22 @@ msgstr "A tároló közvetlen gyermek vezérlőelemeit ennyi képponttal helyezi
 #. HBoxContainer.brief
 #: doc/classes/HBoxContainer.xml
 msgid "A container that arranges its child controls horizontally."
-msgstr "A gyermek vezérlőelemeket vízszintesen elrendező tároló."
+msgstr "A gyermek vezérlőelemeket vízszintesen, egymás mellé rendező tároló."
 
 #. HBoxContainer.description
 #: doc/classes/HBoxContainer.xml
 msgid "A variant of [BoxContainer] that can only arrange its child controls horizontally. Child controls are rearranged automatically when their minimum size changes."
-msgstr "A [BoxContainer] olyan változata, amely a gyermek vezérlőelemeket kizárólag vízszintesen rendezi el. Ha a gyermekek minimális mérete megváltozik, az elrendezés automatikusan frissül."
+msgstr "A [BoxContainer] olyan változata, amely a gyermek vezérlőelemeket kizárólag vízszintesen, egymás mellé helyezi. Ha valamelyik gyermek minimális mérete megváltozik, a tároló automatikusan újrarendezi az elemeket."
 
 #. VBoxContainer.brief
 #: doc/classes/VBoxContainer.xml
 msgid "A container that arranges its child controls vertically."
-msgstr "A gyermek vezérlőelemeket függőlegesen elrendező tároló."
+msgstr "A gyermek vezérlőelemeket függőlegesen, egymás alá rendező tároló."
 
 #. VBoxContainer.description
 #: doc/classes/VBoxContainer.xml
 msgid "A variant of [BoxContainer] that can only arrange its child controls vertically. Child controls are rearranged automatically when their minimum size changes."
-msgstr "A [BoxContainer] olyan változata, amely a gyermek vezérlőelemeket kizárólag függőlegesen rendezi el. Ha a gyermekek minimális mérete megváltozik, az elrendezés automatikusan frissül."
+msgstr "A [BoxContainer] olyan változata, amely a gyermek vezérlőelemeket kizárólag függőlegesen, egymás alá helyezi. Ha valamelyik gyermek minimális mérete megváltozik, a tároló automatikusan újrarendezi az elemeket."
 
 #. CenterContainer.brief
 #: doc/classes/CenterContainer.xml
@@ -5408,7 +5408,7 @@ msgstr "A gyermek vezérlőelemeket középen tartó tároló."
 #. CenterContainer.description
 #: doc/classes/CenterContainer.xml
 msgid "[CenterContainer] is a container that keeps all of its child controls in its center at their minimum size."
-msgstr "A [CenterContainer] a gyermek vezérlőelemeket a minimális méretük megtartásával középre igazítja."
+msgstr "A [CenterContainer] a gyermek vezérlőelemeket a tároló közepére igazítja, miközben megtartja azok minimális méretét."
 
 #. CenterContainer.use_top_left
 #: doc/classes/CenterContainer.xml
@@ -5418,29 +5418,29 @@ msgstr "Ha [code]true[/code], a gyermekelemeket a [CenterContainer] bal felső s
 #. BoxContainer.brief
 #: doc/classes/BoxContainer.xml
 msgid "A container that arranges its child controls horizontally or vertically."
-msgstr "A gyermek vezérlőelemeket vízszintesen vagy függőlegesen elrendező tároló."
+msgstr "A gyermek vezérlőelemeket vízszintesen vagy függőlegesen sorba rendező tároló."
 
 #. BoxContainer.description
 #: doc/classes/BoxContainer.xml
 msgid "A container that arranges its child controls horizontally or vertically, rearranging them automatically when their minimum size changes."
-msgstr "A gyermek vezérlőelemeket vízszintesen vagy függőlegesen elrendező tároló. Ha a gyermekek minimális mérete megváltozik, automatikusan újrarendezi őket."
+msgstr "A gyermek vezérlőelemeket vízszintesen vagy függőlegesen rendezi el. Ha valamelyik gyermek minimális mérete megváltozik, automatikusan frissíti az elrendezést."
 
 #. BoxContainer.add_spacer
 #: doc/classes/BoxContainer.xml
 msgid "Adds a [Control] node to the box as a spacer. If [param begin] is [code]true[/code], it will insert the [Control] node in front of all other children."
-msgstr "Térközként egy [Control] csomópontot ad a dobozhoz. Ha a [param begin] értéke [code]true[/code], a [Control] csomópontot az összes többi gyermek elé helyezi."
+msgstr "Térközként egy [Control] csomópontot ad a tárolóhoz. Ha a [param begin] értéke [code]true[/code], az új [Control] csomópontot a többi gyermek elé helyezi."
 
 #. BoxContainer.alignment
 #. FlowContainer.alignment
 #: doc/classes/BoxContainer.xml
 #: doc/classes/FlowContainer.xml
 msgid "The alignment of the container's children (must be one of [constant ALIGNMENT_BEGIN], [constant ALIGNMENT_CENTER], or [constant ALIGNMENT_END])."
-msgstr "A gyermekek igazítása; értéke a [constant ALIGNMENT_BEGIN], [constant ALIGNMENT_CENTER] vagy [constant ALIGNMENT_END] valamelyike lehet."
+msgstr "A tároló gyermekelemeinek igazítását határozza meg. Értéke [constant ALIGNMENT_BEGIN], [constant ALIGNMENT_CENTER] vagy [constant ALIGNMENT_END] lehet."
 
 #. BoxContainer.vertical
 #: doc/classes/BoxContainer.xml
 msgid "If [code]true[/code], the [BoxContainer] will arrange its children vertically, rather than horizontally.\nCan't be changed when using [HBoxContainer] and [VBoxContainer]."
-msgstr "Ha [code]true[/code], a [BoxContainer] vízszintes helyett függőlegesen rendezi el a gyermekeket.\nA [HBoxContainer] és [VBoxContainer] használatakor nem módosítható."
+msgstr "Ha [code]true[/code], a [BoxContainer] a gyermekelemeket vízszintes helyett függőleges sorrendben rendezi el.\nEz a beállítás [HBoxContainer] és [VBoxContainer] használatakor nem módosítható."
 
 #. BoxContainer.theme.separation
 #: doc/classes/BoxContainer.xml
@@ -5450,17 +5450,17 @@ msgstr "A [BoxContainer] elemei közötti távolság képpontban."
 #. GridContainer.brief
 #: doc/classes/GridContainer.xml
 msgid "A container that arranges its child controls in a grid layout."
-msgstr "A gyermek vezérlőelemeket rácsba rendező tároló."
+msgstr "A gyermek vezérlőelemeket sorokból és oszlopokból álló rácsba rendező tároló."
 
 #. GridContainer.description
 #: doc/classes/GridContainer.xml
 msgid "[GridContainer] arranges its child controls in a grid layout. The number of columns is specified by the [member columns] property, whereas the number of rows depends on how many are needed for the child controls. The number of rows and columns is preserved for every size of the container.\n[b]Note:[/b] [GridContainer] only works with child nodes inheriting from [Control]. It won't rearrange child nodes inheriting from [Node2D]."
-msgstr "A [GridContainer] a gyermek vezérlőelemeket rácsos elrendezésben helyezi el. Az oszlopok számát a [member columns] tulajdonság határozza meg, a sorok száma pedig a gyermekek elhelyezéséhez szükséges mennyiséghez igazodik. A sorok és oszlopok száma a tároló méretének változtatásakor is megmarad.\n[b]Megjegyzés:[/b] A [GridContainer] kizárólag [Control] osztályból származó gyermekcsomópontokkal működik. A [Node2D] alapú gyermekeket nem rendezi át."
+msgstr "A [GridContainer] rácsba rendezi a gyermek vezérlőelemeket. Az oszlopok számát a [member columns] tulajdonság adja meg, a sorok száma pedig a gyermekelemek számához igazodik. A tároló átméretezése nem változtatja meg a sorok és oszlopok számát.\n[b]Megjegyzés:[/b] A [GridContainer] csak a [Control] osztályból származó gyermekcsomópontokat rendezi el. A [Node2D] osztályból származó gyermekeket nem rendezi át."
 
 #. GridContainer.columns
 #: doc/classes/GridContainer.xml
 msgid "The number of columns in the [GridContainer]. If modified, [GridContainer] reorders its Control-derived children to accommodate the new layout."
-msgstr "A [GridContainer] oszlopainak száma. Módosításakor a [GridContainer] az új elrendezésnek megfelelően átrendezi a Control-alapú gyermekeket."
+msgstr "A [GridContainer] oszlopainak számát határozza meg. Ha megváltoztatod, a [GridContainer] az új oszlopszámnak megfelelően rendezi át a Control-alapú gyermekcsomópontokat."
 
 #. GridContainer.theme.h_separation
 #. FlowContainer.theme.h_separation
