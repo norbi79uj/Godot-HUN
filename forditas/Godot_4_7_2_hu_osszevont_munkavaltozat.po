@@ -3983,7 +3983,7 @@ msgstr "Egy [PhysicsBody2D] mozgása során bekövetkezett ütközés adatait t�
 #. KinematicCollision2D.get_angle
 #: doc/classes/KinematicCollision2D.xml
 msgid "Returns the collision angle according to [param up_direction], which is [constant Vector2.UP] by default. This value is always positive."
-msgstr "Visszaadja az ütközési szöget a [param up_direction] irányhoz viszonyítva, amely alapértelmezés szerint [constant Vector2.UP]. A visszaadott szög mindig pozitív."
+msgstr "Visszaadja az ütközés szögét a [param up_direction] paraméterben megadott irányhoz viszonyítva. Az irány alapértelmezett értéke [constant Vector2.UP]. A visszaadott szög mindig pozitív."
 
 #. KinematicCollision2D.get_collider
 #: doc/classes/KinematicCollision2D.xml
@@ -3993,12 +3993,12 @@ msgstr "Visszaadja az ütköző testhez kapcsolódó [Object] példányt."
 #. KinematicCollision2D.get_collider_id
 #: doc/classes/KinematicCollision2D.xml
 msgid "Returns the unique instance ID of the colliding body's attached [Object]. See [method Object.get_instance_id]."
-msgstr "Visszaadja az ütköző testhez kapcsolt [Object] objektum egyedi példányazonosítóját. Lásd: [method Object.get_instance_id]."
+msgstr "Visszaadja az ütköző testhez kapcsolódó [Object] egyedi példányazonosítóját. Lásd: [method Object.get_instance_id]."
 
 #. KinematicCollision2D.get_collider_rid
 #: doc/classes/KinematicCollision2D.xml
 msgid "Returns the colliding body's [RID] used by the [PhysicsServer2D]."
-msgstr "Visszaadja az ütköző test [PhysicsServer2D] által használt [RID] azonosítóját."
+msgstr "Visszaadja az ütköző testhez tartozó, a [PhysicsServer2D] által használt [RID] azonosítót."
 
 #. KinematicCollision2D.get_collider_shape
 #: doc/classes/KinematicCollision2D.xml
@@ -4018,7 +4018,7 @@ msgstr "Visszaadja az ütköző test sebességét."
 #. KinematicCollision2D.get_depth
 #: doc/classes/KinematicCollision2D.xml
 msgid "Returns the colliding body's length of overlap along the collision normal."
-msgstr "Visszaadja az ütköző testek átfedésének mértékét az ütközési normálvektor mentén."
+msgstr "Visszaadja az ütköző testek közötti átfedés hosszát az ütközési normálvektor irányában."
 
 #. KinematicCollision2D.get_local_shape
 #: doc/classes/KinematicCollision2D.xml
@@ -4038,12 +4038,12 @@ msgstr "Visszaadja az ütközési pont globális koordinátáit."
 #. KinematicCollision2D.get_remainder
 #: doc/classes/KinematicCollision2D.xml
 msgid "Returns the moving object's remaining movement vector."
-msgstr "Visszaadja a mozgó objektum ütközés után hátralévő elmozdulásvektorát."
+msgstr "Visszaadja a mozgó objektum tervezett mozgásából az ütközés után fennmaradó elmozdulásvektort."
 
 #. KinematicCollision2D.get_travel
 #: doc/classes/KinematicCollision2D.xml
 msgid "Returns the moving object's travel before collision."
-msgstr "Visszaadja a mozgó objektum ütközésig megtett elmozdulását."
+msgstr "Visszaadja a mozgó objektum által az ütközésig megtett elmozdulást."
 
 #. CollisionPolygon2D.brief
 #: doc/classes/CollisionPolygon2D.xml
@@ -4053,7 +4053,7 @@ msgstr "Sokszög alakú ütközési alakzatot ad a szülő [CollisionObject2D] c
 #. CollisionPolygon2D.description
 #: doc/classes/CollisionPolygon2D.xml
 msgid "A node that provides a polygon shape to a [CollisionObject2D] parent and allows it to be edited. The polygon can be concave or convex. This can give a detection shape to an [Area2D], turn a [PhysicsBody2D] into a solid object, or give a hollow shape to a [StaticBody2D].\n[b]Warning:[/b] A non-uniformly scaled [CollisionPolygon2D] will likely not behave as expected. Make sure to keep its scale the same on all axes and adjust its polygon instead."
-msgstr "Olyan csomópont, amely szerkeszthető sokszög alakú ütközési alakzatot ad egy szülő [CollisionObject2D] csomóponthoz. A sokszög lehet konkáv (homorú) vagy konvex (domború). Használható [Area2D] érzékelési terület alakzataként, [PhysicsBody2D] szilárd testének alakzataként, vagy [StaticBody2D] üreges alakzatának létrehozására.\n[b]Figyelmeztetés:[/b] A nem egyenletes méretarányú [CollisionPolygon2D] valószínűleg nem a vártnak megfelelően működik. Azonos méretarányt használj minden tengelyen, és a kívánt formát inkább a sokszög pontjainak módosításával érd el."
+msgstr "Olyan csomópont, amely szerkeszthető sokszög alakú ütközési alakzatot ad egy szülő [CollisionObject2D] csomóponthoz. A sokszög lehet konkáv (homorú) vagy konvex (domború). Használható egy [Area2D] érzékelőalakzataként, egy [PhysicsBody2D] szilárd ütközési alakzataként, vagy egy [StaticBody2D] üreges ütközési alakzatának kialakítására.\n[b]Figyelmeztetés:[/b] A [CollisionPolygon2D] nem egyenletes méretezése váratlan működést okozhat. Minden tengelyen azonos méretarányt használj, és a kívánt alakot inkább a sokszög csúcsainak módosításával alakítsd ki."
 
 #. CollisionPolygon2D.build_mode
 #: doc/classes/CollisionPolygon2D.xml
@@ -4063,7 +4063,7 @@ msgstr "Az ütközési alakzat létrehozási módja."
 #. CollisionPolygon2D.disabled
 #: doc/classes/CollisionPolygon2D.xml
 msgid "If [code]true[/code], no collisions will be detected. This property should be changed with [method Object.set_deferred]."
-msgstr "Ha az értéke [code]true[/code], az ütközésérzékelés le van tiltva. A tulajdonságot a [method Object.set_deferred] metódussal célszerű módosítani."
+msgstr "Ha az értéke [code]true[/code], a rendszer nem észlel ütközéseket. Ezt a tulajdonságot a [method Object.set_deferred] metódussal érdemes módosítani."
 
 #. CollisionPolygon2D.one_way_collision
 #: doc/classes/CollisionPolygon2D.xml
@@ -4073,7 +4073,7 @@ msgstr "Ha [code]true[/code], csak a [CollisionPolygon2D] elforgatásához viszo
 #. CollisionPolygon2D.one_way_collision_margin
 #: doc/classes/CollisionPolygon2D.xml
 msgid "The margin used for one-way collision (in pixels). Higher values will make the shape thicker, and work better for colliders that enter the polygon at a high velocity."
-msgstr "Az egyirányú ütközéshez használt ráhagyás (képpontban). Nagyobb értéknél az alakzat az ütközésvizsgálat számára vastagabbnak számít, ami javíthatja a nagy sebességgel érkező testek érzékelését."
+msgstr "Az egyirányú ütközéshez használt ráhagyás (képpontban). Nagyobb érték esetén az ütközésvizsgálat vastagabbnak tekinti az alakzatot, ami megbízhatóbbá teheti a nagy sebességgel a sokszögbe belépő testek ütközésének érzékelését."
 
 #. CollisionPolygon2D.polygon
 #: doc/classes/CollisionPolygon2D.xml
