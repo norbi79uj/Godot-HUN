@@ -3463,7 +3463,7 @@ msgstr "Beállítja, hogy a [param link] kapcsolaton mindkét irányban át lehe
 #. NavigationServer2D.link_set_enabled
 #: doc/classes/NavigationServer2D.xml
 msgid "If [param enabled] is [code]true[/code], the specified [param link] will contribute to its current navigation map."
-msgstr "Ha a [param enabled] értéke [code]true[/code], a megadott [param link] részt vesz a hozzá tartozó navigációs térkép működésében."
+msgstr "Ha a [param enabled] értéke [code]true[/code], a megadott [param link] kapcsolat részt vesz a hozzá tartozó navigációs térkép útvonalainak meghatározásában."
 
 #. NavigationServer2D.link_set_end_position
 #: doc/classes/NavigationServer2D.xml
@@ -3483,7 +3483,7 @@ msgstr "Beállítja a kapcsolat navigációs térképének [RID] azonosítóját
 #. NavigationServer2D.link_set_navigation_layers
 #: doc/classes/NavigationServer2D.xml
 msgid "Set the links's navigation layers. This allows selecting links from a path request (when using [method NavigationServer2D.map_get_path])."
-msgstr "Beállítja a kapcsolat navigációs rétegeit. Ezekkel lehet kiválasztani, hogy mely kapcsolatok vehetnek részt az útvonalkérésben (lásd [method NavigationServer2D.map_get_path])."
+msgstr "Beállítja a kapcsolat navigációs rétegeit. Ezek alapján megadható, hogy a [method NavigationServer2D.map_get_path] metódussal kért útvonal mely kapcsolatokat használhatja."
 
 #. NavigationServer2D.link_set_owner_id
 #: doc/classes/NavigationServer2D.xml
@@ -3503,7 +3503,7 @@ msgstr "Beállítja a [param link] kapcsolat [param travel_cost] haladási költ
 #. NavigationServer2D.map_force_update
 #: doc/classes/NavigationServer2D.xml
 msgid "This function immediately forces synchronization of the specified navigation [param map] [RID]. By default navigation maps are only synchronized at the end of each physics frame. This function can be used to immediately (re)calculate all the navigation meshes and region connections of the navigation map. This makes it possible to query a navigation path for a changed map immediately and in the same frame (multiple times if needed).\nDue to technical restrictions the current NavigationServer command queue will be flushed. This means all already queued update commands for this physics frame will be executed, even those intended for other maps, regions and agents not part of the specified map. The expensive computation of the navigation meshes and region connections of a map will only be done for the specified map. Other maps will receive the normal synchronization at the end of the physics frame. Should the specified map receive changes after the forced update it will update again as well when the other maps receive their update.\nAvoidance processing and dispatch of the [code]safe_velocity[/code] signals is unaffected by this function and continues to happen for all maps and agents at the end of the physics frame.\n[b]Note:[/b] With great power comes great responsibility. This function should only be used by users that really know what they are doing and have a good reason for it. Forcing an immediate update of a navigation map requires locking the NavigationServer and flushing the entire NavigationServer command queue. Not only can this severely impact the performance of a game but it can also introduce bugs if used inappropriately without much foresight."
-msgstr "Azonnal kikényszeríti a megadott [param map] navigációs térkép [RID] azonosítójának szinkronizálását. Alapértelmezés szerint a navigációs térképek csak a fizikai képkockák végén szinkronizálódnak. Ezzel a függvénnyel azonnal újraszámíthatod a térkép navigációs hálóit és a területek közötti kapcsolatokat. Így egy módosított térkép útvonala már ugyanabban a képkockában lekérdezhető, szükség esetén többször is.\nTechnikai korlátok miatt a művelet kiüríti a NavigationServer aktuális parancssorát. Ez azt jelenti, hogy a képkockára korábban ütemezett összes frissítési parancs végrehajtódik, azok is, amelyek nem a megadott térképhez tartozó térképeket, területeket vagy ügynököket érintik. A navigációs hálók és területkapcsolatok költséges újraszámítása csak a megadott térképen történik meg. A többi térkép a fizikai képkocka végén a szokásos módon szinkronizálódik. Ha a megadott térkép a kényszerített frissítés után újra megváltozik, akkor a többi térképpel együtt ismét frissül.\nAz akadályelkerülés feldolgozását és a [code]safe_velocity[/code] jelzések továbbítását a függvény nem módosítja; ezek továbbra is az összes térképnél és ügynöknél a fizikai képkocka végén zajlanak.\n[b]Megjegyzés:[/b] Nagy hatalommal nagy felelősség jár. A függvényt csak akkor használd, ha pontosan érted a működését, és valóban szükséges. A navigációs térkép azonnali frissítése zárolja a NavigationServert és kiüríti annak teljes parancssorát. Ez súlyosan ronthatja a játék teljesítményét, és előrelátás nélkül használva hibákat is okozhat."
+msgstr "Azonnal kikényszeríti a [param map] [RID] azonosítójú navigációs térkép szinkronizálását. Alapértelmezés szerint a navigációs térképek csak a fizikai képkockák végén szinkronizálódnak. Ezzel a függvénnyel azonnal újraszámíthatod a térkép navigációs hálóit és a területek közötti kapcsolatokat. Így egy módosított térkép útvonala már ugyanabban a képkockában lekérdezhető, szükség esetén többször is.\nTechnikai korlátok miatt a művelet kiüríti a NavigationServer aktuális parancssorát. Ez azt jelenti, hogy a képkockára korábban ütemezett összes frissítési parancs végrehajtódik, azok is, amelyek nem a megadott térképhez tartozó térképeket, területeket vagy ügynököket érintik. A navigációs hálók és területkapcsolatok költséges újraszámítása csak a megadott térképen történik meg. A többi térkép a fizikai képkocka végén a szokásos módon szinkronizálódik. Ha a megadott térkép a kényszerített frissítés után újra megváltozik, akkor a többi térképpel együtt ismét frissül.\nAz akadályelkerülés feldolgozását és a [code]safe_velocity[/code] jelzések továbbítását a függvény nem módosítja; ezek továbbra is az összes térképnél és ügynöknél a fizikai képkocka végén zajlanak.\n[b]Megjegyzés:[/b] Nagy hatalommal nagy felelősség jár. A függvényt csak akkor használd, ha pontosan érted a működését, és valóban szükséges. A navigációs térkép azonnali frissítése zárolja a NavigationServert és kiüríti annak teljes parancssorát. Ez súlyosan ronthatja a játék teljesítményét, és előrelátás nélkül használva hibákat is okozhat."
 
 #. NavigationServer2D.obstacle_get_avoidance_enabled
 #: doc/classes/NavigationServer2D.xml
@@ -3548,7 +3548,7 @@ msgstr "Visszaadja a megadott [param obstacle] körvonalának csúcsait."
 #. NavigationServer2D.obstacle_set_avoidance_enabled
 #: doc/classes/NavigationServer2D.xml
 msgid "If [param enabled] is [code]true[/code], the provided [param obstacle] affects avoidance using agents."
-msgstr "Ha a [param enabled] értéke [code]true[/code], a megadott [param obstacle] hatással van az ügynökök akadályelkerülésére."
+msgstr "Ha a [param enabled] értéke [code]true[/code], a megadott [param obstacle] akadályt az ügynökök akadályelkerülési számításai figyelembe veszik."
 
 #. NavigationServer2D.obstacle_set_avoidance_layers
 #: doc/classes/NavigationServer2D.xml
@@ -3558,17 +3558,17 @@ msgstr "Beállítja az akadály [code]avoidance_layers[/code] bitmaszkját."
 #. NavigationServer2D.obstacle_set_paused
 #: doc/classes/NavigationServer2D.xml
 msgid "If [param paused] is [code]true[/code] the specified [param obstacle] will not be processed. For example, it will no longer affect avoidance velocities."
-msgstr "Ha a [param paused] értéke [code]true[/code], a megadott [param obstacle] feldolgozása szünetel. Ilyenkor például nem befolyásolja az akadályelkerülési sebességeket."
+msgstr "Ha a [param paused] értéke [code]true[/code], a rendszer nem dolgozza fel a megadott [param obstacle] akadályt. Ilyenkor például az akadály nem befolyásolja az akadályelkerülés során kiszámított sebességeket."
 
 #. NavigationServer2D.obstacle_set_velocity
 #: doc/classes/NavigationServer2D.xml
 msgid "Sets [param velocity] of the dynamic [param obstacle]. Allows other agents to better predict the movement of the dynamic obstacle. Only works in combination with the radius of the obstacle."
-msgstr "Beállítja a dinamikus [param obstacle] [param velocity] sebességét. Ezzel a többi ügynök jobban előre jelezheti a mozgó akadály helyváltoztatását. Csak az akadály sugarával együtt működik."
+msgstr "Beállítja a dinamikus [param obstacle] [param velocity] sebességét. Ez segít a többi ügynöknek pontosabban előre jelezni az akadály mozgását. A beállítás csak az akadály sugarával együtt használható."
 
 #. NavigationServer2D.obstacle_set_vertices
 #: doc/classes/NavigationServer2D.xml
 msgid "Sets the outline vertices for the obstacle. If the vertices are winded in clockwise order agents will be pushed in by the obstacle, else they will be pushed out."
-msgstr "Beállítja az akadály körvonalának csúcsait. Ha a csúcsok óramutató járásával megegyező sorrendben következnek, az akadály az ügynököket befelé tereli, ellenkező sorrend esetén kifelé."
+msgstr "Beállítja az akadály körvonalának csúcsait. Ha a csúcsok az óramutató járásával megegyező körüljárási sorrendben szerepelnek, az akadály befelé tereli az ügynököket; ellenkező sorrend esetén kifelé."
 
 #. NavigationServer2D.parse_source_geometry_data
 #: doc/classes/NavigationServer2D.xml
