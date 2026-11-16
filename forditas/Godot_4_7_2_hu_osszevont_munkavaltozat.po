@@ -3223,7 +3223,7 @@ msgstr "Visszaadja a terület navigációs rétegeit."
 #. NavigationServer2D.region_set_navigation_layers
 #: doc/classes/NavigationServer2D.xml
 msgid "Set the region's navigation layers. This allows selecting regions from a path request (when using [method NavigationServer2D.map_get_path])."
-msgstr "Beállítja a terület navigációs rétegeit. Segítségükkel meghatározhatók az útvonalkérésben részt vevő területek (lásd [method NavigationServer2D.map_get_path])."
+msgstr "Beállítja a terület navigációs rétegeit. Ezek alapján kiválasztható, hogy mely területek vehetnek részt a [method NavigationServer2D.map_get_path] metódussal kért útvonalban."
 
 #. NavigationServer2D.region_set_enter_cost
 #: doc/classes/NavigationServer2D.xml
@@ -3318,12 +3318,12 @@ msgstr "Visszaadja a megadott [param agent] sugarát."
 #. NavigationServer2D.agent_get_time_horizon_agents
 #: doc/classes/NavigationServer2D.xml
 msgid "Returns the minimal amount of time for which the specified [param agent]'s velocities that are computed by the simulation are safe with respect to other agents."
-msgstr "Visszaadja azt a legkisebb időtartamot, amelyre a megadott [param agent] szimulációval kiszámított sebességei biztonságosnak tekinthetők más ügynökökhöz viszonyítva."
+msgstr "Visszaadja azt a minimális időtávot, amelyen belül a szimuláció által a megadott [param agent] számára kiszámított sebességek biztonságosnak tekinthetők a többi ügynökkel szemben."
 
 #. NavigationServer2D.agent_get_time_horizon_obstacles
 #: doc/classes/NavigationServer2D.xml
 msgid "Returns the minimal amount of time for which the specified [param agent]'s velocities that are computed by the simulation are safe with respect to static avoidance obstacles."
-msgstr "Visszaadja azt a legkisebb időtartamot, amelyre a megadott [param agent] szimulációval kiszámított sebességei biztonságosnak tekinthetők a statikus elkerülendő akadályokhoz viszonyítva."
+msgstr "Visszaadja azt a minimális időtávot, amelyen belül a szimuláció által a megadott [param agent] számára kiszámított sebességek biztonságosnak tekinthetők a statikus, elkerülendő akadályokkal szemben."
 
 #. NavigationServer2D.agent_get_velocity
 #: doc/classes/NavigationServer2D.xml
@@ -3373,7 +3373,7 @@ msgstr "Beállítja a legnagyobb távolságot, amelyen belül az ügynök más �
 #. NavigationServer2D.agent_set_paused
 #: doc/classes/NavigationServer2D.xml
 msgid "If [param paused] is [code]true[/code] the specified [param agent] will not be processed. For example, it will not calculate avoidance velocities or receive avoidance callbacks."
-msgstr "Ha a [param paused] értéke [code]true[/code], a megadott [param agent] feldolgozása szünetel. Például nem számít akadályelkerülési sebességeket, és nem kap akadályelkerülési visszahívásokat."
+msgstr "Ha a [param paused] értéke [code]true[/code], a rendszer nem dolgozza fel a megadott [param agent] ügynököt. Így például nem számítja ki az akadályelkerüléshez szükséges sebességét, és az ügynök nem kap akadályelkerülési visszahívásokat."
 
 #. NavigationServer2D.agent_set_radius
 #: doc/classes/NavigationServer2D.xml
@@ -3393,12 +3393,12 @@ msgstr "Az a legkisebb időtartam, amelyre a szimulációval kiszámított sebes
 #. NavigationServer2D.agent_set_velocity_forced
 #: doc/classes/NavigationServer2D.xml
 msgid "Replaces the internal velocity in the collision avoidance simulation with [param velocity] for the specified [param agent]. When an agent is teleported to a new position far away this function should be used in the same frame. If called frequently this function can get agents stuck."
-msgstr "A megadott [param agent] ütközéselkerülési szimulációjának belső sebességét a [param velocity] értékre állítja. Ha az ügynököt nagy távolságra teleportálod, ugyanabban a képkockában ezt a függvényt is használd. A túl gyakori hívás miatt az ügynökök elakadhatnak."
+msgstr "A megadott [param agent] ügynök belső sebességértékét a [param velocity] értékre cseréli az ütközéselkerülési szimulációban. Ha az ügynököt távoli pozícióba teleportálod, ugyanabban a képkockában hívd meg ezt a függvényt is. Túl gyakori használata az ügynökök elakadásához vezethet."
 
 #. NavigationServer2D.bake_from_source_geometry_data_async
 #: doc/classes/NavigationServer2D.xml
 msgid "Bakes the provided [param navigation_polygon] with the data from the provided [param source_geometry_data] as an async task running on a background thread. After the process is finished the optional [param callback] will be called."
-msgstr "A megadott [param navigation_polygon] navigációs sokszöget a [param source_geometry_data] forrásadatokból állítja elő, háttérszálon futó aszinkron feladatként. A művelet végeztével meghívja az opcionális [param callback] visszahívást."
+msgstr "A megadott [param navigation_polygon] navigációs sokszöget a [param source_geometry_data] forrásgeometriai adatai alapján, háttérszálon futó aszinkron feladatként állítja elő. A művelet befejeztével meghívja az opcionális [param callback] visszahívást."
 
 #. NavigationServer2D.link_create
 #: doc/classes/NavigationServer2D.xml
