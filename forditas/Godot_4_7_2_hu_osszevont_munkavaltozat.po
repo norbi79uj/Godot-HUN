@@ -4934,22 +4934,22 @@ msgstr "Matematikai görbe."
 #. Curve.description
 #: doc/classes/Curve.xml
 msgid "This resource describes a mathematical curve by defining a set of points and tangents at each point. By default, it ranges between [code]0[/code] and [code]1[/code] on the X and Y axes, but these ranges can be changed.\nPlease note that many resources and nodes assume they are given [i]unit curves[/i]. A unit curve is a curve whose domain (the X axis) is between [code]0[/code] and [code]1[/code]. Some examples of unit curve usage are [member CPUParticles2D.angle_curve] and [member Line2D.width_curve]."
-msgstr "Ez az erőforrás egy matematikai görbét ír le pontok és az egyes pontokhoz tartozó érintők megadásával. Alapértelmezés szerint az X és az Y tengelyen is [code]0[/code] és [code]1[/code] közé esik a tartománya, de ezek a határok módosíthatók.\nFontos, hogy sok erőforrás és csomópont [i]egységgörbét[/i] vár. Az egységgörbe olyan görbe, amelynek értelmezési tartománya (X tengelye) [code]0[/code] és [code]1[/code] közé esik. Egységgörbét használ például a [member CPUParticles2D.angle_curve] és a [member Line2D.width_curve]."
+msgstr "Ez az erőforrás egy matematikai görbét határoz meg a pontjai és az azokhoz tartozó érintők segítségével. Alapértelmezés szerint mind az X, mind az Y tengely mentén [code]0[/code] és [code]1[/code] közötti értékeket használ, de a tartományhatárok módosíthatók.\nFontos, hogy sok erőforrás és csomópont [i]egységgörbét[/i] vár. Az egységgörbe olyan görbe, amelynek értelmezési tartománya (X tengelye) [code]0[/code] és [code]1[/code] közé esik. Egységgörbét használ például a [member CPUParticles2D.angle_curve] és a [member Line2D.width_curve]."
 
 #. Curve.add_point
 #: doc/classes/Curve.xml
 msgid "Adds a point to the curve. For each side, if the [code]*_mode[/code] is [constant TANGENT_LINEAR], the [code]*_tangent[/code] angle (in degrees) uses the slope of the curve halfway to the adjacent point. Allows custom assignments to the [code]*_tangent[/code] angle if [code]*_mode[/code] is set to [constant TANGENT_FREE]."
-msgstr "Hozzáad egy pontot a görbéhez. Ha valamelyik oldalon a [code]*_mode[/code] értéke [constant TANGENT_LINEAR], a [code]*_tangent[/code] érintő szöge (fokban) a szomszédos pont felé vezető görbeszakasz felénél mért meredekségből adódik. Ha a [code]*_mode[/code] értéke [constant TANGENT_FREE], a [code]*_tangent[/code] érintő szöge egyedileg is megadható."
+msgstr "Hozzáad egy pontot a görbéhez. Ha a pont valamelyik oldalán a [code]*_mode[/code] értéke [constant TANGENT_LINEAR], akkor a [code]*_tangent[/code] érintő fokban megadott szögét a szomszédos pont felé vezető görbeszakasz felénél számított meredekség határozza meg. Ha a [code]*_mode[/code] értéke [constant TANGENT_FREE], a [code]*_tangent[/code] érintő szöge egyedileg is megadható."
 
 #. Curve.bake
 #: doc/classes/Curve.xml
 msgid "Recomputes the baked cache of points for the curve."
-msgstr "Újraszámítja a görbe pontjainak előre kiszámított gyorsítótárát."
+msgstr "Újra előállítja a görbe pontjainak előre kiszámított, gyorsítótárazott adatait."
 
 #. Curve.clean_dupes
 #: doc/classes/Curve.xml
 msgid "Removes duplicate points, i.e. points that are less than 0.00001 units (engine epsilon value) away from their neighbor on the curve."
-msgstr "Eltávolítja az ismétlődő pontokat, vagyis azokat, amelyek a görbe mentén a szomszédjuktól kevesebb mint 0,00001 egységnyire vannak (a motor epsilonértéke)."
+msgstr "Eltávolítja a közel azonos pontokat, amelyek a görbén a szomszédos ponttól 0,00001 egységnél kisebb távolságra vannak (ez a motor epsilonértéke)."
 
 #. Curve.clear_points
 #. Curve2D.clear_points
@@ -4961,7 +4961,7 @@ msgstr "Eltávolítja a görbe összes pontját."
 #. Curve.get_domain_range
 #: doc/classes/Curve.xml
 msgid "Returns the difference between [member min_domain] and [member max_domain]."
-msgstr "Visszaadja a [member min_domain] és a [member max_domain] közötti különbséget."
+msgstr "Visszaadja az értelmezési tartomány szélességét, vagyis a [member max_domain] és a [member min_domain] különbségét."
 
 #. Curve.get_point_left_mode
 #: doc/classes/Curve.xml
@@ -4991,7 +4991,7 @@ msgstr "Visszaadja a [param index] indexű pont jobb oldali érintőjének szög
 #. Curve.get_value_range
 #: doc/classes/Curve.xml
 msgid "Returns the difference between [member min_value] and [member max_value]."
-msgstr "Visszaadja a [member min_value] és a [member max_value] közötti különbséget."
+msgstr "Visszaadja az értéktartomány magasságát, vagyis a [member max_value] és a [member min_value] különbségét."
 
 #. Curve.remove_point
 #: doc/classes/Curve.xml
@@ -5001,12 +5001,12 @@ msgstr "Eltávolítja a görbe [param index] indexű pontját."
 #. Curve.sample
 #: doc/classes/Curve.xml
 msgid "Returns the Y value for the point that would exist at the X position [param offset] along the curve."
-msgstr "Visszaadja annak a pontnak az Y értékét, amely a görbén a [param offset] X pozíciónál helyezkedne el."
+msgstr "Visszaadja a görbe Y-értékét a [param offset] X-koordinátánál."
 
 #. Curve.sample_baked
 #: doc/classes/Curve.xml
 msgid "Returns the Y value for the point that would exist at the X position [param offset] along the curve using the baked cache. Bakes the curve's points if not already baked."
-msgstr "Az előre kiszámított gyorsítótárból visszaadja annak a pontnak az Y értékét, amely a görbén a [param offset] X pozíciónál helyezkedne el. Ha a görbe pontjai még nincsenek előre kiszámítva, előbb elvégzi ezt a műveletet."
+msgstr "A gyorsítótárazott görbeadatok alapján visszaadja az Y-értéket a [param offset] X-koordinátánál. Ha a görbe pontjai még nincsenek előre kiszámítva, előbb elkészíti a gyorsítótárat."
 
 #. Curve.set_point_left_mode
 #: doc/classes/Curve.xml
@@ -5041,12 +5041,12 @@ msgstr "A [param index] indexű pont függőleges pozícióját a [param y] ért
 #. Curve.bake_resolution
 #: doc/classes/Curve.xml
 msgid "The number of points to include in the baked (i.e. cached) curve data."
-msgstr "Az előre kiszámított (gyorsítótárazott) görbeadatokban tárolt pontok száma."
+msgstr "Az előre kiszámított, gyorsítótárazott görbeadatokhoz használt pontok száma."
 
 #. Curve.max_domain
 #: doc/classes/Curve.xml
 msgid "The maximum domain (x-coordinate) that points can have."
-msgstr "A pontok legnagyobb megengedett értelmezésitartomány-értéke (X-koordinátája)."
+msgstr "A görbepontok megengedett legnagyobb X-koordinátája, vagyis az értelmezési tartomány felső határa."
 
 #. Curve.max_value
 #: doc/classes/Curve.xml
@@ -5056,7 +5056,7 @@ msgstr "A pontok legnagyobb megengedett értéke (Y-koordinátája). Az érintő
 #. Curve.min_domain
 #: doc/classes/Curve.xml
 msgid "The minimum domain (x-coordinate) that points can have."
-msgstr "A pontok legkisebb megengedett értelmezésitartomány-értéke (X-koordinátája)."
+msgstr "A görbepontok megengedett legkisebb X-koordinátája, vagyis az értelmezési tartomány alsó határa."
 
 #. Curve.min_value
 #: doc/classes/Curve.xml
