@@ -4178,12 +4178,12 @@ msgstr "Ha engedélyezett, a fénykitakaró bekerül a valós időben létrehozo
 #. CanvasModulate.brief
 #: doc/classes/CanvasModulate.xml
 msgid "A node that applies a color tint to a canvas."
-msgstr "Olyan csomópont, amely színárnyalatot alkalmaz egy vászonra."
+msgstr "Olyan csomópont, amely egységes színezést alkalmaz egy vászonra."
 
 #. CanvasModulate.description
 #: doc/classes/CanvasModulate.xml
 msgid "[CanvasModulate] applies a color tint to all nodes on a canvas. Only one can be used to tint a canvas, but [CanvasLayer]s can be used to render things independently."
-msgstr "A [CanvasModulate] színárnyalatot alkalmaz a vászon összes csomópontjára. Egy vászon színezésére csak egy ilyen csomópont használható, de a [CanvasLayer] csomópontokkal egyes elemek külön is megjeleníthetők."
+msgstr "A [CanvasModulate] egységes színezést alkalmaz a vászon összes csomópontjára. Egy vászonhoz csak egy ilyen színező csomópont használható, de a [CanvasLayer] csomópontokkal egyes elemek külön is kirajzolhatók."
 
 #. CanvasModulate.color
 #: doc/classes/CanvasModulate.xml
@@ -4198,7 +4198,7 @@ msgstr "Fényt bocsát ki egy 2D-s környezetben."
 #. Light2D.description
 #: doc/classes/Light2D.xml
 msgid "Casts light in a 2D environment. A light is defined as a color, an energy value, a mode (see constants), and various other parameters (range and shadows-related)."
-msgstr "Fényt bocsát ki egy 2D-s környezetben. A fény tulajdonságait a színe, az energiája, a módja (lásd az állandókat), valamint több további paraméter, például a hatótávolság és az árnyékbeállítások határozzák meg."
+msgstr "Fényt bocsát ki egy 2D-s környezetben. A fény megjelenését a színe, az energiája, a működési módja (lásd az állandókat), valamint többek között a hatótávolság és az árnyékokra vonatkozó beállítások határozzák meg."
 
 #. Light2D.get_height
 #: doc/classes/Light2D.xml
@@ -4223,7 +4223,7 @@ msgstr "A Light2D [Color] színe."
 #. Light2D.editor_only
 #: doc/classes/Light2D.xml
 msgid "If [code]true[/code], Light2D will only appear when editing the scene."
-msgstr "Ha [code]true[/code], a Light2D csak a jelenet szerkesztésekor látható."
+msgstr "Ha [code]true[/code], a Light2D kizárólag a jelenet szerkesztése közben jelenik meg."
 
 #. Light2D.enabled
 #: doc/classes/Light2D.xml
@@ -4238,7 +4238,7 @@ msgstr "A Light2D fényenergiája. Minél nagyobb az értéke, annál erősebb a
 #. Light2D.range_item_cull_mask
 #: doc/classes/Light2D.xml
 msgid "The layer mask. Only objects with a matching [member CanvasItem.light_mask] will be affected by the Light2D. See also [member shadow_item_cull_mask], which affects which objects can cast shadows.\n[b]Note:[/b] [member range_item_cull_mask] is ignored by [DirectionalLight2D], which will always light a 2D node regardless of the 2D node's [member CanvasItem.light_mask]."
-msgstr "Rétegmaszk. A Light2D csak azokat az objektumokat világítja meg, amelyek [member CanvasItem.light_mask] tulajdonsága illeszkedik a maszkhoz. Lásd még: [member shadow_item_cull_mask], amely az árnyékvetésre képes objektumokat szabályozza.\n[b]Megjegyzés:[/b] A [DirectionalLight2D] figyelmen kívül hagyja a [member range_item_cull_mask] értékét, és a 2D-s csomópontok [member CanvasItem.light_mask] tulajdonságától függetlenül megvilágítja őket."
+msgstr "Rétegmaszk, amely meghatározza, mely objektumokra hat a Light2D. Csak azokat az objektumokat világítja meg, amelyek [member CanvasItem.light_mask] értéke illeszkedik ehhez a maszkhoz. Lásd még: [member shadow_item_cull_mask], amely az árnyékvetésre képes objektumokat szabályozza.\n[b]Megjegyzés:[/b] A [DirectionalLight2D] figyelmen kívül hagyja a [member range_item_cull_mask] értékét, és a 2D-s csomópontok [member CanvasItem.light_mask] tulajdonságától függetlenül megvilágítja őket."
 
 #. Light2D.range_layer_max
 #: doc/classes/Light2D.xml
@@ -4278,12 +4278,12 @@ msgstr "Az árnyékszűrő típusa."
 #. Light2D.shadow_filter_smooth
 #: doc/classes/Light2D.xml
 msgid "Smoothing value for shadows. Higher values will result in softer shadows, at the cost of visible streaks that can appear in shadow rendering. [member shadow_filter_smooth] only has an effect if [member shadow_filter] is [constant SHADOW_FILTER_PCF5] or [constant SHADOW_FILTER_PCF13]."
-msgstr "Az árnyékok simításának mértéke. Nagyobb értéknél lágyabbak az árnyékok, de látható csíkozódás jelentkezhet az árnyékmegjelenítésben. A [member shadow_filter_smooth] csak akkor hatásos, ha a [member shadow_filter] értéke [constant SHADOW_FILTER_PCF5] vagy [constant SHADOW_FILTER_PCF13]."
+msgstr "Az árnyékok simításának mértéke. A nagyobb érték lágyabb árnyékokat eredményez, de a kirajzolás során látható sávok is megjelenhetnek. A [member shadow_filter_smooth] csak akkor hatásos, ha a [member shadow_filter] értéke [constant SHADOW_FILTER_PCF5] vagy [constant SHADOW_FILTER_PCF13]."
 
 #. Light2D.shadow_item_cull_mask
 #: doc/classes/Light2D.xml
 msgid "The shadow mask. Used with [LightOccluder2D] to cast shadows. Only occluders with a matching [member CanvasItem.light_mask] will cast shadows. See also [member range_item_cull_mask], which affects which objects can [i]receive[/i] the light."
-msgstr "Árnyékmaszk. A [LightOccluder2D] csomópontokkal együtt szabályozza az árnyékvetést. Csak azok a fénykitakarók vetnek árnyékot, amelyek [member CanvasItem.light_mask] értéke illeszkedik a maszkhoz. Lásd még: [member range_item_cull_mask], amely azt szabályozza, mely objektumok [i]kaphatnak[/i] fényt."
+msgstr "Árnyékmaszk, amely a [LightOccluder2D] csomópontokkal együtt határozza meg, mely elemek vethetnek árnyékot. Csak azok a fénykitakarók vetnek árnyékot, amelyek [member CanvasItem.light_mask] értéke illeszkedik a maszkhoz. Lásd még: [member range_item_cull_mask], amely azt szabályozza, mely objektumok [i]kaphatnak[/i] fényt."
 
 #. OccluderPolygon2D.brief
 #: doc/classes/OccluderPolygon2D.xml
@@ -4293,12 +4293,12 @@ msgstr "2D-s sokszöget határoz meg a LightOccluder2D számára."
 #. OccluderPolygon2D.description
 #: doc/classes/OccluderPolygon2D.xml
 msgid "Editor facility that helps you draw a 2D polygon used as resource for [LightOccluder2D]."
-msgstr "A szerkesztőben rajzolható 2D-s sokszög, amely erőforrásként szolgál a [LightOccluder2D] számára."
+msgstr "A szerkesztőben 2D-s sokszög rajzolását segítő eszköz, amellyel a [LightOccluder2D] számára használható erőforrás készíthető."
 
 #. OccluderPolygon2D.closed
 #: doc/classes/OccluderPolygon2D.xml
 msgid "If [code]true[/code], closes the polygon. A closed OccluderPolygon2D occludes the light coming from any direction. An opened OccluderPolygon2D occludes the light only at its outline's direction."
-msgstr "Ha [code]true[/code], a sokszög zárt. A zárt OccluderPolygon2D bármely irányból érkező fényt kitakar; a nyitott sokszög csak a körvonala irányának megfelelően takarja ki a fényt."
+msgstr "Ha [code]true[/code], a sokszög zárt. A zárt OccluderPolygon2D minden irányból kitakarja a fényt, míg a nyitott csak a körvonala irányának megfelelő oldalról."
 
 #. OccluderPolygon2D.cull_mode
 #: doc/classes/OccluderPolygon2D.xml
@@ -4313,12 +4313,12 @@ msgstr "A sokszög csúcsainak pozícióit tartalmazó [Vector2] tömb."
 #. DirectionalLight2D.brief
 #: doc/classes/DirectionalLight2D.xml
 msgid "Directional 2D light from a distance."
-msgstr "Távoli forrásból érkező, irányított 2D-s fény."
+msgstr "Távoli fényforrásból érkező irányított 2D-s megvilágítás."
 
 #. DirectionalLight2D.description
 #: doc/classes/DirectionalLight2D.xml
 msgid "A directional light is a type of [Light2D] node that models an infinite number of parallel rays covering the entire scene. It is used for lights with strong intensity that are located far away from the scene (for example: to model sunlight or moonlight).\nLight is emitted in the +Y direction of the node's global basis. For an unrotated light, this means that the light is emitted downwards. The position of the node is ignored; only the basis is used to determine light direction.\n[b]Note:[/b] [DirectionalLight2D] does not support light cull masks (but it supports shadow cull masks). It will always light up 2D nodes, regardless of the 2D node's [member CanvasItem.light_mask]."
-msgstr "Az irányfény a [Light2D] egyik típusa: végtelen számú párhuzamos fénysugárral modellezi a teljes jelenetet megvilágító fényforrást. Nagy intenzitású, a jelenettől távol lévő fényekhez használható, például napsütés vagy holdfény megjelenítésére.\nA fény a csomópont globális bázisának +Y irányában terjed. Elforgatás nélkül ez lefelé irányuló megvilágítást jelent. A csomópont pozíciója nem számít; a fény irányát kizárólag a bázis határozza meg.\n[b]Megjegyzés:[/b] A [DirectionalLight2D] nem támogatja a megvilágított elemek rétegmaszkját, az árnyékvetőkét azonban igen. A 2D-s csomópontokat azok [member CanvasItem.light_mask] értékétől függetlenül megvilágítja."
+msgstr "Az irányfény a [Light2D] egyik típusa: végtelen számú párhuzamos fénysugárral modellezi a teljes jelenetet megvilágító fényforrást. Nagy intenzitású, a jelenettől távol lévő fényekhez használható, például napsütés vagy holdfény megjelenítésére.\nA fény a csomópont globális bázisának +Y irányában terjed. Ha a csomópont nincs elforgatva, a fény lefelé világít. A csomópont pozíciója nem befolyásolja a megvilágítást; annak irányát kizárólag a bázis határozza meg.\n[b]Megjegyzés:[/b] A [DirectionalLight2D] nem támogatja a megvilágított elemek rétegmaszkját, az árnyékvetőkét azonban igen. A 2D-s csomópontokat azok [member CanvasItem.light_mask] értékétől függetlenül megvilágítja."
 
 #. DirectionalLight2D.height
 #: doc/classes/DirectionalLight2D.xml
@@ -4328,7 +4328,7 @@ msgstr "A fény magassága, amelyet a 2D-s normálleképezés használ. Értéke
 #. DirectionalLight2D.max_distance
 #: doc/classes/DirectionalLight2D.xml
 msgid "The maximum distance from the camera center objects can be before their shadows are culled (in pixels). Decreasing this value can prevent objects located outside the camera from casting shadows (while also improving performance). [member Camera2D.zoom] is not taken into account by [member max_distance], which means that at higher zoom values, shadows will appear to fade out sooner when zooming onto a given point."
-msgstr "A kameraközépponttól mért legnagyobb távolság képpontban, amelyen túl az objektumok árnyékát a rendszer nem rajzolja ki. Az érték csökkentésével megakadályozható, hogy a kamerán kívüli objektumok árnyékot vessenek, és a teljesítmény is javulhat. A [member Camera2D.zoom] értékét a [member max_distance] nem veszi figyelembe, ezért nagyobb nagyítás esetén egy adott pontra közelítve az árnyékok hamarabb tűnhetnek el."
+msgstr "A kamera középpontjától mért maximális távolság képpontban. Az ennél távolabb lévő objektumok árnyékát a rendszer nem rajzolja ki. Az érték csökkentésével megakadályozható, hogy a kamerán kívüli objektumok árnyékot vessenek, és a teljesítmény is javulhat. A [member Camera2D.zoom] értékét a [member max_distance] nem veszi figyelembe, ezért nagyobb nagyítás esetén egy adott pontra közelítve az árnyékok hamarabb tűnhetnek el."
 
 #. Parallax2D.brief
 #: doc/classes/Parallax2D.xml
