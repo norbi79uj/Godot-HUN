@@ -6312,13 +6312,13 @@ msgstr "A csoport egyik gombjának lenyomásakor bocsátódik ki."
 #. TabBar.ensure_tab_visible
 #: doc/classes/TabBar.xml
 msgid "Moves the scroll view to make the tab visible."
-msgstr "A görgetett nézetet úgy mozgatja, hogy a fül láthatóvá váljon."
+msgstr "Úgy görgeti a nézetet, hogy a kívánt fül láthatóvá váljon."
 
 
 #. TabBar.get_offset_buttons_visible
 #: doc/classes/TabBar.xml
 msgid "Returns [code]true[/code] if the offset buttons (the ones that appear when there's not enough space for all tabs) are visible."
-msgstr "[code]true[/code] értéket ad vissza, ha láthatók az eltoló gombok (amelyek akkor jelennek meg, ha nincs elég hely az összes fülnek)."
+msgstr "[code]true[/code] értéket ad vissza, ha láthatók a fülek közötti navigációs gombok. Ezek akkor jelennek meg, ha nem fér el az összes fül."
 
 
 #. TabBar.get_previous_tab
@@ -6348,7 +6348,7 @@ msgstr "Visszaadja a [param tab_idx] indexű fül ikonjának megengedett legnagy
 #. TabBar.get_tab_idx_at_point
 #: doc/classes/TabBar.xml
 msgid "Returns the index of the tab at local coordinates [param point]. Returns [code]-1[/code] if the point is outside the control boundaries or if there's no tab at the queried position."
-msgstr "Visszaadja a [param point] helyi koordinátáknál található fül indexét. [code]-1[/code] értéket ad vissza, ha a pont a vezérlőelem határain kívül esik, vagy ott nincs fül."
+msgstr "Visszaadja a [param point] helyi koordinátánál lévő fül indexét. Ha a pont kívül esik a vezérlőelem határain, vagy ott nem található fül, [code]-1[/code] értéket ad vissza."
 
 
 #. TabBar.get_tab_language
@@ -6366,7 +6366,7 @@ msgstr "Visszaadja a [param tab_idx] indexű fülhöz a [method set_tab_metadata
 #. TabBar.get_tab_offset
 #: doc/classes/TabBar.xml
 msgid "Returns the number of hidden tabs offsetted to the left."
-msgstr "Visszaadja a balra eltolva elrejtett fülek számát."
+msgstr "Visszaadja a bal oldalon, a görgetési eltolás miatt rejtett fülek számát."
 
 
 #. TabBar.get_tab_rect
@@ -6378,13 +6378,13 @@ msgstr "Visszaadja a fül helyi pozícióját és méretét tartalmazó [Rect2] 
 #. TabBar.get_tab_text_direction
 #: doc/classes/TabBar.xml
 msgid "Returns tab title text base writing direction."
-msgstr "Visszaadja a fül címének alapvető írásirányát."
+msgstr "Visszaadja a fül címében használt szöveg alapértelmezett írásirányát."
 
 
 #. TabBar.get_tab_tooltip
 #: doc/classes/TabBar.xml
 msgid "Returns the tooltip text of the tab at index [param tab_idx]."
-msgstr "Visszaadja a [param tab_idx] indexű fül eszköztippszövegét."
+msgstr "Visszaadja a [param tab_idx] indexű fül súgóbuborékjának szövegét."
 
 
 #. TabBar.is_tab_disabled
@@ -6402,13 +6402,13 @@ msgstr "[code]true[/code] értéket ad vissza, ha a [param tab_idx] indexű fül
 #. TabBar.select_next_available
 #: doc/classes/TabBar.xml
 msgid "Selects the first available tab with greater index than the currently selected. Returns [code]true[/code] if tab selection changed."
-msgstr "Kijelöli a jelenleg kijelölt fülnél nagyobb indexű első elérhető fület. [code]true[/code] értéket ad vissza, ha megváltozott a kijelölés."
+msgstr "Kijelöli a jelenlegi után következő első elérhető fület. Ha a kijelölés megváltozott, [code]true[/code] értéket ad vissza."
 
 
 #. TabBar.select_previous_available
 #: doc/classes/TabBar.xml
 msgid "Selects the first available tab with lower index than the currently selected. Returns [code]true[/code] if tab selection changed."
-msgstr "Kijelöli a jelenleg kijelölt fülnél kisebb indexű első elérhető fület. [code]true[/code] értéket ad vissza, ha megváltozott a kijelölés."
+msgstr "Kijelöli a jelenlegi előtt található első elérhető fület. Ha a kijelölés megváltozott, [code]true[/code] értéket ad vissza."
 
 
 #. TabContainer.get_popup
@@ -6420,7 +6420,7 @@ msgstr "Visszaadja a [Popup] csomópont példányát, ha azt korábban beállít
 #. TabContainer.get_tab_bar
 #: doc/classes/TabContainer.xml
 msgid "Returns the [TabBar] contained in this container.\n[b]Warning:[/b] This is a required internal node, removing and freeing it or editing its tabs may cause a crash. If you wish to edit the tabs, use the methods provided in [TabContainer]."
-msgstr "Visszaadja a tárolóban található [TabBar] csomópontot.\n[b]Figyelmeztetés:[/b] Ez egy szükséges belső csomópont; eltávolítása és felszabadítása, illetve füleinek közvetlen szerkesztése összeomlást okozhat. A fülek módosításához a [TabContainer] által biztosított metódusokat használd."
+msgstr "Visszaadja a tárolóban található [TabBar] csomópontot.\n[b]Figyelmeztetés:[/b] Ez egy szükséges belső csomópont; eltávolítása és felszabadítása, illetve füleinek közvetlen szerkesztése összeomlást okozhat. A fülek módosításához a [TabContainer] saját metódusait használd."
 
 
 #. TabContainer.get_tab_button_icon
