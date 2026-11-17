@@ -5849,7 +5849,7 @@ msgstr "Két gyermek vezérlőelemet egymás alá rendező tároló, amelynek h�
 #. VSplitContainer.description
 #: doc/classes/VSplitContainer.xml
 msgid "A container that accepts only two child controls, then arranges them vertically and creates a divisor between them. The divisor can be dragged around to change the size relation between the child controls."
-msgstr "Legfeljebb két gyermek vezérlőelemet fogadó tároló. A gyermekeket függőlegesen rendezi el, és húzható elválasztót helyez közéjük. Az elválasztó mozgatásával a két vezérlőelem egymáshoz viszonyított mérete módosítható."
+msgstr "Legfeljebb két gyermek vezérlőelemet tartalmazhat. Ezeket egymás alá rendezi, és húzható elválasztót helyez közéjük. Az elválasztó mozgatásával módosítható a két vezérlőelem egymáshoz viszonyított mérete."
 
 #. TabBar.brief
 #: doc/classes/TabBar.xml
@@ -5859,7 +5859,7 @@ msgstr "Fülekkel ellátott vízszintes sávot megjelenítő vezérlőelem."
 #. TabBar.description
 #: doc/classes/TabBar.xml
 msgid "A control that provides a horizontal bar with tabs. Similar to [TabContainer] but is only in charge of drawing tabs, not interacting with children."
-msgstr "Fülekkel ellátott vízszintes sávot megjelenítő vezérlőelem. Hasonló a [TabContainer] csomóponthoz, de csak a fülek kirajzolását végzi; a gyermekcsomópontok kezeléséről nem gondoskodik."
+msgstr "Vízszintes fülsávot megjelenítő vezérlőelem. A [TabContainer] csomóponthoz hasonló, de csak a fülek megjelenítéséért felel; a gyermekcsomópontokkal való együttműködést nem kezeli."
 
 #. TabBar.add_tab
 #: doc/classes/TabBar.xml
@@ -5889,12 +5889,12 @@ msgstr "Eltávolítja a [param tab_idx] indexű fület."
 #. TabBar.move_tab
 #: doc/classes/TabBar.xml
 msgid "Moves a tab from [param from] to [param to]."
-msgstr "A fület a [param from] pozícióról a [param to] pozícióra helyezi."
+msgstr "A fület a [param from] helyről a [param to] helyre mozgatja."
 
 #. TabBar.current_tab
 #: doc/classes/TabBar.xml
 msgid "The index of the current selected tab. A value of [code]-1[/code] means that no tab is selected and can only be set when [member deselect_enabled] is [code]true[/code] or if all tabs are hidden or disabled."
-msgstr "A jelenleg kiválasztott fül indexe. A [code]-1[/code] érték azt jelenti, hogy nincs kiválasztott fül. Ez csak akkor állítható be, ha a [member deselect_enabled] értéke [code]true[/code], vagy ha az összes fül rejtett vagy letiltott."
+msgstr "Az aktuálisan kijelölt fül indexe. A [code]-1[/code] azt jelzi, hogy nincs kijelölt fül; ez az érték csak akkor állítható be, ha a [member deselect_enabled] értéke [code]true[/code], vagy ha minden fül rejtett vagy letiltott."
 
 #. TabBar.tab_count
 #: doc/classes/TabBar.xml
@@ -5911,22 +5911,22 @@ msgstr "Ha [code]true[/code], a fülek egérrel húzva átrendezhetők."
 #. TabBar.clip_tabs
 #: doc/classes/TabBar.xml
 msgid "If [code]true[/code], tabs overflowing this node's width will be hidden, displaying two navigation buttons instead. Otherwise, this node's minimum size is updated so that all tabs are visible."
-msgstr "Ha [code]true[/code], a csomópont szélességén túlnyúló füleket elrejti, és helyettük két navigációs gombot jelenít meg. Ellenkező esetben a csomópont minimális mérete úgy változik, hogy minden fül látható maradjon."
+msgstr "Ha [code]true[/code], elrejti a csomópont szélességébe már be nem férő füleket, és két navigációs gombot jelenít meg. Ha [code]false[/code], a csomópont minimális mérete úgy változik, hogy minden fül látható legyen."
 
 #. TabContainer.brief
 #: doc/classes/TabContainer.xml
 msgid "A container that creates a tab for each child control, displaying only the active tab's control."
-msgstr "Minden gyermek vezérlőelemhez fület létrehozó tároló, amely csak az aktív fülhöz tartozó vezérlőt jeleníti meg."
+msgstr "Minden gyermek vezérlőelemhez külön fület létrehozó tároló, amely egyszerre csak az aktív fül vezérlőelemét jeleníti meg."
 
 #. TabContainer.description
 #: doc/classes/TabContainer.xml
 msgid "Arranges child controls into a tabbed view, creating a tab for each one. The active tab's corresponding control is made visible, while all other child controls are hidden. Ignores non-control children.\n[b]Note:[/b] The drawing of the clickable tabs is handled by this node; [TabBar] is not needed."
-msgstr "A gyermek vezérlőelemeket fülekre rendezi, minden gyermekhez egy fület létrehozva. Az aktív fülhöz tartozó vezérlőelem látható, az összes többi rejtett. A nem vezérlőelem típusú gyermekeket figyelmen kívül hagyja.\n[b]Megjegyzés:[/b] A kattintható füleket ez a csomópont rajzolja ki, nincs szükség külön [TabBar] csomópontra."
+msgstr "A gyermek vezérlőelemeket füles nézetbe rendezi, mindegyikhez külön fület létrehozva. Csak az aktív fülhöz tartozó vezérlőelem látható; a többit elrejti. A nem [Control] típusú gyermekcsomópontokat figyelmen kívül hagyja.\n[b]Megjegyzés:[/b] A kattintható füleket ez a csomópont rajzolja ki, nincs szükség külön [TabBar] csomópontra."
 
 #. TabContainer.get_current_tab_control
 #: doc/classes/TabContainer.xml
 msgid "Returns the child [Control] node located at the active tab index."
-msgstr "Visszaadja az aktív fül indexén található gyermek [Control] csomópontot."
+msgstr "Visszaadja az aktív fülhöz tartozó gyermek [Control] csomópontot."
 
 #. TabContainer.get_tab_count
 #: doc/classes/TabContainer.xml
@@ -5961,7 +5961,7 @@ msgstr "Az aktuális fül indexe. Beállításakor az adott fül [Control] csom�
 #. TabContainer.tabs_visible
 #: doc/classes/TabContainer.xml
 msgid "If [code]true[/code], tabs are visible. If [code]false[/code], tabs' content and titles are hidden."
-msgstr "Ha [code]true[/code], a fülek láthatók. Ha [code]false[/code], a fülek tartalma és címei rejtettek."
+msgstr "Ha [code]true[/code], a fülek láthatók. Ha [code]false[/code], a fülek címei és tartalma is rejtve maradnak."
 
 #. ItemList.brief
 #: doc/classes/ItemList.xml
