@@ -7871,13 +7871,13 @@ msgstr "Százalékos érték vizuális megjelenítésére szolgáló vezérlőel
 #. ProgressBar.description
 #: doc/classes/ProgressBar.xml
 msgid "A control used for visual representation of a percentage. Shows the fill percentage in the center. Can also be used to show indeterminate progress. For more fill modes, use [TextureProgressBar] instead."
-msgstr "Százalékos érték vizuális megjelenítésére szolgáló vezérlőelem. A kitöltött rész százalékos arányát középen jeleníti meg. Olyan folyamatot is jelezhet, amelynek előrehaladása nem határozható meg pontosan. További kitöltési módokhoz inkább a [TextureProgressBar] osztályt használd."
+msgstr "Százalékos érték szemléltetésére szolgáló vezérlőelem. A kitöltés százalékos arányát a sáv közepén jeleníti meg. Ismeretlen mértékű előrehaladást is képes jelezni. További kitöltési módokhoz inkább a [TextureProgressBar] osztályt használd."
 
 
 #. ProgressBar.editor_preview_indeterminate
 #: doc/classes/ProgressBar.xml
 msgid "If [code]false[/code], the [member indeterminate] animation will be paused in the editor."
-msgstr "Ha [code]false[/code], az [member indeterminate] animációja szünetel a szerkesztőben."
+msgstr "Ha [code]false[/code], a szerkesztőben szünetel az [member indeterminate] animáció."
 
 
 #. ProgressBar.fill_mode
@@ -7889,7 +7889,7 @@ msgstr "A kitöltés iránya. A választható értékeket lásd a [enum FillMode
 #. ProgressBar.indeterminate
 #: doc/classes/ProgressBar.xml
 msgid "When set to [code]true[/code], the progress bar indicates that something is happening with an animation, but does not show the fill percentage or value."
-msgstr "Ha [code]true[/code], a folyamatjelző animációval mutatja, hogy egy művelet folyamatban van, de nem jeleníti meg a kitöltési százalékot vagy az értéket."
+msgstr "Ha [code]true[/code], a folyamatjelző animációval jelzi a művelet folyamatban létét, de nem mutatja sem a kitöltés százalékát, sem az értékét."
 
 
 #. ProgressBar.show_percentage
@@ -7901,13 +7901,13 @@ msgstr "Ha [code]true[/code], a sávon megjelenik a kitöltési százalék."
 #. ProgressBar.FILL_BEGIN_TO_END
 #: doc/classes/ProgressBar.xml
 msgid "The progress bar fills from begin to end horizontally, according to the language direction. If [method Control.is_layout_rtl] returns [code]false[/code], it fills from left to right, and if it returns [code]true[/code], it fills from right to left."
-msgstr "A folyamatjelző a nyelv írásirányának megfelelően, vízszintesen az elejétől a végéig töltődik. Ha a [method Control.is_layout_rtl] [code]false[/code] értéket ad vissza, balról jobbra, ha [code]true[/code] értéket, jobbról balra töltődik."
+msgstr "A folyamatjelző vízszintesen, a nyelv írásirányát követve az elejétől a végéig telik meg. Ha a [method Control.is_layout_rtl] [code]false[/code] értéket ad vissza, balról jobbra, ha [code]true[/code] értéket, jobbról balra töltődik."
 
 
 #. ProgressBar.FILL_END_TO_BEGIN
 #: doc/classes/ProgressBar.xml
 msgid "The progress bar fills from end to begin horizontally, according to the language direction. If [method Control.is_layout_rtl] returns [code]false[/code], it fills from right to left, and if it returns [code]true[/code], it fills from left to right."
-msgstr "A folyamatjelző a nyelv írásirányának megfelelően, vízszintesen a végétől az eleje felé töltődik. Ha a [method Control.is_layout_rtl] [code]false[/code] értéket ad vissza, jobbról balra, ha [code]true[/code] értéket, balról jobbra töltődik."
+msgstr "A folyamatjelző vízszintesen, a nyelv írásirányával ellentétesen, a végétől az eleje felé telik meg. Ha a [method Control.is_layout_rtl] [code]false[/code] értéket ad vissza, jobbról balra, ha [code]true[/code] értéket, balról jobbra töltődik."
 
 
 #. ProgressBar.FILL_TOP_TO_BOTTOM
@@ -7931,13 +7931,13 @@ msgstr "A szöveg színe."
 #. ProgressBar.font_outline_color
 #: doc/classes/ProgressBar.xml
 msgid "The tint of text outline of the [ProgressBar]."
-msgstr "A [ProgressBar] szövegkörvonalának színezése."
+msgstr "A [ProgressBar] szövegkörvonalának színe."
 
 
 #. ProgressBar.outline_size
 #: doc/classes/ProgressBar.xml
 msgid "The size of the text outline.\n[b]Note:[/b] If using a font with [member FontFile.multichannel_signed_distance_field] enabled, its [member FontFile.msdf_pixel_range] must be set to at least [i]twice[/i] the value of [theme_item outline_size] for outline rendering to look correct. Otherwise, the outline may appear to be cut off earlier than intended."
-msgstr "A szöveg körvonalának vastagsága.\n[b]Megjegyzés:[/b] Ha olyan betűkészletet használsz, amelynél a [member FontFile.multichannel_signed_distance_field] engedélyezett, akkor a [member FontFile.msdf_pixel_range] értékének legalább [i]kétszer[/i] akkorának kell lennie, mint a [theme_item outline_size], hogy a körvonal helyesen jelenjen meg. Ellenkező esetben a körvonal a kelleténél korábban levágódhat."
+msgstr "A szövegkörvonal vastagsága.\n[b]Megjegyzés:[/b] Ha olyan betűkészletet használsz, amelynél a [member FontFile.multichannel_signed_distance_field] engedélyezett, a [member FontFile.msdf_pixel_range] értékének legalább [i]kétszer[/i] akkorának kell lennie, mint a [theme_item outline_size], hogy a körvonal megfelelően jelenjen meg. Ellenkező esetben a körvonal a kelleténél korábban levágódhat."
 
 
 #. ProgressBar.font
@@ -7955,13 +7955,13 @@ msgstr "A kitöltési százalék megjelenítéséhez használt betűméret, ha a
 #. ProgressBar.background
 #: doc/classes/ProgressBar.xml
 msgid "The style of the background."
-msgstr "A háttér stílusa."
+msgstr "A folyamatjelző hátterének stílusa."
 
 
 #. ProgressBar.fill
 #: doc/classes/ProgressBar.xml
 msgid "The style of the progress (i.e. the part that fills the bar)."
-msgstr "A folyamatjelző kitöltött részének stílusa."
+msgstr "A folyamatjelző sávot kitöltő rész stílusa."
 
 
 #. HSlider.brief
