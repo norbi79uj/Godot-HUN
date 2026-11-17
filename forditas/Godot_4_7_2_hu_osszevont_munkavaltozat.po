@@ -5911,7 +5911,7 @@ msgstr "Ha [code]true[/code], a fülek egérrel húzva átrendezhetők."
 #. TabBar.clip_tabs
 #: doc/classes/TabBar.xml
 msgid "If [code]true[/code], tabs overflowing this node's width will be hidden, displaying two navigation buttons instead. Otherwise, this node's minimum size is updated so that all tabs are visible."
-msgstr "Ha [code]true[/code], elrejti a csomópont szélességébe már be nem férő füleket, és két navigációs gombot jelenít meg. Ha [code]false[/code], a csomópont minimális mérete úgy változik, hogy minden fül látható legyen."
+msgstr "Ha [code]true[/code], elrejti a csomópont szélességébe már be nem férő füleket, és két navigációs gombot jelenít meg. Ellenkező esetben a csomópont minimális mérete úgy változik, hogy minden fül látható legyen."
 
 #. TabContainer.brief
 #: doc/classes/TabContainer.xml
