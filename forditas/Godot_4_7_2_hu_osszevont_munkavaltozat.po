@@ -7973,18 +7973,18 @@ msgstr "Vízszintes csúszka, amely balról (minimum) jobbra (maximum) halad."
 #. HSlider.description
 #: doc/classes/HSlider.xml
 msgid "A horizontal slider, used to adjust a value by moving a grabber along a horizontal axis. It is a [Range]-based control and goes from left (min) to right (max)."
-msgstr "Vízszintes csúszka, amellyel egy értéket a fogantyú vízszintes tengely mentén történő mozgatásával lehet módosítani. A [Range] osztályon alapuló vezérlőelem; bal oldalon található a minimum, jobb oldalon a maximum."
+msgstr "Vízszintes csúszka, amelynek fogantyúját balra vagy jobbra mozgatva módosítható az érték. A [Range] osztályon alapuló vezérlőelem; bal oldalon található a minimum, jobb oldalon a maximum."
 
 #. MenuBar.brief
 #: doc/classes/MenuBar.xml
 msgid "A horizontal menu bar that creates a menu for each [PopupMenu] child."
-msgstr "Vízszintes menüsáv, amely minden gyermek [PopupMenu] csomóponthoz külön menüt hoz létre."
+msgstr "Vízszintes menüsáv, amely minden gyermek [PopupMenu] csomóponthoz saját menüt hoz létre."
 
 
 #. MenuBar.description
 #: doc/classes/MenuBar.xml
 msgid "A horizontal menu bar that creates a menu for each [PopupMenu] child. New items are created by adding [PopupMenu]s to this node. Item title is determined by [member Window.title], or node name if [member Window.title] is empty. Item title can be overridden using [method set_menu_title]."
-msgstr "Vízszintes menüsáv, amely minden gyermek [PopupMenu] csomóponthoz külön menüt hoz létre. Új menüpontokat úgy adhatsz hozzá, hogy [PopupMenu] csomópontokat helyezel el a menüsáv alatt. A menü címét a [member Window.title] határozza meg, vagy ha a [member Window.title] üres, akkor a csomópont neve. A címet a [method set_menu_title] metódussal felülírhatod."
+msgstr "Vízszintes menüsáv, amely minden gyermek [PopupMenu] csomóponthoz saját menüt hoz létre. Új menüket úgy hozhatsz létre, hogy [PopupMenu] csomópontokat adsz a menüsáv gyermekeihez. A menü címét a [member Window.title] adja meg; ha a [member Window.title] üres, a rendszer a csomópont nevét használja. A címet a [method set_menu_title] metódussal felülírhatod."
 
 
 #. MenuBar.get_menu_count
@@ -8008,7 +8008,7 @@ msgstr "Visszaadja a menüpont címét."
 #. MenuBar.get_menu_tooltip
 #: doc/classes/MenuBar.xml
 msgid "Returns menu item tooltip."
-msgstr "Visszaadja a menüpont eszköztippjét."
+msgstr "Visszaadja a menüpont súgóbuborékjának szövegét."
 
 
 #. MenuBar.is_menu_disabled
@@ -8050,13 +8050,13 @@ msgstr "Beállítja a menüpont címét."
 #. MenuBar.set_menu_tooltip
 #: doc/classes/MenuBar.xml
 msgid "Sets menu item tooltip."
-msgstr "Beállítja a menüpont eszköztippjét."
+msgstr "Beállítja a menüpont súgóbuborékjának szövegét."
 
 
 #. MenuBar.flat
 #: doc/classes/MenuBar.xml
 msgid "Flat [MenuBar] don't display item decoration."
-msgstr "A lapos megjelenítésű [MenuBar] nem rajzol díszítő hátteret a menüpontokhoz."
+msgstr "A lapos megjelenítésű [MenuBar] nem jelenít meg díszítőelemeket a menüpontok körül."
 
 
 #. MenuBar.language
@@ -8074,7 +8074,7 @@ msgstr "Ha [code]true[/code], a [MenuBar] a rendszer globális menüjét haszná
 #. MenuBar.start_index
 #: doc/classes/MenuBar.xml
 msgid "Position order in the global menu to insert [MenuBar] items at. All menu items in the [MenuBar] are always inserted as a continuous range. Menus with lower [member start_index] are inserted first. Menus with [member start_index] equal to [code]-1[/code] are inserted last."
-msgstr "Megadja, hogy a [MenuBar] elemei a globális menüben milyen sorrendi pozícióban jelenjenek meg. A [MenuBar] összes menüpontja mindig összefüggő tartományba kerül. A kisebb [member start_index] értékű menük kerülnek előre. A [code]-1[/code] értékű [member start_index] menüi kerülnek a végére."
+msgstr "Megadja, hogy a [MenuBar] elemei a globális menüben milyen sorrendi pozícióban jelenjenek meg. A [MenuBar] menüpontjai mindig egymás mellett, összefüggő tartományban jelennek meg. A kisebb [member start_index] értékű menük kerülnek előre. Ha a [member start_index] értéke [code]-1[/code], a menük a sor végére kerülnek."
 
 
 #. MenuBar.switch_on_hover
@@ -8086,7 +8086,7 @@ msgstr "Ha [code]true[/code], az egérmutató másik menüpont fölé kerülése
 #. MenuBar.text_direction
 #: doc/classes/MenuBar.xml
 msgid "Base text writing direction."
-msgstr "A szöveg alapvető írásiránya."
+msgstr "A szöveg alapértelmezett írásiránya."
 
 
 #. MenuBar.font_color
