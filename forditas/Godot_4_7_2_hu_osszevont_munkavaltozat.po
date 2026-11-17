@@ -7596,13 +7596,13 @@ msgstr "A többszörös kijelölést engedélyező listában a kijelölés megv�
 #. OptionButton.brief
 #: doc/classes/OptionButton.xml
 msgid "A button that brings up a dropdown with selectable options when pressed."
-msgstr "Olyan gomb, amely megnyomásakor választható lehetőségeket tartalmazó legördülő listát nyit meg."
+msgstr "Olyan gomb, amelyre kattintva kiválasztható elemeket tartalmazó legördülő lista nyílik meg."
 
 
 #. OptionButton.description
 #: doc/classes/OptionButton.xml
 msgid "[OptionButton] is a type of button that brings up a dropdown with selectable items when pressed. The item selected becomes the \"current\" item and is displayed as the button text.\nSee also [BaseButton] which contains common properties and methods associated with this node.\n[b]Note:[/b] The IDs used for items are limited to signed 32-bit integers, not the full 64 bits of [int]. These have a range of [code]-2^31[/code] to [code]2^31 - 1[/code], that is, [code]-2147483648[/code] to [code]2147483647[/code].\n[b]Note:[/b] The [member Button.text] and [member Button.icon] properties are set automatically based on the selected item. They shouldn't be changed manually."
-msgstr "Az [OptionButton] olyan gomb, amely megnyomásakor választható elemeket tartalmazó legördülő listát jelenít meg. A kiválasztott elem lesz az „aktuális” elem, és annak szövege jelenik meg a gombon.\nLásd még a [BaseButton] osztályt, amely a csomóponthoz kapcsolódó közös tulajdonságokat és metódusokat tartalmazza.\n[b]Megjegyzés:[/b] Az elemek azonosítói előjeles 32 bites egész számokra korlátozódnak, nem használhatják ki az [int] teljes 64 bites tartományát. Az érvényes tartomány [code]-2^31[/code] és [code]2^31 - 1[/code] között van, vagyis [code]-2147483648[/code] és [code]2147483647[/code] között.\n[b]Megjegyzés:[/b] A [member Button.text] és a [member Button.icon] tulajdonságokat a rendszer automatikusan beállítja a kiválasztott elem alapján. Ezeket ne módosítsd kézzel."
+msgstr "Az [OptionButton] olyan gomb, amely megnyomáskor kiválasztható elemeket tartalmazó legördülő listát nyit meg. A kiválasztott elem lesz az „aktuális” elem, és annak szövege jelenik meg a gombon.\nLásd még a [BaseButton] osztályt, amely a csomóponthoz kapcsolódó közös tulajdonságokat és metódusokat tartalmazza.\n[b]Megjegyzés:[/b] Az elemazonosítók csak előjeles 32 bites egész számok lehetnek; nem használható ki az [int] teljes 64 bites tartománya. Az érvényes tartomány [code]-2^31[/code] és [code]2^31 - 1[/code] között van, vagyis [code]-2147483648[/code] és [code]2147483647[/code] között.\n[b]Megjegyzés:[/b] A [member Button.text] és a [member Button.icon] tulajdonságokat a rendszer automatikusan beállítja a kiválasztott elem alapján. Ezeket ne módosítsd kézzel."
 
 
 #. OptionButton.add_icon_item
@@ -7620,7 +7620,7 @@ msgstr "Egy új elemet ad hozzá [param label] szöveggel és opcionális [param
 #. OptionButton.add_separator
 #: doc/classes/OptionButton.xml
 msgid "Adds a separator to the list of items. Separators help to group items, and can optionally be given a [param text] header. A separator also gets an index assigned, and is appended at the end of the item list."
-msgstr "Elválasztót ad az elemek listájához. Az elválasztók az elemek csoportosítását segítik, és opcionálisan [param text] fejlécszöveget is kaphatnak. Az elválasztó is kap egy indexet, és az elemlista végére kerül."
+msgstr "Elválasztót ad az elemek listájához. Az elválasztók az elemek csoportosítására szolgálnak, és opcionálisan [param text] fejlécszöveg is megadható hozzájuk. Az elválasztó is kap egy indexet, és az elemlista végére kerül."
 
 
 #. OptionButton.clear
@@ -7656,7 +7656,7 @@ msgstr "Visszaadja a [param id] azonosítójú elem indexét."
 #. OptionButton.get_item_metadata
 #: doc/classes/OptionButton.xml
 msgid "Retrieves the metadata of an item. Metadata may be any type and can be used to store extra information about an item, such as an external string ID."
-msgstr "Lekéri egy elem metaadatát. A metaadat bármilyen típusú lehet, és az elemhez kapcsolódó további információk, például külső szöveges azonosító tárolására használható."
+msgstr "Lekéri egy elem metaadatát. A metaadat tetszőleges típusú lehet, és az elemhez kapcsolódó további információkat, például külső szöveges azonosítót is tárolhat."
 
 
 #. OptionButton.get_item_text
@@ -7668,13 +7668,13 @@ msgstr "Visszaadja a [param idx] indexű elem szövegét."
 #. OptionButton.get_item_tooltip
 #: doc/classes/OptionButton.xml
 msgid "Returns the tooltip of the item at index [param idx]."
-msgstr "Visszaadja a [param idx] indexű elem eszköztippjét."
+msgstr "Visszaadja a [param idx] indexű elem súgóbuborékjának szövegét."
 
 
 #. OptionButton.get_popup
 #: doc/classes/OptionButton.xml
 msgid "Returns the [PopupMenu] contained in this button.\n[b]Warning:[/b] This is a required internal node, removing and freeing it may cause a crash. If you wish to hide it or any of its children, use their [member Window.visible] property."
-msgstr "Visszaadja a gombban található [PopupMenu] csomópontot.\n[b]Figyelmeztetés:[/b] Ez egy szükséges belső csomópont; eltávolítása és felszabadítása összeomlást okozhat. Ha ezt vagy valamelyik gyermekét el szeretnéd rejteni, használd a [member Window.visible] tulajdonságot."
+msgstr "Visszaadja a gombhoz tartozó [PopupMenu] csomópontot.\n[b]Figyelmeztetés:[/b] Ez nélkülözhetetlen belső csomópont; eltávolítása vagy felszabadítása összeomlást okozhat. Ha ezt vagy valamelyik gyermekét szeretnéd elrejteni, használd a [member Window.visible] tulajdonságot."
 
 
 #. OptionButton.get_selectable_item
@@ -7722,7 +7722,7 @@ msgstr "Eltávolítja a [param idx] indexű elemet."
 #. OptionButton.select
 #: doc/classes/OptionButton.xml
 msgid "Selects an item by index and makes it the current item. This will work even if the item is disabled.\nPassing [code]-1[/code] as the index deselects any currently selected item."
-msgstr "Index alapján kiválaszt egy elemet, és azt teszi aktuálissá. Ez akkor is működik, ha az elem le van tiltva.\nA [code]-1[/code] index megadásával megszünteti az aktuális kijelölést."
+msgstr "Index alapján kiválaszt egy elemet, és aktuálissá teszi. Ez letiltott elem esetén is működik.\nA [code]-1[/code] index megadásával megszünteti az aktuális kijelölést."
 
 
 #. OptionButton.set_disable_shortcuts
@@ -7740,7 +7740,7 @@ msgstr "Beállítja a [param idx] indexű elem automatikus fordítási módját.
 #. OptionButton.set_item_disabled
 #: doc/classes/OptionButton.xml
 msgid "Sets whether the item at index [param idx] is disabled.\nDisabled items are drawn differently in the dropdown and are not selectable by the user. If the current selected item is set as disabled, it will remain selected."
-msgstr "Beállítja, hogy a [param idx] indexű elem le legyen-e tiltva.\nA letiltott elemek másként jelennek meg a legördülő listában, és a felhasználó nem választhatja ki őket. Ha a jelenleg kiválasztott elemet tiltod le, az továbbra is kiválasztva marad."
+msgstr "Beállítja, hogy a [param idx] indexű elem le legyen-e tiltva.\nA letiltott elemek másként jelennek meg a legördülő listában, és a felhasználó nem választhatja ki őket. Ha az aktuálisan kiválasztott elemet tiltod le, a kijelölése megmarad."
 
 
 #. OptionButton.set_item_icon
@@ -7770,13 +7770,13 @@ msgstr "Beállítja a [param idx] indexű elem szövegét."
 #. OptionButton.set_item_tooltip
 #: doc/classes/OptionButton.xml
 msgid "Sets the tooltip of the item at index [param idx]."
-msgstr "Beállítja a [param idx] indexű elem eszköztippjét."
+msgstr "Beállítja a [param idx] indexű elem súgóbuborékjának szövegét."
 
 
 #. OptionButton.show_popup
 #: doc/classes/OptionButton.xml
 msgid "Adjusts popup position and sizing for the [OptionButton], then shows the [PopupMenu]. Prefer this over using [code]get_popup().popup()[/code]."
-msgstr "Beállítja a felugró menü pozícióját és méretét az [OptionButton] számára, majd megjeleníti a [PopupMenu] elemet. Ezt célszerű használni a [code]get_popup().popup()[/code] közvetlen meghívása helyett."
+msgstr "Beállítja a felugró menü pozícióját és méretét az [OptionButton] számára, majd megjeleníti a [PopupMenu] elemet. Ezt a metódust érdemes használni a [code]get_popup().popup()[/code] közvetlen meghívása helyett."
 
 
 #. OptionButton.fit_to_longest_item
