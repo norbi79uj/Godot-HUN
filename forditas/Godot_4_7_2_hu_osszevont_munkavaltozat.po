@@ -6498,13 +6498,13 @@ msgstr "Az elemek alapján azonnal újraszámítja a lista méretét. Ez automat
 #. ItemList.get_h_scroll_bar
 #: doc/classes/ItemList.xml
 msgid "Returns the horizontal scrollbar.\n[b]Warning:[/b] This is a required internal node, removing and freeing it may cause a crash. If you wish to hide it or any of its children, use their [member CanvasItem.visible] property."
-msgstr "Visszaadja a vízszintes görgetősávot.\n[b]Figyelmeztetés:[/b] Ez egy szükséges belső csomópont; eltávolítása és felszabadítása összeomlást okozhat. Ha el szeretnéd rejteni ezt vagy valamelyik gyermekét, használd a [member CanvasItem.visible] tulajdonságot."
+msgstr "Visszaadja a vízszintes görgetősávot.\n[b]Figyelmeztetés:[/b] Ez kötelező belső csomópont; eltávolítása vagy felszabadítása összeomlást okozhat. Ha el szeretnéd rejteni ezt vagy valamelyik gyermekét, használd a [member CanvasItem.visible] tulajdonságot."
 
 
 #. ItemList.get_item_at_position
 #: doc/classes/ItemList.xml
 msgid "Returns the item index at the given [param position].\nWhen there is no item at that point, -1 will be returned if [param exact] is [code]true[/code], and the closest item index will be returned otherwise.\n[b]Note:[/b] The returned value is unreliable if called right after modifying the [ItemList], before it redraws in the next frame."
-msgstr "Visszaadja a [param position] pozíciónál található elem indexét.\nHa ott nincs elem, a visszatérési érték -1, amennyiben a [param exact] értéke [code]true[/code]; ellenkező esetben a legközelebbi elem indexét adja vissza.\n[b]Megjegyzés:[/b] A visszaadott érték megbízhatatlan lehet közvetlenül a [ItemList] módosítása után, mielőtt a következő képkockában újrarajzolódna."
+msgstr "Visszaadja a [param position] pozíciónál található elem indexét.\nHa ott nincs elem, [code]true[/code] értékű [param exact] esetén -1 az eredmény; egyébként a legközelebbi elem indexét adja vissza.\n[b]Megjegyzés:[/b] A visszaadott érték megbízhatatlan lehet közvetlenül a [ItemList] módosítása után, mielőtt a következő képkockában újrarajzolódna."
 
 
 #. ItemList.get_item_auto_translate_mode
@@ -6540,7 +6540,7 @@ msgstr "Visszaadja a megadott indexű elem ikonjának színét módosító [Colo
 #. ItemList.get_item_icon_region
 #: doc/classes/ItemList.xml
 msgid "Returns the region of item's icon used. The whole icon will be used if the region has no area."
-msgstr "Visszaadja az elem ikonjának felhasznált területét. Ha a terület mérete nulla, a teljes ikon kerül felhasználásra."
+msgstr "Visszaadja az elem ikonjából felhasznált területet. Ha a területnek nincs kiterjedése, a teljes ikon jelenik meg."
 
 
 #. ItemList.get_item_language
@@ -6558,13 +6558,13 @@ msgstr "Visszaadja a megadott indexű elem metaadatát."
 #. ItemList.get_item_rect
 #: doc/classes/ItemList.xml
 msgid "Returns the position and size of the item with the specified index, in the coordinate system of the [ItemList] node. If [param expand] is [code]true[/code] the last column expands to fill the rest of the row.\n[b]Note:[/b] The returned value is unreliable if called right after modifying the [ItemList], before it redraws in the next frame."
-msgstr "Visszaadja a megadott indexű elem pozícióját és méretét az [ItemList] csomópont koordinátarendszerében. Ha a [param expand] értéke [code]true[/code], az utolsó oszlop kitölti a sor fennmaradó részét.\n[b]Megjegyzés:[/b] A visszaadott érték megbízhatatlan lehet közvetlenül a [ItemList] módosítása után, mielőtt a következő képkockában újrarajzolódna."
+msgstr "Visszaadja a megadott indexű elem helyzetét és méretét az [ItemList] helyi koordinátarendszerében. Ha a [param expand] értéke [code]true[/code], az utolsó oszlop kitölti a sor fennmaradó részét.\n[b]Megjegyzés:[/b] A visszaadott érték megbízhatatlan lehet közvetlenül a [ItemList] módosítása után, mielőtt a következő képkockában újrarajzolódna."
 
 
 #. ItemList.get_item_text_direction
 #: doc/classes/ItemList.xml
 msgid "Returns item's text base writing direction."
-msgstr "Visszaadja az elem szövegének alapvető írásirányát."
+msgstr "Visszaadja a listaelem szövegének alapértelmezett írásirányát."
 
 
 #. ItemList.get_item_tooltip
@@ -6576,7 +6576,7 @@ msgstr "Visszaadja a megadott indexű elem súgóbuborékjának szövegét."
 #. ItemList.get_v_scroll_bar
 #: doc/classes/ItemList.xml
 msgid "Returns the vertical scrollbar.\n[b]Warning:[/b] This is a required internal node, removing and freeing it may cause a crash. If you wish to hide it or any of its children, use their [member CanvasItem.visible] property."
-msgstr "Visszaadja a függőleges görgetősávot.\n[b]Figyelmeztetés:[/b] Ez egy szükséges belső csomópont; eltávolítása és felszabadítása összeomlást okozhat. Ha el szeretnéd rejteni ezt vagy valamelyik gyermekét, használd a [member CanvasItem.visible] tulajdonságot."
+msgstr "Visszaadja a függőleges görgetősávot.\n[b]Figyelmeztetés:[/b] Ez kötelező belső csomópont; eltávolítása vagy felszabadítása összeomlást okozhat. Ha el szeretnéd rejteni ezt vagy valamelyik gyermekét, használd a [member CanvasItem.visible] tulajdonságot."
 
 
 #. ItemList.is_anything_selected
@@ -6617,7 +6617,7 @@ msgstr "Beállítja a [param tab_idx] indexű fül metaadatát. Az érték kés�
 #. TabBar.set_tab_text_direction
 #: doc/classes/TabBar.xml
 msgid "Sets tab title base writing direction."
-msgstr "Beállítja a fül címének alapvető írásirányát."
+msgstr "Beállítja a fül címében használt szöveg alapértelmezett írásirányát."
 
 
 #. TabBar.set_tab_tooltip
@@ -6647,13 +6647,13 @@ msgstr "Beállítja a fülek legnagyobb megengedett szélességét. [code]0[/cod
 #. TabBar.scroll_to_selected
 #: doc/classes/TabBar.xml
 msgid "If [code]true[/code], the tab offset will be changed to keep the currently selected tab visible."
-msgstr "Ha [code]true[/code], a fülek eltolása úgy változik, hogy az aktuálisan kijelölt fül látható maradjon."
+msgstr "Ha [code]true[/code], a fülek görgetési eltolását úgy állítja be, hogy az aktuálisan kijelölt fül látható maradjon."
 
 
 #. TabBar.scrolling_enabled
 #: doc/classes/TabBar.xml
 msgid "if [code]true[/code], the mouse's scroll wheel can be used to navigate the scroll view."
-msgstr "Ha [code]true[/code], az egér görgőjével is lehet navigálni a görgetett nézetben."
+msgstr "Ha [code]true[/code], az egér görgőjével is lehet léptetni a fülek görgetett nézetét."
 
 
 #. TabBar.select_with_rmb
@@ -6677,7 +6677,7 @@ msgstr "A fülek vízszintes igazítása."
 #. TabBar.tab_close_display_policy
 #: doc/classes/TabBar.xml
 msgid "When the close button will appear on the tabs."
-msgstr "Meghatározza, mikor jelenjen meg a fülek bezárógombja."
+msgstr "Meghatározza, hogy mikor jelenjen meg a füleken a bezárógomb."
 
 
 #. TabBar.tab_{index}/disabled
