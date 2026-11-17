@@ -6172,27 +6172,27 @@ msgstr "Csak a lenyomást és az azt követő felengedést együtt tekinti katti
 #. CheckBox.brief
 #: doc/classes/CheckBox.xml
 msgid "A button that represents a binary choice."
-msgstr "Kétféle választási lehetőséget kínáló gomb."
+msgstr "Kétállapotú választást lehetővé tevő gomb."
 
 #. CheckBox.description
 #: doc/classes/CheckBox.xml
 msgid "[CheckBox] allows the user to choose one of only two possible options. It's similar to [CheckButton] in functionality, but it has a different appearance. To follow established UX patterns, it's recommended to use [CheckBox] when toggling it has [b]no[/b] immediate effect on something. For example, it could be used when toggling it will only do something once a confirmation button is pressed.\nSee also [BaseButton] which contains common properties and methods associated with this node.\nWhen [member BaseButton.button_group] specifies a [ButtonGroup], [CheckBox] changes its appearance to that of a radio button and uses the various [code]radio_*[/code] theme properties."
-msgstr "A [CheckBox] két lehetőség közötti választást tesz lehetővé. Működésében a [CheckButton] vezérlőelemhez hasonlít, de másként jelenik meg. A bevett felhasználóifelület-tervezési minták szerint akkor érdemes [CheckBox] vezérlőt használni, ha az átkapcsolásnak [b]nincs[/b] azonnali hatása. Például akkor, ha a változtatás csak egy megerősítő gomb megnyomása után lép érvénybe.\nA közös tulajdonságokat és metódusokat lásd a [BaseButton] osztálynál.\nHa a [member BaseButton.button_group] egy [ButtonGroup] csoportot ad meg, a [CheckBox] rádiógombként jelenik meg, és a különféle [code]radio_*[/code] témaelemeket használja."
+msgstr "A [CheckBox] két lehetőség közötti választásra szolgál. Működése a [CheckButton] vezérlőeleméhez hasonló, de a megjelenése eltérő. A bevett felhasználóifelület-tervezési minták szerint a [CheckBox] akkor ajánlott, ha a bejelölés módosításának [b]nincs[/b] azonnali hatása. Például akkor, ha a változtatás csak egy megerősítő gomb megnyomása után lép érvénybe.\nA közös tulajdonságokat és metódusokat lásd a [BaseButton] osztálynál.\nHa a [member BaseButton.button_group] egy [ButtonGroup] csoportot ad meg, a [CheckBox] rádiógombként jelenik meg, és a különféle [code]radio_*[/code] témaelemeket használja."
 
 #. CheckBox.checkbox_checked_color
 #: doc/classes/CheckBox.xml
 msgid "The color of the checked icon when the checkbox is pressed."
-msgstr "A bejelölt jelölőnégyzet ikonjának színe a gomb lenyomásakor."
+msgstr "A bejelölt jelölőnégyzet ikonjának színe lenyomott állapotban."
 
 #. CheckBox.checkbox_unchecked_color
 #: doc/classes/CheckBox.xml
 msgid "The color of the unchecked icon when the checkbox is not pressed."
-msgstr "A nem bejelölt jelölőnégyzet ikonjának színe, amikor a gomb nincs lenyomva."
+msgstr "A bejelöletlen jelölőnégyzet ikonjának színe felengedett állapotban."
 
 #. CheckBox.check_v_offset
 #: doc/classes/CheckBox.xml
 msgid "The vertical offset used when rendering the check icons (in pixels)."
-msgstr "A jelölőikonok kirajzolásakor használt függőleges eltolás (képpontban)."
+msgstr "A jelölőikonok függőleges eltolása képpontban."
 
 #. CheckBox.checked
 #: doc/classes/CheckBox.xml
@@ -6222,22 +6222,22 @@ msgstr "A rádiógombként beállított, nem kijelölt [CheckBox] jelölőikonja
 #. CheckBox.unchecked
 #: doc/classes/CheckBox.xml
 msgid "The check icon to display when the [CheckBox] is unchecked."
-msgstr "A [CheckBox] nem bejelölt állapotában megjelenő jelölőikon."
+msgstr "A bejelöletlen [CheckBox] esetén megjelenő jelölőikon."
 
 #. CheckBox.unchecked_disabled
 #: doc/classes/CheckBox.xml
 msgid "The check icon to display when the [CheckBox] is unchecked and is disabled."
-msgstr "A [CheckBox] nem bejelölt és letiltott állapotában megjelenő jelölőikon."
+msgstr "A bejelöletlen és letiltott [CheckBox] esetén megjelenő jelölőikon."
 
 #. CheckButton.description
 #: doc/classes/CheckButton.xml
 msgid "[CheckButton] is a toggle button displayed as a check field. It's similar to [CheckBox] in functionality, but it has a different appearance. To follow established UX patterns, it's recommended to use [CheckButton] when toggling it has an [b]immediate[/b] effect on something. For example, it can be used when pressing it shows or hides advanced settings, without asking the user to confirm this action.\nSee also [BaseButton] which contains common properties and methods associated with this node."
-msgstr "A [CheckButton] egy kapcsolóként működő gomb, amely jelölőkapcsolóként jelenik meg. Működésében a [CheckBox] vezérlőelemhez hasonlít, de másként néz ki. A bevett felhasználóifelület-tervezési minták szerint akkor érdemes [CheckButton] vezérlőt használni, ha az átkapcsolásnak [b]azonnali[/b] hatása van. Például megjelenítheti vagy elrejtheti a speciális beállításokat anélkül, hogy külön megerősítésre lenne szükség.\nA közös tulajdonságokat és metódusokat lásd a [BaseButton] osztálynál."
+msgstr "A [CheckButton] kapcsolóként működő vezérlőelem. Működése a [CheckBox] vezérlőeleméhez hasonló, de a megjelenése eltérő. A bevett felhasználóifelület-tervezési minták szerint a [CheckButton] akkor ajánlott, ha az átkapcsolás [b]azonnal[/b] érvénybe lép. Például megjelenítheti vagy elrejtheti a speciális beállításokat anélkül, hogy külön megerősítésre lenne szükség.\nA közös tulajdonságokat és metódusokat lásd a [BaseButton] osztálynál."
 
 #. CheckButton.check_v_offset
 #: doc/classes/CheckButton.xml
 msgid "The vertical offset used when rendering the toggle icons (in pixels)."
-msgstr "A kapcsolóikonok kirajzolásakor használt függőleges eltolás (képpontban)."
+msgstr "A kapcsolóikonok függőleges eltolása képpontban."
 
 #. CheckButton.checked
 #: doc/classes/CheckButton.xml
@@ -6282,12 +6282,12 @@ msgstr "A kikapcsolt [CheckButton] ikonja (jobbról balra haladó elrendezésné
 #. ButtonGroup.brief
 #: doc/classes/ButtonGroup.xml
 msgid "A group of buttons that doesn't allow more than one button to be pressed at a time."
-msgstr "Gombcsoport, amelyben egyszerre legfeljebb egy gomb lehet lenyomva."
+msgstr "Olyan gombcsoport, amelyben egyszerre legfeljebb egy gomb lehet lenyomott állapotban."
 
 #. ButtonGroup.description
 #: doc/classes/ButtonGroup.xml
 msgid "A group of [BaseButton]-derived buttons. The buttons in a [ButtonGroup] are treated like radio buttons: No more than one button can be pressed at a time. Some types of buttons (such as [CheckBox]) may have a special appearance in this state.\nEvery member of a [ButtonGroup] should have [member BaseButton.toggle_mode] set to [code]true[/code]."
-msgstr "A [BaseButton] leszármazottaiból álló gombcsoport. A [ButtonGroup] gombjai rádiógombokként működnek: egyszerre legfeljebb egy lehet lenyomva. Egyes gombtípusok (például a [CheckBox]) ebben az állapotban különleges megjelenést kapnak.\nA [ButtonGroup] minden tagjánál a [member BaseButton.toggle_mode] értékének [code]true[/code]-nak kell lennie."
+msgstr "A [BaseButton] osztályból származó gombok csoportja. A [ButtonGroup] gombjai rádiógombokként működnek: egyszerre legfeljebb egy lehet lenyomva. Egyes gombtípusok (például a [CheckBox]) ebben az állapotban különleges megjelenést kapnak.\nA [ButtonGroup] minden tagjánál a [member BaseButton.toggle_mode] tulajdonságot [code]true[/code] értékre kell állítani."
 
 #. ButtonGroup.get_buttons
 #: doc/classes/ButtonGroup.xml
