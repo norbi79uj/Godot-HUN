@@ -7495,19 +7495,19 @@ msgstr "A [param idx] indexű elem előtérszínét a megadott [Color] értékre
 #. ItemList.set_item_disabled
 #: doc/classes/ItemList.xml
 msgid "Disables (or enables) the item at the specified index.\nDisabled items cannot be selected and do not trigger activation signals (when double-clicking or pressing [kbd]Enter[/kbd])."
-msgstr "Letiltja vagy engedélyezi a megadott indexű elemet.\nA letiltott elemek nem jelölhetők ki, és nem váltanak ki aktiválási jeleket (dupla kattintás vagy az [kbd]Enter[/kbd] lenyomása esetén sem)."
+msgstr "Engedélyezi vagy letiltja a megadott indexű elemet.\nA letiltott elemek nem jelölhetők ki, és dupla kattintáskor vagy az [kbd]Enter[/kbd] megnyomásakor sem bocsátanak ki aktiválási jelet."
 
 
 #. ItemList.set_item_icon
 #: doc/classes/ItemList.xml
 msgid "Sets (or replaces) the icon's [Texture2D] associated with the specified index."
-msgstr "Beállítja vagy lecseréli a megadott indexű elemhez tartozó ikon [Texture2D] erőforrását."
+msgstr "Beállítja vagy lecseréli a megadott indexű elem ikonjához tartozó [Texture2D] erőforrást."
 
 
 #. ItemList.set_item_icon_modulate
 #: doc/classes/ItemList.xml
 msgid "Sets a modulating [Color] of the item associated with the specified index."
-msgstr "Beállítja a megadott indexű elem ikonjának színét módosító [Color] értéket."
+msgstr "Beállítja a megadott indexű listaelem ikonjának színezéséhez használt [Color] értéket."
 
 
 #. ItemList.set_item_icon_region
@@ -7519,19 +7519,19 @@ msgstr "Beállítja, hogy az elem ikonjának melyik területe jelenjen meg. Ha a
 #. ItemList.set_item_icon_transposed
 #: doc/classes/ItemList.xml
 msgid "Sets whether the item icon will be drawn transposed."
-msgstr "Beállítja, hogy az elem ikonja transzponálva jelenjen-e meg."
+msgstr "Meghatározza, hogy az elem ikonjának megjelenítésekor felcserélődjön-e a vízszintes és a függőleges tengely."
 
 
 #. ItemList.set_item_language
 #: doc/classes/ItemList.xml
 msgid "Sets the language code of the text for the item at the given index to [param language]. This is used for line-breaking and text shaping algorithms. If [param language] is empty, the current locale is used."
-msgstr "A megadott indexű elem szövegének nyelvkódját a [param language] értékre állítja. Ezt a sortörési és szövegformázási algoritmusok használják. Ha a [param language] üres, az aktuális területi beállítás érvényesül."
+msgstr "A megadott indexű elem szövegének nyelvkódját a [param language] értékére állítja. Ezt a sortörési és szövegalakítási algoritmusok használják. Ha a [param language] üres, az aktuális területi beállítás érvényesül."
 
 
 #. ItemList.set_item_metadata
 #: doc/classes/ItemList.xml
 msgid "Sets a value (of any type) to be stored with the item associated with the specified index."
-msgstr "Tetszőleges típusú értéket tárol a megadott indexű elemhez társítva."
+msgstr "A megadott indexű elemhez tetszőleges típusú metaadatértéket rendel."
 
 
 #. ItemList.set_item_selectable
@@ -7555,25 +7555,25 @@ msgstr "Beállítja a megadott indexű elem súgóbuborékjának szövegét."
 #. ItemList.set_item_tooltip_enabled
 #: doc/classes/ItemList.xml
 msgid "Sets whether the tooltip hint is enabled for specified item index."
-msgstr "Beállítja, hogy a megadott indexű elem eszköztippje engedélyezett legyen-e."
+msgstr "Beállítja, hogy megjelenhet-e a megadott indexű elem súgóbuborékja."
 
 
 #. ItemList.sort_items_by_text
 #: doc/classes/ItemList.xml
 msgid "Sorts items in the list by their text."
-msgstr "A lista elemeit a szövegük szerint rendezi sorba."
+msgstr "A listaelemeket a szövegük alapján rendezi sorba."
 
 
 #. ItemList.empty_clicked
 #: doc/classes/ItemList.xml
 msgid "Emitted when any mouse click is issued within the rect of the list but on empty space.\n[param at_position] is the click position in this control's local coordinate system."
-msgstr "Akkor bocsátódik ki, amikor az egérrel a lista téglalapján belül egy üres területre kattintanak.\nA [param at_position] a kattintás helye a vezérlőelem helyi koordinátarendszerében."
+msgstr "Akkor bocsátódik ki, amikor a lista határain belüli üres területre kattintanak.\nA [param at_position] a kattintás helye a vezérlőelem helyi koordinátarendszerében."
 
 
 #. ItemList.item_activated
 #: doc/classes/ItemList.xml
 msgid "Emitted when specified list item is activated via double-clicking or by pressing [kbd]Enter[/kbd]."
-msgstr "Akkor bocsátódik ki, amikor a megadott listaelemet dupla kattintással vagy az [kbd]Enter[/kbd] billentyűvel aktiválják."
+msgstr "A megadott listaelem dupla kattintással vagy az [kbd]Enter[/kbd] billentyű megnyomásával történő aktiválásakor bocsátódik ki."
 
 
 #. ItemList.item_clicked
@@ -7591,7 +7591,7 @@ msgstr "Akkor bocsátódik ki, amikor a megadott elemet kijelölik. Csak egyszer
 #. ItemList.multi_selected
 #: doc/classes/ItemList.xml
 msgid "Emitted when a multiple selection is altered on a list allowing multiple selection."
-msgstr "Akkor bocsátódik ki, amikor egy többszörös kijelölést engedélyező listában megváltozik a kijelölés."
+msgstr "A többszörös kijelölést engedélyező listában a kijelölés megváltozásakor bocsátódik ki."
 
 #. OptionButton.brief
 #: doc/classes/OptionButton.xml
