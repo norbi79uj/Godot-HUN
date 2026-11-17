@@ -7262,13 +7262,13 @@ msgstr "Egyszerre csak egy elem kijelölését engedélyezi."
 #. ItemList.SELECT_MULTI
 #: doc/classes/ItemList.xml
 msgid "Allows selecting multiple items by holding [kbd]Ctrl[/kbd] or [kbd]Shift[/kbd]."
-msgstr "Több elem kijelölését engedélyezi a [kbd]Ctrl[/kbd] vagy a [kbd]Shift[/kbd] nyomva tartásával."
+msgstr "A [kbd]Ctrl[/kbd] vagy a [kbd]Shift[/kbd] billentyű nyomva tartásával több elem is kijelölhető."
 
 
 #. ItemList.SELECT_TOGGLE
 #: doc/classes/ItemList.xml
 msgid "Allows selecting multiple items by toggling them on and off."
-msgstr "Lehetővé teszi több elem kijelölését, illetve kijelölésének megszüntetését egyenként."
+msgstr "Lehetővé teszi több elem kijelölését és a kijelölésük egyenkénti be- vagy kikapcsolását."
 
 
 #. ItemList.SCROLL_HINT_MODE_DISABLED
@@ -7298,43 +7298,43 @@ msgstr "Csak az alsó görgetési jelzés jelenik meg."
 #. ItemList.font_color
 #: doc/classes/ItemList.xml
 msgid "Default text [Color] of the item."
-msgstr "Az elem szövegének alapértelmezett [Color] színe."
+msgstr "A listaelem szövegének alapértelmezett [Color] színe."
 
 
 #. ItemList.font_hovered_color
 #: doc/classes/ItemList.xml
 msgid "Text [Color] used when the item is hovered and not selected yet."
-msgstr "A szöveg [Color] színe, amikor az egérmutató az elem fölött van, de az nincs kijelölve."
+msgstr "A szöveg [Color] színe, amikor az egérmutató egy nem kijelölt elem fölött van."
 
 
 #. ItemList.font_hovered_selected_color
 #: doc/classes/ItemList.xml
 msgid "Text [Color] used when the item is hovered and selected."
-msgstr "A szöveg [Color] színe, amikor az egérmutató a kijelölt elem fölött van."
+msgstr "A szöveg [Color] színe, amikor az egérmutató egy kijelölt elem fölött van."
 
 
 #. ItemList.font_outline_color
 #: doc/classes/ItemList.xml
 msgid "The tint of text outline of the item."
-msgstr "Az elem szövegkörvonalának színezése."
+msgstr "Az elem szövegét körülvevő körvonal színe."
 
 
 #. ItemList.font_selected_color
 #: doc/classes/ItemList.xml
 msgid "Text [Color] used when the item is selected, but not hovered."
-msgstr "A szöveg [Color] színe, amikor az elem ki van jelölve, de az egérmutató nincs fölötte."
+msgstr "A szöveg [Color] színe kijelölt elem esetén, ha az egérmutató nincs az elem fölött."
 
 
 #. ItemList.guide_color
 #: doc/classes/ItemList.xml
 msgid "[Color] of the guideline. The guideline is a line drawn between each row of items."
-msgstr "Az elválasztóvonal [Color] színe. Az elválasztóvonalat a rendszer az elemsorok közé rajzolja."
+msgstr "Az elemsorok közé rajzolt elválasztóvonal [Color] színe."
 
 
 #. ItemList.scroll_hint_color
 #: doc/classes/ItemList.xml
 msgid "[Color] used to modulate the [theme_item scroll_hint] texture."
-msgstr "A [theme_item scroll_hint] textúra színének módosítására használt [Color] érték."
+msgstr "A [theme_item scroll_hint] textúra színezéséhez használt [Color] érték."
 
 
 #. ItemList.h_separation
@@ -7382,7 +7382,7 @@ msgstr "Az elem szövegének betűmérete."
 #. ItemList.scroll_hint
 #: doc/classes/ItemList.xml
 msgid "The indicator that will be shown when the content can still be scrolled. See [member scroll_hint_mode]."
-msgstr "Azt jelző elem, hogy a tartalom még tovább görgethető. Lásd: [member scroll_hint_mode]."
+msgstr "Jelzés arról, hogy a tartalom még tovább görgethető. Lásd: [member scroll_hint_mode]."
 
 
 #. ItemList.cursor
