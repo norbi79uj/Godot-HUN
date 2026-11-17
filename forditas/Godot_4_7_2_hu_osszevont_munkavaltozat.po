@@ -6808,7 +6808,7 @@ msgstr "Az [enum CloseButtonDisplayPolicy] felsorolás méretét jelöli."
 #. TabBar.drop_mark_color
 #: doc/classes/TabBar.xml
 msgid "Modulation color for the [theme_item drop_mark] icon."
-msgstr "A [theme_item drop_mark] ikon színének módosítására használt szín."
+msgstr "A [theme_item drop_mark] ikon színezésére használt szín."
 
 
 #. TabBar.font_disabled_color
@@ -6826,7 +6826,7 @@ msgstr "Az egérmutató alatt lévő fül betűszíne. A kijelölt fülre nem vo
 #. TabBar.font_outline_color
 #: doc/classes/TabBar.xml
 msgid "The tint of text outline of the tab name."
-msgstr "A fül címszövege körvonalának színezése."
+msgstr "A fül címét körülvevő szövegkörvonal színe."
 
 
 #. TabBar.font_selected_color
@@ -6868,13 +6868,13 @@ msgstr "A többi, nem kijelölt fül ikonszíne."
 #. TabBar.h_separation
 #: doc/classes/TabBar.xml
 msgid "The horizontal separation between the elements inside tabs."
-msgstr "A fülön belüli elemek vízszintes térköze."
+msgstr "A fülön belül elhelyezkedő elemek közötti vízszintes térköz."
 
 
 #. TabBar.hover_switch_wait_msec
 #: doc/classes/TabBar.xml
 msgid "During a drag-and-drop, this is how many milliseconds to wait before switching the tab."
-msgstr "Ennyi ezredmásodpercet vár a rendszer húzás és ejtés közben, mielőtt másik fülre váltana."
+msgstr "A húzás és ejtés közbeni fülváltás előtti várakozási idő ezredmásodpercben."
 
 
 #. TabBar.icon_max_width
@@ -6892,19 +6892,19 @@ msgstr "A fül címszövege körvonalának vastagsága.\n[b]Megjegyzés:[/b] Ha 
 #. TabBar.tab_separation
 #: doc/classes/TabBar.xml
 msgid "The space between tabs in the tab bar."
-msgstr "A fülsáv fülei közötti térköz."
+msgstr "A fülsávon megjelenő fülek közötti távolság."
 
 
 #. TabBar.font
 #: doc/classes/TabBar.xml
 msgid "The font used to draw tab names."
-msgstr "A fülek címeinek megjelenítésére használt betűkészlet."
+msgstr "A fülek címének kirajzolásához használt betűkészlet."
 
 
 #. TabBar.font_size
 #: doc/classes/TabBar.xml
 msgid "Font size of the tab names."
-msgstr "A fülek címeinek betűmérete."
+msgstr "A fülek címéhez használt betűméret."
 
 
 #. TabBar.close
@@ -6916,7 +6916,7 @@ msgstr "A bezárógomb ikonja (lásd: [member tab_close_display_policy])."
 #. TabBar.decrement
 #: doc/classes/TabBar.xml
 msgid "Icon for the left arrow button that appears when there are too many tabs to fit in the container width. When the button is disabled (i.e. the first tab is visible), it appears semi-transparent."
-msgstr "A balra mutató nyílgomb ikonja, amely akkor jelenik meg, ha a fülek nem férnek el a tároló szélességén. Ha a gomb le van tiltva (vagyis az első fül már látható), félig átlátszóként jelenik meg."
+msgstr "A balra mutató nyílgomb ikonja, amely akkor jelenik meg, ha a fülek nem férnek el a tároló szélességében. Letiltott állapotban (amikor az első fül már látható) az ikon félig átlátszó."
 
 
 #. TabBar.decrement_highlight
@@ -6934,7 +6934,7 @@ msgstr "Azt jelző ikon, hogy a húzott fül hová kerül ejtéskor (lásd: [mem
 #. TabBar.increment
 #: doc/classes/TabBar.xml
 msgid "Icon for the right arrow button that appears when there are too many tabs to fit in the container width. When the button is disabled (i.e. the last tab is visible) it appears semi-transparent."
-msgstr "A jobbra mutató nyílgomb ikonja, amely akkor jelenik meg, ha a fülek nem férnek el a tároló szélességén. Ha a gomb le van tiltva (vagyis az utolsó fül már látható), félig átlátszóként jelenik meg."
+msgstr "A jobbra mutató nyílgomb ikonja, amely akkor jelenik meg, ha a fülek nem férnek el a tároló szélességében. Letiltott állapotban (amikor az utolsó fül már látható) az ikon félig átlátszó."
 
 
 #. TabBar.increment_highlight
@@ -6946,7 +6946,7 @@ msgstr "A jobbra mutató nyílgomb ikonja, amely akkor jelenik meg, ha a fülek 
 #. TabBar.button_highlight
 #: doc/classes/TabBar.xml
 msgid "Background of the tab and close buttons when they're being hovered with the cursor."
-msgstr "A fülek és a bezárógombok háttere, amikor az egérmutató fölöttük van."
+msgstr "A fülek és bezárógombok egérmutató alatti állapotában megjelenő háttér."
 
 
 #. TabBar.button_pressed
