@@ -5921,7 +5921,7 @@ msgstr "Minden gyermek vezérlőelemhez külön fület létrehozó tároló, ame
 #. TabContainer.description
 #: doc/classes/TabContainer.xml
 msgid "Arranges child controls into a tabbed view, creating a tab for each one. The active tab's corresponding control is made visible, while all other child controls are hidden. Ignores non-control children.\n[b]Note:[/b] The drawing of the clickable tabs is handled by this node; [TabBar] is not needed."
-msgstr "A gyermek vezérlőelemeket füles nézetbe rendezi, mindegyikhez külön fület létrehozva. Csak az aktív fülhöz tartozó vezérlőelem látható; a többit elrejti. A nem [Control] típusú gyermekcsomópontokat figyelmen kívül hagyja.\n[b]Megjegyzés:[/b] A kattintható füleket ez a csomópont rajzolja ki, nincs szükség külön [TabBar] csomópontra."
+msgstr "A gyermek vezérlőelemeket füles nézetbe rendezi, mindegyikhez külön fület létrehozva. Csak az aktív fülhöz tartozó vezérlőelem látható; a többit elrejti. A nem vezérlőelem típusú gyermekcsomópontokat figyelmen kívül hagyja.\n[b]Megjegyzés:[/b] A kattintható füleket ez a csomópont rajzolja ki, nincs szükség külön [TabBar] csomópontra."
 
 #. TabContainer.get_current_tab_control
 #: doc/classes/TabContainer.xml
@@ -6021,7 +6021,7 @@ msgstr "A listában jelenleg található elemek száma."
 #. ItemList.max_columns
 #: doc/classes/ItemList.xml
 msgid "Maximum columns the list will have.\nIf greater than zero, the content will be split among the specified columns.\nA value of zero means unlimited columns, i.e. all items will be put in the same row."
-msgstr "A lista oszlopainak legnagyobb száma.\nNullánál nagyobb érték esetén a tartalom a megadott számú oszlopra oszlik.\nA [code]0[/code] korlátlan számú oszlopot jelent, vagyis minden elem ugyanabba a sorba kerül."
+msgstr "A lista oszlopainak legnagyobb száma.\nNullánál nagyobb érték esetén a tartalom a megadott számú oszlopra oszlik.\nA nulla korlátlan számú oszlopot jelent, vagyis minden elem ugyanabba a sorba kerül."
 
 #. ItemList.select_mode
 #: doc/classes/ItemList.xml
