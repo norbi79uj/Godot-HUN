@@ -5709,7 +5709,7 @@ msgstr "Visszaadja a húzási területek [Control] csomópontjainak [Array] töm
 #. SplitContainer.collapsed
 #: doc/classes/SplitContainer.xml
 msgid "If [code]true[/code], the draggers will be disabled and the children will be sized as if all [member split_offsets] were [code]0[/code]."
-msgstr "Ha [code]true[/code], letiltja az elválasztó fogantyúkat, és úgy méretezi a gyermekeket, mintha az összes [member split_offsets] értéke [code]0[/code] lenne."
+msgstr "Ha [code]true[/code], letiltja az elválasztók húzófogantyúit, és úgy méretezi a gyermekelemeket, mintha minden [member split_offsets] eltolás [code]0[/code] lenne."
 
 #. SplitContainer.drag_area_highlight_in_editor
 #: doc/classes/SplitContainer.xml
@@ -5754,7 +5754,7 @@ msgstr "A [member split_offsets] első eleme."
 #. SplitContainer.split_offsets
 #: doc/classes/SplitContainer.xml
 msgid "Offsets for each dragger in pixels. Each one is the offset of the split between the [Control] nodes before and after the dragger, with [code]0[/code] being the default position. The default position is based on the [Control] nodes expand flags and minimum sizes. See [member Control.size_flags_horizontal], [member Control.size_flags_vertical], and [member Control.size_flags_stretch_ratio].\nIf none of the [Control] nodes before the dragger are expanded, the default position will be at the start of the [SplitContainer]. If none of the [Control] nodes after the dragger are expanded, the default position will be at the end of the [SplitContainer]. If the dragger is in between expanded [Control] nodes, the default position will be in the middle, based on the [member Control.size_flags_stretch_ratio]s and minimum sizes.\n[b]Note:[/b] If the split offsets cause [Control] nodes to overlap, the first split will take priority when resolving the positions."
-msgstr "Az elválasztók eltolásai képpontban. Minden érték a fogantyú előtti és utáni [Control] elemek közötti elválasztás helyzetét módosítja; a [code]0[/code] az alaphelyzet. Az alaphelyzetet a [Control] elemek nyújtási jelzői és minimális méretei határozzák meg. Lásd: [member Control.size_flags_horizontal], [member Control.size_flags_vertical] és [member Control.size_flags_stretch_ratio].\nHa a fogantyú előtti [Control] elemek egyike sem nyúlik, az alaphelyzet a [SplitContainer] elején lesz. Ha a fogantyú utáni [Control] elemek egyike sem nyúlik, az alaphelyzet a [SplitContainer] végén lesz. Nyújtható [Control] elemek közötti fogantyúnál az alaphelyzet középen alakul ki a [member Control.size_flags_stretch_ratio] értékek és a minimális méretek alapján.\n[b]Megjegyzés:[/b] Ha az eltolások miatt a [Control] elemek átfedik egymást, a helyzetek rendezésekor az első elválasztó élvez elsőbbséget."
+msgstr "Az egyes húzófogantyúk eltolása képpontban. Az érték a fogantyú előtti és utáni [Control] elemek közötti elválasztó helyzetét módosítja; a [code]0[/code] az alapértelmezett helyzet. Az alaphelyzetet a [Control] elemek nyújtási jelzői és minimális méretei határozzák meg. Lásd: [member Control.size_flags_horizontal], [member Control.size_flags_vertical] és [member Control.size_flags_stretch_ratio].\nHa a fogantyú előtti [Control] elemek közül egyik sem terjeszkedik, az elválasztó alapértelmezett helyzete a [SplitContainer] elején lesz. Ha a fogantyú utáni [Control] elemek közül egyik sem terjeszkedik, az alapértelmezett helyzet a [SplitContainer] végén lesz. Nyújtható [Control] elemek közötti fogantyúnál az alaphelyzet középen alakul ki a [member Control.size_flags_stretch_ratio] értékek és a minimális méretek alapján.\n[b]Megjegyzés:[/b] Ha az eltolások miatt a [Control] elemek átfedik egymást, a helyzetek rendezésekor az első elválasztó élvez elsőbbséget."
 
 #. SplitContainer.touch_dragger_enabled
 #: doc/classes/SplitContainer.xml
@@ -5789,7 +5789,7 @@ msgstr "Logikai érték. Ha [code]1[/code] ([code]true[/code]), a fogantyúk aut
 #. SplitContainer.theme.minimum_grab_thickness
 #: doc/classes/SplitContainer.xml
 msgid "The minimum thickness of the area users can click on to grab a split bar. This ensures that the split bar can still be dragged if [theme_item separation] or [theme_item h_grabber] / [theme_item v_grabber]'s size is too narrow to easily select."
-msgstr "Az a legkisebb vastagság, amelyen az elválasztósáv egérrel megfogható. Így akkor is húzható marad, ha a [theme_item separation], illetve a [theme_item h_grabber] vagy [theme_item v_grabber] ikon mérete túl kicsi a könnyű kijelöléshez."
+msgstr "A húzáshoz egérrel megfogható elválasztósáv-terület legkisebb vastagsága. Így akkor is húzható marad, ha a [theme_item separation], illetve a [theme_item h_grabber] vagy [theme_item v_grabber] ikon mérete túl kicsi a könnyű kijelöléshez."
 
 #. SplitContainer.theme.separation
 #: doc/classes/SplitContainer.xml
@@ -5799,7 +5799,7 @@ msgstr "Az elválasztósáv vastagsága, vagyis a tároló egyes gyermekei köz�
 #. SplitContainer.theme.grabber
 #: doc/classes/SplitContainer.xml
 msgid "The icon used for the grabbers drawn in the separations. This is only used in [HSplitContainer] and [VSplitContainer]. For [SplitContainer], see [theme_item h_grabber] and [theme_item v_grabber] instead."
-msgstr "Az elválasztók közötti résekbe rajzolt fogantyúk ikonja. Csak [HSplitContainer] és [VSplitContainer] esetén használatos. A [SplitContainer] megfelelő beállításai a [theme_item h_grabber] és [theme_item v_grabber]."
+msgstr "Az elválasztósávokon megjelenő húzófogantyúk ikonja. Csak [HSplitContainer] és [VSplitContainer] esetén használatos. A [SplitContainer] megfelelő beállításai a [theme_item h_grabber] és [theme_item v_grabber]."
 
 #. SplitContainer.theme.h_grabber
 #: doc/classes/SplitContainer.xml
@@ -5834,17 +5834,17 @@ msgstr "Az elválasztósáv hátterét határozza meg, ha a sáv vastagsága nag
 #. HSplitContainer.brief
 #: doc/classes/HSplitContainer.xml
 msgid "A container that splits two child controls horizontally and provides a grabber for adjusting the split ratio."
-msgstr "Két gyermek vezérlőelemet vízszintesen elrendező tároló, amely húzható elválasztóval állítja a méretarányukat."
+msgstr "Két gyermek vezérlőelemet egymás mellé rendező tároló, amelynek húzható elválasztójával módosítható a két elem méretaránya."
 
 #. HSplitContainer.description
 #: doc/classes/HSplitContainer.xml
 msgid "A container that accepts only two child controls, then arranges them horizontally and creates a divisor between them. The divisor can be dragged around to change the size relation between the child controls."
-msgstr "Legfeljebb két gyermek vezérlőelemet fogadó tároló. A gyermekeket vízszintesen rendezi el, és húzható elválasztót helyez közéjük. Az elválasztó mozgatásával a két vezérlőelem egymáshoz viszonyított mérete módosítható."
+msgstr "Legfeljebb két gyermek vezérlőelemet tartalmazhat. Ezeket egymás mellé rendezi, és húzható elválasztót helyez közéjük. Az elválasztó mozgatásával módosítható a két vezérlőelem egymáshoz viszonyított mérete."
 
 #. VSplitContainer.brief
 #: doc/classes/VSplitContainer.xml
 msgid "A container that splits two child controls vertically and provides a grabber for adjusting the split ratio."
-msgstr "Két gyermek vezérlőelemet függőlegesen elrendező tároló, amely húzható elválasztóval állítja a méretarányukat."
+msgstr "Két gyermek vezérlőelemet egymás alá rendező tároló, amelynek húzható elválasztójával módosítható a két elem méretaránya."
 
 #. VSplitContainer.description
 #: doc/classes/VSplitContainer.xml
