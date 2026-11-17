@@ -5976,7 +5976,7 @@ msgstr "Ez a vezérlőelem kijelölhető elemek függőleges listáját jelenít
 #. ItemList.add_item
 #: doc/classes/ItemList.xml
 msgid "Adds an item to the item list with specified text. Returns the index of an added item.\nSpecify an [param icon], or use [code]null[/code] as the [param icon] for a list item with no icon.\nIf [param selectable] is [code]true[/code], the list item will be selectable."
-msgstr "A megadott szöveggel új elemet ad a listához, és visszaadja az új elem indexét.\nA [param icon] paraméterrel ikont rendelhetsz az elemhez; ha nem szeretnél ikont, [code]null[/code] értéket adj meg.\nHa a [param selectable] értéke [code]true[/code], az elem kijelölhető."
+msgstr "A megadott szöveggel új elemet ad a listához, és visszaadja az új elem indexét.\nA [param icon] paraméterrel ikont rendelhetsz az elemhez; ha nem szeretnél ikont, a [param icon] értékének [code]null[/code] értéket adj meg.\nHa a [param selectable] értéke [code]true[/code], az elem kijelölhető."
 
 #. ItemList.add_icon_item
 #: doc/classes/ItemList.xml
@@ -6462,13 +6462,13 @@ msgstr "Ha a [param disabled] értéke [code]true[/code], letiltja a [param tab_
 #. TabContainer.set_tab_hidden
 #: doc/classes/TabContainer.xml
 msgid "If [param hidden] is [code]true[/code], hides the tab at index [param tab_idx], making it disappear from the tab area."
-msgstr "Ha a [param hidden] értéke [code]true[/code], elrejti a [param tab_idx] indexű fület a fülsávról."
+msgstr "Ha a [param hidden] értéke [code]true[/code], elrejti a [param tab_idx] indexű fület, amely így eltűnik a fülsávról."
 
 
 #. ItemList.center_on_current
 #: doc/classes/ItemList.xml
 msgid "Ensures the currently selected item (the first selected item if multiple selection is enabled) is visible, adjusting the scroll position as necessary to place the item at the center of the list if possible. See also [method ensure_current_is_visible].\nFails and prints an error if both arguments are [code]false[/code]."
-msgstr "Biztosítja, hogy a jelenleg kijelölt elem (többszörös kijelölés esetén az első kijelölt elem) látható legyen. Szükség esetén a görgetési pozíciót úgy állítja, hogy az elem lehetőség szerint a lista közepére kerüljön. Lásd még: [method ensure_current_is_visible].\nHibával tér vissza, és hibaüzenetet ír ki, ha mindkét argumentum [code]false[/code]."
+msgstr "Gondoskodik arról, hogy a kijelölt elem (többszörös kijelölésnél az első kijelölt elem) látható legyen. Szükség esetén úgy módosítja a görgetési pozíciót, hogy az elem lehetőség szerint a lista közepére kerüljön. Lásd még: [method ensure_current_is_visible].\nHibával tér vissza, és hibaüzenetet ír ki, ha mindkét argumentum [code]false[/code]."
 
 
 #. ItemList.deselect
@@ -6492,7 +6492,7 @@ msgstr "Biztosítja, hogy a jelenleg kijelölt elem (többszörös kijelölés e
 #. ItemList.force_update_list_size
 #: doc/classes/ItemList.xml
 msgid "Forces an update to the list size based on its items. This happens automatically whenever size of the items, or other relevant settings like [member auto_height], change. The method can be used to trigger the update ahead of next drawing pass."
-msgstr "Kikényszeríti a lista méretének újraszámítását az elemei alapján. Ez automatikusan is megtörténik, ha az elemek mérete vagy egy kapcsolódó beállítás, például a [member auto_height] megváltozik. A metódussal a következő kirajzolás előtt is elindítható a frissítés."
+msgstr "Az elemek alapján azonnal újraszámítja a lista méretét. Ez automatikusan is megtörténik, ha az elemek mérete vagy egy kapcsolódó beállítás, például a [member auto_height] megváltozik. A metódussal a következő kirajzolás előtt is elindítható a frissítés."
 
 
 #. ItemList.get_h_scroll_bar
@@ -6510,7 +6510,7 @@ msgstr "Visszaadja a [param position] pozíciónál található elem indexét.\n
 #. ItemList.get_item_auto_translate_mode
 #: doc/classes/ItemList.xml
 msgid "Returns item's auto translate mode."
-msgstr "Visszaadja az elem automatikus fordítási módját."
+msgstr "Visszaadja a listaelem automatikus fordítási módját."
 
 
 #. ItemList.get_item_custom_bg_color
@@ -6570,7 +6570,7 @@ msgstr "Visszaadja az elem szövegének alapvető írásirányát."
 #. ItemList.get_item_tooltip
 #: doc/classes/ItemList.xml
 msgid "Returns the tooltip hint associated with the specified index."
-msgstr "Visszaadja a megadott indexű elemhez társított eszköztippet."
+msgstr "Visszaadja a megadott indexű elem súgóbuborékjának szövegét."
 
 
 #. ItemList.get_v_scroll_bar
