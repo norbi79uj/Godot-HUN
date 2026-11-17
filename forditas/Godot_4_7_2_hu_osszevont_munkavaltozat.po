@@ -7388,37 +7388,37 @@ msgstr "Jelzés arról, hogy a tartalom még tovább görgethető. Lásd: [membe
 #. ItemList.cursor
 #: doc/classes/ItemList.xml
 msgid "[StyleBox] used for the cursor, when the [ItemList] is being focused."
-msgstr "A kurzor megjelenítéséhez használt [StyleBox], amikor az [ItemList] fókuszban van."
+msgstr "A kurzor megjelenítéséhez használt [StyleBox], ha az [ItemList] fókuszban van."
 
 
 #. ItemList.cursor_unfocused
 #: doc/classes/ItemList.xml
 msgid "[StyleBox] used for the cursor, when the [ItemList] is not being focused."
-msgstr "A kurzor megjelenítéséhez használt [StyleBox], amikor az [ItemList] nincs fókuszban."
+msgstr "A kurzor megjelenítéséhez használt [StyleBox], ha az [ItemList] nincs fókuszban."
 
 
 #. ItemList.focus
 #: doc/classes/ItemList.xml
 msgid "The focused style for the [ItemList], drawn on top of everything."
-msgstr "Az [ItemList] fókuszállapotának stílusa, amely minden más elem fölé rajzolódik."
+msgstr "Az [ItemList] fókuszállapotának stílusa, amely minden más fölé rajzolódik."
 
 
 #. ItemList.hovered
 #: doc/classes/ItemList.xml
 msgid "[StyleBox] for the hovered, but not selected items."
-msgstr "Az egérmutató alatt lévő, de nem kijelölt elemek [StyleBox] stílusa."
+msgstr "Az egérmutató alatt lévő, nem kijelölt elemekhez használt [StyleBox]."
 
 
 #. ItemList.hovered_selected
 #: doc/classes/ItemList.xml
 msgid "[StyleBox] for the hovered and selected items, used when the [ItemList] is not being focused."
-msgstr "Az egérmutató alatt lévő, kijelölt elemek [StyleBox] stílusa, amikor az [ItemList] nincs fókuszban."
+msgstr "Az egérmutató alatt lévő, kijelölt elemekhez használt [StyleBox], ha az [ItemList] nincs fókuszban."
 
 
 #. ItemList.hovered_selected_focus
 #: doc/classes/ItemList.xml
 msgid "[StyleBox] for the hovered and selected items, used when the [ItemList] is being focused."
-msgstr "Az egérmutató alatt lévő, kijelölt elemek [StyleBox] stílusa, amikor az [ItemList] fókuszban van."
+msgstr "Az egérmutató alatt lévő, kijelölt elemekhez használt [StyleBox], ha az [ItemList] fókuszban van."
 
 
 #. ItemList.panel
@@ -7430,13 +7430,13 @@ msgstr "Az [ItemList] háttérstílusa."
 #. ItemList.selected
 #: doc/classes/ItemList.xml
 msgid "[StyleBox] for the selected items, used when the [ItemList] is not being focused."
-msgstr "A kijelölt elemek [StyleBox] stílusa, amikor az [ItemList] nincs fókuszban."
+msgstr "A kijelölt elemekhez használt [StyleBox], ha az [ItemList] nincs fókuszban."
 
 
 #. ItemList.selected_focus
 #: doc/classes/ItemList.xml
 msgid "[StyleBox] for the selected items, used when the [ItemList] is being focused."
-msgstr "A kijelölt elemek [StyleBox] stílusa, amikor az [ItemList] fókuszban van."
+msgstr "A kijelölt elemekhez használt [StyleBox], ha az [ItemList] fókuszban van."
 
 #. ItemList.is_item_disabled
 #: doc/classes/ItemList.xml
@@ -7459,7 +7459,7 @@ msgstr "[code]true[/code] értéket ad vissza, ha a megadott indexű elem kijel�
 #. ItemList.is_item_tooltip_enabled
 #: doc/classes/ItemList.xml
 msgid "Returns [code]true[/code] if the tooltip is enabled for specified item index."
-msgstr "[code]true[/code] értéket ad vissza, ha a megadott indexű elem eszköztippje engedélyezett."
+msgstr "[code]true[/code] értéket ad vissza, ha a megadott indexű elem súgóbuborékja engedélyezett."
 
 
 #. ItemList.is_selected
@@ -7471,7 +7471,7 @@ msgstr "[code]true[/code] értéket ad vissza, ha a megadott indexű elem jelenl
 #. ItemList.move_item
 #: doc/classes/ItemList.xml
 msgid "Moves item from index [param from_idx] to [param to_idx]."
-msgstr "A [param from_idx] indexű elemet a [param to_idx] indexre helyezi át."
+msgstr "Áthelyezi az elemet a [param from_idx] indexről a [param to_idx] indexre."
 
 
 #. ItemList.set_item_auto_translate_mode
@@ -7543,13 +7543,13 @@ msgstr "Engedélyezi vagy letiltja a megadott indexű elem kijelölhetőségét.
 #. ItemList.set_item_text_direction
 #: doc/classes/ItemList.xml
 msgid "Sets item's text base writing direction."
-msgstr "Beállítja az elem szövegének alapvető írásirányát."
+msgstr "Beállítja a listaelem szövegének alapértelmezett írásirányát."
 
 
 #. ItemList.set_item_tooltip
 #: doc/classes/ItemList.xml
 msgid "Sets the tooltip hint for the item associated with the specified index."
-msgstr "Beállítja a megadott indexű elemhez tartozó eszköztipp szövegét."
+msgstr "Beállítja a megadott indexű elem súgóbuborékjának szövegét."
 
 
 #. ItemList.set_item_tooltip_enabled
