@@ -7101,7 +7101,7 @@ msgstr "A fül címe és ikonja közötti távolság."
 #. TabContainer.side_margin
 #: doc/classes/TabContainer.xml
 msgid "The space at the left or right edges of the tab bar, accordingly with the current [member tab_alignment].\nThe margin is ignored with [constant TabBar.ALIGNMENT_RIGHT] if the tabs are clipped (see [member clip_tabs]) or a popup has been set (see [method set_popup]). The margin is always ignored with [constant TabBar.ALIGNMENT_CENTER]."
-msgstr "A fülsáv bal vagy jobb szélén lévő térköz a [member tab_alignment] aktuális beállításának megfelelően.\nA térközt figyelmen kívül hagyja a rendszer [constant TabBar.ALIGNMENT_RIGHT] esetén, ha a fülek le vannak vágva (lásd: [member clip_tabs]), vagy ha felugró menü van beállítva (lásd: [method set_popup]). A térközt [constant TabBar.ALIGNMENT_CENTER] esetén mindig figyelmen kívül hagyja."
+msgstr "A fülsáv bal vagy jobb szélén fenntartott térköz, a [member tab_alignment] beállításától függően.\nA térközt figyelmen kívül hagyja a rendszer [constant TabBar.ALIGNMENT_RIGHT] esetén, ha a fülek le vannak vágva (lásd: [member clip_tabs]), vagy ha felugró menü van beállítva (lásd: [method set_popup]). A térközt [constant TabBar.ALIGNMENT_CENTER] esetén mindig figyelmen kívül hagyja."
 
 
 #. TabContainer.menu
@@ -7113,13 +7113,13 @@ msgstr "A menügomb ikonja (lásd: [method set_popup])."
 #. TabContainer.menu_highlight
 #: doc/classes/TabContainer.xml
 msgid "The icon for the menu button (see [method set_popup]) when it's being hovered with the cursor."
-msgstr "A menügomb ikonja (lásd: [method set_popup]), amikor az egérmutató fölötte van."
+msgstr "A menügomb egérmutató alatti állapotának ikonja (lásd: [method set_popup])."
 
 
 #. TabContainer.panel
 #: doc/classes/TabContainer.xml
 msgid "The style for the background fill."
-msgstr "A háttér kitöltésének stílusa."
+msgstr "A háttér kitöltéséhez használt stílus."
 
 
 #. TabContainer.tab_hovered
@@ -7131,7 +7131,7 @@ msgstr "Az egérmutató alatt lévő fül stílusa.\n[b]Megjegyzés:[/b] Ezt a s
 #. TabContainer.tabbar_background
 #: doc/classes/TabContainer.xml
 msgid "The style for the background fill of the [TabBar] area."
-msgstr "A [TabBar] területe háttérkitöltésének stílusa."
+msgstr "A [TabBar] területének háttérkitöltési stílusa."
 
 #. ItemList.allow_reselect
 #: doc/classes/ItemList.xml
@@ -7148,7 +7148,7 @@ msgstr "Ha [code]true[/code], az elemek a jobb egérgombbal is kijelölhetők."
 #. ItemList.allow_search
 #: doc/classes/ItemList.xml
 msgid "If [code]true[/code], allows navigating the [ItemList] with letter keys through incremental search."
-msgstr "Ha [code]true[/code], a betűbillentyűkkel fokozatos keresést használva is lehet navigálni az [ItemList] elemei között."
+msgstr "Ha [code]true[/code], az [ItemList] elemei között betűbillentyűkkel, fokozatos kereséssel is lehet navigálni."
 
 
 #. ItemList.auto_height
@@ -7166,25 +7166,25 @@ msgstr "Ha [code]true[/code], a vezérlőelem automatikusan a tartalmához igaz�
 #. ItemList.fixed_column_width
 #: doc/classes/ItemList.xml
 msgid "The width all columns will be adjusted to.\nA value of zero disables the adjustment, each item will have a width equal to the width of its content and the columns will have an uneven width."
-msgstr "Az a szélesség, amelyhez a rendszer az összes oszlopot igazítja.\nA nulla érték kikapcsolja az igazítást: minden elem a saját tartalmának megfelelő szélességet kap, így az oszlopok szélessége eltérhet."
+msgstr "Az összes oszlophoz beállított rögzített szélesség.\nA nulla érték kikapcsolja az igazítást: minden elem a saját tartalmának megfelelő szélességet kap, így az oszlopok szélessége eltérhet."
 
 
 #. ItemList.fixed_icon_size
 #: doc/classes/ItemList.xml
 msgid "The size all icons will be adjusted to.\nIf either X or Y component is not greater than zero, icon size won't be affected."
-msgstr "Az a méret, amelyhez a rendszer az összes ikont igazítja.\nHa az X vagy az Y összetevő nem nagyobb nullánál, az ikonméret nem változik."
+msgstr "Az összes ikonhoz beállított rögzített méret.\nHa az X vagy az Y összetevő nem nagyobb nullánál, az ikonméret nem változik."
 
 
 #. ItemList.icon_mode
 #: doc/classes/ItemList.xml
 msgid "The icon position, whether above or to the left of the text. See the [enum IconMode] constants."
-msgstr "Az ikon elhelyezése: a szöveg fölött vagy attól balra. Lásd az [enum IconMode] állandóit."
+msgstr "Meghatározza, hogy az ikon a szöveg fölött vagy attól balra jelenjen meg. Lásd az [enum IconMode] felsorolás állandóit."
 
 
 #. ItemList.icon_scale
 #: doc/classes/ItemList.xml
 msgid "The scale of icon applied after [member fixed_icon_size] and transposing takes effect."
-msgstr "Az ikon méretezési aránya, amely a [member fixed_icon_size] alkalmazása és a transzponálás után érvényesül."
+msgstr "Az ikon méretezési tényezője, amely a [member fixed_icon_size] alkalmazása és a transzponálás után érvényesül."
 
 
 #. ItemList.item_{index}/disabled
@@ -7214,13 +7214,13 @@ msgstr "A [code]index[/code] indexű elem szövege.\n[b]Megjegyzés:[/b] Az [cod
 #. ItemList.max_text_lines
 #: doc/classes/ItemList.xml
 msgid "Maximum lines of text allowed in each item. Space will be reserved even when there is not enough lines of text to display.\n[b]Note:[/b] This property takes effect only when [member icon_mode] is [constant ICON_MODE_TOP]. To make the text wrap, [member fixed_column_width] should be greater than zero."
-msgstr "Az egy elemhez megjeleníthető szövegsorok legnagyobb száma. A helyet akkor is fenntartja a rendszer, ha az elem szövege kevesebb sorból áll.\n[b]Megjegyzés:[/b] Ez a tulajdonság csak akkor érvényesül, ha a [member icon_mode] értéke [constant ICON_MODE_TOP]. A szöveg több sorba tördeléséhez a [member fixed_column_width] értékének nullánál nagyobbnak kell lennie."
+msgstr "Az egy listaelemhez megjeleníthető szövegsorok maximális száma. A helyet akkor is fenntartja a rendszer, ha a szöveg ennél kevesebb sorból áll.\n[b]Megjegyzés:[/b] Ez a tulajdonság csak akkor érvényesül, ha a [member icon_mode] értéke [constant ICON_MODE_TOP]. A szöveg több sorba tördeléséhez a [member fixed_column_width] értékének nullánál nagyobbnak kell lennie."
 
 
 #. ItemList.same_column_width
 #: doc/classes/ItemList.xml
 msgid "Whether all columns will have the same width.\nIf [code]true[/code], the width is equal to the largest column width of all columns."
-msgstr "Meghatározza, hogy minden oszlop azonos szélességű legyen-e.\nHa [code]true[/code], az összes oszlop a legszélesebb oszlop méretét kapja."
+msgstr "Meghatározza, hogy az összes oszlop azonos szélességet kapjon-e.\nHa [code]true[/code], az összes oszlop a legszélesebb oszlop méretét kapja."
 
 
 #. ItemList.scroll_hint_mode
@@ -7232,7 +7232,7 @@ msgstr "Meghatározza a görgetési jelzések megjelenítési módját. Ezek a j
 #. ItemList.text_overrun_behavior
 #: doc/classes/ItemList.xml
 msgid "The clipping behavior when the text exceeds an item's bounding rectangle."
-msgstr "Meghatározza a szöveg levágásának módját, amikor a szöveg túlnyúlik az elem határoló téglalapján."
+msgstr "Meghatározza, hogyan kezelje a rendszer az elem határain túlnyúló szöveget."
 
 
 #. ItemList.wraparound_items
