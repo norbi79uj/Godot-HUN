@@ -6952,7 +6952,7 @@ msgstr "A fülek és bezárógombok egérmutató alatti állapotában megjelenő
 #. TabBar.button_pressed
 #: doc/classes/TabBar.xml
 msgid "Background of the tab and close buttons when it's being pressed."
-msgstr "A fülek és a bezárógombok háttere lenyomott állapotban."
+msgstr "A fülek és a bezárógombok lenyomott állapotban használt háttere."
 
 
 #. TabBar.tab_disabled
@@ -6964,13 +6964,13 @@ msgstr "A letiltott fülek stílusa."
 #. TabBar.tab_focus
 #: doc/classes/TabBar.xml
 msgid "[StyleBox] used when the [TabBar] is focused. The [theme_item tab_focus] [StyleBox] is displayed [i]over[/i] the base [StyleBox] of the selected tab, so a partially transparent [StyleBox] should be used to ensure the base [StyleBox] remains visible. A [StyleBox] that represents an outline or an underline works well for this purpose. To disable the focus visual effect, assign a [StyleBoxEmpty] resource. Note that disabling the focus visual effect will harm keyboard/controller navigation usability, so this is not recommended for accessibility reasons."
-msgstr "A [TabBar] fókuszba kerülésekor használt [StyleBox]. A [theme_item tab_focus] [StyleBox] a kijelölt fül alap [StyleBox] eleme [i]fölött[/i] jelenik meg, ezért részben átlátszó [StyleBox] ajánlott, hogy az alap [StyleBox] is látható maradjon. Erre jól megfelel egy körvonalat vagy aláhúzást ábrázoló [StyleBox]. A fókusz vizuális hatásának kikapcsolásához rendelj hozzá [StyleBoxEmpty] erőforrást. Ez azonban rontja a billentyűzetes és kontrolleres navigáció használhatóságát, ezért akadálymentességi szempontból nem ajánlott."
+msgstr "A [TabBar] fókuszában megjelenő [StyleBox]. A [theme_item tab_focus] [StyleBox] a kijelölt fül alap [StyleBox] eleme [i]fölött[/i] jelenik meg, ezért részben átlátszó [StyleBox] ajánlott, hogy az alap [StyleBox] is látható maradjon. Erre megfelelő lehet egy körvonalat vagy aláhúzást megjelenítő [StyleBox]. A fókusz vizuális hatásának kikapcsolásához rendelj hozzá [StyleBoxEmpty] erőforrást. Ez azonban rontja a billentyűzetes és kontrolleres navigáció használhatóságát, ezért akadálymentességi szempontból nem ajánlott."
 
 
 #. TabBar.tab_hovered
 #: doc/classes/TabBar.xml
 msgid "The style of the currently hovered tab. Does not apply to the selected tab.\n[b]Note:[/b] This style will be drawn with the same width as [theme_item tab_unselected] at minimum."
-msgstr "Az egérmutató alatt lévő fül stílusa. A kijelölt fülre nem vonatkozik.\n[b]Megjegyzés:[/b] Ezt a stílust legalább a [theme_item tab_unselected] szélességével rajzolja ki a rendszer."
+msgstr "Az egérmutató alatti fül stílusa. A kijelölt fülre nem érvényes.\n[b]Megjegyzés:[/b] Ezt a stílust legalább a [theme_item tab_unselected] szélességével rajzolja ki a rendszer."
 
 
 #. TabBar.tab_selected
@@ -6987,19 +6987,19 @@ msgstr "A többi, nem kijelölt fül stílusa."
 #. TabContainer.set_tab_tooltip
 #: doc/classes/TabContainer.xml
 msgid "Sets a custom tooltip text for tab at index [param tab_idx].\n[b]Note:[/b] By default, if the [param tooltip] is empty and the tab text is truncated (not all characters fit into the tab), the title will be displayed as a tooltip. To hide the tooltip, assign [code]\" \"[/code] as the [param tooltip] text."
-msgstr "A [param tab_idx] indexű fül egyéni eszköztippszövegét állítja be.\n[b]Megjegyzés:[/b] Alapértelmezés szerint, ha a [param tooltip] üres, és a fül szövege le van vágva (nem fér ki minden karakter), a teljes cím jelenik meg eszköztippként. Az eszköztipp elrejtéséhez a [param tooltip] szövegének [code]\" \"[/code] értéket adj meg."
+msgstr "Beállítja a [param tab_idx] indexű fül egyéni súgóbuborék-szövegét.\n[b]Megjegyzés:[/b] Alapértelmezés szerint, ha a [param tooltip] üres, és a fül szövege le van vágva (nem fér ki minden karakter), a teljes cím jelenik meg eszköztippként. Az eszköztipp elrejtéséhez a [param tooltip] szövegének [code]\" \"[/code] értéket adj meg."
 
 
 #. TabContainer.all_tabs_in_front
 #: doc/classes/TabContainer.xml
 msgid "This doesn't do anything."
-msgstr "Ennek nincs semmilyen hatása."
+msgstr "Ez a tulajdonság nem fejt ki hatást."
 
 
 #. TabContainer.deselect_enabled
 #: doc/classes/TabContainer.xml
 msgid "If [code]true[/code], all tabs can be deselected so that no tab is selected. Click on the [member current_tab] to deselect it.\nOnly the tab header will be shown if no tabs are selected."
-msgstr "Ha [code]true[/code], minden fül kijelölése megszüntethető, így egyik fül sem lesz kijelölve. A [member current_tab] fülre kattintva megszüntetheted a kijelölését.\nHa nincs kijelölt fül, csak a fülek fejléce látható."
+msgstr "Ha [code]true[/code], minden fül kijelölése megszüntethető, így egyik fül sem lesz kijelölve. A [member current_tab] fülre kattintva megszüntetheted a kijelölését.\nHa egyik fül sincs kijelölve, csak a fülsáv fejléce látható."
 
 
 #. TabContainer.switch_on_drag_hover
@@ -7011,13 +7011,13 @@ msgstr "Ha [code]true[/code], egy elem húzása közben egy fül fölé mozgatva
 #. TabContainer.tab_alignment
 #: doc/classes/TabContainer.xml
 msgid "The position at which tabs will be placed."
-msgstr "Meghatározza a fülek elhelyezkedését."
+msgstr "Meghatározza a fülek elhelyezési pozícióját."
 
 
 #. TabContainer.tab_focus_mode
 #: doc/classes/TabContainer.xml
 msgid "The focus access mode for the internal [TabBar] node."
-msgstr "A belső [TabBar] csomópont fókuszkezelési módja."
+msgstr "A belső [TabBar] csomópont fókuszálhatóságának módja."
 
 
 #. TabContainer.tab_{index}/disabled
@@ -7095,7 +7095,7 @@ msgstr "A fül ikonjának legnagyobb megengedett szélessége. Ez az ikon alapé
 #. TabContainer.icon_separation
 #: doc/classes/TabContainer.xml
 msgid "Space between tab's name and its icon."
-msgstr "A fül neve és ikonja közötti térköz."
+msgstr "A fül címe és ikonja közötti távolság."
 
 
 #. TabContainer.side_margin
