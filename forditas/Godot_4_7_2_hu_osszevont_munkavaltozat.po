@@ -8092,37 +8092,37 @@ msgstr "A szöveg alapértelmezett írásiránya."
 #. MenuBar.font_color
 #: doc/classes/MenuBar.xml
 msgid "Default text [Color] of the menu item."
-msgstr "A menüpont szövegének alapértelmezett [Color] színe."
+msgstr "A menüpont szövegéhez használt alapértelmezett [Color] szín."
 
 
 #. MenuBar.font_disabled_color
 #: doc/classes/MenuBar.xml
 msgid "Text [Color] used when the menu item is disabled."
-msgstr "A letiltott menüpont szövegének [Color] színe."
+msgstr "A letiltott menüpont szövegéhez használt [Color] szín."
 
 
 #. MenuBar.font_focus_color
 #: doc/classes/MenuBar.xml
 msgid "Text [Color] used when the menu item is focused. Only replaces the normal text color of the menu item. Disabled, hovered, and pressed states take precedence over this color."
-msgstr "A fókuszban lévő menüpont szövegének [Color] színe. Csak a menüpont normál betűszínét írja felül; a letiltott, egérmutató alatti és lenyomott állapot színei elsőbbséget élveznek."
+msgstr "A fókuszban lévő menüpont szövegéhez használt [Color] szín. Csak a menüpont szokásos szövegszínét helyettesíti; a letiltott, az egérmutató alatti és a lenyomott állapot színei elsőbbséget élveznek."
 
 
 #. MenuBar.font_hover_color
 #: doc/classes/MenuBar.xml
 msgid "Text [Color] used when the menu item is being hovered."
-msgstr "A menüpont szövegének [Color] színe, amikor az egérmutató fölötte van."
+msgstr "A menüpont szövegéhez használt [Color] szín, amikor az egérmutató fölötte van."
 
 
 #. MenuBar.font_hover_pressed_color
 #: doc/classes/MenuBar.xml
 msgid "Text [Color] used when the menu item is being hovered and pressed."
-msgstr "A menüpont szövegének [Color] színe, amikor az egérmutató fölötte van, és a menüpont le van nyomva."
+msgstr "A menüpont szövegéhez használt [Color] szín, amikor az egérmutató alatti menüpont lenyomott állapotban van."
 
 
 #. MenuBar.font_outline_color
 #: doc/classes/MenuBar.xml
 msgid "The tint of text outline of the menu item."
-msgstr "A menüpont szövegkörvonalának színezése."
+msgstr "A menüpont szövegkörvonalának színe."
 
 
 #. MenuBar.font_pressed_color
@@ -8134,13 +8134,13 @@ msgstr "A menüpont szövegének [Color] színe lenyomott állapotban."
 #. MenuBar.h_separation
 #: doc/classes/MenuBar.xml
 msgid "The horizontal space between menu items."
-msgstr "A menüpontok közötti vízszintes térköz."
+msgstr "A menüpontokat elválasztó vízszintes távolság."
 
 
 #. MenuBar.font
 #: doc/classes/MenuBar.xml
 msgid "[Font] of the menu item's text."
-msgstr "A menüpont szövegének [Font] betűkészlete."
+msgstr "A menüpont szövegéhez használt [Font]."
 
 
 #. MenuBar.font_size
@@ -8176,13 +8176,13 @@ msgstr "Az egérmutató alatt lévő menüpontnál használt [StyleBox] (jobbró
 #. MenuBar.hover_pressed
 #: doc/classes/MenuBar.xml
 msgid "[StyleBox] used when the menu item is being pressed and hovered at the same time."
-msgstr "A lenyomott és egyidejűleg egérmutató alatt lévő menüpontnál használt [StyleBox]."
+msgstr "Az egyidejűleg lenyomott és egérmutató alatt lévő menüpont [StyleBox] stílusa."
 
 
 #. MenuBar.hover_pressed_mirrored
 #: doc/classes/MenuBar.xml
 msgid "[StyleBox] used when the menu item is being pressed and hovered at the same time (for right-to-left layouts)."
-msgstr "A lenyomott és egyidejűleg egérmutató alatt lévő menüpontnál használt [StyleBox] (jobbról balra haladó elrendezésnél)."
+msgstr "Az egyidejűleg lenyomott és egérmutató alatt lévő menüpont [StyleBox] stílusa jobbról balra haladó elrendezésnél."
 
 
 #. MenuBar.normal
