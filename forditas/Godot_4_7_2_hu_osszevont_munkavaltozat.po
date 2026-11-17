@@ -7806,25 +7806,25 @@ msgstr "Ha [code]true[/code], a [code]index[/code] indexű elem elválasztó.\n[
 #. OptionButton.search_bar_enabled
 #: doc/classes/OptionButton.xml
 msgid "If [code]true[/code], shows a search bar at the top of the [PopupMenu] for filtering items. See [member search_bar_min_item_count] for dynamically controlling its visibility based on the number of items."
-msgstr "Ha [code]true[/code], a [PopupMenu] tetején keresősáv jelenik meg az elemek szűréséhez. A keresősáv láthatósága az elemek száma alapján a [member search_bar_min_item_count] beállítással is szabályozható."
+msgstr "Ha [code]true[/code], a [PopupMenu] tetején keresősáv jelenik meg, amellyel szűrhetők az elemek. A keresősáv megjelenését az elemek száma alapján a [member search_bar_min_item_count] tulajdonság is szabályozhatja."
 
 
 #. OptionButton.search_bar_fuzzy_search_enabled
 #: doc/classes/OptionButton.xml
 msgid "If [code]true[/code], enables fuzzy searching in the [PopupMenu] search bar. This allows the search results to include items that almost match the search query, as well items that match the individual characters of the search query, but not in sequence.\nUse [member search_bar_fuzzy_search_max_misses] to set the maximum number of mismatches allowed in the search results."
-msgstr "Ha [code]true[/code], engedélyezi a hozzávetőleges keresést a [PopupMenu] keresősávjában. Így a találatok között olyan elemek is megjelenhetnek, amelyek csak majdnem egyeznek a keresett kifejezéssel, vagy amelyekben a keresés egyes karakterei nem egymás után fordulnak elő.\nA megengedett eltérések legnagyobb számát a [member search_bar_fuzzy_search_max_misses] értékével állíthatod be."
+msgstr "Ha [code]true[/code], engedélyezi a hozzávetőleges keresést a [PopupMenu] keresősávjában. A találatok között így olyan elemek is szerepelhetnek, amelyek közel állnak a keresett kifejezéshez, illetve amelyekben a keresett karakterek nem közvetlenül egymás után fordulnak elő.\nA találatokban megengedett eltérések legnagyobb számát a [member search_bar_fuzzy_search_max_misses] tulajdonsággal állíthatod be."
 
 
 #. OptionButton.search_bar_fuzzy_search_max_misses
 #: doc/classes/OptionButton.xml
 msgid "Sets the maximum number of mismatches allowed in each search result when fuzzy searching is enabled for the [PopupMenu] search bar. Any item with more mismatches will be hidden from the search results."
-msgstr "Beállítja a megengedett eltérések legnagyobb számát a [PopupMenu] keresősávjának hozzávetőleges keresésénél. A nagyobb eltérést tartalmazó elemek nem jelennek meg a találatok között."
+msgstr "Megadja, hogy a [PopupMenu] keresősávjának hozzávetőleges keresése legfeljebb hány eltérést engedjen meg találatonként. Az ennél több eltérést tartalmazó elemek kimaradnak a találatokból."
 
 
 #. OptionButton.search_bar_min_item_count
 #: doc/classes/OptionButton.xml
 msgid "Sets the minimum number of items required for the [PopupMenu] search bar to be visible. [member search_bar_enabled] must be [code]true[/code] for this to have any effect."
-msgstr "Beállítja, hogy legalább hány elem szükséges a [PopupMenu] keresősávjának megjelenítéséhez. Ennek csak akkor van hatása, ha a [member search_bar_enabled] értéke [code]true[/code]."
+msgstr "Meghatározza, hogy legalább hány elem esetén jelenjen meg a [PopupMenu] keresősávja. Csak akkor érvényesül, ha a [member search_bar_enabled] értéke [code]true[/code]."
 
 
 #. OptionButton.selected
@@ -7836,25 +7836,25 @@ msgstr "Az aktuálisan kiválasztott elem indexe, vagy [code]-1[/code], ha nincs
 #. OptionButton.item_focused
 #: doc/classes/OptionButton.xml
 msgid "Emitted when the user navigates to an item using the [member ProjectSettings.input/ui_up] or [member ProjectSettings.input/ui_down] input actions. The index of the item focused is passed as argument."
-msgstr "Akkor bocsátódik ki, amikor a felhasználó a [member ProjectSettings.input/ui_up] vagy a [member ProjectSettings.input/ui_down] bemeneti művelettel egy elemre navigál. Argumentumként átadja a fókuszba került elem indexét."
+msgstr "Akkor bocsátódik ki, amikor a felhasználó a [member ProjectSettings.input/ui_up] vagy a [member ProjectSettings.input/ui_down] bemeneti művelettel egy elemre lép. Paraméterként a fókuszba került elem indexét adja át."
 
 
 #. OptionButton.item_selected
 #: doc/classes/OptionButton.xml
 msgid "Emitted when the current item has been changed by the user. The index of the item selected is passed as argument.\n[member allow_reselect] must be enabled to reselect an item."
-msgstr "Akkor bocsátódik ki, amikor a felhasználó megváltoztatja az aktuálisan kiválasztott elemet. Argumentumként átadja a kiválasztott elem indexét.\nUgyanazon elem ismételt kiválasztásához engedélyezni kell a [member allow_reselect] tulajdonságot."
+msgstr "Akkor bocsátódik ki, amikor a felhasználó másik elemet választ ki. Paraméterként a kiválasztott elem indexét adja át.\nEgy már kiválasztott elem ismételt kiválasztásához engedélyezni kell a [member allow_reselect] tulajdonságot."
 
 
 #. OptionButton.arrow_margin
 #: doc/classes/OptionButton.xml
 msgid "The horizontal space between the arrow icon and the right edge of the button."
-msgstr "A nyíl ikonja és a gomb jobb széle közötti vízszintes térköz."
+msgstr "A nyílikon és a gomb jobb széle közötti vízszintes távolság."
 
 
 #. OptionButton.modulate_arrow
 #: doc/classes/OptionButton.xml
 msgid "If different than [code]0[/code], the arrow icon will be modulated to the font color."
-msgstr "Ha az érték eltér a [code]0[/code] értéktől, a nyíl ikonja a betűszínnel lesz színezve."
+msgstr "Ha az érték nem [code]0[/code], a nyílikon a betűszínt veszi fel."
 
 
 #. OptionButton.arrow
