@@ -5966,22 +5966,22 @@ msgstr "Ha [code]true[/code], a fülek láthatók. Ha [code]false[/code], a fül
 #. ItemList.brief
 #: doc/classes/ItemList.xml
 msgid "A vertical list of selectable items with one or multiple columns."
-msgstr "Egy vagy több oszlopban megjelenő, kijelölhető elemek függőleges listája."
+msgstr "Kijelölhető elemek függőleges listája, egy vagy több oszlopba rendezve."
 
 #. ItemList.description
 #: doc/classes/ItemList.xml
 msgid "This control provides a vertical list of selectable items that may be in a single or in multiple columns, with each item having options for text and an icon. Tooltips are supported and may be different for every item in the list.\nSelectable items in the list may be selected or deselected and multiple selection may be enabled. Selection with right mouse button may also be enabled to allow use of popup context menus. Items may also be \"activated\" by double-clicking them or by pressing [kbd]Enter[/kbd].\nItem text only supports single-line strings. Newline characters (e.g. [code]\\n[/code]) in the string won't produce a newline. Text wrapping is enabled in [constant ICON_MODE_TOP] mode, but the column's width is adjusted to fully fit its content by default. You need to set [member fixed_column_width] greater than zero to wrap the text.\nAll [code]set_*[/code] methods allow negative item indices, i.e. [code]-1[/code] to access the last item, [code]-2[/code] to select the second-to-last item, and so on.\n[b]Incremental search:[/b] Like [PopupMenu] and [Tree], [ItemList] supports searching within the list while the control is focused. Press a key that matches the first letter of an item's name to select the first item starting with the given letter. After that point, there are two ways to perform incremental search: 1) Press the same key again before the timeout duration to select the next item starting with the same letter. 2) Press letter keys that match the rest of the word before the timeout duration to match to select the item in question directly. Both of these actions will be reset to the beginning of the list if the timeout duration has passed since the last keystroke was registered. You can adjust the timeout duration by changing [member ProjectSettings.gui/timers/incremental_search_max_interval_msec]."
-msgstr "Ez a vezérlőelem kijelölhető elemek függőleges listáját jeleníti meg egy vagy több oszlopban. Minden elemhez szöveg és ikon rendelhető. Az egyes listaelemekhez különböző eszköztippek is megadhatók.\nAz elemek kijelölhetők és a kijelölésük megszüntethető; többszörös kijelölés is engedélyezhető. A jobb egérgombos kijelölés bekapcsolásával felugró helyi menük is használhatók. A listaelemek dupla kattintással vagy az [kbd]Enter[/kbd] billentyűvel is „aktiválhatók”.\nA listaelemek szövege csak egysoros karakterlánc lehet. A sortörés karaktere (például [code]\\n[/code]) nem eredményez új sort. A [constant ICON_MODE_TOP] módban lehetséges a szöveg tördelése, de a rendszer alapértelmezés szerint úgy állítja be az oszlop szélességét, hogy a teljes tartalom kiférjen. A tördeléshez a [member fixed_column_width] értékét nullánál nagyobbra kell állítani.\nMinden [code]set_*[/code] metódus elfogad negatív listaelemindexeket: a [code]-1[/code] az utolsó elemet, a [code]-2[/code] az utolsó előtti elemet jelenti, és így tovább.\n[b]Fokozatos keresés:[/b] A [PopupMenu] és [Tree] vezérlőhöz hasonlóan az [ItemList] is támogatja a listában történő keresést, amikor fókuszban van. Ha lenyomsz egy billentyűt, amely valamely listaelem nevének első betűjével egyezik, a rendszer kijelöli az első ilyen elemet. Ezután két módon folytatható a keresés: 1) a megadott időkorláton belül ugyanezt a billentyűt újra lenyomva a következő, azonos betűvel kezdődő elemet választja ki; 2) a szó további betűit a határidő lejárta előtt begépelve közvetlenül a megfelelő elemet keresheted ki. Ha a legutóbbi billentyűleütés óta letelt az időkorlát, a keresés a lista elejéről indul újra. Az időkorlát a [member ProjectSettings.gui/timers/incremental_search_max_interval_msec] beállítással módosítható."
+msgstr "Ez a vezérlőelem kijelölhető elemek függőleges listáját jeleníti meg egy vagy több oszlopban. Minden elemhez szöveg és ikon rendelhető, és az egyes listaelemekhez külön súgóbuborék is megadható.\nAz elemek kijelölhetők és a kijelölésük megszüntethető; többszörös kijelölés is engedélyezhető. A jobb egérgombbal történő kijelölés is engedélyezhető, például helyi menük használatához. A listaelemek dupla kattintással vagy az [kbd]Enter[/kbd] billentyű megnyomásával is aktiválhatók.\nA listaelemek szövege csak egysoros lehet. A sortörés karaktere (például [code]\\n[/code]) nem hoz létre új sort. A [constant ICON_MODE_TOP] módban lehetséges a szöveg tördelése, de a rendszer alapértelmezés szerint úgy állítja be az oszlop szélességét, hogy a teljes tartalom kiférjen. A tördeléshez a [member fixed_column_width] értékét nullánál nagyobbra kell állítani.\nMinden [code]set_*[/code] metódus elfogad negatív elemindexet: a [code]-1[/code] az utolsó, a [code]-2[/code] az utolsó előtti elemet jelöli, és így tovább.\n[b]Fokozatos keresés:[/b] A [PopupMenu] és [Tree] vezérlőhöz hasonlóan az [ItemList] is támogatja a listában történő keresést, amikor fókuszban van. Ha lenyomsz egy billentyűt, amely valamely listaelem nevének első betűjével egyezik, a rendszer kijelöli az első ilyen elemet. Ezután két módon folytatható a keresés: 1) a megadott időkorláton belül ugyanezt a billentyűt újra lenyomva a következő, azonos betűvel kezdődő elemet választja ki; 2) a szó további betűit a határidő lejárta előtt begépelve közvetlenül a megfelelő elemet keresheted ki. Ha a legutóbbi billentyűleütés óta letelt az időkorlát, a keresés a lista elejéről indul újra. Az időkorlát a [member ProjectSettings.gui/timers/incremental_search_max_interval_msec] beállítással módosítható."
 
 #. ItemList.add_item
 #: doc/classes/ItemList.xml
 msgid "Adds an item to the item list with specified text. Returns the index of an added item.\nSpecify an [param icon], or use [code]null[/code] as the [param icon] for a list item with no icon.\nIf [param selectable] is [code]true[/code], the list item will be selectable."
-msgstr "A megadott szöveggel új elemet ad a listához, és visszaadja az új elem indexét.\nA [param icon] paraméterrel ikont is megadhatsz, vagy a [param icon] értéke [code]null[/code] lehet, ha nem kell ikon.\nHa a [param selectable] értéke [code]true[/code], az elem kijelölhető."
+msgstr "A megadott szöveggel új elemet ad a listához, és visszaadja az új elem indexét.\nA [param icon] paraméterrel ikont rendelhetsz az elemhez; ha nem szeretnél ikont, [code]null[/code] értéket adj meg.\nHa a [param selectable] értéke [code]true[/code], az elem kijelölhető."
 
 #. ItemList.add_icon_item
 #: doc/classes/ItemList.xml
 msgid "Adds an item to the item list with no text, only an icon. Returns the index of an added item."
-msgstr "Csak ikont tartalmazó, szöveg nélküli elemet ad a listához, és visszaadja az új elem indexét."
+msgstr "Szöveg nélküli, csak ikont tartalmazó elemet ad a listához, és visszaadja az új elem indexét."
 
 #. ItemList.clear
 #: doc/classes/ItemList.xml
@@ -5996,7 +5996,7 @@ msgstr "A kijelölt elemek indexeit tartalmazó tömböt ad vissza."
 #. ItemList.select
 #: doc/classes/ItemList.xml
 msgid "Selects the item at the specified index.\n[b]Note:[/b] This method does not trigger the item selection signal."
-msgstr "Kijelöli a megadott indexű elemet.\n[b]Megjegyzés:[/b] Ez a metódus nem váltja ki az elemkijelölési jelet."
+msgstr "Kijelöli a megadott indexű elemet.\n[b]Megjegyzés:[/b] Ez a metódus nem bocsát ki elemkijelölési jelet."
 
 #. ItemList.remove_item
 #: doc/classes/ItemList.xml
@@ -6021,12 +6021,12 @@ msgstr "A listában jelenleg található elemek száma."
 #. ItemList.max_columns
 #: doc/classes/ItemList.xml
 msgid "Maximum columns the list will have.\nIf greater than zero, the content will be split among the specified columns.\nA value of zero means unlimited columns, i.e. all items will be put in the same row."
-msgstr "A lista oszlopainak legnagyobb száma.\nNullánál nagyobb érték esetén a tartalom a megadott számú oszlopra oszlik.\nA nulla korlátlan számú oszlopot jelent, vagyis minden elem ugyanabba a sorba kerül."
+msgstr "A lista oszlopainak legnagyobb száma.\nNullánál nagyobb érték esetén a tartalom a megadott számú oszlopra oszlik.\nA [code]0[/code] korlátlan számú oszlopot jelent, vagyis minden elem ugyanabba a sorba kerül."
 
 #. ItemList.select_mode
 #: doc/classes/ItemList.xml
 msgid "Allows single or multiple item selection. See the [enum SelectMode] constants."
-msgstr "Egy vagy több elem kijelölését engedélyezi. Lásd a [enum SelectMode] állandókat."
+msgstr "Egyetlen vagy több listaelem kijelölését teszi lehetővé. Lásd a [enum SelectMode] felsorolás állandóit."
 
 
 #. BaseButton.brief
