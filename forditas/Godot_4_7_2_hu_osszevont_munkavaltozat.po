@@ -6062,17 +6062,17 @@ msgstr "[code]true[/code] értéket ad vissza, ha az egérmutató belépett a go
 #. BaseButton.set_pressed_no_signal
 #: doc/classes/BaseButton.xml
 msgid "Changes the [member button_pressed] state of the button, without emitting [signal toggled]. Use when you just want to change the state of the button without sending the pressed event (e.g. when initializing scene). Only works if [member toggle_mode] is [code]true[/code].\n[b]Note:[/b] This method doesn't unpress other buttons in [member button_group]."
-msgstr "A [member button_pressed] állapotát a [signal toggled] jel kibocsátása nélkül módosítja. Akkor használd, ha a gomb állapotát meg szeretnéd változtatni anélkül, hogy lenyomási eseményt váltanál ki (például jelenet inicializálásakor). Csak akkor működik, ha a [member toggle_mode] értéke [code]true[/code].\n[b]Megjegyzés:[/b] Ez a metódus nem oldja fel a [member button_group] többi gombjának lenyomott állapotát."
+msgstr "A gomb [member button_pressed] állapotát a [signal toggled] jel kibocsátása nélkül módosítja. Akkor használd, ha csak az állapotot szeretnéd megváltoztatni, jelzés kiváltása nélkül (például egy jelenet inicializálásakor). Csak akkor működik, ha a [member toggle_mode] értéke [code]true[/code].\n[b]Megjegyzés:[/b] Ez a metódus nem oldja fel a [member button_group] többi gombjának lenyomott állapotát."
 
 #. BaseButton.action_mode
 #: doc/classes/BaseButton.xml
 msgid "Determines when the button is considered clicked."
-msgstr "Meghatározza, hogy a rendszer mikor tekinti a gombot megnyomottnak."
+msgstr "Meghatározza, hogy a rendszer a gomb lenyomásakor vagy felengedésekor érzékeljen kattintást."
 
 #. BaseButton.button_group
 #: doc/classes/BaseButton.xml
 msgid "The [ButtonGroup] associated with the button. Not to be confused with node groups.\n[b]Note:[/b] The button will be configured as a radio button if a [ButtonGroup] is assigned to it."
-msgstr "A gombhoz társított [ButtonGroup]. Nem tévesztendő össze a csomópontcsoportokkal.\n[b]Megjegyzés:[/b] Ha [ButtonGroup] tartozik hozzá, a gomb rádiógombként fog viselkedni."
+msgstr "A gombhoz társított [ButtonGroup]. Nem tévesztendő össze a csomópontcsoportokkal.\n[b]Megjegyzés:[/b] Ha [ButtonGroup] csoporthoz tartozik, a gomb rádiógombként működik."
 
 #. BaseButton.button_mask
 #: doc/classes/BaseButton.xml
@@ -6082,12 +6082,12 @@ msgstr "Bitmaszk, amellyel megadható, hogy a gomb mely egérgombokra reagáljon
 #. BaseButton.button_pressed
 #: doc/classes/BaseButton.xml
 msgid "If [code]true[/code], the button's state is pressed. Means the button is pressed down or toggled (if [member toggle_mode] is active). Only works if [member toggle_mode] is [code]true[/code].\n[b]Note:[/b] Changing the value of [member button_pressed] will result in [signal toggled] to be emitted. If you want to change the pressed state without emitting that signal, use [method set_pressed_no_signal]."
-msgstr "Ha [code]true[/code], a gomb lenyomott állapotban van. Ez azt jelenti, hogy a gombot lenyomva tartják, vagy bekapcsolt állapotú (ha a [member toggle_mode] aktív). Csak akkor működik, ha a [member toggle_mode] értéke [code]true[/code].\n[b]Megjegyzés:[/b] A [member button_pressed] értékének megváltoztatása kibocsátja a [signal toggled] jelet. Ha a jelet nem szeretnéd kibocsátani, használd a [method set_pressed_no_signal] metódust."
+msgstr "Ha [code]true[/code], a gomb lenyomott állapotú. Ez a lenyomott vagy – aktív [member toggle_mode] esetén – bekapcsolt állapotot jelzi. A tulajdonság csak akkor működik, ha a [member toggle_mode] értéke [code]true[/code].\n[b]Megjegyzés:[/b] A [member button_pressed] értékének megváltoztatása kibocsátja a [signal toggled] jelet. Ha a jelet nem szeretnéd kibocsátani, használd a [method set_pressed_no_signal] metódust."
 
 #. BaseButton.disabled
 #: doc/classes/BaseButton.xml
 msgid "If [code]true[/code], the button is in disabled state and can't be clicked or toggled.\n[b]Note:[/b] If the button is disabled while held down, [signal button_up] will be emitted."
-msgstr "Ha [code]true[/code], a gomb le van tiltva, ezért nem lehet rákattintani vagy átkapcsolni.\n[b]Megjegyzés:[/b] Ha a gombot lenyomva tartás közben tiltod le, a [signal button_up] jel akkor is kibocsátódik."
+msgstr "Ha [code]true[/code], a gomb le van tiltva: nem lehet aktiválni vagy átkapcsolni.\n[b]Megjegyzés:[/b] Ha a gombot lenyomva tartás közben tiltod le, a [signal button_up] jel akkor is kibocsátódik."
 
 #. BaseButton.keep_pressed_outside
 #: doc/classes/BaseButton.xml
@@ -6102,17 +6102,17 @@ msgstr "A gombhoz társított [Shortcut] billentyűparancs."
 #. BaseButton.shortcut_feedback
 #: doc/classes/BaseButton.xml
 msgid "If [code]true[/code], the button will highlight for a short amount of time when its shortcut is activated. If [code]false[/code] and [member toggle_mode] is [code]false[/code], the shortcut will activate without any visual feedback."
-msgstr "Ha [code]true[/code], a gomb rövid időre kiemelődik, amikor aktiválják a billentyűparancsát. Ha [code]false[/code], és a [member toggle_mode] is [code]false[/code], a parancs vizuális visszajelzés nélkül aktiválódik."
+msgstr "Ha [code]true[/code], a gomb rövid időre kiemelve jelenik meg, amikor a hozzá rendelt billentyűparancs aktiválódik. Ha [code]false[/code], és a [member toggle_mode] is [code]false[/code], a parancs vizuális visszajelzés nélkül aktiválódik."
 
 #. BaseButton.shortcut_in_tooltip
 #: doc/classes/BaseButton.xml
 msgid "If [code]true[/code], the button will add information about its shortcut in the tooltip. This includes the shortcut's events and its [member Resource.resource_name]. If both events and name are empty, the shortcut will not be included.\n[b]Note:[/b] This property does nothing when the tooltip control is customized using [method Control._make_custom_tooltip]."
-msgstr "Ha [code]true[/code], a gomb az eszköztippben megjeleníti a hozzá tartozó billentyűparancs adatait: az eseményeket és a [member Resource.resource_name] értékét. Ha mindkettő üres, a billentyűparancs nem jelenik meg.\n[b]Megjegyzés:[/b] Ez a tulajdonság nem hat, ha az eszköztippet a [method Control._make_custom_tooltip] metódussal egyedileg készítetted el."
+msgstr "Ha [code]true[/code], a gomb súgóbuborékja megjeleníti a hozzá rendelt billentyűparancs eseményeit és a [member Resource.resource_name] értékét. Ha mindkettő üres, a billentyűparancs nem jelenik meg.\n[b]Megjegyzés:[/b] Ez a tulajdonság nem hat, ha az eszköztippet a [method Control._make_custom_tooltip] metódussal egyedileg készítetted el."
 
 #. BaseButton.toggle_mode
 #: doc/classes/BaseButton.xml
 msgid "If [code]true[/code], the button is in toggle mode. Makes the button flip state between pressed and unpressed each time its area is clicked."
-msgstr "Ha [code]true[/code], a gomb kapcsolóként működik: minden kattintásra vált a lenyomott és a felengedett állapot között."
+msgstr "Ha [code]true[/code], a gomb kapcsolóként működik: minden kattintáskor vált a lenyomott és a felengedett állapot között."
 
 #. BaseButton.button_down
 #: doc/classes/BaseButton.xml
@@ -6127,12 +6127,12 @@ msgstr "Akkor bocsátódik ki, amikor megszűnik a gomb lenyomva tartása."
 #. BaseButton.pressed
 #: doc/classes/BaseButton.xml
 msgid "Emitted when the button is toggled or pressed. This is on [signal button_down] if [member action_mode] is [constant ACTION_MODE_BUTTON_PRESS] and on [signal button_up] otherwise.\nIf you need to know the button's pressed state (and [member toggle_mode] is active), use [signal toggled] instead."
-msgstr "A gomb lenyomásakor vagy átkapcsolásakor bocsátódik ki. Ha a [member action_mode] értéke [constant ACTION_MODE_BUTTON_PRESS], a [signal button_down] jelhez, egyébként a [signal button_up] jelhez kapcsolódik.\nHa a gomb lenyomott állapotára is szükséged van (és a [member toggle_mode] aktív), inkább a [signal toggled] jelet használd."
+msgstr "A gomb aktiválásakor vagy átkapcsolásakor bocsátódik ki. Ha a [member action_mode] értéke [constant ACTION_MODE_BUTTON_PRESS], a [signal button_down] jel kibocsátásakor történik; egyébként a [signal button_up] jel kibocsátásakor.\nHa a gomb lenyomott állapotára is szükséged van (és a [member toggle_mode] aktív), inkább a [signal toggled] jelet használd."
 
 #. BaseButton.toggled
 #: doc/classes/BaseButton.xml
 msgid "Emitted when the button was just toggled between pressed and normal states (only if [member toggle_mode] is active). The new state is contained in the [param toggled_on] argument."
-msgstr "Akkor bocsátódik ki, amikor a gomb lenyomott és normál állapota között vált (csak akkor, ha a [member toggle_mode] aktív). Az új állapotot a [param toggled_on] paraméter tartalmazza."
+msgstr "A gomb lenyomott és normál állapota közötti átváltáskor bocsátódik ki (csak akkor, ha a [member toggle_mode] aktív). Az új állapotot a [param toggled_on] paraméter tartalmazza."
 
 #. BaseButton.DRAW_NORMAL
 #: doc/classes/BaseButton.xml
@@ -6147,7 +6147,7 @@ msgstr "A gombok lenyomott állapota."
 #. BaseButton.DRAW_HOVER
 #: doc/classes/BaseButton.xml
 msgid "The state of buttons are hovered."
-msgstr "A gombok egérmutató alatti állapota."
+msgstr "A gombok állapota, amikor az egérmutató fölöttük van."
 
 #. BaseButton.DRAW_DISABLED
 #: doc/classes/BaseButton.xml
@@ -6157,7 +6157,7 @@ msgstr "A gombok letiltott állapota."
 #. BaseButton.DRAW_HOVER_PRESSED
 #: doc/classes/BaseButton.xml
 msgid "The state of buttons are both hovered and pressed."
-msgstr "A gombok egyidejűleg egérmutató alatti és lenyomott állapota."
+msgstr "A gombok állapota, amikor lenyomott állapotban vannak, és az egérmutató is fölöttük van."
 
 #. BaseButton.ACTION_MODE_BUTTON_PRESS
 #: doc/classes/BaseButton.xml
