@@ -6605,7 +6605,7 @@ msgstr "Beállítja a [param tab_idx] indexű fül ikonjának legnagyobb megenge
 #. TabBar.set_tab_language
 #: doc/classes/TabBar.xml
 msgid "Sets the language code of the title for the tab at index [param tab_idx] to [param language]. This is used for line-breaking and text shaping algorithms. If [param language] is empty, the current locale is used."
-msgstr "A [param tab_idx] indexű fül címének nyelvkódját a [param language] értékre állítja. Ezt a sortörési és szövegformázási algoritmusok használják. Üres [param language] esetén az aktuális területi beállítás érvényesül."
+msgstr "A [param tab_idx] indexű fül címének nyelvkódját a [param language] paraméter értékére állítja. Ezt a sortörési és szövegformázási algoritmusok használják. Üres [param language] esetén az aktuális területi beállítás érvényesül."
 
 
 #. TabBar.set_tab_metadata
@@ -6629,7 +6629,7 @@ msgstr "Beállítja a [param tab_idx] indexű fül [param tooltip] eszköztippj�
 #. TabBar.close_with_middle_mouse
 #: doc/classes/TabBar.xml
 msgid "If [code]true[/code], middle-clicking on a tab will emit the [signal tab_close_pressed] signal."
-msgstr "Ha [code]true[/code], a fülön végzett középső egérgombos kattintás kibocsátja a [signal tab_close_pressed] jelet."
+msgstr "Ha [code]true[/code], a fülön a középső egérgombbal kattintva kibocsátódik a [signal tab_close_pressed] jel."
 
 
 #. TabBar.deselect_enabled
@@ -6683,37 +6683,37 @@ msgstr "Meghatározza, hogy mikor jelenjen meg a füleken a bezárógomb."
 #. TabBar.tab_{index}/disabled
 #: doc/classes/TabBar.xml
 msgid "If [code]true[/code], the tab at [code]index[/code] is disabled.\n[b]Note:[/b] [code]index[/code] is a value in the [code]0 .. tab_count - 1[/code] range."
-msgstr "Ha [code]true[/code], a [code]index[/code] indexű fül le van tiltva.\n[b]Megjegyzés:[/b] Az [code]index[/code] értéke a [code]0 .. tab_count - 1[/code] tartományba esik."
+msgstr "Ha [code]true[/code], a [code]index[/code] indexű fül le van tiltva.\n[b]Megjegyzés:[/b] A [code]index[/code] értéke a [code]0 .. tab_count - 1[/code] tartományba esik."
 
 
 #. TabBar.tab_{index}/icon
 #: doc/classes/TabBar.xml
 msgid "If [code]true[/code], the tab at [code]index[/code] is hidden.\n[b]Note:[/b] [code]index[/code] is a value in the [code]0 .. tab_count - 1[/code] range."
-msgstr "Ha [code]true[/code], a [code]index[/code] indexű fül el van rejtve.\n[b]Megjegyzés:[/b] Az [code]index[/code] értéke a [code]0 .. tab_count - 1[/code] tartományba esik."
+msgstr "Ha [code]true[/code], a [code]index[/code] indexű fül el van rejtve.\n[b]Megjegyzés:[/b] A [code]index[/code] értéke a [code]0 .. tab_count - 1[/code] tartományba esik."
 
 
 #. TabBar.tab_{index}/title
 #: doc/classes/TabBar.xml
 msgid "The title text of the tab at [code]index[/code].\n[b]Note:[/b] [code]index[/code] is a value in the [code]0 .. tab_count - 1[/code] range."
-msgstr "A [code]index[/code] indexű fül címszövege.\n[b]Megjegyzés:[/b] Az [code]index[/code] értéke a [code]0 .. tab_count - 1[/code] tartományba esik."
+msgstr "A [code]index[/code] indexű fül címszövege.\n[b]Megjegyzés:[/b] A [code]index[/code] értéke a [code]0 .. tab_count - 1[/code] tartományba esik."
 
 
 #. TabBar.tab_{index}/tooltip
 #: doc/classes/TabBar.xml
 msgid "The tooltip text of the tab at [code]index[/code].\n[b]Note:[/b] [code]index[/code] is a value in the [code]0 .. tab_count - 1[/code] range."
-msgstr "A [code]index[/code] indexű fül eszköztippszövege.\n[b]Megjegyzés:[/b] Az [code]index[/code] értéke a [code]0 .. tab_count - 1[/code] tartományba esik."
+msgstr "A [code]index[/code] indexű fül súgóbuborékjának szövege.\n[b]Megjegyzés:[/b] A [code]index[/code] értéke a [code]0 .. tab_count - 1[/code] tartományba esik."
 
 
 #. TabBar.tabs_rearrange_group
 #: doc/classes/TabBar.xml
 msgid "[TabBar]s with the same rearrange group ID will allow dragging the tabs between them. Enable drag with [member drag_to_rearrange_enabled].\nSetting this to [code]-1[/code] will disable rearranging between [TabBar]s."
-msgstr "Azonos átrendezési csoportazonosítóval rendelkező [TabBar] elemek között a fülek áthúzhatók. A húzást a [member drag_to_rearrange_enabled] tulajdonsággal engedélyezheted.\nHa az érték [code]-1[/code], a különböző [TabBar] elemek közötti átrendezés le van tiltva."
+msgstr "Az azonos átrendezési csoportazonosítójú [TabBar] elemek között egérrel áthúzhatók a fülek. A húzást a [member drag_to_rearrange_enabled] tulajdonsággal engedélyezheted.\nHa az érték [code]-1[/code], a [TabBar] elemek közötti átrendezés le van tiltva."
 
 
 #. TabBar.active_tab_rearranged
 #: doc/classes/TabBar.xml
 msgid "Emitted when the active tab is rearranged via mouse drag. See [member drag_to_rearrange_enabled]."
-msgstr "Akkor bocsátódik ki, amikor az aktív fület egérrel húzva átrendezik. Lásd: [member drag_to_rearrange_enabled]."
+msgstr "Az aktív fül egérrel történő átrendezésekor bocsátódik ki. Lásd: [member drag_to_rearrange_enabled]."
 
 
 #. TabBar.tab_button_pressed
@@ -6731,7 +6731,7 @@ msgstr "Akkor bocsátódik ki, amikor másik fülre váltanak."
 #. TabBar.tab_clicked
 #: doc/classes/TabBar.xml
 msgid "Emitted when a tab is clicked, even if it is the current tab."
-msgstr "Akkor bocsátódik ki, amikor rákattintanak egy fülre, akkor is, ha már az az aktuális fül."
+msgstr "Akkor bocsátódik ki, amikor egy fülre kattintanak, akkor is, ha az már az aktuális fül."
 
 
 #. TabBar.tab_close_pressed
@@ -6755,7 +6755,7 @@ msgstr "Akkor bocsátódik ki, amikor jobb egérgombbal kattintanak egy fülre."
 #. TabBar.tab_selected
 #: doc/classes/TabBar.xml
 msgid "Emitted when a tab is selected via click, directional input, or script, even if it is the current tab."
-msgstr "Akkor bocsátódik ki, amikor egy fület kattintással, iránygombos vezérléssel vagy szkriptből kijelölnek, akkor is, ha már az az aktuális fül."
+msgstr "Akkor bocsátódik ki, amikor egy fület kattintással, irányvezérléssel vagy szkriptből kijelölnek, akkor is, ha az már az aktuális fül."
 
 
 #. TabBar.ALIGNMENT_LEFT
@@ -7041,7 +7041,7 @@ msgstr "A [code]index[/code] indexű fül címszövege.\n[b]Megjegyzés:[/b] Az 
 #. TabContainer.tab_{index}/title
 #: doc/classes/TabContainer.xml
 msgid "The tooltip text of the tab at [code]index[/code].\n[b]Note:[/b] [code]index[/code] is a value in the [code]0 .. get_tab_count() - 1[/code] range."
-msgstr "A [code]index[/code] indexű fül eszköztippszövege.\n[b]Megjegyzés:[/b] Az [code]index[/code] értéke a [code]0 .. get_tab_count() - 1[/code] tartományba esik."
+msgstr "A [code]index[/code] indexű fül súgóbuborékjának szövege.\n[b]Megjegyzés:[/b] Az [code]index[/code] értéke a [code]0 .. get_tab_count() - 1[/code] tartományba esik."
 
 
 #. TabContainer.tabs_rearrange_group
