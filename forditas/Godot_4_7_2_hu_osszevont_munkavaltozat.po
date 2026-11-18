@@ -9449,7 +9449,7 @@ msgstr "Kattintásra [PopupMenu] menüt megnyitó gomb."
 #. MenuButton.description
 #: doc/classes/MenuButton.xml
 msgid "A button that brings up a [PopupMenu] when clicked. To create new items inside this [PopupMenu], use [code]get_popup().add_item(\"My Item Name\")[/code]. You can also create them directly from Godot editor's inspector.\nSee also [BaseButton] which contains common properties and methods associated with this node."
-msgstr "Kattintásra [PopupMenu] menüt megnyitó gomb. Az ehhez a [PopupMenu] menühöz új menüpontokat például a [code]get_popup().add_item(\"My Item Name\")[/code] hívással adhatsz hozzá. A menüpontokat közvetlenül a Godot szerkesztő felügyelőjében is létrehozhatod.\nLásd még a [BaseButton] osztályt, amely a csomópont közös tulajdonságait és metódusait tartalmazza."
+msgstr "Kattintásra [PopupMenu] menüt megnyitó gomb. Új menüpontokat a [code]get_popup().add_item(\"My Item Name\")[/code] hívással vagy közvetlenül a Godot szerkesztő Felügyelő paneljén adhatsz a [PopupMenu] menühöz.\nLásd még a [BaseButton] osztályt, amely az ilyen csomópontok közös tulajdonságait és metódusait tartalmazza."
 
 
 #. MenuButton.show_popup
@@ -9461,13 +9461,13 @@ msgstr "Az előugró menü helyzetét és méretét a [MenuButton] gombhoz igaz�
 #. MenuButton.switch_on_hover
 #: doc/classes/MenuButton.xml
 msgid "If [code]true[/code], when the cursor hovers above another [MenuButton] within the same parent which also has [member switch_on_hover] enabled, it will close the current [MenuButton] and open the other one."
-msgstr "Ha [code]true[/code], amikor az egérmutató egy ugyanahhoz a szülőhöz tartozó másik [MenuButton] fölé kerül, amelynél a [member switch_on_hover] szintén engedélyezett, az aktuális [MenuButton] menü bezárul, és a másik nyílik meg."
+msgstr "Ha [code]true[/code], és az egérmutató egy ugyanahhoz a szülőhöz tartozó másik [MenuButton] gombra kerül, amelynél a [member switch_on_hover] szintén engedélyezett, az aktuális [MenuButton] menüje bezárul, a másiké pedig megnyílik."
 
 
 #. MenuButton.about_to_popup
 #: doc/classes/MenuButton.xml
 msgid "Emitted when the [PopupMenu] of this MenuButton is about to show."
-msgstr "Akkor bocsátódik ki, amikor a MenuButton [PopupMenu] menüje éppen megjelenni készül."
+msgstr "Akkor bocsátódik ki, amikor a menügombhoz tartozó [PopupMenu] megjelenés előtt áll."
 
 #. VSlider.brief
 #: doc/classes/VSlider.xml
@@ -9478,7 +9478,7 @@ msgstr "Függőleges csúszka, amely alulról (minimum) felfelé (maximum) halad
 #. VSlider.description
 #: doc/classes/VSlider.xml
 msgid "A vertical slider, used to adjust a value by moving a grabber along a vertical axis. It is a [Range]-based control and goes from bottom (min) to top (max). Note that this direction is the opposite of [VScrollBar]'s."
-msgstr "Függőleges csúszka, amellyel a fogantyú függőleges tengely mentén mozgatásával állítható be egy érték. A [Range] osztályon alapul, és alulról (minimum) felfelé (maximum) halad. Fontos, hogy ez az irány ellentétes a [VScrollBar] működésével."
+msgstr "Függőleges csúszka, amelynek fogantyúját fel-le mozgatva állíthatsz be egy értéket. A [Range] osztályon alapul: a legkisebb érték alul, a legnagyobb felül található. Ez az irány ellentétes a [VScrollBar] működésével."
 
 
 #. HScrollBar.brief
@@ -9490,7 +9490,7 @@ msgstr "Vízszintes görgetősáv, amely balról (minimum) jobbra (maximum) hala
 #. HScrollBar.description
 #: doc/classes/HScrollBar.xml
 msgid "A horizontal scrollbar, typically used to navigate through content that extends beyond the visible width of a control. It is a [Range]-based control and goes from left (min) to right (max)."
-msgstr "Vízszintes görgetősáv, amelyet általában a vezérlőelem látható szélességén túlnyúló tartalom böngészésére használnak. A [Range] osztályon alapul, és balról (minimum) jobbra (maximum) halad."
+msgstr "Vízszintes görgetősáv, amely a vezérlőelem látható területén vízszintesen túlnyúló tartalom megtekintésére szolgál. A [Range] osztályon alapul: a legkisebb érték balra, a legnagyobb jobbra található."
 
 
 #. HScrollBar.padding_bottom
@@ -9514,7 +9514,7 @@ msgstr "Függőleges görgetősáv, amely felülről (minimum) lefelé (maximum)
 #. VScrollBar.description
 #: doc/classes/VScrollBar.xml
 msgid "A vertical scrollbar, typically used to navigate through content that extends beyond the visible height of a control. It is a [Range]-based control and goes from top (min) to bottom (max). Note that this direction is the opposite of [VSlider]'s."
-msgstr "Függőleges görgetősáv, amellyel általában a vezérlőelem látható magasságán túlnyúló tartalmat lehet böngészni. A [Range] osztályon alapul, és felülről (minimum) lefelé (maximum) halad. Az irány a [VSlider] működésével ellentétes."
+msgstr "Függőleges görgetősáv, amely a vezérlőelem látható területén függőlegesen túlnyúló tartalom megtekintésére szolgál. A [Range] osztályon alapul: a legkisebb érték felül, a legnagyobb alul található. Ez az irány ellentétes a [VSlider] működésével."
 
 
 #. VScrollBar.padding_left
@@ -9538,13 +9538,13 @@ msgstr "A görgetősávok absztrakt alaposztálya."
 #. ScrollBar.description
 #: doc/classes/ScrollBar.xml
 msgid "Abstract base class for scrollbars, typically used to navigate through content that extends beyond the visible area of a control. Scrollbars are [Range]-based controls."
-msgstr "A görgetősávok absztrakt alaposztálya. A görgetősávok általában a vezérlőelem látható területén túlnyúló tartalomban való navigálásra szolgálnak, és a [Range] osztályon alapulnak."
+msgstr "A görgetősávok absztrakt alaposztálya. A görgetősávokkal a vezérlőelem látható területén túlnyúló tartalom között navigálhatsz. A [Range] osztályon alapulnak."
 
 
 #. ScrollBar.custom_step
 #: doc/classes/ScrollBar.xml
 msgid "Overrides the step used when clicking increment and decrement buttons or when using arrow keys when the [ScrollBar] is focused."
-msgstr "Felülírja a lépésközt, amelyet a növelő és csökkentő gombokra kattintáskor vagy a fókuszban lévő [ScrollBar] nyílbillentyűkkel történő vezérlésekor használ a rendszer."
+msgstr "Meghatározza a növelő és csökkentő gombokra kattintáskor, illetve a fókuszban lévő [ScrollBar] nyílbillentyűkkel való vezérlésekor használt lépésközt, felülírva az alapértelmezett értéket."
 
 
 #. ScrollBar.scrolling
@@ -9556,7 +9556,7 @@ msgstr "Akkor bocsátódik ki, amikor a görgetősávot görgetik."
 #. ScrollBar.decrement
 #: doc/classes/ScrollBar.xml
 msgid "Icon used as a button to scroll the [ScrollBar] left/up. Supports custom step using the [member ScrollBar.custom_step] property."
-msgstr "A [ScrollBar] balra/felfelé görgetésére szolgáló gomb ikonja. Egyéni lépésköz a [member ScrollBar.custom_step] tulajdonsággal állítható be."
+msgstr "A [ScrollBar] balra vagy felfelé görgető gombjának ikonja. A lépésközt a [member ScrollBar.custom_step] tulajdonsággal szabhatod testre."
 
 
 #. ScrollBar.decrement_highlight
@@ -9574,7 +9574,7 @@ msgstr "A csökkentő gomb lenyomásakor jelenik meg."
 #. ScrollBar.increment
 #: doc/classes/ScrollBar.xml
 msgid "Icon used as a button to scroll the [ScrollBar] right/down. Supports custom step using the [member ScrollBar.custom_step] property."
-msgstr "A [ScrollBar] jobbra/lefelé görgetésére szolgáló gomb ikonja. Egyéni lépésköz a [member ScrollBar.custom_step] tulajdonsággal állítható be."
+msgstr "A [ScrollBar] jobbra vagy lefelé görgető gombjának ikonja. A lépésközt a [member ScrollBar.custom_step] tulajdonsággal szabhatod testre."
 
 
 #. ScrollBar.increment_highlight
