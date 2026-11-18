@@ -479,12 +479,12 @@ msgstr "A szövegkurzor alatti szót tartalmazó [String] értéket adja vissza.
 #. TextEdit.has_ime_text
 #: doc/classes/TextEdit.xml
 msgid "Returns [code]true[/code] if the user has text in the [url=https://en.wikipedia.org/wiki/Input_method]Input Method Editor[/url] (IME)."
-msgstr "[code]true[/code] értéket ad vissza, ha a felhasználó az [url=https://en.wikipedia.org/wiki/Input_method]Input Method Editor[/url] (IME) beviteli rendszerben szöveget állított össze."
+msgstr "[code]true[/code] értéket ad vissza, ha a felhasználó szöveget állított össze az [url=https://en.wikipedia.org/wiki/Input_method]Input Method Editor[/url] (IME) segítségével."
 
 #. TextEdit.has_redo
 #: doc/classes/TextEdit.xml
 msgid "Returns [code]true[/code] if a \"redo\" action is available."
-msgstr "[code]true[/code] értéket ad vissza, ha elérhető az újravégrehajtás."
+msgstr "[code]true[/code] értéket ad vissza, ha van újra végrehajtható művelet."
 
 #. TextEdit.has_selection
 #: doc/classes/TextEdit.xml
@@ -494,7 +494,7 @@ msgstr "[code]true[/code] értéket ad vissza, ha a felhasználó kijelölt szö
 #. TextEdit.has_undo
 #: doc/classes/TextEdit.xml
 msgid "Returns [code]true[/code] if an \"undo\" action is available."
-msgstr "[code]true[/code] értéket ad vissza, ha elérhető a visszavonás."
+msgstr "[code]true[/code] értéket ad vissza, ha van visszavonható művelet."
 
 #. TextEdit.insert_line_at
 #: doc/classes/TextEdit.xml
@@ -579,7 +579,7 @@ msgstr "[code]true[/code] értéket ad vissza, ha a felülírási mód engedély
 #. TextEdit.menu_option
 #: doc/classes/TextEdit.xml
 msgid "Executes a given action as defined in the [enum MenuItems] enum."
-msgstr "Végrehajtja a [enum MenuItems] felsorolásban meghatározott műveletet."
+msgstr "Végrehajtja a [enum MenuItems] felsorolásban szereplő, megadott műveletet."
 
 #. TextEdit.merge_gutters
 #: doc/classes/TextEdit.xml
