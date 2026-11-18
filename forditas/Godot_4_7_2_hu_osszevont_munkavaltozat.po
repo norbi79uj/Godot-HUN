@@ -51,7 +51,7 @@ msgstr "Visszaadja a [param coords] koordinátájú cella alternatív csempeazon
 #. TileMapLayer.get_used_rect
 #: doc/classes/TileMapLayer.xml
 msgid "Returns a rectangle enclosing the used (non-empty) tiles of the map."
-msgstr "Visszaadja a térkép összes használt (nem üres) celláját körülhatároló téglalapot."
+msgstr "A csempetérkép használt, azaz nem üres celláit körülhatároló téglalapot adja vissza."
 
 #. TileMapLayer.get_used_cells
 #: doc/classes/TileMapLayer.xml
@@ -66,7 +66,7 @@ msgstr "Visszaadja a [param coords] koordinátájú cella [param neighbor] irán
 #. TileMapLayer.get_surrounding_cells
 #: doc/classes/TileMapLayer.xml
 msgid "Returns the list of all neighboring cells to the one at [param coords]. Any neighboring cell is one that is touching edges, so for a square cell 4 cells would be returned, for a hexagon 6 cells are returned."
-msgstr "Visszaadja a [param coords] koordinátájú cellával él mentén szomszédos cellák listáját. Négyzetes cellánál ez 4, hatszögletűnél pedig 6 cellát jelent."
+msgstr "A [param coords] koordinátájú cellával közös él mentén érintkező szomszédos cellákat adja vissza. Négyzetes cella esetén 4, hatszögletű esetén 6 szomszédot kapunk."
 
 #. TileMapLayer.get_pattern
 #: doc/classes/TileMapLayer.xml
@@ -96,12 +96,12 @@ msgstr "Engedélyezi vagy letiltja az ütközéskezelést."
 #. TileMapLayer.collision_visibility_mode
 #: doc/classes/TileMapLayer.xml
 msgid "Show or hide the [TileMapLayer]'s collision shapes. If set to [constant DEBUG_VISIBILITY_MODE_DEFAULT], this depends on the show collision debug settings."
-msgstr "Szabályozza a [TileMapLayer] ütközési alakzatainak hibakeresési megjelenítését. A [constant DEBUG_VISIBILITY_MODE_DEFAULT] értéknél a láthatóság az ütközések hibakeresési megjelenítési beállításaitól függ."
+msgstr "Meghatározza, hogy láthatók legyenek-e a [TileMapLayer] ütközési alakzatai hibakereséskor. A [constant DEBUG_VISIBILITY_MODE_DEFAULT] érték esetén az ütközések általános hibakeresési megjelenítési beállítása érvényes."
 
 #. TileMapLayer.navigation_enabled
 #: doc/classes/TileMapLayer.xml
 msgid "If [code]true[/code], navigation regions are enabled."
-msgstr "Ha az értéke [code]true[/code], a navigációs területek engedélyezettek."
+msgstr "Ha [code]true[/code], engedélyezi a navigációs területek használatát."
 
 #. TileMapLayer.occlusion_enabled
 #: doc/classes/TileMapLayer.xml
@@ -111,12 +111,12 @@ msgstr "Engedélyezi vagy letiltja a fénykitakarást."
 #. TileMapLayer.enabled
 #: doc/classes/TileMapLayer.xml
 msgid "If [code]false[/code], disables this [TileMapLayer] completely (rendering, collision, navigation, scene tiles, etc.)"
-msgstr "Ha az értéke [code]false[/code], a [TileMapLayer] réteg minden funkcióját letiltja (kirajzolás, ütközéskezelés, navigáció, jelenetcsempék stb.)."
+msgstr "Ha [code]false[/code], teljesen letiltja a [TileMapLayer] réteget, beleértve a kirajzolást, az ütközéskezelést, a navigációt és a jelenetcsempéket is."
 
 #. TileMapLayer.tile_set
 #: doc/classes/TileMapLayer.xml
 msgid "The [TileSet] used by this layer. The textures, collisions, and additional behavior of all available tiles are stored here."
-msgstr "A réteg által használt [TileSet]. Ez tárolja az elérhető csempék textúráit, ütközési adatait és egyéb viselkedési beállításait."
+msgstr "A réteg által használt csempekészlet ([TileSet]). Ebben találhatók az elérhető csempék textúrái, ütközési adatai és további viselkedési beállításai."
 
 #. TileMapLayer.is_cell_flipped_h
 #: doc/classes/TileMapLayer.xml
@@ -136,7 +136,7 @@ msgstr "[code]true[/code] értéket ad vissza, ha a [param coords] koordinátáj
 #. TileMapLayer.y_sort_origin
 #: doc/classes/TileMapLayer.xml
 msgid "This Y-sort origin value is added to each tile's Y-sort origin value. This allows, for example, to fake a different height level. This can be useful for top-down view games."
-msgstr "Ez az Y-rendezési kiindulóérték hozzáadódik az egyes csempék saját Y-rendezési kiindulóértékéhez. Így például eltérő magassági szintet lehet szimulálni. Ez felülnézetes játékoknál lehet hasznos."
+msgstr "Az itt megadott Y-rendezési kiindulóérték hozzáadódik minden csempe saját Y-rendezési kiindulóértékéhez. Ezzel például különböző magassági szintek látszatát keltheted, ami felülnézetes játékoknál hasznos lehet."
 
 #. TileMapLayer.use_kinematic_bodies
 #: doc/classes/TileMapLayer.xml
@@ -226,7 +226,7 @@ msgstr "Azonnal frissíti a [TileMapLayer] csomópontot. Általában erre nincs 
 #. TileMapLayer.navigation_visibility_mode
 #: doc/classes/TileMapLayer.xml
 msgid "Show or hide the [TileMapLayer]'s navigation meshes. If set to [constant DEBUG_VISIBILITY_MODE_DEFAULT], this depends on the show navigation debug settings."
-msgstr "Szabályozza a [TileMapLayer] navigációs hálóinak hibakeresési megjelenítését. A [constant DEBUG_VISIBILITY_MODE_DEFAULT] értéknél a láthatóság a navigáció hibakeresési megjelenítési beállításaitól függ."
+msgstr "Meghatározza, hogy láthatók legyenek-e a [TileMapLayer] navigációs hálói hibakereséskor. A [constant DEBUG_VISIBILITY_MODE_DEFAULT] érték esetén a navigáció általános hibakeresési megjelenítési beállítása érvényes."
 
 #. TileMapLayer.physics_quadrant_size
 #: doc/classes/TileMapLayer.xml
@@ -1361,7 +1361,7 @@ msgstr "A sprite-lapról megjelenítendő aktuális képkocka. A [member hframes
 #. Sprite2D.frame_coords
 #: doc/classes/Sprite2D.xml
 msgid "Coordinates of the frame to display from sprite sheet. This is as an alias for the [member frame] property. [member hframes] or [member vframes] must be greater than 1."
-msgstr "A sprite-lapról megjelenítendő képkocka koordinátái. Ez a [member frame] tulajdonság alternatív elérési módja, amely a képkockát koordinátákkal adja meg. A [member hframes] vagy a [member vframes] értékének 1-nél nagyobbnak kell lennie."
+msgstr "A sprite-lap megjelenítendő képkockájának sor- és oszlopkoordinátái. A [member frame] tulajdonság koordinátákkal megadott megfelelője. Használatához a [member hframes] vagy a [member vframes] értékének 1-nél nagyobbnak kell lennie."
 
 #. Sprite2D.hframes
 #: doc/classes/Sprite2D.xml
@@ -1386,7 +1386,7 @@ msgstr "Ha [code]true[/code], a textúrát egy nagyobb atlasztextúrából vágj
 #. Sprite2D.region_filter_clip_enabled
 #: doc/classes/Sprite2D.xml
 msgid "If [code]true[/code], the area outside of the [member region_rect] is clipped to avoid bleeding of the surrounding texture pixels. [member region_enabled] must be [code]true[/code]."
-msgstr "Ha [code]true[/code], a [member region_rect] területén kívüli részeket levágja, így a szomszédos textúraképpontok nem szivárognak át a kijelölt területre. A [member region_enabled] értékének [code]true[/code] kell lennie."
+msgstr "Ha [code]true[/code], levágja a [member region_rect] területén kívül eső képrészleteket, hogy a szomszédos textúrapixelek ne szűrődjenek át a megjelenített régióba. Ehhez a [member region_enabled] értékének [code]true[/code] kell lennie."
 
 #. Sprite2D.region_rect
 #: doc/classes/Sprite2D.xml
@@ -11665,12 +11665,12 @@ msgstr "Többsoros szövegszerkesztő, amely korlátozott kódszerkesztési funk
 #. Sprite2D.frame_changed
 #: doc/classes/Sprite2D.xml
 msgid "Emitted when the [member frame] changes."
-msgstr "A [member frame] tulajdonság megváltozásakor kerül kibocsátásra."
+msgstr "Akkor bocsátódik ki, amikor a [member frame] tulajdonság értéke megváltozik."
 
 #. Sprite2D.texture_changed
 #: doc/classes/Sprite2D.xml
 msgid "Emitted when the [member texture] changes."
-msgstr "A [member texture] tulajdonság megváltozásakor kerül kibocsátásra."
+msgstr "Akkor bocsátódik ki, amikor a [member texture] tulajdonság értéke megváltozik."
 
 #. TileMapLayer.changed
 #: doc/classes/TileMapLayer.xml
