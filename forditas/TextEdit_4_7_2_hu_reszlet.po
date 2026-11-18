@@ -669,37 +669,37 @@ msgstr "A szövegkurzort a megadott [param line] sorindexre helyezi. A kurzor os
 #. TextEdit.set_gutter_clickable
 #: doc/classes/TextEdit.xml
 msgid "If [code]true[/code], the mouse cursor will change to a pointing hand ([constant Control.CURSOR_POINTING_HAND]) when hovering over the gutter at the given index. See [method is_gutter_clickable] and [method set_line_gutter_clickable]."
-msgstr "Ha az érték [code]true[/code], az egérmutató mutató kézzé ([constant Control.CURSOR_POINTING_HAND]) változik, amikor a megadott indexű oldalsáv fölé kerül. Lásd: [method is_gutter_clickable] és [method set_line_gutter_clickable]."
+msgstr "Ha [code]true[/code], az egérmutató mutató kéz alakúvá ([constant Control.CURSOR_POINTING_HAND]) változik, amikor a megadott indexű oldalsáv fölé viszed. Lásd: [method is_gutter_clickable] és [method set_line_gutter_clickable]."
 
 #. TextEdit.set_gutter_custom_draw
 #: doc/classes/TextEdit.xml
 msgid "Set a custom draw callback for the gutter at the given index. [param draw_callback] must take the following arguments: A line index [int], a gutter index [int], and an area [Rect2]. This callback only works when the gutter type is [constant GUTTER_TYPE_CUSTOM] (see [method set_gutter_type])."
-msgstr "Egyéni kirajzolási visszahívást állít be a megadott indexű oldalsávhoz. A [param draw_callback] a következő argumentumokat fogadja: sorindex [int], oldalsávindex [int] és terület [Rect2]. Ez a visszahívás csak [constant GUTTER_TYPE_CUSTOM] oldalsávtípusnál működik (lásd: [method set_gutter_type])."
+msgstr "A megadott indexű oldalsávhoz egyéni kirajzolási visszahívást rendel. A [param draw_callback] három argumentumot vár: a sor indexét ([int]), az oldalsáv indexét ([int]) és a kirajzolási területet ([Rect2]). A visszahívás csak [constant GUTTER_TYPE_CUSTOM] típusú oldalsávnál működik (lásd: [method set_gutter_type])."
 
 #. TextEdit.set_gutter_draw
 #: doc/classes/TextEdit.xml
 msgid "If [code]true[/code], the gutter at the given index is drawn. The gutter type ([method set_gutter_type]) determines how it is drawn. See [method is_gutter_drawn]."
-msgstr "Ha az érték [code]true[/code], a megadott indexű oldalsáv kirajzolódik. A megjelenés módját az oldalsáv típusa ([method set_gutter_type]) határozza meg. Lásd: [method is_gutter_drawn]."
+msgstr "Ha [code]true[/code], megjeleníti a megadott indexű oldalsávot. A kirajzolás módját a [method set_gutter_type] metódussal beállított típus határozza meg. Lásd még: [method is_gutter_drawn]."
 
 #. TextEdit.set_gutter_name
 #: doc/classes/TextEdit.xml
 msgid "Sets the name of the gutter at the given index."
-msgstr "Beállítja a megadott indexű oldalsáv nevét."
+msgstr "Megadja a kiválasztott indexű oldalsáv nevét."
 
 #. TextEdit.set_gutter_overwritable
 #: doc/classes/TextEdit.xml
 msgid "If [code]true[/code], the line data of the gutter at the given index can be overridden when using [method merge_gutters]. See [method is_gutter_overwritable]."
-msgstr "Ha az érték [code]true[/code], az adott indexű oldalsáv soradatai felülírhatók a [method merge_gutters] használatakor. Lásd: [method is_gutter_overwritable]."
+msgstr "Ha [code]true[/code], a [method merge_gutters] művelet felülírhatja a megadott indexű oldalsáv soronként tárolt adatait. Lásd: [method is_gutter_overwritable]."
 
 #. TextEdit.set_gutter_type
 #: doc/classes/TextEdit.xml
 msgid "Sets the type of gutter at the given index. Gutters can contain icons, text, or custom visuals."
-msgstr "Beállítja a megadott indexű oldalsáv típusát. Az oldalsávok ikonokat, szöveget vagy egyéni grafikus elemeket tartalmazhatnak."
+msgstr "Megadja a kiválasztott indexű oldalsáv típusát. Az oldalsáv ikonokat, szöveget vagy egyéni grafikus elemeket jeleníthet meg."
 
 #. TextEdit.set_gutter_width
 #: doc/classes/TextEdit.xml
 msgid "Set the width of the gutter at the given index."
-msgstr "Beállítja a megadott indexű oldalsáv szélességét."
+msgstr "Megadja a kiválasztott indexű oldalsáv szélességét."
 
 #. TextEdit.set_line
 #: doc/classes/TextEdit.xml
@@ -724,27 +724,27 @@ msgstr "A [param line] sor [param wrap_index] tördelési szakaszát a nézet al
 #. TextEdit.set_line_background_color
 #: doc/classes/TextEdit.xml
 msgid "Sets the custom background color of the given line. If transparent, this color is applied on top of the default background color (See [theme_item background_color]). If set to [code]Color(0, 0, 0, 0)[/code], no additional color is applied."
-msgstr "Beállítja a megadott sor egyéni háttérszínét. Ha a szín áttetsző, az alapértelmezett háttérszínre kerül rá (lásd: [theme_item background_color]). Ha az érték [code]Color(0, 0, 0, 0)[/code], nem alkalmaz további színt."
+msgstr "Egyéni háttérszínt rendel a megadott sorhoz. Áttetsző szín esetén ez az alapértelmezett háttérszín fölé kerül (lásd: [theme_item background_color]). Ha az érték [code]Color(0, 0, 0, 0)[/code], nem alkalmaz további színt."
 
 #. TextEdit.set_line_gutter_clickable
 #: doc/classes/TextEdit.xml
 msgid "If [param clickable] is [code]true[/code], makes the [param gutter] on the given [param line] clickable. This is like [method set_gutter_clickable], but for a single line. If [method is_gutter_clickable] is [code]true[/code], this will not have any effect. See [method is_line_gutter_clickable] and [signal gutter_clicked]."
-msgstr "Ha a [param clickable] értéke [code]true[/code], a megadott [param line] sor [param gutter] oldalsávja kattintható lesz. A [method set_gutter_clickable] metódushoz hasonlóan működik, de csak egyetlen sorra vonatkozik. Ha az [method is_gutter_clickable] értéke [code]true[/code], ez a beállítás nem hat. Lásd: [method is_line_gutter_clickable] és [signal gutter_clicked]."
+msgstr "Ha a [param clickable] értéke [code]true[/code], a [param line] sorban kattinthatóvá teszi a [param gutter] oldalsávot. A [method set_gutter_clickable] metódustól eltérően ez csak egyetlen sorra vonatkozik. Ha a [method is_gutter_clickable] [code]true[/code] értéket ad vissza, a beállításnak nincs hatása. Lásd: [method is_line_gutter_clickable] és [signal gutter_clicked]."
 
 #. TextEdit.set_line_gutter_icon
 #: doc/classes/TextEdit.xml
 msgid "Sets the icon for [param gutter] on [param line] to [param icon]. This only works when the gutter type is [constant GUTTER_TYPE_ICON] (see [method set_gutter_type])."
-msgstr "A [param line] sor [param gutter] oldalsávjának ikonját a [param icon] értékre állítja. Csak [constant GUTTER_TYPE_ICON] típusú oldalsávnál működik (lásd: [method set_gutter_type])."
+msgstr "A megadott [param line] sor [param gutter] oldalsávjában a [param icon] ikont állítja be. Ez csak [constant GUTTER_TYPE_ICON] típusú oldalsávnál működik (lásd: [method set_gutter_type])."
 
 #. TextEdit.set_line_gutter_item_color
 #: doc/classes/TextEdit.xml
 msgid "Sets the color for [param gutter] on [param line] to [param color]."
-msgstr "A [param line] sor [param gutter] oldalsávjának színét a [param color] értékre állítja."
+msgstr "A [param line] sor [param gutter] oldalsávjában megjelenített elem színét a [param color] értékre állítja."
 
 #. TextEdit.set_line_gutter_metadata
 #: doc/classes/TextEdit.xml
 msgid "Sets the metadata for [param gutter] on [param line] to [param metadata]."
-msgstr "A [param line] sor [param gutter] oldalsávjának metaadatát a [param metadata] értékre állítja."
+msgstr "A [param line] sor [param gutter] oldalsávjához tartozó metaadatot a [param metadata] értékre állítja."
 
 #. TextEdit.set_line_gutter_text
 #: doc/classes/TextEdit.xml
