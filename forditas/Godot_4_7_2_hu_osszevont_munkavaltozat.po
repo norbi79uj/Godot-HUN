@@ -10123,13 +10123,13 @@ msgstr "A szövegkurzor villogásának időköze másodpercben."
 #. LineEdit.caret_column
 #: doc/classes/LineEdit.xml
 msgid "The caret's column position inside the [LineEdit]. When set, the text may scroll to accommodate it."
-msgstr "A szövegkurzor oszloppozíciója a [LineEdit] mezőben. Módosításakor a szöveg elgördülhet, hogy a kurzor látható maradjon."
+msgstr "A szövegkurzor oszloppozíciója a [LineEdit] mezőben. Az érték beállításakor a szöveg szükség esetén elgördülhet, hogy a kurzor látható legyen."
 
 
 #. LineEdit.caret_force_displayed
 #: doc/classes/LineEdit.xml
 msgid "If [code]true[/code], the [LineEdit] will always show the caret, even if not editing or focus is lost."
-msgstr "Ha [code]true[/code], a [LineEdit] mindig megjeleníti a szövegkurzort, akkor is, ha nincs szerkesztés alatt, vagy elveszíti a fókuszt."
+msgstr "Ha [code]true[/code], a [LineEdit] akkor is megjeleníti a szövegkurzort, ha nincs szerkesztési módban, vagy már nincs fókuszban."
 
 
 #. LineEdit.caret_mid_grapheme
@@ -10141,7 +10141,7 @@ msgstr "Lehetővé teszi, hogy a kurzor az összetett karakterek egyes összetev
 #. LineEdit.clear_button_enabled
 #: doc/classes/LineEdit.xml
 msgid "If [code]true[/code], the [LineEdit] will show a clear button if [member text] is not empty, which can be used to clear the text quickly."
-msgstr "Ha [code]true[/code], a [LineEdit] törlőgombot jelenít meg, ha a [member text] nem üres. Ezzel gyorsan törölhető a teljes szöveg."
+msgstr "Ha [code]true[/code] és a [member text] nem üres, a [LineEdit] egy törlőgombot jelenít meg, amellyel gyorsan törölhető a teljes szöveg."
 
 
 #. LineEdit.context_menu_enabled
@@ -10159,7 +10159,7 @@ msgstr "Ha az érték [code]true[/code], a fókusz elvesztésekor megszűnik a s
 #. LineEdit.drag_and_drop_selection_enabled
 #: doc/classes/LineEdit.xml
 msgid "If [code]true[/code], allow drag and drop of selected text."
-msgstr "Ha [code]true[/code], lehetővé teszi a kijelölt szöveg fogd és vidd módszerrel történő áthelyezését."
+msgstr "Ha [code]true[/code], a kijelölt szöveg fogd és vidd módszerrel áthelyezhető."
 
 
 #. LineEdit.draw_control_chars
@@ -10177,19 +10177,19 @@ msgstr "Ha az érték [code]false[/code], a meglévő szöveg nem módosítható
 #. LineEdit.emoji_menu_enabled
 #: doc/classes/LineEdit.xml
 msgid "If [code]true[/code], \"Emoji and Symbols\" menu is enabled."
-msgstr "Ha az érték [code]true[/code], engedélyezett az „Emojik és szimbólumok” menü."
+msgstr "Ha [code]true[/code], engedélyezi az „Emojik és szimbólumok” menüt."
 
 
 #. LineEdit.expand_to_text_length
 #: doc/classes/LineEdit.xml
 msgid "If [code]true[/code], the [LineEdit] width will increase to stay longer than the [member text]. It will [b]not[/b] compress if the [member text] is shortened."
-msgstr "Ha [code]true[/code], a [LineEdit] szélessége növekszik, hogy meghaladja a [member text] hosszát. A [member text] rövidülésekor azonban [b]nem[/b] csökken a szélessége."
+msgstr "Ha [code]true[/code], a [LineEdit] szélessége a [member text] hosszához igazodva növekszik, de a [member text] rövidülésekor [b]nem[/b] lesz keskenyebb."
 
 
 #. LineEdit.flat
 #: doc/classes/LineEdit.xml
 msgid "If [code]true[/code], the [LineEdit] doesn't display decoration."
-msgstr "Ha [code]true[/code], a [LineEdit] nem jelenít meg díszítő keretet."
+msgstr "Ha [code]true[/code], a [LineEdit] nem jelenít meg díszítőelemeket."
 
 
 #. LineEdit.icon_expand_mode
@@ -10213,19 +10213,19 @@ msgstr "A [LineEdit] mezőbe beírható karakterek maximális száma. Ha [code]0
 #. LineEdit.middle_mouse_paste_enabled
 #: doc/classes/LineEdit.xml
 msgid "If [code]false[/code], using middle mouse button to paste clipboard will be disabled.\n[b]Note:[/b] This method is only implemented on Linux."
-msgstr "Ha az érték [code]false[/code], a középső egérgombbal történő beillesztés le van tiltva.\n[b]Megjegyzés:[/b] Ez a funkció csak Linuxon van megvalósítva."
+msgstr "Ha [code]false[/code], letiltja a vágólap tartalmának középső egérgombbal történő beillesztését.\n[b]Megjegyzés:[/b] Ez a funkció csak Linuxon érhető el."
 
 
 #. LineEdit.placeholder_text
 #: doc/classes/LineEdit.xml
 msgid "Text shown when the [LineEdit] is empty. It is [b]not[/b] the [LineEdit]'s default value (see [member text])."
-msgstr "Akkor megjelenő szöveg, amikor a [LineEdit] üres. Ez [b]nem[/b] a [LineEdit] alapértelmezett értéke (lásd: [member text])."
+msgstr "A [LineEdit] üres állapotában megjelenő helyőrző szöveg. Ez [b]nem[/b] a [LineEdit] alapértelmezett értéke (lásd: [member text])."
 
 
 #. LineEdit.right_icon
 #: doc/classes/LineEdit.xml
 msgid "Sets the icon that will appear in the right end of the [LineEdit] if there's no [member text], or always, if [member clear_button_enabled] is set to [code]false[/code]."
-msgstr "Beállítja a [LineEdit] jobb szélén megjelenő ikont, amikor nincs [member text] szöveg, vagy mindig megjeleníti, ha a [member clear_button_enabled] értéke [code]false[/code]."
+msgstr "Megadja a [LineEdit] jobb szélén megjelenő ikont. Az ikon akkor látható, ha a [member text] üres, illetve mindig, ha a [member clear_button_enabled] értéke [code]false[/code]."
 
 
 #. LineEdit.right_icon_scale
@@ -10237,7 +10237,7 @@ msgstr "Az ikon méretaránya, ha a [member icon_expand_mode] értéke [constant
 #. LineEdit.secret
 #: doc/classes/LineEdit.xml
 msgid "If [code]true[/code], every character is replaced with the secret character (see [member secret_character])."
-msgstr "Ha [code]true[/code], minden karaktert a titkos karakterrel helyettesít (lásd: [member secret_character])."
+msgstr "Ha [code]true[/code], minden beírt karakter helyett a [member secret_character] tulajdonságban megadott helyettesítő karaktert jeleníti meg."
 
 
 #. LineEdit.secret_character
@@ -10297,7 +10297,7 @@ msgstr "Akkor bocsátódik ki, amikor a [LineEdit] belép a szerkesztési módba
 #. LineEdit.text_change_rejected
 #: doc/classes/LineEdit.xml
 msgid "Emitted when appending text that overflows the [member max_length]. The appended text is truncated to fit [member max_length], and the part that couldn't fit is passed as the [param rejected_substring] argument."
-msgstr "Akkor bocsátódik ki, amikor a hozzáfűzött szöveg túllépné a [member max_length] korlátot. A hozzáadott szöveget a rendszer a [member max_length] korláthoz igazodva levágja, a kimaradó részt pedig a [param rejected_substring] argumentumban adja át."
+msgstr "Akkor bocsátódik ki, ha a hozzáfűzött szöveg meghaladná a [member max_length] korlátját. A rendszer a szöveget a [member max_length] által megengedett hosszra rövidíti, és a kimaradó részt a [param rejected_substring] argumentumban adja át."
 
 
 #. LineEdit.text_changed
