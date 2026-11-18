@@ -9068,13 +9068,13 @@ msgstr "Az egymást követő menüpontok közötti függőleges térköz."
 #. PopupMenu.font
 #: doc/classes/PopupMenu.xml
 msgid "[Font] used for the menu items."
-msgstr "A menüpontokhoz használt [Font] betűkészlet."
+msgstr "A menüpontok szövegéhez használt [Font]."
 
 
 #. PopupMenu.font_separator
 #: doc/classes/PopupMenu.xml
 msgid "[Font] used for the labeled separator."
-msgstr "A feliratos elválasztóhoz használt [Font] betűkészlet."
+msgstr "A feliratos elválasztó szövegéhez használt [Font]."
 
 
 #. PopupMenu.font_separator_size
@@ -9128,7 +9128,7 @@ msgstr "A letiltott, be nem jelölt választógombos menüpontok [Texture2D] iko
 #. PopupMenu.search
 #: doc/classes/PopupMenu.xml
 msgid "[Texture2D] icon for the search bar's search icon."
-msgstr "A keresősáv keresőikonjának [Texture2D] erőforrása."
+msgstr "A keresősávban megjelenő keresőikon [Texture2D] erőforrása."
 
 
 #. PopupMenu.submenu
@@ -9164,19 +9164,19 @@ msgstr "Az egérmutató alatt lévő [PopupMenu] menüpontnál megjelenített [S
 #. PopupMenu.labeled_separator_left
 #: doc/classes/PopupMenu.xml
 msgid "[StyleBox] for the left side of labeled separator. See [method add_separator]."
-msgstr "A feliratos elválasztó bal oldalának [StyleBox] stílusa. Lásd a [method add_separator] metódust."
+msgstr "A feliratos elválasztó bal oldali szakaszához használt [StyleBox]. Lásd a [method add_separator] metódust."
 
 
 #. PopupMenu.labeled_separator_right
 #: doc/classes/PopupMenu.xml
 msgid "[StyleBox] for the right side of labeled separator. See [method add_separator]."
-msgstr "A feliratos elválasztó jobb oldalának [StyleBox] stílusa. Lásd a [method add_separator] metódust."
+msgstr "A feliratos elválasztó jobb oldali szakaszához használt [StyleBox]. Lásd a [method add_separator] metódust."
 
 
 #. PopupMenu.panel
 #: doc/classes/PopupMenu.xml
 msgid "[StyleBox] for the background panel."
-msgstr "A háttérpanel [StyleBox] stílusa."
+msgstr "A háttérpanel megjelenítéséhez használt [StyleBox]."
 
 
 #. PopupMenu.separator
@@ -9193,19 +9193,19 @@ msgstr "Számok bevitelére szolgáló mező."
 #. SpinBox.description
 #: doc/classes/SpinBox.xml
 msgid "[SpinBox] is a numerical input text field. It allows entering integers and floating-point numbers. The [SpinBox] also has up and down buttons that can be clicked to increase or decrease the value. The value can also be changed by dragging the mouse up or down over the [SpinBox]'s arrows.\nAdditionally, mathematical expressions can be entered. These are evaluated when the user presses [kbd]Enter[/kbd] while editing the [SpinBox]'s text field. This uses the [Expression] class to parse and evaluate the expression. The result of the expression is then set as the value of the [SpinBox]. Some examples of valid expressions are [code]5 + 2 * 3[/code], [code]pow(2, 4)[/code], and [code]PI + sin(0.5)[/code]. Expressions are case-sensitive.\n[b]Example:[/b] Create a [SpinBox], disable its context menu and set its text alignment to right.\n[codeblocks]\n[gdscript]\nvar spin_box = SpinBox.new()\nadd_child(spin_box)\nvar line_edit = spin_box.get_line_edit()\nline_edit.context_menu_enabled = false\nspin_box.horizontal_alignment = LineEdit.HORIZONTAL_ALIGNMENT_RIGHT\n[/gdscript]\n[csharp]\nvar spinBox = new SpinBox();\nAddChild(spinBox);\nvar lineEdit = spinBox.GetLineEdit();\nlineEdit.ContextMenuEnabled = false;\nspinBox.AlignHorizontal = LineEdit.HorizontalAlignEnum.Right;\n[/csharp]\n[/codeblocks]\nSee [Range] class for more options over the [SpinBox].\n[b]Note:[/b] With the [SpinBox]'s context menu disabled, you can right-click the bottom half of the spinbox to set the value to its minimum, while right-clicking the top half sets the value to its maximum.\n[b]Note:[/b] [SpinBox] relies on an underlying [LineEdit] node. To theme a [SpinBox]'s background, add theme items for [LineEdit] and customize them. The [LineEdit] has the [code]SpinBoxInnerLineEdit[/code] theme variation, so that you can give it a distinct appearance from regular [LineEdit]s.\n[b]Note:[/b] If you want to implement drag and drop for the underlying [LineEdit], you can use [method Control.set_drag_forwarding] on the node returned by [method get_line_edit]."
-msgstr "A [SpinBox] számértékek bevitelére szolgáló szövegmező. Egész és lebegőpontos számokat is elfogad. A [SpinBox] fel- és lefelé mutató gombjai kattintással növelik vagy csökkentik az értéket. Az érték a [SpinBox] nyilai fölött felfelé vagy lefelé történő egérhúzással is módosítható.\nA [SpinBox] matematikai kifejezéseket is elfogad. Ezeket akkor értékeli ki, amikor a felhasználó a [SpinBox] szövegmezőjének szerkesztése közben lenyomja az [kbd]Enter[/kbd] billentyűt. Az értelmezést és kiértékelést az [Expression] osztály végzi; az eredmény a [SpinBox] új értéke lesz. Érvényes példa a [code]5 + 2 * 3[/code], a [code]pow(2, 4)[/code] és a [code]PI + sin(0.5)[/code]. A kifejezések megkülönböztetik a kis- és nagybetűket.\n[b]Példa:[/b] Hozz létre egy [SpinBox] elemet, tiltsd le a helyi menüjét, és igazítsd jobbra a szövegét.\n[codeblocks]\n[gdscript]\nvar spin_box = SpinBox.new()\nadd_child(spin_box)\nvar line_edit = spin_box.get_line_edit()\nline_edit.context_menu_enabled = false\nspin_box.horizontal_alignment = LineEdit.HORIZONTAL_ALIGNMENT_RIGHT\n[/gdscript]\n[csharp]\nvar spinBox = new SpinBox();\nAddChild(spinBox);\nvar lineEdit = spinBox.GetLineEdit();\nlineEdit.ContextMenuEnabled = false;\nspinBox.AlignHorizontal = LineEdit.HorizontalAlignEnum.Right;\n[/csharp]\n[/codeblocks]\nTovábbi beállításokért lásd a [Range] osztályt.\n[b]Megjegyzés:[/b] Ha a [SpinBox] helyi menüje le van tiltva, a mező alsó felére jobb egérgombbal kattintva az érték a minimumra, a felső felére kattintva a maximumra állítható.\n[b]Megjegyzés:[/b] A [SpinBox] egy belső [LineEdit] csomópontot használ. A [SpinBox] hátterének témázásához adj hozzá [LineEdit] témaelemeket, és módosítsd azokat. A [LineEdit] [code]SpinBoxInnerLineEdit[/code] témaváltozattal rendelkezik, így a hagyományos [LineEdit] elemekétől eltérő megjelenést adhatsz neki.\n[b]Megjegyzés:[/b] Ha a belső [LineEdit] elemnél fogd és vidd műveletet szeretnél megvalósítani, a [method get_line_edit] által visszaadott csomóponton használd a [method Control.set_drag_forwarding] metódust."
+msgstr "A [SpinBox] számértékek bevitelére szolgáló szövegmező. Egész és lebegőpontos számokat is elfogad. A [SpinBox] fel- és lefelé mutató gombjai kattintással növelik vagy csökkentik az értéket. Az érték a [SpinBox] nyilai fölött felfelé vagy lefelé történő egérhúzással is módosítható.\nA [SpinBox] matematikai kifejezéseket is elfogad. Ezeket akkor értékeli ki, amikor a felhasználó a [SpinBox] szövegmezőjének szerkesztése közben lenyomja az [kbd]Enter[/kbd] billentyűt. Az értelmezést és kiértékelést az [Expression] osztály végzi; az eredmény a [SpinBox] új értéke lesz. Érvényes példa a [code]5 + 2 * 3[/code], a [code]pow(2, 4)[/code] és a [code]PI + sin(0.5)[/code]. A kifejezésekben számít a kis- és nagybetűk közötti különbség.\n[b]Példa:[/b] Hozz létre egy [SpinBox] elemet, tiltsd le a helyi menüjét, és igazítsd jobbra a szövegét.\n[codeblocks]\n[gdscript]\nvar spin_box = SpinBox.new()\nadd_child(spin_box)\nvar line_edit = spin_box.get_line_edit()\nline_edit.context_menu_enabled = false\nspin_box.horizontal_alignment = LineEdit.HORIZONTAL_ALIGNMENT_RIGHT\n[/gdscript]\n[csharp]\nvar spinBox = new SpinBox();\nAddChild(spinBox);\nvar lineEdit = spinBox.GetLineEdit();\nlineEdit.ContextMenuEnabled = false;\nspinBox.AlignHorizontal = LineEdit.HorizontalAlignEnum.Right;\n[/csharp]\n[/codeblocks]\nTovábbi beállításokért lásd a [Range] osztályt.\n[b]Megjegyzés:[/b] Ha a [SpinBox] helyi menüje le van tiltva, a mező alsó felére jobb egérgombbal kattintva az érték a minimumra, a felső felére kattintva a maximumra állítható.\n[b]Megjegyzés:[/b] A [SpinBox] egy belső [LineEdit] csomópontot használ. A [SpinBox] hátterének testreszabásához adj hozzá [LineEdit] témaelemeket, és állítsd be őket. A [LineEdit] [code]SpinBoxInnerLineEdit[/code] témaváltozattal rendelkezik, így a hagyományos [LineEdit] elemekétől eltérő megjelenést adhatsz neki.\n[b]Megjegyzés:[/b] Ha a belső [LineEdit] elemnél fogd és vidd műveletet szeretnél megvalósítani, a [method get_line_edit] által visszaadott csomóponton használd a [method Control.set_drag_forwarding] metódust."
 
 
 #. SpinBox.apply
 #: doc/classes/SpinBox.xml
 msgid "Applies the current value of this [SpinBox]. This is equivalent to pressing [kbd]Enter[/kbd] while editing the [LineEdit] used by the [SpinBox]. This will cause [signal LineEdit.text_submitted] to be emitted and its currently contained expression to be evaluated."
-msgstr "Alkalmazza a [SpinBox] aktuális értékét. Ez azzal egyenértékű, mintha a [SpinBox] által használt [LineEdit] szerkesztése közben lenyomnád az [kbd]Enter[/kbd] billentyűt. Ekkor kibocsátódik a [signal LineEdit.text_submitted] jel, és a mezőben lévő kifejezés kiértékelődik."
+msgstr "Alkalmazza a [SpinBox] aktuális értékét. Ugyanolyan hatása van, mintha a [SpinBox] által használt [LineEdit] szerkesztése közben lenyomnád az [kbd]Enter[/kbd] billentyűt. Ekkor kibocsátódik a [signal LineEdit.text_submitted] jel, és a rendszer kiértékeli a mezőben szereplő kifejezést."
 
 
 #. SpinBox.get_line_edit
 #: doc/classes/SpinBox.xml
 msgid "Returns the [LineEdit] instance from this [SpinBox]. You can use it to access properties and methods of [LineEdit].\n[b]Warning:[/b] This is a required internal node, removing and freeing it may cause a crash. If you wish to hide it or any of its children, use their [member CanvasItem.visible] property."
-msgstr "Visszaadja az ehhez a [SpinBox] elemhez tartozó [LineEdit] példányt. Segítségével elérheted a [LineEdit] tulajdonságait és metódusait.\n[b]Figyelmeztetés:[/b] Ez egy kötelező belső csomópont; eltávolítása és felszabadítása összeomlást okozhat. Ha ezt vagy bármely gyermekét el szeretnéd rejteni, használd a [member CanvasItem.visible] tulajdonságot."
+msgstr "Visszaadja az ehhez a [SpinBox] elemhez tartozó [LineEdit] példányt. Segítségével elérheted a [LineEdit] tulajdonságait és metódusait.\n[b]Figyelmeztetés:[/b] Ez egy nélkülözhetetlen belső csomópont, amelynek eltávolítása és felszabadítása összeomlást okozhat. Ha ezt vagy bármely gyermekét el szeretnéd rejteni, használd a [member CanvasItem.visible] tulajdonságot."
 
 
 #. SpinBox.alignment
@@ -9223,7 +9223,7 @@ msgstr "Ha [code]true[/code], a nyílgombok használatakor az értéket a [membe
 #. SpinBox.custom_arrow_step
 #: doc/classes/SpinBox.xml
 msgid "If not [code]0[/code], sets the step when interacting with the arrow buttons of the [SpinBox].\n[b]Note:[/b] [member Range.value] will still be rounded to a multiple of [member Range.step]."
-msgstr "Ha nem [code]0[/code], meghatározza, mekkora lépéssel változzon az érték a [SpinBox] nyílgombjainak használatakor.\n[b]Megjegyzés:[/b] A [member Range.value] továbbra is a [member Range.step] többszörösére kerekítődik."
+msgstr "Ha az érték nem [code]0[/code], meghatározza a változtatás lépésközét a [SpinBox] nyílgombjainak használatakor.\n[b]Megjegyzés:[/b] A [member Range.value] továbbra is a [member Range.step] többszörösére kerekítődik."
 
 
 #. SpinBox.editable
