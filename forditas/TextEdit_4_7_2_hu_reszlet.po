@@ -844,7 +844,7 @@ msgstr "Ha az érték [code]true[/code], a szövegkurzor akkor is látható, ha 
 #. TextEdit.caret_mid_grapheme
 #: doc/classes/TextEdit.xml
 msgid "Allow moving caret, selecting and removing the individual composite character components.\n[b]Note:[/b] [kbd]Backspace[/kbd] is always removing individual composite character components."
-msgstr "Lehetővé teszi, hogy a kurzor az összetett karakterek egyes összetevői közé mozogjon, és azokat külön kijelölhesd vagy törölhesd.\n[b]Megjegyzés:[/b] A [kbd]Backspace[/kbd] mindig az összetett karakterek egyes összetevőit törli."
+msgstr "Lehetővé teszi a szövegkurzor mozgatását az összetett karakterek egyes összetevői között, valamint azok külön kijelölését és törlését.\n[b]Megjegyzés:[/b] A [kbd]Backspace[/kbd] mindig az összetett karakterek egyes összetevőit törli."
 
 #. TextEdit.caret_move_on_right_click
 #: doc/classes/TextEdit.xml
@@ -874,7 +874,7 @@ msgstr "Azokat a karaktereket adja meg, amelyek szóelválasztóként működnek
 #. TextEdit.deselect_on_focus_loss_enabled
 #: doc/classes/TextEdit.xml
 msgid "If [code]true[/code], the selected text will be deselected when focus is lost."
-msgstr "Ha az érték [code]true[/code], a fókusz elvesztésekor megszűnik a szöveg kijelölése."
+msgstr "Ha [code]true[/code], a fókusz elvesztésekor megszűnik a szöveg kijelölése."
 
 #. TextEdit.drag_and_drop_selection_enabled
 #: doc/classes/TextEdit.xml
@@ -884,7 +884,7 @@ msgstr "Ha az érték [code]true[/code], a kijelölt szöveg húzással áthelye
 #. TextEdit.draw_control_chars
 #: doc/classes/TextEdit.xml
 msgid "If [code]true[/code], control characters are displayed."
-msgstr "Ha az érték [code]true[/code], a vezérlőkarakterek megjelennek."
+msgstr "Ha [code]true[/code], a vezérlőkarakterek láthatóvá válnak."
 
 #. TextEdit.draw_spaces
 #: doc/classes/TextEdit.xml
@@ -994,7 +994,7 @@ msgstr "Ha az érték [code]true[/code], a szöveg kijelölhető.\nHa az érték
 #. TextEdit.shortcut_keys_enabled
 #: doc/classes/TextEdit.xml
 msgid "If [code]true[/code], shortcut keys for context menu items are enabled, even if the context menu is disabled."
-msgstr "Ha az érték [code]true[/code], a helyi menü parancsainak gyorsbillentyűi akkor is használhatók, ha maga a helyi menü le van tiltva."
+msgstr "Ha [code]true[/code], a helyi menü parancsaihoz tartozó gyorsbillentyűk akkor is működnek, ha a helyi menü le van tiltva."
 
 #. TextEdit.structured_text_bidi_override
 #: doc/classes/TextEdit.xml
@@ -1039,12 +1039,12 @@ msgstr "Ha az érték [code]false[/code], a [kbd]Ctrl + Left[/kbd] és [kbd]Ctrl
 #. TextEdit.virtual_keyboard_enabled
 #: doc/classes/TextEdit.xml
 msgid "If [code]true[/code], the native virtual keyboard is enabled on platforms that support it."
-msgstr "Ha az érték [code]true[/code], az ezt támogató platformokon engedélyezi a rendszer virtuális billentyűzetét."
+msgstr "Ha [code]true[/code], a támogatott platformokon engedélyezi a rendszer saját virtuális billentyűzetét."
 
 #. TextEdit.virtual_keyboard_show_on_focus
 #: doc/classes/TextEdit.xml
 msgid "If [code]true[/code], the native virtual keyboard is shown on focus events on platforms that support it."
-msgstr "Ha az érték [code]true[/code], az ezt támogató platformokon a vezérlő fókuszba kerülésekor megjelenik a rendszer virtuális billentyűzete."
+msgstr "Ha [code]true[/code], a támogatott platformokon a fókusz megszerzésekor megjelenik a rendszer virtuális billentyűzete."
 
 #. TextEdit.wrap_mode
 #: doc/classes/TextEdit.xml
