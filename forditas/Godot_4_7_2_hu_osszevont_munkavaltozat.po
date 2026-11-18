@@ -10515,7 +10515,7 @@ msgstr "Minden meglévő szövegkurzor fölé vagy alá újabb kurzort helyez. H
 #. TextEdit.add_gutter
 #: doc/classes/TextEdit.xml
 msgid "Register a new gutter to this [TextEdit]. Use [param at] to have a specific gutter order. A value of [code]-1[/code] appends the gutter to the right."
-msgstr "Új oldalsávot regisztrál ehhez a [TextEdit] vezérlőhöz. Az oldalsáv sorrendjét a [param at] paraméterrel adhatod meg. A [code]-1[/code] érték az oldalsávot a jobb szélre fűzi hozzá."
+msgstr "Új oldalsávot ad a [TextEdit] vezérlőhöz. Az oldalsávok sorrendjét a [param at] paraméterrel állíthatod be. A [code]-1[/code] érték a jobb szélre helyezi az új oldalsávot."
 
 #. TextEdit.add_selection_for_next_occurrence
 #: doc/classes/TextEdit.xml
@@ -10640,7 +10640,7 @@ msgstr "Visszaadja annak a tördelési szakasznak az indexét, amelyben a szerke
 #. TextEdit.get_first_non_whitespace_column
 #: doc/classes/TextEdit.xml
 msgid "Returns the first column containing a non-whitespace character on the given line. If there is only whitespace, returns the number of characters."
-msgstr "Visszaadja a megadott sor első olyan oszlopát, amelyben nem térközjellegű karakter található. Ha a sor csak térközjellegű karaktereket tartalmaz, a karakterek számát adja vissza."
+msgstr "A megadott sor első nem térközjellegű karakterének oszlopát adja vissza. Ha a sor csak térközjellegű karakterekből áll, a karakterek számát adja vissza."
 
 #. TextEdit.get_first_visible_line
 #: doc/classes/TextEdit.xml
@@ -10675,17 +10675,17 @@ msgstr "Visszaadja a [TextEdit] által használt [HScrollBar] vezérlőt."
 #. TextEdit.get_indent_level
 #: doc/classes/TextEdit.xml
 msgid "Returns the indent level of the given line. This is the number of spaces and tabs at the beginning of the line, with the tabs taking the tab size into account (see [method get_tab_size])."
-msgstr "Visszaadja a megadott sor behúzásának mértékét. Ez a sor elején lévő szóközök és tabulátorok összesített szélessége, a tabulátorok méretét is figyelembe véve (lásd: [method get_tab_size])."
+msgstr "A megadott sor behúzásának mértékét adja vissza. A számítás a sor elején lévő szóközöket és tabulátorokat veszi figyelembe, a tabulátorok méretét a [method get_tab_size] határozza meg."
 
 #. TextEdit.get_last_full_visible_line
 #: doc/classes/TextEdit.xml
 msgid "Returns the last visible line. Use [method get_last_full_visible_line_wrap_index] for the wrap index."
-msgstr "Visszaadja az utolsó látható sor számát. A tördelési szakasz indexéhez használd a [method get_last_full_visible_line_wrap_index] metódust."
+msgstr "Az utolsó teljes egészében látható sor számát adja vissza. A hozzá tartozó tördelési szakasz indexét a [method get_last_full_visible_line_wrap_index] metódussal kérdezheted le."
 
 #. TextEdit.get_last_full_visible_line_wrap_index
 #: doc/classes/TextEdit.xml
 msgid "Returns the last visible wrap index of the last visible line."
-msgstr "Visszaadja az utolsó látható sor utolsó látható tördelési szakaszának indexét."
+msgstr "Az utolsó teljes egészében látható sor utolsó látható tördelési szakaszának indexét adja vissza."
 
 #. TextEdit.get_last_unhidden_line
 #: doc/classes/TextEdit.xml
@@ -10735,7 +10735,7 @@ msgstr "Visszaadja a [param line] sor [param gutter] oldalsávjában jelenleg me
 #. TextEdit.get_line_height
 #: doc/classes/TextEdit.xml
 msgid "Returns the maximum value of the line height among all lines.\n[b]Note:[/b] The return value is influenced by [theme_item line_spacing] and [theme_item font_size]. And it will not be less than [code]1[/code]."
-msgstr "Visszaadja az összes sor közül a legnagyobb sormagasságot.\n[b]Megjegyzés:[/b] A visszaadott értéket befolyásolja a [theme_item line_spacing] és a [theme_item font_size], és soha nem kisebb [code]1[/code]-nél."
+msgstr "A sorok között előforduló legnagyobb sormagasságot adja vissza.\n[b]Megjegyzés:[/b] Az értéket a [theme_item line_spacing] és a [theme_item font_size] is befolyásolja, és legalább [code]1[/code]."
 
 #. TextEdit.get_line_ranges_from_carets
 #: doc/classes/TextEdit.xml
@@ -10755,7 +10755,7 @@ msgstr "Visszaadja a sor jelenleg megjelenített szövegét, beleértve az IME-b
 #. TextEdit.get_line_wrap_count
 #: doc/classes/TextEdit.xml
 msgid "Returns the number of times the given line is wrapped."
-msgstr "Visszaadja, hányszor tördelődik a megadott sor."
+msgstr "Visszaadja a megadott sor tördeléseinek számát."
 
 #. TextEdit.get_line_wrap_index_at_column
 #: doc/classes/TextEdit.xml
@@ -10765,12 +10765,12 @@ msgstr "Visszaadja a megadott sor megadott oszlopához tartozó tördelési szak
 #. TextEdit.get_line_wrapped_text
 #: doc/classes/TextEdit.xml
 msgid "Returns an array of [String]s representing each wrapped index."
-msgstr "[String] értékeket tartalmazó tömböt ad vissza, amelynek elemei az egyes tördelési szakaszok szövegei."
+msgstr "A tördelés után létrejövő szövegrészeket adja vissza [String] elemeket tartalmazó tömbként."
 
 #. TextEdit.get_local_mouse_pos
 #: doc/classes/TextEdit.xml
 msgid "Returns the local mouse position adjusted for the text direction."
-msgstr "Visszaadja az egér helyi pozícióját a szövegirány figyelembevételével."
+msgstr "A szöveg írásirányához igazítva adja vissza az egér helyi pozícióját."
 
 #. TextEdit.get_menu
 #: doc/classes/TextEdit.xml
@@ -10780,7 +10780,7 @@ msgstr "Visszaadja a [TextEdit] vezérlő [PopupMenu] helyi menüjét. Alapérte
 #. TextEdit.get_minimap_line_at_pos
 #: doc/classes/TextEdit.xml
 msgid "Returns the equivalent minimap line at [param position]."
-msgstr "Visszaadja a [param position] pozíciónak megfelelő sort a minitérképen."
+msgstr "A [param position] pozícióhoz tartozó minitérképsor számát adja vissza."
 
 #. TextEdit.get_minimap_visible_lines
 #: doc/classes/TextEdit.xml
@@ -10895,12 +10895,12 @@ msgstr "Visszaadja a [TextEdit] tabulátorméretét."
 #. TextEdit.get_total_gutter_width
 #: doc/classes/TextEdit.xml
 msgid "Returns the total width of all gutters and internal padding."
-msgstr "Visszaadja az összes oldalsáv és a belső térközök együttes szélességét."
+msgstr "Visszaadja az oldalsávok szélességének és a belső térközöknek az összegét."
 
 #. TextEdit.get_total_visible_line_count
 #: doc/classes/TextEdit.xml
 msgid "Returns the total number of lines in the text. This includes wrapped lines and excludes folded lines. If [member wrap_mode] is set to [constant LINE_WRAPPING_NONE] and no lines are folded (see [method CodeEdit.is_line_folded]) then this is equivalent to [method get_line_count]. See [method get_visible_line_count_in_range] for a limited range of lines."
-msgstr "Visszaadja a szöveg összes látható sorának számát. A tördelésből létrejövő sorokat beleszámítja, az összecsukott sorokat azonban nem. Ha a [member wrap_mode] értéke [constant LINE_WRAPPING_NONE], és nincs összecsukott sor (lásd: [method CodeEdit.is_line_folded]), az eredmény megegyezik a [method get_line_count] értékével. Meghatározott sortartományhoz lásd: [method get_visible_line_count_in_range]."
+msgstr "Megadja a szöveg látható sorainak teljes számát. A sortördeléssel keletkező sorokat beleszámítja, az összecsukott sorokat nem. Ha a [member wrap_mode] értéke [constant LINE_WRAPPING_NONE], és nincs összecsukott sor (lásd: [method CodeEdit.is_line_folded]), az eredmény megegyezik a [method get_line_count] értékével. Adott sortartomány vizsgálatához lásd: [method get_visible_line_count_in_range]."
 
 #. TextEdit.get_v_scroll_bar
 #: doc/classes/TextEdit.xml
