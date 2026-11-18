@@ -8592,13 +8592,13 @@ msgstr "Visszaadja a [param index] indexű elem ikonját."
 #. PopupMenu.get_item_icon_max_width
 #: doc/classes/PopupMenu.xml
 msgid "Returns the maximum allowed width of the icon for the item at the given [param index]."
-msgstr "Visszaadja a [param index] indexű elem ikonjának maximálisan megengedett szélességét."
+msgstr "Visszaadja a [param index] indexű elem ikonjának legnagyobb megengedett szélességét."
 
 
 #. PopupMenu.get_item_icon_modulate
 #: doc/classes/PopupMenu.xml
 msgid "Returns a [Color] modulating the item's icon at the given [param index]."
-msgstr "Visszaadja a [param index] indexű elem ikonjának színét módosító [Color] értéket."
+msgstr "Visszaadja a [param index] indexű elem ikonjának színezéséhez használt [Color] értéket."
 
 
 #. PopupMenu.get_item_id
@@ -8616,13 +8616,13 @@ msgstr "Visszaadja a [param index] indexű elem vízszintes eltolását."
 #. PopupMenu.get_item_index
 #: doc/classes/PopupMenu.xml
 msgid "Returns the index of the item containing the specified [param id]. The index is automatically assigned to each item by the engine when added and represents the order items will be displayed."
-msgstr "Visszaadja a [param id] azonosítójú elem indexét. Az indexet a motor automatikusan adja az elemekhez hozzáadáskor, és az elemek megjelenítési sorrendjét jelöli."
+msgstr "Visszaadja a [param id] azonosítójú elem indexét. A motor az elem hozzáadásakor automatikusan hozzárendeli az indexet, amely a megjelenítési sorrendben elfoglalt helyét jelöli."
 
 
 #. PopupMenu.get_item_metadata
 #: doc/classes/PopupMenu.xml
 msgid "Returns the metadata of the specified item, which might be of any type. You can set it with [method set_item_metadata], which provides a simple way of assigning context data to items."
-msgstr "Visszaadja a megadott elem tetszőleges típusú metaadatát. A metaadat a [method set_item_metadata] metódussal állítható be, így egyszerűen társíthatsz környezeti adatokat egy elemhez."
+msgstr "Visszaadja a megadott elem tetszőleges típusú metaadatát. A metaadat a [method set_item_metadata] metódussal állítható be, így egyszerűen társíthatsz az elemhez kapcsolódó kiegészítő adatokat."
 
 
 #. PopupMenu.get_item_multistate
@@ -8652,7 +8652,7 @@ msgstr "Visszaadja a [param index] indexű elem almenüjének nevét. Almenü l�
 #. PopupMenu.get_item_submenu_node
 #: doc/classes/PopupMenu.xml
 msgid "Returns the submenu of the item at the given [param index], or [code]null[/code] if no submenu was added. See [method add_submenu_node_item] for more info on how to add a submenu."
-msgstr "Visszaadja a [param index] indexű elem almenüjét, vagy [code]null[/code] értéket, ha nincs almenü hozzáadva. Az almenü létrehozásáról lásd a [method add_submenu_node_item] metódust."
+msgstr "Visszaadja a [param index] indexű elem almenüjét, vagy [code]null[/code] értéket, ha az elemhez nem adtak hozzá almenüt. Az almenü létrehozásáról lásd a [method add_submenu_node_item] metódust."
 
 
 #. PopupMenu.get_item_text
@@ -8664,7 +8664,7 @@ msgstr "Visszaadja a [param index] indexű elem szövegét."
 #. PopupMenu.get_item_tooltip
 #: doc/classes/PopupMenu.xml
 msgid "Returns the tooltip associated with the item at the given [param index]."
-msgstr "Visszaadja a [param index] indexű elemhez társított eszköztippet."
+msgstr "Visszaadja a [param index] indexű elemhez tartozó súgóbuborék szövegét."
 
 #. PopupMenu.is_item_checkable
 #: doc/classes/PopupMenu.xml
@@ -8681,13 +8681,13 @@ msgstr "[code]true[/code] értéket ad vissza, ha a [param index] indexű elem b
 #. PopupMenu.is_item_disabled
 #: doc/classes/PopupMenu.xml
 msgid "Returns [code]true[/code] if the item at the given [param index] is disabled. When it is disabled it can't be selected, or its action invoked.\nSee [method set_item_disabled] for more info on how to disable an item."
-msgstr "[code]true[/code] értéket ad vissza, ha a [param index] indexű elem le van tiltva. A letiltott elem nem jelölhető ki, és a művelete sem hívható meg.\nAz elem letiltásáról lásd a [method set_item_disabled] metódust."
+msgstr "[code]true[/code] értéket ad vissza, ha a [param index] indexű elem le van tiltva. A letiltott elem nem jelölhető ki, és a hozzá tartozó művelet sem indítható el.\nAz elem letiltásáról lásd a [method set_item_disabled] metódust."
 
 
 #. PopupMenu.is_item_radio_checkable
 #: doc/classes/PopupMenu.xml
 msgid "Returns [code]true[/code] if the item at the given [param index] has radio button-style checkability.\n[b]Note:[/b] This is purely cosmetic; you must add the logic for checking/unchecking items in radio groups."
-msgstr "[code]true[/code] értéket ad vissza, ha a [param index] indexű elem választógombként jelölhető.\n[b]Megjegyzés:[/b] Ez kizárólag megjelenési beállítás: a választógombok csoportjában történő be- és kikapcsolás logikáját külön kell megírni."
+msgstr "[code]true[/code] értéket ad vissza, ha a [param index] indexű elem választógombként jelölhető.\n[b]Megjegyzés:[/b] Ez kizárólag megjelenési beállítás: a választógombcsoporton belüli kijelölés és kijelölésmegszüntetés logikáját külön kell megírni."
 
 
 #. PopupMenu.is_item_separator
@@ -8717,13 +8717,13 @@ msgstr "[code]true[/code] értéket ad vissza, ha a menü egy speciális rendsze
 #. PopupMenu.remove_item
 #: doc/classes/PopupMenu.xml
 msgid "Removes the item at the given [param index] from the menu.\n[b]Note:[/b] The indices of items after the removed item will be shifted by one."
-msgstr "Eltávolítja a [param index] indexű elemet a menüből.\n[b]Megjegyzés:[/b] Az eltávolított elem utáni elemek indexei eggyel eltolódnak."
+msgstr "Eltávolítja a [param index] indexű elemet a menüből.\n[b]Megjegyzés:[/b] Az eltávolított elem utáni elemek indexei eggyel csökkennek."
 
 
 #. PopupMenu.scroll_to_item
 #: doc/classes/PopupMenu.xml
 msgid "Moves the scroll view to make the item at the given [param index] visible."
-msgstr "A görgetett nézetet úgy mozgatja, hogy a [param index] indexű elem láthatóvá váljon."
+msgstr "Addig görgeti a nézetet, amíg a [param index] indexű elem láthatóvá nem válik."
 
 
 #. PopupMenu.set_focused_item
@@ -8741,7 +8741,7 @@ msgstr "Beállítja a [param index] indexű elem billentyűparancsát. Ez a men�
 #. PopupMenu.set_item_as_checkable
 #: doc/classes/PopupMenu.xml
 msgid "Sets whether the item at the given [param index] has a checkbox. If [code]false[/code], sets the type of the item to plain text.\n[b]Note:[/b] Checkable items just display a checkmark, but don't have any built-in checking behavior and must be checked/unchecked manually."
-msgstr "Beállítja, hogy a [param index] indexű elemnek legyen-e jelölőnégyzete. Ha az érték [code]false[/code], a menüpont típusa egyszerű szöveggé változik.\n[b]Megjegyzés:[/b] A bejelölhető elemek csak pipát jelenítenek meg, de automatikus be- és kikapcsolási viselkedésük nincs."
+msgstr "Beállítja, hogy a [param index] indexű elemnek legyen-e jelölőnégyzete. Ha az érték [code]false[/code], a menüpont típusa egyszerű szöveggé változik.\n[b]Megjegyzés:[/b] A bejelölhető elemek csak pipát jelenítenek meg, de a jelölési állapotuk nem változik automatikusan; azt külön kell vezérelni."
 
 
 #. PopupMenu.set_item_as_radio_checkable
