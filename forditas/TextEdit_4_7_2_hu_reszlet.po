@@ -44,12 +44,12 @@ msgstr "Ezt a metódust felülírva megadhatod, mi történjen, amikor a felhasz
 #. TextEdit.add_caret
 #: doc/classes/TextEdit.xml
 msgid "Adds a new caret at the given location. Returns the index of the new caret, or [code]-1[/code] if the location is invalid."
-msgstr "Új szövegkurzort ad hozzá a megadott helyen. Visszaadja az új kurzor indexét, vagy [code]-1[/code] értéket, ha a hely érvénytelen."
+msgstr "A megadott helyre új szövegkurzort helyez. Az új kurzor indexét adja vissza, érvénytelen hely esetén pedig [code]-1[/code] értéket."
 
 #. TextEdit.add_caret_at_carets
 #: doc/classes/TextEdit.xml
 msgid "Adds an additional caret above or below every caret. If [param below] is [code]true[/code] the new caret will be added below and above otherwise."
-msgstr "Minden meglévő szövegkurzor fölé vagy alá újabb kurzort helyez. Ha a [param below] értéke [code]true[/code], az új kurzor alulra, egyébként felülre kerül."
+msgstr "Minden meglévő szövegkurzor fölé vagy alá egy további kurzort ad. Ha a [param below] értéke [code]true[/code], az új kurzor az eredeti alá, egyébként fölé kerül."
 
 #. TextEdit.add_gutter
 #: doc/classes/TextEdit.xml
@@ -154,32 +154,32 @@ msgstr "Lezárja a [method begin_multicaret_edit] metódussal indított, több s
 #. TextEdit.get_caret_column
 #: doc/classes/TextEdit.xml
 msgid "Returns the column the editing caret is at."
-msgstr "Visszaadja azt az oszlopot, amelyben a szerkesztőkurzor található."
+msgstr "Visszaadja a szerkesztéshez használt szövegkurzor aktuális oszlopindexét."
 
 #. TextEdit.get_caret_count
 #: doc/classes/TextEdit.xml
 msgid "Returns the number of carets in this [TextEdit]."
-msgstr "Visszaadja a [TextEdit] vezérlőben lévő szövegkurzorok számát."
+msgstr "Visszaadja a [TextEdit] szövegkurzorainak számát."
 
 #. TextEdit.get_caret_draw_pos
 #: doc/classes/TextEdit.xml
 msgid "Returns the caret pixel draw position."
-msgstr "Visszaadja a szövegkurzor kirajzolási helyét képpontokban."
+msgstr "Visszaadja a szövegkurzor kirajzolási pozícióját képpontban."
 
 #. TextEdit.get_caret_index_edit_order
 #: doc/classes/TextEdit.xml
 msgid "Returns a list of caret indexes in their edit order, this done from bottom to top. Edit order refers to the way actions such as [method insert_text_at_caret] are applied."
-msgstr "Visszaadja a szövegkurzorok indexeit a szerkesztési sorrendjükben, alulról felfelé haladva. A szerkesztési sorrend azt határozza meg, milyen sorrendben hajtódnak végre az olyan műveletek, mint a [method insert_text_at_caret]."
+msgstr "A szövegkurzorok indexeinek listáját adja vissza abban a sorrendben, amelyben a szerkesztési műveletek végrehajtódnak: alulról felfelé. Ez a sorrend határozza meg többek között a [method insert_text_at_caret] végrehajtását."
 
 #. TextEdit.get_caret_line
 #: doc/classes/TextEdit.xml
 msgid "Returns the line the editing caret is on."
-msgstr "Visszaadja annak a sornak a számát, amelyben a szerkesztőkurzor található."
+msgstr "Visszaadja annak a sornak az indexét, amelyben a szerkesztőkurzor áll."
 
 #. TextEdit.get_caret_wrap_index
 #: doc/classes/TextEdit.xml
 msgid "Returns the wrap index the editing caret is on."
-msgstr "Visszaadja annak a tördelési szakasznak az indexét, amelyben a szerkesztőkurzor található."
+msgstr "Visszaadja annak a sortördelési szakasznak az indexét, amelyben a szerkesztőkurzor található."
 
 #. TextEdit.get_first_non_whitespace_column
 #: doc/classes/TextEdit.xml
@@ -614,7 +614,7 @@ msgstr "Újravégrehajtja a korábban visszavont műveletet."
 #. TextEdit.remove_caret
 #: doc/classes/TextEdit.xml
 msgid "Removes the given caret index.\n[b]Note:[/b] This can result in adjustment of all other caret indices."
-msgstr "Eltávolítja a megadott indexű szövegkurzort.\n[b]Megjegyzés:[/b] Emiatt a többi kurzor indexe is megváltozhat."
+msgstr "Eltávolítja a megadott indexű szövegkurzort.\n[b]Megjegyzés:[/b] Ennek következtében a többi szövegkurzor indexe is módosulhat."
 
 #. TextEdit.remove_gutter
 #: doc/classes/TextEdit.xml
@@ -629,7 +629,7 @@ msgstr "Eltávolítja a [param line] sorban lévő szöveget. Az ott található
 #. TextEdit.remove_secondary_carets
 #: doc/classes/TextEdit.xml
 msgid "Removes all additional carets."
-msgstr "Eltávolítja az összes további szövegkurzort."
+msgstr "Az elsődleges szövegkurzor kivételével minden további kurzort eltávolít."
 
 #. TextEdit.remove_text
 #: doc/classes/TextEdit.xml
@@ -659,12 +659,12 @@ msgstr "Kijelöli a szövegkurzor alatti szót."
 #. TextEdit.set_caret_column
 #: doc/classes/TextEdit.xml
 msgid "Moves the caret to the specified [param column] index.\nIf [param adjust_viewport] is [code]true[/code], the viewport will center at the caret position after the move occurs.\n[b]Note:[/b] If supporting multiple carets this will not check for any overlap. See [method merge_overlapping_carets]."
-msgstr "A szövegkurzort a megadott [param column] oszlopindexre helyezi.\nHa az [param adjust_viewport] értéke [code]true[/code], a mozgatás után a nézet a kurzor helyére központosul.\n[b]Megjegyzés:[/b] Több kurzor használatakor ez a művelet nem ellenőrzi az átfedéseket. Lásd: [method merge_overlapping_carets]."
+msgstr "A szövegkurzort a [param column] paraméterben megadott oszlopindexre mozgatja.\nHa a [param adjust_viewport] értéke [code]true[/code], a mozgatás után a nézet a kurzor pozíciójára központosít.\n[b]Megjegyzés:[/b] Több szövegkurzor esetén ez a művelet nem vizsgálja a kurzorok átfedését. Lásd: [method merge_overlapping_carets]."
 
 #. TextEdit.set_caret_line
 #: doc/classes/TextEdit.xml
 msgid "Moves the caret to the specified [param line] index. The caret column will be moved to the same visual position it was at the last time [method set_caret_column] was called, or clamped to the end of the line.\nIf [param adjust_viewport] is [code]true[/code], the viewport will center at the caret position after the move occurs.\nIf [param can_be_hidden] is [code]true[/code], the specified [param line] can be hidden.\nIf [param wrap_index] is [code]-1[/code], the caret column will be clamped to the [param line]'s length. If [param wrap_index] is greater than [code]-1[/code], the column will be moved to attempt to match the visual x position on the line's [param wrap_index] to the position from the last time [method set_caret_column] was called.\n[b]Note:[/b] If supporting multiple carets this will not check for any overlap. See [method merge_overlapping_carets]."
-msgstr "A szövegkurzort a megadott [param line] sorindexre helyezi. A kurzor oszlopa megpróbálja megtartani azt a látható vízszintes pozíciót, amelyen a [method set_caret_column] utolsó meghívásakor állt; szükség esetén a sor végére korlátozódik.\nHa az [param adjust_viewport] értéke [code]true[/code], a mozgatás után a nézet a kurzor helyére központosul.\nHa a [param can_be_hidden] értéke [code]true[/code], a megadott [param line] lehet rejtett sor is.\nHa a [param wrap_index] értéke [code]-1[/code], a kurzor oszlopát a [param line] hosszához igazítja. Ha a [param wrap_index] nagyobb [code]-1[/code]-nél, a kurzor oszlopa megpróbálja megtartani a [param wrap_index] tördelési szakaszban a [method set_caret_column] utolsó meghívásakor érvényes látható x pozíciót.\n[b]Megjegyzés:[/b] Több kurzor használatakor ez a művelet nem ellenőrzi az átfedéseket. Lásd: [method merge_overlapping_carets]."
+msgstr "A szövegkurzort a [param line] paraméterben megadott sorindexre mozgatja. A kurzor lehetőség szerint megőrzi a [method set_caret_column] legutóbbi meghívásakor használt vízszintes megjelenítési helyét; szükség esetén a sor végére kerül.\nHa a [param adjust_viewport] értéke [code]true[/code], a nézet a mozgatás után a kurzorra központosít.\nHa a [param can_be_hidden] értéke [code]true[/code], a célként megadott [param line] sor rejtett is lehet.\nHa a [param wrap_index] értéke [code]-1[/code], a kurzor oszlopát a [param line] sor hosszára korlátozza. Ha a [param wrap_index] nagyobb [code]-1[/code]-nél, a kurzort az adott sor [param wrap_index] tördelési szakaszában megpróbálja arra a vízszintes helyre állítani, ahol a [method set_caret_column] legutóbbi meghívásakor állt.\n[b]Megjegyzés:[/b] Több szövegkurzor esetén ez a művelet nem ellenőrzi az átfedéseket. Lásd: [method merge_overlapping_carets]."
 
 #. TextEdit.set_gutter_clickable
 #: doc/classes/TextEdit.xml
