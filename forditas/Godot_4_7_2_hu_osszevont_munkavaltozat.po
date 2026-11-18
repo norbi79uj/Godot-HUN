@@ -11185,12 +11185,12 @@ msgstr "A [param line] sor [param gutter] oldalsávjának szövegét a [param te
 #. TextEdit.set_overtype_mode_enabled
 #: doc/classes/TextEdit.xml
 msgid "If [code]true[/code], enables overtype mode. In this mode, typing overrides existing text instead of inserting text. The [member ProjectSettings.input/ui_text_toggle_insert_mode] action toggles overtype mode. See [method is_overtype_mode_enabled]."
-msgstr "Ha az érték [code]true[/code], engedélyezi a felülírási módot. Ebben a módban a gépelés a meglévő szöveget írja felül, nem új szöveget szúr be. A [member ProjectSettings.input/ui_text_toggle_insert_mode] művelettel válthatsz a felülírási mód és a beszúrási mód között. Lásd: [method is_overtype_mode_enabled]."
+msgstr "Ha [code]true[/code], bekapcsolja a felülírási módot: gépeléskor a karakterek a meglévő szöveget írják felül, nem pedig új szövegként szúródnak be. A [member ProjectSettings.input/ui_text_toggle_insert_mode] művelettel válthatsz a beszúrási és a felülírási mód között. Lásd: [method is_overtype_mode_enabled]."
 
 #. TextEdit.set_search_flags
 #: doc/classes/TextEdit.xml
 msgid "Sets the search [param flags]. This is used with [method set_search_text] to highlight occurrences of the searched text. Search flags can be specified from the [enum SearchFlags] enum."
-msgstr "Beállítja a keresési [param flags] jelzőket. A [method set_search_text] metódussal együtt használva kiemeli a keresett szöveg előfordulásait. A keresési jelzők a [enum SearchFlags] felsorolásból választhatók."
+msgstr "Beállítja a keresés [param flags] jelzőit. A [method set_search_text] metódussal együtt a keresett szöveg előfordulásainak kiemelésére szolgál. A jelzőket a [enum SearchFlags] felsorolásból választhatod ki."
 
 #. TextEdit.set_search_text
 #: doc/classes/TextEdit.xml
@@ -11220,17 +11220,17 @@ msgstr "Beállítja a [TextEdit] vezérlő által használt tabulátorméretet."
 #. TextEdit.set_tooltip_request_func
 #: doc/classes/TextEdit.xml
 msgid "Provide custom tooltip text. The callback method must take the following args: [code]hovered_word: String[/code]."
-msgstr "Egyéni eszköztipp-szöveg megadását teszi lehetővé. A visszahívási metódusnak a következő argumentumot kell fogadnia: [code]hovered_word: String[/code]."
+msgstr "Egyéni eszköztippeket biztosító visszahívási függvényt állít be. A visszahívásnak ezt az argumentumot kell fogadnia: [code]hovered_word: String[/code]."
 
 #. TextEdit.skip_selection_for_next_occurrence
 #: doc/classes/TextEdit.xml
 msgid "Moves a selection and a caret for the next occurrence of the current selection. If there is no active selection, moves to the next occurrence of the word under caret."
-msgstr "A kijelölést és a kurzort az aktuálisan kijelölt szöveg következő előfordulásához mozgatja. Ha nincs aktív kijelölés, a kurzor alatti szó következő előfordulására lép."
+msgstr "A kijelölést és a szövegkurzort a kijelölt szöveg következő előfordulására helyezi. Ha nincs kijelölés, a szövegkurzor alatti szó következő előfordulására lép."
 
 #. TextEdit.start_action
 #: doc/classes/TextEdit.xml
 msgid "Starts an action, will end the current action if [param action] is different.\nAn action will also end after a call to [method end_action], after [member ProjectSettings.gui/timers/text_edit_idle_detect_sec] is triggered or a new undoable step outside the [method start_action] and [method end_action] calls."
-msgstr "Műveletet indít; ha a [param action] eltér az aktuális művelettől, előbb lezárja azt.\nA művelet akkor is véget ér, ha meghívják a [method end_action] metódust, ha aktiválódik a [member ProjectSettings.gui/timers/text_edit_idle_detect_sec] beállítás szerinti időzítő, vagy ha a [method start_action] és [method end_action] hívásokon kívül új, visszavonható lépés történik."
+msgstr "Új műveletet kezd. Ha a [param action] eltér a folyamatban lévő művelettől, azt előbb lezárja.\nA művelet a [method end_action] meghívásakor, a [member ProjectSettings.gui/timers/text_edit_idle_detect_sec] beállítás szerinti tétlenségi idő letelte után, vagy egy, a [method start_action] és [method end_action] hívásokon kívül végzett új visszavonható lépéskor is lezárul."
 
 #. TextEdit.swap_lines
 #: doc/classes/TextEdit.xml
@@ -11260,12 +11260,12 @@ msgstr "Ha az érték [code]true[/code], a szövegkurzor akkor is látható, ha 
 #. TextEdit.caret_move_on_right_click
 #: doc/classes/TextEdit.xml
 msgid "If [code]true[/code], a right-click moves the caret at the mouse position before displaying the context menu.\nIf [code]false[/code], the context menu ignores mouse location."
-msgstr "Ha az érték [code]true[/code], jobb kattintáskor a helyi menü megjelenése előtt a szövegkurzor az egérmutató helyére kerül.\nHa az érték [code]false[/code], a helyi menü figyelmen kívül hagyja az egér helyzetét."
+msgstr "Ha [code]true[/code], jobb kattintáskor a helyi menü megnyitása előtt a szövegkurzor az egérmutató helyére ugrik.\nHa [code]false[/code], a helyi menü megnyitásakor az egérmutató helye nem számít."
 
 #. TextEdit.caret_multiple
 #: doc/classes/TextEdit.xml
 msgid "If [code]true[/code], multiple carets are allowed. Left-clicking with [kbd]Alt[/kbd] adds a new caret. See [method add_caret] and [method get_caret_count]."
-msgstr "Ha az érték [code]true[/code], több szövegkurzor használható. Az [kbd]Alt[/kbd] nyomva tartásával végzett bal kattintás új kurzort ad hozzá. Lásd: [method add_caret] és [method get_caret_count]."
+msgstr "Ha [code]true[/code], egyszerre több szövegkurzor is használható. Új kurzort az [kbd]Alt[/kbd] lenyomva tartásával és bal kattintással adhatsz hozzá. Lásd: [method add_caret] és [method get_caret_count]."
 
 #. TextEdit.caret_type
 #: doc/classes/TextEdit.xml
@@ -11280,7 +11280,7 @@ msgstr "Ha az érték [code]true[/code], a jobb kattintás megjeleníti a helyi 
 #. TextEdit.custom_word_separators
 #: doc/classes/TextEdit.xml
 msgid "The characters to consider as word delimiters if [member use_custom_word_separators] is [code]true[/code]. The characters should be defined without separation, for example [code]#_![/code]."
-msgstr "Azokat a karaktereket adja meg, amelyek szóelválasztóként működnek, ha a [member use_custom_word_separators] értéke [code]true[/code]. A karaktereket elválasztás nélkül kell felsorolni, például [code]#_![/code]."
+msgstr "A szóhatárként kezelt karaktereket adja meg, ha a [member use_custom_word_separators] értéke [code]true[/code]. A karaktereket egymás mellé kell írni elválasztójel nélkül, például [code]#_![/code]."
 
 #. TextEdit.drag_and_drop_selection_enabled
 #: doc/classes/TextEdit.xml
@@ -11290,12 +11290,12 @@ msgstr "Ha az érték [code]true[/code], a kijelölt szöveg húzással áthelye
 #. TextEdit.draw_spaces
 #: doc/classes/TextEdit.xml
 msgid "If [code]true[/code], the \"space\" character will have a visible representation."
-msgstr "Ha az érték [code]true[/code], a szóközkarakter látható jelölést kap."
+msgstr "Ha [code]true[/code], a szóközök látható jelöléssel jelennek meg."
 
 #. TextEdit.draw_tabs
 #: doc/classes/TextEdit.xml
 msgid "If [code]true[/code], the \"tab\" character will have a visible representation."
-msgstr "Ha az érték [code]true[/code], a tabulátorkarakter látható jelölést kap."
+msgstr "Ha [code]true[/code], a tabulátorok látható jelöléssel jelennek meg."
 
 #. TextEdit.empty_selection_clipboard_enabled
 #: doc/classes/TextEdit.xml
@@ -11305,12 +11305,12 @@ msgstr "Ha az érték [code]true[/code], kijelölés nélkül a másolás vagy k
 #. TextEdit.highlight_all_occurrences
 #: doc/classes/TextEdit.xml
 msgid "If [code]true[/code], all occurrences of the selected text will be highlighted."
-msgstr "Ha az érték [code]true[/code], a kijelölt szöveg összes előfordulása kiemelést kap."
+msgstr "Ha [code]true[/code], kiemeli a kijelölt szöveg minden előfordulását."
 
 #. TextEdit.highlight_current_line
 #: doc/classes/TextEdit.xml
 msgid "If [code]true[/code], the line containing the cursor is highlighted."
-msgstr "Ha az érték [code]true[/code], a kurzort tartalmazó sor kiemelést kap."
+msgstr "Ha [code]true[/code], kiemeli azt a sort, amelyben a szövegkurzor található."
 
 #. TextEdit.indent_wrapped_lines
 #: doc/classes/TextEdit.xml
