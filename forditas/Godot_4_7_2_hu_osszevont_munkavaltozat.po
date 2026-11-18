@@ -8385,13 +8385,13 @@ msgstr "A szövegkörvonal színe."
 #. Label.font_shadow_color
 #: doc/classes/Label.xml
 msgid "[Color] of the text's shadow effect."
-msgstr "A szöveg árnyékhatásának [Color] színe."
+msgstr "A szövegárnyék megjelenítéséhez használt [Color] szín."
 
 
 #. Label.line_spacing
 #: doc/classes/Label.xml
 msgid "Additional vertical spacing between lines (in pixels), spacing is added to line descent. This value can be negative."
-msgstr "További függőleges térköz a sorok között képpontban, a sor alapvonala alatti részhez hozzáadva. Negatív érték is lehet."
+msgstr "A sorok közötti további függőleges térköz képpontban. Ez a sor alapvonala alatti rész méretéhez adódik hozzá. Negatív érték is megadható."
 
 
 #. Label.outline_size
@@ -8403,7 +8403,7 @@ msgstr "A szövegkörvonal vastagsága.\n[b]Megjegyzés:[/b] Ha olyan betűkész
 #. Label.paragraph_spacing
 #: doc/classes/Label.xml
 msgid "Vertical space between paragraphs. Added on top of [theme_item line_spacing]."
-msgstr "A bekezdések közötti függőleges térköz. Hozzáadódik a [theme_item line_spacing] értékéhez."
+msgstr "A bekezdések közötti függőleges térköz. A [theme_item line_spacing] értékén felüli térközt adja meg."
 
 
 #. Label.shadow_offset_x
@@ -8421,7 +8421,7 @@ msgstr "A szövegárnyék függőleges eltolása."
 #. Label.shadow_outline_size
 #: doc/classes/Label.xml
 msgid "The size of the shadow outline."
-msgstr "Az árnyék körvonalának mérete."
+msgstr "Az árnyék körvonalának vastagsága."
 
 
 #. Label.font
@@ -8439,13 +8439,13 @@ msgstr "A [Label] szövegének betűmérete."
 #. Label.focus
 #: doc/classes/Label.xml
 msgid "[StyleBox] used when the [Label] is focused (when used with assistive apps)."
-msgstr "A [Label] fókuszba kerülésekor használt [StyleBox] (kisegítő alkalmazásokkal együtt használva)."
+msgstr "A fókuszban lévő [Label] megjelenítéséhez használt [StyleBox] (akadálymentesítést segítő alkalmazások használatakor)."
 
 
 #. Label.normal
 #: doc/classes/Label.xml
 msgid "Background [StyleBox] for the [Label]."
-msgstr "A [Label] háttérstílusához használt [StyleBox]."
+msgstr "A [Label] hátterének megjelenítéséhez használt [StyleBox]."
 
 #. PopupMenu.brief
 #: doc/classes/PopupMenu.xml
@@ -8456,19 +8456,19 @@ msgstr "Választható lehetőségek listáját megjelenítő modális ablak."
 #. PopupMenu.description
 #: doc/classes/PopupMenu.xml
 msgid "[PopupMenu] is a modal window used to display a list of options. Useful for toolbars and context menus.\nThe size of a [PopupMenu] can be limited by using [member Window.max_size]. If the height of the list of items is larger than the maximum height of the [PopupMenu], a [ScrollContainer] within the popup will allow the user to scroll the contents. If no maximum size is set, or if it is set to [code]0[/code], the [PopupMenu] height will be limited by its parent rect.\nAll [code]set_*[/code] methods allow negative item indices, i.e. [code]-1[/code] to access the last item, [code]-2[/code] to select the second-to-last item, and so on.\n[b]Incremental search:[/b] Like [ItemList] and [Tree], [PopupMenu] supports searching within the list while the control is focused. Press a key that matches the first letter of an item's name to select the first item starting with the given letter. After that point, there are two ways to perform incremental search: 1) Press the same key again before the timeout duration to select the next item starting with the same letter. 2) Press letter keys that match the rest of the word before the timeout duration to match to select the item in question directly. Both of these actions will be reset to the beginning of the list if the timeout duration has passed since the last keystroke was registered. You can adjust the timeout duration by changing [member ProjectSettings.gui/timers/incremental_search_max_interval_msec].\n[b]Note:[/b] [PopupMenu] is invisible by default. To make it visible, call one of the [code]popup_*[/code] methods from [Window] on the node, such as [method Window.popup_centered_clamped].\n[b]Note:[/b] The ID values used for items are limited to 32 bits, not full 64 bits of [int]. This has a range of [code]-2^32[/code] to [code]2^32 - 1[/code], i.e. [code]-2147483648[/code] to [code]2147483647[/code]."
-msgstr "A [PopupMenu] választási lehetőségek listáját megjelenítő modális ablak. Hasznos eszköztárakhoz és helyi menükhöz.\nA [PopupMenu] mérete a [member Window.max_size] segítségével korlátozható. Ha az elemek listája magasabb a [PopupMenu] maximális magasságánál, a belső [ScrollContainer] lehetővé teszi a görgetést. Ha nincs megadva maximum, vagy az érték [code]0[/code], a [PopupMenu] magasságát a szülő téglalapja korlátozza.\nMinden [code]set_*[/code] metódus elfogad negatív elemindexet: a [code]-1[/code] az utolsó, a [code]-2[/code] az utolsó előtti elemet jelöli, és így tovább.\n[b]Fokozatos keresés:[/b] Az [ItemList] és a [Tree] osztályhoz hasonlóan a [PopupMenu] is támogatja a listán belüli keresést, ha fókuszban van. Egy elem nevének kezdőbetűjét lenyomva az azzal kezdődő első elemre ugrik. Ezután kétféleképpen folytatható a keresés: 1) A várakozási időn belül ugyanazt a billentyűt ismét lenyomva a következő, ugyanezzel a betűvel kezdődő elemre ugrik. 2) A keresett szó további betűit beírva a teljesebb egyezést találja meg. Mindkét módszer újra a lista elejéről indul, ha az utolsó billentyűlenyomás óta letelt a várakozási idő. A késleltetés a [member ProjectSettings.gui/timers/incremental_search_max_interval_msec] beállítással módosítható.\n[b]Megjegyzés:[/b] A [PopupMenu] alapértelmezés szerint láthatatlan. A megjelenítéséhez hívd meg a [Window] egyik [code]popup_*[/code] metódusát, például a [method Window.popup_centered_clamped] metódust.\n[b]Megjegyzés:[/b] Az elemazonosítók 32 bitre korlátozódnak, nem az [int] teljes 64 bites tartományára. A forrásban szereplő tartomány [code]-2^32[/code] és [code]2^32 - 1[/code] között van, azaz [code]-2147483648[/code] és [code]2147483647[/code] között."
+msgstr "A [PopupMenu] választási lehetőségek listáját megjelenítő modális ablak. Hasznos eszköztárakhoz és helyi menükhöz.\nA [PopupMenu] mérete a [member Window.max_size] segítségével korlátozható. Ha az elemek listája magasabb a [PopupMenu] maximális magasságánál, a belső [ScrollContainer] lehetővé teszi a görgetést. Ha nincs megadva maximális méret, vagy az értéke [code]0[/code], a [PopupMenu] magasságát a szülő határoló téglalapja korlátozza.\nMinden [code]set_*[/code] metódus elfogad negatív elemindexet: a [code]-1[/code] az utolsó, a [code]-2[/code] az utolsó előtti elemet jelöli, és így tovább.\n[b]Fokozatos keresés:[/b] Az [ItemList] és a [Tree] osztályhoz hasonlóan a [PopupMenu] is támogatja a listán belüli keresést, ha fókuszban van. Egy elem nevének kezdőbetűjét lenyomva az azzal kezdődő első elemre ugrik. Ezután kétféleképpen folytatható a keresés: 1) A várakozási időn belül ugyanazt a billentyűt ismét lenyomva a következő, ugyanezzel a betűvel kezdődő elemre ugrik. 2) A keresett szó további betűit a várakozási időn belül beírva közvetlenül a megfelelő elemre ugrik. Mindkét módszer újra a lista elejéről indul, ha az utolsó billentyűlenyomás óta letelt a várakozási idő. A billentyűleütések közötti megengedett időt a [member ProjectSettings.gui/timers/incremental_search_max_interval_msec] beállítással módosíthatod.\n[b]Megjegyzés:[/b] A [PopupMenu] alapértelmezés szerint láthatatlan. A megjelenítéséhez hívd meg a [Window] egyik [code]popup_*[/code] metódusát, például a [method Window.popup_centered_clamped] metódust.\n[b]Megjegyzés:[/b] Az elemazonosítók 32 bitre korlátozódnak, nem az [int] teljes 64 bites tartományára. A forrásban szereplő tartomány [code]-2^32[/code] és [code]2^32 - 1[/code] között van, azaz [code]-2147483648[/code] és [code]2147483647[/code] között."
 
 
 #. PopupMenu.activate_item_by_event
 #: doc/classes/PopupMenu.xml
 msgid "Checks the provided [param event] against the [PopupMenu]'s shortcuts and accelerators, and activates the first item with matching events. If [param for_global_only] is [code]true[/code], only shortcuts and accelerators with [code]global[/code] set to [code]true[/code] will be called.\nReturns [code]true[/code] if an item was successfully activated.\n[b]Note:[/b] Certain [Control]s, such as [MenuButton], will call this method automatically."
-msgstr "Az adott [param event] eseményt a [PopupMenu] gyorsbillentyűivel és billentyűparancsaival veti össze, majd aktiválja az első egyező menüpontot. Ha a [param for_global_only] értéke [code]true[/code], csak azok a gyorsbillentyűk és billentyűparancsok működnek, amelyeknél a [code]global[/code] értéke [code]true[/code].\n[code]true[/code] értéket ad vissza, ha sikerült aktiválni egy elemet.\n[b]Megjegyzés:[/b] Egyes [Control] vezérlőelemek, például a [MenuButton], automatikusan meghívják ezt a metódust."
+msgstr "Összehasonlítja a megadott [param event] eseményt a [PopupMenu] gyorsbillentyűivel és billentyűparancsaival, majd aktiválja az első egyező menüpontot. Ha a [param for_global_only] értéke [code]true[/code], csak azok a gyorsbillentyűk és billentyűparancsok működnek, amelyeknél a [code]global[/code] értéke [code]true[/code].\n[code]true[/code] értéket ad vissza, ha sikerült aktiválni egy elemet.\n[b]Megjegyzés:[/b] Egyes [Control] vezérlőelemek, például a [MenuButton], automatikusan meghívják ezt a metódust."
 
 
 #. PopupMenu.add_check_item
 #: doc/classes/PopupMenu.xml
 msgid "Adds a new checkable item with text [param label].\nAn [param id] can optionally be provided, as well as an accelerator ([param accel]). If no [param id] is provided, one will be created from the index. If no [param accel] is provided, then the default value of 0 (corresponding to [constant @GlobalScope.KEY_NONE]) will be assigned to the item (which means it won't have any accelerator). See [method get_item_accelerator] for more info on accelerators.\n[b]Note:[/b] Checkable items just display a checkmark, but don't have any built-in checking behavior and must be checked/unchecked manually. See [method set_item_checked] for more info on how to control it."
-msgstr "Új bejelölhető menüpontot ad hozzá [param label] szöveggel.\nOpcionálisan [param id] azonosító és [param accel] billentyűparancs adható meg. Ha nincs [param id], az index alapján jön létre az azonosító. Ha nincs [param accel], az elem a [constant @GlobalScope.KEY_NONE] állandónak megfelelő alapértelmezett 0 értéket kapja, ezért nincs billentyűparancsa. Lásd a [method get_item_accelerator] metódust.\n[b]Megjegyzés:[/b] A bejelölhető elemek csupán pipát jelenítenek meg: nincs automatikus bejelölési viselkedésük. A jelölést kézzel kell kapcsolni; lásd a [method set_item_checked] metódust."
+msgstr "Új bejelölhető menüpontot ad hozzá [param label] szöveggel.\nOpcionálisan [param id] azonosító és [param accel] billentyűparancs adható meg. Ha nincs [param id], az index alapján jön létre az azonosító. Ha nincs [param accel], az elem a [constant @GlobalScope.KEY_NONE] állandónak megfelelő alapértelmezett 0 értéket kapja, ezért nincs billentyűparancsa. Lásd a [method get_item_accelerator] metódust.\n[b]Megjegyzés:[/b] A bejelölhető elemek csupán pipát jelenítenek meg: a jelölési állapotuk nem változik automatikusan. A bejelölést és a jelölés megszüntetését külön kell vezérelni; lásd a [method set_item_checked] metódust."
 
 
 #. PopupMenu.add_check_shortcut
@@ -8480,7 +8480,7 @@ msgstr "Új bejelölhető menüpontot ad hozzá a megadott [Shortcut] gyorsbille
 #. PopupMenu.add_icon_check_item
 #: doc/classes/PopupMenu.xml
 msgid "Adds a new checkable item with text [param label] and icon [param texture].\nAn [param id] can optionally be provided, as well as an accelerator ([param accel]). If no [param id] is provided, one will be created from the index. If no [param accel] is provided, then the default value of 0 (corresponding to [constant @GlobalScope.KEY_NONE]) will be assigned to the item (which means it won't have any accelerator). See [method get_item_accelerator] for more info on accelerators.\n[b]Note:[/b] Checkable items just display a checkmark, but don't have any built-in checking behavior and must be checked/unchecked manually. See [method set_item_checked] for more info on how to control it."
-msgstr "Új bejelölhető menüpontot hoz létre [param label] szöveggel és [param texture] ikonnal.\nOpcionálisan [param id] azonosító és [param accel] billentyűparancs adható meg. Ha nincs [param id], az index alapján hoz létre egyet. Ha nincs [param accel], a [constant @GlobalScope.KEY_NONE] értéknek megfelelő alapértelmezett 0 értéket kapja, vagyis nem lesz billentyűparancsa. Lásd a [method get_item_accelerator] metódust.\n[b]Megjegyzés:[/b] A bejelölhető elemek csak pipát jelenítenek meg; nem váltják automatikusan a jelölésüket. A viselkedéshez lásd a [method set_item_checked] metódust."
+msgstr "Új bejelölhető menüpontot hoz létre [param label] szöveggel és [param texture] ikonnal.\nOpcionálisan [param id] azonosító és [param accel] billentyűparancs adható meg. Ha nincs megadva [param id], az azonosítót az elem indexéből hozza létre. Ha nincs [param accel], a [constant @GlobalScope.KEY_NONE] értéknek megfelelő alapértelmezett 0 értéket kapja, vagyis nem lesz billentyűparancsa. Lásd a [method get_item_accelerator] metódust.\n[b]Megjegyzés:[/b] A bejelölhető elemek csak pipát jelenítenek meg; nem váltják automatikusan a jelölésüket. A jelölési állapot vezérléséhez lásd a [method set_item_checked] metódust."
 
 
 #. PopupMenu.add_icon_check_shortcut
@@ -8563,7 +8563,7 @@ msgstr "Eltávolítja a [PopupMenu] összes menüpontját. Ha a [param free_subm
 #. PopupMenu.add_multistate_item
 #: doc/classes/PopupMenu.xml
 msgid "Adds a new multistate item with text [param label].\nContrarily to normal binary items, multistate items can have more than two states, as defined by [param max_states]. The default value is defined by [param default_state].\nAn [param id] can optionally be provided, as well as an accelerator ([param accel]). If no [param id] is provided, one will be created from the index. If no [param accel] is provided, then the default value of 0 (corresponding to [constant @GlobalScope.KEY_NONE]) will be assigned to the item (which means it won't have any accelerator). See [method get_item_accelerator] for more info on accelerators.\n[codeblock]\nfunc _ready():\n\tadd_multistate_item(\"Item\", 3, 0)\n\n\tindex_pressed.connect(func(index: int):\n\t\t\ttoggle_item_multistate(index)\n\t\t\tmatch get_item_multistate(index):\n\t\t\t\t0:\n\t\t\t\t\tprint(\"First state\")\n\t\t\t\t1:\n\t\t\t\t\tprint(\"Second state\")\n\t\t\t\t2:\n\t\t\t\t\tprint(\"Third state\")\n\t\t)\n[/codeblock]\n[b]Note:[/b] Multistate items don't update their state automatically and must be done manually. See [method toggle_item_multistate], [method set_item_multistate] and [method get_item_multistate] for more info on how to control it."
-msgstr "Többállapotú menüpontot hoz létre [param label] szöveggel.\nA hagyományos kétállapotú elemekkel szemben a [param max_states] értéke kettőnél több állapotot is engedélyez. A kezdőállapotot a [param default_state] határozza meg.\nOpcionálisan [param id] és [param accel] is megadható. Ha nincs [param id], az indexből jön létre. Ha nincs [param accel], a [constant @GlobalScope.KEY_NONE] állandónak megfelelő alapértelmezett 0 értéket kapja, tehát nincs billentyűparancsa. Lásd a [method get_item_accelerator] metódust.\n[codeblock]\nfunc _ready():\n\tadd_multistate_item(\"Item\", 3, 0)\n\n\tindex_pressed.connect(func(index: int):\n\t\t\ttoggle_item_multistate(index)\n\t\t\tmatch get_item_multistate(index):\n\t\t\t\t0:\n\t\t\t\t\tprint(\"First state\")\n\t\t\t\t1:\n\t\t\t\t\tprint(\"Second state\")\n\t\t\t\t2:\n\t\t\t\t\tprint(\"Third state\")\n\t\t)\n[/codeblock]\n[b]Megjegyzés:[/b] A többállapotú menüpontok állapota nem változik automatikusan; azt kézzel kell beállítani. Lásd a [method toggle_item_multistate], [method set_item_multistate] és [method get_item_multistate] metódusokat."
+msgstr "Többállapotú menüpontot hoz létre [param label] szöveggel.\nA hagyományos kétállapotú elemekkel szemben a többállapotú menüpontoknak kettőnél több állapotuk is lehet, a [param max_states] értékétől függően. A kezdőállapotot a [param default_state] határozza meg.\nOpcionálisan [param id] és [param accel] is megadható. Ha nincs [param id], az indexből jön létre. Ha nincs [param accel], a [constant @GlobalScope.KEY_NONE] állandónak megfelelő alapértelmezett 0 értéket kapja, tehát nincs billentyűparancsa. Lásd a [method get_item_accelerator] metódust.\n[codeblock]\nfunc _ready():\n\tadd_multistate_item(\"Item\", 3, 0)\n\n\tindex_pressed.connect(func(index: int):\n\t\t\ttoggle_item_multistate(index)\n\t\t\tmatch get_item_multistate(index):\n\t\t\t\t0:\n\t\t\t\t\tprint(\"First state\")\n\t\t\t\t1:\n\t\t\t\t\tprint(\"Second state\")\n\t\t\t\t2:\n\t\t\t\t\tprint(\"Third state\")\n\t\t)\n[/codeblock]\n[b]Megjegyzés:[/b] A többállapotú menüpontok állapota nem változik automatikusan; azt kézzel kell beállítani. Lásd a [method toggle_item_multistate], [method set_item_multistate] és [method get_item_multistate] metódusokat."
 
 #. PopupMenu.get_focused_item
 #: doc/classes/PopupMenu.xml
