@@ -9253,54 +9253,54 @@ msgstr "A megadott utótagot jeleníti meg a [SpinBox] számértéke után."
 #. SpinBox.update_on_text_changed
 #: doc/classes/SpinBox.xml
 msgid "Sets the value of the [Range] for this [SpinBox] when the [LineEdit] text is [i]changed[/i] instead of [i]submitted[/i]. See [signal LineEdit.text_changed] and [signal LineEdit.text_submitted].\n[b]Note:[/b] If set to [code]true[/code], this will interfere with entering mathematical expressions in the [SpinBox]. The [SpinBox] will try to evaluate the expression as you type, which means symbols like a trailing [code]+[/code] are removed immediately by the expression being evaluated."
-msgstr "Akkor állítja be az ehhez a [SpinBox] elemhez tartozó [Range] értékét, amikor a [LineEdit] szövege [i]megváltozik[/i], nem pedig amikor azt [i]beküldik[/i]. Lásd: [signal LineEdit.text_changed] és [signal LineEdit.text_submitted].\n[b]Megjegyzés:[/b] Ha [code]true[/code], akadályozhatja a matematikai kifejezések bevitelét a [SpinBox] mezőbe. A [SpinBox] gépelés közben próbálja kiértékelni a kifejezést, ezért például egy sorvégi [code]+[/code] jel azonnal eltűnhet."
+msgstr "Akkor állítja be az ehhez a [SpinBox] elemhez tartozó [Range] értékét, amikor a [LineEdit] szövege [i]megváltozik[/i], nem pedig amikor azt [i]jóváhagyják[/i]. Lásd: [signal LineEdit.text_changed] és [signal LineEdit.text_submitted].\n[b]Megjegyzés:[/b] Ha [code]true[/code], akadályozhatja a matematikai kifejezések bevitelét a [SpinBox] mezőbe. A [SpinBox] gépelés közben próbálja kiértékelni a kifejezést, ezért például egy a kifejezés végén álló [code]+[/code] jel azonnal eltűnhet."
 
 #. SpinBox.down_disabled_icon_modulate
 #: doc/classes/SpinBox.xml
 msgid "Down button icon modulation color, when the button is disabled."
-msgstr "A lefelé mutató gomb ikonjának színmódosító színe letiltott állapotban."
+msgstr "A lefelé mutató gomb ikonjának színezéséhez használt szín letiltott állapotban."
 
 
 #. SpinBox.down_hover_icon_modulate
 #: doc/classes/SpinBox.xml
 msgid "Down button icon modulation color, when the button is hovered."
-msgstr "A lefelé mutató gomb ikonjának színmódosító színe, amikor az egérmutató fölötte van."
+msgstr "A lefelé mutató gomb ikonjának színezéséhez használt szín, amikor az egérmutató a gomb fölött van."
 
 
 #. SpinBox.down_icon_modulate
 #: doc/classes/SpinBox.xml
 msgid "Down button icon modulation color."
-msgstr "A lefelé mutató gomb ikonjának színmódosító színe."
+msgstr "A lefelé mutató gomb ikonjának színezéséhez használt szín."
 
 
 #. SpinBox.down_pressed_icon_modulate
 #: doc/classes/SpinBox.xml
 msgid "Down button icon modulation color, when the button is being pressed."
-msgstr "A lefelé mutató gomb ikonjának színmódosító színe lenyomott állapotban."
+msgstr "A lefelé mutató gomb ikonjának színezéséhez használt szín lenyomott állapotban."
 
 
 #. SpinBox.up_disabled_icon_modulate
 #: doc/classes/SpinBox.xml
 msgid "Up button icon modulation color, when the button is disabled."
-msgstr "A felfelé mutató gomb ikonjának színmódosító színe letiltott állapotban."
+msgstr "A felfelé mutató gomb ikonjának színezéséhez használt szín letiltott állapotban."
 
 
 #. SpinBox.up_hover_icon_modulate
 #: doc/classes/SpinBox.xml
 msgid "Up button icon modulation color, when the button is hovered."
-msgstr "A felfelé mutató gomb ikonjának színmódosító színe, amikor az egérmutató fölötte van."
+msgstr "A felfelé mutató gomb ikonjának színezéséhez használt szín, amikor az egérmutató a gomb fölött van."
 
 
 #. SpinBox.up_icon_modulate
 #: doc/classes/SpinBox.xml
 msgid "Up button icon modulation color."
-msgstr "A felfelé mutató gomb ikonjának színmódosító színe."
+msgstr "A felfelé mutató gomb ikonjának színezéséhez használt szín."
 
 
 #. SpinBox.up_pressed_icon_modulate
 #: doc/classes/SpinBox.xml
 msgid "Up button icon modulation color, when the button is being pressed."
-msgstr "A felfelé mutató gomb ikonjának színmódosító színe lenyomott állapotban."
+msgstr "A felfelé mutató gomb ikonjának színezéséhez használt szín lenyomott állapotban."
 
 
 #. SpinBox.buttons_vertical_separation
@@ -9312,7 +9312,7 @@ msgstr "A fel- és lefelé mutató gombok közötti függőleges térköz."
 #. SpinBox.buttons_width
 #: doc/classes/SpinBox.xml
 msgid "Width of the up and down buttons. If smaller than any icon set on the buttons, the respective icon may overlap neighboring elements. If smaller than [code]0[/code], the width is automatically adjusted from the icon size."
-msgstr "A fel- és lefelé mutató gombok szélessége. Ha ez kisebb, mint a gombon megadott valamelyik ikon, az ikon átfedhet szomszédos elemeket. Ha kisebb, mint [code]0[/code], a rendszer automatikusan az ikon méretéhez igazítja a szélességet."
+msgstr "A fel- és lefelé mutató gombok szélessége. Ha ez kisebb a gombokhoz rendelt ikonok valamelyikének szélességénél, az adott ikon átlóghat a szomszédos elemekre. Ha az érték kisebb, mint [code]0[/code], a szélesség automatikusan az ikon méretéhez igazodik."
 
 
 #. SpinBox.field_and_buttons_separation
@@ -9324,7 +9324,7 @@ msgstr "A szövegbeviteli mező ([LineEdit]) és a gombok közötti vízszintes 
 #. SpinBox.set_min_buttons_width_from_icons
 #: doc/classes/SpinBox.xml
 msgid "If not [code]0[/code], the minimum button width corresponds to the widest of all icons set on those buttons, even if [theme_item buttons_width] is smaller."
-msgstr "Ha nem [code]0[/code], a gombok minimális szélessége a rajtuk megadott ikonok közül a legszélesebbhez igazodik, akkor is, ha a [theme_item buttons_width] ennél kisebb."
+msgstr "Ha az érték nem [code]0[/code], a gombok legkisebb szélességét a hozzájuk rendelt ikonok közül a legszélesebb határozza meg, még akkor is, ha a [theme_item buttons_width] ennél kisebb."
 
 
 #. SpinBox.down
