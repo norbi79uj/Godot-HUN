@@ -904,7 +904,7 @@ msgstr "Ha az érték [code]false[/code], a meglévő szöveg nem módosítható
 #. TextEdit.emoji_menu_enabled
 #: doc/classes/TextEdit.xml
 msgid "If [code]true[/code], \"Emoji and Symbols\" menu is enabled."
-msgstr "Ha az érték [code]true[/code], engedélyezett az „Emojik és szimbólumok” menü."
+msgstr "Ha [code]true[/code], engedélyezi az „Emojik és szimbólumok” menüt."
 
 #. TextEdit.empty_selection_clipboard_enabled
 #: doc/classes/TextEdit.xml
@@ -934,7 +934,7 @@ msgstr "A sortördelési és szövegalakítási algoritmusok által használt ny
 #. TextEdit.middle_mouse_paste_enabled
 #: doc/classes/TextEdit.xml
 msgid "If [code]false[/code], using middle mouse button to paste clipboard will be disabled.\n[b]Note:[/b] This method is only implemented on Linux."
-msgstr "Ha az érték [code]false[/code], a középső egérgombbal történő beillesztés le van tiltva.\n[b]Megjegyzés:[/b] Ez a funkció csak Linuxon van megvalósítva."
+msgstr "Ha [code]false[/code], letiltja a vágólap tartalmának középső egérgombbal történő beillesztését.\n[b]Megjegyzés:[/b] Ez a funkció csak Linuxon érhető el."
 
 #. TextEdit.minimap_draw
 #: doc/classes/TextEdit.xml
