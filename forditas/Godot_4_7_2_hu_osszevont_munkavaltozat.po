@@ -10135,7 +10135,7 @@ msgstr "Ha [code]true[/code], a [LineEdit] mindig megjeleníti a szövegkurzort,
 #. LineEdit.caret_mid_grapheme
 #: doc/classes/LineEdit.xml
 msgid "Allow moving caret, selecting and removing the individual composite character components.\n[b]Note:[/b] [kbd]Backspace[/kbd] is always removing individual composite character components."
-msgstr "Lehetővé teszi, hogy a kurzor az összetett karakterek egyes összetevői közé mozogjon, és azokat külön kijelölhesd vagy törölhesd.\n[b]Megjegyzés:[/b] A [kbd]Backspace[/kbd] mindig az összetett karakterek egyes összetevőit törli."
+msgstr "Lehetővé teszi a szövegkurzor mozgatását az összetett karakterek egyes összetevői között, valamint azok külön kijelölését és törlését.\n[b]Megjegyzés:[/b] A [kbd]Backspace[/kbd] mindig az összetett karakterek egyes összetevőit törli."
 
 
 #. LineEdit.clear_button_enabled
@@ -10147,13 +10147,13 @@ msgstr "Ha [code]true[/code], a [LineEdit] törlőgombot jelenít meg, ha a [mem
 #. LineEdit.context_menu_enabled
 #: doc/classes/LineEdit.xml
 msgid "If [code]true[/code], the context menu will appear when right-clicked."
-msgstr "Ha [code]true[/code], jobb egérgombbal kattintva megjelenik a helyi menü."
+msgstr "Ha [code]true[/code], a mezőn végzett jobb egérgombos kattintáskor megjelenik a helyi menü."
 
 
 #. LineEdit.deselect_on_focus_loss_enabled
 #: doc/classes/LineEdit.xml
 msgid "If [code]true[/code], the selected text will be deselected when focus is lost."
-msgstr "Ha az érték [code]true[/code], a fókusz elvesztésekor megszűnik a szöveg kijelölése."
+msgstr "Ha [code]true[/code], a fókusz elvesztésekor megszűnik a szöveg kijelölése."
 
 
 #. LineEdit.drag_and_drop_selection_enabled
@@ -10165,7 +10165,7 @@ msgstr "Ha [code]true[/code], lehetővé teszi a kijelölt szöveg fogd és vidd
 #. LineEdit.draw_control_chars
 #: doc/classes/LineEdit.xml
 msgid "If [code]true[/code], control characters are displayed."
-msgstr "Ha az érték [code]true[/code], a vezérlőkarakterek megjelennek."
+msgstr "Ha [code]true[/code], a vezérlőkarakterek láthatóvá válnak."
 
 
 #. LineEdit.editable
@@ -10243,7 +10243,7 @@ msgstr "Ha [code]true[/code], minden karaktert a titkos karakterrel helyettesít
 #. LineEdit.secret_character
 #: doc/classes/LineEdit.xml
 msgid "The character to use to mask secret input. Only a single character can be used as the secret character. If it is longer than one character, only the first one will be used. If it is empty, a space will be used instead."
-msgstr "A bizalmasan kezelt bevitel eltakarására használt karakter. Csak egyetlen karakter használható. Ha hosszabb szöveget adsz meg, annak csak az első karakterét veszi figyelembe. Ha üres, szóközt használ helyette."
+msgstr "A rejtett szöveg karaktereit helyettesítő jel. Csak egyetlen karakter használható: ha többet adsz meg, csak az elsőt veszi figyelembe, üres érték esetén pedig szóközt használ."
 
 
 #. LineEdit.select_all_on_focus
@@ -10255,31 +10255,31 @@ msgstr "Ha [code]true[/code], a [LineEdit] fókuszba kerülésekor az egész sz�
 #. LineEdit.selecting_enabled
 #: doc/classes/LineEdit.xml
 msgid "If [code]false[/code], it's impossible to select the text using mouse nor keyboard."
-msgstr "Ha [code]false[/code], a szöveg sem egérrel, sem billentyűzettel nem jelölhető ki."
+msgstr "Ha [code]false[/code], sem egérrel, sem billentyűzettel nem lehet szöveget kijelölni."
 
 
 #. LineEdit.shortcut_keys_enabled
 #: doc/classes/LineEdit.xml
 msgid "If [code]true[/code], shortcut keys for context menu items are enabled, even if the context menu is disabled."
-msgstr "Ha az érték [code]true[/code], a helyi menü parancsainak gyorsbillentyűi akkor is használhatók, ha maga a helyi menü le van tiltva."
+msgstr "Ha [code]true[/code], a helyi menü parancsaihoz tartozó gyorsbillentyűk akkor is működnek, ha a helyi menü le van tiltva."
 
 
 #. LineEdit.text
 #: doc/classes/LineEdit.xml
 msgid "String value of the [LineEdit].\n[b]Note:[/b] Changing text using this property won't emit the [signal text_changed] signal."
-msgstr "A [LineEdit] szöveges értéke.\n[b]Megjegyzés:[/b] A szöveg ezzel a tulajdonsággal történő módosítása nem bocsátja ki a [signal text_changed] jelet."
+msgstr "A [LineEdit] mezőben tárolt szöveg.\n[b]Megjegyzés:[/b] Ha a szöveget ezen a tulajdonságon keresztül módosítod, a [signal text_changed] jel nem bocsátódik ki."
 
 
 #. LineEdit.virtual_keyboard_enabled
 #: doc/classes/LineEdit.xml
 msgid "If [code]true[/code], the native virtual keyboard is enabled on platforms that support it."
-msgstr "Ha az érték [code]true[/code], az ezt támogató platformokon engedélyezi a rendszer virtuális billentyűzetét."
+msgstr "Ha [code]true[/code], a támogatott platformokon engedélyezi a rendszer saját virtuális billentyűzetét."
 
 
 #. LineEdit.virtual_keyboard_show_on_focus
 #: doc/classes/LineEdit.xml
 msgid "If [code]true[/code], the native virtual keyboard is shown on focus events on platforms that support it."
-msgstr "Ha az érték [code]true[/code], az ezt támogató platformokon a vezérlő fókuszba kerülésekor megjelenik a rendszer virtuális billentyűzete."
+msgstr "Ha [code]true[/code], a támogatott platformokon a fókusz megszerzésekor megjelenik a rendszer virtuális billentyűzete."
 
 
 #. LineEdit.virtual_keyboard_type
@@ -10291,7 +10291,7 @@ msgstr "Meghatározza a megjelenítendő virtuális billentyűzet típusát."
 #. LineEdit.editing_toggled
 #: doc/classes/LineEdit.xml
 msgid "Emitted when the [LineEdit] switches in or out of edit mode."
-msgstr "Akkor bocsátódik ki, amikor a [LineEdit] belép a szerkesztési módba, vagy kilép abból."
+msgstr "Akkor bocsátódik ki, amikor a [LineEdit] szerkesztési módba lép, vagy kilép belőle."
 
 
 #. LineEdit.text_change_rejected
@@ -10309,7 +10309,7 @@ msgstr "Akkor bocsátódik ki, amikor a szöveg megváltozik."
 #. LineEdit.text_submitted
 #: doc/classes/LineEdit.xml
 msgid "Emitted when the user presses the [code]ui_text_submit[/code] action (by default: [kbd]Enter[/kbd] or [kbd]Kp Enter[/kbd]) while the [LineEdit] has focus."
-msgstr "Akkor bocsátódik ki, amikor a felhasználó a [code]ui_text_submit[/code] műveletet (alapértelmezés szerint [kbd]Enter[/kbd] vagy [kbd]Kp Enter[/kbd]) aktiválja, miközben a [LineEdit] fókuszban van."
+msgstr "Akkor bocsátódik ki, amikor a fókuszban lévő [LineEdit] mezőben a felhasználó aktiválja a [code]ui_text_submit[/code] műveletet (alapértelmezés szerint az [kbd]Enter[/kbd] vagy a [kbd]Kp Enter[/kbd] billentyűvel)."
 
 #. LineEdit.brief
 #: doc/classes/LineEdit.xml
