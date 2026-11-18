@@ -10910,32 +10910,32 @@ msgstr "Visszaadja a [TextEdit] vezérlő [VScrollBar] görgetősávját."
 #. TextEdit.get_version
 #: doc/classes/TextEdit.xml
 msgid "Returns the current version of the [TextEdit]. The version is a count of recorded operations by the undo/redo history."
-msgstr "Visszaadja a [TextEdit] aktuális verzióját. A verzió a visszavonási és újravégrehajtási előzményekben rögzített műveletek számát jelenti."
+msgstr "Visszaadja a [TextEdit] aktuális verzióját, amely a visszavonási és újravégrehajtási előzményekben rögzített műveletek számát jelöli."
 
 #. TextEdit.get_visible_line_count
 #: doc/classes/TextEdit.xml
 msgid "Returns the number of lines that can visually fit, rounded down, based on this control's height."
-msgstr "Visszaadja a vezérlő magassága alapján láthatóan elférő sorok számát, lefelé kerekítve."
+msgstr "Visszaadja, hogy a vezérlő magassága alapján legfeljebb hány teljes sor fér el a látható területen. Az eredményt lefelé kerekíti."
 
 #. TextEdit.get_visible_line_count_in_range
 #: doc/classes/TextEdit.xml
 msgid "Returns the total number of lines between [param from_line] and [param to_line] (inclusive) in the text. This includes wrapped lines and excludes folded lines. If the range covers all lines it is equivalent to [method get_total_visible_line_count]."
-msgstr "Visszaadja a [param from_line] és a [param to_line] közötti sorok számát, a két végpontot is beleértve. A tördelésből létrejött sorokat beszámítja, az összecsukott sorokat nem. Ha a tartomány minden sort lefed, az eredmény megegyezik a [method get_total_visible_line_count] értékével."
+msgstr "Megadja a [param from_line] és a [param to_line] közötti látható sorok számát, mindkét végpontot beleértve. A tördelésből keletkező sorokat beleszámítja, az összecsukottakat nem. Ha a tartomány az összes sort tartalmazza, az eredmény megegyezik a [method get_total_visible_line_count] értékével."
 
 #. TextEdit.get_word_at_pos
 #: doc/classes/TextEdit.xml
 msgid "Returns the word at [param position]."
-msgstr "Visszaadja a [param position] pozíciónál található szót."
+msgstr "Visszaadja a [param position] által megadott helyen található szót."
 
 #. TextEdit.get_word_under_caret
 #: doc/classes/TextEdit.xml
 msgid "Returns a [String] text with the word under the caret's location."
-msgstr "A szövegkurzor alatti szót tartalmazó [String] értéket adja vissza."
+msgstr "Visszaadja a szövegkurzor helyén található szót [String] értékként."
 
 #. TextEdit.insert_line_at
 #: doc/classes/TextEdit.xml
 msgid "Inserts a new line with [param text] at [param line]."
-msgstr "Új sort szúr be a [param text] szöveggel a [param line] helyére."
+msgstr "A [param line] helyére új sort szúr be, amelynek tartalma a [param text] szöveg."
 
 #. TextEdit.insert_text
 #: doc/classes/TextEdit.xml
@@ -10950,7 +10950,7 @@ msgstr "Beszúrja a megadott szöveget a szövegkurzor helyére."
 #. TextEdit.is_caret_after_selection_origin
 #: doc/classes/TextEdit.xml
 msgid "Returns [code]true[/code] if the caret of the selection is after the selection origin. This can be used to determine the direction of the selection."
-msgstr "[code]true[/code] értéket ad vissza, ha a kijelölés kurzora a kijelölés kiindulópontja után áll. Ezzel meghatározható a kijelölés iránya."
+msgstr "[code]true[/code] értéket ad vissza, ha a szövegkurzor a kijelölés kiindulópontja után helyezkedik el. Ebből megállapítható a kijelölés iránya."
 
 #. TextEdit.is_caret_visible
 #: doc/classes/TextEdit.xml
@@ -10960,7 +10960,7 @@ msgstr "[code]true[/code] értéket ad vissza, ha a kurzor látható, egyébkén
 #. TextEdit.is_dragging_cursor
 #: doc/classes/TextEdit.xml
 msgid "Returns [code]true[/code] if the user is dragging their mouse for scrolling, selecting, or text dragging."
-msgstr "[code]true[/code] értéket ad vissza, ha a felhasználó egérhúzással görget, kijelöl vagy szöveget húz át."
+msgstr "[code]true[/code] értéket ad vissza, ha a felhasználó az egér húzásával görgetést, kijelölést vagy szövegáthelyezést végez."
 
 #. TextEdit.is_gutter_clickable
 #: doc/classes/TextEdit.xml
@@ -10990,12 +10990,12 @@ msgstr "[code]true[/code] értéket ad vissza, ha a megadott sor megadott index�
 #. TextEdit.is_line_in_viewport
 #: doc/classes/TextEdit.xml
 msgid "Returns [code]true[/code] if the given line is within the scope of the scrollable area of the viewport."
-msgstr "[code]true[/code] értéket ad vissza, ha a megadott sor a nézet görgethető területén belül található."
+msgstr "[code]true[/code] értéket ad vissza, ha a megadott sor a nézet görgethető tartományába esik."
 
 #. TextEdit.is_line_wrapped
 #: doc/classes/TextEdit.xml
 msgid "Returns if the given line is wrapped."
-msgstr "Jelzi, hogy a megadott sor tördelve van-e."
+msgstr "Megadja, hogy a megadott sor több megjelenített sorra van-e tördelve."
 
 #. TextEdit.is_menu_visible
 #: doc/classes/TextEdit.xml
@@ -11005,12 +11005,12 @@ msgstr "[code]true[/code] értéket ad vissza, ha a menü látható. A teljesít
 #. TextEdit.is_mouse_over_selection
 #: doc/classes/TextEdit.xml
 msgid "Returns [code]true[/code] if the mouse is over a selection. If [param edges] is [code]true[/code], the edges are considered part of the selection."
-msgstr "[code]true[/code] értéket ad vissza, ha az egérmutató kijelölés fölött van. Ha az [param edges] értéke [code]true[/code], a kijelölés szélei is beleszámítanak."
+msgstr "[code]true[/code] értéket ad vissza, ha az egérmutató a kijelölt szöveg fölött van. Ha az [param edges] értéke [code]true[/code], a kijelölés határai is a vizsgált területhez tartoznak."
 
 #. TextEdit.is_overtype_mode_enabled
 #: doc/classes/TextEdit.xml
 msgid "Returns [code]true[/code] if overtype mode is enabled. See [method set_overtype_mode_enabled]."
-msgstr "[code]true[/code] értéket ad vissza, ha a felülírási mód engedélyezve van. Lásd: [method set_overtype_mode_enabled]."
+msgstr "[code]true[/code] értéket ad vissza, ha engedélyezett a karakterek felülírása. Lásd: [method set_overtype_mode_enabled]."
 
 #. TextEdit.merge_gutters
 #: doc/classes/TextEdit.xml
