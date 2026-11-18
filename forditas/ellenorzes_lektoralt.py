@@ -36,14 +36,28 @@ def release_original() -> dict[str, str]:
         return parse(output)
 
 REVIEWED = ROOT / "Godot_4_7_2_hu_LEKTORALT_10.po"
-TEXTEDIT = ROOT / "TextEdit_4_7_2_hu_reszlet.po"
+RELEASE_TEXTEDIT = "forditas/TextEdit_4_7_2_hu_reszlet.po"
+
+
+def release_textedit() -> dict[str, str]:
+    """A Lektorált 10 kiadáskori TextEdit-részhalmazát olvassa be."""
+    with tempfile.TemporaryDirectory(prefix="godot_hu_10_textedit_") as temp:
+        output = Path(temp) / "textedit_10.po"
+        with output.open("wb") as stream:
+            subprocess.run(
+                ["git", "show", f"{RELEASE_COMMIT}:{RELEASE_TEXTEDIT}"],
+                stdout=stream,
+                cwd=ROOT.parent,
+                check=True,
+            )
+        return parse(output)
 
 
 def main() -> int:
     try:
         old = release_original()
         new = parse(REVIEWED)
-        subset = parse(TEXTEDIT)
+        subset = release_textedit()
         if old.keys() != new.keys():
             raise ValueError("Változott a fordítási kulcsok halmaza!")
         changes = [k for k in old if old[k] != new[k]]
