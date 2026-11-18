@@ -8895,13 +8895,13 @@ msgstr "Ha [code]true[/code], a [PopupMenu] elrejtőzik egy menüpont kiválaszt
 #. PopupMenu.hide_on_state_item_selection
 #: doc/classes/PopupMenu.xml
 msgid "If [code]true[/code], hides the [PopupMenu] when a state item is selected."
-msgstr "Ha [code]true[/code], a [PopupMenu] elrejtőzik egy állapotos menüpont kiválasztásakor."
+msgstr "Ha [code]true[/code], a [PopupMenu] elrejtőzik egy többállapotú menüpont kiválasztásakor."
 
 
 #. PopupMenu.item_{index}/checkable
 #: doc/classes/PopupMenu.xml
 msgid "The checkable item type of the item at [code]index[/code].\n[b]Note:[/b] [code]index[/code] is a value in the [code]0 .. item_count - 1[/code] range."
-msgstr "A [code]index[/code] indexű elem bejelölhetőségi típusa.\n[b]Megjegyzés:[/b] Az [code]index[/code] a [code]0 .. item_count - 1[/code] tartományba esik."
+msgstr "A [code]index[/code] indexű elem jelölési típusa.\n[b]Megjegyzés:[/b] Az [code]index[/code] a [code]0 .. item_count - 1[/code] tartományba esik."
 
 
 #. PopupMenu.item_{index}/checked
@@ -8919,7 +8919,7 @@ msgstr "Ha [code]true[/code], a [MenuBar] a rendszer natív menüjét használja
 #. PopupMenu.search_bar_enabled
 #: doc/classes/PopupMenu.xml
 msgid "If [code]true[/code], shows a search bar at the top of the [PopupMenu] for filtering items. See [member search_bar_min_item_count] for dynamically controlling its visibility based on the number of items.\n[b]Note:[/b] When enabled, [member allow_search] is ignored."
-msgstr "Ha [code]true[/code], a [PopupMenu] tetején keresősáv jelenik meg az elemek szűréséhez. A megjelenést az elemszám alapján a [member search_bar_min_item_count] tulajdonsággal szabályozhatod.\n[b]Megjegyzés:[/b] Ha ez engedélyezett, a rendszer figyelmen kívül hagyja a [member allow_search] tulajdonságot."
+msgstr "Ha [code]true[/code], a [PopupMenu] tetején keresősáv jelenik meg az elemek szűréséhez. A keresősáv láthatóságát a menüpontok száma alapján a [member search_bar_min_item_count] tulajdonsággal szabályozhatod.\n[b]Megjegyzés:[/b] Ha ez engedélyezett, a rendszer figyelmen kívül hagyja a [member allow_search] tulajdonságot."
 
 
 #. PopupMenu.search_bar_min_item_count
@@ -8931,19 +8931,19 @@ msgstr "A keresősáv megjelenítéséhez szükséges menüpontok legkisebb szá
 #. PopupMenu.shrink_height
 #: doc/classes/PopupMenu.xml
 msgid "If [code]true[/code], shrinks [PopupMenu] to minimum height when it's shown."
-msgstr "Ha [code]true[/code], a [PopupMenu] megjelenésekor a minimális magasságára zsugorodik."
+msgstr "Ha [code]true[/code], a [PopupMenu] megjelenésekor a legkisebb megengedett magasságra méreteződik."
 
 
 #. PopupMenu.shrink_width
 #: doc/classes/PopupMenu.xml
 msgid "If [code]true[/code], shrinks [PopupMenu] to minimum width when it's shown."
-msgstr "Ha [code]true[/code], a [PopupMenu] megjelenésekor a minimális szélességére zsugorodik."
+msgstr "Ha [code]true[/code], a [PopupMenu] megjelenésekor a legkisebb megengedett szélességre méreteződik."
 
 
 #. PopupMenu.submenu_popup_delay
 #: doc/classes/PopupMenu.xml
 msgid "Sets the delay time in seconds for the submenu item to popup on mouse hovering. If the popup menu is added as a child of another (acting as a submenu), it will inherit the delay time of the parent menu item.\n[b]Note:[/b] If the mouse is exiting a submenu item with an open submenu and enters a different submenu item, the submenu popup delay time is affected by the direction of the mouse movement toward the open submenu. If the mouse is moving toward the submenu, the open submenu will wait approximately [code]0.5[/code] seconds before closing, which then allows the hovered submenu item to open. This additional delay allows the mouse time to move to the open submenu across other menu items without prematurely closing. If the mouse is not moving toward the open submenu, for example in a downward direction, the open submenu will close immediately."
-msgstr "Megadja másodpercben, mennyi idő után nyíljon meg az almenü, amikor az egérmutató egy almenüs menüpont fölé kerül. Ha a felugró menü egy másik menü gyermeke, vagyis almenü, örökli a szülő menüpont késleltetését.\n[b]Megjegyzés:[/b] Ha az egérmutató egy nyitott almenüvel rendelkező menüpontról egy másik almenüs menüpontra lép, a megnyitás késleltetését befolyásolja az egér mozgásának iránya. Ha az egér a nyitott almenü felé halad, az körülbelül [code]0.5[/code] másodpercet vár a bezárás előtt, így a másik almenü megnyílhat. A többletidő megakadályozza, hogy a más menüpontok fölött áthaladó egérmutató idő előtt bezárja az almenüt. Ha az egér nem a nyitott almenü felé halad, például lefelé mozog, az almenü azonnal bezárul."
+msgstr "Másodpercben adja meg az almenü megnyitási késleltetését, amikor az egérmutató egy almenüvel rendelkező menüpont fölé kerül. Ha a felugró menü egy másik menü gyermeke, vagyis almenü, örökli a szülő menüpont késleltetését.\n[b]Megjegyzés:[/b] Ha az egérmutató egy nyitott almenüvel rendelkező menüpontról egy másik almenüs menüpontra lép, a megnyitás késleltetését befolyásolja az egér mozgásának iránya. Ha az egér a nyitott almenü felé halad, az körülbelül [code]0.5[/code] másodpercet vár a bezárás előtt, ezután megnyílhat az egérmutató alatti másik almenü. A többletidő megakadályozza, hogy a más menüpontok fölött áthaladó egérmutató idő előtt bezárja az almenüt. Ha az egér nem a nyitott almenü felé halad, például lefelé mozog, az almenü azonnal bezárul."
 
 
 #. PopupMenu.system_menu_id
@@ -8961,7 +8961,7 @@ msgstr "Akkor bocsátódik ki, amikor a felhasználó a [member ProjectSettings.
 #. PopupMenu.id_pressed
 #: doc/classes/PopupMenu.xml
 msgid "Emitted when an item of some [param id] is pressed. Also emitted when its accelerator is activated on macOS.\n[b]Note:[/b] If [param id] is negative (either explicitly or due to overflow), this will return the corresponding index instead."
-msgstr "Akkor bocsátódik ki, amikor egy [param id] azonosítójú elemet megnyomnak. macOS rendszeren a billentyűparancsának aktiválásakor is kibocsátódik.\n[b]Megjegyzés:[/b] Ha a [param id] negatív (akár közvetlen megadás, akár túlcsordulás miatt), a megfelelő indexet adja vissza."
+msgstr "Akkor bocsátódik ki, amikor egy [param id] azonosítójú elemet megnyomnak. macOS rendszeren a billentyűparancsának aktiválásakor is kibocsátódik.\n[b]Megjegyzés:[/b] Ha a [param id] negatív (akár kifejezetten negatív érték megadása, akár túlcsordulás miatt), a megfelelő indexet adja vissza."
 
 
 #. PopupMenu.index_pressed
@@ -8978,7 +8978,7 @@ msgstr "Akkor bocsátódik ki, amikor bármely menüpontot hozzáadják, módos�
 #. PopupMenu.font_accelerator_color
 #: doc/classes/PopupMenu.xml
 msgid "The text [Color] used for shortcuts and accelerators that show next to the menu item name when defined. See [method get_item_accelerator] for more info on accelerators."
-msgstr "A menüpont neve mellett megjelenő gyorsbillentyűk és billentyűparancsok szövegének [Color] színe, ha vannak ilyenek. A billentyűparancsokról lásd a [method get_item_accelerator] metódust."
+msgstr "A megadott gyorsbillentyűk és billentyűparancsok menüpont neve mellett megjelenő szövegének [Color] színe. A billentyűparancsokról lásd a [method get_item_accelerator] metódust."
 
 
 #. PopupMenu.font_color
@@ -9008,13 +9008,13 @@ msgstr "A feliratos elválasztók szövegének [Color] színe. Lásd az [method 
 #. PopupMenu.font_separator_outline_color
 #: doc/classes/PopupMenu.xml
 msgid "The tint of text outline of the labeled separator."
-msgstr "A feliratos elválasztó szövegkörvonalának színezése."
+msgstr "A feliratos elválasztó szövegkörvonalának színe."
 
 
 #. PopupMenu.gutter_compact
 #: doc/classes/PopupMenu.xml
 msgid "If not [code]0[/code], the icon gutter will be merged with the checkbox gutter when possible. This acts as a boolean."
-msgstr "Ha az érték nem [code]0[/code], az ikonok számára fenntartott sáv lehetőség szerint összeolvad a jelölőnégyzetek sávjával. Logikai értékként működik."
+msgstr "Ha az érték nem [code]0[/code], az ikonok számára fenntartott sáv lehetőség szerint közös sávot alkot a jelölőnégyzetek számára fenntartott hellyel. Logikai értékként működik."
 
 
 #. PopupMenu.h_separation
@@ -9032,7 +9032,7 @@ msgstr "A menüpont ikonjának maximális szélessége. A korlát az ikon alapé
 #. PopupMenu.indent
 #: doc/classes/PopupMenu.xml
 msgid "Width of the single indentation level."
-msgstr "Az egyetlen behúzási szint szélessége."
+msgstr "Egy behúzási szint szélessége."
 
 
 #. PopupMenu.item_end_padding
