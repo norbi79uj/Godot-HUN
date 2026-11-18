@@ -8747,7 +8747,7 @@ msgstr "Beállítja, hogy a [param index] indexű elemnek legyen-e jelölőnégy
 #. PopupMenu.set_item_as_radio_checkable
 #: doc/classes/PopupMenu.xml
 msgid "Sets the type of the item at the given [param index] to radio button. If [code]false[/code], sets the type of the item to plain text."
-msgstr "A [param index] indexű elemet választógomb típusúra állítja. Ha az érték [code]false[/code], a menüpont egyszerű szöveges elemmé válik."
+msgstr "A [param index] indexű elemet választógombos menüponttá alakítja. Ha az érték [code]false[/code], a menüpont egyszerű szöveges elemmé válik."
 
 
 #. PopupMenu.set_item_as_separator
@@ -8765,12 +8765,12 @@ msgstr "Beállítja a [param index] indexű elem automatikus fordítási módjá
 #. PopupMenu.set_item_checked
 #: doc/classes/PopupMenu.xml
 msgid "Sets the checkstate status of the item at the given [param index]."
-msgstr "Beállítja a [param index] indexű elem bejelölt állapotát."
+msgstr "Beállítja a [param index] indexű elem jelölési állapotát."
 
 #. PopupMenu.set_item_disabled
 #: doc/classes/PopupMenu.xml
 msgid "Enables/disables the item at the given [param index]. When it is disabled, it can't be selected and its action can't be invoked."
-msgstr "Engedélyezi vagy letiltja a [param index] indexű elemet. A letiltott elem nem választható ki, és a hozzá tartozó művelet sem hívható meg."
+msgstr "Engedélyezi vagy letiltja a [param index] indexű elemet. A letiltott elem nem választható ki, és a hozzá tartozó művelet sem indítható el."
 
 
 #. PopupMenu.set_item_icon
@@ -8782,13 +8782,13 @@ msgstr "Lecseréli a [param index] indexű elem [Texture2D] ikonját."
 #. PopupMenu.set_item_icon_max_width
 #: doc/classes/PopupMenu.xml
 msgid "Sets the maximum allowed width of the icon for the item at the given [param index]. This limit is applied on top of the default size of the icon and on top of [theme_item icon_max_width]. The height is adjusted according to the icon's ratio."
-msgstr "Beállítja a [param index] indexű elem ikonjának maximálisan megengedett szélességét. A korlát az ikon alapértelmezett méretén és a [theme_item icon_max_width] beállításon felül érvényesül. A magasság az ikon képarányához igazodik."
+msgstr "Beállítja a [param index] indexű elem ikonjának legnagyobb megengedett szélességét. A korlát az ikon alapértelmezett méretén és a [theme_item icon_max_width] beállításon felül érvényesül. A magasság az ikon képarányához igazodik."
 
 
 #. PopupMenu.set_item_icon_modulate
 #: doc/classes/PopupMenu.xml
 msgid "Sets a modulating [Color] of the item's icon at the given [param index]."
-msgstr "Beállítja a [param index] indexű elem ikonjának színét módosító [Color] értéket."
+msgstr "Beállítja a [param index] indexű elem ikonjának színezéséhez használt [Color] értéket."
 
 
 #. PopupMenu.set_item_id
@@ -8806,13 +8806,13 @@ msgstr "Beállítja a [param index] indexű elem vízszintes eltolását."
 #. PopupMenu.set_item_index
 #: doc/classes/PopupMenu.xml
 msgid "Changes the index of the item at index [param index] to be at index [param target_index]. This can be used to move an item above other items. The moved item will keep the same ID, even if it was generated from the original index.\n[b]Note:[/b] The indices of any items between index [param index] and index [param target_index] will be shifted by one."
-msgstr "A [param index] indexű elemet a [param target_index] indexű helyre mozgatja. Így egy elem más menüpontok fölé is helyezhető. Az áthelyezett elem megőrzi azonosítóját akkor is, ha az az eredeti indexéből jött létre.\n[b]Megjegyzés:[/b] A [param index] és [param target_index] közötti elemek indexe eggyel eltolódik."
+msgstr "A [param index] indexű elemet a [param target_index] indexre helyezi át. Így egy elem más menüpontok fölé is helyezhető. Az áthelyezett elem megőrzi azonosítóját akkor is, ha az azonosítója eredetileg az indexéből származott.\n[b]Megjegyzés:[/b] A [param index] és [param target_index] közötti elemek indexe eggyel eltolódik."
 
 
 #. PopupMenu.set_item_metadata
 #: doc/classes/PopupMenu.xml
 msgid "Sets the metadata of an item, which may be of any type. You can later get it with [method get_item_metadata], which provides a simple way of assigning context data to items."
-msgstr "Beállítja egy elem tetszőleges típusú metaadatát. A [method get_item_metadata] metódussal később lekérhető, így egyszerűen társíthatsz környezeti adatokat az elemekhez."
+msgstr "Beállítja egy elem tetszőleges típusú metaadatát. A [method get_item_metadata] metódussal később lekérhető, így egyszerűen társíthatsz az elemekhez kapcsolódó kiegészítő adatokat."
 
 
 #. PopupMenu.set_item_multistate
@@ -8842,7 +8842,7 @@ msgstr "Letiltja a [param index] indexű elem [Shortcut] gyorsbillentyűjét."
 #. PopupMenu.set_item_submenu
 #: doc/classes/PopupMenu.xml
 msgid "Sets the submenu of the item at the given [param index]. The submenu is the name of a child [PopupMenu] node that would be shown when the item is clicked."
-msgstr "Beállítja a [param index] indexű elem almenüjét. Az almenü egy gyermek [PopupMenu] csomópont neve, amely akkor jelenik meg, amikor a menüpontra kattintanak."
+msgstr "Beállítja a [param index] indexű elem almenüjét. Az almenüt egy gyermek [PopupMenu] csomópont nevével kell megadni; ez a csomópont a menüpontra kattintva jelenik meg."
 
 
 #. PopupMenu.set_item_submenu_node
@@ -8860,19 +8860,19 @@ msgstr "Beállítja a [param index] indexű elem szövegét."
 #. PopupMenu.set_item_tooltip
 #: doc/classes/PopupMenu.xml
 msgid "Sets the [String] tooltip of the item at the given [param index]."
-msgstr "Beállítja a [param index] indexű elem [String] típusú eszköztippjét."
+msgstr "Beállítja a [param index] indexű elem súgóbuborékjának [String] típusú szövegét."
 
 
 #. PopupMenu.toggle_item_checked
 #: doc/classes/PopupMenu.xml
 msgid "Toggles the check state of the item at the given [param index]."
-msgstr "Átváltja a [param index] indexű elem bejelölt állapotát."
+msgstr "Megfordítja a [param index] indexű elem jelölési állapotát."
 
 
 #. PopupMenu.toggle_item_multistate
 #: doc/classes/PopupMenu.xml
 msgid "Cycle to the next state of a multistate item. See [method add_multistate_item] for details."
-msgstr "A többállapotú elem következő állapotára lép. A részleteket lásd az [method add_multistate_item] metódusnál."
+msgstr "A többállapotú elemet a következő állapotba kapcsolja, az utolsó után visszatérve az elsőhöz. A részleteket lásd az [method add_multistate_item] metódusnál."
 
 #. PopupMenu.allow_search
 #: doc/classes/PopupMenu.xml
