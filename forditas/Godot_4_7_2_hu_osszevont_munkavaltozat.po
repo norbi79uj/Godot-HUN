@@ -10362,7 +10362,7 @@ msgstr "Megszünteti az aktuális szövegkijelölést."
 #. LineEdit.edit
 #: doc/classes/LineEdit.xml
 msgid "Allows entering edit mode whether the [LineEdit] is focused or not. If [param hide_focus] is [code]true[/code], the focused state will not be shown (see [method Control.grab_focus]).\nSee also [member keep_editing_on_text_submit]."
-msgstr "Szerkesztési módba lép, függetlenül attól, hogy a [LineEdit] fókuszban van-e. Ha a [param hide_focus] értéke [code]true[/code], a fókuszált állapot nem jelenik meg (lásd: [method Control.grab_focus]).\nLásd még a [member keep_editing_on_text_submit] tulajdonságot."
+msgstr "Lehetővé teszi a szerkesztési módba lépést akkor is, ha a [LineEdit] nincs fókuszban. Ha a [param hide_focus] értéke [code]true[/code], a fókuszállapot jelzése nem látható (lásd: [method Control.grab_focus]).\nLásd még a [member keep_editing_on_text_submit] tulajdonságot."
 
 
 #. LineEdit.get_menu
@@ -10386,7 +10386,7 @@ msgstr "Visszaadja a helyes oszloppozíciót egy több Unicode-kódpontból áll
 #. LineEdit.get_scroll_offset
 #: doc/classes/LineEdit.xml
 msgid "Returns the scroll offset due to [member caret_column], as a number of characters."
-msgstr "Visszaadja a [member caret_column] miatt bekövetkezett görgetés eltolását karakterszámban."
+msgstr "Visszaadja a [member caret_column] miatt szükségessé vált görgetési eltolást, karakterek számában."
 
 
 #. LineEdit.get_selected_text
@@ -10398,25 +10398,25 @@ msgstr "Visszaadja a kijelölt szöveget."
 #. LineEdit.get_selection_from_column
 #: doc/classes/LineEdit.xml
 msgid "Returns the selection begin column."
-msgstr "Visszaadja a kijelölés kezdőoszlopát."
+msgstr "Visszaadja a kijelölt szövegrész kezdő oszlopának indexét."
 
 
 #. LineEdit.get_selection_to_column
 #: doc/classes/LineEdit.xml
 msgid "Returns the selection end column."
-msgstr "Visszaadja a kijelölés záróoszlopát."
+msgstr "Visszaadja a kijelölt szövegrész záró oszlopának indexét."
 
 
 #. LineEdit.has_ime_text
 #: doc/classes/LineEdit.xml
 msgid "Returns [code]true[/code] if the user has text in the [url=https://en.wikipedia.org/wiki/Input_method]Input Method Editor[/url] (IME)."
-msgstr "[code]true[/code] értéket ad vissza, ha a felhasználó az [url=https://en.wikipedia.org/wiki/Input_method]Input Method Editor[/url] (IME) beviteli rendszerben szöveget állított össze."
+msgstr "[code]true[/code] értéket ad vissza, ha a felhasználó szöveget állított össze az [url=https://en.wikipedia.org/wiki/Input_method]Input Method Editor[/url] (IME) segítségével."
 
 
 #. LineEdit.has_redo
 #: doc/classes/LineEdit.xml
 msgid "Returns [code]true[/code] if a \"redo\" action is available."
-msgstr "[code]true[/code] értéket ad vissza, ha elérhető az újravégrehajtás."
+msgstr "[code]true[/code] értéket ad vissza, ha van újra végrehajtható művelet."
 
 
 #. LineEdit.has_selection
@@ -10428,31 +10428,31 @@ msgstr "[code]true[/code] értéket ad vissza, ha a felhasználó kijelölt szö
 #. LineEdit.has_undo
 #: doc/classes/LineEdit.xml
 msgid "Returns [code]true[/code] if an \"undo\" action is available."
-msgstr "[code]true[/code] értéket ad vissza, ha elérhető a visszavonás."
+msgstr "[code]true[/code] értéket ad vissza, ha van visszavonható művelet."
 
 
 #. LineEdit.insert_text_at_caret
 #: doc/classes/LineEdit.xml
 msgid "Inserts [param text] at the caret. If the resulting value is longer than [member max_length], nothing happens."
-msgstr "A szövegkurzor pozíciójára beszúrja a [param text] szöveget. Ha az eredmény hosszabb lenne, mint a [member max_length], nem történik semmi."
+msgstr "Beszúrja a [param text] szöveget a szövegkurzor helyére. Ha a beszúrás miatt túllépné a [member max_length] korlátját, a művelet nem történik meg."
 
 
 #. LineEdit.is_editing
 #: doc/classes/LineEdit.xml
 msgid "Returns whether the [LineEdit] is being edited."
-msgstr "Visszaadja, hogy a [LineEdit] éppen szerkesztés alatt áll-e."
+msgstr "Megadja, hogy a [LineEdit] éppen szerkesztési módban van-e."
 
 
 #. LineEdit.is_menu_visible
 #: doc/classes/LineEdit.xml
 msgid "Returns whether the menu is visible. Use this instead of [code]get_menu().visible[/code] to improve performance (so the creation of the menu is avoided)."
-msgstr "Visszaadja, hogy a menü látható-e. A jobb teljesítmény érdekében ezt használd a [code]get_menu().visible[/code] helyett, így elkerülhető a menü létrehozása."
+msgstr "Megadja, hogy a menü látható-e. A [code]get_menu().visible[/code] helyett ezt használd, mert így elkerülhető a menü létrehozása, és javulhat a teljesítmény."
 
 
 #. LineEdit.menu_option
 #: doc/classes/LineEdit.xml
 msgid "Executes a given action as defined in the [enum MenuItems] enum."
-msgstr "Végrehajtja a [enum MenuItems] felsorolásban meghatározott műveletet."
+msgstr "Végrehajtja a [enum MenuItems] felsorolásban szereplő, megadott műveletet."
 
 
 #. LineEdit.select
@@ -10470,7 +10470,7 @@ msgstr "Kijelöli a teljes [String] szöveget."
 #. LineEdit.unedit
 #: doc/classes/LineEdit.xml
 msgid "Allows exiting edit mode while preserving focus."
-msgstr "Lehetővé teszi a szerkesztési módból való kilépést a fókusz megtartásával."
+msgstr "Kilép a szerkesztési módból úgy, hogy a vezérlő fókuszban marad."
 
 #. TextEdit._backspace
 #: doc/classes/TextEdit.xml
