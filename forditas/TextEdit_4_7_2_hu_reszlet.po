@@ -1344,27 +1344,27 @@ msgstr "Ha a [method set_gutter_type] metódussal egyéni típusúra állítod a
 #. TextEdit.theme_item.background_color
 #: doc/classes/TextEdit.xml
 msgid "Sets the background [Color] of this [TextEdit]."
-msgstr "Beállítja a [TextEdit] háttérszínét ([Color])."
+msgstr "A [TextEdit] vezérlő háttérszínét állítja be ([Color])."
 
 #. TextEdit.theme_item.caret_background_color
 #: doc/classes/TextEdit.xml
 msgid "[Color] of the text behind the caret when using a block caret."
-msgstr "Blokk alakú kurzornál a kurzor mögötti szöveg [Color] színe."
+msgstr "Blokk alakú szövegkurzor használatakor a kurzor mögött lévő szöveg színe ([Color])."
 
 #. TextEdit.theme_item.caret_color
 #: doc/classes/TextEdit.xml
 msgid "[Color] of the caret. This can be set to a fully transparent color to hide the caret entirely."
-msgstr "A kurzor [Color] színe. Teljesen átlátszó színnel a kurzor elrejthető."
+msgstr "A szövegkurzor színe ([Color]). Ha teljesen átlátszó színre állítod, a kurzor egyáltalán nem látszik."
 
 #. TextEdit.theme_item.current_line_color
 #: doc/classes/TextEdit.xml
 msgid "Background [Color] of the line containing the caret."
-msgstr "A kurzort tartalmazó sor háttérszíne ([Color])."
+msgstr "A szövegkurzort tartalmazó sor hátterének színe ([Color])."
 
 #. TextEdit.theme_item.font_color
 #: doc/classes/TextEdit.xml
 msgid "Sets the font [Color]."
-msgstr "Beállítja a betűk [Color] színét."
+msgstr "A szöveg betűszínét állítja be ([Color])."
 
 #. TextEdit.theme_item.font_outline_color
 #: doc/classes/TextEdit.xml
@@ -1379,27 +1379,27 @@ msgstr "A [member placeholder_text] helyőrző szöveg betűszíne."
 #. TextEdit.theme_item.font_readonly_color
 #: doc/classes/TextEdit.xml
 msgid "Sets the font [Color] when [member editable] is disabled."
-msgstr "Beállítja a betűk [Color] színét, amikor a [member editable] ki van kapcsolva."
+msgstr "A szöveg betűszínét adja meg ([Color]), amikor a [member editable] tulajdonság ki van kapcsolva."
 
 #. TextEdit.theme_item.font_selected_color
 #: doc/classes/TextEdit.xml
 msgid "Sets the [Color] of the selected text. If equal to [code]Color(0, 0, 0, 0)[/code], it will be ignored."
-msgstr "Beállítja a kijelölt szöveg [Color] színét. A [code]Color(0, 0, 0, 0)[/code] értéket figyelmen kívül hagyja."
+msgstr "A kijelölt szöveg betűszínét állítja be ([Color]). A [code]Color(0, 0, 0, 0)[/code] érték esetén a beállítás hatástalan."
 
 #. TextEdit.theme_item.search_result_border_color
 #: doc/classes/TextEdit.xml
 msgid "[Color] of the border around text that matches the search query."
-msgstr "A keresésnek megfelelő szöveg körüli keret [Color] színe."
+msgstr "A keresési feltételnek megfelelő szövegrész köré rajzolt keret színe ([Color])."
 
 #. TextEdit.theme_item.search_result_color
 #: doc/classes/TextEdit.xml
 msgid "[Color] behind the text that matches the search query."
-msgstr "A keresésnek megfelelő szöveg mögötti [Color] szín."
+msgstr "A keresési feltételnek megfelelő szövegrész hátterének színe ([Color])."
 
 #. TextEdit.theme_item.selection_color
 #: doc/classes/TextEdit.xml
 msgid "Sets the highlight [Color] of text selections."
-msgstr "Beállítja a kijelölés kiemelő [Color] színét."
+msgstr "A kijelölt szövegrész hátterének kiemelési színét állítja be ([Color])."
 
 #. TextEdit.theme_item.word_highlighted_color
 #: doc/classes/TextEdit.xml
@@ -1429,7 +1429,7 @@ msgstr "További margót állít be a sortördelés szélességéhez."
 #. TextEdit.theme_item.font
 #: doc/classes/TextEdit.xml
 msgid "Sets the default [Font]."
-msgstr "Beállítja az alapértelmezett [Font] betűtípust."
+msgstr "Beállítja a szöveg megjelenítéséhez használt alapértelmezett [Font] erőforrást."
 
 #. TextEdit.theme_item.font_size
 #: doc/classes/TextEdit.xml
@@ -1459,7 +1459,7 @@ msgstr "Beállítja a [TextEdit] [StyleBox] erőforrását."
 #. TextEdit.theme_item.read_only
 #: doc/classes/TextEdit.xml
 msgid "Sets the [StyleBox] of this [TextEdit] when [member editable] is disabled."
-msgstr "Beállítja a [TextEdit] [StyleBox] erőforrását, amikor a [member editable] ki van kapcsolva."
+msgstr "A [TextEdit] megjelenéséhez használt [StyleBox] erőforrást állítja be, amikor a [member editable] tulajdonság ki van kapcsolva."
 
 #. TextEdit.brief_description
 #: doc/classes/TextEdit.xml
