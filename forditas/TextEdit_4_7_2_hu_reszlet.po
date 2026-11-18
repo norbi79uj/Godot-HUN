@@ -1129,7 +1129,7 @@ msgstr "A „Szöveg írásiránya” almenü azonosítója."
 #. TextEdit.MENU_DIR_INHERITED
 #: doc/classes/TextEdit.xml
 msgid "Sets text direction to inherited."
-msgstr "Az írásirányt az örökölt beállításra állítja."
+msgstr "A szöveg írásirányát a szülőtől örökölt beállításra állítja."
 
 #. TextEdit.MENU_DIR_AUTO
 #: doc/classes/TextEdit.xml
@@ -1179,12 +1179,12 @@ msgstr "Jobbról balra irányú beágyazást kezdő (RLE) karaktert szúr be."
 #. TextEdit.MENU_INSERT_LRO
 #: doc/classes/TextEdit.xml
 msgid "Inserts start of left-to-right override (LRO) character."
-msgstr "Balról jobbra írásirány-felülbíráló (LRO) karaktert szúr be."
+msgstr "Balról jobbra haladó írásirányt kikényszerítő (LRO) karaktert szúr be."
 
 #. TextEdit.MENU_INSERT_RLO
 #: doc/classes/TextEdit.xml
 msgid "Inserts start of right-to-left override (RLO) character."
-msgstr "Jobbról balra írásirány-felülbíráló (RLO) karaktert szúr be."
+msgstr "Jobbról balra haladó írásirányt kikényszerítő (RLO) karaktert szúr be."
 
 #. TextEdit.MENU_INSERT_PDF
 #: doc/classes/TextEdit.xml
@@ -1374,7 +1374,7 @@ msgstr "A [TextEdit] szövegkörvonalának árnyalatszíne."
 #. TextEdit.theme_item.font_placeholder_color
 #: doc/classes/TextEdit.xml
 msgid "Font color for [member placeholder_text]."
-msgstr "A [member placeholder_text] helyőrző szöveg betűszíne."
+msgstr "A [member placeholder_text] tulajdonságban megadott helyőrző szöveg színe."
 
 #. TextEdit.theme_item.font_readonly_color
 #: doc/classes/TextEdit.xml
