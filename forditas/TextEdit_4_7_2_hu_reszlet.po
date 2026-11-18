@@ -1299,22 +1299,22 @@ msgstr "Nincs kijelölés."
 #. TextEdit.SELECTION_MODE_SHIFT
 #: doc/classes/TextEdit.xml
 msgid "Select as if [code]shift[/code] is pressed."
-msgstr "Úgy jelöl ki, mintha a [code]shift[/code] billentyű nyomva lenne."
+msgstr "Úgy jelöl ki, mintha a [code]shift[/code] billentyűt lenyomva tartanák."
 
 #. TextEdit.SELECTION_MODE_POINTER
 #: doc/classes/TextEdit.xml
 msgid "Select single characters as if the user single clicked."
-msgstr "Egyes karaktereket jelöl ki, mintha a felhasználó egyszer kattintott volna."
+msgstr "Karakterenként jelöl ki, az egyszeri egérkattintáshoz hasonlóan."
 
 #. TextEdit.SELECTION_MODE_WORD
 #: doc/classes/TextEdit.xml
 msgid "Select whole words as if the user double clicked."
-msgstr "Teljes szavakat jelöl ki, mintha a felhasználó kétszer kattintott volna."
+msgstr "Teljes szavakat jelöl ki, a dupla kattintáshoz hasonlóan."
 
 #. TextEdit.SELECTION_MODE_LINE
 #: doc/classes/TextEdit.xml
 msgid "Select whole lines as if the user triple clicked."
-msgstr "Teljes sorokat jelöl ki, mintha a felhasználó háromszor kattintott volna."
+msgstr "Teljes sorokat jelöl ki, a háromszori kattintáshoz hasonlóan."
 
 #. TextEdit.LINE_WRAPPING_NONE
 #: doc/classes/TextEdit.xml
@@ -1324,22 +1324,22 @@ msgstr "A sortördelés ki van kapcsolva."
 #. TextEdit.LINE_WRAPPING_BOUNDARY
 #: doc/classes/TextEdit.xml
 msgid "Line wrapping occurs at the control boundary, beyond what would normally be visible."
-msgstr "A sorok a vezérlő határán tördelődnek, ahol a szöveg egyébként már nem lenne látható."
+msgstr "A sorok a vezérlő látható területének határán tördelődnek, ahol a szöveg egyébként túlnyúlna a vezérlőn."
 
 #. TextEdit.GUTTER_TYPE_STRING
 #: doc/classes/TextEdit.xml
 msgid "When a gutter is set to string using [method set_gutter_type], it is used to contain text set via the [method set_line_gutter_text] method."
-msgstr "Ha a [method set_gutter_type] metódussal szöveges típusúra állítod az oldalsávot, a [method set_line_gutter_text] metódussal beállított szöveget tartalmazza."
+msgstr "A [method set_gutter_type] metódussal szöveges típusúra állított oldalsáv a [method set_line_gutter_text] segítségével megadott szöveget jeleníti meg."
 
 #. TextEdit.GUTTER_TYPE_ICON
 #: doc/classes/TextEdit.xml
 msgid "When a gutter is set to icon using [method set_gutter_type], it is used to contain an icon set via the [method set_line_gutter_icon] method."
-msgstr "Ha a [method set_gutter_type] metódussal ikon típusúra állítod az oldalsávot, a [method set_line_gutter_icon] metódussal beállított ikont tartalmazza."
+msgstr "A [method set_gutter_type] metódussal ikon típusúra állított oldalsáv a [method set_line_gutter_icon] segítségével megadott ikont jeleníti meg."
 
 #. TextEdit.GUTTER_TYPE_CUSTOM
 #: doc/classes/TextEdit.xml
 msgid "When a gutter is set to custom using [method set_gutter_type], it is used to contain custom visuals controlled by a callback method set via the [method set_gutter_custom_draw] method."
-msgstr "Ha a [method set_gutter_type] metódussal egyéni típusúra állítod az oldalsávot, a [method set_gutter_custom_draw] metódussal beállított visszahívás által vezérelt egyéni grafikus elemeket tartalmazza."
+msgstr "A [method set_gutter_type] metódussal egyéni típusúra állított oldalsávban a [method set_gutter_custom_draw] segítségével megadott visszahívás rajzolja ki az egyéni grafikus elemeket."
 
 #. TextEdit.theme_item.background_color
 #: doc/classes/TextEdit.xml
@@ -1369,7 +1369,7 @@ msgstr "Beállítja a betűk [Color] színét."
 #. TextEdit.theme_item.font_outline_color
 #: doc/classes/TextEdit.xml
 msgid "The tint of text outline of the [TextEdit]."
-msgstr "A [TextEdit] szövegkörvonalának árnyalatszíne."
+msgstr "A [TextEdit] szövege körüli körvonal színe."
 
 #. TextEdit.theme_item.font_placeholder_color
 #: doc/classes/TextEdit.xml
@@ -1404,12 +1404,12 @@ msgstr "Beállítja a kijelölés kiemelő [Color] színét."
 #. TextEdit.theme_item.word_highlighted_color
 #: doc/classes/TextEdit.xml
 msgid "Sets the highlight [Color] of multiple occurrences. [member highlight_all_occurrences] has to be enabled."
-msgstr "Beállítja az ismétlődő szövegrészek kiemelő [Color] színét. Ehhez a [member highlight_all_occurrences] engedélyezése szükséges."
+msgstr "Beállítja a szöveg többször előforduló részeinek kiemelési színét ([Color]). A [member highlight_all_occurrences] tulajdonságnak engedélyezve kell lennie."
 
 #. TextEdit.theme_item.caret_width
 #: doc/classes/TextEdit.xml
 msgid "The caret's width in pixels. Greater values can be used to improve accessibility by ensuring the caret is easily visible, or to ensure consistency with a large font size. If set to [code]0[/code] or lower, the caret width is automatically set to 1 pixel and multiplied by the display scaling factor."
-msgstr "A kurzor szélessége képpontban. Nagyobb értékkel a kurzor könnyebben látható, ami javíthatja a hozzáférhetőséget, illetve nagyobb betűméretnél megőrizheti az arányokat. Ha az érték [code]0[/code] vagy kisebb, a szélesség automatikusan 1 képpont lesz, megszorozva a kijelző skálázási tényezőjével."
+msgstr "A szövegkurzor szélessége képpontban. Nagyobb értékkel a kurzor jobban látható, ami javíthatja az akadálymentességet, és nagy betűméret mellett is arányos megjelenést biztosíthat. Ha az érték [code]0[/code] vagy kisebb, a szélesség automatikusan 1 képpont és a kijelző skálázási tényezőjének szorzata lesz."
 
 #. TextEdit.theme_item.line_spacing
 #: doc/classes/TextEdit.xml
@@ -1424,7 +1424,7 @@ msgstr "A szövegkörvonal vastagsága.\n[b]Megjegyzés:[/b] Ha olyan betűkész
 #. TextEdit.theme_item.wrap_offset
 #: doc/classes/TextEdit.xml
 msgid "Sets an additional margin for line wrapping width."
-msgstr "További margót állít be a sortördelés szélességéhez."
+msgstr "A sortördeléskor figyelembe vett szélességhez további margót ad hozzá."
 
 #. TextEdit.theme_item.font
 #: doc/classes/TextEdit.xml
