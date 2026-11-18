@@ -9752,7 +9752,7 @@ msgstr "A vágólapra másolja a kijelölt szöveget."
 #. LineEdit.MENU_PASTE
 #: doc/classes/LineEdit.xml
 msgid "Pastes the clipboard text over the selected text (or at the caret's position).\nNon-printable escape characters are automatically stripped from the OS clipboard via [method String.strip_escapes]."
-msgstr "A vágólap szövegét beilleszti a kijelölt szöveg helyére (vagy a szövegkurzor pozíciójára).\nAz operációs rendszer vágólapjáról származó nem nyomtatható vezérlőkaraktereket automatikusan eltávolítja a [method String.strip_escapes] metódussal."
+msgstr "A vágólap tartalmát a kijelölt szöveg helyére, kijelölés hiányában a szövegkurzor helyére illeszti be.\nAz operációs rendszer vágólapjáról származó nem nyomtatható vezérlőkaraktereket a [method String.strip_escapes] metódussal automatikusan eltávolítja."
 
 
 #. LineEdit.MENU_CLEAR
@@ -9776,7 +9776,7 @@ msgstr "Visszavonja az előző műveletet."
 #. LineEdit.MENU_REDO
 #: doc/classes/LineEdit.xml
 msgid "Reverse the last undo action."
-msgstr "Újra végrehajtja a legutóbb visszavont műveletet."
+msgstr "Ismét végrehajtja a legutóbb visszavont műveletet."
 
 
 #. LineEdit.MENU_SUBMENU_TEXT_DIR
@@ -9788,7 +9788,7 @@ msgstr "A „Szöveg írásiránya” almenü azonosítója."
 #. LineEdit.MENU_DIR_INHERITED
 #: doc/classes/LineEdit.xml
 msgid "Sets text direction to inherited."
-msgstr "Az írásirányt az örökölt beállításra állítja."
+msgstr "A szöveg írásirányát a szülőtől örökölt beállításra állítja."
 
 
 #. LineEdit.MENU_DIR_AUTO
@@ -9848,13 +9848,13 @@ msgstr "Jobbról balra irányú beágyazást kezdő (RLE) karaktert szúr be."
 #. LineEdit.MENU_INSERT_LRO
 #: doc/classes/LineEdit.xml
 msgid "Inserts start of left-to-right override (LRO) character."
-msgstr "Balról jobbra írásirány-felülbíráló (LRO) karaktert szúr be."
+msgstr "Balról jobbra haladó írásirányt kikényszerítő (LRO) karaktert szúr be."
 
 
 #. LineEdit.MENU_INSERT_RLO
 #: doc/classes/LineEdit.xml
 msgid "Inserts start of right-to-left override (RLO) character."
-msgstr "Jobbról balra írásirány-felülbíráló (RLO) karaktert szúr be."
+msgstr "Jobbról balra haladó írásirányt kikényszerítő (RLO) karaktert szúr be."
 
 
 #. LineEdit.MENU_INSERT_PDF
@@ -9950,13 +9950,13 @@ msgstr "Virtuális számbillentyűzet, például PIN-kód beviteléhez."
 #. LineEdit.KEYBOARD_TYPE_NUMBER_DECIMAL
 #: doc/classes/LineEdit.xml
 msgid "Virtual number keypad, useful for entering fractional numbers."
-msgstr "Virtuális számbillentyűzet törtszámok beviteléhez."
+msgstr "Virtuális számbillentyűzet tizedes törtek beviteléhez."
 
 
 #. LineEdit.KEYBOARD_TYPE_PHONE
 #: doc/classes/LineEdit.xml
 msgid "Virtual phone number keypad."
-msgstr "Virtuális billentyűzet telefonszámok beviteléhez."
+msgstr "Virtuális telefonos számbillentyűzet."
 
 
 #. LineEdit.KEYBOARD_TYPE_EMAIL_ADDRESS
@@ -9968,7 +9968,7 @@ msgstr "Virtuális billentyűzet további billentyűkkel az e-mail-címek beír�
 #. LineEdit.KEYBOARD_TYPE_PASSWORD
 #: doc/classes/LineEdit.xml
 msgid "Virtual keyboard for entering a password. On most platforms, this should disable autocomplete and autocapitalization.\n[b]Note:[/b] This is not supported on Web. Instead, this behaves identically to [constant KEYBOARD_TYPE_DEFAULT]."
-msgstr "Jelszóbevitelre szolgáló virtuális billentyűzet. A legtöbb platformon letiltja az automatikus kiegészítést és a nagybetűsítést.\n[b]Megjegyzés:[/b] Webes környezetben ez nem támogatott. Ilyenkor a [constant KEYBOARD_TYPE_DEFAULT] értékkel azonosan viselkedik."
+msgstr "Jelszóbevitelre szolgáló virtuális billentyűzet. A legtöbb platformon várhatóan letiltja az automatikus szövegkiegészítést és a kezdőbetűk automatikus nagybetűsítését.\n[b]Megjegyzés:[/b] Webes környezetben ez a billentyűzettípus nem támogatott; ilyenkor a [constant KEYBOARD_TYPE_DEFAULT] beállítással azonosan működik."
 
 
 #. LineEdit.KEYBOARD_TYPE_URL
@@ -9992,7 +9992,7 @@ msgstr "A jobb oldali ikon méretét a szöveg méretéhez igazítja."
 #. LineEdit.EXPAND_MODE_FIT_TO_LINE_EDIT
 #: doc/classes/LineEdit.xml
 msgid "Scale the right icon to fit the LineEdit."
-msgstr "A jobb oldali ikont a LineEdit méretéhez igazítja."
+msgstr "A jobb oldali ikont úgy méretezi át, hogy elférjen a LineEdit mezőben."
 
 
 #. LineEdit.caret_color
@@ -10004,7 +10004,7 @@ msgstr "A [LineEdit] szövegkurzorának színe. Teljesen átlátszó szín megad
 #. LineEdit.clear_button_color
 #: doc/classes/LineEdit.xml
 msgid "Color used as default tint for the clear button."
-msgstr "A törlőgomb alapértelmezett színezésének színe."
+msgstr "A törlőgomb alapértelmezett színezéséhez használt szín."
 
 
 #. LineEdit.clear_button_color_pressed
@@ -10016,19 +10016,19 @@ msgstr "A törlőgomb színe lenyomott állapotban."
 #. LineEdit.font_color
 #: doc/classes/LineEdit.xml
 msgid "Default font color."
-msgstr "A betűkészlet alapértelmezett színe."
+msgstr "A szöveg alapértelmezett betűszíne."
 
 
 #. LineEdit.font_outline_color
 #: doc/classes/LineEdit.xml
 msgid "The tint of text outline of the [LineEdit]."
-msgstr "A [LineEdit] szövegkörvonalának színezése."
+msgstr "A [LineEdit] szövege körüli körvonal színe."
 
 
 #. LineEdit.font_placeholder_color
 #: doc/classes/LineEdit.xml
 msgid "Font color for [member placeholder_text]."
-msgstr "A [member placeholder_text] helyőrző szöveg betűszíne."
+msgstr "A [member placeholder_text] tulajdonságban megadott helyőrző szöveg színe."
 
 
 #. LineEdit.font_selected_color
@@ -10058,7 +10058,7 @@ msgstr "A szövegkurzor szélessége képpontban. Nagyobb értékkel javítható
 #. LineEdit.minimum_character_width
 #: doc/classes/LineEdit.xml
 msgid "Minimum horizontal space for the text (not counting the clear button and content margins). This value is measured in count of 'M' characters (i.e. this number of 'M' characters can be displayed without scrolling)."
-msgstr "A szöveg minimális vízszintes helyigénye (a törlőgomb és a belső margók nélkül). Az értéket „M” betűk számában méri (ennyi „M” betű látható görgetés nélkül)."
+msgstr "A szöveg számára fenntartott legkisebb vízszintes hely a törlőgomb és a belső margók nélkül. Az érték „M” karakterek számában van megadva: ennyi „M” fér el görgetés nélkül."
 
 
 #. LineEdit.font
