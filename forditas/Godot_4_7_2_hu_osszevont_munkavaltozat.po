@@ -1229,62 +1229,62 @@ msgstr "A kamera forgatássimításának aszimptotikus szögsebessége, amikor a
 #. Camera2D.drag_horizontal_enabled
 #: doc/classes/Camera2D.xml
 msgid "If [code]true[/code], the camera only moves when reaching the horizontal (left and right) drag margins. If [code]false[/code], the camera moves horizontally regardless of margins."
-msgstr "Ha [code]true[/code], a kamera csak a vízszintes (bal és jobb oldali) követési margók elérésekor mozdul el. Ha [code]false[/code], a kamera a margóktól függetlenül követi a vízszintes mozgást."
+msgstr "[code]true[/code] értéknél a kamera vízszintesen csak akkor mozdul el, amikor a követett cél eléri a bal vagy jobb oldali követési margót. [code]false[/code] esetén a vízszintes kameramozgás nem függ ezektől a margóktól."
 
 #. Camera2D.drag_vertical_enabled
 #: doc/classes/Camera2D.xml
 msgid "If [code]true[/code], the camera only moves when reaching the vertical (top and bottom) drag margins. If [code]false[/code], the camera moves vertically regardless of the drag margins."
-msgstr "Ha [code]true[/code], a kamera csak a függőleges (felső és alsó) követési margók elérésekor mozdul el. Ha [code]false[/code], a kamera a margóktól függetlenül követi a függőleges mozgást."
+msgstr "[code]true[/code] értéknél a kamera függőlegesen csak akkor mozdul el, amikor a követett cél eléri a felső vagy alsó követési margót. [code]false[/code] esetén a függőleges kameramozgás nem függ ezektől a margóktól."
 
 #. Camera2D.drag_left_margin
 #: doc/classes/Camera2D.xml
 msgid "Left margin needed to drag the camera. A value of [code]1[/code] makes the camera move only when reaching the left edge of the screen."
-msgstr "A kamera elmozdításához szükséges bal oldali margó. Az [code]1[/code] érték azt jelenti, hogy a kamera csak a képernyő bal szélének elérésekor mozdul el."
+msgstr "A kamera követését meghatározó bal oldali margó. [code]1[/code] értéknél a kamera csak akkor mozdul el, amikor a követett cél eléri a képernyő bal szélét."
 
 #. Camera2D.drag_right_margin
 #: doc/classes/Camera2D.xml
 msgid "Right margin needed to drag the camera. A value of [code]1[/code] makes the camera move only when reaching the right edge of the screen."
-msgstr "A kamera elmozdításához szükséges jobb oldali margó. Az [code]1[/code] érték azt jelenti, hogy a kamera csak a képernyő jobb szélének elérésekor mozdul el."
+msgstr "A kamera követését meghatározó jobb oldali margó. [code]1[/code] értéknél a kamera csak akkor mozdul el, amikor a követett cél eléri a képernyő jobb szélét."
 
 #. Camera2D.drag_top_margin
 #: doc/classes/Camera2D.xml
 msgid "Top margin needed to drag the camera. A value of [code]1[/code] makes the camera move only when reaching the top edge of the screen."
-msgstr "A kamera elmozdításához szükséges felső margó. Az [code]1[/code] érték azt jelenti, hogy a kamera csak a képernyő felső szélének elérésekor mozdul el."
+msgstr "A kamera követését meghatározó felső margó. [code]1[/code] értéknél a kamera csak akkor mozdul el, amikor a követett cél eléri a képernyő felső szélét."
 
 #. Camera2D.drag_bottom_margin
 #: doc/classes/Camera2D.xml
 msgid "Bottom margin needed to drag the camera. A value of [code]1[/code] makes the camera move only when reaching the bottom edge of the screen."
-msgstr "A kamera elmozdításához szükséges alsó margó. Az [code]1[/code] érték azt jelenti, hogy a kamera csak a képernyő alsó szélének elérésekor mozdul el."
+msgstr "A kamera követését meghatározó alsó margó. [code]1[/code] értéknél a kamera csak akkor mozdul el, amikor a követett cél eléri a képernyő alsó szélét."
 
 #. Camera2D.editor_draw_limits
 #: doc/classes/Camera2D.xml
 msgid "If [code]true[/code], draws the camera's limits rectangle in the editor."
-msgstr "Ha [code]true[/code], a szerkesztőben kirajzolja a kamera korlátait jelölő téglalapot."
+msgstr "[code]true[/code] értéknél a szerkesztő megjeleníti a kamera mozgási korlátait jelölő téglalapot."
 
 #. Camera2D.editor_draw_screen
 #: doc/classes/Camera2D.xml
 msgid "If [code]true[/code], draws the camera's screen rectangle in the editor."
-msgstr "Ha [code]true[/code], a szerkesztőben kirajzolja a kamera képernyőterületét jelölő téglalapot."
+msgstr "[code]true[/code] értéknél a szerkesztő megjeleníti a kamera képernyőterületét jelölő téglalapot."
 
 #. Camera2D.get_screen_center_position
 #: doc/classes/Camera2D.xml
 msgid "Returns the center of the screen from this camera's point of view, in global coordinates.\n[b]Note:[/b] The exact targeted position of the camera may be different. See [method get_target_position]."
-msgstr "Visszaadja a képernyő középpontjának helyét a kamera nézőpontjából, globális koordinátákban.\n[b]Megjegyzés:[/b] A kamera pontos célpozíciója ettől eltérhet. Lásd: [method get_target_position]."
+msgstr "A kamera által megjelenített képernyőterület középpontját adja vissza globális koordinátákban.\n[b]Megjegyzés:[/b] A kamera célpozíciója ettől eltérhet. Lásd: [method get_target_position]."
 
 #. Camera2D.make_current
 #: doc/classes/Camera2D.xml
 msgid "Forces this [Camera2D] to become the current active one. [member enabled] must be [code]true[/code]."
-msgstr "Ezt a [Camera2D] csomópontot teszi az aktuális aktív kamerává. Ehhez a [member enabled] értékének [code]true[/code] kell lennie."
+msgstr "Az adott [Camera2D] csomópontot teszi az aktuálisan aktív kamerává. Ehhez a [member enabled] tulajdonságnak [code]true[/code] értékűnek kell lennie."
 
 #. Camera2D.reset_smoothing
 #: doc/classes/Camera2D.xml
 msgid "Sets the camera's position immediately to its current smoothing destination.\nThis method has no effect if [member position_smoothing_enabled] is [code]false[/code]."
-msgstr "A kamerát azonnal a pozíciósimítás aktuális célpontjára helyezi.\nA metódusnak nincs hatása, ha a [member position_smoothing_enabled] értéke [code]false[/code]."
+msgstr "A kamerát azonnal a pozíciósimítás aktuális célpozíciójára helyezi.\nA metódus hatástalan, ha a [member position_smoothing_enabled] értéke [code]false[/code]."
 
 #. Camera2D.offset
 #: doc/classes/Camera2D.xml
 msgid "The camera's relative offset. Useful for looking around or camera shake animations. The offsetted camera can go past the limits defined in [member limit_top], [member limit_bottom], [member limit_left] and [member limit_right]."
-msgstr "A kamera relatív eltolása. Körbenézéshez és kamerarázási animációkhoz is használható. Az eltolt kamera túlléphet a [member limit_top], [member limit_bottom], [member limit_left] és [member limit_right] tulajdonságokkal megadott korlátokon."
+msgstr "A kamera relatív pozícióeltolása, amely például körbenézéshez vagy kamerarázáshoz használható. Az eltolás miatt a kamera nézete túlléphet a [member limit_top], [member limit_bottom], [member limit_left] és [member limit_right] tulajdonságokkal beállított határokon."
 
 #. Camera2D.anchor_mode
 #: doc/classes/Camera2D.xml
