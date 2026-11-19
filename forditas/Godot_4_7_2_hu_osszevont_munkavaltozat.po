@@ -261,7 +261,7 @@ msgstr "A TileSet a [TileMapLayer] csomópontok által használt csempekészlet.
 #. TileSet.tile_size
 #: doc/classes/TileSet.xml
 msgid "The tile size, in pixels. For all tile shapes, this size corresponds to the encompassing rectangle of the tile shape. This is thus the minimal cell size required in an atlas."
-msgstr "A csempe mérete képpontban. A csempe alakjától függetlenül a befoglaló téglalap méretét adja meg; ez egyben az atlaszban szükséges legkisebb cellaméret."
+msgstr "A csempe mérete képpontban. Bármilyen csempealak esetén a csempét körülvevő befoglaló téglalap méretét jelenti, ezért az atlaszban legalább ekkora cella szükséges."
 
 #. TileSet.tile_shape
 #: doc/classes/TileSet.xml
@@ -271,7 +271,7 @@ msgstr "A csempe alakja."
 #. TileSet.tile_layout
 #: doc/classes/TileSet.xml
 msgid "For all half-offset shapes (Isometric, Hexagonal and Half-Offset square), changes the way tiles are indexed in the [TileMapLayer] grid."
-msgstr "Az izometrikus, hatszögletű és féleltolásos négyzet alakú csempéknél meghatározza a csempék indexelésének módját a [TileMapLayer] rácsában."
+msgstr "Az izometrikus, hatszögletű és féleltolásos négyzet alakú csempék esetében meghatározza, hogyan kapnak rácsindexet a csempék a [TileMapLayer] rétegben."
 
 #. TileSet.tile_offset_axis
 #: doc/classes/TileSet.xml
@@ -296,7 +296,7 @@ msgstr "Visszaadja a [param source_id] azonosítójú [TileSetSource] forrást."
 #. TileSet.get_source_count
 #: doc/classes/TileSet.xml
 msgid "Returns the number of [TileSetSource] in this TileSet."
-msgstr "Visszaadja a csempekészletben található [TileSetSource] források számát."
+msgstr "Megadja, hány [TileSetSource] forrás található a csempekészletben."
 
 #. TileSet.get_source_id
 #: doc/classes/TileSet.xml
@@ -316,12 +316,12 @@ msgstr "Eltávolítja a megadott forrásazonosítójú forrást."
 #. TileSet.get_next_source_id
 #: doc/classes/TileSet.xml
 msgid "Returns a new unused source ID. This generated ID is the same that a call to [method add_source] would return."
-msgstr "Visszaad egy új, még nem használt forrásazonosítót. Ugyanezt az azonosítót adná vissza a [method add_source] metódus is."
+msgstr "A következő szabad forrásazonosítót adja vissza. Ugyanezt az azonosítót kapnád a [method add_source] metódus meghívásakor."
 
 #. TileSet.add_physics_layer
 #: doc/classes/TileSet.xml
 msgid "Adds a physics layer to the TileSet at the given position [param to_position] in the array. If [param to_position] is -1, adds it at the end of the array.\nPhysics layers allow assigning collision polygons to atlas tiles."
-msgstr "Fizikai réteget ad a csempekészlethez a tömb [param to_position] pozíciójára. Ha a [param to_position] értéke -1, a tömb végére illeszti.\nA fizikai rétegek segítségével ütközési sokszögeket rendelhetsz az atlaszcsempékhez."
+msgstr "Új fizikai réteget szúr be a csempekészletbe a [param to_position] indexű helyre. Ha a [param to_position] értéke -1, a tömb végére kerül.\nA fizikai rétegekkel ütközési sokszögeket adhatsz az atlaszcsempékhez."
 
 #. TileSet.get_physics_layers_count
 #: doc/classes/TileSet.xml
@@ -341,12 +341,12 @@ msgstr "Beállítja a megadott TileSet-fizikai réteg testjeinek ütközési mas
 #. TileSet.add_custom_data_layer
 #: doc/classes/TileSet.xml
 msgid "Adds a custom data layer to the TileSet at the given position [param to_position] in the array. If [param to_position] is -1, adds it at the end of the array.\nCustom data layers allow assigning custom properties to atlas tiles."
-msgstr "Egyediadatréteget ad a csempekészlethez a tömb [param to_position] pozíciójára. Ha a [param to_position] értéke -1, a tömb végére illeszti.\nAz egyediadatrétegekkel saját tulajdonságokat rendelhetsz az atlaszcsempékhez."
+msgstr "Új egyediadatréteget szúr be a csempekészletbe a [param to_position] indexű helyre. Ha a [param to_position] értéke -1, a tömb végére kerül.\nAz egyediadatrétegekben saját tulajdonságokat tárolhatsz az atlaszcsempékhez."
 
 #. TileSet.set_custom_data_layer_name
 #: doc/classes/TileSet.xml
 msgid "Sets the name of the custom data layer identified by the given index. Names are identifiers of the layer therefore if the name is already taken it will fail and raise an error."
-msgstr "Beállítja a megadott indexű egyediadatréteg nevét. A rétegek neve azonosítóként is szolgál, ezért már használt név megadásakor a művelet hibával leáll."
+msgstr "Megadja a kijelölt indexű egyediadatréteg nevét. A név egyben a réteg azonosítója is, ezért ha már használatban van, a művelet hibát jelez."
 
 #. TileSet.get_custom_data_layer_name
 #: doc/classes/TileSet.xml
@@ -371,22 +371,22 @@ msgstr "Visszaadja a [param index] indexű [TileMapPattern] mintát."
 #. TileSet.add_terrain
 #: doc/classes/TileSet.xml
 msgid "Adds a new terrain to the given terrain set [param terrain_set] at the given position [param to_position] in the array. If [param to_position] is -1, adds it at the end of the array."
-msgstr "Új tereptípust ad a [param terrain_set] terepkészlethez a tömb [param to_position] pozíciójára. Ha a [param to_position] értéke -1, a tömb végére illeszti."
+msgstr "Új tereptípust szúr be a [param terrain_set] terepkészletbe, a [param to_position] indexű helyre. A [param to_position] -1 értéke esetén az új tereptípus a tömb végére kerül."
 
 #. TileSet.add_terrain_set
 #: doc/classes/TileSet.xml
 msgid "Adds a new terrain set at the given position [param to_position] in the array. If [param to_position] is -1, adds it at the end of the array."
-msgstr "Új terepkészletet ad a tömb [param to_position] pozíciójára. Ha a [param to_position] értéke -1, a tömb végére illeszti."
+msgstr "Új terepkészletet szúr be a [param to_position] indexű helyre. Ha a [param to_position] értéke -1, a terepkészlet a tömb végére kerül."
 
 #. TileSet.add_navigation_layer
 #: doc/classes/TileSet.xml
 msgid "Adds a navigation layer to the TileSet at the given position [param to_position] in the array. If [param to_position] is -1, adds it at the end of the array.\nNavigation layers allow assigning a navigable area to atlas tiles."
-msgstr "Navigációs réteget ad a csempekészlethez a tömb [param to_position] pozíciójára. Ha a [param to_position] értéke -1, a tömb végére illeszti.\nA navigációs rétegek segítségével bejárható terület rendelhető az atlaszcsempékhez."
+msgstr "Új navigációs réteget szúr be a csempekészletbe a [param to_position] indexű helyre. Ha a [param to_position] értéke -1, a tömb végére kerül.\nA navigációs rétegekkel bejárható területeket rendelhetsz az atlaszcsempékhez."
 
 #. TileSet.add_occlusion_layer
 #: doc/classes/TileSet.xml
 msgid "Adds an occlusion layer to the TileSet at the given position [param to_position] in the array. If [param to_position] is -1, adds it at the end of the array.\nOcclusion layers allow assigning occlusion polygons to atlas tiles."
-msgstr "Fénykitakarási réteget ad a csempekészlethez a tömb [param to_position] pozíciójára. Ha a [param to_position] értéke -1, a tömb végére illeszti.\nA fénykitakarási rétegek segítségével fénykitakarási sokszögeket rendelhetsz az atlaszcsempékhez."
+msgstr "Új fénykitakarási réteget szúr be a csempekészletbe a [param to_position] indexű helyre. Ha a [param to_position] értéke -1, a tömb végére kerül.\nA fénykitakarási rétegekkel fénykitakarási sokszögeket adhatsz az atlaszcsempékhez."
 
 #. TileSet.clear_terrains
 #: doc/classes/TileSet.xml
@@ -526,7 +526,7 @@ msgstr "Beállítja a megadott TileSet-navigációs réteg navigációs terület
 #. TileSet.set_terrain_color
 #: doc/classes/TileSet.xml
 msgid "Sets a terrain's color. This color is used for identifying the different terrains in the TileSet editor."
-msgstr "Beállítja a tereptípus színét. A TileSet-szerkesztő ezt a színt használja a tereptípusok megkülönböztetésére."
+msgstr "Beállítja a tereptípus színét. A TileSet-szerkesztőben ez a szín segít megkülönböztetni egymástól a tereptípusokat."
 
 #. TileSet.set_terrain_name
 #: doc/classes/TileSet.xml
