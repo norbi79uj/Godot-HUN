@@ -396,12 +396,12 @@ msgstr "A megadott terepkészlet minden tereptulajdonságát törli."
 #. TileSet.get_custom_data_layer_by_name
 #: doc/classes/TileSet.xml
 msgid "Returns the index of the custom data layer identified by the given name."
-msgstr "Visszaadja a neve alapján azonosított egyediadatréteg indexét."
+msgstr "Visszaadja a megadott nevű egyediadatréteg indexét."
 
 #. TileSet.get_custom_data_layer_type
 #: doc/classes/TileSet.xml
 msgid "Returns the type of the custom data layer identified by the given index."
-msgstr "Visszaadja a megadott indexű egyediadatréteg típusát."
+msgstr "Lekéri a megadott indexű egyediadatréteg adattípusát."
 
 #. TileSet.get_navigation_layer_layers
 #: doc/classes/TileSet.xml
@@ -436,7 +436,7 @@ msgstr "Visszaadja a megadott TileSet-fizikai réteg testjeinek ütközési masz
 #. TileSet.get_physics_layer_collision_priority
 #: doc/classes/TileSet.xml
 msgid "Returns the collision priority of bodies on the given TileSet's physics layer."
-msgstr "Visszaadja a megadott TileSet-fizikai réteg testjeinek ütközési prioritását."
+msgstr "Lekéri a megadott TileSet-fizikai réteghez tartozó testek ütközési prioritását."
 
 #. TileSet.get_physics_layer_physics_material
 #: doc/classes/TileSet.xml
@@ -456,7 +456,7 @@ msgstr "Visszaadja a tereptípus nevét."
 #. TileSet.get_terrain_set_mode
 #: doc/classes/TileSet.xml
 msgid "Returns a terrain set mode."
-msgstr "Visszaadja a megadott terepkészlet illesztési módját."
+msgstr "Visszaadja a megadott terepkészlet illesztési módját, amely a szomszédos csempék terepeinek összeillesztését szabályozza."
 
 #. TileSet.get_terrain_sets_count
 #: doc/classes/TileSet.xml
@@ -466,12 +466,12 @@ msgstr "Visszaadja a terepkészletek számát."
 #. TileSet.get_terrains_count
 #: doc/classes/TileSet.xml
 msgid "Returns the number of terrains in the given terrain set."
-msgstr "Visszaadja a megadott terepkészlet tereptípusainak számát."
+msgstr "Megadja, hány tereptípus található a kiválasztott terepkészletben."
 
 #. TileSet.has_custom_data_layer_by_name
 #: doc/classes/TileSet.xml
 msgid "Returns if there is a custom data layer named [param layer_name]."
-msgstr "Megadja, hogy van-e [param layer_name] nevű egyediadatréteg."
+msgstr "Megadja, hogy található-e [param layer_name] nevű egyediadatréteg a csempekészletben."
 
 #. TileSet.move_navigation_layer
 #: doc/classes/TileSet.xml
@@ -516,7 +516,7 @@ msgstr "Eltávolítja a [param terrain_set] indexű terepkészletet, és ennek m
 #. TileSet.set_custom_data_layer_type
 #: doc/classes/TileSet.xml
 msgid "Sets the type of the custom data layer identified by the given index."
-msgstr "Beállítja a megadott indexű egyediadatréteg típusát."
+msgstr "Beállítja, milyen típusú adatot tároljon a megadott indexű egyediadatréteg."
 
 #. TileSet.set_navigation_layer_layers
 #: doc/classes/TileSet.xml
@@ -561,12 +561,12 @@ msgstr "Visszaadja a megadott azonosítókhoz tartozó koordinátaszintű helyet
 #. TileSet.get_navigation_layer_layer_value
 #: doc/classes/TileSet.xml
 msgid "Returns whether or not the specified navigation layer of the TileSet navigation data layer identified by the given [param layer_index] is enabled, given a navigation_layers [param layer_number] between 1 and 32."
-msgstr "Visszaadja, hogy a [param layer_index] indexű TileSet-navigációs adatrétegben engedélyezett-e a [param layer_number] számú navigációs réteg (1 és 32 között)."
+msgstr "Megadja, hogy a [param layer_index] indexű TileSet-navigációs adatrétegben engedélyezett-e a [param layer_number] számú navigációs réteg. A rétegszám 1 és 32 közé eshet."
 
 #. TileSet.get_occlusion_layer_light_mask
 #: doc/classes/TileSet.xml
 msgid "Returns the light mask of the occlusion layer."
-msgstr "Visszaadja a fénykitakarási réteg fénymaszkját."
+msgstr "Lekéri a megadott fénykitakarási réteg fénymaszkját."
 
 #. TileSet.get_occlusion_layer_sdf_collision
 #: doc/classes/TileSet.xml
@@ -651,12 +651,12 @@ msgstr "Koordinátaszintű helyettesítési szabályt hoz létre a megadott azon
 #. TileSet.set_navigation_layer_layer_value
 #: doc/classes/TileSet.xml
 msgid "Based on [param value], enables or disables the specified navigation layer of the TileSet navigation data layer identified by the given [param layer_index], given a navigation_layers [param layer_number] between 1 and 32."
-msgstr "A [param value] értéke alapján engedélyezi vagy letiltja a [param layer_index] indexű TileSet-navigációs adatréteg [param layer_number] számú navigációs rétegét (1 és 32 között)."
+msgstr "A [param value] értékének megfelelően engedélyezi vagy letiltja a [param layer_index] indexű TileSet-navigációs adatréteg [param layer_number] számú navigációs rétegét. A réteg száma 1 és 32 közötti lehet."
 
 #. TileSet.set_occlusion_layer_light_mask
 #: doc/classes/TileSet.xml
 msgid "Sets the occlusion layer (as in the rendering server) for occluders in the given TileSet occlusion layer."
-msgstr "Beállítja a megadott TileSet-fénykitakarási rétegben található fénykitakarók fénymaszkját, a renderelési kiszolgálóban használt módon."
+msgstr "Beállítja a megadott TileSet-fénykitakarási réteg fénykitakaróinak fénymaszkját, a renderelési kiszolgálóban használt rétegértékek szerint."
 
 #. TileSet.set_occlusion_layer_sdf_collision
 #: doc/classes/TileSet.xml
@@ -666,7 +666,7 @@ msgstr "Engedélyezi vagy letiltja az előjeles távolságmezőn (SDF) alapuló 
 #. TileSet.set_physics_layer_collision_priority
 #: doc/classes/TileSet.xml
 msgid "Sets the collision priority for bodies in the given TileSet physics layer."
-msgstr "Beállítja a megadott TileSet-fizikai réteg testjeinek ütközési prioritását."
+msgstr "Megadja a kiválasztott TileSet-fizikai réteghez tartozó testek ütközési prioritását."
 
 #. TileSet.set_physics_layer_physics_material
 #: doc/classes/TileSet.xml
