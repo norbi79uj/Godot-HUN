@@ -1299,44 +1299,44 @@ msgstr "Ha [code]true[/code], a kamera által megjelenített nézetet nem befoly
 #. CollisionShape2D.brief
 #: doc/classes/CollisionShape2D.xml
 msgid "A node that provides a [Shape2D] to a [CollisionObject2D] parent."
-msgstr "Olyan csomópont, amely [Shape2D] alakzatot biztosít a szülő [CollisionObject2D] számára."
+msgstr "Ütközési alakzatot megadó csomópont: egy [Shape2D] erőforrást kapcsol a szülő [CollisionObject2D] csomóponthoz."
 
 #. CollisionShape2D.description
 #: doc/classes/CollisionShape2D.xml
 msgid "A node that provides a [Shape2D] to a [CollisionObject2D] parent and allows it to be edited. This can give a detection shape to an [Area2D] or turn a [PhysicsBody2D] into a solid object."
-msgstr "Olyan csomópont, amely szerkeszthető [Shape2D] alakzatot biztosít a szülő [CollisionObject2D] számára. Ezzel érzékelési alakzatot adhatsz egy [Area2D] csomóponthoz, vagy ütköző alakzattal rendelkező szilárd testté tehetsz egy [PhysicsBody2D] csomópontot."
+msgstr "Szerkeszthető [Shape2D] alakzatot biztosít a szülő [CollisionObject2D] csomópont számára. Ezzel érzékelési alakzatot adhatsz egy [Area2D] csomóponthoz, vagy szilárd ütközőfelülettel ruházhatsz fel egy [PhysicsBody2D] testet."
 
 #. CollisionShape2D.shape
 #: doc/classes/CollisionShape2D.xml
 msgid "The actual shape owned by this collision shape."
-msgstr "Az ütközési alakzat által használt alakzaterőforrás."
+msgstr "Az ütközéshez használt alakzat geometriáját meghatározó erőforrás."
 
 #. CollisionShape2D.disabled
 #: doc/classes/CollisionShape2D.xml
 msgid "A disabled collision shape has no effect in the world. This property should be changed with [method Object.set_deferred]."
-msgstr "A letiltott ütközési alakzatnak nincs hatása a fizikai világban. Ezt a tulajdonságot a [method Object.set_deferred] metódussal célszerű módosítani."
+msgstr "Letiltásakor az ütközési alakzatnak nincs hatása a fizikai világra. A tulajdonság módosításához a [method Object.set_deferred] metódust használd."
 
 #. CollisionShape2D.one_way_collision
 #: doc/classes/CollisionShape2D.xml
 msgid "Sets whether this collision shape should only detect collision on one side (top or bottom).\n[b]Note:[/b] This property has no effect if this [CollisionShape2D] is a child of an [Area2D] node.\n[b]Note:[/b] The one way collision direction can be configured by setting [member one_way_collision_direction]."
-msgstr "Meghatározza, hogy az ütközési alakzat csak az egyik oldalán (fent vagy lent) érzékeljen-e ütközést.\n[b]Megjegyzés:[/b] Ez a tulajdonság hatástalan, ha a [CollisionShape2D] egy [Area2D] csomópont gyermeke.\n[b]Megjegyzés:[/b] Az egyirányú ütközés iránya a [member one_way_collision_direction] tulajdonsággal állítható be."
+msgstr "Beállítja, hogy az ütközési alakzat csak az egyik oldalán (felül vagy alul) érzékeljen ütközést.\n[b]Megjegyzés:[/b] A tulajdonság hatástalan, ha a [CollisionShape2D] egy [Area2D] csomópont gyermeke.\n[b]Megjegyzés:[/b] Az ütközési irány a [member one_way_collision_direction] tulajdonsággal állítható be."
 
 #. CollisionShape2D.one_way_collision_direction
 #. CollisionPolygon2D.one_way_collision_direction
 #: doc/classes/CollisionShape2D.xml
 #: doc/classes/CollisionPolygon2D.xml
 msgid "The direction used for one-way collision."
-msgstr "Az egyirányú ütközéshez használt irány."
+msgstr "Az egyirányú ütközésnél figyelembe vett irány."
 
 #. CollisionShape2D.one_way_collision_margin
 #: doc/classes/CollisionShape2D.xml
 msgid "The margin used for one-way collision (in pixels). Higher values will make the shape thicker, and work better for colliders that enter the shape at a high velocity."
-msgstr "Az egyirányú ütközéshez használt ráhagyás képpontban. Nagyobb értéknél az alakzat az ütközésvizsgálat számára vastagabbnak számít, így a gyorsan érkező testekkel is megbízhatóbban működhet."
+msgstr "Az egyirányú ütközéshez használt, képpontban megadott ráhagyás. Nagyobb értéknél az alakzat vastagabbnak számít az ütközésvizsgálatban, ami segítheti a nagy sebességgel érkező testek megbízható érzékelését."
 
 #. CollisionShape2D.debug_color
 #: doc/classes/CollisionShape2D.xml
 msgid "The collision shape color that is displayed in the editor, or in the running project if [b]Debug &gt; Visible Collision Shapes[/b] is checked at the top of the editor.\n[b]Note:[/b] The default value is [member ProjectSettings.debug/shapes/collision/shape_color]. The [code]Color(0, 0, 0, 0)[/code] value documented here is a placeholder, and not the actual default debug color."
-msgstr "Az ütközési alakzat szerkesztőben megjelenő színe, illetve futó projektben is ez látható, ha a szerkesztő tetején be van jelölve a [b]Hibakeresés &gt; Látható ütközési alakzatok[/b] lehetőség.\n[b]Megjegyzés:[/b] Az alapértelmezett érték a [member ProjectSettings.debug/shapes/collision/shape_color]. Az itt dokumentált [code]Color(0, 0, 0, 0)[/code] csak helyőrző, nem a tényleges alapértelmezett hibakeresési szín."
+msgstr "Az ütközési alakzat megjelenítési színe a szerkesztőben, illetve futás közben, ha bekapcsolod a [b]Hibakeresés &gt; Látható ütközési alakzatok[/b] lehetőséget.\n[b]Megjegyzés:[/b] Az alapértelmezett színt a [member ProjectSettings.debug/shapes/collision/shape_color] beállítás határozza meg. A leírásban szereplő [code]Color(0, 0, 0, 0)[/code] csak helyőrző, nem a tényleges alapértelmezett hibakeresési szín."
 
 #. Sprite2D.brief
 #: doc/classes/Sprite2D.xml
@@ -4048,12 +4048,12 @@ msgstr "Visszaadja a mozgó objektum által az ütközésig megtett elmozdulást
 #. CollisionPolygon2D.brief
 #: doc/classes/CollisionPolygon2D.xml
 msgid "A node that provides a polygon shape to a [CollisionObject2D] parent."
-msgstr "Sokszög alakú ütközési alakzatot ad a szülő [CollisionObject2D] csomóponthoz."
+msgstr "Sokszög alakú ütközési geometriát biztosít a szülő [CollisionObject2D] csomópont számára."
 
 #. CollisionPolygon2D.description
 #: doc/classes/CollisionPolygon2D.xml
 msgid "A node that provides a polygon shape to a [CollisionObject2D] parent and allows it to be edited. The polygon can be concave or convex. This can give a detection shape to an [Area2D], turn a [PhysicsBody2D] into a solid object, or give a hollow shape to a [StaticBody2D].\n[b]Warning:[/b] A non-uniformly scaled [CollisionPolygon2D] will likely not behave as expected. Make sure to keep its scale the same on all axes and adjust its polygon instead."
-msgstr "Olyan csomópont, amely szerkeszthető sokszög alakú ütközési alakzatot ad egy szülő [CollisionObject2D] csomóponthoz. A sokszög lehet konkáv (homorú) vagy konvex (domború). Használható egy [Area2D] érzékelőalakzataként, egy [PhysicsBody2D] szilárd ütközési alakzataként, vagy egy [StaticBody2D] üreges ütközési alakzatának kialakítására.\n[b]Figyelmeztetés:[/b] A [CollisionPolygon2D] nem egyenletes méretezése váratlan működést okozhat. Minden tengelyen azonos méretarányt használj, és a kívánt alakot inkább a sokszög csúcsainak módosításával alakítsd ki."
+msgstr "Szerkeszthető sokszög alakú ütközési geometriát biztosít egy szülő [CollisionObject2D] csomópontnak. A sokszög lehet homorú vagy domború. Használható egy [Area2D] érzékelési alakzataként, egy [PhysicsBody2D] szilárd ütközési alakzataként, illetve egy [StaticBody2D] üreges alakzatának kialakítására.\n[b]Figyelmeztetés:[/b] A [CollisionPolygon2D] tengelyenként eltérő méretezése váratlan működést okozhat. Használj minden tengelyen azonos méretarányt, és a kívánt formát inkább a sokszög csúcsainak módosításával alakítsd ki."
 
 #. CollisionPolygon2D.build_mode
 #: doc/classes/CollisionPolygon2D.xml
@@ -4068,12 +4068,12 @@ msgstr "Ha az értéke [code]true[/code], a rendszer nem észlel ütközéseket.
 #. CollisionPolygon2D.one_way_collision
 #: doc/classes/CollisionPolygon2D.xml
 msgid "If [code]true[/code], only edges that face up, relative to [CollisionPolygon2D]'s rotation, will collide with other objects.\n[b]Note:[/b] This property has no effect if this [CollisionPolygon2D] is a child of an [Area2D] node.\n[b]Note:[/b] The one way collision direction can be configured by setting [member one_way_collision_direction]."
-msgstr "Ha [code]true[/code], csak a [CollisionPolygon2D] elforgatásához viszonyítva felfelé néző élek ütköznek más objektumokkal.\n[b]Megjegyzés:[/b] A tulajdonságnak nincs hatása, ha a [CollisionPolygon2D] egy [Area2D] csomópont gyermeke.\n[b]Megjegyzés:[/b] Az egyirányú ütközés irányát a [member one_way_collision_direction] beállításával adhatod meg."
+msgstr "Ha [code]true[/code], csak a [CollisionPolygon2D] elforgatásához viszonyítva felfelé néző élek ütköznek más objektumokkal.\n[b]Megjegyzés:[/b] A beállítás hatástalan, ha a [CollisionPolygon2D] egy [Area2D] csomópont gyermeke.\n[b]Megjegyzés:[/b] Az ütközés iránya a [member one_way_collision_direction] tulajdonsággal adható meg."
 
 #. CollisionPolygon2D.one_way_collision_margin
 #: doc/classes/CollisionPolygon2D.xml
 msgid "The margin used for one-way collision (in pixels). Higher values will make the shape thicker, and work better for colliders that enter the polygon at a high velocity."
-msgstr "Az egyirányú ütközéshez használt ráhagyás (képpontban). Nagyobb érték esetén az ütközésvizsgálat vastagabbnak tekinti az alakzatot, ami megbízhatóbbá teheti a nagy sebességgel a sokszögbe belépő testek ütközésének érzékelését."
+msgstr "Az egyirányú ütközéshez használt ráhagyás képpontban. Nagyobb értéknél az ütközésvizsgálat vastagabbnak tekinti a sokszöget, ami megbízhatóbbá teheti a nagy sebességgel belépő testek ütközésének érzékelését."
 
 #. CollisionPolygon2D.polygon
 #: doc/classes/CollisionPolygon2D.xml
