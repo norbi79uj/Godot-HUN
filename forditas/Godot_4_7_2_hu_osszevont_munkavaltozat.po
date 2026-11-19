@@ -846,62 +846,62 @@ msgstr "A [TileData] objektumhoz rendelt [Material]. Az alapértelmezett árnyal
 #. TileData.get_custom_data
 #: doc/classes/TileData.xml
 msgid "Returns the custom data value for custom data layer named [param layer_name]. To check if a custom data layer exists, use [method has_custom_data]."
-msgstr "Visszaadja a csempe [param layer_name] nevű egyediadatrétegében tárolt értéket. A réteg létezését a [method has_custom_data] metódussal ellenőrizheted."
+msgstr "Lekéri a csempe [param layer_name] nevű egyediadatrétegének értékét. A réteg létezését a [method has_custom_data] metódussal ellenőrizheted."
 
 #. TileData.set_custom_data
 #: doc/classes/TileData.xml
 msgid "Sets the tile's custom data value for the TileSet custom data layer with name [param layer_name]."
-msgstr "Beállítja a csempe egyedi adatértékét a TileSet [param layer_name] nevű egyediadatrétegében."
+msgstr "Beállítja a csempéhez tartozó értéket a TileSet [param layer_name] nevű egyediadatrétegében."
 
 #. TileData.has_custom_data
 #: doc/classes/TileData.xml
 msgid "Returns whether there exists a custom data layer named [param layer_name]."
-msgstr "Megadja, hogy van-e [param layer_name] nevű egyediadatréteg."
+msgstr "Ellenőrzi, hogy létezik-e [param layer_name] nevű egyediadatréteg."
 
 #. TileData.get_collision_polygons_count
 #: doc/classes/TileData.xml
 msgid "Returns how many polygons the tile has for TileSet physics layer with index [param layer_id]."
-msgstr "Visszaadja a csempéhez tartozó ütközési sokszögek számát a [param layer_id] indexű TileSet-fizikai rétegen."
+msgstr "Megadja, hány ütközési sokszöge van a csempének a [param layer_id] indexű TileSet-fizikai rétegen."
 
 #. TileData.get_collision_polygon_points
 #: doc/classes/TileData.xml
 msgid "Returns the points of the polygon at index [param polygon_index] for TileSet physics layer with index [param layer_id]."
-msgstr "Visszaadja a [param layer_id] indexű TileSet-fizikai réteg [param polygon_index] indexű ütközési sokszögének pontjait."
+msgstr "Lekéri a csempe [param polygon_index] indexű ütközési sokszögének pontjait a [param layer_id] indexű TileSet-fizikai rétegen."
 
 #. TileData.set_collision_polygon_points
 #: doc/classes/TileData.xml
 msgid "Sets the points of the polygon at index [param polygon_index] for TileSet physics layer with index [param layer_id]."
-msgstr "Beállítja a [param layer_id] indexű TileSet-fizikai réteg [param polygon_index] indexű ütközési sokszögének pontjait."
+msgstr "Beállítja a csempe [param polygon_index] indexű ütközési sokszögének pontjait a [param layer_id] indexű TileSet-fizikai rétegen."
 
 #. TileData.get_navigation_polygon
 #: doc/classes/TileData.xml
 msgid "Returns the navigation polygon of the tile for the TileSet navigation layer with index [param layer_id].\n[param flip_h], [param flip_v], and [param transpose] allow transforming the returned polygon."
-msgstr "Visszaadja a csempe navigációs sokszögét a [param layer_id] indexű TileSet-navigációs rétegen.\nA visszaadott sokszög a [param flip_h], [param flip_v] és [param transpose] paraméterekkel tükrözhető vagy transzponálható."
+msgstr "Lekéri a csempe navigációs sokszögét a [param layer_id] indexű TileSet-navigációs rétegen.\nA [param flip_h] és [param flip_v] paraméterekkel tükrözheted, a [param transpose] paraméterrel pedig transzponálhatod a visszaadott sokszöget."
 
 #. TileData.get_terrain_peering_bit
 #: doc/classes/TileData.xml
 msgid "Returns the tile's terrain bit for the given [param peering_bit] direction. To check that a direction is valid, use [method is_valid_terrain_peering_bit]."
-msgstr "Visszaadja a csempe [param peering_bit] irányhoz tartozó terepilleszkedési bitjét. Az irány érvényességét a [method is_valid_terrain_peering_bit] metódussal ellenőrizheted."
+msgstr "Lekéri a csempe [param peering_bit] irányhoz tartozó terepilleszkedési bitjét. A megadott irány érvényességét a [method is_valid_terrain_peering_bit] metódussal ellenőrizheted."
 
 #. AnimatedSprite2D.brief
 #: doc/classes/AnimatedSprite2D.xml
 msgid "Sprite node that contains multiple textures as frames to play for animation."
-msgstr "Több textúrát animációs képkockákként tároló sprite-csomópont."
+msgstr "Animációs képkockákként több textúrát használó 2D-s sprite-csomópont."
 
 #. AnimatedSprite2D.description
 #: doc/classes/AnimatedSprite2D.xml
 msgid "[AnimatedSprite2D] is similar to the [Sprite2D] node, except it carries multiple textures as animation frames. Animations are created using a [SpriteFrames] resource, which allows you to import image files (or a folder containing said files) to provide the animation frames for the sprite. The [SpriteFrames] resource can be configured in the editor via the SpriteFrames bottom panel."
-msgstr "Az [AnimatedSprite2D] hasonló a [Sprite2D] csomóponthoz, de egyetlen textúra helyett több textúrát tárol animációs képkockákként. Az animációk [SpriteFrames] erőforrás segítségével készülnek; ebbe képfájlokat (vagy azokat tartalmazó mappát) importálhatsz, hogy megadd a sprite animációs képkockáit. A [SpriteFrames] erőforrást a szerkesztő alsó SpriteFrames paneljén állíthatod be."
+msgstr "Az [AnimatedSprite2D] a [Sprite2D] csomóponthoz hasonlóan jelenít meg sprite-okat, de több textúrát használ az animáció képkockáihoz. Az animációkat a [SpriteFrames] erőforrásban hozhatod létre képfájlok vagy képeket tartalmazó mappa importálásával. A [SpriteFrames] erőforrást a szerkesztő alsó SpriteFrames paneljén állíthatod be."
 
 #. AnimatedSprite2D.sprite_frames
 #: doc/classes/AnimatedSprite2D.xml
 msgid "The [SpriteFrames] resource containing the animation(s). Allows you the option to load, edit, clear, make unique and save the states of the [SpriteFrames] resource."
-msgstr "Az animációkat tartalmazó [SpriteFrames] erőforrás. Lehetővé teszi a [SpriteFrames] erőforrás állapotainak betöltését, szerkesztését, törlését, egyedivé tételét és mentését."
+msgstr "Az animációkat tároló [SpriteFrames] erőforrás. A [SpriteFrames] erőforrást betöltheted, szerkesztheted, kiürítheted, egyedivé teheted és mentheted."
 
 #. AnimatedSprite2D.animation
 #: doc/classes/AnimatedSprite2D.xml
 msgid "The current animation from the [member sprite_frames] resource. If this value is changed, the [member frame] counter and the [member frame_progress] are reset."
-msgstr "A [member sprite_frames] erőforrás aktuális animációja. Az érték módosításakor a [member frame] képkockaszámláló és a [member frame_progress] előrehaladási érték alaphelyzetbe áll."
+msgstr "A [member sprite_frames] erőforrásból kiválasztott aktuális animáció. Megváltoztatásakor a [member frame] képkockaindex és a [member frame_progress] képkockán belüli előrehaladás alaphelyzetbe áll."
 
 #. AnimatedSprite2D.autoplay
 #. AnimationPlayer.autoplay
