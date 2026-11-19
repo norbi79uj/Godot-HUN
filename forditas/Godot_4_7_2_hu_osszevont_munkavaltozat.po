@@ -276,12 +276,12 @@ msgstr "Az izometrikus, hatszögletű és féleltolásos négyzet alakú csempé
 #. TileSet.tile_offset_axis
 #: doc/classes/TileSet.xml
 msgid "For all half-offset shapes (Isometric, Hexagonal and Half-Offset square), determines the offset axis."
-msgstr "Az izometrikus, hatszögletű és féleltolásos négyzet alakú csempéknél meghatározza, melyik tengely mentén történik az eltolás."
+msgstr "Féleltolásos csempealakoknál (izometrikus, hatszögletű és féleltolásos négyzet) meghatározza, melyik tengely mentén történik az eltolás."
 
 #. TileSet.uv_clipping
 #: doc/classes/TileSet.xml
 msgid "Enables/Disable uv clipping when rendering the tiles."
-msgstr "Engedélyezi vagy letiltja az UV-koordináták szerinti levágást a csempék kirajzolásakor."
+msgstr "A csempék kirajzolásakor engedélyezi vagy letiltja a textúra UV-koordináták szerinti levágását."
 
 #. TileSet.add_source
 #: doc/classes/TileSet.xml
@@ -331,12 +331,12 @@ msgstr "Visszaadja a fizikai rétegek számát."
 #. TileSet.set_physics_layer_collision_layer
 #: doc/classes/TileSet.xml
 msgid "Sets the collision layer (as in the physics server) for bodies in the given TileSet physics layer."
-msgstr "Beállítja a megadott TileSet-fizikai réteg testjeinek ütközési rétegét, a fizikai kiszolgálóban használt formában."
+msgstr "Beállítja, mely ütközési réteghez tartozzanak a megadott TileSet-fizikai réteg testjei. A rétegérték a fizikai kiszolgálóban használt jelölést követi."
 
 #. TileSet.set_physics_layer_collision_mask
 #: doc/classes/TileSet.xml
 msgid "Sets the collision mask for bodies in the given TileSet physics layer."
-msgstr "Beállítja a megadott TileSet-fizikai réteg testjeinek ütközési maszkját."
+msgstr "Beállítja a megadott TileSet-fizikai réteg testjeinek ütközési maszkját, vagyis hogy mely ütközési rétegeket vegyék figyelembe az ütközésvizsgálat során."
 
 #. TileSet.add_custom_data_layer
 #: doc/classes/TileSet.xml
@@ -406,7 +406,7 @@ msgstr "Visszaadja a megadott indexű egyediadatréteg típusát."
 #. TileSet.get_navigation_layer_layers
 #: doc/classes/TileSet.xml
 msgid "Returns the navigation layers (as in the Navigation server) of the given TileSet navigation layer."
-msgstr "Visszaadja a megadott TileSet-navigációs réteg rétegmaszkját, a navigációs kiszolgálóban használt formában."
+msgstr "Visszaadja a megadott TileSet-navigációs réteg rétegmaszkját, a navigációs kiszolgáló által használt jelöléssel."
 
 #. TileSet.get_navigation_layers_count
 #: doc/classes/TileSet.xml
@@ -426,12 +426,12 @@ msgstr "Visszaadja a csempekészletben tárolt [TileMapPattern] minták számát
 #. TileSet.get_physics_layer_collision_layer
 #: doc/classes/TileSet.xml
 msgid "Returns the collision layer (as in the physics server) bodies on the given TileSet's physics layer are in."
-msgstr "Visszaadja a megadott TileSet-fizikai réteg testjeinek ütközési rétegét, a fizikai kiszolgálóban használt formában."
+msgstr "Visszaadja, mely ütközési réteghez tartoznak a megadott TileSet-fizikai réteg testjei, a fizikai kiszolgáló szerinti jelöléssel."
 
 #. TileSet.get_physics_layer_collision_mask
 #: doc/classes/TileSet.xml
 msgid "Returns the collision mask of bodies on the given TileSet's physics layer."
-msgstr "Visszaadja a megadott TileSet-fizikai réteg testjeinek ütközési maszkját."
+msgstr "Visszaadja a megadott TileSet-fizikai réteg testjeinek ütközési maszkját, amely meghatározza, mely ütközési rétegeket vizsgálják."
 
 #. TileSet.get_physics_layer_collision_priority
 #: doc/classes/TileSet.xml
@@ -441,7 +441,7 @@ msgstr "Visszaadja a megadott TileSet-fizikai réteg testjeinek ütközési prio
 #. TileSet.get_physics_layer_physics_material
 #: doc/classes/TileSet.xml
 msgid "Returns the physics material of bodies on the given TileSet's physics layer."
-msgstr "Visszaadja a megadott TileSet-fizikai réteg testjeinek fizikai anyagát."
+msgstr "Visszaadja a megadott TileSet-fizikai réteg testjeihez rendelt fizikai anyagot."
 
 #. TileSet.get_terrain_color
 #: doc/classes/TileSet.xml
@@ -511,7 +511,7 @@ msgstr "Eltávolítja a [param terrain_set] terepkészlet [param terrain_index] 
 #. TileSet.remove_terrain_set
 #: doc/classes/TileSet.xml
 msgid "Removes the terrain set at index [param terrain_set]. Also updates the atlas tiles accordingly."
-msgstr "Eltávolítja a [param terrain_set] indexű terepkészletet, és ennek megfelelően frissíti az atlaszcsempéket."
+msgstr "Eltávolítja a [param terrain_set] indexű terepkészletet, és a változásnak megfelelően frissíti az atlaszcsempék terepadatait."
 
 #. TileSet.set_custom_data_layer_type
 #: doc/classes/TileSet.xml
@@ -521,7 +521,7 @@ msgstr "Beállítja a megadott indexű egyediadatréteg típusát."
 #. TileSet.set_navigation_layer_layers
 #: doc/classes/TileSet.xml
 msgid "Sets the navigation layers (as in the navigation server) for navigation regions in the given TileSet navigation layer."
-msgstr "Beállítja a megadott TileSet-navigációs réteg navigációs területeinek rétegmaszkját, a navigációs kiszolgálóban használt formában."
+msgstr "Beállítja, mely navigációs rétegekhez tartozzanak a megadott TileSet-navigációs réteg navigációs területei. A rétegmaszk a navigációs kiszolgáló szerinti értéket használja."
 
 #. TileSet.set_terrain_color
 #: doc/classes/TileSet.xml
@@ -571,7 +571,7 @@ msgstr "Visszaadja a fénykitakarási réteg fénymaszkját."
 #. TileSet.get_occlusion_layer_sdf_collision
 #: doc/classes/TileSet.xml
 msgid "Returns if the occluders from this layer use [code]sdf_collision[/code]."
-msgstr "Visszaadja, hogy az adott réteg fénykitakarói használják-e a [code]sdf_collision[/code] beállítást, amely az előjeles távolságmező (SDF) létrehozásában való részvételt szabályozza."
+msgstr "Megadja, hogy a réteg fénykitakarói használják-e az előjeles távolságmezővel (SDF) kapcsolatos [code]sdf_collision[/code] beállítást."
 
 #. TileSet.get_source_level_tile_proxy
 #: doc/classes/TileSet.xml
@@ -661,7 +661,7 @@ msgstr "Beállítja a megadott TileSet-fénykitakarási rétegben található f�
 #. TileSet.set_occlusion_layer_sdf_collision
 #: doc/classes/TileSet.xml
 msgid "Enables or disables SDF collision for occluders in the given TileSet occlusion layer."
-msgstr "Engedélyezi vagy letiltja az előjeles távolságmezőn (SDF) alapuló ütközéskezelést a megadott TileSet-fénykitakarási réteg fénykitakaróinál."
+msgstr "Engedélyezi vagy letiltja az SDF-alapú ütközéskezelést a megadott TileSet-fénykitakarási réteg fénykitakaróinál. Az SDF előjeles távolságmezőt jelent."
 
 #. TileSet.set_physics_layer_collision_priority
 #: doc/classes/TileSet.xml
