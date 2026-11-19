@@ -541,22 +541,22 @@ msgstr "Beállítja a terepkészlet illesztési módját. Az egyes módok meghat
 #. TileSet.cleanup_invalid_tile_proxies
 #: doc/classes/TileSet.xml
 msgid "Clears tile proxies pointing to invalid tiles."
-msgstr "Törli azokat a csempehelyettesítési szabályokat, amelyek érvénytelen csempékre mutatnak."
+msgstr "Eltávolítja azokat a csempehelyettesítési szabályokat, amelyek már nem létező vagy érvénytelen csempére hivatkoznak."
 
 #. TileSet.clear_tile_proxies
 #: doc/classes/TileSet.xml
 msgid "Clears all tile proxies."
-msgstr "Törli az összes csempehelyettesítési szabályt."
+msgstr "Eltávolít minden csempehelyettesítési szabályt a csempekészletből."
 
 #. TileSet.get_alternative_level_tile_proxy
 #: doc/classes/TileSet.xml
 msgid "Returns the alternative-level proxy for the given identifiers. The returned array contains the three proxie's target identifiers (source ID, atlas coords ID and alternative tile ID).\nIf the TileSet has no proxy for the given identifiers, returns an empty Array."
-msgstr "Visszaadja a megadott azonosítókhoz tartozó alternatívszintű helyettesítési szabályt. A kapott tömb a célcsempe három azonosítóját tartalmazza: a forrásazonosítót, az atlaszkoordináta-azonosítót és az alternatív csempeazonosítót.\nHa a TileSet nem tartalmaz ilyen szabályt, üres tömböt ad vissza."
+msgstr "Lekéri a megadott azonosítókhoz tartozó, alternatív csempeszintű helyettesítési szabályt. A visszaadott tömb a célcsempe három azonosítóját tartalmazza: a forrásazonosítót, az atlaszkoordináta-azonosítót és az alternatív csempeazonosítót.\nHa a TileSet nem tartalmaz ilyen helyettesítést, üres tömböt ad vissza."
 
 #. TileSet.get_coords_level_tile_proxy
 #: doc/classes/TileSet.xml
 msgid "Returns the coordinate-level proxy for the given identifiers. The returned array contains the two target identifiers of the proxy (source ID and atlas coordinates ID).\nIf the TileSet has no proxy for the given identifiers, returns an empty Array."
-msgstr "Visszaadja a megadott azonosítókhoz tartozó koordinátaszintű helyettesítési szabályt. A kapott tömb két célazonosítót tartalmaz: a forrásazonosítót és az atlaszkoordináta-azonosítót.\nHa a TileSet nem tartalmaz ilyen szabályt, üres tömböt ad vissza."
+msgstr "Lekéri a megadott azonosítókhoz tartozó, koordinátaszintű csempehelyettesítési szabályt. A visszaadott tömb a célcsempe forrásazonosítóját és atlaszkoordináta-azonosítóját tartalmazza.\nHa a TileSet nem tartalmaz ilyen helyettesítést, üres tömböt ad vissza."
 
 #. TileSet.get_navigation_layer_layer_value
 #: doc/classes/TileSet.xml
@@ -576,22 +576,22 @@ msgstr "Visszaadja, hogy az adott réteg fénykitakarói használják-e a [code]
 #. TileSet.get_source_level_tile_proxy
 #: doc/classes/TileSet.xml
 msgid "Returns the source-level proxy for the given source identifier.\nIf the TileSet has no proxy for the given identifier, returns -1."
-msgstr "Visszaadja a megadott forrásazonosítóhoz tartozó forrásszintű helyettesítési szabály célazonosítóját.\nHa a TileSet nem tartalmaz ilyen szabályt, -1 értéket ad vissza."
+msgstr "Lekéri a megadott forrásazonosítóhoz tartozó, forrásszintű csempehelyettesítés célazonosítóját.\nHa a TileSet nem tartalmaz ilyen helyettesítést, -1 értéket ad vissza."
 
 #. TileSet.has_alternative_level_tile_proxy
 #: doc/classes/TileSet.xml
 msgid "Returns if there is an alternative-level proxy for the given identifiers."
-msgstr "Ellenőrzi, hogy tartozik-e alternatívszintű helyettesítési szabály a megadott azonosítókhoz."
+msgstr "Megadja, hogy létezik-e a megadott azonosítókhoz alternatív csempeszintű helyettesítési szabály."
 
 #. TileSet.has_coords_level_tile_proxy
 #: doc/classes/TileSet.xml
 msgid "Returns if there is a coodinates-level proxy for the given identifiers."
-msgstr "Ellenőrzi, hogy tartozik-e koordinátaszintű helyettesítési szabály a megadott azonosítókhoz."
+msgstr "Megadja, hogy létezik-e a megadott azonosítókhoz koordinátaszintű csempehelyettesítési szabály."
 
 #. TileSet.has_source_level_tile_proxy
 #: doc/classes/TileSet.xml
 msgid "Returns if there is a source-level proxy for the given source ID."
-msgstr "Ellenőrzi, hogy tartozik-e forrásszintű helyettesítési szabály a megadott forrásazonosítóhoz."
+msgstr "Megadja, hogy létezik-e a megadott forrásazonosítóhoz forrásszintű csempehelyettesítési szabály."
 
 #. TileSet.map_tile_proxy
 #: doc/classes/TileSet.xml
@@ -636,17 +636,17 @@ msgstr "Eltávolítja a megadott azonosítókhoz beállított koordinátaszintű
 #. TileSet.remove_source_level_tile_proxy
 #: doc/classes/TileSet.xml
 msgid "Removes a source-level tile proxy."
-msgstr "Eltávolítja a forrásszintű csempehelyettesítési szabályt."
+msgstr "Törli a forrásszintű csempehelyettesítési szabályt."
 
 #. TileSet.set_alternative_level_tile_proxy
 #: doc/classes/TileSet.xml
 msgid "Create an alternative-level proxy for the given identifiers. A proxy will map set of tile identifiers to another set of identifiers.\nProxied tiles can be automatically replaced in TileMapLayer nodes using the editor."
-msgstr "Alternatívszintű helyettesítési szabályt hoz létre a megadott azonosítókhoz. A szabály a megadott csempeazonosítókat egy másik azonosítókészletre képezi le.\nA helyettesített csempék a szerkesztő segítségével automatikusan kicserélhetők a TileMapLayer csomópontokban."
+msgstr "Alternatív csempeszintű helyettesítést hoz létre a megadott azonosítókhoz, így egy csempe azonosítókészletét egy másikra képezi le.\nA helyettesített csempéket a szerkesztőben automatikusan lecserélheted a TileMapLayer csomópontokban."
 
 #. TileSet.set_coords_level_tile_proxy
 #: doc/classes/TileSet.xml
 msgid "Creates a coordinates-level proxy for the given identifiers. A proxy will map set of tile identifiers to another set of identifiers. The alternative tile ID is kept the same when using coordinates-level proxies.\nProxied tiles can be automatically replaced in TileMapLayer nodes using the editor."
-msgstr "Koordinátaszintű helyettesítési szabályt hoz létre a megadott azonosítókhoz. A szabály a csempeazonosítókat más azonosítókra képezi le. Koordinátaszintű helyettesítéskor az alternatív csempeazonosító változatlan marad.\nA helyettesített csempék a szerkesztő segítségével automatikusan kicserélhetők a TileMapLayer csomópontokban."
+msgstr "Koordinátaszintű csempehelyettesítést hoz létre a megadott azonosítókhoz: a forrás- és atlaszkoordináta-azonosítókat más értékekre képezi le, de az alternatív csempeazonosító változatlan marad.\nA helyettesített csempéket a szerkesztőben automatikusan lecserélheted a TileMapLayer csomópontokban."
 
 #. TileSet.set_navigation_layer_layer_value
 #: doc/classes/TileSet.xml
@@ -681,7 +681,7 @@ msgstr "Megváltoztatja egy csempeforrás azonosítóját."
 #. TileSet.set_source_level_tile_proxy
 #: doc/classes/TileSet.xml
 msgid "Creates a source-level proxy for the given source ID. A proxy will map set of tile identifiers to another set of identifiers. Both the atlas coordinates ID and the alternative tile ID are kept the same when using source-level proxies.\nProxied tiles can be automatically replaced in TileMapLayer nodes using the editor."
-msgstr "Forrásszintű helyettesítési szabályt hoz létre a megadott forrásazonosítóhoz. A szabály a csempeazonosítókat más azonosítókra képezi le. Forrásszintű helyettesítéskor az atlaszkoordináta-azonosító és az alternatív csempeazonosító változatlan marad.\nA helyettesített csempék a szerkesztő segítségével automatikusan kicserélhetők a TileMapLayer csomópontokban."
+msgstr "Forrásszintű csempehelyettesítést hoz létre a megadott forrásazonosítóhoz: a forrásazonosítót másikra képezi le, miközben az atlaszkoordináta-azonosító és az alternatív csempeazonosító változatlan marad.\nA helyettesített csempéket a szerkesztőben automatikusan lecserélheted a TileMapLayer csomópontokban."
 
 #. TileSetAtlasSource.brief
 #: doc/classes/TileSetAtlasSource.xml
