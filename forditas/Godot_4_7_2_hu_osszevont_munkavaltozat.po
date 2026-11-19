@@ -476,22 +476,22 @@ msgstr "Megadja, hogy van-e [param layer_name] nevű egyediadatréteg."
 #. TileSet.move_navigation_layer
 #: doc/classes/TileSet.xml
 msgid "Moves the navigation layer at index [param layer_index] to the given position [param to_position] in the array. Also updates the atlas tiles accordingly."
-msgstr "A [param layer_index] indexű navigációs réteget áthelyezi a tömb [param to_position] pozíciójába, és ennek megfelelően frissíti az atlaszcsempéket."
+msgstr "A [param layer_index] indexű navigációs réteget a tömb [param to_position] pozíciójára helyezi át. Az atlaszcsempék adatait is hozzáigazítja az új rétegsorrendhez."
 
 #. TileSet.remove_custom_data_layer
 #: doc/classes/TileSet.xml
 msgid "Removes the custom data layer at index [param layer_index]. Also updates the atlas tiles accordingly."
-msgstr "Eltávolítja a [param layer_index] indexű egyediadatréteget, és ennek megfelelően frissíti az atlaszcsempéket."
+msgstr "Törli a [param layer_index] indexű egyediadatréteget. Az atlaszcsempék kapcsolódó adatait is frissíti a megmaradó rétegeknek megfelelően."
 
 #. TileSet.remove_navigation_layer
 #: doc/classes/TileSet.xml
 msgid "Removes the navigation layer at index [param layer_index]. Also updates the atlas tiles accordingly."
-msgstr "Eltávolítja a [param layer_index] indexű navigációs réteget, és ennek megfelelően frissíti az atlaszcsempéket."
+msgstr "Törli a [param layer_index] indexű navigációs réteget. Az atlaszcsempék kapcsolódó adatait is frissíti a megmaradó rétegeknek megfelelően."
 
 #. TileSet.remove_occlusion_layer
 #: doc/classes/TileSet.xml
 msgid "Removes the occlusion layer at index [param layer_index]. Also updates the atlas tiles accordingly."
-msgstr "Eltávolítja a [param layer_index] indexű fénykitakarási réteget, és ennek megfelelően frissíti az atlaszcsempéket."
+msgstr "Törli a [param layer_index] indexű fénykitakarási réteget. Az atlaszcsempék kapcsolódó adatait is frissíti a megmaradó rétegeknek megfelelően."
 
 #. TileSet.remove_pattern
 #: doc/classes/TileSet.xml
@@ -501,12 +501,12 @@ msgstr "Eltávolítja a megadott indexű [TileMapPattern] mintát."
 #. TileSet.remove_physics_layer
 #: doc/classes/TileSet.xml
 msgid "Removes the physics layer at index [param layer_index]. Also updates the atlas tiles accordingly."
-msgstr "Eltávolítja a [param layer_index] indexű fizikai réteget, és ennek megfelelően frissíti az atlaszcsempéket."
+msgstr "Törli a [param layer_index] indexű fizikai réteget. Az atlaszcsempék kapcsolódó adatait is frissíti a megmaradó rétegeknek megfelelően."
 
 #. TileSet.remove_terrain
 #: doc/classes/TileSet.xml
 msgid "Removes the terrain at index [param terrain_index] in the given terrain set [param terrain_set]. Also updates the atlas tiles accordingly."
-msgstr "Eltávolítja a [param terrain_set] terepkészlet [param terrain_index] indexű tereptípusát, és ennek megfelelően frissíti az atlaszcsempéket."
+msgstr "Törli a [param terrain_set] terepkészlet [param terrain_index] indexű tereptípusát. Az atlaszcsempék terepadatait is frissíti a megmaradó tereptípusoknak megfelelően."
 
 #. TileSet.remove_terrain_set
 #: doc/classes/TileSet.xml
@@ -596,32 +596,32 @@ msgstr "Ellenőrzi, hogy tartozik-e forrásszintű helyettesítési szabály a m
 #. TileSet.map_tile_proxy
 #: doc/classes/TileSet.xml
 msgid "According to the configured proxies, maps the provided identifiers to a new set of identifiers. The source ID, atlas coordinates ID and alternative tile ID are returned as a 3 elements Array.\nThis function first look for matching alternative-level proxies, then coordinates-level proxies, then source-level proxies.\nIf no proxy corresponding to provided identifiers are found, returns the same values the ones used as arguments."
-msgstr "A megadott csempeazonosítókat a beállított helyettesítési szabályok alapján új azonosítókká alakítja. Háromelemű tömbben adja vissza a forrásazonosítót, az atlaszkoordináta-azonosítót és az alternatív csempeazonosítót.\nAz egyezést először az alternatívszintű, utána a koordinátaszintű, végül a forrásszintű szabályok között keresi.\nHa nincs illeszkedő szabály, a bemeneti azonosítókat változtatás nélkül adja vissza."
+msgstr "A beállított csempehelyettesítési szabályok alapján új azonosítókat keres a megadott csempéhez. Az eredményt háromelemű tömbként adja vissza: forrásazonosító, atlaszkoordináta-azonosító és alternatív csempeazonosító.\nA szabályokat ebben a sorrendben vizsgálja: alternatívszintű, koordinátaszintű, majd forrásszintű helyettesítés.\nHa egyik szabály sem illeszkedik, az eredetileg megadott azonosítókat adja vissza."
 
 #. TileSet.move_custom_data_layer
 #: doc/classes/TileSet.xml
 msgid "Moves the custom data layer at index [param layer_index] to the given position [param to_position] in the array. Also updates the atlas tiles accordingly."
-msgstr "A [param layer_index] indexű egyediadatréteget áthelyezi a tömb [param to_position] pozíciójába, és ennek megfelelően frissíti az atlaszcsempéket."
+msgstr "A [param layer_index] indexű egyediadatréteget a tömb [param to_position] pozíciójára helyezi át. Az atlaszcsempék adatait is hozzáigazítja az új rétegsorrendhez."
 
 #. TileSet.move_occlusion_layer
 #: doc/classes/TileSet.xml
 msgid "Moves the occlusion layer at index [param layer_index] to the given position [param to_position] in the array. Also updates the atlas tiles accordingly."
-msgstr "A [param layer_index] indexű fénykitakarási réteget áthelyezi a tömb [param to_position] pozíciójába, és ennek megfelelően frissíti az atlaszcsempéket."
+msgstr "A [param layer_index] indexű fénykitakarási réteget a tömb [param to_position] pozíciójára helyezi át. Az atlaszcsempék adatait is hozzáigazítja az új rétegsorrendhez."
 
 #. TileSet.move_physics_layer
 #: doc/classes/TileSet.xml
 msgid "Moves the physics layer at index [param layer_index] to the given position [param to_position] in the array. Also updates the atlas tiles accordingly."
-msgstr "A [param layer_index] indexű fizikai réteget áthelyezi a tömb [param to_position] pozíciójába, és ennek megfelelően frissíti az atlaszcsempéket."
+msgstr "A [param layer_index] indexű fizikai réteget a tömb [param to_position] pozíciójára helyezi át. Az atlaszcsempék adatait is hozzáigazítja az új rétegsorrendhez."
 
 #. TileSet.move_terrain
 #: doc/classes/TileSet.xml
 msgid "Moves the terrain at index [param terrain_index] for terrain set [param terrain_set] to the given position [param to_position] in the array. Also updates the atlas tiles accordingly."
-msgstr "A [param terrain_set] terepkészlet [param terrain_index] indexű tereptípusát áthelyezi a tömb [param to_position] pozíciójába, és ennek megfelelően frissíti az atlaszcsempéket."
+msgstr "A [param terrain_set] terepkészlet [param terrain_index] indexű tereptípusát áthelyezi a tömb [param to_position] pozíciójára. Az atlaszcsempék terepadatait is frissíti, hogy kövessék az új sorrendet."
 
 #. TileSet.move_terrain_set
 #: doc/classes/TileSet.xml
 msgid "Moves the terrain set at index [param terrain_set] to the given position [param to_position] in the array. Also updates the atlas tiles accordingly."
-msgstr "A [param terrain_set] indexű terepkészletet áthelyezi a tömb [param to_position] pozíciójába, és ennek megfelelően frissíti az atlaszcsempéket."
+msgstr "A [param terrain_set] indexű terepkészletet áthelyezi a tömb [param to_position] pozíciójára. Az atlaszcsempék terepadatait is frissíti az új sorrendnek megfelelően."
 
 #. TileSet.remove_alternative_level_tile_proxy
 #: doc/classes/TileSet.xml
