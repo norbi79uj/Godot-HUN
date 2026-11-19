@@ -291,7 +291,7 @@ msgstr "Hozzáad egy [TileSetSource] forrást a csempekészlethez. Ha a [param a
 #. TileSet.get_source
 #: doc/classes/TileSet.xml
 msgid "Returns the [TileSetSource] with ID [param source_id]."
-msgstr "Visszaadja a [param source_id] azonosítójú [TileSetSource] forrást."
+msgstr "A [param source_id] azonosítónak megfelelő [TileSetSource] csempeforrást adja vissza."
 
 #. TileSet.get_source_count
 #: doc/classes/TileSet.xml
@@ -301,17 +301,17 @@ msgstr "Visszaadja a csempekészletben található [TileSetSource] források sz�
 #. TileSet.get_source_id
 #: doc/classes/TileSet.xml
 msgid "Returns the source ID for source with index [param index]."
-msgstr "Visszaadja a [param index] indexű forrás azonosítóját."
+msgstr "A [param index] indexű csempeforrás azonosítóját adja vissza."
 
 #. TileSet.has_source
 #: doc/classes/TileSet.xml
 msgid "Returns if this TileSet has a source for the given source ID."
-msgstr "Megadja, hogy a csempekészlet tartalmaz-e a megadott azonosítójú forrást."
+msgstr "Megadja, hogy létezik-e a megadott forrásazonosítóhoz tartozó csempeforrás a készletben."
 
 #. TileSet.remove_source
 #: doc/classes/TileSet.xml
 msgid "Removes the source with the given source ID."
-msgstr "Eltávolítja a megadott forrásazonosítójú forrást."
+msgstr "Eltávolítja a megadott azonosítójú csempeforrást a csempekészletből."
 
 #. TileSet.get_next_source_id
 #: doc/classes/TileSet.xml
@@ -326,7 +326,7 @@ msgstr "Fizikai réteget ad a csempekészlethez a tömb [param to_position] poz�
 #. TileSet.get_physics_layers_count
 #: doc/classes/TileSet.xml
 msgid "Returns the physics layers count."
-msgstr "Visszaadja a fizikai rétegek számát."
+msgstr "Megadja, hány fizikai réteg található a csempekészletben."
 
 #. TileSet.set_physics_layer_collision_layer
 #: doc/classes/TileSet.xml
@@ -351,22 +351,22 @@ msgstr "Beállítja a megadott indexű egyediadatréteg nevét. A rétegek neve 
 #. TileSet.get_custom_data_layer_name
 #: doc/classes/TileSet.xml
 msgid "Returns the name of the custom data layer identified by the given index."
-msgstr "Visszaadja a megadott indexű egyediadatréteg nevét."
+msgstr "Lekéri a megadott indexű egyediadatréteg nevét."
 
 #. TileSet.get_custom_data_layers_count
 #: doc/classes/TileSet.xml
 msgid "Returns the custom data layers count."
-msgstr "Visszaadja az egyediadatrétegek számát."
+msgstr "Megadja, hány egyediadatréteg van a csempekészletben."
 
 #. TileSet.add_pattern
 #: doc/classes/TileSet.xml
 msgid "Adds a [TileMapPattern] to be stored in the TileSet resource. If provided, insert it at the given [param index]."
-msgstr "Hozzáad egy [TileMapPattern] mintát a TileSet erőforrásban tárolt mintákhoz. Ha meg van adva a [param index], a mintát a megadott indexű helyre illeszti."
+msgstr "Eltárol egy [TileMapPattern] mintát a TileSet erőforrásban. Ha meg van adva a [param index] értéke, a mintát a megadott indexű helyre szúrja be."
 
 #. TileSet.get_pattern
 #: doc/classes/TileSet.xml
 msgid "Returns the [TileMapPattern] at the given [param index]."
-msgstr "Visszaadja a [param index] indexű [TileMapPattern] mintát."
+msgstr "A [param index] indexnél tárolt [TileMapPattern] mintát adja vissza."
 
 #. TileSet.add_terrain
 #: doc/classes/TileSet.xml
@@ -391,7 +391,7 @@ msgstr "Fénykitakarási réteget ad a csempekészlethez a tömb [param to_posit
 #. TileSet.clear_terrains
 #: doc/classes/TileSet.xml
 msgid "Clears all terrain properties for the given terrain set."
-msgstr "A megadott terepkészlet minden tereptulajdonságát törli."
+msgstr "Törli a megadott terepkészlet összes tereptulajdonságát."
 
 #. TileSet.get_custom_data_layer_by_name
 #: doc/classes/TileSet.xml
@@ -411,12 +411,12 @@ msgstr "Visszaadja a megadott TileSet-navigációs réteg rétegmaszkját, a nav
 #. TileSet.get_navigation_layers_count
 #: doc/classes/TileSet.xml
 msgid "Returns the navigation layers count."
-msgstr "Visszaadja a navigációs rétegek számát."
+msgstr "Megadja, hány navigációs réteg van a csempekészletben."
 
 #. TileSet.get_occlusion_layers_count
 #: doc/classes/TileSet.xml
 msgid "Returns the occlusion layers count."
-msgstr "Visszaadja a fénykitakarási rétegek számát."
+msgstr "Megadja, hány fénykitakarási réteg van a csempekészletben."
 
 #. TileSet.get_patterns_count
 #: doc/classes/TileSet.xml
