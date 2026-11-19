@@ -908,36 +908,36 @@ msgstr "A [member sprite_frames] erőforrás aktuális animációja. Az érték 
 #: doc/classes/AnimatedSprite2D.xml
 #: doc/classes/AnimationPlayer.xml
 msgid "The key of the animation to play when the scene loads."
-msgstr "A jelenet betöltésekor automatikusan lejátszandó animáció kulcsa."
+msgstr "A jelenet betöltésekor automatikusan elinduló animáció kulcsa."
 
 #. AnimatedSprite2D.play
 #: doc/classes/AnimatedSprite2D.xml
 msgid "Plays the animation with key [param name]. If [param custom_speed] is negative and [param from_end] is [code]true[/code], the animation will play backwards (which is equivalent to calling [method play_backwards]).\nIf this method is called with that same animation [param name], or with no [param name] parameter, the assigned animation will resume playing if it was paused."
-msgstr "Lejátssza a [param name] kulcsú animációt. Ha a [param custom_speed] negatív, és a [param from_end] értéke [code]true[/code], az animáció visszafelé játszódik le (ez megfelel a [method play_backwards] meghívásának).\nHa a metódust ugyanazzal a [param name] animációval vagy [param name] paraméter nélkül hívod meg, a korábban szüneteltetett animáció lejátszása folytatódik."
+msgstr "Elindítja a [param name] kulccsal azonosított animációt. Ha a [param custom_speed] negatív, és a [param from_end] értéke [code]true[/code], az animáció visszafelé játszódik le (ez megfelel a [method play_backwards] meghívásának).\nHa a metódust ugyanazzal a [param name] animációval vagy [param name] paraméter nélkül hívod meg, a korábban szüneteltetett animáció lejátszása folytatódik."
 
 #. AnimatedSprite2D.play_backwards
 #. AnimationPlayer.play_backwards
 #: doc/classes/AnimatedSprite2D.xml
 #: doc/classes/AnimationPlayer.xml
 msgid "Plays the animation with key [param name] in reverse.\nThis method is a shorthand for [method play] with [code]custom_speed = -1.0[/code] and [code]from_end = true[/code], so see its description for more information."
-msgstr "Visszafelé játssza le a [param name] kulcsú animációt.\nEz a [method play] metódus rövidített hívása [code]custom_speed = -1.0[/code] és [code]from_end = true[/code] paraméterekkel; részletekért lásd annak leírását."
+msgstr "A [param name] kulcsú animációt visszafelé játssza le.\nEz a [method play] metódus rövidített hívása [code]custom_speed = -1.0[/code] és [code]from_end = true[/code] paraméterekkel; részletekért lásd annak leírását."
 
 #. AnimatedSprite2D.stop
 #: doc/classes/AnimatedSprite2D.xml
 msgid "Stops the currently playing animation. The animation position is reset to [code]0[/code] and the [code]custom_speed[/code] is reset to [code]1.0[/code]. See also [method pause]."
-msgstr "Leállítja az éppen futó animációt. A lejátszási pozíció [code]0[/code]-ra, a [code]custom_speed[/code] pedig [code]1.0[/code]-ra áll vissza. Lásd még: [method pause]."
+msgstr "Leállítja az aktuálisan lejátszott animációt. A lejátszási pozíció [code]0[/code]-ra, a [code]custom_speed[/code] pedig [code]1.0[/code]-ra áll vissza. Lásd még: [method pause]."
 
 #. AnimatedSprite2D.pause
 #: doc/classes/AnimatedSprite2D.xml
 msgid "Pauses the currently playing animation. The [member frame] and [member frame_progress] will be kept and calling [method play] or [method play_backwards] without arguments will resume the animation from the current playback position.\nSee also [method stop]."
-msgstr "Szünetelteti az éppen lejátszott animációt. A [member frame] és a [member frame_progress] értéke megmarad; a [method play] vagy [method play_backwards] paraméter nélküli meghívása az aktuális pozíciótól folytatja a lejátszást.\nLásd még: [method stop]."
+msgstr "Szünetelteti az aktuális animáció lejátszását. A [member frame] és a [member frame_progress] értéke megmarad; a [method play] vagy [method play_backwards] paraméter nélküli meghívása az aktuális pozíciótól folytatja a lejátszást.\nLásd még: [method stop]."
 
 #. AnimatedSprite2D.is_playing
 #. AnimationPlayer.is_playing
 #: doc/classes/AnimatedSprite2D.xml
 #: doc/classes/AnimationPlayer.xml
 msgid "Returns [code]true[/code] if an animation is currently playing (even if [member speed_scale] and/or [code]custom_speed[/code] are [code]0[/code])."
-msgstr "[code]true[/code] értéket ad vissza, ha éppen animáció lejátszása zajlik (akkor is, ha a [member speed_scale] és/vagy a [code]custom_speed[/code] értéke [code]0[/code])."
+msgstr "[code]true[/code] értékkel jelzi, ha egy animáció lejátszása folyamatban van (akkor is, ha a [member speed_scale] és/vagy a [code]custom_speed[/code] értéke [code]0[/code])."
 
 #. AnimatedSprite2D.flip_h
 #. Sprite2D.flip_h
@@ -960,36 +960,36 @@ msgstr "Ha [code]true[/code], függőlegesen tükrözi a textúrát."
 #. AnimatedSprite2D.frame
 #: doc/classes/AnimatedSprite2D.xml
 msgid "The displayed animation frame's index. Setting this property also resets [member frame_progress]. If this is not desired, use [method set_frame_and_progress]."
-msgstr "A megjelenített animációs képkocka indexe. A tulajdonság módosítása a [member frame_progress] értékét is alaphelyzetbe állítja. Ha ezt el akarod kerülni, használd a [method set_frame_and_progress] metódust."
+msgstr "Az éppen megjelenített animációs képkocka indexe. A tulajdonság módosítása a [member frame_progress] értékét is alaphelyzetbe állítja. Ha ezt el akarod kerülni, használd a [method set_frame_and_progress] metódust."
 
 #. AnimatedSprite2D.frame_progress
 #: doc/classes/AnimatedSprite2D.xml
 msgid "The progress value between [code]0.0[/code] and [code]1.0[/code] until the current frame transitions to the next frame. If the animation is playing backwards, the value transitions from [code]1.0[/code] to [code]0.0[/code]."
-msgstr "Az aktuális képkocka lejátszásának előrehaladása [code]0.0[/code] és [code]1.0[/code] között, a következő képkockára váltásig. Visszafelé játszott animációnál az érték [code]1.0[/code]-ról [code]0.0[/code]-ra csökken."
+msgstr "Az aktuális képkockán belüli lejátszási előrehaladás [code]0.0[/code] és [code]1.0[/code] között, a következő képkockára váltásig. Visszafelé játszott animációnál az érték [code]1.0[/code]-ról [code]0.0[/code]-ra csökken."
 
 #. AnimatedSprite2D.speed_scale
 #. AnimationPlayer.speed_scale
 #: doc/classes/AnimatedSprite2D.xml
 #: doc/classes/AnimationPlayer.xml
 msgid "The speed scaling ratio. For example, if this value is [code]1[/code], then the animation plays at normal speed. If it's [code]0.5[/code], then it plays at half speed. If it's [code]2[/code], then it plays at double speed.\nIf set to a negative value, the animation is played in reverse. If set to [code]0[/code], the animation will not advance."
-msgstr "Az animáció sebességének szorzója. Például a [code]1[/code] normál sebességet, a [code]0.5[/code] félsebességet, a [code]2[/code] kétszeres sebességet jelent.\nNegatív értéknél az animáció visszafelé játszódik. [code]0[/code] értéknél nem lép tovább."
+msgstr "Az animáció lejátszási sebességét szabályozó szorzó. Például a [code]1[/code] normál sebességet, a [code]0.5[/code] félsebességet, a [code]2[/code] kétszeres sebességet jelent.\nNegatív értéknél az animáció visszafelé játszódik. [code]0[/code] értéknél nem lép tovább."
 
 #. AnimatedSprite2D.centered
 #: doc/classes/AnimatedSprite2D.xml
 msgid "If [code]true[/code], texture will be centered.\n[b]Note:[/b] For games with a pixel art aesthetic, textures may appear deformed when centered. This is caused by their position being between pixels. To prevent this, set this property to [code]false[/code], or consider enabling [member ProjectSettings.rendering/2d/snap/snap_2d_vertices_to_pixel] and [member ProjectSettings.rendering/2d/snap/snap_2d_transforms_to_pixel]."
-msgstr "Ha [code]true[/code], a textúra középre kerül.\n[b]Megjegyzés:[/b] Pixelgrafikás játékokban a textúrák középre igazítva torzulhatnak, ha a pozíciójuk képpontok közé esik. Ennek elkerülésére állítsd a tulajdonságot [code]false[/code] értékre, vagy kapcsold be a [member ProjectSettings.rendering/2d/snap/snap_2d_vertices_to_pixel] és [member ProjectSettings.rendering/2d/snap/snap_2d_transforms_to_pixel] beállításokat."
+msgstr "Ha [code]true[/code], a textúra középre igazítva jelenik meg.\n[b]Megjegyzés:[/b] Pixelgrafikás játékokban a textúrák középre igazítva torzulhatnak, ha a pozíciójuk képpontok közé esik. Ennek elkerülésére állítsd a tulajdonságot [code]false[/code] értékre, vagy kapcsold be a [member ProjectSettings.rendering/2d/snap/snap_2d_vertices_to_pixel] és [member ProjectSettings.rendering/2d/snap/snap_2d_transforms_to_pixel] beállításokat."
 
 #. AnimatedSprite2D.offset
 #: doc/classes/AnimatedSprite2D.xml
 msgid "The texture's drawing offset."
-msgstr "A textúra kirajzolási eltolása."
+msgstr "A textúra kirajzolási helyének eltolása."
 
 #. AnimatedSprite2D.get_playing_speed
 #. AnimationPlayer.get_playing_speed
 #: doc/classes/AnimatedSprite2D.xml
 #: doc/classes/AnimationPlayer.xml
 msgid "Returns the actual playing speed of current animation or [code]0[/code] if not playing. This speed is the [member speed_scale] property multiplied by [code]custom_speed[/code] argument specified when calling the [method play] method.\nReturns a negative value if the current animation is playing backwards."
-msgstr "Visszaadja az aktuális animáció tényleges lejátszási sebességét, illetve [code]0[/code] értéket, ha nincs lejátszás. A sebesség a [member speed_scale] tulajdonság és a [method play] meghívásakor megadott [code]custom_speed[/code] paraméter szorzata.\nNegatív értéket ad vissza, ha az animáció visszafelé játszódik."
+msgstr "Megadja az aktuális animáció tényleges lejátszási sebességét, illetve [code]0[/code] értéket, ha nincs lejátszás. A sebesség a [member speed_scale] tulajdonság és a [method play] meghívásakor megadott [code]custom_speed[/code] paraméter szorzata.\nNegatív értéket ad vissza, ha az animáció visszafelé játszódik."
 
 #. CharacterBody2D.brief
 #: doc/classes/CharacterBody2D.xml
