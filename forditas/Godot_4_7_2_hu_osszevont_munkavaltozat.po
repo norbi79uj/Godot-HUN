@@ -721,62 +721,62 @@ msgstr "Új csempét hoz létre az atlasz [param atlas_coords] koordinátáinál
 #. TileSetAtlasSource.create_alternative_tile
 #: doc/classes/TileSetAtlasSource.xml
 msgid "Creates an alternative tile for the tile at coordinates [param atlas_coords]. If [param alternative_id_override] is -1, give it an automatically generated unique ID, or assigns it the given ID otherwise.\nReturns the new alternative identifier, or -1 if the alternative could not be created with a provided [param alternative_id_override]."
-msgstr "Alternatív csempét hoz létre a [param atlas_coords] koordinátáknál található csempéhez. Ha a [param alternative_id_override] értéke -1, a rendszer automatikusan egyedi azonosítót rendel az új változathoz; egyébként a megadott azonosítót használja.\nVisszaadja az új alternatív csempe azonosítóját, vagy -1-et, ha a megadott [param alternative_id_override] értékkel nem sikerül létrehozni."
+msgstr "Alternatív csempét hoz létre a [param atlas_coords] atlaszkoordinátáknál található csempéhez. Ha a [param alternative_id_override] értéke -1, automatikusan új, egyedi azonosítót generál; különben a megadott azonosítót használja.\nVisszaadja az új változat azonosítóját, vagy -1-et, ha a létrehozás a megadott [param alternative_id_override] azonosítóval nem sikerült."
 
 #. TileSetAtlasSource.has_room_for_tile
 #: doc/classes/TileSetAtlasSource.xml
 msgid "Returns whether there is enough room in an atlas to create/modify a tile with the given properties. If [param ignored_tile] is provided, act as is the given tile was not present in the atlas. This may be used when you want to modify a tile's properties."
-msgstr "Megadja, hogy van-e elég hely az atlaszban a megadott tulajdonságokkal rendelkező csempe létrehozásához vagy módosításához. Ha a [param ignored_tile] meg van adva, a helyellenőrzés figyelmen kívül hagyja az adott csempét. Ez akkor hasznos, ha egy meglévő csempe tulajdonságait szeretnéd módosítani."
+msgstr "Ellenőrzi, hogy az atlaszban van-e elegendő hely a megadott tulajdonságú csempe létrehozásához vagy módosításához. Ha a [param ignored_tile] meg van adva, a helyellenőrzés úgy számol, mintha az adott csempe nem lenne az atlaszban. Ez meglévő csempék tulajdonságainak módosításakor hasznos."
 
 #. TileSetAtlasSource.has_tiles_outside_texture
 #: doc/classes/TileSetAtlasSource.xml
 msgid "Checks if the source has any tiles that don't fit the texture area (either partially or completely)."
-msgstr "Ellenőrzi, hogy van-e a forrásban olyan csempe, amely részben vagy egészében az atlasztextúra határain kívül esik."
+msgstr "Ellenőrzi, hogy a forrás tartalmaz-e olyan csempét, amely részben vagy teljesen kilóg a textúra területéről."
 
 #. TileSetAtlasSource.clear_tiles_outside_texture
 #: doc/classes/TileSetAtlasSource.xml
 msgid "Removes all tiles that don't fit the available texture area. This method iterates over all the source's tiles, so it's advised to use [method has_tiles_outside_texture] beforehand."
-msgstr "Eltávolítja az atlasztextúra területén el nem férő csempéket. Mivel a metódus a forrás minden csempéjét megvizsgálja, előtte célszerű meghívni a [method has_tiles_outside_texture] metódust."
+msgstr "Eltávolítja az összes olyan csempét, amely nem fér el teljes egészében a textúra területén. A metódus a forrás összes csempéjét bejárja, ezért előtte ajánlott a [method has_tiles_outside_texture] metódussal ellenőrizni, szükség van-e rá."
 
 #. TileSetAtlasSource.get_tiles_to_be_removed_on_change
 #: doc/classes/TileSetAtlasSource.xml
 msgid "Returns an array of tiles coordinates ID that will be automatically removed when modifying one or several of those properties: [param texture], [param margins], [param separation] or [param texture_region_size]. This can be used to undo changes that would have caused tiles data loss."
-msgstr "Visszaadja azoknak a csempéknek az atlaszkoordináta-azonosítóit tömbként, amelyeket a rendszer automatikusan eltávolítana az alábbi tulajdonságok módosítása esetén: [param texture], [param margins], [param separation] vagy [param texture_region_size]. Ez segíthet visszavonni az olyan változtatásokat, amelyek csempeadatok elvesztéséhez vezetnének."
+msgstr "Tömbben adja vissza azoknak a csempéknek az atlaszkoordináta-azonosítóit, amelyeket a [param texture], [param margins], [param separation] vagy [param texture_region_size] tulajdonság módosításakor a rendszer automatikusan eltávolítana. Az eredmény segítségével visszavonhatók a csempeadatok elvesztésével járó módosítások."
 
 #. TileSetAtlasSource.remove_tile
 #: doc/classes/TileSetAtlasSource.xml
 msgid "Remove a tile and its alternative at coordinates [param atlas_coords]."
-msgstr "Eltávolítja a [param atlas_coords] koordinátájú csempét az alternatív változataival együtt."
+msgstr "Eltávolítja a [param atlas_coords] atlaszkoordinátáknál található csempét és valamennyi alternatív változatát."
 
 #. TileSetAtlasSource.remove_alternative_tile
 #: doc/classes/TileSetAtlasSource.xml
 msgid "Remove a tile's alternative with alternative ID [param alternative_tile].\nCalling this function with [param alternative_tile] equals to 0 will fail, as the base tile alternative cannot be removed."
-msgstr "Eltávolítja a csempe [param alternative_tile] alternatív azonosítójú változatát.\nHa a [param alternative_tile] értéke 0, a művelet sikertelen, mert a csempe 0 azonosítójú alapváltozata nem törölhető."
+msgstr "Eltávolítja a csempe [param alternative_tile] azonosítójú alternatív változatát.\nHa a [param alternative_tile] értéke 0, a művelet sikertelen, mert az alapcsempe nem távolítható el ezzel a metódussal."
 
 #. TileSetAtlasSource.get_tile_data
 #: doc/classes/TileSetAtlasSource.xml
 msgid "Returns the [TileData] object for the given atlas coordinates and alternative ID."
-msgstr "Visszaadja a megadott atlaszkoordinátákkal és alternatív csempeazonosítóval kiválasztott [TileData] objektumot."
+msgstr "A megadott atlaszkoordinátákhoz és alternatív csempeazonosítóhoz tartozó [TileData] objektumot adja vissza."
 
 #. TileSetAtlasSource.get_tile_texture_region
 #: doc/classes/TileSetAtlasSource.xml
 msgid "Returns a tile's texture region in the atlas texture. For animated tiles, a [param frame] argument might be provided for the different frames of the animation."
-msgstr "Visszaadja a csempéhez tartozó textúraterületet az atlaszban. Animált csempéknél a [param frame] paraméterrel kiválasztható az animáció kívánt képkockája."
+msgstr "Visszaadja a csempe textúraterületét az atlasztextúrán belül. Animált csempéknél a [param frame] paraméterrel adható meg, melyik animációs képkocka területét kérjük le."
 
 #. TileSetAtlasSource.get_atlas_grid_size
 #: doc/classes/TileSetAtlasSource.xml
 msgid "Returns the atlas grid size, which depends on how many tiles can fit in the texture. It thus depends on the [member texture]'s size, the atlas [member margins], and the tiles' [member texture_region_size]."
-msgstr "Visszaadja az atlaszrács méretét, vagyis azt, hogy a textúrában hány csempe fér el. Ezt a [member texture] mérete, az atlasz [member margins] margói és a csempék [member texture_region_size] mérete határozza meg."
+msgstr "Megadja az atlaszrács méretét, amely a textúrában elférő csempék számától függ. Ezt a [member texture] mérete, a [member margins] margók és a csempék [member texture_region_size] mérete határozza meg."
 
 #. TileSetAtlasSource.get_tile_animation_frames_count
 #: doc/classes/TileSetAtlasSource.xml
 msgid "Returns how many animation frames has the tile at coordinates [param atlas_coords]."
-msgstr "Visszaadja a [param atlas_coords] koordinátájú csempe animációs képkockáinak számát."
+msgstr "Megadja, hány animációs képkockája van a [param atlas_coords] atlaszkoordinátáknál található csempének."
 
 #. TileSetAtlasSource.get_tile_animation_speed
 #: doc/classes/TileSetAtlasSource.xml
 msgid "Returns the animation speed of the tile at coordinates [param atlas_coords]."
-msgstr "Visszaadja a [param atlas_coords] koordinátájú csempe animációs sebességét."
+msgstr "A [param atlas_coords] atlaszkoordinátáknál található csempe animációs sebességét adja vissza."
 
 #. TileSetAtlasSource.set_tile_animation_speed
 #: doc/classes/TileSetAtlasSource.xml
