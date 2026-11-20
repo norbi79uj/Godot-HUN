@@ -920,7 +920,7 @@ msgstr "Lejátssza a [param name] kulcsú animációt. Ha a [param custom_speed]
 #: doc/classes/AnimatedSprite2D.xml
 #: doc/classes/AnimationPlayer.xml
 msgid "Plays the animation with key [param name] in reverse.\nThis method is a shorthand for [method play] with [code]custom_speed = -1.0[/code] and [code]from_end = true[/code], so see its description for more information."
-msgstr "Visszafelé játssza le a [param name] kulcsú animációt.\nEz a [method play] metódus rövidített hívása [code]custom_speed = -1.0[/code] és [code]from_end = true[/code] paraméterekkel; részletekért lásd annak leírását."
+msgstr "Fordított irányban játssza le a [param name] kulcsú animációt.\nEz a [method play] metódus rövidített hívása [code]custom_speed = -1.0[/code] és [code]from_end = true[/code] paraméterekkel; részletekért lásd annak leírását."
 
 #. AnimatedSprite2D.stop
 #: doc/classes/AnimatedSprite2D.xml
@@ -937,7 +937,7 @@ msgstr "Szünetelteti az éppen lejátszott animációt. A [member frame] és a 
 #: doc/classes/AnimatedSprite2D.xml
 #: doc/classes/AnimationPlayer.xml
 msgid "Returns [code]true[/code] if an animation is currently playing (even if [member speed_scale] and/or [code]custom_speed[/code] are [code]0[/code])."
-msgstr "[code]true[/code] értéket ad vissza, ha éppen animáció lejátszása zajlik (akkor is, ha a [member speed_scale] és/vagy a [code]custom_speed[/code] értéke [code]0[/code])."
+msgstr "[code]true[/code] értéket ad vissza, ha egy animáció lejátszási állapotban van (akkor is, ha a [member speed_scale] és/vagy a [code]custom_speed[/code] értéke [code]0[/code])."
 
 #. AnimatedSprite2D.flip_h
 #. Sprite2D.flip_h
@@ -972,7 +972,7 @@ msgstr "Az aktuális képkocka lejátszásának előrehaladása [code]0.0[/code]
 #: doc/classes/AnimatedSprite2D.xml
 #: doc/classes/AnimationPlayer.xml
 msgid "The speed scaling ratio. For example, if this value is [code]1[/code], then the animation plays at normal speed. If it's [code]0.5[/code], then it plays at half speed. If it's [code]2[/code], then it plays at double speed.\nIf set to a negative value, the animation is played in reverse. If set to [code]0[/code], the animation will not advance."
-msgstr "Az animáció sebességének szorzója. Például a [code]1[/code] normál sebességet, a [code]0.5[/code] félsebességet, a [code]2[/code] kétszeres sebességet jelent.\nNegatív értéknél az animáció visszafelé játszódik. [code]0[/code] értéknél nem lép tovább."
+msgstr "Az animáció lejátszási sebességének szorzótényezője. Például a [code]1[/code] normál sebességet, a [code]0.5[/code] félsebességet, a [code]2[/code] kétszeres sebességet jelent.\nNegatív értéknél az animáció visszafelé játszódik. [code]0[/code] értéknél nem lép tovább."
 
 #. AnimatedSprite2D.centered
 #: doc/classes/AnimatedSprite2D.xml
@@ -989,7 +989,7 @@ msgstr "A textúra kirajzolási eltolása."
 #: doc/classes/AnimatedSprite2D.xml
 #: doc/classes/AnimationPlayer.xml
 msgid "Returns the actual playing speed of current animation or [code]0[/code] if not playing. This speed is the [member speed_scale] property multiplied by [code]custom_speed[/code] argument specified when calling the [method play] method.\nReturns a negative value if the current animation is playing backwards."
-msgstr "Visszaadja az aktuális animáció tényleges lejátszási sebességét, illetve [code]0[/code] értéket, ha nincs lejátszás. A sebesség a [member speed_scale] tulajdonság és a [method play] meghívásakor megadott [code]custom_speed[/code] paraméter szorzata.\nNegatív értéket ad vissza, ha az animáció visszafelé játszódik."
+msgstr "Az aktuális animáció tényleges lejátszási sebességét adja vissza, illetve [code]0[/code] értéket, ha nem fut animáció. A sebesség a [member speed_scale] tulajdonság és a [method play] meghívásakor megadott [code]custom_speed[/code] paraméter szorzata.\nNegatív értéket ad vissza, ha az animáció visszafelé játszódik."
 
 #. CharacterBody2D.brief
 #: doc/classes/CharacterBody2D.xml
@@ -1571,7 +1571,7 @@ msgstr "Ha [code]true[/code], a lejátszás előtt automatikusan meghívja a [me
 #. AnimationPlayer.playback_default_blend_time
 #: doc/classes/AnimationPlayer.xml
 msgid "The default time in which to blend animations. Ranges from 0 to 4096 with 0.01 precision."
-msgstr "Az animációk közötti áttűnés alapértelmezett időtartama. Értéke 0 és 4096 között állítható, 0,01-es pontossággal."
+msgstr "Az animációk közötti áttűnés alapértelmezett keverési időtartama. Értéke 0 és 4096 között állítható, 0,01-es pontossággal."
 
 #. AnimationPlayer.animation_get_next
 #: doc/classes/AnimationPlayer.xml
@@ -1596,32 +1596,32 @@ msgstr "Visszaadja a kulcsukkal megadott két animáció közötti áttűnés id
 #. AnimationPlayer.pause
 #: doc/classes/AnimationPlayer.xml
 msgid "Pauses the currently playing animation. The [member current_animation_position] will be kept and calling [method play] or [method play_backwards] without arguments or with the same animation name as [member assigned_animation] will resume the animation.\nSee also [method stop]."
-msgstr "Szünetelteti az éppen futó animációt. A [member current_animation_position] értéke megmarad. A [method play] vagy a [method play_backwards] paraméter nélküli, illetve a [member assigned_animation] értékével azonos animációnévvel történő meghívása a megállított pozíciótól folytatja a lejátszást.\nLásd még: [method stop]."
+msgstr "Szünetelteti az aktuális animáció lejátszását, miközben megőrzi a [member current_animation_position] értékét. A [method play] vagy a [method play_backwards] paraméter nélküli, illetve a [member assigned_animation] értékével azonos animációnévvel történő meghívása a megállított pozíciótól folytatja a lejátszást.\nLásd még: [method stop]."
 
 #. AnimationPlayer.play
 #: doc/classes/AnimationPlayer.xml
 msgid "Plays the animation with key [param name]. Custom blend times and speed can be set.\nThe [param from_end] option only affects when switching to a new animation track, or if the same track but at the start or end. It does not affect resuming playback that was paused in the middle of an animation. If [param custom_speed] is negative and [param from_end] is [code]true[/code], the animation will play backwards (which is equivalent to calling [method play_backwards]).\nThe [AnimationPlayer] keeps track of its current or last played animation with [member assigned_animation]. If this method is called with that same animation [param name], or with no [param name] parameter, the assigned animation will resume playing if it was paused.\n[b]Note:[/b] The animation will be updated the next time the [AnimationPlayer] is processed. If other variables are updated at the same time this is called, they may be updated too early. To perform the update immediately, call [code]advance(0)[/code]."
-msgstr "Lejátssza a [param name] kulcsú animációt. Egyéni áttűnési idő és sebesség adható meg.\nA [param from_end] beállítás csak új animációs sávra váltáskor hat, vagy ugyanazon sáv elején, illetve végén. A közepén szüneteltetett animáció folytatását nem befolyásolja. Ha [param custom_speed] negatív, és [param from_end] értéke [code]true[/code], az animáció visszafelé játszódik, ami megfelel a [method play_backwards] meghívásának.\nAz [AnimationPlayer] a [member assigned_animation] segítségével tartja nyilván az aktuális vagy legutóbb lejátszott animációt. Ha ezzel azonos [param name] értékkel, vagy [param name] nélkül hívod meg, a szüneteltetett animáció folytatódik.\n[b]Megjegyzés:[/b] Az animáció állapota csak az [AnimationPlayer] következő feldolgozásakor frissül. Ha ugyanakkor más változókat is módosítasz, azok még az animáció frissítése előtt változhatnak meg. Az azonnali frissítéshez hívd meg az [code]advance(0)[/code] utasítást."
+msgstr "Elindítja a [param name] kulcsú animáció lejátszását. Egyéni áttűnési idő és lejátszási sebesség is megadható.\nA [param from_end] beállítás csak új animációs sávra váltáskor hat, vagy ugyanazon sáv elején, illetve végén. A közepén szüneteltetett animáció folytatását nem befolyásolja. Ha [param custom_speed] negatív, és [param from_end] értéke [code]true[/code], az animáció visszafelé játszódik, ami megfelel a [method play_backwards] meghívásának.\nAz [AnimationPlayer] a [member assigned_animation] segítségével tartja nyilván az aktuális vagy legutóbb lejátszott animációt. Ha ezzel azonos [param name] értékkel, vagy [param name] nélkül hívod meg, a szüneteltetett animáció folytatódik.\n[b]Megjegyzés:[/b] Az animáció állapota csak az [AnimationPlayer] következő feldolgozásakor frissül. Ha ugyanakkor más változókat is módosítasz, azok még az animáció frissítése előtt változhatnak meg. Az azonnali frissítéshez hívd meg az [code]advance(0)[/code] utasítást."
 
 #. AnimationPlayer.play_section
 #: doc/classes/AnimationPlayer.xml
 msgid "Plays the animation with key [param name] and the section starting from [param start_time] and ending on [param end_time]. See also [method play].\nSetting [param start_time] to a value outside the range of the animation means the start of the animation will be used instead, and setting [param end_time] to a value outside the range of the animation means the end of the animation will be used instead. [param start_time] cannot be equal to [param end_time]."
-msgstr "A [param name] kulcsú animációnak csak a [param start_time] és [param end_time] közötti szakaszát játssza le. Lásd még: [method play].\nHa a [param start_time] kívül esik az animáció időtartamán, az animáció elejét veszi kezdőpontnak; ha a [param end_time] esik kívül, a végét veszi végpontnak. A [param start_time] nem lehet azonos a [param end_time] értékével."
+msgstr "A [param name] kulcsú animáció [param start_time] kezdő- és [param end_time] végidőponttal határolt szakaszát játssza le. Lásd még: [method play].\nHa a [param start_time] kívül esik az animáció időtartamán, az animáció elejét veszi kezdőpontnak; ha a [param end_time] esik kívül, a végét veszi végpontnak. A [param start_time] nem lehet azonos a [param end_time] értékével."
 
 #. AnimationPlayer.queue
 #: doc/classes/AnimationPlayer.xml
 msgid "Queues an animation for playback once the current animation and all previously queued animations are done.\n[b]Note:[/b] If a looped animation is currently playing, the queued animation will never play unless the looped animation is stopped somehow."
-msgstr "Az animációt a lejátszási sorba állítja; akkor indul el, amikor az aktuális és minden korábban sorba tett animáció befejeződött.\n[b]Megjegyzés:[/b] Ha jelenleg végtelenítve ismétlődő animáció fut, a sorba állított animáció nem indul el, amíg az ismétlődőt valamilyen módon meg nem állítod."
+msgstr "A megadott animációt a lejátszási sor végére helyezi; csak az aktuális és a korábban sorba állított animációk befejeződése után indul el.\n[b]Megjegyzés:[/b] Ha jelenleg végtelenítve ismétlődő animáció fut, a sorba állított animáció nem indul el, amíg az ismétlődőt valamilyen módon meg nem állítod."
 
 #. AnimationPlayer.seek
 #: doc/classes/AnimationPlayer.xml
 msgid "Seeks the animation to the [param seconds] point in time (in seconds). If [param update] is [code]true[/code], the animation updates too, otherwise it updates at process time. Events between the current frame and [param seconds] are skipped.\nIf [param update_only] is [code]true[/code], the method / audio / animation playback tracks will not be processed.\n[b]Note:[/b] Seeking to the end of the animation doesn't emit [signal AnimationMixer.animation_finished]. If you want to skip animation and emit the signal, use [method AnimationMixer.advance]."
-msgstr "Az animáció lejátszási pozícióját a [param seconds] időpontra (másodpercben) állítja. Ha a [param update] értéke [code]true[/code], az animáció azonnal frissül, máskülönben csak a feldolgozáskor. Az aktuális lejátszási pozíció és a [param seconds] közötti eseményeket a metódus átugorja.\nHa a [param update_only] értéke [code]true[/code], a metódus-, hang- és animációlejátszási sávok nem kerülnek feldolgozásra.\n[b]Megjegyzés:[/b] Az animáció végére ugrás nem váltja ki a [signal AnimationMixer.animation_finished] jelzést. Ha át szeretnéd ugrani az animációt, de szeretnéd kiváltani ezt a jelzést is, használd a [method AnimationMixer.advance] metódust."
+msgstr "Az animáció lejátszási pozícióját a [param seconds] másodpercnél lévő időpontra helyezi át. Ha a [param update] értéke [code]true[/code], az animáció azonnal frissül, máskülönben csak a feldolgozáskor. Az aktuális lejátszási pozíció és a [param seconds] közötti eseményeket a metódus átugorja.\nHa a [param update_only] értéke [code]true[/code], a metódus-, hang- és animációlejátszási sávok nem kerülnek feldolgozásra.\n[b]Megjegyzés:[/b] Az animáció végére ugrás nem váltja ki a [signal AnimationMixer.animation_finished] jelzést. Ha át szeretnéd ugrani az animációt, de szeretnéd kiváltani ezt a jelzést is, használd a [method AnimationMixer.advance] metódust."
 
 #. AnimationPlayer.stop
 #: doc/classes/AnimationPlayer.xml
 msgid "Stops the currently playing animation. The animation position is reset to [code]0[/code] and the [code]custom_speed[/code] is reset to [code]1.0[/code]. See also [method pause].\nIf [param keep_state] is [code]true[/code], the animation state is not updated visually.\n[b]Note:[/b] The method / audio / animation playback tracks will not be processed by this method."
-msgstr "Leállítja az aktuális animációt. A lejátszási pozíció [code]0[/code], a [code]custom_speed[/code] pedig [code]1.0[/code] értékre áll vissza. Lásd még: [method pause].\nHa a [param keep_state] értéke [code]true[/code], az animáció állapota vizuálisan nem frissül.\n[b]Megjegyzés:[/b] A metódus-, hang- és animációlejátszási sávokat ez a metódus nem dolgozza fel."
+msgstr "Leállítja az aktuális animáció lejátszását. A lejátszási pozíció [code]0[/code] értékre, a [code]custom_speed[/code] pedig [code]1.0[/code] értékre áll vissza. Lásd még: [method pause].\nHa a [param keep_state] értéke [code]true[/code], az animáció állapota vizuálisan nem frissül.\n[b]Megjegyzés:[/b] A metódus-, hang- és animációlejátszási sávokat ez a metódus nem dolgozza fel."
 
 #. AnimationPlayer.set_blend_time
 #: doc/classes/AnimationPlayer.xml
@@ -1646,7 +1646,7 @@ msgstr "Visszaállítja az aktuális lejátszási szakasz beállítását. Ha ni
 #. AnimationPlayer.set_section
 #: doc/classes/AnimationPlayer.xml
 msgid "Changes the start and end times of the section being played. The current playback position will be clamped within the new section. See also [method play_section]."
-msgstr "Módosítja az éppen lejátszott szakasz kezdő- és végidejét. Ha az aktuális lejátszási pozíció kívül esik az új szakaszon, a legközelebbi határértékre állítja. Lásd még: [method play_section]."
+msgstr "Beállítja az éppen lejátszott animációs szakasz új kezdő- és végidejét. Ha az aktuális lejátszási pozíció kívül esik az új szakaszon, a legközelebbi határértékre állítja. Lásd még: [method play_section]."
 
 #. SpriteFrames.brief
 #: doc/classes/SpriteFrames.xml
