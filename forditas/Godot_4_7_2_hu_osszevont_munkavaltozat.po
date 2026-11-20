@@ -1466,12 +1466,12 @@ msgstr "Globális nyírás radiánban. Lásd még: [member skew]."
 #. Node2D.transform
 #: doc/classes/Node2D.xml
 msgid "The node's [Transform2D], relative to the node's parent. See also [member global_transform]."
-msgstr "A csomópont [Transform2D] transzformációja a szülőjéhez viszonyítva. Lásd még: [member global_transform]."
+msgstr "A csomópont szülőjéhez viszonyított [Transform2D] transzformációja. Lásd még: [member global_transform]."
 
 #. Node2D.global_transform
 #: doc/classes/Node2D.xml
 msgid "Global [Transform2D]. See also [member transform]."
-msgstr "Globális [Transform2D] transzformáció. Lásd még: [member transform]."
+msgstr "A csomópont globális [Transform2D] transzformációja. Lásd még: [member transform]."
 
 #. Node2D.apply_scale
 #: doc/classes/Node2D.xml
@@ -1481,52 +1481,52 @@ msgstr "Az aktuális méretezési vektor összetevőit megszorozza a [param rati
 #. Node2D.get_angle_to
 #: doc/classes/Node2D.xml
 msgid "Returns the angle between the node and the [param point] in radians. See also [method look_at].\n[url=https://raw.githubusercontent.com/godotengine/godot-docs/master/img/node2d_get_angle_to.png]Illustration of the returned angle.[/url]"
-msgstr "Visszaadja a csomópont és a [param point] közötti szöget radiánban. Lásd még: [method look_at].\n[url=https://raw.githubusercontent.com/godotengine/godot-docs/master/img/node2d_get_angle_to.png]A visszaadott szög szemléltetése.[/url]"
+msgstr "Radiánban adja vissza a csomópont és a [param point] pont közötti irányszöget. Lásd még: [method look_at].\n[url=https://raw.githubusercontent.com/godotengine/godot-docs/master/img/node2d_get_angle_to.png]A visszaadott szög ábrája.[/url]"
 
 #. Node2D.get_relative_transform_to_parent
 #: doc/classes/Node2D.xml
 msgid "Returns the [Transform2D] relative to this node's parent."
-msgstr "Visszaadja a csomópont szülőjéhez viszonyított [Transform2D] transzformációját."
+msgstr "Lekéri a csomópont szülőjéhez viszonyított [Transform2D] transzformációját."
 
 #. Node2D.global_translate
 #: doc/classes/Node2D.xml
 msgid "Adds the [param offset] vector to the node's global position."
-msgstr "Hozzáadja a [param offset] vektort a csomópont globális pozíciójához."
+msgstr "A csomópont globális pozícióját eltolja a [param offset] vektorral."
 
 #. Node2D.look_at
 #: doc/classes/Node2D.xml
 msgid "Rotates the node so that its local +X axis points towards the [param point], which is expected to use global coordinates. This method is a combination of both [method rotate] and [method get_angle_to].\n[param point] should not be the same as the node's position, otherwise the node always looks to the right."
-msgstr "Elforgatja a csomópontot úgy, hogy a helyi +X tengelye a globális koordinátákkal megadott [param point] felé mutasson. A metódus a [method rotate] és a [method get_angle_to] működését egyesíti.\nA [param point] nem egyezhet meg a csomópont pozíciójával, különben a csomópont mindig jobbra néz."
+msgstr "Úgy forgatja el a csomópontot, hogy a helyi +X tengelye a globális koordinátákban megadott [param point] pontra mutasson. A művelet a [method rotate] és a [method get_angle_to] működését ötvözi.\nA [param point] nem eshet egybe a csomópont helyével, különben a csomópont mindig jobbra fog nézni."
 
 #. Node2D.move_local_x
 #: doc/classes/Node2D.xml
 msgid "Applies a local translation on the node's X axis with the amount specified in [param delta]. If [param scaled] is [code]false[/code], normalizes the movement to occur independently of the node's [member scale]."
-msgstr "A csomópontot a saját X tengelye mentén tolja el a [param delta] értékkel. Ha [param scaled] értéke [code]false[/code], a mozgást normalizálja, hogy ne függjön a csomópont [member scale] értékétől."
+msgstr "A csomópontot a saját X tengelye mentén mozgatja el a [param delta] értékkel. Ha a [param scaled] értéke [code]false[/code], a mozgás irányvektorát normalizálja, így az elmozdulás nem függ a csomópont [member scale] méretezésétől."
 
 #. Node2D.move_local_y
 #: doc/classes/Node2D.xml
 msgid "Applies a local translation on the node's Y axis with the amount specified in [param delta]. If [param scaled] is [code]false[/code], normalizes the movement to occur independently of the node's [member scale]."
-msgstr "A csomópontot a saját Y tengelye mentén tolja el a [param delta] értékkel. Ha [param scaled] értéke [code]false[/code], a mozgást normalizálja, hogy ne függjön a csomópont [member scale] értékétől."
+msgstr "A csomópontot a saját Y tengelye mentén mozgatja el a [param delta] értékkel. Ha a [param scaled] értéke [code]false[/code], a mozgás irányvektorát normalizálja, így az elmozdulás nem függ a csomópont [member scale] méretezésétől."
 
 #. Node2D.rotate
 #: doc/classes/Node2D.xml
 msgid "Applies a rotation to the node, in radians, starting from its current rotation. This is equivalent to [code]rotation += radians[/code]."
-msgstr "Az aktuális elforgatáshoz hozzáadott, radiánban megadott szöggel forgatja el a csomópontot. Ez megfelel a [code]rotation += radians[/code] utasításnak."
+msgstr "A csomópontot az aktuális elforgatásához képest további, radiánban megadott szöggel forgatja el. Ez egyenértékű a [code]rotation += radians[/code] művelettel."
 
 #. Node2D.to_global
 #: doc/classes/Node2D.xml
 msgid "Transforms the provided local position into a position in global coordinate space. The input is expected to be local relative to the [Node2D] it is called on. e.g. Applying this method to the positions of child nodes will correctly transform their positions into the global coordinate space, but applying it to a node's own position will give an incorrect result, as it will incorporate the node's own transformation into its global position."
-msgstr "A megadott helyi pozíciót globális koordinátákká alakítja. A bemenetet annak a [Node2D] csomópontnak a helyi koordinátarendszerében kell megadni, amelyen meghívod. Például a gyermekcsomópontok pozícióit helyesen alakítja át globális koordinátákká, de a csomópont saját pozíciójának átalakítása hibás eredményt ad, mert annak saját transzformációját is hozzáadja a globális pozíciójához."
+msgstr "A megadott helyi pozíciót globális koordinátákra alakítja át. A bemenetet annak a [Node2D] csomópontnak a helyi koordinátarendszerében kell értelmezni, amelyen a metódust meghívod. Például a gyermekcsomópontok helyi pozíciója így helyesen alakítható globális pozícióvá. A csomópont saját, szülőhöz viszonyított pozícióját viszont nem szabad így átalakítani: a metódus a csomópont transzformációját arra ismét alkalmazná, ezért hibás eredményt adna."
 
 #. Node2D.to_local
 #: doc/classes/Node2D.xml
 msgid "Transforms the provided global position into a position in local coordinate space. The output will be local relative to the [Node2D] it is called on. e.g. It is appropriate for determining the positions of child nodes, but it is not appropriate for determining its own position relative to its parent."
-msgstr "A megadott globális pozíciót helyi koordinátákká alakítja. Az eredmény annak a [Node2D] csomópontnak a helyi koordinátarendszerében értendő, amelyen meghívod. Használható a gyermekcsomópontok helyzetének meghatározására, de nem alkalmas a csomópont saját, szülőhöz viszonyított pozíciójának meghatározására."
+msgstr "A megadott globális pozíciót annak a [Node2D] csomópontnak a helyi koordinátarendszerébe alakítja át, amelyen a metódust meghívod. Ez például gyermekcsomópontok helyi pozíciójának meghatározásához megfelelő, de a csomópont saját, szülőhöz viszonyított pozíciójának lekérésére nem alkalmas."
 
 #. Node2D.translate
 #: doc/classes/Node2D.xml
 msgid "Translates the node by the given [param offset] in local coordinates. This is equivalent to [code]position += offset[/code]."
-msgstr "A csomópontot a megadott [param offset] vektorral eltolja helyi koordináták szerint. Ez megfelel a [code]position += offset[/code] utasításnak."
+msgstr "A csomópontot a helyi koordinátarendszerében a megadott [param offset] vektorral tolja el. Ez megfelel a [code]position += offset[/code] műveletnek."
 
 #. AnimationPlayer.brief
 #: doc/classes/AnimationPlayer.xml
