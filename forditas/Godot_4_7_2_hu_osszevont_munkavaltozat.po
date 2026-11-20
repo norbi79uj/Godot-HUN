@@ -2638,7 +2638,7 @@ msgstr "Állapotgépként működő gráf, amely az animációs állapotokat ké
 #. AnimationNodeStateMachine.allow_transition_to_self
 #: doc/classes/AnimationNodeStateMachine.xml
 msgid "If [code]true[/code], allows teleport to the self state with [method AnimationNodeStateMachinePlayback.travel]. When the reset option is enabled in [method AnimationNodeStateMachinePlayback.travel], the animation is restarted. If [code]false[/code], nothing happens on the teleportation to the self state."
-msgstr "Ha [code]true[/code], a [method AnimationNodeStateMachinePlayback.travel] metódussal az állapotgép a már aktív állapotába is átléphet. Ha a [method AnimationNodeStateMachinePlayback.travel] reset opciója be van kapcsolva, az animáció újraindul. Ha [code]false[/code], az aktuális állapotba történő visszalépésnek nincs hatása."
+msgstr "Ha [code]true[/code], a [method AnimationNodeStateMachinePlayback.travel] metódussal az állapotgép az éppen aktív állapotára is átválthat. Ha a [method AnimationNodeStateMachinePlayback.travel] reset opciója be van kapcsolva, az animáció újraindul. Ha [code]false[/code], az éppen aktív állapotra történő váltás nem vált ki semmilyen műveletet."
 
 #. AnimationNodeStateMachine.reset_ends
 #: doc/classes/AnimationNodeStateMachine.xml
@@ -2648,12 +2648,12 @@ msgstr "Ha [code]true[/code], a kezdő- és végállapotba történő áttűnés
 #. AnimationNodeStateMachine.state_machine_type
 #: doc/classes/AnimationNodeStateMachine.xml
 msgid "This property can define the process of transitions for different use cases. See also [enum AnimationNodeStateMachine.StateMachineType]."
-msgstr "Ez a tulajdonság szabályozza, hogyan történjenek az állapotátmenetek a különböző felhasználási esetekben. Lásd még: [enum AnimationNodeStateMachine.StateMachineType]."
+msgstr "Ez a tulajdonság határozza meg az állapotátmenetek működését a különböző felhasználási módokhoz. Lásd még: [enum AnimationNodeStateMachine.StateMachineType]."
 
 #. AnimationNodeStateMachine.add_node
 #: doc/classes/AnimationNodeStateMachine.xml
 msgid "Adds a new animation node to the graph. The [param position] is used for display in the editor."
-msgstr "Új animációs csomópontot ad a gráfhoz. A [param position] a csomópont szerkesztőben megjelenített helyét határozza meg."
+msgstr "Új animációs csomópontot ad a gráfhoz. A [param position] paraméter a csomópont szerkesztőbeli megjelenítési pozícióját adja meg."
 
 #. AnimationNodeStateMachine.add_transition
 #: doc/classes/AnimationNodeStateMachine.xml
@@ -2693,7 +2693,7 @@ msgstr "Visszaadja a megadott átmenetet."
 #. AnimationNodeStateMachine.get_transition_count
 #: doc/classes/AnimationNodeStateMachine.xml
 msgid "Returns the number of connections in the graph."
-msgstr "Visszaadja a gráfban található kapcsolatok számát."
+msgstr "Visszaadja a gráf állapotátmeneteinek számát."
 
 #. AnimationNodeStateMachine.get_transition_from
 #: doc/classes/AnimationNodeStateMachine.xml
@@ -2703,7 +2703,7 @@ msgstr "Visszaadja a megadott átmenet kiinduló csomópontját."
 #. AnimationNodeStateMachine.get_transition_to
 #: doc/classes/AnimationNodeStateMachine.xml
 msgid "Returns the given transition's end node."
-msgstr "Visszaadja a megadott átmenet célcsomópontját."
+msgstr "Visszaadja azt a csomópontot, amelybe a megadott átmenet vezet."
 
 #. AnimationNodeStateMachine.has_node
 #: doc/classes/AnimationNodeStateMachine.xml
