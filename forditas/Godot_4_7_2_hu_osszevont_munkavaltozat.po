@@ -2125,22 +2125,22 @@ msgstr "A csomópont által egyszerre lejátszható hangok legnagyobb száma. Ha
 #. AudioStreamPlayer2D.panning_strength
 #: doc/classes/AudioStreamPlayer2D.xml
 msgid "Scales the panning strength for this node by multiplying the base [member ProjectSettings.audio/general/2d_panning_strength] with this factor. Higher values will pan audio from left to right more dramatically than lower values."
-msgstr "A csomópont sztereó panorámázásának erősségét a [member ProjectSettings.audio/general/2d_panning_strength] alapérték és ennek a szorzótényezőnek a szorzata határozza meg. Nagyobb értéknél erősebben érzékelhető a hang balra-jobbra eltolódása, mint kisebb értéknél."
+msgstr "A csomópont sztereó térbeli eltolásának erősségét szabályozza. A [member ProjectSettings.audio/general/2d_panning_strength] alapértékét szorozza meg ezzel a tényezővel. Nagyobb értéknél erősebben hallható, hogy a hang balról jobbra vagy jobbról balra kerül."
 
 #. AudioStreamPlayer2D.pitch_scale
 #: doc/classes/AudioStreamPlayer2D.xml
 msgid "The pitch and the tempo of the audio, as a multiplier of the audio sample's sample rate."
-msgstr "A hang magasságát és lejátszási tempóját meghatározó szorzótényező, amely a hangminta mintavételi frekvenciájára hat."
+msgstr "A hangmagasság és a lejátszási sebesség szorzótényezője, amely a hangminta mintavételi frekvenciáját módosítja."
 
 #. AudioStreamPlayer2D.playback_type
 #: doc/classes/AudioStreamPlayer2D.xml
 msgid "The playback type of the stream player. If set other than to the default value, it will force that playback type."
-msgstr "A hangfolyam lejátszási típusa. Az alapértelmezettől eltérő érték megadása kikényszeríti ezt a típust."
+msgstr "A hangfolyam lejátszásának típusa. Az alapértelmezettől eltérő beállítás használata az adott lejátszási típust kényszeríti ki."
 
 #. AudioStreamPlayer2D.playing
 #: doc/classes/AudioStreamPlayer2D.xml
 msgid "If [code]true[/code], audio is playing or is queued to be played (see [method play])."
-msgstr "Ha [code]true[/code], a hang lejátszása folyamatban van, vagy a lejátszás már ütemezett (lásd [method play])."
+msgstr "[code]true[/code] értéknél a hang már szól, vagy a lejátszása ütemezve van. Lásd: [method play]."
 
 #. AudioStreamPlayer2D.stream
 #: doc/classes/AudioStreamPlayer2D.xml
@@ -2150,42 +2150,42 @@ msgstr "A lejátszandó [AudioStream] objektum."
 #. AudioStreamPlayer2D.stream_paused
 #: doc/classes/AudioStreamPlayer2D.xml
 msgid "If [code]true[/code], the playback is paused. You can resume it by setting [member stream_paused] to [code]false[/code]."
-msgstr "Ha [code]true[/code], a lejátszás szünetel. A folytatáshoz állítsd a [member stream_paused] értékét [code]false[/code] értékre."
+msgstr "[code]true[/code] értéknél a lejátszás szünetel. A folytatáshoz állítsd a [member stream_paused] tulajdonságot [code]false[/code] értékre."
 
 #. AudioStreamPlayer2D.volume_db
 #: doc/classes/AudioStreamPlayer2D.xml
 msgid "Base volume before attenuation, in decibels."
-msgstr "Alaphangerő a távolság miatti csillapítás előtt, decibelben."
+msgstr "A hang alaphangereje decibelben, még a távolságból adódó halkítás alkalmazása előtt."
 
 #. AudioStreamPlayer2D.volume_linear
 #: doc/classes/AudioStreamPlayer2D.xml
 msgid "Base volume before attenuation, as a linear value.\n[b]Note:[/b] This member modifies [member volume_db] for convenience. The returned value is equivalent to the result of [method @GlobalScope.db_to_linear] on [member volume_db]. Setting this member is equivalent to setting [member volume_db] to the result of [method @GlobalScope.linear_to_db] on a value."
-msgstr "Alaphangerő a távolság miatti csillapítás előtt, lineáris értékként.\n[b]Megjegyzés:[/b] Ez a tulajdonság a [member volume_db] kényelmesebb beállítására szolgál. A visszaadott érték megegyezik a [method @GlobalScope.db_to_linear] segítségével a [member volume_db] értékből számított eredménnyel. A beállítása olyan, mintha a [member volume_db] tulajdonságot a [method @GlobalScope.linear_to_db] által átalakított értékre állítanád."
+msgstr "A hang alaphangereje lineáris skálán, még a távolságból adódó halkítás előtt.\n[b]Megjegyzés:[/b] Ez a tulajdonság a [member volume_db] egyszerűbb beállítására szolgál. Lekérdezése ugyanazt az eredményt adja, mint amikor a [member volume_db] értékét a [method @GlobalScope.db_to_linear] metódussal alakítod át. Beállítása egyenértékű azzal, mintha a megadott értéket a [method @GlobalScope.linear_to_db] metódussal átalakítva írnád a [member volume_db] tulajdonságba."
 
 #. AudioStreamPlayer2D.get_playback_position
 #: doc/classes/AudioStreamPlayer2D.xml
 msgid "Returns the position in the [AudioStream]."
-msgstr "Visszaadja az aktuális lejátszási pozíciót az [AudioStream] hangfolyamban."
+msgstr "Lekéri az [AudioStream] hangfolyam aktuális lejátszási pozícióját."
 
 #. AudioStreamPlayer2D.get_stream_playback
 #: doc/classes/AudioStreamPlayer2D.xml
 msgid "Returns the [AudioStreamPlayback] object associated with this [AudioStreamPlayer2D]."
-msgstr "Visszaadja az ehhez az [AudioStreamPlayer2D] csomóponthoz tartozó [AudioStreamPlayback] objektumot."
+msgstr "Lekéri az ehhez az [AudioStreamPlayer2D] csomóponthoz társított [AudioStreamPlayback] objektumot."
 
 #. AudioStreamPlayer2D.has_stream_playback
 #: doc/classes/AudioStreamPlayer2D.xml
 msgid "Returns whether the [AudioStreamPlayer] can return the [AudioStreamPlayback] object or not."
-msgstr "Megadja, hogy az [AudioStreamPlayer] vissza tud-e adni [AudioStreamPlayback] objektumot."
+msgstr "Megadja, hogy az [AudioStreamPlayer] képes-e [AudioStreamPlayback] objektumot visszaadni."
 
 #. AudioStreamPlayer2D.play
 #: doc/classes/AudioStreamPlayer2D.xml
 msgid "Queues the audio to play on the next physics frame, from the given position [param from_position], in seconds."
-msgstr "A hang lejátszását a következő fizikai képkockára ütemezi a [param from_position] pozíciótól kezdve (másodpercben)."
+msgstr "A következő fizikai képkockára ütemezi a hang lejátszásának indítását. A kezdőpozíciót a [param from_position] adja meg másodpercben."
 
 #. AudioStreamPlayer2D.seek
 #: doc/classes/AudioStreamPlayer2D.xml
 msgid "Sets the position from which audio will be played, in seconds."
-msgstr "Beállítja a hang lejátszásának kezdőpozícióját másodpercben."
+msgstr "Másodpercben adja meg azt a pozíciót, ahonnan a hang lejátszása folytatódik."
 
 #. AudioStreamPlayer2D.stop
 #: doc/classes/AudioStreamPlayer2D.xml
