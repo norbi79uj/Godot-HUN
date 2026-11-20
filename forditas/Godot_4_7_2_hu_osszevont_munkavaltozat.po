@@ -1856,62 +1856,62 @@ msgstr "Beállítja a sáv útvonalát. Az útvonalnak érvényes jelenetfa-útv
 #. Area2D.brief
 #: doc/classes/Area2D.xml
 msgid "A region of 2D space that detects other [CollisionObject2D]s entering or exiting it."
-msgstr "Olyan 2D-s terület, amely érzékeli a többi [CollisionObject2D] objektum belépését és kilépését."
+msgstr "2D-s érzékelési terület, amely észleli más [CollisionObject2D] objektumok belépését és kilépését."
 
 #. Area2D.description
 #: doc/classes/Area2D.xml
 msgid "[Area2D] is a region of 2D space defined by one or multiple [CollisionShape2D] or [CollisionPolygon2D] child nodes. It detects when other [CollisionObject2D]s enter or exit it, and it also keeps track of which collision objects haven't exited it yet (i.e. which one are overlapping it).\nThis node can also locally alter or override physics parameters (gravity, damping) and route audio to custom audio buses.\n[b]Note:[/b] Areas and bodies created with [PhysicsServer2D] might not interact as expected with [Area2D]s, and might not emit signals or track objects correctly."
-msgstr "Az [Area2D] egy 2D-s terület, amelyet egy vagy több gyermek [CollisionShape2D] vagy [CollisionPolygon2D] csomópont határoz meg. Érzékeli más [CollisionObject2D] objektumok belépését és kilépését, valamint nyilvántartja a vele éppen átfedésben lévő objektumokat.\nA csomópont helyileg módosíthatja vagy felülírhatja a fizikai paramétereket (gravitáció, csillapítás), és a hangot egyéni hangbuszokra irányíthatja.\n[b]Megjegyzés:[/b] A [PhysicsServer2D] segítségével létrehozott területek és testek nem feltétlenül a várt módon működnek együtt az [Area2D] csomópontokkal; előfordulhat, hogy nem küldenek jelzéseket, vagy nem megfelelően követik az objektumokat."
+msgstr "Az [Area2D] egy 2D-s érzékelési terület, amelynek határait egy vagy több gyermek [CollisionShape2D] vagy [CollisionPolygon2D] csomópont adja meg. Észleli más [CollisionObject2D] objektumok belépését és kilépését, és nyilvántartja azokat is, amelyek még a területen belül vannak, vagyis átfedésben állnak vele.\nA csomópont helyileg módosíthatja vagy felülírhatja a fizikai tulajdonságokat, például a gravitációt és a csillapítást, valamint egyéni hangbuszra irányíthatja a hangokat.\n[b]Megjegyzés:[/b] A [PhysicsServer2D] segítségével létrehozott testek és területek nem mindig működnek együtt a vártnak megfelelően az [Area2D] csomópontokkal: előfordulhat, hogy a jelzések vagy az átfedések nyilvántartása nem működik megfelelően."
 
 #. Area2D.monitoring
 #: doc/classes/Area2D.xml
 msgid "If [code]true[/code], the area detects bodies or areas entering and exiting it."
-msgstr "Ha az értéke [code]true[/code], a terület érzékeli, amikor fizikai testek vagy más területek belépnek, illetve kilépnek belőle."
+msgstr "[code]true[/code] értéknél a terület figyeli, amikor fizikai testek vagy más területek belépnek a határai közé, illetve kilépnek onnan."
 
 #. Area2D.monitorable
 #: doc/classes/Area2D.xml
 msgid "If [code]true[/code], other monitoring areas can detect this area."
-msgstr "Ha az értéke [code]true[/code], más megfigyelő területek is érzékelhetik ezt a területet."
+msgstr "[code]true[/code] értéknél ezt a területet más, megfigyelést végző területek is észlelhetik."
 
 #. Area2D.priority
 #: doc/classes/Area2D.xml
 msgid "The area's priority. Higher priority areas are processed first. The [World2D]'s physics is always processed last, after all areas."
-msgstr "A terület prioritása. A magasabb prioritású területek feldolgozása előbb történik. A [World2D] fizikai beállításai mindig az összes terület után érvényesülnek."
+msgstr "A terület feldolgozási prioritása. A magasabb prioritású területek előbb kerülnek sorra. A [World2D] világ fizikai beállításait a rendszer mindig az összes terület után dolgozza fel."
 
 #. Area2D.gravity
 #: doc/classes/Area2D.xml
 msgid "The area's gravity intensity (in pixels per second squared). This value multiplies the gravity direction. This is useful to alter the force of gravity without altering its direction."
-msgstr "A terület gravitációs gyorsulásának nagysága (képpont/másodperc² egységben). Ez az érték a gravitáció irányvektorát szorozza meg, így a gravitáció erőssége az irány módosítása nélkül állítható be."
+msgstr "A területen belüli gravitáció erőssége, képpont/másodperc² egységben. Ezzel az értékkel szorozza meg a rendszer a gravitáció irányvektorát, ezért az erősség az irány megváltoztatása nélkül szabályozható."
 
 #. Area2D.gravity_direction
 #: doc/classes/Area2D.xml
 msgid "The area's gravity vector (not normalized)."
-msgstr "A terület gravitációs vektora, amelyet a rendszer nem normalizál."
+msgstr "A terület gravitációjának irányát és nagyságát befolyásoló, nem normalizált vektor."
 
 #. Area2D.gravity_point
 #: doc/classes/Area2D.xml
 msgid "If [code]true[/code], gravity is calculated from a point (set via [member gravity_point_center]). See also [member gravity_space_override]."
-msgstr "Ha az értéke [code]true[/code], a gravitációt a rendszer egyetlen vonzási pontból számítja ki, amelyet a [member gravity_point_center] határoz meg. Lásd még: [member gravity_space_override]."
+msgstr "[code]true[/code] értéknél a gravitációt a rendszer egy megadott vonzási ponthoz viszonyítva számítja ki. A pont helyét a [member gravity_point_center] adja meg. Lásd még: [member gravity_space_override]."
 
 #. Area2D.gravity_point_center
 #: doc/classes/Area2D.xml
 msgid "If gravity is a point (see [member gravity_point]), this will be the point of attraction."
-msgstr "Pontszerű gravitáció esetén (lásd [member gravity_point]) ez a vonzás középpontja."
+msgstr "Pontszerű gravitáció esetén a vonzás középpontja. Lásd: [member gravity_point]."
 
 #. Area2D.gravity_space_override
 #: doc/classes/Area2D.xml
 msgid "Override mode for gravity calculations within this area."
-msgstr "A területen belüli gravitációszámítás felülírásának módja."
+msgstr "Meghatározza, hogyan írja felül a terület gravitációja az alapértelmezett gravitációszámítást."
 
 #. Area2D.linear_damp
 #: doc/classes/Area2D.xml
 msgid "The rate at which objects stop moving in this area. Represents the linear velocity lost per second.\nSee [member ProjectSettings.physics/2d/default_linear_damp] for more details about damping."
-msgstr "Az objektumok lineáris mozgásának csillapítása ezen a területen: azt adja meg, mennyi sebességet veszítenek másodpercenként.\nA csillapításról további információ: [member ProjectSettings.physics/2d/default_linear_damp]."
+msgstr "A területen belül mozgó objektumok lineáris csillapításának mértéke: azt adja meg, mennyivel csökken a sebességük másodpercenként.\nTovábbi részletek: [member ProjectSettings.physics/2d/default_linear_damp]."
 
 #. Area2D.angular_damp
 #: doc/classes/Area2D.xml
 msgid "The rate at which objects stop spinning in this area. Represents the angular velocity lost per second.\nSee [member ProjectSettings.physics/2d/default_angular_damp] for more details about damping."
-msgstr "Az objektumok forgásának csillapítása ezen a területen: azt adja meg, mennyi szögsebességet veszítenek másodpercenként.\nA csillapításról további információ: [member ProjectSettings.physics/2d/default_angular_damp]."
+msgstr "A területen belül forgó objektumok szögsebességének csillapítása: azt adja meg, mennyivel csökken a szögsebességük másodpercenként.\nTovábbi részletek: [member ProjectSettings.physics/2d/default_angular_damp]."
 
 #. Area2D.audio_bus_override
 #: doc/classes/Area2D.xml
