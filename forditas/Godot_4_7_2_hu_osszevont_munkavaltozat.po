@@ -1651,12 +1651,12 @@ msgstr "Módosítja az éppen lejátszott szakasz kezdő- és végidejét. Ha az
 #. SpriteFrames.brief
 #: doc/classes/SpriteFrames.xml
 msgid "Sprite frame library for AnimatedSprite2D and AnimatedSprite3D."
-msgstr "Sprite-képkockák gyűjteménye az AnimatedSprite2D és AnimatedSprite3D csomópontokhoz."
+msgstr "Sprite-képkockák gyűjteménye az AnimatedSprite2D és AnimatedSprite3D csomópontok animációihoz."
 
 #. SpriteFrames.description
 #: doc/classes/SpriteFrames.xml
 msgid "Sprite frame library for an [AnimatedSprite2D] or [AnimatedSprite3D] node. Contains frames and animation data for playback."
-msgstr "Sprite-képkockák könyvtára egy [AnimatedSprite2D] vagy [AnimatedSprite3D] csomóponthoz. A lejátszáshoz szükséges képkockákat és animációs adatokat tárolja."
+msgstr "Az [AnimatedSprite2D] és [AnimatedSprite3D] csomópontokhoz használható sprite-képkockatár. Az animációk lejátszásához szükséges képkockákat és az animációk beállításait tárolja."
 
 #. SpriteFrames.add_animation
 #: doc/classes/SpriteFrames.xml
@@ -1666,7 +1666,7 @@ msgstr "Új [param anim] nevű animációt ad a könyvtárhoz."
 #. SpriteFrames.add_frame
 #: doc/classes/SpriteFrames.xml
 msgid "Adds a frame to the [param anim] animation. If [param at_position] is [code]-1[/code], the frame will be added to the end of the animation. [param duration] specifies the relative duration, see [method get_frame_duration] for details."
-msgstr "Képkockát ad a [param anim] animációhoz. Ha [param at_position] értéke [code]-1[/code], a képkockát az animáció végére helyezi. A [param duration] a relatív időtartamot határozza meg; részletekért lásd: [method get_frame_duration]."
+msgstr "Új képkockát illeszt be a [param anim] animációba. Ha a [param at_position] értéke [code]-1[/code], a képkocka az animáció végére kerül. A [param duration] a képkocka relatív időtartamát adja meg; részletek: [method get_frame_duration]."
 
 #. SpriteFrames.clear
 #: doc/classes/SpriteFrames.xml
@@ -1681,7 +1681,7 @@ msgstr "Eltávolítja az összes animációt, majd létrehoz egy üres [code]def
 #. SpriteFrames.duplicate_animation
 #: doc/classes/SpriteFrames.xml
 msgid "Duplicates the animation [param anim_from] to a new animation named [param anim_to]. Fails if [param anim_to] already exists, or if [param anim_from] does not exist."
-msgstr "Lemásolja a [param anim_from] animációt, és [param anim_to] néven hozza létre az új példányt. Sikertelen a művelet, ha [param anim_to] már létezik, vagy [param anim_from] nem létezik."
+msgstr "A [param anim_from] animáció másolatát hozza létre [param anim_to] néven. A művelet sikertelen, ha [param anim_to] már létezik, vagy ha a másolandó [param anim_from] animáció nem található."
 
 #. SpriteFrames.get_animation_loop
 #: doc/classes/SpriteFrames.xml
@@ -1691,32 +1691,32 @@ msgstr "[code]true[/code] értéket ad vissza, ha [code]get_animation_loop_mode(
 #. SpriteFrames.get_animation_names
 #: doc/classes/SpriteFrames.xml
 msgid "Returns an array containing the names associated to each animation. Values are placed in alphabetical order."
-msgstr "Az animációk neveit tartalmazó tömböt adja vissza, ábécérendben."
+msgstr "Az összes animáció nevét tartalmazó tömböt adja vissza. A nevek ábécérendben szerepelnek."
 
 #. SpriteFrames.get_animation_speed
 #: doc/classes/SpriteFrames.xml
 msgid "Returns the speed in frames per second for the [param anim] animation."
-msgstr "Visszaadja a [param anim] animáció sebességét képkocka/másodperc egységben."
+msgstr "Lekéri a [param anim] animáció lejátszási sebességét, másodpercenkénti képkockaszámban."
 
 #. SpriteFrames.get_frame_count
 #: doc/classes/SpriteFrames.xml
 msgid "Returns the number of frames for the [param anim] animation."
-msgstr "Visszaadja a [param anim] animáció képkockáinak számát."
+msgstr "Lekéri a [param anim] animációban található képkockák számát."
 
 #. SpriteFrames.get_frame_duration
 #: doc/classes/SpriteFrames.xml
 msgid "Returns a relative duration of the frame [param idx] in the [param anim] animation (defaults to [code]1.0[/code]). For example, a frame with a duration of [code]2.0[/code] is displayed twice as long as a frame with a duration of [code]1.0[/code]. You can calculate the absolute duration (in seconds) of a frame using the following formula:\n[codeblock]\nabsolute_duration = relative_duration / (animation_fps * abs(playing_speed))\n[/codeblock]\nIn this example, [code]playing_speed[/code] refers to either [method AnimatedSprite2D.get_playing_speed] or [method AnimatedSprite3D.get_playing_speed]."
-msgstr "Visszaadja a [param anim] animáció [param idx] indexű képkockájának relatív időtartamát (alapértelmezés szerint [code]1.0[/code]). Például egy [code]2.0[/code] relatív időtartamú képkocka kétszer olyan sokáig látható, mint egy [code]1.0[/code] értékű. A képkocka tényleges időtartama (másodpercben) a következő képlettel számítható:\n[codeblock]\nabsolute_duration = relative_duration / (animation_fps * abs(playing_speed))\n[/codeblock]\nItt a [code]playing_speed[/code] a [method AnimatedSprite2D.get_playing_speed] vagy a [method AnimatedSprite3D.get_playing_speed] által visszaadott sebességet jelenti."
+msgstr "A [param anim] animáció [param idx] indexű képkockájának relatív időtartamát adja vissza; az alapérték [code]1.0[/code]. A [code]2.0[/code] értékű képkocka például kétszer annyi ideig látható, mint az [code]1.0[/code] értékű. A tényleges, másodpercben mért időtartam a következőképpen számítható:\n[codeblock]\nabsolute_duration = relative_duration / (animation_fps * abs(playing_speed))\n[/codeblock]\nA képletben szereplő [code]playing_speed[/code] az [method AnimatedSprite2D.get_playing_speed] vagy az [method AnimatedSprite3D.get_playing_speed] metódus által visszaadott sebesség."
 
 #. SpriteFrames.get_frame_texture
 #: doc/classes/SpriteFrames.xml
 msgid "Returns the texture of the frame [param idx] in the [param anim] animation."
-msgstr "Visszaadja a [param anim] animáció [param idx] indexű képkockájának textúráját."
+msgstr "Lekéri a [param anim] animáció [param idx] indexű képkockájához tartozó textúrát."
 
 #. SpriteFrames.has_animation
 #: doc/classes/SpriteFrames.xml
 msgid "Returns [code]true[/code] if the [param anim] animation exists."
-msgstr "[code]true[/code] értéket ad vissza, ha a [param anim] animáció létezik."
+msgstr "[code]true[/code] értéket ad vissza, ha létezik [param anim] nevű animáció."
 
 #. SpriteFrames.remove_animation
 #: doc/classes/SpriteFrames.xml
@@ -1741,12 +1741,12 @@ msgstr "Ha [param loop] értéke [code]false[/code], ez megfelel a [code]set_ani
 #. SpriteFrames.set_animation_speed
 #: doc/classes/SpriteFrames.xml
 msgid "Sets the speed for the [param anim] animation in frames per second."
-msgstr "Beállítja a [param anim] animáció sebességét képkocka/másodperc egységben."
+msgstr "A [param anim] animáció lejátszási sebességét állítja be, másodpercenkénti képkockaszámban."
 
 #. SpriteFrames.set_frame
 #: doc/classes/SpriteFrames.xml
 msgid "Sets the [param texture] and the [param duration] of the frame [param idx] in the [param anim] animation. [param duration] specifies the relative duration, see [method get_frame_duration] for details."
-msgstr "Beállítja a [param anim] animáció [param idx] indexű képkockájának [param texture] textúráját és [param duration] időtartamát. A [param duration] a képkocka relatív időtartamát adja meg. További információ: [method get_frame_duration]."
+msgstr "A [param anim] animáció [param idx] indexű képkockájához tartozó [param texture] textúrát és [param duration] időtartamot állítja be. A [param duration] relatív időtartam; részletek: [method get_frame_duration]."
 
 #. Animation.brief
 #: doc/classes/Animation.xml
