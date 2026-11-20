@@ -1966,44 +1966,44 @@ msgstr "Absztrakt alaposztály 2D-s fizikai objektumokhoz. Egy [CollisionObject2
 #. CollisionObject2D.collision_layer
 #: doc/classes/CollisionObject2D.xml
 msgid "The physics layers this CollisionObject2D is in. Collision objects can exist in one or more of 32 different layers. See also [member collision_mask].\n[b]Note:[/b] Object A can detect a contact with object B only if object B is in any of the layers that object A scans. See [url=$DOCS_URL/tutorials/physics/physics_introduction.html#collision-layers-and-masks]Collision layers and masks[/url] in the documentation for more information."
-msgstr "Azok a fizikai ütközési rétegek, amelyekhez ez a CollisionObject2D tartozik. Egy ütközési objektum a 32 különböző réteg közül egyhez vagy többhöz tartozhat. Lásd még: [member collision_mask].\n[b]Megjegyzés:[/b] Az A objektum csak akkor érzékeli a B objektummal való érintkezést, ha B legalább az A által vizsgált rétegek egyikéhez tartozik. További információ: [url=$DOCS_URL/tutorials/physics/physics_introduction.html#collision-layers-and-masks]Ütközési rétegek és maszkok[/url]."
+msgstr "Azok a fizikai ütközési rétegek, amelyekhez ez a CollisionObject2D objektum tartozik. Az objektum a 32 réteg közül egyszerre többhöz is tartozhat. Lásd még: [member collision_mask].\n[b]Megjegyzés:[/b] Az A objektum akkor érzékelheti a B objektummal való érintkezést, ha B az A által vizsgált rétegek legalább egyikében található. További részletek: [url=$DOCS_URL/tutorials/physics/physics_introduction.html#collision-layers-and-masks]Ütközési rétegek és maszkok[/url]."
 
 #. CollisionObject2D.collision_mask
 #: doc/classes/CollisionObject2D.xml
 msgid "The physics layers this CollisionObject2D scans. Collision objects can scan one or more of 32 different layers. See also [member collision_layer].\n[b]Note:[/b] Object A can detect a contact with object B only if object B is in any of the layers that object A scans. See [url=$DOCS_URL/tutorials/physics/physics_introduction.html#collision-layers-and-masks]Collision layers and masks[/url] in the documentation for more information."
-msgstr "Azok a fizikai ütközési rétegek, amelyeken ez a CollisionObject2D más objektumokat érzékel. Egy ütközési objektum a 32 lehetséges réteg közül egyet vagy többet is figyelhet. Lásd még: [member collision_layer].\n[b]Megjegyzés:[/b] Az A objektum csak akkor érzékeli a B objektummal való érintkezést, ha B legalább az A által vizsgált rétegek egyikéhez tartozik. További információ: [url=$DOCS_URL/tutorials/physics/physics_introduction.html#collision-layers-and-masks]Ütközési rétegek és maszkok[/url]."
+msgstr "Azok a fizikai ütközési rétegek, amelyeken ez a CollisionObject2D objektum más testeket keres. A 32 lehetséges réteg közül egyszerre többet is figyelhet. Lásd még: [member collision_layer].\n[b]Megjegyzés:[/b] Az A objektum akkor érzékelheti a B objektummal való érintkezést, ha B az A által figyelt rétegek legalább egyikéhez tartozik. További részletek: [url=$DOCS_URL/tutorials/physics/physics_introduction.html#collision-layers-and-masks]Ütközési rétegek és maszkok[/url]."
 
 #. CollisionObject2D.collision_priority
 #: doc/classes/CollisionObject2D.xml
 msgid "The priority used to solve colliding when occurring penetration. The higher the priority is, the lower the penetration into the object will be. This can for example be used to prevent the player from breaking through the boundaries of a level."
-msgstr "Az objektumok egymásba hatolásakor az ütközés feloldásához használt prioritás. Minél magasabb a prioritás, annál kisebb lesz a más testekkel való átfedés mértéke. Ez például segíthet megakadályozni, hogy a játékos áttörjön a pálya határain."
+msgstr "Az ütköző testek egymásba hatolásának korrigálásakor alkalmazott prioritás. Minél nagyobb az érték, annál kevésbé hatolhatnak más testek ebbe az objektumba. Például segíthet megakadályozni, hogy a játékos áthatoljon a pálya határain."
 
 #. CollisionObject2D.disable_mode
 #: doc/classes/CollisionObject2D.xml
 msgid "Defines the behavior in physics when [member Node.process_mode] is set to [constant Node.PROCESS_MODE_DISABLED]."
-msgstr "Meghatározza a fizikai működést, amikor a [member Node.process_mode] értéke [constant Node.PROCESS_MODE_DISABLED]."
+msgstr "Meghatározza, hogyan viselkedjen az objektum a fizikai szimulációban, amikor a [member Node.process_mode] értéke [constant Node.PROCESS_MODE_DISABLED]."
 
 #. CollisionObject2D.input_pickable
 #: doc/classes/CollisionObject2D.xml
 msgid "If [code]true[/code], this object is pickable. A pickable object can detect the mouse pointer entering/leaving, and if the mouse is inside it, report input events. Requires at least one [member collision_layer] bit to be set."
-msgstr "Ha az értéke [code]true[/code], az objektum érzékeli az egérmutatóval végzett interakciókat. Érzékelheti az egérmutató belépését és kilépését, valamint bemeneti eseményeket fogadhat, amikor az egérmutató az objektumon belül van. Ehhez a [member collision_layer] legalább egy bitjének beállítottnak kell lennie."
+msgstr "[code]true[/code] értéknél az objektum egérrel kiválasztható: érzékeli az egérmutató belépését és kilépését, valamint a rajta belül bekövetkező bemeneti eseményeket. Ehhez a [member collision_layer] legalább egy bitjének engedélyezettnek kell lennie."
 
 #. CollisionObject2D.create_shape_owner
 #: doc/classes/CollisionObject2D.xml
 msgid "Creates a new shape owner for the given object. Returns [code]owner_id[/code] of the new owner for future reference."
-msgstr "Új alakzattulajdonost hoz létre a megadott objektumhoz, és visszaadja az új tulajdonos [code]owner_id[/code] azonosítóját."
+msgstr "Új alakzattulajdonost hoz létre a megadott objektum számára. Visszaadja az új tulajdonos [code]owner_id[/code] azonosítóját, amelyet későbbi hívásokban használhatsz."
 
 #. CollisionObject2D.get_collision_layer_value
 #: doc/classes/CollisionObject2D.xml
 msgid "Returns whether or not the specified layer of the [member collision_layer] is enabled, given a [param layer_number] between 1 and 32."
-msgstr "Visszaadja, hogy a [member collision_layer] [param layer_number] számú rétege engedélyezett-e. A rétegszám 1 és 32 közötti lehet."
+msgstr "Lekérdezi, hogy a [member collision_layer] [param layer_number] számú ütközési rétege engedélyezett-e. A rétegszám 1 és 32 közötti lehet."
 
 #. CollisionObject2D.get_collision_mask_value
 #. RayCast2D.get_collision_mask_value
 #: doc/classes/CollisionObject2D.xml
 #: doc/classes/RayCast2D.xml
 msgid "Returns whether or not the specified layer of the [member collision_mask] is enabled, given a [param layer_number] between 1 and 32."
-msgstr "Visszaadja, hogy a [member collision_mask] [param layer_number] számú rétege engedélyezett-e. A rétegszám 1 és 32 közötti lehet."
+msgstr "Lekérdezi, hogy a [member collision_mask] [param layer_number] számú ütközési rétege engedélyezett-e. A rétegszám 1 és 32 közötti lehet."
 
 #. CollisionObject2D.get_rid
 #: doc/classes/CollisionObject2D.xml
@@ -2013,12 +2013,12 @@ msgstr "Visszaadja az objektum [RID] azonosítóját."
 #. CollisionObject2D.get_shape_owners
 #: doc/classes/CollisionObject2D.xml
 msgid "Returns an [Array] of [code]owner_id[/code] identifiers. You can use these ids in other methods that take [code]owner_id[/code] as an argument."
-msgstr "Visszaadja az alakzattulajdonosok [code]owner_id[/code] azonosítóit tartalmazó [Array] tömböt. Az azonosítókat átadhatod más, [code]owner_id[/code] paramétert fogadó metódusoknak."
+msgstr "A hozzá tartozó alakzattulajdonosok [code]owner_id[/code] azonosítóit adja vissza [Array] tömbben. Ezek az azonosítók más, [code]owner_id[/code] paramétert váró metódusoknak is átadhatók."
 
 #. CollisionObject2D.is_shape_owner_disabled
 #: doc/classes/CollisionObject2D.xml
 msgid "If [code]true[/code], the shape owner and its shapes are disabled."
-msgstr "Ha [code]true[/code], az alakzattulajdonos és a hozzá tartozó alakzatok le vannak tiltva."
+msgstr "[code]true[/code] értékkel jelzi, ha az alakzattulajdonos és a hozzá rendelt alakzatok le vannak tiltva."
 
 #. CollisionObject2D.remove_shape_owner
 #: doc/classes/CollisionObject2D.xml
@@ -2028,14 +2028,14 @@ msgstr "Eltávolítja a megadott alakzattulajdonost."
 #. CollisionObject2D.set_collision_layer_value
 #: doc/classes/CollisionObject2D.xml
 msgid "Based on [param value], enables or disables the specified layer in the [member collision_layer], given a [param layer_number] between 1 and 32."
-msgstr "A [param value] értéke alapján engedélyezi vagy letiltja a [member collision_layer] [param layer_number] számú rétegét (1 és 32 között)."
+msgstr "A [param value] értékének megfelelően engedélyezi vagy letiltja a [member collision_layer] [param layer_number] számú rétegét. A rétegszám 1 és 32 között lehet."
 
 #. CollisionObject2D.set_collision_mask_value
 #. RayCast2D.set_collision_mask_value
 #: doc/classes/CollisionObject2D.xml
 #: doc/classes/RayCast2D.xml
 msgid "Based on [param value], enables or disables the specified layer in the [member collision_mask], given a [param layer_number] between 1 and 32."
-msgstr "A [param value] értéke alapján engedélyezi vagy letiltja a [member collision_mask] [param layer_number] számú rétegét (1 és 32 között)."
+msgstr "A [param value] értékének megfelelően engedélyezi vagy letiltja a [member collision_mask] [param layer_number] számú rétegét. A rétegszám 1 és 32 között lehet."
 
 #. CollisionObject2D.shape_find_owner
 #: doc/classes/CollisionObject2D.xml
