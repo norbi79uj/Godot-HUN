@@ -1346,7 +1346,7 @@ msgstr "Általános célú sprite-csomópont."
 #. Sprite2D.description
 #: doc/classes/Sprite2D.xml
 msgid "A node that displays a 2D texture. The texture displayed can be a region from a larger atlas texture, or a frame from a sprite sheet animation."
-msgstr "2D textúrát megjelenítő csomópont. A megjelenített kép származhat egy nagyobb atlasztextúra kijelölt területéről vagy egy sprite-lapon lévő animáció valamelyik képkockájából."
+msgstr "2D textúrát megjelenítő csomópont. A megjelenített textúra lehet egy nagyobb atlasztextúra kijelölt része vagy egy sprite-lapos animáció egyik képkockája."
 
 #. Sprite2D.centered
 #: doc/classes/Sprite2D.xml
@@ -1361,7 +1361,7 @@ msgstr "A sprite-lapról megjelenítendő aktuális képkocka. A [member hframes
 #. Sprite2D.frame_coords
 #: doc/classes/Sprite2D.xml
 msgid "Coordinates of the frame to display from sprite sheet. This is as an alias for the [member frame] property. [member hframes] or [member vframes] must be greater than 1."
-msgstr "A sprite-lapról megjelenítendő képkocka koordinátái. Ez a [member frame] tulajdonság alternatív elérési módja, amely a képkockát koordinátákkal adja meg. A [member hframes] vagy a [member vframes] értékének 1-nél nagyobbnak kell lennie."
+msgstr "A sprite-lapról megjelenítendő képkocka koordinátái. Ez a [member frame] tulajdonság aliasa, amely a képkockát koordinátákkal adja meg. A [member hframes] vagy a [member vframes] értékének 1-nél nagyobbnak kell lennie."
 
 #. Sprite2D.hframes
 #: doc/classes/Sprite2D.xml
@@ -1386,7 +1386,7 @@ msgstr "Ha [code]true[/code], a textúrát egy nagyobb atlasztextúrából vágj
 #. Sprite2D.region_filter_clip_enabled
 #: doc/classes/Sprite2D.xml
 msgid "If [code]true[/code], the area outside of the [member region_rect] is clipped to avoid bleeding of the surrounding texture pixels. [member region_enabled] must be [code]true[/code]."
-msgstr "Ha [code]true[/code], a [member region_rect] területén kívüli részeket levágja, így a szomszédos textúraképpontok nem szivárognak át a kijelölt területre. A [member region_enabled] értékének [code]true[/code] kell lennie."
+msgstr "Ha [code]true[/code], a [member region_rect] területén kívüli részeket levágja, hogy a környező textúraképpontok ne jelenjenek meg a kijelölt terület szélein. A [member region_enabled] értékének [code]true[/code] kell lennie."
 
 #. Sprite2D.region_rect
 #: doc/classes/Sprite2D.xml
@@ -1401,7 +1401,7 @@ msgstr "A kirajzolandó [Texture2D] objektum."
 #. Sprite2D.is_pixel_opaque
 #: doc/classes/Sprite2D.xml
 msgid "Returns [code]true[/code] if the pixel at the given position is opaque, [code]false[/code] otherwise. Also returns [code]false[/code] if the given position is out of bounds or this sprite's [member texture] is [code]null[/code]. [param pos] is in local coordinates."
-msgstr "[code]true[/code] értéket ad vissza, ha a megadott pozíció képpontja átlátszatlan, egyébként [code]false[/code] értéket. Akkor is [code]false[/code] értéket ad vissza, ha a pozíció kívül esik a határokon, vagy a sprite [member texture] értéke [code]null[/code]. A [param pos] paraméter helyi koordinátákat használ."
+msgstr "[code]true[/code] értéket ad vissza, ha a megadott pozíció képpontja átlátszatlan, egyébként [code]false[/code] értéket. Akkor is [code]false[/code] értéket ad vissza, ha a pozíció kívül esik a határokon, vagy a sprite [member texture] értéke [code]null[/code]. A [param pos] pozíció helyi koordinátákban értendő."
 
 #. Node2D.brief
 #: doc/classes/Node2D.xml
@@ -10991,12 +10991,12 @@ msgstr "Többsoros szövegszerkesztő, amely korlátozott kódszerkesztési funk
 #. Sprite2D.frame_changed
 #: doc/classes/Sprite2D.xml
 msgid "Emitted when the [member frame] changes."
-msgstr "A [member frame] tulajdonság megváltozásakor kerül kibocsátásra."
+msgstr "A jelzés a [member frame] tulajdonság megváltozásakor keletkezik."
 
 #. Sprite2D.texture_changed
 #: doc/classes/Sprite2D.xml
 msgid "Emitted when the [member texture] changes."
-msgstr "A [member texture] tulajdonság megváltozásakor kerül kibocsátásra."
+msgstr "A jelzés a [member texture] tulajdonság megváltozásakor keletkezik."
 
 #. TileMapLayer.changed
 #: doc/classes/TileMapLayer.xml
