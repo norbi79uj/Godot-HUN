@@ -1771,7 +1771,7 @@ msgstr "Az animáció lépésköze."
 #. Animation.clear
 #: doc/classes/Animation.xml
 msgid "Clear the animation (clear all tracks and reset all)."
-msgstr "Kiüríti az animációt: eltávolítja az összes sávot, és alaphelyzetbe állítja a beállításokat."
+msgstr "Kiüríti az animációt: törli az összes sávot, és minden beállítást alaphelyzetbe állít."
 
 #. Animation.add_track
 #: doc/classes/Animation.xml
@@ -1781,12 +1781,12 @@ msgstr "Új sávot ad az animációhoz."
 #. Animation.find_track
 #: doc/classes/Animation.xml
 msgid "Returns the index of the specified track. If the track is not found, return -1."
-msgstr "Visszaadja a megadott sáv indexét. Ha a sáv nem található, -1-et ad vissza."
+msgstr "Megkeresi a megadott animációs sávot, és visszaadja az indexét. Ha nem találja, -1 értéket ad vissza."
 
 #. Animation.get_track_count
 #: doc/classes/Animation.xml
 msgid "Returns the amount of tracks in the animation."
-msgstr "Visszaadja az animáció sávjainak számát."
+msgstr "Megadja, hány sáv található az animációban."
 
 #. Animation.remove_track
 #: doc/classes/Animation.xml
@@ -1796,42 +1796,42 @@ msgstr "Eltávolítja a megadott indexű animációs sávot."
 #. Animation.add_marker
 #: doc/classes/Animation.xml
 msgid "Adds a marker to this Animation."
-msgstr "Jelölőt ad ehhez az animációhoz."
+msgstr "Új időzítési jelölőt ad az animációhoz."
 
 #. Animation.has_marker
 #: doc/classes/Animation.xml
 msgid "Returns [code]true[/code] if this Animation contains a marker with the given name."
-msgstr "[code]true[/code] értéket ad vissza, ha az animáció tartalmazza a megadott nevű jelölőt."
+msgstr "[code]true[/code] értéket ad vissza, ha az animációban megtalálható a megadott nevű jelölő."
 
 #. Animation.get_marker_names
 #: doc/classes/Animation.xml
 msgid "Returns every marker in this Animation, sorted ascending by time."
-msgstr "Visszaadja az animáció jelölőinek neveit a jelölők időpontja szerint növekvő sorrendben."
+msgstr "Az animáció összes jelölőjének nevét adja vissza, a jelölők időpontja szerint növekvő sorrendben."
 
 #. Animation.get_marker_time
 #: doc/classes/Animation.xml
 msgid "Returns the given marker's time."
-msgstr "Visszaadja a megadott jelölő időpontját."
+msgstr "Lekéri a megadott jelölő időpontját az animáció idővonalán."
 
 #. Animation.remove_marker
 #: doc/classes/Animation.xml
 msgid "Removes the marker with the given name from this Animation."
-msgstr "Eltávolítja a megadott nevű jelölőt az animációból."
+msgstr "A megadott nevű jelölőt törli az animációból."
 
 #. Animation.track_get_key_count
 #: doc/classes/Animation.xml
 msgid "Returns the number of keys in a given track."
-msgstr "Visszaadja a megadott sáv kulcsképkockáinak számát."
+msgstr "Megadja, hány kulcsképkocka található a kiválasztott animációs sávban."
 
 #. Animation.track_get_path
 #: doc/classes/Animation.xml
 msgid "Gets the path of a track. For more information on the path format, see [method track_set_path]."
-msgstr "Lekéri a sáv útvonalát. Az útvonal formátumáról lásd: [method track_set_path]."
+msgstr "Lekéri az animációs sávhoz rendelt útvonalat. Az útvonal felépítését a [method track_set_path] leírása ismerteti."
 
 #. Animation.track_set_enabled
 #: doc/classes/Animation.xml
 msgid "Enables/disables the given track. Tracks are enabled by default."
-msgstr "Engedélyezi vagy letiltja a megadott sávot. A sávok alapértelmezés szerint engedélyezettek."
+msgstr "Engedélyezi vagy letiltja a megadott animációs sávot. Az új sávok alapértelmezés szerint engedélyezettek."
 
 #. Animation.track_is_enabled
 #: doc/classes/Animation.xml
@@ -1841,7 +1841,7 @@ msgstr "[code]true[/code] értéket ad vissza, ha a [param track_idx] indexű s�
 #. Animation.track_insert_key
 #: doc/classes/Animation.xml
 msgid "Inserts a generic key in a given track. Returns the key index."
-msgstr "Általános kulcsképkockát illeszt be a megadott sávba. Visszaadja a kulcsképkocka indexét."
+msgstr "Általános kulcsképkockát szúr be a megadott animációs sávba, majd visszaadja annak indexét."
 
 #. Animation.track_remove_key
 #: doc/classes/Animation.xml
