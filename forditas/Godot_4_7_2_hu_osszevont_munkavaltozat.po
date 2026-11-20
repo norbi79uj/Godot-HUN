@@ -1916,42 +1916,42 @@ msgstr "Az objektumok forgásának csillapítása ezen a területen: azt adja me
 #. Area2D.audio_bus_override
 #: doc/classes/Area2D.xml
 msgid "If [code]true[/code], the area's audio bus overrides the default audio bus."
-msgstr "Ha az értéke [code]true[/code], a terület hangbusza az alapértelmezett hangbusz helyett használatos."
+msgstr "[code]true[/code] értéknél a terület saját hangbusza felülírja az alapértelmezett hangbuszt."
 
 #. Area2D.audio_bus_name
 #: doc/classes/Area2D.xml
 msgid "The name of the area's audio bus."
-msgstr "A terület hangbuszának neve."
+msgstr "A területhez rendelt hangbusz neve."
 
 #. Area2D.get_overlapping_areas
 #: doc/classes/Area2D.xml
 msgid "Returns a list of intersecting [Area2D]s. The overlapping area's [member CollisionObject2D.collision_layer] must be part of this area's [member CollisionObject2D.collision_mask] in order to be detected.\nFor performance reasons (collisions are all processed at the same time) this list is modified once during the physics step, not immediately after objects are moved. Consider using signals instead."
-msgstr "Visszaadja az ezzel a területtel átfedésben lévő [Area2D] területek listáját. Az átfedő terület [member CollisionObject2D.collision_layer] rétegei közül legalább egynek szerepelnie kell ennek a területnek a [member CollisionObject2D.collision_mask] maszkjában ahhoz, hogy a rendszer érzékelje.\nA lista teljesítménybeli okokból fizikai lépésenként egyszer frissül, nem közvetlenül az objektumok elmozdítása után. Ehelyett érdemes lehet jelzéseket használni."
+msgstr "Lekéri az ezzel a területtel átfedésben lévő [Area2D] területek listáját. Az átfedő terület [member CollisionObject2D.collision_layer] rétegei közül legalább egynek szerepelnie kell ennek a területnek a [member CollisionObject2D.collision_mask] maszkjában.\nA listát a rendszer teljesítménybeli okokból fizikai lépésenként egyszer frissíti, nem közvetlenül az objektumok elmozdítása után. Az átfedések követésére érdemes lehet inkább jelzéseket használni."
 
 #. Area2D.get_overlapping_bodies
 #: doc/classes/Area2D.xml
 msgid "Returns a list of intersecting [PhysicsBody2D]s and [TileMap]s. The overlapping body's [member CollisionObject2D.collision_layer] must be part of this area's [member CollisionObject2D.collision_mask] in order to be detected.\nFor performance reasons (collisions are all processed at the same time) this list is modified once during the physics step, not immediately after objects are moved. Consider using signals instead."
-msgstr "Visszaadja az ezzel a területtel átfedésben lévő [PhysicsBody2D] testek és [TileMap] csomópontok listáját. Az átfedő test [member CollisionObject2D.collision_layer] rétegei közül legalább egynek szerepelnie kell ennek a területnek a [member CollisionObject2D.collision_mask] maszkjában ahhoz, hogy a rendszer érzékelje.\nA lista teljesítménybeli okokból fizikai lépésenként egyszer frissül, nem közvetlenül az objektumok elmozdítása után. Ehelyett érdemes lehet jelzéseket használni."
+msgstr "Lekéri az ezzel a területtel átfedésben lévő [PhysicsBody2D] testek és [TileMap] csomópontok listáját. Az átfedő objektum [member CollisionObject2D.collision_layer] rétegei közül legalább egynek szerepelnie kell ennek a területnek a [member CollisionObject2D.collision_mask] maszkjában.\nA listát a rendszer teljesítménybeli okokból fizikai lépésenként egyszer frissíti, nem közvetlenül az objektumok elmozdítása után. Az átfedések követésére érdemes lehet inkább jelzéseket használni."
 
 #. Area2D.has_overlapping_areas
 #: doc/classes/Area2D.xml
 msgid "Returns [code]true[/code] if intersecting any [Area2D]s, otherwise returns [code]false[/code]. The overlapping area's [member CollisionObject2D.collision_layer] must be part of this area's [member CollisionObject2D.collision_mask] in order to be detected.\nFor performance reasons (collisions are all processed at the same time) the list of overlapping areas is modified once during the physics step, not immediately after objects are moved. Consider using signals instead."
-msgstr "[code]true[/code] értéket ad vissza, ha ez a terület legalább egy másik [Area2D] területtel átfedésben van, egyébként [code]false[/code] értéket. A másik terület [member CollisionObject2D.collision_layer] rétegei közül legalább egynek szerepelnie kell a terület [member CollisionObject2D.collision_mask] maszkjában ahhoz, hogy a rendszer érzékelje.\nAz átfedő területek listája teljesítménybeli okokból fizikai lépésenként egyszer frissül, nem közvetlenül az objektumok mozgatása után. Ehelyett érdemes lehet jelzéseket használni."
+msgstr "[code]true[/code] értéket ad vissza, ha ez a terület legalább egy [Area2D] területtel átfedésben van, különben [code]false[/code] értéket. Az átfedő terület [member CollisionObject2D.collision_layer] rétegei közül legalább egynek szerepelnie kell a vizsgáló terület [member CollisionObject2D.collision_mask] maszkjában.\nAz átfedések listája teljesítménybeli okokból fizikai lépésenként egyszer frissül, nem azonnal az objektumok mozgatásakor. Érdemes lehet inkább jelzéseket használni."
 
 #. Area2D.has_overlapping_bodies
 #: doc/classes/Area2D.xml
 msgid "Returns [code]true[/code] if intersecting any [PhysicsBody2D]s or [TileMap]s, otherwise returns [code]false[/code]. The overlapping body's [member CollisionObject2D.collision_layer] must be part of this area's [member CollisionObject2D.collision_mask] in order to be detected.\nFor performance reasons (collisions are all processed at the same time) the list of overlapping bodies is modified once during the physics step, not immediately after objects are moved. Consider using signals instead."
-msgstr "[code]true[/code] értéket ad vissza, ha ez a terület legalább egy [PhysicsBody2D] testtel vagy [TileMap] csomóponttal átfedésben van, egyébként [code]false[/code] értéket. A másik test [member CollisionObject2D.collision_layer] rétegei közül legalább egynek szerepelnie kell a terület [member CollisionObject2D.collision_mask] maszkjában ahhoz, hogy a rendszer érzékelje.\nAz átfedő testek listája teljesítménybeli okokból fizikai lépésenként egyszer frissül, nem közvetlenül az objektumok mozgatása után. Ehelyett érdemes lehet jelzéseket használni."
+msgstr "[code]true[/code] értéket ad vissza, ha ez a terület legalább egy [PhysicsBody2D] testtel vagy [TileMap] csomóponttal átfedésben van, különben [code]false[/code] értéket. Az átfedő objektum [member CollisionObject2D.collision_layer] rétegei közül legalább egynek szerepelnie kell a vizsgáló terület [member CollisionObject2D.collision_mask] maszkjában.\nAz átfedések listája teljesítménybeli okokból fizikai lépésenként egyszer frissül, nem azonnal az objektumok mozgatásakor. Érdemes lehet inkább jelzéseket használni."
 
 #. Area2D.overlaps_area
 #: doc/classes/Area2D.xml
 msgid "Returns [code]true[/code] if the given [Area2D] intersects or overlaps this [Area2D], [code]false[/code] otherwise.\n[b]Note:[/b] The result of this test is not immediate after moving objects. For performance, the list of overlaps is updated once per frame and before the physics step. Consider using signals instead."
-msgstr "[code]true[/code] értéket ad vissza, ha a megadott [Area2D] átfedésben van ezzel az [Area2D] területtel, egyébként [code]false[/code] értéket.\n[b]Megjegyzés:[/b] Az ellenőrzés eredménye az objektumok elmozdítása után nem frissül azonnal: az átfedések listáját a rendszer képkockánként egyszer, a fizikai lépés előtt frissíti. Ehelyett érdemes lehet jelzéseket használni."
+msgstr "[code]true[/code] értéket ad vissza, ha a megadott [Area2D] terület metszi ezt az [Area2D] területet, vagy átfedésben van vele; egyébként [code]false[/code] értéket.\n[b]Megjegyzés:[/b] A vizsgálat eredménye az objektumok mozgatását követően nem változik meg azonnal. Az átfedések listája teljesítménybeli okokból képkockánként egyszer, a fizikai lépés előtt frissül. Szükség esetén használj inkább jelzéseket."
 
 #. Area2D.overlaps_body
 #: doc/classes/Area2D.xml
 msgid "Returns [code]true[/code] if the given physics body intersects or overlaps this [Area2D], [code]false[/code] otherwise.\n[b]Note:[/b] The result of this test is not immediate after moving objects. For performance, list of overlaps is updated once per frame and before the physics step. Consider using signals instead.\nThe [param body] argument can either be a [PhysicsBody2D] or a [TileMap] instance. While TileMaps are not physics bodies themselves, they register their tiles with collision shapes as a virtual physics body."
-msgstr "[code]true[/code] értéket ad vissza, ha a megadott fizikai test átfedésben van ezzel az [Area2D] területtel, egyébként [code]false[/code] értéket.\n[b]Megjegyzés:[/b] Az ellenőrzés eredménye nem frissül azonnal az objektumok mozgatása után. A teljesítmény érdekében az átfedések listája képkockánként egyszer, a fizikai lépés előtt frissül. Ehelyett érdemes lehet jelzéseket használni.\nA [param body] paraméterként [PhysicsBody2D] vagy [TileMap] példány adható meg. Bár a TileMap csomópontok maguk nem fizikai testek, az ütközési alakzatokkal rendelkező csempéiket virtuális fizikai testként regisztrálják."
+msgstr "[code]true[/code] értéket ad vissza, ha a megadott fizikai test metszi ezt az [Area2D] területet, vagy átfedésben van vele; egyébként [code]false[/code] értéket.\n[b]Megjegyzés:[/b] Az eredmény az objektumok mozgatását követően nem frissül azonnal. Az átfedések listája teljesítménybeli okokból képkockánként egyszer, a fizikai lépés előtt frissül. Szükség esetén használj inkább jelzéseket.\nA [param body] paraméter [PhysicsBody2D] vagy [TileMap] példány lehet. A TileMap nem fizikai test, de az ütközési alakzattal rendelkező csempéket virtuális fizikai testként regisztrálja."
 
 #. CollisionObject2D.brief
 #: doc/classes/CollisionObject2D.xml
@@ -2414,7 +2414,7 @@ msgstr "Visszaadja az aktuális navigációs útvonal elérhető végpontját gl
 #. RayCast2D.brief
 #: doc/classes/RayCast2D.xml
 msgid "A ray in 2D space, used to find the first collision object it intersects."
-msgstr "2D-s sugár, amely érzékeli az útjába eső első ütközési objektumot."
+msgstr "2D-s sugárvizsgálat, amely az útjába eső első ütközési objektumot keresi meg."
 
 #. RayCast2D.description
 #: doc/classes/RayCast2D.xml
@@ -2424,12 +2424,12 @@ msgstr "A sugárvizsgálat a kiindulóponttól a [member target_position] célpo
 #. RayCast2D.collide_with_areas
 #: doc/classes/RayCast2D.xml
 msgid "If [code]true[/code], collisions with [Area2D]s will be reported."
-msgstr "Ha az értéke [code]true[/code], a sugár az [Area2D] területekkel való metszéseket is jelzi."
+msgstr "[code]true[/code] értéknél a sugár az [Area2D] területekkel való metszéseket is érzékeli."
 
 #. RayCast2D.collide_with_bodies
 #: doc/classes/RayCast2D.xml
 msgid "If [code]true[/code], collisions with [PhysicsBody2D]s will be reported."
-msgstr "Ha az értéke [code]true[/code], a sugár a [PhysicsBody2D] testekkel való metszéseket is jelzi."
+msgstr "[code]true[/code] értéknél a sugár a [PhysicsBody2D] testekkel való metszéseket is érzékeli."
 
 #. RayCast2D.collision_mask
 #: doc/classes/RayCast2D.xml
@@ -2454,7 +2454,7 @@ msgstr "Ha az értéke [code]true[/code], a sugár akkor is találatot jelez, ha
 #. RayCast2D.target_position
 #: doc/classes/RayCast2D.xml
 msgid "The ray's destination point, relative to this raycast's [member Node2D.position]."
-msgstr "A sugár célpontjának a [member Node2D.position] értékéhez viszonyított helyi pozíciója."
+msgstr "A sugár célpontja a sugárvizsgálat [member Node2D.position] pozíciójához viszonyított helyi koordinátákban."
 
 #. RayCast2D.add_exception
 #: doc/classes/RayCast2D.xml
