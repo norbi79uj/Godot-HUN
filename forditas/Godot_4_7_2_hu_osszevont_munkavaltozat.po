@@ -1661,7 +1661,7 @@ msgstr "Sprite-képkockák könyvtára egy [AnimatedSprite2D] vagy [AnimatedSpri
 #. SpriteFrames.add_animation
 #: doc/classes/SpriteFrames.xml
 msgid "Adds a new [param anim] animation to the library."
-msgstr "Új [param anim] nevű animációt ad a könyvtárhoz."
+msgstr "Új, [param anim] nevű animációt hoz létre a képkockatárban."
 
 #. SpriteFrames.add_frame
 #: doc/classes/SpriteFrames.xml
@@ -1671,12 +1671,12 @@ msgstr "Képkockát ad a [param anim] animációhoz. Ha [param at_position] ért
 #. SpriteFrames.clear
 #: doc/classes/SpriteFrames.xml
 msgid "Removes all frames from the [param anim] animation."
-msgstr "Eltávolítja a [param anim] animáció összes képkockáját."
+msgstr "Törli a [param anim] animáció valamennyi képkockáját, de magát az animációt megtartja."
 
 #. SpriteFrames.clear_all
 #: doc/classes/SpriteFrames.xml
 msgid "Removes all animations. An empty [code]default[/code] animation will be created."
-msgstr "Eltávolítja az összes animációt, majd létrehoz egy üres [code]default[/code] animációt."
+msgstr "Törli az összes animációt, majd létrehoz egy új, üres [code]default[/code] animációt."
 
 #. SpriteFrames.duplicate_animation
 #: doc/classes/SpriteFrames.xml
@@ -1686,7 +1686,7 @@ msgstr "Lemásolja a [param anim_from] animációt, és [param anim_to] néven h
 #. SpriteFrames.get_animation_loop
 #: doc/classes/SpriteFrames.xml
 msgid "Returns [code]true[/code] if [code]get_animation_loop_mode(anim) == LOOP_LINEAR[/code]. Otherwise, returns [code]false[/code]."
-msgstr "[code]true[/code] értéket ad vissza, ha [code]get_animation_loop_mode(anim) == LOOP_LINEAR[/code]. Egyébként [code]false[/code] értéket ad vissza."
+msgstr "[code]true[/code] értéket ad vissza, ha az animáció ismétlési módjára teljesül a [code]get_animation_loop_mode(anim) == LOOP_LINEAR[/code] feltétel; máskülönben [code]false[/code] értéket ad vissza."
 
 #. SpriteFrames.get_animation_names
 #: doc/classes/SpriteFrames.xml
@@ -1721,22 +1721,22 @@ msgstr "[code]true[/code] értéket ad vissza, ha a [param anim] animáció lét
 #. SpriteFrames.remove_animation
 #: doc/classes/SpriteFrames.xml
 msgid "Removes the [param anim] animation."
-msgstr "Eltávolítja a [param anim] animációt."
+msgstr "Törli a megadott [param anim] nevű animációt a gyűjteményből."
 
 #. SpriteFrames.remove_frame
 #: doc/classes/SpriteFrames.xml
 msgid "Removes the [param anim] animation's frame [param idx]."
-msgstr "Eltávolítja a [param anim] animáció [param idx] indexű képkockáját."
+msgstr "A [param anim] animációból törli a [param idx] indexű képkockát."
 
 #. SpriteFrames.rename_animation
 #: doc/classes/SpriteFrames.xml
 msgid "Changes the [param anim] animation's name to [param newname]."
-msgstr "Átnevezi a [param anim] animációt [param newname] névre."
+msgstr "A [param anim] nevű animációt [param newname] névre nevezi át."
 
 #. SpriteFrames.set_animation_loop
 #: doc/classes/SpriteFrames.xml
 msgid "If [param loop] is [code]false[/code] equivalent to [code]set_animation_loop_mode(LOOP_NONE)[/code].\nIf [param loop] is [code]true[/code] equivalent to [code]set_animation_loop_mode(LOOP_LINEAR)[/code]."
-msgstr "Ha [param loop] értéke [code]false[/code], ez megfelel a [code]set_animation_loop_mode(LOOP_NONE)[/code] beállításnak.\nHa [param loop] értéke [code]true[/code], ez megfelel a [code]set_animation_loop_mode(LOOP_LINEAR)[/code] beállításnak."
+msgstr "Ha a [param loop] értéke [code]false[/code], a működés megegyezik a [code]set_animation_loop_mode(LOOP_NONE)[/code] hívással, vagyis az animáció nem ismétlődik.\nHa a [param loop] értéke [code]true[/code], a működés megegyezik a [code]set_animation_loop_mode(LOOP_LINEAR)[/code] hívással, vagyis az animáció ismétlődik."
 
 #. SpriteFrames.set_animation_speed
 #: doc/classes/SpriteFrames.xml
@@ -1751,22 +1751,22 @@ msgstr "Beállítja a [param anim] animáció [param idx] indexű képkockáján
 #. Animation.brief
 #: doc/classes/Animation.xml
 msgid "Holds data that can be used to animate anything in the engine."
-msgstr "A motor bármely objektumának animálásához használható adatokat tárol."
+msgstr "Az animációkhoz szükséges adatokat tárolja, amelyekkel a motor különféle objektumai animálhatók."
 
 #. Animation.length
 #: doc/classes/Animation.xml
 msgid "The total length of the animation (in seconds).\n[b]Note:[/b] Length is not delimited by the last key, as this one may be before or after the end to ensure correct interpolation and looping."
-msgstr "Az animáció teljes hossza másodpercben.\n[b]Megjegyzés:[/b] A hossz nem feltétlenül az utolsó kulcsképkockánál ér véget: az a helyes interpoláció és ismétlés érdekében az animáció vége elé vagy után is eshet."
+msgstr "Az animáció teljes időtartama másodpercben.\n[b]Megjegyzés:[/b] A végét nem feltétlenül az utolsó kulcsképkocka helye határozza meg: a kulcsképkocka az animáció vége elé vagy után is kerülhet a megfelelő interpoláció és ismétlés érdekében."
 
 #. Animation.loop_mode
 #: doc/classes/Animation.xml
 msgid "Determines the behavior of both ends of the animation timeline during animation playback. This indicates whether and how the animation should be restarted, and is also used to correctly interpolate animation cycles."
-msgstr "Meghatározza az animáció idővonalának elején és végén érvényes viselkedést lejátszás közben. Szabályozza, hogy az animáció újraindul-e, és ha igen, hogyan; az animációs ciklusok megfelelő interpolációját is segíti."
+msgstr "Meghatározza, hogyan viselkedik az animáció lejátszáskor az idővonal elején és végén. Szabályozza, hogy újrainduljon-e az animáció, és ha igen, milyen módon; emellett a ciklusok helyes interpolációját is biztosítja."
 
 #. Animation.step
 #: doc/classes/Animation.xml
 msgid "The animation step value."
-msgstr "Az animáció lépésköze."
+msgstr "Az animáció idővonalán használt lépésköz értéke."
 
 #. Animation.clear
 #: doc/classes/Animation.xml
