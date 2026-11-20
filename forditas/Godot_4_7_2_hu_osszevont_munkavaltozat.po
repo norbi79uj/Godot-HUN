@@ -2633,7 +2633,7 @@ msgstr "Több [AnimationRootNode] csomópontból álló állapotgép, amelyet az
 #. AnimationNodeStateMachine.description
 #: doc/classes/AnimationNodeStateMachine.xml
 msgid "Contains multiple [AnimationRootNode]s representing animation states, connected in a graph. State transitions can be configured to happen automatically or via code, using a shortest-path algorithm. Retrieve the [AnimationNodeStateMachinePlayback] object from the [AnimationTree] node to control it programmatically.\n[codeblocks]\n[gdscript]\nvar state_machine = $AnimationTree.get(\"parameters/playback\")\nstate_machine.travel(\"some_state\")\n[/gdscript]\n[csharp]\nvar stateMachine = GetNode&lt;AnimationTree&gt;(\"AnimationTree\").Get(\"parameters/playback\") as AnimationNodeStateMachinePlayback;\nstateMachine.Travel(\"some_state\");\n[/csharp]\n[/codeblocks]"
-msgstr "Állapotgépként működő gráf, amely az animációs állapotokat képviselő több [AnimationRootNode] csomópontot tartalmaz. Az állapotok közötti átmenetek történhetnek automatikusan vagy kódból, egy legrövidebb útvonalat kereső algoritmussal. A programból történő vezérléshez kérd le az [AnimationNodeStateMachinePlayback] objektumot az [AnimationTree] csomópontból.\n[codeblocks]\n[gdscript]\nvar state_machine = $AnimationTree.get(\"parameters/playback\")\nstate_machine.travel(\"some_state\")\n[/gdscript]\n[csharp]\nvar stateMachine = GetNode&lt;AnimationTree&gt;(\"AnimationTree\").Get(\"parameters/playback\") as AnimationNodeStateMachinePlayback;\nstateMachine.Travel(\"some_state\");\n[/csharp]\n[/codeblocks]"
+msgstr "Állapotgépként működő gráf, amely az animációs állapotokat képviselő több [AnimationRootNode] csomópontot tartalmaz. Az állapotok közötti átmenetek automatikusan vagy kódból is vezérelhetők, legrövidebbutat-kereső algoritmus használatával. A kódból történő vezérléshez kérd le az [AnimationNodeStateMachinePlayback] objektumot az [AnimationTree] csomópontból.\n[codeblocks]\n[gdscript]\nvar state_machine = $AnimationTree.get(\"parameters/playback\")\nstate_machine.travel(\"some_state\")\n[/gdscript]\n[csharp]\nvar stateMachine = GetNode&lt;AnimationTree&gt;(\"AnimationTree\").Get(\"parameters/playback\") as AnimationNodeStateMachinePlayback;\nstateMachine.Travel(\"some_state\");\n[/csharp]\n[/codeblocks]"
 
 #. AnimationNodeStateMachine.allow_transition_to_self
 #: doc/classes/AnimationNodeStateMachine.xml
@@ -2643,7 +2643,7 @@ msgstr "Ha [code]true[/code], a [method AnimationNodeStateMachinePlayback.travel
 #. AnimationNodeStateMachine.reset_ends
 #: doc/classes/AnimationNodeStateMachine.xml
 msgid "If [code]true[/code], treat the cross-fade to the start and end nodes as a blend with the RESET animation.\nIn most cases, when additional cross-fades are performed in the parent [AnimationNode] of the state machine, setting this property to [code]false[/code] and matching the cross-fade time of the parent [AnimationNode] and the state machine's start node and end node gives good results."
-msgstr "Ha [code]true[/code], a kezdő- és végállapotba történő áttűnést a RESET animációval való keverésként kezeli.\nA legtöbb esetben, ha az állapotgép szülő [AnimationNode] csomópontja további áttűnéseket hajt végre, jó eredményt ad, ha ezt a tulajdonságot [code]false[/code] értékre állítod, és összehangolod a szülő [AnimationNode] áttűnési idejét az állapotgép kezdő- és végcsomópontjának áttűnési idejével."
+msgstr "Ha [code]true[/code], a kezdő- és végcsomópont felé történő áttűnést a RESET animációval való keverésként kezeli.\nA legtöbb esetben, ha az állapotgép szülő [AnimationNode] csomópontja további áttűnéseket hajt végre, jó eredményt ad, ha ezt a tulajdonságot [code]false[/code] értékre állítod, és összehangolod a szülő [AnimationNode] áttűnési idejét az állapotgép kezdő- és végcsomópontjának áttűnési idejével."
 
 #. AnimationNodeStateMachine.state_machine_type
 #: doc/classes/AnimationNodeStateMachine.xml
@@ -2663,7 +2663,7 @@ msgstr "Átmenetet ad hozzá a megadott animációs csomópontok között."
 #. AnimationNodeStateMachine.get_graph_offset
 #: doc/classes/AnimationNodeStateMachine.xml
 msgid "Returns the draw offset of the graph. Used for display in the editor."
-msgstr "Visszaadja a gráf kirajzolási eltolását. A szerkesztőbeli megjelenítéshez használatos."
+msgstr "Visszaadja a gráf kirajzolásakor alkalmazott eltolást, amelyet a szerkesztőbeli megjelenítés használ."
 
 #. AnimationNodeStateMachine.get_node
 #: doc/classes/AnimationNodeStateMachine.xml
@@ -2673,7 +2673,7 @@ msgstr "Visszaadja a megadott nevű animációs csomópontot."
 #. AnimationNodeStateMachine.get_node_list
 #: doc/classes/AnimationNodeStateMachine.xml
 msgid "Returns a list containing the names of all animation nodes in this state machine."
-msgstr "Visszaadja az állapotgép összes animációs csomópontjának nevét tartalmazó listát."
+msgstr "Az állapotgép valamennyi animációs csomópontjának nevét listában adja vissza."
 
 #. AnimationNodeStateMachine.get_node_name
 #: doc/classes/AnimationNodeStateMachine.xml
