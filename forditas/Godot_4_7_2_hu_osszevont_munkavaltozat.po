@@ -1406,62 +1406,62 @@ msgstr "[code]true[/code] értéket ad vissza, ha a megadott pozíció képpontj
 #. Node2D.brief
 #: doc/classes/Node2D.xml
 msgid "A 2D game object, inherited by all 2D-related nodes. Has a position, rotation, scale, and skew."
-msgstr "2D játékobjektum, amelyből minden 2D-s csomópont származik. Van pozíciója, elforgatása, méretezése és nyírása."
+msgstr "A 2D-s csomópontok alapjául szolgáló játékobjektum; pozícióval, elforgatással, méretezéssel és nyírással rendelkezik."
 
 #. Node2D.description
 #: doc/classes/Node2D.xml
 msgid "A 2D game object, with a transform (position, rotation, and scale). All 2D nodes, including physics objects and sprites, inherit from Node2D. Use Node2D as a parent node to move, scale and rotate children in a 2D project. Also gives control of the node's render order.\n[b]Note:[/b] Since both [Node2D] and [Control] inherit from [CanvasItem], they share several concepts from the class such as the [member CanvasItem.z_index] and [member CanvasItem.visible] properties."
-msgstr "2D játékobjektum transzformációval (pozíció, elforgatás és méretezés). Minden 2D-s csomópont, beleértve a fizikai objektumokat és a sprite-okat, a Node2D osztályból származik. Használd a Node2D-t szülőcsomópontként, ha egy 2D projektben együtt szeretnéd mozgatni, méretezni vagy forgatni a gyermekcsomópontokat. A csomópont kirajzolási sorrendje is szabályozható vele.\n[b]Megjegyzés:[/b] Mivel a [Node2D] és a [Control] egyaránt a [CanvasItem] leszármazottja, több közös tulajdonságuk van, például a [member CanvasItem.z_index] és a [member CanvasItem.visible]."
+msgstr "2D-s játékobjektum, amelynek transzformációja a pozíciót, az elforgatást és a méretezést írja le. A 2D-s fizikai objektumok és sprite-ok is a Node2D osztályból származnak. A Node2D szülőcsomópontként lehetővé teszi, hogy a gyermekcsomópontokat együtt mozgasd, méretezd vagy forgasd; a kirajzolási sorrendjük szabályozásában is szerepet kap.\n[b]Megjegyzés:[/b] A [Node2D] és a [Control] egyaránt a [CanvasItem] osztályból származik, ezért több közös fogalmat és tulajdonságot használnak, például a [member CanvasItem.z_index] és a [member CanvasItem.visible] tulajdonságot."
 
 #. Node2D.position
 #: doc/classes/Node2D.xml
 msgid "Position, relative to the node's parent. See also [member global_position]."
-msgstr "A csomópont pozíciója a szülőjéhez viszonyítva. Lásd még: [member global_position]."
+msgstr "A csomópont helyi pozíciója a szülőcsomóponthoz viszonyítva. Lásd még: [member global_position]."
 
 #. Node2D.global_position
 #: doc/classes/Node2D.xml
 msgid "Global position. See also [member position]."
-msgstr "Globális pozíció. Lásd még: [member position]."
+msgstr "A csomópont globális koordinátákban megadott pozíciója. Lásd még: [member position]."
 
 #. Node2D.rotation
 #: doc/classes/Node2D.xml
 msgid "Rotation in radians, relative to the node's parent. See also [member global_rotation].\n[b]Note:[/b] This property is edited in the inspector in degrees. If you want to use degrees in a script, use [member rotation_degrees]."
-msgstr "A csomópont elforgatása radiánban, a szülőjéhez viszonyítva. Lásd még: [member global_rotation].\n[b]Megjegyzés:[/b] A tulajdonság a Felügyelőben fokban szerkeszthető. Ha scriptből fokokban szeretnéd megadni, használd a [member rotation_degrees] tulajdonságot."
+msgstr "A csomópont szülőjéhez viszonyított elforgatása, radiánban. Lásd még: [member global_rotation].\n[b]Megjegyzés:[/b] A Felügyelő ezt az értéket fokban jeleníti meg és szerkeszti. Ha szkriptben is fokokat szeretnél használni, válaszd a [member rotation_degrees] tulajdonságot."
 
 #. Node2D.rotation_degrees
 #: doc/classes/Node2D.xml
 msgid "Helper property to access [member rotation] in degrees instead of radians. See also [member global_rotation_degrees]."
-msgstr "Segédtulajdonság, amellyel a [member rotation] értéke radián helyett fokban érhető el. Lásd még: [member global_rotation_degrees]."
+msgstr "A [member rotation] értékének elérése radián helyett fokban. Lásd még: [member global_rotation_degrees]."
 
 #. Node2D.global_rotation
 #: doc/classes/Node2D.xml
 msgid "Global rotation in radians. See also [member rotation]."
-msgstr "Globális elforgatás radiánban. Lásd még: [member rotation]."
+msgstr "A csomópont globális elforgatási szöge radiánban. Lásd még: [member rotation]."
 
 #. Node2D.global_rotation_degrees
 #: doc/classes/Node2D.xml
 msgid "Helper property to access [member global_rotation] in degrees instead of radians. See also [member rotation_degrees]."
-msgstr "Segédtulajdonság, amellyel a [member global_rotation] értéke radián helyett fokban érhető el. Lásd még: [member rotation_degrees]."
+msgstr "A [member global_rotation] értékének elérése radián helyett fokban. Lásd még: [member rotation_degrees]."
 
 #. Node2D.scale
 #: doc/classes/Node2D.xml
 msgid "The node's scale, relative to the node's parent. Unscaled value: [code](1, 1)[/code]. See also [member global_scale].\n[b]Note:[/b] Negative X scales in 2D are not decomposable from the transformation matrix. Due to the way scale is represented with transformation matrices in Godot, negative scales on the X axis will be changed to negative scales on the Y axis and a rotation of 180 degrees when decomposed."
-msgstr "A csomópont méretezése a szülőjéhez viszonyítva. A méretezés nélküli alapérték [code](1, 1)[/code]. Lásd még: [member global_scale].\n[b]Megjegyzés:[/b] 2D-ben a negatív X irányú méretezés nem bontható fel közvetlenül a transzformációs mátrixból. A Godot mátrixos ábrázolása miatt a negatív X skála felbontáskor negatív Y skálává és 180 fokos elforgatássá alakul."
+msgstr "A csomópont szülőjéhez viszonyított méretezése. A méretezés nélküli érték [code](1, 1)[/code]. Lásd még: [member global_scale].\n[b]Megjegyzés:[/b] A negatív X tengelyű méretezés 2D-ben nem állítható vissza egyértelműen a transzformációs mátrix felbontásából. A Godot ezért a mátrix felbontásakor a negatív X-méretezést negatív Y-méretezésként és 180 fokos elforgatásként ábrázolja."
 
 #. Node2D.global_scale
 #: doc/classes/Node2D.xml
 msgid "Global scale. See also [member scale]."
-msgstr "Globális méretezés. Lásd még: [member scale]."
+msgstr "A csomópont globális méretezési tényezője. Lásd még: [member scale]."
 
 #. Node2D.skew
 #: doc/classes/Node2D.xml
 msgid "If set to a non-zero value, slants the node in one direction or another. This can be used for pseudo-3D effects. See also [member global_skew].\n[b]Note:[/b] Skew is performed on the X axis only, and [i]between[/i] rotation and scaling.\n[b]Note:[/b] This property is edited in the inspector in degrees. If you want to use degrees in a script, use [code]skew = deg_to_rad(value_in_degrees)[/code]."
-msgstr "Ha az értéke nem nulla, a csomópontot a megadott irányba ferdíti. Ez ál-3D hatásokhoz is használható. Lásd még: [member global_skew].\n[b]Megjegyzés:[/b] A nyírás csak az X tengely mentén történik, és a műveleti sorrendben az elforgatás [i]és[/i] a méretezés közé esik.\n[b]Megjegyzés:[/b] A tulajdonság a Felügyelőben fokban szerkeszthető. Ha scriptben fokokat szeretnél használni, írd ezt: [code]skew = deg_to_rad(value_in_degrees)[/code]."
+msgstr "Nullától eltérő értéknél a csomópontot az egyik irányba ferdíti; ez például ál-3D hatásokhoz is használható. Lásd még: [member global_skew].\n[b]Megjegyzés:[/b] A nyírás kizárólag az X tengely mentén történik, a transzformációs műveletek sorrendjében az elforgatás [i]és[/i] a méretezés között.\n[b]Megjegyzés:[/b] A Felügyelőben a nyírás fokban szerkeszthető. Szkriptben a fokban megadott értéket így alakíthatod radiánná: [code]skew = deg_to_rad(value_in_degrees)[/code]."
 
 #. Node2D.global_skew
 #: doc/classes/Node2D.xml
 msgid "Global skew in radians. See also [member skew]."
-msgstr "Globális nyírás radiánban. Lásd még: [member skew]."
+msgstr "A csomópont globális nyírási szöge radiánban. Lásd még: [member skew]."
 
 #. Node2D.transform
 #: doc/classes/Node2D.xml
