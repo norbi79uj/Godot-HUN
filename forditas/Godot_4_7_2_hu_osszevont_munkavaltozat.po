@@ -1341,57 +1341,57 @@ msgstr "Az ütközési alakzat szerkesztőben megjelenő színe, illetve futó p
 #. Sprite2D.brief
 #: doc/classes/Sprite2D.xml
 msgid "General-purpose sprite node."
-msgstr "Általános célú sprite-csomópont."
+msgstr "Általános célú, 2D-s sprite-csomópont."
 
 #. Sprite2D.description
 #: doc/classes/Sprite2D.xml
 msgid "A node that displays a 2D texture. The texture displayed can be a region from a larger atlas texture, or a frame from a sprite sheet animation."
-msgstr "2D textúrát megjelenítő csomópont. A megjelenített kép származhat egy nagyobb atlasztextúra kijelölt területéről vagy egy sprite-lapon lévő animáció valamelyik képkockájából."
+msgstr "Kétdimenziós textúrát megjelenítő csomópont. A kirajzolt kép lehet egy nagyobb atlasztextúra kivágata vagy egy sprite-lapon tárolt animáció képkockája."
 
 #. Sprite2D.centered
 #: doc/classes/Sprite2D.xml
 msgid "If [code]true[/code], texture is centered.\n[b]Note:[/b] For games with a pixel art aesthetic, textures may appear deformed when centered. This is caused by their position being between pixels. To prevent this, set this property to [code]false[/code], or consider enabling [member ProjectSettings.rendering/2d/snap/snap_2d_vertices_to_pixel] and [member ProjectSettings.rendering/2d/snap/snap_2d_transforms_to_pixel]."
-msgstr "Ha [code]true[/code], a textúra középre kerül.\n[b]Megjegyzés:[/b] Pixelgrafikás játékokban a középre igazított textúrák torzultnak tűnhetnek, ha a pozíciójuk képpontok közé esik. Ennek elkerüléséhez állítsd ezt a tulajdonságot [code]false[/code] értékre, vagy kapcsold be a [member ProjectSettings.rendering/2d/snap/snap_2d_vertices_to_pixel] és a [member ProjectSettings.rendering/2d/snap/snap_2d_transforms_to_pixel] beállítást."
+msgstr "Ha [code]true[/code], a textúrát középre igazítja.\n[b]Megjegyzés:[/b] Pixelgrafikás játékokban a középre igazított textúrák torzultnak tűnhetnek, ha képpontok közé kerülnek. Ennek elkerüléséhez állítsd a tulajdonságot [code]false[/code] értékre, vagy engedélyezd a [member ProjectSettings.rendering/2d/snap/snap_2d_vertices_to_pixel] és a [member ProjectSettings.rendering/2d/snap/snap_2d_transforms_to_pixel] beállítást."
 
 #. Sprite2D.frame
 #: doc/classes/Sprite2D.xml
 msgid "Current frame to display from sprite sheet. [member hframes] or [member vframes] must be greater than 1. This property is automatically adjusted when [member hframes] or [member vframes] are changed to keep pointing to the same visual frame (same column and row). If that's impossible, this value is reset to [code]0[/code]."
-msgstr "A sprite-lapról megjelenítendő aktuális képkocka. A [member hframes] vagy a [member vframes] értékének 1-nél nagyobbnak kell lennie. Ha a [member hframes] vagy [member vframes] megváltozik, a tulajdonság automatikusan igazodik, hogy ugyanarra a látható képkockára (ugyanarra a sorra és oszlopra) mutasson. Ha ez nem lehetséges, a képkocka indexe [code]0[/code]-ra áll vissza."
+msgstr "A sprite-lapról megjelenítendő képkocka indexe. A [member hframes] vagy a [member vframes] értékének 1-nél nagyobbnak kell lennie. Ha a [member hframes] vagy a [member vframes] értéke megváltozik, az index automatikusan igazodik, hogy ugyanarra a képkockára (ugyanarra a sorra és oszlopra) mutasson. Ha ez nem lehetséges, [code]0[/code]-ra áll vissza."
 
 #. Sprite2D.frame_coords
 #: doc/classes/Sprite2D.xml
 msgid "Coordinates of the frame to display from sprite sheet. This is as an alias for the [member frame] property. [member hframes] or [member vframes] must be greater than 1."
-msgstr "A sprite-lapról megjelenítendő képkocka koordinátái. Ez a [member frame] tulajdonság alternatív elérési módja, amely a képkockát koordinátákkal adja meg. A [member hframes] vagy a [member vframes] értékének 1-nél nagyobbnak kell lennie."
+msgstr "A sprite-lapról megjelenítendő képkocka koordinátái. A [member frame] tulajdonság alternatívája, amely az index helyett a képkocka helyét adja meg. A [member hframes] vagy a [member vframes] értékének 1-nél nagyobbnak kell lennie."
 
 #. Sprite2D.hframes
 #: doc/classes/Sprite2D.xml
 msgid "The number of columns in the sprite sheet. When this property is changed, [member frame] is adjusted so that the same visual frame is maintained (same row and column). If that's impossible, [member frame] is reset to [code]0[/code]."
-msgstr "A sprite-lap oszlopainak száma. A tulajdonság módosításakor a [member frame] úgy igazodik, hogy ugyanaz a látható képkocka maradjon kiválasztva (ugyanaz a sor és oszlop). Ha ez nem lehetséges, a [member frame] értéke [code]0[/code] lesz."
+msgstr "Megadja a sprite-lap oszlopainak számát. Módosításakor a [member frame] indexe úgy változik, hogy lehetőség szerint ugyanaz a képkocka (ugyanaz a sor és oszlop) maradjon kiválasztva. Ha ez nem lehetséges, a [member frame] értéke [code]0[/code]-ra áll vissza."
 
 #. Sprite2D.vframes
 #: doc/classes/Sprite2D.xml
 msgid "The number of rows in the sprite sheet. When this property is changed, [member frame] is adjusted so that the same visual frame is maintained (same row and column). If that's impossible, [member frame] is reset to [code]0[/code]."
-msgstr "A sprite-lap sorainak száma. A tulajdonság módosításakor a [member frame] úgy igazodik, hogy ugyanaz a látható képkocka maradjon kiválasztva (ugyanaz a sor és oszlop). Ha ez nem lehetséges, a [member frame] értéke [code]0[/code] lesz."
+msgstr "Megadja a sprite-lap sorainak számát. Módosításakor a [member frame] indexe úgy változik, hogy lehetőség szerint ugyanaz a képkocka (ugyanaz a sor és oszlop) maradjon kiválasztva. Ha ez nem lehetséges, a [member frame] értéke [code]0[/code]-ra áll vissza."
 
 #. Sprite2D.offset
 #: doc/classes/Sprite2D.xml
 msgid "The texture's drawing offset.\n[b]Note:[/b] When you increase [member offset].y in Sprite2D, the sprite moves downward on screen (i.e., +Y is down)."
-msgstr "A textúra kirajzolási eltolása.\n[b]Megjegyzés:[/b] A Sprite2D [member offset].y értékének növelése lefelé mozdítja a sprite-ot a képernyőn, mert a pozitív Y irány lefelé mutat."
+msgstr "A textúra kirajzolási pozíciójának eltolása.\n[b]Megjegyzés:[/b] A Sprite2D [member offset].y értékének növelése lefelé tolja a sprite-ot a képernyőn, mivel a pozitív Y tengely lefelé mutat."
 
 #. Sprite2D.region_enabled
 #: doc/classes/Sprite2D.xml
 msgid "If [code]true[/code], texture is cut from a larger atlas texture. See [member region_rect].\n[b]Note:[/b] When using a custom [Shader] on a [Sprite2D], the [code]UV[/code] shader built-in will refer to the entire texture space. Use the [code]REGION_RECT[/code] built-in to get the currently visible region defined in [member region_rect] instead. See [url=$DOCS_URL/tutorials/shaders/shader_reference/canvas_item_shader.html]CanvasItem shaders[/url] for details."
-msgstr "Ha [code]true[/code], a textúrát egy nagyobb atlasztextúrából vágja ki. Lásd: [member region_rect].\n[b]Megjegyzés:[/b] Ha egyéni [Shader] van a [Sprite2D] csomóponton, a shader beépített [code]UV[/code] változója a teljes textúrára vonatkozik. A [member region_rect] által meghatározott látható rész eléréséhez inkább a [code]REGION_RECT[/code] beépített változót használd. Részletek: [url=$DOCS_URL/tutorials/shaders/shader_reference/canvas_item_shader.html]CanvasItem shaderek[/url]."
+msgstr "[code]true[/code] értéknél a megjelenített képet egy nagyobb atlasztextúrából vágja ki. Lásd: [member region_rect].\n[b]Megjegyzés:[/b] Ha a [Sprite2D] csomópont egyéni [Shader] árnyalót használ, a beépített [code]UV[/code] változó továbbra is a teljes textúra koordinátáira utal. A [member region_rect] által kijelölt, ténylegesen megjelenő területhez a [code]REGION_RECT[/code] beépített változót használd. Részletek: [url=$DOCS_URL/tutorials/shaders/shader_reference/canvas_item_shader.html]CanvasItem shaderek[/url]."
 
 #. Sprite2D.region_filter_clip_enabled
 #: doc/classes/Sprite2D.xml
 msgid "If [code]true[/code], the area outside of the [member region_rect] is clipped to avoid bleeding of the surrounding texture pixels. [member region_enabled] must be [code]true[/code]."
-msgstr "Ha [code]true[/code], a [member region_rect] területén kívüli részeket levágja, így a szomszédos textúraképpontok nem szivárognak át a kijelölt területre. A [member region_enabled] értékének [code]true[/code] kell lennie."
+msgstr "[code]true[/code] értéknél levágja a [member region_rect] téglalapon kívüli textúrarészeket, hogy a szomszédos képpontok színei ne szivárogjanak át a kijelölt területre. Ehhez a [member region_enabled] tulajdonságnak [code]true[/code] értékűnek kell lennie."
 
 #. Sprite2D.region_rect
 #: doc/classes/Sprite2D.xml
 msgid "The region of the atlas texture to display. [member region_enabled] must be [code]true[/code]."
-msgstr "Az atlasztextúra megjelenítendő területe. A [member region_enabled] értékének [code]true[/code] kell lennie."
+msgstr "Az atlasztextúra azon téglalap alakú területe, amelyet meg kell jeleníteni. Ehhez a [member region_enabled] értékének [code]true[/code]-nak kell lennie."
 
 #. Sprite2D.texture
 #: doc/classes/Sprite2D.xml
@@ -1401,7 +1401,7 @@ msgstr "A kirajzolandó [Texture2D] objektum."
 #. Sprite2D.is_pixel_opaque
 #: doc/classes/Sprite2D.xml
 msgid "Returns [code]true[/code] if the pixel at the given position is opaque, [code]false[/code] otherwise. Also returns [code]false[/code] if the given position is out of bounds or this sprite's [member texture] is [code]null[/code]. [param pos] is in local coordinates."
-msgstr "[code]true[/code] értéket ad vissza, ha a megadott pozíció képpontja átlátszatlan, egyébként [code]false[/code] értéket. Akkor is [code]false[/code] értéket ad vissza, ha a pozíció kívül esik a határokon, vagy a sprite [member texture] értéke [code]null[/code]. A [param pos] paraméter helyi koordinátákat használ."
+msgstr "[code]true[/code] értékkel jelzi, ha a megadott pozíción lévő képpont átlátszatlan; ellenkező esetben [code]false[/code] értéket ad vissza. Akkor is [code]false[/code] az eredmény, ha a pozíció a textúra határain kívül esik, vagy a sprite [member texture] értéke [code]null[/code]. A [param pos] helyi koordinátákban értendő."
 
 #. Node2D.brief
 #: doc/classes/Node2D.xml
