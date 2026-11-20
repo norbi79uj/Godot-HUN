@@ -1541,12 +1541,12 @@ msgstr "Az animációlejátszó általános célú animációk lejátszására h
 #. AnimationPlayer.assigned_animation
 #: doc/classes/AnimationPlayer.xml
 msgid "If playing, the current animation's key, otherwise, the animation last played. When set, this changes the animation, but will not play it unless already playing. See also [member current_animation]."
-msgstr "Lejátszás közben az aktuális animáció kulcsa, egyébként a legutóbb lejátszott animációé. Beállításakor az animáció megváltozik, de csak akkor kezdődik meg a lejátszása, ha a lejátszó már működik. Lásd még: [member current_animation]."
+msgstr "Lejátszás közben az aktuális animáció kulcsa, egyébként a legutóbb lejátszott animációé. A tulajdonság beállítása másik animációt jelöl ki, de annak lejátszása csak akkor indul el, ha már folyamatban van lejátszás. Lásd még: [member current_animation]."
 
 #. AnimationPlayer.current_animation
 #: doc/classes/AnimationPlayer.xml
 msgid "The key of the currently playing animation. If no animation is playing, the property's value is an empty string. Changing this value does not restart the animation. See [method play] for more information on playing animations.\n[b]Note:[/b] While this property appears in the Inspector, it's not meant to be edited, and it's not saved in the scene. This property is mainly used to get the currently playing animation, and internally for animation playback tracks. For more information, see [Animation]."
-msgstr "Az éppen lejátszott animáció kulcsa. Ha nincs lejátszás, a tulajdonság értéke üres karakterlánc. Az érték módosítása nem indítja újra az animációt. Az animációk indításáról lásd: [method play].\n[b]Megjegyzés:[/b] Bár ez a tulajdonság látható a Felügyelőben, nem szerkesztésre szolgál, és nem kerül mentésre a jelenetben. Elsősorban az éppen futó animáció lekérdezésére és belsőleg az animációlejátszási sávokhoz használatos. További információ: [Animation]."
+msgstr "Az éppen lejátszott animáció kulcsa. Ha nincs lejátszás, a tulajdonság értéke üres karakterlánc. Az érték módosítása nem indítja újra az animációt. Az animációk indításáról lásd: [method play].\n[b]Megjegyzés:[/b] Bár a tulajdonság megjelenik a Felügyelőben, nem közvetlen szerkesztésre szolgál, és az értéke nem kerül mentésre a jelenettel. Elsősorban az éppen futó animáció lekérdezésére és belsőleg az animációlejátszási sávokhoz használatos. További információ: [Animation]."
 
 #. AnimationPlayer.current_animation_length
 #: doc/classes/AnimationPlayer.xml
@@ -1561,12 +1561,12 @@ msgstr "Az éppen lejátszott animáció aktuális pozíciója másodpercben."
 #. AnimationPlayer.movie_quit_on_finish
 #: doc/classes/AnimationPlayer.xml
 msgid "If [code]true[/code] and the engine is running in Movie Maker mode (see [MovieWriter]), exits the engine with [method SceneTree.quit] as soon as an animation is done playing in this [AnimationPlayer]. A message is printed when the engine quits for this reason.\n[b]Note:[/b] This obeys the same logic as the [signal AnimationMixer.animation_finished] signal, so it will not quit the engine if the animation is set to be looping."
-msgstr "Ha [code]true[/code], és a motor Filmkészítő módban fut (lásd [MovieWriter]), az [AnimationPlayer] animációjának befejeződésekor a [method SceneTree.quit] metódussal kilép. A kilépés okáról üzenetet ír ki.\n[b]Megjegyzés:[/b] Ez a [signal AnimationMixer.animation_finished] jelzéssel azonos logikát követ, ezért ismétlődőre állított animációnál nem lép ki."
+msgstr "Ha [code]true[/code], és a motor Filmkészítő módban fut (lásd [MovieWriter]), az [AnimationPlayer] animációjának befejeződésekor a [method SceneTree.quit] metódussal kilép. Az emiatt történő kilépéskor a motor üzenetet ír ki.\n[b]Megjegyzés:[/b] Ez a [signal AnimationMixer.animation_finished] jelzésével azonos szabályt követi, ezért ismétlésre beállított animáció esetén a motor nem lép ki."
 
 #. AnimationPlayer.playback_auto_capture
 #: doc/classes/AnimationPlayer.xml
 msgid "If [code]true[/code], performs [method AnimationMixer.capture] before playback automatically. This means just [method play_with_capture] is executed with default arguments instead of [method play].\n[b]Note:[/b] Capture interpolation is only performed if the animation contains a capture track. See also [constant Animation.UPDATE_CAPTURE]."
-msgstr "Ha [code]true[/code], a lejátszás előtt automatikusan meghívja a [method AnimationMixer.capture] metódust. Így a [method play] helyett lényegében a [method play_with_capture] fut alapértelmezett paraméterekkel.\n[b]Megjegyzés:[/b] A rögzítési interpoláció csak akkor történik meg, ha az animáció tartalmaz rögzítési sávot. Lásd még: [constant Animation.UPDATE_CAPTURE]."
+msgstr "Ha [code]true[/code], a lejátszás előtt automatikusan meghívja a [method AnimationMixer.capture] metódust. Ez azt jelenti, hogy a [method play] helyett a [method play_with_capture] metódus hajtódik végre az alapértelmezett paraméterekkel.\n[b]Megjegyzés:[/b] A rögzítési interpoláció csak akkor történik meg, ha az animáció tartalmaz rögzítési sávot. Lásd még: [constant Animation.UPDATE_CAPTURE]."
 
 #. AnimationPlayer.playback_default_blend_time
 #: doc/classes/AnimationPlayer.xml
