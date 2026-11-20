@@ -2200,7 +2200,7 @@ msgstr "Az [AnimationPlayer] összetett animációváltásainak kezelésére szo
 #. AnimationTree.description
 #: doc/classes/AnimationTree.xml
 msgid "A node used for advanced animation transitions in an [AnimationPlayer].\n[b]Note:[/b] When linked with an [AnimationPlayer], several properties and methods of the corresponding [AnimationPlayer] will not function as expected. Playback and transitions should be handled using only the [AnimationTree] and its constituent [AnimationNode](s). The [AnimationPlayer] node should be used solely for adding, deleting, and editing animations."
-msgstr "Az [AnimationPlayer] összetett animációváltásainak kezelésére szolgáló csomópont.\n[b]Megjegyzés:[/b] Ha az [AnimationTree] egy [AnimationPlayer] csomóponthoz van kapcsolva, az [AnimationPlayer] több tulajdonsága és metódusa nem feltétlenül a várt módon működik. Az animációk lejátszását és az átmeneteket kizárólag az [AnimationTree] és a benne található [AnimationNode] csomópontok segítségével vezéreld. Az [AnimationPlayer] csomópontot csak az animációk hozzáadására, törlésére és szerkesztésére használd."
+msgstr "Az [AnimationPlayer] összetett animációváltásainak kezelésére szolgáló csomópont.\n[b]Megjegyzés:[/b] Ha egy [AnimationPlayer] csomóponthoz kapcsolódik, az [AnimationPlayer] több tulajdonsága és metódusa nem feltétlenül a várt módon működik. Az animációk lejátszását és az átmeneteket kizárólag az [AnimationTree] és a benne található [AnimationNode] csomópontok segítségével vezéreld. Az [AnimationPlayer] csomópontot csak az animációk hozzáadására, törlésére és szerkesztésére használd."
 
 #. AnimationTree.advance_expression_base_node
 #: doc/classes/AnimationTree.xml
