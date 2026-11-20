@@ -1531,7 +1531,7 @@ msgstr "A csomópontot a megadott [param offset] vektorral eltolja helyi koordin
 #. AnimationPlayer.brief
 #: doc/classes/AnimationPlayer.xml
 msgid "A node used for animation playback."
-msgstr "Animációk lejátszására szolgáló csomópont."
+msgstr "Animációk lejátszását vezérlő csomópont."
 
 #. AnimationPlayer.description
 #: doc/classes/AnimationPlayer.xml
@@ -1541,17 +1541,17 @@ msgstr "Az animációlejátszó általános célú animációk lejátszására h
 #. AnimationPlayer.assigned_animation
 #: doc/classes/AnimationPlayer.xml
 msgid "If playing, the current animation's key, otherwise, the animation last played. When set, this changes the animation, but will not play it unless already playing. See also [member current_animation]."
-msgstr "Lejátszás közben az aktuális animáció kulcsa, egyébként a legutóbb lejátszott animációé. Beállításakor az animáció megváltozik, de csak akkor kezdődik meg a lejátszása, ha a lejátszó már működik. Lásd még: [member current_animation]."
+msgstr "Ha éppen folyik lejátszás, az aktuális animáció kulcsa; egyébként a legutóbb lejátszott animáció kulcsa. Beállításakor az animáció megváltozik, de csak akkor kezdődik meg a lejátszása, ha a lejátszó már működik. Lásd még: [member current_animation]."
 
 #. AnimationPlayer.current_animation
 #: doc/classes/AnimationPlayer.xml
 msgid "The key of the currently playing animation. If no animation is playing, the property's value is an empty string. Changing this value does not restart the animation. See [method play] for more information on playing animations.\n[b]Note:[/b] While this property appears in the Inspector, it's not meant to be edited, and it's not saved in the scene. This property is mainly used to get the currently playing animation, and internally for animation playback tracks. For more information, see [Animation]."
-msgstr "Az éppen lejátszott animáció kulcsa. Ha nincs lejátszás, a tulajdonság értéke üres karakterlánc. Az érték módosítása nem indítja újra az animációt. Az animációk indításáról lásd: [method play].\n[b]Megjegyzés:[/b] Bár ez a tulajdonság látható a Felügyelőben, nem szerkesztésre szolgál, és nem kerül mentésre a jelenetben. Elsősorban az éppen futó animáció lekérdezésére és belsőleg az animációlejátszási sávokhoz használatos. További információ: [Animation]."
+msgstr "A jelenleg lejátszott animáció kulcsa. Ha nem fut animáció, az értéke üres karakterlánc. Az érték módosítása nem indítja újra az animációt. Az animációk indításáról lásd: [method play].\n[b]Megjegyzés:[/b] Bár ez a tulajdonság látható a Felügyelőben, nem szerkesztésre szolgál, és nem kerül mentésre a jelenetben. Elsősorban az éppen futó animáció lekérdezésére és belsőleg az animációlejátszási sávokhoz használatos. További információ: [Animation]."
 
 #. AnimationPlayer.current_animation_length
 #: doc/classes/AnimationPlayer.xml
 msgid "The length (in seconds) of the currently playing animation."
-msgstr "Az éppen lejátszott animáció hossza másodpercben."
+msgstr "A jelenleg lejátszott animáció teljes időtartama másodpercben."
 
 #. AnimationPlayer.current_animation_position
 #: doc/classes/AnimationPlayer.xml
@@ -1576,17 +1576,17 @@ msgstr "Az animációk közötti áttűnés alapértelmezett időtartama. Érté
 #. AnimationPlayer.animation_get_next
 #: doc/classes/AnimationPlayer.xml
 msgid "Returns the key of the animation which is queued to play after the [param animation_from] animation."
-msgstr "Visszaadja annak az animációnak a kulcsát, amely az [param animation_from] animáció után következőként van beállítva."
+msgstr "Lekéri az [param animation_from] animáció befejezése utánra beállított következő animáció kulcsát."
 
 #. AnimationPlayer.animation_set_next
 #: doc/classes/AnimationPlayer.xml
 msgid "Triggers the [param animation_to] animation when the [param animation_from] animation completes."
-msgstr "Az [param animation_from] animáció befejezésekor elindítja az [param animation_to] animációt."
+msgstr "Beállítja, hogy az [param animation_from] animáció befejeződése után az [param animation_to] animáció induljon el."
 
 #. AnimationPlayer.clear_queue
 #: doc/classes/AnimationPlayer.xml
 msgid "Clears all queued, unplayed animations."
-msgstr "Törli a lejátszásra váró összes, még el nem indított animációt a sorból."
+msgstr "Kiüríti a lejátszási sort: eltávolítja belőle az összes, még el nem indított animációt."
 
 #. AnimationPlayer.get_blend_time
 #: doc/classes/AnimationPlayer.xml
@@ -1631,7 +1631,7 @@ msgstr "Megadja a kulcsukkal hivatkozott két animáció közötti áttűnés id
 #. AnimationPlayer.get_queue
 #: doc/classes/AnimationPlayer.xml
 msgid "Returns a list of the animation keys that are currently queued to play."
-msgstr "Visszaadja a lejátszásra váró animációk kulcsainak listáját."
+msgstr "Lekéri a lejátszási sorban várakozó animációk kulcsait tartalmazó listát."
 
 #. AnimationPlayer.get_root
 #: doc/classes/AnimationPlayer.xml
@@ -1791,7 +1791,7 @@ msgstr "Visszaadja az animáció sávjainak számát."
 #. Animation.remove_track
 #: doc/classes/Animation.xml
 msgid "Removes a track by specifying the track index."
-msgstr "Eltávolítja a megadott indexű animációs sávot."
+msgstr "A sáv indexe alapján eltávolítja a megfelelő sávot az animációból."
 
 #. Animation.add_marker
 #: doc/classes/Animation.xml
@@ -1836,7 +1836,7 @@ msgstr "Engedélyezi vagy letiltja a megadott sávot. A sávok alapértelmezés 
 #. Animation.track_is_enabled
 #: doc/classes/Animation.xml
 msgid "Returns [code]true[/code] if the track at index [param track_idx] is enabled."
-msgstr "[code]true[/code] értéket ad vissza, ha a [param track_idx] indexű sáv engedélyezett."
+msgstr "[code]true[/code] értékkel jelzi, hogy a [param track_idx] indexű animációs sáv engedélyezve van."
 
 #. Animation.track_insert_key
 #: doc/classes/Animation.xml
@@ -1846,12 +1846,12 @@ msgstr "Általános kulcsképkockát illeszt be a megadott sávba. Visszaadja a 
 #. Animation.track_remove_key
 #: doc/classes/Animation.xml
 msgid "Removes a key by index in a given track."
-msgstr "Eltávolítja a megadott sávból az indexével azonosított kulcsképkockát."
+msgstr "A megadott animációs sávból az indexe alapján törli a kiválasztott kulcsképkockát."
 
 #. Animation.track_set_path
 #: doc/classes/Animation.xml
 msgid "Sets the path of a track. Paths must be valid scene-tree paths to a node and must be specified starting from the [member AnimationMixer.root_node] that will reproduce the animation. Tracks that control properties or bones must append their name after the path, separated by [code]\":\"[/code].\nFor example, [code]\"character/skeleton:ankle\"[/code] or [code]\"character/mesh:transform/local\"[/code]."
-msgstr "Beállítja a sáv útvonalát. Az útvonalnak érvényes jelenetfa-útvonalnak kell lennie, amely a lejátszást végző [member AnimationMixer.root_node] csomóponttól indul. A tulajdonságokat vagy csontokat vezérlő sávoknál az útvonal végére [code]\":\"[/code] elválasztóval hozzá kell fűzni a tulajdonság vagy csont nevét.\nPéldául: [code]\"character/skeleton:ankle\"[/code] vagy [code]\"character/mesh:transform/local\"[/code]."
+msgstr "Beállítja a sáv útvonalát. A sáv útvonalának érvényes jelenetfa-útvonalnak kell lennie, amely a lejátszáshoz használt [member AnimationMixer.root_node] gyökércsomóponttól indul. A tulajdonságokat vagy csontokat vezérlő sávoknál az útvonal végére [code]\":\"[/code] elválasztóval hozzá kell fűzni a tulajdonság vagy csont nevét.\nPéldául: [code]\"character/skeleton:ankle\"[/code] vagy [code]\"character/mesh:transform/local\"[/code]."
 
 #. Area2D.brief
 #: doc/classes/Area2D.xml
