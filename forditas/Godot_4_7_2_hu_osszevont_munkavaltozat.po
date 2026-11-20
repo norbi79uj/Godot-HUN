@@ -2040,47 +2040,47 @@ msgstr "A [param value] értéke alapján engedélyezi vagy letiltja a [member c
 #. CollisionObject2D.shape_find_owner
 #: doc/classes/CollisionObject2D.xml
 msgid "Returns the [code]owner_id[/code] of the given shape."
-msgstr "Visszaadja a megadott alakzat tulajdonosának [code]owner_id[/code] azonosítóját."
+msgstr "Lekéri a megadott alakzathoz tartozó alakzattulajdonos [code]owner_id[/code] azonosítóját."
 
 #. CollisionObject2D.shape_owner_add_shape
 #: doc/classes/CollisionObject2D.xml
 msgid "Adds a [Shape2D] to the shape owner."
-msgstr "Hozzáad egy [Shape2D] alakzatot az alakzattulajdonoshoz."
+msgstr "A megadott alakzattulajdonoshoz hozzáad egy [Shape2D] alakzatot."
 
 #. CollisionObject2D.shape_owner_clear_shapes
 #: doc/classes/CollisionObject2D.xml
 msgid "Removes all shapes from the shape owner."
-msgstr "Eltávolítja a megadott alakzattulajdonoshoz rendelt összes alakzatot."
+msgstr "Eltávolítja a megadott alakzattulajdonos összes ütközési alakzatát."
 
 #. CollisionObject2D.shape_owner_get_owner
 #: doc/classes/CollisionObject2D.xml
 msgid "Returns the parent object of the given shape owner."
-msgstr "Visszaadja a megadott alakzattulajdonoshoz tartozó szülőobjektumot."
+msgstr "Lekéri a megadott alakzattulajdonos szülőobjektumát."
 
 #. CollisionObject2D.shape_owner_get_shape
 #: doc/classes/CollisionObject2D.xml
 msgid "Returns the [Shape2D] with the given ID from the given shape owner."
-msgstr "Visszaadja a megadott alakzattulajdonos megadott azonosítójú [Shape2D] alakzatát."
+msgstr "Lekéri a megadott alakzattulajdonoshoz tartozó, adott azonosítójú [Shape2D] alakzatot."
 
 #. CollisionObject2D.shape_owner_get_shape_count
 #: doc/classes/CollisionObject2D.xml
 msgid "Returns the number of shapes the given shape owner contains."
-msgstr "Visszaadja a megadott alakzattulajdonoshoz tartozó alakzatok számát."
+msgstr "Megadja, hány alakzat tartozik a megadott alakzattulajdonoshoz."
 
 #. CollisionObject2D.shape_owner_remove_shape
 #: doc/classes/CollisionObject2D.xml
 msgid "Removes a shape from the given shape owner."
-msgstr "Eltávolítja a kiválasztott alakzatot a megadott alakzattulajdonosból."
+msgstr "Eltávolít egy alakzatot a megadott alakzattulajdonos alakzatai közül."
 
 #. CollisionObject2D.shape_owner_set_disabled
 #: doc/classes/CollisionObject2D.xml
 msgid "If [code]true[/code], disables the given shape owner."
-msgstr "Ha az értéke [code]true[/code], letiltja a megadott alakzattulajdonost és a hozzá tartozó alakzatokat."
+msgstr "[code]true[/code] értéknél letiltja a megadott alakzattulajdonost és a hozzá rendelt alakzatokat."
 
 #. CollisionObject2D.shape_owner_set_transform
 #: doc/classes/CollisionObject2D.xml
 msgid "Sets the [Transform2D] of the given shape owner."
-msgstr "Beállítja a megadott alakzattulajdonos [Transform2D] transzformációját."
+msgstr "A megadott alakzattulajdonoshoz tartozó [Transform2D] transzformációt állítja be."
 
 #. AudioStreamPlayer2D.brief
 #: doc/classes/AudioStreamPlayer2D.xml
@@ -4058,12 +4058,12 @@ msgstr "Olyan csomópont, amely szerkeszthető sokszög alakú ütközési alakz
 #. CollisionPolygon2D.build_mode
 #: doc/classes/CollisionPolygon2D.xml
 msgid "Collision build mode."
-msgstr "Az ütközési alakzat létrehozási módja."
+msgstr "Meghatározza az ütközési sokszög felépítési módját."
 
 #. CollisionPolygon2D.disabled
 #: doc/classes/CollisionPolygon2D.xml
 msgid "If [code]true[/code], no collisions will be detected. This property should be changed with [method Object.set_deferred]."
-msgstr "Ha az értéke [code]true[/code], a rendszer nem észlel ütközéseket. Ezt a tulajdonságot a [method Object.set_deferred] metódussal érdemes módosítani."
+msgstr "[code]true[/code] értéknél az ütközési sokszög le van tiltva, ezért nem vesz részt az ütközésérzékelésben. A tulajdonság módosításához használd a [method Object.set_deferred] metódust."
 
 #. CollisionPolygon2D.one_way_collision
 #: doc/classes/CollisionPolygon2D.xml
@@ -4078,7 +4078,7 @@ msgstr "Az egyirányú ütközéshez használt ráhagyás (képpontban). Nagyobb
 #. CollisionPolygon2D.polygon
 #: doc/classes/CollisionPolygon2D.xml
 msgid "The polygon's list of vertices. Each point will be connected to the next, and the final point will be connected to the first.\n[b]Note:[/b] The returned vertices are in the local coordinate space of the given [CollisionPolygon2D]."
-msgstr "A sokszög csúcsainak listája. A pontokat a rendszer sorrendben összeköti, az utolsót pedig az elsővel, így zárt sokszög jön létre.\n[b]Megjegyzés:[/b] A visszaadott csúcsok a megadott [CollisionPolygon2D] helyi koordinátarendszerében értendők."
+msgstr "A sokszög csúcspontjainak sorrendbe rendezett listája. Az egymást követő pontokat élek kötik össze, az utolsó pontot pedig az elsővel, így zárt alakzat jön létre.\n[b]Megjegyzés:[/b] A visszaadott csúcsok koordinátái a [CollisionPolygon2D] csomópont helyi koordinátarendszerében értendők."
 
 #. RemoteTransform2D.brief
 #: doc/classes/RemoteTransform2D.xml
