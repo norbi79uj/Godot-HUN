@@ -2085,42 +2085,42 @@ msgstr "Beállítja a megadott alakzattulajdonos [Transform2D] transzformációj
 #. AudioStreamPlayer2D.brief
 #: doc/classes/AudioStreamPlayer2D.xml
 msgid "Plays positional sound in 2D space."
-msgstr "Térbeli hangot játszik le 2D környezetben."
+msgstr "Pozícióhoz kötött hangot játszik le a 2D-s térben."
 
 #. AudioStreamPlayer2D.description
 #: doc/classes/AudioStreamPlayer2D.xml
 msgid "Plays audio that is attenuated with distance to the listener.\nBy default, audio is heard from the screen center. This can be changed by adding an [AudioListener2D] node to the scene and enabling it by calling [method AudioListener2D.make_current] on it.\nSee also [AudioStreamPlayer] to play a sound non-positionally.\n[b]Note:[/b] Hiding an [AudioStreamPlayer2D] node does not disable its audio output. To temporarily disable an [AudioStreamPlayer2D]'s audio output, set [member volume_db] to a very low value like [code]-100[/code] (which isn't audible to human hearing)."
-msgstr "Olyan hangot játszik le, amelynek hangereje a hallgatótól mért távolsággal csökken.\nAlapértelmezés szerint a képernyő középpontja szolgál hallgatói pozícióként. Ezt úgy módosíthatod, hogy [AudioListener2D] csomópontot adsz a jelenethez, majd a [method AudioListener2D.make_current] hívással aktiválod.\nHa térbeli elhelyezkedés nélkül szeretnél hangot lejátszani, lásd még: [AudioStreamPlayer].\n[b]Megjegyzés:[/b] Az [AudioStreamPlayer2D] csomópont elrejtése nem némítja el a hangot. A hangkimenet átmeneti letiltásához állítsd az [AudioStreamPlayer2D] [member volume_db] értékét nagyon alacsonyra, például [code]-100[/code] értékre (amit az emberi fül már nem hall)."
+msgstr "Pozícióhoz kötött hangot játszik le, amelynek hangereje a hallgatótól való távolság növekedésével csökken.\nAlapértelmezés szerint a képernyő középpontja szolgál hallgatói pozícióként. Ezt úgy módosíthatod, hogy [AudioListener2D] csomópontot adsz a jelenethez, majd a [method AudioListener2D.make_current] hívással aktiválod.\nHa térbeli elhelyezkedés nélkül szeretnél hangot lejátszani, lásd még: [AudioStreamPlayer].\n[b]Megjegyzés:[/b] Az [AudioStreamPlayer2D] csomópont elrejtése nem némítja el a hangot. A hangkimenet átmeneti letiltásához állítsd az [AudioStreamPlayer2D] [member volume_db] értékét nagyon alacsonyra, például [code]-100[/code] értékre (amit az emberi fül már nem hall)."
 
 #. AudioStreamPlayer2D.area_mask
 #: doc/classes/AudioStreamPlayer2D.xml
 msgid "Determines which [Area2D] layers affect the sound for reverb and audio bus effects. Areas can be used to redirect [AudioStream]s so that they play in a certain audio bus. An example of how you might use this is making a \"water\" area so that sounds played in the water are redirected through an audio bus to make them sound like they are being played underwater."
-msgstr "Meghatározza, hogy mely [Area2D] rétegek befolyásolják a hangot visszhang és hangbusz-effektek szempontjából. A területek segítségével az [AudioStream] hangfolyamok egy adott hangbuszra irányíthatók. Például létrehozhatsz egy „víz” területet, amely a benne megszólaló hangokat olyan hangbuszra irányítja, amely víz alatti hangzást ad nekik."
+msgstr "Meghatározza, hogy mely [Area2D] rétegek módosíthatják a hang visszhangját és hangbusz-effektjeit. A területek segítségével az [AudioStream] hangfolyamok egy adott hangbuszra irányíthatók. Például létrehozhatsz egy „víz” területet, amely a benne megszólaló hangokat olyan hangbuszra irányítja, amely víz alatti hangzást ad nekik."
 
 #. AudioStreamPlayer2D.attenuation
 #: doc/classes/AudioStreamPlayer2D.xml
 msgid "The volume is attenuated over distance with this as an exponent."
-msgstr "Ezzel a kitevővel határozható meg, hogyan csökken a hangerő a távolság növekedésével."
+msgstr "A hangerő távolság szerinti csökkenésének kitevője: ez szabályozza, milyen gyorsan halkul el a hang a távolság növekedésével."
 
 #. AudioStreamPlayer2D.autoplay
 #: doc/classes/AudioStreamPlayer2D.xml
 msgid "If [code]true[/code], audio plays when added to scene tree."
-msgstr "Ha [code]true[/code], a jelenetfához hozzáadáskor elindul a hanglejátszás."
+msgstr "[code]true[/code] értéknél a hang automatikusan elindul, amikor a csomópont bekerül a jelenetfába."
 
 #. AudioStreamPlayer2D.bus
 #: doc/classes/AudioStreamPlayer2D.xml
 msgid "Bus on which this audio is playing.\n[b]Note:[/b] When setting this property, keep in mind that no validation is performed to see if the given name matches an existing bus. This is because audio bus layouts might be loaded after this property is set. If this given name can't be resolved at runtime, it will fall back to [code]\"Master\"[/code]."
-msgstr "Az a hangbusz, amelyen ez a hang szól.\n[b]Megjegyzés:[/b] A beállításkor a Godot nem ellenőrzi, hogy a megadott név valóban létező buszhoz tartozik-e. Ennek oka, hogy a hangbusz-elrendezés később is betöltődhet. Ha a név futás közben nem található, a rendszer a [code]\"Master\"[/code] buszra vált."
+msgstr "A hang lejátszásához használt hangbusz.\n[b]Megjegyzés:[/b] A beállításkor a Godot nem ellenőrzi, hogy a megadott név valóban létező buszhoz tartozik-e. Ennek oka, hogy a hangbusz-elrendezés később is betöltődhet. Ha a név futás közben nem található, a rendszer a [code]\"Master\"[/code] buszra vált."
 
 #. AudioStreamPlayer2D.max_distance
 #: doc/classes/AudioStreamPlayer2D.xml
 msgid "Maximum distance from which audio is still hearable."
-msgstr "Az a legnagyobb távolság, ahonnan a hang még hallható."
+msgstr "A legnagyobb távolság a hangforrástól, amelyen belül a hang még hallható."
 
 #. AudioStreamPlayer2D.max_polyphony
 #: doc/classes/AudioStreamPlayer2D.xml
 msgid "The maximum number of sounds this node can play at the same time. Playing additional sounds after this value is reached will cut off the oldest sounds."
-msgstr "A csomópont által egyszerre lejátszható hangok legnagyobb száma. Ha a korlát elérése után újabb hang indul, a legrégebbi hangok megszakadnak."
+msgstr "Az egy időben megszólaltatható hangok maximális száma ennél a csomópontnál. Ha ezt a korlátot elérte, egy újabb hang indításakor a legrégebben játszott hang szakad meg."
 
 #. AudioStreamPlayer2D.panning_strength
 #: doc/classes/AudioStreamPlayer2D.xml
@@ -2464,7 +2464,7 @@ msgstr "Ütközési kivételként kezeli a [param node] csomópontot, ezért a s
 #. RayCast2D.add_exception_rid
 #: doc/classes/RayCast2D.xml
 msgid "Adds a collision exception so the ray does not report collisions with the specified [RID]."
-msgstr "Ütközési kivételként kezeli a megadott [RID] azonosítójú objektumot, ezért a sugár nem jelzi az azzal való metszést."
+msgstr "A megadott [RID] azonosítójú objektumot felveszi az ütközési kivételek közé, így a sugár nem jelez vele ütközést."
 
 #. RayCast2D.clear_exceptions
 #: doc/classes/RayCast2D.xml
@@ -2484,7 +2484,7 @@ msgstr "Visszaadja a sugár útjába eső első objektumot, találat hiányában
 #. RayCast2D.get_collider_rid
 #: doc/classes/RayCast2D.xml
 msgid "Returns the [RID] of the first object that the ray intersects, or an empty [RID] if no object is intersecting the ray (i.e. [method is_colliding] returns [code]false[/code])."
-msgstr "Visszaadja a sugár útjába eső első objektum [RID] azonosítóját. Ha nincs találat, üres [RID] értéket ad vissza (vagyis a [method is_colliding] [code]false[/code] értéket ad vissza)."
+msgstr "A sugár által elsőként eltalált objektum [RID] azonosítóját adja vissza. Ha nincs találat, üres [RID] értéket ad vissza (vagyis a [method is_colliding] [code]false[/code] értéket ad vissza)."
 
 #. RayCast2D.get_collision_normal
 #: doc/classes/RayCast2D.xml
@@ -2504,12 +2504,12 @@ msgstr "Megadja, hogy a sugár meghatározott hosszúságú szakasza metsz-e bá
 #. RayCast2D.remove_exception
 #: doc/classes/RayCast2D.xml
 msgid "Removes a collision exception so the ray can report collisions with the specified [param node]."
-msgstr "Törli a [param node] csomópontra vonatkozó ütközési kivételt, így a sugár ismét érzékelheti a csomópontot."
+msgstr "Eltávolítja a [param node] csomópontot az ütközési kivételek közül, így a sugár ismét jelezheti az ütközést vele."
 
 #. RayCast2D.remove_exception_rid
 #: doc/classes/RayCast2D.xml
 msgid "Removes a collision exception so the ray can report collisions with the specified [RID]."
-msgstr "Törli a megadott [RID] azonosítójú objektumra vonatkozó ütközési kivételt, így a sugár ismét érzékelheti az objektumot."
+msgstr "Eltávolítja a megadott [RID] azonosítójú objektumot az ütközési kivételek közül, így a sugár ismét jelezheti az ütközést vele."
 
 #. NavigationRegion2D.brief
 #: doc/classes/NavigationRegion2D.xml
