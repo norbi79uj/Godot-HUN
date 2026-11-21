@@ -844,7 +844,7 @@ msgstr "Ha az érték [code]true[/code], a szövegkurzor akkor is látható, ha 
 #. TextEdit.caret_mid_grapheme
 #: doc/classes/TextEdit.xml
 msgid "Allow moving caret, selecting and removing the individual composite character components.\n[b]Note:[/b] [kbd]Backspace[/kbd] is always removing individual composite character components."
-msgstr "Lehetővé teszi, hogy a kurzor az összetett karakterek egyes összetevői közé mozogjon, és azokat külön kijelölhesd vagy törölhesd.\n[b]Megjegyzés:[/b] A [kbd]Backspace[/kbd] mindig az összetett karakterek egyes összetevőit törli."
+msgstr "Lehetővé teszi a szövegkurzor mozgatását az összetett karakterek alkotóelemei között, valamint az alkotóelemek külön kijelölését és törlését.\n[b]Megjegyzés:[/b] A [kbd]Backspace[/kbd] mindig egyenként törli az összetett karakterek alkotóelemeit."
 
 #. TextEdit.caret_move_on_right_click
 #: doc/classes/TextEdit.xml
@@ -869,7 +869,7 @@ msgstr "Ha az érték [code]true[/code], a jobb kattintás megjeleníti a helyi 
 #. TextEdit.custom_word_separators
 #: doc/classes/TextEdit.xml
 msgid "The characters to consider as word delimiters if [member use_custom_word_separators] is [code]true[/code]. The characters should be defined without separation, for example [code]#_![/code]."
-msgstr "Azokat a karaktereket adja meg, amelyek szóelválasztóként működnek, ha a [member use_custom_word_separators] értéke [code]true[/code]. A karaktereket elválasztás nélkül kell felsorolni, például [code]#_![/code]."
+msgstr "Azok a karakterek, amelyek szóelválasztónak számítanak, ha a [member use_custom_word_separators] értéke [code]true[/code]. A karaktereket közvetlenül egymás után add meg, például így: [code]#_![/code]."
 
 #. TextEdit.deselect_on_focus_loss_enabled
 #: doc/classes/TextEdit.xml
@@ -879,7 +879,7 @@ msgstr "Ha az érték [code]true[/code], a fókusz elvesztésekor megszűnik a s
 #. TextEdit.drag_and_drop_selection_enabled
 #: doc/classes/TextEdit.xml
 msgid "If [code]true[/code], allow drag and drop of selected text. Text can still be dropped from other sources."
-msgstr "Ha az érték [code]true[/code], a kijelölt szöveg húzással áthelyezhető. Más forrásból továbbra is lehet szöveget behúzni."
+msgstr "Ha az érték [code]true[/code], a kijelölt szöveg egérrel megfogható és áthúzható. Más forrásból ettől függetlenül is áthúzhatsz szöveget a vezérlőbe."
 
 #. TextEdit.draw_control_chars
 #: doc/classes/TextEdit.xml
@@ -939,7 +939,7 @@ msgstr "Ha az érték [code]false[/code], a középső egérgombbal történő b
 #. TextEdit.minimap_draw
 #: doc/classes/TextEdit.xml
 msgid "If [code]true[/code], a minimap is shown, providing an outline of your source code. The minimap uses a fixed-width text size."
-msgstr "Ha az érték [code]true[/code], megjelenik a forráskód áttekintését segítő minitérkép. A minitérkép rögzített szélességű betűméretet használ."
+msgstr "Ha az érték [code]true[/code], megjelenik a forráskód áttekintését segítő minitérkép. A minitérképen minden karakter azonos szélességű."
 
 #. TextEdit.minimap_width
 #: doc/classes/TextEdit.xml
@@ -954,12 +954,12 @@ msgstr "A [TextEdit] üres állapotában megjelenő helyőrző szöveg. Ez [b]ne
 #. TextEdit.scroll_fit_content_height
 #: doc/classes/TextEdit.xml
 msgid "If [code]true[/code], [TextEdit] fits its minimum height to the number of visible lines instead of scrolling vertically. If a maximum height is set (for example via [member Control.custom_maximum_size]) and content exceeds it, a vertical scrollbar is shown."
-msgstr "Ha az érték [code]true[/code], a [TextEdit] függőleges görgetés helyett a látható sorok számához igazítja minimális magasságát. Ha maximális magasság van beállítva (például a [member Control.custom_maximum_size] segítségével), és a tartalom ezt meghaladja, függőleges görgetősáv jelenik meg."
+msgstr "Ha az érték [code]true[/code], a [TextEdit] minimális magassága követi a látható sorok számát, így a tartalomhoz igazodva görgetés nélkül növekedhet. Ha van megadva legnagyobb magasság (például a [member Control.custom_maximum_size] tulajdonságban), és a tartalom ennél magasabb, függőleges görgetősáv jelenik meg."
 
 #. TextEdit.scroll_fit_content_width
 #: doc/classes/TextEdit.xml
 msgid "If [code]true[/code], [TextEdit] fits its minimum width to the widest line instead of scrolling horizontally. If a maximum width is set (for example via [member Control.custom_maximum_size]) and content exceeds it, a horizontal scrollbar is shown."
-msgstr "Ha az érték [code]true[/code], a [TextEdit] vízszintes görgetés helyett a leghosszabb sorhoz igazítja minimális szélességét. Ha maximális szélesség van beállítva (például a [member Control.custom_maximum_size] segítségével), és a tartalom ezt meghaladja, vízszintes görgetősáv jelenik meg."
+msgstr "Ha az érték [code]true[/code], a [TextEdit] minimális szélessége a megjelenítéskor legszélesebb sorhoz igazodik, így a tartalomhoz igazodva görgetés nélkül szélesedhet. Ha van megadva legnagyobb szélesség (például a [member Control.custom_maximum_size] tulajdonságban), és a tartalom ennél szélesebb, vízszintes görgetősáv jelenik meg."
 
 #. TextEdit.scroll_horizontal
 #: doc/classes/TextEdit.xml
@@ -984,7 +984,7 @@ msgstr "Beállítja a görgetési sebességet a minitérkép használatakor vagy
 #. TextEdit.scroll_vertical
 #: doc/classes/TextEdit.xml
 msgid "If there is a vertical scrollbar, this determines the current vertical scroll value in line numbers, starting at 0 for the top line."
-msgstr "Ha van függőleges görgetősáv, ez határozza meg a függőleges görgetés aktuális értékét sorszámokban, ahol a legfelső sor értéke 0."
+msgstr "Ha van függőleges görgetősáv, ez adja meg a függőleges görgetés aktuális pozícióját sorokban mérve. A legfelső sorhoz a 0 érték tartozik."
 
 #. TextEdit.selecting_enabled
 #: doc/classes/TextEdit.xml
@@ -1009,12 +1009,12 @@ msgstr "További beállításokat ad meg a BiDi-felülbíráláshoz."
 #. TextEdit.syntax_highlighter
 #: doc/classes/TextEdit.xml
 msgid "The syntax highlighter to use.\n[b]Note:[/b] A [SyntaxHighlighter] instance should not be used across multiple [TextEdit] nodes."
-msgstr "A használni kívánt szintaxiskiemelő.\n[b]Megjegyzés:[/b] Ugyanazt a [SyntaxHighlighter] példányt nem ajánlott több [TextEdit] csomópontban használni."
+msgstr "A használt szintaxiskiemelő.\n[b]Megjegyzés:[/b] Minden [SyntaxHighlighter] példányt csak egyetlen [TextEdit] csomóponthoz használj."
 
 #. TextEdit.tab_input_mode
 #: doc/classes/TextEdit.xml
 msgid "If [code]true[/code], [member ProjectSettings.input/ui_text_indent] input [code]Tab[/code] character, otherwise it moves keyboard focus to the next [Control] in the scene."
-msgstr "Ha az érték [code]true[/code], a [member ProjectSettings.input/ui_text_indent] bemeneti művelet [code]Tab[/code] karaktert szúr be; ellenkező esetben a billentyűzet fókusza a jelenet következő [Control] vezérlőjére kerül."
+msgstr "Ha az érték [code]true[/code], a [member ProjectSettings.input/ui_text_indent] beviteli művelet [code]Tab[/code] karaktert szúr be. Ellenkező esetben a művelet a jelenet következő [Control] vezérlőjére helyezi a billentyűzetfókuszt."
 
 #. TextEdit.text
 #: doc/classes/TextEdit.xml
@@ -1024,7 +1024,7 @@ msgstr "A [TextEdit] szöveges értéke."
 #. TextEdit.text_direction
 #: doc/classes/TextEdit.xml
 msgid "Base text writing direction."
-msgstr "A szöveg alapértelmezett írásiránya."
+msgstr "A szöveg alapiránya."
 
 #. TextEdit.use_custom_word_separators
 #: doc/classes/TextEdit.xml
@@ -1054,37 +1054,37 @@ msgstr "Beállítja a használandó sortördelési módot."
 #. TextEdit.caret_changed
 #: doc/classes/TextEdit.xml
 msgid "Emitted when any caret changes position."
-msgstr "Akkor bocsátódik ki, amikor bármelyik szövegkurzor pozíciója megváltozik."
+msgstr "A vezérlő ezt a jelzést küldi, ha bármelyik szövegkurzor elmozdul."
 
 #. TextEdit.gutter_added
 #: doc/classes/TextEdit.xml
 msgid "Emitted when a gutter is added."
-msgstr "Akkor bocsátódik ki, amikor új oldalsávot adnak hozzá."
+msgstr "A vezérlő ezt a jelzést küldi, ha új oldalsávot adnak hozzá."
 
 #. TextEdit.gutter_clicked
 #: doc/classes/TextEdit.xml
 msgid "Emitted when a gutter is clicked."
-msgstr "Akkor bocsátódik ki, amikor egy oldalsávra kattintanak."
+msgstr "A vezérlő ezt a jelzést küldi, ha egy oldalsávra kattintanak."
 
 #. TextEdit.gutter_removed
 #: doc/classes/TextEdit.xml
 msgid "Emitted when a gutter is removed."
-msgstr "Akkor bocsátódik ki, amikor eltávolítanak egy oldalsávot."
+msgstr "A vezérlő ezt a jelzést küldi, ha eltávolítanak egy oldalsávot."
 
 #. TextEdit.lines_edited_from
 #: doc/classes/TextEdit.xml
 msgid "Emitted immediately when the text changes.\nWhen text is added [param from_line] will be less than [param to_line]. On a remove [param to_line] will be less than [param from_line]."
-msgstr "Azonnal kibocsátódik, amikor a szöveg megváltozik.\nSzöveg hozzáadásakor a [param from_line] kisebb, mint a [param to_line]. Törléskor a [param to_line] kisebb, mint a [param from_line]."
+msgstr "A vezérlő a szöveg változásakor azonnal elküldi ezt a jelzést.\nSzöveg hozzáadásakor a [param from_line] sorindex kisebb a [param to_line] sorindexnél. Törléskor a [param to_line] sorindex kisebb a [param from_line] sorindexnél."
 
 #. TextEdit.text_changed
 #: doc/classes/TextEdit.xml
 msgid "Emitted when the text changes."
-msgstr "Akkor bocsátódik ki, amikor a szöveg megváltozik."
+msgstr "A vezérlő ezt a jelzést küldi, ha megváltozik a szöveg."
 
 #. TextEdit.text_set
 #: doc/classes/TextEdit.xml
 msgid "Emitted when [method clear] is called or [member text] is set."
-msgstr "Akkor bocsátódik ki, amikor meghívják a [method clear] metódust, vagy beállítják a [member text] tulajdonságot."
+msgstr "A vezérlő ezt a jelzést küldi a [method clear] metódus meghívásakor vagy a [member text] tulajdonság beállításakor."
 
 #. TextEdit.MENU_CUT
 #: doc/classes/TextEdit.xml
