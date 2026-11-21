@@ -12859,3 +12859,248 @@ msgstr "A világ navigációs térképének [RID] azonosítója. A [NavigationSe
 #: doc/classes/World2D.xml
 msgid "The [RID] of this world's physics space resource. Used by the [PhysicsServer2D] for 2D physics, treating it as both a space and an area."
 msgstr "A világ fizikai terét képviselő erőforrás [RID] azonosítója. A [PhysicsServer2D] a 2D fizikához használja, és fizikai térként, illetve területként is kezeli."
+
+#. AStar2D.brief
+#: doc/classes/AStar2D.xml
+msgid "An implementation of A* for finding the shortest path between two vertices on a connected graph in 2D space."
+msgstr "Az A* algoritmus megvalósítása két csúcs közötti legrövidebb út megkeresésére egy kétdimenziós összefüggő gráfban."
+
+#. AStar2D.description
+#: doc/classes/AStar2D.xml
+msgid "An implementation of the A* algorithm, used to find the shortest path between two vertices on a connected graph in 2D space.\nSee [AStar3D] for a more thorough explanation on how to use this class. [AStar2D] is a wrapper for [AStar3D] that enforces 2D coordinates."
+msgstr "Az A* algoritmus megvalósítása, amellyel megkereshető két csúcs között a legrövidebb út egy kétdimenziós összefüggő gráfban.\nAz osztály használatáról az [AStar3D] dokumentációja ad részletesebb magyarázatot. Az [AStar2D] az [AStar3D] köré épül, és csak kétdimenziós koordinátákat fogad el."
+
+#. AStar2D._compute_cost
+#: doc/classes/AStar2D.xml
+msgid "Called when computing the cost between two connected points.\nNote that this function is hidden in the default [AStar2D] class."
+msgstr "Két összekötött pont közötti költség kiszámításakor hívódik meg.\nEz a metódus az [AStar2D] alapértelmezett megvalósításában rejtett."
+
+#. AStar2D._estimate_cost
+#: doc/classes/AStar2D.xml
+msgid "Called when estimating the cost between a point and the path's ending point.\nNote that this function is hidden in the default [AStar2D] class."
+msgstr "Egy pont és az útvonal végpontja közötti költség becslésekor hívódik meg.\nEz a metódus az [AStar2D] alapértelmezett megvalósításában rejtett."
+
+#. AStar2D._filter_neighbor
+#: doc/classes/AStar2D.xml
+msgid "Called when neighboring enters processing and if [member neighbor_filter_enabled] is [code]true[/code]. If [code]true[/code] is returned the point will not be processed.\nNote that this function is hidden in the default [AStar2D] class."
+msgstr "Egy szomszédos pont feldolgozása előtt hívódik meg, ha a [member neighbor_filter_enabled] értéke [code]true[/code]. Ha a metódus [code]true[/code] értéket ad vissza, a pont kimarad a feldolgozásból.\nEz a metódus az [AStar2D] alapértelmezett megvalósításában rejtett."
+
+#. AStar2D.add_point
+#: doc/classes/AStar2D.xml
+msgid "Adds a new point at the given position with the given identifier. The [param id] must be 0 or larger, and the [param weight_scale] must be 0.0 or greater.\nThe [param weight_scale] is multiplied by the result of [method _compute_cost] when determining the overall cost of traveling across a segment from a neighboring point to this point. Thus, all else being equal, the algorithm prefers points with lower [param weight_scale]s to form a path.\n[codeblocks]\n[gdscript]\nvar astar = AStar2D.new()\nastar.add_point(1, Vector2(1, 0), 4) # Adds the point (1, 0) with weight_scale 4 and id 1\n[/gdscript]\n[csharp]\nvar astar = new AStar2D();\nastar.AddPoint(1, new Vector2(1, 0), 4); // Adds the point (1, 0) with weight_scale 4 and id 1\n[/csharp]\n[/codeblocks]\nIf there already exists a point for the given [param id], its position and weight scale are updated to the given values."
+msgstr "Új pontot ad hozzá a megadott helyen és azonosítóval. A [param id] legalább 0, a [param weight_scale] pedig legalább 0,0 legyen.\nAmikor az algoritmus kiszámítja, mennyibe kerül egy szomszédos pontból ezen a szakaszon át ide eljutni, a [method _compute_cost] eredményét megszorozza a [param weight_scale] értékével. Egyébként azonos feltételek mellett ezért az alacsonyabb [param weight_scale] értékű pontokat részesíti előnyben az útvonal keresésekor.\n[codeblocks]\n[gdscript]\nvar astar = AStar2D.new()\nastar.add_point(1, Vector2(1, 0), 4) # Adds the point (1, 0) with weight_scale 4 and id 1\n[/gdscript]\n[csharp]\nvar astar = new AStar2D();\nastar.AddPoint(1, new Vector2(1, 0), 4); // Adds the point (1, 0) with weight_scale 4 and id 1\n[/csharp]\n[/codeblocks]\nHa már létezik pont a megadott [param id] azonosítóval, a helye és a súlyszorzója a megadott értékekre módosul."
+
+#. AStar2D.are_points_connected
+#: doc/classes/AStar2D.xml
+msgid "Returns whether there is a connection/segment between the given points. If [param bidirectional] is [code]false[/code], returns whether movement from [param id] to [param to_id] is possible through this segment."
+msgstr "Megadja, hogy van-e összeköttetés, azaz szakasz a megadott pontok között. Ha a [param bidirectional] értéke [code]false[/code], azt adja meg, hogy a szakaszon el lehet-e jutni a [param id] pontból a [param to_id] pontba."
+
+#. AStar2D.clear
+#. AStar3D.clear
+#: doc/classes/AStar2D.xml doc/classes/AStar3D.xml
+msgid "Clears all the points and segments."
+msgstr "Törli az összes pontot és szakaszt."
+
+#. AStar2D.connect_points
+#: doc/classes/AStar2D.xml
+msgid "Creates a segment between the given points. If [param bidirectional] is [code]false[/code], only movement from [param id] to [param to_id] is allowed, not the reverse direction.\n[codeblocks]\n[gdscript]\nvar astar = AStar2D.new()\nastar.add_point(1, Vector2(1, 1))\nastar.add_point(2, Vector2(0, 5))\nastar.connect_points(1, 2, false)\n[/gdscript]\n[csharp]\nvar astar = new AStar2D();\nastar.AddPoint(1, new Vector2(1, 1));\nastar.AddPoint(2, new Vector2(0, 5));\nastar.ConnectPoints(1, 2, false);\n[/csharp]\n[/codeblocks]"
+msgstr "Szakaszt hoz létre a megadott pontok között. Ha a [param bidirectional] értéke [code]false[/code], a szakaszon csak a [param id] pontból a [param to_id] pontba lehet haladni.\n[codeblocks]\n[gdscript]\nvar astar = AStar2D.new()\nastar.add_point(1, Vector2(1, 1))\nastar.add_point(2, Vector2(0, 5))\nastar.connect_points(1, 2, false)\n[/gdscript]\n[csharp]\nvar astar = new AStar2D();\nastar.AddPoint(1, new Vector2(1, 1));\nastar.AddPoint(2, new Vector2(0, 5));\nastar.ConnectPoints(1, 2, false);\n[/csharp]\n[/codeblocks]"
+
+#. AStar2D.disconnect_points
+#. AStar3D.disconnect_points
+#: doc/classes/AStar2D.xml doc/classes/AStar3D.xml
+msgid "Deletes the segment between the given points. If [param bidirectional] is [code]false[/code], only movement from [param id] to [param to_id] is prevented, and a unidirectional segment possibly remains."
+msgstr "Törli a megadott pontok közötti szakaszt. Ha a [param bidirectional] értéke [code]false[/code], csak a [param id] pontból a [param to_id] pontba vezető irány szűnik meg, így az ellenkező irányban megmaradhat az összeköttetés."
+
+#. AStar2D.get_available_point_id
+#. AStar3D.get_available_point_id
+#: doc/classes/AStar2D.xml doc/classes/AStar3D.xml
+msgid "Returns the next available point ID with no point associated to it."
+msgstr "Visszaadja a következő szabad pontazonosítót, amelyhez még nem tartozik pont."
+
+#. AStar2D.get_closest_point
+#. AStar3D.get_closest_point
+#: doc/classes/AStar2D.xml doc/classes/AStar3D.xml
+msgid "Returns the ID of the closest point to [param to_position], optionally taking disabled points into account. Returns [code]-1[/code] if there are no points in the points pool.\n[b]Note:[/b] If several points are the closest to [param to_position], the one with the smallest ID will be returned, ensuring a deterministic result."
+msgstr "Visszaadja a [param to_position] helyhez legközelebbi pont azonosítóját. A letiltott pontokat kérésre szintén figyelembe veszi. Ha egyetlen pont sincs a gyűjteményben, [code]-1[/code] az eredmény.\n[b]Megjegyzés:[/b] Ha a [param to_position] helyhez több pont is ugyanolyan közel van, és ezek a legközelebbi pontok, a metódus mindig a legkisebb azonosítójút adja vissza."
+
+#. AStar2D.get_closest_position_in_segment
+#: doc/classes/AStar2D.xml
+msgid "Returns the closest position to [param to_position] that resides inside a segment between two connected points.\n[codeblocks]\n[gdscript]\nvar astar = AStar2D.new()\nastar.add_point(1, Vector2(0, 0))\nastar.add_point(2, Vector2(0, 5))\nastar.connect_points(1, 2)\nvar res = astar.get_closest_position_in_segment(Vector2(3, 3)) # Returns (0, 3)\n[/gdscript]\n[csharp]\nvar astar = new AStar2D();\nastar.AddPoint(1, new Vector2(0, 0));\nastar.AddPoint(2, new Vector2(0, 5));\nastar.ConnectPoints(1, 2);\nVector2 res = astar.GetClosestPositionInSegment(new Vector2(3, 3)); // Returns (0, 3)\n[/csharp]\n[/codeblocks]\nThe result is in the segment that goes from [code]y = 0[/code] to [code]y = 5[/code]. It's the closest position in the segment to the given point."
+msgstr "Az összekötött pontok közötti szakaszokról azt a helyet adja vissza, amely a [param to_position] helyhez a legközelebb van.\n[codeblocks]\n[gdscript]\nvar astar = AStar2D.new()\nastar.add_point(1, Vector2(0, 0))\nastar.add_point(2, Vector2(0, 5))\nastar.connect_points(1, 2)\nvar res = astar.get_closest_position_in_segment(Vector2(3, 3)) # Returns (0, 3)\n[/gdscript]\n[csharp]\nvar astar = new AStar2D();\nastar.AddPoint(1, new Vector2(0, 0));\nastar.AddPoint(2, new Vector2(0, 5));\nastar.ConnectPoints(1, 2);\nVector2 res = astar.GetClosestPositionInSegment(new Vector2(3, 3)); // Returns (0, 3)\n[/csharp]\n[/codeblocks]\nAz eredmény a [code]y = 0[/code] és [code]y = 5[/code] közötti szakaszra esik. A szakaszon ez a hely van a legközelebb a megadott ponthoz."
+
+#. AStar2D.get_id_path
+#: doc/classes/AStar2D.xml
+msgid "Returns an array with the IDs of the points that form the path found by AStar2D between the given points. The array is ordered from the starting point to the ending point of the path.\nIf [param from_id] point is disabled, returns an empty array (even if [code]from_id == to_id[/code]).\nIf [param from_id] point is not disabled, there is no valid path to the target, and [param allow_partial_path] is [code]true[/code], returns a path to the point closest to the target that can be reached.\n[b]Note:[/b] When [param allow_partial_path] is [code]true[/code] and [param to_id] is disabled the search may take an unusually long time to finish.\n[codeblocks]\n[gdscript]\nvar astar = AStar2D.new()\nastar.add_point(1, Vector2(0, 0))\nastar.add_point(2, Vector2(0, 1), 1) # Default weight is 1\nastar.add_point(3, Vector2(1, 1))\nastar.add_point(4, Vector2(2, 0))\n\nastar.connect_points(1, 2, false)\nastar.connect_points(2, 3, false)\nastar.connect_points(4, 3, false)\nastar.connect_points(1, 4, false)\n\nvar res = astar.get_id_path(1, 3) # Returns [1, 2, 3]\n[/gdscript]\n[csharp]\nvar astar = new AStar2D();\nastar.AddPoint(1, new Vector2(0, 0));\nastar.AddPoint(2, new Vector2(0, 1), 1); // Default weight is 1\nastar.AddPoint(3, new Vector2(1, 1));\nastar.AddPoint(4, new Vector2(2, 0));\n\nastar.ConnectPoints(1, 2, false);\nastar.ConnectPoints(2, 3, false);\nastar.ConnectPoints(4, 3, false);\nastar.ConnectPoints(1, 4, false);\nlong[] res = astar.GetIdPath(1, 3); // Returns [1, 2, 3]\n[/csharp]\n[/codeblocks]\nIf you change the 2nd point's weight to 3, then the result will be [code][1, 4, 3][/code] instead, because now even though the distance is longer, it's \"easier\" to get through point 4 than through point 2."
+msgstr "Tömbben adja vissza azoknak a pontoknak az azonosítóit, amelyek az AStar2D által a megadott pontok között megtalált útvonalat alkotják. A tömb sorrendje az útvonal kezdőpontjától a végpontjáig tart.\nHa a [param from_id] pont le van tiltva, üres tömböt ad vissza akkor is, ha [code]from_id == to_id[/code].\nHa a [param from_id] pont engedélyezett, a célhoz nincs járható útvonal, és az [param allow_partial_path] értéke [code]true[/code], a célhoz legközelebbi elérhető pontig vezető útvonalat adja vissza.\n[b]Megjegyzés:[/b] Ha az [param allow_partial_path] értéke [code]true[/code], és a [param to_id] pont le van tiltva, a keresés szokatlanul sokáig tarthat.\n[codeblocks]\n[gdscript]\nvar astar = AStar2D.new()\nastar.add_point(1, Vector2(0, 0))\nastar.add_point(2, Vector2(0, 1), 1) # Default weight is 1\nastar.add_point(3, Vector2(1, 1))\nastar.add_point(4, Vector2(2, 0))\n\nastar.connect_points(1, 2, false)\nastar.connect_points(2, 3, false)\nastar.connect_points(4, 3, false)\nastar.connect_points(1, 4, false)\n\nvar res = astar.get_id_path(1, 3) # Returns [1, 2, 3]\n[/gdscript]\n[csharp]\nvar astar = new AStar2D();\nastar.AddPoint(1, new Vector2(0, 0));\nastar.AddPoint(2, new Vector2(0, 1), 1); // Default weight is 1\nastar.AddPoint(3, new Vector2(1, 1));\nastar.AddPoint(4, new Vector2(2, 0));\n\nastar.ConnectPoints(1, 2, false);\nastar.ConnectPoints(2, 3, false);\nastar.ConnectPoints(4, 3, false);\nastar.ConnectPoints(1, 4, false);\nlong[] res = astar.GetIdPath(1, 3); // Returns [1, 2, 3]\n[/csharp]\n[/codeblocks]\nHa a 2-es pont súlyszorzóját 3-ra állítod, az eredmény [code][1, 4, 3][/code] lesz. Bár hosszabb a távolság, a 4-es ponton át kisebb költséggel lehet eljutni a célhoz, mint a 2-esen át."
+
+#. AStar2D.get_point_capacity
+#. AStar3D.get_point_capacity
+#: doc/classes/AStar2D.xml doc/classes/AStar3D.xml
+msgid "Returns the capacity of the structure backing the points, useful in conjunction with [method reserve_space]."
+msgstr "Visszaadja a pontokat tároló adatszerkezet kapacitását. A [method reserve_space] metódussal együtt hasznos."
+
+#. AStar2D.get_point_connections
+#: doc/classes/AStar2D.xml
+msgid "Returns an array with the IDs of the points that form the connection with the given point.\n[codeblocks]\n[gdscript]\nvar astar = AStar2D.new()\nastar.add_point(1, Vector2(0, 0))\nastar.add_point(2, Vector2(0, 1))\nastar.add_point(3, Vector2(1, 1))\nastar.add_point(4, Vector2(2, 0))\n\nastar.connect_points(1, 2, true)\nastar.connect_points(1, 3, true)\n\nvar neighbors = astar.get_point_connections(1) # Returns [2, 3]\n[/gdscript]\n[csharp]\nvar astar = new AStar2D();\nastar.AddPoint(1, new Vector2(0, 0));\nastar.AddPoint(2, new Vector2(0, 1));\nastar.AddPoint(3, new Vector2(1, 1));\nastar.AddPoint(4, new Vector2(2, 0));\n\nastar.ConnectPoints(1, 2, true);\nastar.ConnectPoints(1, 3, true);\n\nlong[] neighbors = astar.GetPointConnections(1); // Returns [2, 3]\n[/csharp]\n[/codeblocks]"
+msgstr "Tömbben adja vissza a megadott ponttal összekötött pontok azonosítóit.\n[codeblocks]\n[gdscript]\nvar astar = AStar2D.new()\nastar.add_point(1, Vector2(0, 0))\nastar.add_point(2, Vector2(0, 1))\nastar.add_point(3, Vector2(1, 1))\nastar.add_point(4, Vector2(2, 0))\n\nastar.connect_points(1, 2, true)\nastar.connect_points(1, 3, true)\n\nvar neighbors = astar.get_point_connections(1) # Returns [2, 3]\n[/gdscript]\n[csharp]\nvar astar = new AStar2D();\nastar.AddPoint(1, new Vector2(0, 0));\nastar.AddPoint(2, new Vector2(0, 1));\nastar.AddPoint(3, new Vector2(1, 1));\nastar.AddPoint(4, new Vector2(2, 0));\n\nastar.ConnectPoints(1, 2, true);\nastar.ConnectPoints(1, 3, true);\n\nlong[] neighbors = astar.GetPointConnections(1); // Returns [2, 3]\n[/csharp]\n[/codeblocks]"
+
+#. AStar2D.get_point_count
+#. AStar3D.get_point_count
+#: doc/classes/AStar2D.xml doc/classes/AStar3D.xml
+msgid "Returns the number of points currently in the points pool."
+msgstr "Visszaadja, hogy jelenleg hány pont van a pontgyűjteményben."
+
+#. AStar2D.get_point_ids
+#. AStar3D.get_point_ids
+#: doc/classes/AStar2D.xml doc/classes/AStar3D.xml
+msgid "Returns an array of all point IDs."
+msgstr "Tömbben adja vissza az összes pontazonosítót."
+
+#. AStar2D.get_point_path
+#: doc/classes/AStar2D.xml
+msgid "Returns an array with the points that are in the path found by AStar2D between the given points. The array is ordered from the starting point to the ending point of the path.\nIf [param from_id] point is disabled, returns an empty array (even if [code]from_id == to_id[/code]).\nIf [param from_id] point is not disabled, there is no valid path to the target, and [param allow_partial_path] is [code]true[/code], returns a path to the point closest to the target that can be reached.\n[b]Note:[/b] This method is not thread-safe; it can only be used from a single [Thread] at a given time. Consider using [Mutex] to ensure exclusive access to one thread to avoid race conditions.\nAdditionally, when [param allow_partial_path] is [code]true[/code] and [param to_id] is disabled the search may take an unusually long time to finish."
+msgstr "Tömbben adja vissza az AStar2D által a megadott pontok között megtalált útvonal pontjait, a kezdőponttól a végpontig.\nHa a [param from_id] pont le van tiltva, üres tömböt ad vissza akkor is, ha [code]from_id == to_id[/code].\nHa a [param from_id] pont engedélyezett, a célhoz nincs járható útvonal, és az [param allow_partial_path] értéke [code]true[/code], a célhoz legközelebbi elérhető pontig vezető útvonalat adja vissza.\n[b]Megjegyzés:[/b] A metódus nem szálbiztos, ezért egyszerre csak egyetlen [Thread] szálból hívd meg. A párhuzamos hozzáférésből eredő hibák elkerülésére egy [Mutex] segítségével biztosíthatod, hogy egyszerre csak egy szál férjen hozzá.\nHa az [param allow_partial_path] értéke [code]true[/code], és a [param to_id] pont le van tiltva, a keresés szokatlanul sokáig tarthat."
+
+#. AStar2D.has_point
+#. AStar3D.has_point
+#: doc/classes/AStar2D.xml doc/classes/AStar3D.xml
+msgid "Returns whether a point associated with the given [param id] exists."
+msgstr "Megadja, hogy létezik-e pont a megadott [param id] azonosítóval."
+
+#. AStar2D.is_point_disabled
+#. AStar3D.is_point_disabled
+#: doc/classes/AStar2D.xml doc/classes/AStar3D.xml
+msgid "Returns whether a point is disabled or not for pathfinding. By default, all points are enabled."
+msgstr "Megadja, hogy a pont le van-e tiltva az útkeresésben. Alapértelmezés szerint minden pont engedélyezett."
+
+#. AStar2D.remove_point
+#. AStar3D.remove_point
+#: doc/classes/AStar2D.xml doc/classes/AStar3D.xml
+msgid "Removes the point associated with the given [param id] from the points pool."
+msgstr "Eltávolítja a megadott [param id] azonosítójú pontot a pontgyűjteményből."
+
+#. AStar2D.reserve_space
+#. AStar3D.reserve_space
+#: doc/classes/AStar2D.xml doc/classes/AStar3D.xml
+msgid "Reserves space internally for [param num_nodes] points. Useful if you're adding a known large number of points at once, such as points on a grid."
+msgstr "Memóriát foglal le [param num_nodes] pont számára. Akkor hasznos, ha előre ismert számú, sok pontot adsz hozzá egyszerre, például egy rács pontjait."
+
+#. AStar2D.set_point_disabled
+#. AStar3D.set_point_disabled
+#: doc/classes/AStar2D.xml doc/classes/AStar3D.xml
+msgid "Disables or enables the specified point for pathfinding. Useful for making a temporary obstacle."
+msgstr "Letiltja vagy engedélyezi a megadott pontot az útkeresésben. Ideiglenes akadály létrehozására használható."
+
+#. AStar2D.set_point_position
+#. AStar3D.set_point_position
+#: doc/classes/AStar2D.xml doc/classes/AStar3D.xml
+msgid "Sets the [param position] for the point with the given [param id]."
+msgstr "A megadott [param id] azonosítójú pont helyét a [param position] értékére állítja."
+
+#. AStar2D.set_point_weight_scale
+#. AStar3D.set_point_weight_scale
+#: doc/classes/AStar2D.xml doc/classes/AStar3D.xml
+msgid "Sets the [param weight_scale] for the point with the given [param id]. The [param weight_scale] is multiplied by the result of [method _compute_cost] when determining the overall cost of traveling across a segment from a neighboring point to this point."
+msgstr "Beállítja a [param weight_scale] súlyszorzót a megadott [param id] azonosítójú ponthoz. Amikor az algoritmus kiszámítja, mennyibe kerül egy szomszédos pontból ezen a szakaszon át ide eljutni, a [method _compute_cost] eredményét megszorozza a [param weight_scale] értékével."
+
+#. AStar2D.neighbor_filter_enabled
+#. AStar3D.neighbor_filter_enabled
+#: doc/classes/AStar2D.xml doc/classes/AStar3D.xml
+msgid "If [code]true[/code] enables the filtering of neighbors via [method _filter_neighbor]."
+msgstr "Ha az értéke [code]true[/code], engedélyezi a szomszédos pontok szűrését a [method _filter_neighbor] metódussal."
+
+#. AStarGrid2D.brief
+#: doc/classes/AStarGrid2D.xml
+msgid "An implementation of A* for finding the shortest path between two points on a partial 2D grid."
+msgstr "Az A* algoritmus megvalósítása két pont közötti legrövidebb út megkeresésére egy 2D rács megadott tartományában."
+
+#. AStarGrid2D.description
+#: doc/classes/AStarGrid2D.xml
+msgid "[AStarGrid2D] is a variant of [AStar2D] that is specialized for partial 2D grids. It is simpler to use because it doesn't require you to manually create points and connect them together. This class also supports multiple types of heuristics, modes for diagonal movement, and a jumping mode to speed up calculations.\nTo use [AStarGrid2D], you only need to set the [member region] of the grid, optionally set the [member cell_size], and then call the [method update] method:\n[codeblocks]\n[gdscript]\nvar astar_grid = AStarGrid2D.new()\nastar_grid.region = Rect2i(0, 0, 32, 32)\nastar_grid.cell_size = Vector2(16, 16)\nastar_grid.update()\nprint(astar_grid.get_id_path(Vector2i(0, 0), Vector2i(3, 4))) # Prints [(0, 0), (1, 1), (2, 2), (3, 3), (3, 4)]\nprint(astar_grid.get_point_path(Vector2i(0, 0), Vector2i(3, 4))) # Prints [(0, 0), (16, 16), (32, 32), (48, 48), (48, 64)]\n[/gdscript]\n[csharp]\nAStarGrid2D astarGrid = new AStarGrid2D();\nastarGrid.Region = new Rect2I(0, 0, 32, 32);\nastarGrid.CellSize = new Vector2I(16, 16);\nastarGrid.Update();\nGD.Print(astarGrid.GetIdPath(Vector2I.Zero, new Vector2I(3, 4))); // Prints [(0, 0), (1, 1), (2, 2), (3, 3), (3, 4)]\nGD.Print(astarGrid.GetPointPath(Vector2I.Zero, new Vector2I(3, 4))); // Prints [(0, 0), (16, 16), (32, 32), (48, 48), (48, 64)]\n[/csharp]\n[/codeblocks]\nTo remove a point from the pathfinding grid, it must be set as \"solid\" with [method set_point_solid]."
+msgstr "Az [AStarGrid2D] az [AStar2D] 2D rácsok megadott tartományára szabott változata. Egyszerűbb használni, mivel a pontokat nem kell kézzel létrehozni és összekötni. Többféle heurisztikát és átlós mozgási módot kínál, valamint ugrásos üzemmóddal gyorsíthatja a számítást.\nAz [AStarGrid2D] használatához állítsd be a rács [member region] tartományát és szükség esetén a [member cell_size] cellaméretet, majd hívd meg a [method update] metódust:\n[codeblocks]\n[gdscript]\nvar astar_grid = AStarGrid2D.new()\nastar_grid.region = Rect2i(0, 0, 32, 32)\nastar_grid.cell_size = Vector2(16, 16)\nastar_grid.update()\nprint(astar_grid.get_id_path(Vector2i(0, 0), Vector2i(3, 4))) # Prints [(0, 0), (1, 1), (2, 2), (3, 3), (3, 4)]\nprint(astar_grid.get_point_path(Vector2i(0, 0), Vector2i(3, 4))) # Prints [(0, 0), (16, 16), (32, 32), (48, 48), (48, 64)]\n[/gdscript]\n[csharp]\nAStarGrid2D astarGrid = new AStarGrid2D();\nastarGrid.Region = new Rect2I(0, 0, 32, 32);\nastarGrid.CellSize = new Vector2I(16, 16);\nastarGrid.Update();\nGD.Print(astarGrid.GetIdPath(Vector2I.Zero, new Vector2I(3, 4))); // Prints [(0, 0), (1, 1), (2, 2), (3, 3), (3, 4)]\nGD.Print(astarGrid.GetPointPath(Vector2I.Zero, new Vector2I(3, 4))); // Prints [(0, 0), (16, 16), (32, 32), (48, 48), (48, 64)]\n[/csharp]\n[/codeblocks]\nHa egy pontot ki akarsz zárni az útkeresésből, a [method set_point_solid] metódussal jelöld járhatatlannak."
+
+#. AStarGrid2D.get_point_path
+#: doc/classes/AStarGrid2D.xml
+msgid "Returns an array with the points that are in the path found by [AStarGrid2D] between the given points. The array is ordered from the starting point to the ending point of the path.\nIf [param from_id] point is disabled, returns an empty array (even if [code]from_id == to_id[/code]).\nIf [param from_id] point is not disabled, there is no valid path to the target, and [param allow_partial_path] is [code]true[/code], returns a path to the point closest to the target that can be reached.\n[b]Note:[/b] This method is not thread-safe; it can only be used from a single [Thread] at a given time. Consider using [Mutex] to ensure exclusive access to one thread to avoid race conditions.\nAdditionally, when [param allow_partial_path] is [code]true[/code] and [param to_id] is solid the search may take an unusually long time to finish."
+msgstr "Tömbben adja vissza az [AStarGrid2D] által a megadott pontok között megtalált útvonal pontjait, a kezdőponttól a végpontig.\nHa a [param from_id] pont járhatatlan, üres tömböt ad vissza akkor is, ha [code]from_id == to_id[/code].\nHa a [param from_id] pont járható, a célhoz nincs érvényes útvonal, és az [param allow_partial_path] értéke [code]true[/code], a célhoz legközelebbi elérhető pontig vezető útvonalat adja vissza.\n[b]Megjegyzés:[/b] A metódus nem szálbiztos, ezért egyszerre csak egyetlen [Thread] szálból hívd meg. A párhuzamos hozzáférésből eredő hibák elkerülésére egy [Mutex] segítségével biztosíthatod, hogy egyszerre csak egy szál férjen hozzá.\nHa az [param allow_partial_path] értéke [code]true[/code], és a [param to_id] pont járhatatlan, a keresés szokatlanul sokáig tarthat."
+
+#. AStarGrid2D.set_point_weight_scale
+#: doc/classes/AStarGrid2D.xml
+msgid "Sets the [param weight_scale] for the point with the given [param id]. The [param weight_scale] is multiplied by the result of [method _compute_cost] when determining the overall cost of traveling across a segment from a neighboring point to this point.\n[b]Note:[/b] Calling [method update] is not needed after the call of this function."
+msgstr "Beállítja a [param weight_scale] súlyszorzót a megadott [param id] azonosítójú ponthoz. Amikor az algoritmus kiszámítja, mennyibe kerül egy szomszédos pontból ezen a szakaszon át ide eljutni, a [method _compute_cost] eredményét megszorozza a [param weight_scale] értékével.\n[b]Megjegyzés:[/b] E metódus után nem kell meghívni a [method update] metódust."
+
+#. AStarGrid2D.update
+#: doc/classes/AStarGrid2D.xml
+msgid "Updates the internal state of the grid according to the parameters to prepare it to search the path. Needs to be called if parameters like [member region], [member cell_size] or [member offset] are changed. [method is_dirty] will return [code]true[/code] if this is the case and this needs to be called.\n[b]Note:[/b] All point data (solidity and weight scale) will be cleared."
+msgstr "A beállítások alapján frissíti a rács belső állapotát, hogy használható legyen az útkereséshez. Akkor kell meghívni, ha például a [member region], a [member cell_size] vagy az [member offset] megváltozott. Ilyenkor az [method is_dirty] metódus [code]true[/code] értékkel jelzi, hogy frissíteni kell a rácsot.\n[b]Megjegyzés:[/b] A frissítés törli a pontok összes adatát, így a járhatósági beállításaikat és a súlyszorzóikat is."
+
+#. AStarGrid2D.HEURISTIC_EUCLIDEAN
+#: doc/classes/AStarGrid2D.xml
+msgid "The [url=https://en.wikipedia.org/wiki/Euclidean_distance]Euclidean heuristic[/url] to be used for the pathfinding using the following formula:\n[codeblock]\ndx = abs(to_id.x - from_id.x)\ndy = abs(to_id.y - from_id.y)\nresult = sqrt(dx * dx + dy * dy)\n[/codeblock]\n[b]Note:[/b] This is also the internal heuristic used in [AStar3D] and [AStar2D] by default (with the inclusion of possible z-axis coordinate)."
+msgstr "Az útkereséshez használható [url=https://en.wikipedia.org/wiki/Euclidean_distance]euklideszi heurisztika[/url] képlete:\n[codeblock]\ndx = abs(to_id.x - from_id.x)\ndy = abs(to_id.y - from_id.y)\nresult = sqrt(dx * dx + dy * dy)\n[/codeblock]\n[b]Megjegyzés:[/b] Az [AStar3D] és az [AStar2D] alapértelmezésben ugyanezt a belső heurisztikát használja, szükség esetén a Z koordinátát is figyelembe véve."
+
+#. AStarGrid2D.HEURISTIC_MANHATTAN
+#: doc/classes/AStarGrid2D.xml
+msgid "The [url=https://en.wikipedia.org/wiki/Taxicab_geometry]Manhattan heuristic[/url] to be used for the pathfinding using the following formula:\n[codeblock]\ndx = abs(to_id.x - from_id.x)\ndy = abs(to_id.y - from_id.y)\nresult = dx + dy\n[/codeblock]\n[b]Note:[/b] This heuristic is intended to be used with 4-side orthogonal movements, provided by setting the [member diagonal_mode] to [constant DIAGONAL_MODE_NEVER]."
+msgstr "Az útkereséshez használható [url=https://en.wikipedia.org/wiki/Taxicab_geometry]Manhattan-heurisztika[/url] képlete:\n[codeblock]\ndx = abs(to_id.x - from_id.x)\ndy = abs(to_id.y - from_id.y)\nresult = dx + dy\n[/codeblock]\n[b]Megjegyzés:[/b] Ez a heurisztika négyirányú, vízszintes és függőleges mozgáshoz használható. Ehhez állítsd a [member diagonal_mode] értékét [constant DIAGONAL_MODE_NEVER] módra."
+
+#. AStarGrid2D.HEURISTIC_OCTILE
+#: doc/classes/AStarGrid2D.xml
+msgid "The Octile heuristic to be used for the pathfinding using the following formula:\n[codeblock]\ndx = abs(to_id.x - from_id.x)\ndy = abs(to_id.y - from_id.y)\nf = sqrt(2) - 1\nresult = (dx < dy) ? f * dx + dy : f * dy + dx;\n[/codeblock]"
+msgstr "Az útkereséshez használható nyolcirányú rácstávolságon alapuló heurisztika képlete:\n[codeblock]\ndx = abs(to_id.x - from_id.x)\ndy = abs(to_id.y - from_id.y)\nf = sqrt(2) - 1\nresult = (dx < dy) ? f * dx + dy : f * dy + dx;\n[/codeblock]"
+
+#. AStarGrid2D.HEURISTIC_CHEBYSHEV
+#: doc/classes/AStarGrid2D.xml
+msgid "The [url=https://en.wikipedia.org/wiki/Chebyshev_distance]Chebyshev heuristic[/url] to be used for the pathfinding using the following formula:\n[codeblock]\ndx = abs(to_id.x - from_id.x)\ndy = abs(to_id.y - from_id.y)\nresult = max(dx, dy)\n[/codeblock]"
+msgstr "Az útkereséshez használható [url=https://en.wikipedia.org/wiki/Chebyshev_distance]Csebisev-heurisztika[/url] képlete:\n[codeblock]\ndx = abs(to_id.x - from_id.x)\ndy = abs(to_id.y - from_id.y)\nresult = max(dx, dy)\n[/codeblock]"
+
+#. AStarGrid2D.HEURISTIC_MAX
+#: doc/classes/AStarGrid2D.xml
+msgid "Represents the size of the [enum Heuristic] enum."
+msgstr "Az [enum Heuristic] felsorolásban szereplő heurisztikák száma."
+
+#. AStarGrid2D.DIAGONAL_MODE_ALWAYS
+#: doc/classes/AStarGrid2D.xml
+msgid "The pathfinding algorithm will ignore solid neighbors around the target cell and allow passing using diagonals."
+msgstr "Az útkereső algoritmus akkor is engedi az átlós lépést, ha a célcella melletti szomszédos cellák járhatatlanok."
+
+#. AStarGrid2D.DIAGONAL_MODE_NEVER
+#: doc/classes/AStarGrid2D.xml
+msgid "The pathfinding algorithm will ignore all diagonals and the way will be always orthogonal."
+msgstr "Az útkereső algoritmus csak vízszintes és függőleges lépéseket enged."
+
+#. AStarGrid2D.DIAGONAL_MODE_AT_LEAST_ONE_WALKABLE
+#: doc/classes/AStarGrid2D.xml
+msgid "The pathfinding algorithm will avoid using diagonals if at least two obstacles have been placed around the neighboring cells of the specific path segment."
+msgstr "Az útkereső algoritmus tiltja az átlós lépést, ha az átlós átjáró két oldalán is akadály van."
+
+#. AStarGrid2D.DIAGONAL_MODE_ONLY_IF_NO_OBSTACLES
+#: doc/classes/AStarGrid2D.xml
+msgid "The pathfinding algorithm will avoid using diagonals if any obstacle has been placed around the neighboring cells of the specific path segment."
+msgstr "Az útkereső algoritmus tiltja az átlós lépést, ha az átlós átjáró bármelyik oldalán akadály van."
+
+#. AStarGrid2D.DIAGONAL_MODE_MAX
+#: doc/classes/AStarGrid2D.xml
+msgid "Represents the size of the [enum DiagonalMode] enum."
+msgstr "A [enum DiagonalMode] felsorolásban szereplő mozgási módok száma."
+
+#. AStarGrid2D.CELL_SHAPE_SQUARE
+#: doc/classes/AStarGrid2D.xml
+msgid "Rectangular cell shape."
+msgstr "Téglalap alakú cella."
+
+#. AStarGrid2D.CELL_SHAPE_ISOMETRIC_RIGHT
+#: doc/classes/AStarGrid2D.xml
+msgid "Diamond cell shape (for isometric look). Cell coordinates layout where the horizontal axis goes up-right, and the vertical one goes down-right."
+msgstr "Rombusz alakú cella az izometrikus nézethez. A cella koordináta-rendszerében a vízszintes tengely jobbra felfelé, a függőleges jobbra lefelé mutat."
+
+#. AStarGrid2D.CELL_SHAPE_ISOMETRIC_DOWN
+#: doc/classes/AStarGrid2D.xml
+msgid "Diamond cell shape (for isometric look). Cell coordinates layout where the horizontal axis goes down-right, and the vertical one goes down-left."
+msgstr "Rombusz alakú cella az izometrikus nézethez. A cella koordináta-rendszerében a vízszintes tengely jobbra lefelé, a függőleges balra lefelé mutat."
+
+#. AStarGrid2D.CELL_SHAPE_MAX
+#: doc/classes/AStarGrid2D.xml
+msgid "Represents the size of the [enum CellShape] enum."
+msgstr "A [enum CellShape] felsorolásban szereplő cellaformák száma."
