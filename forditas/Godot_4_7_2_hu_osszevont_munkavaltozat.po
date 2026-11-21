@@ -5123,22 +5123,22 @@ msgstr "A csomópont [Texture2D] erőforrása."
 #. NinePatchRect.brief
 #: doc/classes/NinePatchRect.xml
 msgid "A control that displays a texture by keeping its corners intact, but tiling its edges and center."
-msgstr "Olyan vezérlőelem, amely átméretezéskor megőrzi a textúra sarkait, miközben a széleket és a középső részt ismétli."
+msgstr "Textúrát megjelenítő vezérlőelem, amely a sarkokat változatlanul hagyja, a széleket és a középső részt pedig ismétli."
 
 #. NinePatchRect.description
 #: doc/classes/NinePatchRect.xml
 msgid "Also known as 9-slice panels, [NinePatchRect] produces clean panels of any size based on a small texture. To do so, it splits the texture in a 3×3 grid. When you scale the node, it tiles the texture's edges horizontally or vertically, tiles the center on both axes, and leaves the corners unchanged."
-msgstr "A [NinePatchRect] (más néven kilencrészes panel) egy kisméretű textúrából különböző méretű, rendezett megjelenésű paneleket hoz létre. A textúrát ehhez 3×3-as részekre osztja. A csomópont méretezésekor a szélső részeket vízszintesen vagy függőlegesen, a középsőt mindkét irányban ismétli, a négy sarokrész pedig változatlan marad."
+msgstr "A [NinePatchRect] (más néven kilencrészes panel) egy kis textúrából tetszőleges méretű, egységes megjelenésű paneleket hoz létre. Ehhez a textúrát 3×3-as rács szerint kilenc részre osztja. A csomópont méretezésekor a szélső részeket vízszintesen vagy függőlegesen, a középsőt mindkét irányban ismétli, a négy sarokrész pedig változatlan marad."
 
 #. NinePatchRect.get_patch_margin
 #: doc/classes/NinePatchRect.xml
 msgid "Returns the size of the margin on the specified [enum Side]."
-msgstr "Visszaadja a megadott [enum Side] oldal margójának méretét."
+msgstr "Visszaadja a [enum Side] által megadott oldalon lévő margó méretét."
 
 #. NinePatchRect.set_patch_margin
 #: doc/classes/NinePatchRect.xml
 msgid "Sets the size of the margin on the specified [enum Side] to [param value] pixels."
-msgstr "A megadott [enum Side] oldal margóját [param value] képpontra állítja."
+msgstr "A [enum Side] által megadott oldal margójának méretét [param value] képpontra állítja."
 
 #. NinePatchRect.axis_stretch_horizontal
 #: doc/classes/NinePatchRect.xml
@@ -5153,12 +5153,12 @@ msgstr "A függőleges nyújtáshoz vagy ismétléshez használt mód."
 #. NinePatchRect.draw_center
 #: doc/classes/NinePatchRect.xml
 msgid "If [code]true[/code], draw the panel's center. Else, only draw the 9-slice's borders."
-msgstr "Ha [code]true[/code], a panel közepét is kirajzolja. Ellenkező esetben csak a kilencrészes felosztás kerete jelenik meg."
+msgstr "Ha [code]true[/code], a panel középső részét is kirajzolja. Ellenkező esetben csak a kilencrészes panel szegélyrészei jelennek meg."
 
 #. NinePatchRect.patch_margin_bottom
 #: doc/classes/NinePatchRect.xml
 msgid "The height of the 9-slice's bottom row. A margin of 16 means the 9-slice's bottom corners and side will have a height of 16 pixels. You can set all 4 margin values individually to create panels with non-uniform borders."
-msgstr "A kilencrészes panel alsó sorának magassága. A 16-os érték azt jelenti, hogy az alsó sarkok és az alsó szélső rész 16 képpont magasak. Mind a négy margó külön állítható, így a keret oldalai eltérő vastagságúak lehetnek."
+msgstr "A kilencrészes panel alsó sorának magassága. A 16 képpontos margó azt jelenti, hogy mindkét alsó sarok és az alsó szegély 16 képpont magas. Mind a négy margó külön állítható, így a keret oldalai eltérő vastagságúak lehetnek."
 
 #. NinePatchRect.patch_margin_left
 #: doc/classes/NinePatchRect.xml
@@ -5178,7 +5178,7 @@ msgstr "A kilencrészes panel felső sorának magassága. A 16-os érték azt je
 #. NinePatchRect.region_rect
 #: doc/classes/NinePatchRect.xml
 msgid "Rectangular region of the texture to sample from. If you're working with an atlas, use this property to define the area the 9-slice should use. All other properties are relative to this one. If the rect is empty, NinePatchRect will use the whole texture."
-msgstr "A textúrának az a téglalap alakú része, amelyből a panel mintát vesz. Textúraatlasz használatakor ezzel választhatod ki a kilencrészes panel számára szükséges területet. A többi tulajdonság ehhez a kijelölt részhez viszonyul. Ha a téglalap üres, a NinePatchRect a teljes textúrát használja."
+msgstr "A textúrának az a téglalap alakú része, amelyből a panel mintát vesz. Textúraatlasz használatakor ezzel adhatod meg a kilencrészes panelhez felhasználandó területet. Az összes többi tulajdonság ehhez a területhez viszonyul. Ha a téglalap üres, a NinePatchRect a teljes textúrát használja."
 
 #. NinePatchRect.texture
 #: doc/classes/NinePatchRect.xml
