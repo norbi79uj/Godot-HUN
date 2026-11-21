@@ -9836,7 +9836,7 @@ msgstr "Új szövegkurzort ad hozzá a megadott helyen. Visszaadja az új kurzor
 #. TextEdit.add_caret_at_carets
 #: doc/classes/TextEdit.xml
 msgid "Adds an additional caret above or below every caret. If [param below] is [code]true[/code] the new caret will be added below and above otherwise."
-msgstr "Minden meglévő szövegkurzor fölé vagy alá újabb kurzort helyez. Ha a [param below] értéke [code]true[/code], az új kurzor alulra, egyébként felülre kerül."
+msgstr "Minden meglévő szövegkurzorhoz egy további kurzort ad hozzá, az eredeti fölé vagy alá. Ha a [param below] értéke [code]true[/code], a kurzor alá, egyébként fölé kerül."
 
 #. TextEdit.add_gutter
 #: doc/classes/TextEdit.xml
@@ -9951,7 +9951,7 @@ msgstr "Visszaadja a szövegkurzor kirajzolási helyét képpontokban."
 #. TextEdit.get_caret_index_edit_order
 #: doc/classes/TextEdit.xml
 msgid "Returns a list of caret indexes in their edit order, this done from bottom to top. Edit order refers to the way actions such as [method insert_text_at_caret] are applied."
-msgstr "Visszaadja a szövegkurzorok indexeit a szerkesztési sorrendjükben, alulról felfelé haladva. A szerkesztési sorrend azt határozza meg, milyen sorrendben hajtódnak végre az olyan műveletek, mint a [method insert_text_at_caret]."
+msgstr "Visszaadja a szövegkurzorok indexeit a szerkesztési sorrendjükben, alulról felfelé. Ez a sorrend határozza meg, hogy például a [method insert_text_at_caret] művelet milyen sorrendben hajtódik végre a kurzoroknál."
 
 #. TextEdit.get_caret_line
 #: doc/classes/TextEdit.xml
@@ -9966,7 +9966,7 @@ msgstr "Visszaadja annak a tördelési szakasznak az indexét, amelyben a szerke
 #. TextEdit.get_first_non_whitespace_column
 #: doc/classes/TextEdit.xml
 msgid "Returns the first column containing a non-whitespace character on the given line. If there is only whitespace, returns the number of characters."
-msgstr "Visszaadja a megadott sor első olyan oszlopát, amelyben nem térközjellegű karakter található. Ha a sor csak térközjellegű karaktereket tartalmaz, a karakterek számát adja vissza."
+msgstr "Visszaadja a megadott sor első olyan oszlopát, amely nem üreshelykaraktert tartalmaz. Ha a sorban csak üreshelykarakterek vannak, a karakterek számát adja vissza."
 
 #. TextEdit.get_first_visible_line
 #: doc/classes/TextEdit.xml
@@ -10061,7 +10061,7 @@ msgstr "Visszaadja a [param line] sor [param gutter] oldalsávjában jelenleg me
 #. TextEdit.get_line_height
 #: doc/classes/TextEdit.xml
 msgid "Returns the maximum value of the line height among all lines.\n[b]Note:[/b] The return value is influenced by [theme_item line_spacing] and [theme_item font_size]. And it will not be less than [code]1[/code]."
-msgstr "Visszaadja az összes sor közül a legnagyobb sormagasságot.\n[b]Megjegyzés:[/b] A visszaadott értéket befolyásolja a [theme_item line_spacing] és a [theme_item font_size], és soha nem kisebb [code]1[/code]-nél."
+msgstr "Visszaadja a sorok közül a legnagyobb sormagasságot.\n[b]Megjegyzés:[/b] Az értéket a [theme_item line_spacing] és a [theme_item font_size] is befolyásolja. A visszaadott érték legalább [code]1[/code]."
 
 #. TextEdit.get_line_ranges_from_carets
 #: doc/classes/TextEdit.xml
@@ -10076,7 +10076,7 @@ msgstr "Visszaadja a [param line] sor [param wrap_index] tördelési szakaszána
 #. TextEdit.get_line_with_ime
 #: doc/classes/TextEdit.xml
 msgid "Returns line text as it is currently displayed, including IME composition string."
-msgstr "Visszaadja a sor jelenleg megjelenített szövegét, beleértve az IME-ben éppen összeállított karaktereket is."
+msgstr "Visszaadja a sor jelenleg megjelenített szövegét, beleértve az IME-ben éppen összeállítás alatt álló szöveget is."
 
 #. TextEdit.get_line_wrap_count
 #: doc/classes/TextEdit.xml
