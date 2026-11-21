@@ -17718,7 +17718,7 @@ msgstr "A részecske létrejöttekor a másodlagos kibocsátócsomópontból lé
 #. ParticleProcessMaterial.sub_emitter_keep_velocity
 #: doc/classes/ParticleProcessMaterial.xml
 msgid "If [code]true[/code], the subemitter inherits the parent particle's velocity when it spawns."
-msgstr "Ha az értéke [code]true[/code], a másodlagos kibocsátó létrejöttekor örökli a szülőrészecske sebességét."
+msgstr "Ha az értéke [code]true[/code], a másodlagos kibocsátáskor létrejövő részecskék öröklik a szülőrészecske sebességét."
 
 #. ParticleProcessMaterial.sub_emitter_mode
 #: doc/classes/ParticleProcessMaterial.xml
