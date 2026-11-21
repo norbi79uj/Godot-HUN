@@ -11192,3 +11192,218 @@ msgstr "Általános célú 2D pozíciójelölő a szerkesztőben. Úgy működik
 #: doc/classes/Marker2D.xml
 msgid "Size of the gizmo cross that appears in the editor."
 msgstr "A szerkesztőben megjelenő kereszt mérete."
+
+#. CanvasTexture.brief
+#: doc/classes/CanvasTexture.xml
+msgid "Texture with optional normal and specular maps for use in 2D rendering."
+msgstr "Textúra 2D-s megjelenítéshez, opcionális normáltérképpel és csillogási térképpel."
+
+#. CanvasTexture.description
+#: doc/classes/CanvasTexture.xml
+msgid "[CanvasTexture] is an alternative to [ImageTexture] for 2D rendering. It allows using normal maps and specular maps in any node that inherits from [CanvasItem]. [CanvasTexture] also allows overriding the texture's filter and repeat mode independently of the node's properties (or the project settings).\n[b]Note:[/b] [CanvasTexture] cannot be used in 3D. It will not display correctly when applied to any [VisualInstance3D], such as [Sprite3D] or [Decal]. For physically-based materials in 3D, use [BaseMaterial3D] instead."
+msgstr "A [CanvasTexture] az [ImageTexture] egyik alternatívája 2D-s megjelenítéshez. Normáltérképet és csillogási térképet használhatsz vele minden olyan csomóponton, amely a [CanvasItem] osztályból származik. A [CanvasTexture] a textúra szűrési és ismétlési módját is felülírhatja a csomópont tulajdonságaitól és a projekt beállításaitól függetlenül.\n[b]Megjegyzés:[/b] A [CanvasTexture] 3D-ben nem használható. Sem a [Sprite3D], sem a [Decal], sem más [VisualInstance3D] esetén nem jelenik meg helyesen. Fizikai alapú 3D-s anyagokhoz használd a [BaseMaterial3D] osztályt."
+
+#. CanvasTexture.diffuse_texture
+#: doc/classes/CanvasTexture.xml
+msgid "The diffuse (color) texture to use. This is the main texture you want to set in most cases."
+msgstr "A használt diffúz textúra, amely a felület alapszínét adja. A legtöbb esetben ezt kell fő textúraként beállítanod."
+
+#. CanvasTexture.normal_texture
+#: doc/classes/CanvasTexture.xml
+msgid "The normal map texture to use. Only has a visible effect if [Light2D]s are affecting this [CanvasTexture].\n[b]Note:[/b] Godot expects the normal map to use X+, Y+, and Z+ coordinates. See [url=http://wiki.polycount.com/wiki/Normal_Map_Technical_Details#Common_Swizzle_Coordinates]this page[/url] for a comparison of normal map coordinates expected by popular engines."
+msgstr "A használt normáltérkép-textúra. Csak akkor van látható hatása, ha a [CanvasTexture] textúrára [Light2D] fényforrások hatnak.\n[b]Megjegyzés:[/b] A Godot X+, Y+ és Z+ koordinátákat vár a normáltérképen. A népszerű motorok által várt koordinátákat [url=http://wiki.polycount.com/wiki/Normal_Map_Technical_Details#Common_Swizzle_Coordinates]ezen az oldalon[/url] hasonlíthatod össze."
+
+#. CanvasTexture.specular_color
+#: doc/classes/CanvasTexture.xml
+msgid "The multiplier for specular reflection colors. The [Light2D]'s color is also taken into account when determining the reflection color. Only has a visible effect if [Light2D]s are affecting this [CanvasTexture]."
+msgstr "A tükrös visszaverődés színének szorzója. A visszavert fény színét a [Light2D] fényforrás színe is befolyásolja. Csak akkor van látható hatása, ha a [CanvasTexture] textúrára [Light2D] fényforrások hatnak."
+
+#. CanvasTexture.specular_shininess
+#: doc/classes/CanvasTexture.xml
+msgid "The specular exponent for [Light2D] specular reflections. Higher values result in a more glossy/\"wet\" look, with reflections becoming more localized and less visible overall. The default value of [code]1.0[/code] disables specular reflections entirely. Only has a visible effect if [Light2D]s are affecting this [CanvasTexture]."
+msgstr "A [Light2D] fényforrások tükrös visszaverődésének kitevője. A nagyobb érték fényesebb, nedves hatású felületet eredményez, kisebb területre összpontosuló, összességében kevésbé feltűnő csillanásokkal. Az alapértelmezett [code]1.0[/code] érték teljesen kikapcsolja a tükrös visszaverődést. Csak akkor van látható hatása, ha a [CanvasTexture] textúrára [Light2D] fényforrások hatnak."
+
+#. CanvasTexture.specular_texture
+#: doc/classes/CanvasTexture.xml
+msgid "The specular map to use for [Light2D] specular reflections. This should be a grayscale or colored texture, with brighter areas resulting in a higher [member specular_shininess] value. Using a colored [member specular_texture] allows controlling specular shininess on a per-channel basis. Only has a visible effect if [Light2D]s are affecting this [CanvasTexture]."
+msgstr "A [Light2D] fényforrások tükrös visszaverődéséhez használt csillogási térkép. Szürkeárnyalatos vagy színes textúra használható. A világosabb részek nagyobb [member specular_shininess] értéknek felelnek meg. Színes [member specular_texture] esetén színcsatornánként szabályozhatod a csillogást. Csak akkor van látható hatása, ha a [CanvasTexture] textúrára [Light2D] fényforrások hatnak."
+
+#. CanvasTexture.texture_filter
+#: doc/classes/CanvasTexture.xml
+msgid "The texture filtering mode to use when drawing this [CanvasTexture]."
+msgstr "A [CanvasTexture] kirajzolásakor használt textúraszűrési mód."
+
+#. CanvasTexture.texture_repeat
+#: doc/classes/CanvasTexture.xml
+msgid "The texture repeat mode to use when drawing this [CanvasTexture]."
+msgstr "A [CanvasTexture] kirajzolásakor használt textúraismétlési mód."
+
+#. Texture2D.brief
+#: doc/classes/Texture2D.xml
+msgid "Texture for 2D and 3D."
+msgstr "Textúra 2D-s és 3D-s megjelenítéshez."
+
+#. Texture2D.description
+#: doc/classes/Texture2D.xml
+msgid "A texture works by registering an image in the video hardware, which then can be used in 3D models or 2D [Sprite2D] or GUI [Control].\nTextures are often created by loading them from a file. See [method @GDScript.load].\n[Texture2D] is a base for other resources. It cannot be used directly.\n[b]Note:[/b] The maximum texture size is 16384×16384 pixels due to graphics hardware limitations. Larger textures may fail to import."
+msgstr "A textúra egy képet regisztrál a grafikus hardveren. A kép ezután 3D-s modellen, 2D-s [Sprite2D] csomóponton vagy a felhasználói felület [Control] elemén is megjeleníthető.\nTextúrát gyakran fájlból töltünk be. Lásd a [method @GDScript.load] metódust.\nA [Texture2D] más erőforrások alaposztálya. Közvetlenül nem használható.\n[b]Megjegyzés:[/b] A grafikus hardver korlátai miatt a textúra legfeljebb 16384×16384 képpontos lehet. Ennél nagyobb textúrák importálása meghiúsulhat."
+
+#. Texture2D._draw
+#: doc/classes/Texture2D.xml
+msgid "Called when the entire [Texture2D] is requested to be drawn over a [CanvasItem], with the top-left offset specified in [param pos]. [param modulate] specifies a multiplier for the colors being drawn, while [param transpose] specifies whether drawing should be performed in column-major order instead of row-major order (resulting in 90-degree clockwise rotation).\n[b]Note:[/b] This is only used in 2D rendering, not 3D."
+msgstr "Akkor hívódik meg, amikor a teljes [Texture2D] textúrát egy [CanvasItem] csomópontra kell rajzolni. A bal felső sarok eltolását a [param pos] adja meg. A [param modulate] a kirajzolt színek szorzója. A [param transpose] azt szabályozza, hogy soronkénti helyett oszloponkénti sorrendben történjen-e a kirajzolás. Ez 90 fokos, az óramutató járásával megegyező elforgatást eredményez.\n[b]Megjegyzés:[/b] Csak 2D-s megjelenítéskor használatos."
+
+#. Texture2D._draw_rect
+#: doc/classes/Texture2D.xml
+msgid "Called when the [Texture2D] is requested to be drawn onto [CanvasItem]'s specified [param rect]. [param modulate] specifies a multiplier for the colors being drawn, while [param transpose] specifies whether drawing should be performed in column-major order instead of row-major order (resulting in 90-degree clockwise rotation).\n[b]Note:[/b] This is only used in 2D rendering, not 3D."
+msgstr "Akkor hívódik meg, amikor a [Texture2D] textúrát a [CanvasItem] megadott [param rect] téglalapjába kell rajzolni. A [param modulate] a kirajzolt színek szorzója. A [param transpose] azt szabályozza, hogy soronkénti helyett oszloponkénti sorrendben történjen-e a kirajzolás. Ez 90 fokos, az óramutató járásával megegyező elforgatást eredményez.\n[b]Megjegyzés:[/b] Csak 2D-s megjelenítéskor használatos."
+
+#. Texture2D._draw_rect_region
+#: doc/classes/Texture2D.xml
+msgid "Called when a part of the [Texture2D] specified by [param src_rect]'s coordinates is requested to be drawn onto [CanvasItem]'s specified [param rect]. [param modulate] specifies a multiplier for the colors being drawn, while [param transpose] specifies whether drawing should be performed in column-major order instead of row-major order (resulting in 90-degree clockwise rotation).\n[b]Note:[/b] This is only used in 2D rendering, not 3D."
+msgstr "Akkor hívódik meg, amikor a [Texture2D] textúra [param src_rect] koordinátáival megadott részét a [CanvasItem] megadott [param rect] téglalapjába kell rajzolni. A [param modulate] a kirajzolt színek szorzója. A [param transpose] azt szabályozza, hogy soronkénti helyett oszloponkénti sorrendben történjen-e a kirajzolás. Ez 90 fokos, az óramutató járásával megegyező elforgatást eredményez.\n[b]Megjegyzés:[/b] Csak 2D-s megjelenítéskor használatos."
+
+#. Texture2D._get_format
+#: doc/classes/Texture2D.xml
+msgid "Called when [method get_format] is called."
+msgstr "A [method get_format] hívásakor fut le."
+
+#. Texture2D._get_height
+#: doc/classes/Texture2D.xml
+msgid "Called when the [Texture2D]'s height is queried."
+msgstr "A [Texture2D] textúra magasságának lekérdezésekor hívódik meg."
+
+#. Texture2D._get_image
+#: doc/classes/Texture2D.xml
+msgid "Called when [method get_image] is called."
+msgstr "A [method get_image] hívásakor fut le."
+
+#. Texture2D._get_mipmap_count
+#: doc/classes/Texture2D.xml
+msgid "Called when [method get_mipmap_count] is called."
+msgstr "A [method get_mipmap_count] hívásakor fut le."
+
+#. Texture2D._get_width
+#: doc/classes/Texture2D.xml
+msgid "Called when the [Texture2D]'s width is queried."
+msgstr "A [Texture2D] textúra szélességének lekérdezésekor hívódik meg."
+
+#. Texture2D._has_alpha
+#: doc/classes/Texture2D.xml
+msgid "Called when the presence of an alpha channel in the [Texture2D] is queried."
+msgstr "Akkor hívódik meg, amikor a rendszer lekérdezi, hogy van-e a [Texture2D] textúrának alfa-csatornája."
+
+#. Texture2D._has_mipmaps
+#: doc/classes/Texture2D.xml
+msgid "Called when [method has_mipmaps] is called."
+msgstr "A [method has_mipmaps] hívásakor fut le."
+
+#. Texture2D._is_pixel_opaque
+#: doc/classes/Texture2D.xml
+msgid "Called when a pixel's opaque state in the [Texture2D] is queried at the specified [code](x, y)[/code] position."
+msgstr "Akkor hívódik meg, amikor a rendszer lekérdezi, hogy a [Texture2D] textúra megadott [code](x, y)[/code] pozíciójú képpontja átlátszatlan-e."
+
+#. Texture2D.create_placeholder
+#: doc/classes/Texture2D.xml
+msgid "Creates a placeholder version of this resource ([PlaceholderTexture2D])."
+msgstr "Létrehozza az erőforrás helyőrző változatát ([PlaceholderTexture2D])."
+
+#. Texture2D.draw
+#: doc/classes/Texture2D.xml
+msgid "Draws the texture using a [CanvasItem] with the [RenderingServer] API at the specified [param position]."
+msgstr "Kirajzolja a textúrát egy [CanvasItem] segítségével a megadott [param position] pozíción, a [RenderingServer] API-ján keresztül."
+
+#. Texture2D.draw_rect
+#: doc/classes/Texture2D.xml
+msgid "Draws the texture using a [CanvasItem] with the [RenderingServer] API."
+msgstr "Kirajzolja a textúrát egy [CanvasItem] segítségével, a [RenderingServer] API-ján keresztül."
+
+#. Texture2D.draw_rect_region
+#: doc/classes/Texture2D.xml
+msgid "Draws a part of the texture using a [CanvasItem] with the [RenderingServer] API."
+msgstr "Kirajzolja a textúra egy részét egy [CanvasItem] segítségével, a [RenderingServer] API-ján keresztül."
+
+#. Texture2D.get_format
+#: doc/classes/Texture2D.xml
+msgid "Returns the image format of the texture."
+msgstr "Visszaadja a textúra képformátumát."
+
+#. Texture2D.get_height
+#: doc/classes/Texture2D.xml
+msgid "Returns the texture height in pixels."
+msgstr "Visszaadja a textúra magasságát képpontban."
+
+#. Texture2D.get_image
+#: doc/classes/Texture2D.xml
+msgid "Returns an [Image] that is a copy of data from this [Texture2D] (a new [Image] is created each time). [Image]s can be accessed and manipulated directly.\n[b]Note:[/b] This will return [code]null[/code] if this [Texture2D] is invalid.\n[b]Note:[/b] This will fetch the texture data from the GPU, which might cause performance problems when overused. Avoid calling [method get_image] every frame, especially on large textures."
+msgstr "A [Texture2D] adatairól készített [Image] másolatot ad vissza. Minden hívás új [Image] példányt hoz létre. Az [Image] példányok közvetlenül elérhetők és módosíthatók.\n[b]Megjegyzés:[/b] Ha ez a [Texture2D] érvénytelen, a metódus [code]null[/code] értéket ad vissza.\n[b]Megjegyzés:[/b] A metódus a GPU-ról olvassa vissza a textúraadatokat. A túl gyakori használat ronthatja a teljesítményt. Kerüld a [method get_image] képkockánkénti hívását, különösen nagy textúráknál."
+
+#. Texture2D.get_mipmap_count
+#: doc/classes/Texture2D.xml
+msgid "Returns the number of mipmaps of the texture."
+msgstr "Visszaadja a textúra mipmap-szintjeinek számát."
+
+#. Texture2D.get_size
+#: doc/classes/Texture2D.xml
+msgid "Returns the texture size in pixels."
+msgstr "Visszaadja a textúra méretét képpontban."
+
+#. Texture2D.get_width
+#: doc/classes/Texture2D.xml
+msgid "Returns the texture width in pixels."
+msgstr "Visszaadja a textúra szélességét képpontban."
+
+#. Texture2D.has_alpha
+#: doc/classes/Texture2D.xml
+msgid "Returns [code]true[/code] if this [Texture2D] has an alpha channel."
+msgstr "[code]true[/code] értéket ad vissza, ha a [Texture2D] textúrának van alfa-csatornája."
+
+#. Texture2D.has_mipmaps
+#: doc/classes/Texture2D.xml
+msgid "Returns [code]true[/code] if the texture has mipmaps."
+msgstr "[code]true[/code] értéket ad vissza, ha a textúrának vannak mipmap-szintjei."
+
+#. CompressedTexture2D.brief
+#: doc/classes/CompressedTexture2D.xml
+msgid "Texture with 2 dimensions, optionally compressed."
+msgstr "Kétdimenziós textúra, amely tömörített is lehet."
+
+#. CompressedTexture2D.load
+#: doc/classes/CompressedTexture2D.xml
+msgid "Loads the texture from the specified [param path]."
+msgstr "Betölti a textúrát a megadott [param path] útvonalról."
+
+#. CompressedTexture2D.load_path
+#: doc/classes/CompressedTexture2D.xml
+msgid "The [CompressedTexture2D]'s file path to a [code].ctex[/code] file."
+msgstr "A [CompressedTexture2D] textúra [code].ctex[/code] fájljának elérési útja."
+
+#. PlaceholderTexture2D.brief
+#: doc/classes/PlaceholderTexture2D.xml
+msgid "Placeholder class for a 2-dimensional texture."
+msgstr "Kétdimenziós textúra helyőrző osztálya."
+
+#. PlaceholderTexture2D.description
+#: doc/classes/PlaceholderTexture2D.xml
+msgid "This class is used when loading a project that uses a [Texture2D] subclass in 2 conditions:\n- When running the project exported in dedicated server mode, only the texture's dimensions are kept (as they may be relied upon for gameplay purposes or positioning of other elements). This allows reducing the exported PCK's size significantly.\n- When this subclass is missing due to using a different engine version or build (e.g. modules disabled).\n[b]Note:[/b] This is not intended to be used as an actual texture for rendering. It is not guaranteed to work like one in shaders or materials (for example when calculating UV)."
+msgstr "A motor két esetben használja ezt az osztályt olyan projekt betöltésekor, amely a [Texture2D] valamelyik alosztályát használja.\n- Dedikált szerver módba exportált projekt futtatásakor csak a textúra méretei maradnak meg. Ezekre a játékmenet vagy más elemek elhelyezése továbbra is támaszkodhat. Így az exportált PCK mérete jelentősen csökkenthető.\n- Ha az alosztály a motor eltérő verziója vagy összeállítása miatt nem érhető el, például egy modul kikapcsolása miatt.\n[b]Megjegyzés:[/b] Ez a helyőrző nem megjelenítésre szolgál. Árnyalókban és anyagokban nem garantált, hogy valódi textúraként működik, például az UV-koordináták számításakor."
+
+#. PlaceholderTexture2D.size
+#: doc/classes/PlaceholderTexture2D.xml
+msgid "The texture's size (in pixels)."
+msgstr "A textúra mérete képpontban."
+
+#. ViewportTexture.brief
+#: doc/classes/ViewportTexture.xml
+msgid "Provides the content of a [Viewport] as a dynamic texture."
+msgstr "A [Viewport] tartalmát dinamikus textúraként teszi elérhetővé."
+
+#. ViewportTexture.description
+#: doc/classes/ViewportTexture.xml
+msgid "A [ViewportTexture] provides the content of a [Viewport] as a dynamic [Texture2D]. This can be used to combine the rendering of [Control], [Node2D] and [Node3D] nodes. For example, you can use this texture to display a 3D scene inside a [TextureRect], or a 2D overlay in a [Sprite3D].\nTo get a [ViewportTexture] in code, use the [method Viewport.get_texture] method on the target viewport.\n[b]Note:[/b] A [ViewportTexture] is always local to its scene (see [member Resource.resource_local_to_scene]). If the scene root is not ready, it may return incorrect data (see [signal Node.ready]).\n[b]Note:[/b] Instantiating scenes containing a high-resolution [ViewportTexture] may cause noticeable stutter.\n[b]Note:[/b] When using a [Viewport] with [member Viewport.use_hdr_2d] set to [code]true[/code], the returned texture will be an HDR image that uses linear encoding. This may look darker than normal when displayed directly on screen. To convert to nonlinear sRGB encoding, you can do the following:\n[codeblock]\nimg.convert(Image.FORMAT_RGBA8)\nimg.linear_to_srgb()\n[/codeblock]\n[b]Note:[/b] Some nodes such as [Decal], [Light3D], and [PointLight2D] do not support using [ViewportTexture] directly. To use texture data from a [ViewportTexture] in these nodes, you need to create an [ImageTexture] by calling [method Texture2D.get_image] on the [ViewportTexture] and passing the result to [method ImageTexture.create_from_image]. This conversion is a slow operation, so it should not be performed every frame."
+msgstr "A [ViewportTexture] a [Viewport] tartalmát dinamikus [Texture2D] textúraként teszi elérhetővé. Így egyesíthető a [Control], a [Node2D] és a [Node3D] csomópontok kirajzolt képe. Például megjeleníthetsz egy 3D-s jelenetet egy [TextureRect] vezérlőben, vagy egy 2D-s fedőréteget egy [Sprite3D] csomóponton.\nHa kódból szeretnéd elkérni a [ViewportTexture] erőforrást, hívd meg a [method Viewport.get_texture] metódust a célként használt nézetablakon.\n[b]Megjegyzés:[/b] A [ViewportTexture] mindig a saját jelenetéhez tartozik (lásd a [member Resource.resource_local_to_scene] tulajdonságot). Ha a jelenet gyökércsomópontja még nem áll készen, az erőforrás hibás adatot adhat vissza (lásd a [signal Node.ready] jelzést).\n[b]Megjegyzés:[/b] Nagy felbontású [ViewportTexture] erőforrást tartalmazó jelenet példányosításakor észrevehető akadás léphet fel.\n[b]Megjegyzés:[/b] Ha a [Viewport] csomópont [member Viewport.use_hdr_2d] tulajdonsága [code]true[/code], a kapott textúra lineáris kódolású HDR-kép. Közvetlenül a képernyőn megjelenítve a kép a szokásosnál sötétebbnek tűnhet. A nemlineáris sRGB-kódolásra a következőképpen alakíthatod át:\n[codeblock]\nimg.convert(Image.FORMAT_RGBA8)\nimg.linear_to_srgb()\n[/codeblock]\n[b]Megjegyzés:[/b] Egyes csomópontok, például a [Decal], a [Light3D] vagy a [PointLight2D] közvetlenül nem támogatják a [ViewportTexture] használatát. Ha ilyen csomóponton szeretnéd használni egy [ViewportTexture] képadatát, hívd meg a [method Texture2D.get_image] metódust a [ViewportTexture] erőforráson, majd az eredményt add át a [method ImageTexture.create_from_image] metódusnak. Az így kapott [ImageTexture] használható a csomóponton. Az átalakítás lassú, ezért ne végezd el minden képkockában."
+
+#. ViewportTexture.viewport_path
+#: doc/classes/ViewportTexture.xml
+msgid "The path to the [Viewport] node to display. This is relative to the local scene root (see [method Resource.get_local_scene]), [b]not[/b] to the nodes that use this texture.\n[b]Note:[/b] In the editor, this path is automatically updated when the target viewport or one of its ancestors is renamed or moved. At runtime, this path may not automatically update if the scene root cannot be found."
+msgstr "A megjelenítendő [Viewport] csomópont útvonala. Az útvonal a helyi jelenet gyökércsomópontjához viszonyított (lásd a [method Resource.get_local_scene] metódust), [b]nem[/b] pedig a textúrát használó csomópontokhoz.\n[b]Megjegyzés:[/b] A szerkesztő automatikusan frissíti az útvonalat, ha a célként használt nézetablakot vagy valamelyik ősét átnevezed vagy áthelyezed. Futás közben előfordulhat, hogy az útvonal nem frissül automatikusan, ha a jelenet gyökércsomópontja nem található."
