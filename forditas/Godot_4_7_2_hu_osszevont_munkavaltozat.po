@@ -8456,7 +8456,7 @@ msgstr "Megfordítja a [param index] indexű elem jelölési állapotát."
 #. PopupMenu.toggle_item_multistate
 #: doc/classes/PopupMenu.xml
 msgid "Cycle to the next state of a multistate item. See [method add_multistate_item] for details."
-msgstr "A többállapotú elemet a következő állapotba kapcsolja, az utolsó után visszatérve az elsőhöz. A részleteket lásd az [method add_multistate_item] metódusnál."
+msgstr "A többállapotú elemet a következő állapotba kapcsolja, az utolsó után visszatérve az elsőhöz. A részleteket lásd a [method add_multistate_item] metódusnál."
 
 #. PopupMenu.allow_search
 #: doc/classes/PopupMenu.xml
@@ -8481,12 +8481,12 @@ msgstr "Ha [code]true[/code], a [PopupMenu] elrejtőzik egy többállapotú men�
 #. PopupMenu.item_{index}/checkable
 #: doc/classes/PopupMenu.xml
 msgid "The checkable item type of the item at [code]index[/code].\n[b]Note:[/b] [code]index[/code] is a value in the [code]0 .. item_count - 1[/code] range."
-msgstr "A [code]index[/code] indexű elem jelölési típusa.\n[b]Megjegyzés:[/b] Az [code]index[/code] a [code]0 .. item_count - 1[/code] tartományba esik."
+msgstr "A [code]index[/code] indexű elem jelölési típusa.\n[b]Megjegyzés:[/b] A [code]index[/code] a [code]0 .. item_count - 1[/code] tartományba esik."
 
 #. PopupMenu.item_{index}/checked
 #: doc/classes/PopupMenu.xml
 msgid "If [code]true[/code], the item at [code]index[/code] is checked.\n[b]Note:[/b] [code]index[/code] is a value in the [code]0 .. item_count - 1[/code] range."
-msgstr "Ha [code]true[/code], a [code]index[/code] indexű elem be van jelölve.\n[b]Megjegyzés:[/b] Az [code]index[/code] a [code]0 .. item_count - 1[/code] tartományba esik."
+msgstr "Ha [code]true[/code], a [code]index[/code] indexű elem be van jelölve.\n[b]Megjegyzés:[/b] A [code]index[/code] a [code]0 .. item_count - 1[/code] tartományba esik."
 
 #. PopupMenu.prefer_native_menu
 #: doc/classes/PopupMenu.xml
@@ -8501,7 +8501,7 @@ msgstr "Ha [code]true[/code], a [PopupMenu] tetején keresősáv jelenik meg az 
 #. PopupMenu.search_bar_min_item_count
 #: doc/classes/PopupMenu.xml
 msgid "Sets the minimum number of items required for the search bar to be visible. [member search_bar_enabled] must be [code]true[/code] for this to have any effect. Separator items are not counted."
-msgstr "A keresősáv megjelenítéséhez szükséges menüpontok legkisebb száma. Ennek csak akkor van hatása, ha a [member search_bar_enabled] értéke [code]true[/code]. Az elválasztó elemek nem számítanak bele."
+msgstr "Meghatározza, hány menüponttól jelenjen meg a keresősáv. A beállítás csak akkor érvényesül, ha a [member search_bar_enabled] értéke [code]true[/code]. Az elválasztók nem számítanak bele."
 
 #. PopupMenu.shrink_height
 #: doc/classes/PopupMenu.xml
@@ -8541,12 +8541,12 @@ msgstr "Akkor bocsátódik ki, amikor egy [param index] indexű elemet megnyomna
 #. PopupMenu.menu_changed
 #: doc/classes/PopupMenu.xml
 msgid "Emitted when any item is added, modified or removed."
-msgstr "Akkor bocsátódik ki, amikor bármely menüpontot hozzáadják, módosítják vagy eltávolítják."
+msgstr "Menüpont hozzáadásakor, módosításakor vagy eltávolításakor bocsátódik ki."
 
 #. PopupMenu.font_accelerator_color
 #: doc/classes/PopupMenu.xml
 msgid "The text [Color] used for shortcuts and accelerators that show next to the menu item name when defined. See [method get_item_accelerator] for more info on accelerators."
-msgstr "A megadott gyorsbillentyűk és billentyűparancsok menüpont neve mellett megjelenő szövegének [Color] színe. A billentyűparancsokról lásd a [method get_item_accelerator] metódust."
+msgstr "A menüpont neve mellett megjelenő gyorsbillentyűk és billentyűparancsok szövegének színe ([Color]). A billentyűparancsokról lásd a [method get_item_accelerator] metódust."
 
 #. PopupMenu.font_color
 #: doc/classes/PopupMenu.xml
@@ -8566,7 +8566,7 @@ msgstr "Az egérmutató alatt lévő szöveg [Color] színe."
 #. PopupMenu.font_separator_color
 #: doc/classes/PopupMenu.xml
 msgid "[Color] used for labeled separators' text. See [method add_separator]."
-msgstr "A feliratos elválasztók szövegének [Color] színe. Lásd az [method add_separator] metódust."
+msgstr "A feliratos elválasztók szövegének [Color] színe. Lásd a [method add_separator] metódust."
 
 #. PopupMenu.font_separator_outline_color
 #: doc/classes/PopupMenu.xml
@@ -8576,7 +8576,7 @@ msgstr "A feliratos elválasztó szövegkörvonalának színe."
 #. PopupMenu.gutter_compact
 #: doc/classes/PopupMenu.xml
 msgid "If not [code]0[/code], the icon gutter will be merged with the checkbox gutter when possible. This acts as a boolean."
-msgstr "Ha az érték nem [code]0[/code], az ikonok számára fenntartott sáv lehetőség szerint közös sávot alkot a jelölőnégyzetek számára fenntartott hellyel. Logikai értékként működik."
+msgstr "Ha az érték nem [code]0[/code], az ikonok és a jelölőnégyzetek számára fenntartott sáv lehetőség szerint összevonódik. A beállítás logikai értékként működik."
 
 #. PopupMenu.h_separation
 #: doc/classes/PopupMenu.xml
