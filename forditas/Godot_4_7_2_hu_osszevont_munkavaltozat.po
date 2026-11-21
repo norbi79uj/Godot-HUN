@@ -18770,3 +18770,2550 @@ msgstr "A cellás zaj a Worley-zajt és a Voronoi-diagramokat is magában foglal
 #: modules/noise/doc_classes/FastNoiseLite.xml
 msgid "Modified, higher quality version of [constant TYPE_SIMPLEX], but slower. Internally uses FastNoiseLite's OpenSimplex2S noise type."
 msgstr "A [constant TYPE_SIMPLEX] mód módosított, jobb minőségű, de lassabb változata. Belsőleg a FastNoiseLite OpenSimplex2S zajtípusát használja."
+
+#. AudioListener3D.DOPPLER_TRACKING_DISABLED
+#. Camera3D.DOPPLER_TRACKING_DISABLED
+#: doc/classes/AudioListener3D.xml doc/classes/Camera3D.xml
+msgid "Disables [url=https://en.wikipedia.org/wiki/Doppler_effect]Doppler effect[/url] simulation (default)."
+msgstr "Kikapcsolja a [url=https://en.wikipedia.org/wiki/Doppler_effect]Doppler-hatás[/url] szimulációját (alapértelmezés)."
+
+#. Camera2D.drag_horizontal_offset
+#: doc/classes/Camera2D.xml
+msgid "The relative horizontal drag offset of the camera between the right ([code]-1[/code]) and left ([code]1[/code]) drag margins.\n[b]Note:[/b] Used to set the initial horizontal drag offset; determine the current offset; or force the current offset. It's not automatically updated when [member drag_horizontal_enabled] is [code]true[/code] or the drag margins are changed."
+msgstr "A kamera relatív vízszintes eltolása a jobb oldali ([code]-1[/code]) és a bal oldali ([code]1[/code]) húzási határ között.\n[b]Megjegyzés:[/b] A kezdeti vízszintes eltolás megadására, a pillanatnyi eltolás lekérdezésére vagy annak kényszerített beállítására használható. Az érték nem frissül automatikusan, ha a [member drag_horizontal_enabled] értéke [code]true[/code], vagy ha megváltoznak a húzási határok."
+
+#. Camera2D.drag_vertical_offset
+#: doc/classes/Camera2D.xml
+msgid "The relative vertical drag offset of the camera between the bottom ([code]-1[/code]) and top ([code]1[/code]) drag margins.\n[b]Note:[/b] Used to set the initial vertical drag offset; determine the current offset; or force the current offset. It's not automatically updated when [member drag_vertical_enabled] is [code]true[/code] or the drag margins are changed."
+msgstr "A kamera relatív függőleges eltolása az alsó ([code]-1[/code]) és a felső ([code]1[/code]) húzási határ között.\n[b]Megjegyzés:[/b] A kezdeti függőleges eltolás megadására, a pillanatnyi eltolás lekérdezésére vagy annak kényszerített beállítására használható. Az érték nem frissül automatikusan, ha a [member drag_vertical_enabled] értéke [code]true[/code], vagy ha megváltoznak a húzási határok."
+
+#. Camera2D.zoom
+#: doc/classes/Camera2D.xml
+msgid "The camera's zoom. Higher values are more zoomed in. For example, a zoom of [code]Vector2(2.0, 2.0)[/code] will be twice as zoomed in on each axis (the view covers an area four times smaller). In contrast, a zoom of [code]Vector2(0.5, 0.5)[/code] will be twice as zoomed out on each axis (the view covers an area four times larger). The X and Y components should generally always be set to the same value, unless you wish to stretch the camera view.\n[b]Note:[/b] [member FontFile.oversampling] does [i]not[/i] take [Camera2D] zoom into account. This means that zooming in/out will cause bitmap fonts and rasterized (non-MSDF) dynamic fonts to appear blurry or pixelated unless the font is part of a [CanvasLayer] that makes it ignore camera zoom. To ensure text remains crisp regardless of zoom, you can enable MSDF font rendering by enabling [member ProjectSettings.gui/theme/default_font_multichannel_signed_distance_field] (applies to the default project font only), or enabling [b]Multichannel Signed Distance Field[/b] in the import options of a DynamicFont for custom fonts. On system fonts, [member SystemFont.multichannel_signed_distance_field] can be enabled in the inspector."
+msgstr "A kamera nagyítása. Nagyobb értéknél közelebbről látszik a jelenet. A [code]Vector2(2.0, 2.0)[/code] például mindkét tengely mentén kétszeres nagyítást ad, így a nézet negyedakkora területet fed le. A [code]Vector2(0.5, 0.5)[/code] mindkét tengelyen felére kicsinyít, így a nézet négyszer akkora területet fed le. Az X és Y összetevő értéke általában azonos, kivéve, ha nyújtani szeretnéd a kamera képét.\n[b]Megjegyzés:[/b] A [member FontFile.oversampling] [i]nem[/i] veszi figyelembe a [Camera2D] nagyítását. Emiatt nagyításkor vagy kicsinyítéskor a bittérképes és a raszterizált (nem MSDF) dinamikus betűk elmosódhatnak vagy pixelesnek tűnhetnek, kivéve, ha olyan [CanvasLayer] rétegben vannak, amelyre nem hat a kamera nagyítása. Az alapértelmezett projektbetűtípus éles megjelenítéséhez engedélyezd a [member ProjectSettings.gui/theme/default_font_multichannel_signed_distance_field] beállítást. Egyéni dinamikus betűtípusnál az importálási beállításokban kapcsold be a [b]Multichannel Signed Distance Field[/b] lehetőséget, rendszerbetűtípusnál pedig a szerkesztőben a [member SystemFont.multichannel_signed_distance_field] tulajdonságot."
+
+#. Camera2D.ANCHOR_MODE_FIXED_TOP_LEFT
+#: doc/classes/Camera2D.xml
+msgid "The camera's position is fixed so that the top-left corner is always at the origin."
+msgstr "A kamera úgy rögzíti a helyzetét, hogy a bal felső sarok mindig az origóba essen."
+
+#. Camera2D.ANCHOR_MODE_DRAG_CENTER
+#: doc/classes/Camera2D.xml
+msgid "The camera's position takes into account vertical/horizontal offsets and the screen size."
+msgstr "A kamera helyzete követi a függőleges és vízszintes eltolást, valamint a képernyő méretét."
+
+#. Camera2D.CAMERA2D_PROCESS_PHYSICS
+#: doc/classes/Camera2D.xml
+msgid "The camera updates during physics frames (see [constant Node.NOTIFICATION_INTERNAL_PHYSICS_PROCESS])."
+msgstr "A kamera a fizikai képkockákban frissül (lásd: [constant Node.NOTIFICATION_INTERNAL_PHYSICS_PROCESS])."
+
+#. Camera2D.CAMERA2D_PROCESS_IDLE
+#: doc/classes/Camera2D.xml
+msgid "The camera updates during process frames (see [constant Node.NOTIFICATION_INTERNAL_PROCESS])."
+msgstr "A kamera a feldolgozási képkockákban frissül (lásd: [constant Node.NOTIFICATION_INTERNAL_PROCESS])."
+
+#. Camera3D.brief
+#: doc/classes/Camera3D.xml
+msgid "Camera node, displays from a point of view."
+msgstr "Kameracsomópont, amely egy adott nézőpontból jeleníti meg a jelenetet."
+
+#. Camera3D.description
+#: doc/classes/Camera3D.xml
+msgid "[Camera3D] is a special node that displays what is visible from its current location. Cameras register themselves in the nearest [Viewport] node (when ascending the tree). Only one camera can be active per viewport. If no viewport is available ascending the tree, the camera will register in the global viewport. In other words, a camera just provides 3D display capabilities to a [Viewport], and, without one, a scene registered in that [Viewport] (or higher viewports) can't be displayed."
+msgstr "A [Camera3D] speciális csomópont, amely azt jeleníti meg, ami a pillanatnyi helyéről látható. A kamera a jelenetfán felfelé haladva a legközelebbi [Viewport] csomóponthoz társul. Nézetablakonként egy kamera lehet aktív. Ha felfelé haladva nincs nézetablak, a kamera a globális nézetablakhoz társul. A kamera teszi lehetővé a 3D megjelenítést a [Viewport] számára. Kamera nélkül a hozzá vagy valamelyik fölérendelt [Viewport] csomóponthoz tartozó 3D jelenet nem jeleníthető meg."
+
+#. Camera3D.clear_current
+#: doc/classes/Camera3D.xml
+msgid "If this is the current camera, remove it from being current. If [param enable_next] is [code]true[/code], request to make the next camera current, if any."
+msgstr "Ha ez az aktív kamera, megszünteti az aktív állapotát. Ha az [param enable_next] értéke [code]true[/code], akkor kéri, hogy a következő kamera legyen aktív, amennyiben van ilyen."
+
+#. Camera3D.get_camera_projection
+#: doc/classes/Camera3D.xml
+msgid "Returns the projection matrix that this camera uses to render to its associated viewport. The camera must be part of the scene tree to function."
+msgstr "Visszaadja a kamera vetítési mátrixát, amellyel a hozzá tartozó nézetablakba renderel. Ehhez a kamerának a jelenetfában kell lennie."
+
+#. Camera3D.get_camera_rid
+#: doc/classes/Camera3D.xml
+msgid "Returns the camera's RID from the [RenderingServer]."
+msgstr "Visszaadja a kamera [RenderingServer] által használt RID azonosítóját."
+
+#. Camera3D.get_camera_transform
+#: doc/classes/Camera3D.xml
+msgid "Returns the transform of the camera plus the vertical ([member v_offset]) and horizontal ([member h_offset]) offsets; and any other adjustments made to the position and orientation of the camera by subclassed cameras such as [XRCamera3D]."
+msgstr "Visszaadja a kamera transzformációját, beleértve a függőleges ([member v_offset]) és a vízszintes ([member h_offset]) eltolást, valamint a leszármazott kameraosztályok (például az [XRCamera3D]) által a helyzeten és az irányon végzett egyéb módosításokat."
+
+#. Camera3D.get_cull_mask_value
+#: doc/classes/Camera3D.xml
+msgid "Returns whether or not the specified layer of the [member cull_mask] is enabled, given a [param layer_number] between 1 and 20."
+msgstr "Megadja, hogy a [member cull_mask] megadott rétege engedélyezve van-e. A [param layer_number] értéke 1 és 20 közé esik."
+
+#. Camera3D.get_frustum
+#: doc/classes/Camera3D.xml
+msgid "Returns the camera's frustum planes in world space units as an array of [Plane]s in the following order: near, far, left, top, right, bottom. Not to be confused with [member frustum_offset]."
+msgstr "Visszaadja a kamera látógúlájának határolósíkjait világkoordinátákban, [Plane] elemekből álló tömbként. A sorrend: közeli, távoli, bal, felső, jobb, alsó. A síkok tömbje különbözik a [member frustum_offset] eltolástól."
+
+#. Camera3D.get_pyramid_shape_rid
+#: doc/classes/Camera3D.xml
+msgid "Returns the RID of a pyramid shape encompassing the camera's view frustum, ignoring the camera's near plane. The tip of the pyramid represents the position of the camera."
+msgstr "Visszaadja a kamera látógúláját befoglaló gúla alakzat RID azonosítóját. Az alakzat figyelmen kívül hagyja a közeli vágósíkot. A gúla csúcsa a kamera helyét jelöli."
+
+#. Camera3D.is_position_behind
+#: doc/classes/Camera3D.xml
+msgid "Returns [code]true[/code] if the given position is behind the camera (the blue part of the linked diagram). [url=https://raw.githubusercontent.com/godotengine/godot-docs/master/img/camera3d_position_frustum.png]See this diagram[/url] for an overview of position query methods.\n[b]Note:[/b] A position which returns [code]false[/code] may still be outside the camera's field of view."
+msgstr "[code]true[/code] értéket ad vissza, ha a megadott pont a kamera mögött van (az ábra kék tartományában). [url=https://raw.githubusercontent.com/godotengine/godot-docs/master/img/camera3d_position_frustum.png]Az ábrán[/url] áttekinthetők a helyzetlekérdező metódusok.\n[b]Megjegyzés:[/b] A pont akkor is eshet a kamera látómezején kívülre, ha a metódus [code]false[/code] értéket ad vissza."
+
+#. Camera3D.is_position_in_frustum
+#: doc/classes/Camera3D.xml
+msgid "Returns [code]true[/code] if the given position is inside the camera's frustum (the green part of the linked diagram). [url=https://raw.githubusercontent.com/godotengine/godot-docs/master/img/camera3d_position_frustum.png]See this diagram[/url] for an overview of position query methods."
+msgstr "[code]true[/code] értéket ad vissza, ha a megadott pont a kamera látógúláján belül van (az ábra zöld tartományában). [url=https://raw.githubusercontent.com/godotengine/godot-docs/master/img/camera3d_position_frustum.png]Az ábrán[/url] áttekinthetők a helyzetlekérdező metódusok."
+
+#. Camera3D.make_current
+#: doc/classes/Camera3D.xml
+msgid "Makes this camera the current camera for the [Viewport] (see class description). If the camera node is outside the scene tree, it will attempt to become current once it's added."
+msgstr "Ezt a kamerát teszi aktívvá a [Viewport] számára (lásd az osztály leírását). Ha a kamera még nincs a jelenetfában, a hozzáadásakor próbál aktívvá válni."
+
+#. Camera3D.project_position
+#: doc/classes/Camera3D.xml
+msgid "Returns the 3D point in world space that maps to the given 2D coordinate in the [Viewport] rectangle on a plane that is the given [param z_depth] distance into the scene away from the camera."
+msgstr "Visszaadja a [Viewport] téglalapján megadott 2D koordinátához tartozó 3D pontot világkoordinátákban. A pont a kamerától a jelenet felé [param z_depth] távolságra lévő síkon fekszik."
+
+#. Camera3D.project_ray_normal
+#: doc/classes/Camera3D.xml
+msgid "Returns a normal vector in world space, that is the result of projecting a point on the [Viewport] rectangle by the inverse camera projection. This is useful for casting rays in the form of (origin, normal) for object intersection or picking."
+msgstr "Visszaadja a [Viewport] téglalapján megadott pont inverz kameravetítésével kapott irányvektort világkoordinátákban. Ebből és a kezdőpontból sugár képezhető metszésvizsgálathoz vagy objektumkijelöléshez."
+
+#. Camera3D.project_ray_origin
+#: doc/classes/Camera3D.xml
+msgid "Returns a 3D position in world space, that is the result of projecting a point on the [Viewport] rectangle by the inverse camera projection. This is useful for casting rays in the form of (origin, normal) for object intersection or picking."
+msgstr "Visszaadja a [Viewport] téglalapján megadott pont inverz kameravetítésével kapott 3D helyzetet világkoordinátákban. Ez az irányvektorral együtt használható sugár indítására metszésvizsgálathoz vagy objektumkijelöléshez."
+
+#. Camera3D.set_cull_mask_value
+#: doc/classes/Camera3D.xml
+msgid "Based on [param value], enables or disables the specified layer in the [member cull_mask], given a [param layer_number] between 1 and 20."
+msgstr "A [param value] alapján engedélyezi vagy letiltja a [member cull_mask] megadott rétegét. A [param layer_number] értéke 1 és 20 közé esik."
+
+#. Camera3D.set_frustum
+#: doc/classes/Camera3D.xml
+msgid "Sets the camera projection to frustum mode (see [constant PROJECTION_FRUSTUM]), by specifying a [param size], an [param offset], and the [param z_near] and [param z_far] clip planes in world space units. The [param size] parameter represents the size of the near plane, either its width or height depending on the value of [member keep_aspect]. See also [member frustum_offset]."
+msgstr "Látógúla-vetítésre állítja a kamerát (lásd: [constant PROJECTION_FRUSTUM]). Ehhez a [param size] méretet, a [param offset] eltolást, valamint a [param z_near] és [param z_far] vágósíkokat kell megadni a világtér egységeiben. A [param size] a közeli sík szélességét vagy magasságát jelenti a [member keep_aspect] értékétől függően. Lásd még: [member frustum_offset]."
+
+#. Camera3D.set_orthogonal
+#: doc/classes/Camera3D.xml
+msgid "Sets the camera projection to orthogonal mode (see [constant PROJECTION_ORTHOGONAL]), by specifying a [param size], and the [param z_near] and [param z_far] clip planes in world space units.\nAs a hint, 3D games that look 2D often use this projection, with [param size] specified in pixels."
+msgstr "Merőleges vetítésre állítja a kamerát (lásd: [constant PROJECTION_ORTHOGONAL]). Ehhez a [param size] méretet, valamint a [param z_near] és [param z_far] vágósíkokat kell megadni a világtér egységeiben.\nA 2D hatású 3D játékok gyakran ezt a vetítést használják, képpontban megadott [param size] értékkel."
+
+#. Camera3D.set_perspective
+#: doc/classes/Camera3D.xml
+msgid "Sets the camera projection to perspective mode (see [constant PROJECTION_PERSPECTIVE]), by specifying a [param fov] (field of view) angle in degrees, and the [param z_near] and [param z_far] clip planes in world space units."
+msgstr "Perspektivikus vetítésre állítja a kamerát (lásd: [constant PROJECTION_PERSPECTIVE]). A [param fov] látószöget fokban, a [param z_near] és [param z_far] vágósíkokat a világtér egységeiben kell megadni."
+
+#. Camera3D.unproject_position
+#: doc/classes/Camera3D.xml
+msgid "Returns the 2D coordinate in the [Viewport] rectangle that maps to the given 3D point in world space.\n[b]Note:[/b] When using this to position GUI elements over a 3D viewport, use [method is_position_behind] to prevent them from appearing if the 3D point is behind the camera:\n[codeblock]\n# This code block is part of a script that inherits from Node3D.\n# `control` is a reference to a node inheriting from Control.\ncontrol.visible = not get_viewport().get_camera_3d().is_position_behind(global_transform.origin)\ncontrol.position = get_viewport().get_camera_3d().unproject_position(global_transform.origin)\n[/codeblock]"
+msgstr "Visszaadja a [Viewport] téglalapján azt a 2D koordinátát, amely a világban megadott 3D pontnak felel meg.\n[b]Megjegyzés:[/b] Ha ezzel helyezel el felületi elemeket egy 3D nézetablak fölött, a [method is_position_behind] metódussal rejtheted el őket, amikor a 3D pont a kamera mögött van:\n[codeblock]\n# This code block is part of a script that inherits from Node3D.\n# `control` is a reference to a node inheriting from Control.\ncontrol.visible = not get_viewport().get_camera_3d().is_position_behind(global_transform.origin)\ncontrol.position = get_viewport().get_camera_3d().unproject_position(global_transform.origin)\n[/codeblock]"
+
+#. Camera3D.attributes
+#: doc/classes/Camera3D.xml
+msgid "The [CameraAttributes] to use for this camera."
+msgstr "A kamera által használt [CameraAttributes] erőforrás."
+
+#. Camera3D.compositor
+#: doc/classes/Camera3D.xml
+msgid "The [Compositor] to use for this camera."
+msgstr "A kamera által használt [Compositor] erőforrás."
+
+#. Camera3D.cull_mask
+#: doc/classes/Camera3D.xml
+msgid "The culling mask that describes which [member VisualInstance3D.layers] are rendered by this camera. By default, all 20 user-visible layers are rendered.\n[b]Note:[/b] Since the [member cull_mask] allows for 32 layers to be stored in total, there are an additional 12 layers that are only used internally by the engine and aren't exposed in the editor. Setting [member cull_mask] using a script allows you to toggle those reserved layers, which can be useful for editor plugins.\nTo adjust [member cull_mask] more easily using a script, use [method get_cull_mask_value] and [method set_cull_mask_value].\n[b]Note:[/b] [VoxelGI], SDFGI and [LightmapGI] will always take all layers into account to determine what contributes to global illumination. If this is an issue, set [member GeometryInstance3D.gi_mode] to [constant GeometryInstance3D.GI_MODE_DISABLED] for meshes and [member Light3D.light_bake_mode] to [constant Light3D.BAKE_DISABLED] for lights to exclude them from global illumination."
+msgstr "A láthatósági maszk meghatározza, hogy a kamera mely [member VisualInstance3D.layers] rétegeket rendereli. Alapértelmezésben mind a 20 felhasználói réteg látható.\n[b]Megjegyzés:[/b] A [member cull_mask] összesen 32 réteg tárolására képes. A további 12 réteget a motor belsőleg használja, a szerkesztőben nem jelennek meg. A [member cull_mask] szkriptből történő beállításával a fenntartott rétegek is kapcsolhatók, ami szerkesztőbővítményeknél hasznos lehet.\nA [member cull_mask] szkriptből egyszerűbben állítható a [method get_cull_mask_value] és a [method set_cull_mask_value] metódussal.\n[b]Megjegyzés:[/b] A [VoxelGI], az SDFGI és a [LightmapGI] mindig minden réteget figyelembe vesz a globális megvilágítás kiszámításakor. Egy háló kizárásához állítsd a [member GeometryInstance3D.gi_mode] értékét [constant GeometryInstance3D.GI_MODE_DISABLED] értékre, egy fény kizárásához pedig a [member Light3D.light_bake_mode] értékét [constant Light3D.BAKE_DISABLED] értékre."
+
+#. Camera3D.current
+#: doc/classes/Camera3D.xml
+msgid "If [code]true[/code], the ancestor [Viewport] is currently using this camera.\nIf multiple cameras are in the scene, one will always be made current. For example, if two [Camera3D] nodes are present in the scene and only one is current, setting one camera's [member current] to [code]false[/code] will cause the other camera to be made current."
+msgstr "Ha az értéke [code]true[/code], a fölérendelt [Viewport] ezt a kamerát használja.\nTöbb kamera esetén a jelenetben mindig van egy aktív kamera. Ha például két [Camera3D] közül csak az egyik aktív, és annak a [member current] értékét [code]false[/code] értékre állítod, a másik kamera lesz aktív."
+
+#. Camera3D.environment
+#: doc/classes/Camera3D.xml
+msgid "The [Environment] to use for this camera."
+msgstr "A kamera által használt [Environment] erőforrás."
+
+#. Camera3D.far
+#: doc/classes/Camera3D.xml
+msgid "The distance to the far culling boundary for this camera relative to its local Z axis. Higher values allow the camera to see further away, while decreasing [member far] can improve performance if it results in objects being partially or fully culled."
+msgstr "A távoli vágósík távolsága a kamera helyi Z tengelye mentén. Nagyobb értéknél messzebbre lát a kamera. A [member far] csökkentése javíthatja a teljesítményt, ha emiatt a motor részben vagy teljesen kihagy egyes objektumokat a rajzolásból."
+
+#. Camera3D.fov
+#: doc/classes/Camera3D.xml
+msgid "The camera's field of view angle (in degrees). Only applicable in perspective mode. Since [member keep_aspect] locks one axis, [member fov] sets the other axis' field of view angle.\nFor reference, the default vertical field of view value ([code]75.0[/code]) is equivalent to a horizontal FOV of:\n- ~91.31 degrees in a 4:3 viewport\n- ~101.67 degrees in a 16:10 viewport\n- ~107.51 degrees in a 16:9 viewport\n- ~121.63 degrees in a 21:9 viewport"
+msgstr "A kamera látószöge fokban. Csak perspektivikus módban érvényes. Mivel a [member keep_aspect] az egyik tengelyt rögzíti, a [member fov] a másik tengely menti látószöget adja meg.\nAz alapértelmezett függőleges látószög ([code]75.0[/code]) a következő vízszintes látószögeknek felel meg:\n- kb. 91,31 fok 4:3 képarányú nézetablakban\n- kb. 101,67 fok 16:10 képarányú nézetablakban\n- kb. 107,51 fok 16:9 képarányú nézetablakban\n- kb. 121,63 fok 21:9 képarányú nézetablakban"
+
+#. Camera3D.frustum_offset
+#: doc/classes/Camera3D.xml
+msgid "The camera's frustum offset. This can be changed from the default to create \"tilted frustum\" effects such as [url=https://zdoom.org/wiki/Y-shearing]Y-shearing[/url].\n[b]Note:[/b] Only effective if [member projection] is [constant PROJECTION_FRUSTUM]."
+msgstr "A kamera látógúlájának eltolása. Az alapértéket megváltoztatva ferde látógúlát használó hatások állíthatók elő, például [url=https://zdoom.org/wiki/Y-shearing]Y irányú nyírás[/url].\n[b]Megjegyzés:[/b] Csak akkor hat, ha a [member projection] értéke [constant PROJECTION_FRUSTUM]."
+
+#. Camera3D.h_offset
+#: doc/classes/Camera3D.xml
+msgid "The horizontal (X) offset of the camera viewport."
+msgstr "A kamera nézetablakának vízszintes (X irányú) eltolása."
+
+#. Camera3D.keep_aspect
+#: doc/classes/Camera3D.xml
+msgid "The axis to lock during [member fov]/[member size] adjustments. Can be either [constant KEEP_WIDTH] or [constant KEEP_HEIGHT]."
+msgstr "A [member fov] vagy a [member size] módosításakor rögzített tengely. Az értéke [constant KEEP_WIDTH] vagy [constant KEEP_HEIGHT] lehet."
+
+#. Camera3D.near
+#: doc/classes/Camera3D.xml
+msgid "The distance to the near culling boundary for this camera relative to its local Z axis. Lower values allow the camera to see objects more up close to its origin, at the cost of lower precision across the [i]entire[/i] range. Values lower than the default can lead to increased Z-fighting."
+msgstr "A közeli vágósík távolsága a kamera helyi Z tengelye mentén. Kisebb értéknél a kamera közelebbi objektumokat is megjelenít, de az [i]egész[/i] tartományban csökken a mélységi pontosság. Az alapértéknél kisebb érték felerősítheti a közel azonos mélységű felületek vibrálását (Z-fighting)."
+
+#. Camera3D.projection
+#: doc/classes/Camera3D.xml
+msgid "The camera's projection mode. In [constant PROJECTION_PERSPECTIVE] mode, objects' Z distance from the camera's local space scales their perceived size."
+msgstr "A kamera vetítési módja. [constant PROJECTION_PERSPECTIVE] módban a kamera helyi Z tengelye mentén mért távolság határozza meg az objektumok látszólagos méretét."
+
+#. Camera3D.v_offset
+#: doc/classes/Camera3D.xml
+msgid "The vertical (Y) offset of the camera viewport."
+msgstr "A kamera nézetablakának függőleges (Y irányú) eltolása."
+
+#. Camera3D.PROJECTION_PERSPECTIVE
+#: doc/classes/Camera3D.xml
+msgid "Perspective projection. Objects on the screen becomes smaller when they are far away."
+msgstr "Perspektivikus vetítés. A távolabbi objektumok kisebbnek látszanak a képernyőn."
+
+#. Camera3D.PROJECTION_ORTHOGONAL
+#: doc/classes/Camera3D.xml
+msgid "Orthogonal projection, also known as orthographic projection. Objects remain the same size on the screen no matter how far away they are."
+msgstr "Merőleges, más néven ortografikus vetítés. Az objektumok a távolságuktól függetlenül azonos méretűnek látszanak a képernyőn."
+
+#. Camera3D.PROJECTION_FRUSTUM
+#: doc/classes/Camera3D.xml
+msgid "Frustum projection. This mode allows adjusting [member frustum_offset] to create \"tilted frustum\" effects."
+msgstr "Látógúla-vetítés. Ebben a módban a [member frustum_offset] változtatásával ferde látógúlát használó hatások hozhatók létre."
+
+#. Camera3D.DOPPLER_TRACKING_IDLE_STEP
+#: doc/classes/Camera3D.xml
+msgid "Simulate [url=https://en.wikipedia.org/wiki/Doppler_effect]Doppler effect[/url] by tracking positions of objects that are changed in [code]_process[/code]. Changes in the relative velocity of this camera compared to those objects affect how audio is perceived (changing the audio's [member AudioStreamPlayer3D.pitch_scale])."
+msgstr "A [url=https://en.wikipedia.org/wiki/Doppler_effect]Doppler-hatást[/url] a [code]_process[/code] metódusban módosított objektumok helyzetének követésével szimulálja. A kamera objektumokhoz viszonyított sebességváltozása a hang érzékelt magasságát módosítja a [member AudioStreamPlayer3D.pitch_scale] értékén keresztül."
+
+#. Camera3D.DOPPLER_TRACKING_PHYSICS_STEP
+#: doc/classes/Camera3D.xml
+msgid "Simulate [url=https://en.wikipedia.org/wiki/Doppler_effect]Doppler effect[/url] by tracking positions of objects that are changed in [code]_physics_process[/code]. Changes in the relative velocity of this camera compared to those objects affect how audio is perceived (changing the audio's [member AudioStreamPlayer3D.pitch_scale])."
+msgstr "A [url=https://en.wikipedia.org/wiki/Doppler_effect]Doppler-hatást[/url] a [code]_physics_process[/code] metódusban módosított objektumok helyzetének követésével szimulálja. A kamera objektumokhoz viszonyított sebességváltozása a hang érzékelt magasságát módosítja a [member AudioStreamPlayer3D.pitch_scale] értékén keresztül."
+
+#. CameraAttributes.brief
+#: doc/classes/CameraAttributes.xml
+msgid "Parent class for camera settings."
+msgstr "A kamerabeállítások alaposztálya."
+
+#. CameraAttributes.description
+#: doc/classes/CameraAttributes.xml
+msgid "Controls camera-specific attributes such as depth of field and exposure override.\nWhen used in a [WorldEnvironment] it provides default settings for exposure, auto-exposure, and depth of field that will be used by all cameras without their own [CameraAttributes], including the editor camera. When used in a [Camera3D] it will override any [CameraAttributes] set in the [WorldEnvironment]. When used in [VoxelGI] or [LightmapGI], only the exposure settings will be used.\nSee also [Environment] for general 3D environment settings.\nThis is a pure virtual class that is inherited by [CameraAttributesPhysical] and [CameraAttributesPractical]."
+msgstr "A kamera saját jellemzőit, például a mélységélességet és az expozíció felülbírálását szabályozza.\nA [WorldEnvironment] csomóponthoz rendelve alapértelmezett expozíciós, automatikus expozíciós és mélységélességi beállításokat ad minden olyan kamerának, amelyhez nincs saját [CameraAttributes] rendelve. Ez a szerkesztő kamerájára is vonatkozik. A [Camera3D] csomóponthoz rendelve felülbírálja a [WorldEnvironment] [CameraAttributes] beállításait. A [VoxelGI] vagy a [LightmapGI] csak az expozíciós beállításokat használja.\nA 3D környezet általános beállításaihoz lásd az [Environment] osztályt.\nEz egy absztrakt osztály, amelyből a [CameraAttributesPhysical] és a [CameraAttributesPractical] származik."
+
+#. CameraAttributes.auto_exposure_enabled
+#: doc/classes/CameraAttributes.xml
+msgid "If [code]true[/code], enables the tonemapping auto exposure mode of the scene renderer. If [code]true[/code], the renderer will automatically determine the exposure setting to adapt to the scene's illumination and the observed light.\n[b]Note:[/b] Auto-exposure is only supported in the Forward+ rendering method, not Mobile or Compatibility."
+msgstr "Ha az értéke [code]true[/code], engedélyezi a jelenet renderelőjében a tónusleképezés automatikus expozíciós módját. [code]true[/code] esetén a renderelő a jelenet megvilágítása és az érzékelt fény alapján automatikusan állítja be az expozíciót.\n[b]Megjegyzés:[/b] Az automatikus expozíció csak a Forward+ renderelési módban támogatott."
+
+#. CameraAttributes.auto_exposure_scale
+#: doc/classes/CameraAttributes.xml
+msgid "The scale of the auto exposure effect. Affects the intensity of auto exposure."
+msgstr "Az automatikus expozíció szorzója. A hatás erősségét befolyásolja."
+
+#. CameraAttributes.auto_exposure_speed
+#: doc/classes/CameraAttributes.xml
+msgid "The speed of the auto exposure effect. Affects the time needed for the camera to perform auto exposure."
+msgstr "Az automatikus expozíció sebessége. Meghatározza, milyen gyorsan alkalmazkodik a kamera."
+
+#. CameraAttributes.exposure_multiplier
+#: doc/classes/CameraAttributes.xml
+msgid "Multiplier for the exposure amount. A higher value results in a brighter image."
+msgstr "Az expozíció szorzója. Nagyobb értéknél világosabb a kép."
+
+#. CameraAttributes.exposure_sensitivity
+#: doc/classes/CameraAttributes.xml
+msgid "Sensitivity of camera sensors, measured in ISO. A higher sensitivity results in a brighter image.\nIf [member auto_exposure_enabled] is [code]true[/code], this can be used as a method of exposure compensation, doubling the value will increase the exposure value (measured in EV100) by 1 stop.\n[b]Note:[/b] Only available when [member ProjectSettings.rendering/lights_and_shadows/use_physical_light_units] is enabled."
+msgstr "A kamera érzékelőjének ISO-ban megadott érzékenysége. Nagyobb érzékenységnél világosabb a kép.\nHa a [member auto_exposure_enabled] értéke [code]true[/code], az érték expozíciókompenzációra használható. Megkétszerezése egy fényértékkel növeli az EV100-ban mért expozíciós értéket.\n[b]Megjegyzés:[/b] Csak akkor érhető el, ha a [member ProjectSettings.rendering/lights_and_shadows/use_physical_light_units] engedélyezve van."
+
+#. CameraAttributesPhysical.brief
+#: doc/classes/CameraAttributesPhysical.xml
+msgid "Physically-based camera settings."
+msgstr "Fizikai modellen alapuló kamerabeállítások."
+
+#. CameraAttributesPhysical.get_fov
+#: doc/classes/CameraAttributesPhysical.xml
+msgid "Returns the vertical field of view that corresponds to the [member frustum_focal_length]. This value is calculated internally whenever [member frustum_focal_length] is changed."
+msgstr "Visszaadja a [member frustum_focal_length] értékéhez tartozó függőleges látószöget. A motor a [member frustum_focal_length] minden módosításakor újraszámolja ezt az értéket."
+
+#. CameraAttributesPhysical.exposure_aperture
+#: doc/classes/CameraAttributesPhysical.xml
+msgid "Size of the aperture of the camera, measured in f-stops. An f-stop is a unitless ratio between the focal length of the camera and the diameter of the aperture. A high aperture setting will result in a smaller aperture which leads to a dimmer image and sharper focus. A low aperture results in a wide aperture which lets in more light resulting in a brighter, less-focused image. Default is appropriate for outdoors at daytime (i.e. for use with a default [DirectionalLight3D]), for indoor lighting, a value between 2 and 4 is more appropriate.\nOnly available when [member ProjectSettings.rendering/lights_and_shadows/use_physical_light_units] is enabled."
+msgstr "A kamera rekesznyílását jellemző rekeszérték. A rekeszérték a gyújtótávolság és a rekesznyílás átmérőjének mértékegység nélküli hányadosa. Nagyobb értéknél szűkebb a rekesznyílás, így sötétebb a kép és nagyobb a mélységélesség. Kisebb értéknél tágabb a nyílás, így több fény jut be, és kisebb a mélységélesség. Az alapérték nappali kültéri megvilágításhoz illik, például alapbeállítású [DirectionalLight3D] használatakor. Beltérben a 2 és 4 közötti érték megfelelőbb.\nCsak akkor érhető el, ha a [member ProjectSettings.rendering/lights_and_shadows/use_physical_light_units] engedélyezve van."
+
+#. CameraAttributesPhysical.exposure_shutter_speed
+#: doc/classes/CameraAttributesPhysical.xml
+msgid "Time for shutter to open and close, evaluated as [code]1 / shutter_speed[/code] seconds. A higher value will allow less light (leading to a darker image), while a lower value will allow more light (leading to a brighter image).\nOnly available when [member ProjectSettings.rendering/lights_and_shadows/use_physical_light_units] is enabled."
+msgstr "A zár nyitvatartási ideje [code]1 / shutter_speed[/code] másodpercben. Nagyobb értéknél kevesebb fény jut be, ezért sötétebb a kép. Kisebb értéknél több fény jut be, így világosabb a kép.\nCsak akkor érhető el, ha a [member ProjectSettings.rendering/lights_and_shadows/use_physical_light_units] engedélyezve van."
+
+#. CameraAttributesPhysical.frustum_far
+#: doc/classes/CameraAttributesPhysical.xml
+msgid "Override value for [member Camera3D.far]. Used internally when calculating depth of field. When attached to a [Camera3D] as its [member Camera3D.attributes], it will override the [member Camera3D.far] property."
+msgstr "A [member Camera3D.far] felülbírálására szolgáló érték. A motor a mélységélesség kiszámításához használja. Ha ezt az erőforrást egy [Camera3D] [member Camera3D.attributes] tulajdonságához rendeled, felülbírálja annak [member Camera3D.far] értékét."
+
+#. CameraAttributesPhysical.frustum_focus_distance
+#: doc/classes/CameraAttributesPhysical.xml
+msgid "Distance from camera of object that will be in focus, measured in meters. Internally this will be clamped to be at least 1 millimeter larger than [member frustum_focal_length]."
+msgstr "A kamerától mért távolság méterben, amelynél a tárgyak élesen látszanak. A motor úgy korlátozza, hogy legalább egy milliméterrel nagyobb legyen a [member frustum_focal_length] értékénél."
+
+#. CameraAttributesPhysical.frustum_near
+#: doc/classes/CameraAttributesPhysical.xml
+msgid "Override value for [member Camera3D.near]. Used internally when calculating depth of field. When attached to a [Camera3D] as its [member Camera3D.attributes], it will override the [member Camera3D.near] property."
+msgstr "A [member Camera3D.near] felülbírálására szolgáló érték. A motor a mélységélesség kiszámításához használja. Ha ezt az erőforrást egy [Camera3D] [member Camera3D.attributes] tulajdonságához rendeled, felülbírálja annak [member Camera3D.near] értékét."
+
+#. CameraAttributesPractical.brief
+#: doc/classes/CameraAttributesPractical.xml
+msgid "Camera settings in an easy to use format."
+msgstr "Könnyen használható kamerabeállítások."
+
+#. CameraAttributesPractical.description
+#: doc/classes/CameraAttributesPractical.xml
+msgid "Controls camera-specific attributes such as auto-exposure, depth of field, and exposure override.\nWhen used in a [WorldEnvironment] it provides default settings for exposure, auto-exposure, and depth of field that will be used by all cameras without their own [CameraAttributes], including the editor camera. When used in a [Camera3D] it will override any [CameraAttributes] set in the [WorldEnvironment]. When used in [VoxelGI] or [LightmapGI], only the exposure settings will be used.\n[b]Note:[/b] Depth of field blur is only supported in the Forward+ and Mobile rendering methods, not Compatibility.\n[b]Note:[/b] Auto-exposure is only supported in the Forward+ rendering method, not Mobile or Compatibility."
+msgstr "A kamera saját jellemzőit, például az automatikus expozíciót, a mélységélességet és az expozíció felülbírálását szabályozza.\nA [WorldEnvironment] csomóponthoz rendelve alapértelmezett expozíciós, automatikus expozíciós és mélységélességi beállításokat ad minden olyan kamerának, amelyhez nincs saját [CameraAttributes] rendelve. Ez a szerkesztő kamerájára is vonatkozik. A [Camera3D] csomóponthoz rendelve felülbírálja a [WorldEnvironment] [CameraAttributes] beállításait. A [VoxelGI] vagy a [LightmapGI] csak az expozíciós beállításokat használja.\n[b]Megjegyzés:[/b] A mélységélességi elmosás a Forward+ és a Mobile renderelési módokban támogatott. A Compatibility módban nem érhető el.\n[b]Megjegyzés:[/b] Az automatikus expozíció csak a Forward+ renderelési módban támogatott."
+
+#. CameraAttributesPractical.dof_blur_amount
+#: doc/classes/CameraAttributesPractical.xml
+msgid "Sets the maximum amount of blur. When using physically-based blur amounts, will instead act as a multiplier. High values lead to an increased amount of blurriness, but can be much more expensive to calculate. It is best to keep this as low as possible for a given art style."
+msgstr "Az elmosás legnagyobb mértéke. Fizikai modellen alapuló elmosásnál szorzóként működik. Nagyobb értéknél erősebb az elmosás, de a számítás lényegesen több erőforrást igényelhet. Érdemes a látványhoz még elegendő legkisebb értéket használni."
+
+#. CameraAttributesPractical.dof_blur_far_distance
+#: doc/classes/CameraAttributesPractical.xml
+msgid "Objects further from the [Camera3D] by this amount will be blurred by the depth of field effect. Measured in meters."
+msgstr "A [Camera3D] kamerától ennél távolabb lévő objektumokat elmossa a mélységélességi hatás. Méterben értendő."
+
+#. CameraAttributesPractical.dof_blur_far_enabled
+#: doc/classes/CameraAttributesPractical.xml
+msgid "Enables depth of field blur for objects further than [member dof_blur_far_distance]. Strength of blur is controlled by [member dof_blur_amount] and modulated by [member dof_blur_far_transition].\n[b]Note:[/b] Depth of field blur is only supported in the Forward+ and Mobile rendering methods, not Compatibility.\n[b]Note:[/b] Depth of field blur is not supported on viewports that have a transparent background (where [member Viewport.transparent_bg] is [code]true[/code])."
+msgstr "Bekapcsolja a mélységélességi elmosást a [member dof_blur_far_distance] értékénél távolabbi objektumokra. Az elmosás erősségét a [member dof_blur_amount] adja meg, és a [member dof_blur_far_transition] szabályozza az átmenetét.\n[b]Megjegyzés:[/b] A mélységélességi elmosás a Forward+ és a Mobile renderelési módokban támogatott. A Compatibility módban nem érhető el.\n[b]Megjegyzés:[/b] Átlátszó hátterű nézetablakban nem támogatott a mélységélességi elmosás, vagyis ha a [member Viewport.transparent_bg] értéke [code]true[/code]."
+
+#. CameraAttributesPractical.dof_blur_far_transition
+#: doc/classes/CameraAttributesPractical.xml
+msgid "When positive, distance over which (starting from [member dof_blur_far_distance]) blur effect will scale from 0 to [member dof_blur_amount]. When negative, uses physically-based scaling so depth of field effect will scale from 0 at [member dof_blur_far_distance] and will increase in a physically accurate way as objects get further from the [Camera3D]."
+msgstr "Pozitív értéknél ez az a távolság, amelyen a [member dof_blur_far_distance] értékétől kifelé haladva az elmosás nulláról a [member dof_blur_amount] értékére nő. Negatív értéknél az elmosás fizikailag megalapozott módon nő a [member dof_blur_far_distance] helyén mért nulláról, ahogy az objektumok távolodnak a [Camera3D] kamerától."
+
+#. CameraAttributesPractical.dof_blur_near_distance
+#: doc/classes/CameraAttributesPractical.xml
+msgid "Objects closer from the [Camera3D] by this amount will be blurred by the depth of field effect. Measured in meters."
+msgstr "A [Camera3D] kamerához ennél közelebb lévő objektumokat elmossa a mélységélességi hatás. Méterben értendő."
+
+#. CameraAttributesPractical.dof_blur_near_enabled
+#: doc/classes/CameraAttributesPractical.xml
+msgid "Enables depth of field blur for objects closer than [member dof_blur_near_distance]. Strength of blur is controlled by [member dof_blur_amount] and modulated by [member dof_blur_near_transition].\n[b]Note:[/b] Depth of field blur is only supported in the Forward+ and Mobile rendering methods, not Compatibility.\n[b]Note:[/b] Depth of field blur is not supported on viewports that have a transparent background (where [member Viewport.transparent_bg] is [code]true[/code])."
+msgstr "Bekapcsolja a mélységélességi elmosást a [member dof_blur_near_distance] értékénél közelebbi objektumokra. Az elmosás erősségét a [member dof_blur_amount] adja meg, és a [member dof_blur_near_transition] szabályozza az átmenetét.\n[b]Megjegyzés:[/b] A mélységélességi elmosás a Forward+ és a Mobile renderelési módokban támogatott. A Compatibility módban nem érhető el.\n[b]Megjegyzés:[/b] Átlátszó hátterű nézetablakban nem támogatott a mélységélességi elmosás, vagyis ha a [member Viewport.transparent_bg] értéke [code]true[/code]."
+
+#. FogMaterial.brief
+#: doc/classes/FogMaterial.xml
+msgid "A material that controls how volumetric fog is rendered, to be assigned to a [FogVolume]."
+msgstr "A térfogati köd renderelését szabályozó anyag, amely egy [FogVolume] csomóponthoz rendelhető."
+
+#. FogMaterial.description
+#: doc/classes/FogMaterial.xml
+msgid "A [Material] resource that can be used by [FogVolume]s to draw volumetric effects.\nIf you need more advanced effects, use a custom [url=$DOCS_URL/tutorials/shaders/shader_reference/fog_shader.html]fog shader[/url]."
+msgstr "A [FogVolume] csomópontok ezzel a [Material] erőforrással jeleníthetnek meg térfogati hatásokat.\nÖsszetettebb hatásokhoz használj egyéni [url=$DOCS_URL/tutorials/shaders/shader_reference/fog_shader.html]ködárnyalót[/url]."
+
+#. FogMaterial.albedo
+#: doc/classes/FogMaterial.xml
+msgid "The single-scattering [Color] of the [FogVolume]. Internally, [member albedo] is converted into single-scattering, which is additively blended with other [FogVolume]s and the [member Environment.volumetric_fog_albedo]."
+msgstr "A [FogVolume] egyszeres fényszórásának [Color] értéke. A motor az [member albedo] értékét egyszeres szórási hozzájárulássá alakítja, majd összeadja a többi [FogVolume] hozzájárulásával és az [member Environment.volumetric_fog_albedo] hatásával."
+
+#. FogMaterial.density
+#: doc/classes/FogMaterial.xml
+msgid "The density of the [FogVolume]. Denser objects are more opaque, but may suffer from under-sampling artifacts that look like stripes. Negative values can be used to subtract fog from other [FogVolume]s or global volumetric fog.\n[b]Note:[/b] Due to limited precision, [member density] values between [code]-0.001[/code] and [code]0.001[/code] (exclusive) act like [code]0.0[/code]. This does not apply to [member Environment.volumetric_fog_density]."
+msgstr "A [FogVolume] sűrűsége. A sűrűbb köd kevésbé átlátszó, de ritka mintavételezésnél csíkozódhat. Negatív értékkel csökkenthető más [FogVolume] csomópontok vagy a globális térfogati köd sűrűsége.\n[b]Megjegyzés:[/b] A korlátozott pontosság miatt a [code]-0.001[/code] és a [code]0.001[/code] közötti [member density] értékek a határok nélkül úgy viselkednek, mint a [code]0.0[/code]. Ez a [member Environment.volumetric_fog_density] értékére nem vonatkozik."
+
+#. FogMaterial.density_texture
+#: doc/classes/FogMaterial.xml
+msgid "The 3D texture that is used to scale the [member density] of the [FogVolume]. This can be used to vary fog density within the [FogVolume] with any kind of static pattern. For animated effects, consider using a custom [url=$DOCS_URL/tutorials/shaders/shader_reference/fog_shader.html]fog shader[/url]."
+msgstr "A [FogVolume] [member density] értékének skálázására használt 3D textúra. Segítségével a [FogVolume] területén belül tetszőleges állandó mintázattal változtatható a köd sűrűsége. Animált hatásokhoz egyéni [url=$DOCS_URL/tutorials/shaders/shader_reference/fog_shader.html]ködárnyaló[/url] használható."
+
+#. FogMaterial.edge_fade
+#: doc/classes/FogMaterial.xml
+msgid "The hardness of the edges of the [FogVolume]. A higher value will result in softer edges, while a lower value will result in harder edges."
+msgstr "A [FogVolume] széleinek keménységét szabályozza. Nagyobb értéknél lágyabb, kisebb értéknél élesebb a határ."
+
+#. FogMaterial.emission
+#: doc/classes/FogMaterial.xml
+msgid "The [Color] of the light emitted by the [FogVolume]. Emitted light will not cast light or shadows on other objects, but can be useful for modulating the [Color] of the [FogVolume] independently from light sources."
+msgstr "A [FogVolume] által kibocsátott fény [Color] értéke. Ez a fény nem világít meg más objektumokat, és árnyékot sem vet rájuk. Arra használható, hogy a [FogVolume] [Color] értéke a fényforrásoktól függetlenül változtatható legyen."
+
+#. FogMaterial.height_falloff
+#: doc/classes/FogMaterial.xml
+msgid "The rate by which the height-based fog decreases in density as height increases in world space. A high falloff will result in a sharp transition, while a low falloff will result in a smoother transition. A value of [code]0.0[/code] results in uniform-density fog. The height threshold is determined by the height of the associated [FogVolume]."
+msgstr "Megadja, milyen gyorsan csökken a köd sűrűsége a világtérben mért magasság növekedésével. Nagyobb értéknél élesebb, kisebb értéknél fokozatosabb az átmenet. [code]0.0[/code] értéknél a köd sűrűsége egyenletes. A magassági küszöböt a kapcsolódó [FogVolume] magassága határozza meg."
+
+#. FogVolume.brief
+#: doc/classes/FogVolume.xml
+msgid "A region that contributes to the default volumetric fog from the world environment."
+msgstr "Olyan tartomány, amely hozzájárul a világ környezetének alapértelmezett térfogati ködéhez."
+
+#. FogVolume.description
+#: doc/classes/FogVolume.xml
+msgid "[FogVolume]s are used to add localized fog into the global volumetric fog effect. [FogVolume]s can also remove volumetric fog from specific areas if using a [FogMaterial] with a negative [member FogMaterial.density].\nPerformance of [FogVolume]s is directly related to their relative size on the screen and the complexity of their attached [FogMaterial]. It is best to keep [FogVolume]s relatively small and simple where possible.\n[b]Note:[/b] [FogVolume]s only have a visible effect if [member Environment.volumetric_fog_enabled] is [code]true[/code]. If you don't want fog to be globally visible (but only within [FogVolume] nodes), set [member Environment.volumetric_fog_density] to [code]0.0[/code]."
+msgstr "A [FogVolume] csomópontok helyi ködöt adnak a globális térfogati ködhatáshoz. A [FogVolume] bizonyos területekről el is távolíthatja a térfogati ködöt, ha olyan [FogMaterial] anyagot használ, amelynek [member FogMaterial.density] értéke negatív.\nA [FogVolume] csomópont teljesítményköltsége közvetlenül függ attól, mekkora területet fed le a képernyőn, és milyen összetett a hozzá rendelt [FogMaterial]. Lehetőség szerint használj kisebb és egyszerűbb [FogVolume] csomópontokat.\n[b]Megjegyzés:[/b] A [FogVolume] csak akkor látható, ha az [member Environment.volumetric_fog_enabled] értéke [code]true[/code]. Ha csak a [FogVolume] csomópontok belsejében szeretnél ködöt, állítsd az [member Environment.volumetric_fog_density] értékét [code]0.0[/code] értékre."
+
+#. FogVolume.material
+#: doc/classes/FogVolume.xml
+msgid "The [Material] used by the [FogVolume]. Can be either a built-in [FogMaterial] or a custom [ShaderMaterial]."
+msgstr "A [FogVolume] által használt [Material]. Beépített [FogMaterial] vagy egyéni [ShaderMaterial] lehet."
+
+#. FogVolume.shape
+#: doc/classes/FogVolume.xml
+msgid "The shape of the [FogVolume]. This can be set to either [constant RenderingServer.FOG_VOLUME_SHAPE_ELLIPSOID], [constant RenderingServer.FOG_VOLUME_SHAPE_CONE], [constant RenderingServer.FOG_VOLUME_SHAPE_CYLINDER], [constant RenderingServer.FOG_VOLUME_SHAPE_BOX] or [constant RenderingServer.FOG_VOLUME_SHAPE_WORLD]."
+msgstr "A [FogVolume] alakja. Lehetséges értékei: [constant RenderingServer.FOG_VOLUME_SHAPE_ELLIPSOID], [constant RenderingServer.FOG_VOLUME_SHAPE_CONE], [constant RenderingServer.FOG_VOLUME_SHAPE_CYLINDER], [constant RenderingServer.FOG_VOLUME_SHAPE_BOX] és [constant RenderingServer.FOG_VOLUME_SHAPE_WORLD]."
+
+#. FogVolume.size
+#: doc/classes/FogVolume.xml
+msgid "The size of the [FogVolume] when [member shape] is [constant RenderingServer.FOG_VOLUME_SHAPE_ELLIPSOID], [constant RenderingServer.FOG_VOLUME_SHAPE_CONE], [constant RenderingServer.FOG_VOLUME_SHAPE_CYLINDER] or [constant RenderingServer.FOG_VOLUME_SHAPE_BOX].\n[b]Note:[/b] Thin fog volumes may appear to flicker when the camera moves or rotates. This can be alleviated by increasing [member ProjectSettings.rendering/environment/volumetric_fog/volume_depth] (at a performance cost) or by decreasing [member Environment.volumetric_fog_length] (at no performance cost, but at the cost of lower fog range). Alternatively, the [FogVolume] can be made thicker and use a lower density in the [member material].\n[b]Note:[/b] If [member shape] is [constant RenderingServer.FOG_VOLUME_SHAPE_CONE] or [constant RenderingServer.FOG_VOLUME_SHAPE_CYLINDER], the cone/cylinder will be adjusted to fit within the size. Non-uniform scaling of cone/cylinder shapes via the [member size] property is not supported, but you can scale the [FogVolume] node instead."
+msgstr "A [FogVolume] mérete, ha a [member shape] értéke [constant RenderingServer.FOG_VOLUME_SHAPE_ELLIPSOID], [constant RenderingServer.FOG_VOLUME_SHAPE_CONE], [constant RenderingServer.FOG_VOLUME_SHAPE_CYLINDER] vagy [constant RenderingServer.FOG_VOLUME_SHAPE_BOX].\n[b]Megjegyzés:[/b] A vékony ködtérfogatok a kamera mozgásakor vagy forgatásakor villódzhatnak. Ez mérsékelhető a [member ProjectSettings.rendering/environment/volumetric_fog/volume_depth] növelésével (ami rontja a teljesítményt), vagy az [member Environment.volumetric_fog_length] csökkentésével (ami nem rontja a teljesítményt, de csökkenti a köd hatótávolságát). A [FogVolume] vastagabbra is állítható, a [member material] sűrűségének csökkentésével együtt.\n[b]Megjegyzés:[/b] Ha a [member shape] értéke [constant RenderingServer.FOG_VOLUME_SHAPE_CONE] vagy [constant RenderingServer.FOG_VOLUME_SHAPE_CYLINDER], a kúp vagy henger mérete a megadott határokhoz igazodik. A kúp vagy henger tengelyenként eltérő skálázása a [member size] tulajdonsággal nem támogatott. Ehhez magát a [FogVolume] csomópontot skálázd."
+
+#. Sky.brief
+#: doc/classes/Sky.xml
+msgid "Defines a 3D environment's background by using a [Material]."
+msgstr "A 3D környezet hátterét határozza meg egy [Material] segítségével."
+
+#. Sky.description
+#: doc/classes/Sky.xml
+msgid "The [Sky] class uses a [Material] to render a 3D environment's background and the light it emits by updating the reflection/radiance cubemaps."
+msgstr "A [Sky] osztály egy [Material] segítségével jeleníti meg a 3D környezet hátterét. A háttér által kibocsátott fény megjelenítéséhez frissíti a tükröződési és sugárzási kockatérképeket."
+
+#. Sky.process_mode
+#: doc/classes/Sky.xml
+msgid "The method for generating the radiance map from the sky. The radiance map is a cubemap with increasingly blurry versions of the sky corresponding to different levels of roughness. Radiance maps can be expensive to calculate."
+msgstr "Az égbolt sugárzási térképének előállítási módja. A sugárzási térkép olyan kockatérkép, amely az égbolt egyre elmosódottabb változatait tárolja az eltérő érdességi szintekhez. A számítása jelentős erőforrást igényelhet."
+
+#. Sky.radiance_size
+#: doc/classes/Sky.xml
+msgid "The [Sky]'s radiance map size. The higher the radiance map size, the more detailed the lighting from the [Sky] will be.\n[b]Note:[/b] Some hardware will have trouble with higher radiance sizes, especially [constant RADIANCE_SIZE_512] and above. Only use such high values on high-end hardware."
+msgstr "A [Sky] sugárzási térképének mérete. Nagyobb térképméret mellett részletesebb a [Sky] megvilágítása.\n[b]Megjegyzés:[/b] Egyes hardverek nehezen kezelik a nagyobb méreteket, különösen a [constant RADIANCE_SIZE_512] értéktől felfelé. Ilyen méretet csak nagy teljesítményű hardveren használj."
+
+#. Sky.sky_material
+#: doc/classes/Sky.xml
+msgid "[Material] used to draw the background. Can be [PanoramaSkyMaterial], [ProceduralSkyMaterial], [PhysicalSkyMaterial], or even a [ShaderMaterial] if you want to use your own custom shader."
+msgstr "A háttér megrajzolásához használt [Material]. Lehet [PanoramaSkyMaterial], [ProceduralSkyMaterial], [PhysicalSkyMaterial], vagy saját árnyaló használatához akár [ShaderMaterial] is."
+
+#. Sky.RADIANCE_SIZE_32
+#: doc/classes/Sky.xml
+msgid "Radiance texture size is 32×32 pixels."
+msgstr "A sugárzási textúra mérete 32 × 32 képpont."
+
+#. Sky.RADIANCE_SIZE_64
+#: doc/classes/Sky.xml
+msgid "Radiance texture size is 64×64 pixels."
+msgstr "A sugárzási textúra mérete 64 × 64 képpont."
+
+#. Sky.RADIANCE_SIZE_128
+#: doc/classes/Sky.xml
+msgid "Radiance texture size is 128×128 pixels."
+msgstr "A sugárzási textúra mérete 128 × 128 képpont."
+
+#. Sky.RADIANCE_SIZE_256
+#: doc/classes/Sky.xml
+msgid "Radiance texture size is 256×256 pixels."
+msgstr "A sugárzási textúra mérete 256 × 256 képpont."
+
+#. Sky.RADIANCE_SIZE_512
+#: doc/classes/Sky.xml
+msgid "Radiance texture size is 512×512 pixels."
+msgstr "A sugárzási textúra mérete 512 × 512 képpont."
+
+#. Sky.RADIANCE_SIZE_1024
+#: doc/classes/Sky.xml
+msgid "Radiance texture size is 1024×1024 pixels."
+msgstr "A sugárzási textúra mérete 1024 × 1024 képpont."
+
+#. Sky.RADIANCE_SIZE_2048
+#: doc/classes/Sky.xml
+msgid "Radiance texture size is 2048×2048 pixels."
+msgstr "A sugárzási textúra mérete 2048 × 2048 képpont."
+
+#. Sky.RADIANCE_SIZE_MAX
+#: doc/classes/Sky.xml
+msgid "Represents the size of the [enum RadianceSize] enum."
+msgstr "A [enum RadianceSize] felsorolás méretét jelöli."
+
+#. Sky.PROCESS_MODE_AUTOMATIC
+#: doc/classes/Sky.xml
+msgid "Automatically selects the appropriate process mode based on your sky shader. If your shader uses [code]TIME[/code] or [code]POSITION[/code], this will use [constant PROCESS_MODE_REALTIME]. If your shader uses any of the [code]LIGHT_*[/code] variables or any custom uniforms, this uses [constant PROCESS_MODE_INCREMENTAL]. Otherwise, this defaults to [constant PROCESS_MODE_QUALITY]."
+msgstr "Az égboltárnyaló alapján automatikusan választ feldolgozási módot. Ha az árnyaló használja a [code]TIME[/code] vagy a [code]POSITION[/code] változót, a [constant PROCESS_MODE_REALTIME] módot választja. Ha bármely [code]LIGHT_*[/code] változót vagy egyéni uniform változót használ, a [constant PROCESS_MODE_INCREMENTAL] módot választja. Egyébként a [constant PROCESS_MODE_QUALITY] az alapértelmezés."
+
+#. Sky.PROCESS_MODE_REALTIME
+#: doc/classes/Sky.xml
+msgid "Uses the fast filtering algorithm to process the radiance map. In general this results in lower quality, but substantially faster run times. If you need better quality, but still need to update the sky every frame, consider turning on [member ProjectSettings.rendering/reflections/sky_reflections/fast_filter_high_quality].\n[b]Note:[/b] The fast filtering algorithm is limited to 256×256 cubemaps, so [member radiance_size] must be set to [constant RADIANCE_SIZE_256]. Otherwise, a warning is printed and the overridden radiance size is ignored."
+msgstr "A sugárzási térképet gyors szűrési algoritmussal dolgozza fel. Ezzel általában gyengébb minőség mellett lényegesen rövidebb a futási idő. Ha jobb minőségre van szükséged, de minden képkockában frissítened kell az égboltot, érdemes bekapcsolni a [member ProjectSettings.rendering/reflections/sky_reflections/fast_filter_high_quality] beállítást.\n[b]Megjegyzés:[/b] A gyors szűrési algoritmus csak 256 × 256 méretű kockatérképpel működik, így a [member radiance_size] értékét [constant RADIANCE_SIZE_256] értékre kell állítani. Egyéb esetben figyelmeztetés jelenik meg, és a megadott méretet a motor figyelmen kívül hagyja."
+
+#. World3D.camera_attributes
+#. WorldEnvironment.camera_attributes
+#: doc/classes/World3D.xml doc/classes/WorldEnvironment.xml
+msgid "The default [CameraAttributes] resource to use if none set on the [Camera3D]."
+msgstr "Az alapértelmezett [CameraAttributes] erőforrás, amelyet a [Camera3D] akkor használ, ha saját erőforrás nincs beállítva."
+
+#. WorldEnvironment.brief
+#: doc/classes/WorldEnvironment.xml
+msgid "Default environment properties for the entire scene (post-processing effects, lighting and background settings)."
+msgstr "A teljes jelenet alapértelmezett környezeti beállításai: utófeldolgozási hatások, megvilágítás és háttér."
+
+#. WorldEnvironment.compositor
+#: doc/classes/WorldEnvironment.xml
+msgid "The default [Compositor] resource to use if none set on the [Camera3D]."
+msgstr "Az alapértelmezett [Compositor] erőforrás, amelyet a [Camera3D] akkor használ, ha saját erőforrás nincs beállítva."
+
+#. WorldEnvironment.environment
+#: doc/classes/WorldEnvironment.xml
+msgid "The [Environment] resource used by this [WorldEnvironment], defining the default properties."
+msgstr "A [WorldEnvironment] által használt [Environment] erőforrás, amely az alapértelmezett környezeti tulajdonságokat határozza meg."
+
+#. AreaLight3D.brief
+#: doc/classes/AreaLight3D.xml
+msgid "An area light, such as a neon light tube or a screen."
+msgstr "Felületi fényforrás, például fénycső vagy képernyő."
+
+#. AreaLight3D.area_normalize_energy
+#: doc/classes/AreaLight3D.xml
+msgid "Defines whether the energy is normalized (divided) by the surface area of the light. If set to [code]true[/code], changing the size does not affect the total energy output, and does not dramatically alter the brightness of the scene."
+msgstr "Megadja, hogy a fényforrás energiáját el kell-e osztani a felület nagyságával. Ha az értéke [code]true[/code], a méret változása nem módosítja a teljes leadott energiát, így a jelenet fényerejét sem változtatja meg jelentősen."
+
+#. AreaLight3D.area_range
+#: doc/classes/AreaLight3D.xml
+msgid "The range of the area in meters. This determines the maximum distance from any point on the area at which the area can still emit light."
+msgstr "A felületi fény hatótávolsága méterben, a fényforrás felületének bármely pontjától mérve."
+
+#. AreaLight3D.area_size
+#: doc/classes/AreaLight3D.xml
+msgid "The extents (width and height) of the area in meters."
+msgstr "A fényforrás felületének szélessége és magassága méterben."
+
+#. DirectionalLight3D.brief
+#: doc/classes/DirectionalLight3D.xml
+msgid "Directional light from a distance, as from the Sun."
+msgstr "Távolról érkező irányított fény, például napfény."
+
+#. DirectionalLight3D.description
+#: doc/classes/DirectionalLight3D.xml
+msgid "A directional light is a type of [Light3D] node that models an infinite number of parallel rays covering the entire scene. It is used for lights with strong intensity that are located far away from the scene to model sunlight or moonlight.\nLight is emitted in the -Z direction of the node's global basis. For an unrotated light, this means that the light is emitted forwards, illuminating the front side of a 3D model (see [constant Vector3.FORWARD] and [constant Vector3.MODEL_FRONT]). The position of the node is ignored; only the basis is used to determine light direction."
+msgstr "Az irányított fény egy [Light3D] csomópont, amely a teljes jelenetet végtelen számú párhuzamos sugárral világítja meg. Távoli, erős fényforrások, például a napfény vagy a holdfény modellezésére használható.\nA fény a csomópont globális bázisának negatív Z irányába halad. Elforgatás nélkül a fény előre, egy 3D modell elülső oldala felé halad (lásd: [constant Vector3.FORWARD] és [constant Vector3.MODEL_FRONT]). A fény irányát kizárólag a csomópont bázisa határozza meg, a helyzete nem számít."
+
+#. DirectionalLight3D.directional_shadow_blend_splits
+#: doc/classes/DirectionalLight3D.xml
+msgid "If [code]true[/code], shadow detail is sacrificed in exchange for smoother transitions between splits. Enabling shadow blend splitting also has a moderate performance cost. This is ignored when [member directional_shadow_mode] is [constant SHADOW_ORTHOGONAL]."
+msgstr "Ha az értéke [code]true[/code], az árnyékok részletessége csökken, de az árnyéktartományok határán simább lesz az átmenet. Az összemosás mérsékelt teljesítményköltséggel jár. A beállításnak nincs hatása, ha a [member directional_shadow_mode] értéke [constant SHADOW_ORTHOGONAL]."
+
+#. DirectionalLight3D.directional_shadow_max_distance
+#. RenderingServer.LIGHT_PARAM_SHADOW_MAX_DISTANCE
+#: doc/classes/DirectionalLight3D.xml doc/classes/RenderingServer.xml
+msgid "The maximum distance for shadow splits. Increasing this value will make directional shadows visible from further away, at the cost of lower overall shadow detail and performance (since more objects need to be included in the directional shadow rendering)."
+msgstr "Az árnyéktartományok legnagyobb távolsága. Nagyobb értéknél az irányított fény árnyékai messzebbről is látszanak, viszont összességében kevésbé részletesek, és a számítás több erőforrást igényel, mert több objektumot kell figyelembe venni."
+
+#. DirectionalLight3D.directional_shadow_mode
+#: doc/classes/DirectionalLight3D.xml
+msgid "The light's shadow rendering algorithm."
+msgstr "A fény árnyékainak renderelési algoritmusa."
+
+#. DirectionalLight3D.directional_shadow_pancake_size
+#. RenderingServer.LIGHT_PARAM_SHADOW_PANCAKE_SIZE
+#: doc/classes/DirectionalLight3D.xml doc/classes/RenderingServer.xml
+msgid "Sets the size of the directional shadow pancake. The pancake offsets the start of the shadow's camera frustum to provide a higher effective depth resolution for the shadow. However, a high pancake size can cause artifacts in the shadows of large objects that are close to the edge of the frustum. Reducing the pancake size can help. Setting the size to [code]0[/code] turns off the pancaking effect."
+msgstr "Az irányított árnyékhoz tartozó lapítás mértéke. A lapítás eltolja az árnyékkamera látógúlájának kezdősíkját, így javítja az árnyék mélységi felbontását. Túl nagy értéknél a látógúla széle közelében lévő nagy objektumok árnyékán megjelenítési hibák jelentkezhetnek. Ilyenkor csökkentsd a lapítás mértékét. A [code]0[/code] érték kikapcsolja a lapítást."
+
+#. DirectionalLight3D.directional_shadow_split_1
+#: doc/classes/DirectionalLight3D.xml
+msgid "The distance from camera to shadow split 1. Relative to [member directional_shadow_max_distance]. Only used when [member directional_shadow_mode] is [constant SHADOW_PARALLEL_2_SPLITS] or [constant SHADOW_PARALLEL_4_SPLITS]."
+msgstr "Az első árnyéktartomány határának távolsága a kamerától, a [member directional_shadow_max_distance] arányában. Csak akkor használatos, ha a [member directional_shadow_mode] értéke [constant SHADOW_PARALLEL_2_SPLITS] vagy [constant SHADOW_PARALLEL_4_SPLITS]."
+
+#. DirectionalLight3D.SHADOW_ORTHOGONAL
+#: doc/classes/DirectionalLight3D.xml
+msgid "Renders the entire scene's shadow map from an orthogonal point of view. This is the fastest directional shadow mode. May result in blurrier shadows on close objects."
+msgstr "A teljes jelenet árnyéktérképét merőleges vetítéssel rendereli. Ez a leggyorsabb irányított árnyékmód, de a közeli objektumok árnyéka elmosódottabb lehet."
+
+#. DirectionalLight3D.SHADOW_PARALLEL_2_SPLITS
+#: doc/classes/DirectionalLight3D.xml
+msgid "Splits the view frustum in 2 areas, each with its own shadow map. This shadow mode is a compromise between [constant SHADOW_ORTHOGONAL] and [constant SHADOW_PARALLEL_4_SPLITS] in terms of performance."
+msgstr "A látógúlát két tartományra osztja, mindegyik saját árnyéktérképet kap. A teljesítménye a [constant SHADOW_ORTHOGONAL] és a [constant SHADOW_PARALLEL_4_SPLITS] közé esik."
+
+#. DirectionalLight3D.SHADOW_PARALLEL_4_SPLITS
+#: doc/classes/DirectionalLight3D.xml
+msgid "Splits the view frustum in 4 areas, each with its own shadow map. This is the slowest directional shadow mode."
+msgstr "A látógúlát négy tartományra osztja, mindegyik saját árnyéktérképet kap. Ez a leglassabb irányított árnyékmód."
+
+#. DirectionalLight3D.SKY_MODE_LIGHT_AND_SKY
+#: doc/classes/DirectionalLight3D.xml
+msgid "Makes the light visible in both scene lighting and sky rendering."
+msgstr "A fény a jelenet megvilágításában és az égbolt renderelésekor is látható."
+
+#. DirectionalLight3D.SKY_MODE_LIGHT_ONLY
+#: doc/classes/DirectionalLight3D.xml
+msgid "Makes the light visible in scene lighting only (including direct lighting and global illumination). When using this mode, the light will not be visible from sky shaders."
+msgstr "A fény csak a jelenet megvilágításában látható. Hat a közvetlen és a globális megvilágításra, az égboltárnyalók viszont nem érzékelik."
+
+#. DirectionalLight3D.SKY_MODE_SKY_ONLY
+#: doc/classes/DirectionalLight3D.xml
+msgid "Makes the light visible to sky shaders only. When using this mode the light will not cast light into the scene (either through direct lighting or through global illumination), but can be accessed through sky shaders. This can be useful, for example, when you want to control sky effects without illuminating the scene (during a night cycle, for example)."
+msgstr "A fényt csak az égboltárnyalók érzékelik. Ebben a módban a fény sem közvetlenül, sem a globális megvilágításon keresztül nem világítja meg a jelenetet. Ez például akkor hasznos, ha éjszaka a jelenet megvilágítása nélkül szeretnéd vezérelni az égbolt hatásait."
+
+#. Light3D.brief
+#: doc/classes/Light3D.xml
+msgid "Provides a base class for different kinds of light nodes."
+msgstr "A különféle fényforrás-csomópontok alaposztálya."
+
+#. Light3D.description
+#: doc/classes/Light3D.xml
+msgid "Light3D is the [i]abstract[/i] base class for light nodes. As it can't be instantiated, it shouldn't be used directly. Other types of light nodes inherit from it. Light3D contains the common variables and parameters used for lighting."
+msgstr "A Light3D a fényforrás-csomópontok [i]absztrakt[/i] alaposztálya. Közvetlenül nem példányosítható. A konkrét fényforrástípusok ebből származnak, és innen öröklik a megvilágítás közös változóit és paramétereit."
+
+#. Light3D.get_correlated_color
+#: doc/classes/Light3D.xml
+msgid "Returns the [Color] of an idealized blackbody at the given [member light_temperature]. This value is calculated internally based on the [member light_temperature]. This [Color] is multiplied by [member light_color] before being sent to the [RenderingServer]."
+msgstr "Visszaadja a [member light_temperature] hőmérsékletű ideális feketetest [Color] értékét. A motor ezt a színt a [member light_temperature] alapján számítja ki, majd ezzel a [Color] értékkel megszorozza a [member light_color] színt, mielőtt átadja a [RenderingServer] számára."
+
+#. Light3D.get_param
+#: doc/classes/Light3D.xml
+msgid "Returns the value of the specified [enum Light3D.Param] parameter."
+msgstr "Visszaadja a megadott [enum Light3D.Param] paraméter értékét."
+
+#. Light3D.set_param
+#: doc/classes/Light3D.xml
+msgid "Sets the value of the specified [enum Light3D.Param] parameter."
+msgstr "Beállítja a megadott [enum Light3D.Param] paraméter értékét."
+
+#. Light3D.distance_fade_begin
+#: doc/classes/Light3D.xml
+msgid "The distance from the camera at which the light begins to fade away (in 3D units).\n[b]Note:[/b] Only effective for [OmniLight3D] and [SpotLight3D]."
+msgstr "A kamerától mért távolság, ahol a fény halványodni kezd, a 3D tér egységeiben.\n[b]Megjegyzés:[/b] Csak az [OmniLight3D] és a [SpotLight3D] esetében hatásos."
+
+#. Light3D.distance_fade_enabled
+#: doc/classes/Light3D.xml
+msgid "If [code]true[/code], the light will smoothly fade away when far from the active [Camera3D] starting at [member distance_fade_begin]. This acts as a form of level of detail (LOD). The light will fade out over [member distance_fade_begin] + [member distance_fade_length], after which it will be culled and not sent to the shader at all. Use this to reduce the number of active lights in a scene and thus improve performance.\n[b]Note:[/b] Only effective for [OmniLight3D] and [SpotLight3D]."
+msgstr "Ha az értéke [code]true[/code], a fény az aktív [Camera3D] kamerától mért [member distance_fade_begin] távolságtól fokozatosan halványul. Ez a részletességi szint (LOD) szabályozásának egyik módja. A fény a [member distance_fade_begin] és a [member distance_fade_length] összegénél tűnik el. Ekkor a motor kihagyja, így az árnyalóhoz sem jut el. Használd az aktív fényforrások számának csökkentésére és a teljesítmény javítására.\n[b]Megjegyzés:[/b] Csak az [OmniLight3D] és a [SpotLight3D] esetében hatásos."
+
+#. Light3D.distance_fade_length
+#: doc/classes/Light3D.xml
+msgid "Distance over which the light and its shadow fades. The light's energy and shadow's opacity is progressively reduced over this distance and is completely invisible at the end.\n[b]Note:[/b] Only effective for [OmniLight3D] and [SpotLight3D]."
+msgstr "Az a távolság, amelyen a fény és árnyéka fokozatosan eltűnik. Ezen a szakaszon a fény energiája és az árnyék fedettsége fokozatosan csökken, a végén mindkettő láthatatlanná válik.\n[b]Megjegyzés:[/b] Csak az [OmniLight3D] és a [SpotLight3D] esetében hatásos."
+
+#. Light3D.distance_fade_shadow
+#: doc/classes/Light3D.xml
+msgid "The distance from the camera at which the light's shadow cuts off (in 3D units). Set this to a value lower than [member distance_fade_begin] + [member distance_fade_length] to further improve performance, as shadow rendering is often more expensive than light rendering itself.\n[b]Note:[/b] Only effective for [OmniLight3D] and [SpotLight3D], and only when [member shadow_enabled] is [code]true[/code]."
+msgstr "A kamerától mért távolság, ahol a fény árnyéka megszűnik, a 3D tér egységeiben. A jobb teljesítményhez állítsd a [member distance_fade_begin] és a [member distance_fade_length] összegénél kisebbre, mivel az árnyék renderelése gyakran több erőforrást igényel magánál a megvilágításnál.\n[b]Megjegyzés:[/b] Csak az [OmniLight3D] és a [SpotLight3D] esetében hatásos, ha a [member shadow_enabled] értéke [code]true[/code]."
+
+#. Light3D.editor_only
+#: doc/classes/Light3D.xml
+msgid "If [code]true[/code], the light only appears in the editor and will not be visible at runtime. If [code]true[/code], the light will never be baked in [LightmapGI] regardless of its [member light_bake_mode]."
+msgstr "Ha az értéke [code]true[/code], a fény csak a szerkesztőben látható, futás közben nem jelenik meg. [code]true[/code] esetén a fény a [member light_bake_mode] értékétől függetlenül nem kerül bele a [LightmapGI] által előre kiszámított megvilágításba."
+
+#. Light3D.light_bake_mode
+#: doc/classes/Light3D.xml
+msgid "The light's bake mode. This will affect the global illumination techniques that have an effect on the light's rendering.\n[b]Note:[/b] Meshes' global illumination mode will also affect the global illumination rendering. See [member GeometryInstance3D.gi_mode]."
+msgstr "A fény előzetes kiszámítási módja. Ez befolyásolja, mely globális megvilágítási eljárások veszik figyelembe a fényt.\n[b]Megjegyzés:[/b] A hálók globális megvilágítási módja szintén hat a globális megvilágítás renderelésére. Lásd: [member GeometryInstance3D.gi_mode]."
+
+#. Light3D.light_color
+#: doc/classes/Light3D.xml
+msgid "The light's color in nonlinear sRGB encoding. An [i]overbright[/i] color can be used to achieve a result equivalent to increasing the light's [member light_energy]."
+msgstr "A fény színe nemlineáris sRGB kódolással. [i]Túlfényes[/i] színnel ugyanaz a hatás érhető el, mint a [member light_energy] növelésével."
+
+#. Light3D.light_cull_mask
+#: doc/classes/Light3D.xml
+msgid "The light will affect objects in the selected layers.\n[b]Note:[/b] The light cull mask is ignored by [VoxelGI], SDFGI, [LightmapGI], and volumetric fog. These will always render lights in a way that ignores the cull mask. See also [member VisualInstance3D.layers]."
+msgstr "A fény a kiválasztott rétegek objektumaira hat.\n[b]Megjegyzés:[/b] A [VoxelGI], az SDFGI, a [LightmapGI] és a térfogati köd figyelmen kívül hagyja a fény láthatósági maszkját, amikor a fényeket rendereli. Lásd még: [member VisualInstance3D.layers]."
+
+#. Light3D.light_energy
+#: doc/classes/Light3D.xml
+msgid "The light's strength multiplier (this is not a physical unit). For [OmniLight3D] and [SpotLight3D], changing this value will only change the light color's intensity, not the light's radius."
+msgstr "A fény erősségének mértékegység nélküli szorzója. Az [OmniLight3D] és a [SpotLight3D] esetében az érték csak a fény színének intenzitását változtatja meg, a fény hatósugarát nem."
+
+#. Light3D.light_indirect_energy
+#: doc/classes/Light3D.xml
+msgid "Secondary multiplier used with indirect light (light bounces). Used with [VoxelGI] and SDFGI (see [member Environment.sdfgi_enabled]).\n[b]Note:[/b] This property is ignored if [member light_energy] is equal to [code]0.0[/code], as the light won't be present at all in the GI shader."
+msgstr "A közvetett, visszavert fény másodlagos szorzója. A [VoxelGI] és az SDFGI használja (lásd: [member Environment.sdfgi_enabled]).\n[b]Megjegyzés:[/b] Ha a [member light_energy] értéke [code]0.0[/code], a globális megvilágítás árnyalója nem kapja meg a fényt, így ez a tulajdonság hatástalan."
+
+#. Light3D.light_intensity_lux
+#: doc/classes/Light3D.xml
+msgid "Used by [DirectionalLight3D]s when [member ProjectSettings.rendering/lights_and_shadows/use_physical_light_units] is [code]true[/code]. Sets the intensity of the light source measured in Lux. Lux is a measure of luminous flux per unit area, it is equal to one lumen per square meter. Lux is the measure of how much light hits a surface at a given time.\nOn a clear sunny day a surface in direct sunlight may be approximately 100,000 lux, a typical room in a home may be approximately 50 lux, while the moonlit ground may be approximately 0.1 lux."
+msgstr "A [DirectionalLight3D] használja, ha a [member ProjectSettings.rendering/lights_and_shadows/use_physical_light_units] értéke [code]true[/code]. Luxban adja meg a megvilágítást. Egy lux egy lumen négyzetméterenként, vagyis a felületet érő fényáramot fejezi ki területegységenként.\nDerült, napos időben a közvetlen napfénynek kitett felület megvilágítása körülbelül 100 000 lux lehet, egy átlagos szobáé 50 lux, a holdfényes talajé pedig 0,1 lux."
+
+#. Light3D.light_negative
+#: doc/classes/Light3D.xml
+msgid "If [code]true[/code], the light's effect is reversed, darkening areas and casting bright shadows."
+msgstr "Ha az értéke [code]true[/code], a fény hatása megfordul: a megvilágított területek elsötétednek, az árnyékok pedig világosak lesznek."
+
+#. Light3D.light_specular
+#: doc/classes/Light3D.xml
+msgid "The intensity of the specular blob in objects affected by the light. At [code]0[/code], the light becomes a pure diffuse light. When not baking emission, this can be used to avoid unrealistic reflections when placing lights above an emissive surface."
+msgstr "A fény által érintett objektumok tükrös csúcsfényének erőssége. [code]0[/code] értéknél a fény teljesen szórt. Ha a fénykibocsátást nem számítod ki előre, ezzel elkerülhetők a valószerűtlen tükröződések a fénykibocsátó felület fölé helyezett fényforrásoknál."
+
+#. Light3D.light_temperature
+#: doc/classes/Light3D.xml
+msgid "Sets the color temperature of the light source, measured in Kelvin. This is used to calculate a correlated color temperature which tints the [member light_color].\nThe sun on a cloudy day is approximately 6500 Kelvin, on a clear day it is between 5500 to 6000 Kelvin, and on a clear day at sunrise or sunset it ranges to around 1850 Kelvin."
+msgstr "A fényforrás színhőmérséklete kelvinben. Ebből számítja a motor a [member light_color] színt módosító árnyalatot.\nBorult napon a napfény színhőmérséklete nagyjából 6500 kelvin, derült napon 5500 és 6000 kelvin között van, derült időben napkeltekor vagy napnyugtakor pedig körülbelül 1850 kelvinig csökkenhet."
+
+#. Light3D.shadow_bias
+#: doc/classes/Light3D.xml
+msgid "Used to adjust shadow appearance. Too small a value results in self-shadowing (\"shadow acne\"), while too large a value causes shadows to separate from casters (\"peter-panning\"). Adjust as needed."
+msgstr "Az árnyék megjelenésének finomhangolására szolgál. Túl kis értéknél a felület hibásan önmagára vet árnyékot, túl nagy értéknél az árnyék látszólag elválik a vető objektumtól. Szükség szerint igazítsd."
+
+#. Light3D.shadow_blur
+#: doc/classes/Light3D.xml
+msgid "Blurs the edges of the shadow. Can be used to hide pixel artifacts in low-resolution shadow maps. A high value can impact performance, make shadows appear grainy and can cause other unwanted artifacts. Try to keep as near default as possible."
+msgstr "Elmossa az árnyékok széleit. Elfedi az alacsony felbontású árnyéktérképek képponthibáit. Nagy érték lassulást, szemcsés árnyékokat és más megjelenítési hibákat okozhat. Törekedj az alapértékhez közeli beállításra."
+
+#. Light3D.shadow_caster_mask
+#: doc/classes/Light3D.xml
+msgid "The light will only cast shadows using objects in the selected layers."
+msgstr "A fény csak a kiválasztott rétegekben lévő objektumokról vet árnyékot."
+
+#. Light3D.shadow_enabled
+#: doc/classes/Light3D.xml
+msgid "If [code]true[/code], the light will cast real-time shadows. This has a significant performance cost. Only enable shadow rendering when it makes a noticeable difference in the scene's appearance, and consider using [member distance_fade_enabled] to hide the light when far away from the [Camera3D]."
+msgstr "Ha az értéke [code]true[/code], a fény valós időben vet árnyékot. Ez jelentős teljesítményköltséggel jár. Akkor engedélyezd, ha láthatóan javítja a jelenet megjelenését. A [member distance_fade_enabled] engedélyezésével elrejtheted a fényt, amikor messze van a [Camera3D] kamerától."
+
+#. Light3D.shadow_normal_bias
+#: doc/classes/Light3D.xml
+msgid "Offsets the lookup into the shadow map by the object's normal. This can be used to reduce self-shadowing artifacts without using [member shadow_bias]. In practice, this value should be tweaked along with [member shadow_bias] to reduce artifacts as much as possible."
+msgstr "Az objektum normálisa mentén eltolja az árnyéktérkép mintavételi helyét. Ezzel a [member shadow_bias] használata nélkül is csökkenthetők az önárnyékolási hibák. A gyakorlatban érdemes a [member shadow_bias] értékével együtt finomhangolni."
+
+#. Light3D.shadow_opacity
+#: doc/classes/Light3D.xml
+msgid "The opacity to use when rendering the light's shadow map. Values lower than [code]1.0[/code] make the light appear through shadows. This can be used to fake global illumination at a low performance cost."
+msgstr "A fény árnyéktérképének renderelésekor használt fedettség. A [code]1.0[/code] alatti értékeknél a fény részben átlátszik az árnyékon. Ezzel kis teljesítményköltséggel utánozható a globális megvilágítás."
+
+#. Light3D.shadow_reverse_cull_face
+#: doc/classes/Light3D.xml
+msgid "If [code]true[/code], reverses the backface culling of the mesh. This can be useful when you have a flat mesh that has a light behind it. If you need to cast a shadow on both sides of the mesh, set the mesh to use double-sided shadows with [constant GeometryInstance3D.SHADOW_CASTING_SETTING_DOUBLE_SIDED]."
+msgstr "Ha az értéke [code]true[/code], a háló hátoldali lapjai helyett az elülső lapjait hagyja ki. Ez akkor hasznos, ha a fény egy sík háló mögött van. Kétoldali árnyékhoz állítsd a hálót [constant GeometryInstance3D.SHADOW_CASTING_SETTING_DOUBLE_SIDED] módra."
+
+#. Light3D.PARAM_ENERGY
+#: doc/classes/Light3D.xml
+msgid "Constant for accessing [member light_energy]."
+msgstr "A [member light_energy] eléréséhez használt állandó."
+
+#. Light3D.PARAM_INDIRECT_ENERGY
+#: doc/classes/Light3D.xml
+msgid "Constant for accessing [member light_indirect_energy]."
+msgstr "A [member light_indirect_energy] eléréséhez használt állandó."
+
+#. Light3D.PARAM_VOLUMETRIC_FOG_ENERGY
+#: doc/classes/Light3D.xml
+msgid "Constant for accessing [member light_volumetric_fog_energy]."
+msgstr "A [member light_volumetric_fog_energy] eléréséhez használt állandó."
+
+#. Light3D.PARAM_SPECULAR
+#: doc/classes/Light3D.xml
+msgid "Constant for accessing [member light_specular]."
+msgstr "A [member light_specular] eléréséhez használt állandó."
+
+#. Light3D.PARAM_RANGE
+#: doc/classes/Light3D.xml
+msgid "Constant for accessing [member OmniLight3D.omni_range] or [member SpotLight3D.spot_range]."
+msgstr "Az [member OmniLight3D.omni_range] vagy a [member SpotLight3D.spot_range] eléréséhez használt állandó."
+
+#. Light3D.PARAM_SIZE
+#: doc/classes/Light3D.xml
+msgid "Constant for accessing [member light_size]."
+msgstr "A [member light_size] eléréséhez használt állandó."
+
+#. Light3D.PARAM_ATTENUATION
+#: doc/classes/Light3D.xml
+msgid "Constant for accessing [member OmniLight3D.omni_attenuation] or [member SpotLight3D.spot_attenuation]."
+msgstr "Az [member OmniLight3D.omni_attenuation] vagy a [member SpotLight3D.spot_attenuation] eléréséhez használt állandó."
+
+#. Light3D.PARAM_SPOT_ANGLE
+#: doc/classes/Light3D.xml
+msgid "Constant for accessing [member SpotLight3D.spot_angle]."
+msgstr "A [member SpotLight3D.spot_angle] eléréséhez használt állandó."
+
+#. Light3D.PARAM_SPOT_ATTENUATION
+#: doc/classes/Light3D.xml
+msgid "Constant for accessing [member SpotLight3D.spot_angle_attenuation]."
+msgstr "A [member SpotLight3D.spot_angle_attenuation] eléréséhez használt állandó."
+
+#. Light3D.PARAM_SHADOW_MAX_DISTANCE
+#: doc/classes/Light3D.xml
+msgid "Constant for accessing [member DirectionalLight3D.directional_shadow_max_distance]."
+msgstr "A [member DirectionalLight3D.directional_shadow_max_distance] eléréséhez használt állandó."
+
+#. Light3D.PARAM_SHADOW_SPLIT_1_OFFSET
+#: doc/classes/Light3D.xml
+msgid "Constant for accessing [member DirectionalLight3D.directional_shadow_split_1]."
+msgstr "A [member DirectionalLight3D.directional_shadow_split_1] eléréséhez használt állandó."
+
+#. Light3D.PARAM_SHADOW_SPLIT_2_OFFSET
+#: doc/classes/Light3D.xml
+msgid "Constant for accessing [member DirectionalLight3D.directional_shadow_split_2]."
+msgstr "A [member DirectionalLight3D.directional_shadow_split_2] eléréséhez használt állandó."
+
+#. Light3D.PARAM_SHADOW_SPLIT_3_OFFSET
+#: doc/classes/Light3D.xml
+msgid "Constant for accessing [member DirectionalLight3D.directional_shadow_split_3]."
+msgstr "A [member DirectionalLight3D.directional_shadow_split_3] eléréséhez használt állandó."
+
+#. Light3D.PARAM_SHADOW_FADE_START
+#: doc/classes/Light3D.xml
+msgid "Constant for accessing [member DirectionalLight3D.directional_shadow_fade_start]."
+msgstr "A [member DirectionalLight3D.directional_shadow_fade_start] eléréséhez használt állandó."
+
+#. Light3D.PARAM_SHADOW_NORMAL_BIAS
+#: doc/classes/Light3D.xml
+msgid "Constant for accessing [member shadow_normal_bias]."
+msgstr "A [member shadow_normal_bias] eléréséhez használt állandó."
+
+#. Light3D.PARAM_SHADOW_BIAS
+#: doc/classes/Light3D.xml
+msgid "Constant for accessing [member shadow_bias]."
+msgstr "A [member shadow_bias] eléréséhez használt állandó."
+
+#. Light3D.PARAM_SHADOW_PANCAKE_SIZE
+#: doc/classes/Light3D.xml
+msgid "Constant for accessing [member DirectionalLight3D.directional_shadow_pancake_size]."
+msgstr "A [member DirectionalLight3D.directional_shadow_pancake_size] eléréséhez használt állandó."
+
+#. Light3D.PARAM_SHADOW_OPACITY
+#: doc/classes/Light3D.xml
+msgid "Constant for accessing [member shadow_opacity]."
+msgstr "A [member shadow_opacity] eléréséhez használt állandó."
+
+#. Light3D.PARAM_SHADOW_BLUR
+#: doc/classes/Light3D.xml
+msgid "Constant for accessing [member shadow_blur]."
+msgstr "A [member shadow_blur] eléréséhez használt állandó."
+
+#. Light3D.PARAM_TRANSMITTANCE_BIAS
+#: doc/classes/Light3D.xml
+msgid "Constant for accessing [member shadow_transmittance_bias]."
+msgstr "A [member shadow_transmittance_bias] eléréséhez használt állandó."
+
+#. Light3D.PARAM_INTENSITY
+#: doc/classes/Light3D.xml
+msgid "Constant for accessing [member light_intensity_lumens] and [member light_intensity_lux]. Only used when [member ProjectSettings.rendering/lights_and_shadows/use_physical_light_units] is [code]true[/code]."
+msgstr "A [member light_intensity_lumens] és a [member light_intensity_lux] eléréséhez használt állandó. Csak akkor használatos, ha a [member ProjectSettings.rendering/lights_and_shadows/use_physical_light_units] értéke [code]true[/code]."
+
+#. OmniLight3D.brief
+#: doc/classes/OmniLight3D.xml
+msgid "Omnidirectional light, such as a light bulb or a candle."
+msgstr "Minden irányba sugárzó fényforrás, például izzó vagy gyertya."
+
+#. OmniLight3D.omni_range
+#: doc/classes/OmniLight3D.xml
+msgid "The light's radius. Note that the effectively lit area may appear to be smaller depending on the [member omni_attenuation] in use. No matter the [member omni_attenuation] in use, the light will never reach anything outside this radius.\n[b]Note:[/b] [member omni_range] is not affected by [member Node3D.scale] (the light's scale or its parent's scale)."
+msgstr "A fény hatósugara. A ténylegesen megvilágított terület kisebbnek látszhat az [member omni_attenuation] értékétől függően. A fény az [member omni_attenuation] értékétől függetlenül nem ér el a megadott sugáron túlra.\n[b]Megjegyzés:[/b] Az [member omni_range] értékét nem befolyásolja a [member Node3D.scale], vagyis sem a fényforrás, sem a szülő méretezése."
+
+#. OmniLight3D.SHADOW_DUAL_PARABOLOID
+#: doc/classes/OmniLight3D.xml
+msgid "Shadows are rendered to a dual-paraboloid texture. Faster than [constant SHADOW_CUBE], but lower-quality."
+msgstr "Az árnyékok kettős paraboloidtextúrába kerülnek. Gyorsabb eljárás a [constant SHADOW_CUBE] módnál, de gyengébb minőségű."
+
+#. OmniLight3D.SHADOW_CUBE
+#: doc/classes/OmniLight3D.xml
+msgid "Shadows are rendered to a cubemap. Slower than [constant SHADOW_DUAL_PARABOLOID], but higher-quality."
+msgstr "Az árnyékok kockatérképbe kerülnek. Lassabb eljárás a [constant SHADOW_DUAL_PARABOLOID] módnál, de jobb minőségű."
+
+#. PanoramaSkyMaterial.brief
+#: doc/classes/PanoramaSkyMaterial.xml
+msgid "A material that provides a special texture to a [Sky], usually an HDR panorama."
+msgstr "A [Sky] számára speciális textúrát, rendszerint HDR-panorámát biztosító anyag."
+
+#. PanoramaSkyMaterial.description
+#: doc/classes/PanoramaSkyMaterial.xml
+msgid "A resource referenced in a [Sky] that is used to draw a background. [PanoramaSkyMaterial] functions similar to skyboxes in other engines, except it uses an equirectangular sky map instead of a [Cubemap].\nUsing an HDR panorama is strongly recommended for accurate, high-quality reflections. Godot supports the Radiance HDR ([code].hdr[/code]) and OpenEXR ([code].exr[/code]) image formats for this purpose.\nYou can use [url=https://danilw.github.io/GLSL-howto/cubemap_to_panorama_js/cubemap_to_panorama.html]this tool[/url] to convert a cubemap to an equirectangular sky map."
+msgstr "A [Sky] által a háttér rajzolásához használt erőforrás. A [PanoramaSkyMaterial] működése más motorok égboltdobozaihoz hasonló, de [Cubemap] helyett egyenlő távolságú hengervetületű égbolttérképet használ.\nA pontos, jó minőségű tükröződésekhez ajánlott HDR-panorámát használni. Erre a Godot a Radiance HDR ([code].hdr[/code]) és az OpenEXR ([code].exr[/code]) képformátumot támogatja.\n[url=https://danilw.github.io/GLSL-howto/cubemap_to_panorama_js/cubemap_to_panorama.html]Ezzel az eszközzel[/url] a kockatérkép egyenlő távolságú hengervetületű égbolttérképpé alakítható."
+
+#. PanoramaSkyMaterial.energy_multiplier
+#. PhysicalSkyMaterial.energy_multiplier
+#. ProceduralSkyMaterial.energy_multiplier
+#: doc/classes/PanoramaSkyMaterial.xml doc/classes/PhysicalSkyMaterial.xml doc/classes/ProceduralSkyMaterial.xml
+msgid "The sky's overall brightness multiplier. Higher values result in a brighter sky."
+msgstr "Az égbolt teljes fényerejének szorzója. Nagyobb értéknél világosabb az égbolt."
+
+#. PanoramaSkyMaterial.filter
+#: doc/classes/PanoramaSkyMaterial.xml
+msgid "A boolean value to determine if the background texture should be filtered or not."
+msgstr "Logikai érték, amely a háttértextúra szűrését kapcsolja."
+
+#. PanoramaSkyMaterial.panorama
+#: doc/classes/PanoramaSkyMaterial.xml
+msgid "[Texture2D] to be applied to the [PanoramaSkyMaterial]."
+msgstr "A [PanoramaSkyMaterial] által használt [Texture2D] textúra."
+
+#. PhysicalSkyMaterial.brief
+#: doc/classes/PhysicalSkyMaterial.xml
+msgid "A material that defines a sky for a [Sky] resource by a set of physical properties."
+msgstr "Fizikai tulajdonságok alapján égboltot előállító anyag a [Sky] erőforráshoz."
+
+#. PhysicalSkyMaterial.description
+#: doc/classes/PhysicalSkyMaterial.xml
+msgid "The [PhysicalSkyMaterial] uses the Preetham analytic daylight model to draw a sky based on physical properties. This results in a substantially more realistic sky than the [ProceduralSkyMaterial], but it is slightly slower and less flexible.\nThe [PhysicalSkyMaterial] only supports one sun. The color, energy, and direction of the sun are taken from the first [DirectionalLight3D] in the scene tree."
+msgstr "A [PhysicalSkyMaterial] a Preetham-féle analitikus nappali megvilágítási modellt használja az égbolt megrajzolásához. A [ProceduralSkyMaterial] anyagnál lényegesen valósághűbb égboltot ad, de valamivel lassabb és kevésbé rugalmas.\nA [PhysicalSkyMaterial] csak egy Napot támogat. A Nap színét, energiáját és irányát a jelenetfa első [DirectionalLight3D] csomópontja adja meg."
+
+#. PhysicalSkyMaterial.ground_color
+#: doc/classes/PhysicalSkyMaterial.xml
+msgid "Modulates the [Color] on the bottom half of the sky to represent the ground."
+msgstr "Az égbolt alsó felének [Color] értékét módosítja a talaj megjelenítéséhez."
+
+#. PhysicalSkyMaterial.mie_coefficient
+#: doc/classes/PhysicalSkyMaterial.xml
+msgid "Controls the strength of [url=https://en.wikipedia.org/wiki/Mie_scattering]Mie scattering[/url] for the sky. Mie scattering results from light colliding with larger particles (like water). On earth, Mie scattering results in a whitish color around the sun and horizon."
+msgstr "Az égbolt [url=https://en.wikipedia.org/wiki/Mie_scattering]Mie-szórásának[/url] erősségét szabályozza. Ez a fényszórás akkor jön létre, amikor a fény nagyobb részecskékkel, például vízcseppekkel találkozik. A Földön emiatt fehéres az ég a Nap és a horizont körül."
+
+#. PhysicalSkyMaterial.mie_color
+#: doc/classes/PhysicalSkyMaterial.xml
+msgid "Controls the [Color] of the [url=https://en.wikipedia.org/wiki/Mie_scattering]Mie scattering[/url] effect. While not physically accurate, this allows for the creation of alien-looking planets."
+msgstr "A [url=https://en.wikipedia.org/wiki/Mie_scattering]Mie-szórás[/url] [Color] értékét szabályozza. A szín változtatásával a fizikai modelltől eltérő, idegen bolygókra emlékeztető égbolt hozható létre."
+
+#. PhysicalSkyMaterial.mie_eccentricity
+#: doc/classes/PhysicalSkyMaterial.xml
+msgid "Controls the direction of the [url=https://en.wikipedia.org/wiki/Mie_scattering]Mie scattering[/url]. A value of [code]1[/code] means that when light hits a particle it's passing through straight forward. A value of [code]-1[/code] means that all light is scatter backwards."
+msgstr "A [url=https://en.wikipedia.org/wiki/Mie_scattering]Mie-szórás[/url] irányát szabályozza. [code]1[/code] esetén a részecskére érkező fény egyenesen továbbhalad. [code]-1[/code] esetén az összes fény visszafelé szóródik."
+
+#. PhysicalSkyMaterial.night_sky
+#: doc/classes/PhysicalSkyMaterial.xml
+msgid "[Texture2D] for the night sky. This is added to the sky, so if it is bright enough, it may be visible during the day."
+msgstr "Az éjszakai égbolt [Texture2D] textúrája. A motor a színét hozzáadja az égbolt színéhez, így elég nagy fényerőnél nappal is látszódhat."
+
+#. PhysicalSkyMaterial.rayleigh_coefficient
+#: doc/classes/PhysicalSkyMaterial.xml
+msgid "Controls the strength of the [url=https://en.wikipedia.org/wiki/Rayleigh_scattering]Rayleigh scattering[/url]. Rayleigh scattering results from light colliding with small particles. It is responsible for the blue color of the sky."
+msgstr "A [url=https://en.wikipedia.org/wiki/Rayleigh_scattering]Rayleigh-szórás[/url] erősségét szabályozza. Akkor lép fel, amikor a fény apró részecskékkel találkozik. Ezért kék az égbolt."
+
+#. PhysicalSkyMaterial.rayleigh_color
+#: doc/classes/PhysicalSkyMaterial.xml
+msgid "Controls the [Color] of the [url=https://en.wikipedia.org/wiki/Rayleigh_scattering]Rayleigh scattering[/url]. While not physically accurate, this allows for the creation of alien-looking planets. For example, setting this to a red [Color] results in a Mars-looking atmosphere with a corresponding blue sunset."
+msgstr "A [url=https://en.wikipedia.org/wiki/Rayleigh_scattering]Rayleigh-szórás[/url] [Color] értékét szabályozza. A fizikai modelltől eltérő értékkel idegen bolygókra emlékeztető égbolt hozható létre. A vörös [Color] például a Marsra emlékeztető légkört és kék napnyugtát eredményez."
+
+#. PhysicalSkyMaterial.sun_disk_scale
+#: doc/classes/PhysicalSkyMaterial.xml
+msgid "Sets the size of the sun disk. Default value is based on Sol's perceived size from Earth."
+msgstr "A napkorong méretét állítja be. Az alapérték a Nap Földről látható méretén alapul."
+
+#. PhysicalSkyMaterial.turbidity
+#: doc/classes/PhysicalSkyMaterial.xml
+msgid "Sets the thickness of the atmosphere. High turbidity creates a foggy-looking atmosphere, while a low turbidity results in a clearer atmosphere."
+msgstr "A légkör zavarosságát állítja be. Nagyobb értéknél ködösebb, kisebb értéknél tisztább a légkör."
+
+#. PhysicalSkyMaterial.use_debanding
+#. ProceduralSkyMaterial.use_debanding
+#: doc/classes/PhysicalSkyMaterial.xml doc/classes/ProceduralSkyMaterial.xml
+msgid "If [code]true[/code], enables debanding. Debanding adds a small amount of noise which helps reduce banding that appears from the smooth changes in color in the sky."
+msgstr "Ha az értéke [code]true[/code], bekapcsolja a színsávok csökkentését. A motor kevés zajt ad a képhez, hogy az égbolt finom színátmenetein kevésbé látszódjanak a sávok."
+
+#. ProceduralSkyMaterial.brief
+#: doc/classes/ProceduralSkyMaterial.xml
+msgid "A material that defines a simple sky for a [Sky] resource."
+msgstr "Egyszerű égboltot létrehozó anyag a [Sky] erőforráshoz."
+
+#. ProceduralSkyMaterial.ground_bottom_color
+#: doc/classes/ProceduralSkyMaterial.xml
+msgid "Color of the ground at the bottom. Blends with [member ground_horizon_color]."
+msgstr "A talaj színe az alsó részen. Átmenetet képez a [member ground_horizon_color] értékével."
+
+#. ProceduralSkyMaterial.ground_curve
+#: doc/classes/ProceduralSkyMaterial.xml
+msgid "How quickly the [member ground_horizon_color] fades into the [member ground_bottom_color]."
+msgstr "A [member ground_horizon_color] és a [member ground_bottom_color] közötti átmenet gyorsasága."
+
+#. ProceduralSkyMaterial.ground_energy_multiplier
+#: doc/classes/ProceduralSkyMaterial.xml
+msgid "Multiplier for ground color. A higher value will make the ground brighter."
+msgstr "A talajszín szorzója. Nagyobb értéknél világosabb a talaj."
+
+#. ProceduralSkyMaterial.ground_horizon_color
+#: doc/classes/ProceduralSkyMaterial.xml
+msgid "Color of the ground at the horizon. Blends with [member ground_bottom_color]."
+msgstr "A talaj színe a látóhatáron. Átmenetet képez a [member ground_bottom_color] értékével."
+
+#. ProceduralSkyMaterial.sky_cover_modulate
+#: doc/classes/ProceduralSkyMaterial.xml
+msgid "The tint to apply to the [member sky_cover] texture. This can be used to change the sky cover's colors or opacity independently of the sky energy, which is useful for day/night or weather transitions. Only effective if a texture is defined in [member sky_cover]."
+msgstr "A [member sky_cover] textúra színárnyalata. Ezzel az égbolt fényerejétől függetlenül módosítható a fedőtextúra színe és fedettsége, ami napszak- vagy időjárás-váltáskor hasznos. Csak akkor érvényes, ha a [member sky_cover] tartalmaz textúrát."
+
+#. ProceduralSkyMaterial.sky_curve
+#: doc/classes/ProceduralSkyMaterial.xml
+msgid "How quickly the [member sky_horizon_color] fades into the [member sky_top_color]."
+msgstr "A [member sky_horizon_color] és a [member sky_top_color] közötti átmenet gyorsasága."
+
+#. ProceduralSkyMaterial.sky_energy_multiplier
+#: doc/classes/ProceduralSkyMaterial.xml
+msgid "Multiplier for sky color. A higher value will make the sky brighter."
+msgstr "Az égbolt színének szorzója. Nagyobb értéknél világosabb az égbolt."
+
+#. ProceduralSkyMaterial.sky_horizon_color
+#: doc/classes/ProceduralSkyMaterial.xml
+msgid "Color of the sky at the horizon. Blends with [member sky_top_color]."
+msgstr "Az égbolt színe a látóhatáron. Átmenetet képez a [member sky_top_color] értékével."
+
+#. ProceduralSkyMaterial.sky_top_color
+#: doc/classes/ProceduralSkyMaterial.xml
+msgid "Color of the sky at the top. Blends with [member sky_horizon_color]."
+msgstr "Az égbolt színe a legfelső ponton. Átmenetet képez a [member sky_horizon_color] értékével."
+
+#. ProceduralSkyMaterial.sun_curve
+#: doc/classes/ProceduralSkyMaterial.xml
+msgid "How quickly the sun fades away between the edge of the sun disk and [member sun_angle_max]."
+msgstr "A Nap fényének halványulási üteme a napkorong széle és a [member sun_angle_max] határa között."
+
+#. SpotLight3D.brief
+#: doc/classes/SpotLight3D.xml
+msgid "A spotlight, such as a reflector spotlight or a lantern."
+msgstr "Kúpos fényforrás, például reflektor vagy lámpás."
+
+#. SpotLight3D.spot_angle
+#: doc/classes/SpotLight3D.xml
+msgid "The spotlight's angle in degrees. This is the angular radius, meaning the angle from the -Z axis, the cone's center, to the edge of the cone. The default angular radius of 45 degrees corresponds to a cone with an angular diameter of 90 degrees.\n[b]Note:[/b] [member spot_angle] is not affected by [member Node3D.scale] (the light's scale or its parent's scale)."
+msgstr "A reflektor nyílásszöge fokban, a kúp középvonala (a negatív Z tengely) és széle között mérve. Az alapértelmezett 45 fokos félnyílásszög 90 fokos teljes nyílásszögnek felel meg.\n[b]Megjegyzés:[/b] A [member spot_angle] értékét nem befolyásolja a [member Node3D.scale], vagyis sem a fényforrás, sem a szülő méretezése."
+
+#. SpotLight3D.spot_angle_attenuation
+#: doc/classes/SpotLight3D.xml
+msgid "The spotlight's [i]angular[/i] attenuation curve. See also [member spot_attenuation]."
+msgstr "A reflektor [i]szög szerinti[/i] csillapítási görbéje. Lásd még: [member spot_attenuation]."
+
+#. SpotLight3D.spot_range
+#: doc/classes/SpotLight3D.xml
+msgid "The maximal range that can be reached by the spotlight. Note that the effectively lit area may appear to be smaller depending on the [member spot_attenuation] in use. No matter the [member spot_attenuation] in use, the light will never reach anything outside this range.\n[b]Note:[/b] [member spot_range] is not affected by [member Node3D.scale] (the light's scale or its parent's scale)."
+msgstr "A reflektor legnagyobb hatótávolsága. A ténylegesen megvilágított terület kisebbnek látszhat a [member spot_attenuation] értékétől függően. A fény a [member spot_attenuation] értékétől függetlenül nem terjed túl a megadott hatótávolságon.\n[b]Megjegyzés:[/b] A [member spot_range] értékét nem befolyásolja a [member Node3D.scale], vagyis sem a fényforrás, sem a szülő méretezése."
+
+#. ArrayMesh.brief
+#: doc/classes/ArrayMesh.xml
+msgid "[Mesh] type that provides utility for constructing a surface from arrays."
+msgstr "[Mesh] típus, amely tömbökből hoz létre felületeket."
+
+#. ArrayMesh.add_blend_shape
+#: doc/classes/ArrayMesh.xml
+msgid "Adds name for a blend shape that will be added with [method add_surface_from_arrays]. Must be called before surface is added."
+msgstr "Hozzáadja egy olyan alakváltozat nevét, amelyet később a [method add_surface_from_arrays] metódussal adsz hozzá. A felület hozzáadása előtt kell meghívni."
+
+#. ArrayMesh.clear_blend_shapes
+#: doc/classes/ArrayMesh.xml
+msgid "Removes all blend shapes from this [ArrayMesh]."
+msgstr "Eltávolítja az összes alakváltozatot ebből az [ArrayMesh] hálóból."
+
+#. ArrayMesh.clear_surfaces
+#: doc/classes/ArrayMesh.xml
+msgid "Removes all surfaces from this [ArrayMesh]."
+msgstr "Eltávolítja az összes felületet ebből az [ArrayMesh] hálóból."
+
+#. ArrayMesh.get_blend_shape_count
+#: doc/classes/ArrayMesh.xml
+msgid "Returns the number of blend shapes that the [ArrayMesh] holds."
+msgstr "Visszaadja az [ArrayMesh] által tárolt alakváltozatok számát."
+
+#. ArrayMesh.get_blend_shape_name
+#. ImporterMesh.get_blend_shape_name
+#: doc/classes/ArrayMesh.xml doc/classes/ImporterMesh.xml
+msgid "Returns the name of the blend shape at this index."
+msgstr "Visszaadja a megadott indexű alakváltozat nevét."
+
+#. ArrayMesh.lightmap_unwrap
+#: doc/classes/ArrayMesh.xml
+msgid "Performs a UV unwrap on the [ArrayMesh] to prepare the mesh for lightmapping."
+msgstr "Kiteríti az [ArrayMesh] UV-koordinátáit a fénytérkép előkészítéséhez."
+
+#. ArrayMesh.regen_normal_maps
+#: doc/classes/ArrayMesh.xml
+msgid "Regenerates tangents for each of the [ArrayMesh]'s surfaces."
+msgstr "Újraszámítja az [ArrayMesh] minden felületének érintővektorait."
+
+#. ArrayMesh.set_blend_shape_name
+#: doc/classes/ArrayMesh.xml
+msgid "Sets the name of the blend shape at this index."
+msgstr "Beállítja a megadott indexű alakváltozat nevét."
+
+#. ArrayMesh.surface_find_by_name
+#: doc/classes/ArrayMesh.xml
+msgid "Returns the index of the first surface with this name held within this [ArrayMesh]. If none are found, -1 is returned."
+msgstr "Visszaadja az [ArrayMesh] hálóban az első megadott nevű felület indexét. Ha nincs ilyen, -1-et ad vissza."
+
+#. ArrayMesh.surface_get_array_index_len
+#: doc/classes/ArrayMesh.xml
+msgid "Returns the length in indices of the index array in the requested surface (see [method add_surface_from_arrays])."
+msgstr "Visszaadja a kért felület indextömbjének elemszámát (lásd: [method add_surface_from_arrays])."
+
+#. ArrayMesh.surface_get_array_len
+#: doc/classes/ArrayMesh.xml
+msgid "Returns the length in vertices of the vertex array in the requested surface (see [method add_surface_from_arrays])."
+msgstr "Visszaadja a kért felület csúcstömbjében lévő csúcsok számát (lásd: [method add_surface_from_arrays])."
+
+#. ArrayMesh.surface_get_format
+#: doc/classes/ArrayMesh.xml
+msgid "Returns the format mask of the requested surface (see [method add_surface_from_arrays])."
+msgstr "Visszaadja a kért felület formátummaszkját (lásd: [method add_surface_from_arrays])."
+
+#. ArrayMesh.surface_get_name
+#. ImporterMesh.get_surface_name
+#: doc/classes/ArrayMesh.xml doc/classes/ImporterMesh.xml
+msgid "Gets the name assigned to this surface."
+msgstr "Lekéri a felülethez rendelt nevet."
+
+#. ArrayMesh.surface_get_primitive_type
+#: doc/classes/ArrayMesh.xml
+msgid "Returns the primitive type of the requested surface (see [method add_surface_from_arrays])."
+msgstr "Visszaadja a kért felület primitívtípusát (lásd: [method add_surface_from_arrays])."
+
+#. ArrayMesh.surface_remove
+#. RenderingServer.mesh_surface_remove
+#: doc/classes/ArrayMesh.xml doc/classes/RenderingServer.xml
+msgid "Removes the surface at the given index from the Mesh, shifting surfaces with higher index down by one."
+msgstr "Eltávolítja a hálóból a megadott indexű felületet. A nagyobb indexű felületek indexe eggyel csökken."
+
+#. ArrayMesh.surface_set_name
+#. ImporterMesh.set_surface_name
+#: doc/classes/ArrayMesh.xml doc/classes/ImporterMesh.xml
+msgid "Sets a name for a given surface."
+msgstr "Beállítja a megadott felület nevét."
+
+#. ArrayMesh.blend_shape_mode
+#: doc/classes/ArrayMesh.xml
+msgid "The blend shape mode."
+msgstr "Az alakváltozatok keverési módja."
+
+#. ArrayMesh.custom_aabb
+#. PrimitiveMesh.custom_aabb
+#: doc/classes/ArrayMesh.xml doc/classes/PrimitiveMesh.xml
+msgid "Overrides the [AABB] with one defined by user for use with frustum culling. Especially useful to avoid unexpected culling when using a shader to offset vertices."
+msgstr "A látógúlán kívül eső objektumok kiszűréséhez a felhasználó által megadott [AABB] befoglaló dobozt használja. Különösen hasznos a téves kiszűrés elkerülésére, amikor egy árnyaló eltolja a csúcsokat."
+
+#. BoxMesh.brief
+#: doc/classes/BoxMesh.xml
+msgid "Generate an axis-aligned box [PrimitiveMesh]."
+msgstr "A koordinátatengelyekhez igazodó doboz alakú [PrimitiveMesh] hálót hoz létre."
+
+#. BoxMesh.subdivide_depth
+#: doc/classes/BoxMesh.xml
+msgid "Number of extra edge loops inserted along the Z axis."
+msgstr "A Z tengely mentén beillesztett további élhurkok száma."
+
+#. BoxMesh.subdivide_height
+#: doc/classes/BoxMesh.xml
+msgid "Number of extra edge loops inserted along the Y axis."
+msgstr "Az Y tengely mentén beillesztett további élhurkok száma."
+
+#. BoxMesh.subdivide_width
+#: doc/classes/BoxMesh.xml
+msgid "Number of extra edge loops inserted along the X axis."
+msgstr "Az X tengely mentén beillesztett további élhurkok száma."
+
+#. CapsuleMesh.brief
+#. CapsuleMesh.description
+#: doc/classes/CapsuleMesh.xml
+msgid "Class representing a capsule-shaped [PrimitiveMesh]."
+msgstr "Kapszula alakú [PrimitiveMesh] hálót képviselő osztály."
+
+#. CapsuleMesh.radial_segments
+#: doc/classes/CapsuleMesh.xml
+msgid "Number of radial segments on the capsule mesh."
+msgstr "A kapszulaháló kerülete mentén elhelyezkedő szegmensek száma."
+
+#. CapsuleMesh.rings
+#: doc/classes/CapsuleMesh.xml
+msgid "Number of rings along the height of the capsule."
+msgstr "A kapszula magassága mentén elhelyezkedő gyűrűk száma."
+
+#. CylinderMesh.brief
+#: doc/classes/CylinderMesh.xml
+msgid "Class representing a cylindrical [PrimitiveMesh]."
+msgstr "Henger alakú [PrimitiveMesh] hálót képviselő osztály."
+
+#. CylinderMesh.description
+#: doc/classes/CylinderMesh.xml
+msgid "Class representing a cylindrical [PrimitiveMesh]. This class can be used to create cones by setting either the [member top_radius] or [member bottom_radius] properties to [code]0.0[/code]."
+msgstr "Henger alakú [PrimitiveMesh] hálót képviselő osztály. Kúp létrehozására is használható: ehhez állítsd a [member top_radius] vagy a [member bottom_radius] értékét [code]0.0[/code] értékre."
+
+#. CylinderMesh.bottom_radius
+#: doc/classes/CylinderMesh.xml
+msgid "Bottom radius of the cylinder. If set to [code]0.0[/code], the bottom faces will not be generated, resulting in a conic shape. See also [member cap_bottom]."
+msgstr "A henger alsó sugarának értéke. Ha [code]0.0[/code], az alsó lapok nem jönnek létre, így az alakzat kúpos lesz. Lásd még: [member cap_bottom]."
+
+#. CylinderMesh.height
+#: doc/classes/CylinderMesh.xml
+msgid "Full height of the cylinder."
+msgstr "A henger teljes magassága."
+
+#. CylinderMesh.radial_segments
+#: doc/classes/CylinderMesh.xml
+msgid "Number of radial segments on the cylinder. Higher values result in a more detailed cylinder/cone at the cost of performance."
+msgstr "A henger kerülete mentén elhelyezkedő szegmensek száma. Nagyobb értéknél részletesebb a henger vagy kúp, de több erőforrást igényel a megjelenítése."
+
+#. CylinderMesh.top_radius
+#: doc/classes/CylinderMesh.xml
+msgid "Top radius of the cylinder. If set to [code]0.0[/code], the top faces will not be generated, resulting in a conic shape. See also [member cap_top]."
+msgstr "A henger felső sugarának értéke. Ha [code]0.0[/code], a felső lapok nem jönnek létre, így az alakzat kúpos lesz. Lásd még: [member cap_top]."
+
+#. ImmediateMesh.brief
+#: doc/classes/ImmediateMesh.xml
+msgid "Mesh optimized for creating geometry manually."
+msgstr "Kézzel összeállított geometriához optimalizált háló."
+
+#. ImmediateMesh.clear_surfaces
+#: doc/classes/ImmediateMesh.xml
+msgid "Clear all surfaces."
+msgstr "Törli az összes felületet."
+
+#. ImmediateMesh.surface_add_vertex
+#: doc/classes/ImmediateMesh.xml
+msgid "Add a 3D vertex using the current attributes previously set."
+msgstr "3D csúcsot ad hozzá a korábban beállított aktuális attribútumokkal."
+
+#. ImmediateMesh.surface_add_vertex_2d
+#: doc/classes/ImmediateMesh.xml
+msgid "Add a 2D vertex using the current attributes previously set."
+msgstr "2D csúcsot ad hozzá a korábban beállított aktuális attribútumokkal."
+
+#. ImmediateMesh.surface_begin
+#: doc/classes/ImmediateMesh.xml
+msgid "Begin a new surface."
+msgstr "Elkezdi egy új felület összeállítását."
+
+#. ImmediateMesh.surface_end
+#: doc/classes/ImmediateMesh.xml
+msgid "End and commit current surface. Note that surface being created will not be visible until this function is called."
+msgstr "Befejezi és rögzíti a felületet. A létrehozás alatt álló felület csak a metódus meghívása után látható."
+
+#. ImmediateMesh.surface_set_color
+#: doc/classes/ImmediateMesh.xml
+msgid "Set the color attribute that will be pushed with the next vertex."
+msgstr "Beállítja a következő csúcshoz hozzáadott színattribútumot."
+
+#. ImmediateMesh.surface_set_normal
+#: doc/classes/ImmediateMesh.xml
+msgid "Set the normal attribute that will be pushed with the next vertex."
+msgstr "Beállítja a következő csúcshoz hozzáadott normálvektort."
+
+#. ImmediateMesh.surface_set_uv
+#: doc/classes/ImmediateMesh.xml
+msgid "Set the UV attribute that will be pushed with the next vertex."
+msgstr "Beállítja a következő csúcshoz hozzáadott UV-attribútumot."
+
+#. ImmediateMesh.surface_set_uv2
+#: doc/classes/ImmediateMesh.xml
+msgid "Set the UV2 attribute that will be pushed with the next vertex."
+msgstr "Beállítja a következő csúcshoz hozzáadott UV2-attribútumot."
+
+#. Mesh.brief
+#: doc/classes/Mesh.xml
+msgid "A [Resource] that contains vertex array-based geometry."
+msgstr "Csúcstömbökben tárolt geometriát tartalmazó [Resource]."
+
+#. Mesh._get_aabb
+#: doc/classes/Mesh.xml
+msgid "Virtual method to override the [AABB] for a custom class extending [Mesh]."
+msgstr "Virtuális metódus, amellyel egy [Mesh] osztályból származó osztály megadhatja a saját [AABB] befoglaló dobozát."
+
+#. Mesh._get_blend_shape_count
+#: doc/classes/Mesh.xml
+msgid "Virtual method to override the number of blend shapes for a custom class extending [Mesh]."
+msgstr "Virtuális metódus, amellyel egy [Mesh] osztályból származó osztály megadhatja az alakváltozatok számát."
+
+#. Mesh._get_blend_shape_name
+#: doc/classes/Mesh.xml
+msgid "Virtual method to override the retrieval of blend shape names for a custom class extending [Mesh]."
+msgstr "Virtuális metódus, amellyel egy [Mesh] osztályból származó osztály megadhatja, hogyan kérdezhetők le az alakváltozatok nevei."
+
+#. Mesh._get_surface_count
+#: doc/classes/Mesh.xml
+msgid "Virtual method to override the surface count for a custom class extending [Mesh]."
+msgstr "Virtuális metódus, amellyel egy [Mesh] osztályból származó osztály megadhatja a felületek számát."
+
+#. Mesh._set_blend_shape_name
+#: doc/classes/Mesh.xml
+msgid "Virtual method to override the names of blend shapes for a custom class extending [Mesh]."
+msgstr "Virtuális metódus, amellyel egy [Mesh] osztályból származó osztály felülbírálhatja az alakváltozatok nevének beállítását."
+
+#. Mesh._surface_get_array_index_len
+#: doc/classes/Mesh.xml
+msgid "Virtual method to override the surface array index length for a custom class extending [Mesh]."
+msgstr "Virtuális metódus, amellyel egy [Mesh] osztályból származó osztály megadhatja a felület indextömbjének hosszát."
+
+#. Mesh._surface_get_array_len
+#: doc/classes/Mesh.xml
+msgid "Virtual method to override the surface array length for a custom class extending [Mesh]."
+msgstr "Virtuális metódus, amellyel egy [Mesh] osztályból származó osztály megadhatja a felület tömbjének hosszát."
+
+#. Mesh._surface_get_arrays
+#: doc/classes/Mesh.xml
+msgid "Virtual method to override the surface arrays for a custom class extending [Mesh]."
+msgstr "Virtuális metódus, amellyel egy [Mesh] osztályból származó osztály megadhatja a felület adattömbjeit."
+
+#. Mesh._surface_get_blend_shape_arrays
+#: doc/classes/Mesh.xml
+msgid "Virtual method to override the blend shape arrays for a custom class extending [Mesh]."
+msgstr "Virtuális metódus, amellyel egy [Mesh] osztályból származó osztály megadhatja a felület alakváltozati tömbjeit."
+
+#. Mesh._surface_get_format
+#: doc/classes/Mesh.xml
+msgid "Virtual method to override the surface format for a custom class extending [Mesh]."
+msgstr "Virtuális metódus, amellyel egy [Mesh] osztályból származó osztály megadhatja a felület formátumát."
+
+#. Mesh._surface_get_lods
+#: doc/classes/Mesh.xml
+msgid "Virtual method to override the surface LODs for a custom class extending [Mesh]."
+msgstr "Virtuális metódus, amellyel egy [Mesh] osztályból származó osztály megadhatja a felület részletességi szintjeit (LOD)."
+
+#. Mesh._surface_get_material
+#: doc/classes/Mesh.xml
+msgid "Virtual method to override the surface material for a custom class extending [Mesh]."
+msgstr "Virtuális metódus, amellyel egy [Mesh] osztályból származó osztály megadhatja a felület anyagát."
+
+#. Mesh._surface_get_primitive_type
+#: doc/classes/Mesh.xml
+msgid "Virtual method to override the surface primitive type for a custom class extending [Mesh]."
+msgstr "Virtuális metódus, amellyel egy [Mesh] osztályból származó osztály megadhatja a felület primitívtípusát."
+
+#. Mesh._surface_set_material
+#: doc/classes/Mesh.xml
+msgid "Virtual method to override the setting of a [param material] at the given [param index] for a custom class extending [Mesh]."
+msgstr "Virtuális metódus, amellyel egy [Mesh] osztályból származó osztály felülbírálhatja a [param material] anyag hozzárendelését a [param index] indexű felülethez."
+
+#. Mesh.create_outline
+#: doc/classes/Mesh.xml
+msgid "Calculate an outline mesh at a defined offset (margin) from the original mesh.\n[b]Note:[/b] This method typically returns the vertices in reverse order (e.g. clockwise to counterclockwise)."
+msgstr "Kiszámítja az eredeti hálóhoz képest megadott távolságra eltolt körvonalhálót.\n[b]Megjegyzés:[/b] A metódus általában fordított sorrendben adja vissza a csúcsokat, például az óramutató járásával megegyező irány helyett azzal ellentétesen."
+
+#. Mesh.create_placeholder
+#: doc/classes/Mesh.xml
+msgid "Creates a placeholder version of this resource ([PlaceholderMesh])."
+msgstr "Létrehozza az erőforrás helyőrző változatát ([PlaceholderMesh])."
+
+#. Mesh.create_trimesh_shape
+#: doc/classes/Mesh.xml
+msgid "Calculate a [ConcavePolygonShape3D] from the mesh."
+msgstr "A hálóból [ConcavePolygonShape3D] alakzatot számít."
+
+#. Mesh.generate_triangle_mesh
+#: doc/classes/Mesh.xml
+msgid "Generate a [TriangleMesh] from the mesh. Considers only surfaces using one of these primitive types: [constant PRIMITIVE_TRIANGLES], [constant PRIMITIVE_TRIANGLE_STRIP]."
+msgstr "A hálóból [TriangleMesh] erőforrást hoz létre. Csak a [constant PRIMITIVE_TRIANGLES] vagy [constant PRIMITIVE_TRIANGLE_STRIP] primitívtípusú felületeket veszi figyelembe."
+
+#. Mesh.get_aabb
+#: doc/classes/Mesh.xml
+msgid "Returns the smallest [AABB] enclosing this mesh in local space. Not affected by [code]custom_aabb[/code].\n[b]Note:[/b] This is only implemented for [ArrayMesh] and [PrimitiveMesh]."
+msgstr "Visszaadja a hálót helyi koordinátákban befoglaló legkisebb [AABB] dobozt. A [code]custom_aabb[/code] értéke nem befolyásolja.\n[b]Megjegyzés:[/b] Csak az [ArrayMesh] és a [PrimitiveMesh] osztályban van megvalósítva."
+
+#. Mesh.get_faces
+#: doc/classes/Mesh.xml
+msgid "Returns all the vertices that make up the faces of the mesh. Each three vertices represent one triangle."
+msgstr "Visszaadja a háló lapjait alkotó összes csúcsot. Minden három egymást követő csúcs egy háromszöget alkot."
+
+#. Mesh.surface_get_arrays
+#: doc/classes/Mesh.xml
+msgid "Returns the arrays for the vertices, normals, UVs, etc. that make up the requested surface (see [method ArrayMesh.add_surface_from_arrays])."
+msgstr "Visszaadja a kért felületet alkotó csúcsok, normálvektorok, UV-koordináták és egyéb attribútumok tömbjeit (lásd: [method ArrayMesh.add_surface_from_arrays])."
+
+#. Mesh.surface_get_blend_shape_arrays
+#: doc/classes/Mesh.xml
+msgid "Returns the blend shape arrays for the requested surface."
+msgstr "Visszaadja a kért felület alakváltozati tömbjeit."
+
+#. Mesh.lightmap_size_hint
+#: doc/classes/Mesh.xml
+msgid "Sets a hint to be used for lightmap resolution."
+msgstr "Ajánlott felbontást ad meg a fénytérképhez."
+
+#. Mesh.PRIMITIVE_POINTS
+#: doc/classes/Mesh.xml
+msgid "Render array as points (one vertex equals one point)."
+msgstr "A tömböt pontokként rendereli. Egy csúcs egy pontot ad."
+
+#. Mesh.PRIMITIVE_LINES
+#: doc/classes/Mesh.xml
+msgid "Render array as lines (every two vertices a line is created)."
+msgstr "A tömböt szakaszokként rendereli. Minden csúcspár egy szakaszt ad."
+
+#. Mesh.PRIMITIVE_LINE_STRIP
+#: doc/classes/Mesh.xml
+msgid "Render array as line strip."
+msgstr "A tömböt összefüggő törött vonalként rendereli."
+
+#. Mesh.PRIMITIVE_TRIANGLES
+#: doc/classes/Mesh.xml
+msgid "Render array as triangles (every three vertices a triangle is created)."
+msgstr "A tömböt háromszögenként rendereli. Minden csúcshármas egy háromszöget ad."
+
+#. Mesh.PRIMITIVE_TRIANGLE_STRIP
+#: doc/classes/Mesh.xml
+msgid "Render array as triangle strips."
+msgstr "A tömböt háromszögsávokként rendereli."
+
+#. Mesh.ARRAY_VERTEX
+#: doc/classes/Mesh.xml
+msgid "[PackedVector3Array], [PackedVector2Array], or [Array] of vertex positions."
+msgstr "Csúcsok helyzeteit tároló [PackedVector3Array], [PackedVector2Array] vagy [Array]."
+
+#. Mesh.ARRAY_TANGENT
+#: doc/classes/Mesh.xml
+msgid "[PackedFloat32Array] of vertex tangents. Each element in groups of 4 floats, first 3 floats determine the tangent, and the last the binormal direction as -1 or 1."
+msgstr "A csúcsok érintővektorait leíró [PackedFloat32Array]. Négy lebegőpontos érték alkot egy csoportot. Az első három az érintővektort adja meg, a negyedik pedig a binormális irányát -1 vagy 1 értékkel."
+
+#. Mesh.ARRAY_COLOR
+#: doc/classes/Mesh.xml
+msgid "[PackedColorArray] of vertex colors."
+msgstr "A csúcsok színeit tároló [PackedColorArray]."
+
+#. Mesh.ARRAY_TEX_UV
+#: doc/classes/Mesh.xml
+msgid "[PackedVector2Array] for UV coordinates."
+msgstr "UV-koordinátákat tároló [PackedVector2Array]."
+
+#. Mesh.ARRAY_TEX_UV2
+#: doc/classes/Mesh.xml
+msgid "[PackedVector2Array] for second UV coordinates."
+msgstr "A második UV-koordinátakészletet tároló [PackedVector2Array]."
+
+#. Mesh.ARRAY_BONES
+#: doc/classes/Mesh.xml
+msgid "[PackedFloat32Array] or [PackedInt32Array] of bone indices. Contains either 4 or 8 numbers per vertex depending on the presence of the [constant ARRAY_FLAG_USE_8_BONE_WEIGHTS] flag."
+msgstr "Csontindexeket tároló [PackedFloat32Array] vagy [PackedInt32Array]. Csúcsonként 4 vagy 8 számot tartalmaz, attól függően, hogy az [constant ARRAY_FLAG_USE_8_BONE_WEIGHTS] jelző be van-e állítva."
+
+#. Mesh.ARRAY_MAX
+#. RenderingServer.ARRAY_MAX
+#: doc/classes/Mesh.xml doc/classes/RenderingServer.xml
+msgid "Represents the size of the [enum ArrayType] enum."
+msgstr "Az [enum ArrayType] felsorolás méretét jelöli."
+
+#. Mesh.ARRAY_CUSTOM_RGBA8_UNORM
+#: doc/classes/Mesh.xml
+msgid "Indicates this custom channel contains unsigned normalized byte colors from 0 to 1, encoded as [PackedByteArray]."
+msgstr "Ez az egyéni csatorna 0 és 1 közé normált, előjel nélküli bájtokkal tárolja a színösszetevőket [PackedByteArray] formátumban."
+
+#. Mesh.ARRAY_CUSTOM_RGBA8_SNORM
+#: doc/classes/Mesh.xml
+msgid "Indicates this custom channel contains signed normalized byte colors from -1 to 1, encoded as [PackedByteArray]."
+msgstr "Ez az egyéni csatorna -1 és 1 közé normált, előjeles bájtokkal tárolja a színösszetevőket [PackedByteArray] formátumban."
+
+#. Mesh.ARRAY_CUSTOM_RGBA_HALF
+#: doc/classes/Mesh.xml
+msgid "Indicates this custom channel contains half precision float colors, encoded as [PackedByteArray]."
+msgstr "Ez az egyéni csatorna félpontosságú lebegőpontos színösszetevőket tárol [PackedByteArray] formátumban."
+
+#. Mesh.ARRAY_CUSTOM_R_FLOAT
+#: doc/classes/Mesh.xml
+msgid "Indicates this custom channel contains full float colors, in a [PackedFloat32Array]. Only the red channel is used."
+msgstr "Ez az egyéni csatorna egyszeres pontosságú lebegőpontos színösszetevőket tárol [PackedFloat32Array] formátumban. Csak a vörös összetevőt használja."
+
+#. Mesh.ARRAY_CUSTOM_RG_FLOAT
+#: doc/classes/Mesh.xml
+msgid "Indicates this custom channel contains full float colors, in a [PackedFloat32Array]. Only red and green channels are used."
+msgstr "Ez az egyéni csatorna egyszeres pontosságú lebegőpontos színösszetevőket tárol [PackedFloat32Array] formátumban. Csak a vörös és a zöld összetevőt használja."
+
+#. Mesh.ARRAY_CUSTOM_RGB_FLOAT
+#: doc/classes/Mesh.xml
+msgid "Indicates this custom channel contains full float colors, in a [PackedFloat32Array]. Only red, green and blue channels are used."
+msgstr "Ez az egyéni csatorna egyszeres pontosságú lebegőpontos színösszetevőket tárol [PackedFloat32Array] formátumban. Csak a vörös, a zöld és a kék összetevőt használja."
+
+#. Mesh.ARRAY_CUSTOM_RGBA_FLOAT
+#: doc/classes/Mesh.xml
+msgid "Indicates this custom channel contains full float colors, in a [PackedFloat32Array]."
+msgstr "Ez az egyéni csatorna egyszeres pontosságú lebegőpontos színösszetevőket tárol [PackedFloat32Array] formátumban."
+
+#. Mesh.ARRAY_CUSTOM_MAX
+#. RenderingServer.ARRAY_CUSTOM_MAX
+#: doc/classes/Mesh.xml doc/classes/RenderingServer.xml
+msgid "Represents the size of the [enum ArrayCustomFormat] enum."
+msgstr "Az [enum ArrayCustomFormat] felsorolás méretét jelöli."
+
+#. Mesh.ARRAY_FORMAT_NORMAL
+#: doc/classes/Mesh.xml
+msgid "Mesh array contains normals."
+msgstr "A háló tömbje normálvektorokat tartalmaz."
+
+#. Mesh.ARRAY_FORMAT_TANGENT
+#: doc/classes/Mesh.xml
+msgid "Mesh array contains tangents."
+msgstr "A háló tömbje érintővektorokat tartalmaz."
+
+#. Mesh.ARRAY_FORMAT_COLOR
+#: doc/classes/Mesh.xml
+msgid "Mesh array contains colors."
+msgstr "A háló tömbje színértékeket tartalmaz."
+
+#. Mesh.ARRAY_FORMAT_TEX_UV
+#: doc/classes/Mesh.xml
+msgid "Mesh array contains UVs."
+msgstr "A háló tömbje UV-koordinátákat tartalmaz."
+
+#. Mesh.ARRAY_FORMAT_TEX_UV2
+#: doc/classes/Mesh.xml
+msgid "Mesh array contains second UV."
+msgstr "A háló tömbje egy második UV-koordinátakészletet tartalmaz."
+
+#. Mesh.ARRAY_FORMAT_BONES
+#: doc/classes/Mesh.xml
+msgid "Mesh array contains bones."
+msgstr "A háló tömbje csontadatokat tartalmaz."
+
+#. Mesh.ARRAY_FORMAT_WEIGHTS
+#: doc/classes/Mesh.xml
+msgid "Mesh array contains bone weights."
+msgstr "A háló tömbje csontsúlyokat tartalmaz."
+
+#. Mesh.ARRAY_FORMAT_INDEX
+#: doc/classes/Mesh.xml
+msgid "Mesh array uses indices."
+msgstr "A háló tömbje indexeket használ."
+
+#. Mesh.ARRAY_FORMAT_BLEND_SHAPE_MASK
+#. RenderingServer.ARRAY_FORMAT_BLEND_SHAPE_MASK
+#: doc/classes/Mesh.xml doc/classes/RenderingServer.xml
+msgid "Mask of mesh channels permitted in blend shapes."
+msgstr "Az alakváltozatokban engedélyezett hálócsatornák maszkja."
+
+#. Mesh.ARRAY_FLAG_USE_2D_VERTICES
+#. RenderingServer.ARRAY_FLAG_USE_2D_VERTICES
+#: doc/classes/Mesh.xml doc/classes/RenderingServer.xml
+msgid "Flag used to mark that the array contains 2D vertices."
+msgstr "Azt jelző bit, hogy a tömb 2D csúcsokat tartalmaz."
+
+#. Mesh.ARRAY_FLAG_USE_DYNAMIC_UPDATE
+#. RenderingServer.ARRAY_FLAG_USE_DYNAMIC_UPDATE
+#: doc/classes/Mesh.xml doc/classes/RenderingServer.xml
+msgid "Flag used to mark that the mesh data will use [code]GL_DYNAMIC_DRAW[/code] on GLES. Unused on Vulkan."
+msgstr "Azt jelző bit, hogy a háló adatai GLES alatt [code]GL_DYNAMIC_DRAW[/code] használatával kezelendők. Vulkan alatt nincs hatása."
+
+#. Mesh.ARRAY_FLAG_USES_EMPTY_VERTEX_ARRAY
+#: doc/classes/Mesh.xml
+msgid "Flag used to mark that the mesh intentionally contains no vertex array."
+msgstr "Azt jelző bit, hogy a háló szándékosan nem tartalmaz csúcstömböt."
+
+#. Mesh.BLEND_SHAPE_MODE_NORMALIZED
+#. RenderingServer.BLEND_SHAPE_MODE_NORMALIZED
+#: doc/classes/Mesh.xml doc/classes/RenderingServer.xml
+msgid "Blend shapes are normalized."
+msgstr "Az alakváltozatok normáltak."
+
+#. Mesh.BLEND_SHAPE_MODE_RELATIVE
+#. RenderingServer.BLEND_SHAPE_MODE_RELATIVE
+#: doc/classes/Mesh.xml doc/classes/RenderingServer.xml
+msgid "Blend shapes are relative to base weight."
+msgstr "Az alakváltozatok az alapsúlyhoz viszonyítottak."
+
+#. MeshConvexDecompositionSettings.brief
+#. MeshConvexDecompositionSettings.description
+#: doc/classes/MeshConvexDecompositionSettings.xml
+msgid "Parameters to be used with a [Mesh] convex decomposition operation."
+msgstr "A [Mesh] konvex részekre bontásához használt paraméterek."
+
+#. MeshConvexDecompositionSettings.convex_hull_approximation
+#: doc/classes/MeshConvexDecompositionSettings.xml
+msgid "If [code]true[/code], uses approximation for computing convex hulls."
+msgstr "Ha az értéke [code]true[/code], közelítéssel számítja ki a konvex burkokat."
+
+#. MeshConvexDecompositionSettings.convex_hull_downsampling
+#: doc/classes/MeshConvexDecompositionSettings.xml
+msgid "Controls the precision of the convex-hull generation process during the clipping plane selection stage. Ranges from [code]1[/code] to [code]16[/code]."
+msgstr "A konvex burok előállításának pontosságát szabályozza a vágósík kiválasztásakor. Értéke [code]1[/code] és [code]16[/code] közé esik."
+
+#. MeshConvexDecompositionSettings.max_concavity
+#: doc/classes/MeshConvexDecompositionSettings.xml
+msgid "Maximum concavity. Ranges from [code]0.0[/code] to [code]1.0[/code]."
+msgstr "A konkáv eltérés megengedett legnagyobb mértéke. Értéke [code]0.0[/code] és [code]1.0[/code] közé esik."
+
+#. MeshConvexDecompositionSettings.max_convex_hulls
+#: doc/classes/MeshConvexDecompositionSettings.xml
+msgid "The maximum number of convex hulls to produce from the merge operation."
+msgstr "Az egyesítés eredményeként előállítható konvex burkok legnagyobb száma."
+
+#. MeshConvexDecompositionSettings.min_volume_per_convex_hull
+#: doc/classes/MeshConvexDecompositionSettings.xml
+msgid "Controls the adaptive sampling of the generated convex-hulls. Ranges from [code]0.0[/code] to [code]0.01[/code]."
+msgstr "A létrehozott konvex burkok adaptív mintavételét szabályozza. Értéke [code]0.0[/code] és [code]0.01[/code] közé esik."
+
+#. MeshConvexDecompositionSettings.mode
+#: doc/classes/MeshConvexDecompositionSettings.xml
+msgid "Mode for the approximate convex decomposition."
+msgstr "A közelítő konvex felbontás módja."
+
+#. MeshConvexDecompositionSettings.normalize_mesh
+#: doc/classes/MeshConvexDecompositionSettings.xml
+msgid "If [code]true[/code], normalizes the mesh before applying the convex decomposition."
+msgstr "Ha az értéke [code]true[/code], a konvex felbontás előtt normálja a hálót."
+
+#. MeshConvexDecompositionSettings.plane_downsampling
+#: doc/classes/MeshConvexDecompositionSettings.xml
+msgid "Controls the granularity of the search for the \"best\" clipping plane. Ranges from [code]1[/code] to [code]16[/code]."
+msgstr "A legjobb vágósík keresésének lépésközét szabályozza. Értéke [code]1[/code] és [code]16[/code] közé esik."
+
+#. MeshConvexDecompositionSettings.project_hull_vertices
+#: doc/classes/MeshConvexDecompositionSettings.xml
+msgid "If [code]true[/code], projects output convex hull vertices onto the original source mesh to increase floating-point accuracy of the results."
+msgstr "Ha az értéke [code]true[/code], a kapott konvex burkok csúcsait az eredeti hálóra vetíti, hogy pontosabb eredményt adjon a lebegőpontos számítás."
+
+#. MeshConvexDecompositionSettings.resolution
+#: doc/classes/MeshConvexDecompositionSettings.xml
+msgid "Maximum number of voxels generated during the voxelization stage."
+msgstr "A voxelezés során létrehozható voxelek legnagyobb száma."
+
+#. MeshConvexDecompositionSettings.revolution_axes_clipping_bias
+#: doc/classes/MeshConvexDecompositionSettings.xml
+msgid "Controls the bias toward clipping along revolution axes. Ranges from [code]0.0[/code] to [code]1.0[/code]."
+msgstr "A forgástengelyek mentén történő vágás előnyben részesítését szabályozza. Értéke [code]0.0[/code] és [code]1.0[/code] közé esik."
+
+#. MeshConvexDecompositionSettings.symmetry_planes_clipping_bias
+#: doc/classes/MeshConvexDecompositionSettings.xml
+msgid "Controls the bias toward clipping along symmetry planes. Ranges from [code]0.0[/code] to [code]1.0[/code]."
+msgstr "A szimmetriasíkok mentén történő vágás előnyben részesítését szabályozza. Értéke [code]0.0[/code] és [code]1.0[/code] közé esik."
+
+#. MeshConvexDecompositionSettings.CONVEX_DECOMPOSITION_MODE_VOXEL
+#: doc/classes/MeshConvexDecompositionSettings.xml
+msgid "Constant for voxel-based approximate convex decomposition."
+msgstr "A voxelalapú közelítő konvex felbontás állandója."
+
+#. MeshConvexDecompositionSettings.CONVEX_DECOMPOSITION_MODE_TETRAHEDRON
+#: doc/classes/MeshConvexDecompositionSettings.xml
+msgid "Constant for tetrahedron-based approximate convex decomposition."
+msgstr "A tetraéderalapú közelítő konvex felbontás állandója."
+
+#. MeshDataTool.brief
+#: doc/classes/MeshDataTool.xml
+msgid "Helper tool to access and edit [Mesh] data."
+msgstr "Segédeszköz a [Mesh] adatainak eléréséhez és szerkesztéséhez."
+
+#. MeshDataTool.clear
+#: doc/classes/MeshDataTool.xml
+msgid "Clears all data currently in MeshDataTool."
+msgstr "Törli a MeshDataTool összes jelenlegi adatát."
+
+#. MeshDataTool.commit_to_surface
+#: doc/classes/MeshDataTool.xml
+msgid "Adds a new surface to specified [Mesh] with edited data."
+msgstr "A szerkesztett adatokból új felületet ad a megadott [Mesh] hálóhoz."
+
+#. MeshDataTool.create_from_surface
+#: doc/classes/MeshDataTool.xml
+msgid "Uses specified surface of given [Mesh] to populate data for MeshDataTool.\nRequires [Mesh] with primitive type [constant Mesh.PRIMITIVE_TRIANGLES]."
+msgstr "A megadott [Mesh] kiválasztott felületéről betölti a MeshDataTool adatait.\n[constant Mesh.PRIMITIVE_TRIANGLES] primitívtípusú [Mesh] szükséges hozzá."
+
+#. MeshDataTool.get_edge_count
+#: doc/classes/MeshDataTool.xml
+msgid "Returns the number of edges in this [Mesh]."
+msgstr "Visszaadja a [Mesh] éleinek számát."
+
+#. MeshDataTool.get_edge_faces
+#: doc/classes/MeshDataTool.xml
+msgid "Returns array of faces that touch given edge."
+msgstr "Visszaadja a megadott élhez csatlakozó lapok tömbjét."
+
+#. MeshDataTool.get_edge_meta
+#: doc/classes/MeshDataTool.xml
+msgid "Returns meta information assigned to given edge."
+msgstr "Visszaadja a megadott élhez rendelt metaadatot."
+
+#. MeshDataTool.get_edge_vertex
+#: doc/classes/MeshDataTool.xml
+msgid "Returns the index of the specified [param vertex] connected to the edge at index [param idx].\n[param vertex] can only be [code]0[/code] or [code]1[/code], as edges are composed of two vertices."
+msgstr "Visszaadja a [param idx] indexű él megadott [param vertex] végpontjának csúcsindexét.\nAz él két csúcsból áll, ezért a [param vertex] értéke csak [code]0[/code] vagy [code]1[/code] lehet."
+
+#. MeshDataTool.get_face_count
+#: doc/classes/MeshDataTool.xml
+msgid "Returns the number of faces in this [Mesh]."
+msgstr "Visszaadja a [Mesh] lapjainak számát."
+
+#. MeshDataTool.get_face_edge
+#: doc/classes/MeshDataTool.xml
+msgid "Returns the edge associated with the face at index [param idx].\n[param edge] argument must be either [code]0[/code], [code]1[/code], or [code]2[/code] because a face only has three edges."
+msgstr "Visszaadja a [param idx] indexű lap megadott élének indexét.\nA lapnak három éle van, ezért az [param edge] értéke csak [code]0[/code], [code]1[/code] vagy [code]2[/code] lehet."
+
+#. MeshDataTool.get_face_meta
+#: doc/classes/MeshDataTool.xml
+msgid "Returns the metadata associated with the given face."
+msgstr "Visszaadja a megadott laphoz rendelt metaadatot."
+
+#. MeshDataTool.get_face_normal
+#: doc/classes/MeshDataTool.xml
+msgid "Calculates and returns the face normal of the given face."
+msgstr "Kiszámítja és visszaadja a megadott lap normálvektorát."
+
+#. MeshDataTool.get_face_vertex
+#: doc/classes/MeshDataTool.xml
+msgid "Returns the specified vertex index of the given face.\n[param vertex] must be either [code]0[/code], [code]1[/code], or [code]2[/code] because faces contain three vertices.\n[codeblocks]\n[gdscript]\nvar index = mesh_data_tool.get_face_vertex(0, 1) # Gets the index of the second vertex of the first face.\nvar position = mesh_data_tool.get_vertex(index)\nvar normal = mesh_data_tool.get_vertex_normal(index)\n[/gdscript]\n[csharp]\nint index = meshDataTool.GetFaceVertex(0, 1); // Gets the index of the second vertex of the first face.\nVector3 position = meshDataTool.GetVertex(index);\nVector3 normal = meshDataTool.GetVertexNormal(index);\n[/csharp]\n[/codeblocks]"
+msgstr "Visszaadja a megadott lap kiválasztott csúcsának indexét.\nA lapnak három csúcsa van, így a [param vertex] értéke [code]0[/code], [code]1[/code] vagy [code]2[/code] lehet.\n[codeblocks]\n[gdscript]\nvar index = mesh_data_tool.get_face_vertex(0, 1) # Gets the index of the second vertex of the first face.\nvar position = mesh_data_tool.get_vertex(index)\nvar normal = mesh_data_tool.get_vertex_normal(index)\n[/gdscript]\n[csharp]\nint index = meshDataTool.GetFaceVertex(0, 1); // Gets the index of the second vertex of the first face.\nVector3 position = meshDataTool.GetVertex(index);\nVector3 normal = meshDataTool.GetVertexNormal(index);\n[/csharp]\n[/codeblocks]"
+
+#. MeshDataTool.get_format
+#: doc/classes/MeshDataTool.xml
+msgid "Returns the [Mesh]'s format as a combination of the [enum Mesh.ArrayFormat] flags. For example, a mesh containing both vertices and normals would return a format of [code]3[/code] because [constant Mesh.ARRAY_FORMAT_VERTEX] is [code]1[/code] and [constant Mesh.ARRAY_FORMAT_NORMAL] is [code]2[/code]."
+msgstr "A [Mesh] formátumát a [enum Mesh.ArrayFormat] jelzők kombinációjaként adja vissza. Ha például a háló csúcsokat és normálvektorokat is tartalmaz, az érték [code]3[/code], mert a [constant Mesh.ARRAY_FORMAT_VERTEX] értéke [code]1[/code], a [constant Mesh.ARRAY_FORMAT_NORMAL] értéke pedig [code]2[/code]."
+
+#. MeshDataTool.get_material
+#: doc/classes/MeshDataTool.xml
+msgid "Returns the material assigned to the [Mesh]."
+msgstr "Visszaadja a [Mesh] hálóhoz rendelt anyagot."
+
+#. MeshDataTool.get_vertex
+#: doc/classes/MeshDataTool.xml
+msgid "Returns the position of the given vertex."
+msgstr "Visszaadja a megadott csúcs helyét."
+
+#. MeshDataTool.get_vertex_bones
+#: doc/classes/MeshDataTool.xml
+msgid "Returns the bones of the given vertex."
+msgstr "Visszaadja a megadott csúcshoz tartozó csontindexeket."
+
+#. MeshDataTool.get_vertex_color
+#: doc/classes/MeshDataTool.xml
+msgid "Returns the color of the given vertex."
+msgstr "Visszaadja a megadott csúcs színét."
+
+#. MeshDataTool.get_vertex_count
+#: doc/classes/MeshDataTool.xml
+msgid "Returns the total number of vertices in [Mesh]."
+msgstr "Visszaadja a [Mesh] csúcsainak teljes számát."
+
+#. MeshDataTool.get_vertex_edges
+#: doc/classes/MeshDataTool.xml
+msgid "Returns an array of edges that share the given vertex."
+msgstr "Visszaadja a megadott csúcshoz kapcsolódó élek tömbjét."
+
+#. MeshDataTool.get_vertex_faces
+#: doc/classes/MeshDataTool.xml
+msgid "Returns an array of faces that share the given vertex."
+msgstr "Visszaadja a megadott csúcshoz kapcsolódó lapok tömbjét."
+
+#. MeshDataTool.get_vertex_meta
+#: doc/classes/MeshDataTool.xml
+msgid "Returns the metadata associated with the given vertex."
+msgstr "Visszaadja a megadott csúcshoz rendelt metaadatot."
+
+#. MeshDataTool.get_vertex_normal
+#: doc/classes/MeshDataTool.xml
+msgid "Returns the normal of the given vertex."
+msgstr "Visszaadja a megadott csúcs normálvektorát."
+
+#. MeshDataTool.get_vertex_tangent
+#: doc/classes/MeshDataTool.xml
+msgid "Returns the tangent of the given vertex."
+msgstr "Visszaadja a megadott csúcs érintővektorát."
+
+#. MeshDataTool.get_vertex_uv
+#: doc/classes/MeshDataTool.xml
+msgid "Returns the UV of the given vertex."
+msgstr "Visszaadja a megadott csúcs UV-koordinátáját."
+
+#. MeshDataTool.get_vertex_uv2
+#: doc/classes/MeshDataTool.xml
+msgid "Returns the UV2 of the given vertex."
+msgstr "Visszaadja a megadott csúcs UV2-koordinátáját."
+
+#. MeshDataTool.get_vertex_weights
+#: doc/classes/MeshDataTool.xml
+msgid "Returns bone weights of the given vertex."
+msgstr "Visszaadja a megadott csúcs csontsúlyait."
+
+#. MeshDataTool.set_edge_meta
+#: doc/classes/MeshDataTool.xml
+msgid "Sets the metadata of the given edge."
+msgstr "Beállítja a megadott él metaadatát."
+
+#. MeshDataTool.set_face_meta
+#: doc/classes/MeshDataTool.xml
+msgid "Sets the metadata of the given face."
+msgstr "Beállítja a megadott lap metaadatát."
+
+#. MeshDataTool.set_material
+#: doc/classes/MeshDataTool.xml
+msgid "Sets the material to be used by newly-constructed [Mesh]."
+msgstr "Beállítja az újonnan összeállított [Mesh] által használt anyagot."
+
+#. MeshDataTool.set_vertex
+#: doc/classes/MeshDataTool.xml
+msgid "Sets the position of the given vertex."
+msgstr "Beállítja a megadott csúcs helyét."
+
+#. MeshDataTool.set_vertex_bones
+#: doc/classes/MeshDataTool.xml
+msgid "Sets the bones of the given vertex."
+msgstr "Beállítja a megadott csúcshoz tartozó csontindexeket."
+
+#. MeshDataTool.set_vertex_color
+#: doc/classes/MeshDataTool.xml
+msgid "Sets the color of the given vertex."
+msgstr "Beállítja a megadott csúcs színét."
+
+#. MeshDataTool.set_vertex_meta
+#: doc/classes/MeshDataTool.xml
+msgid "Sets the metadata associated with the given vertex."
+msgstr "Beállítja a megadott csúcshoz rendelt metaadatot."
+
+#. MeshDataTool.set_vertex_normal
+#: doc/classes/MeshDataTool.xml
+msgid "Sets the normal of the given vertex."
+msgstr "Beállítja a megadott csúcs normálvektorát."
+
+#. MeshDataTool.set_vertex_tangent
+#: doc/classes/MeshDataTool.xml
+msgid "Sets the tangent of the given vertex.\n[b]Note:[/b] Even though [param tangent] is a [Plane], it does not directly represent the tangent plane. Its [member Plane.x], [member Plane.y], and [member Plane.z] represent the tangent vector and [member Plane.d] should be either [code]-1[/code] or [code]1[/code]. See also [constant Mesh.ARRAY_TANGENT]."
+msgstr "Beállítja a megadott csúcs érintővektorát.\n[b]Megjegyzés:[/b] Bár a [param tangent] típusa [Plane], közvetlenül nem érintősíkot képvisel. A [member Plane.x], a [member Plane.y] és a [member Plane.z] az érintővektor összetevőit tárolja. A [member Plane.d] értéke [code]-1[/code] vagy [code]1[/code] legyen. Lásd még: [constant Mesh.ARRAY_TANGENT]."
+
+#. MeshDataTool.set_vertex_uv
+#: doc/classes/MeshDataTool.xml
+msgid "Sets the UV of the given vertex."
+msgstr "Beállítja a megadott csúcs UV-koordinátáját."
+
+#. MeshDataTool.set_vertex_uv2
+#: doc/classes/MeshDataTool.xml
+msgid "Sets the UV2 of the given vertex."
+msgstr "Beállítja a megadott csúcs UV2-koordinátáját."
+
+#. MeshDataTool.set_vertex_weights
+#: doc/classes/MeshDataTool.xml
+msgid "Sets the bone weights of the given vertex."
+msgstr "Beállítja a megadott csúcs csontsúlyait."
+
+#. MeshInstance2D.brief
+#: doc/classes/MeshInstance2D.xml
+msgid "Node used for displaying a [Mesh] in 2D."
+msgstr "Egy [Mesh] háló 2D megjelenítésére szolgáló csomópont."
+
+#. MeshInstance2D.texture_changed
+#. MultiMeshInstance2D.texture_changed
+#: doc/classes/MeshInstance2D.xml doc/classes/MultiMeshInstance2D.xml
+msgid "Emitted when the [member texture] is changed."
+msgstr "A [member texture] megváltozásakor jelez."
+
+#. MeshInstance2D.mesh
+#: doc/classes/MeshInstance2D.xml
+msgid "The [Mesh] that will be drawn by the [MeshInstance2D]."
+msgstr "A [MeshInstance2D] által megrajzolt [Mesh]."
+
+#. MeshInstance2D.texture
+#. MultiMeshInstance2D.texture
+#: doc/classes/MeshInstance2D.xml doc/classes/MultiMeshInstance2D.xml
+msgid "The [Texture2D] that will be used if using the default [CanvasItemMaterial]. Can be accessed as [code]TEXTURE[/code] in CanvasItem shader."
+msgstr "Az alapértelmezett [CanvasItemMaterial] mellett használt [Texture2D]. A CanvasItem árnyalóban [code]TEXTURE[/code] néven érhető el."
+
+#. MeshInstance3D.brief
+#: doc/classes/MeshInstance3D.xml
+msgid "Node that instances meshes into a scenario."
+msgstr "Csomópont, amely hálókat példányosít a renderelési térben."
+
+#. MeshInstance3D.description
+#: doc/classes/MeshInstance3D.xml
+msgid "MeshInstance3D is a node that takes a [Mesh] resource and adds it to the current scenario by creating an instance of it. This is the class most often used to render 3D geometry and can be used to instance a single [Mesh] in many places. This allows reusing geometry, which can save on resources. When a [Mesh] has to be instantiated more than thousands of times at close proximity, consider using a [MultiMesh] in a [MultiMeshInstance3D] instead."
+msgstr "A MeshInstance3D egy [Mesh] erőforrásból példányt hoz létre, és hozzáadja az aktuális renderelési térhez. A 3D geometria rendereléséhez leggyakrabban ezt az osztályt használjuk. Egy [Mesh] több helyen is példányosítható, így ugyanaz a geometria újrafelhasználható, ami erőforrást takaríthat meg. Ha ugyanazt a [Mesh] erőforrást több ezer alkalommal kell kis területen példányosítani, érdemes [MultiMesh] erőforrást használni egy [MultiMeshInstance3D] csomópontban."
+
+#. MeshInstance3D.create_debug_tangents
+#: doc/classes/MeshInstance3D.xml
+msgid "This helper creates a [MeshInstance3D] child node with gizmos at every vertex calculated from the mesh geometry. It's mainly used for testing."
+msgstr "A segédmetódus olyan [MeshInstance3D] gyermekcsomópontot hoz létre, amely a háló geometriájából számított segédjelölőket rajzol minden csúcsnál. Főként teszteléshez használható."
+
+#. MeshInstance3D.create_multiple_convex_collisions
+#: doc/classes/MeshInstance3D.xml
+msgid "This helper creates a [StaticBody3D] child node with multiple [ConvexPolygonShape3D] collision shapes calculated from the mesh geometry via convex decomposition. The convex decomposition operation can be controlled with parameters from the optional [param settings]."
+msgstr "A segédmetódus [StaticBody3D] gyermekcsomópontot hoz létre több [ConvexPolygonShape3D] ütközési alakzattal. Az alakzatokat a háló konvex részekre bontásával számítja ki. A felbontás a választható [param settings] paraméterrel szabályozható."
+
+#. MeshInstance3D.create_trimesh_collision
+#: doc/classes/MeshInstance3D.xml
+msgid "This helper creates a [StaticBody3D] child node with a [ConcavePolygonShape3D] collision shape calculated from the mesh geometry. It's mainly used for testing."
+msgstr "A segédmetódus [StaticBody3D] gyermekcsomópontot hoz létre a háló geometriájából számított [ConcavePolygonShape3D] ütközési alakzattal. Főként teszteléshez használható."
+
+#. MeshInstance3D.find_blend_shape_by_name
+#: doc/classes/MeshInstance3D.xml
+msgid "Returns the index of the blend shape with the given [param name]. Returns [code]-1[/code] if no blend shape with this name exists, including when [member mesh] is [code]null[/code]."
+msgstr "Visszaadja a [param name] nevű alakváltozat indexét. Ha nincs ilyen alakváltozat, vagy a [member mesh] értéke [code]null[/code], [code]-1[/code] értéket ad vissza."
+
+#. MeshInstance3D.get_blend_shape_count
+#: doc/classes/MeshInstance3D.xml
+msgid "Returns the number of blend shapes available. Produces an error if [member mesh] is [code]null[/code]."
+msgstr "Visszaadja az elérhető alakváltozatok számát. Hibát jelez, ha a [member mesh] értéke [code]null[/code]."
+
+#. MeshInstance3D.get_blend_shape_value
+#: doc/classes/MeshInstance3D.xml
+msgid "Returns the value of the blend shape at the given [param blend_shape_idx]. Returns [code]0.0[/code] and produces an error if [member mesh] is [code]null[/code] or doesn't have a blend shape at that index."
+msgstr "Visszaadja a [param blend_shape_idx] indexű alakváltozat értékét. Ha a [member mesh] értéke [code]null[/code], vagy nincs ilyen indexű alakváltozat, hibát jelez és [code]0.0[/code] értéket ad vissza."
+
+#. MeshInstance3D.set_blend_shape_value
+#: doc/classes/MeshInstance3D.xml
+msgid "Sets the value of the blend shape at [param blend_shape_idx] to [param value]. Produces an error if [member mesh] is [code]null[/code] or doesn't have a blend shape at that index."
+msgstr "A [param blend_shape_idx] indexű alakváltozat értékét [param value] értékre állítja. Hibát jelez, ha a [member mesh] értéke [code]null[/code], vagy nincs ilyen indexű alakváltozat."
+
+#. MeshInstance3D.mesh
+#: doc/classes/MeshInstance3D.xml
+msgid "The [Mesh] resource for the instance."
+msgstr "A példány [Mesh] erőforrása."
+
+#. MeshInstance3D.skeleton
+#: doc/classes/MeshInstance3D.xml
+msgid "[NodePath] to the [Skeleton3D] associated with the instance.\n[b]Note:[/b] The default value of this property has changed in Godot 4.6. Enable [member ProjectSettings.animation/compatibility/default_parent_skeleton_in_mesh_instance_3d] if the old behavior is needed for compatibility."
+msgstr "A példányhoz tartozó [Skeleton3D] csomópont [NodePath] útvonala.\n[b]Megjegyzés:[/b] A tulajdonság alapértéke a Godot 4.6-ban megváltozott. Ha kompatibilitás miatt a régi működésre van szükség, engedélyezd a [member ProjectSettings.animation/compatibility/default_parent_skeleton_in_mesh_instance_3d] beállítást."
+
+#. MeshInstance3D.skin
+#: doc/classes/MeshInstance3D.xml
+msgid "The [Skin] to be used by this instance."
+msgstr "A példány által használt [Skin] erőforrás."
+
+#. MultiMesh.brief
+#: doc/classes/MultiMesh.xml
+msgid "Provides high-performance drawing of a mesh multiple times using GPU instancing."
+msgstr "Egy háló többszöri kirajzolását gyorsítja a grafikus processzor példányosítási támogatásával."
+
+#. MultiMesh.get_aabb
+#: doc/classes/MultiMesh.xml
+msgid "Returns the visibility axis-aligned bounding box in local space."
+msgstr "Visszaadja a láthatósághoz használt, tengelyekhez igazított befoglaló dobozt helyi koordinátákban."
+
+#. MultiMesh.get_instance_color
+#: doc/classes/MultiMesh.xml
+msgid "Gets a specific instance's color multiplier."
+msgstr "Lekéri a megadott példány színszorzóját."
+
+#. MultiMesh.get_instance_custom_data
+#: doc/classes/MultiMesh.xml
+msgid "Returns the custom data that has been set for a specific instance."
+msgstr "Visszaadja a megadott példányhoz beállított egyéni adatot."
+
+#. MultiMesh.get_instance_transform
+#: doc/classes/MultiMesh.xml
+msgid "Returns the [Transform3D] of a specific instance."
+msgstr "Visszaadja a megadott példány [Transform3D] transzformációját."
+
+#. MultiMesh.get_instance_transform_2d
+#: doc/classes/MultiMesh.xml
+msgid "Returns the [Transform2D] of a specific instance."
+msgstr "Visszaadja a megadott példány [Transform2D] transzformációját."
+
+#. MultiMesh.reset_instance_physics_interpolation
+#: doc/classes/MultiMesh.xml
+msgid "When using [i]physics interpolation[/i], this function allows you to prevent interpolation on an instance in the current physics tick.\nThis allows you to move instances instantaneously, and should usually be used when initially placing an instance such as a bullet to prevent graphical glitches."
+msgstr "[i]Fizikai interpoláció[/i] használatakor ezzel a metódussal kikapcsolható egy példány interpolációja az aktuális fizikai lépésre.\nÍgy a példány azonnal áthelyezhető. Megjelenítési hibák elkerülése érdekében általában az első elhelyezéskor érdemes meghívni, például egy lövedék létrehozásakor."
+
+#. MultiMesh.reset_instances_physics_interpolation
+#: doc/classes/MultiMesh.xml
+msgid "When using [i]physics interpolation[/i], this function allows you to prevent interpolation for all instances in the current physics tick.\nThis allows you to move all instances instantaneously, and should usually be used when initially placing instances to prevent graphical glitches."
+msgstr "[i]Fizikai interpoláció[/i] használatakor ezzel a metódussal kikapcsolható az összes példány interpolációja az aktuális fizikai lépésre.\nÍgy az összes példány azonnal áthelyezhető. Megjelenítési hibák elkerülése érdekében általában az első elhelyezéskor érdemes meghívni."
+
+#. MultiMesh.set_instance_transform
+#: doc/classes/MultiMesh.xml
+msgid "Sets the [Transform3D] for a specific instance."
+msgstr "Beállítja a megadott példány [Transform3D] transzformációját."
+
+#. MultiMesh.set_instance_transform_2d
+#: doc/classes/MultiMesh.xml
+msgid "Sets the [Transform2D] for a specific instance."
+msgstr "Beállítja a megadott példány [Transform2D] transzformációját."
+
+#. MultiMesh.color_array
+#: doc/classes/MultiMesh.xml
+msgid "Array containing each [Color] used by all instances of this mesh."
+msgstr "A háló összes példányának [Color] értékeit tartalmazó tömb."
+
+#. MultiMesh.custom_aabb
+#: doc/classes/MultiMesh.xml
+msgid "Custom AABB for this MultiMesh resource. Setting this manually prevents costly runtime AABB recalculations."
+msgstr "A MultiMesh egyéni, tengelyekhez igazított befoglaló doboza. Kézi megadásával elkerülhető a befoglaló doboz költséges újraszámítása futás közben."
+
+#. MultiMesh.custom_data_array
+#: doc/classes/MultiMesh.xml
+msgid "Array containing each custom data value used by all instances of this mesh, as a [PackedColorArray]."
+msgstr "A háló összes példányának egyéni adatait tartalmazó [PackedColorArray] tömb."
+
+#. MultiMesh.instance_count
+#: doc/classes/MultiMesh.xml
+msgid "Number of instances that will get drawn. This clears and (re)sizes the buffers. Setting data format or flags afterwards will have no effect.\nBy default, all instances are drawn but you can limit this with [member visible_instance_count]."
+msgstr "A kirajzolható példányok száma. A beállítás törli és átméretezi a puffereket. Az adatformátum és a jelzők ezt követő módosítása hatástalan.\nAlapértelmezés szerint az összes példány kirajzolódik. Számuk a [member visible_instance_count] tulajdonsággal korlátozható."
+
+#. MultiMesh.mesh
+#: doc/classes/MultiMesh.xml
+msgid "[Mesh] resource to be instanced.\nThe looks of the individual instances can be modified using [method set_instance_color] and [method set_instance_custom_data]."
+msgstr "A példányosítandó [Mesh] erőforrás.\nAz egyes példányok megjelenése a [method set_instance_color] és a [method set_instance_custom_data] metódussal módosítható."
+
+#. MultiMesh.transform_2d_array
+#: doc/classes/MultiMesh.xml
+msgid "Array containing each [Transform2D] value used by all instances of this mesh, as a [PackedVector2Array]. Each transform is divided into 3 [Vector2] values corresponding to the transforms' [code]x[/code], [code]y[/code], and [code]origin[/code]."
+msgstr "A háló összes példányának [Transform2D] transzformációját tartalmazó [PackedVector2Array] tömb. Minden transzformáció három [Vector2] értékből áll, a [code]x[/code], [code]y[/code] és [code]origin[/code] összetevőből."
+
+#. MultiMesh.transform_array
+#: doc/classes/MultiMesh.xml
+msgid "Array containing each [Transform3D] value used by all instances of this mesh, as a [PackedVector3Array]. Each transform is divided into 4 [Vector3] values corresponding to the transforms' [code]x[/code], [code]y[/code], [code]z[/code], and [code]origin[/code]."
+msgstr "A háló összes példányának [Transform3D] transzformációját tartalmazó [PackedVector3Array] tömb. Minden transzformáció négy [Vector3] értékből áll, a [code]x[/code], [code]y[/code], [code]z[/code] és [code]origin[/code] összetevőből."
+
+#. MultiMesh.transform_format
+#: doc/classes/MultiMesh.xml
+msgid "Format of transform used to transform mesh, either 2D or 3D."
+msgstr "A háló transzformálásához használt formátum: 2D vagy 3D."
+
+#. MultiMesh.use_colors
+#: doc/classes/MultiMesh.xml
+msgid "If [code]true[/code], the [MultiMesh] will use color data (see [method set_instance_color]). Can only be set when [member instance_count] is [code]0[/code] or less. This means that you need to call this method before setting the instance count, or temporarily reset it to [code]0[/code]."
+msgstr "Ha az értéke [code]true[/code], a [MultiMesh] színadatokat használ (lásd: [method set_instance_color]). Csak akkor állítható be, ha a [member instance_count] értéke [code]0[/code] vagy kisebb. A példányszám megadása előtt állítsd be, vagy állítsd vissza ideiglenesen a példányszámot [code]0[/code] értékre."
+
+#. MultiMesh.use_custom_data
+#: doc/classes/MultiMesh.xml
+msgid "If [code]true[/code], the [MultiMesh] will use custom data (see [method set_instance_custom_data]). Can only be set when [member instance_count] is [code]0[/code] or less. This means that you need to call this method before setting the instance count, or temporarily reset it to [code]0[/code]."
+msgstr "Ha az értéke [code]true[/code], a [MultiMesh] egyéni adatokat használ (lásd: [method set_instance_custom_data]). Csak akkor állítható be, ha a [member instance_count] értéke [code]0[/code] vagy kisebb. A példányszám megadása előtt állítsd be, vagy állítsd vissza ideiglenesen a példányszámot [code]0[/code] értékre."
+
+#. MultiMesh.visible_instance_count
+#: doc/classes/MultiMesh.xml
+msgid "Limits the number of instances drawn, -1 draws all instances. Changing this does not change the sizes of the buffers."
+msgstr "Korlátozza a kirajzolt példányok számát. A -1 értéknél az összes példány kirajzolódik. A beállítás nem változtatja meg a pufferek méretét."
+
+#. MultiMesh.TRANSFORM_2D
+#: doc/classes/MultiMesh.xml
+msgid "Use this when using 2D transforms."
+msgstr "2D transzformációkhoz használható."
+
+#. MultiMesh.TRANSFORM_3D
+#: doc/classes/MultiMesh.xml
+msgid "Use this when using 3D transforms."
+msgstr "3D transzformációkhoz használható."
+
+#. MultiMesh.INTERP_QUALITY_FAST
+#: doc/classes/MultiMesh.xml
+msgid "Always interpolate using Basis lerping, which can produce warping artifacts in some situations."
+msgstr "Mindig lineárisan interpolálja a bázist, ami egyes esetekben látható torzulást okozhat."
+
+#. MultiMesh.INTERP_QUALITY_HIGH
+#: doc/classes/MultiMesh.xml
+msgid "Attempt to interpolate using Basis slerping (spherical linear interpolation) where possible, otherwise fall back to lerping."
+msgstr "Ahol lehet, gömbi lineáris interpolációt használ a bázishoz. Egyébként egyszerű lineáris interpolációt használ."
+
+#. MultiMeshInstance2D.brief
+#: doc/classes/MultiMeshInstance2D.xml
+msgid "Node that instances a [MultiMesh] in 2D."
+msgstr "Csomópont, amely 2D-ben példányosít egy [MultiMesh] erőforrást."
+
+#. MultiMeshInstance2D.multimesh
+#: doc/classes/MultiMeshInstance2D.xml
+msgid "The [MultiMesh] that will be drawn by the [MultiMeshInstance2D]."
+msgstr "A [MultiMeshInstance2D] által megrajzolt [MultiMesh]."
+
+#. MultiMeshInstance3D.brief
+#: doc/classes/MultiMeshInstance3D.xml
+msgid "Node that instances a [MultiMesh]."
+msgstr "Csomópont, amely egy [MultiMesh] erőforrást példányosít."
+
+#. MultiMeshInstance3D.description
+#: doc/classes/MultiMeshInstance3D.xml
+msgid "[MultiMeshInstance3D] is a specialized node to instance [GeometryInstance3D]s based on a [MultiMesh] resource.\nThis is useful to optimize the rendering of a high number of instances of a given mesh (for example trees in a forest or grass strands)."
+msgstr "A [MultiMeshInstance3D] [MultiMesh] erőforrás alapján példányosít [GeometryInstance3D] csomópontokat.\nAkkor hasznos, ha egy háló sok példányát kell hatékonyan megjeleníteni, például erdőben fákat vagy fűszálakat."
+
+#. MultiMeshInstance3D.multimesh
+#: doc/classes/MultiMeshInstance3D.xml
+msgid "The [MultiMesh] resource that will be used and shared among all instances of the [MultiMeshInstance3D]."
+msgstr "A [MultiMeshInstance3D] minden példánya által közösen használt [MultiMesh] erőforrás."
+
+#. BaseMaterial3D.TEXTURE_FILTER_NEAREST
+#. CanvasItem.TEXTURE_FILTER_NEAREST
+#. RenderingServer.CANVAS_ITEM_TEXTURE_FILTER_NEAREST
+#. Viewport.DEFAULT_CANVAS_ITEM_TEXTURE_FILTER_NEAREST
+#. VisualShaderNodeTextureParameter.FILTER_NEAREST
+#: doc/classes/BaseMaterial3D.xml doc/classes/CanvasItem.xml doc/classes/RenderingServer.xml doc/classes/Viewport.xml modules/visual_shader/doc_classes/VisualShaderNodeTextureParameter.xml
+msgid "The texture filter reads from the nearest pixel only. This makes the texture look pixelated from up close, and grainy from a distance (due to mipmaps not being sampled)."
+msgstr "A textúraszűrő csak a legközelebbi képpontot mintavételezi. A textúra közelről pixelesnek, távolról szemcsésnek látszik, mivel a szűrő nem használ mipmapszinteket."
+
+#. BaseMaterial3D.TEXTURE_FILTER_LINEAR
+#. CanvasItem.TEXTURE_FILTER_LINEAR
+#. RenderingServer.CANVAS_ITEM_TEXTURE_FILTER_LINEAR
+#. Viewport.DEFAULT_CANVAS_ITEM_TEXTURE_FILTER_LINEAR
+#. VisualShaderNodeTextureParameter.FILTER_LINEAR
+#: doc/classes/BaseMaterial3D.xml doc/classes/CanvasItem.xml doc/classes/RenderingServer.xml doc/classes/Viewport.xml modules/visual_shader/doc_classes/VisualShaderNodeTextureParameter.xml
+msgid "The texture filter blends between the nearest 4 pixels. This makes the texture look smooth from up close, and grainy from a distance (due to mipmaps not being sampled)."
+msgstr "A textúraszűrő a négy legközelebbi képpont értékét keveri össze. Így a textúra közelről simának, távolról szemcsésnek látszik, mivel a szűrő nem használ mipmapszinteket."
+
+#. ProjectSettings.rendering/lights_and_shadows/positional_shadow/atlas_16_bits
+#. Viewport.positional_shadow_atlas_16_bits
+#: doc/classes/ProjectSettings.xml doc/classes/Viewport.xml
+msgid "Use 16 bits for the omni/spot shadow depth map. Enabling this results in shadows having less precision and may result in shadow acne, but can lead to performance improvements on some devices."
+msgstr "16 bittel tárolja a minden irányba sugárzó fények és reflektorok árnyéktérképének mélységét. A kisebb pontosság önárnyékolási hibákat okozhat, de egyes eszközökön javíthatja a teljesítményt."
+
+#. RenderingServer.VIEWPORT_ANISOTROPY_DISABLED
+#. Viewport.ANISOTROPY_DISABLED
+#: doc/classes/RenderingServer.xml doc/classes/Viewport.xml
+msgid "Anisotropic filtering is disabled."
+msgstr "Az anizotropikus szűrés ki van kapcsolva."
+
+#. RenderingServer.VIEWPORT_ANISOTROPY_2X
+#. Viewport.ANISOTROPY_2X
+#: doc/classes/RenderingServer.xml doc/classes/Viewport.xml
+msgid "Use 2× anisotropic filtering."
+msgstr "Kétszeres (2×) anizotropikus szűrés."
+
+#. RenderingServer.VIEWPORT_ANISOTROPY_4X
+#. Viewport.ANISOTROPY_4X
+#: doc/classes/RenderingServer.xml doc/classes/Viewport.xml
+msgid "Use 4× anisotropic filtering. This is the default value."
+msgstr "Négyszeres (4×) anizotropikus szűrés. Ez az alapértelmezett beállítás."
+
+#. RenderingServer.VIEWPORT_ANISOTROPY_8X
+#. Viewport.ANISOTROPY_8X
+#: doc/classes/RenderingServer.xml doc/classes/Viewport.xml
+msgid "Use 8× anisotropic filtering."
+msgstr "Nyolcszoros (8×) anizotropikus szűrés."
+
+#. RenderingServer.VIEWPORT_ANISOTROPY_16X
+#. Viewport.ANISOTROPY_16X
+#: doc/classes/RenderingServer.xml doc/classes/Viewport.xml
+msgid "Use 16× anisotropic filtering."
+msgstr "Tizenhatszoros (16×) anizotropikus szűrés."
+
+#. RenderingServer.VIEWPORT_SCREEN_SPACE_AA_DISABLED
+#. Viewport.SCREEN_SPACE_AA_DISABLED
+#: doc/classes/RenderingServer.xml doc/classes/Viewport.xml
+msgid "Do not perform any antialiasing in the full screen post-process."
+msgstr "A teljes képernyős utófeldolgozás nem alkalmaz élsimítást."
+
+#. RenderingServer.VIEWPORT_RENDER_INFO_TYPE_VISIBLE
+#. Viewport.RENDER_INFO_TYPE_VISIBLE
+#: doc/classes/RenderingServer.xml doc/classes/Viewport.xml
+msgid "Visible render pass (excluding shadows)."
+msgstr "Látható elemek renderelési menete, az árnyékok nélkül."
+
+#. RenderingServer.VIEWPORT_RENDER_INFO_TYPE_SHADOW
+#. Viewport.RENDER_INFO_TYPE_SHADOW
+#: doc/classes/RenderingServer.xml doc/classes/Viewport.xml
+msgid "Shadow render pass. Objects will be rendered several times depending on the number of amounts of lights with shadows and the number of directional shadow splits."
+msgstr "Az árnyékok renderelési menete. Az objektumok többször is kirajzolódhatnak az árnyékot vető fények és az irányított fények árnyéktartományainak számától függően."
+
+#. RenderingServer.VIEWPORT_RENDER_INFO_TYPE_CANVAS
+#. Viewport.RENDER_INFO_TYPE_CANVAS
+#: doc/classes/RenderingServer.xml doc/classes/Viewport.xml
+msgid "Canvas item rendering. This includes all 2D rendering."
+msgstr "Vásznonelemek renderelése. A teljes 2D renderelés ide tartozik."
+
+#. RenderingServer.VIEWPORT_DEBUG_DRAW_UNSHADED
+#. Viewport.DEBUG_DRAW_UNSHADED
+#: doc/classes/RenderingServer.xml doc/classes/Viewport.xml
+msgid "Objects are displayed without light information."
+msgstr "Az objektumok megvilágítás nélkül jelennek meg."
+
+#. RenderingServer.VIEWPORT_DEBUG_DRAW_SHADOW_ATLAS
+#. Viewport.DEBUG_DRAW_SHADOW_ATLAS
+#: doc/classes/RenderingServer.xml doc/classes/Viewport.xml
+msgid "Draws the shadow atlas that stores shadows from [OmniLight3D]s and [SpotLight3D]s in the upper left quadrant of the [Viewport]."
+msgstr "Az [OmniLight3D] és a [SpotLight3D] árnyékait tároló atlaszt a [Viewport] bal felső negyedébe rajzolja."
+
+#. RenderingServer.VIEWPORT_VRS_UPDATE_DISABLED
+#. Viewport.VRS_UPDATE_DISABLED
+#: doc/classes/RenderingServer.xml doc/classes/Viewport.xml
+msgid "The input texture for variable rate shading will not be processed."
+msgstr "A változó gyakoriságú árnyalás bemeneti textúráját nem dolgozza fel."
+
+#. RenderingServer.VIEWPORT_VRS_UPDATE_ONCE
+#. Viewport.VRS_UPDATE_ONCE
+#: doc/classes/RenderingServer.xml doc/classes/Viewport.xml
+msgid "The input texture for variable rate shading will be processed once."
+msgstr "A változó gyakoriságú árnyalás bemeneti textúráját egyszer dolgozza fel."
+
+#. RenderingServer.VIEWPORT_VRS_UPDATE_ALWAYS
+#. Viewport.VRS_UPDATE_ALWAYS
+#: doc/classes/RenderingServer.xml doc/classes/Viewport.xml
+msgid "The input texture for variable rate shading will be processed each frame."
+msgstr "A változó gyakoriságú árnyalás bemeneti textúráját minden képkockában feldolgozza."
+
+#. RenderingServer.CANVAS_ITEM_TEXTURE_REPEAT_MIRROR
+#. Viewport.DEFAULT_CANVAS_ITEM_TEXTURE_REPEAT_MIRROR
+#: doc/classes/RenderingServer.xml doc/classes/Viewport.xml
+msgid "Flip the texture when repeating so that the edge lines up instead of abruptly changing."
+msgstr "Ismétléskor tükrözi a textúrát, hogy a szomszédos példányok szélei illeszkedjenek, és ne legyen éles átmenet."
+
+#. Viewport.find_world_2d
+#: doc/classes/Viewport.xml
+msgid "Returns the first valid [World2D] for this viewport, searching the [member world_2d] property of itself and any Viewport ancestor."
+msgstr "Visszaadja az első érvényes [World2D] erőforrást, amelyet a nézetablak vagy valamelyik fölérendelt nézetablak [member world_2d] tulajdonságában talál."
+
+#. Viewport.find_world_3d
+#: doc/classes/Viewport.xml
+msgid "Returns the first valid [World3D] for this viewport, searching the [member world_3d] property of itself and any Viewport ancestor."
+msgstr "Visszaadja az első érvényes [World3D] erőforrást, amelyet a nézetablak vagy valamelyik fölérendelt nézetablak [member world_3d] tulajdonságában talál."
+
+#. Viewport.get_audio_listener_2d
+#: doc/classes/Viewport.xml
+msgid "Returns the currently active 2D audio listener. Returns [code]null[/code] if there are no active 2D audio listeners, in which case the active 2D camera will be treated as listener."
+msgstr "Visszaadja a jelenleg aktív 2D hangfigyelőt. Ha nincs aktív 2D hangfigyelő, [code]null[/code] értéket ad vissza, és az aktív 2D kamera tölti be ezt a szerepet."
+
+#. Viewport.get_audio_listener_3d
+#: doc/classes/Viewport.xml
+msgid "Returns the currently active 3D audio listener. Returns [code]null[/code] if there are no active 3D audio listeners, in which case the active 3D camera will be treated as listener."
+msgstr "Visszaadja a jelenleg aktív 3D hangfigyelőt. Ha nincs aktív 3D hangfigyelő, [code]null[/code] értéket ad vissza, és az aktív 3D kamera tölti be ezt a szerepet."
+
+#. Viewport.get_canvas_cull_mask_bit
+#: doc/classes/Viewport.xml
+msgid "Returns an individual bit on the rendering layer mask."
+msgstr "Visszaadja a renderelési rétegmaszk megadott bitjét."
+
+#. Viewport.get_embedded_subwindows
+#: doc/classes/Viewport.xml
+msgid "Returns a list of the visible embedded [Window]s inside the viewport.\n[b]Note:[/b] [Window]s inside other viewports will not be listed."
+msgstr "Visszaadja a nézetablak látható beágyazott [Window] ablakainak listáját.\n[b]Megjegyzés:[/b] Más nézetablakokban lévő [Window] ablakok nem kerülnek a listába."
+
+#. Viewport.get_final_transform
+#: doc/classes/Viewport.xml
+msgid "Returns the transform from the viewport's coordinate system to the embedder's coordinate system."
+msgstr "Visszaadja a nézetablak koordináta-rendszeréből a befogadó koordináta-rendszerébe vezető transzformációt."
+
+#. Viewport.get_mouse_position
+#: doc/classes/Viewport.xml
+msgid "Returns the mouse's position in this [Viewport] using the coordinate system of this [Viewport]."
+msgstr "Visszaadja az egér helyét ebben a [Viewport] nézetablakban, a [Viewport] saját koordináta-rendszerében."
+
+#. Viewport.get_oversampling
+#: doc/classes/Viewport.xml
+msgid "Returns viewport oversampling factor."
+msgstr "Visszaadja a nézetablak túlmintavételezési szorzóját."
+
+#. Viewport.get_positional_shadow_atlas_quadrant_subdiv
+#: doc/classes/Viewport.xml
+msgid "Returns the positional shadow atlas quadrant subdivision of the specified quadrant."
+msgstr "Visszaadja az árnyékatlasz kijelölt negyedének felosztási beállítását."
+
+#. Viewport.get_render_info
+#: doc/classes/Viewport.xml
+msgid "Returns rendering statistics of the given type."
+msgstr "Visszaadja a megadott típusú renderelési statisztikát."
+
+#. Viewport.get_screen_transform
+#: doc/classes/Viewport.xml
+msgid "Returns the transform from the Viewport's coordinates to the screen coordinates of the containing window manager window."
+msgstr "Visszaadja a nézetablak koordinátáit a befogadó ablak képernyő-koordinátáira átszámító transzformációt."
+
+#. Viewport.get_viewport_rid
+#: doc/classes/Viewport.xml
+msgid "Returns the viewport's RID from the [RenderingServer]."
+msgstr "Visszaadja a nézetablak [RenderingServer] által használt RID azonosítóját."
+
+#. Viewport.gui_cancel_drag
+#: doc/classes/Viewport.xml
+msgid "Cancels the drag operation that was previously started through [method Control._get_drag_data] or forced with [method Control.force_drag]."
+msgstr "Megszakítja a [method Control._get_drag_data] révén vagy a [method Control.force_drag] hívásával elindított húzási műveletet."
+
+#. Viewport.gui_get_drag_data
+#: doc/classes/Viewport.xml
+msgid "Returns the drag data from the GUI, that was previously returned by [method Control._get_drag_data]."
+msgstr "Visszaadja a felületi húzás adatait, amelyeket korábban a [method Control._get_drag_data] adott vissza."
+
+#. Viewport.gui_get_drag_description
+#: doc/classes/Viewport.xml
+msgid "Returns the human-readable description of the drag data, used for assistive apps."
+msgstr "Visszaadja a húzás adatainak ember számára olvasható leírását, amelyet a kisegítő alkalmazások használnak."
+
+#. Viewport.gui_get_focus_owner
+#: doc/classes/Viewport.xml
+msgid "Returns the currently focused [Control] within this viewport. If no [Control] is focused, returns [code]null[/code]."
+msgstr "Visszaadja a nézetablak jelenleg fókuszban lévő [Control] elemét. Ha nincs fókuszban [Control] elem, [code]null[/code] értéket ad vissza."
+
+#. Viewport.gui_is_drag_successful
+#: doc/classes/Viewport.xml
+msgid "Returns [code]true[/code] if the drag operation is successful."
+msgstr "[code]true[/code] értéket ad vissza, ha a húzás sikeres volt."
+
+#. Viewport.gui_release_focus
+#: doc/classes/Viewport.xml
+msgid "Removes the focus from the currently focused [Control] within this viewport. If no [Control] has the focus, does nothing."
+msgstr "Elveszi a fókuszt a nézetablak jelenleg fókuszban lévő [Control] elemétől. Ha egyik [Control] elem sincs fókuszban, nincs hatása."
+
+#. Viewport.gui_set_drag_description
+#: doc/classes/Viewport.xml
+msgid "Sets the human-readable description of the drag data to [param description], used for assistive apps."
+msgstr "A húzás adatainak ember számára olvasható leírását a [param description] értékére állítja. A leírást a kisegítő alkalmazások használják."
+
+#. Viewport.push_text_input
+#: doc/classes/Viewport.xml
+msgid "Helper method which calls the [code]set_text()[/code] method on the currently focused [Control], provided that it is defined (e.g. if the focused Control is [Button] or [LineEdit])."
+msgstr "Segédmetódus, amely meghívja a fókuszban lévő [Control] [code]set_text()[/code] metódusát, ha rendelkezik ilyennel. Ilyen például a [Button] és a [LineEdit]."
+
+#. Viewport.set_canvas_cull_mask_bit
+#: doc/classes/Viewport.xml
+msgid "Set/clear individual bits on the rendering layer mask. This simplifies editing this [Viewport]'s layers."
+msgstr "Beállítja vagy törli a renderelési rétegmaszk megadott bitjét. Így egyszerűbben szerkeszthetők a [Viewport] rétegei."
+
+#. Viewport.set_input_as_handled
+#: doc/classes/Viewport.xml
+msgid "Stops the input from propagating further up the [SceneTree].\n[b]Note:[/b] This does not affect the methods in [Input], only the way events are propagated."
+msgstr "Megakadályozza, hogy a bemeneti esemény továbbterjedjen felfelé a [SceneTree] jelenetfában.\n[b]Megjegyzés:[/b] Csak az események továbbítására hat, az [Input] metódusainak működésére nem."
+
+#. Viewport.gui_focus_changed
+#: doc/classes/Viewport.xml
+msgid "Emitted when a Control node grabs keyboard focus.\n[b]Note:[/b] A Control node losing focus doesn't cause this signal to be emitted."
+msgstr "Akkor jelez, amikor egy Control csomópont megkapja a billentyűzetfókuszt.\n[b]Megjegyzés:[/b] A fókusz elvesztésekor a Control csomópont nem váltja ki ezt a jelzést."
+
+#. Viewport.size_changed
+#: doc/classes/Viewport.xml
+msgid "Emitted when the size of the viewport is changed, whether by resizing of window, or some other means."
+msgstr "A nézetablak méretének megváltozásakor jelez, például az ablak átméretezésekor."
+
+#. Viewport.audio_listener_enable_2d
+#: doc/classes/Viewport.xml
+msgid "If [code]true[/code], the viewport will process 2D audio streams."
+msgstr "Ha az értéke [code]true[/code], a nézetablak feldolgozza a 2D hangfolyamokat."
+
+#. Viewport.audio_listener_enable_3d
+#: doc/classes/Viewport.xml
+msgid "If [code]true[/code], the viewport will process 3D audio streams."
+msgstr "Ha az értéke [code]true[/code], a nézetablak feldolgozza a 3D hangfolyamokat."
+
+#. Viewport.canvas_item_default_texture_filter
+#: doc/classes/Viewport.xml
+msgid "The default filter mode used by [CanvasItem] nodes in this viewport."
+msgstr "A nézetablak [CanvasItem] csomópontjai által alapértelmezésben használt textúraszűrési mód."
+
+#. Viewport.canvas_item_default_texture_repeat
+#: doc/classes/Viewport.xml
+msgid "The default repeat mode used by [CanvasItem] nodes in this viewport."
+msgstr "A nézetablak [CanvasItem] csomópontjai által alapértelmezésben használt textúraismétlési mód."
+
+#. Viewport.canvas_transform
+#: doc/classes/Viewport.xml
+msgid "The canvas transform of the viewport, useful for changing the on-screen positions of all child [CanvasItem]s. This is relative to the global canvas transform of the viewport."
+msgstr "A nézetablak vászontranszformációja. Ezzel módosítható az összes [CanvasItem] gyermek képernyőn elfoglalt helye. A nézetablak globális vászontranszformációjához viszonyítva értendő."
+
+#. Viewport.disable_3d
+#: doc/classes/Viewport.xml
+msgid "Disable 3D rendering (but keep 2D rendering)."
+msgstr "Kikapcsolja a 3D renderelést. A 2D renderelés aktív marad."
+
+#. Viewport.gui_disable_input
+#: doc/classes/Viewport.xml
+msgid "If [code]true[/code], the viewport will not receive input events."
+msgstr "Ha az értéke [code]true[/code], a nézetablak nem kap bemeneti eseményeket."
+
+#. Viewport.gui_drag_threshold
+#: doc/classes/Viewport.xml
+msgid "The minimum distance the mouse cursor must move while pressed before a drag operation begins."
+msgstr "Az egérmutató legkisebb elmozdulása, amely lenyomott egérgomb mellett elindítja a húzást."
+
+#. Viewport.gui_snap_controls_to_pixels
+#: doc/classes/Viewport.xml
+msgid "If [code]true[/code], the GUI controls on the viewport will lay pixel perfectly."
+msgstr "Ha az értéke [code]true[/code], a nézetablak felületi elemei a képpontrácshoz igazodnak."
+
+#. Viewport.own_world_3d
+#: doc/classes/Viewport.xml
+msgid "If [code]true[/code], the viewport will use a unique copy of the [World3D] defined in [member world_3d]."
+msgstr "Ha az értéke [code]true[/code], a nézetablak saját másolatot használ a [member world_3d] tulajdonságban megadott [World3D] erőforrásból."
+
+#. Viewport.positional_shadow_atlas_quad_0
+#: doc/classes/Viewport.xml
+msgid "The subdivision amount of the first quadrant on the shadow atlas."
+msgstr "Az árnyékatlasz első negyedének felosztása."
+
+#. Viewport.positional_shadow_atlas_quad_1
+#: doc/classes/Viewport.xml
+msgid "The subdivision amount of the second quadrant on the shadow atlas."
+msgstr "Az árnyékatlasz második negyedének felosztása."
+
+#. Viewport.positional_shadow_atlas_quad_2
+#: doc/classes/Viewport.xml
+msgid "The subdivision amount of the third quadrant on the shadow atlas."
+msgstr "Az árnyékatlasz harmadik negyedének felosztása."
+
+#. Viewport.positional_shadow_atlas_quad_3
+#: doc/classes/Viewport.xml
+msgid "The subdivision amount of the fourth quadrant on the shadow atlas."
+msgstr "Az árnyékatlasz negyedik negyedének felosztása."
+
+#. Viewport.sdf_scale
+#: doc/classes/Viewport.xml
+msgid "The resolution scale to use for the 2D signed distance field. Higher values lead to a more precise and more stable signed distance field as the camera moves, at the cost of performance."
+msgstr "A 2D előjeles távolságmező felbontásának szorzója. Nagyobb értéknél a mező pontosabb és stabilabb marad a kamera mozgásakor, de több erőforrást igényel."
+
+#. Viewport.use_xr
+#: doc/classes/Viewport.xml
+msgid "If [code]true[/code], the viewport will use the primary XR interface to render XR output. When applicable this can result in a stereoscopic image and the resulting render being output to a headset."
+msgstr "Ha az értéke [code]true[/code], a nézetablak az elsődleges XR-felületen keresztül rendereli az XR-kimenetet. Adott esetben térhatású képet állít elő, amelyet a rendszer a fejre helyezhető kijelzőre küld."
+
+#. Viewport.vrs_mode
+#: doc/classes/Viewport.xml
+msgid "The Variable Rate Shading (VRS) mode that is used for this viewport. Note, if hardware does not support VRS this property is ignored."
+msgstr "A nézetablak változó gyakoriságú árnyalási (VRS) módja. A motor figyelmen kívül hagyja, ha a hardver nem támogatja a VRS-t."
+
+#. Viewport.world_2d
+#: doc/classes/Viewport.xml
+msgid "The custom [World2D] which can be used as 2D environment source."
+msgstr "A 2D környezet forrásaként használható egyéni [World2D] erőforrás."
+
+#. Viewport.world_3d
+#: doc/classes/Viewport.xml
+msgid "The custom [World3D] which can be used as 3D environment source."
+msgstr "A 3D környezet forrásaként használható egyéni [World3D] erőforrás."
+
+#. Viewport.SHADOW_ATLAS_QUADRANT_SUBDIV_DISABLED
+#: doc/classes/Viewport.xml
+msgid "This quadrant will not be used."
+msgstr "Ez a negyed használaton kívül marad."
+
+#. Viewport.SHADOW_ATLAS_QUADRANT_SUBDIV_1
+#: doc/classes/Viewport.xml
+msgid "This quadrant will only be used by one shadow map."
+msgstr "Ezt a negyedet egyetlen árnyéktérkép használhatja."
+
+#. Viewport.SHADOW_ATLAS_QUADRANT_SUBDIV_4
+#: doc/classes/Viewport.xml
+msgid "This quadrant will be split in 4 and used by up to 4 shadow maps."
+msgstr "A negyed négy részre oszlik, így legfeljebb 4 árnyéktérkép fér el benne."
+
+#. Viewport.SHADOW_ATLAS_QUADRANT_SUBDIV_16
+#: doc/classes/Viewport.xml
+msgid "This quadrant will be split 16 ways and used by up to 16 shadow maps."
+msgstr "A negyed 16 részre oszlik, így legfeljebb 16 árnyéktérkép fér el benne."
+
+#. Viewport.SHADOW_ATLAS_QUADRANT_SUBDIV_64
+#: doc/classes/Viewport.xml
+msgid "This quadrant will be split 64 ways and used by up to 64 shadow maps."
+msgstr "A negyed 64 részre oszlik, így legfeljebb 64 árnyéktérkép fér el benne."
+
+#. Viewport.MSAA_DISABLED
+#: doc/classes/Viewport.xml
+msgid "Multisample antialiasing mode disabled. This is the default value, and is also the fastest setting."
+msgstr "A többmintás élsimítás ki van kapcsolva. Ez az alapértelmezett és egyben leggyorsabb beállítás."
+
+#. Viewport.MSAA_2X
+#: doc/classes/Viewport.xml
+msgid "Use 2× Multisample Antialiasing. This has a moderate performance cost. It helps reduce aliasing noticeably, but 4× MSAA still looks substantially better."
+msgstr "Kétszeres (2×) többmintás élsimítást használ. Mérsékelt teljesítményköltséggel észrevehetően csökkenti a recézést. A 4× MSAA ennél lényegesen jobb képet ad."
+
+#. Viewport.MSAA_4X
+#: doc/classes/Viewport.xml
+msgid "Use 4× Multisample Antialiasing. This has a significant performance cost, and is generally a good compromise between performance and quality."
+msgstr "Négyszeres (4×) többmintás élsimítást használ. Jelentős a teljesítményköltsége, de általában jó kompromisszumot jelent a teljesítmény és a képminőség között."
+
+#. Viewport.RENDER_INFO_OBJECTS_IN_FRAME
+#: doc/classes/Viewport.xml
+msgid "Amount of objects in frame."
+msgstr "Az objektumok száma a képkockában."
+
+#. Viewport.RENDER_INFO_DRAW_CALLS_IN_FRAME
+#: doc/classes/Viewport.xml
+msgid "Amount of draw calls in frame."
+msgstr "A rajzolási hívások száma a képkockában."
+
+#. Viewport.DEBUG_DRAW_DIRECTIONAL_SHADOW_ATLAS
+#: doc/classes/Viewport.xml
+msgid "Draws the shadow atlas that stores shadows from [DirectionalLight3D]s in the upper left quadrant of the [Viewport]."
+msgstr "A [DirectionalLight3D] árnyékait tároló atlaszt a [Viewport] bal felső negyedébe rajzolja."
+
+#. Viewport.DEBUG_DRAW_SCENE_LUMINANCE
+#: doc/classes/Viewport.xml
+msgid "Draws the scene luminance buffer (if available) in the upper left quadrant of the [Viewport].\n[b]Note:[/b] Only supported when using the Forward+ or Mobile rendering methods."
+msgstr "A jelenet fénysűrűségi pufferét a [Viewport] bal felső negyedébe rajzolja, ha elérhető.\n[b]Megjegyzés:[/b] Csak a Forward+ és a Mobile renderelési módokban támogatott."
+
+#. Viewport.DEBUG_DRAW_DECAL_ATLAS
+#: doc/classes/Viewport.xml
+msgid "Draws the decal atlas used by [Decal]s and light projector textures in the upper left quadrant of the [Viewport].\n[b]Note:[/b] Only supported when using the Forward+ or Mobile rendering methods."
+msgstr "A [Decal] csomópontok és a fényvetítők textúráinak atlaszát a [Viewport] bal felső negyedébe rajzolja.\n[b]Megjegyzés:[/b] Csak a Forward+ és a Mobile renderelési módokban támogatott."
+
+#. Viewport.DEBUG_DRAW_DISABLE_LOD
+#: doc/classes/Viewport.xml
+msgid "Draws all of the objects at their highest polycount regardless of their distance from the camera. No low level of detail (LOD) is applied."
+msgstr "Minden objektumot a legtöbb sokszöget tartalmazó változatával rajzol ki, a kamerától mért távolságtól függetlenül. Nem használ alacsonyabb részletességi szintet (LOD)."
+
+#. Viewport.DEBUG_DRAW_CLUSTER_OMNI_LIGHTS
+#: doc/classes/Viewport.xml
+msgid "Draws the cluster used by [OmniLight3D] nodes to optimize light rendering.\n[b]Note:[/b] Only supported when using the Forward+ rendering method."
+msgstr "Megjeleníti az [OmniLight3D] fényforrások renderelését gyorsító klasztert.\n[b]Megjegyzés:[/b] Csak a Forward+ renderelési módban támogatott."
+
+#. Viewport.DEBUG_DRAW_CLUSTER_SPOT_LIGHTS
+#: doc/classes/Viewport.xml
+msgid "Draws the cluster used by [SpotLight3D] nodes to optimize light rendering.\n[b]Note:[/b] Only supported when using the Forward+ rendering method."
+msgstr "Megjeleníti a [SpotLight3D] fényforrások renderelését gyorsító klasztert.\n[b]Megjegyzés:[/b] Csak a Forward+ renderelési módban támogatott."
+
+#. Viewport.DEBUG_DRAW_CLUSTER_DECALS
+#: doc/classes/Viewport.xml
+msgid "Draws the cluster used by [Decal] nodes to optimize decal rendering.\n[b]Note:[/b] Only supported when using the Forward+ rendering method."
+msgstr "Megjeleníti a [Decal] csomópontok renderelését gyorsító klasztert.\n[b]Megjegyzés:[/b] Csak a Forward+ renderelési módban támogatott."
+
+#. Viewport.DEBUG_DRAW_CLUSTER_REFLECTION_PROBES
+#: doc/classes/Viewport.xml
+msgid "Draws the cluster used by [ReflectionProbe] nodes to optimize reflection probes.\n[b]Note:[/b] Only supported when using the Forward+ rendering method."
+msgstr "Megjeleníti a [ReflectionProbe] tükröződési szondák feldolgozását gyorsító klasztert.\n[b]Megjegyzés:[/b] Csak a Forward+ renderelési módban támogatott."
+
+#. Viewport.DEBUG_DRAW_OCCLUDERS
+#: doc/classes/Viewport.xml
+msgid "Draws the buffer used for occlusion culling.\n[b]Note:[/b] Only supported when using the Forward+ or Mobile rendering methods."
+msgstr "Megjeleníti a takart objektumok kiszűréséhez használt puffert.\n[b]Megjegyzés:[/b] Csak a Forward+ és a Mobile renderelési módokban támogatott."
+
+#. Viewport.DEBUG_DRAW_MOTION_VECTORS
+#: doc/classes/Viewport.xml
+msgid "Draws vector lines over the viewport to indicate the movement of pixels between frames.\n[b]Note:[/b] Only supported when using the Forward+ rendering method."
+msgstr "Vektorokat rajzol a nézetablakra, amelyek a képpontok képkockák közötti mozgását jelzik.\n[b]Megjegyzés:[/b] Csak a Forward+ renderelési módban támogatott."
+
+#. Viewport.DEBUG_DRAW_CLUSTER_AREA_LIGHTS
+#: doc/classes/Viewport.xml
+msgid "Draws the cluster used by [AreaLight3D] nodes to optimize light rendering.\n[b]Note:[/b] Only supported when using the Forward+ rendering method."
+msgstr "Megjeleníti az [AreaLight3D] fényforrások renderelését gyorsító klasztert.\n[b]Megjegyzés:[/b] Csak a Forward+ renderelési módban támogatott."
+
+#. Viewport.DEBUG_DRAW_AREA_LIGHT_ATLAS
+#: doc/classes/Viewport.xml
+msgid "Draws the atlas used by [AreaLight3D] nodes in the upper left quadrant of the [Viewport].\n[b]Note:[/b] Only supported when using the Forward+ or Mobile rendering method."
+msgstr "Az [AreaLight3D] csomópontok atlaszát a [Viewport] bal felső negyedébe rajzolja.\n[b]Megjegyzés:[/b] Csak a Forward+ és a Mobile renderelési módokban támogatott."
+
+#. Viewport.DEFAULT_CANVAS_ITEM_TEXTURE_FILTER_PARENT_NODE
+#: doc/classes/Viewport.xml
+msgid "The [Viewport] will inherit the filter from its parent [CanvasItem] or [Viewport]."
+msgstr "A [Viewport] a szülő [CanvasItem] vagy [Viewport] szűrési módját örökli."
+
+#. Viewport.DEFAULT_CANVAS_ITEM_TEXTURE_REPEAT_PARENT_NODE
+#: doc/classes/Viewport.xml
+msgid "The [Viewport] will inherit the repeat mode from its parent [CanvasItem] or [Viewport]."
+msgstr "A [Viewport] a szülő [CanvasItem] vagy [Viewport] ismétlési módját örökli."
+
+#. Viewport.SDF_OVERSIZE_100_PERCENT
+#: doc/classes/Viewport.xml
+msgid "The signed distance field only covers the viewport's own rectangle."
+msgstr "Az előjeles távolságmező csak a nézetablak saját téglalapját fedi le."
+
+#. Viewport.SDF_SCALE_100_PERCENT
+#: doc/classes/Viewport.xml
+msgid "The signed distance field is rendered at full resolution."
+msgstr "Az előjeles távolságmezőt teljes felbontásban rendereli."
+
+#. Viewport.SDF_SCALE_50_PERCENT
+#: doc/classes/Viewport.xml
+msgid "The signed distance field is rendered at half the resolution of this viewport."
+msgstr "Az előjeles távolságmezőt a nézetablak felbontásának felével rendereli."
+
+#. Viewport.SDF_SCALE_25_PERCENT
+#: doc/classes/Viewport.xml
+msgid "The signed distance field is rendered at a quarter the resolution of this viewport."
+msgstr "Az előjeles távolságmezőt a nézetablak felbontásának negyedével rendereli."
+
+#. Viewport.VRS_TEXTURE
+#: doc/classes/Viewport.xml
+msgid "Variable Rate Shading uses a texture. Note, for stereoscopic use a texture atlas with a texture for each view."
+msgstr "A változó gyakoriságú árnyalás textúrát használ. Térhatású megjelenítéshez olyan textúraatlaszt használj, amely minden nézethez külön textúrát tartalmaz."
+
+#. Viewport.VRS_XR
+#: doc/classes/Viewport.xml
+msgid "Variable Rate Shading's texture is supplied by the primary [XRInterface]."
+msgstr "A változó gyakoriságú árnyalás textúráját az elsődleges [XRInterface] biztosítja."
+
+#. Viewport.VRS_MAX
+#: doc/classes/Viewport.xml
+msgid "Represents the size of the [enum VRSMode] enum."
+msgstr "A [enum VRSMode] felsorolás méretét jelöli."
+
+#. World3D.brief
+#: doc/classes/World3D.xml
+msgid "A resource that holds all components of a 3D world, such as a visual scenario and a physics space."
+msgstr "Egy 3D világ összetevőit tároló erőforrás, amely például a renderelési teret és a fizikai teret tartalmazza."
+
+#. World3D.description
+#: doc/classes/World3D.xml
+msgid "Class that has everything pertaining to a world: A physics space, a visual scenario, and a sound space. 3D nodes register their resources into the current 3D world."
+msgstr "A világhoz tartozó fizikai teret, renderelési teret és hangteret tároló osztály. A 3D csomópontok az aktuális 3D világban regisztrálják az erőforrásaikat."
+
+#. World3D.environment
+#: doc/classes/World3D.xml
+msgid "The World3D's [Environment]."
+msgstr "A World3D [Environment] erőforrása."
+
+#. World3D.fallback_environment
+#: doc/classes/World3D.xml
+msgid "The World3D's fallback environment will be used if [member environment] fails or is missing."
+msgstr "A World3D tartalék környezete, amelyet a motor a [member environment] hiánya vagy hibája esetén használ."
+
+#. World3D.navigation_map
+#: doc/classes/World3D.xml
+msgid "The [RID] of this world's navigation map. Used by the [NavigationServer3D]."
+msgstr "E világ navigációs térképének [RID] azonosítója. A [NavigationServer3D] használja."
+
+#. World3D.scenario
+#: doc/classes/World3D.xml
+msgid "The World3D's visual scenario."
+msgstr "A World3D renderelési tere."
+
+#. World3D.space
+#: doc/classes/World3D.xml
+msgid "The World3D's physics space."
+msgstr "A World3D fizikai tere."
