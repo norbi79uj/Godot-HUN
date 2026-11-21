@@ -13104,3 +13104,215 @@ msgstr "Rombusz alakú cella az izometrikus nézethez. A cella koordináta-rends
 #: doc/classes/AStarGrid2D.xml
 msgid "Represents the size of the [enum CellShape] enum."
 msgstr "A [enum CellShape] felsorolásban szereplő cellaformák száma."
+
+#. NavigationAgent2D.get_avoidance_mask_value
+#. NavigationAgent3D.get_avoidance_mask_value
+#: doc/classes/NavigationAgent2D.xml doc/classes/NavigationAgent3D.xml
+msgid "Returns whether or not the specified mask of the [member avoidance_mask] bitmask is enabled, given a [param mask_number] between 1 and 32."
+msgstr "Megadja, hogy az [member avoidance_mask] bitmaszk [param mask_number] sorszámú bitje be van-e kapcsolva. A sorszám 1 és 32 közötti."
+
+#. NavigationAgent2D.get_current_navigation_result
+#. NavigationAgent3D.get_current_navigation_result
+#: doc/classes/NavigationAgent2D.xml doc/classes/NavigationAgent3D.xml
+msgid "Returns the path query result for the path the agent is currently following."
+msgstr "Visszaadja az ügynök által éppen követett útvonal lekérdezési eredményét."
+
+#. NavigationAgent2D.get_navigation_map
+#. NavigationAgent3D.get_navigation_map
+#: doc/classes/NavigationAgent2D.xml doc/classes/NavigationAgent3D.xml
+msgid "Returns the [RID] of the navigation map for this NavigationAgent node. This function returns always the map set on the NavigationAgent node and not the map of the abstract agent on the NavigationServer. If the agent map is changed directly with the NavigationServer API the NavigationAgent node will not be aware of the map change. Use [method set_navigation_map] to change the navigation map for the NavigationAgent and also update the agent on the NavigationServer."
+msgstr "Visszaadja a NavigationAgent csomóponthoz tartozó navigációs térkép [RID] azonosítóját. Mindig a csomóponton beállított térképet adja vissza, a navigációs kiszolgáló belső ügynökének térképétől függetlenül. Ha az ügynök térképét közvetlenül a navigációs kiszolgáló API-jával módosítod, a NavigationAgent csomópont erről nem értesül. A [method set_navigation_map] metódussal a csomópont térképét és a kiszolgálón nyilvántartott ügynököt is frissítheted."
+
+#. NavigationAgent2D.get_path_length
+#. NavigationAgent3D.get_path_length
+#: doc/classes/NavigationAgent2D.xml doc/classes/NavigationAgent3D.xml
+msgid "Returns the length of the currently calculated path. The returned value is [code]0.0[/code], if the path is still calculating or no calculation has been requested yet."
+msgstr "Visszaadja a jelenleg kiszámított útvonal hosszát. Az eredmény [code]0.0[/code], ha a számítás még tart, vagy még nem kértek útvonalszámítást."
+
+#. NavigationAgent2D.get_rid
+#: doc/classes/NavigationAgent2D.xml
+msgid "Returns the [RID] of this agent on the [NavigationServer2D]."
+msgstr "Visszaadja az ügynök [NavigationServer2D] által használt [RID] azonosítóját."
+
+#. NavigationAgent2D.set_avoidance_mask_value
+#. NavigationAgent3D.set_avoidance_mask_value
+#: doc/classes/NavigationAgent2D.xml doc/classes/NavigationAgent3D.xml
+msgid "Based on [param value], enables or disables the specified mask in the [member avoidance_mask] bitmask, given a [param mask_number] between 1 and 32."
+msgstr "A [param value] értékétől függően be- vagy kikapcsolja az [member avoidance_mask] bitmaszk [param mask_number] sorszámú bitjét. A sorszám 1 és 32 közötti."
+
+#. NavigationAgent2D.set_navigation_map
+#. NavigationAgent3D.set_navigation_map
+#: doc/classes/NavigationAgent2D.xml doc/classes/NavigationAgent3D.xml
+msgid "Sets the [RID] of the navigation map this NavigationAgent node should use and also updates the [code]agent[/code] on the NavigationServer."
+msgstr "Beállítja a NavigationAgent csomópont által használandó navigációs térkép [RID] azonosítóját, és frissíti a navigációs kiszolgálón nyilvántartott [code]agent[/code] ügynököt is."
+
+#. NavigationAgent2D.set_velocity_forced
+#. NavigationAgent3D.set_velocity_forced
+#: doc/classes/NavigationAgent2D.xml doc/classes/NavigationAgent3D.xml
+msgid "Replaces the internal velocity in the collision avoidance simulation with [param velocity]. When an agent is teleported to a new position this function should be used in the same frame. If called frequently this function can get agents stuck."
+msgstr "Az ütközéselkerülési szimulációban használt belső sebességet a [param velocity] értékére állítja. Ha az ügynököt új helyre teleportálod, még ugyanabban a képkockában hívd meg ezt a metódust. A túl gyakori hívástól az ügynökök elakadhatnak."
+
+#. NavigationAgent2D.navigation_finished
+#. NavigationAgent3D.navigation_finished
+#: doc/classes/NavigationAgent2D.xml doc/classes/NavigationAgent3D.xml
+msgid "Signals that the agent's navigation has finished. If the target is reachable, navigation ends when the target is reached. If the target is unreachable, navigation ends when the last waypoint of the path is reached. This signal is emitted only once per loaded path.\nThis signal will be emitted just after [signal target_reached] when the target is reachable."
+msgstr "Jelzi, hogy az ügynök befejezte a navigációt. Ha a cél elérhető, a navigáció a cél elérésekor ér véget. Ha a cél nem érhető el, a navigáció az útvonal utolsó pontjának elérésekor fejeződik be. Ez a jelzés betöltött útvonalanként csak egyszer érkezik.\nHa a cél elérhető, a jelzés közvetlenül a [signal target_reached] után érkezik."
+
+#. NavigationAgent2D.path_changed
+#. NavigationAgent3D.path_changed
+#: doc/classes/NavigationAgent2D.xml doc/classes/NavigationAgent3D.xml
+msgid "Emitted when the agent had to update the loaded path:\n- because path was previously empty.\n- because navigation map has changed.\n- because agent pushed further away from the current path segment than the [member path_max_distance]."
+msgstr "Akkor érkezik, ha az ügynöknek frissítenie kellett a betöltött útvonalat, mert\n- az útvonal korábban üres volt,\n- a navigációs térkép megváltozott, vagy\n- az ügynök az aktuális útvonalszakasztól a [member path_max_distance] értékénél messzebbre került."
+
+#. NavigationAgent2D.target_reached
+#. NavigationAgent3D.target_reached
+#: doc/classes/NavigationAgent2D.xml doc/classes/NavigationAgent3D.xml
+msgid "Signals that the agent reached the target, i.e. the agent moved within [member target_desired_distance] of the [member target_position]. This signal is emitted only once per loaded path.\nThis signal will be emitted just before [signal navigation_finished] when the target is reachable.\nIt may not always be possible to reach the target but it should always be possible to reach the final position. See [method get_final_position]."
+msgstr "Jelzi, hogy az ügynök elérte a célt, vagyis a [member target_position] céltól mért távolsága a [member target_desired_distance] küszöb alá csökkent. Ez a jelzés betöltött útvonalanként csak egyszer érkezik.\nHa a cél elérhető, a jelzés közvetlenül a [signal navigation_finished] előtt érkezik.\nElőfordulhat, hogy a cél nem érhető el, de az útvonal végpontjának mindig elérhetőnek kell lennie. Lásd a [method get_final_position] metódust."
+
+#. NavigationAgent2D.velocity_computed
+#. NavigationAgent3D.velocity_computed
+#: doc/classes/NavigationAgent2D.xml doc/classes/NavigationAgent3D.xml
+msgid "Notifies when the collision avoidance velocity is calculated. Emitted every update as long as [member avoidance_enabled] is [code]true[/code] and the agent has a navigation map."
+msgstr "Jelzi, hogy elkészült az ütközéselkerüléshez számított sebesség. Minden frissítéskor érkezik, amíg az [member avoidance_enabled] értéke [code]true[/code], és az ügynöknek van navigációs térképe."
+
+#. NavigationAgent2D.waypoint_reached
+#. NavigationAgent3D.waypoint_reached
+#: doc/classes/NavigationAgent2D.xml doc/classes/NavigationAgent3D.xml
+msgid "Signals that the agent reached a waypoint. Emitted when the agent moves within [member path_desired_distance] of the next position of the path.\nThe details dictionary may contain the following keys depending on the value of [member path_metadata_flags]:\n- [code]position[/code]: The position of the waypoint that was reached.\n- [code]type[/code]: The type of navigation primitive (region or link) that contains this waypoint.\n- [code]rid[/code]: The [RID] of the containing navigation primitive (region or link).\n- [code]owner[/code]: The object which manages the containing navigation primitive (region or link)."
+msgstr "Jelzi, hogy az ügynök elért egy útvonalpontot. Akkor érkezik, amikor az ügynök az útvonal következő pontját a [member path_desired_distance] távolságon belülre közelíti meg.\nA részleteket tartalmazó szótárban a [member path_metadata_flags] értékétől függően a következő kulcsok szerepelhetnek:\n- [code]position[/code]: Az elért útvonalpont helye.\n- [code]type[/code]: Az útvonalpontot tartalmazó navigációs elem típusa (terület vagy kapcsolat).\n- [code]rid[/code]: Az útvonalpontot tartalmazó navigációs elem (terület vagy kapcsolat) [RID] azonosítója.\n- [code]owner[/code]: Az útvonalpontot tartalmazó navigációs elemet (területet vagy kapcsolatot) kezelő objektum."
+
+#. NavigationAgent2D.avoidance_priority
+#. NavigationAgent3D.avoidance_priority
+#: doc/classes/NavigationAgent2D.xml doc/classes/NavigationAgent3D.xml
+msgid "The agent does not adjust the velocity for other agents that would match the [member avoidance_mask] but have a lower [member avoidance_priority]. This in turn makes the other agents with lower priority adjust their velocities even more to avoid collision with this agent."
+msgstr "Az ügynök figyelmen kívül hagyja a kisebb prioritású szomszédokat a sebesség kiszámításakor, még akkor is, ha megfelelnek az [member avoidance_mask] maszknak. A prioritások sorrendjét a [member avoidance_priority] értékei határozzák meg. Emiatt az alacsonyabb prioritású ügynökök nagyobb mértékben igazítják a saját sebességüket, hogy elkerüljék az ütközést ezzel az ügynökkel."
+
+#. NavigationAgent2D.debug_path_custom_color
+#. NavigationAgent3D.debug_path_custom_color
+#: doc/classes/NavigationAgent2D.xml doc/classes/NavigationAgent3D.xml
+msgid "If [member debug_use_custom] is [code]true[/code] uses this color for this agent instead of global color."
+msgstr "Ha a [member debug_use_custom] értéke [code]true[/code], a rendszer ezt a színt használja ennél az ügynöknél a globális szín helyett."
+
+#. NavigationAgent2D.debug_path_custom_point_size
+#. NavigationAgent3D.debug_path_custom_point_size
+#: doc/classes/NavigationAgent2D.xml doc/classes/NavigationAgent3D.xml
+msgid "If [member debug_use_custom] is [code]true[/code] uses this rasterized point size for rendering path points for this agent instead of global point size."
+msgstr "Ha a [member debug_use_custom] értéke [code]true[/code], a rendszer az útvonal pontjait ennél az ügynöknél ezzel a pontmérettel raszterezi a globális pontméret helyett."
+
+#. NavigationAgent2D.debug_use_custom
+#. NavigationAgent3D.debug_use_custom
+#: doc/classes/NavigationAgent2D.xml doc/classes/NavigationAgent3D.xml
+msgid "If [code]true[/code] uses the defined [member debug_path_custom_color] for this agent instead of global color."
+msgstr "Ha az értéke [code]true[/code], a rendszer ennél az ügynöknél a [member debug_path_custom_color] szerinti színt használja a globális szín helyett."
+
+#. NavigationAgent2D.path_metadata_flags
+#. NavigationAgent3D.path_metadata_flags
+#: doc/classes/NavigationAgent2D.xml doc/classes/NavigationAgent3D.xml
+msgid "Additional information to return with the navigation path."
+msgstr "A navigációs útvonallal együtt visszaadandó kiegészítő információk."
+
+#. NavigationAgent2D.path_return_max_length
+#. NavigationAgent3D.path_return_max_length
+#: doc/classes/NavigationAgent2D.xml doc/classes/NavigationAgent3D.xml
+msgid "The maximum allowed length of the returned path in world units. A path will be clipped when going over this length."
+msgstr "A visszaadott útvonal legnagyobb megengedett hossza világegységben. Ha az útvonal ennél hosszabb, a rendszer levágja a túlnyúló részét."
+
+#. NavigationAgent2D.path_return_max_radius
+#. NavigationAgent3D.path_return_max_radius
+#: doc/classes/NavigationAgent2D.xml doc/classes/NavigationAgent3D.xml
+msgid "The maximum allowed radius in world units that the returned path can be from the path start. The path will be clipped when going over this radius. Compared to [member path_return_max_length], this allows the agent to go that much further, if they need to walk around a corner.\n[b]Note:[/b] This will perform a sphere clip considering only the actual navigation mesh path points with the first path position being the sphere's center."
+msgstr "A visszaadott útvonal legnagyobb megengedett távolsága a kezdőponttól, világegységben. Ha az útvonal túlnyúlik ezen a sugáron, a rendszer levágja. A [member path_return_max_length] hosszkorláthoz képest ezzel az ügynök hosszabb utat tehet meg, ha például meg kell kerülnie egy sarkot.\n[b]Megjegyzés:[/b] A sugár szerinti levágás csak a navigációs hálón számított útvonal pontjait veszi figyelembe, és az útvonal első pontját használja középpontként."
+
+#. NavigationAgent2D.radius
+#: doc/classes/NavigationAgent2D.xml
+msgid "The radius of the avoidance agent. This is the \"body\" of the avoidance agent and not the avoidance maneuver starting radius (which is controlled by [member neighbor_distance]).\nDoes not affect normal pathfinding. To change an actor's pathfinding radius bake [NavigationPolygon] resources with a different [member NavigationPolygon.agent_radius] property and use different navigation maps for each actor size."
+msgstr "Az elkerülési számításban részt vevő ügynök sugara. Ez az ügynök testének méretét határozza meg. Az elkerülési manőver kezdőtávolságát a [member neighbor_distance] adja meg.\nA szokásos útkeresést nem befolyásolja. Ha az útkereséshez más sugarat szeretnél használni, állíts elő [NavigationPolygon] erőforrásokat eltérő [member NavigationPolygon.agent_radius] értékekkel, és minden szereplőmérethez használj külön navigációs térképet."
+
+#. NavigationAgent2D.target_desired_distance
+#. NavigationAgent3D.target_desired_distance
+#: doc/classes/NavigationAgent2D.xml doc/classes/NavigationAgent3D.xml
+msgid "The distance threshold before the target is considered to be reached. On reaching the target, [signal target_reached] is emitted and navigation ends (see [method is_navigation_finished] and [signal navigation_finished]).\nYou can make navigation end early by setting this property to a value greater than [member path_desired_distance] (navigation will end before reaching the last waypoint).\nYou can also make navigation end closer to the target than each individual path position by setting this property to a value lower than [member path_desired_distance] (navigation won't immediately end when reaching the last waypoint). However, if the value set is too low, the agent will be stuck in a repath loop because it will constantly overshoot the distance to the target on each physics frame update."
+msgstr "Az a távolsági küszöb, amelyen belül a célt elértnek tekinti a rendszer. Ekkor megérkezik a [signal target_reached] jelzés, és a navigáció befejeződik. Lásd a [method is_navigation_finished] metódust és a [signal navigation_finished] jelzést.\nHa ez az érték nagyobb a [member path_desired_distance] értékénél, a navigáció hamarabb is véget érhet, még az utolsó útvonalpont elérése előtt.\nHa ez az érték kisebb a [member path_desired_distance] értékénél, az ügynöknek közelebb kell jutnia a célhoz, mint az egyes útvonalpontokhoz. Így a navigáció nem ér véget rögtön az utolsó útvonalpont elérésekor. Túl kis értéknél az ügynök folyamatos útvonal-újratervezésbe ragadhat, mert minden fizikai frissítéskor túlfut a cél körüli távolsági küszöbön."
+
+#. NavigationAgent2D.time_horizon_agents
+#. NavigationAgent3D.time_horizon_agents
+#: doc/classes/NavigationAgent2D.xml doc/classes/NavigationAgent3D.xml
+msgid "The minimal amount of time for which this agent's velocities, that are computed with the collision avoidance algorithm, are safe with respect to other agents. The larger the number, the sooner the agent will respond to other agents, but less freedom in choosing its velocities. A too high value will slow down agents movement considerably. Must be positive."
+msgstr "Az a legrövidebb időtartam, amelyre az ütközéselkerülési algoritmus a többi ügynökkel szemben biztonságos sebességet számít ennek az ügynöknek. Nagyobb értéknél az ügynök hamarabb reagál a többiekre, de kevesebb sebesség közül választhat. A túl nagy érték jelentősen lelassítja az ügynökök mozgását. Az értéknek pozitívnak kell lennie."
+
+#. NavigationAgent2D.time_horizon_obstacles
+#. NavigationAgent3D.time_horizon_obstacles
+#: doc/classes/NavigationAgent2D.xml doc/classes/NavigationAgent3D.xml
+msgid "The minimal amount of time for which this agent's velocities, that are computed with the collision avoidance algorithm, are safe with respect to static avoidance obstacles. The larger the number, the sooner the agent will respond to static avoidance obstacles, but less freedom in choosing its velocities. A too high value will slow down agents movement considerably. Must be positive."
+msgstr "Az a legrövidebb időtartam, amelyre az ütközéselkerülési algoritmus a statikus akadályok elkerülésére biztonságos sebességet számít ennek az ügynöknek. Nagyobb értéknél az ügynök hamarabb reagál ezekre az akadályokra, de kevesebb sebesség közül választhat. A túl nagy érték jelentősen lelassítja az ügynökök mozgását. Az értéknek pozitívnak kell lennie."
+
+#. NavigationPolygon.SAMPLE_PARTITION_CONVEX_PARTITION
+#: doc/classes/NavigationPolygon.xml
+msgid "Convex partitioning that results in a navigation mesh with convex polygons."
+msgstr "A felosztás eredménye egy konvex sokszögekből álló navigációs háló."
+
+#. NavigationPolygon.SAMPLE_PARTITION_TRIANGULATE
+#: doc/classes/NavigationPolygon.xml
+msgid "Triangulation partitioning that results in a navigation mesh with triangle polygons."
+msgstr "Háromszögelés, amely háromszögekből álló navigációs hálót eredményez."
+
+#. NavigationMesh.SAMPLE_PARTITION_MAX
+#. NavigationPolygon.SAMPLE_PARTITION_MAX
+#: doc/classes/NavigationMesh.xml doc/classes/NavigationPolygon.xml
+msgid "Represents the size of the [enum SamplePartitionType] enum."
+msgstr "Az [enum SamplePartitionType] felsorolásban szereplő felosztási típusok száma."
+
+#. NavigationPolygon.PARSED_GEOMETRY_MESH_INSTANCES
+#: doc/classes/NavigationPolygon.xml
+msgid "Parses mesh instances as obstruction geometry. This includes [Polygon2D], [MeshInstance2D], [MultiMeshInstance2D], and [TileMap] nodes.\nMeshes are only parsed when they use a 2D vertices surface format."
+msgstr "Akadálygeometriaként dolgozza fel a hálópéldányokat. Ide tartoznak a [Polygon2D], [MeshInstance2D], [MultiMeshInstance2D] és [TileMap] csomópontok.\nA rendszer csak a kétdimenziós csúcsadatokat használó hálófelületeket dolgozza fel."
+
+#. NavigationPolygon.PARSED_GEOMETRY_STATIC_COLLIDERS
+#: doc/classes/NavigationPolygon.xml
+msgid "Parses [StaticBody2D] and [TileMap] colliders as obstruction geometry. The collider should be in any of the layers specified by [member parsed_collision_mask]."
+msgstr "Akadálygeometriaként dolgozza fel a [StaticBody2D] és [TileMap] ütközési objektumait. Az ütközési objektumnak a [member parsed_collision_mask] által megadott rétegek valamelyikén kell lennie."
+
+#. NavigationMesh.PARSED_GEOMETRY_BOTH
+#. NavigationPolygon.PARSED_GEOMETRY_BOTH
+#: doc/classes/NavigationMesh.xml doc/classes/NavigationPolygon.xml
+msgid "Both [constant PARSED_GEOMETRY_MESH_INSTANCES] and [constant PARSED_GEOMETRY_STATIC_COLLIDERS]."
+msgstr "A [constant PARSED_GEOMETRY_MESH_INSTANCES] és a [constant PARSED_GEOMETRY_STATIC_COLLIDERS] által meghatározott geometriát egyaránt feldolgozza."
+
+#. NavigationMesh.PARSED_GEOMETRY_MAX
+#. NavigationPolygon.PARSED_GEOMETRY_MAX
+#: doc/classes/NavigationMesh.xml doc/classes/NavigationPolygon.xml
+msgid "Represents the size of the [enum ParsedGeometryType] enum."
+msgstr "Az [enum ParsedGeometryType] felsorolásban szereplő geometriafeldolgozási módok száma."
+
+#. NavigationMesh.SOURCE_GEOMETRY_ROOT_NODE_CHILDREN
+#. NavigationPolygon.SOURCE_GEOMETRY_ROOT_NODE_CHILDREN
+#: doc/classes/NavigationMesh.xml doc/classes/NavigationPolygon.xml
+msgid "Scans the child nodes of the root node recursively for geometry."
+msgstr "A geometriát a gyökércsomópont összes leszármazottjában keresi."
+
+#. NavigationPolygon.SOURCE_GEOMETRY_GROUPS_WITH_CHILDREN
+#: doc/classes/NavigationPolygon.xml
+msgid "Scans nodes in a group and their child nodes recursively for geometry. The group is specified by [member source_geometry_group_name]."
+msgstr "A geometriát a csoport csomópontjaiban és azok összes leszármazottjában keresi. A csoportot a [member source_geometry_group_name] adja meg."
+
+#. NavigationPolygon.SOURCE_GEOMETRY_GROUPS_EXPLICIT
+#: doc/classes/NavigationPolygon.xml
+msgid "Uses nodes in a group for geometry. The group is specified by [member source_geometry_group_name]."
+msgstr "A csoport csomópontjait használja geometriaforrásként. A csoportot a [member source_geometry_group_name] adja meg."
+
+#. NavigationMesh.SOURCE_GEOMETRY_MAX
+#. NavigationPolygon.SOURCE_GEOMETRY_MAX
+#: doc/classes/NavigationMesh.xml doc/classes/NavigationPolygon.xml
+msgid "Represents the size of the [enum SourceGeometryMode] enum."
+msgstr "A [enum SourceGeometryMode] felsorolásban szereplő geometriaforrás-módok száma."
+
+#. NavigationRegion2D.bake_finished
+#: doc/classes/NavigationRegion2D.xml
+msgid "Emitted when a navigation polygon bake operation is completed."
+msgstr "Akkor érkezik, amikor a navigációs sokszög előállítása befejeződik."
+
+#. NavigationRegion2D.navigation_polygon_changed
+#: doc/classes/NavigationRegion2D.xml
+msgid "Emitted when the used navigation polygon is replaced or changes to the internals of the current navigation polygon are committed."
+msgstr "Akkor érkezik, amikor a használt navigációs sokszöget lecserélik, vagy az aktuális sokszög belső módosításai érvénybe lépnek."
