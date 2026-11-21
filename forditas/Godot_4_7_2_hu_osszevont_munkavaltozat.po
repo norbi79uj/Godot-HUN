@@ -11642,3 +11642,178 @@ msgstr "Csak akkor frissíti a renderelési célt, ha az alnézetablak szülője
 #: doc/classes/SubViewport.xml
 msgid "Always update the render target."
 msgstr "Mindig frissíti a renderelési célt."
+
+#. Material.brief
+#: doc/classes/Material.xml
+msgid "Virtual base class for applying visual properties to an object, such as color and roughness."
+msgstr "Virtuális alaposztály az objektumok megjelenési tulajdonságainak, például színének és érdességének megadásához."
+
+#. Material.description
+#: doc/classes/Material.xml
+msgid "[Material] is a base resource used for coloring and shading geometry. All materials inherit from it and almost all [VisualInstance3D] derived nodes carry a [Material]. A few flags and parameters are shared between all material types and are configured here.\nImportantly, you can inherit from [Material] to create your own custom material type in script or in GDExtension."
+msgstr "A [Material] a geometria színezésére és árnyalására szolgáló alaperőforrás. Minden anyag ebből származik, és szinte minden [VisualInstance3D] leszármazotthoz tartozik egy [Material]. Minden anyagtípusnak van néhány közös jelzője és paramétere, ezeket itt lehet beállítani.\nA [Material] osztályból örökölve szkriptben vagy GDExtensionnel saját anyagtípust is létrehozhatsz."
+
+#. Material._can_do_next_pass
+#: doc/classes/Material.xml
+msgid "Only exposed for the purpose of overriding. You cannot call this function directly. Used internally to determine if [member next_pass] should be shown in the editor or not."
+msgstr "Kizárólag felülírásra szolgál, közvetlenül nem hívható meg. A szerkesztő belsőleg ezzel dönti el, hogy megjelenítse-e a [member next_pass] tulajdonságot."
+
+#. Material._can_use_render_priority
+#: doc/classes/Material.xml
+msgid "Only exposed for the purpose of overriding. You cannot call this function directly. Used internally to determine if [member render_priority] should be shown in the editor or not."
+msgstr "Kizárólag felülírásra szolgál, közvetlenül nem hívható meg. A szerkesztő belsőleg ezzel dönti el, hogy megjelenítse-e a [member render_priority] tulajdonságot."
+
+#. Material._get_shader_mode
+#: doc/classes/Material.xml
+msgid "Only exposed for the purpose of overriding. You cannot call this function directly. Used internally by various editor tools."
+msgstr "Kizárólag felülírásra szolgál, közvetlenül nem hívható meg. A szerkesztő különböző eszközei használják belsőleg."
+
+#. Material._get_shader_rid
+#: doc/classes/Material.xml
+msgid "Only exposed for the purpose of overriding. You cannot call this function directly. Used internally by various editor tools. Used to access the RID of the [Material]'s [Shader]."
+msgstr "Kizárólag felülírásra szolgál, közvetlenül nem hívható meg. A szerkesztő különböző eszközei belsőleg ezzel érik el a [Material] erőforrás [Shader] árnyalójának RID-azonosítóját."
+
+#. Material.create_placeholder
+#: doc/classes/Material.xml
+msgid "Creates a placeholder version of this resource ([PlaceholderMaterial])."
+msgstr "Létrehozza az erőforrás helyőrző változatát ([PlaceholderMaterial])."
+
+#. Material.inspect_native_shader_code
+#: doc/classes/Material.xml
+msgid "Only available when running in the editor. Opens a popup that visualizes the generated shader code, including all variants and internal shader code. See also [method Shader.inspect_native_shader_code]."
+msgstr "Csak a szerkesztőben érhető el. Felugró ablakban jeleníti meg a generált árnyalókódot, az összes változattal és a belső árnyalókóddal együtt. Lásd még a [method Shader.inspect_native_shader_code] metódust."
+
+#. Material.next_pass
+#: doc/classes/Material.xml
+msgid "Sets the [Material] to be used for the next pass. This renders the object again using a different material.\n[b]Note:[/b] [member next_pass] materials are not necessarily drawn immediately after the source [Material]. Draw order is determined by material properties, [member render_priority], and distance to camera.\n[b]Note:[/b] This only applies to [StandardMaterial3D]s and [ShaderMaterial]s with type \"Spatial\"."
+msgstr "Beállítja a következő kirajzolási menetben használt [Material] erőforrást. Az objektum így újra kirajzolódik egy másik anyaggal.\n[b]Megjegyzés:[/b] A [member next_pass] anyagok nem feltétlenül közvetlenül az eredeti [Material] után rajzolódnak ki. A sorrendet az anyag tulajdonságai, a [member render_priority] és a kamerától mért távolság határozza meg.\n[b]Megjegyzés:[/b] Ez csak a [StandardMaterial3D] és a „Spatial” típusú [ShaderMaterial] anyagokra vonatkozik."
+
+#. Material.render_priority
+#: doc/classes/Material.xml
+msgid "Sets the render priority for objects in 3D scenes. Higher priority objects will be sorted in front of lower priority objects. In other words, all objects with [member render_priority] [code]1[/code] will render on top of all objects with [member render_priority] [code]0[/code].\n[b]Note:[/b] This only applies to [StandardMaterial3D]s and [ShaderMaterial]s with type \"Spatial\".\n[b]Note:[/b] This will not impact how transparent objects are sorted relative to opaque objects or how dynamic meshes will be sorted relative to other opaque meshes. This is because all transparent objects are drawn after all opaque objects and all dynamic opaque meshes are drawn before other opaque meshes."
+msgstr "Beállítja a 3D-s jelenet objektumainak kirajzolási prioritását. A nagyobb prioritású objektumok a kisebb prioritásúak elé kerülnek. A [member render_priority] [code]1[/code] értékével rendelkező objektumok tehát a [member render_priority] [code]0[/code] értékével rendelkezők előtt jelennek meg.\n[b]Megjegyzés:[/b] Ez csak a [StandardMaterial3D] és a „Spatial” típusú [ShaderMaterial] anyagokra vonatkozik.\n[b]Megjegyzés:[/b] Ez a beállítás nem befolyásolja az átlátszó objektumok sorrendjét az átlátszatlanokhoz képest, sem a dinamikus hálók sorrendjét az egyéb átlátszatlan hálókhoz képest. Az átlátszó objektumokat ugyanis az átlátszatlanok után, a dinamikus átlátszatlan hálókat pedig a többi átlátszatlan háló előtt rajzolja ki a motor."
+
+#. Material.RENDER_PRIORITY_MAX
+#: doc/classes/Material.xml
+msgid "Maximum value for the [member render_priority] parameter."
+msgstr "A [member render_priority] legnagyobb értéke."
+
+#. Material.RENDER_PRIORITY_MIN
+#: doc/classes/Material.xml
+msgid "Minimum value for the [member render_priority] parameter."
+msgstr "A [member render_priority] legkisebb értéke."
+
+#. Shader.brief
+#: doc/classes/Shader.xml
+msgid "A shader implemented in the Godot shading language."
+msgstr "A Godot árnyalónyelvén írt árnyaló."
+
+#. Shader.description
+#: doc/classes/Shader.xml
+msgid "A custom shader program implemented in the Godot shading language, saved with the [code].gdshader[/code] extension.\nThis class is used by a [ShaderMaterial] and allows you to write your own custom behavior for rendering visual items or updating particle information. For a detailed explanation and usage, please see the tutorials linked below."
+msgstr "A Godot árnyalónyelvén írt egyéni árnyalóprogram, [code].gdshader[/code] kiterjesztéssel mentve.\nEzt az osztályt a [ShaderMaterial] használja. Segítségével saját szabályokat írhatsz a megjelenítendő elemek kirajzolásához vagy a részecskeadatok frissítéséhez. A részletes magyarázatot és a használati példákat a lent hivatkozott útmutatókban találod."
+
+#. Shader.get_default_texture_parameter
+#: doc/classes/Shader.xml
+msgid "Returns the texture that is set as default for the specified parameter.\n[b]Note:[/b] [param name] must match the name of the uniform in the code exactly.\n[b]Note:[/b] If the sampler array is used use [param index] to access the specified texture."
+msgstr "Visszaadja a megadott paraméterhez alapértelmezettként beállított textúrát.\n[b]Megjegyzés:[/b] A [param name] értékének pontosan egyeznie kell a kódban szereplő uniform paraméter nevével.\n[b]Megjegyzés:[/b] Ha mintavételezők tömbjét használod, a kívánt textúrát a [param index] paraméterrel érheted el."
+
+#. Shader.get_mode
+#: doc/classes/Shader.xml
+msgid "Returns the shader mode for the shader."
+msgstr "Visszaadja az árnyaló működési módját."
+
+#. Shader.get_shader_uniform_list
+#: doc/classes/Shader.xml
+msgid "Returns the list of shader uniforms that can be assigned to a [ShaderMaterial], for use with [method ShaderMaterial.set_shader_parameter] and [method ShaderMaterial.get_shader_parameter]. The parameters returned are contained in dictionaries in a similar format to the ones returned by [method Object.get_property_list].\nIf argument [param get_groups] is [code]true[/code], parameter grouping hints are also included in the list."
+msgstr "Visszaadja a [ShaderMaterial] erőforráshoz beállítható uniform paraméterek listáját. A paraméterértékek a [method ShaderMaterial.set_shader_parameter] metódussal állíthatók be, és a [method ShaderMaterial.get_shader_parameter] metódussal kérhetők le. A lista az egyes paramétereket a [method Object.get_property_list] eredményéhez hasonló formátumú szótárakban adja vissza.\nHa a [param get_groups] argumentum értéke [code]true[/code], a lista a paraméterek csoportosítási adatait is tartalmazza."
+
+#. Shader.inspect_native_shader_code
+#: doc/classes/Shader.xml
+msgid "Only available when running in the editor. Opens a popup that visualizes the generated shader code, including all variants and internal shader code. See also [method Material.inspect_native_shader_code]."
+msgstr "Csak a szerkesztőben érhető el. Felugró ablakban jeleníti meg a generált árnyalókódot, az összes változattal és a belső árnyalókóddal együtt. Lásd még a [method Material.inspect_native_shader_code] metódust."
+
+#. Shader.set_default_texture_parameter
+#: doc/classes/Shader.xml
+msgid "Sets the default texture to be used with a texture uniform. The default is used if a texture is not set in the [ShaderMaterial].\n[b]Note:[/b] [param name] must match the name of the uniform in the code exactly.\n[b]Note:[/b] If the sampler array is used use [param index] to access the specified texture."
+msgstr "Beállítja a textúra típusú uniform paraméter alapértelmezett textúráját. Ez akkor használatos, ha a [ShaderMaterial] nem ad meg textúrát a paraméterhez.\n[b]Megjegyzés:[/b] A [param name] értékének pontosan egyeznie kell a kódban szereplő uniform paraméter nevével.\n[b]Megjegyzés:[/b] Ha mintavételezők tömbjét használod, a kívánt textúrát a [param index] paraméterrel érheted el."
+
+#. Shader.code
+#: doc/classes/Shader.xml
+msgid "Returns the shader's code as the user has written it, not the full generated code used internally."
+msgstr "A felhasználó által írt árnyalókódot adja vissza. Ez eltér a motor által belsőleg használt teljes generált kódtól."
+
+#. Shader.MODE_SPATIAL
+#: doc/classes/Shader.xml
+msgid "Mode used to draw all 3D objects."
+msgstr "Az összes 3D-s objektum kirajzolásához használt mód."
+
+#. Shader.MODE_CANVAS_ITEM
+#: doc/classes/Shader.xml
+msgid "Mode used to draw all 2D objects."
+msgstr "Az összes 2D-s objektum kirajzolásához használt mód."
+
+#. Shader.MODE_PARTICLES
+#: doc/classes/Shader.xml
+msgid "Mode used to calculate particle information on a per-particle basis. Not used for drawing."
+msgstr "Részecskénként számítja ki a részecskeadatokat. Kirajzolásra nem használatos."
+
+#. Shader.MODE_SKY
+#: doc/classes/Shader.xml
+msgid "Mode used for drawing skies. Only works with shaders attached to [Sky] objects."
+msgstr "Az égbolt kirajzolásához használt mód. Csak [Sky] objektumhoz rendelt árnyalóval működik."
+
+#. Shader.MODE_FOG
+#: doc/classes/Shader.xml
+msgid "Mode used for setting the color and density of volumetric fog effect."
+msgstr "A térfogati köd színének és sűrűségének beállítására szolgáló mód."
+
+#. Shader.MODE_TEXTURE_BLIT
+#: doc/classes/Shader.xml
+msgid "Mode used for drawing to DrawableTexture resources via blit calls."
+msgstr "A DrawableTexture erőforrásokba történő rajzoláshoz használt mód, amely blit hívásokkal működik."
+
+#. Light2D.SHADOW_FILTER_NONE
+#: doc/classes/Light2D.xml
+msgid "No filter applies to the shadow map. This provides hard shadow edges and is the fastest to render. See [member shadow_filter]."
+msgstr "Az árnyéktérképre nem kerül szűrő. Így az árnyékok széle éles lesz, és a kirajzolás ebben a módban a leggyorsabb. Lásd a [member shadow_filter] tulajdonságot."
+
+#. Light2D.SHADOW_FILTER_PCF5
+#: doc/classes/Light2D.xml
+msgid "Percentage closer filtering (5 samples) applies to the shadow map. This is slower compared to hard shadow rendering. See [member shadow_filter]."
+msgstr "Öt mintával végzett PCF-árnyékszűrést alkalmaz az árnyéktérképre. Ez lassabb az éles szélű árnyékok kirajzolásánál. Lásd a [member shadow_filter] tulajdonságot."
+
+#. Light2D.SHADOW_FILTER_PCF13
+#: doc/classes/Light2D.xml
+msgid "Percentage closer filtering (13 samples) applies to the shadow map. This is the slowest shadow filtering mode, and should be used sparingly. See [member shadow_filter]."
+msgstr "Tizenhárom mintával végzett PCF-árnyékszűrést alkalmaz az árnyéktérképre. Ez a leglassabb árnyékszűrési mód, ezért csak indokolt esetben használd. Lásd a [member shadow_filter] tulajdonságot."
+
+#. Light2D.BLEND_MODE_ADD
+#: doc/classes/Light2D.xml
+msgid "Adds the value of pixels corresponding to the Light2D to the values of pixels under it. This is the common behavior of a light."
+msgstr "A Light2D által meghatározott képpontértékeket hozzáadja az alatta lévő képpontok értékéhez. Ez a fényforrás szokásos működése."
+
+#. Light2D.BLEND_MODE_SUB
+#: doc/classes/Light2D.xml
+msgid "Subtracts the value of pixels corresponding to the Light2D to the values of pixels under it, resulting in inversed light effect."
+msgstr "A Light2D által meghatározott képpontértékeket kivonja az alatta lévő képpontok értékéből, így fordított fényhatást hoz létre."
+
+#. Light2D.BLEND_MODE_MIX
+#: doc/classes/Light2D.xml
+msgid "Mix the value of pixels corresponding to the Light2D to the values of pixels under it by linear interpolation."
+msgstr "Lineáris interpolációval keveri a Light2D által meghatározott képpontértékeket az alatta lévő képpontok értékeivel."
+
+#. OccluderPolygon2D.CULL_DISABLED
+#: doc/classes/OccluderPolygon2D.xml
+msgid "Culling is disabled. See [member cull_mode]."
+msgstr "Az élek irány szerinti kizárása ki van kapcsolva. Lásd a [member cull_mode] tulajdonságot."
+
+#. OccluderPolygon2D.CULL_CLOCKWISE
+#: doc/classes/OccluderPolygon2D.xml
+msgid "Culling is performed in the clockwise direction. See [member cull_mode]."
+msgstr "Az óramutató járásával megegyező irányú éleket zárja ki. Lásd a [member cull_mode] tulajdonságot."
+
+#. OccluderPolygon2D.CULL_COUNTER_CLOCKWISE
+#: doc/classes/OccluderPolygon2D.xml
+msgid "Culling is performed in the counterclockwise direction. See [member cull_mode]."
+msgstr "Az óramutató járásával ellentétes irányú éleket zárja ki. Lásd a [member cull_mode] tulajdonságot."
