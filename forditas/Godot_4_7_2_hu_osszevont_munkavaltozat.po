@@ -7906,7 +7906,7 @@ msgstr "Egyszerű szöveg megjelenítésére szolgáló vezérlőelem."
 #. Label.description
 #: doc/classes/Label.xml
 msgid "A control for displaying plain text. It gives you control over the horizontal and vertical alignment and can wrap the text inside the node's bounding rectangle. It doesn't support bold, italics, or other rich text formatting. For that, use [RichTextLabel] instead.\n[b]Note:[/b] A single Label node is not designed to display huge amounts of text. To display large amounts of text in a single node, consider using [RichTextLabel] instead as it supports features like an integrated scroll bar and threading. [RichTextLabel] generally performs better when displaying large amounts of text (several pages or more)."
-msgstr "Egyszerű szöveg megjelenítésére szolgáló vezérlőelem. Beállítható a vízszintes és függőleges igazítás, és a szöveg a csomópont határoló téglalapján belül több sorba tördelhető. A félkövér, dőlt és egyéb formázott szövegeket nem támogatja; ezekhez inkább a [RichTextLabel] osztályt használd.\n[b]Megjegyzés:[/b] A Label csomópontot nem nagy mennyiségű szöveg megjelenítésére tervezték. Hosszú szövegek esetén érdemes inkább a [RichTextLabel] osztályt használni, amely beépített görgetősávot és többszálú feldolgozást is támogat. Nagy mennyiségű (többoldalas vagy hosszabb) szöveg megjelenítésekor a [RichTextLabel] általában gyorsabb."
+msgstr "Egyszerű szöveg megjelenítésére szolgáló vezérlőelem. Beállítható a vízszintes és függőleges igazítás, és a szöveg a csomópont határoló téglalapján belül több sorba tördelhető. A félkövér, dőlt és más gazdagon formázott szövegek megjelenítését nem támogatja; ezekhez inkább a [RichTextLabel] osztályt használd.\n[b]Megjegyzés:[/b] A Label csomópontot nem nagy mennyiségű szöveg megjelenítésére tervezték. Hosszú szövegek esetén érdemes inkább a [RichTextLabel] osztályt használni, amely beépített görgetősávot és többszálú feldolgozást is támogat. Nagy mennyiségű (többoldalas vagy hosszabb) szöveg megjelenítésekor a [RichTextLabel] általában gyorsabb."
 
 #. Label.get_character_bounds
 #: doc/classes/Label.xml
@@ -7921,7 +7921,7 @@ msgstr "Visszaadja a Label szövegsorainak számát."
 #. Label.get_line_height
 #: doc/classes/Label.xml
 msgid "Returns the height of the line [param line].\nIf [param line] is set to [code]-1[/code], returns the biggest line height.\nIf there are no lines, returns font size in pixels."
-msgstr "Visszaadja a [param line] sor magasságát.\nHa a [param line] értéke [code]-1[/code], a legmagasabb sor magasságát adja vissza.\nHa nincsenek sorok, a betűméretet adja vissza képpontban."
+msgstr "Visszaadja a [param line] sor magasságát.\nHa a [param line] értéke [code]-1[/code], a sorok közül a legnagyobb magasságot adja vissza.\nHa nincsenek sorok, a betűméretet adja vissza képpontban."
 
 #. Label.get_total_character_count
 #: doc/classes/Label.xml
@@ -7976,7 +7976,7 @@ msgstr "A [member text] elejétől kihagyott, meg nem jelenített sorok száma."
 #. Label.max_lines_visible
 #: doc/classes/Label.xml
 msgid "Limits the lines of text the node shows on screen."
-msgstr "Korlátozza, hogy a csomópont hány szövegsort jelenítsen meg a képernyőn."
+msgstr "Meghatározza a csomópont által a képernyőn megjeleníthető szövegsorok maximális számát."
 
 #. Label.paragraph_separator
 #: doc/classes/Label.xml
@@ -8016,12 +8016,12 @@ msgstr "Ha [code]true[/code], minden szöveg NAGYBETŰKKEL jelenik meg."
 #. Label.vertical_alignment
 #: doc/classes/Label.xml
 msgid "Controls the text's vertical alignment. Supports top, center, bottom, and fill."
-msgstr "A szöveg függőleges igazítását szabályozza. Felülre, középre és alulra igazítás, valamint a függőleges tér teljes kitöltése választható."
+msgstr "A szöveg függőleges igazítását szabályozza. A szöveg felülre, középre vagy alulra igazítható, illetve a rendelkezésre álló függőleges teret kitöltve is elhelyezhető."
 
 #. Label.visible_characters
 #: doc/classes/Label.xml
 msgid "The number of characters to display. If set to [code]-1[/code], all characters are displayed. This can be useful when animating the text appearing in a dialog box.\n[b]Note:[/b] Setting this property updates [member visible_ratio] accordingly.\n[b]Note:[/b] Characters are counted as Unicode codepoints. A single visible grapheme may contain multiple codepoints (e.g. certain emoji use three codepoints). A single codepoint may contain two UTF-16 characters, which are used in C# strings."
-msgstr "A megjelenítendő karakterek száma. Ha az érték [code]-1[/code], minden karakter megjelenik. Ez hasznos lehet például párbeszédpanelben a szöveg fokozatos megjelenítésének animálásához.\n[b]Megjegyzés:[/b] A tulajdonság módosítása ennek megfelelően frissíti a [member visible_ratio] értékét.\n[b]Megjegyzés:[/b] A karakterek számlálása Unicode-kódpontok alapján történik. Egyetlen látható graféma több kódpontból is állhat (például bizonyos emodzsik három kódpontot használnak). Egyetlen kódpontot akár két UTF-16 kódegység is képviselhet a C# karakterláncaiban."
+msgstr "A megjelenítendő karakterek száma. Ha az érték [code]-1[/code], minden karakter megjelenik. Ez hasznos lehet például párbeszédpanelben a szöveg fokozatos megjelenítésének animálásához.\n[b]Megjegyzés:[/b] A tulajdonság módosítása ennek megfelelően frissíti a [member visible_ratio] értékét.\n[b]Megjegyzés:[/b] A karakterek számlálása Unicode-kódpontok alapján történik. Egyetlen látható graféma több kódpontból is állhat (például bizonyos emodzsik három kódpontot használnak). A C# karakterláncaiban egy Unicode-kódpontot akár két UTF-16 kódegység is képviselhet."
 
 #. Label.visible_characters_behavior
 #: doc/classes/Label.xml
@@ -8061,7 +8061,7 @@ msgstr "A szövegkörvonal vastagsága.\n[b]Megjegyzés:[/b] Ha olyan betűkész
 #. Label.paragraph_spacing
 #: doc/classes/Label.xml
 msgid "Vertical space between paragraphs. Added on top of [theme_item line_spacing]."
-msgstr "A bekezdések közötti függőleges térköz. A [theme_item line_spacing] értékén felüli térközt adja meg."
+msgstr "A bekezdések közötti függőleges térköz, amely a [theme_item line_spacing] értékéhez adódik hozzá."
 
 #. Label.shadow_offset_x
 #: doc/classes/Label.xml
