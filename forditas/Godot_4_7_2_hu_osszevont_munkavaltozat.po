@@ -7911,7 +7911,7 @@ msgstr "Egyszerű szöveg megjelenítésére szolgáló vezérlőelem. Beállít
 #. Label.get_character_bounds
 #: doc/classes/Label.xml
 msgid "Returns the bounding rectangle of the character at position [param pos] in the label's local coordinate system. If the character is a non-visual character or [param pos] is outside the valid range, an empty [Rect2] is returned. If the character is a part of a composite grapheme, the bounding rectangle of the whole grapheme is returned."
-msgstr "Visszaadja a [param pos] pozíción lévő karakter határoló téglalapját a címke helyi koordinátarendszerében. Ha a karakternek nincs vizuális megjelenése, vagy a [param pos] kívül esik az érvényes tartományon, üres [Rect2] értéket ad vissza. Ha a karakter egy összetett graféma része, az egész graféma határoló téglalapját adja vissza."
+msgstr "Visszaadja a [param pos] pozíción lévő karakter határoló téglalapját a címke helyi koordinátarendszerében. Ha a karakternek nincs vizuális megjelenése, vagy a [param pos] kívül esik az érvényes tartományon, üres [Rect2] értéket ad vissza. Ha a karakter egy összetett graféma része, a teljes graféma határoló téglalapját adja vissza."
 
 #. Label.get_line_count
 #: doc/classes/Label.xml
@@ -7936,17 +7936,17 @@ msgstr "Visszaadja a ténylegesen látható sorok számát. Akkor hasznos, ha a 
 #. Label.autowrap_mode
 #: doc/classes/Label.xml
 msgid "If set to something other than [constant TextServer.AUTOWRAP_OFF], the text gets wrapped inside the node's bounding rectangle. If you resize the node, it will change its height automatically to show all the text.\n[b]Note:[/b] Labels with autowrapping enabled must have a custom maximum width configured to work correctly, either through the Label's own [member Control.custom_maximum_size] or as a result of a propagated maximum size from a parent Control with [member Control.propagate_maximum_size] enabled."
-msgstr "Ha az érték nem [constant TextServer.AUTOWRAP_OFF], a szöveg a csomópont határoló téglalapján belül több sorba tördelődik. A csomópont átméretezésekor a magasság automatikusan igazodik, hogy a teljes szöveg elférjen.\n[b]Megjegyzés:[/b] Az automatikus sortörést használó címkék helyes működéséhez egyéni maximális szélességet kell beállítani, vagy a Label saját [member Control.custom_maximum_size] tulajdonságával, vagy a szülő Control csomóponttól örökölt maximális mérettel, ha azon a [member Control.propagate_maximum_size] engedélyezett."
+msgstr "Ha az érték nem [constant TextServer.AUTOWRAP_OFF], a szöveg a csomópont határoló téglalapján belül több sorba tördelődik. A csomópont átméretezésekor a magasság automatikusan igazodik, hogy a teljes szöveg elférjen.\n[b]Megjegyzés:[/b] Az automatikus sortörés helyes működéséhez maximális szélességet kell megadni: közvetlenül a Label [member Control.custom_maximum_size] tulajdonságában, vagy egy olyan szülő Control csomóponton keresztül, amelynél a [member Control.propagate_maximum_size] engedélyezett."
 
 #. Label.autowrap_trim_flags
 #: doc/classes/Label.xml
 msgid "Autowrap space trimming flags. See [constant TextServer.BREAK_TRIM_START_EDGE_SPACES] and [constant TextServer.BREAK_TRIM_END_EDGE_SPACES] for more info."
-msgstr "Az automatikus sortörésnél a sor eleji és végi szóközök eltávolítását szabályozó jelzők. További részletekért lásd a [constant TextServer.BREAK_TRIM_START_EDGE_SPACES] és [constant TextServer.BREAK_TRIM_END_EDGE_SPACES] állandókat."
+msgstr "Az automatikus sortörés során a sorok elején és végén található szóközök eltávolítását vezérlő jelzők. További részletekért lásd a [constant TextServer.BREAK_TRIM_START_EDGE_SPACES] és [constant TextServer.BREAK_TRIM_END_EDGE_SPACES] állandókat."
 
 #. Label.clip_text
 #: doc/classes/Label.xml
 msgid "If [code]true[/code], the Label only shows the text that fits inside its bounding rectangle and will clip text horizontally."
-msgstr "Ha [code]true[/code], a Label csak a határoló téglalapjába beleférő szöveget jeleníti meg, és vízszintesen levágja a túlnyúló részt."
+msgstr "Ha [code]true[/code], a Label csak a határoló téglalapján belül elférő szöveget mutatja; a vízszintesen túlnyúló részt levágja."
 
 #. Label.ellipsis_char
 #: doc/classes/Label.xml
@@ -7956,7 +7956,7 @@ msgstr "A szöveg levágásakor megjelenő kihagyásjel karaktere."
 #. Label.horizontal_alignment
 #: doc/classes/Label.xml
 msgid "Controls the text's horizontal alignment. Supports left, center, right, and fill (also known as justify)."
-msgstr "A szöveg vízszintes igazítását szabályozza. Balra, középre és jobbra igazítás, valamint sorkizárás (a sor teljes kitöltése) választható."
+msgstr "A szöveg vízszintes igazítását szabályozza. A szöveg balra, középre vagy jobbra igazítható, illetve sorkizártan is megjeleníthető (a sor teljes szélességét kitöltve)."
 
 #. Label.justification_flags
 #: doc/classes/Label.xml
@@ -7981,7 +7981,7 @@ msgstr "Korlátozza, hogy a csomópont hány szövegsort jelenítsen meg a képe
 #. Label.paragraph_separator
 #: doc/classes/Label.xml
 msgid "String used as a paragraph separator. Each paragraph is processed independently, in its own BiDi context."
-msgstr "A bekezdések elválasztására használt karakterlánc. Minden bekezdést külön dolgoz fel a rendszer, saját kétirányú szövegkezelési (BiDi) környezetben."
+msgstr "A bekezdések elválasztására használt karakterlánc. Minden bekezdést önállóan, a saját kétirányú (BiDi) szövegkezelési környezetében dolgoz fel a rendszer."
 
 #. Label.structured_text_bidi_override
 #: doc/classes/Label.xml
@@ -8006,7 +8006,7 @@ msgstr "A képernyőn megjelenítendő szöveg."
 #. Label.text_overrun_behavior
 #: doc/classes/Label.xml
 msgid "The clipping behavior when the text exceeds the node's bounding rectangle."
-msgstr "Meghatározza a szöveg levágásának módját, ha a szöveg túlnyúlik a csomópont határoló téglalapján."
+msgstr "Meghatározza, hogyan történjen a szöveg levágása, ha az túlnyúlik a csomópont határoló téglalapján."
 
 #. Label.uppercase
 #: doc/classes/Label.xml
@@ -8031,7 +8031,7 @@ msgstr "A megjelenített szöveg csonkításának módja, ha a [member visible_c
 #. Label.visible_ratio
 #: doc/classes/Label.xml
 msgid "The fraction of characters to display, relative to the total number of characters (see [method get_total_character_count]). If set to [code]1.0[/code], all characters are displayed. If set to [code]0.5[/code], only half of the characters will be displayed. This can be useful when animating the text appearing in a dialog box.\n[b]Note:[/b] Setting this property updates [member visible_characters] accordingly."
-msgstr "A megjelenítendő karakterek aránya a teljes karakterszámhoz képest (lásd: [method get_total_character_count]). Ha az érték [code]1.0[/code], minden karakter megjelenik. Ha [code]0.5[/code], a karaktereknek csak a fele látható. Ez hasznos lehet például párbeszédpanelben a szöveg fokozatos megjelenítésének animálásához.\n[b]Megjegyzés:[/b] A tulajdonság módosítása ennek megfelelően frissíti a [member visible_characters] értékét."
+msgstr "A megjelenítendő karakterek aránya az összes karakterhez viszonyítva (lásd: [method get_total_character_count]). Ha az érték [code]1.0[/code], minden karakter megjelenik. Ha [code]0.5[/code], a karaktereknek csak a fele látható. Ez hasznos lehet például párbeszédpanelben a szöveg fokozatos megjelenítésének animálásához.\n[b]Megjegyzés:[/b] A tulajdonság módosítása ennek megfelelően frissíti a [member visible_characters] értékét."
 
 #. Label.font_color
 #: doc/classes/Label.xml
