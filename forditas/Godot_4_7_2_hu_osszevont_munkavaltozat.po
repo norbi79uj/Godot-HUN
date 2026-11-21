@@ -12512,3 +12512,168 @@ msgstr "Folyamatos ütközésérzékelés sugárvizsgálattal. Gyorsabb, de kev�
 #: doc/classes/RigidBody2D.xml
 msgid "Continuous collision detection enabled using shapecasting. This is the slowest CCD method and the most precise."
 msgstr "Folyamatos ütközésérzékelés alakzattal végzett vizsgálattal. Ez a leglassabb és egyben a legpontosabb folyamatos ütközésérzékelési mód."
+
+#. Joint2D.brief
+#: doc/classes/Joint2D.xml
+msgid "Abstract base class for all 2D physics joints."
+msgstr "A 2D fizikai csuklók absztrakt alaposztálya."
+
+#. Joint2D.description
+#: doc/classes/Joint2D.xml
+msgid "Abstract base class for all joints in 2D physics. 2D joints bind together two physics bodies ([member node_a] and [member node_b]) and apply a constraint."
+msgstr "A 2D fizikai csuklók absztrakt alaposztálya. A 2D csukló két fizikai testet ([member node_a] és [member node_b]) köt össze, és korlátozza a mozgásukat."
+
+#. Joint2D.get_rid
+#: doc/classes/Joint2D.xml
+msgid "Returns the joint's internal [RID] from the [PhysicsServer2D]."
+msgstr "Visszaadja a csukló [PhysicsServer2D] által használt belső [RID] azonosítóját."
+
+#. Joint2D.bias
+#: doc/classes/Joint2D.xml
+msgid "When [member node_a] and [member node_b] move in different directions the [member bias] controls how fast the joint pulls them back to their original position. The lower the [member bias] the more the two bodies can pull on the joint.\nWhen set to [code]0[/code], the default value from [member ProjectSettings.physics/2d/solver/default_constraint_bias] is used."
+msgstr "Ha a [member node_a] és a [member node_b] eltérő irányba mozog, a [member bias] szabályozza, milyen gyorsan húzza vissza őket a csukló az eredeti helyzetükbe. Minél kisebb a [member bias], annál jobban eltávolodhat egymástól a két test a csukló ellenében.\nHa az érték [code]0[/code], a [member ProjectSettings.physics/2d/solver/default_constraint_bias] alapértéke érvényes."
+
+#. Joint2D.disable_collision
+#: doc/classes/Joint2D.xml
+msgid "If [code]true[/code], the two bodies bound together do not collide with each other."
+msgstr "Ha [code]true[/code], az összekapcsolt két test nem ütközik egymással."
+
+#. Joint2D.node_a
+#: doc/classes/Joint2D.xml
+msgid "Path to the first body (A) attached to the joint. The node must inherit [PhysicsBody2D]."
+msgstr "A csuklóhoz kapcsolt első test (A) csomópontjának útvonala. A csomópontnak a [PhysicsBody2D] osztályból kell származnia."
+
+#. Joint2D.node_b
+#: doc/classes/Joint2D.xml
+msgid "Path to the second body (B) attached to the joint. The node must inherit [PhysicsBody2D]."
+msgstr "A csuklóhoz kapcsolt második test (B) csomópontjának útvonala. A csomópontnak a [PhysicsBody2D] osztályból kell származnia."
+
+#. PinJoint2D.brief
+#: doc/classes/PinJoint2D.xml
+msgid "A physics joint that attaches two 2D physics bodies at a single point, allowing them to freely rotate."
+msgstr "Fizikai csukló, amely egyetlen pontban kapcsol össze két 2D fizikai testet, így azok szabadon elfordulhatnak a csatlakozási pont körül."
+
+#. PinJoint2D.description
+#: doc/classes/PinJoint2D.xml
+msgid "A physics joint that attaches two 2D physics bodies at a single point, allowing them to freely rotate. For example, a [RigidBody2D] can be attached to a [StaticBody2D] to create a pendulum or a seesaw."
+msgstr "Fizikai csukló, amely egyetlen pontban kapcsol össze két 2D fizikai testet, így azok szabadon elfordulhatnak a csatlakozási pont körül. Például egy [RigidBody2D] testet egy [StaticBody2D] testhez kapcsolva ingát vagy mérleghintát készíthetünk."
+
+#. PinJoint2D.angular_limit_enabled
+#: doc/classes/PinJoint2D.xml
+msgid "If [code]true[/code], the pin maximum and minimum rotation, defined by [member angular_limit_lower] and [member angular_limit_upper] are applied."
+msgstr "Ha [code]true[/code], a csukló elfordulását a [member angular_limit_lower] és a [member angular_limit_upper] által megadott alsó és felső szöghatár korlátozza."
+
+#. PinJoint2D.angular_limit_lower
+#: doc/classes/PinJoint2D.xml
+msgid "The minimum rotation. Only active if [member angular_limit_enabled] is [code]true[/code]."
+msgstr "A legkisebb elfordulási szög. Csak akkor érvényes, ha a [member angular_limit_enabled] értéke [code]true[/code]."
+
+#. PinJoint2D.angular_limit_upper
+#: doc/classes/PinJoint2D.xml
+msgid "The maximum rotation. Only active if [member angular_limit_enabled] is [code]true[/code]."
+msgstr "A legnagyobb elfordulási szög. Csak akkor érvényes, ha a [member angular_limit_enabled] értéke [code]true[/code]."
+
+#. PinJoint2D.motor_enabled
+#: doc/classes/PinJoint2D.xml
+msgid "When activated, a motor turns the pin."
+msgstr "Ha engedélyezve van, a motor forgatja a csuklót."
+
+#. PinJoint2D.motor_target_velocity
+#: doc/classes/PinJoint2D.xml
+msgid "Target speed for the motor. In radians per second."
+msgstr "A motor célként megadott szögsebessége radián per másodpercben."
+
+#. PinJoint2D.softness
+#: doc/classes/PinJoint2D.xml
+msgid "The higher this value, the more the bond to the pinned partner can flex."
+msgstr "Minél nagyobb ez az érték, annál rugalmasabb a kapcsolat a csuklóval összekötött testek között."
+
+#. GrooveJoint2D.brief
+#: doc/classes/GrooveJoint2D.xml
+msgid "A physics joint that restricts the movement of two 2D physics bodies to a fixed axis."
+msgstr "Fizikai csukló, amely két 2D fizikai test mozgását egy rögzített tengelyre korlátozza."
+
+#. GrooveJoint2D.description
+#: doc/classes/GrooveJoint2D.xml
+msgid "A physics joint that restricts the movement of two 2D physics bodies to a fixed axis. For example, a [StaticBody2D] representing a piston base can be attached to a [RigidBody2D] representing the piston head, moving up and down."
+msgstr "Fizikai csukló, amely két 2D fizikai test mozgását egy rögzített tengelyre korlátozza. Így például a dugattyú rögzített alapját jelképező [StaticBody2D] testhez kapcsolható a fel-le mozgó dugattyúfejet jelképező [RigidBody2D] test."
+
+#. GrooveJoint2D.initial_offset
+#: doc/classes/GrooveJoint2D.xml
+msgid "The body B's initial anchor position defined by the joint's origin and a local offset [member initial_offset] along the joint's Y axis (along the groove)."
+msgstr "A B test kezdeti rögzítési pontja, amelyet a csukló origója és a csukló helyi Y tengelye mentén (a horony irányában) mért [member initial_offset] eltolás határoz meg."
+
+#. GrooveJoint2D.length
+#: doc/classes/GrooveJoint2D.xml
+msgid "The groove's length. The groove is from the joint's origin towards [member length] along the joint's local Y axis."
+msgstr "A horony hossza. A horony a csukló origójától a helyi Y tengelye mentén [member length] távolságig tart."
+
+#. DampedSpringJoint2D.brief
+#: doc/classes/DampedSpringJoint2D.xml
+msgid "A physics joint that connects two 2D physics bodies with a spring-like force."
+msgstr "Fizikai csukló, amely rugóerővel kapcsol össze két 2D fizikai testet."
+
+#. DampedSpringJoint2D.description
+#: doc/classes/DampedSpringJoint2D.xml
+msgid "A physics joint that connects two 2D physics bodies with a spring-like force. This behaves like a spring that always wants to stretch to a given length."
+msgstr "Fizikai csukló, amely rugóerővel kapcsol össze két 2D fizikai testet. Úgy viselkedik, mint egy rugó, amely egy adott hosszúságot igyekszik felvenni."
+
+#. DampedSpringJoint2D.rest_length
+#: doc/classes/DampedSpringJoint2D.xml
+msgid "When the bodies attached to the spring joint move they stretch or squash it. The joint always tries to resize towards this length."
+msgstr "A csuklóhoz kapcsolt testek mozgás közben megnyújtják vagy összenyomják a rugót. A rugó mindig erre a hosszra igyekszik visszaállni."
+
+#. DampedSpringJoint2D.stiffness
+#: doc/classes/DampedSpringJoint2D.xml
+msgid "The higher the value, the less the bodies attached to the joint will deform it. The joint applies an opposing force to the bodies, the product of the stiffness multiplied by the size difference from its resting length."
+msgstr "Minél nagyobb az érték, annál kevésbé deformálják a csuklóhoz kapcsolt testek a rugót. A csukló az alakváltozással ellentétes irányú erőt fejt ki a testekre. Az erő nagysága a merevség és a nyugalmi hossztól való eltérés szorzata."
+
+#. Area2D.area_shape_entered
+#: doc/classes/Area2D.xml
+msgid "Emitted when a [Shape2D] of the received [param area] enters a shape of this area. Requires [member monitoring] to be set to [code]true[/code].\n[param local_shape_index] and [param area_shape_index] contain indices of the interacting shapes from this area and the other area, respectively. [param area_rid] contains the [RID] of the other area. These values can be used with the [PhysicsServer2D].\n[b]Example:[/b] Get the [CollisionShape2D] node from the shape index:\n[codeblocks]\n[gdscript]\nvar other_shape_owner = area.shape_find_owner(area_shape_index)\nvar other_shape_node = area.shape_owner_get_owner(other_shape_owner)\n\nvar local_shape_owner = shape_find_owner(local_shape_index)\nvar local_shape_node = shape_owner_get_owner(local_shape_owner)\n[/gdscript]\n[/codeblocks]"
+msgstr "A jelzés akkor érkezik, amikor a kapott [param area] egyik [Shape2D] alakzata belép ennek a területnek az egyik alakzatába. Ehhez a [member monitoring] beállítás értéke legyen [code]true[/code].\nA [param local_shape_index] az itteni érintett alakzat indexe, a [param area_shape_index] pedig a másik terület érintett alakzatának indexe. A [param area_rid] a másik terület [RID] azonosítóját tartalmazza. Ezek az értékek a [PhysicsServer2D] kiszolgálóval használhatók.\n[b]Példa:[/b] A [CollisionShape2D] csomópont lekérése az alakzat indexe alapján:\n[codeblocks]\n[gdscript]\nvar other_shape_owner = area.shape_find_owner(area_shape_index)\nvar other_shape_node = area.shape_owner_get_owner(other_shape_owner)\n\nvar local_shape_owner = shape_find_owner(local_shape_index)\nvar local_shape_node = shape_owner_get_owner(local_shape_owner)\n[/gdscript]\n[/codeblocks]"
+
+#. Area2D.body_shape_entered
+#: doc/classes/Area2D.xml
+msgid "Emitted when a [Shape2D] of the received [param body] enters a shape of this area. [param body] can be a [PhysicsBody2D] or a [TileMap]. [TileMap]s are detected if their [TileSet] has collision shapes configured. Requires [member monitoring] to be set to [code]true[/code].\n[param local_shape_index] and [param body_shape_index] contain indices of the interacting shapes from this area and the interacting body, respectively. [param body_rid] contains the [RID] of the body. These values can be used with the [PhysicsServer2D].\n[b]Example:[/b] Get the [CollisionShape2D] node from the shape index:\n[codeblocks]\n[gdscript]\nvar body_shape_owner = body.shape_find_owner(body_shape_index)\nvar body_shape_node = body.shape_owner_get_owner(body_shape_owner)\n\nvar local_shape_owner = shape_find_owner(local_shape_index)\nvar local_shape_node = shape_owner_get_owner(local_shape_owner)\n[/gdscript]\n[/codeblocks]"
+msgstr "A jelzés akkor érkezik, amikor a kapott [param body] egyik [Shape2D] alakzata belép ennek a területnek az egyik alakzatába. A [param body] lehet [PhysicsBody2D] vagy [TileMap]. A terület akkor érzékeli a [TileMap] csomópontokat, ha a [TileSet] készletükben ütközési alakzatok vannak beállítva. Ehhez a [member monitoring] beállítás értéke legyen [code]true[/code].\nA [param local_shape_index] a terület érintett alakzatának indexe, a [param body_shape_index] pedig a test érintett alakzatának indexe. A [param body_rid] a test [RID] azonosítóját tartalmazza. Ezek az értékek a [PhysicsServer2D] kiszolgálóval használhatók.\n[b]Példa:[/b] A [CollisionShape2D] csomópont lekérése az alakzat indexe alapján:\n[codeblocks]\n[gdscript]\nvar body_shape_owner = body.shape_find_owner(body_shape_index)\nvar body_shape_node = body.shape_owner_get_owner(body_shape_owner)\n\nvar local_shape_owner = shape_find_owner(local_shape_index)\nvar local_shape_node = shape_owner_get_owner(local_shape_owner)\n[/gdscript]\n[/codeblocks]"
+
+#. Area2D.gravity_point_unit_distance
+#: doc/classes/Area2D.xml
+msgid "The distance at which the gravity strength is equal to [member gravity]. For example, on a planet 100 pixels in radius with a surface gravity of 4.0 px/s², set the [member gravity] to 4.0 and the unit distance to 100.0. The gravity will have falloff according to the inverse square law, so in the example, at 200 pixels from the center the gravity will be 1.0 px/s² (twice the distance, 1/4th the gravity), at 50 pixels it will be 16.0 px/s² (half the distance, 4x the gravity), and so on.\nThe above is true only when the unit distance is a positive number. When this is set to 0.0, the gravity will be constant regardless of distance."
+msgstr "Az a távolság, amelynél a gravitáció erőssége megegyezik a [member gravity] értékével. Például egy 100 képpont sugarú bolygón, ahol a felszíni gravitációs gyorsulás 4,0 px/s², a [member gravity] értéke 4,0, az egységtávolság pedig 100,0 legyen. A gravitáció erőssége a távolság négyzetével fordítottan arányos. A példában a középponttól 200 képpontra 1,0 px/s² (kétszeres távolságnál a negyede), 50 képpontra pedig 16,0 px/s² (feleakkora távolságnál a négyszerese), és így tovább.\nEz csak pozitív egységtávolság esetén érvényes. 0,0 értéknél a gravitáció erőssége a távolságtól függetlenül állandó."
+
+#. Area2D.SPACE_OVERRIDE_DISABLED
+#: doc/classes/Area2D.xml
+msgid "This area does not affect gravity/damping."
+msgstr "Ez a terület nem befolyásolja a gravitációt vagy a csillapítást."
+
+#. Area2D.SPACE_OVERRIDE_COMBINE
+#: doc/classes/Area2D.xml
+msgid "This area adds its gravity/damping values to whatever has been calculated so far (in [member priority] order)."
+msgstr "Ez a terület a saját gravitációs és csillapítási értékeit hozzáadja az addig kiszámított értékekhez (a [member priority] szerinti sorrendben)."
+
+#. Area2D.SPACE_OVERRIDE_COMBINE_REPLACE
+#: doc/classes/Area2D.xml
+msgid "This area adds its gravity/damping values to whatever has been calculated so far (in [member priority] order), ignoring any lower priority areas."
+msgstr "Ez a terület a saját gravitációs és csillapítási értékeit hozzáadja az addig kiszámított értékekhez (a [member priority] szerinti sorrendben). Az alacsonyabb prioritású területek figyelmen kívül maradnak."
+
+#. Area2D.SPACE_OVERRIDE_REPLACE
+#: doc/classes/Area2D.xml
+msgid "This area replaces any gravity/damping, even the defaults, ignoring any lower priority areas."
+msgstr "Ez a terület felülírja az addigi gravitációs és csillapítási értékeket, beleértve az alapértékeket is. Az alacsonyabb prioritású területek figyelmen kívül maradnak."
+
+#. Area2D.SPACE_OVERRIDE_REPLACE_COMBINE
+#: doc/classes/Area2D.xml
+msgid "This area replaces any gravity/damping calculated so far (in [member priority] order), but keeps calculating the rest of the areas."
+msgstr "Ez a terület felülírja az addig kiszámított gravitációs és csillapítási értékeket (a [member priority] szerinti sorrendben), majd a számítás folytatódik a többi területtel."
+
+#. RayCast2D.get_collider_shape
+#: doc/classes/RayCast2D.xml
+msgid "Returns the shape ID of the first object that the ray intersects, or [code]0[/code] if no object is intersecting the ray (i.e. [method is_colliding] returns [code]false[/code]).\nTo get the intersected shape node, for a [CollisionObject2D] target, use:\n[codeblocks]\n[gdscript]\nvar target = get_collider() # A CollisionObject2D.\nvar shape_id = get_collider_shape() # The shape index in the collider.\nvar owner_id = target.shape_find_owner(shape_id) # The owner ID in the collider.\nvar shape = target.shape_owner_get_owner(owner_id)\n[/gdscript]\n[csharp]\nvar target = (CollisionObject2D)GetCollider(); // A CollisionObject2D.\nvar shapeId = GetColliderShape(); // The shape index in the collider.\nvar ownerId = target.ShapeFindOwner(shapeId); // The owner ID in the collider.\nvar shape = target.ShapeOwnerGetOwner(ownerId);\n[/csharp]\n[/codeblocks]"
+msgstr "A sugár által elsőként metszett objektum alakzatának azonosítóját adja vissza. Ha a sugár egyetlen objektumot sem metsz (vagyis a [method is_colliding] visszatérési értéke [code]false[/code]), az eredmény [code]0[/code].\nHa a találat egy [CollisionObject2D] objektum, a metszett alakzat csomópontját így kérheted le:\n[codeblocks]\n[gdscript]\nvar target = get_collider() # A CollisionObject2D.\nvar shape_id = get_collider_shape() # The shape index in the collider.\nvar owner_id = target.shape_find_owner(shape_id) # The owner ID in the collider.\nvar shape = target.shape_owner_get_owner(owner_id)\n[/gdscript]\n[csharp]\nvar target = (CollisionObject2D)GetCollider(); // A CollisionObject2D.\nvar shapeId = GetColliderShape(); // The shape index in the collider.\nvar ownerId = target.ShapeFindOwner(shapeId); // The owner ID in the collider.\nvar shape = target.ShapeOwnerGetOwner(ownerId);\n[/csharp]\n[/codeblocks]"
+
+#. CollisionPolygon2D.BUILD_SEGMENTS
+#: doc/classes/CollisionPolygon2D.xml
+msgid "Collisions will only include the polygon edges. In this mode the node has the same effect as a single [ConcavePolygonShape2D] made of segments, with the restriction that each segment (after the first one) starts where the previous one ends, and the last one ends where the first one starts (forming a closed but hollow polygon)."
+msgstr "Csak a sokszög élei vesznek részt az ütközésekben. Ebben a módban a csomópont egyetlen, szakaszokból álló [ConcavePolygonShape2D] alakzatnak felel meg. Az első kivételével minden szakasz az előző végpontjában kezdődik, az utolsó pedig az első kezdőpontjában végződik. Így zárt körvonalú, üres belsejű sokszög jön létre."
