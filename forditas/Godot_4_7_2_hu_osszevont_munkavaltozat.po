@@ -21317,3 +21317,2524 @@ msgstr "A World3D renderelési tere."
 #: doc/classes/World3D.xml
 msgid "The World3D's physics space."
 msgstr "A World3D fizikai tere."
+
+#. ImporterMesh.brief
+#: doc/classes/ImporterMesh.xml
+msgid "A [Resource] that contains vertex array-based geometry during the import process."
+msgstr "Az importálás során csúcstömbökben tárolt geometriát tartalmazó [Resource]."
+
+#. ImporterMesh.description
+#: doc/classes/ImporterMesh.xml
+msgid "ImporterMesh is a type of [Resource] analogous to [ArrayMesh]. It contains vertex array-based geometry, divided in [i]surfaces[/i]. Each surface contains a completely separate array and a material used to draw it. Design wise, a mesh with multiple surfaces is preferred to a single surface, because objects created in 3D editing software commonly contain multiple materials.\nUnlike its runtime counterpart, [ImporterMesh] contains mesh data before various import steps, such as LOD and shadow mesh generation, have taken place. Modify surface data by calling [method clear], followed by [method add_surface] for each surface."
+msgstr "Az ImporterMesh az [ArrayMesh] hálóhoz hasonló [Resource]. Csúcstömbökben tárolt geometriát tartalmaz, [i]felületekre[/i] bontva. Minden felületnek saját tömbje és a kirajzolásához használt anyaga van. Tervezéskor érdemes több felületet használni, mert a 3D szerkesztőprogramokban létrehozott objektumok gyakran több anyagból állnak.\nAz [ImporterMesh] a futás közben használt változattól eltérően az importálás olyan lépései előtt tárolja a háló adatait, mint a részletességi szintek (LOD) és az árnyékháló előállítása. A felületi adatok módosításához hívd meg a [method clear] metódust, majd minden felületre a [method add_surface] metódust."
+
+#. ImporterMesh.add_blend_shape
+#: doc/classes/ImporterMesh.xml
+msgid "Adds name for a blend shape that will be added with [method add_surface]. Must be called before surface is added."
+msgstr "Hozzáadja a [method add_surface] metódussal később hozzáadandó alakváltozat nevét. A felület hozzáadása előtt kell meghívni."
+
+#. ImporterMesh.clear
+#: doc/classes/ImporterMesh.xml
+msgid "Removes all surfaces and blend shapes from this [ImporterMesh]."
+msgstr "Törli az [ImporterMesh] összes felületét és alakváltozatát."
+
+#. ImporterMesh.from_mesh
+#: doc/classes/ImporterMesh.xml
+msgid "Converts the given [Mesh] into an [ImporterMesh] by copying all its surfaces, blend shapes, materials, and metadata into a new [ImporterMesh] object."
+msgstr "A megadott [Mesh] hálót [ImporterMesh] erőforrássá alakítja. Az összes felületet, alakváltozatot, anyagot és metaadatot egy új [ImporterMesh] objektumba másolja."
+
+#. ImporterMesh.get_blend_shape_count
+#: doc/classes/ImporterMesh.xml
+msgid "Returns the number of blend shapes that the mesh holds."
+msgstr "Visszaadja a háló alakváltozatainak számát."
+
+#. ImporterMesh.get_blend_shape_mode
+#: doc/classes/ImporterMesh.xml
+msgid "Returns the blend shape mode for this Mesh."
+msgstr "Visszaadja a háló alakváltozatainak keverési módját."
+
+#. ImporterMesh.get_lightmap_size_hint
+#: doc/classes/ImporterMesh.xml
+msgid "Returns the size hint of this mesh for lightmap-unwrapping in UV-space."
+msgstr "Visszaadja a háló ajánlott méretét a fénytérkép UV-kiterítéséhez."
+
+#. ImporterMesh.get_mesh
+#: doc/classes/ImporterMesh.xml
+msgid "Returns the mesh data represented by this [ImporterMesh] as a usable [ArrayMesh].\nThis method caches the returned mesh, and subsequent calls will return the cached data until [method clear] is called.\nIf not yet cached and [param base_mesh] is provided, [param base_mesh] will be used and mutated."
+msgstr "Visszaadja az [ImporterMesh] hálóadatait használható [ArrayMesh] formájában.\nA metódus eltárolja az eredményt. A későbbi hívások a [method clear] meghívásáig ezt az eltárolt hálót adják vissza.\nHa még nincs eltárolt háló, de megadtad a [param base_mesh] paramétert, a metódus a [param base_mesh] hálót használja és módosítja."
+
+#. ImporterMesh.get_surface_arrays
+#: doc/classes/ImporterMesh.xml
+msgid "Returns the arrays for the vertices, normals, UVs, etc. that make up the requested surface. See [method add_surface]."
+msgstr "Visszaadja a kért felületet alkotó csúcsok, normálvektorok, UV-koordináták és egyéb attribútumok tömbjeit. Lásd: [method add_surface]."
+
+#. ImporterMesh.get_surface_blend_shape_arrays
+#: doc/classes/ImporterMesh.xml
+msgid "Returns a single set of blend shape arrays for the requested blend shape index for a surface."
+msgstr "Visszaadja a felület megadott indexű alakváltozatához tartozó tömböket."
+
+#. ImporterMesh.get_surface_count
+#: doc/classes/ImporterMesh.xml
+msgid "Returns the number of surfaces that the mesh holds."
+msgstr "Visszaadja a háló felületeinek számát."
+
+#. ImporterMesh.get_surface_format
+#: doc/classes/ImporterMesh.xml
+msgid "Returns the format of the surface that the mesh holds."
+msgstr "Visszaadja a háló megadott felületének formátumát."
+
+#. ImporterMesh.get_surface_lod_count
+#: doc/classes/ImporterMesh.xml
+msgid "Returns the number of lods that the mesh holds on a given surface."
+msgstr "Visszaadja a háló adott felületéhez tartozó részletességi szintek (LOD) számát."
+
+#. ImporterMesh.get_surface_lod_indices
+#: doc/classes/ImporterMesh.xml
+msgid "Returns the index buffer of a lod for a surface."
+msgstr "Visszaadja a felület kiválasztott részletességi szintjének (LOD) indexpufferét."
+
+#. ImporterMesh.get_surface_material
+#: doc/classes/ImporterMesh.xml
+msgid "Returns a [Material] in a given surface. Surface is rendered using this material."
+msgstr "Visszaadja a megadott felület [Material] anyagát. A motor ezzel az anyaggal rajzolja ki a felületet."
+
+#. ImporterMesh.get_surface_primitive_type
+#: doc/classes/ImporterMesh.xml
+msgid "Returns the primitive type of the requested surface (see [method add_surface])."
+msgstr "Visszaadja a kért felület primitívtípusát (lásd: [method add_surface])."
+
+#. ImporterMesh.set_blend_shape_mode
+#: doc/classes/ImporterMesh.xml
+msgid "Sets the blend shape mode."
+msgstr "Beállítja az alakváltozatok keverési módját."
+
+#. ImporterMesh.set_lightmap_size_hint
+#: doc/classes/ImporterMesh.xml
+msgid "Sets the size hint of this mesh for lightmap-unwrapping in UV-space."
+msgstr "Beállítja a háló ajánlott méretét a fénytérkép UV-kiterítéséhez."
+
+#. ImporterMesh.set_surface_material
+#: doc/classes/ImporterMesh.xml
+msgid "Sets a [Material] for a given surface. Surface will be rendered using this material."
+msgstr "Beállítja a megadott felület [Material] anyagát. A motor ezzel az anyaggal rajzolja ki a felületet."
+
+#. Label3D.font
+#. TextMesh.font
+#: doc/classes/Label3D.xml doc/classes/TextMesh.xml
+msgid "Font configuration used to display text."
+msgstr "A szöveg megjelenítéséhez használt betűtípus-beállítás."
+
+#. Label3D.vertical_alignment
+#. TextMesh.vertical_alignment
+#: doc/classes/Label3D.xml doc/classes/TextMesh.xml
+msgid "Controls the text's vertical alignment. Supports top, center, and bottom."
+msgstr "A szöveg függőleges igazítását szabályozza. Felülre, középre vagy alulra igazítható."
+
+#. MeshLibrary.brief
+#: doc/classes/MeshLibrary.xml
+msgid "Library of meshes."
+msgstr "Hálókönyvtár."
+
+#. MeshLibrary.description
+#: doc/classes/MeshLibrary.xml
+msgid "A library of meshes. Contains a list of [Mesh] resources, each with a name and ID. Each item can also include collision and navigation shapes. This resource is used in [GridMap]."
+msgstr "Hálók könyvtára. Olyan [Mesh] erőforrásokat tartalmaz, amelyekhez név és azonosító tartozik. Az elemek ütközési alakzatokat és navigációs hálót is tartalmazhatnak. A [GridMap] ezt az erőforrást használja."
+
+#. MeshLibrary.clear
+#: doc/classes/MeshLibrary.xml
+msgid "Clears the library."
+msgstr "Kiüríti a könyvtárat."
+
+#. MeshLibrary.create_item
+#: doc/classes/MeshLibrary.xml
+msgid "Creates a new item in the library with the given ID.\nYou can get an unused ID from [method get_last_unused_item_id]."
+msgstr "A megadott azonosítóval új elemet hoz létre a könyvtárban.\nSzabad azonosítót a [method get_last_unused_item_id] metódussal kérhetsz le."
+
+#. MeshLibrary.get_item_count
+#: doc/classes/MeshLibrary.xml
+msgid "Returns the number of items present in the library."
+msgstr "Visszaadja a könyvtárban található elemek számát."
+
+#. MeshLibrary.get_item_list
+#: doc/classes/MeshLibrary.xml
+msgid "Returns the list of item IDs in use."
+msgstr "Visszaadja a használatban lévő elemazonosítók listáját."
+
+#. MeshLibrary.get_item_mesh
+#: doc/classes/MeshLibrary.xml
+msgid "Returns the item's mesh."
+msgstr "Visszaadja az elem hálóját."
+
+#. MeshLibrary.get_item_mesh_cast_shadow
+#: doc/classes/MeshLibrary.xml
+msgid "Returns the item's shadow casting mode."
+msgstr "Visszaadja az elem árnyékvetési módját."
+
+#. MeshLibrary.get_item_mesh_transform
+#: doc/classes/MeshLibrary.xml
+msgid "Returns the transform applied to the item's mesh."
+msgstr "Visszaadja az elem hálójára alkalmazott transzformációt."
+
+#. MeshLibrary.get_item_name
+#: doc/classes/MeshLibrary.xml
+msgid "Returns the item's name."
+msgstr "Visszaadja az elem nevét."
+
+#. MeshLibrary.get_item_navigation_layers
+#: doc/classes/MeshLibrary.xml
+msgid "Returns the item's navigation layers bitmask."
+msgstr "Visszaadja az elem navigációs rétegeinek bitmaszkját."
+
+#. MeshLibrary.get_item_navigation_mesh
+#: doc/classes/MeshLibrary.xml
+msgid "Returns the item's navigation mesh."
+msgstr "Visszaadja az elem navigációs hálóját."
+
+#. MeshLibrary.get_item_navigation_mesh_transform
+#: doc/classes/MeshLibrary.xml
+msgid "Returns the transform applied to the item's navigation mesh."
+msgstr "Visszaadja az elem navigációs hálójára alkalmazott transzformációt."
+
+#. MeshLibrary.get_item_shapes
+#: doc/classes/MeshLibrary.xml
+msgid "Returns an item's collision shapes.\nThe array consists of each [Shape3D] followed by its [Transform3D]."
+msgstr "Visszaadja az elem ütközési alakzatait.\nA tömbben minden [Shape3D] alakzatot a hozzá tartozó [Transform3D] követ."
+
+#. MeshLibrary.get_last_unused_item_id
+#: doc/classes/MeshLibrary.xml
+msgid "Gets an unused ID for a new item."
+msgstr "Lekér egy szabad azonosítót az új elemhez."
+
+#. MeshLibrary.remove_item
+#: doc/classes/MeshLibrary.xml
+msgid "Removes the item."
+msgstr "Eltávolítja az elemet."
+
+#. MeshLibrary.set_item_mesh
+#: doc/classes/MeshLibrary.xml
+msgid "Sets the item's mesh."
+msgstr "Beállítja az elem hálóját."
+
+#. MeshLibrary.set_item_mesh_cast_shadow
+#: doc/classes/MeshLibrary.xml
+msgid "Sets the item's shadow casting mode to [param shadow_casting_setting]."
+msgstr "Az elem árnyékvetési módját a [param shadow_casting_setting] értékére állítja."
+
+#. MeshLibrary.set_item_mesh_transform
+#: doc/classes/MeshLibrary.xml
+msgid "Sets the transform to apply to the item's mesh."
+msgstr "Beállítja az elem hálójára alkalmazandó transzformációt."
+
+#. MeshLibrary.set_item_name
+#: doc/classes/MeshLibrary.xml
+msgid "Sets the item's name.\nThis name is shown in the editor. It can also be used to look up the item later using [method find_item_by_name]."
+msgstr "Beállítja az elem nevét.\nA név megjelenik a szerkesztőben. Később az elem a neve alapján is megkereshető a [method find_item_by_name] metódussal."
+
+#. MeshLibrary.set_item_navigation_layers
+#: doc/classes/MeshLibrary.xml
+msgid "Sets the item's navigation layers bitmask."
+msgstr "Beállítja az elem navigációs rétegeinek bitmaszkját."
+
+#. MeshLibrary.set_item_navigation_mesh
+#: doc/classes/MeshLibrary.xml
+msgid "Sets the item's navigation mesh."
+msgstr "Beállítja az elem navigációs hálóját."
+
+#. MeshLibrary.set_item_navigation_mesh_transform
+#: doc/classes/MeshLibrary.xml
+msgid "Sets the transform to apply to the item's navigation mesh."
+msgstr "Beállítja az elem navigációs hálójára alkalmazandó transzformációt."
+
+#. MeshLibrary.set_item_preview
+#: doc/classes/MeshLibrary.xml
+msgid "Sets a texture to use as the item's preview icon in the editor."
+msgstr "Beállítja az elem szerkesztőbeli előnézeti ikonjaként használt textúrát."
+
+#. MeshLibrary.set_item_shapes
+#: doc/classes/MeshLibrary.xml
+msgid "Sets an item's collision shapes.\nThe array should consist of [Shape3D] objects, each followed by a [Transform3D] that will be applied to it. For shapes that should not have a transform, use [constant Transform3D.IDENTITY]."
+msgstr "Beállítja az elem ütközési alakzatait.\nA tömbben minden [Shape3D] objektumot a rá alkalmazandó [Transform3D] kövessen. Ha egy alakzatot nem kell transzformálni, használd a [constant Transform3D.IDENTITY] állandót."
+
+#. MeshTexture.brief
+#: doc/classes/MeshTexture.xml
+msgid "Simple texture that uses a mesh to draw itself."
+msgstr "Háló segítségével megrajzolt egyszerű textúra."
+
+#. MeshTexture.base_texture
+#: doc/classes/MeshTexture.xml
+msgid "Sets the base texture that the Mesh will use to draw."
+msgstr "Beállítja a háló kirajzolásához használt alaptextúrát."
+
+#. MeshTexture.image_size
+#: doc/classes/MeshTexture.xml
+msgid "Sets the size of the image, needed for reference."
+msgstr "Beállítja a referenciaként használt képméretet."
+
+#. MeshTexture.mesh
+#: doc/classes/MeshTexture.xml
+msgid "Sets the mesh used to draw. It must be a mesh using 2D vertices."
+msgstr "Beállítja a kirajzoláshoz használt hálót. A hálónak 2D csúcsokból kell állnia."
+
+#. PlaceholderMesh.brief
+#: doc/classes/PlaceholderMesh.xml
+msgid "Placeholder class for a mesh."
+msgstr "Háló helyőrzőjeként használt osztály."
+
+#. PlaceholderMesh.aabb
+#: doc/classes/PlaceholderMesh.xml
+msgid "The smallest [AABB] enclosing this mesh in local space."
+msgstr "A hálót helyi koordinátákban befoglaló legkisebb [AABB] doboz."
+
+#. PlaneMesh.brief
+#: doc/classes/PlaneMesh.xml
+msgid "Class representing a planar [PrimitiveMesh]."
+msgstr "Sík alakú [PrimitiveMesh] hálót képviselő osztály."
+
+#. PlaneMesh.description
+#: doc/classes/PlaneMesh.xml
+msgid "Class representing a planar [PrimitiveMesh]. This flat mesh does not have a thickness. By default, this mesh is aligned on the X and Z axes; this default rotation isn't suited for use with billboarded materials. For billboarded materials, change [member orientation] to [constant FACE_Z].\n[b]Note:[/b] When using a large textured [PlaneMesh] (e.g. as a floor), you may stumble upon UV jittering issues depending on the camera angle. To solve this, increase [member subdivide_depth] and [member subdivide_width] until you no longer notice UV jittering."
+msgstr "Sík alakú [PrimitiveMesh] hálót képviselő osztály. Ennek a lapos hálónak nincs vastagsága. Alapértelmezésben az X és a Z tengely síkjában fekszik, ami nem felel meg a mindig a kamera felé forduló anyagokhoz. Ilyen anyagokhoz állítsd az [member orientation] értékét [constant FACE_Z] értékre.\n[b]Megjegyzés:[/b] Nagy, textúrázott [PlaneMesh] esetén, például padlónál, a kamera szögétől függően vibrálhat a textúra UV-leképezése. Növeld a [member subdivide_depth] és a [member subdivide_width] értékét, amíg a vibrálás megszűnik."
+
+#. PlaneMesh.center_offset
+#: doc/classes/PlaneMesh.xml
+msgid "Offset of the generated plane. Useful for particles."
+msgstr "A létrehozott sík eltolása. Részecskéknél hasznos lehet."
+
+#. PlaneMesh.orientation
+#: doc/classes/PlaneMesh.xml
+msgid "Direction that the [PlaneMesh] is facing."
+msgstr "Az az irány, amely felé a [PlaneMesh] néz."
+
+#. PlaneMesh.size
+#: doc/classes/PlaneMesh.xml
+msgid "Size of the generated plane."
+msgstr "A létrehozott sík mérete."
+
+#. PlaneMesh.subdivide_depth
+#: doc/classes/PlaneMesh.xml
+msgid "Number of subdivision along the Z axis."
+msgstr "A Z tengely menti felosztások száma."
+
+#. PlaneMesh.subdivide_width
+#: doc/classes/PlaneMesh.xml
+msgid "Number of subdivision along the X axis."
+msgstr "Az X tengely menti felosztások száma."
+
+#. PlaneMesh.FACE_X
+#: doc/classes/PlaneMesh.xml
+msgid "[PlaneMesh] will face the positive X-axis."
+msgstr "A [PlaneMesh] a pozitív X tengely irányába néz."
+
+#. PlaneMesh.FACE_Y
+#: doc/classes/PlaneMesh.xml
+msgid "[PlaneMesh] will face the positive Y-axis. This matches the behavior of the [PlaneMesh] in Godot 3.x."
+msgstr "A [PlaneMesh] a pozitív Y tengely irányába néz. Ez megegyezik a [PlaneMesh] Godot 3.x-beli viselkedésével."
+
+#. PlaneMesh.FACE_Z
+#: doc/classes/PlaneMesh.xml
+msgid "[PlaneMesh] will face the positive Z-axis. This matches the behavior of the QuadMesh in Godot 3.x."
+msgstr "A [PlaneMesh] a pozitív Z tengely irányába néz. Ez megegyezik a QuadMesh Godot 3.x-beli viselkedésével."
+
+#. PrimitiveMesh.brief
+#: doc/classes/PrimitiveMesh.xml
+msgid "Base class for all primitive meshes. Handles applying a [Material] to a primitive mesh."
+msgstr "Az összes primitív háló alaposztálya. Kezeli a [Material] hozzárendelését a primitív hálóhoz."
+
+#. PrimitiveMesh.description
+#: doc/classes/PrimitiveMesh.xml
+msgid "Base class for all primitive meshes. Handles applying a [Material] to a primitive mesh. Examples include [BoxMesh], [CapsuleMesh], [CylinderMesh], [PlaneMesh], [PrismMesh], and [SphereMesh]."
+msgstr "Az összes primitív háló alaposztálya. Kezeli a [Material] hozzárendelését egy primitív hálóhoz. Példák a leszármazottakra: [BoxMesh], [CapsuleMesh], [CylinderMesh], [PlaneMesh], [PrismMesh] és [SphereMesh]."
+
+#. PrimitiveMesh._create_mesh_array
+#: doc/classes/PrimitiveMesh.xml
+msgid "Override this method to customize how this primitive mesh should be generated. Should return an [Array] where each element is another Array of values required for the mesh (see the [enum Mesh.ArrayType] constants)."
+msgstr "A primitív háló előállításának testreszabásához bíráld felül ezt a metódust. Olyan [Array] tömböt adjon vissza, amelynek minden eleme a hálóhoz szükséges értékeket tartalmazó tömb (lásd az [enum Mesh.ArrayType] állandóit)."
+
+#. PrimitiveMesh.get_mesh_arrays
+#: doc/classes/PrimitiveMesh.xml
+msgid "Returns the mesh arrays used to make up the surface of this primitive mesh.\n[b]Example:[/b] Pass the result to [method ArrayMesh.add_surface_from_arrays] to create a new surface:\n[codeblocks]\n[gdscript]\nvar c = CylinderMesh.new()\nvar arr_mesh = ArrayMesh.new()\narr_mesh.add_surface_from_arrays(Mesh.PRIMITIVE_TRIANGLES, c.get_mesh_arrays())\n[/gdscript]\n[csharp]\nvar c = new CylinderMesh();\nvar arrMesh = new ArrayMesh();\narrMesh.AddSurfaceFromArrays(Mesh.PrimitiveType.Triangles, c.GetMeshArrays());\n[/csharp]\n[/codeblocks]"
+msgstr "Visszaadja a primitív háló felületét alkotó adattömböket.\n[b]Példa:[/b] Új felület létrehozásához add át az eredményt a [method ArrayMesh.add_surface_from_arrays] metódusnak:\n[codeblocks]\n[gdscript]\nvar c = CylinderMesh.new()\nvar arr_mesh = ArrayMesh.new()\narr_mesh.add_surface_from_arrays(Mesh.PRIMITIVE_TRIANGLES, c.get_mesh_arrays())\n[/gdscript]\n[csharp]\nvar c = new CylinderMesh();\nvar arrMesh = new ArrayMesh();\narrMesh.AddSurfaceFromArrays(Mesh.PrimitiveType.Triangles, c.GetMeshArrays());\n[/csharp]\n[/codeblocks]"
+
+#. PrimitiveMesh.request_update
+#: doc/classes/PrimitiveMesh.xml
+msgid "Request an update of this primitive mesh based on its properties."
+msgstr "A primitív háló frissítését kéri a tulajdonságai alapján."
+
+#. PrimitiveMesh.add_uv2
+#: doc/classes/PrimitiveMesh.xml
+msgid "If set, generates UV2 UV coordinates applying a padding using the [member uv2_padding] setting. UV2 is needed for lightmapping."
+msgstr "Bekapcsolva UV2-koordinátákat állít elő a [member uv2_padding] beállítás szerinti ráhagyással. Az UV2 szükséges a fénytérképhez."
+
+#. PrimitiveMesh.flip_faces
+#: doc/classes/PrimitiveMesh.xml
+msgid "If [code]true[/code], the order of the vertices in each triangle is reversed, resulting in the backside of the mesh being drawn.\nThis gives the same result as using [constant BaseMaterial3D.CULL_FRONT] in [member BaseMaterial3D.cull_mode]."
+msgstr "Ha az értéke [code]true[/code], minden háromszögben megfordul a csúcsok sorrendje, így a háló hátoldala rajzolódik ki.\nEz ugyanazt az eredményt adja, mint a [constant BaseMaterial3D.CULL_FRONT] érték a [member BaseMaterial3D.cull_mode] tulajdonságban."
+
+#. PrimitiveMesh.material
+#: doc/classes/PrimitiveMesh.xml
+msgid "The current [Material] of the primitive mesh."
+msgstr "A primitív háló jelenlegi [Material] anyaga."
+
+#. PrimitiveMesh.uv2_padding
+#: doc/classes/PrimitiveMesh.xml
+msgid "If [member add_uv2] is set, specifies the padding in pixels applied along seams of the mesh. Lower padding values allow making better use of the lightmap texture (resulting in higher texel density), but may introduce visible lightmap bleeding along edges.\nIf the size of the lightmap texture can't be determined when generating the mesh, UV2 is calculated assuming a texture size of 1024x1024."
+msgstr "Ha a [member add_uv2] engedélyezve van, ez adja meg a háló illesztéseinél alkalmazott ráhagyást képpontban. Kisebb ráhagyással jobban kihasználható a fénytérkép textúrája, és nagyobb lesz a texelsűrűség, de az éleknél láthatóvá válhat a fénytérkép szomszédos részeinek átszivárgása.\nHa a háló előállításakor a fénytérkép textúramérete nem állapítható meg, a motor 1024 × 1024 méretű textúrát feltételez az UV2 kiszámításához."
+
+#. PrismMesh.brief
+#. PrismMesh.description
+#: doc/classes/PrismMesh.xml
+msgid "Class representing a prism-shaped [PrimitiveMesh]."
+msgstr "Prizma alakú [PrimitiveMesh] hálót képviselő osztály."
+
+#. PrismMesh.left_to_right
+#: doc/classes/PrismMesh.xml
+msgid "Displacement of the upper edge along the X axis. 0.0 positions edge straight above the bottom-left edge."
+msgstr "A felső él eltolása az X tengely mentén. A 0,0 értéknél a felső él közvetlenül az alsó bal él fölé kerül."
+
+#. PrismMesh.size
+#: doc/classes/PrismMesh.xml
+msgid "Size of the prism."
+msgstr "A prizma mérete."
+
+#. PrismMesh.subdivide_depth
+#: doc/classes/PrismMesh.xml
+msgid "Number of added edge loops along the Z axis."
+msgstr "A hozzáadott élhurkok száma a Z tengely mentén."
+
+#. PrismMesh.subdivide_height
+#: doc/classes/PrismMesh.xml
+msgid "Number of added edge loops along the Y axis."
+msgstr "A hozzáadott élhurkok száma az Y tengely mentén."
+
+#. PrismMesh.subdivide_width
+#: doc/classes/PrismMesh.xml
+msgid "Number of added edge loops along the X axis."
+msgstr "A hozzáadott élhurkok száma az X tengely mentén."
+
+#. SphereMesh.brief
+#. SphereMesh.description
+#: doc/classes/SphereMesh.xml
+msgid "Class representing a spherical [PrimitiveMesh]."
+msgstr "Gömb alakú [PrimitiveMesh] hálót képviselő osztály."
+
+#. SphereMesh.height
+#: doc/classes/SphereMesh.xml
+msgid "Full height of the sphere."
+msgstr "A gömb teljes magassága."
+
+#. SphereMesh.radial_segments
+#: doc/classes/SphereMesh.xml
+msgid "Number of radial segments on the sphere."
+msgstr "A gömb kerülete menti szegmensek száma."
+
+#. SphereMesh.radius
+#: doc/classes/SphereMesh.xml
+msgid "Radius of sphere."
+msgstr "A gömb sugara."
+
+#. SphereMesh.rings
+#: doc/classes/SphereMesh.xml
+msgid "Number of segments along the height of the sphere."
+msgstr "A gömb magassága menti szegmensek száma."
+
+#. TextMesh.brief
+#: doc/classes/TextMesh.xml
+msgid "Generate a [PrimitiveMesh] from the text."
+msgstr "Szövegből [PrimitiveMesh] hálót hoz létre."
+
+#. TextMesh.curve_step
+#: doc/classes/TextMesh.xml
+msgid "Step (in pixels) used to approximate Bézier curves. Lower values result in smoother curves, but is slower to generate and render. Consider adjusting this according to the font size and the typical viewing distance.\n[b]Note:[/b] Changing this property will regenerate the mesh, which is a slow operation, especially with large font sizes and long texts."
+msgstr "A Bézier-görbék közelítéséhez használt lépésköz képpontban. Kisebb értéknél simábbak a görbék, de lassabb az előállítás és a renderelés. A betűméret és a jellemző nézési távolság alapján érdemes beállítani.\n[b]Megjegyzés:[/b] A tulajdonság módosításakor a háló újra létrejön. Ez különösen nagy betűméretnél és hosszú szövegnél lassú művelet."
+
+#. TextMesh.depth
+#: doc/classes/TextMesh.xml
+msgid "Depths of the mesh, if set to [code]0.0[/code] only front surface, is generated, and UV layout is changed to use full texture for the front face only."
+msgstr "A háló mélysége. Ha [code]0.0[/code], csak az elülső felület jön létre, az UV-elrendezés pedig az elülső lapra képezi a teljes textúrát."
+
+#. TextMesh.offset
+#: doc/classes/TextMesh.xml
+msgid "The text drawing offset (in pixels).\n[b]Note:[/b] Changing this property will regenerate the mesh, which is a slow operation. To change the text's position in real-time efficiently, change the node's [member Node3D.position] instead."
+msgstr "A szöveg rajzolási eltolása képpontban.\n[b]Megjegyzés:[/b] A tulajdonság módosításakor a háló újra létrejön, ami lassú művelet. A szöveg helyzetének hatékony, valós idejű módosításához inkább a csomópont [member Node3D.position] értékét állítsd."
+
+#. TextMesh.text
+#: doc/classes/TextMesh.xml
+msgid "The text to generate mesh from.\n[b]Note:[/b] Due to being a [Resource], it doesn't follow the rules of [member Node.auto_translate_mode]. If disabling translation is desired, it should be done manually with [method Object.set_message_translation]."
+msgstr "A szöveg, amelyből a háló létrejön.\n[b]Megjegyzés:[/b] Mivel ez egy [Resource], a [member Node.auto_translate_mode] szabályai nem vonatkoznak rá. A fordítás kézzel, az [method Object.set_message_translation] metódussal kapcsolható ki."
+
+#. TextMesh.width
+#: doc/classes/TextMesh.xml
+msgid "Text width (in pixels), used for fill alignment."
+msgstr "A szöveg szélessége képpontban, a kitöltő igazításhoz."
+
+#. TorusMesh.brief
+#. TorusMesh.description
+#: doc/classes/TorusMesh.xml
+msgid "Class representing a torus [PrimitiveMesh]."
+msgstr "Tórusz alakú [PrimitiveMesh] hálót képviselő osztály."
+
+#. TorusMesh.inner_radius
+#. CSGTorus3D.inner_radius
+#: doc/classes/TorusMesh.xml modules/csg/doc_classes/CSGTorus3D.xml
+msgid "The inner radius of the torus."
+msgstr "A tórusz belső sugara."
+
+#. TorusMesh.outer_radius
+#. CSGTorus3D.outer_radius
+#: doc/classes/TorusMesh.xml modules/csg/doc_classes/CSGTorus3D.xml
+msgid "The outer radius of the torus."
+msgstr "A tórusz külső sugara."
+
+#. TorusMesh.ring_segments
+#. CSGTorus3D.ring_sides
+#: doc/classes/TorusMesh.xml modules/csg/doc_classes/CSGTorus3D.xml
+msgid "The number of edges each ring of the torus is constructed of."
+msgstr "A tórusz egy gyűrűjét alkotó élek száma."
+
+#. TorusMesh.rings
+#. CSGTorus3D.sides
+#: doc/classes/TorusMesh.xml modules/csg/doc_classes/CSGTorus3D.xml
+msgid "The number of slices the torus is constructed of."
+msgstr "A tóruszt alkotó szeletek száma."
+
+#. TriangleMesh.brief
+#: doc/classes/TriangleMesh.xml
+msgid "Triangle geometry for efficient, physicsless intersection queries."
+msgstr "Háromszögekből álló geometria, amely fizikai motor nélkül tesz lehetővé hatékony metszésvizsgálatot."
+
+#. TriangleMesh.description
+#: doc/classes/TriangleMesh.xml
+msgid "Creates a bounding volume hierarchy (BVH) tree structure around triangle geometry.\nThe triangle BVH tree can be used for efficient intersection queries without involving a physics engine.\nFor example, this can be used in editor tools to select objects with complex shapes based on the mouse cursor position.\n[b]Performance:[/b] Creating the BVH tree for complex geometry is a slow process and best done in a background thread."
+msgstr "A háromszögekből álló geometria köré befoglaló térfogatok hierarchiáját (BVH-fát) építi fel.\nA háromszögek BVH-fája a fizikai motor használata nélkül tesz lehetővé hatékony metszésvizsgálatot.\nA szerkesztőeszközök például így választhatnak ki összetett alakú objektumokat az egérmutató helye alapján.\n[b]Teljesítmény:[/b] Összetett geometriánál a BVH-fa létrehozása lassú művelet, ezért érdemes háttérszálon futtatni."
+
+#. TriangleMesh.create_from_faces
+#: doc/classes/TriangleMesh.xml
+msgid "Creates the BVH tree from an array of faces. Each 3 vertices of the input [param faces] array represent one triangle (face).\nReturns [code]true[/code] if the tree is successfully built, [code]false[/code] otherwise."
+msgstr "A lapok tömbjéből létrehozza a BVH-fát. A bemeneti [param faces] tömb minden három egymást követő csúcsa egy háromszöget (lapot) alkot.\nSiker esetén [code]true[/code], egyébként [code]false[/code] értéket ad vissza."
+
+#. TriangleMesh.get_faces
+#: doc/classes/TriangleMesh.xml
+msgid "Returns a copy of the geometry faces. Each 3 vertices of the array represent one triangle (face)."
+msgstr "Visszaadja a geometria lapjainak másolatát. A tömb minden három egymást követő csúcsa egy háromszöget (lapot) alkot."
+
+#. TriangleMesh.intersect_ray
+#: doc/classes/TriangleMesh.xml
+msgid "Tests for intersection with a ray starting at [param begin] and facing [param dir] and extending toward infinity.\nIf an intersection with a triangle happens, returns a [Dictionary] with the following fields:\n[code]position[/code]: The position on the intersected triangle.\n[code]normal[/code]: The normal of the intersected triangle.\n[code]face_index[/code]: The index of the intersected triangle.\nReturns an empty [Dictionary] if no intersection happens.\nSee also [method intersect_segment], which is similar but uses a finite-length segment."
+msgstr "A [param begin] pontból induló és a [param dir] irányában a végtelenbe tartó sugár metszését vizsgálja.\nHa a sugár metsz egy háromszöget, a visszaadott [Dictionary] mezői a következők:\n[code]position[/code]: A metszéspont helye a háromszögön.\n[code]normal[/code]: A metszett háromszög normálvektora.\n[code]face_index[/code]: A metszett háromszög indexe.\nMetszés hiányában üres [Dictionary] értéket ad vissza.\nLásd még a [method intersect_segment] metódust, amely hasonlóan működik, de véges hosszúságú szakasszal."
+
+#. TriangleMesh.intersect_segment
+#: doc/classes/TriangleMesh.xml
+msgid "Tests for intersection with a segment going from [param begin] to [param end].\nIf an intersection with a triangle happens returns a [Dictionary] with the following fields:\n[code]position[/code]: The position on the intersected triangle.\n[code]normal[/code]: The normal of the intersected triangle.\n[code]face_index[/code]: The index of the intersected triangle.\nReturns an empty [Dictionary] if no intersection happens.\nSee also [method intersect_ray], which is similar but uses an infinite-length ray."
+msgstr "A [param begin] és a [param end] közötti szakasz metszését vizsgálja.\nHa a szakasz metsz egy háromszöget, a visszaadott [Dictionary] mezői a következők:\n[code]position[/code]: A metszéspont helye a háromszögön.\n[code]normal[/code]: A metszett háromszög normálvektora.\n[code]face_index[/code]: A metszett háromszög indexe.\nMetszés hiányában üres [Dictionary] értéket ad vissza.\nLásd még a [method intersect_ray] metódust, amely hasonlóan működik, de végtelen hosszúságú sugárral."
+
+#. SurfaceTool.brief
+#: doc/classes/SurfaceTool.xml
+msgid "Helper tool to create geometry."
+msgstr "Segédeszköz geometria létrehozásához."
+
+#. SurfaceTool.add_index
+#: doc/classes/SurfaceTool.xml
+msgid "Adds a vertex to index array if you are using indexed vertices. Does not need to be called before adding vertices."
+msgstr "Indexelt csúcsok használatakor hozzáad egy csúcsindexet az indextömbhöz. A csúcsok hozzáadása után is meghívható."
+
+#. SurfaceTool.add_triangle_fan
+#: doc/classes/SurfaceTool.xml
+msgid "Inserts a triangle fan made of array data into [Mesh] being constructed.\nRequires the primitive type be set to [constant Mesh.PRIMITIVE_TRIANGLES]."
+msgstr "Tömbadatokból összeállított háromszöglegyezőt szúr be az épülő [Mesh] hálóba.\nEhhez a primitívtípusnak [constant Mesh.PRIMITIVE_TRIANGLES] értékűnek kell lennie."
+
+#. SurfaceTool.add_vertex
+#: doc/classes/SurfaceTool.xml
+msgid "Specifies the position of current vertex. Should be called after specifying other vertex properties (e.g. Color, UV)."
+msgstr "Megadja az aktuális csúcs helyét. A csúcs többi tulajdonságának, például a színnek és az UV-koordinátának a beállítása után hívd meg."
+
+#. SurfaceTool.append_from
+#: doc/classes/SurfaceTool.xml
+msgid "Append vertices from a given [Mesh] surface onto the current vertex array with specified [Transform3D]."
+msgstr "A megadott [Mesh] felületének csúcsait a megadott [Transform3D] transzformációval hozzáfűzi az aktuális csúcstömbhöz."
+
+#. SurfaceTool.begin
+#: doc/classes/SurfaceTool.xml
+msgid "Called before adding any vertices. Takes the primitive type as an argument (e.g. [constant Mesh.PRIMITIVE_TRIANGLES])."
+msgstr "A csúcsok hozzáadása előtt kell meghívni. Argumentumként a primitívtípust várja, például [constant Mesh.PRIMITIVE_TRIANGLES]."
+
+#. SurfaceTool.clear
+#: doc/classes/SurfaceTool.xml
+msgid "Clear all information passed into the surface tool so far."
+msgstr "Törli a SurfaceToolnak eddig átadott összes adatot."
+
+#. SurfaceTool.commit_to_arrays
+#: doc/classes/SurfaceTool.xml
+msgid "Commits the data to the same format used by [method ArrayMesh.add_surface_from_arrays], [method ImporterMesh.add_surface], and [method create_from_arrays]. This way you can further process the mesh data using the [ArrayMesh] or [ImporterMesh] APIs."
+msgstr "Az adatokat a [method ArrayMesh.add_surface_from_arrays], a [method ImporterMesh.add_surface] és a [method create_from_arrays] által használt formátumban adja vissza. Így a háló adatai az [ArrayMesh] vagy az [ImporterMesh] API-jával tovább feldolgozhatók."
+
+#. SurfaceTool.create_from
+#: doc/classes/SurfaceTool.xml
+msgid "Creates a vertex array from an existing [Mesh]."
+msgstr "Meglévő [Mesh] hálóból csúcstömböt hoz létre."
+
+#. SurfaceTool.create_from_blend_shape
+#: doc/classes/SurfaceTool.xml
+msgid "Creates a vertex array from the specified blend shape of an existing [Mesh]. This can be used to extract a specific pose from a blend shape."
+msgstr "Meglévő [Mesh] háló megadott alakváltozatából csúcstömböt hoz létre. Ezzel kinyerhető az alakváltozat által leírt meghatározott alak."
+
+#. SurfaceTool.deindex
+#: doc/classes/SurfaceTool.xml
+msgid "Removes the index array by expanding the vertex array."
+msgstr "A csúcstömb kibontásával eltávolítja az indextömböt."
+
+#. SurfaceTool.generate_tangents
+#: doc/classes/SurfaceTool.xml
+msgid "Generates a tangent vector for each vertex. Requires that each vertex already has UVs and normals set (see [method generate_normals])."
+msgstr "Minden csúcshoz érintővektort hoz létre. Ehhez minden csúcshoz már be kell állítani az UV-koordinátákat és a normálvektort (lásd: [method generate_normals])."
+
+#. SurfaceTool.get_aabb
+#: doc/classes/SurfaceTool.xml
+msgid "Returns the axis-aligned bounding box of the vertex positions."
+msgstr "Visszaadja a csúcsok helyét befoglaló, koordinátatengelyekhez igazított dobozt."
+
+#. SurfaceTool.get_primitive_type
+#: doc/classes/SurfaceTool.xml
+msgid "Returns the type of mesh geometry, such as [constant Mesh.PRIMITIVE_TRIANGLES]."
+msgstr "Visszaadja a háló geometriájának primitívtípusát, például [constant Mesh.PRIMITIVE_TRIANGLES] értéket."
+
+#. SurfaceTool.get_skin_weight_count
+#: doc/classes/SurfaceTool.xml
+msgid "By default, returns [constant SKIN_4_WEIGHTS] to indicate only 4 bone influences per vertex are used.\nReturns [constant SKIN_8_WEIGHTS] if up to 8 influences are used.\n[b]Note:[/b] This function returns an enum, not the exact number of weights."
+msgstr "Alapértelmezés szerint [constant SKIN_4_WEIGHTS] értéket ad vissza, ami csúcsonként négy csontsúlyt jelöl.\nLegfeljebb nyolc csont hatása esetén [constant SKIN_8_WEIGHTS] értéket ad vissza.\n[b]Megjegyzés:[/b] A metódus felsorolásértéket ad vissza, a súlyok pontos száma ettől eltérhet."
+
+#. SurfaceTool.optimize_indices_for_cache
+#: doc/classes/SurfaceTool.xml
+msgid "Optimizes triangle sorting for performance. Requires that [method get_primitive_type] is [constant Mesh.PRIMITIVE_TRIANGLES]."
+msgstr "A jobb teljesítmény érdekében átrendezi a háromszögeket. A [method get_primitive_type] visszatérési értékének [constant Mesh.PRIMITIVE_TRIANGLES] értékűnek kell lennie."
+
+#. SurfaceTool.set_custom
+#: doc/classes/SurfaceTool.xml
+msgid "Sets the custom value on this vertex for [param channel_index].\n[method set_custom_format] must be called first for this [param channel_index]. Formats which are not RGBA will ignore other color channels."
+msgstr "A [param channel_index] indexű egyéni csatorna értékét állítja be a csúcshoz.\nEhhez először hívd meg a [method set_custom_format] metódust a [param channel_index] csatornára. Az egyéb formátumok kihagyják az RGBA-formátumhoz képest hiányzó színösszetevőket."
+
+#. SurfaceTool.set_custom_format
+#: doc/classes/SurfaceTool.xml
+msgid "Sets the color format for this custom [param channel_index]. Use [constant CUSTOM_MAX] to disable.\nMust be invoked after [method begin] and should be set before [method commit] or [method commit_to_arrays]."
+msgstr "Beállítja a [param channel_index] indexű egyéni csatorna színformátumát. A csatorna kikapcsolásához használd a [constant CUSTOM_MAX] értéket.\nA [method begin] után, de a [method commit] vagy a [method commit_to_arrays] előtt kell meghívni."
+
+#. SurfaceTool.set_material
+#: doc/classes/SurfaceTool.xml
+msgid "Sets [Material] to be used by the [Mesh] you are constructing."
+msgstr "Beállítja az összeállítás alatt álló [Mesh] által használt [Material] anyagot."
+
+#. SurfaceTool.set_normal
+#: doc/classes/SurfaceTool.xml
+msgid "Specifies a normal to use for the [i]next[/i] vertex. If every vertex needs to have this information set and you fail to submit it for the first vertex, this information may not be used at all."
+msgstr "A [i]következő[/i] csúcshoz megadja a normálvektort. Ha minden csúcshoz szükség van rá, de az elsőnél kihagyod, előfordulhat, hogy az adat sehol sem kerül felhasználásra."
+
+#. SurfaceTool.set_skin_weight_count
+#: doc/classes/SurfaceTool.xml
+msgid "Set to [constant SKIN_8_WEIGHTS] to indicate that up to 8 bone influences per vertex may be used.\nBy default, only 4 bone influences are used ([constant SKIN_4_WEIGHTS]).\n[b]Note:[/b] This function takes an enum, not the exact number of weights."
+msgstr "A [constant SKIN_8_WEIGHTS] érték csúcsonként legfeljebb nyolc csont hatását engedélyezi.\nAlapértelmezésben csak négy csont hathat egy csúcsra ([constant SKIN_4_WEIGHTS]).\n[b]Megjegyzés:[/b] A metódus felsorolásértéket vár, nem a súlyok pontos számát."
+
+#. SurfaceTool.set_uv
+#: doc/classes/SurfaceTool.xml
+msgid "Specifies a set of UV coordinates to use for the [i]next[/i] vertex. If every vertex needs to have this information set and you fail to submit it for the first vertex, this information may not be used at all."
+msgstr "Megadja a [i]következő[/i] csúcs UV-koordinátáit. Ha minden csúcshoz szükség van rájuk, de az elsőnél kihagyod őket, előfordulhat, hogy az adatok sehol sem kerülnek felhasználásra."
+
+#. SurfaceTool.set_uv2
+#: doc/classes/SurfaceTool.xml
+msgid "Specifies an optional second set of UV coordinates to use for the [i]next[/i] vertex. If every vertex needs to have this information set and you fail to submit it for the first vertex, this information may not be used at all."
+msgstr "Megadja a [i]következő[/i] csúcs választható második UV-koordinátáit. Ha minden csúcshoz szükség van rájuk, de az elsőnél kihagyod őket, előfordulhat, hogy az adatok sehol sem kerülnek felhasználásra."
+
+#. SurfaceTool.CUSTOM_RGBA8_UNORM
+#: doc/classes/SurfaceTool.xml
+msgid "Limits range of data passed to [method set_custom] to unsigned normalized 0 to 1 stored in 8 bits per channel. See [constant Mesh.ARRAY_CUSTOM_RGBA8_UNORM]."
+msgstr "A [method set_custom] metódusnak átadott értékeket a 0 és 1 közötti tartományra korlátozza, és csatornánként 8 bites, előjel nélküli normált értékként tárolja. Lásd: [constant Mesh.ARRAY_CUSTOM_RGBA8_UNORM]."
+
+#. SurfaceTool.CUSTOM_RGBA8_SNORM
+#: doc/classes/SurfaceTool.xml
+msgid "Limits range of data passed to [method set_custom] to signed normalized -1 to 1 stored in 8 bits per channel. See [constant Mesh.ARRAY_CUSTOM_RGBA8_SNORM]."
+msgstr "A [method set_custom] metódusnak átadott értékeket a -1 és 1 közötti tartományra korlátozza, és csatornánként 8 bites, előjeles normált értékként tárolja. Lásd: [constant Mesh.ARRAY_CUSTOM_RGBA8_SNORM]."
+
+#. SurfaceTool.CUSTOM_RG_HALF
+#: doc/classes/SurfaceTool.xml
+msgid "Stores data passed to [method set_custom] as half precision floats, and uses only red and green color channels. See [constant Mesh.ARRAY_CUSTOM_RG_HALF]."
+msgstr "A [method set_custom] metódusnak átadott adatokat félpontosságú lebegőpontos értékként tárolja, csak a vörös és a zöld csatornát használva. Lásd: [constant Mesh.ARRAY_CUSTOM_RG_HALF]."
+
+#. SurfaceTool.CUSTOM_RGBA_HALF
+#: doc/classes/SurfaceTool.xml
+msgid "Stores data passed to [method set_custom] as half precision floats and uses all color channels. See [constant Mesh.ARRAY_CUSTOM_RGBA_HALF]."
+msgstr "A [method set_custom] metódusnak átadott adatokat félpontosságú lebegőpontos értékként tárolja, az összes színcsatornát használva. Lásd: [constant Mesh.ARRAY_CUSTOM_RGBA_HALF]."
+
+#. SurfaceTool.CUSTOM_R_FLOAT
+#: doc/classes/SurfaceTool.xml
+msgid "Stores data passed to [method set_custom] as full precision floats, and uses only red color channel. See [constant Mesh.ARRAY_CUSTOM_R_FLOAT]."
+msgstr "A [method set_custom] metódusnak átadott adatokat egyszeres pontosságú lebegőpontos értékként tárolja, csak a vörös csatornát használva. Lásd: [constant Mesh.ARRAY_CUSTOM_R_FLOAT]."
+
+#. SurfaceTool.CUSTOM_RG_FLOAT
+#: doc/classes/SurfaceTool.xml
+msgid "Stores data passed to [method set_custom] as full precision floats, and uses only red and green color channels. See [constant Mesh.ARRAY_CUSTOM_RG_FLOAT]."
+msgstr "A [method set_custom] metódusnak átadott adatokat egyszeres pontosságú lebegőpontos értékként tárolja, csak a vörös és a zöld csatornát használva. Lásd: [constant Mesh.ARRAY_CUSTOM_RG_FLOAT]."
+
+#. SurfaceTool.CUSTOM_RGB_FLOAT
+#: doc/classes/SurfaceTool.xml
+msgid "Stores data passed to [method set_custom] as full precision floats, and uses only red, green and blue color channels. See [constant Mesh.ARRAY_CUSTOM_RGB_FLOAT]."
+msgstr "A [method set_custom] metódusnak átadott adatokat egyszeres pontosságú lebegőpontos értékként tárolja, csak a vörös, a zöld és a kék csatornát használva. Lásd: [constant Mesh.ARRAY_CUSTOM_RGB_FLOAT]."
+
+#. SurfaceTool.CUSTOM_RGBA_FLOAT
+#: doc/classes/SurfaceTool.xml
+msgid "Stores data passed to [method set_custom] as full precision floats, and uses all color channels. See [constant Mesh.ARRAY_CUSTOM_RGBA_FLOAT]."
+msgstr "A [method set_custom] metódusnak átadott adatokat egyszeres pontosságú lebegőpontos értékként tárolja, az összes színcsatornát használva. Lásd: [constant Mesh.ARRAY_CUSTOM_RGBA_FLOAT]."
+
+#. SurfaceTool.CUSTOM_MAX
+#: doc/classes/SurfaceTool.xml
+msgid "Used to indicate a disabled custom channel."
+msgstr "Kikapcsolt egyéni csatornát jelöl."
+
+#. SurfaceTool.SKIN_4_WEIGHTS
+#: doc/classes/SurfaceTool.xml
+msgid "Each individual vertex can be influenced by only 4 bone weights."
+msgstr "Minden csúcsra legfeljebb négy csontsúly hathat."
+
+#. SurfaceTool.SKIN_8_WEIGHTS
+#: doc/classes/SurfaceTool.xml
+msgid "Each individual vertex can be influenced by up to 8 bone weights."
+msgstr "Minden csúcsra legfeljebb nyolc csontsúly hathat."
+
+#. CSGBox3D.brief
+#: modules/csg/doc_classes/CSGBox3D.xml
+msgid "A CSG Box shape."
+msgstr "CSG-doboz alakzat."
+
+#. CSGBox3D.material
+#: modules/csg/doc_classes/CSGBox3D.xml
+msgid "The material used to render the box."
+msgstr "A doboz rendereléséhez használt anyag."
+
+#. CSGCombiner3D.brief
+#: modules/csg/doc_classes/CSGCombiner3D.xml
+msgid "A CSG node that allows you to combine other CSG modifiers."
+msgstr "Más CSG-módosítókat egyesítő CSG-csomópont."
+
+#. CSGCylinder3D.brief
+#: modules/csg/doc_classes/CSGCylinder3D.xml
+msgid "A CSG Cylinder shape."
+msgstr "CSG-henger alakzat."
+
+#. CSGCylinder3D.cone
+#: modules/csg/doc_classes/CSGCylinder3D.xml
+msgid "If [code]true[/code] a cone is created, the [member radius] will only apply to one side."
+msgstr "Ha az értéke [code]true[/code], kúp jön létre, és a [member radius] csak az egyik végére vonatkozik."
+
+#. CSGCylinder3D.height
+#: modules/csg/doc_classes/CSGCylinder3D.xml
+msgid "The height of the cylinder."
+msgstr "A henger magassága."
+
+#. CSGCylinder3D.material
+#: modules/csg/doc_classes/CSGCylinder3D.xml
+msgid "The material used to render the cylinder."
+msgstr "A henger rendereléséhez használt anyag."
+
+#. CSGCylinder3D.radius
+#. OpenXRCompositionLayerCylinder.radius
+#: modules/csg/doc_classes/CSGCylinder3D.xml modules/openxr/doc_classes/OpenXRCompositionLayerCylinder.xml
+msgid "The radius of the cylinder."
+msgstr "A henger sugara."
+
+#. CSGCylinder3D.sides
+#: modules/csg/doc_classes/CSGCylinder3D.xml
+msgid "The number of sides of the cylinder, the higher this number the more detail there will be in the cylinder."
+msgstr "A henger oldalainak száma. Nagyobb értéknél részletesebb a henger."
+
+#. CSGCylinder3D.smooth_faces
+#: modules/csg/doc_classes/CSGCylinder3D.xml
+msgid "If [code]true[/code] the normals of the cylinder are set to give a smooth effect making the cylinder seem rounded. If [code]false[/code] the cylinder will have a flat shaded look."
+msgstr "Ha az értéke [code]true[/code], a normálvektorok sima árnyalást adnak, így a henger lekerekítettnek látszik. [code]false[/code] esetén a henger lapjai külön-külön, sík árnyalással jelennek meg."
+
+#. CSGMesh3D.brief
+#: modules/csg/doc_classes/CSGMesh3D.xml
+msgid "A CSG Mesh shape that uses a mesh resource."
+msgstr "Hálóerőforrást használó CSG-alakzat."
+
+#. CSGMesh3D.material
+#: modules/csg/doc_classes/CSGMesh3D.xml
+msgid "The [Material] used in drawing the CSG shape."
+msgstr "A CSG-alakzat kirajzolásához használt [Material]."
+
+#. CSGPolygon3D.brief
+#: modules/csg/doc_classes/CSGPolygon3D.xml
+msgid "Extrudes a 2D polygon shape to create a 3D mesh."
+msgstr "2D sokszög kihúzásával 3D hálót hoz létre."
+
+#. CSGPolygon3D.depth
+#: modules/csg/doc_classes/CSGPolygon3D.xml
+msgid "When [member mode] is [constant MODE_DEPTH], the depth of the extrusion."
+msgstr "A kihúzás mélysége, ha a [member mode] értéke [constant MODE_DEPTH]."
+
+#. CSGPolygon3D.path_continuous_u
+#: modules/csg/doc_classes/CSGPolygon3D.xml
+msgid "When [member mode] is [constant MODE_PATH], by default, the top half of the [member material] is stretched along the entire length of the extruded shape. If [code]false[/code] the top half of the material is repeated every step of the extrusion."
+msgstr "Ha a [member mode] értéke [constant MODE_PATH], a [member material] felső fele alapértelmezésben végignyúlik a kihúzott alakzat teljes hosszán. [code]false[/code] értéknél az anyag felső fele minden kihúzási lépésnél megismétlődik."
+
+#. CSGPolygon3D.path_interval_type
+#: modules/csg/doc_classes/CSGPolygon3D.xml
+msgid "When [member mode] is [constant MODE_PATH], this will determine if the interval should be by distance ([constant PATH_INTERVAL_DISTANCE]) or subdivision fractions ([constant PATH_INTERVAL_SUBDIVIDE])."
+msgstr "Ha a [member mode] értéke [constant MODE_PATH], meghatározza, hogy a lépésközt távolságként ([constant PATH_INTERVAL_DISTANCE]) vagy a felosztás törtrészeként ([constant PATH_INTERVAL_SUBDIVIDE]) kell-e megadni."
+
+#. CSGPolygon3D.path_joined
+#: modules/csg/doc_classes/CSGPolygon3D.xml
+msgid "When [member mode] is [constant MODE_PATH], if [code]true[/code] the ends of the path are joined, by adding an extrusion between the last and first points of the path."
+msgstr "Ha a [member mode] értéke [constant MODE_PATH], és ennek a tulajdonságnak az értéke [code]true[/code], a motor az útvonal első és utolsó pontja közé is beszúr egy kihúzott szakaszt, így összeköti a két végét."
+
+#. CSGPolygon3D.path_local
+#: modules/csg/doc_classes/CSGPolygon3D.xml
+msgid "When [member mode] is [constant MODE_PATH], if [code]true[/code] the [Transform3D] of the [CSGPolygon3D] is used as the starting point for the extrusions, not the [Transform3D] of the [member path_node]."
+msgstr "Ha a [member mode] értéke [constant MODE_PATH], [code]true[/code] esetén a [CSGPolygon3D] [Transform3D] transzformációja adja a kihúzás kezdőpontját a [member path_node] [Transform3D] transzformációja helyett."
+
+#. CSGPolygon3D.path_node
+#: modules/csg/doc_classes/CSGPolygon3D.xml
+msgid "When [member mode] is [constant MODE_PATH], the location of the [Path3D] object used to extrude the [member polygon]."
+msgstr "Ha a [member mode] értéke [constant MODE_PATH], a [member polygon] kihúzásához használt [Path3D] csomópont útvonala."
+
+#. CSGPolygon3D.path_rotation
+#: modules/csg/doc_classes/CSGPolygon3D.xml
+msgid "When [member mode] is [constant MODE_PATH], the path rotation method used to rotate the [member polygon] as it is extruded."
+msgstr "Ha a [member mode] értéke [constant MODE_PATH], ez szabályozza a [member polygon] forgatását az útvonal menti kihúzáskor."
+
+#. CSGPolygon3D.path_rotation_accurate
+#: modules/csg/doc_classes/CSGPolygon3D.xml
+msgid "When [member mode] is [constant MODE_PATH], if [code]true[/code] the polygon will be rotated according to the proper tangent of the path at the sampled points. If [code]false[/code] an approximation is used, which decreases in accuracy as the number of subdivisions decreases."
+msgstr "Ha a [member mode] értéke [constant MODE_PATH], [code]true[/code] esetén a sokszög az útvonal tényleges érintője szerint fordul el a mintavételi pontoknál. [code]false[/code] esetén a motor közelítést használ, amely kevesebb felosztással pontatlanabb."
+
+#. CSGPolygon3D.path_u_distance
+#: modules/csg/doc_classes/CSGPolygon3D.xml
+msgid "When [member mode] is [constant MODE_PATH], this is the distance along the path, in meters, the texture coordinates will tile. When set to 0, texture coordinates will match geometry exactly with no tiling."
+msgstr "Ha a [member mode] értéke [constant MODE_PATH], ez adja meg méterben, hogy az útvonal mentén milyen távolságonként ismétlődjenek a textúrakoordináták. Nulla értéknél a textúrakoordináták ismétlés nélkül követik a geometriát."
+
+#. CSGPolygon3D.smooth_faces
+#: modules/csg/doc_classes/CSGPolygon3D.xml
+msgid "If [code]true[/code], applies smooth shading to the extrusions."
+msgstr "Ha az értéke [code]true[/code], sima árnyalást alkalmaz a kihúzott részeken."
+
+#. CSGPolygon3D.spin_degrees
+#: modules/csg/doc_classes/CSGPolygon3D.xml
+msgid "When [member mode] is [constant MODE_SPIN], the total number of degrees the [member polygon] is rotated when extruding."
+msgstr "Ha a [member mode] értéke [constant MODE_SPIN], a [member polygon] kihúzás közbeni teljes elfordulása fokban."
+
+#. CSGPolygon3D.spin_sides
+#: modules/csg/doc_classes/CSGPolygon3D.xml
+msgid "When [member mode] is [constant MODE_SPIN], the number of extrusions made."
+msgstr "A kihúzási lépések száma, ha a [member mode] értéke [constant MODE_SPIN]."
+
+#. CSGPolygon3D.MODE_DEPTH
+#: modules/csg/doc_classes/CSGPolygon3D.xml
+msgid "The [member polygon] shape is extruded along the negative Z axis."
+msgstr "A [member polygon] alakzat a negatív Z tengely mentén húzódik ki."
+
+#. CSGPolygon3D.MODE_SPIN
+#: modules/csg/doc_classes/CSGPolygon3D.xml
+msgid "The [member polygon] shape is extruded by rotating it around the Y axis."
+msgstr "A [member polygon] alakzat az Y tengely körüli elforgatással húzódik ki."
+
+#. CSGPolygon3D.MODE_PATH
+#: modules/csg/doc_classes/CSGPolygon3D.xml
+msgid "The [member polygon] shape is extruded along the [Path3D] specified in [member path_node]."
+msgstr "A [member polygon] alakzat a [member path_node] tulajdonságban megadott [Path3D] útvonal mentén húzódik ki."
+
+#. CSGPolygon3D.PATH_ROTATION_POLYGON
+#: modules/csg/doc_classes/CSGPolygon3D.xml
+msgid "The [member polygon] shape is not rotated.\n[b]Note:[/b] Requires the path Z coordinates to continually decrease to ensure viable shapes."
+msgstr "A [member polygon] alakzat nem fordul el.\n[b]Megjegyzés:[/b] Érvényes alakzathoz az útvonal Z koordinátáinak végig csökkenniük kell."
+
+#. CSGPolygon3D.PATH_ROTATION_PATH_FOLLOW
+#: modules/csg/doc_classes/CSGPolygon3D.xml
+msgid "The [member polygon] shape follows the path and its rotations around the path axis."
+msgstr "A [member polygon] alakzat követi az útvonalat és az útvonal tengelye körüli elfordulását is."
+
+#. CSGPolygon3D.PATH_INTERVAL_DISTANCE
+#: modules/csg/doc_classes/CSGPolygon3D.xml
+msgid "When [member mode] is set to [constant MODE_PATH], [member path_interval] will determine the distance, in meters, each interval of the path will extrude."
+msgstr "Ha a [member mode] értéke [constant MODE_PATH], a [member path_interval] adja meg méterben a kihúzási lépések közötti távolságot az útvonal mentén."
+
+#. CSGShape3D.brief
+#: modules/csg/doc_classes/CSGShape3D.xml
+msgid "The CSG base class."
+msgstr "A CSG-alakzatok alaposztálya."
+
+#. CSGShape3D.is_root_shape
+#: modules/csg/doc_classes/CSGShape3D.xml
+msgid "Returns [code]true[/code] if this is a root shape and is thus the object that is rendered."
+msgstr "[code]true[/code] értéket ad vissza, ha ez gyökéralakzat, így ezt az objektumot rendereli a motor."
+
+#. CSGShape3D.autosmooth
+#: modules/csg/doc_classes/CSGShape3D.xml
+msgid "Enables automatic smoothing. This overrides any smoothing on the CSG node and instead uses [member smoothing_angle] to calculate normals based on the angle between faces.\nChildren of a [CSGCombiner3D] node will be treated as a single mesh."
+msgstr "Bekapcsolja az automatikus simítást. Felülbírálja a CSG-csomópont simítási beállításait, és a lapok közötti szög alapján, a [member smoothing_angle] értékével számítja ki a normálvektorokat.\nA [CSGCombiner3D] gyermekcsomópontjait egyetlen hálóként kezeli."
+
+#. CSGShape3D.calculate_tangents
+#: modules/csg/doc_classes/CSGShape3D.xml
+msgid "Calculate tangents for the CSG shape which allows the use of normal and height maps. This is only applied on the root shape, this setting is ignored on any child. Setting this to [code]false[/code] can speed up shape generation slightly."
+msgstr "Kiszámítja a CSG-alakzat érintővektorait, hogy normál- és magasságtérképek is használhatók legyenek. Csak a gyökéralakzatra vonatkozik. A gyermekalakzatokon a beállítás hatástalan. [code]false[/code] értéknél kissé gyorsabb lehet az alakzat előállítása."
+
+#. CSGShape3D.collision_mask
+#: modules/csg/doc_classes/CSGShape3D.xml
+msgid "The physics layers this CSG shape scans for collisions. Only effective if [member use_collision] is [code]true[/code]. See [url=$DOCS_URL/tutorials/physics/physics_introduction.html#collision-layers-and-masks]Collision layers and masks[/url] in the documentation for more information."
+msgstr "A fizikai rétegek, amelyeken a CSG-alakzat ütközést keres. Csak akkor érvényes, ha a [member use_collision] értéke [code]true[/code]. További részletekért lásd a dokumentáció [url=$DOCS_URL/tutorials/physics/physics_introduction.html#collision-layers-and-masks]ütközési rétegekről és maszkokról[/url] szóló részét."
+
+#. CSGShape3D.use_collision
+#: modules/csg/doc_classes/CSGShape3D.xml
+msgid "Adds a collision shape to the physics engine for our CSG shape. This will always act like a static body. Note that the collision shape is still active even if the CSG shape itself is hidden. See also [member collision_mask] and [member collision_priority]."
+msgstr "A CSG-alakzathoz ütközési alakzatot ad a fizikai motorban. Az alakzat mindig statikus testként viselkedik. Az ütközési alakzat akkor is aktív marad, ha a CSG-alakzat rejtett. Lásd még: [member collision_mask] és [member collision_priority]."
+
+#. CSGShape3D.OPERATION_INTERSECTION
+#: modules/csg/doc_classes/CSGShape3D.xml
+msgid "Only intersecting geometry remains, the rest is removed."
+msgstr "Csak a két geometria közös része marad meg, a többi eltűnik."
+
+#. CSGShape3D.OPERATION_SUBTRACTION
+#: modules/csg/doc_classes/CSGShape3D.xml
+msgid "The second shape is subtracted from the first, leaving a dent with its shape."
+msgstr "A második alakzatot kivonja az elsőből, így annak helyén a második alakzatnak megfelelő kivágás marad."
+
+#. CSGSphere3D.brief
+#: modules/csg/doc_classes/CSGSphere3D.xml
+msgid "A CSG Sphere shape."
+msgstr "CSG-gömb alakzat."
+
+#. CSGSphere3D.material
+#: modules/csg/doc_classes/CSGSphere3D.xml
+msgid "The material used to render the sphere."
+msgstr "A gömb rendereléséhez használt anyag."
+
+#. CSGSphere3D.radial_segments
+#: modules/csg/doc_classes/CSGSphere3D.xml
+msgid "Number of vertical slices for the sphere."
+msgstr "A gömb függőleges szeleteinek száma."
+
+#. CSGSphere3D.radius
+#: modules/csg/doc_classes/CSGSphere3D.xml
+msgid "Radius of the sphere."
+msgstr "A gömb sugara."
+
+#. CSGSphere3D.rings
+#: modules/csg/doc_classes/CSGSphere3D.xml
+msgid "Number of horizontal slices for the sphere."
+msgstr "A gömb vízszintes szeleteinek száma."
+
+#. CSGSphere3D.smooth_faces
+#: modules/csg/doc_classes/CSGSphere3D.xml
+msgid "If [code]true[/code] the normals of the sphere are set to give a smooth effect making the sphere seem rounded. If [code]false[/code] the sphere will have a flat shaded look."
+msgstr "Ha az értéke [code]true[/code], a normálvektorok sima árnyalást adnak, így a gömb lekerekítettnek látszik. [code]false[/code] esetén a gömb lapjai külön-külön, sík árnyalással jelennek meg."
+
+#. CSGTorus3D.brief
+#: modules/csg/doc_classes/CSGTorus3D.xml
+msgid "A CSG Torus shape."
+msgstr "CSG-tórusz alakzat."
+
+#. CSGTorus3D.material
+#: modules/csg/doc_classes/CSGTorus3D.xml
+msgid "The material used to render the torus."
+msgstr "A tórusz rendereléséhez használt anyag."
+
+#. CSGTorus3D.smooth_faces
+#: modules/csg/doc_classes/CSGTorus3D.xml
+msgid "If [code]true[/code] the normals of the torus are set to give a smooth effect making the torus seem rounded. If [code]false[/code] the torus will have a flat shaded look."
+msgstr "Ha az értéke [code]true[/code], a normálvektorok sima árnyalást adnak, így a tórusz lekerekítettnek látszik. [code]false[/code] esetén a tórusz lapjai külön-külön, sík árnyalással jelennek meg."
+
+#. GridMap.brief
+#: modules/gridmap/doc_classes/GridMap.xml
+msgid "Node for 3D tile-based maps."
+msgstr "Csomópont 3D csempealapú pályákhoz."
+
+#. GridMap.clear
+#: modules/gridmap/doc_classes/GridMap.xml
+msgid "Clear all cells."
+msgstr "Törli az összes cellát."
+
+#. GridMap.clear_baked_meshes
+#: modules/gridmap/doc_classes/GridMap.xml
+msgid "Clears all baked meshes. See [method make_baked_meshes]."
+msgstr "Törli az összes előre kiszámított hálót. Lásd: [method make_baked_meshes]."
+
+#. GridMap.get_bake_mesh_instance
+#: modules/gridmap/doc_classes/GridMap.xml
+msgid "Returns [RID] of a baked mesh with the given [param idx]."
+msgstr "Visszaadja a [param idx] indexű előre kiszámított háló [RID] azonosítóját."
+
+#. GridMap.get_cell_item
+#: modules/gridmap/doc_classes/GridMap.xml
+msgid "The [MeshLibrary] item index located at the given grid coordinates. If the cell is empty, [constant INVALID_CELL_ITEM] will be returned."
+msgstr "A megadott rácskoordinátán található [MeshLibrary] elem indexe. Üres cellánál [constant INVALID_CELL_ITEM] értéket ad vissza."
+
+#. GridMap.get_cell_item_basis
+#: modules/gridmap/doc_classes/GridMap.xml
+msgid "Returns the basis that gives the specified cell its orientation."
+msgstr "Visszaadja a megadott cella tájolását meghatározó bázist."
+
+#. GridMap.get_cell_item_orientation
+#: modules/gridmap/doc_classes/GridMap.xml
+msgid "The orientation of the cell at the given grid coordinates. [code]-1[/code] is returned if the cell is empty."
+msgstr "A megadott rácskoordinátán lévő cella tájolása. Üres cellánál [code]-1[/code] értéket ad vissza."
+
+#. GridMap.get_meshes
+#: modules/gridmap/doc_classes/GridMap.xml
+msgid "Returns an array of [Transform3D] and [Mesh] references corresponding to the non-empty cells in the grid. The transforms are specified in local space. Even indices contain [Transform3D]s, while odd indices contain [Mesh]es related to the [Transform3D] in the index preceding it."
+msgstr "A rács nem üres celláihoz tartozó [Transform3D] és [Mesh] hivatkozásokat adja vissza egy tömbben. A transzformációk helyi koordinátákban értendők. A páros indexeken [Transform3D] értékek, a páratlan indexeken pedig az előző indexű [Transform3D] értékhez tartozó [Mesh] hálók vannak."
+
+#. GridMap.get_octant_coords_from_cell_coords
+#: modules/gridmap/doc_classes/GridMap.xml
+msgid "Returns the [Vector3i] octant coordinates of the octant that the cell at [param cell_coords] belongs to."
+msgstr "A [param cell_coords] koordinátájú cellát tartalmazó oktáns [Vector3i] koordinátáit adja vissza."
+
+#. GridMap.get_octants_in_bounds
+#: modules/gridmap/doc_classes/GridMap.xml
+msgid "Returns an array of [Vector3i] octant coordinates that are inside the given [param bounds], including octants that have no cells in use."
+msgstr "[Vector3i] értékek tömbjeként adja vissza a megadott [param bounds] határokon belüli oktánsok koordinátáit, az üres oktánsokat is beleértve."
+
+#. GridMap.get_used_cells_in_octant
+#: modules/gridmap/doc_classes/GridMap.xml
+msgid "Returns an array of [Vector3i]s with the cell coordinates of non-empty cells inside the octant at [param octant_coords]."
+msgstr "[Vector3i] értékek tömbjeként adja vissza a [param octant_coords] koordinátájú oktáns nem üres celláinak koordinátáit."
+
+#. GridMap.get_used_cells_in_octant_by_item
+#: modules/gridmap/doc_classes/GridMap.xml
+msgid "Returns an array of [Vector3i]s with the cell coordinates of cells inside the octant at [param octant_coords] that use the specified cell [param item]."
+msgstr "[Vector3i] értékek tömbjeként adja vissza a [param octant_coords] koordinátájú oktáns azon celláinak koordinátáit, amelyek a megadott [param item] indexű elemet használják."
+
+#. GridMap.get_used_octants
+#: modules/gridmap/doc_classes/GridMap.xml
+msgid "Returns an array of [Vector3i]s with the octant coordinates of the non-empty octants in the grid map."
+msgstr "A rácstérkép nem üres oktánsainak koordinátáit [Vector3i] értékek tömbjeként adja vissza."
+
+#. GridMap.get_used_octants_by_item
+#: modules/gridmap/doc_classes/GridMap.xml
+msgid "Returns an array of [Vector3i]s with the octant coordinates of the octants that use the specified [param item] in the grid map."
+msgstr "A rácstérkép azon oktánsainak koordinátáit adja vissza [Vector3i] értékek tömbjeként, amelyek a megadott [param item] indexű elemet használják."
+
+#. GridMap.get_used_octants_in_bounds
+#: modules/gridmap/doc_classes/GridMap.xml
+msgid "Returns an array of [Vector3i]s with the octant coordinates of non-empty octants that are inside the local [param bounds]."
+msgstr "A helyi [param bounds] határokon belüli nem üres oktánsok koordinátáit adja vissza [Vector3i] értékek tömbjeként."
+
+#. GridMap.local_to_map
+#: modules/gridmap/doc_classes/GridMap.xml
+msgid "Returns the map coordinates of the cell containing the given [param local_position]. If [param local_position] is in global coordinates, consider using [method Node3D.to_local] before passing it to this method. See also [method map_to_local]."
+msgstr "Visszaadja a [param local_position] pontot tartalmazó cella rácskoordinátáit. Ha a [param local_position] világkoordinátákban van megadva, az átadása előtt használd a [method Node3D.to_local] metódust. Lásd még: [method map_to_local]."
+
+#. GridMap.map_to_local
+#: modules/gridmap/doc_classes/GridMap.xml
+msgid "Returns the position of a grid cell in the GridMap's local coordinate space. To convert the returned value into global coordinates, use [method Node3D.to_global]. See also [method local_to_map]."
+msgstr "Visszaadja a rácscella helyét a GridMap helyi koordináta-rendszerében. Világkoordinátákra a [method Node3D.to_global] metódussal alakítható át. Lásd még: [method local_to_map]."
+
+#. GridMap.set_cell_item
+#: modules/gridmap/doc_classes/GridMap.xml
+msgid "Sets the mesh index for the cell referenced by its grid coordinates.\nA negative item index such as [constant INVALID_CELL_ITEM] will clear the cell.\nOptionally, the item's orientation can be passed. For valid orientation values, see [method get_orthogonal_index_from_basis]."
+msgstr "Beállítja a rácskoordinátákkal megadott cella hálóindexét.\nNegatív elemindex, például [constant INVALID_CELL_ITEM] megadásával kiüríthető a cella.\nAz elem tájolása is megadható. Az érvényes tájolási értékekhez lásd a [method get_orthogonal_index_from_basis] metódust."
+
+#. CompressedTexture3D.brief
+#: doc/classes/CompressedTexture3D.xml
+msgid "Texture with 3 dimensions, optionally compressed."
+msgstr "Háromdimenziós, választhatóan tömörített textúra."
+
+#. CompressedTexture3D.load_path
+#: doc/classes/CompressedTexture3D.xml
+msgid "The [CompressedTexture3D]'s file path to a [code].ctex3d[/code] file."
+msgstr "A [CompressedTexture3D] textúrához tartozó [code].ctex3d[/code] fájl útvonala."
+
+#. CompressedTextureLayered.brief
+#: doc/classes/CompressedTextureLayered.xml
+msgid "Base class for texture arrays that can optionally be compressed."
+msgstr "Választhatóan tömörített textúratömbök alaposztálya."
+
+#. CompressedTextureLayered.load
+#: doc/classes/CompressedTextureLayered.xml
+msgid "Loads the texture at [param path]."
+msgstr "Betölti a [param path] útvonalon található textúrát."
+
+#. CompressedTextureLayered.load_path
+#: doc/classes/CompressedTextureLayered.xml
+msgid "The path the texture should be loaded from."
+msgstr "A textúra betöltési útvonala."
+
+#. Cubemap.brief
+#: doc/classes/Cubemap.xml
+msgid "Six square textures representing the faces of a cube. Commonly used as a skybox."
+msgstr "Egy kocka hat lapját ábrázoló négyzetes textúrák. Gyakran égboltdobozként használják."
+
+#. Cubemap.create_placeholder
+#: doc/classes/Cubemap.xml
+msgid "Creates a placeholder version of this resource ([PlaceholderCubemap])."
+msgstr "Létrehozza az erőforrás helyőrző változatát ([PlaceholderCubemap])."
+
+#. CubemapArray.brief
+#: doc/classes/CubemapArray.xml
+msgid "An array of [Cubemap]s, stored together and with a single reference."
+msgstr "Egyetlen hivatkozással elérhető, együtt tárolt [Cubemap] textúrák tömbje."
+
+#. CubemapArray.create_placeholder
+#: doc/classes/CubemapArray.xml
+msgid "Creates a placeholder version of this resource ([PlaceholderCubemapArray])."
+msgstr "Létrehozza az erőforrás helyőrző változatát ([PlaceholderCubemapArray])."
+
+#. ImageTexture3D.brief
+#: doc/classes/ImageTexture3D.xml
+msgid "Texture with 3 dimensions."
+msgstr "Háromdimenziós textúra."
+
+#. ImageTexture3D.create
+#: doc/classes/ImageTexture3D.xml
+msgid "Creates the [ImageTexture3D] with specified [param format], [param width], [param height], and [param depth]. If [param use_mipmaps] is [code]true[/code], generates mipmaps for the [ImageTexture3D]."
+msgstr "Létrehozza az [ImageTexture3D] textúrát a megadott [param format], [param width], [param height] és [param depth] értékekkel. Ha a [param use_mipmaps] értéke [code]true[/code], az [ImageTexture3D] textúrához mipmapszintek is készülnek."
+
+#. ImageTexture3D.update
+#: doc/classes/ImageTexture3D.xml
+msgid "Replaces the texture's existing data with the layers specified in [param data]. The size of [param data] must match the parameters that were used for [method create]. In other words, the texture cannot be resized or have its format changed by calling [method update]."
+msgstr "A textúra meglévő adatait a [param data] paraméterben megadott rétegekre cseréli. A [param data] méretének illeszkednie kell a [method create] hívásakor megadott paraméterekhez. A [method update] hívásával a textúra mérete és formátuma nem változtatható meg."
+
+#. ImageTextureLayered.brief
+#: doc/classes/ImageTextureLayered.xml
+msgid "Base class for texture types which contain the data of multiple [ImageTexture]s. Each image is of the same size and format."
+msgstr "Több [ImageTexture] adatait tároló textúratípusok alaposztálya. Minden kép azonos méretű és formátumú."
+
+#. ImageTextureLayered.description
+#: doc/classes/ImageTextureLayered.xml
+msgid "Base class for [Texture2DArray], [Cubemap] and [CubemapArray]. Cannot be used directly, but contains all the functions necessary for accessing the derived resource types. See also [Texture3D]."
+msgstr "A [Texture2DArray], a [Cubemap] és a [CubemapArray] alaposztálya. Közvetlenül nem használható, de tartalmazza a leszármazott erőforrástípusok eléréséhez szükséges metódusokat. Lásd még: [Texture3D]."
+
+#. ImageTextureLayered.update_layer
+#: doc/classes/ImageTextureLayered.xml
+msgid "Replaces the existing [Image] data at the given [param layer] with this new image.\nThe given [Image] must have the same width, height, image format, and mipmapping flag as the rest of the referenced images.\nIf the image format is unsupported, it will be decompressed and converted to a similar and supported [enum Image.Format].\nThe update is immediate: it's synchronized with drawing."
+msgstr "A [param layer] réteg meglévő [Image] adatait a megadott új képre cseréli.\nA megadott [Image] szélessége, magassága, képformátuma és mipmapbeállítása egyezzen meg a többi képével.\nHa a képformátum nem támogatott, a motor kitömöríti a képet, és hasonló, támogatott [enum Image.Format] formátumba alakítja.\nA frissítés azonnali, a rajzolással szinkronban történik."
+
+#. PortableCompressedTexture2D.brief
+#: doc/classes/PortableCompressedTexture2D.xml
+msgid "Provides a compressed texture for disk and/or VRAM in a way that is portable."
+msgstr "Különböző platformokon használható tömörített textúrát biztosít a háttértárhoz, a videomemóriához vagy mindkettőhöz."
+
+#. PortableCompressedTexture2D.get_compression_mode
+#: doc/classes/PortableCompressedTexture2D.xml
+msgid "Return the compression mode used (valid after initialized)."
+msgstr "Visszaadja a használt tömörítési módot. Az érték a textúra inicializálása után érvényes."
+
+#. PortableCompressedTexture2D.is_keeping_all_compressed_buffers
+#: doc/classes/PortableCompressedTexture2D.xml
+msgid "Returns [code]true[/code] if the flag is overridden for all textures of this type."
+msgstr "[code]true[/code] értéket ad vissza, ha a beállítás felül van bírálva az összes ilyen típusú textúrára."
+
+#. PortableCompressedTexture2D.set_basisu_compressor_params
+#: doc/classes/PortableCompressedTexture2D.xml
+msgid "Sets the compressor parameters for Basis Universal compression. See also the settings in [ResourceImporterTexture].\n[b]Note:[/b] This method must be called before [method create_from_image] for this to work."
+msgstr "Beállítja a Basis Universal tömörítő paramétereit. Lásd a [ResourceImporterTexture] beállításait is.\n[b]Megjegyzés:[/b] A beállítás csak akkor hat, ha ezt a metódust a [method create_from_image] előtt hívod meg."
+
+#. PortableCompressedTexture2D.set_keep_all_compressed_buffers
+#: doc/classes/PortableCompressedTexture2D.xml
+msgid "If [param keep] is [code]true[/code], overrides the flag globally for all textures of this type. This is used primarily by the editor."
+msgstr "Ha a [param keep] értéke [code]true[/code], az összes ilyen típusú textúrára felülbírálja a beállítást. Elsősorban a szerkesztő használja."
+
+#. PortableCompressedTexture2D.size_override
+#: doc/classes/PortableCompressedTexture2D.xml
+msgid "Allows overriding the texture's size (for 2D only)."
+msgstr "Lehetővé teszi a textúraméret felülbírálását. Csak 2D-ben használható."
+
+#. Texture.brief
+#: doc/classes/Texture.xml
+msgid "Base class for all texture types."
+msgstr "Minden textúratípus alaposztálya."
+
+#. Texture.description
+#: doc/classes/Texture.xml
+msgid "[Texture] is the base class for all texture types. Common texture types are [Texture2D] and [ImageTexture]. See also [Image]."
+msgstr "A [Texture] az összes textúratípus alaposztálya. Gyakran használt textúratípus a [Texture2D] és az [ImageTexture]. Lásd még: [Image]."
+
+#. Texture2DArray.brief
+#: doc/classes/Texture2DArray.xml
+msgid "A single texture resource which consists of multiple, separate images. Each image has the same dimensions and number of mipmap levels."
+msgstr "Több különálló képből álló textúraerőforrás. Minden kép mérete és mipmapszintjeinek száma azonos."
+
+#. Texture2DArray.create_placeholder
+#: doc/classes/Texture2DArray.xml
+msgid "Creates a placeholder version of this resource ([PlaceholderTexture2DArray])."
+msgstr "Létrehozza az erőforrás helyőrző változatát ([PlaceholderTexture2DArray])."
+
+#. Texture3D.brief
+#: doc/classes/Texture3D.xml
+msgid "Base class for 3-dimensional textures."
+msgstr "A háromdimenziós textúrák alaposztálya."
+
+#. Texture3D.description
+#: doc/classes/Texture3D.xml
+msgid "Base class for [ImageTexture3D] and [CompressedTexture3D]. Cannot be used directly, but contains all the functions necessary for accessing the derived resource types. [Texture3D] is the base class for all 3-dimensional texture types. See also [TextureLayered].\nAll images need to have the same width, height and number of mipmap levels.\nTo create such a texture file yourself, reimport your image files using the Godot Editor import presets."
+msgstr "Az [ImageTexture3D] és a [CompressedTexture3D] alaposztálya. Közvetlenül nem használható, de tartalmazza a leszármazott erőforrástípusok eléréséhez szükséges metódusokat. A [Texture3D] az összes háromdimenziós textúratípus alaposztálya. Lásd még: [TextureLayered].\nMinden kép szélessége, magassága és mipmapszintjeinek száma legyen azonos.\nIlyen textúrafájl létrehozásához importáld újra a képfájlokat a Godot szerkesztő importálási előbeállításaival."
+
+#. Texture3D._get_data
+#: doc/classes/Texture3D.xml
+msgid "Called when the [Texture3D]'s data is queried."
+msgstr "A [Texture3D] adatainak lekérdezésekor hívódik meg."
+
+#. Texture3D._get_depth
+#: doc/classes/Texture3D.xml
+msgid "Called when the [Texture3D]'s depth is queried."
+msgstr "A [Texture3D] mélységének lekérdezésekor hívódik meg."
+
+#. Texture3D._get_format
+#: doc/classes/Texture3D.xml
+msgid "Called when the [Texture3D]'s format is queried."
+msgstr "A [Texture3D] formátumának lekérdezésekor hívódik meg."
+
+#. Texture3D._get_height
+#: doc/classes/Texture3D.xml
+msgid "Called when the [Texture3D]'s height is queried."
+msgstr "A [Texture3D] magasságának lekérdezésekor hívódik meg."
+
+#. Texture3D._get_width
+#: doc/classes/Texture3D.xml
+msgid "Called when the [Texture3D]'s width is queried."
+msgstr "A [Texture3D] szélességének lekérdezésekor hívódik meg."
+
+#. Texture3D._has_mipmaps
+#: doc/classes/Texture3D.xml
+msgid "Called when the presence of mipmaps in the [Texture3D] is queried."
+msgstr "Akkor hívódik meg, amikor a motor lekérdezi, hogy a [Texture3D] tartalmaz-e mipmapszinteket."
+
+#. Texture3D.create_placeholder
+#: doc/classes/Texture3D.xml
+msgid "Creates a placeholder version of this resource ([PlaceholderTexture3D])."
+msgstr "Létrehozza az erőforrás helyőrző változatát ([PlaceholderTexture3D])."
+
+#. Texture3D.get_data
+#: doc/classes/Texture3D.xml
+msgid "Returns the [Texture3D]'s data as an array of [Image]s. Each [Image] represents a [i]slice[/i] of the [Texture3D], with different slices mapping to different depth (Z axis) levels."
+msgstr "A [Texture3D] adatait [Image] erőforrások tömbjeként adja vissza. Minden [Image] a [Texture3D] egy [i]szelete[/i]. Az egyes szeletek különböző mélységeknek felelnek meg a Z tengely mentén."
+
+#. Texture3D.get_depth
+#: doc/classes/Texture3D.xml
+msgid "Returns the [Texture3D]'s depth in pixels. Depth is typically represented by the Z axis (a dimension not present in [Texture2D])."
+msgstr "Visszaadja a [Texture3D] mélységét képpontban. A mélységet általában a Z tengely, vagyis a [Texture2D] textúráknál hiányzó dimenzió jelöli."
+
+#. Texture3D.get_format
+#. TextureLayered.get_format
+#: doc/classes/Texture3D.xml doc/classes/TextureLayered.xml
+msgid "Returns the current format being used by this texture."
+msgstr "Visszaadja a textúra jelenlegi formátumát."
+
+#. Texture3D.get_width
+#: doc/classes/Texture3D.xml
+msgid "Returns the [Texture3D]'s width in pixels. Width is typically represented by the X axis."
+msgstr "Visszaadja a [Texture3D] szélességét képpontban. A szélesség általában az X tengely mentén értendő."
+
+#. Texture3D.has_mipmaps
+#: doc/classes/Texture3D.xml
+msgid "Returns [code]true[/code] if the [Texture3D] has generated mipmaps."
+msgstr "[code]true[/code] értéket ad vissza, ha a [Texture3D] rendelkezik előállított mipmapszintekkel."
+
+#. TextureLayered.brief
+#: doc/classes/TextureLayered.xml
+msgid "Base class for texture types which contain the data of multiple [Image]s. Each image is of the same size and format."
+msgstr "Több [Image] adatait tároló textúratípusok alaposztálya. Minden kép azonos méretű és formátumú."
+
+#. TextureLayered.description
+#: doc/classes/TextureLayered.xml
+msgid "Base class for [ImageTextureLayered] and [CompressedTextureLayered]. Cannot be used directly, but contains all the functions necessary for accessing the derived resource types. See also [Texture3D].\nData is set on a per-layer basis. For [Texture2DArray]s, the layer specifies the array layer.\nAll images need to have the same width, height and number of mipmap levels.\nA [TextureLayered] can be loaded with [method ResourceLoader.load].\nInternally, Godot maps these files to their respective counterparts in the target rendering driver (Vulkan, OpenGL3)."
+msgstr "Az [ImageTextureLayered] és a [CompressedTextureLayered] alaposztálya. Közvetlenül nem használható, de tartalmazza a leszármazott erőforrástípusok eléréséhez szükséges metódusokat. Lásd még: [Texture3D].\nAz adatok rétegenként állíthatók be. A [Texture2DArray] esetén a réteg a tömb megfelelő rétegét jelöli.\nMinden kép szélessége, magassága és mipmapszintjeinek száma legyen azonos.\nA [TextureLayered] a [method ResourceLoader.load] metódussal tölthető be.\nA Godot a fájlokat belsőleg a cél renderelő-illesztőprogram (Vulkan, OpenGL3) megfelelő erőforrástípusára képezi le."
+
+#. TextureLayered._get_format
+#: doc/classes/TextureLayered.xml
+msgid "Called when the [TextureLayered]'s format is queried."
+msgstr "A [TextureLayered] formátumának lekérdezésekor hívódik meg."
+
+#. TextureLayered._get_height
+#: doc/classes/TextureLayered.xml
+msgid "Called when the [TextureLayered]'s height is queried."
+msgstr "A [TextureLayered] magasságának lekérdezésekor hívódik meg."
+
+#. TextureLayered._get_layer_data
+#: doc/classes/TextureLayered.xml
+msgid "Called when the data for a layer in the [TextureLayered] is queried."
+msgstr "A [TextureLayered] egy rétegének adatlekérdezésekor hívódik meg."
+
+#. TextureLayered._get_layered_type
+#: doc/classes/TextureLayered.xml
+msgid "Called when the layers' type in the [TextureLayered] is queried."
+msgstr "A [TextureLayered] rétegtípusának lekérdezésekor hívódik meg."
+
+#. TextureLayered._get_layers
+#: doc/classes/TextureLayered.xml
+msgid "Called when the number of layers in the [TextureLayered] is queried."
+msgstr "A [TextureLayered] rétegszámának lekérdezésekor hívódik meg."
+
+#. TextureLayered._get_width
+#: doc/classes/TextureLayered.xml
+msgid "Called when the [TextureLayered]'s width queried."
+msgstr "A [TextureLayered] szélességének lekérdezésekor hívódik meg."
+
+#. TextureLayered._has_mipmaps
+#: doc/classes/TextureLayered.xml
+msgid "Called when the presence of mipmaps in the [TextureLayered] is queried."
+msgstr "Akkor hívódik meg, amikor a motor lekérdezi, hogy a [TextureLayered] tartalmaz-e mipmapszinteket."
+
+#. TextureLayered.get_height
+#: doc/classes/TextureLayered.xml
+msgid "Returns the height of the texture in pixels. Height is typically represented by the Y axis."
+msgstr "Visszaadja a textúra magasságát képpontban. A magasság általában az Y tengely mentén értendő."
+
+#. TextureLayered.get_layer_data
+#: doc/classes/TextureLayered.xml
+msgid "Returns an [Image] resource with the data from specified [param layer]."
+msgstr "A megadott [param layer] réteg adatait [Image] erőforrásként adja vissza."
+
+#. TextureLayered.get_layered_type
+#: doc/classes/TextureLayered.xml
+msgid "Returns the [TextureLayered]'s type. The type determines how the data is accessed, with cubemaps having special types."
+msgstr "Visszaadja a [TextureLayered] típusát. A típustól függ, hogyan érhetők el az adatok. A kockatérképeknek saját típusaik vannak."
+
+#. TextureLayered.get_layers
+#: doc/classes/TextureLayered.xml
+msgid "Returns the number of referenced [Image]s."
+msgstr "Visszaadja a hivatkozott [Image] erőforrások számát."
+
+#. TextureLayered.get_width
+#: doc/classes/TextureLayered.xml
+msgid "Returns the width of the texture in pixels. Width is typically represented by the X axis."
+msgstr "Visszaadja a textúra szélességét képpontban. A szélesség általában az X tengely mentén értendő."
+
+#. TextureLayered.has_mipmaps
+#: doc/classes/TextureLayered.xml
+msgid "Returns [code]true[/code] if the layers have generated mipmaps."
+msgstr "[code]true[/code] értéket ad vissza, ha a rétegek rendelkeznek előállított mipmapszintekkel."
+
+#. TextureLayered.LAYERED_TYPE_2D_ARRAY
+#: doc/classes/TextureLayered.xml
+msgid "Texture is a generic [Texture2DArray]."
+msgstr "A textúra általános [Texture2DArray]."
+
+#. TextureLayered.LAYERED_TYPE_CUBEMAP
+#: doc/classes/TextureLayered.xml
+msgid "Texture is a [Cubemap], with each side in its own layer (6 in total)."
+msgstr "A textúra [Cubemap]. A kocka minden oldala külön rétegben van, összesen hat rétegben."
+
+#. TextureLayered.LAYERED_TYPE_CUBEMAP_ARRAY
+#: doc/classes/TextureLayered.xml
+msgid "Texture is a [CubemapArray], with each cubemap being made of 6 layers."
+msgstr "A textúra [CubemapArray]. Minden kockatérkép hat rétegből áll."
+
+#. BaseMaterial3D.brief
+#: doc/classes/BaseMaterial3D.xml
+msgid "Abstract base class for defining the 3D rendering properties of meshes."
+msgstr "A hálók 3D megjelenítési tulajdonságainak meghatározására szolgáló absztrakt alaposztály."
+
+#. BaseMaterial3D.get_feature
+#: doc/classes/BaseMaterial3D.xml
+msgid "Returns [code]true[/code] if the specified [param feature] is enabled."
+msgstr "[code]true[/code] értéket ad vissza, ha a megadott [param feature] funkció engedélyezve van."
+
+#. BaseMaterial3D.get_flag
+#: doc/classes/BaseMaterial3D.xml
+msgid "Returns [code]true[/code] if the specified [param flag] is enabled."
+msgstr "[code]true[/code] értéket ad vissza, ha a megadott [param flag] jelző aktív."
+
+#. BaseMaterial3D.get_texture
+#: doc/classes/BaseMaterial3D.xml
+msgid "Returns the [Texture2D] associated with the specified texture [param param]."
+msgstr "Visszaadja a [param param] textúraparaméterhez tartozó [Texture2D] textúrát."
+
+#. BaseMaterial3D.set_texture
+#: doc/classes/BaseMaterial3D.xml
+msgid "Sets the texture for the slot specified by [param param]."
+msgstr "Beállítja a textúrát a [param param] paraméterrel megadott helyen."
+
+#. BaseMaterial3D.albedo_texture
+#: doc/classes/BaseMaterial3D.xml
+msgid "Texture to multiply by [member albedo_color]. Used for basic texturing of objects.\nIf the texture appears unexpectedly too dark or too bright, check [member albedo_texture_force_srgb]."
+msgstr "A [member albedo_color] albedószínnel összeszorzott textúra. Az objektum alaptextúrázásához használható.\nHa a textúra szokatlanul sötétnek vagy világosnak látszik, ellenőrizd a [member albedo_texture_force_srgb] beállítást."
+
+#. BaseMaterial3D.albedo_texture_msdf
+#: doc/classes/BaseMaterial3D.xml
+msgid "Enables multichannel signed distance field rendering shader. Use [member msdf_pixel_range] and [member msdf_outline_size] to configure MSDF parameters."
+msgstr "Bekapcsolja a többcsatornás előjeles távolságmező (MSDF) renderelésére szolgáló árnyalót. Az MSDF paramétereit a [member msdf_pixel_range] és a [member msdf_outline_size] tulajdonságokkal állíthatod be."
+
+#. BaseMaterial3D.alpha_antialiasing_edge
+#. Label3D.alpha_antialiasing_edge
+#. SpriteBase3D.alpha_antialiasing_edge
+#: doc/classes/BaseMaterial3D.xml doc/classes/Label3D.xml doc/classes/SpriteBase3D.xml
+msgid "Threshold at which antialiasing will be applied on the alpha channel."
+msgstr "Az a küszöbérték, amelynél a motor élsimítást alkalmaz az alfa-csatornán."
+
+#. BaseMaterial3D.alpha_antialiasing_mode
+#. Label3D.alpha_antialiasing_mode
+#. SpriteBase3D.alpha_antialiasing_mode
+#: doc/classes/BaseMaterial3D.xml doc/classes/Label3D.xml doc/classes/SpriteBase3D.xml
+msgid "The type of alpha antialiasing to apply."
+msgstr "Az alfa-csatornán alkalmazott élsimítás típusa."
+
+#. BaseMaterial3D.alpha_hash_scale
+#. Label3D.alpha_hash_scale
+#. SpriteBase3D.alpha_hash_scale
+#: doc/classes/BaseMaterial3D.xml doc/classes/Label3D.xml doc/classes/SpriteBase3D.xml
+msgid "The hashing scale for Alpha Hash. Recommended values between [code]0[/code] and [code]2[/code]."
+msgstr "Az Alpha Hash mód hashelési szorzója. Az ajánlott tartomány [code]0[/code] és [code]2[/code] közé esik."
+
+#. BaseMaterial3D.anisotropy
+#: doc/classes/BaseMaterial3D.xml
+msgid "The strength of the anisotropy effect. This is multiplied by [member anisotropy_flowmap]'s alpha channel if a texture is defined there and the texture contains an alpha channel."
+msgstr "Az anizotropikus hatás erőssége. Ha az [member anisotropy_flowmap] tulajdonságban van textúra, és annak van alfa-csatornája, a motor megszorozza vele ezt az értéket."
+
+#. BaseMaterial3D.ao_enabled
+#: doc/classes/BaseMaterial3D.xml
+msgid "If [code]true[/code], ambient occlusion is enabled. Ambient occlusion darkens areas based on the [member ao_texture]."
+msgstr "Ha az értéke [code]true[/code], bekapcsolja a környezeti takarást. A motor az [member ao_texture] textúra alapján sötétíti a takart területeket."
+
+#. BaseMaterial3D.ao_on_uv2
+#: doc/classes/BaseMaterial3D.xml
+msgid "If [code]true[/code], use [code]UV2[/code] coordinates to look up from the [member ao_texture]."
+msgstr "Ha az értéke [code]true[/code], a motor a [code]UV2[/code] koordinátakészlettel mintavételezi az [member ao_texture] textúrát."
+
+#. BaseMaterial3D.ao_texture
+#: doc/classes/BaseMaterial3D.xml
+msgid "Texture that defines the amount of ambient occlusion for a given point on the object."
+msgstr "Az objektum egyes pontjain a környezeti takarás mértékét megadó textúra."
+
+#. BaseMaterial3D.backlight
+#: doc/classes/BaseMaterial3D.xml
+msgid "The color used by the backlight effect. Represents the light passing through an object."
+msgstr "A hátulról átszűrődő fény színe. Az objektumon áthaladó fényt jelöli."
+
+#. BaseMaterial3D.backlight_enabled
+#: doc/classes/BaseMaterial3D.xml
+msgid "If [code]true[/code], the backlight effect is enabled. See also [member subsurf_scatter_transmittance_enabled]."
+msgstr "Ha az értéke [code]true[/code], bekapcsolja a hátulról átszűrődő fény hatását. Lásd még: [member subsurf_scatter_transmittance_enabled]."
+
+#. BaseMaterial3D.backlight_texture
+#: doc/classes/BaseMaterial3D.xml
+msgid "Texture used to control the backlight effect per-pixel. Added to [member backlight]."
+msgstr "A hátulról átszűrődő fényt képpontonként szabályozó textúra. Értéke hozzáadódik a [member backlight] értékéhez."
+
+#. BaseMaterial3D.bent_normal_enabled
+#: doc/classes/BaseMaterial3D.xml
+msgid "If [code]true[/code], the bent normal map is enabled. This allows for more accurate indirect lighting and specular occlusion."
+msgstr "Ha az értéke [code]true[/code], a motor eltérített normálvektorokat tartalmazó térképet használ. Ezzel pontosabban számítható a közvetett megvilágítás és a tükröződések takarása."
+
+#. BaseMaterial3D.billboard_keep_scale
+#: doc/classes/BaseMaterial3D.xml
+msgid "If [code]true[/code], the shader will keep the scale set for the mesh. Otherwise, the scale is lost when billboarding. Only applies when [member billboard_mode] is not [constant BILLBOARD_DISABLED]."
+msgstr "Ha az értéke [code]true[/code], az árnyaló megőrzi a háló méretezését. Ellenkező esetben a kamerához fordulás felülírja a méretezést. Csak akkor érvényes, ha a [member billboard_mode] eltér a [constant BILLBOARD_DISABLED] értéktől."
+
+#. BaseMaterial3D.clearcoat
+#: doc/classes/BaseMaterial3D.xml
+msgid "Sets the strength of the clearcoat effect. Setting to [code]0[/code] looks the same as disabling the clearcoat effect."
+msgstr "A lakkréteg hatásának erőssége. [code]0[/code] értéknél a lakkréteg kikapcsolásával azonos a megjelenés."
+
+#. BaseMaterial3D.clearcoat_roughness
+#: doc/classes/BaseMaterial3D.xml
+msgid "Sets the roughness of the clearcoat pass. A higher value results in a rougher clearcoat while a lower value results in a smoother clearcoat."
+msgstr "A lakkréteg érdessége. Nagyobb értéknél érdesebb, kisebb értéknél simább a lakkréteg."
+
+#. BaseMaterial3D.clearcoat_texture
+#: doc/classes/BaseMaterial3D.xml
+msgid "Texture that defines the strength of the clearcoat effect and the glossiness of the clearcoat. Strength is specified in the red channel while glossiness is specified in the green channel."
+msgstr "A lakkréteg hatásának erősségét és fényességét meghatározó textúra. Az erősséget a vörös, a fényességet a zöld csatorna adja meg."
+
+#. BaseMaterial3D.depth_draw_mode
+#: doc/classes/BaseMaterial3D.xml
+msgid "Determines when depth rendering takes place. See also [member transparency]."
+msgstr "Meghatározza, mikor történik a mélység renderelése. Lásd még: [member transparency]."
+
+#. BaseMaterial3D.detail_blend_mode
+#: doc/classes/BaseMaterial3D.xml
+msgid "Specifies how the [member detail_albedo] should blend with the current [code]ALBEDO[/code]."
+msgstr "Megadja, hogyan keveredik a [member detail_albedo] az aktuális [code]ALBEDO[/code] értékkel."
+
+#. BaseMaterial3D.detail_mask
+#: doc/classes/BaseMaterial3D.xml
+msgid "Texture used to specify how the detail textures get blended with the base textures. [member detail_mask] can be used together with [member detail_albedo]'s alpha channel (if any)."
+msgstr "A részlettextúrák és az alaptextúrák keverését meghatározó textúra. A [member detail_mask] együtt használható a [member detail_albedo] alfa-csatornájával, ha van ilyen."
+
+#. BaseMaterial3D.detail_uv_layer
+#: doc/classes/BaseMaterial3D.xml
+msgid "Specifies whether to use [code]UV[/code] or [code]UV2[/code] for the detail layer."
+msgstr "Megadja, hogy a részletréteg a [code]UV[/code] vagy az [code]UV2[/code] koordinátakészletet használja-e."
+
+#. BaseMaterial3D.diffuse_mode
+#: doc/classes/BaseMaterial3D.xml
+msgid "The algorithm used for diffuse light scattering."
+msgstr "A diffúz fényszóráshoz használt algoritmus."
+
+#. BaseMaterial3D.disable_ambient_light
+#: doc/classes/BaseMaterial3D.xml
+msgid "If [code]true[/code], the object receives no ambient light."
+msgstr "Ha az értéke [code]true[/code], az objektumra nem hat a környezeti fény."
+
+#. BaseMaterial3D.disable_fog
+#: doc/classes/BaseMaterial3D.xml
+msgid "If [code]true[/code], the object will not be affected by fog (neither volumetric nor depth fog). This is useful for unshaded or transparent materials (e.g. particles), which without this setting will be affected even if fully transparent."
+msgstr "Ha az értéke [code]true[/code], sem a térfogati, sem a mélységi köd nem hat az objektumra. Ez például részecskékhez használt, árnyalás nélküli vagy átlátszó anyagoknál hasznos, amelyekre e beállítás nélkül a köd teljes átlátszóság mellett is hatna."
+
+#. BaseMaterial3D.disable_receive_shadows
+#: doc/classes/BaseMaterial3D.xml
+msgid "If [code]true[/code], the object receives no shadow that would otherwise be cast onto it."
+msgstr "Ha az értéke [code]true[/code], az objektumon nem jelennek meg a rávetülő árnyékok."
+
+#. BaseMaterial3D.distance_fade_mode
+#: doc/classes/BaseMaterial3D.xml
+msgid "Specifies which type of fade to use. Can be any of the [enum DistanceFadeMode]s."
+msgstr "Megadja a halványítás típusát. Az [enum DistanceFadeMode] felsorolás egyik értéke lehet."
+
+#. BaseMaterial3D.emission
+#: doc/classes/BaseMaterial3D.xml
+msgid "The emitted light's color. See [member emission_enabled]."
+msgstr "A kibocsátott fény színe. Lásd: [member emission_enabled]."
+
+#. BaseMaterial3D.emission_energy_multiplier
+#: doc/classes/BaseMaterial3D.xml
+msgid "Multiplier for emitted light. See [member emission_enabled]."
+msgstr "A kibocsátott fény szorzója. Lásd: [member emission_enabled]."
+
+#. BaseMaterial3D.emission_on_uv2
+#: doc/classes/BaseMaterial3D.xml
+msgid "Use [code]UV2[/code] to read from the [member emission_texture]."
+msgstr "A [code]UV2[/code] koordinátakészlettel mintavételezi az [member emission_texture] textúrát."
+
+#. BaseMaterial3D.emission_operator
+#: doc/classes/BaseMaterial3D.xml
+msgid "Sets how [member emission] interacts with [member emission_texture]. Can either add or multiply."
+msgstr "Meghatározza, hogyan hat egymásra az [member emission] és az [member emission_texture]. Az értékek összeadhatók vagy összeszorozhatók."
+
+#. BaseMaterial3D.emission_texture
+#: doc/classes/BaseMaterial3D.xml
+msgid "Texture that specifies how much surface emits light at a given point."
+msgstr "A felület adott pontján a fénykibocsátás mértékét meghatározó textúra."
+
+#. BaseMaterial3D.grow_amount
+#: doc/classes/BaseMaterial3D.xml
+msgid "Grows object vertices in the direction of their normals. Only effective if [member grow] is [code]true[/code]."
+msgstr "A normálvektoruk irányába tolja a csúcsokat, így megnöveli az objektumot. Csak akkor hat, ha a [member grow] értéke [code]true[/code]."
+
+#. BaseMaterial3D.heightmap_flip_tangent
+#: doc/classes/BaseMaterial3D.xml
+msgid "If [code]true[/code], flips the mesh's tangent vectors when interpreting the height map. If the heightmap effect looks strange when the camera moves (even with a reasonable [member heightmap_scale]), try setting this to [code]true[/code]."
+msgstr "Ha az értéke [code]true[/code], megfordítja a háló érintővektorait a magasságtérkép értelmezésekor. Ha a magasságtérkép hatása furcsán változik a kamera mozgásakor, még megfelelő [member heightmap_scale] mellett is, próbáld [code]true[/code] értékre állítani."
+
+#. BaseMaterial3D.metallic_texture
+#: doc/classes/BaseMaterial3D.xml
+msgid "Texture used to specify metallic for an object. This is multiplied by [member metallic]."
+msgstr "Az objektum fémességét meghatározó textúra. Az értékét a motor megszorozza a [member metallic] értékével."
+
+#. BaseMaterial3D.msdf_outline_size
+#: doc/classes/BaseMaterial3D.xml
+msgid "The width of the shape outline."
+msgstr "Az alakzat körvonalának szélessége."
+
+#. BaseMaterial3D.msdf_pixel_range
+#: doc/classes/BaseMaterial3D.xml
+msgid "The width of the range around the shape between the minimum and maximum representable signed distance."
+msgstr "Az alakzat körüli tartomány szélessége, amely a legkisebb és a legnagyobb ábrázolható előjeles távolság közé esik."
+
+#. BaseMaterial3D.normal_enabled
+#: doc/classes/BaseMaterial3D.xml
+msgid "If [code]true[/code], normal mapping is enabled. This has a slight performance cost, especially on mobile GPUs."
+msgstr "Ha az értéke [code]true[/code], bekapcsolja a normáltérképezést. Ez valamivel több erőforrást igényel, különösen mobil grafikus processzorokon."
+
+#. BaseMaterial3D.normal_scale
+#: doc/classes/BaseMaterial3D.xml
+msgid "The strength of the normal map's effect."
+msgstr "A normáltérkép hatásának erőssége."
+
+#. BaseMaterial3D.particles_anim_h_frames
+#: doc/classes/BaseMaterial3D.xml
+msgid "The number of horizontal frames in the particle sprite sheet. Only enabled when using [constant BILLBOARD_PARTICLES]. See [member billboard_mode]."
+msgstr "A részecskék képkockalapján vízszintesen elhelyezkedő képkockák száma. Csak [constant BILLBOARD_PARTICLES] módban érhető el. Lásd: [member billboard_mode]."
+
+#. BaseMaterial3D.particles_anim_loop
+#: doc/classes/BaseMaterial3D.xml
+msgid "If [code]true[/code], particle animations are looped. Only enabled when using [constant BILLBOARD_PARTICLES]. See [member billboard_mode]."
+msgstr "Ha az értéke [code]true[/code], a részecskeanimációk ismétlődnek. Csak [constant BILLBOARD_PARTICLES] módban érhető el. Lásd: [member billboard_mode]."
+
+#. BaseMaterial3D.particles_anim_v_frames
+#: doc/classes/BaseMaterial3D.xml
+msgid "The number of vertical frames in the particle sprite sheet. Only enabled when using [constant BILLBOARD_PARTICLES]. See [member billboard_mode]."
+msgstr "A részecskék képkockalapján függőlegesen elhelyezkedő képkockák száma. Csak [constant BILLBOARD_PARTICLES] módban érhető el. Lásd: [member billboard_mode]."
+
+#. BaseMaterial3D.point_size
+#: doc/classes/BaseMaterial3D.xml
+msgid "The point size in pixels. See [member use_point_size]."
+msgstr "A rajzolt pont mérete képpontban. Lásd: [member use_point_size]."
+
+#. BaseMaterial3D.proximity_fade_distance
+#: doc/classes/BaseMaterial3D.xml
+msgid "Distance over which the fade effect takes place. The larger the distance the longer it takes for an object to fade."
+msgstr "Az a távolság, amelyen az objektum fokozatosan eltűnik. Nagyobb értéknél a halványulás hosszabb szakaszon történik."
+
+#. BaseMaterial3D.proximity_fade_enabled
+#: doc/classes/BaseMaterial3D.xml
+msgid "If [code]true[/code], the proximity fade effect is enabled. The proximity fade effect fades out each pixel based on its distance to another object."
+msgstr "Ha az értéke [code]true[/code], bekapcsolja a közelségi halványítást. A képpontok átlátszósága a másik objektumtól mért távolságuk alapján változik."
+
+#. BaseMaterial3D.refraction_enabled
+#: doc/classes/BaseMaterial3D.xml
+msgid "If [code]true[/code], the refraction effect is enabled. Distorts transparency based on light from behind the object.\n[b]Note:[/b] Refraction is implemented using the screen texture. Only opaque materials will appear in the refraction, since transparent materials do not appear in the screen texture."
+msgstr "Ha az értéke [code]true[/code], bekapcsolja a fénytörést. Az objektum mögül érkező fény alapján torzítja az átlátszó felületen át látható képet.\n[b]Megjegyzés:[/b] A fénytörés a képernyőtextúrát használja. A megtört képen csak az átlátszatlan anyagok jelennek meg, mert az átlátszó anyagok nem kerülnek a képernyőtextúrába."
+
+#. BaseMaterial3D.refraction_scale
+#: doc/classes/BaseMaterial3D.xml
+msgid "The strength of the refraction effect."
+msgstr "A fénytörési hatás erőssége."
+
+#. BaseMaterial3D.refraction_texture
+#: doc/classes/BaseMaterial3D.xml
+msgid "Texture that controls the strength of the refraction per-pixel. Multiplied by [member refraction_scale]."
+msgstr "A fénytörés erősségét képpontonként szabályozó textúra. Az értékét a motor megszorozza a [member refraction_scale] értékével."
+
+#. BaseMaterial3D.refraction_texture_channel
+#: doc/classes/BaseMaterial3D.xml
+msgid "Specifies the channel of the [member refraction_texture] in which the refraction information is stored. This is useful when you store the information for multiple effects in a single texture. For example if you stored refraction in the red channel, roughness in the blue, and ambient occlusion in the green you could reduce the number of textures you use."
+msgstr "Megadja, hogy a [member refraction_texture] melyik csatornája tárolja a fénytörési adatot. Ez akkor hasznos, ha több hatás adatait tárolod egyetlen textúrában. Például a vörös csatornán fénytörést, a kéken érdességet, a zöldön pedig környezeti takarást tárolhatsz, így kevesebb textúrára van szükség."
+
+#. BaseMaterial3D.rim
+#: doc/classes/BaseMaterial3D.xml
+msgid "Sets the strength of the rim lighting effect."
+msgstr "Beállítja a peremfény erősségét."
+
+#. BaseMaterial3D.rim_enabled
+#: doc/classes/BaseMaterial3D.xml
+msgid "If [code]true[/code], rim effect is enabled. Rim lighting increases the brightness at glancing angles on an object.\n[b]Note:[/b] Rim lighting is not visible if the material's [member shading_mode] is [constant SHADING_MODE_UNSHADED]."
+msgstr "Ha az értéke [code]true[/code], bekapcsolja a peremfényt. A hatás a nézési irányhoz képest kis szöget bezáró felületeket világosítja.\n[b]Megjegyzés:[/b] A peremfény nem látható, ha az anyag [member shading_mode] értéke [constant SHADING_MODE_UNSHADED]."
+
+#. BaseMaterial3D.rim_texture
+#: doc/classes/BaseMaterial3D.xml
+msgid "Texture used to set the strength of the rim lighting effect per-pixel. Multiplied by [member rim]."
+msgstr "A peremfény erősségét képpontonként meghatározó textúra. Az értékét a motor megszorozza a [member rim] értékével."
+
+#. BaseMaterial3D.rim_tint
+#: doc/classes/BaseMaterial3D.xml
+msgid "The amount of to blend light and albedo color when rendering rim effect. If [code]0[/code] the light color is used, while [code]1[/code] means albedo color is used. An intermediate value generally works best."
+msgstr "Megadja, milyen arányban keveredik a fény színe az albedószínnel a peremfény renderelésekor. [code]0[/code] esetén a fény színe, [code]1[/code] esetén az albedószín érvényesül. Általában köztes értékkel érhető el a legjobb eredmény."
+
+#. BaseMaterial3D.roughness
+#: doc/classes/BaseMaterial3D.xml
+msgid "Surface reflection. A value of [code]0[/code] represents a perfect mirror while a value of [code]1[/code] completely blurs the reflection. See also [member metallic]."
+msgstr "A felület tükröződésének érdessége. A [code]0[/code] érték tökéletes tükröt jelent, a [code]1[/code] teljesen elmossa a tükröződést. Lásd még: [member metallic]."
+
+#. BaseMaterial3D.roughness_texture
+#: doc/classes/BaseMaterial3D.xml
+msgid "Texture used to control the roughness per-pixel. Multiplied by [member roughness]."
+msgstr "Az érdességet képpontonként szabályozó textúra. Az értékét a motor megszorozza a [member roughness] értékével."
+
+#. BaseMaterial3D.roughness_texture_channel
+#: doc/classes/BaseMaterial3D.xml
+msgid "Specifies the channel of the [member roughness_texture] in which the roughness information is stored. This is useful when you store the information for multiple effects in a single texture. For example if you stored metallic in the red channel, roughness in the blue, and ambient occlusion in the green you could reduce the number of textures you use."
+msgstr "Megadja, hogy a [member roughness_texture] melyik csatornája tárolja az érdességet. Ez akkor hasznos, ha több hatás adatait tárolod egyetlen textúrában. Például a vörös csatornán fémességet, a kéken érdességet, a zöldön pedig környezeti takarást tárolhatsz, így kevesebb textúrára van szükség."
+
+#. BaseMaterial3D.shadow_to_opacity
+#: doc/classes/BaseMaterial3D.xml
+msgid "If [code]true[/code], enables the \"shadow to opacity\" render mode where lighting modifies the alpha so shadowed areas are opaque and non-shadowed areas are transparent. Useful for overlaying shadows onto a camera feed in AR."
+msgstr "Ha az értéke [code]true[/code], a megvilágítás módosítja az alfaértékeket. Az árnyékos területek átlátszatlanok, az árnyék nélküli területek átlátszóak lesznek. Kiterjesztett valóságban így helyezhetők árnyékok a kameraképre."
+
+#. BaseMaterial3D.stencil_color
+#: doc/classes/BaseMaterial3D.xml
+msgid "The primary color of the stencil effect."
+msgstr "A stencilhatás elsődleges színe."
+
+#. BaseMaterial3D.stencil_compare
+#: doc/classes/BaseMaterial3D.xml
+msgid "The comparison operator to use for stencil masking operations."
+msgstr "A stencilmaszkolási műveletekhez használt összehasonlító művelet."
+
+#. BaseMaterial3D.stencil_flags
+#: doc/classes/BaseMaterial3D.xml
+msgid "The flags dictating how the stencil operation behaves."
+msgstr "A stencilművelet viselkedését meghatározó jelzők."
+
+#. BaseMaterial3D.stencil_mode
+#: doc/classes/BaseMaterial3D.xml
+msgid "The stencil effect mode."
+msgstr "A stencilhatás módja."
+
+#. BaseMaterial3D.stencil_outline_thickness
+#: doc/classes/BaseMaterial3D.xml
+msgid "The outline thickness for [constant STENCIL_MODE_OUTLINE]."
+msgstr "A körvonal vastagsága [constant STENCIL_MODE_OUTLINE] módban."
+
+#. BaseMaterial3D.stencil_reference
+#: doc/classes/BaseMaterial3D.xml
+msgid "The stencil reference value (0-255). Typically a power of 2."
+msgstr "A stencil referenciaértéke (0–255). Általában kettőhatvány."
+
+#. BaseMaterial3D.subsurf_scatter_enabled
+#: doc/classes/BaseMaterial3D.xml
+msgid "If [code]true[/code], subsurface scattering is enabled. Emulates light that penetrates an object's surface, is scattered, and then emerges. Subsurface scattering quality is controlled by [member ProjectSettings.rendering/environment/subsurface_scattering/subsurface_scattering_quality].\n[b]Note:[/b] Subsurface scattering is not supported on viewports that have a transparent background (where [member Viewport.transparent_bg] is [code]true[/code])."
+msgstr "Ha az értéke [code]true[/code], bekapcsolja a felszín alatti fényszórást. Ez azt utánozza, ahogyan a fény behatol az objektum felszíne alá, szétszóródik, majd ismét kilép. A hatás minőségét a [member ProjectSettings.rendering/environment/subsurface_scattering/subsurface_scattering_quality] szabályozza.\n[b]Megjegyzés:[/b] A felszín alatti fényszórás nem támogatott átlátszó hátterű nézetablakokban, ahol a [member Viewport.transparent_bg] értéke [code]true[/code]."
+
+#. BaseMaterial3D.subsurf_scatter_skin_mode
+#: doc/classes/BaseMaterial3D.xml
+msgid "If [code]true[/code], subsurface scattering will use a special mode optimized for the color and density of human skin, such as boosting the intensity of the red channel in subsurface scattering."
+msgstr "Ha az értéke [code]true[/code], a felszín alatti fényszórás az emberi bőr színéhez és sűrűségéhez igazított módot használ. Például erősebb lesz a fényszórás a vörös csatornán."
+
+#. BaseMaterial3D.subsurf_scatter_strength
+#: doc/classes/BaseMaterial3D.xml
+msgid "The strength of the subsurface scattering effect. The depth of the effect is also controlled by [member ProjectSettings.rendering/environment/subsurface_scattering/subsurface_scattering_scale], which is set globally."
+msgstr "A felszín alatti fényszórás erőssége. A hatás mélységét a globális [member ProjectSettings.rendering/environment/subsurface_scattering/subsurface_scattering_scale] beállítás is szabályozza."
+
+#. BaseMaterial3D.subsurf_scatter_texture
+#: doc/classes/BaseMaterial3D.xml
+msgid "Texture used to control the subsurface scattering strength. Stored in the red texture channel. Multiplied by [member subsurf_scatter_strength]."
+msgstr "A felszín alatti fényszórás erősségét szabályozó textúra. Az adatot a vörös csatorna tárolja. A motor megszorozza a [member subsurf_scatter_strength] értékével."
+
+#. BaseMaterial3D.subsurf_scatter_transmittance_boost
+#: doc/classes/BaseMaterial3D.xml
+msgid "The intensity of the subsurface scattering transmittance effect."
+msgstr "A felszín alatti szóródás során átjutó fény hatásának erőssége."
+
+#. BaseMaterial3D.subsurf_scatter_transmittance_color
+#: doc/classes/BaseMaterial3D.xml
+msgid "The color to multiply the subsurface scattering transmittance effect with. Ignored if [member subsurf_scatter_skin_mode] is [code]true[/code]."
+msgstr "A felszín alatti szóródás során átjutó fény színének szorzója. Hatástalan, ha a [member subsurf_scatter_skin_mode] értéke [code]true[/code]."
+
+#. BaseMaterial3D.subsurf_scatter_transmittance_depth
+#: doc/classes/BaseMaterial3D.xml
+msgid "The depth of the subsurface scattering transmittance effect."
+msgstr "A felszín alatti szóródás során átjutó fény hatásának mélysége."
+
+#. BaseMaterial3D.subsurf_scatter_transmittance_enabled
+#: doc/classes/BaseMaterial3D.xml
+msgid "If [code]true[/code], enables subsurface scattering transmittance. Only effective if [member subsurf_scatter_enabled] is [code]true[/code]. See also [member backlight_enabled]."
+msgstr "Ha az értéke [code]true[/code], engedélyezi a fény átjutását felszín alatti szóródáskor. Csak akkor hat, ha a [member subsurf_scatter_enabled] értéke [code]true[/code]. Lásd még: [member backlight_enabled]."
+
+#. BaseMaterial3D.subsurf_scatter_transmittance_texture
+#: doc/classes/BaseMaterial3D.xml
+msgid "The texture to use for multiplying the intensity of the subsurface scattering transmittance intensity. See also [member subsurf_scatter_texture]. Ignored if [member subsurf_scatter_skin_mode] is [code]true[/code]."
+msgstr "A felszín alatti szóródás során átjutó fény erősségét ezzel a textúrával szorozza meg. Lásd még: [member subsurf_scatter_texture]. Hatástalan, ha a [member subsurf_scatter_skin_mode] értéke [code]true[/code]."
+
+#. BaseMaterial3D.texture_repeat
+#: doc/classes/BaseMaterial3D.xml
+msgid "If [code]true[/code], the texture repeats when exceeding the texture's size. See [constant FLAG_USE_TEXTURE_REPEAT]."
+msgstr "Ha az értéke [code]true[/code], a textúra a határain túl ismétlődik. Lásd: [constant FLAG_USE_TEXTURE_REPEAT]."
+
+#. BaseMaterial3D.transparency
+#: doc/classes/BaseMaterial3D.xml
+msgid "The material's transparency mode. Some transparency modes will disable shadow casting. Any transparency mode other than [constant TRANSPARENCY_DISABLED] has a greater performance impact compared to opaque rendering. See also [member blend_mode]."
+msgstr "Az anyag átlátszósági módja. Egyes átlátszósági módok kikapcsolják az árnyékvetést. A [constant TRANSPARENCY_DISABLED] értéktől eltérő módok több erőforrást igényelnek az átlátszatlan renderelésnél. Lásd még: [member blend_mode]."
+
+#. BaseMaterial3D.use_fov_override
+#: doc/classes/BaseMaterial3D.xml
+msgid "If [code]true[/code] use [member fov_override] to override the [Camera3D]'s field of view angle."
+msgstr "Ha az értéke [code]true[/code], a [member fov_override] felülbírálja a [Camera3D] látószögét."
+
+#. BaseMaterial3D.use_particle_trails
+#: doc/classes/BaseMaterial3D.xml
+msgid "If [code]true[/code], enables parts of the shader required for [GPUParticles3D] trails to function. This also requires using a mesh with appropriate skinning, such as [RibbonTrailMesh] or [TubeTrailMesh]. Enabling this feature outside of materials used in [GPUParticles3D] meshes will break material rendering."
+msgstr "Ha az értéke [code]true[/code], bekapcsolja az árnyaló [GPUParticles3D] részecskenyomaihoz szükséges részeit. Megfelelő csontozású háló is szükséges, például [RibbonTrailMesh] vagy [TubeTrailMesh]. Ha olyan anyagon használod, amely nem [GPUParticles3D] hálóhoz tartozik, az anyag renderelése hibás lesz."
+
+#. BaseMaterial3D.use_point_size
+#: doc/classes/BaseMaterial3D.xml
+msgid "If [code]true[/code], render point size can be changed.\n[b]Note:[/b] This is only effective for objects whose geometry is point-based rather than triangle-based. See also [member point_size]."
+msgstr "Ha az értéke [code]true[/code], módosítható a kirajzolt pontok mérete.\n[b]Megjegyzés:[/b] Csak pontokból álló geometriára hat, háromszögekre nem. Lásd még: [member point_size]."
+
+#. BaseMaterial3D.use_z_clip_scale
+#: doc/classes/BaseMaterial3D.xml
+msgid "If [code]true[/code] use [member z_clip_scale] to scale the object being rendered towards the camera to avoid clipping into things like walls."
+msgstr "Ha az értéke [code]true[/code], a [member z_clip_scale] a kamera irányában skálázza a renderelt objektumot, így az például kisebb eséllyel metsz bele a falba."
+
+#. BaseMaterial3D.uv1_offset
+#: doc/classes/BaseMaterial3D.xml
+msgid "How much to offset the [code]UV[/code] coordinates. This amount will be added to [code]UV[/code] in the vertex function. This can be used to offset a texture. The Z component is used when [member uv1_triplanar] is enabled, but it is not used anywhere else."
+msgstr "A [code]UV[/code] koordináták eltolása. A csúcsfüggvény hozzáadja ezt az értéket a [code]UV[/code] koordinátákhoz, így eltolható a textúra. A Z összetevőt csak az [member uv1_triplanar] engedélyezésekor használja."
+
+#. BaseMaterial3D.uv1_scale
+#: doc/classes/BaseMaterial3D.xml
+msgid "How much to scale the [code]UV[/code] coordinates. This is multiplied by [code]UV[/code] in the vertex function. The Z component is used when [member uv1_triplanar] is enabled, but it is not used anywhere else."
+msgstr "A [code]UV[/code] koordináták szorzója. A csúcsfüggvény ezzel szorozza meg a [code]UV[/code] koordinátákat. A Z összetevőt csak az [member uv1_triplanar] engedélyezésekor használja."
+
+#. BaseMaterial3D.uv1_triplanar_sharpness
+#: doc/classes/BaseMaterial3D.xml
+msgid "A lower number blends the texture more softly while a higher number blends the texture more sharply.\n[b]Note:[/b] [member uv1_triplanar_sharpness] is clamped between [code]0.0[/code] and [code]150.0[/code] (inclusive) as values outside that range can look broken depending on the mesh."
+msgstr "Kisebb értéknél lágyabb, nagyobb értéknél élesebb az átmenet a textúravetületek között.\n[b]Megjegyzés:[/b] A motor a [member uv1_triplanar_sharpness] értékét [code]0.0[/code] és [code]150.0[/code] közé korlátozza, a határértékeket is beleértve. A tartományon kívüli értékek egyes hálóknál hibás megjelenést okozhatnak."
+
+#. BaseMaterial3D.uv1_world_triplanar
+#: doc/classes/BaseMaterial3D.xml
+msgid "If [code]true[/code], triplanar mapping for [code]UV[/code] is calculated in world space rather than object local space. See also [member uv1_triplanar]."
+msgstr "Ha az értéke [code]true[/code], a motor a [code]UV[/code] háromsíkú vetítését világkoordinátákban számítja ki. Egyébként az objektum helyi koordinátáit használja. Lásd még: [member uv1_triplanar]."
+
+#. BaseMaterial3D.uv2_offset
+#: doc/classes/BaseMaterial3D.xml
+msgid "How much to offset the [code]UV2[/code] coordinates. This amount will be added to [code]UV2[/code] in the vertex function. This can be used to offset a texture. The Z component is used when [member uv2_triplanar] is enabled, but it is not used anywhere else."
+msgstr "A [code]UV2[/code] koordináták eltolása. A csúcsfüggvény hozzáadja ezt az értéket a [code]UV2[/code] koordinátákhoz, így eltolható a textúra. A Z összetevőt csak az [member uv2_triplanar] engedélyezésekor használja."
+
+#. BaseMaterial3D.uv2_scale
+#: doc/classes/BaseMaterial3D.xml
+msgid "How much to scale the [code]UV2[/code] coordinates. This is multiplied by [code]UV2[/code] in the vertex function. The Z component is used when [member uv2_triplanar] is enabled, but it is not used anywhere else."
+msgstr "A [code]UV2[/code] koordináták szorzója. A csúcsfüggvény ezzel szorozza meg a [code]UV2[/code] koordinátákat. A Z összetevőt csak az [member uv2_triplanar] engedélyezésekor használja."
+
+#. BaseMaterial3D.uv2_triplanar_sharpness
+#: doc/classes/BaseMaterial3D.xml
+msgid "A lower number blends the texture more softly while a higher number blends the texture more sharply.\n[b]Note:[/b] [member uv2_triplanar_sharpness] is clamped between [code]0.0[/code] and [code]150.0[/code] (inclusive) as values outside that range can look broken depending on the mesh."
+msgstr "Kisebb értéknél lágyabb, nagyobb értéknél élesebb az átmenet a textúravetületek között.\n[b]Megjegyzés:[/b] A motor a [member uv2_triplanar_sharpness] értékét [code]0.0[/code] és [code]150.0[/code] közé korlátozza, a határértékeket is beleértve. A tartományon kívüli értékek egyes hálóknál hibás megjelenést okozhatnak."
+
+#. BaseMaterial3D.uv2_world_triplanar
+#: doc/classes/BaseMaterial3D.xml
+msgid "If [code]true[/code], triplanar mapping for [code]UV2[/code] is calculated in world space rather than object local space. See also [member uv2_triplanar]."
+msgstr "Ha az értéke [code]true[/code], a motor a [code]UV2[/code] háromsíkú vetítését világkoordinátákban számítja ki. Egyébként az objektum helyi koordinátáit használja. Lásd még: [member uv2_triplanar]."
+
+#. BaseMaterial3D.vertex_color_use_as_albedo
+#: doc/classes/BaseMaterial3D.xml
+msgid "If [code]true[/code], the vertex color is used as albedo color."
+msgstr "Ha az értéke [code]true[/code], a csúcsszín adja az albedószínt."
+
+#. BaseMaterial3D.TEXTURE_ALBEDO
+#: doc/classes/BaseMaterial3D.xml
+msgid "Texture specifying per-pixel color."
+msgstr "A képpontonkénti színt megadó textúra."
+
+#. BaseMaterial3D.TEXTURE_METALLIC
+#: doc/classes/BaseMaterial3D.xml
+msgid "Texture specifying per-pixel metallic value."
+msgstr "A képpontonkénti fémességet megadó textúra."
+
+#. BaseMaterial3D.TEXTURE_ROUGHNESS
+#: doc/classes/BaseMaterial3D.xml
+msgid "Texture specifying per-pixel roughness value."
+msgstr "A képpontonkénti érdességet megadó textúra."
+
+#. BaseMaterial3D.TEXTURE_EMISSION
+#: doc/classes/BaseMaterial3D.xml
+msgid "Texture specifying per-pixel emission color."
+msgstr "A fénykibocsátás színét képpontonként megadó textúra."
+
+#. BaseMaterial3D.TEXTURE_NORMAL
+#: doc/classes/BaseMaterial3D.xml
+msgid "Texture specifying per-pixel normal vector."
+msgstr "A képpontonkénti normálvektort megadó textúra."
+
+#. BaseMaterial3D.TEXTURE_BENT_NORMAL
+#: doc/classes/BaseMaterial3D.xml
+msgid "Texture specifying per-pixel bent normal vector."
+msgstr "A képpontonkénti eltérített normálvektort megadó textúra."
+
+#. BaseMaterial3D.TEXTURE_RIM
+#: doc/classes/BaseMaterial3D.xml
+msgid "Texture specifying per-pixel rim value."
+msgstr "A peremfény erősségét képpontonként megadó textúra."
+
+#. BaseMaterial3D.TEXTURE_CLEARCOAT
+#: doc/classes/BaseMaterial3D.xml
+msgid "Texture specifying per-pixel clearcoat value."
+msgstr "A lakkréteg erősségét képpontonként megadó textúra."
+
+#. BaseMaterial3D.TEXTURE_FLOWMAP
+#: doc/classes/BaseMaterial3D.xml
+msgid "Texture specifying per-pixel flowmap direction for use with [member anisotropy]."
+msgstr "Az [member anisotropy] hatás irányát képpontonként megadó iránytérkép."
+
+#. BaseMaterial3D.TEXTURE_AMBIENT_OCCLUSION
+#: doc/classes/BaseMaterial3D.xml
+msgid "Texture specifying per-pixel ambient occlusion value."
+msgstr "A környezeti takarás mértékét képpontonként megadó textúra."
+
+#. BaseMaterial3D.TEXTURE_HEIGHTMAP
+#: doc/classes/BaseMaterial3D.xml
+msgid "Texture specifying per-pixel height."
+msgstr "A képpontonkénti magasságot megadó textúra."
+
+#. BaseMaterial3D.TEXTURE_SUBSURFACE_SCATTERING
+#: doc/classes/BaseMaterial3D.xml
+msgid "Texture specifying per-pixel subsurface scattering."
+msgstr "A felszín alatti fényszórás mértékét képpontonként megadó textúra."
+
+#. BaseMaterial3D.TEXTURE_SUBSURFACE_TRANSMITTANCE
+#: doc/classes/BaseMaterial3D.xml
+msgid "Texture specifying per-pixel transmittance for subsurface scattering."
+msgstr "A felszín alatti fényszórás során átjutó fény mértékét képpontonként megadó textúra."
+
+#. BaseMaterial3D.TEXTURE_BACKLIGHT
+#: doc/classes/BaseMaterial3D.xml
+msgid "Texture specifying per-pixel backlight color."
+msgstr "A hátulról átszűrődő fény színét képpontonként megadó textúra."
+
+#. BaseMaterial3D.TEXTURE_REFRACTION
+#: doc/classes/BaseMaterial3D.xml
+msgid "Texture specifying per-pixel refraction strength."
+msgstr "A fénytörés erősségét képpontonként megadó textúra."
+
+#. BaseMaterial3D.TEXTURE_DETAIL_MASK
+#: doc/classes/BaseMaterial3D.xml
+msgid "Texture specifying per-pixel detail mask blending value."
+msgstr "A részletmaszk keverési értékét képpontonként megadó textúra."
+
+#. BaseMaterial3D.TEXTURE_DETAIL_ALBEDO
+#: doc/classes/BaseMaterial3D.xml
+msgid "Texture specifying per-pixel detail color."
+msgstr "A részletréteg színét képpontonként megadó textúra."
+
+#. BaseMaterial3D.TEXTURE_DETAIL_NORMAL
+#: doc/classes/BaseMaterial3D.xml
+msgid "Texture specifying per-pixel detail normal."
+msgstr "A részletréteg normálvektorát képpontonként megadó textúra."
+
+#. BaseMaterial3D.TEXTURE_ORM
+#: doc/classes/BaseMaterial3D.xml
+msgid "Texture holding ambient occlusion, roughness, and metallic."
+msgstr "A környezeti takarást, az érdességet és a fémességet egyesítő textúra."
+
+#. BaseMaterial3D.DETAIL_UV_1
+#: doc/classes/BaseMaterial3D.xml
+msgid "Use [code]UV[/code] with the detail texture."
+msgstr "A részlettextúrához a [code]UV[/code] koordinátakészletet használja."
+
+#. BaseMaterial3D.DETAIL_UV_2
+#: doc/classes/BaseMaterial3D.xml
+msgid "Use [code]UV2[/code] with the detail texture."
+msgstr "A részlettextúrához a [code]UV2[/code] koordinátakészletet használja."
+
+#. BaseMaterial3D.TRANSPARENCY_DISABLED
+#: doc/classes/BaseMaterial3D.xml
+msgid "The material will not use transparency. This is the fastest to render."
+msgstr "Az anyag teljesen átlátszatlan. Ez a leggyorsabban renderelhető mód."
+
+#. BaseMaterial3D.TRANSPARENCY_ALPHA
+#: doc/classes/BaseMaterial3D.xml
+msgid "The material will use the texture's alpha values for transparency. This is the slowest to render, and disables shadow casting."
+msgstr "Az anyag átlátszóságát a textúra alfaértékei határozzák meg. Ez a leglassabban renderelhető mód, és kikapcsolja az árnyékvetést."
+
+#. BaseMaterial3D.SHADING_MODE_PER_PIXEL
+#: doc/classes/BaseMaterial3D.xml
+msgid "The object will be shaded per pixel. Useful for realistic shading effects."
+msgstr "Az objektum árnyalása képpontonként történik. Valósághű árnyalási hatásokhoz használható."
+
+#. BaseMaterial3D.SHADING_MODE_PER_VERTEX
+#: doc/classes/BaseMaterial3D.xml
+msgid "The object will be shaded per vertex. Useful when you want cheaper shaders and do not care about visual quality."
+msgstr "Az objektum árnyalása csúcsonként történik. Akkor használható, ha fontosabb a kisebb erőforrásigény, mint a képminőség."
+
+#. BaseMaterial3D.BLEND_MODE_MIX
+#: doc/classes/BaseMaterial3D.xml
+msgid "Default blend mode. The color of the object is blended over the background based on the object's alpha value."
+msgstr "Alapértelmezett keverési mód. Az objektum színe az alfaértékének megfelelően keveredik a háttérrel."
+
+#. BaseMaterial3D.BLEND_MODE_ADD
+#: doc/classes/BaseMaterial3D.xml
+msgid "The color of the object is added to the background."
+msgstr "Az objektum színe hozzáadódik a háttér színéhez."
+
+#. BaseMaterial3D.BLEND_MODE_SUB
+#: doc/classes/BaseMaterial3D.xml
+msgid "The color of the object is subtracted from the background."
+msgstr "Az objektum színe kivonódik a háttér színéből."
+
+#. BaseMaterial3D.BLEND_MODE_MUL
+#: doc/classes/BaseMaterial3D.xml
+msgid "The color of the object is multiplied by the background."
+msgstr "Az objektum és a háttér színe összeszorzódik."
+
+#. BaseMaterial3D.ALPHA_ANTIALIASING_OFF
+#: doc/classes/BaseMaterial3D.xml
+msgid "Disables Alpha AntiAliasing for the material."
+msgstr "Kikapcsolja az anyag alfaalapú élsimítását."
+
+#. BaseMaterial3D.ALPHA_ANTIALIASING_ALPHA_TO_COVERAGE
+#: doc/classes/BaseMaterial3D.xml
+msgid "Enables AlphaToCoverage. Alpha values in the material are passed to the AntiAliasing sample mask."
+msgstr "Bekapcsolja az alfaértékből számított mintafedettséget (AlphaToCoverage). Az anyag alfaértékei az élsimítás mintamaszkjába kerülnek."
+
+#. BaseMaterial3D.ALPHA_ANTIALIASING_ALPHA_TO_COVERAGE_AND_TO_ONE
+#: doc/classes/BaseMaterial3D.xml
+msgid "Enables AlphaToCoverage and forces all non-zero alpha values to [code]1[/code]. Alpha values in the material are passed to the AntiAliasing sample mask."
+msgstr "Bekapcsolja az alfaértékből számított mintafedettséget (AlphaToCoverage), és minden nem nulla alfaértéket [code]1[/code] értékre állít. Az anyag alfaértékei az élsimítás mintamaszkjába kerülnek."
+
+#. BaseMaterial3D.DEPTH_DRAW_OPAQUE_ONLY
+#: doc/classes/BaseMaterial3D.xml
+msgid "Default depth draw mode. Depth is drawn only for opaque objects during the opaque prepass (if any) and during the opaque pass."
+msgstr "Alapértelmezett mélységírási mód. Csak az átlátszatlan objektumok mélységét írja ki az átlátszatlan előmenetben, ha van ilyen, és az átlátszatlan menetben."
+
+#. BaseMaterial3D.DEPTH_DRAW_DISABLED
+#: doc/classes/BaseMaterial3D.xml
+msgid "Objects will not write their depth to the depth buffer, even during the depth prepass (if enabled)."
+msgstr "Az objektumok az előzetes mélységmenetben sem írnak a mélységpufferbe, ha az engedélyezve van."
+
+#. BaseMaterial3D.DEPTH_TEST_DEFAULT
+#: doc/classes/BaseMaterial3D.xml
+msgid "Depth test will discard the pixel if it is behind other pixels."
+msgstr "A mélységteszt elveti a képpontot, ha más képpontok mögött van."
+
+#. BaseMaterial3D.DEPTH_TEST_INVERTED
+#: doc/classes/BaseMaterial3D.xml
+msgid "Depth test will discard the pixel if it is in front of other pixels. Useful for stencil effects."
+msgstr "A mélységteszt elveti a képpontot, ha más képpontok előtt van. Stencilhatásoknál hasznos."
+
+#. BaseMaterial3D.CULL_FRONT
+#: doc/classes/BaseMaterial3D.xml
+msgid "Front face triangles will be culled when facing the camera. This results in only the back side of triangles being drawn. For closed-surface meshes, this means that the interior of the mesh will be drawn instead of the exterior."
+msgstr "A kamera felé forduló háromszögek elülső oldala kimarad a renderelésből. Csak a háromszögek hátoldala rajzolódik ki. Zárt felületű hálóknál ezért a külső felület helyett a háló belseje látszik."
+
+#. BaseMaterial3D.CULL_DISABLED
+#: doc/classes/BaseMaterial3D.xml
+msgid "No face culling is performed; both the front face and back face will be visible."
+msgstr "Nincs hátoldali vagy elülső kiszűrés. Mindkét oldal látható."
+
+#. BaseMaterial3D.FLAG_ALBEDO_FROM_VERTEX_COLOR
+#: doc/classes/BaseMaterial3D.xml
+msgid "Set [code]ALBEDO[/code] to the per-vertex color specified in the mesh."
+msgstr "A hálóban megadott csúcsszínre állítja az [code]ALBEDO[/code] értékét."
+
+#. BaseMaterial3D.FLAG_USE_POINT_SIZE
+#: doc/classes/BaseMaterial3D.xml
+msgid "Uses point size to alter the size of primitive points. Also changes the albedo texture lookup to use [code]POINT_COORD[/code] instead of [code]UV[/code]."
+msgstr "A pontmérettel módosítja a pontprimitívek méretét. Az albedótextúrát [code]UV[/code] helyett [code]POINT_COORD[/code] alapján mintavételezi."
+
+#. BaseMaterial3D.FLAG_FIXED_SIZE
+#: doc/classes/BaseMaterial3D.xml
+msgid "Object is scaled by depth so that it always appears the same size on screen."
+msgstr "Az objektumot a mélysége alapján úgy méretezi, hogy a képernyőn mindig azonos méretűnek látszódjon."
+
+#. BaseMaterial3D.FLAG_DONT_RECEIVE_SHADOWS
+#: doc/classes/BaseMaterial3D.xml
+msgid "Disables receiving shadows from other objects."
+msgstr "Kikapcsolja a más objektumokról vetülő árnyékok fogadását."
+
+#. BaseMaterial3D.FLAG_DISABLE_AMBIENT_LIGHT
+#: doc/classes/BaseMaterial3D.xml
+msgid "Disables receiving ambient light."
+msgstr "Kikapcsolja a környezeti fény fogadását."
+
+#. BaseMaterial3D.FLAG_USE_SHADOW_TO_OPACITY
+#: doc/classes/BaseMaterial3D.xml
+msgid "Enables the shadow to opacity feature."
+msgstr "Bekapcsolja az árnyék alapján számított fedettséget."
+
+#. BaseMaterial3D.FLAG_INVERT_HEIGHTMAP
+#: doc/classes/BaseMaterial3D.xml
+msgid "Invert values read from a depth texture to convert them to height values (heightmap)."
+msgstr "Megfordítja a mélységtextúrából kiolvasott értékeket, hogy magasságértékeket kapjon a magasságtérképhez."
+
+#. BaseMaterial3D.FLAG_ALBEDO_TEXTURE_MSDF
+#: doc/classes/BaseMaterial3D.xml
+msgid "Enables multichannel signed distance field rendering shader."
+msgstr "Bekapcsolja a többcsatornás előjeles távolságmező renderelésére szolgáló árnyalót."
+
+#. BaseMaterial3D.FLAG_DISABLE_FOG
+#: doc/classes/BaseMaterial3D.xml
+msgid "Disables receiving depth-based or volumetric fog."
+msgstr "Kikapcsolja a mélységi és a térfogati köd hatását."
+
+#. BaseMaterial3D.FLAG_DISABLE_SPECULAR_OCCLUSION
+#: doc/classes/BaseMaterial3D.xml
+msgid "Disables specular occlusion."
+msgstr "Kikapcsolja a tükröződések takarását."
+
+#. BaseMaterial3D.FLAG_USE_Z_CLIP_SCALE
+#: doc/classes/BaseMaterial3D.xml
+msgid "Enables using [member z_clip_scale]."
+msgstr "Engedélyezi a [member z_clip_scale] használatát."
+
+#. BaseMaterial3D.FLAG_USE_FOV_OVERRIDE
+#: doc/classes/BaseMaterial3D.xml
+msgid "Enables using [member fov_override]."
+msgstr "Engedélyezi a [member fov_override] használatát."
+
+#. BaseMaterial3D.FLAG_USE_TEXTURE_REPEAT
+#. RenderingServer.CANVAS_ITEM_TEXTURE_REPEAT_ENABLED
+#. Viewport.DEFAULT_CANVAS_ITEM_TEXTURE_REPEAT_ENABLED
+#: doc/classes/BaseMaterial3D.xml doc/classes/RenderingServer.xml doc/classes/Viewport.xml
+msgid "Enables the texture to repeat when UV coordinates are outside the 0-1 range. If using one of the linear filtering modes, this can result in artifacts at the edges of a texture when the sampler filters across the edges of the texture."
+msgstr "Aktív állapotban a textúra ismétlődik a 0 és 1 közötti UV-tartományon kívül. Lineáris szűrésnél a textúra szélein megjelenítési hibák látszódhatnak, amikor a mintavétel átnyúlik a textúra peremén."
+
+#. BaseMaterial3D.DIFFUSE_BURLEY
+#: doc/classes/BaseMaterial3D.xml
+msgid "Default diffuse scattering algorithm."
+msgstr "A diffúz fényszórás alapértelmezett algoritmusa."
+
+#. BaseMaterial3D.FEATURE_EMISSION
+#: doc/classes/BaseMaterial3D.xml
+msgid "Constant for setting [member emission_enabled]."
+msgstr "A [member emission_enabled] beállításához használt állandó."
+
+#. BaseMaterial3D.FEATURE_NORMAL_MAPPING
+#: doc/classes/BaseMaterial3D.xml
+msgid "Constant for setting [member normal_enabled]."
+msgstr "A [member normal_enabled] beállításához használt állandó."
+
+#. BaseMaterial3D.FEATURE_RIM
+#: doc/classes/BaseMaterial3D.xml
+msgid "Constant for setting [member rim_enabled]."
+msgstr "A [member rim_enabled] beállításához használt állandó."
+
+#. BaseMaterial3D.FEATURE_CLEARCOAT
+#: doc/classes/BaseMaterial3D.xml
+msgid "Constant for setting [member clearcoat_enabled]."
+msgstr "A [member clearcoat_enabled] beállításához használt állandó."
+
+#. BaseMaterial3D.FEATURE_ANISOTROPY
+#: doc/classes/BaseMaterial3D.xml
+msgid "Constant for setting [member anisotropy_enabled]."
+msgstr "A [member anisotropy_enabled] beállításához használt állandó."
+
+#. BaseMaterial3D.FEATURE_AMBIENT_OCCLUSION
+#: doc/classes/BaseMaterial3D.xml
+msgid "Constant for setting [member ao_enabled]."
+msgstr "A [member ao_enabled] beállításához használt állandó."
+
+#. BaseMaterial3D.FEATURE_HEIGHT_MAPPING
+#: doc/classes/BaseMaterial3D.xml
+msgid "Constant for setting [member heightmap_enabled]."
+msgstr "A [member heightmap_enabled] beállításához használt állandó."
+
+#. BaseMaterial3D.FEATURE_SUBSURFACE_SCATTERING
+#: doc/classes/BaseMaterial3D.xml
+msgid "Constant for setting [member subsurf_scatter_enabled]."
+msgstr "A [member subsurf_scatter_enabled] beállításához használt állandó."
+
+#. BaseMaterial3D.FEATURE_SUBSURFACE_TRANSMITTANCE
+#: doc/classes/BaseMaterial3D.xml
+msgid "Constant for setting [member subsurf_scatter_transmittance_enabled]."
+msgstr "A [member subsurf_scatter_transmittance_enabled] beállításához használt állandó."
+
+#. BaseMaterial3D.FEATURE_BACKLIGHT
+#: doc/classes/BaseMaterial3D.xml
+msgid "Constant for setting [member backlight_enabled]."
+msgstr "A [member backlight_enabled] beállításához használt állandó."
+
+#. BaseMaterial3D.FEATURE_REFRACTION
+#: doc/classes/BaseMaterial3D.xml
+msgid "Constant for setting [member refraction_enabled]."
+msgstr "A [member refraction_enabled] beállításához használt állandó."
+
+#. BaseMaterial3D.FEATURE_DETAIL
+#: doc/classes/BaseMaterial3D.xml
+msgid "Constant for setting [member detail_enabled]."
+msgstr "A [member detail_enabled] beállításához használt állandó."
+
+#. BaseMaterial3D.FEATURE_BENT_NORMAL_MAPPING
+#: doc/classes/BaseMaterial3D.xml
+msgid "Constant for setting [member bent_normal_enabled]."
+msgstr "A [member bent_normal_enabled] beállításához használt állandó."
+
+#. BaseMaterial3D.DIFFUSE_LAMBERT
+#: doc/classes/BaseMaterial3D.xml
+msgid "Diffuse scattering ignores roughness."
+msgstr "A diffúz szórás figyelmen kívül hagyja az érdességet."
+
+#. BaseMaterial3D.DIFFUSE_LAMBERT_WRAP
+#: doc/classes/BaseMaterial3D.xml
+msgid "Extends Lambert to cover more than 90 degrees when roughness increases."
+msgstr "Növekvő érdességnél a Lambert-modell 90 foknál szélesebb tartományra hat."
+
+#. BaseMaterial3D.SPECULAR_TOON
+#: doc/classes/BaseMaterial3D.xml
+msgid "Toon blob which changes size based on roughness."
+msgstr "Rajzfilmszerű csúcsfény, amelynek mérete az érdességtől függ."
+
+#. BaseMaterial3D.SPECULAR_DISABLED
+#: doc/classes/BaseMaterial3D.xml
+msgid "No specular blob. This is slightly faster to render than other specular modes."
+msgstr "Nincs tükrös csúcsfény. A renderelés valamivel gyorsabb, mint a többi csúcsfénymódban."
+
+#. BaseMaterial3D.BILLBOARD_DISABLED
+#: doc/classes/BaseMaterial3D.xml
+msgid "Billboard mode is disabled."
+msgstr "A kamera felé forduló megjelenítés ki van kapcsolva."
+
+#. BaseMaterial3D.BILLBOARD_ENABLED
+#: doc/classes/BaseMaterial3D.xml
+msgid "The object's Z axis will always face the camera."
+msgstr "Az objektum Z tengelye mindig a kamera felé mutat."
+
+#. BaseMaterial3D.BILLBOARD_PARTICLES
+#: doc/classes/BaseMaterial3D.xml
+msgid "Used for particle systems when assigned to [GPUParticles3D] and [CPUParticles3D] nodes (flipbook animation). Enables [code]particles_anim_*[/code] properties.\nThe [member ParticleProcessMaterial.anim_speed_min] or [member CPUParticles3D.anim_speed_min] should also be set to a value bigger than zero for the animation to play."
+msgstr "Részecskerendszerek képkockás animációjához használható, ha az anyag [GPUParticles3D] vagy [CPUParticles3D] csomóponthoz van rendelve. Bekapcsolja a [code]particles_anim_*[/code] tulajdonságokat.\nAz animáció lejátszásához a [member ParticleProcessMaterial.anim_speed_min] vagy a [member CPUParticles3D.anim_speed_min] értékét nullánál nagyobbra kell állítani."
+
+#. BaseMaterial3D.TEXTURE_CHANNEL_RED
+#: doc/classes/BaseMaterial3D.xml
+msgid "Used to read from the red channel of a texture."
+msgstr "A textúra vörös csatornájának olvasására használható."
+
+#. BaseMaterial3D.TEXTURE_CHANNEL_GREEN
+#: doc/classes/BaseMaterial3D.xml
+msgid "Used to read from the green channel of a texture."
+msgstr "A textúra zöld csatornájának olvasására használható."
+
+#. BaseMaterial3D.TEXTURE_CHANNEL_BLUE
+#: doc/classes/BaseMaterial3D.xml
+msgid "Used to read from the blue channel of a texture."
+msgstr "A textúra kék csatornájának olvasására használható."
+
+#. BaseMaterial3D.TEXTURE_CHANNEL_ALPHA
+#: doc/classes/BaseMaterial3D.xml
+msgid "Used to read from the alpha channel of a texture."
+msgstr "A textúra alfa-csatornájának olvasására használható."
+
+#. BaseMaterial3D.TEXTURE_CHANNEL_GRAYSCALE
+#: doc/classes/BaseMaterial3D.xml
+msgid "Used to read from the linear (non-perceptual) average of the red, green and blue channels of a texture."
+msgstr "A textúra vörös, zöld és kék csatornájának lineáris átlagát olvassa ki, az észlelt fényesség szerinti súlyozás nélkül."
+
+#. BaseMaterial3D.EMISSION_OP_ADD
+#: doc/classes/BaseMaterial3D.xml
+msgid "Adds the emission color to the color from the emission texture."
+msgstr "Hozzáadja a kibocsátott fény színét a kibocsátási textúra színéhez."
+
+#. BaseMaterial3D.EMISSION_OP_MULTIPLY
+#: doc/classes/BaseMaterial3D.xml
+msgid "Multiplies the emission color by the color from the emission texture."
+msgstr "A kibocsátott fény színét megszorozza a kibocsátási textúra színével."
+
+#. BaseMaterial3D.DISTANCE_FADE_DISABLED
+#: doc/classes/BaseMaterial3D.xml
+msgid "Do not use distance fade."
+msgstr "Kikapcsolja a távolságalapú halványítást."
+
+#. BaseMaterial3D.DISTANCE_FADE_PIXEL_ALPHA
+#: doc/classes/BaseMaterial3D.xml
+msgid "Smoothly fades the object out based on each pixel's distance from the camera using the alpha channel."
+msgstr "Az alfa-csatorna segítségével fokozatosan halványítja az objektumot a képpontok és a kamera közötti távolság alapján."
+
+#. BaseMaterial3D.DISTANCE_FADE_PIXEL_DITHER
+#: doc/classes/BaseMaterial3D.xml
+msgid "Smoothly fades the object out based on each pixel's distance from the camera using a dithering approach. Dithering discards pixels based on a set pattern to smoothly fade without enabling transparency. On certain hardware, this can be faster than [constant DISTANCE_FADE_PIXEL_ALPHA]."
+msgstr "A képpontok és a kamera közötti távolság alapján, raszteres mintázattal halványítja az objektumot. A motor meghatározott minta szerint hagy ki képpontokat, így az átlátszóság bekapcsolása nélkül is sima az átmenet. Egyes hardvereken ez gyorsabb lehet a [constant DISTANCE_FADE_PIXEL_ALPHA] módnál."
+
+#. BaseMaterial3D.DISTANCE_FADE_OBJECT_DITHER
+#: doc/classes/BaseMaterial3D.xml
+msgid "Smoothly fades the object out based on the object's distance from the camera using a dithering approach. Dithering discards pixels based on a set pattern to smoothly fade without enabling transparency. On certain hardware, this can be faster than [constant DISTANCE_FADE_PIXEL_ALPHA] and [constant DISTANCE_FADE_PIXEL_DITHER]."
+msgstr "Az objektum és a kamera közötti távolság alapján, raszteres mintázattal halványítja az objektumot. A motor meghatározott minta szerint hagy ki képpontokat, így az átlátszóság bekapcsolása nélkül is sima az átmenet. Egyes hardvereken ez gyorsabb lehet a [constant DISTANCE_FADE_PIXEL_ALPHA] és a [constant DISTANCE_FADE_PIXEL_DITHER] módnál."
+
+#. BaseMaterial3D.STENCIL_MODE_DISABLED
+#: doc/classes/BaseMaterial3D.xml
+msgid "Disables stencil operations."
+msgstr "Kikapcsolja a stencilműveleteket."
+
+#. BaseMaterial3D.STENCIL_MODE_OUTLINE
+#: doc/classes/BaseMaterial3D.xml
+msgid "Stencil preset which applies an outline to the object.\n[b]Note:[/b] Requires a [member Material.next_pass] material which will be automatically applied. Any manual changes made to [member Material.next_pass] will be lost when the stencil properties are modified or the scene is reloaded. To safely apply a [member Material.next_pass] material on a material that uses stencil presets, use [member GeometryInstance3D.material_overlay] instead."
+msgstr "Stencil-előbeállítás, amely körvonalat rajzol az objektumra.\n[b]Megjegyzés:[/b] [member Material.next_pass] anyagot igényel, amelyet a motor automatikusan alkalmaz. A [member Material.next_pass] kézi módosításai elvesznek a stenciltulajdonságok módosításakor vagy a jelenet újratöltésekor. Ha stencil-előbeállítást használó anyagra saját [member Material.next_pass] anyagot szeretnél helyezni, használd a [member GeometryInstance3D.material_overlay] tulajdonságot."
+
+#. BaseMaterial3D.STENCIL_MODE_XRAY
+#: doc/classes/BaseMaterial3D.xml
+msgid "Stencil preset which shows a silhouette of the object behind walls.\n[b]Note:[/b] Requires a [member Material.next_pass] material which will be automatically applied. Any manual changes made to [member Material.next_pass] will be lost when the stencil properties are modified or the scene is reloaded. To safely apply a [member Material.next_pass] material on a material that uses stencil presets, use [member GeometryInstance3D.material_overlay] instead."
+msgstr "Stencil-előbeállítás, amely a falak mögött is megjeleníti az objektum sziluettjét.\n[b]Megjegyzés:[/b] [member Material.next_pass] anyagot igényel, amelyet a motor automatikusan alkalmaz. A [member Material.next_pass] kézi módosításai elvesznek a stenciltulajdonságok módosításakor vagy a jelenet újratöltésekor. Ha stencil-előbeállítást használó anyagra saját [member Material.next_pass] anyagot szeretnél helyezni, használd a [member GeometryInstance3D.material_overlay] tulajdonságot."
+
+#. BaseMaterial3D.STENCIL_FLAG_READ
+#: doc/classes/BaseMaterial3D.xml
+msgid "The material will only be rendered where it passes a stencil comparison with existing stencil buffer values."
+msgstr "Az anyag csak ott jelenik meg, ahol a stencilpuffer meglévő értékeivel végzett összehasonlítás sikeres."
+
+#. BaseMaterial3D.STENCIL_FLAG_WRITE
+#: doc/classes/BaseMaterial3D.xml
+msgid "The material will write the reference value to the stencil buffer where it passes the depth test."
+msgstr "Az anyag ott írja a referenciaértéket a stencilpufferbe, ahol sikeres a mélységteszt."
+
+#. BaseMaterial3D.STENCIL_FLAG_WRITE_DEPTH_FAIL
+#: doc/classes/BaseMaterial3D.xml
+msgid "The material will write the reference value to the stencil buffer where it fails the depth test."
+msgstr "Az anyag ott írja a referenciaértéket a stencilpufferbe, ahol sikertelen a mélységteszt."
+
+#. BaseMaterial3D.STENCIL_COMPARE_ALWAYS
+#: doc/classes/BaseMaterial3D.xml
+msgid "Always passes the stencil test."
+msgstr "A stencilteszt mindig sikeres."
+
+#. BaseMaterial3D.STENCIL_COMPARE_LESS
+#: doc/classes/BaseMaterial3D.xml
+msgid "Passes the stencil test when the reference value is less than the existing stencil value."
+msgstr "A stencilteszt akkor sikeres, ha a referenciaérték kisebb a pufferben lévő stencilértéknél."
+
+#. BaseMaterial3D.STENCIL_COMPARE_EQUAL
+#: doc/classes/BaseMaterial3D.xml
+msgid "Passes the stencil test when the reference value is equal to the existing stencil value."
+msgstr "A stencilteszt akkor sikeres, ha a referenciaérték megegyezik a pufferben lévő stencilértékkel."
+
+#. BaseMaterial3D.STENCIL_COMPARE_LESS_OR_EQUAL
+#: doc/classes/BaseMaterial3D.xml
+msgid "Passes the stencil test when the reference value is less than or equal to the existing stencil value."
+msgstr "A stencilteszt akkor sikeres, ha a referenciaérték kisebb a pufferben lévő stencilértéknél, vagy egyenlő vele."
+
+#. BaseMaterial3D.STENCIL_COMPARE_GREATER
+#: doc/classes/BaseMaterial3D.xml
+msgid "Passes the stencil test when the reference value is greater than the existing stencil value."
+msgstr "A stencilteszt akkor sikeres, ha a referenciaérték nagyobb a pufferben lévő stencilértéknél."
+
+#. BaseMaterial3D.STENCIL_COMPARE_NOT_EQUAL
+#: doc/classes/BaseMaterial3D.xml
+msgid "Passes the stencil test when the reference value is not equal to the existing stencil value."
+msgstr "A stencilteszt akkor sikeres, ha a referenciaérték eltér a pufferben lévő stencilértéktől."
+
+#. BaseMaterial3D.STENCIL_COMPARE_GREATER_OR_EQUAL
+#: doc/classes/BaseMaterial3D.xml
+msgid "Passes the stencil test when the reference value is greater than or equal to the existing stencil value."
+msgstr "A stencilteszt akkor sikeres, ha a referenciaérték nagyobb a pufferben lévő stencilértéknél, vagy egyenlő vele."
+
+#. Decal.albedo_mix
+#: doc/classes/Decal.xml
+msgid "Blends the albedo [Color] of the decal with albedo [Color] of the underlying mesh. This can be set to [code]0.0[/code] to create a decal that only affects normal or ORM. In this case, an albedo texture is still required as its alpha channel will determine where the normal and ORM will be overridden. See also [member modulate]."
+msgstr "A vetített textúra albedójának [Color] értékét összekeveri az alatta lévő háló albedójának [Color] értékével. [code]0.0[/code] értéknél a vetítés csak a normálvektorokat vagy az ORM-adatokat módosítja. Ekkor is kell albedótextúra, mert annak alfa-csatornája jelöli ki, hol történik a felülbírálás. Lásd még: [member modulate]."
+
+#. Decal.cull_mask
+#: doc/classes/Decal.xml
+msgid "Specifies which [member VisualInstance3D.layers] this decal will project on. By default, Decals affect all layers. This is used so you can specify which types of objects receive the Decal and which do not. This is especially useful so you can ensure that dynamic objects don't accidentally receive a Decal intended for the terrain under them."
+msgstr "A [member VisualInstance3D.layers] azon rétegeit adja meg, amelyekre a textúra vetül. Alapértelmezésben minden rétegre hat. Ezzel választható ki, hogy mely objektumok kapják meg a vetített textúrát. Így például a mozgó objektumokra nem vetül rá véletlenül az alattuk lévő terepnek szánt minta."
+
+#. Decal.distance_fade_begin
+#: doc/classes/Decal.xml
+msgid "The distance from the camera at which the Decal begins to fade away (in 3D units)."
+msgstr "A kamerától mért távolság, amelynél a vetített textúra halványodni kezd, a 3D tér egységeiben."
+
+#. Decal.distance_fade_enabled
+#: doc/classes/Decal.xml
+msgid "If [code]true[/code], decals will smoothly fade away when far from the active [Camera3D] starting at [member distance_fade_begin]. The Decal will fade out over [member distance_fade_begin] + [member distance_fade_length], after which it will be culled and not sent to the shader at all. Use this to reduce the number of active Decals in a scene and thus improve performance."
+msgstr "Ha az értéke [code]true[/code], a vetített textúrák az aktív [Camera3D] kamerától mért [member distance_fade_begin] távolságtól fokozatosan halványulnak el. A vetített textúra a [member distance_fade_begin] és a [member distance_fade_length] összegénél tűnik el. Ekkor a motor kihagyja, és az árnyalóhoz sem jut el. Így csökkenthető a jelenet aktív vetített textúráinak száma, ami javíthatja a teljesítményt."
+
+#. Decal.distance_fade_length
+#: doc/classes/Decal.xml
+msgid "The distance over which the Decal fades (in 3D units). The Decal becomes slowly more transparent over this distance and is completely invisible at the end. Higher values result in a smoother fade-out transition, which is more suited when the camera moves fast."
+msgstr "A vetített textúra halványulásának hossza a 3D tér egységeiben. Ezen a szakaszon fokozatosan átlátszóvá válik, a végén pedig teljesen eltűnik. Nagyobb értéknél simább az átmenet, ami gyors kameramozgáshoz előnyös."
+
+#. Decal.emission_energy
+#: doc/classes/Decal.xml
+msgid "Energy multiplier for the emission texture. This will make the decal emit light at a higher or lower intensity, independently of the albedo color. See also [member modulate]."
+msgstr "A kibocsátási textúra energiaszorzója. Az albedószíntől függetlenül növeli vagy csökkenti a vetített textúra fénykibocsátásának erősségét. Lásd még: [member modulate]."
+
+#. Decal.modulate
+#: doc/classes/Decal.xml
+msgid "Changes the [Color] of the Decal by multiplying the albedo and emission colors with this value. The alpha component is only taken into account when multiplying the albedo color, not the emission color. See also [member emission_energy] and [member albedo_mix] to change the emission and albedo intensity independently of each other."
+msgstr "Úgy módosítja a vetített textúra [Color] értékét, hogy ezzel megszorozza az albedó és a fénykibocsátás színét. Az alfa összetevő csak az albedószín szorzásakor számít. A fénykibocsátás és az albedó erősségét külön a [member emission_energy] és a [member albedo_mix] tulajdonsággal változtathatod."
+
+#. Decal.TEXTURE_ALBEDO
+#: doc/classes/Decal.xml
+msgid "[Texture2D] corresponding to [member texture_albedo]."
+msgstr "A [member texture_albedo] tulajdonsághoz tartozó [Texture2D]."
+
+#. Decal.TEXTURE_NORMAL
+#: doc/classes/Decal.xml
+msgid "[Texture2D] corresponding to [member texture_normal]."
+msgstr "A [member texture_normal] tulajdonsághoz tartozó [Texture2D]."
+
+#. Decal.TEXTURE_ORM
+#: doc/classes/Decal.xml
+msgid "[Texture2D] corresponding to [member texture_orm]."
+msgstr "A [member texture_orm] tulajdonsághoz tartozó [Texture2D]."
+
+#. Decal.TEXTURE_EMISSION
+#: doc/classes/Decal.xml
+msgid "[Texture2D] corresponding to [member texture_emission]."
+msgstr "A [member texture_emission] tulajdonsághoz tartozó [Texture2D]."
+
+#. ORMMaterial3D.brief
+#: doc/classes/ORMMaterial3D.xml
+msgid "A PBR (Physically Based Rendering) material to be used on 3D objects. Uses an ORM texture."
+msgstr "Fizikai alapú renderelést (PBR) használó anyag 3D objektumokhoz. ORM-textúrát használ."
+
+#. ORMMaterial3D.description
+#: doc/classes/ORMMaterial3D.xml
+msgid "ORMMaterial3D's properties are inherited from [BaseMaterial3D]. Unlike [StandardMaterial3D], ORMMaterial3D uses a single texture for ambient occlusion, roughness and metallic maps, known as an ORM texture."
+msgstr "Az ORMMaterial3D tulajdonságait a [BaseMaterial3D] osztályból örökli. A [StandardMaterial3D] anyagtól eltérően egyetlen ORM-textúrában tárolja a környezeti takarást, az érdességet és a fémességet."
+
+#. RDTextureFormat.brief
+#: doc/classes/RDTextureFormat.xml
+msgid "Texture format (used by [RenderingDevice])."
+msgstr "A [RenderingDevice] által használt textúraformátum."
+
+#. RDTextureFormat.add_shareable_format
+#: doc/classes/RDTextureFormat.xml
+msgid "Adds [param format] as a valid format for the corresponding [RDTextureView]'s [member RDTextureView.format_override] property. If any format is added as shareable, then the main [member format] must also be added."
+msgstr "A [param format] formátumot felveszi a kapcsolódó [RDTextureView] [member RDTextureView.format_override] tulajdonságának érvényes értékei közé. Ha bármely formátumot megoszthatóként adsz meg, az alap [member format] formátumot is hozzá kell adnod."
+
+#. RDTextureFormat.remove_shareable_format
+#: doc/classes/RDTextureFormat.xml
+msgid "Removes [param format] from the list of valid formats that the corresponding [RDTextureView]'s [member RDTextureView.format_override] property can be set to."
+msgstr "Eltávolítja a [param format] formátumot a kapcsolódó [RDTextureView] [member RDTextureView.format_override] tulajdonságának érvényes értékei közül."
+
+#. RDTextureFormat.array_layers
+#: doc/classes/RDTextureFormat.xml
+msgid "The number of layers in the texture. Only relevant for 2D texture arrays."
+msgstr "A textúra rétegeinek száma. Csak 2D textúratömböknél számít."
+
+#. RDTextureFormat.depth
+#: doc/classes/RDTextureFormat.xml
+msgid "The texture's depth (in pixels). This is always [code]1[/code] for 2D textures."
+msgstr "A textúra mélysége képpontban. A 2D textúráknál mindig [code]1[/code]."
+
+#. RDTextureFormat.format
+#: doc/classes/RDTextureFormat.xml
+msgid "The texture's pixel data format."
+msgstr "A textúra képpontadatainak formátuma."
+
+#. RDTextureFormat.height
+#: doc/classes/RDTextureFormat.xml
+msgid "The texture's height (in pixels)."
+msgstr "A textúra magassága képpontban."
+
+#. RDTextureFormat.is_discardable
+#: doc/classes/RDTextureFormat.xml
+msgid "If a texture is discardable, its contents do not need to be preserved between frames. This flag is only relevant when the texture is used as target in a draw list.\nThis information is used by [RenderingDevice] to figure out if a texture's contents can be discarded, eliminating unnecessary writes to memory and boosting performance."
+msgstr "Ha a textúra eldobható, a tartalmát nem kell megőrizni a képkockák között. Ez a jelző csak akkor számít, ha rajzolási listában a textúra a rajzolás célja.\nA [RenderingDevice] ebből állapítja meg, hogy eldobhatja-e a textúra tartalmát. Így elmaradnak a fölösleges memóriaírások, ami javítja a teljesítményt."
+
+#. RDTextureFormat.is_resolve_buffer
+#: doc/classes/RDTextureFormat.xml
+msgid "The texture will be used as the destination of a resolve operation."
+msgstr "A textúra egy feloldási művelet célja lesz."
+
+#. RDTextureFormat.mipmaps
+#: doc/classes/RDTextureFormat.xml
+msgid "The number of mipmaps available in the texture."
+msgstr "A textúrában elérhető mipmapszintek száma."
+
+#. RDTextureFormat.usage_bits
+#: doc/classes/RDTextureFormat.xml
+msgid "The texture's usage bits, which determine what can be done using the texture."
+msgstr "A textúra felhasználási bitjei, amelyek meghatározzák, milyen műveletek végezhetők el vele."
+
+#. RDTextureFormat.width
+#: doc/classes/RDTextureFormat.xml
+msgid "The texture's width (in pixels)."
+msgstr "A textúra szélessége képpontban."
+
+#. RDTextureView.brief
+#: doc/classes/RDTextureView.xml
+msgid "Texture view (used by [RenderingDevice])."
+msgstr "A [RenderingDevice] által használt textúranézet."
+
+#. RDTextureView.format_override
+#: doc/classes/RDTextureView.xml
+msgid "Optional override for the data format to return sampled values in. The corresponding [RDTextureFormat] must have had this added as a shareable format. The default value of [constant RenderingDevice.DATA_FORMAT_MAX] does not override the format."
+msgstr "A mintavételezett értékekhez választható felülbíráló adatformátum. A formátumot előzőleg hozzá kell adni a kapcsolódó [RDTextureFormat] megosztható formátumaihoz. Az alapértelmezett [constant RenderingDevice.DATA_FORMAT_MAX] érték nem bírálja felül a formátumot."
+
+#. RDTextureView.swizzle_a
+#: doc/classes/RDTextureView.xml
+msgid "The channel to sample when sampling the alpha channel."
+msgstr "Az alfa-csatorna olvasásakor mintavételezett csatorna."
+
+#. RDTextureView.swizzle_b
+#: doc/classes/RDTextureView.xml
+msgid "The channel to sample when sampling the blue color channel."
+msgstr "A kék színcsatorna olvasásakor mintavételezett csatorna."
+
+#. RDTextureView.swizzle_g
+#: doc/classes/RDTextureView.xml
+msgid "The channel to sample when sampling the green color channel."
+msgstr "A zöld színcsatorna olvasásakor mintavételezett csatorna."
+
+#. RDTextureView.swizzle_r
+#: doc/classes/RDTextureView.xml
+msgid "The channel to sample when sampling the red color channel."
+msgstr "A vörös színcsatorna olvasásakor mintavételezett csatorna."
+
+#. StandardMaterial3D.brief
+#: doc/classes/StandardMaterial3D.xml
+msgid "A PBR (Physically Based Rendering) material to be used on 3D objects."
+msgstr "Fizikai alapú renderelést (PBR) használó anyag 3D objektumokhoz."
+
+#. StandardMaterial3D.description
+#: doc/classes/StandardMaterial3D.xml
+msgid "[StandardMaterial3D]'s properties are inherited from [BaseMaterial3D]. [StandardMaterial3D] uses separate textures for ambient occlusion, roughness and metallic maps. To use a single ORM map for all 3 textures, use an [ORMMaterial3D] instead."
+msgstr "A [StandardMaterial3D] tulajdonságait a [BaseMaterial3D] osztályból örökli. A [StandardMaterial3D] külön textúrákban tárolja a környezeti takarást, az érdességet és a fémességet. Ha mindhárom értéket egyetlen ORM-textúrában szeretnéd tárolni, használj [ORMMaterial3D] anyagot."
+
+#. Texture2DRD.brief
+#: doc/classes/Texture2DRD.xml
+msgid "Texture for 2D that is bound to a texture created on the [RenderingDevice]."
+msgstr "A [RenderingDevice] segítségével létrehozott textúrához kötött 2D textúra."
+
+#. Texture2DRD.description
+#: doc/classes/Texture2DRD.xml
+msgid "This texture class allows you to use a 2D texture created directly on the [RenderingDevice] as a texture for materials, meshes, etc.\n[b]Note:[/b] [Texture2DRD] is intended for low-level usage with [RenderingDevice]. For most use cases, use [Texture2D] instead."
+msgstr "A [RenderingDevice] segítségével közvetlenül létrehozott 2D textúrát anyagokhoz, hálókhoz és egyéb erőforrásokhoz teszi használhatóvá.\n[b]Megjegyzés:[/b] A [Texture2DRD] a [RenderingDevice] alacsony szintű használatához készült. A legtöbb esetben a [Texture2D] használata ajánlott."
+
+#. Texture2DRD.texture_rd_rid
+#. Texture3DRD.texture_rd_rid
+#. TextureLayeredRD.texture_rd_rid
+#: doc/classes/Texture2DRD.xml doc/classes/Texture3DRD.xml doc/classes/TextureLayeredRD.xml
+msgid "The RID of the texture object created on the [RenderingDevice]."
+msgstr "A [RenderingDevice] segítségével létrehozott textúraobjektum RID azonosítója."
+
+#. Texture3DRD.brief
+#: doc/classes/Texture3DRD.xml
+msgid "Texture for 3D that is bound to a texture created on the [RenderingDevice]."
+msgstr "A [RenderingDevice] segítségével létrehozott textúrához kötött 3D textúra."
+
+#. Texture3DRD.description
+#: doc/classes/Texture3DRD.xml
+msgid "This texture class allows you to use a 3D texture created directly on the [RenderingDevice] as a texture for materials, meshes, etc.\n[b]Note:[/b] [Texture3DRD] is intended for low-level usage with [RenderingDevice]. For most use cases, use [Texture3D] instead."
+msgstr "A [RenderingDevice] segítségével közvetlenül létrehozott 3D textúrát anyagokhoz, hálókhoz és egyéb erőforrásokhoz teszi használhatóvá.\n[b]Megjegyzés:[/b] A [Texture3DRD] a [RenderingDevice] alacsony szintű használatához készült. A legtöbb esetben a [Texture3D] használata ajánlott."
+
+#. TextureLayeredRD.brief
+#: doc/classes/TextureLayeredRD.xml
+msgid "Abstract base class for layered texture RD types."
+msgstr "A réteges RD-textúratípusok absztrakt alaposztálya."
+
+#. TextureLayeredRD.description
+#: doc/classes/TextureLayeredRD.xml
+msgid "Base class for [Texture2DArrayRD], [TextureCubemapRD] and [TextureCubemapArrayRD]. Cannot be used directly, but contains all the functions necessary for accessing the derived resource types.\n[b]Note:[/b] [TextureLayeredRD] is intended for low-level usage with [RenderingDevice]. For most use cases, use [TextureLayered] instead."
+msgstr "A [Texture2DArrayRD], a [TextureCubemapRD] és a [TextureCubemapArrayRD] alaposztálya. Közvetlenül nem használható, de tartalmazza a származtatott erőforrástípusok eléréséhez szükséges metódusokat.\n[b]Megjegyzés:[/b] A [TextureLayeredRD] a [RenderingDevice] alacsony szintű használatához készült. A legtöbb esetben a [TextureLayered] használata ajánlott."
+
+#. GridMap.set_navigation_map
+#: modules/gridmap/doc_classes/GridMap.xml
+msgid "Sets the [RID] of the navigation map this GridMap node should use for its cell baked navigation meshes."
+msgstr "Beállítja annak a navigációs térképnek a [RID] azonosítóját, amelyet a GridMap a cellákhoz előre előállított navigációs hálóknál használ."
+
+#. GridMap.cell_size_changed
+#: modules/gridmap/doc_classes/GridMap.xml
+msgid "Emitted when [member cell_size] changes."
+msgstr "A [member cell_size] változásakor jelez."
+
+#. GridMap.changed
+#: modules/gridmap/doc_classes/GridMap.xml
+msgid "Emitted when the [MeshLibrary] of this GridMap changes."
+msgstr "A GridMap [MeshLibrary] erőforrásának változásakor jelez."
+
+#. GridMap.bake_navigation
+#: modules/gridmap/doc_classes/GridMap.xml
+msgid "If [code]true[/code], this GridMap creates a navigation region for each cell that uses a [member mesh_library] item with a navigation mesh. The created navigation region will use the navigation layers bitmask assigned to the [MeshLibrary]'s item."
+msgstr "Ha az értéke [code]true[/code], a GridMap minden olyan cellához navigációs régiót hoz létre, amelynek [member mesh_library] eleme navigációs hálóval rendelkezik. A létrehozott navigációs régió a [MeshLibrary] adott elemének navigációs rétegmaszkját használja."
+
+#. GridMap.cell_center_x
+#: modules/gridmap/doc_classes/GridMap.xml
+msgid "If [code]true[/code], grid items are centered on the X axis."
+msgstr "Ha az értéke [code]true[/code], a rácselemek középre igazodnak az X tengely mentén."
+
+#. GridMap.cell_center_y
+#: modules/gridmap/doc_classes/GridMap.xml
+msgid "If [code]true[/code], grid items are centered on the Y axis."
+msgstr "Ha az értéke [code]true[/code], a rácselemek középre igazodnak az Y tengely mentén."
+
+#. GridMap.cell_center_z
+#: modules/gridmap/doc_classes/GridMap.xml
+msgid "If [code]true[/code], grid items are centered on the Z axis."
+msgstr "Ha az értéke [code]true[/code], a rácselemek középre igazodnak a Z tengely mentén."
+
+#. GridMap.cell_octant_size
+#: modules/gridmap/doc_classes/GridMap.xml
+msgid "The size of each octant measured in number of cells. This applies to all three axis."
+msgstr "Az egyes oktánsok mérete cellákban. Mindhárom tengelyre vonatkozik."
+
+#. GridMap.cell_scale
+#: modules/gridmap/doc_classes/GridMap.xml
+msgid "The scale of the cell items.\nThis does not affect the size of the grid cells themselves, only the items in them. This can be used to make cell items overlap their neighbors."
+msgstr "A cellákban lévő elemek méretezése.\nA rácscellák mérete változatlan marad. Nagyobb értékkel a cellák elemei átnyúlhatnak a szomszédos cellákba."
+
+#. GridMap.cell_size
+#: modules/gridmap/doc_classes/GridMap.xml
+msgid "The dimensions of the grid's cells.\nThis does not affect the size of the meshes. See [member cell_scale]."
+msgstr "A rácscellák méretei.\nEz a hálók méretét nem változtatja meg. Lásd: [member cell_scale]."
+
+#. GridMap.collision_layer
+#: modules/gridmap/doc_classes/GridMap.xml
+msgid "The physics layers this GridMap is in.\nGridMaps act as static bodies, meaning they aren't affected by gravity or other forces. They only affect other physics bodies that collide with them."
+msgstr "A fizikai rétegek, amelyekhez a GridMap tartozik.\nA GridMap statikus testként viselkedik, ezért sem a gravitáció, sem más erő nem hat rá. Csak azokra a fizikai testekre hat, amelyek ütköznek vele."
+
+#. GridMap.collision_mask
+#: modules/gridmap/doc_classes/GridMap.xml
+msgid "The physics layers this GridMap detects collisions in. See [url=$DOCS_URL/tutorials/physics/physics_introduction.html#collision-layers-and-masks]Collision layers and masks[/url] in the documentation for more information."
+msgstr "A fizikai rétegek, amelyeken a GridMap érzékeli az ütközéseket. További részletekért lásd a dokumentáció [url=$DOCS_URL/tutorials/physics/physics_introduction.html#collision-layers-and-masks]ütközési rétegekről és maszkokról[/url] szóló részét."
+
+#. GridMap.collision_visibility_mode
+#: modules/gridmap/doc_classes/GridMap.xml
+msgid "Show or hide the [GridMap]'s collision shapes. If set to [constant DEBUG_VISIBILITY_MODE_DEFAULT], this depends on the show collision debug settings."
+msgstr "Megjeleníti vagy elrejti a [GridMap] ütközési alakzatait. [constant DEBUG_VISIBILITY_MODE_DEFAULT] értéknél a hibakeresési ütközésmegjelenítés beállítása érvényes."
+
+#. GridMap.mesh_library
+#: modules/gridmap/doc_classes/GridMap.xml
+msgid "The assigned [MeshLibrary]."
+msgstr "A hozzárendelt [MeshLibrary] könyvtár."
+
+#. GridMap.physics_material
+#: modules/gridmap/doc_classes/GridMap.xml
+msgid "Overrides the default friction and bounce physics properties for the whole [GridMap]."
+msgstr "A teljes [GridMap] alapértelmezett súrlódási és visszapattanási beállításait felülbírálja."
+
+#. GridMap.INVALID_CELL_ITEM
+#: modules/gridmap/doc_classes/GridMap.xml
+msgid "Invalid cell item that can be used in [method set_cell_item] to clear cells (or represent an empty cell in [method get_cell_item])."
+msgstr "Érvénytelen cellaelem. Cellák törlésére használható a [method set_cell_item] metódusban. A [method get_cell_item] visszatérési értékeként üres cellát jelöl."
