@@ -7616,7 +7616,7 @@ msgstr "Százalékos érték vizuális megjelenítésére szolgáló vezérlőel
 #. ProgressBar.description
 #: doc/classes/ProgressBar.xml
 msgid "A control used for visual representation of a percentage. Shows the fill percentage in the center. Can also be used to show indeterminate progress. For more fill modes, use [TextureProgressBar] instead."
-msgstr "Százalékos érték szemléltetésére szolgáló vezérlőelem. A kitöltés százalékos arányát a sáv közepén jeleníti meg. Ismeretlen mértékű előrehaladást is képes jelezni. További kitöltési módokhoz inkább a [TextureProgressBar] osztályt használd."
+msgstr "Százalékos érték szemléltetésére szolgáló vezérlőelem. A kitöltés százalékos arányát a sáv közepén jeleníti meg. Akkor is jelezheti a folyamatban lévő műveletet, ha az előrehaladás mértéke nem ismert. További kitöltési módokhoz inkább a [TextureProgressBar] osztályt használd."
 
 #. ProgressBar.editor_preview_indeterminate
 #: doc/classes/ProgressBar.xml
@@ -7626,27 +7626,27 @@ msgstr "Ha [code]false[/code], a szerkesztőben szünetel az [member indetermina
 #. ProgressBar.fill_mode
 #: doc/classes/ProgressBar.xml
 msgid "The fill direction. See [enum FillMode] for possible values."
-msgstr "A kitöltés iránya. A választható értékeket lásd a [enum FillMode] felsorolásban."
+msgstr "A folyamatjelző kitöltésének iránya. A lehetséges értékeket a [enum FillMode] felsorolás tartalmazza."
 
 #. ProgressBar.indeterminate
 #: doc/classes/ProgressBar.xml
 msgid "When set to [code]true[/code], the progress bar indicates that something is happening with an animation, but does not show the fill percentage or value."
-msgstr "Ha [code]true[/code], a folyamatjelző animációval jelzi a művelet folyamatban létét, de nem mutatja sem a kitöltés százalékát, sem az értékét."
+msgstr "Ha [code]true[/code], a folyamatjelző animációval mutatja, hogy egy művelet folyamatban van, de nem jeleníti meg sem a kitöltés százalékos arányát, sem az értékét."
 
 #. ProgressBar.show_percentage
 #: doc/classes/ProgressBar.xml
 msgid "If [code]true[/code], the fill percentage is displayed on the bar."
-msgstr "Ha [code]true[/code], a sávon megjelenik a kitöltési százalék."
+msgstr "Ha [code]true[/code], a sávon megjelenik a kitöltés százalékos aránya."
 
 #. ProgressBar.FILL_BEGIN_TO_END
 #: doc/classes/ProgressBar.xml
 msgid "The progress bar fills from begin to end horizontally, according to the language direction. If [method Control.is_layout_rtl] returns [code]false[/code], it fills from left to right, and if it returns [code]true[/code], it fills from right to left."
-msgstr "A folyamatjelző vízszintesen, a nyelv írásirányát követve az elejétől a végéig telik meg. Ha a [method Control.is_layout_rtl] [code]false[/code] értéket ad vissza, balról jobbra, ha [code]true[/code] értéket, jobbról balra töltődik."
+msgstr "A folyamatjelző vízszintesen, a nyelv írásirányának megfelelően az elejétől a végéig töltődik fel. Ha a [method Control.is_layout_rtl] [code]false[/code] értéket ad vissza, balról jobbra, ha [code]true[/code] értéket, jobbról balra töltődik."
 
 #. ProgressBar.FILL_END_TO_BEGIN
 #: doc/classes/ProgressBar.xml
 msgid "The progress bar fills from end to begin horizontally, according to the language direction. If [method Control.is_layout_rtl] returns [code]false[/code], it fills from right to left, and if it returns [code]true[/code], it fills from left to right."
-msgstr "A folyamatjelző vízszintesen, a nyelv írásirányával ellentétesen, a végétől az eleje felé telik meg. Ha a [method Control.is_layout_rtl] [code]false[/code] értéket ad vissza, jobbról balra, ha [code]true[/code] értéket, balról jobbra töltődik."
+msgstr "A folyamatjelző vízszintesen, a nyelv írásirányával ellentétesen, a végétől az eleje felé töltődik fel. Ha a [method Control.is_layout_rtl] [code]false[/code] értéket ad vissza, jobbról balra, ha [code]true[/code] értéket, balról jobbra töltődik."
 
 #. ProgressBar.FILL_TOP_TO_BOTTOM
 #: doc/classes/ProgressBar.xml
