@@ -7621,7 +7621,7 @@ msgstr "Százalékos érték szemléltetésére szolgáló vezérlőelem. A kit�
 #. ProgressBar.editor_preview_indeterminate
 #: doc/classes/ProgressBar.xml
 msgid "If [code]false[/code], the [member indeterminate] animation will be paused in the editor."
-msgstr "Ha [code]false[/code], a szerkesztőben szünetel az [member indeterminate] animáció."
+msgstr "Ha [code]false[/code], az [member indeterminate] animációja szünetel a szerkesztőben."
 
 #. ProgressBar.fill_mode
 #: doc/classes/ProgressBar.xml
@@ -7666,7 +7666,7 @@ msgstr "A szöveg színe."
 #. ProgressBar.font_outline_color
 #: doc/classes/ProgressBar.xml
 msgid "The tint of text outline of the [ProgressBar]."
-msgstr "A [ProgressBar] szövegkörvonalának színe."
+msgstr "A [ProgressBar] szövegének körvonalához használt szín."
 
 #. ProgressBar.outline_size
 #: doc/classes/ProgressBar.xml
@@ -7676,22 +7676,22 @@ msgstr "A szövegkörvonal vastagsága.\n[b]Megjegyzés:[/b] Ha olyan betűkész
 #. ProgressBar.font
 #: doc/classes/ProgressBar.xml
 msgid "Font used to draw the fill percentage if [member show_percentage] is [code]true[/code]."
-msgstr "A kitöltési százalék megjelenítéséhez használt betűkészlet, ha a [member show_percentage] értéke [code]true[/code]."
+msgstr "A kitöltés százalékos arányát megjelenítő betűkészlet, ha a [member show_percentage] értéke [code]true[/code]."
 
 #. ProgressBar.font_size
 #: doc/classes/ProgressBar.xml
 msgid "Font size used to draw the fill percentage if [member show_percentage] is [code]true[/code]."
-msgstr "A kitöltési százalék megjelenítéséhez használt betűméret, ha a [member show_percentage] értéke [code]true[/code]."
+msgstr "A kitöltés százalékos arányát megjelenítő szöveg betűmérete, ha a [member show_percentage] értéke [code]true[/code]."
 
 #. ProgressBar.background
 #: doc/classes/ProgressBar.xml
 msgid "The style of the background."
-msgstr "A folyamatjelző hátterének stílusa."
+msgstr "A folyamatjelző sáv hátterének stílusa."
 
 #. ProgressBar.fill
 #: doc/classes/ProgressBar.xml
 msgid "The style of the progress (i.e. the part that fills the bar)."
-msgstr "A folyamatjelző sávot kitöltő rész stílusa."
+msgstr "A folyamatjelző kitöltött részének stílusa."
 
 #. HSlider.brief
 #: doc/classes/HSlider.xml
