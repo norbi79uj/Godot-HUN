@@ -5574,22 +5574,22 @@ msgstr "Biztosítja a [param control] vezérlőelem láthatóságát (a ScrollCo
 #. ScrollContainer.get_h_scroll_bar
 #: doc/classes/ScrollContainer.xml
 msgid "Returns the horizontal scrollbar [HScrollBar] of this [ScrollContainer].\n[b]Warning:[/b] This is a required internal node, removing and freeing it may cause a crash. If you wish to disable or hide a scrollbar, you can use [member horizontal_scroll_mode]."
-msgstr "Visszaadja a [ScrollContainer] vízszintes [HScrollBar] görgetősávját.\n[b]Figyelmeztetés:[/b] Ez kötelező belső csomópont, ezért eltávolítása vagy felszabadítása összeomlást okozhat. A görgetősáv kikapcsolásához vagy elrejtéséhez használd a [member horizontal_scroll_mode] tulajdonságot."
+msgstr "Visszaadja a [ScrollContainer] vízszintes görgetősávját ([HScrollBar]).\n[b]Figyelmeztetés:[/b] Ez kötelező belső csomópont, ezért eltávolítása vagy felszabadítása összeomlást okozhat. A görgetősáv kikapcsolásához vagy elrejtéséhez használd a [member horizontal_scroll_mode] tulajdonságot."
 
 #. ScrollContainer.get_v_scroll_bar
 #: doc/classes/ScrollContainer.xml
 msgid "Returns the vertical scrollbar [VScrollBar] of this [ScrollContainer].\n[b]Warning:[/b] This is a required internal node, removing and freeing it may cause a crash. If you wish to disable or hide a scrollbar, you can use [member vertical_scroll_mode]."
-msgstr "Visszaadja a [ScrollContainer] függőleges [VScrollBar] görgetősávját.\n[b]Figyelmeztetés:[/b] Ez kötelező belső csomópont, ezért eltávolítása vagy felszabadítása összeomlást okozhat. A görgetősáv kikapcsolásához vagy elrejtéséhez használd a [member vertical_scroll_mode] tulajdonságot."
+msgstr "Visszaadja a [ScrollContainer] függőleges görgetősávját ([VScrollBar]).\n[b]Figyelmeztetés:[/b] Ez kötelező belső csomópont, ezért eltávolítása vagy felszabadítása összeomlást okozhat. A görgetősáv kikapcsolásához vagy elrejtéséhez használd a [member vertical_scroll_mode] tulajdonságot."
 
 #. ScrollContainer.draw_focus_border
 #: doc/classes/ScrollContainer.xml
 msgid "If [code]true[/code], [theme_item focus] is drawn when the ScrollContainer or one of its descendant nodes is focused."
-msgstr "Ha [code]true[/code], a [theme_item focus] fókuszkeret megjelenik, amikor a ScrollContainer vagy valamelyik leszármazott csomópontja fókuszba kerül."
+msgstr "Ha [code]true[/code], a [theme_item focus] fókuszkeret akkor jelenik meg, ha a ScrollContainer vagy bármelyik leszármazott csomópontja fókuszban van."
 
 #. ScrollContainer.follow_focus
 #: doc/classes/ScrollContainer.xml
 msgid "If [code]true[/code], the ScrollContainer will automatically scroll to focused children (including indirect children) to make sure they are fully visible."
-msgstr "Ha [code]true[/code], a ScrollContainer automatikusan a fókuszba került gyermekcsomóponthoz görget – a közvetett gyermekekhez is –, hogy a teljes elem láthatóvá váljon."
+msgstr "Ha [code]true[/code], a ScrollContainer automatikusan a fókuszban lévő gyermekcsomóponthoz görget, beleértve a közvetett gyermekeket is, hogy az elem teljes egészében látható legyen."
 
 #. ScrollContainer.horizontal_scroll_mode
 #: doc/classes/ScrollContainer.xml
@@ -5614,7 +5614,7 @@ msgstr "A vízszintes görgetés aktuális értéke.\n[b]Megjegyzés:[/b] Ha ezt
 #. ScrollContainer.scroll_horizontal_by_default
 #: doc/classes/ScrollContainer.xml
 msgid "If [code]true[/code], the mouse wheel scrolls the view horizontally, and holding [kbd]Shift[/kbd] scrolls vertically.\nIf [code]false[/code] (default), the mouse wheel scrolls the view vertically, and holding [kbd]Shift[/kbd] scrolls horizontally."
-msgstr "Ha [code]true[/code], az egérgörgő alapból vízszintesen görget, a [kbd]Shift[/kbd] billentyű nyomva tartásakor pedig függőlegesen.\nHa [code]false[/code] (ez az alapértelmezés), az egérgörgő függőlegesen görget, a [kbd]Shift[/kbd] nyomva tartásakor pedig vízszintesen."
+msgstr "Ha [code]true[/code], az egérgörgő vízszintesen görget, a [kbd]Shift[/kbd] billentyű nyomva tartásával pedig függőlegesen.\nHa [code]false[/code] (ez az alapértelmezés), az egérgörgő függőlegesen görget, a [kbd]Shift[/kbd] nyomva tartásakor pedig vízszintesen."
 
 #. ScrollContainer.scroll_horizontal_custom_step
 #: doc/classes/ScrollContainer.xml
@@ -5634,7 +5634,7 @@ msgstr "Felülírja a [member ScrollBar.custom_step] lépésközét a belső fü
 #. ScrollContainer.tile_scroll_hint
 #: doc/classes/ScrollContainer.xml
 msgid "If [code]true[/code], the scroll hint texture will be tiled instead of stretched. See [member scroll_hint_mode]."
-msgstr "Ha [code]true[/code], a görgetési jelzés textúrája nyújtás helyett csempeszerűen ismétlődik. Lásd: [member scroll_hint_mode]."
+msgstr "Ha [code]true[/code], a görgetési jelzés textúráját nyújtás helyett ismétlődő mintázatként rajzolja ki. Lásd: [member scroll_hint_mode]."
 
 #. ScrollContainer.vertical_scroll_mode
 #: doc/classes/ScrollContainer.xml
@@ -5654,12 +5654,12 @@ msgstr "A [theme_item scroll_hint_vertical] textúra színezésére használt [C
 #. ScrollContainer.theme.scrollbar_h_separation
 #: doc/classes/ScrollContainer.xml
 msgid "The space between the ScrollContainer's vertical scroll bar and its content, in pixels. No space will be added when the content's minimum size is larger than the ScrollContainer's size."
-msgstr "A ScrollContainer függőleges görgetősávja és a tartalma közötti vízszintes térköz képpontban. Ha a tartalom minimális mérete meghaladja a ScrollContainer méretét, a rendszer nem ad hozzá térközt."
+msgstr "A függőleges görgetősáv és a ScrollContainer tartalma közötti vízszintes távolság képpontban. Ha a tartalom minimális mérete meghaladja a ScrollContainer méretét, a rendszer nem ad hozzá térközt."
 
 #. ScrollContainer.theme.scrollbar_v_separation
 #: doc/classes/ScrollContainer.xml
 msgid "The space between the ScrollContainer's horizontal scroll bar and its content, in pixels. No space will be added when the content's minimum size is larger than the ScrollContainer's size."
-msgstr "A ScrollContainer vízszintes görgetősávja és a tartalma közötti függőleges térköz képpontban. Ha a tartalom minimális mérete meghaladja a ScrollContainer méretét, a rendszer nem ad hozzá térközt."
+msgstr "A vízszintes görgetősáv és a ScrollContainer tartalma közötti függőleges távolság képpontban. Ha a tartalom minimális mérete meghaladja a ScrollContainer méretét, a rendszer nem ad hozzá térközt."
 
 #. ScrollContainer.theme.scroll_hint_horizontal
 #: doc/classes/ScrollContainer.xml
@@ -5674,7 +5674,7 @@ msgstr "Akkor megjelenő jelzés, ha a tartalom függőleges irányban még tov�
 #. ScrollContainer.theme.focus
 #: doc/classes/ScrollContainer.xml
 msgid "The focus border [StyleBox] of the [ScrollContainer]. Only used if [member draw_focus_border] is [code]true[/code]."
-msgstr "A [ScrollContainer] fókuszát jelző [StyleBox] keret. Csak akkor jelenik meg, ha a [member draw_focus_border] értéke [code]true[/code]."
+msgstr "A [ScrollContainer] fókuszjelző keretéhez használt [StyleBox]. Csak akkor jelenik meg, ha a [member draw_focus_border] értéke [code]true[/code]."
 
 #. ScrollContainer.theme.panel
 #: doc/classes/ScrollContainer.xml
