@@ -8151,7 +8151,7 @@ msgstr "Ugyanaz, mint a [method add_icon_check_shortcut], de választógombot ha
 #. PopupMenu.add_icon_shortcut
 #: doc/classes/PopupMenu.xml
 msgid "Adds a new item and assigns the specified [Shortcut] and icon [param texture] to it. Sets the label of the checkbox to the [Shortcut]'s name.\nAn [param id] can optionally be provided. If no [param id] is provided, one will be created from the index.\nIf [param allow_echo] is [code]true[/code], the shortcut can be activated with echo events."
-msgstr "Új menüpontot hoz létre a megadott [Shortcut] gyorsbillentyűvel és [param texture] ikonnal. A jelölőnégyzet felirata a [Shortcut] neve lesz.\nOpcionálisan [param id] azonosító adható meg. Ha nincs [param id], az index alapján jön létre.\nHa a [param allow_echo] értéke [code]true[/code], a gyorsbillentyű ismétlődő billentyűeseményekkel is aktiválható."
+msgstr "Új menüpontot hoz létre a megadott [Shortcut] gyorsbillentyűvel és [param texture] ikonnal. A menüpont felirata a [Shortcut] neve lesz.\nOpcionálisan [param id] azonosító adható meg. Ha nincs [param id], az index alapján jön létre.\nHa a [param allow_echo] értéke [code]true[/code], a gyorsbillentyű ismétlődő billentyűeseményekkel is aktiválható."
 
 #. PopupMenu.add_item
 #: doc/classes/PopupMenu.xml
@@ -8166,12 +8166,12 @@ msgstr "Új választógombos menüpontot ad hozzá [param label] szöveggel.\nOp
 #. PopupMenu.add_radio_check_shortcut
 #: doc/classes/PopupMenu.xml
 msgid "Adds a new radio check button and assigns a [Shortcut] to it. Sets the label of the checkbox to the [Shortcut]'s name.\nAn [param id] can optionally be provided. If no [param id] is provided, one will be created from the index.\n[b]Note:[/b] Checkable items just display a checkmark, but don't have any built-in checking behavior and must be checked/unchecked manually. See [method set_item_checked] for more info on how to control it."
-msgstr "Új választógombos menüpontot ad hozzá, és [Shortcut] gyorsbillentyűt társít hozzá. A jelölőnégyzet felirata a [Shortcut] neve lesz.\nOpcionálisan [param id] adható meg. Ha nincs [param id], az index alapján hoz létre egyet.\n[b]Megjegyzés:[/b] A jelölhető elemek csak pipát jelenítenek meg; jelölésük be- és kikapcsolását kézzel kell kezelni. Lásd a [method set_item_checked] metódust."
+msgstr "Új választógombos menüpontot ad hozzá, és [Shortcut] gyorsbillentyűt társít hozzá. A menüpont felirata a [Shortcut] neve lesz.\nOpcionálisan [param id] adható meg. Ha nincs [param id], az azonosító az index alapján jön létre.\n[b]Megjegyzés:[/b] A jelölhető elemek csak pipát jelenítenek meg; jelölésük be- és kikapcsolását kézzel kell kezelni. Lásd a [method set_item_checked] metódust."
 
 #. PopupMenu.add_separator
 #: doc/classes/PopupMenu.xml
 msgid "Adds a separator between items. Separators also occupy an index, which you can set by using the [param id] parameter.\nA [param label] can optionally be provided, which will appear at the center of the separator."
-msgstr "Elválasztót ad a menüpontok közé. Az elválasztó is elfoglal egy indexet, amely a [param id] paraméterrel adható meg.\nOpcionális [param label] felirat is megadható, amely az elválasztó közepén jelenik meg."
+msgstr "Elválasztót ad a menüpontok közé. Az elválasztó is külön indexet foglal el; a [param id] paraméterrel az azonosítója adható meg.\nOpcionálisan [param label] felirat is megadható, amely az elválasztó közepén jelenik meg."
 
 #. PopupMenu.add_shortcut
 #: doc/classes/PopupMenu.xml
@@ -8256,7 +8256,7 @@ msgstr "Visszaadja a [param index] indexű elem állapotát."
 #. PopupMenu.get_item_multistate_max
 #: doc/classes/PopupMenu.xml
 msgid "Returns the max states of the item at the given [param index]."
-msgstr "Visszaadja a [param index] indexű elem lehetséges állapotainak legnagyobb számát."
+msgstr "Visszaadja a [param index] indexű elem lehetséges állapotainak maximális számát."
 
 #. PopupMenu.get_item_shortcut
 #: doc/classes/PopupMenu.xml
@@ -8306,7 +8306,7 @@ msgstr "[code]true[/code] értéket ad vissza, ha a [param index] indexű elem v
 #. PopupMenu.is_item_separator
 #: doc/classes/PopupMenu.xml
 msgid "Returns [code]true[/code] if the item is a separator. If it is, it will be displayed as a line. See [method add_separator] for more info on how to add a separator."
-msgstr "[code]true[/code] értéket ad vissza, ha a menüpont elválasztó. Ilyenkor vonalként jelenik meg. Elválasztó hozzáadásához lásd az [method add_separator] metódust."
+msgstr "[code]true[/code] értéket ad vissza, ha a menüpont elválasztó. Ilyenkor vonalként jelenik meg. Elválasztó hozzáadásához lásd a [method add_separator] metódust."
 
 #. PopupMenu.is_item_shortcut_disabled
 #: doc/classes/PopupMenu.xml
@@ -8411,12 +8411,12 @@ msgstr "Beállítja egy elem tetszőleges típusú metaadatát. A [method get_it
 #. PopupMenu.set_item_multistate
 #: doc/classes/PopupMenu.xml
 msgid "Sets the state of a multistate item. See [method add_multistate_item] for details."
-msgstr "Beállítja egy többállapotú elem aktuális állapotát. A részleteket lásd az [method add_multistate_item] metódusnál."
+msgstr "Beállítja egy többállapotú elem aktuális állapotát. A részleteket lásd a [method add_multistate_item] metódusnál."
 
 #. PopupMenu.set_item_multistate_max
 #: doc/classes/PopupMenu.xml
 msgid "Sets the max states of a multistate item. See [method add_multistate_item] for details."
-msgstr "Beállítja egy többállapotú elem lehetséges állapotainak maximális számát. Lásd az [method add_multistate_item] metódust."
+msgstr "Beállítja egy többállapotú elem lehetséges állapotainak maximális számát. Lásd a [method add_multistate_item] metódust."
 
 #. PopupMenu.set_item_shortcut
 #: doc/classes/PopupMenu.xml
@@ -8446,7 +8446,7 @@ msgstr "Beállítja a [param index] indexű elem szövegét."
 #. PopupMenu.set_item_tooltip
 #: doc/classes/PopupMenu.xml
 msgid "Sets the [String] tooltip of the item at the given [param index]."
-msgstr "Beállítja a [param index] indexű elem súgóbuborékjának [String] típusú szövegét."
+msgstr "Beállítja a [param index] indexű elem súgóbuborékának [String] típusú szövegét."
 
 #. PopupMenu.toggle_item_checked
 #: doc/classes/PopupMenu.xml
