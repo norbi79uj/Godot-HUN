@@ -9406,7 +9406,7 @@ msgstr "A [LineEdit] szövegkurzorának színe. Teljesen átlátszó szín megad
 #. LineEdit.clear_button_color
 #: doc/classes/LineEdit.xml
 msgid "Color used as default tint for the clear button."
-msgstr "A törlőgomb alapértelmezett színezésének színe."
+msgstr "A törlőgomb alapértelmezett színezéséhez használt szín."
 
 #. LineEdit.clear_button_color_pressed
 #: doc/classes/LineEdit.xml
@@ -9416,12 +9416,12 @@ msgstr "A törlőgomb színe lenyomott állapotban."
 #. LineEdit.font_color
 #: doc/classes/LineEdit.xml
 msgid "Default font color."
-msgstr "A betűkészlet alapértelmezett színe."
+msgstr "A szöveg alapértelmezett színe."
 
 #. LineEdit.font_outline_color
 #: doc/classes/LineEdit.xml
 msgid "The tint of text outline of the [LineEdit]."
-msgstr "A [LineEdit] szövegkörvonalának színezése."
+msgstr "A [LineEdit] szövegkörvonalának színe."
 
 #. LineEdit.font_placeholder_color
 #: doc/classes/LineEdit.xml
@@ -9446,12 +9446,12 @@ msgstr "A kijelölési téglalap színe."
 #. LineEdit.caret_width
 #: doc/classes/LineEdit.xml
 msgid "The caret's width in pixels. Greater values can be used to improve accessibility by ensuring the caret is easily visible, or to ensure consistency with a large font size."
-msgstr "A szövegkurzor szélessége képpontban. Nagyobb értékkel javítható az akadálymentesség és a kurzor láthatósága, illetve igazítható a nagyobb betűmérethez."
+msgstr "A szövegkurzor szélessége képpontban. Nagyobb értékkel a kurzor jobban láthatóvá tehető, ami segíti az akadálymentes használatot, és a nagyobb betűmérettel is összhangba hozható."
 
 #. LineEdit.minimum_character_width
 #: doc/classes/LineEdit.xml
 msgid "Minimum horizontal space for the text (not counting the clear button and content margins). This value is measured in count of 'M' characters (i.e. this number of 'M' characters can be displayed without scrolling)."
-msgstr "A szöveg minimális vízszintes helyigénye (a törlőgomb és a belső margók nélkül). Az értéket „M” betűk számában méri (ennyi „M” betű látható görgetés nélkül)."
+msgstr "A szöveg számára fenntartott minimális vízszintes hely (a törlőgomb és a belső margók nélkül). Az érték „M” karakterek számában értendő: ennyi „M” karakter jeleníthető meg görgetés nélkül."
 
 #. LineEdit.font
 #: doc/classes/LineEdit.xml
@@ -9471,7 +9471,7 @@ msgstr "A törlőgomb textúrája. Lásd a [member clear_button_enabled] tulajdo
 #. LineEdit.focus
 #: doc/classes/LineEdit.xml
 msgid "Background used when [LineEdit] has GUI focus. The [theme_item focus] [StyleBox] is displayed [i]over[/i] the base [StyleBox], so a partially transparent [StyleBox] should be used to ensure the base [StyleBox] remains visible. A [StyleBox] that represents an outline or an underline works well for this purpose. To disable the focus visual effect, assign a [StyleBoxEmpty] resource. Note that disabling the focus visual effect will harm keyboard/controller navigation usability, so this is not recommended for accessibility reasons."
-msgstr "A fókuszban lévő [LineEdit] háttere. A [theme_item focus] [StyleBox] az alap [StyleBox] [i]fölött[/i] jelenik meg, ezért részben átlátszó [StyleBox] használata ajánlott, hogy az alap [StyleBox] is látható maradjon. Ehhez például körvonalat vagy aláhúzást megjelenítő [StyleBox] megfelelő. A fókusz vizuális jelzésének kikapcsolásához rendelj hozzá [StyleBoxEmpty] erőforrást. Ez azonban rontja a billentyűzettel vagy kontrollerrel történő navigálás használhatóságát, ezért akadálymentességi szempontból nem ajánlott."
+msgstr "A fókuszban lévő [LineEdit] háttere. A [theme_item focus] [StyleBox] az alap [StyleBox] [i]fölött[/i] jelenik meg, ezért részben átlátszó [StyleBox] használata ajánlott, hogy az alap [StyleBox] is látható maradjon. Ehhez például körvonalat vagy aláhúzást megjelenítő [StyleBox] megfelelő. A fókusz vizuális jelzésének kikapcsolásához rendelj hozzá [StyleBoxEmpty] erőforrást. Ez azonban megnehezíti a billentyűzettel és játékvezérlővel történő navigációt, ezért akadálymentességi szempontból nem ajánlott."
 
 #. LineEdit.normal
 #: doc/classes/LineEdit.xml
@@ -9576,7 +9576,7 @@ msgstr "Ha [code]true[/code], a [LineEdit] a [code]ui_text_submit[/code] művele
 #. LineEdit.max_length
 #: doc/classes/LineEdit.xml
 msgid "Maximum number of characters that can be entered inside the [LineEdit]. If [code]0[/code], there is no limit.\nWhen a limit is defined, characters that would exceed [member max_length] are truncated. This happens both for existing [member text] contents when setting the max length, or for new text inserted in the [LineEdit], including pasting.\nIf any input text is truncated, the [signal text_change_rejected] signal is emitted with the truncated substring as a parameter:\n[codeblocks]\n[gdscript]\ntext = \"Hello world\"\nmax_length = 5\n# `text` becomes \"Hello\".\nmax_length = 10\ntext += \" goodbye\"\n# `text` becomes \"Hello good\".\n# `text_change_rejected` is emitted with \"bye\" as a parameter.\n[/gdscript]\n[csharp]\nText = \"Hello world\";\nMaxLength = 5;\n// `Text` becomes \"Hello\".\nMaxLength = 10;\nText += \" goodbye\";\n// `Text` becomes \"Hello good\".\n// `text_change_rejected` is emitted with \"bye\" as a parameter.\n[/csharp]\n[/codeblocks]"
-msgstr "A [LineEdit] mezőbe beírható karakterek maximális száma. Ha [code]0[/code], nincs korlátozás.\nHa van korlát, a [member max_length] értékét meghaladó karaktereket a rendszer levágja. Ez a már meglévő [member text] tartalomra is érvényes a korlát beállításakor, valamint a [LineEdit] mezőbe újonnan beillesztett szövegre is.\nHa bármely bevitt szöveg levágásra kerül, a [signal text_change_rejected] jel kibocsátódik, és paraméterként megkapja az elutasított szövegrészt:\n[codeblocks]\n[gdscript]\ntext = \"Hello world\"\nmax_length = 5\n# `text` becomes \"Hello\".\nmax_length = 10\ntext += \" goodbye\"\n# `text` becomes \"Hello good\".\n# `text_change_rejected` is emitted with \"bye\" as a parameter.\n[/gdscript]\n[csharp]\nText = \"Hello world\";\nMaxLength = 5;\n// `Text` becomes \"Hello\".\nMaxLength = 10;\nText += \" goodbye\";\n// `Text` becomes \"Hello good\".\n// `text_change_rejected` is emitted with \"bye\" as a parameter.\n[/csharp]\n[/codeblocks]"
+msgstr "A [LineEdit] mezőbe beírható karakterek maximális száma. Ha [code]0[/code], nincs korlátozás.\nHa van korlát, a [member max_length] értékét meghaladó karaktereket a rendszer levágja. Ez a már meglévő [member text] tartalomra is érvényes a korlát beállításakor, valamint a [LineEdit] mezőbe újonnan beírt vagy beillesztett szövegre is.\nHa bármely bevitt szöveg levágásra kerül, a [signal text_change_rejected] jel kibocsátódik, és paraméterként megkapja az elutasított szövegrészt:\n[codeblocks]\n[gdscript]\ntext = \"Hello world\"\nmax_length = 5\n# A `text` értéke \"Hello\" lesz.\nmax_length = 10\ntext += \" goodbye\"\n# A `text` értéke \"Hello good\" lesz.\n# A `text_change_rejected` jel \"bye\" paraméterrel bocsátódik ki.\n[/gdscript]\n[csharp]\nText = \"Hello world\";\nMaxLength = 5;\n// A `Text` értéke \"Hello\" lesz.\nMaxLength = 10;\nText += \" goodbye\";\n// A `Text` értéke \"Hello good\" lesz.\n// A `text_change_rejected` jel \"bye\" paraméterrel bocsátódik ki.\n[/csharp]\n[/codeblocks]"
 
 #. LineEdit.middle_mouse_paste_enabled
 #: doc/classes/LineEdit.xml
@@ -9786,7 +9786,7 @@ msgstr "Végrehajtja a [enum MenuItems] felsorolásban meghatározott műveletet
 #. LineEdit.select
 #: doc/classes/LineEdit.xml
 msgid "Selects characters inside [LineEdit] between [param from] and [param to]. By default, [param from] is at the beginning and [param to] at the end.\n[codeblocks]\n[gdscript]\ntext = \"Welcome\"\nselect() # Will select \"Welcome\".\nselect(4) # Will select \"ome\".\nselect(2, 5) # Will select \"lco\".\n[/gdscript]\n[csharp]\nText = \"Welcome\";\nSelect(); // Will select \"Welcome\".\nSelect(4); // Will select \"ome\".\nSelect(2, 5); // Will select \"lco\".\n[/csharp]\n[/codeblocks]"
-msgstr "Kijelöli a [LineEdit] szövegének a [param from] és [param to] közötti karaktereit. Alapértelmezés szerint a [param from] a szöveg eleje, a [param to] pedig a szöveg vége.\n[codeblocks]\n[gdscript]\ntext = \"Welcome\"\nselect() # Will select \"Welcome\".\nselect(4) # Will select \"ome\".\nselect(2, 5) # Will select \"lco\".\n[/gdscript]\n[csharp]\nText = \"Welcome\";\nSelect(); // Will select \"Welcome\".\nSelect(4); // Will select \"ome\".\nSelect(2, 5); // Will select \"lco\".\n[/csharp]\n[/codeblocks]"
+msgstr "Kijelöli a [LineEdit] szövegének a [param from] és [param to] közötti karaktereit. Alapértelmezés szerint a [param from] a szöveg eleje, a [param to] pedig a szöveg vége.\n[codeblocks]\n[gdscript]\ntext = \"Welcome\"\nselect() # Kijelöli a \"Welcome\" szöveget.\nselect(4) # Kijelöli az \"ome\" részt.\nselect(2, 5) # Kijelöli az \"lco\" részt.\n[/gdscript]\n[csharp]\nText = \"Welcome\";\nSelect(); // Kijelöli a \"Welcome\" szöveget.\nSelect(4); // Kijelöli az \"ome\" részt.\nSelect(2, 5); // Kijelöli az \"lco\" részt.\n[/csharp]\n[/codeblocks]"
 
 #. LineEdit.select_all
 #: doc/classes/LineEdit.xml
