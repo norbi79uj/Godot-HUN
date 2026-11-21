@@ -9556,7 +9556,7 @@ msgstr "Ha az érték [code]true[/code], engedélyezett az „Emojik és szimbó
 #. LineEdit.expand_to_text_length
 #: doc/classes/LineEdit.xml
 msgid "If [code]true[/code], the [LineEdit] width will increase to stay longer than the [member text]. It will [b]not[/b] compress if the [member text] is shortened."
-msgstr "Ha [code]true[/code], a [LineEdit] szélessége növekszik, hogy meghaladja a [member text] hosszát. A [member text] rövidülésekor azonban [b]nem[/b] csökken a szélessége."
+msgstr "Ha [code]true[/code], a [LineEdit] szélessége úgy növekszik, hogy a teljes [member text] szöveg elférjen benne. A [member text] rövidülésekor azonban a mező szélessége [b]nem[/b] csökken."
 
 #. LineEdit.flat
 #: doc/classes/LineEdit.xml
@@ -9601,7 +9601,7 @@ msgstr "Az ikon méretaránya, ha a [member icon_expand_mode] értéke [constant
 #. LineEdit.secret
 #: doc/classes/LineEdit.xml
 msgid "If [code]true[/code], every character is replaced with the secret character (see [member secret_character])."
-msgstr "Ha [code]true[/code], minden karaktert a titkos karakterrel helyettesít (lásd: [member secret_character])."
+msgstr "Ha [code]true[/code], minden karaktert a megadott kitakaró karakterrel helyettesít (lásd: [member secret_character])."
 
 #. LineEdit.secret_character
 #: doc/classes/LineEdit.xml
@@ -9651,7 +9651,7 @@ msgstr "Akkor bocsátódik ki, amikor a [LineEdit] belép a szerkesztési módba
 #. LineEdit.text_change_rejected
 #: doc/classes/LineEdit.xml
 msgid "Emitted when appending text that overflows the [member max_length]. The appended text is truncated to fit [member max_length], and the part that couldn't fit is passed as the [param rejected_substring] argument."
-msgstr "Akkor bocsátódik ki, amikor a hozzáfűzött szöveg túllépné a [member max_length] korlátot. A hozzáadott szöveget a rendszer a [member max_length] korláthoz igazodva levágja, a kimaradó részt pedig a [param rejected_substring] argumentumban adja át."
+msgstr "Akkor bocsátódik ki, amikor a hozzáfűzött szöveg túllépné a [member max_length] korlátot. A rendszer a [member max_length] korlátnak megfelelően csonkítja a hozzáfűzött szöveget, és az elutasított részt a [param rejected_substring] argumentumban adja át."
 
 #. LineEdit.text_changed
 #: doc/classes/LineEdit.xml
@@ -9711,22 +9711,22 @@ msgstr "Szerkesztési módba lép, függetlenül attól, hogy a [LineEdit] fóku
 #. LineEdit.get_menu
 #: doc/classes/LineEdit.xml
 msgid "Returns the [PopupMenu] of this [LineEdit]. By default, this menu is displayed when right-clicking on the [LineEdit].\nYou can add custom menu items or remove standard ones. Make sure your IDs don't conflict with the standard ones (see [enum MenuItems]). For example:\n[codeblocks]\n[gdscript]\nfunc _ready():\n\tvar menu = get_menu()\n\t# Remove all items after \"Redo\".\n\tmenu.item_count = menu.get_item_index(MENU_REDO) + 1\n\t# Add custom items.\n\tmenu.add_separator()\n\tmenu.add_item(\"Insert Date\", MENU_MAX + 1)\n\t# Connect callback.\n\tmenu.id_pressed.connect(_on_item_pressed)\n\nfunc _on_item_pressed(id):\n\tif id == MENU_MAX + 1:\n\t\tinsert_text_at_caret(Time.get_date_string_from_system())\n[/gdscript]\n[csharp]\npublic override void _Ready()\n{\n\tvar menu = GetMenu();\n\t// Remove all items after \"Redo\".\n\tmenu.ItemCount = menu.GetItemIndex(LineEdit.MenuItems.Redo) + 1;\n\t// Add custom items.\n\tmenu.AddSeparator();\n\tmenu.AddItem(\"Insert Date\", LineEdit.MenuItems.Max + 1);\n\t// Add event handler.\n\tmenu.IdPressed += OnItemPressed;\n}\n\npublic void OnItemPressed(int id)\n{\n\tif (id == LineEdit.MenuItems.Max + 1)\n\t{\n\t\tInsertTextAtCaret(Time.GetDateStringFromSystem());\n\t}\n}\n[/csharp]\n[/codeblocks]\n[b]Warning:[/b] This is a required internal node, removing and freeing it may cause a crash. If you wish to hide it or any of its children, use their [member Window.visible] property."
-msgstr "Visszaadja a [LineEdit] [PopupMenu] helyi menüjét. Alapértelmezés szerint ez a menü akkor jelenik meg, amikor jobb gombbal kattintasz a [LineEdit] mezőre.\nEgyéni menüpontokat adhatsz hozzá, vagy eltávolíthatod a szokásosakat. Ügyelj arra, hogy az azonosítóid ne ütközzenek a szabványos azonosítókkal (lásd: [enum MenuItems]). Például:\n[codeblocks]\n[gdscript]\nfunc _ready():\n\tvar menu = get_menu()\n\t# Remove all items after \"Redo\".\n\tmenu.item_count = menu.get_item_index(MENU_REDO) + 1\n\t# Add custom items.\n\tmenu.add_separator()\n\tmenu.add_item(\"Insert Date\", MENU_MAX + 1)\n\t# Connect callback.\n\tmenu.id_pressed.connect(_on_item_pressed)\n\nfunc _on_item_pressed(id):\n\tif id == MENU_MAX + 1:\n\t\tinsert_text_at_caret(Time.get_date_string_from_system())\n[/gdscript]\n[csharp]\npublic override void _Ready()\n{\n\tvar menu = GetMenu();\n\t// Remove all items after \"Redo\".\n\tmenu.ItemCount = menu.GetItemIndex(LineEdit.MenuItems.Redo) + 1;\n\t// Add custom items.\n\tmenu.AddSeparator();\n\tmenu.AddItem(\"Insert Date\", LineEdit.MenuItems.Max + 1);\n\t// Add event handler.\n\tmenu.IdPressed += OnItemPressed;\n}\n\npublic void OnItemPressed(int id)\n{\n\tif (id == LineEdit.MenuItems.Max + 1)\n\t{\n\t\tInsertTextAtCaret(Time.GetDateStringFromSystem());\n\t}\n}\n[/csharp]\n[/codeblocks]\n[b]Figyelmeztetés:[/b] Ez egy kötelező belső csomópont; eltávolítása és felszabadítása összeomlást okozhat. Ha ezt vagy valamelyik gyermekét el szeretnéd rejteni, használd a [member Window.visible] tulajdonságot."
+msgstr "Visszaadja a [LineEdit] [PopupMenu] helyi menüjét. Alapértelmezés szerint ez a menü akkor jelenik meg, amikor jobb gombbal kattintasz a [LineEdit] mezőre.\nEgyéni menüpontokat adhatsz hozzá, vagy eltávolíthatod az alapértelmezetteket. Ügyelj arra, hogy az egyéni azonosítók ne ütközzenek a beépített menüpontok azonosítóival (lásd: [enum MenuItems]). Például:\n[codeblocks]\n[gdscript]\nfunc _ready():\n\tvar menu = get_menu()\n\t# Eltávolítja a \"Redo\" utáni menüpontokat.\n\tmenu.item_count = menu.get_item_index(MENU_REDO) + 1\n\t# Egyéni menüpontok hozzáadása.\n\tmenu.add_separator()\n\tmenu.add_item(\"Insert Date\", MENU_MAX + 1)\n\t# A visszahívás csatlakoztatása.\n\tmenu.id_pressed.connect(_on_item_pressed)\n\nfunc _on_item_pressed(id):\n\tif id == MENU_MAX + 1:\n\t\tinsert_text_at_caret(Time.get_date_string_from_system())\n[/gdscript]\n[csharp]\npublic override void _Ready()\n{\n\tvar menu = GetMenu();\n\t// Eltávolítja a \"Redo\" utáni menüpontokat.\n\tmenu.ItemCount = menu.GetItemIndex(LineEdit.MenuItems.Redo) + 1;\n\t// Egyéni menüpontok hozzáadása.\n\tmenu.AddSeparator();\n\tmenu.AddItem(\"Insert Date\", LineEdit.MenuItems.Max + 1);\n\t// Eseménykezelő hozzáadása.\n\tmenu.IdPressed += OnItemPressed;\n}\n\npublic void OnItemPressed(int id)\n{\n\tif (id == LineEdit.MenuItems.Max + 1)\n\t{\n\t\tInsertTextAtCaret(Time.GetDateStringFromSystem());\n\t}\n}\n[/csharp]\n[/codeblocks]\n[b]Figyelmeztetés:[/b] Ez egy kötelező belső csomópont; eltávolítása és felszabadítása összeomlást okozhat. Ha ezt vagy valamelyik gyermekét el szeretnéd rejteni, használd a [member Window.visible] tulajdonságot."
 
 #. LineEdit.get_next_composite_character_column
 #: doc/classes/LineEdit.xml
 msgid "Returns the correct column at the end of a composite character like ❤️‍🩹 (mending heart; Unicode: [code]U+2764 U+FE0F U+200D U+1FA79[/code]) which is comprised of more than one Unicode code point, if the caret is at the start of the composite character. Also returns the correct column with the caret at mid grapheme and for non-composite characters.\n[b]Note:[/b] To check at caret location use [code]get_next_composite_character_column(get_caret_column())[/code]"
-msgstr "Visszaadja a helyes oszloppozíciót egy több Unicode-kódpontból álló összetett karakter végén, például ❤️‍🩹 (gyógyuló szív, Unicode: [code]U+2764 U+FE0F U+200D U+1FA79[/code]) esetén, ha a szövegkurzor az összetett karakter elején áll. A helyes oszloppozíciót akkor is visszaadja, ha a kurzor egy graféma közepén vagy nem összetett karakteren áll.\n[b]Megjegyzés:[/b] Az aktuális kurzorpozíciónál a [code]get_next_composite_character_column(get_caret_column())[/code] hívással ellenőrizhető."
+msgstr "Visszaadja egy több Unicode-kódpontból álló összetett karakter végének oszloppozícióját, például ❤️‍🩹 (gyógyuló szív, Unicode: [code]U+2764 U+FE0F U+200D U+1FA79[/code]) esetén, ha a szövegkurzor az összetett karakter elején áll. A helyes oszloppozíciót akkor is visszaadja, ha a kurzor egy graféma közepén vagy nem összetett karakteren áll.\n[b]Megjegyzés:[/b] Az aktuális kurzorpozíciónál a [code]get_next_composite_character_column(get_caret_column())[/code] hívással ellenőrizhető."
 
 #. LineEdit.get_previous_composite_character_column
 #: doc/classes/LineEdit.xml
 msgid "Returns the correct column at the start of a composite character like ❤️‍🩹 (mending heart; Unicode: [code]U+2764 U+FE0F U+200D U+1FA79[/code]) which is comprised of more than one Unicode code point, if the caret is at the end of the composite character. Also returns the correct column with the caret at mid grapheme and for non-composite characters.\n[b]Note:[/b] To check at caret location use [code]get_previous_composite_character_column(get_caret_column())[/code]"
-msgstr "Visszaadja a helyes oszloppozíciót egy több Unicode-kódpontból álló összetett karakter elején, például ❤️‍🩹 (gyógyuló szív, Unicode: [code]U+2764 U+FE0F U+200D U+1FA79[/code]) esetén, ha a szövegkurzor az összetett karakter végén áll. A helyes oszloppozíciót akkor is visszaadja, ha a kurzor egy graféma közepén vagy nem összetett karakteren áll.\n[b]Megjegyzés:[/b] Az aktuális kurzorpozíciónál a [code]get_previous_composite_character_column(get_caret_column())[/code] hívással ellenőrizhető."
+msgstr "Visszaadja egy több Unicode-kódpontból álló összetett karakter kezdetének oszloppozícióját, például ❤️‍🩹 (gyógyuló szív, Unicode: [code]U+2764 U+FE0F U+200D U+1FA79[/code]) esetén, ha a szövegkurzor az összetett karakter végén áll. A helyes oszloppozíciót akkor is visszaadja, ha a kurzor egy graféma közepén vagy nem összetett karakteren áll.\n[b]Megjegyzés:[/b] Az aktuális kurzorpozíciónál a [code]get_previous_composite_character_column(get_caret_column())[/code] hívással ellenőrizhető."
 
 #. LineEdit.get_scroll_offset
 #: doc/classes/LineEdit.xml
 msgid "Returns the scroll offset due to [member caret_column], as a number of characters."
-msgstr "Visszaadja a [member caret_column] miatt bekövetkezett görgetés eltolását karakterszámban."
+msgstr "Visszaadja a [member caret_column] miatt végzett görgetés eltolását, karakterekben megadva."
 
 #. LineEdit.get_selected_text
 #: doc/classes/LineEdit.xml
@@ -9776,7 +9776,7 @@ msgstr "Visszaadja, hogy a [LineEdit] éppen szerkesztés alatt áll-e."
 #. LineEdit.is_menu_visible
 #: doc/classes/LineEdit.xml
 msgid "Returns whether the menu is visible. Use this instead of [code]get_menu().visible[/code] to improve performance (so the creation of the menu is avoided)."
-msgstr "Visszaadja, hogy a menü látható-e. A jobb teljesítmény érdekében ezt használd a [code]get_menu().visible[/code] helyett, így elkerülhető a menü létrehozása."
+msgstr "Visszaadja, hogy a menü látható-e. A [code]get_menu().visible[/code] helyett ezt használd a jobb teljesítmény érdekében, mert így nem kell létrehozni a menüt pusztán a láthatóság ellenőrzéséhez."
 
 #. LineEdit.menu_option
 #: doc/classes/LineEdit.xml
