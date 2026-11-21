@@ -7931,7 +7931,7 @@ msgstr "Visszaadja a szöveg megjeleníthető karaktereinek teljes számát (a s
 #. Label.get_visible_line_count
 #: doc/classes/Label.xml
 msgid "Returns the number of lines shown. Useful if the [Label]'s height cannot currently display all lines."
-msgstr "Visszaadja a megjelenített sorok számát. Akkor hasznos, ha a [Label] magassága jelenleg nem elegendő az összes sor megjelenítéséhez."
+msgstr "Visszaadja a ténylegesen látható sorok számát. Akkor hasznos, ha a [Label] magassága nem elegendő az összes sor megjelenítéséhez."
 
 #. Label.autowrap_mode
 #: doc/classes/Label.xml
@@ -7951,7 +7951,7 @@ msgstr "Ha [code]true[/code], a Label csak a határoló téglalapjába belefér�
 #. Label.ellipsis_char
 #: doc/classes/Label.xml
 msgid "Ellipsis character used for text clipping."
-msgstr "A levágott szövegrész helyén megjelenő hárompontjel karaktere."
+msgstr "A szöveg levágásakor megjelenő kihagyásjel karaktere."
 
 #. Label.horizontal_alignment
 #: doc/classes/Label.xml
@@ -7966,12 +7966,12 @@ msgstr "A sorkizárás során alkalmazott igazítási szabályok."
 #. Label.label_settings
 #: doc/classes/Label.xml
 msgid "A [LabelSettings] resource that can be shared between multiple [Label] nodes. Takes priority over theme properties."
-msgstr "Több [Label] csomópont között megosztható [LabelSettings] erőforrás. Elsőbbséget élvez a tématulajdonságokkal szemben."
+msgstr "Több [Label] csomópont által is használható [LabelSettings] erőforrás. Beállításai elsőbbséget élveznek a téma tulajdonságaival szemben."
 
 #. Label.lines_skipped
 #: doc/classes/Label.xml
 msgid "The number of the lines ignored and not displayed from the start of the [member text] value."
-msgstr "A [member text] elején kihagyandó, meg nem jelenített sorok száma."
+msgstr "A [member text] elejétől kihagyott, meg nem jelenített sorok száma."
 
 #. Label.max_lines_visible
 #: doc/classes/Label.xml
@@ -8026,7 +8026,7 @@ msgstr "A megjelenítendő karakterek száma. Ha az érték [code]-1[/code], min
 #. Label.visible_characters_behavior
 #: doc/classes/Label.xml
 msgid "The clipping behavior when [member visible_characters] or [member visible_ratio] is set."
-msgstr "A szöveg levágásának módja, amikor a [member visible_characters] vagy a [member visible_ratio] be van állítva."
+msgstr "A megjelenített szöveg csonkításának módja, ha a [member visible_characters] vagy a [member visible_ratio] értéke van megadva."
 
 #. Label.visible_ratio
 #: doc/classes/Label.xml
@@ -8036,7 +8036,7 @@ msgstr "A megjelenítendő karakterek aránya a teljes karakterszámhoz képest 
 #. Label.font_color
 #: doc/classes/Label.xml
 msgid "Default text [Color] of the [Label]."
-msgstr "A [Label] szövegének alapértelmezett [Color] színe."
+msgstr "A [Label] szövegének alapértelmezett színe ([Color])."
 
 #. Label.font_outline_color
 #: doc/classes/Label.xml
@@ -8046,7 +8046,7 @@ msgstr "A szövegkörvonal színe."
 #. Label.font_shadow_color
 #: doc/classes/Label.xml
 msgid "[Color] of the text's shadow effect."
-msgstr "A szövegárnyék megjelenítéséhez használt [Color] szín."
+msgstr "A szöveg árnyékának színe ([Color])."
 
 #. Label.line_spacing
 #: doc/classes/Label.xml
@@ -8091,7 +8091,7 @@ msgstr "A [Label] szövegének betűmérete."
 #. Label.focus
 #: doc/classes/Label.xml
 msgid "[StyleBox] used when the [Label] is focused (when used with assistive apps)."
-msgstr "A fókuszban lévő [Label] megjelenítéséhez használt [StyleBox] (akadálymentesítést segítő alkalmazások használatakor)."
+msgstr "A [Label] fókuszállapotában használt [StyleBox], kisegítő alkalmazások használata esetén."
 
 #. Label.normal
 #: doc/classes/Label.xml
