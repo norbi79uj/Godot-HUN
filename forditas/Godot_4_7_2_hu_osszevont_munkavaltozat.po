@@ -9946,7 +9946,7 @@ msgstr "Visszaadja a [TextEdit] vezérlőben lévő szövegkurzorok számát."
 #. TextEdit.get_caret_draw_pos
 #: doc/classes/TextEdit.xml
 msgid "Returns the caret pixel draw position."
-msgstr "Visszaadja a szövegkurzor kirajzolási helyét képpontokban."
+msgstr "Visszaadja a szövegkurzor kirajzolási pozícióját képpontokban."
 
 #. TextEdit.get_caret_index_edit_order
 #: doc/classes/TextEdit.xml
@@ -10066,7 +10066,7 @@ msgstr "Visszaadja a sorok közül a legnagyobb sormagasságot.\n[b]Megjegyzés:
 #. TextEdit.get_line_ranges_from_carets
 #: doc/classes/TextEdit.xml
 msgid "Returns an [Array] of line ranges where [code]x[/code] is the first line and [code]y[/code] is the last line. All lines within these ranges will have a caret on them or be part of a selection. Each line will only be part of one line range, even if it has multiple carets on it.\nIf a selection's end column ([method get_selection_to_column]) is at column [code]0[/code], that line will not be included. If a selection begins on the line after another selection ends and [param merge_adjacent] is [code]true[/code], or they begin and end on the same line, one line range will include both selections."
-msgstr "A sorok tartományait tartalmazó [Array] tömböt ad vissza. Az [code]x[/code] az első, az [code]y[/code] az utolsó sort jelöli. E tartományok minden sora tartalmaz szövegkurzort, vagy egy kijelölés részét képezi. Egy sor akkor is csak egyetlen tartományhoz tartozik, ha több szövegkurzor van rajta.\nHa egy kijelölés utolsó oszlopa ([method get_selection_to_column]) [code]0[/code], az adott sor nem kerül bele a tartományba. Ha egy kijelölés közvetlenül az előző kijelölés végét követő sorban kezdődik, és a [param merge_adjacent] értéke [code]true[/code], vagy mindkettő ugyanabban a sorban kezdődik és végződik, a két kijelölés egyetlen sortartományba kerül."
+msgstr "A kurzorokkal és kijelölésekkel érintett sorok tartományait [Array] tömbként adja vissza. Az [code]x[/code] az első, az [code]y[/code] az utolsó sort jelöli. Minden ilyen sor tartalmaz szövegkurzort, vagy egy kijelölés részét képezi. Egy sor akkor is csak egyetlen tartományhoz tartozik, ha több szövegkurzor van rajta.\nHa egy kijelölés utolsó oszlopa ([method get_selection_to_column]) [code]0[/code], az adott sor nem kerül bele a tartományba. Ha egy kijelölés közvetlenül az előző kijelölés végét követő sorban kezdődik, és a [param merge_adjacent] értéke [code]true[/code], vagy mindkettő ugyanabban a sorban kezdődik és végződik, a két kijelölés egyetlen sortartományba kerül."
 
 #. TextEdit.get_line_width
 #: doc/classes/TextEdit.xml
@@ -10091,7 +10091,7 @@ msgstr "Visszaadja a megadott sor megadott oszlopához tartozó tördelési szak
 #. TextEdit.get_line_wrapped_text
 #: doc/classes/TextEdit.xml
 msgid "Returns an array of [String]s representing each wrapped index."
-msgstr "[String] értékeket tartalmazó tömböt ad vissza, amelynek elemei az egyes tördelési szakaszok szövegei."
+msgstr "Az egyes tördelési szakaszok szövegét [String] elemekből álló tömbként adja vissza."
 
 #. TextEdit.get_local_mouse_pos
 #: doc/classes/TextEdit.xml
@@ -10126,7 +10126,7 @@ msgstr "A [method get_next_visible_line_offset_from] metódushoz hasonlóan műk
 #. TextEdit.get_next_visible_line_offset_from
 #: doc/classes/TextEdit.xml
 msgid "Returns the count to the next visible line from [param line] to [code]line + visible_amount[/code]. Can also count backwards. For example if a [TextEdit] has 5 lines with lines 2 and 3 hidden, calling this with [code]line = 1, visible_amount = 1[/code] would return 3."
-msgstr "Visszaadja, hány sort kell lépni a [param line] sortól a következő megadott számú látható sorig, azaz a [code]line + visible_amount[/code] szerinti látható pozícióig. Visszafelé is képes számolni. Ha például egy [TextEdit] öt sorból áll, amelyek közül a 2. és a 3. rejtett, akkor [code]line = 1, visible_amount = 1[/code] esetén 3 értéket ad vissza."
+msgstr "Visszaadja, hány sort kell lépni a [param line] sortól a [code]line + visible_amount[/code] szerinti látható sor eléréséhez. Visszafelé is képes számolni. Ha például egy [TextEdit] öt sorból áll, amelyek közül a 2. és a 3. rejtett, akkor [code]line = 1, visible_amount = 1[/code] esetén 3 értéket ad vissza."
 
 #. TextEdit.get_pos_at_line_column
 #: doc/classes/TextEdit.xml
@@ -10161,7 +10161,7 @@ msgstr "Visszaadja egy szövegkurzor kijelölésének szövegét, vagy az össze
 #. TextEdit.get_selection_at_line_column
 #: doc/classes/TextEdit.xml
 msgid "Returns the caret index of the selection at the given [param line] and [param column], or [code]-1[/code] if there is none.\nIf [param include_edges] is [code]false[/code], the position must be inside the selection and not at either end. If [param only_selections] is [code]false[/code], carets without a selection will also be considered."
-msgstr "Visszaadja a megadott [param line] sor és [param column] oszlop helyén lévő kijelölés kurzorindexét, vagy [code]-1[/code] értéket, ha nincs ilyen.\nHa a [param include_edges] értéke [code]false[/code], a pozíciónak a kijelölés belsejében kell lennie, nem a végpontjain. Ha a [param only_selections] értéke [code]false[/code], a kijelölés nélküli kurzorokat is figyelembe veszi."
+msgstr "Visszaadja a [param line] sor [param column] oszlopánál található kijelöléshez tartozó kurzor indexét, vagy [code]-1[/code] értéket, ha nincs találat.\nHa a [param include_edges] értéke [code]false[/code], a pozíciónak a kijelölés belsejében kell lennie, nem a végpontjain. Ha a [param only_selections] értéke [code]false[/code], a kijelölés nélküli kurzorokat is figyelembe veszi."
 
 #. TextEdit.get_selection_column
 #: doc/classes/TextEdit.xml
