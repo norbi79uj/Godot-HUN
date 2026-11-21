@@ -16625,73 +16625,73 @@ msgstr "A részecskék a hátralévő élettartamuk szerint rajzolódnak ki. A l
 #. CPUParticles3D.PARAM_INITIAL_LINEAR_VELOCITY
 #: doc/classes/CPUParticles2D.xml doc/classes/CPUParticles3D.xml
 msgid "Use with [method set_param_min], [method set_param_max], and [method set_param_curve] to set initial velocity properties."
-msgstr "A kezdeti sebesség beállításához használd a [method set_param_min], a [method set_param_max] és a [method set_param_curve] metódusban."
+msgstr "A kezdeti sebesség beállításához használd ezt az állandót a [method set_param_min], a [method set_param_max] és a [method set_param_curve] metódusokkal."
 
 #. CPUParticles2D.PARAM_ANGULAR_VELOCITY
 #. CPUParticles3D.PARAM_ANGULAR_VELOCITY
 #: doc/classes/CPUParticles2D.xml doc/classes/CPUParticles3D.xml
 msgid "Use with [method set_param_min], [method set_param_max], and [method set_param_curve] to set angular velocity properties."
-msgstr "A szögsebesség beállításához használd a [method set_param_min], a [method set_param_max] és a [method set_param_curve] metódusban."
+msgstr "A szögsebesség beállításához használd ezt az állandót a [method set_param_min], a [method set_param_max] és a [method set_param_curve] metódusokkal."
 
 #. CPUParticles2D.PARAM_ORBIT_VELOCITY
 #. CPUParticles3D.PARAM_ORBIT_VELOCITY
 #: doc/classes/CPUParticles2D.xml doc/classes/CPUParticles3D.xml
 msgid "Use with [method set_param_min], [method set_param_max], and [method set_param_curve] to set orbital velocity properties."
-msgstr "A keringési sebesség beállításához használd a [method set_param_min], a [method set_param_max] és a [method set_param_curve] metódusban."
+msgstr "A keringési sebesség beállításához használd ezt az állandót a [method set_param_min], a [method set_param_max] és a [method set_param_curve] metódusokkal."
 
 #. CPUParticles2D.PARAM_LINEAR_ACCEL
 #. CPUParticles3D.PARAM_LINEAR_ACCEL
 #: doc/classes/CPUParticles2D.xml doc/classes/CPUParticles3D.xml
 msgid "Use with [method set_param_min], [method set_param_max], and [method set_param_curve] to set linear acceleration properties."
-msgstr "A lineáris gyorsulás beállításához használd a [method set_param_min], a [method set_param_max] és a [method set_param_curve] metódusban."
+msgstr "A lineáris gyorsulás beállításához használd ezt az állandót a [method set_param_min], a [method set_param_max] és a [method set_param_curve] metódusokkal."
 
 #. CPUParticles2D.PARAM_RADIAL_ACCEL
 #. CPUParticles3D.PARAM_RADIAL_ACCEL
 #: doc/classes/CPUParticles2D.xml doc/classes/CPUParticles3D.xml
 msgid "Use with [method set_param_min], [method set_param_max], and [method set_param_curve] to set radial acceleration properties."
-msgstr "A sugárirányú gyorsulás beállításához használd a [method set_param_min], a [method set_param_max] és a [method set_param_curve] metódusban."
+msgstr "A sugárirányú gyorsulás beállításához használd ezt az állandót a [method set_param_min], a [method set_param_max] és a [method set_param_curve] metódusokkal."
 
 #. CPUParticles2D.PARAM_TANGENTIAL_ACCEL
 #. CPUParticles3D.PARAM_TANGENTIAL_ACCEL
 #: doc/classes/CPUParticles2D.xml doc/classes/CPUParticles3D.xml
 msgid "Use with [method set_param_min], [method set_param_max], and [method set_param_curve] to set tangential acceleration properties."
-msgstr "Az érintőirányú gyorsulás beállításához használd a [method set_param_min], a [method set_param_max] és a [method set_param_curve] metódusban."
+msgstr "Az érintőirányú gyorsulás beállításához használd ezt az állandót a [method set_param_min], a [method set_param_max] és a [method set_param_curve] metódusokkal."
 
 #. CPUParticles2D.PARAM_DAMPING
 #. CPUParticles3D.PARAM_DAMPING
 #: doc/classes/CPUParticles2D.xml doc/classes/CPUParticles3D.xml
 msgid "Use with [method set_param_min], [method set_param_max], and [method set_param_curve] to set damping properties."
-msgstr "A csillapítás beállításához használd a [method set_param_min], a [method set_param_max] és a [method set_param_curve] metódusban."
+msgstr "A csillapítás beállításához használd ezt az állandót a [method set_param_min], a [method set_param_max] és a [method set_param_curve] metódusokkal."
 
 #. CPUParticles2D.PARAM_ANGLE
 #. CPUParticles3D.PARAM_ANGLE
 #: doc/classes/CPUParticles2D.xml doc/classes/CPUParticles3D.xml
 msgid "Use with [method set_param_min], [method set_param_max], and [method set_param_curve] to set angle properties."
-msgstr "A szög beállításához használd a [method set_param_min], a [method set_param_max] és a [method set_param_curve] metódusban."
+msgstr "A szög beállításához használd ezt az állandót a [method set_param_min], a [method set_param_max] és a [method set_param_curve] metódusokkal."
 
 #. CPUParticles2D.PARAM_SCALE
 #. CPUParticles3D.PARAM_SCALE
 #: doc/classes/CPUParticles2D.xml doc/classes/CPUParticles3D.xml
 msgid "Use with [method set_param_min], [method set_param_max], and [method set_param_curve] to set scale properties."
-msgstr "A méretarány beállításához használd a [method set_param_min], a [method set_param_max] és a [method set_param_curve] metódusban."
+msgstr "A méretarány beállításához használd ezt az állandót a [method set_param_min], a [method set_param_max] és a [method set_param_curve] metódusokkal."
 
 #. CPUParticles2D.PARAM_HUE_VARIATION
 #. CPUParticles3D.PARAM_HUE_VARIATION
 #: doc/classes/CPUParticles2D.xml doc/classes/CPUParticles3D.xml
 msgid "Use with [method set_param_min], [method set_param_max], and [method set_param_curve] to set hue variation properties."
-msgstr "A színárnyalat-eltérés beállításához használd a [method set_param_min], a [method set_param_max] és a [method set_param_curve] metódusban."
+msgstr "A színárnyalat-eltérés beállításához használd ezt az állandót a [method set_param_min], a [method set_param_max] és a [method set_param_curve] metódusokkal."
 
 #. CPUParticles2D.PARAM_ANIM_SPEED
 #. CPUParticles3D.PARAM_ANIM_SPEED
 #: doc/classes/CPUParticles2D.xml doc/classes/CPUParticles3D.xml
 msgid "Use with [method set_param_min], [method set_param_max], and [method set_param_curve] to set animation speed properties."
-msgstr "Az animációs sebesség beállításához használd a [method set_param_min], a [method set_param_max] és a [method set_param_curve] metódusban."
+msgstr "Az animációs sebesség beállításához használd ezt az állandót a [method set_param_min], a [method set_param_max] és a [method set_param_curve] metódusokkal."
 
 #. CPUParticles2D.PARAM_ANIM_OFFSET
 #. CPUParticles3D.PARAM_ANIM_OFFSET
 #: doc/classes/CPUParticles2D.xml doc/classes/CPUParticles3D.xml
 msgid "Use with [method set_param_min], [method set_param_max], and [method set_param_curve] to set animation offset properties."
-msgstr "Az animációs eltolás beállításához használd a [method set_param_min], a [method set_param_max] és a [method set_param_curve] metódusban."
+msgstr "Az animációs eltolás beállításához használd ezt az állandót a [method set_param_min], a [method set_param_max] és a [method set_param_curve] metódusokkal."
 
 #. CPUParticles2D.PARAM_MAX
 #. CPUParticles3D.PARAM_MAX
@@ -16705,7 +16705,7 @@ msgstr "A [enum Parameter] felsorolásban szereplő paraméterek száma."
 #. ParticleProcessMaterial.PARTICLE_FLAG_ALIGN_Y_TO_VELOCITY
 #: doc/classes/CPUParticles2D.xml doc/classes/CPUParticles3D.xml doc/classes/ParticleProcessMaterial.xml
 msgid "Use with [method set_particle_flag] to set [member particle_flag_align_y]."
-msgstr "A [member particle_flag_align_y] beállításához használd a [method set_particle_flag] metódusban."
+msgstr "A [member particle_flag_align_y] beállításához használd ezt az állandót a [method set_particle_flag] metódusban."
 
 #. CPUParticles2D.PARTICLE_FLAG_ROTATE_Y
 #. CPUParticles2D.PARTICLE_FLAG_DISABLE_Z
@@ -17032,13 +17032,13 @@ msgstr "A részecskék mélység szerint rajzolódnak ki."
 #. ParticleProcessMaterial.PARTICLE_FLAG_ROTATE_Y
 #: doc/classes/CPUParticles3D.xml doc/classes/ParticleProcessMaterial.xml
 msgid "Use with [method set_particle_flag] to set [member particle_flag_rotate_y]."
-msgstr "A [member particle_flag_rotate_y] beállításához használd a [method set_particle_flag] metódusban."
+msgstr "A [member particle_flag_rotate_y] beállításához használd ezt az állandót a [method set_particle_flag] metódusban."
 
 #. CPUParticles3D.PARTICLE_FLAG_DISABLE_Z
 #. ParticleProcessMaterial.PARTICLE_FLAG_DISABLE_Z
 #: doc/classes/CPUParticles3D.xml doc/classes/ParticleProcessMaterial.xml
 msgid "Use with [method set_particle_flag] to set [member particle_flag_disable_z]."
-msgstr "A [member particle_flag_disable_z] beállításához használd a [method set_particle_flag] metódusban."
+msgstr "A [member particle_flag_disable_z] beállításához használd ezt az állandót a [method set_particle_flag] metódusban."
 
 #. CPUParticles3D.EMISSION_SHAPE_SPHERE
 #. ParticleProcessMaterial.EMISSION_SHAPE_SPHERE
@@ -17703,17 +17703,17 @@ msgstr "A [member scale_over_velocity_curve] legkisebb referenciasebessége.\nA 
 #. ParticleProcessMaterial.sub_emitter_amount_at_collision
 #: doc/classes/ParticleProcessMaterial.xml
 msgid "The amount of particles to spawn from the subemitter node when a collision occurs. When combined with [constant COLLISION_HIDE_ON_CONTACT] on the main particles material, this can be used to achieve effects such as raindrops hitting the ground.\n[b]Note:[/b] This value shouldn't exceed [member GPUParticles2D.amount] or [member GPUParticles3D.amount] defined on the [i]subemitter node[/i] (not the main node), relative to the subemitter's particle lifetime. If the number of particles is exceeded, no new particles will spawn from the subemitter until enough particles have expired."
-msgstr "Az ütközéskor a másodlagos kibocsátócsomópontból létrehozandó részecskék száma. Ha a fő részecskeanyag [constant COLLISION_HIDE_ON_CONTACT] módot használ, ezzel például a talajra érő esőcsepp effektusa hozható létre.\n[b]Megjegyzés:[/b] A másodlagos kibocsátó részecskéinek élettartamát figyelembe véve az érték ne lépje túl az [i]alárendelt kibocsátón[/i] megadott [member GPUParticles2D.amount] vagy [member GPUParticles3D.amount] értékét. Ha a részecskék száma eléri ezt a korlátot, a másodlagos kibocsátó csak akkor hoz létre új részecskéket, ha elegendő korábbi részecske megszűnt."
+msgstr "Az ütközéskor a másodlagos kibocsátócsomópontból létrehozandó részecskék száma. Ha a fő részecskeanyag [constant COLLISION_HIDE_ON_CONTACT] módot használ, ezzel például a talajra érő esőcsepp effektusa hozható létre.\n[b]Megjegyzés:[/b] A másodlagos kibocsátó részecskéinek élettartamát figyelembe véve az érték ne lépje túl az [i]alárendelt kibocsátón[/i] megadott [member GPUParticles2D.amount] vagy [member GPUParticles3D.amount] értékét. Ha a részecskék száma túllépi ezt a korlátot, a másodlagos kibocsátó csak akkor hoz létre új részecskéket, ha elegendő korábbi részecske megszűnt."
 
 #. ParticleProcessMaterial.sub_emitter_amount_at_end
 #: doc/classes/ParticleProcessMaterial.xml
 msgid "The amount of particles to spawn from the subemitter node when the particle expires.\n[b]Note:[/b] This value shouldn't exceed [member GPUParticles2D.amount] or [member GPUParticles3D.amount] defined on the [i]subemitter node[/i] (not the main node), relative to the subemitter's particle lifetime. If the number of particles is exceeded, no new particles will spawn from the subemitter until enough particles have expired."
-msgstr "A részecske élettartamának végén a másodlagos kibocsátócsomópontból létrehozandó részecskék száma.\n[b]Megjegyzés:[/b] A másodlagos kibocsátó részecskéinek élettartamát figyelembe véve az érték ne lépje túl az [i]alárendelt kibocsátón[/i] megadott [member GPUParticles2D.amount] vagy [member GPUParticles3D.amount] értékét. Ha a részecskék száma eléri ezt a korlátot, a másodlagos kibocsátó csak akkor hoz létre új részecskéket, ha elegendő korábbi részecske megszűnt."
+msgstr "A részecske élettartamának végén a másodlagos kibocsátócsomópontból létrehozandó részecskék száma.\n[b]Megjegyzés:[/b] A másodlagos kibocsátó részecskéinek élettartamát figyelembe véve az érték ne lépje túl az [i]alárendelt kibocsátón[/i] megadott [member GPUParticles2D.amount] vagy [member GPUParticles3D.amount] értékét. Ha a részecskék száma túllépi ezt a korlátot, a másodlagos kibocsátó csak akkor hoz létre új részecskéket, ha elegendő korábbi részecske megszűnt."
 
 #. ParticleProcessMaterial.sub_emitter_amount_at_start
 #: doc/classes/ParticleProcessMaterial.xml
 msgid "The amount of particles to spawn from the subemitter node when the particle spawns.\n[b]Note:[/b] This value shouldn't exceed [member GPUParticles2D.amount] or [member GPUParticles3D.amount] defined on the [i]subemitter node[/i] (not the main node), relative to the subemitter's particle lifetime. If the number of particles is exceeded, no new particles will spawn from the subemitter until enough particles have expired."
-msgstr "A részecske létrejöttekor a másodlagos kibocsátócsomópontból létrehozandó részecskék száma.\n[b]Megjegyzés:[/b] A másodlagos kibocsátó részecskéinek élettartamát figyelembe véve az érték ne lépje túl az [i]alárendelt kibocsátón[/i] megadott [member GPUParticles2D.amount] vagy [member GPUParticles3D.amount] értékét. Ha a részecskék száma eléri ezt a korlátot, a másodlagos kibocsátó csak akkor hoz létre új részecskéket, ha elegendő korábbi részecske megszűnt."
+msgstr "A részecske létrejöttekor a másodlagos kibocsátócsomópontból létrehozandó részecskék száma.\n[b]Megjegyzés:[/b] A másodlagos kibocsátó részecskéinek élettartamát figyelembe véve az érték ne lépje túl az [i]alárendelt kibocsátón[/i] megadott [member GPUParticles2D.amount] vagy [member GPUParticles3D.amount] értékét. Ha a részecskék száma túllépi ezt a korlátot, a másodlagos kibocsátó csak akkor hoz létre új részecskéket, ha elegendő korábbi részecske megszűnt."
 
 #. ParticleProcessMaterial.sub_emitter_keep_velocity
 #: doc/classes/ParticleProcessMaterial.xml
@@ -17808,77 +17808,77 @@ msgstr "A részecskék sugárirányú és keringési sebességének kiszámítá
 #. ParticleProcessMaterial.PARAM_INITIAL_LINEAR_VELOCITY
 #: doc/classes/ParticleProcessMaterial.xml
 msgid "Use with [method set_param_min], [method set_param_max], and [method set_param_texture] to set initial velocity properties."
-msgstr "A kezdeti sebesség beállításához használd a [method set_param_min], a [method set_param_max] és a [method set_param_texture] metódusban."
+msgstr "A kezdeti sebesség beállításához használd ezt az állandót a [method set_param_min], a [method set_param_max] és a [method set_param_texture] metódusokkal."
 
 #. ParticleProcessMaterial.PARAM_ANGULAR_VELOCITY
 #: doc/classes/ParticleProcessMaterial.xml
 msgid "Use with [method set_param_min], [method set_param_max], and [method set_param_texture] to set angular velocity properties."
-msgstr "A szögsebesség beállításához használd a [method set_param_min], a [method set_param_max] és a [method set_param_texture] metódusban."
+msgstr "A szögsebesség beállításához használd ezt az állandót a [method set_param_min], a [method set_param_max] és a [method set_param_texture] metódusokkal."
 
 #. ParticleProcessMaterial.PARAM_ORBIT_VELOCITY
 #: doc/classes/ParticleProcessMaterial.xml
 msgid "Use with [method set_param_min], [method set_param_max], and [method set_param_texture] to set orbital velocity properties."
-msgstr "A keringési sebesség beállításához használd a [method set_param_min], a [method set_param_max] és a [method set_param_texture] metódusban."
+msgstr "A keringési sebesség beállításához használd ezt az állandót a [method set_param_min], a [method set_param_max] és a [method set_param_texture] metódusokkal."
 
 #. ParticleProcessMaterial.PARAM_LINEAR_ACCEL
 #: doc/classes/ParticleProcessMaterial.xml
 msgid "Use with [method set_param_min], [method set_param_max], and [method set_param_texture] to set linear acceleration properties."
-msgstr "A lineáris gyorsulás beállításához használd a [method set_param_min], a [method set_param_max] és a [method set_param_texture] metódusban."
+msgstr "A lineáris gyorsulás beállításához használd ezt az állandót a [method set_param_min], a [method set_param_max] és a [method set_param_texture] metódusokkal."
 
 #. ParticleProcessMaterial.PARAM_RADIAL_ACCEL
 #: doc/classes/ParticleProcessMaterial.xml
 msgid "Use with [method set_param_min], [method set_param_max], and [method set_param_texture] to set radial acceleration properties."
-msgstr "A sugárirányú gyorsulás beállításához használd a [method set_param_min], a [method set_param_max] és a [method set_param_texture] metódusban."
+msgstr "A sugárirányú gyorsulás beállításához használd ezt az állandót a [method set_param_min], a [method set_param_max] és a [method set_param_texture] metódusokkal."
 
 #. ParticleProcessMaterial.PARAM_TANGENTIAL_ACCEL
 #: doc/classes/ParticleProcessMaterial.xml
 msgid "Use with [method set_param_min], [method set_param_max], and [method set_param_texture] to set tangential acceleration properties."
-msgstr "Az érintőirányú gyorsulás beállításához használd a [method set_param_min], a [method set_param_max] és a [method set_param_texture] metódusban."
+msgstr "Az érintőirányú gyorsulás beállításához használd ezt az állandót a [method set_param_min], a [method set_param_max] és a [method set_param_texture] metódusokkal."
 
 #. ParticleProcessMaterial.PARAM_DAMPING
 #: doc/classes/ParticleProcessMaterial.xml
 msgid "Use with [method set_param_min], [method set_param_max], and [method set_param_texture] to set damping properties."
-msgstr "A csillapítás beállításához használd a [method set_param_min], a [method set_param_max] és a [method set_param_texture] metódusban."
+msgstr "A csillapítás beállításához használd ezt az állandót a [method set_param_min], a [method set_param_max] és a [method set_param_texture] metódusokkal."
 
 #. ParticleProcessMaterial.PARAM_ANGLE
 #: doc/classes/ParticleProcessMaterial.xml
 msgid "Use with [method set_param_min], [method set_param_max], and [method set_param_texture] to set angle properties."
-msgstr "A szög beállításához használd a [method set_param_min], a [method set_param_max] és a [method set_param_texture] metódusban."
+msgstr "A szög beállításához használd ezt az állandót a [method set_param_min], a [method set_param_max] és a [method set_param_texture] metódusokkal."
 
 #. ParticleProcessMaterial.PARAM_SCALE
 #: doc/classes/ParticleProcessMaterial.xml
 msgid "Use with [method set_param_min], [method set_param_max], and [method set_param_texture] to set scale properties."
-msgstr "A méretarány beállításához használd a [method set_param_min], a [method set_param_max] és a [method set_param_texture] metódusban."
+msgstr "A méretarány beállításához használd ezt az állandót a [method set_param_min], a [method set_param_max] és a [method set_param_texture] metódusokkal."
 
 #. ParticleProcessMaterial.PARAM_HUE_VARIATION
 #: doc/classes/ParticleProcessMaterial.xml
 msgid "Use with [method set_param_min], [method set_param_max], and [method set_param_texture] to set hue variation properties."
-msgstr "A színárnyalat-eltérés beállításához használd a [method set_param_min], a [method set_param_max] és a [method set_param_texture] metódusban."
+msgstr "A színárnyalat-eltérés beállításához használd ezt az állandót a [method set_param_min], a [method set_param_max] és a [method set_param_texture] metódusokkal."
 
 #. ParticleProcessMaterial.PARAM_ANIM_SPEED
 #: doc/classes/ParticleProcessMaterial.xml
 msgid "Use with [method set_param_min], [method set_param_max], and [method set_param_texture] to set animation speed properties."
-msgstr "Az animációs sebesség beállításához használd a [method set_param_min], a [method set_param_max] és a [method set_param_texture] metódusban."
+msgstr "Az animációs sebesség beállításához használd ezt az állandót a [method set_param_min], a [method set_param_max] és a [method set_param_texture] metódusokkal."
 
 #. ParticleProcessMaterial.PARAM_ANIM_OFFSET
 #: doc/classes/ParticleProcessMaterial.xml
 msgid "Use with [method set_param_min], [method set_param_max], and [method set_param_texture] to set animation offset properties."
-msgstr "Az animációs eltolás beállításához használd a [method set_param_min], a [method set_param_max] és a [method set_param_texture] metódusban."
+msgstr "Az animációs eltolás beállításához használd ezt az állandót a [method set_param_min], a [method set_param_max] és a [method set_param_texture] metódusokkal."
 
 #. ParticleProcessMaterial.PARAM_RADIAL_VELOCITY
 #: doc/classes/ParticleProcessMaterial.xml
 msgid "Use with [method set_param_min], [method set_param_max], and [method set_param_texture] to set radial velocity properties."
-msgstr "A sugárirányú sebesség beállításához használd a [method set_param_min], a [method set_param_max] és a [method set_param_texture] metódusban."
+msgstr "A sugárirányú sebesség beállításához használd ezt az állandót a [method set_param_min], a [method set_param_max] és a [method set_param_texture] metódusokkal."
 
 #. ParticleProcessMaterial.PARAM_DIRECTIONAL_VELOCITY
 #: doc/classes/ParticleProcessMaterial.xml
 msgid "Use with [method set_param_min], [method set_param_max], and [method set_param_texture] to set directional velocity properties."
-msgstr "Az irány szerinti sebesség beállításához használd a [method set_param_min], a [method set_param_max] és a [method set_param_texture] metódusban."
+msgstr "Az irány szerinti sebesség beállításához használd ezt az állandót a [method set_param_min], a [method set_param_max] és a [method set_param_texture] metódusokkal."
 
 #. ParticleProcessMaterial.PARAM_SCALE_OVER_VELOCITY
 #: doc/classes/ParticleProcessMaterial.xml
 msgid "Use with [method set_param_min], [method set_param_max], and [method set_param_texture] to set scale over velocity properties."
-msgstr "A sebességfüggő méretarány beállításához használd a [method set_param_min], a [method set_param_max] és a [method set_param_texture] metódusban."
+msgstr "A sebességfüggő méretarány beállításához használd ezt az állandót a [method set_param_min], a [method set_param_max] és a [method set_param_texture] metódusokkal."
 
 #. ParticleProcessMaterial.EMISSION_SHAPE_POINTS
 #: doc/classes/ParticleProcessMaterial.xml
@@ -17903,7 +17903,7 @@ msgstr "A [method set_param_min] és a [method set_param_max] metódussal haszn�
 #. ParticleProcessMaterial.PARAM_TURB_INFLUENCE_OVER_LIFE
 #: doc/classes/ParticleProcessMaterial.xml
 msgid "Use with [method set_param_texture] to set the turbulence influence over the particles life time."
-msgstr "A [method set_param_texture] metódusban használd a turbulencia részecskék élettartama alatt kifejtett hatásának beállításához."
+msgstr "A turbulencia részecskékre az élettartamuk során gyakorolt hatásának beállításához használd ezt az állandót a [method set_param_texture] metódusban."
 
 #. ParticleProcessMaterial.SUB_EMITTER_DISABLED
 #: doc/classes/ParticleProcessMaterial.xml
@@ -18698,7 +18698,7 @@ msgstr "Ha az értéke [code]true[/code], a zajgenerátor képét a rendszer a [
 #. NoiseTexture2D.seamless
 #: modules/noise/doc_classes/NoiseTexture2D.xml
 msgid "If [code]true[/code], a seamless texture is requested from the [Noise] resource.\n[b]Note:[/b] Seamless noise textures may take longer to generate and/or can have a lower contrast compared to non-seamless noise depending on the used [Noise] resource. This is because some implementations use higher dimensions for generating seamless noise.\n[b]Note:[/b] The default [FastNoiseLite] implementation uses the fallback path for seamless generation. If using a [member width] or [member height] lower than the default, you may need to increase [member seamless_blend_skirt] to make seamless blending more effective."
-msgstr "Ha az értéke [code]true[/code], varratmentes textúrát kér a [Noise] erőforrástól.\n[b]Megjegyzés:[/b] A használt [Noise] erőforrástól függően a varratmentes zajtextúra előállítása tovább tarthat, illetve a kontrasztja kisebb lehet, mint a varratos változaté. Egyes megvalósítások ugyanis több dimenziót használnak a varratmentes zaj előállításához.\n[b]Megjegyzés:[/b] Az alapértelmezett [FastNoiseLite] megvalósítás a tartalék varratmentes eljárást használja. Ha a [member width] vagy a [member height] kisebb az alapértéknél, a hatékonyabb összemosáshoz szükség lehet a [member seamless_blend_skirt] növelésére."
+msgstr "Ha az értéke [code]true[/code], varratmentes textúrát kér a [Noise] erőforrástól.\n[b]Megjegyzés:[/b] A használt [Noise] erőforrástól függően a varratmentes zajtextúra előállítása tovább tarthat, illetve a kontrasztja kisebb lehet, mint a nem varratmentes változaté. Egyes megvalósítások ugyanis több dimenziót használnak a varratmentes zaj előállításához.\n[b]Megjegyzés:[/b] Az alapértelmezett [FastNoiseLite] megvalósítás helyettesítő eljárást használ a varratmentes zaj előállítására. Ha a [member width] vagy a [member height] kisebb az alapértéknél, a hatékonyabb összemosáshoz szükség lehet a [member seamless_blend_skirt] növelésére."
 
 #. NoiseTexture2D.seamless_blend_skirt
 #: modules/noise/doc_classes/NoiseTexture2D.xml
@@ -18729,7 +18729,7 @@ msgstr "A létrehozott textúra mélysége képpontban."
 #. NoiseTexture3D.seamless
 #: modules/noise/doc_classes/NoiseTexture3D.xml
 msgid "If [code]true[/code], a seamless texture is requested from the [Noise] resource.\n[b]Note:[/b] Seamless noise textures may take longer to generate and/or can have a lower contrast compared to non-seamless noise depending on the used [Noise] resource. This is because some implementations use higher dimensions for generating seamless noise.\n[b]Note:[/b] The default [FastNoiseLite] implementation uses the fallback path for seamless generation. If using a [member width], [member height] or [member depth] lower than the default, you may need to increase [member seamless_blend_skirt] to make seamless blending more effective."
-msgstr "Ha az értéke [code]true[/code], varratmentes textúrát kér a [Noise] erőforrástól.\n[b]Megjegyzés:[/b] A használt [Noise] erőforrástól függően a varratmentes zajtextúra előállítása tovább tarthat, illetve a kontrasztja kisebb lehet, mint a varratos változaté. Egyes megvalósítások ugyanis több dimenziót használnak a varratmentes zaj előállításához.\n[b]Megjegyzés:[/b] Az alapértelmezett [FastNoiseLite] megvalósítás a tartalék varratmentes eljárást használja. Ha a [member width], a [member height] vagy a [member depth] kisebb az alapértéknél, a hatékonyabb összemosáshoz szükség lehet a [member seamless_blend_skirt] növelésére."
+msgstr "Ha az értéke [code]true[/code], varratmentes textúrát kér a [Noise] erőforrástól.\n[b]Megjegyzés:[/b] A használt [Noise] erőforrástól függően a varratmentes zajtextúra előállítása tovább tarthat, illetve a kontrasztja kisebb lehet, mint a nem varratmentes változaté. Egyes megvalósítások ugyanis több dimenziót használnak a varratmentes zaj előállításához.\n[b]Megjegyzés:[/b] Az alapértelmezett [FastNoiseLite] megvalósítás helyettesítő eljárást használ a varratmentes zaj előállítására. Ha a [member width], a [member height] vagy a [member depth] kisebb az alapértéknél, a hatékonyabb összemosáshoz szükség lehet a [member seamless_blend_skirt] növelésére."
 
 #. NoiseTexture3D.seamless_blend_skirt
 #: modules/noise/doc_classes/NoiseTexture3D.xml
