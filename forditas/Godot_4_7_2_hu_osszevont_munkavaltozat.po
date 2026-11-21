@@ -9036,12 +9036,12 @@ msgstr "A [ScrollBar] balra vagy felfelé görgető gombjának ikonja. A lépés
 #. ScrollBar.decrement_highlight
 #: doc/classes/ScrollBar.xml
 msgid "Displayed when the mouse cursor hovers over the decrement button."
-msgstr "Akkor jelenik meg, amikor az egérmutató a csökkentő gomb fölött van."
+msgstr "Akkor jelenik meg, amikor az egérmutató a csökkentőgomb fölé kerül."
 
 #. ScrollBar.decrement_pressed
 #: doc/classes/ScrollBar.xml
 msgid "Displayed when the decrement button is being pressed."
-msgstr "A csökkentő gomb lenyomásakor jelenik meg."
+msgstr "A csökkentőgomb lenyomásakor jelenik meg."
 
 #. ScrollBar.increment
 #: doc/classes/ScrollBar.xml
@@ -9051,12 +9051,12 @@ msgstr "A [ScrollBar] jobbra vagy lefelé görgető gombjának ikonja. A lépés
 #. ScrollBar.increment_highlight
 #: doc/classes/ScrollBar.xml
 msgid "Displayed when the mouse cursor hovers over the increment button."
-msgstr "Akkor jelenik meg, amikor az egérmutató a növelő gomb fölött van."
+msgstr "Akkor jelenik meg, amikor az egérmutató a növelőgomb fölé kerül."
 
 #. ScrollBar.increment_pressed
 #: doc/classes/ScrollBar.xml
 msgid "Displayed when the increment button is being pressed."
-msgstr "A növelő gomb lenyomásakor jelenik meg."
+msgstr "A növelőgomb lenyomásakor jelenik meg."
 
 #. ScrollBar.grabber
 #: doc/classes/ScrollBar.xml
@@ -9066,12 +9066,12 @@ msgstr "A görgetősáv aktuális helyzetét jelző, egérrel húzható foganty�
 #. ScrollBar.grabber_highlight
 #: doc/classes/ScrollBar.xml
 msgid "Used when the mouse hovers over the grabber."
-msgstr "Akkor használatos, amikor az egérmutató a fogantyú fölött van."
+msgstr "A fogantyú fölé vitt egérmutató esetén használatos."
 
 #. ScrollBar.grabber_pressed
 #: doc/classes/ScrollBar.xml
 msgid "Used when the grabber is being dragged."
-msgstr "A fogantyú húzása közben használatos."
+msgstr "A fogantyú húzásakor használatos."
 
 #. ScrollBar.scroll
 #: doc/classes/ScrollBar.xml
@@ -9081,7 +9081,7 @@ msgstr "A [ScrollBar] háttérképeként használatos."
 #. ScrollBar.scroll_focus
 #: doc/classes/ScrollBar.xml
 msgid "Used as background when the [ScrollBar] has the GUI focus."
-msgstr "Háttérként használatos, amikor a [ScrollBar] vezérlőelem GUI-fókuszban van."
+msgstr "A [ScrollBar] háttereként szolgál, amikor a vezérlőelem GUI-fókuszban van."
 
 #. LinkButton.brief
 #: doc/classes/LinkButton.xml
