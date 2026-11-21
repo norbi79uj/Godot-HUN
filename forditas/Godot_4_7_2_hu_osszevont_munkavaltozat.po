@@ -9361,7 +9361,7 @@ msgstr "Virtuális számbillentyűzet, például PIN-kód beviteléhez."
 #. LineEdit.KEYBOARD_TYPE_NUMBER_DECIMAL
 #: doc/classes/LineEdit.xml
 msgid "Virtual number keypad, useful for entering fractional numbers."
-msgstr "Virtuális számbillentyűzet törtszámok beviteléhez."
+msgstr "Virtuális számbillentyűzet tizedes törtek beviteléhez."
 
 #. LineEdit.KEYBOARD_TYPE_PHONE
 #: doc/classes/LineEdit.xml
@@ -9376,7 +9376,7 @@ msgstr "Virtuális billentyűzet további billentyűkkel az e-mail-címek beír�
 #. LineEdit.KEYBOARD_TYPE_PASSWORD
 #: doc/classes/LineEdit.xml
 msgid "Virtual keyboard for entering a password. On most platforms, this should disable autocomplete and autocapitalization.\n[b]Note:[/b] This is not supported on Web. Instead, this behaves identically to [constant KEYBOARD_TYPE_DEFAULT]."
-msgstr "Jelszóbevitelre szolgáló virtuális billentyűzet. A legtöbb platformon letiltja az automatikus kiegészítést és a nagybetűsítést.\n[b]Megjegyzés:[/b] Webes környezetben ez nem támogatott. Ilyenkor a [constant KEYBOARD_TYPE_DEFAULT] értékkel azonosan viselkedik."
+msgstr "Jelszóbevitelre szolgáló virtuális billentyűzet. A legtöbb platformon ennek a beállításnak ki kell kapcsolnia az automatikus kiegészítést és az automatikus nagybetűsítést.\n[b]Megjegyzés:[/b] Webes környezetben ez nem támogatott. Ilyenkor a [constant KEYBOARD_TYPE_DEFAULT] értékkel azonosan viselkedik."
 
 #. LineEdit.KEYBOARD_TYPE_URL
 #: doc/classes/LineEdit.xml
@@ -9506,7 +9506,7 @@ msgstr "A szövegkurzor villogásának időköze másodpercben."
 #. LineEdit.caret_column
 #: doc/classes/LineEdit.xml
 msgid "The caret's column position inside the [LineEdit]. When set, the text may scroll to accommodate it."
-msgstr "A szövegkurzor oszloppozíciója a [LineEdit] mezőben. Módosításakor a szöveg elgördülhet, hogy a kurzor látható maradjon."
+msgstr "A szövegkurzor oszloppozíciója a [LineEdit] mezőben. Az érték beállításakor a szöveg elgörgethető, hogy a kurzor látható maradjon."
 
 #. LineEdit.caret_force_displayed
 #: doc/classes/LineEdit.xml
@@ -9591,7 +9591,7 @@ msgstr "Akkor megjelenő szöveg, amikor a [LineEdit] üres. Ez [b]nem[/b] a [Li
 #. LineEdit.right_icon
 #: doc/classes/LineEdit.xml
 msgid "Sets the icon that will appear in the right end of the [LineEdit] if there's no [member text], or always, if [member clear_button_enabled] is set to [code]false[/code]."
-msgstr "Beállítja a [LineEdit] jobb szélén megjelenő ikont, amikor nincs [member text] szöveg, vagy mindig megjeleníti, ha a [member clear_button_enabled] értéke [code]false[/code]."
+msgstr "Beállítja a [LineEdit] jobb szélén megjelenő ikont. Az ikon akkor látható, ha a [member text] üres; ha a [member clear_button_enabled] értéke [code]false[/code], mindig megjelenik."
 
 #. LineEdit.right_icon_scale
 #: doc/classes/LineEdit.xml
@@ -9606,7 +9606,7 @@ msgstr "Ha [code]true[/code], minden karaktert a megadott kitakaró karakterrel 
 #. LineEdit.secret_character
 #: doc/classes/LineEdit.xml
 msgid "The character to use to mask secret input. Only a single character can be used as the secret character. If it is longer than one character, only the first one will be used. If it is empty, a space will be used instead."
-msgstr "A bizalmasan kezelt bevitel eltakarására használt karakter. Csak egyetlen karakter használható. Ha hosszabb szöveget adsz meg, annak csak az első karakterét veszi figyelembe. Ha üres, szóközt használ helyette."
+msgstr "A bizalmas szöveg kitakarásához használt helyettesítő karakter. Csak egyetlen karakter adható meg. Ha több karaktert írsz be, csak az elsőt használja; ha üresen hagyod, szóközzel helyettesíti a szöveg karaktereit."
 
 #. LineEdit.select_all_on_focus
 #: doc/classes/LineEdit.xml
@@ -9691,7 +9691,7 @@ msgstr "Törli a [LineEdit] [member text] szövegét."
 #. LineEdit.delete_char_at_caret
 #: doc/classes/LineEdit.xml
 msgid "Deletes one character at the caret's current position (equivalent to pressing [kbd]Delete[/kbd])."
-msgstr "Töröl egy karaktert a szövegkurzor aktuális pozícióján (ugyanaz, mint a [kbd]Delete[/kbd] lenyomása)."
+msgstr "A szövegkurzor aktuális helyén álló karaktert törli. Ez egyenértékű a [kbd]Delete[/kbd] billentyű lenyomásával."
 
 #. LineEdit.delete_text
 #: doc/classes/LineEdit.xml
