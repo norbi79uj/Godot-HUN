@@ -54,12 +54,12 @@ msgstr "Minden meglévő szövegkurzorhoz egy további kurzort ad hozzá, az ere
 #. TextEdit.add_gutter
 #: doc/classes/TextEdit.xml
 msgid "Register a new gutter to this [TextEdit]. Use [param at] to have a specific gutter order. A value of [code]-1[/code] appends the gutter to the right."
-msgstr "Új oldalsávot regisztrál ehhez a [TextEdit] vezérlőhöz. Az oldalsáv sorrendjét a [param at] paraméterrel adhatod meg. A [code]-1[/code] érték az oldalsávot a jobb szélre fűzi hozzá."
+msgstr "Új oldalsávot regisztrál ehhez a [TextEdit] vezérlőhöz. Az új oldalsáv helyét a [param at] paraméterrel adhatod meg. A [code]-1[/code] érték a jobb szélső helyre teszi az új oldalsávot."
 
 #. TextEdit.add_selection_for_next_occurrence
 #: doc/classes/TextEdit.xml
 msgid "Adds a selection and a caret for the next occurrence of the current selection. If there is no active selection, selects word under caret."
-msgstr "Kijelölést és szövegkurzort ad hozzá a jelenlegi kijelölés következő előfordulásához. Ha nincs aktív kijelölés, a kurzor alatti szót jelöli ki."
+msgstr "Új kijelölést és szövegkurzort hoz létre a kijelölt szöveg következő előfordulásánál. Ha nincs aktív kijelölés, a kurzor alatti szót jelöli ki."
 
 #. TextEdit.adjust_carets_after_edit
 #: doc/classes/TextEdit.xml
@@ -74,7 +74,7 @@ msgstr "Úgy állítja be a nézetet, hogy a szövegkurzor látható legyen."
 #. TextEdit.apply_ime
 #: doc/classes/TextEdit.xml
 msgid "Applies text from the [url=https://en.wikipedia.org/wiki/Input_method]Input Method Editor[/url] (IME) to each caret and closes the IME if it is open."
-msgstr "Az [url=https://en.wikipedia.org/wiki/Input_method]Input Method Editor[/url] (IME) szövegét minden szövegkurzornál alkalmazza, majd bezárja az IME-t, ha az nyitva van."
+msgstr "Az [url=https://en.wikipedia.org/wiki/Input_method]Input Method Editor[/url] (IME) szövegét minden szövegkurzornál beilleszti, majd bezárja az IME-t, ha nyitva van."
 
 #. TextEdit.backspace
 #: doc/classes/TextEdit.xml
@@ -94,12 +94,12 @@ msgstr "Több szövegkurzort érintő szerkesztést indít. A szerkesztést a [m
 #. TextEdit.cancel_ime
 #: doc/classes/TextEdit.xml
 msgid "Closes the [url=https://en.wikipedia.org/wiki/Input_method]Input Method Editor[/url] (IME) if it is open. Any text in the IME will be lost."
-msgstr "Bezárja az [url=https://en.wikipedia.org/wiki/Input_method]Input Method Editor[/url] (IME) ablakát, ha nyitva van. Az IME-ben lévő, még be nem vitt szöveg elveszik."
+msgstr "Bezárja az [url=https://en.wikipedia.org/wiki/Input_method]Input Method Editor[/url] (IME) beviteli felületét, ha nyitva van. Az IME-ben lévő, még be nem vitt szöveg elveszik."
 
 #. TextEdit.center_viewport_to_caret
 #: doc/classes/TextEdit.xml
 msgid "Centers the viewport on the line the editing caret is at. This also resets the [member scroll_horizontal] value to [code]0[/code]."
-msgstr "A nézetet a szerkesztőkurzor sorára központosítja. A [member scroll_horizontal] értékét is visszaállítja [code]0[/code]-ra."
+msgstr "A szövegkurzor sorát a nézet közepére görgeti. A [member scroll_horizontal] értékét is visszaállítja [code]0[/code]-ra."
 
 #. TextEdit.clear
 #: doc/classes/TextEdit.xml
@@ -114,7 +114,7 @@ msgstr "Törli a visszavonási előzményeket."
 #. TextEdit.collapse_carets
 #: doc/classes/TextEdit.xml
 msgid "Collapse all carets in the given range to the [param from_line] and [param from_column] position.\n[param inclusive] applies to both ends.\nIf [method is_in_mulitcaret_edit] is [code]true[/code], carets that are collapsed will be [code]true[/code] for [method multicaret_edit_ignore_caret].\n[method merge_overlapping_carets] will be called if any carets were collapsed."
-msgstr "A megadott tartományban lévő összes szövegkurzort a [param from_line] és [param from_column] által meghatározott helyre vonja össze.\nA [param inclusive] mindkét végpontra vonatkozik.\nHa az [method is_in_mulitcaret_edit] értéke [code]true[/code], az összevont kurzoroknál a [method multicaret_edit_ignore_caret] [code]true[/code] értéket ad vissza.\nHa bármelyik kurzor összevonásra került, meghívódik a [method merge_overlapping_carets] metódus."
+msgstr "A megadott tartomány minden szövegkurzorát a [param from_line] sor [param from_column] oszlopába helyezi.\nA [param inclusive] határozza meg, hogy a tartományba a két végpont is beletartozik-e.\nHa a [method is_in_mulitcaret_edit] visszatérési értéke [code]true[/code], a [method multicaret_edit_ignore_caret] minden így áthelyezett kurzornál [code]true[/code] értéket ad vissza.\nHa legalább egy kurzort áthelyezett, meghívja a [method merge_overlapping_carets] metódust."
 
 #. TextEdit.copy
 #: doc/classes/TextEdit.xml
@@ -184,7 +184,7 @@ msgstr "Visszaadja annak a tördelési szakasznak az indexét, amelyben a szerke
 #. TextEdit.get_first_non_whitespace_column
 #: doc/classes/TextEdit.xml
 msgid "Returns the first column containing a non-whitespace character on the given line. If there is only whitespace, returns the number of characters."
-msgstr "Visszaadja a megadott sor első olyan oszlopát, amely nem üreshelykaraktert tartalmaz. Ha a sorban csak üreshelykarakterek vannak, a karakterek számát adja vissza."
+msgstr "Visszaadja a megadott sor első olyan karakterének oszlopát, amely nem üreshely-karakter. Ha a sor csak üreshely-karakterekből áll, a sorban lévő karakterek számát adja vissza."
 
 #. TextEdit.get_first_visible_line
 #: doc/classes/TextEdit.xml
@@ -219,7 +219,7 @@ msgstr "Visszaadja a [TextEdit] által használt [HScrollBar] vezérlőt."
 #. TextEdit.get_indent_level
 #: doc/classes/TextEdit.xml
 msgid "Returns the indent level of the given line. This is the number of spaces and tabs at the beginning of the line, with the tabs taking the tab size into account (see [method get_tab_size])."
-msgstr "Visszaadja a megadott sor behúzásának mértékét. Ez a sor elején lévő szóközök és tabulátorok összesített szélessége, a tabulátorok méretét is figyelembe véve (lásd: [method get_tab_size])."
+msgstr "Visszaadja a megadott sor behúzásának mértékét. A sor eleji szóközöket és tabulátorokat számolja, a tabulátorokat a beállított méretükkel veszi figyelembe (lásd [method get_tab_size])."
 
 #. TextEdit.get_last_full_visible_line
 #: doc/classes/TextEdit.xml
@@ -234,7 +234,7 @@ msgstr "Visszaadja az utolsó látható sor utolsó látható tördelési szakas
 #. TextEdit.get_last_unhidden_line
 #: doc/classes/TextEdit.xml
 msgid "Returns the last unhidden line in the entire [TextEdit]."
-msgstr "Visszaadja a teljes [TextEdit] utolsó, nem elrejtett sorának számát."
+msgstr "A teljes [TextEdit] szövegében megkeresi az utolsó el nem rejtett sort, és visszaadja az indexét."
 
 #. TextEdit.get_line
 #: doc/classes/TextEdit.xml
@@ -304,7 +304,7 @@ msgstr "Visszaadja, hányszor tördelődik a megadott sor."
 #. TextEdit.get_line_wrap_index_at_column
 #: doc/classes/TextEdit.xml
 msgid "Returns the wrap index of the given column on the given line. This ranges from [code]0[/code] to [method get_line_wrap_count]."
-msgstr "Visszaadja a megadott sor megadott oszlopához tartozó tördelési szakasz indexét. Az érték [code]0[/code] és a [method get_line_wrap_count] eredménye közé esik."
+msgstr "Visszaadja a megadott sor és oszlop tördelési szakaszának indexét. A legkisebb érték [code]0[/code], a legnagyobb a [method get_line_wrap_count] eredménye."
 
 #. TextEdit.get_line_wrapped_text
 #: doc/classes/TextEdit.xml
@@ -334,7 +334,7 @@ msgstr "Visszaadja a minitérképen kirajzolható sorok számát."
 #. TextEdit.get_next_composite_character_column
 #: doc/classes/TextEdit.xml
 msgid "Returns the correct column at the end of a composite character like ❤️‍🩹 (mending heart; Unicode: [code]U+2764 U+FE0F U+200D U+1FA79[/code]) which is comprised of more than one Unicode code point, if the caret is at the start of the composite character. Also returns the correct column with the caret at mid grapheme and for non-composite characters.\n[b]Note:[/b] To check at caret location use [code]get_next_composite_character_column(get_caret_line(), get_caret_column())[/code]"
-msgstr "Visszaadja az összetett karakter – például a ❤️‍🩹 (gyógyuló szív; Unicode: [code]U+2764 U+FE0F U+200D U+1FA79[/code]) – vége utáni helyes oszlopot, ha a kurzor a karakter elején áll. Az ilyen karakterek több Unicode-kódpontból állnak. A metódus akkor is a helyes oszlopot adja vissza, ha a kurzor egy graféma belsejében áll, illetve ha a karakter nem összetett.\n[b]Megjegyzés:[/b] A kurzor aktuális helyén így ellenőrizheted: [code]get_next_composite_character_column(get_caret_line(), get_caret_column())[/code]"
+msgstr "Ha a szövegkurzor egy több Unicode-kódpontból álló összetett karakter, például a ❤️‍🩹 (gyógyuló szív, Unicode: [code]U+2764 U+FE0F U+200D U+1FA79[/code]) elején áll, a karakter végét jelölő oszlopot adja vissza. A metódus akkor is a helyes oszlopot adja vissza, ha a kurzor egy graféma belsejében áll, vagy a karakter nem összetett.\n[b]Megjegyzés:[/b] A szövegkurzor aktuális helyén a [code]get_next_composite_character_column(get_caret_line(), get_caret_column())[/code] hívással kérdezheted le ezt az oszlopot."
 
 #. TextEdit.get_next_visible_line_index_offset_from
 #: doc/classes/TextEdit.xml
@@ -354,12 +354,12 @@ msgstr "Visszaadja a megadott [param line] sor és [param column] oszlop helyi p
 #. TextEdit.get_previous_composite_character_column
 #: doc/classes/TextEdit.xml
 msgid "Returns the correct column at the start of a composite character like ❤️‍🩹 (mending heart; Unicode: [code]U+2764 U+FE0F U+200D U+1FA79[/code]) which is comprised of more than one Unicode code point, if the caret is at the end of the composite character. Also returns the correct column with the caret at mid grapheme and for non-composite characters.\n[b]Note:[/b] To check at caret location use [code]get_previous_composite_character_column(get_caret_line(), get_caret_column())[/code]"
-msgstr "Visszaadja a helyes oszlopot egy több Unicode-kódpontból álló összetett karakter – például ❤️‍🩹 (gyógyuló szív; Unicode: [code]U+2764 U+FE0F U+200D U+1FA79[/code]) – elején, ha a szövegkurzor a karakter végén áll. Akkor is a megfelelő oszlopot adja vissza, ha a kurzor egy graféma belsejében áll, illetve nem összetett karakterek esetén is.\n[b]Megjegyzés:[/b] A kurzor aktuális helyének ellenőrzéséhez használd: [code]get_previous_composite_character_column(get_caret_line(), get_caret_column())[/code]"
+msgstr "Ha a szövegkurzor egy több Unicode-kódpontból álló összetett karakter, például a ❤️‍🩹 (gyógyuló szív, Unicode: [code]U+2764 U+FE0F U+200D U+1FA79[/code]) végén áll, a karakter elejét jelölő oszlopot adja vissza. A metódus akkor is a helyes oszlopot adja vissza, ha a kurzor egy graféma belsejében áll, vagy a karakter nem összetett.\n[b]Megjegyzés:[/b] A szövegkurzor aktuális helyén a [code]get_previous_composite_character_column(get_caret_line(), get_caret_column())[/code] hívással kérdezheted le ezt az oszlopot."
 
 #. TextEdit.get_rect_at_line_column
 #: doc/classes/TextEdit.xml
 msgid "Returns the local position and size for the grapheme at the given [param line] and [param column]. If [code]x[/code] or [code]y[/code] position of the returned rect equal [code]-1[/code], the position is outside of the viewable area of the control.\n[b]Note:[/b] The Y position of the returned rect corresponds to the top side of the line, unlike [method get_pos_at_line_column] which returns the bottom side."
-msgstr "Visszaadja a megadott [param line] sor és [param column] oszlop grafémájának helyi pozícióját és méretét. Ha a visszaadott téglalap [code]x[/code] vagy [code]y[/code] koordinátája [code]-1[/code], a pozíció a vezérlő látható területén kívül esik.\n[b]Megjegyzés:[/b] A téglalap Y koordinátája a sor felső széléhez tartozik, szemben a [method get_pos_at_line_column] eredményével, amely az alsó szélet adja meg."
+msgstr "Visszaadja a [param line] sor [param column] oszlopában lévő graféma helyi pozícióját és méretét. Ha a visszaadott téglalap [code]x[/code] vagy [code]y[/code] koordinátája [code]-1[/code], a pozíció a vezérlő látható területén kívül esik.\n[b]Megjegyzés:[/b] A téglalap Y koordinátája a sor felső szélét jelöli. A [method get_pos_at_line_column] ezzel szemben a sor alsó széléhez tartozó koordinátát adja vissza."
 
 #. TextEdit.get_saved_version
 #: doc/classes/TextEdit.xml
@@ -374,7 +374,7 @@ msgstr "Visszaadja a [param line] sor [param wrap_index] tördelési szakaszáho
 #. TextEdit.get_selected_text
 #: doc/classes/TextEdit.xml
 msgid "Returns the text inside the selection of a caret, or all the carets if [param caret_index] is its default value [code]-1[/code]."
-msgstr "Visszaadja egy szövegkurzor kijelölésének szövegét, vagy az összes kurzor kijelölését, ha a [param caret_index] az alapértelmezett [code]-1[/code] értéken marad."
+msgstr "Visszaadja az adott szövegkurzorhoz tartozó kijelölt szöveget. Ha a [param caret_index] értéke az alapértelmezett [code]-1[/code], minden kurzor kijelölt szövegét visszaadja."
 
 #. TextEdit.get_selection_at_line_column
 #: doc/classes/TextEdit.xml
@@ -409,12 +409,12 @@ msgstr "Visszaadja az aktuális kijelölési módot."
 #. TextEdit.get_selection_origin_column
 #: doc/classes/TextEdit.xml
 msgid "Returns the origin column of the selection. This is the opposite end from the caret."
-msgstr "Visszaadja a kijelölés kiindulóoszlopát. Ez a kijelölésnek a szövegkurzorral ellentétes végpontja."
+msgstr "A kijelölés szövegkurzorral ellentétes végpontjának oszlopát adja vissza."
 
 #. TextEdit.get_selection_origin_line
 #: doc/classes/TextEdit.xml
 msgid "Returns the origin line of the selection. This is the opposite end from the caret."
-msgstr "Visszaadja a kijelölés kiindulósorát. Ez a kijelölésnek a szövegkurzorral ellentétes végpontja."
+msgstr "A kijelölés szövegkurzorral ellentétes végpontjának sorát adja vissza."
 
 #. TextEdit.get_selection_to_column
 #: doc/classes/TextEdit.xml
@@ -444,7 +444,7 @@ msgstr "Visszaadja az összes oldalsáv és a belső térközök együttes szél
 #. TextEdit.get_total_visible_line_count
 #: doc/classes/TextEdit.xml
 msgid "Returns the total number of lines in the text. This includes wrapped lines and excludes folded lines. If [member wrap_mode] is set to [constant LINE_WRAPPING_NONE] and no lines are folded (see [method CodeEdit.is_line_folded]) then this is equivalent to [method get_line_count]. See [method get_visible_line_count_in_range] for a limited range of lines."
-msgstr "Visszaadja a szöveg összes látható sorának számát. A tördelésből létrejövő sorokat beleszámítja, az összecsukott sorokat azonban nem. Ha a [member wrap_mode] értéke [constant LINE_WRAPPING_NONE], és nincs összecsukott sor (lásd: [method CodeEdit.is_line_folded]), az eredmény megegyezik a [method get_line_count] értékével. Meghatározott sortartományhoz lásd: [method get_visible_line_count_in_range]."
+msgstr "Visszaadja a szöveg összes látható sorának számát. A tördeléssel keletkező sorok külön számítanak, az összecsukott sorok kimaradnak. Ha a [member wrap_mode] értéke [constant LINE_WRAPPING_NONE], és nincs összecsukott sor (lásd [method CodeEdit.is_line_folded]), az eredmény megegyezik azzal, amit a [method get_line_count] visszaad. Adott sortartományhoz használd a [method get_visible_line_count_in_range] metódust."
 
 #. TextEdit.get_v_scroll_bar
 #: doc/classes/TextEdit.xml
@@ -464,7 +464,7 @@ msgstr "Visszaadja, hogy a vezérlő magasságában hány teljes sor fér el."
 #. TextEdit.get_visible_line_count_in_range
 #: doc/classes/TextEdit.xml
 msgid "Returns the total number of lines between [param from_line] and [param to_line] (inclusive) in the text. This includes wrapped lines and excludes folded lines. If the range covers all lines it is equivalent to [method get_total_visible_line_count]."
-msgstr "Visszaadja a [param from_line] és a [param to_line] közötti sorok számát, a két végpontot is beleértve. A tördelésből létrejött sorokat beszámítja, az összecsukott sorokat nem. Ha a tartomány minden sort lefed, az eredmény megegyezik a [method get_total_visible_line_count] értékével."
+msgstr "Megszámolja a [param from_line] és a [param to_line] közötti sorokat a két határoló sorral együtt. A tördeléssel keletkező sorok külön számítanak, az összecsukott sorok kimaradnak. A teljes szövegre ugyanazt az értéket adja vissza, mint a [method get_total_visible_line_count]."
 
 #. TextEdit.get_word_at_pos
 #: doc/classes/TextEdit.xml
@@ -569,7 +569,7 @@ msgstr "[code]true[/code] értéket ad vissza, ha a menü látható. A teljesít
 #. TextEdit.is_mouse_over_selection
 #: doc/classes/TextEdit.xml
 msgid "Returns [code]true[/code] if the mouse is over a selection. If [param edges] is [code]true[/code], the edges are considered part of the selection."
-msgstr "[code]true[/code] értéket ad vissza, ha az egérmutató kijelölés fölött van. Ha az [param edges] értéke [code]true[/code], a kijelölés szélei is beleszámítanak."
+msgstr "[code]true[/code] értéket ad vissza, ha az egérmutató egy kijelölés fölött van. Ha a [param edges] értéke [code]true[/code], a kijelölés szélei is a kijelölés részének számítanak."
 
 #. TextEdit.is_overtype_mode_enabled
 #: doc/classes/TextEdit.xml
@@ -584,12 +584,12 @@ msgstr "Végrehajtja a [enum MenuItems] felsorolásban meghatározott műveletet
 #. TextEdit.merge_gutters
 #: doc/classes/TextEdit.xml
 msgid "Merge the gutters from [param from_line] into [param to_line]. Only overwritable gutters will be copied. See [method set_gutter_overwritable]."
-msgstr "A [param from_line] sor oldalsávjainak tartalmát összevonja a [param to_line] sor oldalsávjaival. Csak a felülírható oldalsávok kerülnek átmásolásra. Lásd: [method set_gutter_overwritable]."
+msgstr "A [param from_line] sor oldalsávadatait átmásolja a [param to_line] sor megfelelő oldalsávjaiba. Csak a felülírható oldalsávokat másolja. Lásd a [method set_gutter_overwritable] metódust."
 
 #. TextEdit.merge_overlapping_carets
 #: doc/classes/TextEdit.xml
 msgid "Merges any overlapping carets. Will favor the newest caret, or the caret with a selection.\nIf [method is_in_mulitcaret_edit] is [code]true[/code], the merge will be queued to happen at the end of the multicaret edit. See [method begin_multicaret_edit] and [method end_multicaret_edit].\n[b]Note:[/b] This is not called when a caret changes position but after certain actions, so it is possible to get into a state where carets overlap."
-msgstr "Összevonja az egymást átfedő szövegkurzorokat. Az újabb kurzort, illetve a kijelöléssel rendelkező kurzort részesíti előnyben.\nHa az [method is_in_mulitcaret_edit] értéke [code]true[/code], az összevonás a többkurzoros szerkesztés végére halasztódik. Lásd: [method begin_multicaret_edit] és [method end_multicaret_edit].\n[b]Megjegyzés:[/b] A metódus nem minden kurzormozgatáskor, hanem bizonyos műveletek után hívódik meg, ezért előfordulhat, hogy a kurzorok átfedik egymást."
+msgstr "Összevonja az egymást átfedő szövegkurzorokat. A legújabb vagy a kijelöléssel rendelkező kurzort részesíti előnyben.\nHa a [method is_in_mulitcaret_edit] visszatérési értéke [code]true[/code], az összevonást a többkurzoros szerkesztés végére ütemezi. Lásd a [method begin_multicaret_edit] és a [method end_multicaret_edit] metódust.\n[b]Megjegyzés:[/b] A kurzor mozgatása önmagában nem hívja meg ezt a metódust. A hívás bizonyos műveletek után történik, így a kurzorok átfedhetik egymást."
 
 #. TextEdit.multicaret_edit_ignore_caret
 #: doc/classes/TextEdit.xml
@@ -644,7 +644,7 @@ msgstr "Keresést végez a szövegben. A keresési jelzőket a [enum SearchFlags
 #. TextEdit.select
 #: doc/classes/TextEdit.xml
 msgid "Selects text from [param origin_line] and [param origin_column] to [param caret_line] and [param caret_column] for the given [param caret_index]. This moves the selection origin and the caret. If the positions are the same, the selection will be deselected.\nIf [member selecting_enabled] is [code]false[/code], no selection will occur.\n[b]Note:[/b] If supporting multiple carets this will not check for any overlap. See [method merge_overlapping_carets]."
-msgstr "Kijelöli a szöveget a [param origin_line] sor és [param origin_column] oszlop helyétől a [param caret_line] sor és [param caret_column] oszlop helyéig, a [param caret_index] indexű kurzorhoz. Ezzel a kijelölés kezdőpontja és a kurzor helye is megváltozik. Ha a két pozíció azonos, a kijelölés megszűnik.\nHa a [member selecting_enabled] értéke [code]false[/code], nem történik kijelölés.\n[b]Megjegyzés:[/b] Több kurzor használatakor ez nem ellenőrzi az átfedéseket. Lásd: [method merge_overlapping_carets]."
+msgstr "Kijelöli a szöveget a [param origin_line] sor [param origin_column] oszlopától a [param caret_line] sor [param caret_column] oszlopáig a [param caret_index] indexű kurzorhoz. A kijelölés kiindulópontja és a kurzor is a megadott helyre kerül. Ha a két pozíció azonos, a kijelölés megszűnik.\nHa a [member selecting_enabled] értéke [code]false[/code], nem történik kijelölés.\n[b]Megjegyzés:[/b] Több kurzor használatakor a metódus nem ellenőrzi az átfedéseket. Lásd a [method merge_overlapping_carets] metódust."
 
 #. TextEdit.select_all
 #: doc/classes/TextEdit.xml
@@ -659,17 +659,17 @@ msgstr "Kijelöli a szövegkurzor alatti szót."
 #. TextEdit.set_caret_column
 #: doc/classes/TextEdit.xml
 msgid "Moves the caret to the specified [param column] index.\nIf [param adjust_viewport] is [code]true[/code], the viewport will center at the caret position after the move occurs.\n[b]Note:[/b] If supporting multiple carets this will not check for any overlap. See [method merge_overlapping_carets]."
-msgstr "A szövegkurzort a megadott [param column] oszlopindexre helyezi.\nHa az [param adjust_viewport] értéke [code]true[/code], a mozgatás után a nézet a kurzor helyére központosul.\n[b]Megjegyzés:[/b] Több kurzor használatakor ez a művelet nem ellenőrzi az átfedéseket. Lásd: [method merge_overlapping_carets]."
+msgstr "A szövegkurzort a [param column] indexű oszlopba helyezi.\nHa a [param adjust_viewport] értéke [code]true[/code], a kurzor új helye a nézet közepére kerül.\n[b]Megjegyzés:[/b] Több kurzor használatakor a metódus nem ellenőrzi az átfedéseket. Lásd a [method merge_overlapping_carets] metódust."
 
 #. TextEdit.set_caret_line
 #: doc/classes/TextEdit.xml
 msgid "Moves the caret to the specified [param line] index. The caret column will be moved to the same visual position it was at the last time [method set_caret_column] was called, or clamped to the end of the line.\nIf [param adjust_viewport] is [code]true[/code], the viewport will center at the caret position after the move occurs.\nIf [param can_be_hidden] is [code]true[/code], the specified [param line] can be hidden.\nIf [param wrap_index] is [code]-1[/code], the caret column will be clamped to the [param line]'s length. If [param wrap_index] is greater than [code]-1[/code], the column will be moved to attempt to match the visual x position on the line's [param wrap_index] to the position from the last time [method set_caret_column] was called.\n[b]Note:[/b] If supporting multiple carets this will not check for any overlap. See [method merge_overlapping_carets]."
-msgstr "A szövegkurzort a megadott [param line] sorindexre helyezi. A kurzor oszlopa megpróbálja megtartani azt a látható vízszintes pozíciót, amelyen a [method set_caret_column] utolsó meghívásakor állt; szükség esetén a sor végére korlátozódik.\nHa az [param adjust_viewport] értéke [code]true[/code], a mozgatás után a nézet a kurzor helyére központosul.\nHa a [param can_be_hidden] értéke [code]true[/code], a megadott [param line] lehet rejtett sor is.\nHa a [param wrap_index] értéke [code]-1[/code], a kurzor oszlopát a [param line] hosszához igazítja. Ha a [param wrap_index] nagyobb [code]-1[/code]-nél, a kurzor oszlopa megpróbálja megtartani a [param wrap_index] tördelési szakaszban a [method set_caret_column] utolsó meghívásakor érvényes látható x pozíciót.\n[b]Megjegyzés:[/b] Több kurzor használatakor ez a művelet nem ellenőrzi az átfedéseket. Lásd: [method merge_overlapping_carets]."
+msgstr "A szövegkurzort a [param line] indexű sorba helyezi. A kurzor a [method set_caret_column] legutóbbi hívásakor beállított vízszintes helyre kerül, vagy a sor végére, ha a hely túlér a soron.\nHa a [param adjust_viewport] értéke [code]true[/code], a kurzor új helye a nézet közepére kerül.\nHa a [param can_be_hidden] értéke [code]true[/code], a megadott [param line] rejtett sor is lehet.\nHa a [param wrap_index] értéke [code]-1[/code], a kurzor oszlopa legfeljebb a [param line] sor hosszáig érhet. Ha a [param wrap_index] nagyobb [code]-1[/code]-nél, a metódus a sor [param wrap_index] tördelési szakaszában igyekszik megtartani a [method set_caret_column] legutóbbi hívásakor beállított vízszintes helyet.\n[b]Megjegyzés:[/b] Több kurzor használatakor a metódus nem ellenőrzi az átfedéseket. Lásd a [method merge_overlapping_carets] metódust."
 
 #. TextEdit.set_gutter_clickable
 #: doc/classes/TextEdit.xml
 msgid "If [code]true[/code], the mouse cursor will change to a pointing hand ([constant Control.CURSOR_POINTING_HAND]) when hovering over the gutter at the given index. See [method is_gutter_clickable] and [method set_line_gutter_clickable]."
-msgstr "Ha az érték [code]true[/code], az egérmutató mutató kézzé ([constant Control.CURSOR_POINTING_HAND]) változik, amikor a megadott indexű oldalsáv fölé kerül. Lásd: [method is_gutter_clickable] és [method set_line_gutter_clickable]."
+msgstr "Ha az érték [code]true[/code], az egérmutató kéz alakúra ([constant Control.CURSOR_POINTING_HAND]) vált a megadott indexű oldalsáv fölött. Lásd a [method is_gutter_clickable] és a [method set_line_gutter_clickable] metódust."
 
 #. TextEdit.set_gutter_custom_draw
 #: doc/classes/TextEdit.xml
@@ -689,7 +689,7 @@ msgstr "Beállítja a megadott indexű oldalsáv nevét."
 #. TextEdit.set_gutter_overwritable
 #: doc/classes/TextEdit.xml
 msgid "If [code]true[/code], the line data of the gutter at the given index can be overridden when using [method merge_gutters]. See [method is_gutter_overwritable]."
-msgstr "Ha az érték [code]true[/code], az adott indexű oldalsáv soradatai felülírhatók a [method merge_gutters] használatakor. Lásd: [method is_gutter_overwritable]."
+msgstr "Ha az érték [code]true[/code], a [method merge_gutters] metódus felülírhatja a megadott indexű oldalsávhoz tartozó soronkénti adatokat. Lásd a [method is_gutter_overwritable] metódust."
 
 #. TextEdit.set_gutter_type
 #: doc/classes/TextEdit.xml
@@ -729,7 +729,7 @@ msgstr "Beállítja a megadott sor egyéni háttérszínét. Ha a szín áttetsz
 #. TextEdit.set_line_gutter_clickable
 #: doc/classes/TextEdit.xml
 msgid "If [param clickable] is [code]true[/code], makes the [param gutter] on the given [param line] clickable. This is like [method set_gutter_clickable], but for a single line. If [method is_gutter_clickable] is [code]true[/code], this will not have any effect. See [method is_line_gutter_clickable] and [signal gutter_clicked]."
-msgstr "Ha a [param clickable] értéke [code]true[/code], a megadott [param line] sor [param gutter] oldalsávja kattintható lesz. A [method set_gutter_clickable] metódushoz hasonlóan működik, de csak egyetlen sorra vonatkozik. Ha az [method is_gutter_clickable] értéke [code]true[/code], ez a beállítás nem hat. Lásd: [method is_line_gutter_clickable] és [signal gutter_clicked]."
+msgstr "Ha a [param clickable] értéke [code]true[/code], a megadott [param line] sor [param gutter] oldalsávja kattintható lesz. A [method set_gutter_clickable] metódushoz hasonlóan működik, de csak egyetlen sorra vonatkozik. Ha a [method is_gutter_clickable] visszatérési értéke [code]true[/code], ez a beállítás hatástalan. Lásd a [method is_line_gutter_clickable] metódust és a [signal gutter_clicked] jelzést."
 
 #. TextEdit.set_line_gutter_icon
 #: doc/classes/TextEdit.xml
@@ -779,7 +779,7 @@ msgstr "A megadott [param caret_index] indexű kurzor kijelölésének kiinduló
 #. TextEdit.set_selection_origin_line
 #: doc/classes/TextEdit.xml
 msgid "Sets the selection origin line to the [param line] for the given [param caret_index]. If the selection origin is moved to the caret position, the selection will deselect.\nIf [param can_be_hidden] is [code]false[/code], The line will be set to the nearest unhidden line below or above.\nIf [param wrap_index] is [code]-1[/code], the selection origin column will be clamped to the [param line]'s length. If [param wrap_index] is greater than [code]-1[/code], the column will be moved to attempt to match the visual x position on the line's [param wrap_index] to the position from the last time [method set_selection_origin_column] or [method select] was called."
-msgstr "A megadott [param caret_index] indexű kurzor kijelölésének kiindulósorát a [param line] értékre állítja. Ha a kijelölés kiindulópontja a kurzor helyére kerül, a kijelölés megszűnik.\nHa a [param can_be_hidden] értéke [code]false[/code], a sor a legközelebbi, alatta vagy fölötte található nem rejtett sorra módosul.\nHa a [param wrap_index] értéke [code]-1[/code], a kijelölés kiindulóoszlopa nem lépheti túl a [param line] sor hosszát. Ha a [param wrap_index] nagyobb [code]-1[/code]-nél, az oszlopot úgy próbálja elhelyezni a sor [param wrap_index] tördelési szakaszán, hogy megőrizze a [method set_selection_origin_column] vagy a [method select] legutóbbi meghívásakor használt látható vízszintes pozíciót."
+msgstr "A kijelölés kiindulópontját a [param line] sorba helyezi a [param caret_index] indexű kurzorhoz. Ha a kiindulópont a kurzor helyére kerül, a kijelölés megszűnik.\nHa a [param can_be_hidden] értéke [code]false[/code], rejtett sor esetén a legközelebbi el nem rejtett sort használja alatta vagy fölötte.\nHa a [param wrap_index] értéke [code]-1[/code], a kijelölés kiindulóoszlopa legfeljebb a [param line] sor hosszáig érhet. Ha a [param wrap_index] nagyobb [code]-1[/code]-nél, a sor [param wrap_index] tördelési szakaszában igyekszik megtartani azt a vízszintes helyet, amelyet a [method set_selection_origin_column] vagy a [method select] legutóbbi hívása állított be."
 
 #. TextEdit.set_tab_size
 #: doc/classes/TextEdit.xml
@@ -799,7 +799,7 @@ msgstr "A kijelölést és a kurzort az aktuálisan kijelölt szöveg következ�
 #. TextEdit.start_action
 #: doc/classes/TextEdit.xml
 msgid "Starts an action, will end the current action if [param action] is different.\nAn action will also end after a call to [method end_action], after [member ProjectSettings.gui/timers/text_edit_idle_detect_sec] is triggered or a new undoable step outside the [method start_action] and [method end_action] calls."
-msgstr "Műveletet indít; ha a [param action] eltér az aktuális művelettől, előbb lezárja azt.\nA művelet akkor is véget ér, ha meghívják a [method end_action] metódust, ha aktiválódik a [member ProjectSettings.gui/timers/text_edit_idle_detect_sec] beállítás szerinti időzítő, vagy ha a [method start_action] és [method end_action] hívásokon kívül új, visszavonható lépés történik."
+msgstr "Elindítja a [param action] által megadott szerkesztési műveletet. Ha már fut más típusú művelet, előbb lezárja.\nA művelet akkor is véget ér, ha meghívják a [method end_action] metódust, ha lejár a [member ProjectSettings.gui/timers/text_edit_idle_detect_sec] beállítás szerinti várakozási idő, vagy ha a [method start_action] és a [method end_action] hívásokon kívül új, visszavonható lépés történik."
 
 #. TextEdit.swap_lines
 #: doc/classes/TextEdit.xml
@@ -999,12 +999,12 @@ msgstr "Ha az érték [code]true[/code], a helyi menü parancsainak gyorsbillent
 #. TextEdit.structured_text_bidi_override
 #: doc/classes/TextEdit.xml
 msgid "Set BiDi algorithm override for the structured text."
-msgstr "Beállítja a strukturált szöveg kétirányú (BiDi) megjelenítési algoritmusának felülbírálását."
+msgstr "Beállítja, hogyan módosuljon a kétirányú szöveg (BiDi) alapértelmezett elrendezése strukturált szöveg esetén."
 
 #. TextEdit.structured_text_bidi_override_options
 #: doc/classes/TextEdit.xml
 msgid "Set additional options for BiDi override."
-msgstr "További beállításokat ad meg a BiDi-felülbíráláshoz."
+msgstr "További beállítások a strukturált szöveg kétirányú (BiDi) elrendezésének módosításához."
 
 #. TextEdit.syntax_highlighter
 #: doc/classes/TextEdit.xml
@@ -1099,7 +1099,7 @@ msgstr "A vágólapra másolja a kijelölt szöveget."
 #. TextEdit.MENU_PASTE
 #: doc/classes/TextEdit.xml
 msgid "Pastes the clipboard text over the selected text (or at the cursor's position)."
-msgstr "A vágólapon lévő szöveget a kijelölt szöveg helyére (vagy a kurzor pozíciójába) illeszti be."
+msgstr "A vágólap szövegét a kijelölés helyére illeszti. Ha nincs kijelölés, a szövegkurzor helyére illeszti."
 
 #. TextEdit.MENU_CLEAR
 #: doc/classes/TextEdit.xml
@@ -1294,7 +1294,7 @@ msgstr "Téglalap alakú szövegkurzor."
 #. TextEdit.SELECTION_MODE_NONE
 #: doc/classes/TextEdit.xml
 msgid "Not selecting."
-msgstr "Nincs kijelölés."
+msgstr "Éppen nincs folyamatban kijelölési művelet."
 
 #. TextEdit.SELECTION_MODE_SHIFT
 #: doc/classes/TextEdit.xml
@@ -1339,7 +1339,7 @@ msgstr "Ha a [method set_gutter_type] metódussal ikon típusúra állítod az o
 #. TextEdit.GUTTER_TYPE_CUSTOM
 #: doc/classes/TextEdit.xml
 msgid "When a gutter is set to custom using [method set_gutter_type], it is used to contain custom visuals controlled by a callback method set via the [method set_gutter_custom_draw] method."
-msgstr "Ha a [method set_gutter_type] metódussal egyéni típusúra állítod az oldalsávot, a [method set_gutter_custom_draw] metódussal beállított visszahívás által vezérelt egyéni grafikus elemeket tartalmazza."
+msgstr "Ha a [method set_gutter_type] metódussal egyéni típusúra állítod az oldalsávot, annak megjelenését a [method set_gutter_custom_draw] metódussal megadott visszahívás határozza meg."
 
 #. TextEdit.theme_item.background_color
 #: doc/classes/TextEdit.xml
@@ -1349,7 +1349,7 @@ msgstr "Beállítja a [TextEdit] háttérszínét ([Color])."
 #. TextEdit.theme_item.caret_background_color
 #: doc/classes/TextEdit.xml
 msgid "[Color] of the text behind the caret when using a block caret."
-msgstr "Blokk alakú kurzornál a kurzor mögötti szöveg [Color] színe."
+msgstr "Téglalap alakú szövegkurzor használatakor a kurzor mögötti szöveg színe ([Color])."
 
 #. TextEdit.theme_item.caret_color
 #: doc/classes/TextEdit.xml
@@ -1369,7 +1369,7 @@ msgstr "Beállítja a betűk [Color] színét."
 #. TextEdit.theme_item.font_outline_color
 #: doc/classes/TextEdit.xml
 msgid "The tint of text outline of the [TextEdit]."
-msgstr "A [TextEdit] szövegkörvonalának árnyalatszíne."
+msgstr "A [TextEdit] szövegkörvonalának színe."
 
 #. TextEdit.theme_item.font_placeholder_color
 #: doc/classes/TextEdit.xml
@@ -1384,17 +1384,17 @@ msgstr "Beállítja a betűk [Color] színét, amikor a [member editable] ki van
 #. TextEdit.theme_item.font_selected_color
 #: doc/classes/TextEdit.xml
 msgid "Sets the [Color] of the selected text. If equal to [code]Color(0, 0, 0, 0)[/code], it will be ignored."
-msgstr "Beállítja a kijelölt szöveg [Color] színét. A [code]Color(0, 0, 0, 0)[/code] értéket figyelmen kívül hagyja."
+msgstr "A kijelölt szöveg betűszíne ([Color]). A [code]Color(0, 0, 0, 0)[/code] értéket a vezérlő figyelmen kívül hagyja."
 
 #. TextEdit.theme_item.search_result_border_color
 #: doc/classes/TextEdit.xml
 msgid "[Color] of the border around text that matches the search query."
-msgstr "A keresésnek megfelelő szöveg körüli keret [Color] színe."
+msgstr "A keresési találat körüli keret színe ([Color])."
 
 #. TextEdit.theme_item.search_result_color
 #: doc/classes/TextEdit.xml
 msgid "[Color] behind the text that matches the search query."
-msgstr "A keresésnek megfelelő szöveg mögötti [Color] szín."
+msgstr "A keresési találat háttérszíne ([Color])."
 
 #. TextEdit.theme_item.selection_color
 #: doc/classes/TextEdit.xml
@@ -1404,12 +1404,12 @@ msgstr "Beállítja a kijelölés kiemelő [Color] színét."
 #. TextEdit.theme_item.word_highlighted_color
 #: doc/classes/TextEdit.xml
 msgid "Sets the highlight [Color] of multiple occurrences. [member highlight_all_occurrences] has to be enabled."
-msgstr "Beállítja az ismétlődő szövegrészek kiemelő [Color] színét. Ehhez a [member highlight_all_occurrences] engedélyezése szükséges."
+msgstr "A kijelölt szöveg előfordulásainak kiemelőszíne ([Color]). Ehhez be kell kapcsolni a [member highlight_all_occurrences] tulajdonságot."
 
 #. TextEdit.theme_item.caret_width
 #: doc/classes/TextEdit.xml
 msgid "The caret's width in pixels. Greater values can be used to improve accessibility by ensuring the caret is easily visible, or to ensure consistency with a large font size. If set to [code]0[/code] or lower, the caret width is automatically set to 1 pixel and multiplied by the display scaling factor."
-msgstr "A kurzor szélessége képpontban. Nagyobb értékkel a kurzor könnyebben látható, ami javíthatja a hozzáférhetőséget, illetve nagyobb betűméretnél megőrizheti az arányokat. Ha az érték [code]0[/code] vagy kisebb, a szélesség automatikusan 1 képpont lesz, megszorozva a kijelző skálázási tényezőjével."
+msgstr "A szövegkurzor szélessége képpontban. A nagyobb szélesség könnyebben észrevehetővé teszi a kurzort, és nagy betűmérethez is jobban illeszkedhet. Ha az érték [code]0[/code] vagy kisebb, a szélességet a vezérlő úgy számítja ki, hogy 1 képpontot megszoroz a kijelző méretezési tényezőjével."
 
 #. TextEdit.theme_item.line_spacing
 #: doc/classes/TextEdit.xml
@@ -1424,7 +1424,7 @@ msgstr "A szövegkörvonal vastagsága.\n[b]Megjegyzés:[/b] Ha olyan betűkész
 #. TextEdit.theme_item.wrap_offset
 #: doc/classes/TextEdit.xml
 msgid "Sets an additional margin for line wrapping width."
-msgstr "További margót állít be a sortördelés szélességéhez."
+msgstr "Külön margó, amelyet a vezérlő a sortördeléshez használható szélesség kiszámításakor vesz figyelembe."
 
 #. TextEdit.theme_item.font
 #: doc/classes/TextEdit.xml
@@ -1454,7 +1454,7 @@ msgstr "Beállítja a fókuszban használt [StyleBox] erőforrást. A [theme_ite
 #. TextEdit.theme_item.normal
 #: doc/classes/TextEdit.xml
 msgid "Sets the [StyleBox] of this [TextEdit]."
-msgstr "Beállítja a [TextEdit] [StyleBox] erőforrását."
+msgstr "A [TextEdit] alapállapotban használt [StyleBox] stílusa."
 
 #. TextEdit.theme_item.read_only
 #: doc/classes/TextEdit.xml
