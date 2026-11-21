@@ -9091,7 +9091,7 @@ msgstr "Hivatkozást megjelenítő gomb."
 #. LinkButton.description
 #: doc/classes/LinkButton.xml
 msgid "A button that represents a link. This type of button is primarily used for interactions that cause a context change (like linking to a web page).\nSee also [BaseButton] which contains common properties and methods associated with this node."
-msgstr "Hivatkozást megjelenítő gomb. Ez a gombtípus elsősorban olyan műveletekhez használatos, amelyek környezetváltást okoznak (például egy weboldal megnyitásához).\nLásd még a [BaseButton] osztályt, amely a csomópont közös tulajdonságait és metódusait tartalmazza."
+msgstr "Hivatkozást megjelenítő gomb. Ez a gombtípus elsősorban olyan műveletekhez használatos, amelyek környezetváltást okoznak (például egy weboldal megnyitásához).\nA gombok közös tulajdonságait és metódusait a [BaseButton] osztály ismerteti."
 
 #. LinkButton.text
 #: doc/classes/LinkButton.xml
@@ -9101,7 +9101,7 @@ msgstr "A gomb területén megjelenő felirat."
 #. LinkButton.text_overrun_behavior
 #: doc/classes/LinkButton.xml
 msgid "Sets the clipping behavior when the text exceeds the node's bounding rectangle."
-msgstr "Beállítja a szöveg levágásának módját, ha a szöveg túlnyúlik a csomópont határoló téglalapján."
+msgstr "Meghatározza, hogyan legyen levágva a szöveg, ha túlnyúlik a csomópont határoló téglalapján."
 
 #. LinkButton.underline
 #: doc/classes/LinkButton.xml
@@ -9111,7 +9111,7 @@ msgstr "A szöveg aláhúzásának módja."
 #. LinkButton.uri
 #: doc/classes/LinkButton.xml
 msgid "The [url=https://en.wikipedia.org/wiki/Uniform_Resource_Identifier]URI[/url] for this [LinkButton]. If set to a valid URI, pressing the button opens the URI using the operating system's default program for the protocol (via [method OS.shell_open]). HTTP and HTTPS URLs open the default web browser.\n[codeblocks]\n[gdscript]\nuri = \"https://godotengine.org\"  # Opens the URL in the default web browser.\nuri = \"C:\\SomeFolder\"  # Opens the file explorer at the given path.\nuri = \"C:\\SomeImage.png\"  # Opens the given image in the default viewing app.\n[/gdscript]\n[csharp]\nUri = \"https://godotengine.org\"; // Opens the URL in the default web browser.\nUri = \"C:\\SomeFolder\"; // Opens the file explorer at the given path.\nUri = \"C:\\SomeImage.png\"; // Opens the given image in the default viewing app.\n[/csharp]\n[/codeblocks]"
-msgstr "Ehhez a [LinkButton] gombhoz tartozó [url=https://en.wikipedia.org/wiki/Uniform_Resource_Identifier]URI[/url]. Ha érvényes URI-t adsz meg, a gomb megnyomásakor az operációs rendszer az adott protokollhoz társított alapértelmezett programmal nyitja meg a címet (a [method OS.shell_open] segítségével). A HTTP- és HTTPS-címek az alapértelmezett webböngészőben nyílnak meg.\n[codeblocks]\n[gdscript]\nuri = \"https://godotengine.org\"  # Opens the URL in the default web browser.\nuri = \"C:\\SomeFolder\"  # Opens the file explorer at the given path.\nuri = \"C:\\SomeImage.png\"  # Opens the given image in the default viewing app.\n[/gdscript]\n[csharp]\nUri = \"https://godotengine.org\"; // Opens the URL in the default web browser.\nUri = \"C:\\SomeFolder\"; // Opens the file explorer at the given path.\nUri = \"C:\\SomeImage.png\"; // Opens the given image in the default viewing app.\n[/csharp]\n[/codeblocks]"
+msgstr "Ehhez a [LinkButton] gombhoz tartozó [url=https://en.wikipedia.org/wiki/Uniform_Resource_Identifier]URI[/url]. Ha érvényes URI-t adsz meg, a gomb megnyomásakor az operációs rendszer az adott protokollhoz társított alapértelmezett programmal nyitja meg a címet (a [method OS.shell_open] segítségével). A HTTP- és HTTPS-címek az alapértelmezett webböngészőben nyílnak meg.\n[codeblocks]\n[gdscript]\nuri = \"https://godotengine.org\"  # Megnyitja a webcímet az alapértelmezett böngészőben.\nuri = \"C:\\SomeFolder\"  # Megnyitja a fájlkezelőt a megadott elérési úton.\nuri = \"C:\\SomeImage.png\"  # Megnyitja a képet az alapértelmezett képnézegetőben.\n[/gdscript]\n[csharp]\nUri = \"https://godotengine.org\"; // Megnyitja a webcímet az alapértelmezett böngészőben.\nUri = \"C:\\SomeFolder\"; // Megnyitja a fájlkezelőt a megadott elérési úton.\nUri = \"C:\\SomeImage.png\"; // Megnyitja a képet az alapértelmezett képnézegetőben.\n[/csharp]\n[/codeblocks]"
 
 #. LinkButton.UNDERLINE_MODE_ALWAYS
 #: doc/classes/LinkButton.xml
@@ -9141,22 +9141,22 @@ msgstr "A letiltott [LinkButton] szövegének [Color] színe."
 #. LinkButton.font_focus_color
 #: doc/classes/LinkButton.xml
 msgid "Text [Color] used when the [LinkButton] is focused. Only replaces the normal text color of the button. Disabled, hovered, and pressed states take precedence over this color."
-msgstr "A fókuszban lévő [LinkButton] szövegének [Color] színe. Csak a gomb normál betűszínét írja felül; a letiltott, egérmutató alatti és lenyomott állapot színei elsőbbséget élveznek."
+msgstr "A fókuszban lévő [LinkButton] szövegének [Color] színe. Csak a gomb alapértelmezett szövegszínét helyettesíti; a letiltott, egérmutató alatti és lenyomott állapot színei elsőbbséget élveznek."
 
 #. LinkButton.font_hover_color
 #: doc/classes/LinkButton.xml
 msgid "Text [Color] used when the [LinkButton] is being hovered."
-msgstr "A [LinkButton] szövegének [Color] színe, amikor az egérmutató fölötte van."
+msgstr "A [LinkButton] szövegének [Color] színe, amikor az egérmutató a gomb fölött van."
 
 #. LinkButton.font_hover_pressed_color
 #: doc/classes/LinkButton.xml
 msgid "Text [Color] used when the [LinkButton] is being hovered and pressed."
-msgstr "A [LinkButton] szövegének [Color] színe, amikor az egérmutató fölötte van, és a gomb le van nyomva."
+msgstr "A [LinkButton] szövegének [Color] színe, amikor az egérmutató a gomb fölött van, és a gombot lenyomva tartják."
 
 #. LinkButton.font_outline_color
 #: doc/classes/LinkButton.xml
 msgid "The tint of text outline of the [LinkButton]."
-msgstr "A [LinkButton] szövegkörvonalának színezése."
+msgstr "A [LinkButton] szövegkörvonalának színe."
 
 #. LinkButton.font_pressed_color
 #: doc/classes/LinkButton.xml
@@ -9181,7 +9181,7 @@ msgstr "A [LinkButton] szövegének betűmérete."
 #. LinkButton.focus
 #: doc/classes/LinkButton.xml
 msgid "[StyleBox] used when the [LinkButton] is focused. The [theme_item focus] [StyleBox] is displayed [i]over[/i] the base [StyleBox], so a partially transparent [StyleBox] should be used to ensure the base [StyleBox] remains visible. A [StyleBox] that represents an outline or an underline works well for this purpose. To disable the focus visual effect, assign a [StyleBoxEmpty] resource. Note that disabling the focus visual effect will harm keyboard/controller navigation usability, so this is not recommended for accessibility reasons."
-msgstr "A fókuszban lévő [LinkButton] megjelenítéséhez használt [StyleBox]. A [theme_item focus] [StyleBox] az alapul szolgáló [StyleBox] [i]fölött[/i] jelenik meg, ezért részben átlátszó [StyleBox] használata javasolt, hogy az alatta lévő [StyleBox] is látható maradjon. Erre például egy körvonalat vagy aláhúzást ábrázoló [StyleBox] megfelelő. A fókusz vizuális jelzésének kikapcsolásához rendelj hozzá [StyleBoxEmpty] erőforrást. Ez azonban megnehezíti a billentyűzettel és kontrollerrel történő navigációt, ezért akadálymentességi szempontból nem ajánlott."
+msgstr "A fókuszban lévő [LinkButton] megjelenítéséhez használt [StyleBox]. A [theme_item focus] [StyleBox] az alapul szolgáló [StyleBox] [i]fölött[/i] jelenik meg, ezért részben átlátszó [StyleBox] használata javasolt, hogy az alatta lévő [StyleBox] is látható maradjon. Erre például egy körvonalat vagy aláhúzást ábrázoló [StyleBox] megfelelő. A fókusz vizuális jelzésének kikapcsolásához rendelj hozzá egy [StyleBoxEmpty] erőforrást. Ez azonban megnehezíti a billentyűzettel és játékvezérlővel történő navigációt, ezért akadálymentességi szempontból nem ajánlott."
 
 #. LineEdit.MENU_CUT
 #: doc/classes/LineEdit.xml
