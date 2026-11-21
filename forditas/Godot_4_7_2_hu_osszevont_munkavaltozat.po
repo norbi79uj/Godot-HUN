@@ -13316,3 +13316,209 @@ msgstr "Akkor érkezik, amikor a navigációs sokszög előállítása befejező
 #: doc/classes/NavigationRegion2D.xml
 msgid "Emitted when the used navigation polygon is replaced or changes to the internals of the current navigation polygon are committed."
 msgstr "Akkor érkezik, amikor a használt navigációs sokszöget lecserélik, vagy az aktuális sokszög belső módosításai érvénybe lépnek."
+
+#. NavigationMeshSourceGeometryData2D.brief
+#. NavigationMeshSourceGeometryData2D.description
+#. NavigationMeshSourceGeometryData3D.brief
+#. NavigationMeshSourceGeometryData3D.description
+#: doc/classes/NavigationMeshSourceGeometryData2D.xml doc/classes/NavigationMeshSourceGeometryData3D.xml
+msgid "Container for parsed source geometry data used in navigation mesh baking."
+msgstr "A navigációs háló előállításához feldolgozott forrásgeometria adatait tárolja."
+
+#. NavigationMeshSourceGeometryData2D.add_obstruction_outline
+#: doc/classes/NavigationMeshSourceGeometryData2D.xml
+msgid "Adds the outline points of a shape as obstructed area."
+msgstr "Egy alakzat körvonalának pontjait akadállyal fedett területként adja hozzá."
+
+#. NavigationMeshSourceGeometryData2D.add_projected_obstruction
+#: doc/classes/NavigationMeshSourceGeometryData2D.xml
+msgid "Adds a projected obstruction shape to the source geometry. If [param carve] is [code]true[/code] the carved shape will not be affected by additional offsets (e.g. agent radius) of the navigation mesh baking process."
+msgstr "Vetített akadályalakzatot ad a forrásgeometriához. Ha a [param carve] értéke [code]true[/code], a kivágott alakzatra nem hatnak a navigációs háló előállítása során alkalmazott további eltolások, például az ügynök sugara."
+
+#. NavigationMeshSourceGeometryData2D.add_traversable_outline
+#: doc/classes/NavigationMeshSourceGeometryData2D.xml
+msgid "Adds the outline points of a shape as traversable area."
+msgstr "Egy alakzat körvonalának pontjait bejárható területként adja hozzá."
+
+#. NavigationMeshSourceGeometryData2D.clear
+#. NavigationMeshSourceGeometryData3D.clear
+#: doc/classes/NavigationMeshSourceGeometryData2D.xml doc/classes/NavigationMeshSourceGeometryData3D.xml
+msgid "Clears the internal data."
+msgstr "Törli a belső adatokat."
+
+#. NavigationMeshSourceGeometryData2D.clear_projected_obstructions
+#. NavigationMeshSourceGeometryData3D.clear_projected_obstructions
+#: doc/classes/NavigationMeshSourceGeometryData2D.xml doc/classes/NavigationMeshSourceGeometryData3D.xml
+msgid "Clears all projected obstructions."
+msgstr "Törli az összes vetített akadályt."
+
+#. NavigationMeshSourceGeometryData2D.get_bounds
+#. NavigationMeshSourceGeometryData3D.get_bounds
+#: doc/classes/NavigationMeshSourceGeometryData2D.xml doc/classes/NavigationMeshSourceGeometryData3D.xml
+msgid "Returns an axis-aligned bounding box that covers all the stored geometry data. The bounds are calculated when calling this function with the result cached until further geometry changes are made."
+msgstr "Visszaadja az összes tárolt geometriai adatot befoglaló, tengelyekhez igazított határolókeretet. A határokat a metódus meghívásakor számítja ki, és az eredményt a geometria következő módosításáig gyorsítótárban tartja."
+
+#. NavigationMeshSourceGeometryData2D.get_obstruction_outlines
+#: doc/classes/NavigationMeshSourceGeometryData2D.xml
+msgid "Returns all the obstructed area outlines arrays."
+msgstr "Visszaadja az akadállyal fedett területek összes körvonalát tartalmazó tömböket."
+
+#. NavigationMeshSourceGeometryData2D.get_traversable_outlines
+#: doc/classes/NavigationMeshSourceGeometryData2D.xml
+msgid "Returns all the traversable area outlines arrays."
+msgstr "Visszaadja a bejárható területek összes körvonalát tartalmazó tömböket."
+
+#. NavigationMeshSourceGeometryData2D.merge
+#: doc/classes/NavigationMeshSourceGeometryData2D.xml
+msgid "Adds the geometry data of another [NavigationMeshSourceGeometryData2D] to the navigation mesh baking data."
+msgstr "Egy másik [NavigationMeshSourceGeometryData2D] objektum geometriai adatait hozzáadja a navigációs háló előállításához használt adatokhoz."
+
+#. NavigationMeshSourceGeometryData2D.set_obstruction_outlines
+#: doc/classes/NavigationMeshSourceGeometryData2D.xml
+msgid "Sets all the obstructed area outlines arrays."
+msgstr "Beállítja az akadállyal fedett területek összes körvonalát tartalmazó tömböket."
+
+#. NavigationMeshSourceGeometryData2D.set_traversable_outlines
+#: doc/classes/NavigationMeshSourceGeometryData2D.xml
+msgid "Sets all the traversable area outlines arrays."
+msgstr "Beállítja a bejárható területek összes körvonalát tartalmazó tömböket."
+
+#. NavigationPathQueryParameters2D.PATHFINDING_ALGORITHM_ASTAR
+#. NavigationPathQueryParameters3D.PATHFINDING_ALGORITHM_ASTAR
+#: doc/classes/NavigationPathQueryParameters2D.xml doc/classes/NavigationPathQueryParameters3D.xml
+msgid "The path query uses the default A* pathfinding algorithm."
+msgstr "Az útvonallekérdezés az alapértelmezett A* útkereső algoritmust használja."
+
+#. NavigationPathQueryParameters2D.PATH_POSTPROCESSING_CORRIDORFUNNEL
+#. NavigationPathQueryParameters3D.PATH_POSTPROCESSING_CORRIDORFUNNEL
+#: doc/classes/NavigationPathQueryParameters2D.xml doc/classes/NavigationPathQueryParameters3D.xml
+msgid "Applies a funnel algorithm to the raw path corridor found by the pathfinding algorithm. This will result in the shortest path possible inside the path corridor. This postprocessing very much depends on the navigation mesh polygon layout and the created corridor. Especially tile- or gridbased layouts can face artificial corners with diagonal movement due to a jagged path corridor imposed by the cell shapes."
+msgstr "Tölcséralgoritmust alkalmaz az útkereső algoritmus által megtalált nyers útvonal-folyosóra. Ez a folyosón belüli lehető legrövidebb útvonalat eredményezi. Az utófeldolgozás eredménye nagyban függ a navigációs háló sokszögeinek elrendezésétől és a kialakult folyosótól. Különösen a csempe- vagy rácsalapú elrendezéseknél keletkezhetnek fölösleges kanyarok átlós mozgáskor, mert a cellák alakja cikkcakkossá teheti a folyosót."
+
+#. NavigationPathQueryParameters2D.PATH_POSTPROCESSING_EDGECENTERED
+#. NavigationPathQueryParameters3D.PATH_POSTPROCESSING_EDGECENTERED
+#: doc/classes/NavigationPathQueryParameters2D.xml doc/classes/NavigationPathQueryParameters3D.xml
+msgid "Centers every path position in the middle of the traveled navigation mesh polygon edge. This creates better paths for tile- or gridbased layouts that restrict the movement to the cells center."
+msgstr "Az útvonal átlépési pontjait a navigációs háló érintett sokszögéleinek közepére helyezi. Ez jobb útvonalakat eredményez olyan csempe- vagy rácsalapú elrendezéseknél, amelyek a mozgást a cellák középpontjaira korlátozzák."
+
+#. NavigationPathQueryParameters2D.PATH_POSTPROCESSING_NONE
+#. NavigationPathQueryParameters3D.PATH_POSTPROCESSING_NONE
+#: doc/classes/NavigationPathQueryParameters2D.xml doc/classes/NavigationPathQueryParameters3D.xml
+msgid "Applies no postprocessing and returns the raw path corridor as found by the pathfinding algorithm."
+msgstr "Utófeldolgozás nélkül adja vissza az útkereső algoritmus által megtalált nyers útvonal-folyosót."
+
+#. NavigationPathQueryParameters2D.PATH_METADATA_INCLUDE_NONE
+#. NavigationPathQueryParameters3D.PATH_METADATA_INCLUDE_NONE
+#: doc/classes/NavigationPathQueryParameters2D.xml doc/classes/NavigationPathQueryParameters3D.xml
+msgid "Don't include any additional metadata about the returned path."
+msgstr "A visszaadott útvonalhoz nem mellékel további metaadatokat."
+
+#. NavigationPathQueryParameters2D.PATH_METADATA_INCLUDE_TYPES
+#. NavigationPathQueryParameters3D.PATH_METADATA_INCLUDE_TYPES
+#: doc/classes/NavigationPathQueryParameters2D.xml doc/classes/NavigationPathQueryParameters3D.xml
+msgid "Include the type of navigation primitive (region or link) that each point of the path goes through."
+msgstr "Megadja, hogy az útvonal egyes pontjai milyen típusú navigációs elemhez tartoznak (területhez vagy kapcsolathoz)."
+
+#. NavigationPathQueryParameters2D.PATH_METADATA_INCLUDE_RIDS
+#. NavigationPathQueryParameters3D.PATH_METADATA_INCLUDE_RIDS
+#: doc/classes/NavigationPathQueryParameters2D.xml doc/classes/NavigationPathQueryParameters3D.xml
+msgid "Include the [RID]s of the regions and links that each point of the path goes through."
+msgstr "Megadja az útvonal egyes pontjaihoz tartozó navigációs területek és kapcsolatok [RID] azonosítóit."
+
+#. NavigationPathQueryParameters2D.PATH_METADATA_INCLUDE_OWNERS
+#. NavigationPathQueryParameters3D.PATH_METADATA_INCLUDE_OWNERS
+#: doc/classes/NavigationPathQueryParameters2D.xml doc/classes/NavigationPathQueryParameters3D.xml
+msgid "Include the [code]ObjectID[/code]s of the [Object]s which manage the regions and links each point of the path goes through."
+msgstr "Megadja azoknak az [Object] objektumoknak az [code]ObjectID[/code] azonosítóit, amelyek az útvonal egyes pontjaihoz tartozó navigációs területeket és kapcsolatokat kezelik."
+
+#. NavigationPathQueryParameters2D.PATH_METADATA_INCLUDE_ALL
+#. NavigationPathQueryParameters3D.PATH_METADATA_INCLUDE_ALL
+#: doc/classes/NavigationPathQueryParameters2D.xml doc/classes/NavigationPathQueryParameters3D.xml
+msgid "Include all available metadata about the returned path."
+msgstr "A visszaadott útvonalhoz minden elérhető metaadatot mellékel."
+
+#. NavigationPathQueryResult2D.PATH_SEGMENT_TYPE_REGION
+#. NavigationPathQueryResult3D.PATH_SEGMENT_TYPE_REGION
+#: doc/classes/NavigationPathQueryResult2D.xml doc/classes/NavigationPathQueryResult3D.xml
+msgid "This segment of the path goes through a region."
+msgstr "Az útvonal ezen szakasza navigációs területen halad át."
+
+#. NavigationPathQueryResult2D.PATH_SEGMENT_TYPE_LINK
+#. NavigationPathQueryResult3D.PATH_SEGMENT_TYPE_LINK
+#: doc/classes/NavigationPathQueryResult2D.xml doc/classes/NavigationPathQueryResult3D.xml
+msgid "This segment of the path goes through a link."
+msgstr "Az útvonal ezen szakasza navigációs kapcsolaton halad át."
+
+#. NavigationServer2D.avoidance_debug_changed
+#. NavigationServer3D.avoidance_debug_changed
+#: doc/classes/NavigationServer2D.xml doc/classes/NavigationServer3D.xml
+msgid "Emitted when avoidance debug settings are changed. Only available in debug builds."
+msgstr "Az akadályelkerülés hibakeresési beállításainak módosításakor érkezik. Csak hibakeresési buildben érhető el."
+
+#. NavigationServer2D.map_changed
+#. NavigationServer3D.map_changed
+#: doc/classes/NavigationServer2D.xml doc/classes/NavigationServer3D.xml
+msgid "Emitted when a navigation map is updated, when a region moves or is modified."
+msgstr "A navigációs térkép frissítésekor érkezik, például amikor egy navigációs terület elmozdul vagy megváltozik."
+
+#. NavigationServer2D.navigation_debug_changed
+#. NavigationServer3D.navigation_debug_changed
+#: doc/classes/NavigationServer2D.xml doc/classes/NavigationServer3D.xml
+msgid "Emitted when navigation debug settings are changed. Only available in debug builds."
+msgstr "A navigáció hibakeresési beállításainak módosításakor érkezik. Csak hibakeresési buildben érhető el."
+
+#. NavigationServer2D.INFO_ACTIVE_MAPS
+#. NavigationServer3D.INFO_ACTIVE_MAPS
+#: doc/classes/NavigationServer2D.xml doc/classes/NavigationServer3D.xml
+msgid "Constant to get the number of active navigation maps."
+msgstr "Az aktív navigációs térképek számának lekérésére szolgáló állandó."
+
+#. NavigationServer2D.INFO_POLYGON_COUNT
+#. NavigationServer3D.INFO_POLYGON_COUNT
+#: doc/classes/NavigationServer2D.xml doc/classes/NavigationServer3D.xml
+msgid "Constant to get the number of navigation mesh polygons."
+msgstr "A navigációs hálóban lévő sokszögek számának lekérésére szolgáló állandó."
+
+#. NavigationServer2D.INFO_EDGE_COUNT
+#. NavigationServer3D.INFO_EDGE_COUNT
+#: doc/classes/NavigationServer2D.xml doc/classes/NavigationServer3D.xml
+msgid "Constant to get the number of navigation mesh polygon edges."
+msgstr "A navigációs háló sokszögélei számának lekérésére szolgáló állandó."
+
+#. NavigationServer2D.INFO_EDGE_MERGE_COUNT
+#. NavigationServer3D.INFO_EDGE_MERGE_COUNT
+#: doc/classes/NavigationServer2D.xml doc/classes/NavigationServer3D.xml
+msgid "Constant to get the number of navigation mesh polygon edges that were merged due to edge key overlap."
+msgstr "Az egyező élkulcs alapján összevont navigációs hálóélek számának lekérésére szolgáló állandó."
+
+#. NavigationServer2D.INFO_EDGE_CONNECTION_COUNT
+#. NavigationServer3D.INFO_EDGE_CONNECTION_COUNT
+#: doc/classes/NavigationServer2D.xml doc/classes/NavigationServer3D.xml
+msgid "Constant to get the number of navigation mesh polygon edges that are considered connected by edge proximity."
+msgstr "A közelségük alapján összekapcsoltnak tekintett navigációs hálóélek számának lekérésére szolgáló állandó."
+
+#. NavigationServer2D.INFO_EDGE_FREE_COUNT
+#. NavigationServer3D.INFO_EDGE_FREE_COUNT
+#: doc/classes/NavigationServer2D.xml doc/classes/NavigationServer3D.xml
+msgid "Constant to get the number of navigation mesh polygon edges that could not be merged but may be still connected by edge proximity or with links."
+msgstr "Az össze nem vonható navigációs hálóélek számának lekérésére szolgáló állandó. Ezek az élek a közelségük alapján vagy navigációs kapcsolatok révén még összekapcsolhatók."
+
+#. NavigationServer2DManager.brief
+#: doc/classes/NavigationServer2DManager.xml
+msgid "A singleton for managing [NavigationServer2D] implementations."
+msgstr "A [NavigationServer2D] megvalósításait kezelő egypéldányos osztály."
+
+#. NavigationServer2DManager.description
+#: doc/classes/NavigationServer2DManager.xml
+msgid "[NavigationServer2DManager] is the API for registering [NavigationServer2D] implementations and setting the default implementation.\n[b]Note:[/b] It is not possible to switch servers at runtime. This class is only used on startup at the server initialization level."
+msgstr "A [NavigationServer2DManager] API-jával regisztrálhatók a [NavigationServer2D] megvalósításai, és kiválasztható az alapértelmezett megvalósítás.\n[b]Megjegyzés:[/b] Futás közben nem lehet kiszolgálót váltani. Ez az osztály csak indításkor, a kiszolgálók inicializálásakor használatos."
+
+#. NavigationServer2DManager.register_server
+#: doc/classes/NavigationServer2DManager.xml
+msgid "Registers a [NavigationServer2D] implementation by passing a [param name] and a [Callable] that returns a [NavigationServer2D] object."
+msgstr "Regisztrál egy [NavigationServer2D] megvalósítást. Ehhez add meg a [param name] nevet és egy olyan [Callable] hívható objektumot, amely egy [NavigationServer2D] objektumot ad vissza."
+
+#. NavigationServer2DManager.set_default_server
+#: doc/classes/NavigationServer2DManager.xml
+msgid "Sets the default [NavigationServer2D] implementation to the one identified by [param name], if [param priority] is greater than the priority of the current default implementation."
+msgstr "A [param name] névvel azonosított [NavigationServer2D] megvalósítást állítja be alapértelmezettnek, ha a [param priority] értéke nagyobb a jelenlegi alapértelmezett megvalósítás prioritásánál."
