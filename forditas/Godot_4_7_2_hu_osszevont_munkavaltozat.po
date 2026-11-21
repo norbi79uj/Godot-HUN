@@ -11407,3 +11407,238 @@ msgstr "A [ViewportTexture] a [Viewport] tartalmát dinamikus [Texture2D] textú
 #: doc/classes/ViewportTexture.xml
 msgid "The path to the [Viewport] node to display. This is relative to the local scene root (see [method Resource.get_local_scene]), [b]not[/b] to the nodes that use this texture.\n[b]Note:[/b] In the editor, this path is automatically updated when the target viewport or one of its ancestors is renamed or moved. At runtime, this path may not automatically update if the scene root cannot be found."
 msgstr "A megjelenítendő [Viewport] csomópont útvonala. Az útvonal a helyi jelenet gyökércsomópontjához viszonyított (lásd a [method Resource.get_local_scene] metódust), [b]nem[/b] pedig a textúrát használó csomópontokhoz.\n[b]Megjegyzés:[/b] A szerkesztő automatikusan frissíti az útvonalat, ha a célként használt nézetablakot vagy valamelyik ősét átnevezed vagy áthelyezed. Futás közben előfordulhat, hogy az útvonal nem frissül automatikusan, ha a jelenet gyökércsomópontja nem található."
+
+#. BackBufferCopy.brief
+#: doc/classes/BackBufferCopy.xml
+msgid "A node that copies a region of the screen to a buffer for access in shader code."
+msgstr "A képernyő egy részét pufferbe másolja, hogy az árnyalókód hozzáférhessen."
+
+#. BackBufferCopy.description
+#: doc/classes/BackBufferCopy.xml
+msgid "Node for back-buffering the currently-displayed screen. The region defined in the [BackBufferCopy] node is buffered with the content of the screen it covers, or the entire screen according to the [member copy_mode]. It can be accessed in shader scripts using the screen texture (i.e. a uniform sampler with [code]hint_screen_texture[/code]).\n[b]Note:[/b] Since this node inherits from [Node2D] (and not [Control]), anchors and margins won't apply to child [Control]-derived nodes. This can be problematic when resizing the window. To avoid this, add [Control]-derived nodes as [i]siblings[/i] to the [BackBufferCopy] node instead of adding them as children."
+msgstr "Az éppen megjelenített kép tartalmát a háttérpufferbe másolja. A [BackBufferCopy] a saját területe alatti képernyőrészletet vagy az egész képernyőt másolja, a [member copy_mode] beállításától függően. A másolt tartalmat az árnyalókódból a képernyőtextúrán keresztül, vagyis egy [code]hint_screen_texture[/code] jelölésű uniform mintavételezővel érheted el.\n[b]Megjegyzés:[/b] Ez a csomópont a [Node2D] osztályból származik, így a [Control] osztálytól eltérően a [Control] típusú gyermekeinél nem érvényesülnek a rögzítési pontok és a margók. Ez az ablak átméretezésekor gondot okozhat. Ennek elkerüléséhez a [Control] osztályból származó csomópontok a [BackBufferCopy] [i]testvércsomópontjai[/i] legyenek, ne a gyermekei."
+
+#. BackBufferCopy.copy_mode
+#: doc/classes/BackBufferCopy.xml
+msgid "Buffer mode."
+msgstr "A pufferbe másolás módja."
+
+#. BackBufferCopy.rect
+#: doc/classes/BackBufferCopy.xml
+msgid "The area covered by the [BackBufferCopy]. Only used if [member copy_mode] is [constant COPY_MODE_RECT]."
+msgstr "A [BackBufferCopy] által lefedett terület. Csak akkor használatos, ha a [member copy_mode] értéke [constant COPY_MODE_RECT]."
+
+#. BackBufferCopy.COPY_MODE_DISABLED
+#: doc/classes/BackBufferCopy.xml
+msgid "Disables the buffering mode. This means the [BackBufferCopy] node will directly use the portion of screen it covers."
+msgstr "Kikapcsolja a pufferbe másolást. A [BackBufferCopy] közvetlenül a képernyő általa lefedett részét használja."
+
+#. BackBufferCopy.COPY_MODE_RECT
+#: doc/classes/BackBufferCopy.xml
+msgid "[BackBufferCopy] buffers a rectangular region."
+msgstr "A [BackBufferCopy] egy téglalap alakú területet másol a pufferbe."
+
+#. BackBufferCopy.COPY_MODE_VIEWPORT
+#: doc/classes/BackBufferCopy.xml
+msgid "[BackBufferCopy] buffers the entire screen."
+msgstr "A [BackBufferCopy] az egész képernyőt a pufferbe másolja."
+
+#. CanvasItemMaterial.brief
+#: doc/classes/CanvasItemMaterial.xml
+msgid "A material for [CanvasItem]s."
+msgstr "A [CanvasItem] csomópontokhoz használható anyag."
+
+#. CanvasItemMaterial.description
+#: doc/classes/CanvasItemMaterial.xml
+msgid "[CanvasItemMaterial]s provide a means of modifying the textures associated with a CanvasItem. They specialize in describing blend and lighting behaviors for textures. Use a [ShaderMaterial] to more fully customize a material's interactions with a [CanvasItem]."
+msgstr "A [CanvasItemMaterial] segítségével módosíthatod a CanvasItem csomópontokhoz tartozó textúrák megjelenését. Az anyag a textúrák keverését és megvilágítását szabályozza. Ha részletesebben szeretnéd vezérelni, hogyan jelenjen meg az anyag egy [CanvasItem] csomóponton, használj [ShaderMaterial] erőforrást."
+
+#. CanvasItemMaterial.blend_mode
+#: doc/classes/CanvasItemMaterial.xml
+msgid "The manner in which a material's rendering is applied to underlying textures."
+msgstr "Meghatározza, hogyan keveredik az anyag kirajzolt képe az alatta lévő textúrákkal."
+
+#. CanvasItemMaterial.light_mode
+#: doc/classes/CanvasItemMaterial.xml
+msgid "The manner in which material reacts to lighting."
+msgstr "Meghatározza, hogyan reagál az anyag a megvilágításra."
+
+#. CanvasItemMaterial.particles_anim_h_frames
+#: doc/classes/CanvasItemMaterial.xml
+msgid "The number of columns in the spritesheet assigned as [Texture2D] for a [GPUParticles2D] or [CPUParticles2D].\n[b]Note:[/b] This property is only used and visible in the editor if [member particles_animation] is [code]true[/code]."
+msgstr "A [GPUParticles2D] vagy [CPUParticles2D] csomóponthoz [Texture2D] textúraként rendelt sprite-lap oszlopainak száma.\n[b]Megjegyzés:[/b] Ez a tulajdonság csak akkor használatos és látható a szerkesztőben, ha a [member particles_animation] értéke [code]true[/code]."
+
+#. CanvasItemMaterial.particles_anim_v_frames
+#: doc/classes/CanvasItemMaterial.xml
+msgid "The number of rows in the spritesheet assigned as [Texture2D] for a [GPUParticles2D] or [CPUParticles2D].\n[b]Note:[/b] This property is only used and visible in the editor if [member particles_animation] is [code]true[/code]."
+msgstr "A [GPUParticles2D] vagy [CPUParticles2D] csomóponthoz [Texture2D] textúraként rendelt sprite-lap sorainak száma.\n[b]Megjegyzés:[/b] Ez a tulajdonság csak akkor használatos és látható a szerkesztőben, ha a [member particles_animation] értéke [code]true[/code]."
+
+#. CanvasItemMaterial.particles_anim_loop
+#: doc/classes/CanvasItemMaterial.xml
+msgid "If [code]true[/code], the particles animation will loop.\n[b]Note:[/b] This property is only used and visible in the editor if [member particles_animation] is [code]true[/code]."
+msgstr "Ha az érték [code]true[/code], a részecskeanimáció ismétlődik.\n[b]Megjegyzés:[/b] Ez a tulajdonság csak akkor használatos és látható a szerkesztőben, ha a [member particles_animation] értéke [code]true[/code]."
+
+#. CanvasItemMaterial.particles_animation
+#: doc/classes/CanvasItemMaterial.xml
+msgid "If [code]true[/code], enable spritesheet-based animation features when assigned to [GPUParticles2D] and [CPUParticles2D] nodes. The [member ParticleProcessMaterial.anim_speed_max] or [member CPUParticles2D.anim_speed_max] should also be set to a positive value for the animation to play.\nThis property (and other [code]particles_anim_*[/code] properties that depend on it) has no effect on other types of nodes."
+msgstr "Ha az érték [code]true[/code], a [GPUParticles2D] és [CPUParticles2D] csomópontokhoz rendelve engedélyezi a sprite-lap alapú animációt. A lejátszáshoz a [member ParticleProcessMaterial.anim_speed_max] vagy a [member CPUParticles2D.anim_speed_max] értékét is állítsd pozitív számra.\nEnnek és a tőle függő [code]particles_anim_*[/code] tulajdonságoknak más típusú csomópontokra nincs hatásuk."
+
+#. CanvasItemMaterial.BLEND_MODE_MIX
+#: doc/classes/CanvasItemMaterial.xml
+msgid "Mix blending mode. Colors are assumed to be independent of the alpha (opacity) value."
+msgstr "Normál keverés. A színértékek függetlenek az alfaértéktől, amely az átlátszatlanságot adja meg."
+
+#. CanvasItemMaterial.BLEND_MODE_ADD
+#: doc/classes/CanvasItemMaterial.xml
+msgid "Additive blending mode."
+msgstr "Összeadó keverési mód."
+
+#. CanvasItemMaterial.BLEND_MODE_SUB
+#: doc/classes/CanvasItemMaterial.xml
+msgid "Subtractive blending mode."
+msgstr "Kivonó keverési mód."
+
+#. CanvasItemMaterial.BLEND_MODE_MUL
+#: doc/classes/CanvasItemMaterial.xml
+msgid "Multiplicative blending mode."
+msgstr "Szorzó keverési mód."
+
+#. CanvasItemMaterial.BLEND_MODE_PREMULT_ALPHA
+#: doc/classes/CanvasItemMaterial.xml
+msgid "Mix blending mode. Colors are assumed to be premultiplied by the alpha (opacity) value."
+msgstr "Normál keverés. A színértékeket előzetesen megszorozták az átlátszatlanságot megadó alfaértékkel."
+
+#. CanvasItemMaterial.LIGHT_MODE_NORMAL
+#: doc/classes/CanvasItemMaterial.xml
+msgid "Render the material using both light and non-light sensitive material properties."
+msgstr "A kirajzolás az anyag fényérzékeny és fénytől független tulajdonságait egyaránt figyelembe veszi."
+
+#. CanvasItemMaterial.LIGHT_MODE_UNSHADED
+#: doc/classes/CanvasItemMaterial.xml
+msgid "Render the material as if there were no light."
+msgstr "Úgy rajzolja ki az anyagot, mintha nem lenne megvilágítás."
+
+#. CanvasItemMaterial.LIGHT_MODE_LIGHT_ONLY
+#: doc/classes/CanvasItemMaterial.xml
+msgid "Render the material as if there were only light."
+msgstr "Úgy rajzolja ki az anyagot, mintha csak a fény hatása lenne látható."
+
+#. CanvasLayer.brief
+#: doc/classes/CanvasLayer.xml
+msgid "A node used for independent rendering of objects within a 2D scene."
+msgstr "A 2D-s jelenet elemeinek külön rétegen történő megjelenítésére szolgáló csomópont."
+
+#. CanvasLayer.description
+#: doc/classes/CanvasLayer.xml
+msgid "[CanvasItem]-derived nodes that are direct or indirect children of a [CanvasLayer] will be drawn in that layer. The layer is a numeric index that defines the draw order. The default 2D scene renders with index [code]0[/code], so a [CanvasLayer] with index [code]-1[/code] will be drawn below, and a [CanvasLayer] with index [code]1[/code] will be drawn above. This order will hold regardless of the [member CanvasItem.z_index] of the nodes within each layer.\n[CanvasLayer]s can be hidden and they can also optionally follow the viewport. This makes them useful for HUDs like health bar overlays (on layers [code]1[/code] and higher) or backgrounds (on layers [code]-1[/code] and lower).\n[b]Note:[/b] Embedded [Window]s are placed on layer [code]1024[/code]. [CanvasItem]s on layers [code]1025[/code] and higher appear in front of embedded windows.\n[b]Note:[/b] Each [CanvasLayer] is drawn on one specific [Viewport] and cannot be shared between multiple [Viewport]s, see [member custom_viewport]. When using multiple [Viewport]s, for example in a split-screen game, you need to create an individual [CanvasLayer] for each [Viewport] you want it to be drawn on."
+msgstr "A [CanvasLayer] közvetlen vagy közvetett, [CanvasItem] osztályból származó gyermekei ezen a rétegen jelennek meg. A réteg számozott indexe határozza meg a kirajzolás sorrendjét. Az alapértelmezett 2D-s jelenet indexe [code]0[/code]. A [code]-1[/code] indexű [CanvasLayer] ez alá, az [code]1[/code] indexű [CanvasLayer] pedig e fölé kerül. Ez a sorrend a rétegen belüli csomópontok [member CanvasItem.z_index] értékétől független.\nA [CanvasLayer] rétegek elrejthetők, és igény szerint követhetik a nézetablakot. Így például életerőjelzőt jeleníthetsz meg a [code]1[/code] indexű vagy magasabb rétegen, hátteret pedig a [code]-1[/code] indexű vagy alacsonyabb rétegen.\n[b]Megjegyzés:[/b] A beágyazott [Window] ablakok a [code]1024[/code] indexű rétegre kerülnek. A [code]1025[/code] indexű vagy magasabb rétegek [CanvasItem] elemei a beágyazott ablakok előtt jelennek meg.\n[b]Megjegyzés:[/b] Minden [CanvasLayer] egy adott [Viewport] nézetablakra rajzolódik ki. Ugyanaz a réteg nem osztható meg több [Viewport] között (lásd a [member custom_viewport] tulajdonságot). Ha több [Viewport] nézetablakot használsz, például osztott képernyős játékban, minden érintett [Viewport] nézetablakhoz külön [CanvasLayer] csomópontot hozz létre."
+
+#. CanvasLayer.layer
+#: doc/classes/CanvasLayer.xml
+msgid "Layer index for draw order. Lower values are drawn behind higher values.\n[b]Note:[/b] If multiple CanvasLayers have the same layer index, [CanvasItem] children of one CanvasLayer are drawn behind the [CanvasItem] children of the other CanvasLayer. Which CanvasLayer is drawn in front is non-deterministic.\n[b]Note:[/b] The layer index should be between [constant RenderingServer.CANVAS_LAYER_MIN] and [constant RenderingServer.CANVAS_LAYER_MAX] (inclusive). Any other value will wrap around."
+msgstr "A kirajzolási sorrendet meghatározó rétegindex. A kisebb indexű rétegek a nagyobb indexűek mögött jelennek meg.\n[b]Megjegyzés:[/b] Ha több CanvasLayer réteg indexe azonos, az egyik réteg [CanvasItem] gyermekei a másik réteg [CanvasItem] gyermekei mögé kerülnek. Nincs meghatározva, melyik réteg kerül előre.\n[b]Megjegyzés:[/b] A rétegindex a [constant RenderingServer.CANVAS_LAYER_MIN] és a [constant RenderingServer.CANVAS_LAYER_MAX] közé essen, a határértékeket is beleértve. A tartományon kívüli érték a tartományon belülre fordul vissza."
+
+#. ShaderMaterial.brief
+#: doc/classes/ShaderMaterial.xml
+msgid "A material defined by a custom [Shader] program and the values of its shader parameters."
+msgstr "Egyéni [Shader] program és az árnyaló paraméterértékei által meghatározott anyag."
+
+#. ShaderMaterial.description
+#: doc/classes/ShaderMaterial.xml
+msgid "A material that uses a custom [Shader] program to render visual items (canvas items, meshes, skies, fog), or to process particles. Compared to other materials, [ShaderMaterial] gives deeper control over the generated shader code. For more information, see the shaders documentation index below.\nMultiple [ShaderMaterial]s can use the same shader and configure different values for the shader uniforms.\n[b]Note:[/b] For performance reasons, the [signal Resource.changed] signal is only emitted when the [member Resource.resource_name] changes. Only in editor, it is also emitted for [member shader] changes."
+msgstr "Egyéni [Shader] programot használó anyag. Vászonelemek, hálók, égbolt és köd megjelenítésére, valamint részecskék feldolgozására használható. A többi anyagtípushoz képest a [ShaderMaterial] részletesebb vezérlést ad a létrejövő árnyalókód fölött. További információt az alábbi árnyalódokumentációban találsz.\nTöbb [ShaderMaterial] használhatja ugyanazt az árnyalót, és mindegyikhez más uniform paraméterértékeket állíthatsz be.\n[b]Megjegyzés:[/b] Teljesítménybeli okokból a [signal Resource.changed] jelzést csak a [member Resource.resource_name] változásakor küldi el. A szerkesztőben a [member shader] változásakor is jelzést küld."
+
+#. ShaderMaterial.get_shader_parameter
+#: doc/classes/ShaderMaterial.xml
+msgid "Returns the current value set for this material of a uniform in the shader."
+msgstr "Visszaadja az árnyaló uniform paraméterének ehhez az anyaghoz beállított aktuális értékét."
+
+#. ShaderMaterial.set_shader_parameter
+#: doc/classes/ShaderMaterial.xml
+msgid "Changes the value set for this material of a uniform in the shader.\n[b]Note:[/b] [param param] is case-sensitive and must match the name of the uniform in the code exactly (not the capitalized name in the inspector).\n[b]Note:[/b] Changes to the shader uniform will be effective on all instances using this [ShaderMaterial]. To prevent this, use per-instance uniforms with [method CanvasItem.set_instance_shader_parameter], [method GeometryInstance3D.set_instance_shader_parameter] or duplicate the [ShaderMaterial] resource using [method Resource.duplicate]. Per-instance uniforms allow for better shader reuse and are therefore faster, so they should be preferred over duplicating the [ShaderMaterial] when possible."
+msgstr "Módosítja az árnyaló uniform paraméterének ehhez az anyaghoz beállított értékét.\n[b]Megjegyzés:[/b] A [param param] megkülönbözteti a kis- és nagybetűket. Pontosan a kódban szereplő uniform nevet add meg, ne a Tulajdonságok panelen megjelenő, nagybetűsített nevet.\n[b]Megjegyzés:[/b] A uniform paraméter módosítása minden olyan példányra hat, amely ezt a [ShaderMaterial] erőforrást használja. Ennek elkerüléséhez állíts be példányonkénti uniform paramétereket a [method CanvasItem.set_instance_shader_parameter] vagy a [method GeometryInstance3D.set_instance_shader_parameter] metódussal, vagy másold le a [ShaderMaterial] erőforrást a [method Resource.duplicate] metódussal. A példányonkénti uniform paraméterekkel ugyanaz az árnyaló több helyen felhasználható, így a megjelenítés gyorsabb lehet. Ha lehetséges, ezeket használd a [ShaderMaterial] másolása helyett."
+
+#. ShaderMaterial.shader
+#: doc/classes/ShaderMaterial.xml
+msgid "The [Shader] program used to render this material."
+msgstr "Az anyag megjelenítéséhez használt [Shader] program."
+
+#. SubViewport.brief
+#: doc/classes/SubViewport.xml
+msgid "An interface to a game world that doesn't create a window or draw to the screen directly."
+msgstr "A játékvilág nézete, amely saját ablak nélkül működik, és nem rajzol közvetlenül a képernyőre."
+
+#. SubViewport.description
+#: doc/classes/SubViewport.xml
+msgid "[SubViewport] Isolates a rectangular region of a scene to be displayed independently. This can be used, for example, to display UI in 3D space.\n[b]Note:[/b] [SubViewport] is a [Viewport] that isn't a [Window], i.e. it doesn't draw anything by itself. To display anything, [SubViewport] must have a non-zero size and be either put inside a [SubViewportContainer] or assigned to a [ViewportTexture].\n[b]Note:[/b] [InputEvent]s are not passed to a standalone [SubViewport] by default. To ensure [InputEvent] propagation, a [SubViewport] can be placed inside of a [SubViewportContainer]."
+msgstr "A [SubViewport] elkülöníti a jelenet egy téglalap alakú részét, így az önállóan megjeleníthető. Ezzel például 3D-s térben is megjeleníthetsz felhasználói felületet.\n[b]Megjegyzés:[/b] A [SubViewport] egy [Viewport], amely a [Window] ablakoktól eltérően önmagában nem jelenít meg semmit. A [SubViewport] megjelenítéséhez adj meg nullánál nagyobb méretet, majd helyezd [SubViewportContainer] csomópontba, vagy rendeld egy [ViewportTexture] textúrához.\n[b]Megjegyzés:[/b] Az önálló [SubViewport] alapértelmezés szerint nem kap [InputEvent] eseményeket. Az [InputEvent] események továbbításához a [SubViewport] csomópontot helyezd [SubViewportContainer] csomópontba."
+
+#. SubViewport.render_target_clear_mode
+#: doc/classes/SubViewport.xml
+msgid "The clear mode when the sub-viewport is used as a render target.\n[b]Note:[/b] This property is intended for 2D usage."
+msgstr "A törlés módja, amikor ez az alnézetablak a renderelési cél.\n[b]Megjegyzés:[/b] Ez a tulajdonság 2D-s használatra szolgál."
+
+#. SubViewport.render_target_update_mode
+#: doc/classes/SubViewport.xml
+msgid "The update mode when the sub-viewport is used as a render target."
+msgstr "A frissítés módja, amikor ez az alnézetablak a renderelési cél."
+
+#. SubViewport.size
+#: doc/classes/SubViewport.xml
+msgid "The width and height of the sub-viewport. Must be set to a value greater than or equal to 2 pixels on both dimensions. Otherwise, nothing will be displayed.\n[b]Note:[/b] If the parent node is a [SubViewportContainer] and its [member SubViewportContainer.stretch] is [code]true[/code], the viewport size cannot be changed manually."
+msgstr "Az alnézetablak szélessége és magassága. Mindkét méretnek legalább 2 képpontnak kell lennie, különben semmi sem jelenik meg.\n[b]Megjegyzés:[/b] Ha a szülő egy [SubViewportContainer], és a [member SubViewportContainer.stretch] értéke [code]true[/code], a nézetablak mérete kézzel nem módosítható."
+
+#. SubViewport.size_2d_override
+#: doc/classes/SubViewport.xml
+msgid "The 2D size override of the sub-viewport. If either the width or height is [code]0[/code], the override is disabled."
+msgstr "Felülírja az alnézetablak 2D-s méretét. Ha akár a szélesség, akár a magasság értéke [code]0[/code], a felülírás nem érvényesül."
+
+#. SubViewport.size_2d_override_stretch
+#: doc/classes/SubViewport.xml
+msgid "If [code]true[/code], the 2D size override affects stretch as well."
+msgstr "Ha az érték [code]true[/code], a 2D-s méret felülírása a nyújtást is befolyásolja."
+
+#. SubViewport.view_count
+#: doc/classes/SubViewport.xml
+msgid "The number of view layers we are rendering to. Set this to [code]2[/code] to enable stereo rendering."
+msgstr "A kirajzolt nézeti rétegek száma. A sztereó megjelenítéshez állítsd [code]2[/code] értékre."
+
+#. SubViewport.CLEAR_MODE_ALWAYS
+#: doc/classes/SubViewport.xml
+msgid "Always clear the render target before drawing."
+msgstr "Kirajzolás előtt mindig törli a renderelési cél tartalmát."
+
+#. SubViewport.CLEAR_MODE_NEVER
+#: doc/classes/SubViewport.xml
+msgid "Never clear the render target."
+msgstr "Soha nem törli a renderelési cél tartalmát."
+
+#. SubViewport.CLEAR_MODE_ONCE
+#: doc/classes/SubViewport.xml
+msgid "Clear the render target on the next frame, then switch to [constant CLEAR_MODE_NEVER]."
+msgstr "A következő képkockában törli a renderelési cél tartalmát, majd [constant CLEAR_MODE_NEVER] módra vált."
+
+#. SubViewport.UPDATE_DISABLED
+#: doc/classes/SubViewport.xml
+msgid "Do not update the render target."
+msgstr "Nem frissíti a renderelési célt."
+
+#. SubViewport.UPDATE_ONCE
+#: doc/classes/SubViewport.xml
+msgid "Update the render target once, then switch to [constant UPDATE_DISABLED]."
+msgstr "Egyszer frissíti a renderelési célt, majd [constant UPDATE_DISABLED] módra vált."
+
+#. SubViewport.UPDATE_WHEN_VISIBLE
+#: doc/classes/SubViewport.xml
+msgid "Update the render target only when it is visible. This is the default value."
+msgstr "Csak akkor frissíti a renderelési célt, ha az látható. Ez az alapértelmezett érték."
+
+#. SubViewport.UPDATE_WHEN_PARENT_VISIBLE
+#: doc/classes/SubViewport.xml
+msgid "Update the render target only when its parent is visible."
+msgstr "Csak akkor frissíti a renderelési célt, ha az alnézetablak szülője látható."
+
+#. SubViewport.UPDATE_ALWAYS
+#: doc/classes/SubViewport.xml
+msgid "Always update the render target."
+msgstr "Mindig frissíti a renderelési célt."
