@@ -13522,3 +13522,2587 @@ msgstr "Regisztrál egy [NavigationServer2D] megvalósítást. Ehhez add meg a [
 #: doc/classes/NavigationServer2DManager.xml
 msgid "Sets the default [NavigationServer2D] implementation to the one identified by [param name], if [param priority] is greater than the priority of the current default implementation."
 msgstr "A [param name] névvel azonosított [NavigationServer2D] megvalósítást állítja be alapértelmezettnek, ha a [param priority] értéke nagyobb a jelenlegi alapértelmezett megvalósítás prioritásánál."
+
+#. PhysicsDirectBodyState2D.brief
+#: doc/classes/PhysicsDirectBodyState2D.xml
+msgid "Provides direct access to a physics body in the [PhysicsServer2D]."
+msgstr "Közvetlen hozzáférést ad a [PhysicsServer2D] egyik fizikai testéhez."
+
+#. PhysicsDirectBodyState2D.get_constant_force
+#. PhysicsDirectBodyState3D.get_constant_force
+#: doc/classes/PhysicsDirectBodyState2D.xml doc/classes/PhysicsDirectBodyState3D.xml
+msgid "Returns the body's total constant positional forces applied during each physics update.\nSee [method add_constant_force] and [method add_constant_central_force]."
+msgstr "Visszaadja a testre minden fizikai lépésben ható állandó erők eredőjét.\nLásd az [method add_constant_force] és az [method add_constant_central_force] metódust."
+
+#. PhysicsDirectBodyState2D.get_constant_torque
+#. PhysicsDirectBodyState3D.get_constant_torque
+#: doc/classes/PhysicsDirectBodyState2D.xml doc/classes/PhysicsDirectBodyState3D.xml
+msgid "Returns the body's total constant rotational forces applied during each physics update.\nSee [method add_constant_torque]."
+msgstr "Visszaadja a testre minden fizikai lépésben ható eredő állandó forgatónyomatékot.\nLásd az [method add_constant_torque] metódust."
+
+#. PhysicsDirectBodyState2D.get_contact_collider
+#. PhysicsDirectBodyState3D.get_contact_collider
+#: doc/classes/PhysicsDirectBodyState2D.xml doc/classes/PhysicsDirectBodyState3D.xml
+msgid "Returns the collider's [RID]."
+msgstr "Visszaadja az ütköző objektum [RID] azonosítóját."
+
+#. PhysicsDirectBodyState2D.get_contact_collider_id
+#. PhysicsDirectBodyState3D.get_contact_collider_id
+#: doc/classes/PhysicsDirectBodyState2D.xml doc/classes/PhysicsDirectBodyState3D.xml
+msgid "Returns the collider's object id."
+msgstr "Visszaadja az ütköző objektum példányazonosítóját."
+
+#. PhysicsDirectBodyState2D.get_contact_collider_object
+#: doc/classes/PhysicsDirectBodyState2D.xml
+msgid "Returns the collider object. This depends on how it was created (will return a scene node if such was used to create it)."
+msgstr "Visszaadja az ütköző objektumot. Az eredmény a létrehozás módjától függ. Ha jelenetcsomóponttal hozták létre, a metódus azt a csomópontot adja vissza."
+
+#. PhysicsDirectBodyState2D.get_contact_collider_position
+#. PhysicsDirectBodyState3D.get_contact_collider_position
+#: doc/classes/PhysicsDirectBodyState2D.xml doc/classes/PhysicsDirectBodyState3D.xml
+msgid "Returns the position of the contact point on the collider in the global coordinate system."
+msgstr "Visszaadja az ütköző objektum érintkezési pontjának helyét a globális koordináta-rendszerben."
+
+#. PhysicsDirectBodyState2D.get_contact_collider_shape
+#. PhysicsDirectBodyState3D.get_contact_collider_shape
+#: doc/classes/PhysicsDirectBodyState2D.xml doc/classes/PhysicsDirectBodyState3D.xml
+msgid "Returns the collider's shape index."
+msgstr "Visszaadja az ütköző objektum alakzatának indexét."
+
+#. PhysicsDirectBodyState2D.get_contact_collider_velocity_at_position
+#: doc/classes/PhysicsDirectBodyState2D.xml
+msgid "Returns the velocity vector at the collider's contact point."
+msgstr "Visszaadja az ütköző objektum érintkezési pontjának sebességvektorát."
+
+#. PhysicsDirectBodyState2D.get_contact_impulse
+#: doc/classes/PhysicsDirectBodyState2D.xml
+msgid "Returns the impulse created by the contact."
+msgstr "Visszaadja az érintkezésből eredő impulzust."
+
+#. PhysicsDirectBodyState2D.get_contact_local_normal
+#. PhysicsDirectBodyState3D.get_contact_local_normal
+#: doc/classes/PhysicsDirectBodyState2D.xml doc/classes/PhysicsDirectBodyState3D.xml
+msgid "Returns the local normal at the contact point."
+msgstr "Visszaadja az érintkezési pont helyi normálvektorát."
+
+#. PhysicsDirectBodyState2D.get_contact_local_position
+#. PhysicsDirectBodyState3D.get_contact_local_position
+#: doc/classes/PhysicsDirectBodyState2D.xml doc/classes/PhysicsDirectBodyState3D.xml
+msgid "Returns the position of the contact point on the body in the global coordinate system."
+msgstr "Visszaadja a testen lévő érintkezési pont helyét a globális koordináta-rendszerben."
+
+#. PhysicsDirectBodyState2D.get_contact_local_shape
+#. PhysicsDirectBodyState3D.get_contact_local_shape
+#: doc/classes/PhysicsDirectBodyState2D.xml doc/classes/PhysicsDirectBodyState3D.xml
+msgid "Returns the local shape index of the collision."
+msgstr "Visszaadja az ütközésben érintett saját alakzat indexét."
+
+#. PhysicsDirectBodyState2D.get_contact_local_velocity_at_position
+#: doc/classes/PhysicsDirectBodyState2D.xml
+msgid "Returns the velocity vector at the body's contact point."
+msgstr "Visszaadja a testen lévő érintkezési pont sebességvektorát."
+
+#. PhysicsDirectBodyState2D.get_space_state
+#. PhysicsDirectBodyState3D.get_space_state
+#: doc/classes/PhysicsDirectBodyState2D.xml doc/classes/PhysicsDirectBodyState3D.xml
+msgid "Returns the current state of the space, useful for queries."
+msgstr "Visszaadja a fizikai tér aktuális állapotát, amely lekérdezésekhez használható."
+
+#. PhysicsDirectBodyState2D.get_velocity_at_local_position
+#. PhysicsDirectBodyState3D.get_velocity_at_local_position
+#: doc/classes/PhysicsDirectBodyState2D.xml doc/classes/PhysicsDirectBodyState3D.xml
+msgid "Returns the body's velocity at the given relative position.\n[param local_position] is the offset from the body origin in global coordinates."
+msgstr "Visszaadja a test sebességét a megadott relatív helyen.\nA [param local_position] a test origójától mért eltolás globális koordinátákban."
+
+#. PhysicsDirectBodyState2D.integrate_forces
+#. PhysicsDirectBodyState3D.integrate_forces
+#: doc/classes/PhysicsDirectBodyState2D.xml doc/classes/PhysicsDirectBodyState3D.xml
+msgid "Updates the body's linear and angular velocity by applying gravity and damping for the equivalent of one physics tick."
+msgstr "Egy fizikai lépésnyi gravitáció és csillapítás alkalmazásával frissíti a test lineáris sebességét és szögsebességét."
+
+#. PhysicsDirectBodyState2D.set_constant_force
+#. PhysicsDirectBodyState3D.set_constant_force
+#: doc/classes/PhysicsDirectBodyState2D.xml doc/classes/PhysicsDirectBodyState3D.xml
+msgid "Sets the body's total constant positional forces applied during each physics update.\nSee [method add_constant_force] and [method add_constant_central_force]."
+msgstr "Beállítja a testre minden fizikai lépésben ható állandó erők eredőjét.\nLásd az [method add_constant_force] és az [method add_constant_central_force] metódust."
+
+#. PhysicsDirectBodyState2D.set_constant_torque
+#. PhysicsDirectBodyState3D.set_constant_torque
+#: doc/classes/PhysicsDirectBodyState2D.xml doc/classes/PhysicsDirectBodyState3D.xml
+msgid "Sets the body's total constant rotational forces applied during each physics update.\nSee [method add_constant_torque]."
+msgstr "Beállítja a testre minden fizikai lépésben ható eredő állandó forgatónyomatékot.\nLásd az [method add_constant_torque] metódust."
+
+#. PhysicsDirectBodyState2D.center_of_mass
+#. PhysicsDirectBodyState3D.center_of_mass
+#: doc/classes/PhysicsDirectBodyState2D.xml doc/classes/PhysicsDirectBodyState3D.xml
+msgid "The body's center of mass position relative to the body's center in the global coordinate system."
+msgstr "A test tömegközéppontjának helye a test középpontjához képest, globális koordinátákban."
+
+#. PhysicsDirectBodyState2D.center_of_mass_local
+#. PhysicsDirectBodyState3D.center_of_mass_local
+#: doc/classes/PhysicsDirectBodyState2D.xml doc/classes/PhysicsDirectBodyState3D.xml
+msgid "The body's center of mass position in the body's local coordinate system."
+msgstr "A test tömegközéppontjának helye a test helyi koordináta-rendszerében."
+
+#. PhysicsDirectBodyState2D.collision_layer
+#. PhysicsDirectBodyState3D.collision_layer
+#: doc/classes/PhysicsDirectBodyState2D.xml doc/classes/PhysicsDirectBodyState3D.xml
+msgid "The body's collision layer."
+msgstr "A test ütközési rétege."
+
+#. PhysicsDirectBodyState2D.collision_mask
+#. PhysicsDirectBodyState3D.collision_mask
+#: doc/classes/PhysicsDirectBodyState2D.xml doc/classes/PhysicsDirectBodyState3D.xml
+msgid "The body's collision mask."
+msgstr "A test ütközési maszkja."
+
+#. PhysicsDirectBodyState2D.inverse_inertia
+#. PhysicsDirectBodyState3D.inverse_inertia
+#: doc/classes/PhysicsDirectBodyState2D.xml doc/classes/PhysicsDirectBodyState3D.xml
+msgid "The inverse of the inertia of the body."
+msgstr "A test tehetetlenségi nyomatékának reciproka."
+
+#. PhysicsDirectBodyState2D.inverse_mass
+#. PhysicsDirectBodyState3D.inverse_mass
+#: doc/classes/PhysicsDirectBodyState2D.xml doc/classes/PhysicsDirectBodyState3D.xml
+msgid "The inverse of the mass of the body."
+msgstr "A test tömegének reciproka."
+
+#. PhysicsDirectBodyState2D.linear_velocity
+#: doc/classes/PhysicsDirectBodyState2D.xml
+msgid "The body's linear velocity in pixels per second."
+msgstr "A test lineáris sebessége képpont per másodpercben."
+
+#. PhysicsDirectBodyState2D.sleeping
+#. PhysicsDirectBodyState3D.sleeping
+#: doc/classes/PhysicsDirectBodyState2D.xml doc/classes/PhysicsDirectBodyState3D.xml
+msgid "If [code]true[/code], this body is currently sleeping (not active)."
+msgstr "Ha az értéke [code]true[/code], a test jelenleg alvó állapotban van (inaktív)."
+
+#. PhysicsDirectBodyState2D.step
+#. PhysicsDirectBodyState3D.step
+#: doc/classes/PhysicsDirectBodyState2D.xml doc/classes/PhysicsDirectBodyState3D.xml
+msgid "The timestep (delta) used for the simulation."
+msgstr "A szimulációhoz használt időlépés (delta)."
+
+#. PhysicsDirectBodyState2D.total_angular_damp
+#. PhysicsDirectBodyState3D.total_angular_damp
+#: doc/classes/PhysicsDirectBodyState2D.xml doc/classes/PhysicsDirectBodyState3D.xml
+msgid "The rate at which the body stops rotating, if there are not any other forces moving it."
+msgstr "A test forgásának lassulási üteme, ha más erők nem hatnak rá."
+
+#. PhysicsDirectBodyState2D.total_gravity
+#. PhysicsDirectBodyState3D.total_gravity
+#: doc/classes/PhysicsDirectBodyState2D.xml doc/classes/PhysicsDirectBodyState3D.xml
+msgid "The total gravity vector being currently applied to this body."
+msgstr "A testre éppen ható eredő gravitációs vektor."
+
+#. PhysicsDirectBodyState2D.total_linear_damp
+#. PhysicsDirectBodyState3D.total_linear_damp
+#: doc/classes/PhysicsDirectBodyState2D.xml doc/classes/PhysicsDirectBodyState3D.xml
+msgid "The rate at which the body stops moving, if there are not any other forces moving it."
+msgstr "A test mozgásának lassulási üteme, ha más erők nem hatnak rá."
+
+#. PhysicsDirectBodyState2D.transform
+#. PhysicsDirectBodyState3D.transform
+#: doc/classes/PhysicsDirectBodyState2D.xml doc/classes/PhysicsDirectBodyState3D.xml
+msgid "The body's transformation matrix."
+msgstr "A test transzformációs mátrixa."
+
+#. PhysicsServer2D.brief
+#: doc/classes/PhysicsServer2D.xml
+msgid "A server interface for low-level 2D physics access."
+msgstr "Kiszolgálói felület a 2D fizika alacsony szintű eléréséhez."
+
+#. PhysicsServer2D.area_attach_canvas_instance_id
+#: doc/classes/PhysicsServer2D.xml
+msgid "Attaches the [code]ObjectID[/code] of a canvas to the area. Use [method Object.get_instance_id] to get the [code]ObjectID[/code] of a [CanvasLayer]."
+msgstr "A vászon [code]ObjectID[/code] azonosítóját a területhez társítja. A [CanvasLayer] [code]ObjectID[/code] azonosítóját a [method Object.get_instance_id] metódussal kérheted le."
+
+#. PhysicsServer2D.area_attach_object_instance_id
+#: doc/classes/PhysicsServer2D.xml
+msgid "Attaches the [code]ObjectID[/code] of an [Object] to the area. Use [method Object.get_instance_id] to get the [code]ObjectID[/code] of a [CollisionObject2D]."
+msgstr "Egy [Object] példány [code]ObjectID[/code] azonosítóját a területhez társítja. A [CollisionObject2D] [code]ObjectID[/code] azonosítóját a [method Object.get_instance_id] metódussal kérheted le."
+
+#. PhysicsServer2D.area_clear_shapes
+#: doc/classes/PhysicsServer2D.xml
+msgid "Removes all shapes from the area. This does not delete the shapes themselves, so they can continue to be used elsewhere or added back later."
+msgstr "Eltávolítja a terület összes alakzatát. Az alakzatok megmaradnak, így máshol is használhatók vagy később újra hozzáadhatók."
+
+#. PhysicsServer2D.area_get_collision_layer
+#: doc/classes/PhysicsServer2D.xml
+msgid "Returns the physics layer or layers the area belongs to, as a bitmask."
+msgstr "Bitmaszkként adja vissza azokat a fizikai rétegeket, amelyekhez a terület tartozik."
+
+#. PhysicsServer2D.area_get_collision_mask
+#: doc/classes/PhysicsServer2D.xml
+msgid "Returns the physics layer or layers the area can contact with, as a bitmask."
+msgstr "Bitmaszkként adja vissza azokat a fizikai rétegeket, amelyekkel a terület érintkezhet."
+
+#. PhysicsServer2D.area_get_object_instance_id
+#: doc/classes/PhysicsServer2D.xml
+msgid "Returns the [code]ObjectID[/code] attached to the area. Use [method @GlobalScope.instance_from_id] to retrieve an [Object] from a nonzero [code]ObjectID[/code]."
+msgstr "Visszaadja a területhez társított [code]ObjectID[/code] azonosítót. Nem nulla [code]ObjectID[/code] alapján a [method @GlobalScope.instance_from_id] metódussal kérheted le az [Object] példányt."
+
+#. PhysicsServer2D.area_get_param
+#: doc/classes/PhysicsServer2D.xml
+msgid "Returns the value of the given area parameter."
+msgstr "Visszaadja a terület megadott paraméterének értékét."
+
+#. PhysicsServer2D.area_get_shape
+#: doc/classes/PhysicsServer2D.xml
+msgid "Returns the [RID] of the shape with the given index in the area's array of shapes."
+msgstr "Visszaadja a terület alakzattömbjében a megadott indexen lévő alakzat [RID] azonosítóját."
+
+#. PhysicsServer2D.area_get_shape_count
+#: doc/classes/PhysicsServer2D.xml
+msgid "Returns the number of shapes added to the area."
+msgstr "Visszaadja a területhez hozzáadott alakzatok számát."
+
+#. PhysicsServer2D.area_get_space
+#: doc/classes/PhysicsServer2D.xml
+msgid "Returns the [RID] of the space assigned to the area. Returns an empty [RID] if no space is assigned."
+msgstr "Visszaadja a területhez rendelt fizikai tér [RID] azonosítóját. Ha nincs hozzárendelt tér, üres [RID] azonosítót ad vissza."
+
+#. PhysicsServer2D.area_get_transform
+#: doc/classes/PhysicsServer2D.xml
+msgid "Returns the transform matrix of the area."
+msgstr "Visszaadja a terület transzformációs mátrixát."
+
+#. PhysicsServer2D.area_set_collision_layer
+#: doc/classes/PhysicsServer2D.xml
+msgid "Assigns the area to one or many physics layers, via a bitmask."
+msgstr "Bitmaszkkal rendeli a területet egy vagy több fizikai réteghez."
+
+#. PhysicsServer2D.area_set_collision_mask
+#: doc/classes/PhysicsServer2D.xml
+msgid "Sets which physics layers the area will monitor, via a bitmask."
+msgstr "Bitmaszkkal állítja be, hogy a terület mely fizikai rétegeket figyelje."
+
+#. PhysicsServer2D.area_set_param
+#: doc/classes/PhysicsServer2D.xml
+msgid "Sets the value of the given area parameter."
+msgstr "Beállítja a terület megadott paraméterének értékét."
+
+#. PhysicsServer2D.area_set_shape
+#: doc/classes/PhysicsServer2D.xml
+msgid "Replaces the area's shape at the given index by another shape, while not affecting the [code]transform[/code] and [code]disabled[/code] properties at the same index."
+msgstr "A megadott indexen lecseréli a terület alakzatát. Az indexhez tartozó [code]transform[/code] és [code]disabled[/code] tulajdonság értéke megmarad."
+
+#. PhysicsServer2D.area_set_shape_transform
+#: doc/classes/PhysicsServer2D.xml
+msgid "Sets the local transform matrix of the area's shape with the given index."
+msgstr "Beállítja a terület megadott indexű alakzatának helyi transzformációs mátrixát."
+
+#. PhysicsServer2D.area_set_transform
+#: doc/classes/PhysicsServer2D.xml
+msgid "Sets the transform matrix of the area."
+msgstr "Beállítja a terület transzformációs mátrixát."
+
+#. PhysicsServer2D.body_add_collision_exception
+#: doc/classes/PhysicsServer2D.xml
+msgid "Adds [param excepted_body] to the body's list of collision exceptions, so that collisions with it are ignored."
+msgstr "A [param excepted_body] testet hozzáadja az ütközési kivételek listájához. A rendszer figyelmen kívül hagyja az ezzel a testtel történő ütközéseket."
+
+#. PhysicsServer2D.body_apply_torque
+#: doc/classes/PhysicsServer2D.xml
+msgid "Applies a rotational force to the body. The force does not affect position. A force is time dependent and meant to be applied every physics update."
+msgstr "Forgatónyomatékot fejt ki a testre. A nyomaték a test helyzetét változatlanul hagyja. A hatása időfüggő, ezért minden fizikai lépésben alkalmazni kell."
+
+#. PhysicsServer2D.body_attach_canvas_instance_id
+#: doc/classes/PhysicsServer2D.xml
+msgid "Attaches the [code]ObjectID[/code] of a canvas to the body. Use [method Object.get_instance_id] to get the [code]ObjectID[/code] of a [CanvasLayer]."
+msgstr "A vászon [code]ObjectID[/code] azonosítóját a testhez társítja. A [CanvasLayer] [code]ObjectID[/code] azonosítóját a [method Object.get_instance_id] metódussal kérheted le."
+
+#. PhysicsServer2D.body_attach_object_instance_id
+#: doc/classes/PhysicsServer2D.xml
+msgid "Attaches the [code]ObjectID[/code] of an [Object] to the body. Use [method Object.get_instance_id] to get the [code]ObjectID[/code] of a [CollisionObject2D]."
+msgstr "Egy [Object] példány [code]ObjectID[/code] azonosítóját a testhez társítja. A [CollisionObject2D] [code]ObjectID[/code] azonosítóját a [method Object.get_instance_id] metódussal kérheted le."
+
+#. PhysicsServer2D.body_clear_shapes
+#: doc/classes/PhysicsServer2D.xml
+msgid "Removes all shapes from the body. This does not delete the shapes themselves, so they can continue to be used elsewhere or added back later."
+msgstr "Eltávolítja a test összes alakzatát. Az alakzatok megmaradnak, így máshol is használhatók vagy később újra hozzáadhatók."
+
+#. PhysicsServer2D.body_get_collision_layer
+#: doc/classes/PhysicsServer2D.xml
+msgid "Returns the physics layer or layers the body belongs to, as a bitmask."
+msgstr "Bitmaszkként adja vissza azokat a fizikai rétegeket, amelyekhez a test tartozik."
+
+#. PhysicsServer2D.body_get_collision_mask
+#: doc/classes/PhysicsServer2D.xml
+msgid "Returns the physics layer or layers the body can collide with, as a bitmask."
+msgstr "Bitmaszkként adja vissza azokat a fizikai rétegeket, amelyekkel a test ütközhet."
+
+#. PhysicsServer2D.body_get_constant_force
+#: doc/classes/PhysicsServer2D.xml
+msgid "Returns the body's total constant positional force applied during each physics update.\nSee [method body_add_constant_force] and [method body_add_constant_central_force]."
+msgstr "Visszaadja a testre minden fizikai lépésben ható állandó erők eredőjét.\nLásd a [method body_add_constant_force] és a [method body_add_constant_central_force] metódust."
+
+#. PhysicsServer2D.body_get_constant_torque
+#: doc/classes/PhysicsServer2D.xml
+msgid "Returns the body's total constant rotational force applied during each physics update.\nSee [method body_add_constant_torque]."
+msgstr "Visszaadja a testre minden fizikai lépésben ható eredő állandó forgatónyomatékot.\nLásd a [method body_add_constant_torque] metódust."
+
+#. PhysicsServer2D.body_get_continuous_collision_detection_mode
+#: doc/classes/PhysicsServer2D.xml
+msgid "Returns the body's continuous collision detection mode."
+msgstr "Visszaadja a test folyamatos ütközésérzékelési módját."
+
+#. PhysicsServer2D.body_get_direct_state
+#: doc/classes/PhysicsServer2D.xml
+msgid "Returns the [PhysicsDirectBodyState2D] of the body. Returns [code]null[/code] if the body is destroyed or not assigned to a space."
+msgstr "Visszaadja a test [PhysicsDirectBodyState2D] állapotobjektumát. Az eredmény [code]null[/code], ha a test megszűnt, vagy nincs fizikai térhez rendelve."
+
+#. PhysicsServer2D.body_get_max_contacts_reported
+#: doc/classes/PhysicsServer2D.xml
+msgid "Returns the maximum number of contacts that the body can report. See [method body_set_max_contacts_reported]."
+msgstr "Visszaadja a test által jelenthető érintkezések legnagyobb számát. Lásd a [method body_set_max_contacts_reported] metódust."
+
+#. PhysicsServer2D.body_get_mode
+#: doc/classes/PhysicsServer2D.xml
+msgid "Returns the body's mode."
+msgstr "Visszaadja a test fizikai módját."
+
+#. PhysicsServer2D.body_get_object_instance_id
+#: doc/classes/PhysicsServer2D.xml
+msgid "Returns the [code]ObjectID[/code] attached to the body. Use [method @GlobalScope.instance_from_id] to retrieve an [Object] from a nonzero [code]ObjectID[/code]."
+msgstr "Visszaadja a testhez társított [code]ObjectID[/code] azonosítót. Nem nulla [code]ObjectID[/code] alapján a [method @GlobalScope.instance_from_id] metódussal kérheted le az [Object] példányt."
+
+#. PhysicsServer2D.body_get_param
+#: doc/classes/PhysicsServer2D.xml
+msgid "Returns the value of the given body parameter."
+msgstr "Visszaadja a test megadott paraméterének értékét."
+
+#. PhysicsServer2D.body_get_shape
+#: doc/classes/PhysicsServer2D.xml
+msgid "Returns the [RID] of the shape with the given index in the body's array of shapes."
+msgstr "Visszaadja a test alakzattömbjében a megadott indexen lévő alakzat [RID] azonosítóját."
+
+#. PhysicsServer2D.body_get_shape_count
+#: doc/classes/PhysicsServer2D.xml
+msgid "Returns the number of shapes added to the body."
+msgstr "Visszaadja a testhez hozzáadott alakzatok számát."
+
+#. PhysicsServer2D.body_get_space
+#: doc/classes/PhysicsServer2D.xml
+msgid "Returns the [RID] of the space assigned to the body. Returns an empty [RID] if no space is assigned."
+msgstr "Visszaadja a testhez rendelt fizikai tér [RID] azonosítóját. Ha nincs hozzárendelt tér, üres [RID] azonosítót ad vissza."
+
+#. PhysicsServer2D.body_get_state
+#: doc/classes/PhysicsServer2D.xml
+msgid "Returns the value of the given state of the body."
+msgstr "Visszaadja a test megadott állapotértékét."
+
+#. PhysicsServer2D.body_is_omitting_force_integration
+#. PhysicsServer3D.body_is_omitting_force_integration
+#: doc/classes/PhysicsServer2D.xml doc/classes/PhysicsServer3D.xml
+msgid "Returns [code]true[/code] if the body is omitting the standard force integration. See [method body_set_omit_force_integration]."
+msgstr "[code]true[/code] értéket ad vissza, ha a test kihagyja a szokásos erőintegrálást. Lásd a [method body_set_omit_force_integration] metódust."
+
+#. PhysicsServer2D.body_remove_collision_exception
+#: doc/classes/PhysicsServer2D.xml
+msgid "Removes [param excepted_body] from the body's list of collision exceptions, so that collisions with it are no longer ignored."
+msgstr "Eltávolítja a [param excepted_body] testet az ütközési kivételek listájáról. A rendszer ezután figyelembe veszi az ezzel a testtel történő ütközéseket."
+
+#. PhysicsServer2D.body_reset_mass_properties
+#: doc/classes/PhysicsServer2D.xml
+msgid "Restores the default inertia and center of mass of the body based on its shapes. This undoes any custom values previously set using [method body_set_param]."
+msgstr "A test alakzatai alapján visszaállítja az alapértelmezett tehetetlenségi nyomatékot és tömegközéppontot. Ezzel törli a [method body_set_param] metódussal megadott egyedi értékeket."
+
+#. PhysicsServer2D.body_set_collision_layer
+#: doc/classes/PhysicsServer2D.xml
+msgid "Sets the physics layer or layers the body belongs to, via a bitmask."
+msgstr "Bitmaszkkal állítja be, mely fizikai rétegekhez tartozik a test."
+
+#. PhysicsServer2D.body_set_collision_mask
+#: doc/classes/PhysicsServer2D.xml
+msgid "Sets the physics layer or layers the body can collide with, via a bitmask."
+msgstr "Bitmaszkkal állítja be, mely fizikai rétegekkel ütközhet a test."
+
+#. PhysicsServer2D.body_set_constant_force
+#: doc/classes/PhysicsServer2D.xml
+msgid "Sets the body's total constant positional force applied during each physics update.\nSee [method body_add_constant_force] and [method body_add_constant_central_force]."
+msgstr "Beállítja a testre minden fizikai lépésben ható állandó erők eredőjét.\nLásd a [method body_add_constant_force] és a [method body_add_constant_central_force] metódust."
+
+#. PhysicsServer2D.body_set_constant_torque
+#: doc/classes/PhysicsServer2D.xml
+msgid "Sets the body's total constant rotational force applied during each physics update.\nSee [method body_add_constant_torque]."
+msgstr "Beállítja a testre minden fizikai lépésben ható eredő állandó forgatónyomatékot.\nLásd a [method body_add_constant_torque] metódust."
+
+#. PhysicsServer2D.body_set_mode
+#: doc/classes/PhysicsServer2D.xml
+msgid "Sets the body's mode."
+msgstr "Beállítja a test fizikai módját."
+
+#. PhysicsServer2D.body_set_param
+#: doc/classes/PhysicsServer2D.xml
+msgid "Sets the value of the given body parameter."
+msgstr "Beállítja a test megadott paraméterének értékét."
+
+#. PhysicsServer2D.body_set_shape
+#: doc/classes/PhysicsServer2D.xml
+msgid "Replaces the body's shape at the given index by another shape, while not affecting the [code]transform[/code], [code]disabled[/code], and one-way collision properties at the same index."
+msgstr "A megadott indexen lecseréli a test alakzatát. Az indexhez tartozó [code]transform[/code] és [code]disabled[/code] tulajdonság, valamint az egyirányú ütközés beállításai megmaradnak."
+
+#. PhysicsServer2D.body_set_shape_disabled
+#: doc/classes/PhysicsServer2D.xml
+msgid "Sets the disabled property of the body's shape with the given index. If [param disabled] is [code]true[/code], then the shape will be ignored in all collision detection."
+msgstr "Beállítja a test megadott indexű alakzatának letiltási állapotát. Ha a [param disabled] értéke [code]true[/code], az ütközésérzékelés teljesen figyelmen kívül hagyja az alakzatot."
+
+#. PhysicsServer2D.body_set_shape_transform
+#: doc/classes/PhysicsServer2D.xml
+msgid "Sets the local transform matrix of the body's shape with the given index."
+msgstr "Beállítja a test megadott indexű alakzatának helyi transzformációs mátrixát."
+
+#. PhysicsServer2D.capsule_shape_create
+#: doc/classes/PhysicsServer2D.xml
+msgid "Creates a 2D capsule shape in the physics server, and returns the [RID] that identifies it. Use [method shape_set_data] to set the capsule's height and radius."
+msgstr "2D kapszulaalakzatot hoz létre a fizikai kiszolgálón, és visszaadja az alakzat [RID] azonosítóját. A kapszula magasságát és sugarát a [method shape_set_data] metódussal állíthatod be."
+
+#. PhysicsServer2D.circle_shape_create
+#: doc/classes/PhysicsServer2D.xml
+msgid "Creates a 2D circle shape in the physics server, and returns the [RID] that identifies it. Use [method shape_set_data] to set the circle's radius."
+msgstr "2D köralakzatot hoz létre a fizikai kiszolgálón, és visszaadja az alakzat [RID] azonosítóját. A kör sugarát a [method shape_set_data] metódussal állíthatod be."
+
+#. PhysicsServer2D.concave_polygon_shape_create
+#: doc/classes/PhysicsServer2D.xml
+msgid "Creates a 2D concave polygon shape in the physics server, and returns the [RID] that identifies it. Use [method shape_set_data] to set the concave polygon's segments."
+msgstr "2D konkáv sokszögalakzatot hoz létre a fizikai kiszolgálón, és visszaadja az alakzat [RID] azonosítóját. A konkáv sokszög szakaszait a [method shape_set_data] metódussal állíthatod be."
+
+#. PhysicsServer2D.convex_polygon_shape_create
+#: doc/classes/PhysicsServer2D.xml
+msgid "Creates a 2D convex polygon shape in the physics server, and returns the [RID] that identifies it. Use [method shape_set_data] to set the convex polygon's points."
+msgstr "2D konvex sokszögalakzatot hoz létre a fizikai kiszolgálón, és visszaadja az alakzat [RID] azonosítóját. A konvex sokszög pontjait a [method shape_set_data] metódussal állíthatod be."
+
+#. PhysicsServer2D.damped_spring_joint_get_param
+#: doc/classes/PhysicsServer2D.xml
+msgid "Returns the value of the given damped spring joint parameter."
+msgstr "Visszaadja a csillapított rugós csukló megadott paraméterének értékét."
+
+#. PhysicsServer2D.damped_spring_joint_set_param
+#: doc/classes/PhysicsServer2D.xml
+msgid "Sets the value of the given damped spring joint parameter."
+msgstr "Beállítja a csillapított rugós csukló megadott paraméterének értékét."
+
+#. PhysicsServer2D.free_rid
+#: doc/classes/PhysicsServer2D.xml
+msgid "Destroys any of the objects created by PhysicsServer2D. If the [RID] passed is not one of the objects that can be created by PhysicsServer2D, an error will be printed to the console."
+msgstr "Megsemmisíti a PhysicsServer2D által létrehozott objektumot. Ha a megadott [RID] más típusú objektumhoz tartozik, a konzolon hibaüzenet jelenik meg."
+
+#. PhysicsServer2D.get_process_info
+#. PhysicsServer3D.get_process_info
+#: doc/classes/PhysicsServer2D.xml doc/classes/PhysicsServer3D.xml
+msgid "Returns the value of a physics engine state specified by [param process_info]."
+msgstr "Visszaadja a fizikai motor [param process_info] paraméterrel megadott állapotértékét."
+
+#. PhysicsServer2D.joint_clear
+#: doc/classes/PhysicsServer2D.xml
+msgid "Destroys the joint with the given [RID], creates a new uninitialized joint, and makes the [RID] refer to this new joint."
+msgstr "Megsemmisíti a megadott [RID] azonosítójú csuklót, létrehoz egy új, inicializálatlan csuklót, és az eredeti [RID] azonosítót ehhez rendeli."
+
+#. PhysicsServer2D.joint_disable_collisions_between_bodies
+#: doc/classes/PhysicsServer2D.xml
+msgid "Sets whether the bodies attached to the [Joint2D] will collide with each other."
+msgstr "Beállítja, hogy a [Joint2D] csuklóval összekapcsolt testek ütközhetnek-e egymással."
+
+#. PhysicsServer2D.joint_get_param
+#: doc/classes/PhysicsServer2D.xml
+msgid "Returns the value of the given joint parameter."
+msgstr "Visszaadja a csukló megadott paraméterének értékét."
+
+#. PhysicsServer2D.joint_get_type
+#: doc/classes/PhysicsServer2D.xml
+msgid "Returns the joint's type."
+msgstr "Visszaadja a csukló típusát."
+
+#. PhysicsServer2D.joint_make_groove
+#: doc/classes/PhysicsServer2D.xml
+msgid "Makes the joint a groove joint."
+msgstr "A csuklót horonycsuklóvá alakítja."
+
+#. PhysicsServer2D.joint_set_param
+#: doc/classes/PhysicsServer2D.xml
+msgid "Sets the value of the given joint parameter."
+msgstr "Beállítja a csukló megadott paraméterének értékét."
+
+#. PhysicsServer2D.pin_joint_get_flag
+#: doc/classes/PhysicsServer2D.xml
+msgid "Gets a pin joint flag."
+msgstr "Lekéri a csapos csukló megadott jelzőbitjét."
+
+#. PhysicsServer2D.pin_joint_get_param
+#: doc/classes/PhysicsServer2D.xml
+msgid "Returns the value of a pin joint parameter."
+msgstr "Visszaadja a csapos csukló egyik paraméterének értékét."
+
+#. PhysicsServer2D.pin_joint_set_flag
+#: doc/classes/PhysicsServer2D.xml
+msgid "Sets a pin joint flag."
+msgstr "Beállítja a csapos csukló megadott jelzőbitjét."
+
+#. PhysicsServer2D.pin_joint_set_param
+#. PhysicsServer3D.pin_joint_set_param
+#: doc/classes/PhysicsServer2D.xml doc/classes/PhysicsServer3D.xml
+msgid "Sets a pin joint parameter."
+msgstr "Beállítja a csapos csukló egyik paraméterét."
+
+#. PhysicsServer2D.rectangle_shape_create
+#: doc/classes/PhysicsServer2D.xml
+msgid "Creates a 2D rectangle shape in the physics server, and returns the [RID] that identifies it. Use [method shape_set_data] to set the rectangle's half-extents."
+msgstr "2D téglalapalakzatot hoz létre a fizikai kiszolgálón, és visszaadja az alakzat [RID] azonosítóját. A téglalap fél szélességét és fél magasságát a [method shape_set_data] metódussal állíthatod be."
+
+#. PhysicsServer2D.segment_shape_create
+#: doc/classes/PhysicsServer2D.xml
+msgid "Creates a 2D segment shape in the physics server, and returns the [RID] that identifies it. Use [method shape_set_data] to set the segment's start and end points."
+msgstr "2D szakaszalakzatot hoz létre a fizikai kiszolgálón, és visszaadja az alakzat [RID] azonosítóját. A szakasz kezdő- és végpontját a [method shape_set_data] metódussal állíthatod be."
+
+#. PhysicsServer2D.set_active
+#: doc/classes/PhysicsServer2D.xml
+msgid "Activates or deactivates the 2D physics server. If [param active] is [code]false[/code], then the physics server will not do anything in its physics step."
+msgstr "Be- vagy kikapcsolja a 2D fizikai kiszolgálót. Ha a [param active] értéke [code]false[/code], a kiszolgáló kihagyja a fizikai lépést."
+
+#. PhysicsServer2D.shape_get_type
+#. PhysicsServer3D.shape_get_type
+#: doc/classes/PhysicsServer2D.xml doc/classes/PhysicsServer3D.xml
+msgid "Returns the shape's type."
+msgstr "Visszaadja az alakzat típusát."
+
+#. PhysicsServer2D.space_create
+#: doc/classes/PhysicsServer2D.xml
+msgid "Creates a 2D space in the physics server, and returns the [RID] that identifies it. A space contains bodies and areas, and controls the stepping of the physics simulation of the objects in it."
+msgstr "2D fizikai teret hoz létre a fizikai kiszolgálón, és visszaadja a tér [RID] azonosítóját. A tér testeket és területeket tartalmaz, és vezérli a bennük lévő objektumok fizikai szimulációjának lépéseit."
+
+#. PhysicsServer2D.space_get_direct_state
+#: doc/classes/PhysicsServer2D.xml
+msgid "Returns the state of a space, a [PhysicsDirectSpaceState2D]. This object can be used for collision/intersection queries."
+msgstr "A fizikai tér állapotát egy [PhysicsDirectSpaceState2D] objektumban adja vissza. Az objektum ütközési és metszésvizsgálatokra használható."
+
+#. PhysicsServer2D.space_get_param
+#: doc/classes/PhysicsServer2D.xml
+msgid "Returns the value of the given space parameter."
+msgstr "Visszaadja a fizikai tér megadott paraméterének értékét."
+
+#. PhysicsServer2D.space_is_active
+#: doc/classes/PhysicsServer2D.xml
+msgid "Returns [code]true[/code] if the space is active."
+msgstr "[code]true[/code] értéket ad vissza, ha a fizikai tér aktív."
+
+#. PhysicsServer2D.space_set_active
+#: doc/classes/PhysicsServer2D.xml
+msgid "Activates or deactivates the space. If [param active] is [code]false[/code], then the physics server will not do anything with this space in its physics step."
+msgstr "Be- vagy kikapcsolja a fizikai teret. Ha a [param active] értéke [code]false[/code], a kiszolgáló kihagyja ezt a teret a fizikai lépésből."
+
+#. PhysicsServer2D.space_set_param
+#: doc/classes/PhysicsServer2D.xml
+msgid "Sets the value of the given space parameter."
+msgstr "Beállítja a fizikai tér megadott paraméterének értékét."
+
+#. PhysicsServer2D.world_boundary_shape_create
+#: doc/classes/PhysicsServer2D.xml
+msgid "Creates a 2D world boundary shape in the physics server, and returns the [RID] that identifies it. Use [method shape_set_data] to set the shape's normal direction and distance properties."
+msgstr "2D világhatár-alakzatot hoz létre a fizikai kiszolgálón, és visszaadja az alakzat [RID] azonosítóját. A normál irányát és a távolságot a [method shape_set_data] metódussal állíthatod be."
+
+#. PhysicsServer2D.SPACE_PARAM_CONTACT_RECYCLE_RADIUS
+#: doc/classes/PhysicsServer2D.xml
+msgid "Constant to set/get the maximum distance a pair of bodies has to move before their collision status has to be recalculated. The default value of this parameter is [member ProjectSettings.physics/2d/solver/contact_recycle_radius]."
+msgstr "Két test legnagyobb elmozdulásának lekérdezésére vagy beállítására szolgáló állandó. A határ átlépésekor újra kell számítani az ütközési állapotukat. Alapértéke a [member ProjectSettings.physics/2d/solver/contact_recycle_radius] értéke."
+
+#. PhysicsServer2D.SPACE_PARAM_CONTACT_MAX_SEPARATION
+#: doc/classes/PhysicsServer2D.xml
+msgid "Constant to set/get the maximum distance a shape can be from another before they are considered separated and the contact is discarded. The default value of this parameter is [member ProjectSettings.physics/2d/solver/contact_max_separation]."
+msgstr "Az alakzatok közötti megengedett legnagyobb távolság lekérdezésére vagy beállítására szolgáló állandó. E fölött különállónak számítanak, és az érintkezés törlődik. Alapértéke a [member ProjectSettings.physics/2d/solver/contact_max_separation] értéke."
+
+#. PhysicsServer2D.SPACE_PARAM_BODY_TIME_TO_SLEEP
+#: doc/classes/PhysicsServer2D.xml
+msgid "Constant to set/get the maximum time of activity. A body marked as potentially inactive for both linear and angular velocity will be put to sleep after this time. The default value of this parameter is [member ProjectSettings.physics/2d/time_before_sleep]."
+msgstr "A legnagyobb aktivitási idő lekérdezésére vagy beállítására szolgáló állandó. Az a test, amelynek lineáris sebessége és szögsebessége alapján is elaltatható, ennyi idő után alvó állapotba kerül. Alapértéke a [member ProjectSettings.physics/2d/time_before_sleep] értéke."
+
+#. PhysicsServer2D.SHAPE_WORLD_BOUNDARY
+#: doc/classes/PhysicsServer2D.xml
+msgid "This is the constant for creating world boundary shapes. A world boundary shape is an [i]infinite[/i] line with an origin point, and a normal. Thus, it can be used for front/behind checks."
+msgstr "Világhatárok létrehozására szolgáló állandó. A világhatár egy origóval és normálvektorral megadott, [i]végtelen[/i] egyenes. Segítségével megállapítható, hogy valami a határ előtt vagy mögött van."
+
+#. PhysicsServer2D.SHAPE_SEPARATION_RAY
+#: doc/classes/PhysicsServer2D.xml
+msgid "This is the constant for creating separation ray shapes. A separation ray is defined by a length and separates itself from what is touching its far endpoint. Useful for character controllers."
+msgstr "Elválasztó sugarak létrehozására szolgáló állandó. A megadott hosszúságú sugár eltávolodik a távolabbi végpontjához érő objektumtól. Karaktervezérléshez használható."
+
+#. PhysicsServer2D.SHAPE_SEGMENT
+#: doc/classes/PhysicsServer2D.xml
+msgid "This is the constant for creating segment shapes. A segment shape is a [i]finite[/i] line from a point A to a point B. It can be checked for intersections."
+msgstr "Szakaszalakzatok létrehozására szolgáló állandó. A szakasz egy A és B pont közötti [i]véges[/i] egyenesdarab. Metszésvizsgálatra használható."
+
+#. PhysicsServer2D.SHAPE_CIRCLE
+#: doc/classes/PhysicsServer2D.xml
+msgid "This is the constant for creating circle shapes. A circle shape only has a radius. It can be used for intersections and inside/outside checks."
+msgstr "Köralakzatok létrehozására szolgáló állandó. A kört a sugara határozza meg. Metszések és a körön belüli vagy kívüli helyzet vizsgálatára használható."
+
+#. PhysicsServer2D.SHAPE_RECTANGLE
+#: doc/classes/PhysicsServer2D.xml
+msgid "This is the constant for creating rectangle shapes. A rectangle shape is defined by a width and a height. It can be used for intersections and inside/outside checks."
+msgstr "Téglalapalakzatok létrehozására szolgáló állandó. A téglalapot a szélessége és a magassága határozza meg. Metszések és a téglalapon belüli vagy kívüli helyzet vizsgálatára használható."
+
+#. PhysicsServer2D.SHAPE_CAPSULE
+#: doc/classes/PhysicsServer2D.xml
+msgid "This is the constant for creating capsule shapes. A capsule shape is defined by a radius and a length. It can be used for intersections and inside/outside checks."
+msgstr "Kapszulaalakzatok létrehozására szolgáló állandó. A kapszulát a sugara és a hossza határozza meg. Metszések és a kapszulán belüli vagy kívüli helyzet vizsgálatára használható."
+
+#. PhysicsServer2D.SHAPE_CONVEX_POLYGON
+#: doc/classes/PhysicsServer2D.xml
+msgid "This is the constant for creating convex polygon shapes. A polygon is defined by a list of points. It can be used for intersections and inside/outside checks."
+msgstr "Konvex sokszögalakzatok létrehozására szolgáló állandó. A sokszöget pontok listája határozza meg. Metszések és a sokszögön belüli vagy kívüli helyzet vizsgálatára használható."
+
+#. PhysicsServer2D.SHAPE_CONCAVE_POLYGON
+#: doc/classes/PhysicsServer2D.xml
+msgid "This is the constant for creating concave polygon shapes. A polygon is defined by a list of points. It can be used for intersections checks, but not for inside/outside checks."
+msgstr "Konkáv sokszögalakzatok létrehozására szolgáló állandó. A sokszöget pontok listája határozza meg. Metszésvizsgálatra használható, a sokszögön belüli vagy kívüli helyzet ellenőrzésére viszont nem."
+
+#. PhysicsServer2D.SHAPE_CUSTOM
+#: doc/classes/PhysicsServer2D.xml
+msgid "This constant is used internally by the engine. Any attempt to create this kind of shape results in an error."
+msgstr "A motor belső állandója. Ilyen alakzat létrehozásának kísérlete hibát okoz."
+
+#. PhysicsServer2D.AREA_PARAM_GRAVITY_OVERRIDE_MODE
+#: doc/classes/PhysicsServer2D.xml
+msgid "Constant to set/get gravity override mode in an area. See [enum AreaSpaceOverrideMode] for possible values. The default value of this parameter is [constant AREA_SPACE_OVERRIDE_DISABLED]."
+msgstr "A terület gravitáció-felülírási módjának beállítására vagy lekérdezésére szolgáló állandó. A lehetséges értékeket az [enum AreaSpaceOverrideMode] felsorolás tartalmazza. Az alapérték [constant AREA_SPACE_OVERRIDE_DISABLED]."
+
+#. PhysicsServer2D.AREA_PARAM_GRAVITY
+#: doc/classes/PhysicsServer2D.xml
+msgid "Constant to set/get gravity strength in an area. The default value of this parameter is [code]9.80665[/code]."
+msgstr "A területen ható gravitáció erősségének beállítására vagy lekérdezésére szolgáló állandó. Az alapérték [code]9.80665[/code]."
+
+#. PhysicsServer2D.AREA_PARAM_GRAVITY_VECTOR
+#: doc/classes/PhysicsServer2D.xml
+msgid "Constant to set/get gravity vector/center in an area. The default value of this parameter is [code]Vector2(0, -1)[/code]."
+msgstr "A gravitációvektor vagy a gravitációs középpont beállítására vagy lekérdezésére szolgáló állandó. Az alapérték [code]Vector2(0, -1)[/code]."
+
+#. PhysicsServer2D.AREA_PARAM_GRAVITY_IS_POINT
+#: doc/classes/PhysicsServer2D.xml
+msgid "Constant to set/get whether the gravity vector of an area is a direction, or a center point. The default value of this parameter is [code]false[/code]."
+msgstr "Annak beállítására vagy lekérdezésére szolgáló állandó, hogy a terület gravitációvektora irányt vagy középpontot jelöl-e. Az alapérték [code]false[/code]."
+
+#. PhysicsServer2D.AREA_PARAM_LINEAR_DAMP_OVERRIDE_MODE
+#: doc/classes/PhysicsServer2D.xml
+msgid "Constant to set/get linear damping override mode in an area. See [enum AreaSpaceOverrideMode] for possible values. The default value of this parameter is [constant AREA_SPACE_OVERRIDE_DISABLED]."
+msgstr "A terület lineáris csillapítását felülíró mód beállítására vagy lekérdezésére szolgáló állandó. A lehetséges értékeket az [enum AreaSpaceOverrideMode] felsorolás tartalmazza. Az alapérték [constant AREA_SPACE_OVERRIDE_DISABLED]."
+
+#. PhysicsServer2D.AREA_PARAM_LINEAR_DAMP
+#: doc/classes/PhysicsServer2D.xml
+msgid "Constant to set/get the linear damping factor of an area. The default value of this parameter is [code]0.1[/code]."
+msgstr "A terület lineáris csillapítási tényezőjének beállítására vagy lekérdezésére szolgáló állandó. Az alapérték [code]0.1[/code]."
+
+#. PhysicsServer2D.AREA_PARAM_ANGULAR_DAMP_OVERRIDE_MODE
+#: doc/classes/PhysicsServer2D.xml
+msgid "Constant to set/get angular damping override mode in an area. See [enum AreaSpaceOverrideMode] for possible values. The default value of this parameter is [constant AREA_SPACE_OVERRIDE_DISABLED]."
+msgstr "A terület szögcsillapítási felülírási módjának beállítására vagy lekérdezésére szolgáló állandó. A lehetséges értékeket az [enum AreaSpaceOverrideMode] felsorolás tartalmazza. Az alapérték [constant AREA_SPACE_OVERRIDE_DISABLED]."
+
+#. PhysicsServer2D.AREA_PARAM_ANGULAR_DAMP
+#: doc/classes/PhysicsServer2D.xml
+msgid "Constant to set/get the angular damping factor of an area. The default value of this parameter is [code]1.0[/code]."
+msgstr "A terület szögcsillapítási tényezőjének beállítására vagy lekérdezésére szolgáló állandó. Az alapérték [code]1.0[/code]."
+
+#. PhysicsServer2D.AREA_PARAM_PRIORITY
+#: doc/classes/PhysicsServer2D.xml
+msgid "Constant to set/get the priority (order of processing) of an area. The default value of this parameter is [code]0[/code]."
+msgstr "A terület feldolgozási sorrendjét meghatározó prioritás beállítására vagy lekérdezésére szolgáló állandó. Az alapérték [code]0[/code]."
+
+#. PhysicsServer2D.AREA_SPACE_OVERRIDE_DISABLED
+#. PhysicsServer3D.AREA_SPACE_OVERRIDE_DISABLED
+#: doc/classes/PhysicsServer2D.xml doc/classes/PhysicsServer3D.xml
+msgid "This area does not affect gravity/damp. These are generally areas that exist only to detect collisions, and objects entering or exiting them."
+msgstr "A terület nem módosítja a gravitációt és a csillapítást. Az ilyen területek általában ütközések, valamint be- és kilépő objektumok érzékelésére szolgálnak."
+
+#. PhysicsServer2D.AREA_SPACE_OVERRIDE_COMBINE
+#. PhysicsServer3D.AREA_SPACE_OVERRIDE_COMBINE
+#: doc/classes/PhysicsServer2D.xml doc/classes/PhysicsServer3D.xml
+msgid "This area adds its gravity/damp values to whatever has been calculated so far. This way, many overlapping areas can combine their physics to make interesting effects."
+msgstr "A terület hozzáadja a saját gravitációs és csillapítási értékeit az addig kiszámított értékekhez. Így több átfedő terület fizikai hatásai kombinálhatók."
+
+#. PhysicsServer2D.AREA_SPACE_OVERRIDE_COMBINE_REPLACE
+#. PhysicsServer3D.AREA_SPACE_OVERRIDE_COMBINE_REPLACE
+#: doc/classes/PhysicsServer2D.xml doc/classes/PhysicsServer3D.xml
+msgid "This area adds its gravity/damp values to whatever has been calculated so far. Then stops taking into account the rest of the areas, even the default one."
+msgstr "A terület hozzáadja a saját gravitációs és csillapítási értékeit az addig kiszámított értékekhez. Ezt követően a többi terület és az alapértelmezett terület kimarad a számításból."
+
+#. PhysicsServer2D.AREA_SPACE_OVERRIDE_REPLACE
+#. PhysicsServer3D.AREA_SPACE_OVERRIDE_REPLACE
+#: doc/classes/PhysicsServer2D.xml doc/classes/PhysicsServer3D.xml
+msgid "This area replaces any gravity/damp, even the default one, and stops taking into account the rest of the areas."
+msgstr "A terület felülír minden gravitációs és csillapítási értéket, az alapértelmezett értékeket is beleértve. A többi terület kimarad a számításból."
+
+#. PhysicsServer2D.AREA_SPACE_OVERRIDE_REPLACE_COMBINE
+#. PhysicsServer3D.AREA_SPACE_OVERRIDE_REPLACE_COMBINE
+#: doc/classes/PhysicsServer2D.xml doc/classes/PhysicsServer3D.xml
+msgid "This area replaces any gravity/damp calculated so far, but keeps calculating the rest of the areas, down to the default one."
+msgstr "A terület felülírja az addig kiszámított gravitációs és csillapítási értékeket. A számítás ezután folytatódik a többi területtel, az alapértelmezettet is beleértve."
+
+#. PhysicsServer2D.BODY_MODE_STATIC
+#. PhysicsServer3D.BODY_MODE_STATIC
+#: doc/classes/PhysicsServer2D.xml doc/classes/PhysicsServer3D.xml
+msgid "Constant for static bodies. In this mode, a body can be only moved by user code and doesn't collide with other bodies along its path when moved."
+msgstr "Statikus testekhez használható állandó. Ebben a módban a testet csak a felhasználó kódja mozgathatja. Mozgatáskor a test nem ütközik az útjába eső testekkel."
+
+#. PhysicsServer2D.BODY_MODE_KINEMATIC
+#. PhysicsServer3D.BODY_MODE_KINEMATIC
+#: doc/classes/PhysicsServer2D.xml doc/classes/PhysicsServer3D.xml
+msgid "Constant for kinematic bodies. In this mode, a body can be only moved by user code and collides with other bodies along its path."
+msgstr "Kinematikus testekhez használható állandó. Ebben a módban a testet csak a felhasználó kódja mozgathatja. A test ütközik az útjába eső testekkel."
+
+#. PhysicsServer2D.BODY_MODE_RIGID
+#. PhysicsServer3D.BODY_MODE_RIGID
+#: doc/classes/PhysicsServer2D.xml doc/classes/PhysicsServer3D.xml
+msgid "Constant for rigid bodies. In this mode, a body can be pushed by other bodies and has forces applied."
+msgstr "Merev testekhez használható állandó. Ebben a módban más testek meglökhetik a testet, és erők is hathatnak rá."
+
+#. PhysicsServer2D.BODY_MODE_RIGID_LINEAR
+#. PhysicsServer3D.BODY_MODE_RIGID_LINEAR
+#: doc/classes/PhysicsServer2D.xml doc/classes/PhysicsServer3D.xml
+msgid "Constant for linear rigid bodies. In this mode, a body can not rotate, and only its linear velocity is affected by external forces."
+msgstr "Forgásra képtelen merev testekhez használható állandó. Ebben a módban a külső erők csak a test lineáris sebességét befolyásolják."
+
+#. PhysicsServer2D.BODY_PARAM_BOUNCE
+#: doc/classes/PhysicsServer2D.xml
+msgid "Constant to set/get a body's bounce factor. The default value of this parameter is [code]0.0[/code]."
+msgstr "A test visszapattanási tényezőjének beállítására vagy lekérdezésére szolgáló állandó. Az alapérték [code]0.0[/code]."
+
+#. PhysicsServer2D.BODY_PARAM_FRICTION
+#: doc/classes/PhysicsServer2D.xml
+msgid "Constant to set/get a body's friction. The default value of this parameter is [code]1.0[/code]."
+msgstr "A test súrlódásának beállítására vagy lekérdezésére szolgáló állandó. Az alapérték [code]1.0[/code]."
+
+#. PhysicsServer2D.BODY_PARAM_INERTIA
+#: doc/classes/PhysicsServer2D.xml
+msgid "Constant to set/get a body's inertia. The default value of this parameter is [code]0.0[/code]. If the body's inertia is set to a value [code]<= 0.0[/code], then the inertia will be recalculated based on the body's shapes, mass, and center of mass."
+msgstr "A test tehetetlenségi nyomatékának beállítására vagy lekérdezésére szolgáló állandó. Az alapérték [code]0.0[/code]. Ha a nyomaték értéke [code]<= 0.0[/code], a rendszer a test alakzatai, tömege és tömegközéppontja alapján újraszámítja."
+
+#. PhysicsServer2D.BODY_PARAM_GRAVITY_SCALE
+#: doc/classes/PhysicsServer2D.xml
+msgid "Constant to set/get a body's gravity multiplier. The default value of this parameter is [code]1.0[/code]."
+msgstr "A test gravitációs szorzójának beállítására vagy lekérdezésére szolgáló állandó. Az alapérték [code]1.0[/code]."
+
+#. PhysicsServer2D.BODY_PARAM_LINEAR_DAMP_MODE
+#: doc/classes/PhysicsServer2D.xml
+msgid "Constant to set/get a body's linear damping mode. See [enum BodyDampMode] for possible values. The default value of this parameter is [constant BODY_DAMP_MODE_COMBINE]."
+msgstr "A test lineáris csillapítási módjának beállítására vagy lekérdezésére szolgáló állandó. A lehetséges értékeket az [enum BodyDampMode] felsorolás tartalmazza. Az alapérték [constant BODY_DAMP_MODE_COMBINE]."
+
+#. PhysicsServer2D.BODY_PARAM_ANGULAR_DAMP_MODE
+#: doc/classes/PhysicsServer2D.xml
+msgid "Constant to set/get a body's angular damping mode. See [enum BodyDampMode] for possible values. The default value of this parameter is [constant BODY_DAMP_MODE_COMBINE]."
+msgstr "A test szögcsillapítási módjának beállítására vagy lekérdezésére szolgáló állandó. A lehetséges értékeket az [enum BodyDampMode] felsorolás tartalmazza. Az alapérték [constant BODY_DAMP_MODE_COMBINE]."
+
+#. PhysicsServer2D.BODY_PARAM_LINEAR_DAMP
+#: doc/classes/PhysicsServer2D.xml
+msgid "Constant to set/get a body's linear damping factor. The default value of this parameter is [code]0.0[/code]."
+msgstr "A test lineáris csillapítási tényezőjének beállítására vagy lekérdezésére szolgáló állandó. Az alapérték [code]0.0[/code]."
+
+#. PhysicsServer2D.BODY_PARAM_ANGULAR_DAMP
+#: doc/classes/PhysicsServer2D.xml
+msgid "Constant to set/get a body's angular damping factor. The default value of this parameter is [code]0.0[/code]."
+msgstr "A test szögcsillapítási tényezőjének beállítására vagy lekérdezésére szolgáló állandó. Az alapérték [code]0.0[/code]."
+
+#. PhysicsServer2D.BODY_PARAM_MAX
+#. PhysicsServer3D.BODY_PARAM_MAX
+#: doc/classes/PhysicsServer2D.xml doc/classes/PhysicsServer3D.xml
+msgid "Represents the size of the [enum BodyParameter] enum."
+msgstr "A [enum BodyParameter] felsorolásban szereplő testparaméterek száma."
+
+#. PhysicsServer2D.BODY_DAMP_MODE_COMBINE
+#. PhysicsServer3D.BODY_DAMP_MODE_COMBINE
+#: doc/classes/PhysicsServer2D.xml doc/classes/PhysicsServer3D.xml
+msgid "The body's damping value is added to any value set in areas or the default value."
+msgstr "A test csillapítási értéke hozzáadódik a területeken beállított értékhez vagy az alapértékhez."
+
+#. PhysicsServer2D.BODY_DAMP_MODE_REPLACE
+#. PhysicsServer3D.BODY_DAMP_MODE_REPLACE
+#: doc/classes/PhysicsServer2D.xml doc/classes/PhysicsServer3D.xml
+msgid "The body's damping value replaces any value set in areas or the default value."
+msgstr "A test csillapítási értéke felülírja a területeken beállított értéket vagy az alapértéket."
+
+#. PhysicsServer2D.BODY_STATE_TRANSFORM
+#. PhysicsServer3D.BODY_STATE_TRANSFORM
+#: doc/classes/PhysicsServer2D.xml doc/classes/PhysicsServer3D.xml
+msgid "Constant to set/get the current transform matrix of the body."
+msgstr "A test aktuális transzformációs mátrixának beállítására vagy lekérdezésére szolgáló állandó."
+
+#. PhysicsServer2D.BODY_STATE_LINEAR_VELOCITY
+#. PhysicsServer3D.BODY_STATE_LINEAR_VELOCITY
+#: doc/classes/PhysicsServer2D.xml doc/classes/PhysicsServer3D.xml
+msgid "Constant to set/get the current linear velocity of the body."
+msgstr "A test aktuális lineáris sebességének beállítására vagy lekérdezésére szolgáló állandó."
+
+#. PhysicsServer2D.BODY_STATE_ANGULAR_VELOCITY
+#. PhysicsServer3D.BODY_STATE_ANGULAR_VELOCITY
+#: doc/classes/PhysicsServer2D.xml doc/classes/PhysicsServer3D.xml
+msgid "Constant to set/get the current angular velocity of the body."
+msgstr "A test aktuális szögsebességének beállítására vagy lekérdezésére szolgáló állandó."
+
+#. PhysicsServer2D.BODY_STATE_SLEEPING
+#. PhysicsServer3D.BODY_STATE_SLEEPING
+#: doc/classes/PhysicsServer2D.xml doc/classes/PhysicsServer3D.xml
+msgid "Constant to sleep/wake up a body, or to get whether it is sleeping."
+msgstr "A test elaltatására vagy felébresztésére, illetve az alvó állapot lekérdezésére szolgáló állandó."
+
+#. PhysicsServer2D.BODY_STATE_CAN_SLEEP
+#. PhysicsServer3D.BODY_STATE_CAN_SLEEP
+#: doc/classes/PhysicsServer2D.xml doc/classes/PhysicsServer3D.xml
+msgid "Constant to set/get whether the body can sleep."
+msgstr "Annak beállítására vagy lekérdezésére szolgáló állandó, hogy elalhat-e a test."
+
+#. PhysicsServer2D.JOINT_TYPE_PIN
+#: doc/classes/PhysicsServer2D.xml
+msgid "Constant to create pin joints."
+msgstr "Csapos csuklók létrehozására szolgáló állandó."
+
+#. PhysicsServer2D.JOINT_TYPE_GROOVE
+#: doc/classes/PhysicsServer2D.xml
+msgid "Constant to create groove joints."
+msgstr "Horonycsuklók létrehozására szolgáló állandó."
+
+#. PhysicsServer2D.JOINT_TYPE_DAMPED_SPRING
+#: doc/classes/PhysicsServer2D.xml
+msgid "Constant to create damped spring joints."
+msgstr "Csillapított rugós csuklók létrehozására szolgáló állandó."
+
+#. PhysicsServer2D.JOINT_TYPE_MAX
+#. PhysicsServer3D.JOINT_TYPE_MAX
+#: doc/classes/PhysicsServer2D.xml doc/classes/PhysicsServer3D.xml
+msgid "Represents the size of the [enum JointType] enum."
+msgstr "A [enum JointType] felsorolásban szereplő csuklótípusok száma."
+
+#. PhysicsServer2D.PIN_JOINT_SOFTNESS
+#: doc/classes/PhysicsServer2D.xml
+msgid "Constant to set/get a how much the bond of the pin joint can flex. The default value of this parameter is [code]0.0[/code]."
+msgstr "A csapos csukló kapcsolatának rugalmasságát beállító vagy lekérdező állandó. Az alapérték [code]0.0[/code]."
+
+#. PhysicsServer2D.PIN_JOINT_LIMIT_UPPER
+#: doc/classes/PhysicsServer2D.xml
+msgid "The maximum rotation around the pin."
+msgstr "A csap körüli legnagyobb elfordulási szög."
+
+#. PhysicsServer2D.PIN_JOINT_LIMIT_LOWER
+#: doc/classes/PhysicsServer2D.xml
+msgid "The minimum rotation around the pin."
+msgstr "A csap körüli legkisebb elfordulási szög."
+
+#. PhysicsServer2D.PIN_JOINT_FLAG_ANGULAR_LIMIT_ENABLED
+#: doc/classes/PhysicsServer2D.xml
+msgid "If [code]true[/code], the pin has a maximum and a minimum rotation."
+msgstr "Ha az értéke [code]true[/code], a csap elfordulására alsó és felső határérték vonatkozik."
+
+#. PhysicsServer2D.PIN_JOINT_FLAG_MOTOR_ENABLED
+#: doc/classes/PhysicsServer2D.xml
+msgid "If [code]true[/code], a motor turns the pin."
+msgstr "Ha az értéke [code]true[/code], a csapot motor forgatja."
+
+#. PhysicsServer2D.DAMPED_SPRING_REST_LENGTH
+#: doc/classes/PhysicsServer2D.xml
+msgid "Sets the resting length of the spring joint. The joint will always try to go to back this length when pulled apart. The default value of this parameter is the distance between the joint's anchor points."
+msgstr "Beállítja a rugós csukló nyugalmi hosszát. Széthúzáskor a csukló mindig erre a hosszra igyekszik visszaállni. Az alapérték a csukló két rögzítési pontja közötti távolság."
+
+#. PhysicsServer2D.DAMPED_SPRING_STIFFNESS
+#: doc/classes/PhysicsServer2D.xml
+msgid "Sets the stiffness of the spring joint. The joint applies a force equal to the stiffness times the distance from its resting length. The default value of this parameter is [code]20.0[/code]."
+msgstr "Beállítja a rugós csukló merevségét. A csukló által kifejtett erő nagysága a merevség és a nyugalmi hossztól való eltérés szorzata. Az alapérték [code]20.0[/code]."
+
+#. PhysicsServer2D.CCD_MODE_DISABLED
+#: doc/classes/PhysicsServer2D.xml
+msgid "Disables continuous collision detection. This is the fastest way to detect body collisions, but it can miss small and/or fast-moving objects."
+msgstr "Kikapcsolja a folyamatos ütközésérzékelést. Ez a leggyorsabb mód a testek ütközéseinek érzékelésére, de kisebb vagy gyorsan mozgó objektumok kimaradhatnak."
+
+#. PhysicsServer2D.CCD_MODE_CAST_RAY
+#: doc/classes/PhysicsServer2D.xml
+msgid "Enables continuous collision detection by raycasting. It is faster than shapecasting, but less precise."
+msgstr "Bekapcsolja a sugárvetítéses folyamatos ütközésérzékelést. Gyorsabb az alakzatvetítésnél, de kevésbé pontos."
+
+#. PhysicsServer2D.CCD_MODE_CAST_SHAPE
+#: doc/classes/PhysicsServer2D.xml
+msgid "Enables continuous collision detection by shapecasting. It is the slowest CCD method, and the most precise."
+msgstr "Bekapcsolja az alakzatvetítéses folyamatos ütközésérzékelést. A folyamatos ütközésérzékelési módok közül ez a leglassabb és a legpontosabb."
+
+#. PhysicsServer2D.AREA_BODY_ADDED
+#. PhysicsServer3D.AREA_BODY_ADDED
+#: doc/classes/PhysicsServer2D.xml doc/classes/PhysicsServer3D.xml
+msgid "The value of the first parameter and area callback function receives, when an object enters one of its shapes."
+msgstr "Ezt kapja első paraméterként a terület visszahívási függvénye, amikor egy objektum belép a terület egyik alakzatába."
+
+#. PhysicsServer2D.AREA_BODY_REMOVED
+#. PhysicsServer3D.AREA_BODY_REMOVED
+#: doc/classes/PhysicsServer2D.xml doc/classes/PhysicsServer3D.xml
+msgid "The value of the first parameter and area callback function receives, when an object exits one of its shapes."
+msgstr "Ezt kapja első paraméterként a terület visszahívási függvénye, amikor egy objektum kilép a terület egyik alakzatából."
+
+#. PhysicsServer2D.INFO_ACTIVE_OBJECTS
+#. PhysicsServer3D.INFO_ACTIVE_OBJECTS
+#: doc/classes/PhysicsServer2D.xml doc/classes/PhysicsServer3D.xml
+msgid "Constant to get the number of objects that are not sleeping."
+msgstr "Az ébren lévő objektumok számának lekérdezésére szolgáló állandó."
+
+#. PhysicsServer2D.INFO_COLLISION_PAIRS
+#. PhysicsServer3D.INFO_COLLISION_PAIRS
+#: doc/classes/PhysicsServer2D.xml doc/classes/PhysicsServer3D.xml
+msgid "Constant to get the number of possible collisions."
+msgstr "A lehetséges ütközések számának lekérdezésére szolgáló állandó."
+
+#. PhysicsServer2D.INFO_ISLAND_COUNT
+#. PhysicsServer3D.INFO_ISLAND_COUNT
+#: doc/classes/PhysicsServer2D.xml doc/classes/PhysicsServer3D.xml
+msgid "Constant to get the number of space regions where a collision could occur."
+msgstr "Az ütközésre esélyes térbeli csoportok számának lekérdezésére szolgáló állandó."
+
+#. PhysicsDirectBodyState3D.brief
+#: doc/classes/PhysicsDirectBodyState3D.xml
+msgid "Provides direct access to a physics body in the [PhysicsServer3D]."
+msgstr "Közvetlen hozzáférést ad a [PhysicsServer3D] egyik fizikai testéhez."
+
+#. PhysicsDirectBodyState3D.description
+#: doc/classes/PhysicsDirectBodyState3D.xml
+msgid "Provides direct access to a physics body in the [PhysicsServer3D], allowing safe changes to physics properties. This object is passed via the direct state callback of [RigidBody3D], and is intended for changing the direct state of that body. See [method RigidBody3D._integrate_forces]."
+msgstr "Közvetlen hozzáférést ad a [PhysicsServer3D] egyik fizikai testéhez, így annak fizikai tulajdonságai biztonságosan módosíthatók. Ezt az objektumot a [RigidBody3D] a közvetlen állapotra szolgáló visszahívásban adja át. Az objektummal a test közvetlen állapota módosítható. Lásd a [method RigidBody3D._integrate_forces] metódust."
+
+#. PhysicsDirectBodyState3D.add_constant_central_force
+#. RigidBody3D.add_constant_central_force
+#: doc/classes/PhysicsDirectBodyState3D.xml doc/classes/RigidBody3D.xml
+msgid "Adds a constant directional force without affecting rotation that keeps being applied over time until cleared with [code]constant_force = Vector3(0, 0, 0)[/code].\nThis is equivalent to using [method add_constant_force] at the body's center of mass."
+msgstr "Állandó, adott irányú erőt ad hozzá a testhez, amely nem okoz forgást. Az erő addig hat, amíg a [code]constant_force = Vector3(0, 0, 0)[/code] utasítással nem törlöd.\nEz megfelel az [method add_constant_force] meghívásának a test tömegközéppontjában."
+
+#. PhysicsDirectBodyState3D.add_constant_force
+#. RigidBody3D.add_constant_force
+#: doc/classes/PhysicsDirectBodyState3D.xml doc/classes/RigidBody3D.xml
+msgid "Adds a constant positioned force to the body that keeps being applied over time until cleared with [code]constant_force = Vector3(0, 0, 0)[/code].\n[param position] is the offset from the body origin in global coordinates."
+msgstr "Állandó erőt ad hozzá a testhez a megadott pontban. Az erő addig hat, amíg a [code]constant_force = Vector3(0, 0, 0)[/code] utasítással nem törlöd.\nA [param position] a test origójától mért eltolás globális koordinátákban."
+
+#. PhysicsDirectBodyState3D.add_constant_torque
+#. RigidBody3D.add_constant_torque
+#: doc/classes/PhysicsDirectBodyState3D.xml doc/classes/RigidBody3D.xml
+msgid "Adds a constant rotational force without affecting position that keeps being applied over time until cleared with [code]constant_torque = Vector3(0, 0, 0)[/code]."
+msgstr "Állandó forgatónyomatékot ad hozzá, amely a test helyzetét változatlanul hagyja. A nyomaték addig hat, amíg a [code]constant_torque = Vector3(0, 0, 0)[/code] utasítással nem törlöd."
+
+#. PhysicsDirectBodyState3D.get_contact_collider_object
+#: doc/classes/PhysicsDirectBodyState3D.xml
+msgid "Returns the collider object."
+msgstr "Visszaadja az ütköző objektumot."
+
+#. PhysicsDirectBodyState3D.get_contact_collider_velocity_at_position
+#: doc/classes/PhysicsDirectBodyState3D.xml
+msgid "Returns the linear velocity vector at the collider's contact point."
+msgstr "Visszaadja az ütköző objektum érintkezési pontjának lineáris sebességvektorát."
+
+#. PhysicsDirectBodyState3D.get_contact_count
+#: doc/classes/PhysicsDirectBodyState3D.xml
+msgid "Returns the number of contacts this body has with other bodies.\n[b]Note:[/b] By default, this returns 0 unless bodies are configured to monitor contacts. See [member RigidBody3D.contact_monitor]."
+msgstr "Visszaadja a test más testekkel való érintkezéseinek számát.\n[b]Megjegyzés:[/b] Az eredmény alapértelmezés szerint 0, amíg az érintkezésfigyelést be nem állítod. Lásd a [member RigidBody3D.contact_monitor] tulajdonságot."
+
+#. PhysicsDirectBodyState3D.get_contact_impulse
+#: doc/classes/PhysicsDirectBodyState3D.xml
+msgid "Impulse created by the contact."
+msgstr "Az érintkezésből eredő impulzus."
+
+#. PhysicsDirectBodyState3D.get_contact_local_velocity_at_position
+#: doc/classes/PhysicsDirectBodyState3D.xml
+msgid "Returns the linear velocity vector at the body's contact point."
+msgstr "Visszaadja a testen lévő érintkezési pont lineáris sebességvektorát."
+
+#. PhysicsDirectBodyState3D.inverse_inertia_tensor
+#: doc/classes/PhysicsDirectBodyState3D.xml
+msgid "The inverse of the inertia tensor of the body."
+msgstr "A test tehetetlenségi tenzorának inverze."
+
+#. PhysicsDirectBodyState3D.linear_velocity
+#: doc/classes/PhysicsDirectBodyState3D.xml
+msgid "The body's linear velocity in units per second."
+msgstr "A test lineáris sebessége egység per másodpercben."
+
+#. PhysicsServer2DManager.brief
+#: doc/classes/PhysicsServer2DManager.xml
+msgid "A singleton for managing [PhysicsServer2D] implementations."
+msgstr "A [PhysicsServer2D] megvalósításait kezelő egypéldányos osztály."
+
+#. PhysicsServer2DManager.register_server
+#: doc/classes/PhysicsServer2DManager.xml
+msgid "Register a [PhysicsServer2D] implementation by passing a [param name] and a [Callable] that returns a [PhysicsServer2D] object."
+msgstr "Regisztrál egy [PhysicsServer2D] megvalósítást. Ehhez adj meg egy [param name] nevet és egy olyan [Callable] hívható objektumot, amely [PhysicsServer2D] példányt ad vissza."
+
+#. PhysicsServer2DManager.set_default_server
+#: doc/classes/PhysicsServer2DManager.xml
+msgid "Set the default [PhysicsServer2D] implementation to the one identified by [param name], if [param priority] is greater than the priority of the current default implementation."
+msgstr "A [param name] névvel azonosított [PhysicsServer2D] megvalósítást állítja be alapértelmezettnek, ha a [param priority] értéke meghaladja a jelenlegi alapértelmezett megvalósítás prioritását."
+
+#. PhysicsServer3DManager.brief
+#: doc/classes/PhysicsServer3DManager.xml
+msgid "A singleton for managing [PhysicsServer3D] implementations."
+msgstr "A [PhysicsServer3D] megvalósításait kezelő egypéldányos osztály."
+
+#. PhysicsServer3DManager.register_server
+#: doc/classes/PhysicsServer3DManager.xml
+msgid "Register a [PhysicsServer3D] implementation by passing a [param name] and a [Callable] that returns a [PhysicsServer3D] object."
+msgstr "Regisztrál egy [PhysicsServer3D] megvalósítást. Ehhez adj meg egy [param name] nevet és egy olyan [Callable] hívható objektumot, amely [PhysicsServer3D] példányt ad vissza."
+
+#. PhysicsServer3DManager.set_default_server
+#: doc/classes/PhysicsServer3DManager.xml
+msgid "Set the default [PhysicsServer3D] implementation to the one identified by [param name], if [param priority] is greater than the priority of the current default implementation."
+msgstr "A [param name] névvel azonosított [PhysicsServer3D] megvalósítást állítja be alapértelmezettnek, ha a [param priority] értéke meghaladja a jelenlegi alapértelmezett megvalósítás prioritását."
+
+#. PhysicsServer3D.area_set_shape_transform
+#: doc/classes/PhysicsServer3D.xml
+msgid "Sets the transform matrix for an area shape."
+msgstr "Beállítja a terület egyik alakzatának transzformációs mátrixát."
+
+#. PhysicsServer3D.area_set_space
+#: doc/classes/PhysicsServer3D.xml
+msgid "Assigns a space to the area."
+msgstr "Fizikai teret rendel a területhez."
+
+#. PhysicsServer3D.area_set_transform
+#: doc/classes/PhysicsServer3D.xml
+msgid "Sets the transform matrix for an area."
+msgstr "Beállítja egy terület transzformációs mátrixát."
+
+#. PhysicsServer3D.body_add_collision_exception
+#: doc/classes/PhysicsServer3D.xml
+msgid "Adds a body to the list of bodies exempt from collisions."
+msgstr "Hozzáad egy testet az ütközések alól kivett testek listájához."
+
+#. PhysicsServer3D.body_add_shape
+#: doc/classes/PhysicsServer3D.xml
+msgid "Adds a shape to the body, along with a transform matrix. Shapes are usually referenced by their index, so you should track which shape has a given index."
+msgstr "Alakzatot ad a testhez a hozzá tartozó transzformációs mátrixszal együtt. Az alakzatokra általában az indexükkel lehet hivatkozni, ezért érdemes nyilvántartani, hogy melyik alakzat melyik indexet kapta."
+
+#. PhysicsServer3D.body_apply_torque
+#: doc/classes/PhysicsServer3D.xml
+msgid "Applies a rotational force without affecting position. A force is time dependent and meant to be applied every physics update."
+msgstr "Forgatónyomatékot fejt ki a test helyzetének megváltoztatása nélkül. A nyomaték hatása időfüggő, ezért minden fizikai lépésben alkalmazni kell."
+
+#. PhysicsServer3D.body_clear_shapes
+#: doc/classes/PhysicsServer3D.xml
+msgid "Removes all shapes from a body."
+msgstr "Eltávolítja egy test összes alakzatát."
+
+#. PhysicsServer3D.body_get_collision_layer
+#: doc/classes/PhysicsServer3D.xml
+msgid "Returns the physics layer or layers a body belongs to."
+msgstr "Visszaadja azokat a fizikai rétegeket, amelyekhez a test tartozik."
+
+#. PhysicsServer3D.body_get_collision_mask
+#: doc/classes/PhysicsServer3D.xml
+msgid "Returns the physics layer or layers a body can collide with."
+msgstr "Visszaadja azokat a fizikai rétegeket, amelyekkel a test ütközhet."
+
+#. PhysicsServer3D.body_get_collision_priority
+#: doc/classes/PhysicsServer3D.xml
+msgid "Returns the body's collision priority."
+msgstr "Visszaadja a test ütközési prioritását."
+
+#. PhysicsServer3D.body_get_constant_torque
+#: doc/classes/PhysicsServer3D.xml
+msgid "Returns the body's total constant rotational forces applied during each physics update.\nSee [method body_add_constant_torque]."
+msgstr "Visszaadja a testre minden fizikai lépésben ható eredő állandó forgatónyomatékot.\nLásd a [method body_add_constant_torque] metódust."
+
+#. PhysicsServer3D.body_get_direct_state
+#: doc/classes/PhysicsServer3D.xml
+msgid "Returns the [PhysicsDirectBodyState3D] of the body. Returns [code]null[/code] if the body is destroyed or removed from the physics space."
+msgstr "Visszaadja a test [PhysicsDirectBodyState3D] állapotobjektumát. Az eredmény [code]null[/code], ha a test megszűnt, vagy eltávolították a fizikai térből."
+
+#. PhysicsServer3D.body_get_max_contacts_reported
+#: doc/classes/PhysicsServer3D.xml
+msgid "Returns the maximum contacts that can be reported. See [method body_set_max_contacts_reported]."
+msgstr "Visszaadja a jelenthető érintkezések legnagyobb számát. Lásd a [method body_set_max_contacts_reported] metódust."
+
+#. PhysicsServer3D.body_get_mode
+#: doc/classes/PhysicsServer3D.xml
+msgid "Returns the body mode."
+msgstr "Visszaadja a test fizikai módját."
+
+#. PhysicsServer3D.body_get_param
+#: doc/classes/PhysicsServer3D.xml
+msgid "Returns the value of a body parameter. A list of available parameters is on the [enum BodyParameter] constants."
+msgstr "Visszaadja az egyik testparaméter értékét. A lehetséges paramétereket a [enum BodyParameter] felsorolás tartalmazza."
+
+#. PhysicsServer3D.body_get_shape
+#: doc/classes/PhysicsServer3D.xml
+msgid "Returns the [RID] of the nth shape of a body."
+msgstr "Visszaadja a test megadott sorszámú alakzatának [RID] azonosítóját."
+
+#. PhysicsServer3D.body_get_shape_count
+#: doc/classes/PhysicsServer3D.xml
+msgid "Returns the number of shapes assigned to a body."
+msgstr "Visszaadja a testhez rendelt alakzatok számát."
+
+#. PhysicsServer3D.body_get_shape_transform
+#: doc/classes/PhysicsServer3D.xml
+msgid "Returns the transform matrix of a body shape."
+msgstr "Visszaadja a test egyik alakzatának transzformációs mátrixát."
+
+#. PhysicsServer3D.body_get_space
+#: doc/classes/PhysicsServer3D.xml
+msgid "Returns the [RID] of the space assigned to a body."
+msgstr "Visszaadja a testhez rendelt fizikai tér [RID] azonosítóját."
+
+#. PhysicsServer3D.body_get_state
+#: doc/classes/PhysicsServer3D.xml
+msgid "Returns a body state."
+msgstr "Visszaadja a test egyik állapotértékét."
+
+#. PhysicsServer3D.body_is_continuous_collision_detection_enabled
+#: doc/classes/PhysicsServer3D.xml
+msgid "If [code]true[/code], the continuous collision detection mode is enabled."
+msgstr "A [code]true[/code] érték jelzi, hogy a folyamatos ütközésérzékelés engedélyezve van."
+
+#. PhysicsServer3D.body_remove_shape
+#: doc/classes/PhysicsServer3D.xml
+msgid "Removes a shape from a body. The shape is not deleted, so it can be reused afterwards."
+msgstr "Eltávolít egy alakzatot a testből. Az alakzat megmarad, így később újra használható."
+
+#. PhysicsServer3D.body_reset_mass_properties
+#: doc/classes/PhysicsServer3D.xml
+msgid "Restores the default inertia and center of mass based on shapes to cancel any custom values previously set using [method body_set_param]."
+msgstr "Az alakzatok alapján visszaállítja az alapértelmezett tehetetlenségi nyomatékot és tömegközéppontot. Ezzel törli a [method body_set_param] metódussal megadott egyedi értékeket."
+
+#. PhysicsServer3D.body_set_axis_velocity
+#. RigidBody3D.set_axis_velocity
+#: doc/classes/PhysicsServer3D.xml doc/classes/RigidBody3D.xml
+msgid "Sets an axis velocity. The velocity in the given vector axis will be set as the given vector length. This is useful for jumping behavior."
+msgstr "Tengelyirányú sebességet állít be. A megadott vektor irányában a sebességkomponens a vektor hosszával egyezik meg. Ez például ugrásnál hasznos."
+
+#. PhysicsServer3D.body_set_collision_layer
+#: doc/classes/PhysicsServer3D.xml
+msgid "Sets the physics layer or layers a body belongs to."
+msgstr "Beállítja, mely fizikai rétegekhez tartozik a test."
+
+#. PhysicsServer3D.body_set_collision_mask
+#: doc/classes/PhysicsServer3D.xml
+msgid "Sets the physics layer or layers a body can collide with."
+msgstr "Beállítja, mely fizikai rétegekkel ütközhet a test."
+
+#. PhysicsServer3D.body_set_collision_priority
+#: doc/classes/PhysicsServer3D.xml
+msgid "Sets the body's collision priority."
+msgstr "Beállítja a test ütközési prioritását."
+
+#. PhysicsServer3D.body_set_constant_force
+#: doc/classes/PhysicsServer3D.xml
+msgid "Sets the body's total constant positional forces applied during each physics update.\nSee [method body_add_constant_force] and [method body_add_constant_central_force]."
+msgstr "Beállítja a testre minden fizikai lépésben ható állandó erők eredőjét.\nLásd a [method body_add_constant_force] és a [method body_add_constant_central_force] metódust."
+
+#. PhysicsServer3D.body_set_constant_torque
+#: doc/classes/PhysicsServer3D.xml
+msgid "Sets the body's total constant rotational forces applied during each physics update.\nSee [method body_add_constant_torque]."
+msgstr "Beállítja a testre minden fizikai lépésben ható eredő állandó forgatónyomatékot.\nLásd a [method body_add_constant_torque] metódust."
+
+#. PhysicsServer3D.body_set_enable_continuous_collision_detection
+#: doc/classes/PhysicsServer3D.xml
+msgid "If [code]true[/code], the continuous collision detection mode is enabled.\nContinuous collision detection tries to predict where a moving body will collide, instead of moving it and correcting its movement if it collided."
+msgstr "Ha az értéke [code]true[/code], bekapcsolja a folyamatos ütközésérzékelést.\nA folyamatos ütközésérzékelés előre megbecsüli, hol ütközne a mozgó test, így elkerülhető az ütközés utáni helyzetkorrekció."
+
+#. PhysicsServer3D.body_set_max_contacts_reported
+#: doc/classes/PhysicsServer3D.xml
+msgid "Sets the maximum contacts to report. Bodies can keep a log of the contacts with other bodies. This is enabled by setting the maximum number of contacts reported to a number greater than 0."
+msgstr "Beállítja a jelenthető érintkezések legnagyobb számát. A testek nyilvántarthatják a más testekkel való érintkezéseiket. Ehhez a legnagyobb jelenthető számot nullánál nagyobb értékre kell állítani."
+
+#. PhysicsServer3D.body_set_mode
+#: doc/classes/PhysicsServer3D.xml
+msgid "Sets the body mode."
+msgstr "Beállítja a test fizikai módját."
+
+#. PhysicsServer3D.body_set_param
+#: doc/classes/PhysicsServer3D.xml
+msgid "Sets a body parameter. A list of available parameters is on the [enum BodyParameter] constants."
+msgstr "Beállít egy testparamétert. A lehetséges paramétereket a [enum BodyParameter] felsorolás tartalmazza."
+
+#. PhysicsServer3D.body_set_ray_pickable
+#: doc/classes/PhysicsServer3D.xml
+msgid "Sets the body pickable with rays if [param enable] is set."
+msgstr "Ha a [param enable] be van kapcsolva, a test sugárral kijelölhető."
+
+#. PhysicsServer3D.body_set_shape
+#: doc/classes/PhysicsServer3D.xml
+msgid "Substitutes a given body shape by another. The old shape is selected by its index, the new one by its [RID]."
+msgstr "Lecseréli a test egyik alakzatát. A régi alakzatot az indexével, az újat a [RID] azonosítójával kell megadni."
+
+#. PhysicsServer3D.body_set_shape_transform
+#: doc/classes/PhysicsServer3D.xml
+msgid "Sets the transform matrix for a body shape."
+msgstr "Beállítja a test egyik alakzatának transzformációs mátrixát."
+
+#. PhysicsServer3D.body_set_space
+#: doc/classes/PhysicsServer3D.xml
+msgid "Assigns a space to the body (see [method space_create])."
+msgstr "Fizikai teret rendel a testhez. Lásd a [method space_create] metódust."
+
+#. PhysicsServer3D.body_set_state
+#: doc/classes/PhysicsServer3D.xml
+msgid "Sets a body state."
+msgstr "Beállítja a test egyik állapotértékét."
+
+#. PhysicsServer3D.body_test_motion
+#: doc/classes/PhysicsServer3D.xml
+msgid "Returns [code]true[/code] if a collision would result from moving along a motion vector from a given point in space. [PhysicsTestMotionParameters3D] is passed to set motion parameters. [PhysicsTestMotionResult3D] can be passed to return additional information."
+msgstr "[code]true[/code] értéket ad vissza, ha a megadott térbeli pontból a mozgásvektor mentén elmozdulva ütközés történne. Az elmozdulás paramétereit egy [PhysicsTestMotionParameters3D] objektumban kell átadni. További adatok lekéréséhez egy [PhysicsTestMotionResult3D] objektum is átadható."
+
+#. PhysicsServer3D.box_shape_create
+#: doc/classes/PhysicsServer3D.xml
+msgid "Creates a 3D box shape in the physics server, and returns the [RID] that identifies it. Use [method shape_set_data] to set the box's half-extents."
+msgstr "3D dobozalakzatot hoz létre a fizikai kiszolgálón, és visszaadja az alakzat [RID] azonosítóját. A doboz méreteinek felét a [method shape_set_data] metódussal állíthatod be."
+
+#. PhysicsServer3D.capsule_shape_create
+#: doc/classes/PhysicsServer3D.xml
+msgid "Creates a 3D capsule shape in the physics server, and returns the [RID] that identifies it. Use [method shape_set_data] to set the capsule's height and radius."
+msgstr "3D kapszulaalakzatot hoz létre a fizikai kiszolgálón, és visszaadja az alakzat [RID] azonosítóját. A kapszula magasságát és sugarát a [method shape_set_data] metódussal állíthatod be."
+
+#. PhysicsServer3D.concave_polygon_shape_create
+#: doc/classes/PhysicsServer3D.xml
+msgid "Creates a 3D concave polygon shape in the physics server, and returns the [RID] that identifies it. Use [method shape_set_data] to set the concave polygon's triangles."
+msgstr "3D konkáv sokszögalakzatot hoz létre a fizikai kiszolgálón, és visszaadja az alakzat [RID] azonosítóját. A konkáv sokszög háromszögeit a [method shape_set_data] metódussal állíthatod be."
+
+#. PhysicsServer3D.cone_twist_joint_get_param
+#: doc/classes/PhysicsServer3D.xml
+msgid "Gets a cone twist joint parameter."
+msgstr "Lekéri a kúpos csavarócsukló egyik paraméterét."
+
+#. PhysicsServer3D.cone_twist_joint_set_param
+#: doc/classes/PhysicsServer3D.xml
+msgid "Sets a cone twist joint parameter."
+msgstr "Beállítja a kúpos csavarócsukló egyik paraméterét."
+
+#. PhysicsServer3D.convex_polygon_shape_create
+#: doc/classes/PhysicsServer3D.xml
+msgid "Creates a 3D convex polygon shape in the physics server, and returns the [RID] that identifies it. Use [method shape_set_data] to set the convex polygon's points."
+msgstr "3D konvex sokszögalakzatot hoz létre a fizikai kiszolgálón, és visszaadja az alakzat [RID] azonosítóját. A konvex sokszög pontjait a [method shape_set_data] metódussal állíthatod be."
+
+#. PhysicsServer3D.cylinder_shape_create
+#: doc/classes/PhysicsServer3D.xml
+msgid "Creates a 3D cylinder shape in the physics server, and returns the [RID] that identifies it. Use [method shape_set_data] to set the cylinder's height and radius."
+msgstr "3D hengeres alakzatot hoz létre a fizikai kiszolgálón, és visszaadja az alakzat [RID] azonosítóját. A henger magasságát és sugarát a [method shape_set_data] metódussal állíthatod be."
+
+#. PhysicsServer3D.free_rid
+#: doc/classes/PhysicsServer3D.xml
+msgid "Destroys any of the objects created by PhysicsServer3D. If the [RID] passed is not one of the objects that can be created by PhysicsServer3D, an error will be sent to the console."
+msgstr "Megsemmisíti a PhysicsServer3D által létrehozott objektumot. Ha a megadott [RID] más típusú objektumhoz tartozik, a konzolon hibaüzenet jelenik meg."
+
+#. PhysicsServer3D.generic_6dof_joint_get_flag
+#: doc/classes/PhysicsServer3D.xml
+msgid "Returns the value of a generic 6DOF joint flag."
+msgstr "Visszaadja egy általános, hat szabadságfokú (6DOF) csukló egyik jelzőjének értékét."
+
+#. PhysicsServer3D.generic_6dof_joint_get_param
+#: doc/classes/PhysicsServer3D.xml
+msgid "Returns the value of a generic 6DOF joint parameter."
+msgstr "Visszaadja egy általános, hat szabadságfokú (6DOF) csukló egyik paraméterének értékét."
+
+#. PhysicsServer3D.generic_6dof_joint_set_flag
+#: doc/classes/PhysicsServer3D.xml
+msgid "Sets the value of a given generic 6DOF joint flag."
+msgstr "Beállítja egy általános, hat szabadságfokú (6DOF) csukló megadott jelzőjének értékét."
+
+#. PhysicsServer3D.generic_6dof_joint_set_param
+#: doc/classes/PhysicsServer3D.xml
+msgid "Sets the value of a given generic 6DOF joint parameter."
+msgstr "Beállítja egy általános, hat szabadságfokú (6DOF) csukló megadott paraméterének értékét."
+
+#. PhysicsServer3D.heightmap_shape_create
+#: doc/classes/PhysicsServer3D.xml
+msgid "Creates a 3D heightmap shape in the physics server, and returns the [RID] that identifies it. Use [method shape_set_data] to set the heightmap's data."
+msgstr "3D magasságtérkép-alakzatot hoz létre a fizikai kiszolgálón, és visszaadja az alakzat [RID] azonosítóját. A magasságtérkép adatait a [method shape_set_data] metódussal állíthatod be."
+
+#. PhysicsServer3D.hinge_joint_get_flag
+#: doc/classes/PhysicsServer3D.xml
+msgid "Gets a hinge joint flag."
+msgstr "Lekéri a zsanércsukló egyik jelzőjét."
+
+#. PhysicsServer3D.hinge_joint_get_param
+#: doc/classes/PhysicsServer3D.xml
+msgid "Gets a hinge joint parameter."
+msgstr "Lekéri a zsanércsukló egyik paraméterét."
+
+#. PhysicsServer3D.hinge_joint_set_flag
+#: doc/classes/PhysicsServer3D.xml
+msgid "Sets a hinge joint flag."
+msgstr "Beállítja a zsanércsukló egyik jelzőjét."
+
+#. PhysicsServer3D.hinge_joint_set_param
+#: doc/classes/PhysicsServer3D.xml
+msgid "Sets a hinge joint parameter."
+msgstr "Beállítja a zsanércsukló egyik paraméterét."
+
+#. PhysicsServer3D.joint_disable_collisions_between_bodies
+#: doc/classes/PhysicsServer3D.xml
+msgid "Sets whether the bodies attached to the [Joint3D] will collide with each other."
+msgstr "Beállítja, hogy a [Joint3D] csuklóval összekapcsolt testek ütközhetnek-e egymással."
+
+#. PhysicsServer3D.joint_get_solver_priority
+#: doc/classes/PhysicsServer3D.xml
+msgid "Gets the priority value of the Joint3D.\n[b]Note:[/b] Only supported when using GodotPhysics3D. This method always returns [code]1[/code] when using Jolt Physics, as it does not support joint solver priority."
+msgstr "Lekéri a Joint3D csukló prioritását.\n[b]Megjegyzés:[/b] Csak a GodotPhysics3D támogatja. A Jolt Physics nem támogatja a csuklók megoldási prioritását, így használatakor ez a metódus mindig [code]1[/code] értéket ad vissza."
+
+#. PhysicsServer3D.joint_get_type
+#: doc/classes/PhysicsServer3D.xml
+msgid "Returns the type of the Joint3D."
+msgstr "Visszaadja a Joint3D csukló típusát."
+
+#. PhysicsServer3D.joint_make_generic_6dof
+#: doc/classes/PhysicsServer3D.xml
+msgid "Make the joint a generic six degrees of freedom (6DOF) joint. Use [method generic_6dof_joint_set_flag] and [method generic_6dof_joint_set_param] to set the joint's flags and parameters respectively."
+msgstr "A csuklót általános, hat szabadságfokú (6DOF) csuklóvá alakítja. A csukló jelzőit a [method generic_6dof_joint_set_flag], a paramétereit pedig a [method generic_6dof_joint_set_param] metódussal állíthatod be."
+
+#. PhysicsServer3D.joint_set_solver_priority
+#: doc/classes/PhysicsServer3D.xml
+msgid "Sets the priority value of the Joint3D.\n[b]Note:[/b] Only supported when using GodotPhysics3D. This method has no effect when using Jolt Physics, as it does not support joint solver priority."
+msgstr "Beállítja a Joint3D csukló prioritását.\n[b]Megjegyzés:[/b] Csak a GodotPhysics3D támogatja. A Jolt Physics nem támogatja a csuklók megoldási prioritását, így használatakor ez a metódus hatástalan."
+
+#. PhysicsServer3D.pin_joint_get_local_a
+#: doc/classes/PhysicsServer3D.xml
+msgid "Returns position of the joint in the local space of body a of the joint."
+msgstr "Visszaadja a csukló helyét a hozzá tartozó A test helyi koordináta-rendszerében."
+
+#. PhysicsServer3D.pin_joint_get_local_b
+#: doc/classes/PhysicsServer3D.xml
+msgid "Returns position of the joint in the local space of body b of the joint."
+msgstr "Visszaadja a csukló helyét a hozzá tartozó B test helyi koordináta-rendszerében."
+
+#. PhysicsServer3D.pin_joint_get_param
+#: doc/classes/PhysicsServer3D.xml
+msgid "Gets a pin joint parameter."
+msgstr "Lekéri a csapos csukló egyik paraméterét."
+
+#. PhysicsServer3D.pin_joint_set_local_a
+#: doc/classes/PhysicsServer3D.xml
+msgid "Sets position of the joint in the local space of body a of the joint."
+msgstr "Beállítja a csukló helyét a hozzá tartozó A test helyi koordináta-rendszerében."
+
+#. PhysicsServer3D.pin_joint_set_local_b
+#: doc/classes/PhysicsServer3D.xml
+msgid "Sets position of the joint in the local space of body b of the joint."
+msgstr "Beállítja a csukló helyét a hozzá tartozó B test helyi koordináta-rendszerében."
+
+#. PhysicsServer3D.separation_ray_shape_create
+#: doc/classes/PhysicsServer3D.xml
+msgid "Creates a 3D separation ray shape in the physics server, and returns the [RID] that identifies it. Use [method shape_set_data] to set the shape's [code]length[/code] and [code]slide_on_slope[/code] properties."
+msgstr "3D elválasztósugár-alakzatot hoz létre a fizikai kiszolgálón, és visszaadja az alakzat [RID] azonosítóját. Az alakzat [code]length[/code] és [code]slide_on_slope[/code] tulajdonságait a [method shape_set_data] metódussal állíthatod be."
+
+#. PhysicsServer3D.set_active
+#: doc/classes/PhysicsServer3D.xml
+msgid "Activates or deactivates the 3D physics engine."
+msgstr "Be- vagy kikapcsolja a 3D fizikai motort."
+
+#. PhysicsServer3D.shape_get_data
+#: doc/classes/PhysicsServer3D.xml
+msgid "Returns the shape data that configures the shape, such as the half-extents of a box or the triangles of a concave (trimesh) shape. See [method shape_set_data] for the precise format of this data in each case."
+msgstr "Visszaadja az alakzatot meghatározó adatokat, például a doboz méreteinek felét vagy a konkáv háromszögháló háromszögeit. Az egyes alakzatok adatformátumát a [method shape_set_data] leírása részletezi."
+
+#. PhysicsServer3D.shape_get_margin
+#: doc/classes/PhysicsServer3D.xml
+msgid "Returns the collision margin for the shape.\n[b]Note:[/b] This is not used in Godot Physics, so will always return [code]0[/code]."
+msgstr "Visszaadja az alakzat ütközési ráhagyását.\n[b]Megjegyzés:[/b] A Godot Physics nem használja ezt az értéket, így ilyenkor az eredmény mindig [code]0[/code]."
+
+#. PhysicsServer3D.shape_set_margin
+#: doc/classes/PhysicsServer3D.xml
+msgid "Sets the collision margin for the shape.\n[b]Note:[/b] This is not used in Godot Physics."
+msgstr "Beállítja az alakzat ütközési ráhagyását.\n[b]Megjegyzés:[/b] A Godot Physics nem használja ezt az értéket."
+
+#. PhysicsServer3D.soft_body_add_collision_exception
+#: doc/classes/PhysicsServer3D.xml
+msgid "Adds the given body to the list of bodies exempt from collisions."
+msgstr "A megadott testet hozzáadja az ütközési kivételek listájához."
+
+#. PhysicsServer3D.soft_body_apply_central_force
+#. SoftBody3D.apply_central_force
+#: doc/classes/PhysicsServer3D.xml doc/classes/SoftBody3D.xml
+msgid "Distributes and applies a force to all points. A force is time dependent and meant to be applied every physics update."
+msgstr "Eloszt egy erőt az összes pont között, és alkalmazza rájuk. Az erő hatása időfüggő, ezért minden fizikai lépésben alkalmazni kell."
+
+#. PhysicsServer3D.soft_body_apply_point_force
+#. SoftBody3D.apply_force
+#: doc/classes/PhysicsServer3D.xml doc/classes/SoftBody3D.xml
+msgid "Applies a force to a point. A force is time dependent and meant to be applied every physics update."
+msgstr "Erőt fejt ki egy pontra. Az erő hatása időfüggő, ezért minden fizikai lépésben alkalmazni kell."
+
+#. PhysicsServer3D.soft_body_apply_point_impulse
+#. SoftBody3D.apply_impulse
+#: doc/classes/PhysicsServer3D.xml doc/classes/SoftBody3D.xml
+msgid "Applies an impulse to a point.\nAn impulse is time-independent! Applying an impulse every frame would result in a framerate-dependent force. For this reason, it should only be used when simulating one-time impacts (use the \"_force\" functions otherwise)."
+msgstr "Impulzust ad egy pontnak.\nAz impulzus hatása független az eltelt időtől. Ha minden képkockában impulzust adsz, az eredő erő a képkockasebességtől függ. Ezért csak egyszeri lökések szimulálására használd. Egyébként az „_force” függvényeket használd."
+
+#. PhysicsServer3D.soft_body_create
+#: doc/classes/PhysicsServer3D.xml
+msgid "Creates a new soft body and returns its internal [RID]."
+msgstr "Új lágy testet hoz létre, és visszaadja a belső [RID] azonosítóját."
+
+#. PhysicsServer3D.soft_body_get_bounds
+#: doc/classes/PhysicsServer3D.xml
+msgid "Returns the bounds of the given soft body in global coordinates."
+msgstr "Visszaadja a megadott lágy test határolókeretét globális koordinátákban."
+
+#. PhysicsServer3D.soft_body_get_collision_layer
+#: doc/classes/PhysicsServer3D.xml
+msgid "Returns the physics layer or layers that the given soft body belongs to."
+msgstr "Visszaadja azokat a fizikai rétegeket, amelyekhez a megadott lágy test tartozik."
+
+#. PhysicsServer3D.soft_body_get_collision_mask
+#: doc/classes/PhysicsServer3D.xml
+msgid "Returns the physics layer or layers that the given soft body can collide with."
+msgstr "Visszaadja azokat a fizikai rétegeket, amelyekkel a megadott lágy test ütközhet."
+
+#. PhysicsServer3D.soft_body_get_damping_coefficient
+#: doc/classes/PhysicsServer3D.xml
+msgid "Returns the damping coefficient of the given soft body."
+msgstr "Visszaadja a megadott lágy test csillapítási tényezőjét."
+
+#. PhysicsServer3D.soft_body_get_drag_coefficient
+#: doc/classes/PhysicsServer3D.xml
+msgid "Returns the drag coefficient of the given soft body."
+msgstr "Visszaadja a megadott lágy test közegellenállási tényezőjét."
+
+#. PhysicsServer3D.soft_body_get_linear_stiffness
+#: doc/classes/PhysicsServer3D.xml
+msgid "Returns the linear stiffness of the given soft body."
+msgstr "Visszaadja a megadott lágy test lineáris merevségét."
+
+#. PhysicsServer3D.soft_body_get_point_global_position
+#: doc/classes/PhysicsServer3D.xml
+msgid "Returns the current position of the given soft body point in global coordinates."
+msgstr "Visszaadja a lágy test megadott pontjának aktuális helyzetét globális koordinátákban."
+
+#. PhysicsServer3D.soft_body_get_pressure_coefficient
+#: doc/classes/PhysicsServer3D.xml
+msgid "Returns the pressure coefficient of the given soft body."
+msgstr "Visszaadja a megadott lágy test nyomástényezőjét."
+
+#. PhysicsServer3D.soft_body_get_shrinking_factor
+#: doc/classes/PhysicsServer3D.xml
+msgid "Returns the shrinking factor of the given soft body."
+msgstr "Visszaadja a megadott lágy test zsugorodási tényezőjét."
+
+#. PhysicsServer3D.soft_body_get_simulation_precision
+#: doc/classes/PhysicsServer3D.xml
+msgid "Returns the simulation precision of the given soft body."
+msgstr "Visszaadja a megadott lágy test szimulációs pontosságát."
+
+#. PhysicsServer3D.soft_body_get_space
+#: doc/classes/PhysicsServer3D.xml
+msgid "Returns the [RID] of the space assigned to the given soft body."
+msgstr "Visszaadja a megadott lágy testhez rendelt fizikai tér [RID] azonosítóját."
+
+#. PhysicsServer3D.soft_body_get_total_mass
+#: doc/classes/PhysicsServer3D.xml
+msgid "Returns the total mass assigned to the given soft body."
+msgstr "Visszaadja a megadott lágy test teljes tömegét."
+
+#. PhysicsServer3D.soft_body_is_point_pinned
+#: doc/classes/PhysicsServer3D.xml
+msgid "Returns whether the given soft body point is pinned."
+msgstr "Megadja, hogy a lágy test megadott pontja rögzítve van-e."
+
+#. PhysicsServer3D.soft_body_move_point
+#: doc/classes/PhysicsServer3D.xml
+msgid "Moves the given soft body point to a position in global coordinates."
+msgstr "A lágy test megadott pontját globális koordinátákban megadott helyre mozgatja."
+
+#. PhysicsServer3D.soft_body_pin_point
+#: doc/classes/PhysicsServer3D.xml
+msgid "Pins or unpins the given soft body point based on the value of [param pin].\n[b]Note:[/b] Pinning a point effectively makes it kinematic, preventing it from being affected by forces, but you can still move it using [method soft_body_move_point]."
+msgstr "A [param pin] értéke szerint rögzíti vagy feloldja a lágy test megadott pontját.\n[b]Megjegyzés:[/b] A rögzített pont kinematikusan viselkedik. Az erők nem mozgatják, de a [method soft_body_move_point] metódussal továbbra is elmozdítható."
+
+#. PhysicsServer3D.soft_body_remove_all_pinned_points
+#: doc/classes/PhysicsServer3D.xml
+msgid "Unpins all points of the given soft body."
+msgstr "Feloldja a megadott lágy test összes rögzített pontját."
+
+#. PhysicsServer3D.soft_body_remove_collision_exception
+#: doc/classes/PhysicsServer3D.xml
+msgid "Removes the given body from the list of bodies exempt from collisions."
+msgstr "Eltávolítja a megadott testet az ütközési kivételek listájáról."
+
+#. PhysicsServer3D.soft_body_set_collision_layer
+#: doc/classes/PhysicsServer3D.xml
+msgid "Sets the physics layer or layers the given soft body belongs to."
+msgstr "Beállítja, mely fizikai rétegekhez tartozik a megadott lágy test."
+
+#. PhysicsServer3D.soft_body_set_collision_mask
+#: doc/classes/PhysicsServer3D.xml
+msgid "Sets the physics layer or layers the given soft body can collide with."
+msgstr "Beállítja, mely fizikai rétegekkel ütközhet a megadott lágy test."
+
+#. PhysicsServer3D.soft_body_set_damping_coefficient
+#: doc/classes/PhysicsServer3D.xml
+msgid "Sets the damping coefficient of the given soft body. Higher values will slow down the body more noticeably when forces are applied."
+msgstr "Beállítja a megadott lágy test csillapítási tényezőjét. Nagyobb értéknél a test erők hatására bekövetkező mozgása erősebben csillapodik."
+
+#. PhysicsServer3D.soft_body_set_linear_stiffness
+#: doc/classes/PhysicsServer3D.xml
+msgid "Sets the linear stiffness of the given soft body. Higher values will result in a stiffer body, while lower values will increase the body's ability to bend. The value can be between [code]0.0[/code] and [code]1.0[/code] (inclusive)."
+msgstr "Beállítja a megadott lágy test lineáris merevségét. Nagyobb értéknél a test merevebb, kisebb értéknél könnyebben meghajlik. Az érték [code]0.0[/code] és [code]1.0[/code] közé eshet, a határértékeket is beleértve."
+
+#. PhysicsServer3D.soft_body_set_mesh
+#: doc/classes/PhysicsServer3D.xml
+msgid "Sets the mesh of the given soft body."
+msgstr "Beállítja a megadott lágy test hálóját."
+
+#. PhysicsServer3D.soft_body_set_pressure_coefficient
+#: doc/classes/PhysicsServer3D.xml
+msgid "Sets the pressure coefficient of the given soft body. Simulates pressure build-up from inside this body. Higher values increase the strength of this effect."
+msgstr "Beállítja a megadott lágy test nyomástényezőjét. A beállítás a test belsejében keletkező nyomást szimulálja. Nagyobb értéknél a hatás erősebb."
+
+#. PhysicsServer3D.soft_body_set_ray_pickable
+#: doc/classes/PhysicsServer3D.xml
+msgid "Sets whether the given soft body will be pickable when using object picking."
+msgstr "Beállítja, hogy a megadott lágy test kijelölhető legyen-e az objektumkijelöléssel."
+
+#. PhysicsServer3D.soft_body_set_shrinking_factor
+#: doc/classes/PhysicsServer3D.xml
+msgid "Sets the shrinking factor of the given soft body."
+msgstr "Beállítja a megadott lágy test zsugorodási tényezőjét."
+
+#. PhysicsServer3D.soft_body_set_simulation_precision
+#: doc/classes/PhysicsServer3D.xml
+msgid "Sets the simulation precision of the given soft body. Increasing this value will improve the resulting simulation, but can affect performance. Use with care."
+msgstr "Beállítja a megadott lágy test szimulációs pontosságát. Nagyobb értéknél pontosabb a szimuláció, de csökkenhet a teljesítmény. Óvatosan növeld."
+
+#. PhysicsServer3D.soft_body_set_space
+#: doc/classes/PhysicsServer3D.xml
+msgid "Assigns a space to the given soft body (see [method space_create])."
+msgstr "Fizikai teret rendel a megadott lágy testhez. Lásd a [method space_create] metódust."
+
+#. PhysicsServer3D.soft_body_set_total_mass
+#: doc/classes/PhysicsServer3D.xml
+msgid "Sets the total mass for the given soft body."
+msgstr "Beállítja a megadott lágy test teljes tömegét."
+
+#. PhysicsServer3D.soft_body_set_transform
+#: doc/classes/PhysicsServer3D.xml
+msgid "Sets the global transform of the given soft body."
+msgstr "Beállítja a megadott lágy test globális transzformációját."
+
+#. PhysicsServer3D.soft_body_update_rendering_server
+#: doc/classes/PhysicsServer3D.xml
+msgid "Requests that the physics server updates the rendering server with the latest positions of the given soft body's points through the [param rendering_server_handler] interface."
+msgstr "Arra kéri a fizikai kiszolgálót, hogy a [param rendering_server_handler] felületen keresztül frissítse a renderelőkiszolgálót a lágy test pontjainak aktuális helyzetével."
+
+#. PhysicsServer3D.space_get_direct_state
+#: doc/classes/PhysicsServer3D.xml
+msgid "Returns the state of a space, a [PhysicsDirectSpaceState3D]. This object can be used to make collision/intersection queries."
+msgstr "A fizikai tér állapotát egy [PhysicsDirectSpaceState3D] objektumban adja vissza. Az objektum ütközési és metszésvizsgálatokra használható."
+
+#. PhysicsServer3D.space_get_param
+#: doc/classes/PhysicsServer3D.xml
+msgid "Returns the value of a space parameter."
+msgstr "Visszaadja a fizikai tér egyik paraméterének értékét."
+
+#. PhysicsServer3D.space_is_active
+#: doc/classes/PhysicsServer3D.xml
+msgid "Returns whether the space is active."
+msgstr "Megadja, hogy a fizikai tér aktív-e."
+
+#. PhysicsServer3D.space_set_param
+#: doc/classes/PhysicsServer3D.xml
+msgid "Sets the value for a space parameter. A list of available parameters is on the [enum SpaceParameter] constants."
+msgstr "Beállítja a fizikai tér egyik paraméterének értékét. A lehetséges paramétereket a [enum SpaceParameter] felsorolás tartalmazza."
+
+#. PhysicsServer3D.sphere_shape_create
+#: doc/classes/PhysicsServer3D.xml
+msgid "Creates a 3D sphere shape in the physics server, and returns the [RID] that identifies it. Use [method shape_set_data] to set the sphere's radius."
+msgstr "3D gömbalakzatot hoz létre a fizikai kiszolgálón, és visszaadja az alakzat [RID] azonosítóját. A gömb sugarát a [method shape_set_data] metódussal állíthatod be."
+
+#. PhysicsServer3D.world_boundary_shape_create
+#: doc/classes/PhysicsServer3D.xml
+msgid "Creates a 3D world boundary shape in the physics server, and returns the [RID] that identifies it. Use [method shape_set_data] to set the shape's normal direction and distance properties."
+msgstr "3D világhatár-alakzatot hoz létre a fizikai kiszolgálón, és visszaadja az alakzat [RID] azonosítóját. A normál irányát és a távolságot a [method shape_set_data] metódussal állíthatod be."
+
+#. PhysicsServer3D.JOINT_TYPE_PIN
+#: doc/classes/PhysicsServer3D.xml
+msgid "The [Joint3D] is a [PinJoint3D]."
+msgstr "A [Joint3D] típusa [PinJoint3D]."
+
+#. PhysicsServer3D.JOINT_TYPE_HINGE
+#: doc/classes/PhysicsServer3D.xml
+msgid "The [Joint3D] is a [HingeJoint3D]."
+msgstr "A [Joint3D] típusa [HingeJoint3D]."
+
+#. PhysicsServer3D.JOINT_TYPE_SLIDER
+#: doc/classes/PhysicsServer3D.xml
+msgid "The [Joint3D] is a [SliderJoint3D]."
+msgstr "A [Joint3D] típusa [SliderJoint3D]."
+
+#. PhysicsServer3D.JOINT_TYPE_CONE_TWIST
+#: doc/classes/PhysicsServer3D.xml
+msgid "The [Joint3D] is a [ConeTwistJoint3D]."
+msgstr "A [Joint3D] típusa [ConeTwistJoint3D]."
+
+#. PhysicsServer3D.JOINT_TYPE_6DOF
+#: doc/classes/PhysicsServer3D.xml
+msgid "The [Joint3D] is a [Generic6DOFJoint3D]."
+msgstr "A [Joint3D] típusa [Generic6DOFJoint3D]."
+
+#. PhysicsServer3D.PIN_JOINT_BIAS
+#: doc/classes/PhysicsServer3D.xml
+msgid "The strength with which the pinned objects try to stay in positional relation to each other. The higher, the stronger.\n[b]Note:[/b] Only supported when using GodotPhysics3D. This parameter is ignored when using Jolt Physics."
+msgstr "A rögzített testek egymáshoz viszonyított helyzetét fenntartó korrekció erőssége. Nagyobb értéknél erősebb a korrekció.\n[b]Megjegyzés:[/b] Csak a GodotPhysics3D támogatja. A Jolt Physics figyelmen kívül hagyja ezt a paramétert."
+
+#. PhysicsServer3D.PIN_JOINT_DAMPING
+#: doc/classes/PhysicsServer3D.xml
+msgid "The strength with which the pinned objects try to stay in velocity relation to each other. The higher, the stronger.\n[b]Note:[/b] Only supported when using GodotPhysics3D. This parameter is ignored when using Jolt Physics."
+msgstr "A rögzített testek egymáshoz viszonyított sebességét fenntartó korrekció erőssége. Nagyobb értéknél erősebb a korrekció.\n[b]Megjegyzés:[/b] Csak a GodotPhysics3D támogatja. A Jolt Physics figyelmen kívül hagyja ezt a paramétert."
+
+#. PhysicsServer3D.PIN_JOINT_IMPULSE_CLAMP
+#: doc/classes/PhysicsServer3D.xml
+msgid "If above 0, this value is the maximum value for an impulse that this Joint3D puts on its ends.\n[b]Note:[/b] Only supported when using GodotPhysics3D. This parameter is ignored when using Jolt Physics."
+msgstr "Ha ez az érték pozitív, megadja a Joint3D csukló két végén alkalmazható legnagyobb impulzust.\n[b]Megjegyzés:[/b] Csak a GodotPhysics3D támogatja. A Jolt Physics figyelmen kívül hagyja ezt a paramétert."
+
+#. PhysicsServer3D.HINGE_JOINT_BIAS
+#: doc/classes/PhysicsServer3D.xml
+msgid "The speed with which the two bodies get pulled together when they move in different directions.\n[b]Note:[/b] Only supported when using GodotPhysics3D. This parameter is ignored when using Jolt Physics."
+msgstr "Az a sebesség, amellyel a csukló egymás felé húzza a két testet, ha azok eltérő irányba mozognak.\n[b]Megjegyzés:[/b] Csak a GodotPhysics3D támogatja. A Jolt Physics figyelmen kívül hagyja ezt a paramétert."
+
+#. PhysicsServer3D.HINGE_JOINT_LIMIT_UPPER
+#: doc/classes/PhysicsServer3D.xml
+msgid "The maximum rotation across the Hinge."
+msgstr "A zsanér körüli legnagyobb elfordulási szög."
+
+#. PhysicsServer3D.HINGE_JOINT_LIMIT_LOWER
+#: doc/classes/PhysicsServer3D.xml
+msgid "The minimum rotation across the Hinge."
+msgstr "A zsanér körüli legkisebb elfordulási szög."
+
+#. PhysicsServer3D.HINGE_JOINT_LIMIT_BIAS
+#: doc/classes/PhysicsServer3D.xml
+msgid "The speed with which the rotation across the axis perpendicular to the hinge gets corrected.\n[b]Note:[/b] Only supported when using GodotPhysics3D. This parameter is ignored when using Jolt Physics."
+msgstr "A zsanérra merőleges tengely körüli forgás korrekciós sebessége.\n[b]Megjegyzés:[/b] Csak a GodotPhysics3D támogatja. A Jolt Physics figyelmen kívül hagyja ezt a paramétert."
+
+#. PhysicsServer3D.HINGE_JOINT_LIMIT_SOFTNESS
+#: doc/classes/PhysicsServer3D.xml
+msgid "[b]Note:[/b] Only supported when using GodotPhysics3D. This parameter is ignored when using Jolt Physics."
+msgstr "[b]Megjegyzés:[/b] Csak a GodotPhysics3D támogatja. A Jolt Physics figyelmen kívül hagyja ezt a paramétert."
+
+#. PhysicsServer3D.HINGE_JOINT_LIMIT_RELAXATION
+#: doc/classes/PhysicsServer3D.xml
+msgid "The lower this value, the more the rotation gets slowed down.\n[b]Note:[/b] Only supported when using GodotPhysics3D. This parameter is ignored when using Jolt Physics."
+msgstr "Minél kisebb ez az érték, annál jobban lassul a forgás.\n[b]Megjegyzés:[/b] Csak a GodotPhysics3D támogatja. A Jolt Physics figyelmen kívül hagyja ezt a paramétert."
+
+#. PhysicsServer3D.HINGE_JOINT_FLAG_USE_LIMIT
+#: doc/classes/PhysicsServer3D.xml
+msgid "If [code]true[/code], the Hinge has a maximum and a minimum rotation."
+msgstr "Ha az értéke [code]true[/code], a zsanér elfordulására alsó és felső határérték vonatkozik."
+
+#. PhysicsServer3D.HINGE_JOINT_FLAG_ENABLE_MOTOR
+#: doc/classes/PhysicsServer3D.xml
+msgid "If [code]true[/code], a motor turns the Hinge."
+msgstr "Ha az értéke [code]true[/code], a zsanért motor forgatja."
+
+#. PhysicsServer3D.SLIDER_JOINT_LINEAR_LIMIT_UPPER
+#. SliderJoint3D.linear_limit/upper_distance
+#: doc/classes/PhysicsServer3D.xml doc/classes/SliderJoint3D.xml
+msgid "The maximum difference between the pivot points on their X axis before damping happens."
+msgstr "A forgáspontok közötti legnagyobb különbség az X tengelyük mentén, mielőtt a csillapítás hatni kezd."
+
+#. PhysicsServer3D.SLIDER_JOINT_LINEAR_LIMIT_LOWER
+#. SliderJoint3D.linear_limit/lower_distance
+#: doc/classes/PhysicsServer3D.xml doc/classes/SliderJoint3D.xml
+msgid "The minimum difference between the pivot points on their X axis before damping happens."
+msgstr "A forgáspontok közötti legkisebb különbség az X tengelyük mentén, mielőtt a csillapítás hatni kezd."
+
+#. PhysicsServer3D.SLIDER_JOINT_LINEAR_LIMIT_SOFTNESS
+#: doc/classes/PhysicsServer3D.xml
+msgid "A factor applied to the movement across the slider axis once the limits get surpassed. The lower, the slower the movement.\n[b]Note:[/b] Only supported when using GodotPhysics3D. This parameter is ignored when using Jolt Physics."
+msgstr "A csúszka tengelye mentén végzett mozgásra a határok túllépésekor alkalmazott tényező. Kisebb értéknél lassabb a mozgás.\n[b]Megjegyzés:[/b] Csak a GodotPhysics3D támogatja. A Jolt Physics figyelmen kívül hagyja ezt a paramétert."
+
+#. PhysicsServer3D.SLIDER_JOINT_LINEAR_LIMIT_RESTITUTION
+#: doc/classes/PhysicsServer3D.xml
+msgid "The amount of restitution once the limits are surpassed. The lower, the more velocity-energy gets lost.\n[b]Note:[/b] Only supported when using GodotPhysics3D. This parameter is ignored when using Jolt Physics."
+msgstr "A határok túllépésekor alkalmazott visszapattanási tényező. Kisebb értéknél több mozgási energia vész el.\n[b]Megjegyzés:[/b] Csak a GodotPhysics3D támogatja. A Jolt Physics figyelmen kívül hagyja ezt a paramétert."
+
+#. PhysicsServer3D.SLIDER_JOINT_LINEAR_LIMIT_DAMPING
+#: doc/classes/PhysicsServer3D.xml
+msgid "The amount of damping once the slider limits are surpassed.\n[b]Note:[/b] Only supported when using GodotPhysics3D. This parameter is ignored when using Jolt Physics."
+msgstr "A csúszka határainak túllépésekor alkalmazott csillapítás mértéke.\n[b]Megjegyzés:[/b] Csak a GodotPhysics3D támogatja. A Jolt Physics figyelmen kívül hagyja ezt a paramétert."
+
+#. PhysicsServer3D.SLIDER_JOINT_LINEAR_MOTION_SOFTNESS
+#: doc/classes/PhysicsServer3D.xml
+msgid "A factor applied to the movement across the slider axis as long as the slider is in the limits. The lower, the slower the movement.\n[b]Note:[/b] Only supported when using GodotPhysics3D. This parameter is ignored when using Jolt Physics."
+msgstr "A csúszka tengelye mentén végzett mozgásra a határokon belül alkalmazott tényező. Kisebb értéknél lassabb a mozgás.\n[b]Megjegyzés:[/b] Csak a GodotPhysics3D támogatja. A Jolt Physics figyelmen kívül hagyja ezt a paramétert."
+
+#. PhysicsServer3D.SLIDER_JOINT_LINEAR_MOTION_RESTITUTION
+#: doc/classes/PhysicsServer3D.xml
+msgid "The amount of restitution inside the slider limits.\n[b]Note:[/b] Only supported when using GodotPhysics3D. This parameter is ignored when using Jolt Physics."
+msgstr "A visszapattanás mértéke a csúszka határain belül.\n[b]Megjegyzés:[/b] Csak a GodotPhysics3D támogatja. A Jolt Physics figyelmen kívül hagyja ezt a paramétert."
+
+#. PhysicsServer3D.SLIDER_JOINT_LINEAR_MOTION_DAMPING
+#: doc/classes/PhysicsServer3D.xml
+msgid "The amount of damping inside the slider limits.\n[b]Note:[/b] Only supported when using GodotPhysics3D. This parameter is ignored when using Jolt Physics."
+msgstr "A csillapítás mértéke a csúszka határain belül.\n[b]Megjegyzés:[/b] Csak a GodotPhysics3D támogatja. A Jolt Physics figyelmen kívül hagyja ezt a paramétert."
+
+#. PhysicsServer3D.SLIDER_JOINT_LINEAR_ORTHOGONAL_SOFTNESS
+#: doc/classes/PhysicsServer3D.xml
+msgid "A factor applied to the movement across axes orthogonal to the slider.\n[b]Note:[/b] Only supported when using GodotPhysics3D. This parameter is ignored when using Jolt Physics."
+msgstr "A csúszka tengelyére merőleges mozgásra alkalmazott tényező.\n[b]Megjegyzés:[/b] Csak a GodotPhysics3D támogatja. A Jolt Physics figyelmen kívül hagyja ezt a paramétert."
+
+#. PhysicsServer3D.SLIDER_JOINT_LINEAR_ORTHOGONAL_RESTITUTION
+#: doc/classes/PhysicsServer3D.xml
+msgid "The amount of restitution when movement is across axes orthogonal to the slider.\n[b]Note:[/b] Only supported when using GodotPhysics3D. This parameter is ignored when using Jolt Physics."
+msgstr "A visszapattanás mértéke a csúszka tengelyére merőleges mozgáskor.\n[b]Megjegyzés:[/b] Csak a GodotPhysics3D támogatja. A Jolt Physics figyelmen kívül hagyja ezt a paramétert."
+
+#. PhysicsServer3D.SLIDER_JOINT_LINEAR_ORTHOGONAL_DAMPING
+#: doc/classes/PhysicsServer3D.xml
+msgid "The amount of damping when movement is across axes orthogonal to the slider.\n[b]Note:[/b] Only supported when using GodotPhysics3D. This parameter is ignored when using Jolt Physics."
+msgstr "A csillapítás mértéke a csúszka tengelyére merőleges mozgáskor.\n[b]Megjegyzés:[/b] Csak a GodotPhysics3D támogatja. A Jolt Physics figyelmen kívül hagyja ezt a paramétert."
+
+#. PhysicsServer3D.SLIDER_JOINT_ANGULAR_LIMIT_UPPER
+#: doc/classes/PhysicsServer3D.xml
+msgid "The upper limit of rotation in the slider.\n[b]Note:[/b] Only supported when using GodotPhysics3D. This parameter is ignored when using Jolt Physics."
+msgstr "A csúszócsukló elfordulásának felső határa.\n[b]Megjegyzés:[/b] Csak a GodotPhysics3D támogatja. A Jolt Physics figyelmen kívül hagyja ezt a paramétert."
+
+#. PhysicsServer3D.SLIDER_JOINT_ANGULAR_LIMIT_LOWER
+#: doc/classes/PhysicsServer3D.xml
+msgid "The lower limit of rotation in the slider.\n[b]Note:[/b] Only supported when using GodotPhysics3D. This parameter is ignored when using Jolt Physics."
+msgstr "A csúszócsukló elfordulásának alsó határa.\n[b]Megjegyzés:[/b] Csak a GodotPhysics3D támogatja. A Jolt Physics figyelmen kívül hagyja ezt a paramétert."
+
+#. PhysicsServer3D.SLIDER_JOINT_ANGULAR_LIMIT_SOFTNESS
+#: doc/classes/PhysicsServer3D.xml
+msgid "A factor applied to the all rotation once the limit is surpassed.\n[b]Note:[/b] Only supported when using GodotPhysics3D. This parameter is ignored when using Jolt Physics."
+msgstr "A forgásra a szöghatár túllépésekor alkalmazott tényező.\n[b]Megjegyzés:[/b] Csak a GodotPhysics3D támogatja. A Jolt Physics figyelmen kívül hagyja ezt a paramétert."
+
+#. PhysicsServer3D.SLIDER_JOINT_ANGULAR_LIMIT_RESTITUTION
+#: doc/classes/PhysicsServer3D.xml
+msgid "The amount of restitution of the rotation when the limit is surpassed.\n[b]Note:[/b] Only supported when using GodotPhysics3D. This parameter is ignored when using Jolt Physics."
+msgstr "A forgás visszapattanásának mértéke a szöghatár túllépésekor.\n[b]Megjegyzés:[/b] Csak a GodotPhysics3D támogatja. A Jolt Physics figyelmen kívül hagyja ezt a paramétert."
+
+#. PhysicsServer3D.SLIDER_JOINT_ANGULAR_LIMIT_DAMPING
+#: doc/classes/PhysicsServer3D.xml
+msgid "The amount of damping of the rotation when the limit is surpassed.\n[b]Note:[/b] Only supported when using GodotPhysics3D. This parameter is ignored when using Jolt Physics."
+msgstr "A forgás csillapításának mértéke a szöghatár túllépésekor.\n[b]Megjegyzés:[/b] Csak a GodotPhysics3D támogatja. A Jolt Physics figyelmen kívül hagyja ezt a paramétert."
+
+#. PhysicsServer3D.SLIDER_JOINT_ANGULAR_MOTION_SOFTNESS
+#: doc/classes/PhysicsServer3D.xml
+msgid "A factor that gets applied to the all rotation in the limits.\n[b]Note:[/b] Only supported when using GodotPhysics3D. This parameter is ignored when using Jolt Physics."
+msgstr "A forgásra a szöghatárokon belül alkalmazott tényező.\n[b]Megjegyzés:[/b] Csak a GodotPhysics3D támogatja. A Jolt Physics figyelmen kívül hagyja ezt a paramétert."
+
+#. PhysicsServer3D.SLIDER_JOINT_ANGULAR_MOTION_RESTITUTION
+#: doc/classes/PhysicsServer3D.xml
+msgid "The amount of restitution of the rotation in the limits.\n[b]Note:[/b] Only supported when using GodotPhysics3D. This parameter is ignored when using Jolt Physics."
+msgstr "A forgás visszapattanásának mértéke a szöghatárokon belül.\n[b]Megjegyzés:[/b] Csak a GodotPhysics3D támogatja. A Jolt Physics figyelmen kívül hagyja ezt a paramétert."
+
+#. PhysicsServer3D.SLIDER_JOINT_ANGULAR_MOTION_DAMPING
+#: doc/classes/PhysicsServer3D.xml
+msgid "The amount of damping of the rotation in the limits.\n[b]Note:[/b] Only supported when using GodotPhysics3D. This parameter is ignored when using Jolt Physics."
+msgstr "A forgás csillapításának mértéke a szöghatárokon belül.\n[b]Megjegyzés:[/b] Csak a GodotPhysics3D támogatja. A Jolt Physics figyelmen kívül hagyja ezt a paramétert."
+
+#. PhysicsServer3D.SLIDER_JOINT_ANGULAR_ORTHOGONAL_SOFTNESS
+#: doc/classes/PhysicsServer3D.xml
+msgid "A factor that gets applied to the all rotation across axes orthogonal to the slider.\n[b]Note:[/b] Only supported when using GodotPhysics3D. This parameter is ignored when using Jolt Physics."
+msgstr "A csúszka tengelyére merőleges tengelyek körüli forgásra alkalmazott tényező.\n[b]Megjegyzés:[/b] Csak a GodotPhysics3D támogatja. A Jolt Physics figyelmen kívül hagyja ezt a paramétert."
+
+#. PhysicsServer3D.SLIDER_JOINT_ANGULAR_ORTHOGONAL_RESTITUTION
+#: doc/classes/PhysicsServer3D.xml
+msgid "The amount of restitution of the rotation across axes orthogonal to the slider.\n[b]Note:[/b] Only supported when using GodotPhysics3D. This parameter is ignored when using Jolt Physics."
+msgstr "A csúszka tengelyére merőleges tengelyek körüli forgás visszapattanásának mértéke.\n[b]Megjegyzés:[/b] Csak a GodotPhysics3D támogatja. A Jolt Physics figyelmen kívül hagyja ezt a paramétert."
+
+#. PhysicsServer3D.SLIDER_JOINT_ANGULAR_ORTHOGONAL_DAMPING
+#: doc/classes/PhysicsServer3D.xml
+msgid "The amount of damping of the rotation across axes orthogonal to the slider.\n[b]Note:[/b] Only supported when using GodotPhysics3D. This parameter is ignored when using Jolt Physics."
+msgstr "A csúszka tengelyére merőleges tengelyek körüli forgás csillapításának mértéke.\n[b]Megjegyzés:[/b] Csak a GodotPhysics3D támogatja. A Jolt Physics figyelmen kívül hagyja ezt a paramétert."
+
+#. PhysicsServer3D.SLIDER_JOINT_MAX
+#: doc/classes/PhysicsServer3D.xml
+msgid "Represents the size of the [enum SliderJointParam] enum."
+msgstr "A [enum SliderJointParam] felsorolásban szereplő csúszócsukló-paraméterek száma."
+
+#. PhysicsServer3D.CONE_TWIST_JOINT_TWIST_SPAN
+#: doc/classes/PhysicsServer3D.xml
+msgid "Twist is the rotation around the twist axis, this value defined how far the joint can twist. Twist is locked if below 0.05."
+msgstr "A csavarodás a csavarási tengely körüli elfordulás. Ez az érték határozza meg, hogy a csukló mennyire fordulhat el. A csavarodás 0,05 alatti értéknél le van tiltva."
+
+#. PhysicsServer3D.CONE_TWIST_JOINT_BIAS
+#: doc/classes/PhysicsServer3D.xml
+msgid "The speed with which the swing or twist will take place. The higher, the faster.\n[b]Note:[/b] Only supported when using GodotPhysics3D. This parameter is ignored when using Jolt Physics."
+msgstr "A kilengés vagy a csavarodás sebessége. Nagyobb értéknél gyorsabb a mozgás.\n[b]Megjegyzés:[/b] Csak a GodotPhysics3D támogatja. A Jolt Physics figyelmen kívül hagyja ezt a paramétert."
+
+#. PhysicsServer3D.CONE_TWIST_JOINT_SOFTNESS
+#: doc/classes/PhysicsServer3D.xml
+msgid "The ease with which the Joint3D twists, if it's too low, it takes more force to twist the joint.\n[b]Note:[/b] Only supported when using GodotPhysics3D. This parameter is ignored when using Jolt Physics."
+msgstr "Meghatározza, milyen könnyen csavarodik a Joint3D csukló. Túl kis értéknél nagyobb erő szükséges a csukló csavarásához.\n[b]Megjegyzés:[/b] Csak a GodotPhysics3D támogatja. A Jolt Physics figyelmen kívül hagyja ezt a paramétert."
+
+#. PhysicsServer3D.CONE_TWIST_JOINT_RELAXATION
+#: doc/classes/PhysicsServer3D.xml
+msgid "Defines, how fast the swing- and twist-speed-difference on both sides gets synced.\n[b]Note:[/b] Only supported when using GodotPhysics3D. This parameter is ignored when using Jolt Physics."
+msgstr "Meghatározza, milyen gyorsan egyenlítődik ki a kilengés és a csavarodás sebességkülönbsége a csukló két oldala között.\n[b]Megjegyzés:[/b] Csak a GodotPhysics3D támogatja. A Jolt Physics figyelmen kívül hagyja ezt a paramétert."
+
+#. PhysicsServer3D.G6DOF_JOINT_LINEAR_LIMIT_SOFTNESS
+#: doc/classes/PhysicsServer3D.xml
+msgid "A factor that gets applied to the movement across the axes. The lower, the slower the movement.\n[b]Note:[/b] Only supported when using GodotPhysics3D. This parameter is ignored when using Jolt Physics."
+msgstr "A tengelyek mentén végzett mozgásra alkalmazott tényező. Kisebb értéknél lassabb a mozgás.\n[b]Megjegyzés:[/b] Csak a GodotPhysics3D támogatja. A Jolt Physics figyelmen kívül hagyja ezt a paramétert."
+
+#. PhysicsServer3D.G6DOF_JOINT_LINEAR_RESTITUTION
+#: doc/classes/PhysicsServer3D.xml
+msgid "The amount of restitution on the axes movement. The lower, the more velocity-energy gets lost.\n[b]Note:[/b] Only supported when using GodotPhysics3D. This parameter is ignored when using Jolt Physics."
+msgstr "A visszapattanás mértéke a tengelyek mentén végzett mozgáskor. Kisebb értéknél több mozgási energia vész el.\n[b]Megjegyzés:[/b] Csak a GodotPhysics3D támogatja. A Jolt Physics figyelmen kívül hagyja ezt a paramétert."
+
+#. PhysicsServer3D.G6DOF_JOINT_LINEAR_DAMPING
+#: doc/classes/PhysicsServer3D.xml
+msgid "The amount of damping that happens at the linear motion across the axes.\n[b]Note:[/b] Only supported when using GodotPhysics3D. This parameter is ignored when using Jolt Physics."
+msgstr "A csillapítás mértéke a tengelyek mentén végzett lineáris mozgáskor.\n[b]Megjegyzés:[/b] Csak a GodotPhysics3D támogatja. A Jolt Physics figyelmen kívül hagyja ezt a paramétert."
+
+#. PhysicsServer3D.G6DOF_JOINT_LINEAR_MOTOR_TARGET_VELOCITY
+#: doc/classes/PhysicsServer3D.xml
+msgid "The velocity that the joint's linear motor will attempt to reach."
+msgstr "Az a sebesség, amelyet a csukló lineáris motorja igyekszik elérni."
+
+#. PhysicsServer3D.G6DOF_JOINT_LINEAR_MOTOR_FORCE_LIMIT
+#: doc/classes/PhysicsServer3D.xml
+msgid "The maximum force that the linear motor can apply while trying to reach the target velocity."
+msgstr "A legnagyobb erő, amelyet a lineáris motor a célsebesség eléréséhez kifejthet."
+
+#. PhysicsServer3D.G6DOF_JOINT_ANGULAR_LIMIT_SOFTNESS
+#: doc/classes/PhysicsServer3D.xml
+msgid "A factor that gets multiplied onto all rotations across the axes.\n[b]Note:[/b] Only supported when using GodotPhysics3D. This parameter is ignored when using Jolt Physics."
+msgstr "A tengelyek körüli összes forgásra szorzóként alkalmazott tényező.\n[b]Megjegyzés:[/b] Csak a GodotPhysics3D támogatja. A Jolt Physics figyelmen kívül hagyja ezt a paramétert."
+
+#. PhysicsServer3D.G6DOF_JOINT_ANGULAR_DAMPING
+#: doc/classes/PhysicsServer3D.xml
+msgid "The amount of rotational damping across the axes. The lower, the more damping occurs.\n[b]Note:[/b] Only supported when using GodotPhysics3D. This parameter is ignored when using Jolt Physics."
+msgstr "A csillapítás mértéke a tengelyek körüli forgásnál. Kisebb értéknél erősebb a csillapítás.\n[b]Megjegyzés:[/b] Csak a GodotPhysics3D támogatja. A Jolt Physics figyelmen kívül hagyja ezt a paramétert."
+
+#. PhysicsServer3D.G6DOF_JOINT_ANGULAR_RESTITUTION
+#: doc/classes/PhysicsServer3D.xml
+msgid "The amount of rotational restitution across the axes. The lower, the more restitution occurs.\n[b]Note:[/b] Only supported when using GodotPhysics3D. This parameter is ignored when using Jolt Physics."
+msgstr "A visszapattanás mértéke a tengelyek körüli forgásnál. Kisebb értéknél nagyobb a visszapattanás.\n[b]Megjegyzés:[/b] Csak a GodotPhysics3D támogatja. A Jolt Physics figyelmen kívül hagyja ezt a paramétert."
+
+#. PhysicsServer3D.G6DOF_JOINT_ANGULAR_FORCE_LIMIT
+#: doc/classes/PhysicsServer3D.xml
+msgid "The maximum amount of force that can occur, when rotating around the axes.\n[b]Note:[/b] Only supported when using GodotPhysics3D. This parameter is ignored when using Jolt Physics."
+msgstr "A tengelyek körüli forgáskor fellépő legnagyobb erő.\n[b]Megjegyzés:[/b] Csak a GodotPhysics3D támogatja. A Jolt Physics figyelmen kívül hagyja ezt a paramétert."
+
+#. PhysicsServer3D.G6DOF_JOINT_MAX
+#: doc/classes/PhysicsServer3D.xml
+msgid "Represents the size of the [enum G6DOFJointAxisParam] enum."
+msgstr "A [enum G6DOFJointAxisParam] felsorolásban szereplő tengelyparaméterek száma."
+
+#. PhysicsServer3D.G6DOF_JOINT_FLAG_ENABLE_MOTOR
+#: doc/classes/PhysicsServer3D.xml
+msgid "If set, there is a rotational motor across these axes."
+msgstr "Ha be van állítva, ezeken a tengelyeken forgómotor működik."
+
+#. PhysicsServer3D.G6DOF_JOINT_FLAG_ENABLE_LINEAR_MOTOR
+#: doc/classes/PhysicsServer3D.xml
+msgid "If set, there is a linear motor on this axis that targets a specific velocity."
+msgstr "Ha be van állítva, ezen a tengelyen egy megadott célsebességre törekvő lineáris motor működik."
+
+#. PhysicsServer3D.G6DOF_JOINT_FLAG_MAX
+#: doc/classes/PhysicsServer3D.xml
+msgid "Represents the size of the [enum G6DOFJointAxisFlag] enum."
+msgstr "A [enum G6DOFJointAxisFlag] felsorolásban szereplő tengelyjelzők száma."
+
+#. PhysicsServer3D.SHAPE_WORLD_BOUNDARY
+#: doc/classes/PhysicsServer3D.xml
+msgid "Constant for creating a world boundary shape (used by the [WorldBoundaryShape3D] resource)."
+msgstr "Világhatár-alakzat létrehozására szolgáló állandó. A [WorldBoundaryShape3D] erőforrás használja."
+
+#. PhysicsServer3D.SHAPE_SEPARATION_RAY
+#: doc/classes/PhysicsServer3D.xml
+msgid "Constant for creating a separation ray shape (used by the [SeparationRayShape3D] resource)."
+msgstr "Elválasztósugár-alakzat létrehozására szolgáló állandó. A [SeparationRayShape3D] erőforrás használja."
+
+#. PhysicsServer3D.SHAPE_SPHERE
+#: doc/classes/PhysicsServer3D.xml
+msgid "Constant for creating a sphere shape (used by the [SphereShape3D] resource)."
+msgstr "Gömbalakzat létrehozására szolgáló állandó. A [SphereShape3D] erőforrás használja."
+
+#. PhysicsServer3D.SHAPE_BOX
+#: doc/classes/PhysicsServer3D.xml
+msgid "Constant for creating a box shape (used by the [BoxShape3D] resource)."
+msgstr "Dobozalakzat létrehozására szolgáló állandó. A [BoxShape3D] erőforrás használja."
+
+#. PhysicsServer3D.SHAPE_CAPSULE
+#: doc/classes/PhysicsServer3D.xml
+msgid "Constant for creating a capsule shape (used by the [CapsuleShape3D] resource)."
+msgstr "Kapszulaalakzat létrehozására szolgáló állandó. A [CapsuleShape3D] erőforrás használja."
+
+#. PhysicsServer3D.SHAPE_CYLINDER
+#: doc/classes/PhysicsServer3D.xml
+msgid "Constant for creating a cylinder shape (used by the [CylinderShape3D] resource)."
+msgstr "Hengeres alakzat létrehozására szolgáló állandó. A [CylinderShape3D] erőforrás használja."
+
+#. PhysicsServer3D.SHAPE_CONVEX_POLYGON
+#: doc/classes/PhysicsServer3D.xml
+msgid "Constant for creating a convex polygon shape (used by the [ConvexPolygonShape3D] resource)."
+msgstr "Konvex sokszögalakzat létrehozására szolgáló állandó. A [ConvexPolygonShape3D] erőforrás használja."
+
+#. PhysicsServer3D.SHAPE_CONCAVE_POLYGON
+#: doc/classes/PhysicsServer3D.xml
+msgid "Constant for creating a concave polygon (trimesh) shape (used by the [ConcavePolygonShape3D] resource)."
+msgstr "Konkáv sokszögalakzat (háromszögháló) létrehozására szolgáló állandó. A [ConcavePolygonShape3D] erőforrás használja."
+
+#. PhysicsServer3D.SHAPE_HEIGHTMAP
+#: doc/classes/PhysicsServer3D.xml
+msgid "Constant for creating a heightmap shape (used by the [HeightMapShape3D] resource)."
+msgstr "Magasságtérkép-alakzat létrehozására szolgáló állandó. A [HeightMapShape3D] erőforrás használja."
+
+#. PhysicsServer3D.SHAPE_SOFT_BODY
+#: doc/classes/PhysicsServer3D.xml
+msgid "Constant used internally for a soft body shape. Any attempt to create this kind of shape results in an error."
+msgstr "A motor belső állandója a lágy test alakzatához. Ilyen alakzat közvetlen létrehozásának kísérlete hibát okoz."
+
+#. PhysicsServer3D.SHAPE_CUSTOM
+#: doc/classes/PhysicsServer3D.xml
+msgid "Constant used internally for a custom shape. Any attempt to create this kind of shape results in an error when using Godot Physics or Jolt Physics."
+msgstr "A motor belső állandója egyéni alakzathoz. Godot Physics vagy Jolt Physics használatakor ilyen alakzat létrehozásának kísérlete hibát okoz."
+
+#. PhysicsServer3D.AREA_PARAM_GRAVITY_OVERRIDE_MODE
+#: doc/classes/PhysicsServer3D.xml
+msgid "Constant to set/get gravity override mode in an area. See [enum AreaSpaceOverrideMode] for possible values."
+msgstr "A terület gravitáció-felülírási módjának beállítására vagy lekérdezésére szolgáló állandó. A lehetséges értékeket az [enum AreaSpaceOverrideMode] felsorolás tartalmazza."
+
+#. PhysicsServer3D.AREA_PARAM_GRAVITY
+#: doc/classes/PhysicsServer3D.xml
+msgid "Constant to set/get gravity strength in an area."
+msgstr "A területen ható gravitáció erősségének beállítására vagy lekérdezésére szolgáló állandó."
+
+#. PhysicsServer3D.AREA_PARAM_GRAVITY_VECTOR
+#: doc/classes/PhysicsServer3D.xml
+msgid "Constant to set/get gravity vector/center in an area."
+msgstr "A terület gravitációvektorának vagy gravitációs középpontjának beállítására vagy lekérdezésére szolgáló állandó."
+
+#. PhysicsServer3D.AREA_PARAM_GRAVITY_IS_POINT
+#: doc/classes/PhysicsServer3D.xml
+msgid "Constant to set/get whether the gravity vector of an area is a direction, or a center point."
+msgstr "Annak beállítására vagy lekérdezésére szolgáló állandó, hogy a terület gravitációvektora irányt vagy középpontot jelöl-e."
+
+#. PhysicsServer3D.AREA_PARAM_LINEAR_DAMP_OVERRIDE_MODE
+#: doc/classes/PhysicsServer3D.xml
+msgid "Constant to set/get linear damping override mode in an area. See [enum AreaSpaceOverrideMode] for possible values."
+msgstr "A terület lineáris csillapítását felülíró mód beállítására vagy lekérdezésére szolgáló állandó. A lehetséges értékeket az [enum AreaSpaceOverrideMode] felsorolás tartalmazza."
+
+#. PhysicsServer3D.AREA_PARAM_LINEAR_DAMP
+#: doc/classes/PhysicsServer3D.xml
+msgid "Constant to set/get the linear damping factor of an area."
+msgstr "A terület lineáris csillapítási tényezőjének beállítására vagy lekérdezésére szolgáló állandó."
+
+#. PhysicsServer3D.AREA_PARAM_ANGULAR_DAMP_OVERRIDE_MODE
+#: doc/classes/PhysicsServer3D.xml
+msgid "Constant to set/get angular damping override mode in an area. See [enum AreaSpaceOverrideMode] for possible values."
+msgstr "A terület szögcsillapítási felülírási módjának beállítására vagy lekérdezésére szolgáló állandó. A lehetséges értékeket az [enum AreaSpaceOverrideMode] felsorolás tartalmazza."
+
+#. PhysicsServer3D.AREA_PARAM_ANGULAR_DAMP
+#: doc/classes/PhysicsServer3D.xml
+msgid "Constant to set/get the angular damping factor of an area."
+msgstr "A terület szögcsillapítási tényezőjének beállítására vagy lekérdezésére szolgáló állandó."
+
+#. PhysicsServer3D.AREA_PARAM_PRIORITY
+#: doc/classes/PhysicsServer3D.xml
+msgid "Constant to set/get the priority (order of processing) of an area."
+msgstr "A terület feldolgozási sorrendjét meghatározó prioritás beállítására vagy lekérdezésére szolgáló állandó."
+
+#. PhysicsServer3D.AREA_PARAM_WIND_FORCE_MAGNITUDE
+#: doc/classes/PhysicsServer3D.xml
+msgid "Constant to set/get the magnitude of area-specific wind force. This wind force only applies to [SoftBody3D] nodes. Other physics bodies are currently not affected by wind."
+msgstr "A területen ható szélerő nagyságának beállítására vagy lekérdezésére szolgáló állandó. Ez a szélerő csak a [SoftBody3D] csomópontokra hat. A többi fizikai testre jelenleg nem hat a szél."
+
+#. PhysicsServer3D.AREA_PARAM_WIND_SOURCE
+#: doc/classes/PhysicsServer3D.xml
+msgid "Constant to set/get the 3D vector that specifies the origin from which an area-specific wind blows."
+msgstr "A területen ható szél kiindulási pontját megadó 3D vektor beállítására vagy lekérdezésére szolgáló állandó."
+
+#. PhysicsServer3D.AREA_PARAM_WIND_DIRECTION
+#: doc/classes/PhysicsServer3D.xml
+msgid "Constant to set/get the 3D vector that specifies the direction in which an area-specific wind blows."
+msgstr "A területen ható szél irányát megadó 3D vektor beállítására vagy lekérdezésére szolgáló állandó."
+
+#. PhysicsServer3D.AREA_PARAM_WIND_ATTENUATION_FACTOR
+#: doc/classes/PhysicsServer3D.xml
+msgid "Constant to set/get the exponential rate at which wind force decreases with distance from its origin."
+msgstr "A szélerő forrástól mért távolsággal járó exponenciális gyengülésének beállítására vagy lekérdezésére szolgáló állandó."
+
+#. PhysicsServer3D.BODY_PARAM_BOUNCE
+#: doc/classes/PhysicsServer3D.xml
+msgid "Constant to set/get a body's bounce factor."
+msgstr "A test visszapattanási tényezőjének beállítására vagy lekérdezésére szolgáló állandó."
+
+#. PhysicsServer3D.BODY_PARAM_FRICTION
+#: doc/classes/PhysicsServer3D.xml
+msgid "Constant to set/get a body's friction."
+msgstr "A test súrlódásának beállítására vagy lekérdezésére szolgáló állandó."
+
+#. PhysicsServer3D.BODY_PARAM_MASS
+#: doc/classes/PhysicsServer3D.xml
+msgid "Constant to set/get a body's mass."
+msgstr "A test tömegének beállítására vagy lekérdezésére szolgáló állandó."
+
+#. PhysicsServer3D.BODY_PARAM_INERTIA
+#: doc/classes/PhysicsServer3D.xml
+msgid "Constant to set/get a body's inertia."
+msgstr "A test tehetetlenségi nyomatékának beállítására vagy lekérdezésére szolgáló állandó."
+
+#. PhysicsServer3D.BODY_PARAM_CENTER_OF_MASS
+#: doc/classes/PhysicsServer3D.xml
+msgid "Constant to set/get a body's center of mass position in the body's local coordinate system."
+msgstr "A test tömegközéppontja helyi koordinátákban megadott helyzetének beállítására vagy lekérdezésére szolgáló állandó."
+
+#. PhysicsServer3D.BODY_PARAM_GRAVITY_SCALE
+#: doc/classes/PhysicsServer3D.xml
+msgid "Constant to set/get a body's gravity multiplier."
+msgstr "A test gravitációs szorzójának beállítására vagy lekérdezésére szolgáló állandó."
+
+#. PhysicsServer3D.BODY_PARAM_LINEAR_DAMP_MODE
+#: doc/classes/PhysicsServer3D.xml
+msgid "Constant to set/get a body's linear damping mode. See [enum BodyDampMode] for possible values."
+msgstr "A test lineáris csillapítási módjának beállítására vagy lekérdezésére szolgáló állandó. A lehetséges értékeket az [enum BodyDampMode] felsorolás tartalmazza."
+
+#. PhysicsServer3D.BODY_PARAM_ANGULAR_DAMP_MODE
+#: doc/classes/PhysicsServer3D.xml
+msgid "Constant to set/get a body's angular damping mode. See [enum BodyDampMode] for possible values."
+msgstr "A test szögcsillapítási módjának beállítására vagy lekérdezésére szolgáló állandó. A lehetséges értékeket az [enum BodyDampMode] felsorolás tartalmazza."
+
+#. PhysicsServer3D.BODY_PARAM_LINEAR_DAMP
+#: doc/classes/PhysicsServer3D.xml
+msgid "Constant to set/get a body's linear damping factor."
+msgstr "A test lineáris csillapítási tényezőjének beállítására vagy lekérdezésére szolgáló állandó."
+
+#. PhysicsServer3D.BODY_PARAM_ANGULAR_DAMP
+#: doc/classes/PhysicsServer3D.xml
+msgid "Constant to set/get a body's angular damping factor."
+msgstr "A test szögcsillapítási tényezőjének beállítására vagy lekérdezésére szolgáló állandó."
+
+#. PhysicsServer3D.SPACE_PARAM_CONTACT_RECYCLE_RADIUS
+#: doc/classes/PhysicsServer3D.xml
+msgid "Constant to set/get the maximum distance a pair of bodies has to move before their collision status has to be recalculated."
+msgstr "Két test legnagyobb elmozdulásának lekérdezésére vagy beállítására szolgáló állandó. A határ átlépésekor újra kell számítani az ütközési állapotukat."
+
+#. PhysicsServer3D.SPACE_PARAM_CONTACT_MAX_SEPARATION
+#: doc/classes/PhysicsServer3D.xml
+msgid "Constant to set/get the maximum distance a shape can be from another before they are considered separated and the contact is discarded."
+msgstr "Az alakzatok közötti megengedett legnagyobb távolság lekérdezésére vagy beállítására szolgáló állandó. E fölött különállónak számítanak, és az érintkezés törlődik."
+
+#. PhysicsServer3D.SPACE_PARAM_CONTACT_DEFAULT_BIAS
+#: doc/classes/PhysicsServer3D.xml
+msgid "Constant to set/get the default solver bias for all physics contacts. A solver bias is a factor controlling how much two objects \"rebound\", after overlapping, to avoid leaving them in that state because of numerical imprecision."
+msgstr "A fizikai érintkezések alapértelmezett korrekciós tényezőjének beállítására vagy lekérdezésére szolgáló állandó. A tényező azt szabályozza, hogy két átfedő objektum milyen erősen távolodjon el egymástól, hogy a számítási pontatlanság miatt ne maradjanak átfedésben."
+
+#. PhysicsServer3D.SPACE_PARAM_BODY_TIME_TO_SLEEP
+#: doc/classes/PhysicsServer3D.xml
+msgid "Constant to set/get the maximum time of activity. A body marked as potentially inactive for both linear and angular velocity will be put to sleep after this time."
+msgstr "A legnagyobb aktivitási idő lekérdezésére vagy beállítására szolgáló állandó. Az a test, amelynek lineáris sebessége és szögsebessége alapján is elaltatható, ennyi idő után alvó állapotba kerül."
+
+#. BoxMesh.size
+#. BoxShape3D.size
+#. CSGBox3D.size
+#: doc/classes/BoxMesh.xml doc/classes/BoxShape3D.xml modules/csg/doc_classes/CSGBox3D.xml
+msgid "The box's width, height and depth."
+msgstr "A doboz szélessége, magassága és mélysége."
+
+#. Area3D.brief
+#: doc/classes/Area3D.xml
+msgid "A region of 3D space that detects other [CollisionObject3D]s entering or exiting it."
+msgstr "A 3D tér olyan területe, amely érzékeli a be- vagy kilépő [CollisionObject3D] objektumokat."
+
+#. Area3D.area_shape_exited
+#: doc/classes/Area3D.xml
+msgid "Emitted when a [Shape3D] of the received [param area] exits a shape of this area. Requires [member monitoring] to be set to [code]true[/code].\nSee also [signal area_shape_entered]."
+msgstr "Akkor érkezik, amikor a kapott [param area] egyik [Shape3D] alakzata kilép ennek a területnek az egyik alakzatából. Ehhez a [member monitoring] értéke legyen [code]true[/code].\nLásd még az [signal area_shape_entered] jelzést."
+
+#. Area3D.gravity
+#: doc/classes/Area3D.xml
+msgid "The area's gravity intensity (in meters per second squared). This value multiplies the gravity direction. This is useful to alter the force of gravity without altering its direction."
+msgstr "A gravitáció erőssége a területen, méter per másodpercnégyzetben. Ezzel az értékkel szorzódik a gravitáció irányvektora. Így az irány megváltoztatása nélkül módosítható a gravitáció erőssége."
+
+#. Area3D.reverb_bus_enabled
+#: doc/classes/Area3D.xml
+msgid "If [code]true[/code], the area applies reverb to its associated audio."
+msgstr "Ha az értéke [code]true[/code], a terület visszhangosítást alkalmaz a hozzá tartozó hangra."
+
+#. Area3D.reverb_bus_name
+#: doc/classes/Area3D.xml
+msgid "The name of the reverb bus to use for this area's associated audio."
+msgstr "A területhez tartozó hang visszhangosításához használt hangbusz neve."
+
+#. Area3D.wind_attenuation_factor
+#: doc/classes/Area3D.xml
+msgid "The exponential rate at which wind force decreases with distance from its origin.\n[b]Note:[/b] This wind force only applies to [SoftBody3D] nodes. Other physics bodies are currently not affected by wind."
+msgstr "A szélerő forrástól mért távolsággal járó exponenciális gyengülésének üteme.\n[b]Megjegyzés:[/b] Ez a szélerő csak a [SoftBody3D] csomópontokra hat. A többi fizikai testre jelenleg nem hat a szél."
+
+#. Area3D.wind_force_magnitude
+#: doc/classes/Area3D.xml
+msgid "The magnitude of area-specific wind force.\n[b]Note:[/b] This wind force only applies to [SoftBody3D] nodes. Other physics bodies are currently not affected by wind."
+msgstr "A területen ható szélerő nagysága.\n[b]Megjegyzés:[/b] Ez a szélerő csak a [SoftBody3D] csomópontokra hat. A többi fizikai testre jelenleg nem hat a szél."
+
+#. Area3D.wind_source_path
+#: doc/classes/Area3D.xml
+msgid "The [Node3D] which is used to specify the direction and origin of an area-specific wind force. The direction is opposite to the z-axis of the [Node3D]'s local transform, and its origin is the origin of the [Node3D]'s local transform.\n[b]Note:[/b] This wind force only applies to [SoftBody3D] nodes. Other physics bodies are currently not affected by wind."
+msgstr "A területen ható szél irányát és kiindulási pontját megadó [Node3D]. A szél iránya a [Node3D] helyi transzformációja Z tengelyének ellenkező iránya, a kiindulási pontja pedig a [Node3D] helyi transzformációjának origója.\n[b]Megjegyzés:[/b] Ez a szélerő csak a [SoftBody3D] csomópontokra hat. A többi fizikai testre jelenleg nem hat a szél."
+
+#. BoxShape3D.brief
+#: doc/classes/BoxShape3D.xml
+msgid "A 3D box shape used for physics collision."
+msgstr "3D dobozalakzat fizikai ütközésvizsgálathoz."
+
+#. BoxShape3D.description
+#: doc/classes/BoxShape3D.xml
+msgid "A 3D box shape, intended for use in physics. Usually used to provide a shape for a [CollisionShape3D].\n[b]Performance:[/b] [BoxShape3D] is fast to check collisions against. It is faster than [CapsuleShape3D] and [CylinderShape3D], but slower than [SphereShape3D]."
+msgstr "3D dobozalakzat fizikai szimulációhoz. Általában egy [CollisionShape3D] alakzataként használható.\n[b]Teljesítmény:[/b] A [BoxShape3D] ütközésvizsgálata gyors. Gyorsabb, mint a [CapsuleShape3D] és a [CylinderShape3D] vizsgálata, de lassabb, mint a [SphereShape3D] vizsgálata."
+
+#. CapsuleShape3D.brief
+#: doc/classes/CapsuleShape3D.xml
+msgid "A 3D capsule shape used for physics collision."
+msgstr "3D kapszulaalakzat fizikai ütközésvizsgálathoz."
+
+#. CapsuleShape3D.description
+#: doc/classes/CapsuleShape3D.xml
+msgid "A 3D capsule shape, intended for use in physics. Usually used to provide a shape for a [CollisionShape3D].\n[b]Performance:[/b] [CapsuleShape3D] is fast to check collisions against. It is faster than [CylinderShape3D], but slower than [SphereShape3D] and [BoxShape3D]."
+msgstr "3D kapszulaalakzat fizikai szimulációhoz. Általában egy [CollisionShape3D] alakzataként használható.\n[b]Teljesítmény:[/b] A [CapsuleShape3D] ütközésvizsgálata gyors. Gyorsabb, mint a [CylinderShape3D] vizsgálata, de lassabb, mint a [SphereShape3D] és a [BoxShape3D] vizsgálata."
+
+#. CapsuleShape3D.height
+#. SpringBoneCollisionCapsule3D.height
+#: doc/classes/CapsuleShape3D.xml doc/classes/SpringBoneCollisionCapsule3D.xml
+msgid "The capsule's full height, including the hemispheres.\n[b]Note:[/b] The [member height] of a capsule must be at least twice its [member radius]. Otherwise, the capsule becomes a sphere. If the [member height] is less than twice the [member radius], the properties adjust to a valid value."
+msgstr "A kapszula teljes magassága a két félgömbbel együtt.\n[b]Megjegyzés:[/b] A kapszula [member height] értékének legalább kétszer akkorának kell lennie, mint a [member radius] értéke. Máskülönben a kapszula gömbbé alakul. Ha a [member height] kisebb a [member radius] kétszeresénél, a tulajdonságok automatikusan érvényes értékre állnak."
+
+#. CapsuleShape3D.mid_height
+#. SpringBoneCollisionCapsule3D.mid_height
+#: doc/classes/CapsuleShape3D.xml doc/classes/SpringBoneCollisionCapsule3D.xml
+msgid "The capsule's height, excluding the hemispheres. This is the height of the central cylindrical part in the middle of the capsule, and is the distance between the centers of the two hemispheres. This is a wrapper for [member height]."
+msgstr "A kapszula magassága a félgömbök nélkül. Ez a középső hengeres rész magassága, vagyis a két félgömb középpontja közötti távolság. Ez a tulajdonság a [member height] közvetett elérését biztosítja."
+
+#. CapsuleShape3D.radius
+#. SpringBoneCollisionCapsule3D.radius
+#: doc/classes/CapsuleShape3D.xml doc/classes/SpringBoneCollisionCapsule3D.xml
+msgid "The capsule's radius.\n[b]Note:[/b] The [member radius] of a capsule cannot be greater than half of its [member height]. Otherwise, the capsule becomes a sphere. If the [member radius] is greater than half of the [member height], the properties adjust to a valid value."
+msgstr "A kapszula sugara.\n[b]Megjegyzés:[/b] A kapszula [member radius] értéke legfeljebb a [member height] fele lehet. Máskülönben a kapszula gömbbé alakul. Ha a [member radius] nagyobb a [member height] felénél, a tulajdonságok automatikusan érvényes értékre állnak."
+
+#. CollisionObject2D.DISABLE_MODE_KEEP_ACTIVE
+#. CollisionObject3D.DISABLE_MODE_KEEP_ACTIVE
+#. SoftBody3D.DISABLE_MODE_KEEP_ACTIVE
+#: doc/classes/CollisionObject2D.xml doc/classes/CollisionObject3D.xml doc/classes/SoftBody3D.xml
+msgid "When [member Node.process_mode] is set to [constant Node.PROCESS_MODE_DISABLED], do not affect the physics simulation."
+msgstr "Ha a [member Node.process_mode] értéke [constant Node.PROCESS_MODE_DISABLED], a fizikai szimuláció változatlanul folytatódik."
+
+#. CollisionObject3D.brief
+#: doc/classes/CollisionObject3D.xml
+msgid "Abstract base class for 3D physics objects."
+msgstr "A 3D fizikai objektumok absztrakt alaposztálya."
+
+#. CollisionObject3D.shape_owner_add_shape
+#: doc/classes/CollisionObject3D.xml
+msgid "Adds a [Shape3D] to the shape owner."
+msgstr "Egy [Shape3D] alakzatot ad az alakzattulajdonoshoz."
+
+#. CollisionObject3D.shape_owner_get_shape
+#: doc/classes/CollisionObject3D.xml
+msgid "Returns the [Shape3D] with the given ID from the given shape owner."
+msgstr "Visszaadja a megadott alakzattulajdonos megadott azonosítójú [Shape3D] alakzatát."
+
+#. CollisionObject3D.shape_owner_get_shape_index
+#: doc/classes/CollisionObject3D.xml
+msgid "Returns the child index of the [Shape3D] with the given ID from the given shape owner."
+msgstr "Visszaadja a megadott alakzattulajdonos megadott azonosítójú [Shape3D] alakzatának gyermekindexét."
+
+#. CollisionObject3D.shape_owner_get_transform
+#: doc/classes/CollisionObject3D.xml
+msgid "Returns the shape owner's [Transform3D]."
+msgstr "Visszaadja az alakzattulajdonos [Transform3D] transzformációját."
+
+#. CollisionObject3D.shape_owner_set_transform
+#: doc/classes/CollisionObject3D.xml
+msgid "Sets the [Transform3D] of the given shape owner."
+msgstr "Beállítja a megadott alakzattulajdonos [Transform3D] transzformációját."
+
+#. CollisionObject3D.input_event
+#: doc/classes/CollisionObject3D.xml
+msgid "Emitted when the object receives an unhandled [InputEvent]. [param event_position] is the location in world space of the mouse pointer on the surface of the shape with index [param shape_idx] and [param normal] is the normal vector of the surface at that point."
+msgstr "Akkor érkezik, amikor az objektum kezeletlen [InputEvent] eseményt kap. A [param event_position] az egérmutató helye a [param shape_idx] indexű alakzat felületén, világkoordinátákban. A [param normal] a felület normálvektora ezen a ponton."
+
+#. CollisionObject3D.DISABLE_MODE_REMOVE
+#: doc/classes/CollisionObject3D.xml
+msgid "When [member Node.process_mode] is set to [constant Node.PROCESS_MODE_DISABLED], remove from the physics simulation to stop all physics interactions with this [CollisionObject3D].\nAutomatically re-added to the physics simulation when the [Node] is processed again."
+msgstr "Ha a [member Node.process_mode] értéke [constant Node.PROCESS_MODE_DISABLED], a rendszer eltávolítja a [CollisionObject3D] objektumot a fizikai szimulációból, így minden fizikai kölcsönhatása megszűnik.\nAmikor a [Node] feldolgozása újraindul, a rendszer automatikusan visszahelyezi a szimulációba."
+
+#. CollisionObject3D.DISABLE_MODE_MAKE_STATIC
+#: doc/classes/CollisionObject3D.xml
+msgid "When [member Node.process_mode] is set to [constant Node.PROCESS_MODE_DISABLED], make the body static. Doesn't affect [Area3D]. [PhysicsBody3D] can't be affected by forces or other bodies while static.\nAutomatically set [PhysicsBody3D] back to its original mode when the [Node] is processed again."
+msgstr "Ha a [member Node.process_mode] értéke [constant Node.PROCESS_MODE_DISABLED], a rendszer statikussá teszi a testet. Az [Area3D] objektumokra nincs hatással. Statikus állapotban a [PhysicsBody3D] testre sem erők, sem más testek nem hatnak.\nAmikor a [Node] feldolgozása újraindul, a rendszer automatikusan visszaállítja a [PhysicsBody3D] eredeti módját."
+
+#. CollisionPolygon3D.debug_fill
+#. CollisionShape3D.debug_fill
+#: doc/classes/CollisionPolygon3D.xml doc/classes/CollisionShape3D.xml
+msgid "If [code]true[/code], when the shape is displayed, it will show a solid fill color in addition to its wireframe."
+msgstr "Ha az értéke [code]true[/code], az alakzat a drótváza mellett egyszínű kitöltéssel is megjelenik."
+
+#. CollisionShape3D.brief
+#: doc/classes/CollisionShape3D.xml
+msgid "A node that provides a [Shape3D] to a [CollisionObject3D] parent."
+msgstr "Csomópont, amely [Shape3D] alakzatot biztosít a [CollisionObject3D] szülőnek."
+
+#. CollisionShape3D.description
+#: doc/classes/CollisionShape3D.xml
+msgid "A node that provides a [Shape3D] to a [CollisionObject3D] parent and allows it to be edited. This can give a detection shape to an [Area3D] or turn a [PhysicsBody3D] into a solid object.\n[b]Warning:[/b] A non-uniformly scaled [CollisionShape3D] will likely not behave as expected. Make sure to keep its scale the same on all axes and adjust its [member shape] resource instead."
+msgstr "Csomópont, amely [Shape3D] alakzatot biztosít a [CollisionObject3D] szülőnek, és lehetővé teszi az alakzat szerkesztését. Így érzékelőalakzatot adhatsz egy [Area3D] területhez, vagy tömör objektummá tehetsz egy [PhysicsBody3D] testet.\n[b]Figyelmeztetés:[/b] A különböző tengelyeken eltérően méretezett [CollisionShape3D] valószínűleg nem a várt módon működik. A tengelyek méretaránya legyen azonos, és a [member shape] erőforrást módosítsd."
+
+#. ConcavePolygonShape3D.brief
+#: doc/classes/ConcavePolygonShape3D.xml
+msgid "A 3D trimesh shape used for physics collision."
+msgstr "Háromszöghálóból álló 3D alakzat fizikai ütközésvizsgálathoz."
+
+#. ConcavePolygonShape3D.get_faces
+#: doc/classes/ConcavePolygonShape3D.xml
+msgid "Returns the faces of the trimesh shape as an array of vertices. The array (of length divisible by three) is naturally divided into triples; each triple of vertices defines a triangle."
+msgstr "A háromszögháló lapjait csúcsok tömbjeként adja vissza. A tömb hosszának hárommal oszthatónak kell lennie. A csúcsokat hármasával kell olvasni. Minden hármas egy háromszöget határoz meg."
+
+#. ConcavePolygonShape3D.set_faces
+#: doc/classes/ConcavePolygonShape3D.xml
+msgid "Sets the faces of the trimesh shape from an array of vertices. The [param faces] array should be composed of triples such that each triple of vertices defines a triangle."
+msgstr "A háromszögháló lapjait csúcsok tömbjéből állítja be. A [param faces] tömbben a csúcsok hármasával adjanak meg egy-egy háromszöget."
+
+#. ConcavePolygonShape3D.backface_collision
+#: doc/classes/ConcavePolygonShape3D.xml
+msgid "If set to [code]true[/code], collisions occur on both sides of the concave shape faces. Otherwise they occur only along the face normals."
+msgstr "Ha az értéke [code]true[/code], a konkáv alakzat lapjainak mindkét oldalán előfordulhat ütközés. Egyébként csak a lapnormálok felőli oldalon."
+
+#. ConvexPolygonShape3D.brief
+#: doc/classes/ConvexPolygonShape3D.xml
+msgid "A 3D convex polyhedron shape used for physics collision."
+msgstr "3D konvex poliéder fizikai ütközésvizsgálathoz."
+
+#. ConvexPolygonShape3D.points
+#: doc/classes/ConvexPolygonShape3D.xml
+msgid "The list of 3D points forming the convex polygon shape."
+msgstr "A konvex sokszögalakzatot meghatározó 3D pontok listája."
+
+#. CylinderShape3D.brief
+#: doc/classes/CylinderShape3D.xml
+msgid "A 3D cylinder shape used for physics collision."
+msgstr "3D hengeres alakzat fizikai ütközésvizsgálathoz."
+
+#. CylinderShape3D.height
+#: doc/classes/CylinderShape3D.xml
+msgid "The cylinder's height."
+msgstr "A henger magassága."
+
+#. CylinderShape3D.radius
+#: doc/classes/CylinderShape3D.xml
+msgid "The cylinder's radius."
+msgstr "A henger sugara."
+
+#. HeightMapShape3D.brief
+#: doc/classes/HeightMapShape3D.xml
+msgid "A 3D heightmap shape used for physics collision."
+msgstr "Magasságtérképből álló 3D alakzat fizikai ütközésvizsgálathoz."
+
+#. HeightMapShape3D.get_max_height
+#: doc/classes/HeightMapShape3D.xml
+msgid "Returns the largest height value found in [member map_data]. Recalculates only when [member map_data] changes."
+msgstr "Visszaadja a [member map_data] adatai közül a legnagyobb magasságot. A rendszer csak a [member map_data] módosításakor számítja újra."
+
+#. HeightMapShape3D.get_min_height
+#: doc/classes/HeightMapShape3D.xml
+msgid "Returns the smallest height value found in [member map_data]. Recalculates only when [member map_data] changes."
+msgstr "Visszaadja a [member map_data] adatai közül a legkisebb magasságot. A rendszer csak a [member map_data] módosításakor számítja újra."
+
+#. HeightMapShape3D.map_data
+#: doc/classes/HeightMapShape3D.xml
+msgid "Heightmap data. The array's size must be equal to [member map_width] multiplied by [member map_depth]."
+msgstr "A magasságtérkép adatai. A tömb méretének meg kell egyeznie a [member map_width] és a [member map_depth] szorzatával."
+
+#. HeightMapShape3D.map_depth
+#: doc/classes/HeightMapShape3D.xml
+msgid "Number of vertices in the depth of the heightmap. Changing this will resize the [member map_data]."
+msgstr "A csúcsok száma a magasságtérkép mélységi irányában. Az érték módosítása átméretezi a [member map_data] tömböt."
+
+#. HeightMapShape3D.map_width
+#: doc/classes/HeightMapShape3D.xml
+msgid "Number of vertices in the width of the heightmap. Changing this will resize the [member map_data]."
+msgstr "A csúcsok száma a magasságtérkép szélességi irányában. Az érték módosítása átméretezi a [member map_data] tömböt."
+
+#. Joint3D.brief
+#: doc/classes/Joint3D.xml
+msgid "Abstract base class for all 3D physics joints."
+msgstr "A 3D fizikai csuklók absztrakt alaposztálya."
+
+#. Joint3D.description
+#: doc/classes/Joint3D.xml
+msgid "Abstract base class for all joints in 3D physics. 3D joints bind together two physics bodies ([member node_a] and [member node_b]) and apply a constraint. If only one body is defined, it is attached to a fixed [StaticBody3D] without collision shapes."
+msgstr "A 3D fizikai csuklók absztrakt alaposztálya. A 3D csukló két fizikai testet ([member node_a] és [member node_b]) köt össze, és korlátozza a mozgásukat. Ha csak egy test van megadva, a csukló egy rögzített, ütközési alakzat nélküli [StaticBody3D] testhez kapcsolja."
+
+#. Joint3D.get_rid
+#: doc/classes/Joint3D.xml
+msgid "Returns the joint's internal [RID] from the [PhysicsServer3D]."
+msgstr "Visszaadja a csukló [PhysicsServer3D] által használt belső [RID] azonosítóját."
+
+#. Joint3D.node_a
+#: doc/classes/Joint3D.xml
+msgid "Path to the first node (A) attached to the joint. The node must inherit [PhysicsBody3D].\nIf left empty and [member node_b] is set, the body is attached to a fixed [StaticBody3D] without collision shapes."
+msgstr "A csuklóhoz kapcsolt első csomópont (A) útvonala. A csomópontnak a [PhysicsBody3D] osztályból kell származnia.\nHa üresen hagyod, és a [member node_b] meg van adva, a csukló egy rögzített, ütközési alakzat nélküli [StaticBody3D] testhez kapcsolja a megadott testet."
+
+#. Joint3D.node_b
+#: doc/classes/Joint3D.xml
+msgid "Path to the second node (B) attached to the joint. The node must inherit [PhysicsBody3D].\nIf left empty and [member node_a] is set, the body is attached to a fixed [StaticBody3D] without collision shapes."
+msgstr "A csuklóhoz kapcsolt második csomópont (B) útvonala. A csomópontnak a [PhysicsBody3D] osztályból kell származnia.\nHa üresen hagyod, és a [member node_a] meg van adva, a csukló egy rögzített, ütközési alakzat nélküli [StaticBody3D] testhez kapcsolja a megadott testet."
+
+#. Joint3D.solver_priority
+#: doc/classes/Joint3D.xml
+msgid "The priority used to define which solver is executed first for multiple joints. The lower the value, the higher the priority.\n[b]Note:[/b] Only supported when using GodotPhysics3D. This property is ignored when using Jolt Physics."
+msgstr "Több csukló esetén meghatározza a fizikai kényszerek megoldási sorrendjét. Kisebb értéknél magasabb a prioritás.\n[b]Megjegyzés:[/b] Csak a GodotPhysics3D támogatja. A Jolt Physics figyelmen kívül hagyja ezt a tulajdonságot."
+
+#. PhysicalBone3D.gravity_scale
+#. RigidBody3D.gravity_scale
+#: doc/classes/PhysicalBone3D.xml doc/classes/RigidBody3D.xml
+msgid "This is multiplied by [member ProjectSettings.physics/3d/default_gravity] to produce this body's gravity. For example, a value of [code]1.0[/code] will apply normal gravity, [code]2.0[/code] will apply double the gravity, and [code]0.5[/code] will apply half the gravity to this body."
+msgstr "A testre ható gravitációt az érték és a [member ProjectSettings.physics/3d/default_gravity] szorzata adja. Például [code]1.0[/code] esetén a szokásos gravitáció hat a testre, [code]2.0[/code] esetén a kétszerese, [code]0.5[/code] esetén pedig a fele."
+
+#. PhysicalBone3D.linear_velocity
+#. RigidBody3D.linear_velocity
+#: doc/classes/PhysicalBone3D.xml doc/classes/RigidBody3D.xml
+msgid "The body's linear velocity in units per second. Can be used sporadically, but [b]don't set this every frame[/b], because physics may run in another thread and runs at a different granularity. Use [method _integrate_forces] as your process loop for precise control of the body state."
+msgstr "A test lineáris sebessége egység per másodpercben. Alkalmanként módosíthatod, de [b]ne állítsd be minden képkockában[/b], mert a fizikai szimuláció külön szálon és más időlépéssel futhat. A test állapotának pontos vezérléséhez az [method _integrate_forces] metódusban végezd el az ismétlődő feldolgozást."
+
+#. PhysicsBody3D.brief
+#: doc/classes/PhysicsBody3D.xml
+msgid "Abstract base class for 3D game objects affected by physics."
+msgstr "A fizikai szimuláció által érintett 3D játékobjektumok absztrakt alaposztálya."
+
+#. PhysicsBody3D.description
+#: doc/classes/PhysicsBody3D.xml
+msgid "[PhysicsBody3D] is an abstract base class for 3D game objects affected by physics. All 3D physics bodies inherit from it.\n[b]Warning:[/b] With a non-uniform scale, this node will likely not behave as expected. It is advised to keep its scale the same on all axes and adjust its collision shape(s) instead."
+msgstr "A [PhysicsBody3D] a fizikai szimuláció által érintett 3D játékobjektumok absztrakt alaposztálya. Minden 3D fizikai test ebből származik.\n[b]Figyelmeztetés:[/b] Ha a tengelyek méretaránya eltér, a csomópont valószínűleg nem a várt módon működik. Célszerű azonos méretarányt használni minden tengelyen, és az ütközési alakzatokat módosítani."
+
+#. PhysicsBody3D.get_axis_lock
+#: doc/classes/PhysicsBody3D.xml
+msgid "Returns [code]true[/code] if the specified linear or rotational [param axis] is locked."
+msgstr "[code]true[/code] értéket ad vissza, ha a megadott lineáris vagy forgási [param axis] zárolva van."
+
+#. PhysicsBody3D.get_gravity
+#: doc/classes/PhysicsBody3D.xml
+msgid "Returns the gravity vector computed from all sources that can affect the body, including all gravity overrides from [Area3D] nodes and the global world gravity."
+msgstr "Visszaadja a testre ható összes forrásból kiszámított gravitációvektort, beleértve az [Area3D] csomópontok gravitáció-felülírásait és a világ globális gravitációját."
+
+#. PhysicsBody3D.set_axis_lock
+#: doc/classes/PhysicsBody3D.xml
+msgid "Locks or unlocks the specified linear or rotational [param axis] depending on the value of [param lock]."
+msgstr "A [param lock] értékétől függően zárolja vagy feloldja a megadott lineáris vagy forgási [param axis] tengelyt."
+
+#. PhysicsBody3D.axis_lock_angular_x
+#: doc/classes/PhysicsBody3D.xml
+msgid "Lock the body's rotation in the X axis."
+msgstr "Zárolja a test forgását az X tengely körül."
+
+#. PhysicsBody3D.axis_lock_angular_y
+#: doc/classes/PhysicsBody3D.xml
+msgid "Lock the body's rotation in the Y axis."
+msgstr "Zárolja a test forgását az Y tengely körül."
+
+#. PhysicsBody3D.axis_lock_angular_z
+#: doc/classes/PhysicsBody3D.xml
+msgid "Lock the body's rotation in the Z axis."
+msgstr "Zárolja a test forgását a Z tengely körül."
+
+#. PhysicsBody3D.axis_lock_linear_x
+#: doc/classes/PhysicsBody3D.xml
+msgid "Lock the body's linear movement in the X axis."
+msgstr "Zárolja a test lineáris mozgását az X tengely mentén."
+
+#. PhysicsBody3D.axis_lock_linear_y
+#: doc/classes/PhysicsBody3D.xml
+msgid "Lock the body's linear movement in the Y axis."
+msgstr "Zárolja a test lineáris mozgását az Y tengely mentén."
+
+#. PhysicsBody3D.axis_lock_linear_z
+#: doc/classes/PhysicsBody3D.xml
+msgid "Lock the body's linear movement in the Z axis."
+msgstr "Zárolja a test lineáris mozgását a Z tengely mentén."
+
+#. RigidBody3D.brief
+#: doc/classes/RigidBody3D.xml
+msgid "A 3D physics body that is moved by a physics simulation."
+msgstr "A fizikai szimuláció által mozgatott 3D test."
+
+#. RigidBody3D.apply_torque
+#: doc/classes/RigidBody3D.xml
+msgid "Applies a rotational force without affecting position. A force is time dependent and meant to be applied every physics update.\n[b]Note:[/b] [member inertia] is required for this to work. To have [member inertia], an active [CollisionShape3D] must be a child of the node, or you can manually set [member inertia]."
+msgstr "Forgatónyomatékot fejt ki a test helyzetének megváltoztatása nélkül. A nyomaték hatása időfüggő, ezért minden fizikai lépésben alkalmazni kell.\n[b]Megjegyzés:[/b] Ehhez szükség van a [member inertia] értékére. A [member inertia] kiszámításához aktív [CollisionShape3D] gyermekcsomópont szükséges. A [member inertia] értékét kézzel is beállíthatod."
+
+#. RigidBody3D.get_inverse_inertia_tensor
+#: doc/classes/RigidBody3D.xml
+msgid "Returns the inverse inertia tensor basis. This is used to calculate the angular acceleration resulting from a torque applied to the [RigidBody3D]."
+msgstr "Visszaadja a tehetetlenségi tenzor inverzének bázismátrixát. Ebből számítható ki a [RigidBody3D] testre ható forgatónyomaték okozta szöggyorsulás."
+
+#. RigidBody3D.angular_velocity
+#: doc/classes/RigidBody3D.xml
+msgid "The RigidBody3D's rotational velocity in [i]radians[/i] per second."
+msgstr "A RigidBody3D szögsebessége, másodpercenkénti [i]radiánban[/i]."
+
+#. RigidBody3D.contact_monitor
+#: doc/classes/RigidBody3D.xml
+msgid "If [code]true[/code], the RigidBody3D will emit signals when it collides with another body.\n[b]Note:[/b] By default the maximum contacts reported is set to 0, meaning nothing will be recorded, see [member max_contacts_reported]."
+msgstr "Ha az értéke [code]true[/code], a RigidBody3D jelzést küld, amikor másik testtel ütközik.\n[b]Megjegyzés:[/b] Alapértelmezés szerint a jelenthető érintkezések legnagyobb száma 0, így a rendszer egyetlen érintkezést sem rögzít. Lásd a [member max_contacts_reported] tulajdonságot."
+
+#. RigidBody3D.freeze
+#: doc/classes/RigidBody3D.xml
+msgid "If [code]true[/code], the body is frozen. Gravity and forces are not applied anymore.\nSee [member freeze_mode] to set the body's behavior when frozen.\n[b]Note:[/b] For a body that is always frozen, use [StaticBody3D] or [AnimatableBody3D] instead."
+msgstr "Ha az értéke [code]true[/code], a test befagyasztott állapotban van. A gravitáció és az erők ilyenkor nem hatnak rá.\nA befagyasztott test viselkedését a [member freeze_mode] tulajdonsággal állíthatod be.\n[b]Megjegyzés:[/b] Állandóan befagyasztott testhez használj [StaticBody3D] vagy [AnimatableBody3D] csomópontot."
+
+#. RigidBody3D.freeze_mode
+#: doc/classes/RigidBody3D.xml
+msgid "The body's freeze mode. Determines the body's behavior when [member freeze] is [code]true[/code].\n[b]Note:[/b] For a body that is always frozen, use [StaticBody3D] or [AnimatableBody3D] instead."
+msgstr "A test befagyasztási módja. Ez határozza meg a viselkedést, ha a [member freeze] értéke [code]true[/code].\n[b]Megjegyzés:[/b] Állandóan befagyasztott testhez használj [StaticBody3D] vagy [AnimatableBody3D] csomópontot."
+
+#. SeparationRayShape3D.brief
+#: doc/classes/SeparationRayShape3D.xml
+msgid "A 3D ray shape used for physics collision that tries to separate itself from any collider."
+msgstr "Fizikai ütközésvizsgálatra szolgáló 3D sugáralakzat, amely igyekszik eltávolodni az ütköző objektumoktól."
+
+#. Shape3D.brief
+#: doc/classes/Shape3D.xml
+msgid "Abstract base class for 3D shapes used for physics collision."
+msgstr "A fizikai ütközésvizsgálathoz használt 3D alakzatok absztrakt alaposztálya."
+
+#. Shape3D.description
+#: doc/classes/Shape3D.xml
+msgid "Abstract base class for all 3D shapes, intended for use in physics.\n[b]Performance:[/b] Primitive shapes, especially [SphereShape3D], are fast to check collisions against. [ConvexPolygonShape3D] and [HeightMapShape3D] are slower, and [ConcavePolygonShape3D] is the slowest."
+msgstr "A fizikai szimulációhoz használt 3D alakzatok absztrakt alaposztálya.\n[b]Teljesítmény:[/b] Az egyszerű alakzatok, különösen a [SphereShape3D] ütközésvizsgálata gyors. A [ConvexPolygonShape3D] és a [HeightMapShape3D] lassabb, a [ConcavePolygonShape3D] pedig a leglassabb."
+
+#. Shape3D.get_debug_mesh
+#: doc/classes/Shape3D.xml
+msgid "Returns the [ArrayMesh] used to draw the debug collision for this [Shape3D]."
+msgstr "Visszaadja az ehhez a [Shape3D] alakzathoz tartozó ütközési alakzat hibakeresési kirajzolásához használt [ArrayMesh] erőforrást."
+
+#. SphereShape3D.brief
+#: doc/classes/SphereShape3D.xml
+msgid "A 3D sphere shape used for physics collision."
+msgstr "3D gömbalakzat fizikai ütközésvizsgálathoz."
+
+#. SphereShape3D.description
+#: doc/classes/SphereShape3D.xml
+msgid "A 3D sphere shape, intended for use in physics. Usually used to provide a shape for a [CollisionShape3D].\n[b]Performance:[/b] [SphereShape3D] is fast to check collisions against. It is faster than [BoxShape3D], [CapsuleShape3D], and [CylinderShape3D]."
+msgstr "3D gömbalakzat fizikai szimulációhoz. Általában egy [CollisionShape3D] alakzataként használható.\n[b]Teljesítmény:[/b] A [SphereShape3D] ütközésvizsgálata gyorsabb, mint a [BoxShape3D], a [CapsuleShape3D] és a [CylinderShape3D] vizsgálata."
+
+#. SphereShape3D.radius
+#: doc/classes/SphereShape3D.xml
+msgid "The sphere's radius. The shape's diameter is double the radius."
+msgstr "A gömb sugara. Az alakzat átmérője a sugár kétszerese."
+
+#. StaticBody3D.brief
+#: doc/classes/StaticBody3D.xml
+msgid "A 3D physics body that can't be moved by external forces. When moved manually, it doesn't affect other bodies in its path."
+msgstr "3D fizikai test, amelyet külső erők nem mozgathatnak. Kézi mozgatáskor nincs hatással az útjába eső testekre."
+
+#. WorldBoundaryShape3D.brief
+#: doc/classes/WorldBoundaryShape3D.xml
+msgid "A 3D world boundary (half-space) shape used for physics collision."
+msgstr "Fizikai ütközésvizsgálathoz használt 3D világhatár (féltér)."
+
+#. WorldBoundaryShape3D.plane
+#: doc/classes/WorldBoundaryShape3D.xml
+msgid "The [Plane] used by the [WorldBoundaryShape3D] for collision."
+msgstr "A [WorldBoundaryShape3D] ütközésvizsgálatához használt [Plane] sík."
+
+#. AnimatableBody3D.brief
+#: doc/classes/AnimatableBody3D.xml
+msgid "A 3D physics body that can't be moved by external forces. When moved manually, it affects other bodies in its path."
+msgstr "3D fizikai test, amelyet külső erők nem mozgathatnak. Kézi mozgatáskor hatással van az útjába eső testekre."
+
+#. AnimatableBody3D.sync_to_physics
+#: doc/classes/AnimatableBody3D.xml
+msgid "If [code]true[/code], the body's movement will be synchronized to the physics frame. This is useful when animating movement via [AnimationPlayer], for example on moving platforms. Do [b]not[/b] use together with [method PhysicsBody3D.move_and_collide]."
+msgstr "Ha az értéke [code]true[/code], a test mozgása a fizikai képkockához igazodik. Ez az [AnimationPlayer] által animált mozgásnál, például mozgó platformoknál hasznos. A [method PhysicsBody3D.move_and_collide] metódussal együtt használni [b]tilos[/b]."
+
+#. ConeTwistJoint3D.brief
+#: doc/classes/ConeTwistJoint3D.xml
+msgid "A physics joint that connects two 3D physics bodies in a way that simulates a ball-and-socket joint."
+msgstr "Fizikai csukló, amely két 3D fizikai testet kapcsol össze, és gömbcsuklót szimulál."
+
+#. ConeTwistJoint3D.bias
+#. ConeTwistJoint3D.PARAM_BIAS
+#: doc/classes/ConeTwistJoint3D.xml
+msgid "The speed with which the swing or twist will take place.\nThe higher, the faster."
+msgstr "A kilengés vagy a csavarodás sebessége.\nNagyobb értéknél gyorsabb a mozgás."
+
+#. ConeTwistJoint3D.softness
+#. ConeTwistJoint3D.PARAM_SOFTNESS
+#: doc/classes/ConeTwistJoint3D.xml
+msgid "The ease with which the joint starts to twist. If it's too low, it takes more force to start twisting the joint."
+msgstr "Meghatározza, milyen könnyen kezd el csavarodni a csukló. Túl kis értéknél nagyobb erő szükséges a csavarodás megindításához."
+
+#. HingeJoint3D.brief
+#: doc/classes/HingeJoint3D.xml
+msgid "A physics joint that restricts the rotation of a 3D physics body around an axis relative to another physics body."
+msgstr "Fizikai csukló, amely egy 3D fizikai test forgását egy másik testhez képest egyetlen tengelyre korlátozza."
+
+#. HingeJoint3D.description
+#: doc/classes/HingeJoint3D.xml
+msgid "A physics joint that restricts the rotation of a 3D physics body around an axis relative to another physics body. For example, Body A can be a [StaticBody3D] representing a door hinge that a [RigidBody3D] rotates around."
+msgstr "Fizikai csukló, amely egy 3D fizikai test forgását egy másik testhez képest egyetlen tengelyre korlátozza. Az A test lehet például egy ajtó zsanérját képviselő [StaticBody3D], amely körül egy [RigidBody3D] test elfordul."
+
+#. HingeJoint3D.angular_limit/bias
+#. HingeJoint3D.PARAM_LIMIT_BIAS
+#: doc/classes/HingeJoint3D.xml
+msgid "The speed with which the rotation across the axis perpendicular to the hinge gets corrected."
+msgstr "A zsanérra merőleges tengely körüli forgás korrekciós sebessége."
+
+#. HingeJoint3D.angular_limit/enable
+#. HingeJoint3D.FLAG_USE_LIMIT
+#: doc/classes/HingeJoint3D.xml
+msgid "If [code]true[/code], the hinges maximum and minimum rotation, defined by [member angular_limit/lower] and [member angular_limit/upper] has effects."
+msgstr "Ha az értéke [code]true[/code], a zsanér elfordulását a [member angular_limit/lower] és a [member angular_limit/upper] által megadott határértékek korlátozzák."
+
+#. HingeJoint3D.angular_limit/lower
+#. HingeJoint3D.PARAM_LIMIT_LOWER
+#: doc/classes/HingeJoint3D.xml
+msgid "The minimum rotation. Only active if [member angular_limit/enable] is [code]true[/code]."
+msgstr "A legkisebb elfordulási szög. Csak akkor érvényes, ha a [member angular_limit/enable] értéke [code]true[/code]."
+
+#. HingeJoint3D.angular_limit/upper
+#. HingeJoint3D.PARAM_LIMIT_UPPER
+#: doc/classes/HingeJoint3D.xml
+msgid "The maximum rotation. Only active if [member angular_limit/enable] is [code]true[/code]."
+msgstr "A legnagyobb elfordulási szög. Csak akkor érvényes, ha a [member angular_limit/enable] értéke [code]true[/code]."
+
+#. HingeJoint3D.motor/enable
+#. HingeJoint3D.FLAG_ENABLE_MOTOR
+#: doc/classes/HingeJoint3D.xml
+msgid "When activated, a motor turns the hinge."
+msgstr "Bekapcsoláskor a zsanért motor forgatja."
+
+#. HingeJoint3D.motor/target_velocity
+#. HingeJoint3D.PARAM_MOTOR_TARGET_VELOCITY
+#. PhysicsServer3D.HINGE_JOINT_MOTOR_TARGET_VELOCITY
+#: doc/classes/HingeJoint3D.xml doc/classes/PhysicsServer3D.xml
+msgid "Target speed for the motor."
+msgstr "A motor célsebessége."
+
+#. PinJoint3D.brief
+#: doc/classes/PinJoint3D.xml
+msgid "A physics joint that attaches two 3D physics bodies at a single point, allowing them to freely rotate."
+msgstr "Fizikai csukló, amely két 3D fizikai testet egyetlen pontban köt össze, így a testek szabadon elfordulhatnak a csatlakozási pont körül."
+
+#. PinJoint3D.description
+#: doc/classes/PinJoint3D.xml
+msgid "A physics joint that attaches two 3D physics bodies at a single point, allowing them to freely rotate. For example, a [RigidBody3D] can be attached to a [StaticBody3D] to create a pendulum or a seesaw."
+msgstr "Fizikai csukló, amely két 3D fizikai testet egyetlen pontban köt össze, így a testek szabadon elfordulhatnak a csatlakozási pont körül. Például egy [RigidBody3D] testet egy [StaticBody3D] testhez kapcsolva ingát vagy mérleghintát készíthetsz."
+
+#. PinJoint3D.params/bias
+#. PinJoint3D.PARAM_BIAS
+#: doc/classes/PinJoint3D.xml
+msgid "The force with which the pinned objects stay in positional relation to each other. The higher, the stronger."
+msgstr "Az erő, amely fenntartja a rögzített testek egymáshoz viszonyított helyzetét. Nagyobb értéknél nagyobb az erő."
+
+#. PinJoint3D.params/damping
+#. PinJoint3D.PARAM_DAMPING
+#: doc/classes/PinJoint3D.xml
+msgid "The force with which the pinned objects stay in velocity relation to each other. The higher, the stronger."
+msgstr "Az erő, amely fenntartja a rögzített testek egymáshoz viszonyított sebességét. Nagyobb értéknél nagyobb az erő."
+
+#. PinJoint3D.params/impulse_clamp
+#. PinJoint3D.PARAM_IMPULSE_CLAMP
+#: doc/classes/PinJoint3D.xml
+msgid "If above 0, this value is the maximum value for an impulse that this Joint3D produces."
+msgstr "Pozitív érték esetén ez a Joint3D csukló által kifejthető impulzus felső határa."
+
+#. SliderJoint3D.brief
+#: doc/classes/SliderJoint3D.xml
+msgid "A physics joint that restricts the movement of a 3D physics body along an axis relative to another physics body."
+msgstr "Fizikai csukló, amely egy 3D fizikai test mozgását egy másik testhez képest egyetlen tengely menti elmozdulásra korlátozza."
+
+#. SliderJoint3D.description
+#: doc/classes/SliderJoint3D.xml
+msgid "A physics joint that restricts the movement of a 3D physics body along an axis relative to another physics body. For example, Body A could be a [StaticBody3D] representing a piston base, while Body B could be a [RigidBody3D] representing the piston head, moving up and down."
+msgstr "Fizikai csukló, amely egy 3D fizikai test mozgását egy másik testhez képest egyetlen tengely menti elmozdulásra korlátozza. Az A test lehet például a dugattyú rögzített alapját képviselő [StaticBody3D], a B test pedig a fel-le mozgó dugattyúfejet képviselő [RigidBody3D]."
+
+#. SliderJoint3D.set_param
+#: doc/classes/SliderJoint3D.xml
+msgid "Assigns [param value] to the given parameter."
+msgstr "A [param value] értéket rendeli a megadott paraméterhez."
