@@ -5564,12 +5564,12 @@ msgstr "Olyan tároló, amely szükség esetén görgetősávokat biztosít a gy
 #. ScrollContainer.description
 #: doc/classes/ScrollContainer.xml
 msgid "A container used to provide a child control with scrollbars when needed. Scrollbars will automatically be drawn at the right (for vertical) or bottom (for horizontal) and will enable dragging to move the viewable Control (and its children) within the ScrollContainer. Scrollbars will also automatically resize the grabber based on the [member Control.custom_minimum_size] of the Control relative to the ScrollContainer."
-msgstr "Olyan tároló, amely szükség esetén görgetősávokat biztosít a gyermek vezérlőelemhez. A függőleges görgetősáv a jobb oldalon, a vízszintes pedig alul jelenik meg. A görgetősávok húzásával a Control csomópontot és gyermekeit mozgathatod a ScrollContainer látható területén belül. A görgetősáv fogantyújának mérete automatikusan alkalmazkodik a [member Control.custom_minimum_size] által meghatározott minimális tartalommérethez, a tároló méretéhez viszonyítva."
+msgstr "Olyan tároló, amely szükség esetén görgetősávokat biztosít a gyermek vezérlőelemhez. A függőleges görgetősáv a jobb oldalon, a vízszintes pedig alul jelenik meg. A görgetősávok húzásával a Control vezérlőelem és gyermekei tartalmát görgetheted a ScrollContainer látható területén belül. A görgetősáv fogantyújának mérete automatikusan alkalmazkodik a [member Control.custom_minimum_size] által meghatározott minimális tartalommérethez, a tároló méretéhez viszonyítva."
 
 #. ScrollContainer.ensure_control_visible
 #: doc/classes/ScrollContainer.xml
 msgid "Ensures the given [param control] is visible (must be a direct or indirect child of the ScrollContainer). Used by [member follow_focus].\n[b]Note:[/b] This will not work on a node that was just added during the same frame. If you want to scroll to a newly added child, you must wait until the next frame using [signal SceneTree.process_frame]:\n[codeblock]\nadd_child(child_node)\nawait get_tree().process_frame\nensure_control_visible(child_node)\n[/codeblock]"
-msgstr "Biztosítja a [param control] vezérlőelem láthatóságát (a ScrollContainer közvetlen vagy közvetett gyermekének kell lennie). A [member follow_focus] tulajdonság használja.\n[b]Megjegyzés:[/b] Az ugyanabban a képkockában hozzáadott csomópontnál ez még nem működik. Új gyermekhez görgetés előtt várd meg a következő képkockát a [signal SceneTree.process_frame] segítségével:\n[codeblock]\nadd_child(child_node)\nawait get_tree().process_frame\nensure_control_visible(child_node)\n[/codeblock]"
+msgstr "Biztosítja a [param control] vezérlőelem láthatóságát (a ScrollContainer közvetlen vagy közvetett gyermekének kell lennie). A [member follow_focus] tulajdonság használja.\n[b]Megjegyzés:[/b] A metódus nem működik az ugyanabban a képkockában frissen hozzáadott csomópontoknál. Új gyermekhez görgetés előtt várd meg a következő képkockát a [signal SceneTree.process_frame] segítségével:\n[codeblock]\nadd_child(child_node)\nawait get_tree().process_frame\nensure_control_visible(child_node)\n[/codeblock]"
 
 #. ScrollContainer.get_h_scroll_bar
 #: doc/classes/ScrollContainer.xml
@@ -5594,17 +5594,17 @@ msgstr "Ha [code]true[/code], a ScrollContainer automatikusan a fókuszba kerül
 #. ScrollContainer.horizontal_scroll_mode
 #: doc/classes/ScrollContainer.xml
 msgid "Controls whether horizontal scrollbar can be used and when it should be visible."
-msgstr "Meghatározza, hogy a vízszintes görgetősáv használható-e, és milyen esetekben jelenjen meg."
+msgstr "Szabályozza, hogy a vízszintes görgetősáv használható-e, és mikor jelenjen meg."
 
 #. ScrollContainer.scroll_deadzone
 #: doc/classes/ScrollContainer.xml
 msgid "Deadzone for touch scrolling. Lower deadzone makes the scrolling more sensitive."
-msgstr "Az érintéses görgetés holtzónájának mérete. Kisebb holtzóna esetén a görgetés érzékenyebben reagál a mozdulatokra."
+msgstr "Az érintéses görgetés holtzónáját adja meg. Minél kisebb a holtzóna, annál érzékenyebb a görgetés."
 
 #. ScrollContainer.scroll_hint_mode
 #: doc/classes/ScrollContainer.xml
 msgid "The way which scroll hints (indicators that show that the content can still be scrolled in a certain direction) will be shown.\n[b]Note:[/b] Hints won't be shown if the content can be scrolled both vertically and horizontally."
-msgstr "Meghatározza a görgetési jelzések megjelenítési módját. Ezek a jelzések mutatják, hogy a tartalom egy adott irányban még tovább görgethető.\n[b]Megjegyzés:[/b] A jelzések nem láthatók, ha a tartalom egyszerre vízszintesen és függőlegesen is görgethető."
+msgstr "Meghatározza a görgetési jelzések megjelenítési módját. A jelzések azt mutatják, hogy a tartalom melyik irányban görgethető még tovább.\n[b]Megjegyzés:[/b] A jelzések nem láthatók, ha a tartalom egyszerre vízszintesen és függőlegesen is görgethető."
 
 #. ScrollContainer.scroll_horizontal
 #: doc/classes/ScrollContainer.xml
@@ -5619,7 +5619,7 @@ msgstr "Ha [code]true[/code], az egérgörgő alapból vízszintesen görget, a 
 #. ScrollContainer.scroll_horizontal_custom_step
 #: doc/classes/ScrollContainer.xml
 msgid "Overrides the [member ScrollBar.custom_step] used when clicking the internal scroll bar's horizontal increment and decrement buttons or when using arrow keys when the [ScrollBar] is focused."
-msgstr "Felülírja a [member ScrollBar.custom_step] értékét, amelyet a belső vízszintes görgetősáv növelő és csökkentő gombjainak használatakor, valamint a fókuszban lévő [ScrollBar] nyílbillentyűs vezérlésekor alkalmaz a rendszer."
+msgstr "Felülírja a [member ScrollBar.custom_step] lépésközét a belső vízszintes görgetősáv növelő- és csökkentőgombjainak használatakor, illetve a fókuszban lévő [ScrollBar] nyílbillentyűs vezérlésekor."
 
 #. ScrollContainer.scroll_vertical
 #: doc/classes/ScrollContainer.xml
@@ -5629,7 +5629,7 @@ msgstr "A függőleges görgetés aktuális értéke.\n[b]Megjegyzés:[/b] Korai
 #. ScrollContainer.scroll_vertical_custom_step
 #: doc/classes/ScrollContainer.xml
 msgid "Overrides the [member ScrollBar.custom_step] used when clicking the internal scroll bar's vertical increment and decrement buttons or when using arrow keys when the [ScrollBar] is focused."
-msgstr "Felülírja a [member ScrollBar.custom_step] értékét, amelyet a belső függőleges görgetősáv növelő és csökkentő gombjainak használatakor, valamint a fókuszban lévő [ScrollBar] nyílbillentyűs vezérlésekor alkalmaz a rendszer."
+msgstr "Felülírja a [member ScrollBar.custom_step] lépésközét a belső függőleges görgetősáv növelő- és csökkentőgombjainak használatakor, illetve a fókuszban lévő [ScrollBar] nyílbillentyűs vezérlésekor."
 
 #. ScrollContainer.tile_scroll_hint
 #: doc/classes/ScrollContainer.xml
@@ -5639,7 +5639,7 @@ msgstr "Ha [code]true[/code], a görgetési jelzés textúrája nyújtás helyet
 #. ScrollContainer.vertical_scroll_mode
 #: doc/classes/ScrollContainer.xml
 msgid "Controls whether vertical scrollbar can be used and when it should be visible."
-msgstr "Meghatározza, hogy a függőleges görgetősáv használható-e, és milyen esetekben jelenjen meg."
+msgstr "Szabályozza, hogy a függőleges görgetősáv használható-e, és mikor jelenjen meg."
 
 #. ScrollContainer.theme.scroll_hint_horizontal_color
 #: doc/classes/ScrollContainer.xml
