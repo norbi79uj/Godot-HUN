@@ -11002,3 +11002,193 @@ msgstr "A jelzés a [member texture] tulajdonság megváltozásakor keletkezik."
 #: doc/classes/TileMapLayer.xml
 msgid "Emitted when this [TileMapLayer]'s properties changes. This includes modified cells, properties, or changes made to its assigned [TileSet].\n[b]Note:[/b] This signal may be emitted very often when batch-modifying a [TileMapLayer]. Avoid executing complex processing in a connected function, and consider delaying it to the end of the frame instead (i.e. calling [method Object.call_deferred])."
 msgstr "A jelzés akkor bocsátódik ki, amikor a [TileMapLayer] módosul: például megváltozik egy cellája, valamelyik tulajdonsága vagy a hozzá rendelt [TileSet].\n[b]Megjegyzés:[/b] A [TileMapLayer] több cellájának együttes módosításakor ez a jelzés nagyon gyakran kibocsátásra kerülhet. A jelzéshez kapcsolt függvényben kerüld a számításigényes műveleteket; érdemes inkább a képkocka végére halasztani a feldolgozást (például a [method Object.call_deferred] meghívásával)."
+
+#. TileMapLayer.DEBUG_VISIBILITY_MODE_DEFAULT
+#: doc/classes/TileMapLayer.xml
+msgid "Hide the collisions or navigation debug shapes in the editor, and use the debug settings to determine their visibility in game (i.e. [member SceneTree.debug_collisions_hint] or [member SceneTree.debug_navigation_hint])."
+msgstr "A szerkesztőben elrejti az ütközési vagy navigációs hibakeresési alakzatokat. Játék közben a hibakeresési beállítások határozzák meg a láthatóságukat ([member SceneTree.debug_collisions_hint] vagy [member SceneTree.debug_navigation_hint])."
+
+#. TileMapLayer.DEBUG_VISIBILITY_MODE_FORCE_HIDE
+#: doc/classes/TileMapLayer.xml
+msgid "Always hide the collisions or navigation debug shapes."
+msgstr "Mindig elrejti az ütközési vagy navigációs hibakeresési alakzatokat."
+
+#. TileMapLayer.DEBUG_VISIBILITY_MODE_FORCE_SHOW
+#: doc/classes/TileMapLayer.xml
+msgid "Always show the collisions or navigation debug shapes."
+msgstr "Mindig megjeleníti az ütközési vagy navigációs hibakeresési alakzatokat."
+
+#. TileData.add_collision_polygon
+#: doc/classes/TileData.xml
+msgid "Adds a collision polygon to the tile on the given TileSet physics layer."
+msgstr "Ütközési sokszöget ad a csempéhez a TileSet megadott fizikai rétegén."
+
+#. TileData.add_occluder_polygon
+#: doc/classes/TileData.xml
+msgid "Adds an occlusion polygon to the tile on the TileSet occlusion layer with index [param layer_id]."
+msgstr "Fénykitakarási sokszöget ad a csempéhez a TileSet [param layer_id] indexű fénykitakarási rétegén."
+
+#. TileData.get_collision_polygon_one_way_margin
+#: doc/classes/TileData.xml
+msgid "Returns the one-way margin (for one-way platforms) of the polygon at index [param polygon_index] for TileSet physics layer with index [param layer_id]."
+msgstr "Visszaadja a [param polygon_index] indexű sokszög egyirányú ütközési ráhagyását a TileSet [param layer_id] indexű fizikai rétegén. Ez a ráhagyás az egyirányú platformoknál használatos."
+
+#. TileData.get_constant_angular_velocity
+#: doc/classes/TileData.xml
+msgid "Returns the constant angular velocity applied to objects colliding with this tile."
+msgstr "Visszaadja a csempével ütköző objektumokra alkalmazott állandó szögsebességet."
+
+#. TileData.get_constant_linear_velocity
+#: doc/classes/TileData.xml
+msgid "Returns the constant linear velocity applied to objects colliding with this tile."
+msgstr "Visszaadja a csempével ütköző objektumokra alkalmazott állandó lineáris sebességet."
+
+#. TileData.get_custom_data_by_layer_id
+#: doc/classes/TileData.xml
+msgid "Returns the custom data value for custom data layer with index [param layer_id]."
+msgstr "Visszaadja a [param layer_id] indexű egyéni adatréteghez tartozó adatértéket."
+
+#. TileData.get_occluder
+#: doc/classes/TileData.xml
+msgid "Returns the occluder polygon of the tile for the TileSet occlusion layer with index [param layer_id].\n[param flip_h], [param flip_v], and [param transpose] allow transforming the returned polygon."
+msgstr "Visszaadja a csempe fénykitakarási sokszögét a TileSet [param layer_id] indexű fénykitakarási rétegéről.\nA [param flip_h], [param flip_v] és [param transpose] paraméterekkel átalakíthatod a visszaadott sokszöget."
+
+#. TileData.get_occluder_polygon
+#: doc/classes/TileData.xml
+msgid "Returns the occluder polygon at index [param polygon_index] from the TileSet occlusion layer with index [param layer_id].\nThe [param flip_h], [param flip_v], and [param transpose] parameters can be [code]true[/code] to transform the returned polygon."
+msgstr "Visszaadja a [param polygon_index] indexű fénykitakarási sokszöget a TileSet [param layer_id] indexű fénykitakarási rétegéről.\nA visszaadott sokszöget a [param flip_h], [param flip_v] és [param transpose] paraméterek [code]true[/code] értékével alakíthatod át."
+
+#. TileData.get_occluder_polygons_count
+#: doc/classes/TileData.xml
+msgid "Returns the number of occluder polygons of the tile in the TileSet occlusion layer with index [param layer_id]."
+msgstr "Visszaadja a csempe fénykitakarási sokszögeinek számát a TileSet [param layer_id] indexű fénykitakarási rétegén."
+
+#. TileData.is_collision_polygon_one_way
+#: doc/classes/TileData.xml
+msgid "Returns whether one-way collisions are enabled for the polygon at index [param polygon_index] for TileSet physics layer with index [param layer_id]."
+msgstr "Megadja, hogy engedélyezve van-e az egyirányú ütközés a [param polygon_index] indexű sokszögnél a TileSet [param layer_id] indexű fizikai rétegén."
+
+#. TileData.is_valid_terrain_peering_bit
+#: doc/classes/TileData.xml
+msgid "Returns whether the given [param peering_bit] direction is valid for this tile."
+msgstr "Megadja, hogy a [param peering_bit] paraméterben megadott terepilleszkedési irány érvényes-e a csempéhez."
+
+#. TileData.remove_collision_polygon
+#: doc/classes/TileData.xml
+msgid "Removes the polygon at index [param polygon_index] for TileSet physics layer with index [param layer_id]."
+msgstr "Eltávolítja a [param polygon_index] indexű sokszöget a TileSet [param layer_id] indexű fizikai rétegéről."
+
+#. TileData.remove_occluder_polygon
+#: doc/classes/TileData.xml
+msgid "Removes the polygon at index [param polygon_index] for TileSet occlusion layer with index [param layer_id]."
+msgstr "Eltávolítja a [param polygon_index] indexű sokszöget a TileSet [param layer_id] indexű fénykitakarási rétegéről."
+
+#. TileData.set_collision_polygon_one_way
+#: doc/classes/TileData.xml
+msgid "Enables/disables one-way collisions on the polygon at index [param polygon_index] for TileSet physics layer with index [param layer_id]."
+msgstr "Engedélyezi vagy letiltja az egyirányú ütközést a [param polygon_index] indexű sokszögnél a TileSet [param layer_id] indexű fizikai rétegén."
+
+#. TileData.set_collision_polygon_one_way_margin
+#: doc/classes/TileData.xml
+msgid "Sets the one-way margin (for one-way platforms) of the polygon at index [param polygon_index] for TileSet physics layer with index [param layer_id]."
+msgstr "Beállítja a [param polygon_index] indexű sokszög egyirányú ütközési ráhagyását a TileSet [param layer_id] indexű fizikai rétegén. Ez a ráhagyás az egyirányú platformoknál használatos."
+
+#. TileData.set_collision_polygons_count
+#: doc/classes/TileData.xml
+msgid "Sets the polygons count for TileSet physics layer with index [param layer_id]."
+msgstr "Beállítja a csempe ütközési sokszögeinek számát a TileSet [param layer_id] indexű fizikai rétegén."
+
+#. TileData.set_constant_angular_velocity
+#: doc/classes/TileData.xml
+msgid "Sets the constant angular velocity. This does not rotate the tile. This angular velocity is applied to objects colliding with this tile."
+msgstr "Beállítja az állandó szögsebességet. Ez a csempével ütköző objektumokra hat, maga a csempe nem fordul el."
+
+#. TileData.set_constant_linear_velocity
+#: doc/classes/TileData.xml
+msgid "Sets the constant linear velocity. This does not move the tile. This linear velocity is applied to objects colliding with this tile. This is useful to create conveyor belts."
+msgstr "Beállítja az állandó lineáris sebességet. Ez a csempével ütköző objektumokra hat, maga a csempe nem mozdul el. Így például futószalagot hozhatsz létre."
+
+#. TileData.set_custom_data_by_layer_id
+#: doc/classes/TileData.xml
+msgid "Sets the tile's custom data value for the TileSet custom data layer with index [param layer_id]."
+msgstr "Beállítja a csempe egyéni adatértékét a TileSet [param layer_id] indexű egyéni adatrétegén."
+
+#. TileData.set_navigation_polygon
+#: doc/classes/TileData.xml
+msgid "Sets the navigation polygon for the TileSet navigation layer with index [param layer_id]."
+msgstr "Beállítja a csempe navigációs sokszögét a TileSet [param layer_id] indexű navigációs rétegén."
+
+#. TileData.set_occluder
+#: doc/classes/TileData.xml
+msgid "Sets the occluder for the TileSet occlusion layer with index [param layer_id]."
+msgstr "Beállítja a csempe fénykitakaróját a TileSet [param layer_id] indexű fénykitakarási rétegén."
+
+#. TileData.set_occluder_polygon
+#: doc/classes/TileData.xml
+msgid "Sets the occluder for polygon with index [param polygon_index] in the TileSet occlusion layer with index [param layer_id]."
+msgstr "Beállítja a [param polygon_index] indexű fénykitakarási sokszöget a TileSet [param layer_id] indexű fénykitakarási rétegén."
+
+#. TileData.set_occluder_polygons_count
+#: doc/classes/TileData.xml
+msgid "Sets the occluder polygon count in the TileSet occlusion layer with index [param layer_id]."
+msgstr "Beállítja a csempe fénykitakarási sokszögeinek számát a TileSet [param layer_id] indexű fénykitakarási rétegén."
+
+#. TileData.set_terrain_peering_bit
+#: doc/classes/TileData.xml
+msgid "Sets the tile's terrain bit for the given [param peering_bit] direction. To check that a direction is valid, use [method is_valid_terrain_peering_bit]."
+msgstr "Beállítja a csempe terepilleszkedési bitjét a [param peering_bit] irányhoz. Az irány érvényességét a [method is_valid_terrain_peering_bit] metódussal ellenőrizheted."
+
+#. TileData.changed
+#: doc/classes/TileData.xml
+msgid "Emitted when any of the properties are changed."
+msgstr "Ez a jelzés bármelyik tulajdonság megváltozásakor létrejön."
+
+#. TileData.terrain
+#: doc/classes/TileData.xml
+msgid "ID of the terrain from the terrain set that the tile uses."
+msgstr "A csempe által használt terep azonosítója a terepkészleten belül."
+
+#. TileData.terrain_set
+#: doc/classes/TileData.xml
+msgid "ID of the terrain set that the tile uses."
+msgstr "A csempe által használt terepkészlet azonosítója."
+
+#. CanvasGroup.brief
+#: doc/classes/CanvasGroup.xml
+msgid "Merges several 2D nodes into a single draw operation."
+msgstr "Több 2D-s csomópontot egyetlen művelettel rajzol ki."
+
+#. CanvasGroup.description
+#: doc/classes/CanvasGroup.xml
+msgid "Child [CanvasItem] nodes of a [CanvasGroup] are drawn as a single object. It allows to e.g. draw overlapping translucent 2D nodes without causing the overlapping sections to be more opaque than intended (set the [member CanvasItem.self_modulate] property on the [CanvasGroup] to achieve this effect).\n[b]Note:[/b] The [CanvasGroup] uses a custom shader to read from the backbuffer to draw its children. Assigning a [Material] to the [CanvasGroup] overrides the built-in shader. To duplicate the behavior of the built-in shader in a custom [Shader], use the following:\n[codeblock]\nshader_type canvas_item;\nrender_mode unshaded;\n\nuniform sampler2D screen_texture : hint_screen_texture, repeat_disable, filter_nearest;\n\nvoid fragment() {\n\tvec4 c = textureLod(screen_texture, SCREEN_UV, 0.0);\n\n\tif (c.a > 0.0001) {\n\t\tc.rgb /= c.a;\n\t}\n\n\tCOLOR *= c;\n}\n[/codeblock]\n[b]Note:[/b] Since [CanvasGroup] and [member CanvasItem.clip_children] both utilize the backbuffer, children of a [CanvasGroup] who have their [member CanvasItem.clip_children] set to anything other than [constant CanvasItem.CLIP_CHILDREN_DISABLED] will not function correctly."
+msgstr "A [CanvasGroup] a gyermek [CanvasItem] csomópontjait egyetlen objektumként rajzolja ki. Így például áttetsző, egymást átfedő 2D-s csomópontokat jeleníthetsz meg anélkül, hogy az átfedő részek a kívántnál kevésbé átlátszóvá válnának. Ehhez a [CanvasGroup] csomóponton állítsd be a [member CanvasItem.self_modulate] tulajdonságot.\n[b]Megjegyzés:[/b] A [CanvasGroup] saját árnyalóval olvassa be a háttérpuffer adatait a gyermekei kirajzolásához. Ha [Material] erőforrást rendelsz a [CanvasGroup] csomóponthoz, az felülírja a beépített árnyalót. A következő kóddal egyéni [Shader] erőforrásban is megvalósíthatod a beépített árnyaló működését.\n[codeblock]\nshader_type canvas_item;\nrender_mode unshaded;\n\nuniform sampler2D screen_texture : hint_screen_texture, repeat_disable, filter_nearest;\n\nvoid fragment() {\n\tvec4 c = textureLod(screen_texture, SCREEN_UV, 0.0);\n\n\tif (c.a > 0.0001) {\n\t\tc.rgb /= c.a;\n\t}\n\n\tCOLOR *= c;\n}\n[/codeblock]\n[b]Megjegyzés:[/b] A [CanvasGroup] és a [member CanvasItem.clip_children] egyaránt a háttérpuffert használja. Ezért a [CanvasGroup] azon gyermekei nem működnek megfelelően, amelyeknél a [member CanvasItem.clip_children] értéke eltér a [constant CanvasItem.CLIP_CHILDREN_DISABLED] értéktől."
+
+#. CanvasGroup.clear_margin
+#: doc/classes/CanvasGroup.xml
+msgid "Sets the size of the margin used to expand the clearing rect of this [CanvasGroup]. This expands the area of the backbuffer that will be used by the [CanvasGroup]. A smaller margin will reduce the area of the backbuffer used which can increase performance, however if [member use_mipmaps] is enabled, a small margin may result in mipmap errors at the edge of the [CanvasGroup]. Accordingly, this should be left as small as possible, but should be increased if artifacts appear along the edges of the canvas group."
+msgstr "Megadja, milyen széles ráhagyással bővüljön a [CanvasGroup] törlési téglalapja. A ráhagyás növeli a háttérpuffernek azt a részét, amelyet a [CanvasGroup] használ. Kisebb ráhagyásnál kevesebb területet kell feldolgozni, ami javíthatja a teljesítményt. Bekapcsolt [member use_mipmaps] esetén viszont a túl kis ráhagyás hibás mipmap-mintavételezést okozhat a [CanvasGroup] szélén. Használj minél kisebb értéket, és akkor növeld, ha a csoport szélein képhibák jelennek meg."
+
+#. CanvasGroup.fit_margin
+#: doc/classes/CanvasGroup.xml
+msgid "Sets the size of a margin used to expand the drawable rect of this [CanvasGroup]. The size of the [CanvasGroup] is determined by fitting a rect around its children then expanding that rect by [member fit_margin]. This increases both the backbuffer area used and the area covered by the [CanvasGroup] both of which can reduce performance. This should be kept as small as possible and should only be expanded when an increased size is needed (e.g. for custom shader effects)."
+msgstr "Megadja, milyen széles ráhagyással bővüljön a [CanvasGroup] kirajzolható téglalapja. A rendszer a [CanvasGroup] méretét a gyermekcsomópontokat körülvevő téglalapból számítja ki, amelyet a [member fit_margin] értékével bővít. Ezzel a háttérpufferből használt terület és a [CanvasGroup] által lefedett terület is nő, és mindkettő ronthatja a teljesítményt. Használj minél kisebb értéket, és csak akkor növeld, ha nagyobb területre van szükség, például egy egyéni árnyalóeffektushoz."
+
+#. CanvasGroup.use_mipmaps
+#: doc/classes/CanvasGroup.xml
+msgid "If [code]true[/code], calculates mipmaps for the backbuffer before drawing the [CanvasGroup] so that mipmaps can be used in a custom [ShaderMaterial] attached to the [CanvasGroup]. Generating mipmaps has a performance cost so this should not be enabled unless required."
+msgstr "Ha az érték [code]true[/code], a rendszer a [CanvasGroup] kirajzolása előtt mipmap-szinteket készít a háttérpufferhez. Ezeket a [CanvasGroup] csomóponthoz rendelt egyéni [ShaderMaterial] használhatja. A mipmap-szintek előállítása többletmunkával jár, ezért csak szükség esetén engedélyezd."
+
+#. Marker2D.brief
+#: doc/classes/Marker2D.xml
+msgid "Generic 2D position hint for editing."
+msgstr "Általános célú 2D pozíciójelölő a szerkesztőben."
+
+#. Marker2D.description
+#: doc/classes/Marker2D.xml
+msgid "Generic 2D position hint for editing. It's just like a plain [Node2D], but it displays as a cross in the 2D editor at all times. You can set the cross' visual size by using the gizmo in the 2D editor while the node is selected."
+msgstr "Általános célú 2D pozíciójelölő a szerkesztőben. Úgy működik, mint egy egyszerű [Node2D], de a 2D-s szerkesztőben mindig kereszt jelöli. A kereszt megjelenítési méretét a csomópont kijelölése után a szerkesztőfogantyúval állíthatod be."
+
+#. Marker2D.gizmo_extents
+#: doc/classes/Marker2D.xml
+msgid "Size of the gizmo cross that appears in the editor."
+msgstr "A szerkesztőben megjelenő kereszt mérete."
