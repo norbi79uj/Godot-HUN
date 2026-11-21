@@ -12677,3 +12677,185 @@ msgstr "A sugár által elsőként metszett objektum alakzatának azonosítójá
 #: doc/classes/CollisionPolygon2D.xml
 msgid "Collisions will only include the polygon edges. In this mode the node has the same effect as a single [ConcavePolygonShape2D] made of segments, with the restriction that each segment (after the first one) starts where the previous one ends, and the last one ends where the first one starts (forming a closed but hollow polygon)."
 msgstr "Csak a sokszög élei vesznek részt az ütközésekben. Ebben a módban a csomópont egyetlen, szakaszokból álló [ConcavePolygonShape2D] alakzatnak felel meg. Az első kivételével minden szakasz az előző végpontjában kezdődik, az utolsó pedig az első kezdőpontjában végződik. Így zárt körvonalú, üres belsejű sokszög jön létre."
+
+#. PhysicsDirectSpaceState2D.brief
+#: doc/classes/PhysicsDirectSpaceState2D.xml
+msgid "Provides direct access to a physics space in the [PhysicsServer2D]."
+msgstr "Közvetlen hozzáférést ad a [PhysicsServer2D] egyik fizikai teréhez."
+
+#. PhysicsDirectSpaceState2D.description
+#: doc/classes/PhysicsDirectSpaceState2D.xml
+msgid "Provides direct access to a physics space in the [PhysicsServer2D]. It's used mainly to do queries against objects and areas residing in a given space.\n[b]Note:[/b] This class is not meant to be instantiated directly. Use [member World2D.direct_space_state] to get the world's physics 2D space state."
+msgstr "Közvetlen hozzáférést ad a [PhysicsServer2D] egyik fizikai teréhez. Főként az adott térben lévő objektumok és területek lekérdezésére szolgál.\n[b]Megjegyzés:[/b] Ezt az osztályt nem közvetlen példányosításra tervezték. A világ 2D fizikai terének állapotát a [member World2D.direct_space_state] tulajdonságon keresztül érheted el."
+
+#. PhysicsDirectSpaceState2D.cast_motion
+#: doc/classes/PhysicsDirectSpaceState2D.xml
+msgid "Checks how far a [Shape2D] can move without colliding. All the parameters for the query, including the shape and the motion, are supplied through a [PhysicsShapeQueryParameters2D] object.\nReturns an array with the safe and unsafe proportions (between 0 and 1) of the motion. The safe proportion is the maximum fraction of the motion that can be made without a collision. The unsafe proportion is the minimum fraction of the distance that must be moved for a collision. If no collision is detected a result of [code][1.0, 1.0][/code] will be returned.\n[b]Note:[/b] Any [Shape2D]s that the shape is already colliding with e.g. inside of, will be ignored. Use [method collide_shape] to determine the [Shape2D]s that the shape is already colliding with."
+msgstr "Megvizsgálja, milyen messzire mozdulhat el egy [Shape2D] ütközés nélkül. A lekérdezés összes paraméterét, így az alakzatot és az elmozdulást is, egy [PhysicsShapeQueryParameters2D] objektumban kell megadni.\nA visszaadott tömb két, 0 és 1 közötti arányt tartalmaz. A biztonságos arány a tervezett elmozdulás legnagyobb olyan hányada, amely ütközés nélkül megtehető. A másik arány azt a legkisebb hányadot adja meg, amelynél már ütközés történik. Ha a vizsgálat nem talál ütközést, az eredmény [code][1.0, 1.0][/code].\n[b]Megjegyzés:[/b] A vizsgálat kihagyja azokat a [Shape2D] alakzatokat, amelyekkel a vizsgált alakzat már ütközik, például mert a belsejükben van. A már ütköző [Shape2D] alakzatok megkereséséhez használd a [method collide_shape] metódust."
+
+#. PhysicsDirectSpaceState2D.collide_shape
+#: doc/classes/PhysicsDirectSpaceState2D.xml
+msgid "Checks the intersections of a shape, given through a [PhysicsShapeQueryParameters2D] object, against the space. The resulting array contains a list of points where the shape intersects another. Like with [method intersect_shape], the number of returned results can be limited to save processing time.\nReturned points are a list of pairs of contact points. For each pair the first one is in the shape passed in [PhysicsShapeQueryParameters2D] object, second one is in the collided shape from the physics space."
+msgstr "Megvizsgálja, hol metsz más alakzatokat a fizikai térben a [PhysicsShapeQueryParameters2D] objektumban megadott alakzat. Az eredmény egy tömb, amely a metszésnél kapott érintkezési pontokat tartalmazza. A [method intersect_shape] metódushoz hasonlóan az eredmények száma korlátozható a feldolgozási idő csökkentéséhez.\nA tömb érintkezési pontpárokból áll. Minden pár első pontja a [PhysicsShapeQueryParameters2D] objektumban megadott alakzathoz tartozik, a második pedig a fizikai térben vele ütköző alakzathoz."
+
+#. PhysicsDirectSpaceState2D.intersect_point
+#: doc/classes/PhysicsDirectSpaceState2D.xml
+msgid "Checks whether a point is inside any solid shape. Position and other parameters are defined through [PhysicsPointQueryParameters2D]. The shapes the point is inside of are returned in an array containing dictionaries with the following fields:\n[code]collider[/code]: The colliding object.\n[code]collider_id[/code]: The colliding object's ID.\n[code]rid[/code]: The intersecting object's [RID].\n[code]shape[/code]: The shape index of the colliding shape.\nThe number of intersections can be limited with the [param max_results] parameter, to reduce the processing time.\n[b]Note:[/b] [ConcavePolygonShape2D]s and [CollisionPolygon2D]s in [code]Segments[/code] build mode are not solid shapes. Therefore, they will not be detected."
+msgstr "Megvizsgálja, hogy egy pont valamelyik tömör alakzat belsejébe esik-e. A pont helyzetét és a többi paramétert a [PhysicsPointQueryParameters2D] objektumban kell megadni. A metódus a pontot tartalmazó alakzatokat tömbben adja vissza. A tömb szótárainak mezői:\n[code]collider[/code]: Az ütköző objektum.\n[code]collider_id[/code]: Az ütköző objektum azonosítója.\n[code]rid[/code]: A találatot adó objektum [RID] azonosítója.\n[code]shape[/code]: A találatot adó alakzat indexe.\nA találatok száma a [param max_results] paraméterrel korlátozható a feldolgozási idő csökkentéséhez.\n[b]Megjegyzés:[/b] A [ConcavePolygonShape2D] alakzatok és a [code]Segments[/code] módban létrehozott [CollisionPolygon2D] alakzatok nem tömörek, ezért a lekérdezés nem érzékeli őket."
+
+#. PhysicsDirectSpaceState2D.intersect_ray
+#: doc/classes/PhysicsDirectSpaceState2D.xml
+msgid "Intersects a ray in a given space. Ray position and other parameters are defined through [PhysicsRayQueryParameters2D]. The returned object is a dictionary with the following fields:\n[code]collider[/code]: The colliding object.\n[code]collider_id[/code]: The colliding object's ID.\n[code]normal[/code]: The object's surface normal at the intersection point, or [code]Vector2(0, 0)[/code] if the ray starts inside the shape and [member PhysicsRayQueryParameters2D.hit_from_inside] is [code]true[/code].\n[code]position[/code]: The intersection point.\n[code]rid[/code]: The intersecting object's [RID].\n[code]shape[/code]: The shape index of the colliding shape.\nIf the ray did not intersect anything, then an empty dictionary is returned instead."
+msgstr "Megvizsgálja, mit metsz a sugár a megadott fizikai térben. A sugár helyzetét és a többi paramétert a [PhysicsRayQueryParameters2D] objektumban kell megadni. Az eredmény egy szótár a következő mezőkkel:\n[code]collider[/code]: Az ütköző objektum.\n[code]collider_id[/code]: Az ütköző objektum azonosítója.\n[code]normal[/code]: Az objektum felületének normálvektora a metszéspontban. Ha a sugár az alakzat belsejéből indul és a [member PhysicsRayQueryParameters2D.hit_from_inside] értéke [code]true[/code], akkor [code]Vector2(0, 0)[/code].\n[code]position[/code]: A metszéspont.\n[code]rid[/code]: A találatot adó objektum [RID] azonosítója.\n[code]shape[/code]: A találatot adó alakzat indexe.\nHa a sugár semmit sem metsz, az eredmény üres szótár."
+
+#. PhysicsDirectSpaceState2D.intersect_shape
+#: doc/classes/PhysicsDirectSpaceState2D.xml
+msgid "Checks the intersections of a shape, given through a [PhysicsShapeQueryParameters2D] object, against the space. The intersected shapes are returned in an array containing dictionaries with the following fields:\n[code]collider[/code]: The colliding object.\n[code]collider_id[/code]: The colliding object's ID.\n[code]rid[/code]: The intersecting object's [RID].\n[code]shape[/code]: The shape index of the colliding shape.\nThe number of intersections can be limited with the [param max_results] parameter, to reduce the processing time."
+msgstr "Megvizsgálja, mely alakzatokat metszi a fizikai térben a [PhysicsShapeQueryParameters2D] objektumban megadott alakzat. A metódus a találatokat tömbben adja vissza. A tömb szótárainak mezői:\n[code]collider[/code]: Az ütköző objektum.\n[code]collider_id[/code]: Az ütköző objektum azonosítója.\n[code]rid[/code]: A találatot adó objektum [RID] azonosítója.\n[code]shape[/code]: A találatot adó alakzat indexe.\nA találatok száma a [param max_results] paraméterrel korlátozható a feldolgozási idő csökkentéséhez."
+
+#. PhysicsPointQueryParameters2D.brief
+#: doc/classes/PhysicsPointQueryParameters2D.xml
+msgid "Provides parameters for [method PhysicsDirectSpaceState2D.intersect_point]."
+msgstr "A [method PhysicsDirectSpaceState2D.intersect_point] metódus paramétereit tartalmazza."
+
+#. PhysicsPointQueryParameters2D.description
+#: doc/classes/PhysicsPointQueryParameters2D.xml
+msgid "By changing various properties of this object, such as the point position, you can configure the parameters for [method PhysicsDirectSpaceState2D.intersect_point]."
+msgstr "Az objektum tulajdonságainak módosításával, például a pont helyzetének megadásával, beállíthatod a [method PhysicsDirectSpaceState2D.intersect_point] metódus paramétereit."
+
+#. PhysicsPointQueryParameters2D.canvas_instance_id
+#: doc/classes/PhysicsPointQueryParameters2D.xml
+msgid "If different from [code]0[/code], restricts the query to a specific canvas layer specified by its instance ID. See [method Object.get_instance_id].\nIf [code]0[/code], restricts the query to the Viewport's default canvas layer."
+msgstr "Ha az értéke eltér a [code]0[/code] értéktől, a lekérdezés az ezzel a példányazonosítóval megadott vászonrétegre korlátozódik. Lásd a [method Object.get_instance_id] metódust.\nHa az értéke [code]0[/code], a lekérdezés a nézetablak alapértelmezett vászonrétegére korlátozódik."
+
+#. PhysicsPointQueryParameters2D.collide_with_areas
+#. PhysicsRayQueryParameters2D.collide_with_areas
+#. PhysicsShapeQueryParameters2D.collide_with_areas
+#: doc/classes/PhysicsPointQueryParameters2D.xml doc/classes/PhysicsRayQueryParameters2D.xml doc/classes/PhysicsShapeQueryParameters2D.xml
+msgid "If [code]true[/code], the query will take [Area2D]s into account."
+msgstr "Ha az értéke [code]true[/code], a lekérdezés az [Area2D] területeket is figyelembe veszi."
+
+#. PhysicsPointQueryParameters2D.collide_with_bodies
+#. PhysicsRayQueryParameters2D.collide_with_bodies
+#. PhysicsShapeQueryParameters2D.collide_with_bodies
+#: doc/classes/PhysicsPointQueryParameters2D.xml doc/classes/PhysicsRayQueryParameters2D.xml doc/classes/PhysicsShapeQueryParameters2D.xml
+msgid "If [code]true[/code], the query will take [PhysicsBody2D]s into account."
+msgstr "Ha az értéke [code]true[/code], a lekérdezés a [PhysicsBody2D] testeket is figyelembe veszi."
+
+#. PhysicsPointQueryParameters2D.collision_mask
+#. PhysicsPointQueryParameters3D.collision_mask
+#. PhysicsRayQueryParameters2D.collision_mask
+#. PhysicsRayQueryParameters3D.collision_mask
+#. PhysicsShapeQueryParameters2D.collision_mask
+#. PhysicsShapeQueryParameters3D.collision_mask
+#: doc/classes/PhysicsPointQueryParameters2D.xml doc/classes/PhysicsPointQueryParameters3D.xml doc/classes/PhysicsRayQueryParameters2D.xml doc/classes/PhysicsRayQueryParameters3D.xml doc/classes/PhysicsShapeQueryParameters2D.xml doc/classes/PhysicsShapeQueryParameters3D.xml
+msgid "The physics layers the query will detect (as a bitmask). By default, all collision layers are detected. See [url=$DOCS_URL/tutorials/physics/physics_introduction.html#collision-layers-and-masks]Collision layers and masks[/url] in the documentation for more information."
+msgstr "A lekérdezés által figyelt fizikai rétegek bitmaszkja. Alapértelmezés szerint a lekérdezés minden ütközési réteget figyel. További részletek a dokumentáció [url=$DOCS_URL/tutorials/physics/physics_introduction.html#collision-layers-and-masks]Ütközési rétegek és maszkok[/url] szakaszában találhatók."
+
+#. PhysicsPointQueryParameters2D.exclude
+#. PhysicsRayQueryParameters2D.exclude
+#. PhysicsShapeQueryParameters2D.exclude
+#: doc/classes/PhysicsPointQueryParameters2D.xml doc/classes/PhysicsRayQueryParameters2D.xml doc/classes/PhysicsShapeQueryParameters2D.xml
+msgid "The list of object [RID]s that will be excluded from collisions. Use [method CollisionObject2D.get_rid] to get the [RID] associated with a [CollisionObject2D]-derived node.\n[b]Note:[/b] The returned array is copied and any changes to it will not update the original property value. To update the value you need to modify the returned array, and then assign it to the property again."
+msgstr "Az ütközésvizsgálatból kizárandó objektumok [RID] azonosítóinak listája. A [CollisionObject2D] osztályból származó csomópontok [RID] azonosítóját a [method CollisionObject2D.get_rid] metódussal kérheted le.\n[b]Megjegyzés:[/b] A lekért tömb egy másolat, így a módosítása nem változtatja meg a tulajdonság eredeti értékét. A tulajdonság frissítéséhez módosítsd a lekért tömböt, majd rendeld vissza a tulajdonsághoz."
+
+#. PhysicsPointQueryParameters2D.position
+#. PhysicsPointQueryParameters3D.position
+#: doc/classes/PhysicsPointQueryParameters2D.xml doc/classes/PhysicsPointQueryParameters3D.xml
+msgid "The position being queried for, in global coordinates."
+msgstr "A vizsgált pont helyzete globális koordinátákban."
+
+#. PhysicsRayQueryParameters2D.brief
+#: doc/classes/PhysicsRayQueryParameters2D.xml
+msgid "Provides parameters for [method PhysicsDirectSpaceState2D.intersect_ray]."
+msgstr "A [method PhysicsDirectSpaceState2D.intersect_ray] metódus paramétereit tartalmazza."
+
+#. PhysicsRayQueryParameters2D.description
+#: doc/classes/PhysicsRayQueryParameters2D.xml
+msgid "By changing various properties of this object, such as the ray position, you can configure the parameters for [method PhysicsDirectSpaceState2D.intersect_ray]."
+msgstr "Az objektum tulajdonságainak módosításával, például a sugár helyzetének megadásával, beállíthatod a [method PhysicsDirectSpaceState2D.intersect_ray] metódus paramétereit."
+
+#. PhysicsRayQueryParameters2D.create
+#: doc/classes/PhysicsRayQueryParameters2D.xml
+msgid "Returns a new, pre-configured [PhysicsRayQueryParameters2D] object. Use it to quickly create query parameters using the most common options.\n[codeblock]\nvar query = PhysicsRayQueryParameters2D.create(global_position, global_position + Vector2(0, 100))\nvar collision = get_world_2d().direct_space_state.intersect_ray(query)\n[/codeblock]"
+msgstr "Új, előre beállított [PhysicsRayQueryParameters2D] objektumot ad vissza. A leggyakoribb beállításokkal gyorsan létrehozhatod vele a lekérdezés paramétereit.\n[codeblock]\nvar query = PhysicsRayQueryParameters2D.create(global_position, global_position + Vector2(0, 100))\nvar collision = get_world_2d().direct_space_state.intersect_ray(query)\n[/codeblock]"
+
+#. PhysicsRayQueryParameters2D.from
+#. PhysicsRayQueryParameters3D.from
+#: doc/classes/PhysicsRayQueryParameters2D.xml doc/classes/PhysicsRayQueryParameters3D.xml
+msgid "The starting point of the ray being queried for, in global coordinates."
+msgstr "A vizsgált sugár kezdőpontja globális koordinátákban."
+
+#. PhysicsRayQueryParameters2D.hit_from_inside
+#: doc/classes/PhysicsRayQueryParameters2D.xml
+msgid "If [code]true[/code], the query will detect a hit when starting inside shapes. In this case the collision normal will be [code]Vector2(0, 0)[/code]. Does not affect concave polygon shapes."
+msgstr "Ha az értéke [code]true[/code], a lekérdezés akkor is találatot jelez, ha a sugár az alakzat belsejéből indul. Ilyenkor az ütközési normálvektor [code]Vector2(0, 0)[/code]. A beállítás a homorú sokszögekre nincs hatással."
+
+#. PhysicsRayQueryParameters2D.to
+#. PhysicsRayQueryParameters3D.to
+#: doc/classes/PhysicsRayQueryParameters2D.xml doc/classes/PhysicsRayQueryParameters3D.xml
+msgid "The ending point of the ray being queried for, in global coordinates."
+msgstr "A vizsgált sugár végpontja globális koordinátákban."
+
+#. PhysicsShapeQueryParameters2D.brief
+#: doc/classes/PhysicsShapeQueryParameters2D.xml
+msgid "Provides parameters for [PhysicsDirectSpaceState2D]'s methods."
+msgstr "A [PhysicsDirectSpaceState2D] metódusainak paramétereit tartalmazza."
+
+#. PhysicsShapeQueryParameters2D.description
+#: doc/classes/PhysicsShapeQueryParameters2D.xml
+msgid "By changing various properties of this object, such as the shape, you can configure the parameters for [PhysicsDirectSpaceState2D]'s methods."
+msgstr "Az objektum tulajdonságainak módosításával, például az alakzat megadásával, beállíthatod a [PhysicsDirectSpaceState2D] metódusainak paramétereit."
+
+#. PhysicsShapeQueryParameters2D.margin
+#. PhysicsShapeQueryParameters3D.margin
+#: doc/classes/PhysicsShapeQueryParameters2D.xml doc/classes/PhysicsShapeQueryParameters3D.xml
+msgid "The collision margin for the shape."
+msgstr "Az alakzathoz tartozó ütközési ráhagyás."
+
+#. PhysicsShapeQueryParameters2D.motion
+#. PhysicsShapeQueryParameters3D.motion
+#: doc/classes/PhysicsShapeQueryParameters2D.xml doc/classes/PhysicsShapeQueryParameters3D.xml
+msgid "The motion of the shape being queried for."
+msgstr "A vizsgált alakzat elmozdulása."
+
+#. PhysicsShapeQueryParameters2D.shape
+#: doc/classes/PhysicsShapeQueryParameters2D.xml
+msgid "The [Shape2D] that will be used for collision/intersection queries. This stores the actual reference which avoids the shape to be released while being used for queries, so always prefer using this over [member shape_rid]."
+msgstr "Az ütközés- és metszésvizsgálatokhoz használt [Shape2D] alakzat. Ez a tulajdonság közvetlen hivatkozást tárol az alakzatra, így az a lekérdezések alatt nem szabadul fel. Ezért ezt részesítsd előnyben a [member shape_rid] helyett."
+
+#. PhysicsShapeQueryParameters2D.shape_rid
+#: doc/classes/PhysicsShapeQueryParameters2D.xml
+msgid "The queried shape's [RID] that will be used for collision/intersection queries. Use this over [member shape] if you want to optimize for performance using the Servers API:\n[codeblocks]\n[gdscript]\nvar shape_rid = PhysicsServer2D.circle_shape_create()\nvar radius = 64\nPhysicsServer2D.shape_set_data(shape_rid, radius)\n\nvar params = PhysicsShapeQueryParameters2D.new()\nparams.shape_rid = shape_rid\n\n# Execute physics queries here...\n\n# Release the shape when done with physics queries.\nPhysicsServer2D.free_rid(shape_rid)\n[/gdscript]\n[csharp]\nRID shapeRid = PhysicsServer2D.CircleShapeCreate();\nint radius = 64;\nPhysicsServer2D.ShapeSetData(shapeRid, radius);\n\nvar params = new PhysicsShapeQueryParameters2D();\nparams.ShapeRid = shapeRid;\n\n// Execute physics queries here...\n\n// Release the shape when done with physics queries.\nPhysicsServer2D.FreeRid(shapeRid);\n[/csharp]\n[/codeblocks]"
+msgstr "Az ütközés- és metszésvizsgálatokhoz használt alakzat [RID] azonosítója. Ha a kiszolgálók API-jával szeretnéd javítani a teljesítményt, ezt használd a [member shape] helyett:\n[codeblocks]\n[gdscript]\nvar shape_rid = PhysicsServer2D.circle_shape_create()\nvar radius = 64\nPhysicsServer2D.shape_set_data(shape_rid, radius)\n\nvar params = PhysicsShapeQueryParameters2D.new()\nparams.shape_rid = shape_rid\n\n# Execute physics queries here...\n\n# Release the shape when done with physics queries.\nPhysicsServer2D.free_rid(shape_rid)\n[/gdscript]\n[csharp]\nRID shapeRid = PhysicsServer2D.CircleShapeCreate();\nint radius = 64;\nPhysicsServer2D.ShapeSetData(shapeRid, radius);\n\nvar params = new PhysicsShapeQueryParameters2D();\nparams.ShapeRid = shapeRid;\n\n// Execute physics queries here...\n\n// Release the shape when done with physics queries.\nPhysicsServer2D.FreeRid(shapeRid);\n[/csharp]\n[/codeblocks]"
+
+#. PhysicsShapeQueryParameters2D.transform
+#. PhysicsShapeQueryParameters3D.transform
+#: doc/classes/PhysicsShapeQueryParameters2D.xml doc/classes/PhysicsShapeQueryParameters3D.xml
+msgid "The queried shape's transform matrix."
+msgstr "A vizsgált alakzat transzformációs mátrixa."
+
+#. World2D.brief
+#: doc/classes/World2D.xml
+msgid "A resource that holds all components of a 2D world, such as a canvas and a physics space."
+msgstr "A 2D világ összes összetevőjét, például a vásznat és a fizikai teret tároló erőforrás."
+
+#. World2D.canvas
+#: doc/classes/World2D.xml
+msgid "The [RID] of this world's canvas resource. Used by the [RenderingServer] for 2D drawing."
+msgstr "A világ vásznának [RID] azonosítója. A [RenderingServer] a 2D rajzoláshoz használja."
+
+#. World2D.direct_space_state
+#: doc/classes/World2D.xml
+msgid "Direct access to the world's physics 2D space state. Used for querying current and potential collisions. When using multi-threaded physics, access is limited to [method Node._physics_process] in the main thread."
+msgstr "Közvetlen hozzáférés a világ 2D fizikai terének állapotához. A fennálló és a lehetséges ütközések lekérdezésére szolgál. Többszálú fizika esetén csak a főszálon, a [method Node._physics_process] metódusban érhető el."
+
+#. World2D.navigation_map
+#: doc/classes/World2D.xml
+msgid "The [RID] of this world's navigation map. Used by the [NavigationServer2D]."
+msgstr "A világ navigációs térképének [RID] azonosítója. A [NavigationServer2D] használja."
+
+#. World2D.space
+#: doc/classes/World2D.xml
+msgid "The [RID] of this world's physics space resource. Used by the [PhysicsServer2D] for 2D physics, treating it as both a space and an area."
+msgstr "A világ fizikai terét képviselő erőforrás [RID] azonosítója. A [PhysicsServer2D] a 2D fizikához használja, és fizikai térként, illetve területként is kezeli."
