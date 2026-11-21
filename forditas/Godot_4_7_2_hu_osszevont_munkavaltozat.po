@@ -8941,22 +8941,22 @@ msgstr "Kattintásra [PopupMenu] menüt megnyitó gomb."
 #. MenuButton.description
 #: doc/classes/MenuButton.xml
 msgid "A button that brings up a [PopupMenu] when clicked. To create new items inside this [PopupMenu], use [code]get_popup().add_item(\"My Item Name\")[/code]. You can also create them directly from Godot editor's inspector.\nSee also [BaseButton] which contains common properties and methods associated with this node."
-msgstr "Kattintásra [PopupMenu] menüt megnyitó gomb. Az ehhez a [PopupMenu] menühöz új menüpontokat például a [code]get_popup().add_item(\"My Item Name\")[/code] hívással adhatsz hozzá. A menüpontokat közvetlenül a Godot szerkesztő felügyelőjében is létrehozhatod.\nLásd még a [BaseButton] osztályt, amely a csomópont közös tulajdonságait és metódusait tartalmazza."
+msgstr "Kattintásra [PopupMenu] menüt megnyitó gomb. Az ehhez a [PopupMenu] menühöz új menüpontokat például a [code]get_popup().add_item(\"My Item Name\")[/code] hívással adhatsz hozzá. A menüpontokat a Godot szerkesztőjének Felügyelő paneljén is létrehozhatod.\nLásd még a [BaseButton] osztályt, amely az ilyen gombok közös tulajdonságait és metódusait tartalmazza."
 
 #. MenuButton.show_popup
 #: doc/classes/MenuButton.xml
 msgid "Adjusts popup position and sizing for the [MenuButton], then shows the [PopupMenu]. Prefer this over using [code]get_popup().popup()[/code]."
-msgstr "Az előugró menü helyzetét és méretét a [MenuButton] gombhoz igazítja, majd megjeleníti a [PopupMenu] menüt. Ezt érdemes használni a [code]get_popup().popup()[/code] közvetlen meghívása helyett."
+msgstr "A [PopupMenu] helyzetét és méretét a [MenuButton] gombhoz igazítja, majd megjeleníti a menüt. Ezt érdemes használni a [code]get_popup().popup()[/code] közvetlen meghívása helyett."
 
 #. MenuButton.switch_on_hover
 #: doc/classes/MenuButton.xml
 msgid "If [code]true[/code], when the cursor hovers above another [MenuButton] within the same parent which also has [member switch_on_hover] enabled, it will close the current [MenuButton] and open the other one."
-msgstr "Ha [code]true[/code], amikor az egérmutató egy ugyanahhoz a szülőhöz tartozó másik [MenuButton] fölé kerül, amelynél a [member switch_on_hover] szintén engedélyezett, az aktuális [MenuButton] menü bezárul, és a másik nyílik meg."
+msgstr "Ha [code]true[/code], amikor az egérmutató egy ugyanahhoz a szülőhöz tartozó másik [MenuButton] fölé kerül, amelynél a [member switch_on_hover] szintén engedélyezett, az aktuális [MenuButton] menüje bezárul, és a másik gomb menüje nyílik meg."
 
 #. MenuButton.about_to_popup
 #: doc/classes/MenuButton.xml
 msgid "Emitted when the [PopupMenu] of this MenuButton is about to show."
-msgstr "Akkor bocsátódik ki, amikor a MenuButton [PopupMenu] menüje éppen megjelenni készül."
+msgstr "Közvetlenül a MenuButton [PopupMenu] menüjének megjelenése előtt bocsátódik ki."
 
 #. VSlider.brief
 #: doc/classes/VSlider.xml
@@ -8966,7 +8966,7 @@ msgstr "Függőleges csúszka, amely alulról (minimum) felfelé (maximum) halad
 #. VSlider.description
 #: doc/classes/VSlider.xml
 msgid "A vertical slider, used to adjust a value by moving a grabber along a vertical axis. It is a [Range]-based control and goes from bottom (min) to top (max). Note that this direction is the opposite of [VScrollBar]'s."
-msgstr "Függőleges csúszka, amellyel a fogantyú függőleges tengely mentén mozgatásával állítható be egy érték. A [Range] osztályon alapul, és alulról (minimum) felfelé (maximum) halad. Fontos, hogy ez az irány ellentétes a [VScrollBar] működésével."
+msgstr "Függőleges csúszka, amelynek értéke a fogantyú függőleges mozgatásával állítható be. A [Range] osztályon alapul, és alulról (minimum) felfelé (maximum) halad. Fontos, hogy ez az irány ellentétes a [VScrollBar] működésével."
 
 #. HScrollBar.brief
 #: doc/classes/HScrollBar.xml
@@ -8976,12 +8976,12 @@ msgstr "Vízszintes görgetősáv, amely balról (minimum) jobbra (maximum) hala
 #. HScrollBar.description
 #: doc/classes/HScrollBar.xml
 msgid "A horizontal scrollbar, typically used to navigate through content that extends beyond the visible width of a control. It is a [Range]-based control and goes from left (min) to right (max)."
-msgstr "Vízszintes görgetősáv, amelyet általában a vezérlőelem látható szélességén túlnyúló tartalom böngészésére használnak. A [Range] osztályon alapul, és balról (minimum) jobbra (maximum) halad."
+msgstr "Vízszintes görgetősáv, amellyel a vezérlőelem látható szélességén túlnyúló tartalom görgethető. A [Range] osztályon alapul, és balról (minimum) jobbra (maximum) halad."
 
 #. HScrollBar.padding_bottom
 #: doc/classes/HScrollBar.xml
 msgid "Padding between the bottom of the [theme_item ScrollBar.scroll] element and the [theme_item ScrollBar.grabber].\n[b]Note:[/b] To apply horizontal padding, modify the left/right content margins of [theme_item ScrollBar.scroll] instead."
-msgstr "A [theme_item ScrollBar.scroll] elem alja és a [theme_item ScrollBar.grabber] közötti belső térköz.\n[b]Megjegyzés:[/b] A vízszintes belső térköz beállításához inkább a [theme_item ScrollBar.scroll] tartalmának bal/jobb margóját módosítsd."
+msgstr "A [theme_item ScrollBar.scroll] elem alsó széle és a [theme_item ScrollBar.grabber] közötti belső térköz.\n[b]Megjegyzés:[/b] A vízszintes belső térköz beállításához inkább a [theme_item ScrollBar.scroll] tartalmának bal/jobb margóját módosítsd."
 
 #. HScrollBar.padding_top
 #: doc/classes/HScrollBar.xml
@@ -8996,7 +8996,7 @@ msgstr "Függőleges görgetősáv, amely felülről (minimum) lefelé (maximum)
 #. VScrollBar.description
 #: doc/classes/VScrollBar.xml
 msgid "A vertical scrollbar, typically used to navigate through content that extends beyond the visible height of a control. It is a [Range]-based control and goes from top (min) to bottom (max). Note that this direction is the opposite of [VSlider]'s."
-msgstr "Függőleges görgetősáv, amellyel általában a vezérlőelem látható magasságán túlnyúló tartalmat lehet böngészni. A [Range] osztályon alapul, és felülről (minimum) lefelé (maximum) halad. Az irány a [VSlider] működésével ellentétes."
+msgstr "Függőleges görgetősáv, amellyel a vezérlőelem látható magasságán túlnyúló tartalom görgethető. A [Range] osztályon alapul, és felülről (minimum) lefelé (maximum) halad. Az irány a [VSlider] működésével ellentétes."
 
 #. VScrollBar.padding_left
 #: doc/classes/VScrollBar.xml
