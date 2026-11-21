@@ -8726,7 +8726,7 @@ msgstr "Számok bevitelére szolgáló mező."
 #. SpinBox.description
 #: doc/classes/SpinBox.xml
 msgid "[SpinBox] is a numerical input text field. It allows entering integers and floating-point numbers. The [SpinBox] also has up and down buttons that can be clicked to increase or decrease the value. The value can also be changed by dragging the mouse up or down over the [SpinBox]'s arrows.\nAdditionally, mathematical expressions can be entered. These are evaluated when the user presses [kbd]Enter[/kbd] while editing the [SpinBox]'s text field. This uses the [Expression] class to parse and evaluate the expression. The result of the expression is then set as the value of the [SpinBox]. Some examples of valid expressions are [code]5 + 2 * 3[/code], [code]pow(2, 4)[/code], and [code]PI + sin(0.5)[/code]. Expressions are case-sensitive.\n[b]Example:[/b] Create a [SpinBox], disable its context menu and set its text alignment to right.\n[codeblocks]\n[gdscript]\nvar spin_box = SpinBox.new()\nadd_child(spin_box)\nvar line_edit = spin_box.get_line_edit()\nline_edit.context_menu_enabled = false\nspin_box.horizontal_alignment = LineEdit.HORIZONTAL_ALIGNMENT_RIGHT\n[/gdscript]\n[csharp]\nvar spinBox = new SpinBox();\nAddChild(spinBox);\nvar lineEdit = spinBox.GetLineEdit();\nlineEdit.ContextMenuEnabled = false;\nspinBox.AlignHorizontal = LineEdit.HorizontalAlignEnum.Right;\n[/csharp]\n[/codeblocks]\nSee [Range] class for more options over the [SpinBox].\n[b]Note:[/b] With the [SpinBox]'s context menu disabled, you can right-click the bottom half of the spinbox to set the value to its minimum, while right-clicking the top half sets the value to its maximum.\n[b]Note:[/b] [SpinBox] relies on an underlying [LineEdit] node. To theme a [SpinBox]'s background, add theme items for [LineEdit] and customize them. The [LineEdit] has the [code]SpinBoxInnerLineEdit[/code] theme variation, so that you can give it a distinct appearance from regular [LineEdit]s.\n[b]Note:[/b] If you want to implement drag and drop for the underlying [LineEdit], you can use [method Control.set_drag_forwarding] on the node returned by [method get_line_edit]."
-msgstr "A [SpinBox] számértékek bevitelére szolgáló szövegmező. Egész és lebegőpontos számokat is elfogad. A [SpinBox] fel- és lefelé mutató gombjai kattintással növelik vagy csökkentik az értéket. Az érték a [SpinBox] nyilai fölött felfelé vagy lefelé történő egérhúzással is módosítható.\nA [SpinBox] matematikai kifejezéseket is elfogad. Ezeket akkor értékeli ki, amikor a felhasználó a [SpinBox] szövegmezőjének szerkesztése közben lenyomja az [kbd]Enter[/kbd] billentyűt. Az értelmezést és kiértékelést az [Expression] osztály végzi; az eredmény a [SpinBox] új értéke lesz. Érvényes példa a [code]5 + 2 * 3[/code], a [code]pow(2, 4)[/code] és a [code]PI + sin(0.5)[/code]. A kifejezésekben számít a kis- és nagybetűk közötti különbség.\n[b]Példa:[/b] Hozz létre egy [SpinBox] elemet, tiltsd le a helyi menüjét, és igazítsd jobbra a szövegét.\n[codeblocks]\n[gdscript]\nvar spin_box = SpinBox.new()\nadd_child(spin_box)\nvar line_edit = spin_box.get_line_edit()\nline_edit.context_menu_enabled = false\nspin_box.horizontal_alignment = LineEdit.HORIZONTAL_ALIGNMENT_RIGHT\n[/gdscript]\n[csharp]\nvar spinBox = new SpinBox();\nAddChild(spinBox);\nvar lineEdit = spinBox.GetLineEdit();\nlineEdit.ContextMenuEnabled = false;\nspinBox.AlignHorizontal = LineEdit.HorizontalAlignEnum.Right;\n[/csharp]\n[/codeblocks]\nTovábbi beállításokért lásd a [Range] osztályt.\n[b]Megjegyzés:[/b] Ha a [SpinBox] helyi menüje le van tiltva, a mező alsó felére jobb egérgombbal kattintva az érték a minimumra, a felső felére kattintva a maximumra állítható.\n[b]Megjegyzés:[/b] A [SpinBox] egy belső [LineEdit] csomópontot használ. A [SpinBox] hátterének testreszabásához adj hozzá [LineEdit] témaelemeket, és állítsd be őket. A [LineEdit] [code]SpinBoxInnerLineEdit[/code] témaváltozattal rendelkezik, így a hagyományos [LineEdit] elemekétől eltérő megjelenést adhatsz neki.\n[b]Megjegyzés:[/b] Ha a belső [LineEdit] elemnél fogd és vidd műveletet szeretnél megvalósítani, a [method get_line_edit] által visszaadott csomóponton használd a [method Control.set_drag_forwarding] metódust."
+msgstr "A [SpinBox] számértékek bevitelére szolgáló szövegmező. Egész és lebegőpontos számokat is elfogad. A [SpinBox] fel- és lefelé mutató gombjai kattintással növelik vagy csökkentik az értéket. Az érték a [SpinBox] nyilai fölött felfelé vagy lefelé történő egérhúzással is módosítható.\nA [SpinBox] matematikai kifejezéseket is elfogad. Ezeket akkor értékeli ki, amikor a felhasználó a [SpinBox] szövegmezőjének szerkesztése közben lenyomja az [kbd]Enter[/kbd] billentyűt. Az értelmezést és kiértékelést az [Expression] osztály végzi; az eredmény a [SpinBox] új értéke lesz. Érvényes kifejezés például a [code]5 + 2 * 3[/code], a [code]pow(2, 4)[/code] vagy a [code]PI + sin(0.5)[/code]. A kifejezésekben számít a kis- és nagybetűk közötti különbség.\n[b]Példa:[/b] Hozz létre egy [SpinBox] elemet, tiltsd le a helyi menüjét, és igazítsd jobbra a szövegét.\n[codeblocks]\n[gdscript]\nvar spin_box = SpinBox.new()\nadd_child(spin_box)\nvar line_edit = spin_box.get_line_edit()\nline_edit.context_menu_enabled = false\nspin_box.horizontal_alignment = LineEdit.HORIZONTAL_ALIGNMENT_RIGHT\n[/gdscript]\n[csharp]\nvar spinBox = new SpinBox();\nAddChild(spinBox);\nvar lineEdit = spinBox.GetLineEdit();\nlineEdit.ContextMenuEnabled = false;\nspinBox.AlignHorizontal = LineEdit.HorizontalAlignEnum.Right;\n[/csharp]\n[/codeblocks]\nTovábbi beállításokért lásd a [Range] osztályt.\n[b]Megjegyzés:[/b] Ha a [SpinBox] helyi menüje le van tiltva, a mező alsó felére jobb egérgombbal kattintva az érték a minimumra, a felső felére kattintva a maximumra állítható.\n[b]Megjegyzés:[/b] A [SpinBox] egy belső [LineEdit] csomópontot használ. A [SpinBox] hátterének testreszabásához adj hozzá [LineEdit] témaelemeket, és állítsd be őket. A [LineEdit] [code]SpinBoxInnerLineEdit[/code] témaváltozattal rendelkezik, így a hagyományos [LineEdit] elemekétől eltérő megjelenést adhatsz neki.\n[b]Megjegyzés:[/b] Ha a belső [LineEdit] elemnél fogd és vidd műveletet szeretnél megvalósítani, a [method get_line_edit] által visszaadott csomóponton használd a [method Control.set_drag_forwarding] metódust."
 
 #. SpinBox.apply
 #: doc/classes/SpinBox.xml
@@ -8746,12 +8746,12 @@ msgstr "Módosítja a belső [LineEdit] szövegének igazítását."
 #. SpinBox.custom_arrow_round
 #: doc/classes/SpinBox.xml
 msgid "If [code]true[/code], the value will be rounded to a multiple of [member custom_arrow_step] when interacting with the arrow buttons. Otherwise, increments the value by [member custom_arrow_step] and then rounds it according to [member Range.step]."
-msgstr "Ha [code]true[/code], a nyílgombok használatakor az értéket a [member custom_arrow_step] egész számú többszörösére kerekíti. Egyébként a [member custom_arrow_step] értékkel növeli vagy csökkenti, majd a [member Range.step] alapján kerekíti az értéket."
+msgstr "Ha [code]true[/code], a nyílgombok használatakor az értéket a [member custom_arrow_step] egész számú többszörösére kerekíti. Ellenkező esetben előbb a [member custom_arrow_step] értékével növeli vagy csökkenti a számot, majd a [member Range.step] szerint kerekíti."
 
 #. SpinBox.custom_arrow_step
 #: doc/classes/SpinBox.xml
 msgid "If not [code]0[/code], sets the step when interacting with the arrow buttons of the [SpinBox].\n[b]Note:[/b] [member Range.value] will still be rounded to a multiple of [member Range.step]."
-msgstr "Ha az érték nem [code]0[/code], meghatározza a változtatás lépésközét a [SpinBox] nyílgombjainak használatakor.\n[b]Megjegyzés:[/b] A [member Range.value] továbbra is a [member Range.step] többszörösére kerekítődik."
+msgstr "Ha az érték nem [code]0[/code], ez adja meg a [SpinBox] nyílgombjaival történő értékváltoztatás lépésközét.\n[b]Megjegyzés:[/b] A [member Range.value] továbbra is a [member Range.step] többszörösére kerekítődik."
 
 #. SpinBox.editable
 #: doc/classes/SpinBox.xml
@@ -8776,7 +8776,7 @@ msgstr "A megadott utótagot jeleníti meg a [SpinBox] számértéke után."
 #. SpinBox.update_on_text_changed
 #: doc/classes/SpinBox.xml
 msgid "Sets the value of the [Range] for this [SpinBox] when the [LineEdit] text is [i]changed[/i] instead of [i]submitted[/i]. See [signal LineEdit.text_changed] and [signal LineEdit.text_submitted].\n[b]Note:[/b] If set to [code]true[/code], this will interfere with entering mathematical expressions in the [SpinBox]. The [SpinBox] will try to evaluate the expression as you type, which means symbols like a trailing [code]+[/code] are removed immediately by the expression being evaluated."
-msgstr "Akkor állítja be az ehhez a [SpinBox] elemhez tartozó [Range] értékét, amikor a [LineEdit] szövege [i]megváltozik[/i], nem pedig amikor azt [i]beküldik[/i]. Lásd: [signal LineEdit.text_changed] és [signal LineEdit.text_submitted].\n[b]Megjegyzés:[/b] Ha [code]true[/code], akadályozhatja a matematikai kifejezések bevitelét a [SpinBox] mezőbe. A [SpinBox] gépelés közben próbálja kiértékelni a kifejezést, ezért például egy sorvégi [code]+[/code] jel azonnal eltűnhet."
+msgstr "Akkor állítja be az ehhez a [SpinBox] elemhez tartozó [Range] értékét, amikor a [LineEdit] szövege [i]megváltozik[/i], nem pedig amikor azt [i]jóváhagyják[/i]. Lásd: [signal LineEdit.text_changed] és [signal LineEdit.text_submitted].\n[b]Megjegyzés:[/b] Ha [code]true[/code], akadályozhatja a matematikai kifejezések bevitelét a [SpinBox] mezőbe. A [SpinBox] gépelés közben próbálja kiértékelni a kifejezést, ezért például a kifejezés végén álló [code]+[/code] jel azonnal eltűnhet."
 
 #. SpinBox.down_disabled_icon_modulate
 #: doc/classes/SpinBox.xml
@@ -8826,17 +8826,17 @@ msgstr "A fel- és lefelé mutató gombok közötti függőleges térköz."
 #. SpinBox.buttons_width
 #: doc/classes/SpinBox.xml
 msgid "Width of the up and down buttons. If smaller than any icon set on the buttons, the respective icon may overlap neighboring elements. If smaller than [code]0[/code], the width is automatically adjusted from the icon size."
-msgstr "A fel- és lefelé mutató gombok szélessége. Ha ez kisebb, mint a gombon megadott valamelyik ikon, az ikon átfedhet szomszédos elemeket. Ha kisebb, mint [code]0[/code], a rendszer automatikusan az ikon méretéhez igazítja a szélességet."
+msgstr "A fel- és lefelé mutató gombok szélessége. Ha a szélesség kisebb a gombokhoz rendelt valamelyik ikon szélességénél, az ikon átlóghat a szomszédos elemekre. Ha kisebb, mint [code]0[/code], a rendszer automatikusan az ikon méretéhez igazítja a szélességet."
 
 #. SpinBox.field_and_buttons_separation
 #: doc/classes/SpinBox.xml
 msgid "Width of the horizontal separation between the text input field ([LineEdit]) and the buttons."
-msgstr "A szövegbeviteli mező ([LineEdit]) és a gombok közötti vízszintes térköz szélessége."
+msgstr "A szövegbeviteli mező ([LineEdit]) és a gombok közötti vízszintes távolság."
 
 #. SpinBox.set_min_buttons_width_from_icons
 #: doc/classes/SpinBox.xml
 msgid "If not [code]0[/code], the minimum button width corresponds to the widest of all icons set on those buttons, even if [theme_item buttons_width] is smaller."
-msgstr "Ha nem [code]0[/code], a gombok minimális szélessége a rajtuk megadott ikonok közül a legszélesebbhez igazodik, akkor is, ha a [theme_item buttons_width] ennél kisebb."
+msgstr "Ha az érték nem [code]0[/code], a gombok minimális szélességét a hozzájuk rendelt ikonok közül a legszélesebb határozza meg, még akkor is, ha a [theme_item buttons_width] ennél kisebb."
 
 #. SpinBox.down
 #: doc/classes/SpinBox.xml
@@ -8881,7 +8881,7 @@ msgstr "A felfelé mutató gomb ikonja lenyomott állapotban."
 #. SpinBox.updown
 #: doc/classes/SpinBox.xml
 msgid "Single texture representing both the up and down buttons icons. It is displayed in the middle of the buttons and does not change upon interaction. If a valid icon is assigned, it will replace [theme_item up] and [theme_item down]."
-msgstr "A fel- és lefelé mutató gombok ikonjait egyetlen textúrával ábrázolja. A gombok közepén jelenik meg, és használat közben nem változik. Ha érvényes ikont rendelsz hozzá, az felülírja a [theme_item up] és a [theme_item down] ikonokat."
+msgstr "A fel- és lefelé mutató gombok ikonjait egyetlen textúrával ábrázolja. A gombok közepén jelenik meg, és használat közben nem változik. Ha érvényes ikont rendelsz hozzá, az a [theme_item up] és a [theme_item down] ikonok helyett jelenik meg."
 
 #. SpinBox.down_background
 #: doc/classes/SpinBox.xml
