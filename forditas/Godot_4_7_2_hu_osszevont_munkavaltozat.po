@@ -11817,3 +11817,198 @@ msgstr "Az óramutató járásával megegyező irányú éleket zárja ki. Lásd
 #: doc/classes/OccluderPolygon2D.xml
 msgid "Culling is performed in the counterclockwise direction. See [member cull_mode]."
 msgstr "Az óramutató járásával ellentétes irányú éleket zárja ki. Lásd a [member cull_mode] tulajdonságot."
+
+#. CapsuleShape2D.brief
+#: doc/classes/CapsuleShape2D.xml
+msgid "A 2D capsule shape used for physics collision."
+msgstr "Kétdimenziós kapszulaalakzat fizikai ütközésekhez."
+
+#. CapsuleShape2D.description
+#: doc/classes/CapsuleShape2D.xml
+msgid "A 2D capsule shape, intended for use in physics. Usually used to provide a shape for a [CollisionShape2D].\n[b]Performance:[/b] [CapsuleShape2D] is fast to check collisions against, but it is slower than [RectangleShape2D] and [CircleShape2D]."
+msgstr "Fizikai ütközésekhez használható kétdimenziós kapszulaalakzat. Általában [CollisionShape2D] csomóponthoz adjuk meg alakzatként.\n[b]Teljesítmény:[/b] A [CapsuleShape2D] ütközésvizsgálata gyors, de lassabb a [RectangleShape2D] és a [CircleShape2D] ütközésvizsgálatánál."
+
+#. CapsuleShape2D.height
+#: doc/classes/CapsuleShape2D.xml
+msgid "The capsule's full height, including the semicircles.\n[b]Note:[/b] The [member height] of a capsule must be at least twice its [member radius]. Otherwise, the capsule becomes a circle. If the [member height] is less than twice the [member radius], the properties adjust to a valid value."
+msgstr "A kapszula teljes magassága a félkörökkel együtt.\n[b]Megjegyzés:[/b] A kapszula [member height] értékének legalább a [member radius] kétszeresének kell lennie. Ellenkező esetben a kapszula körré válik. Ha a [member height] értéke kisebb a [member radius] kétszeresénél, a tulajdonságok érvényes értékre állnak be."
+
+#. CapsuleShape2D.mid_height
+#: doc/classes/CapsuleShape2D.xml
+msgid "The capsule's height, excluding the semicircles. This is the height of the central rectangular part in the middle of the capsule, and is the distance between the centers of the two semicircles. This is a wrapper for [member height]."
+msgstr "A kapszula félkörök nélküli magassága. Ez a középső téglalap magassága, vagyis a két félkör középpontja közötti távolság. Ezen a tulajdonságon keresztül a [member height] közvetve is kezelhető."
+
+#. CapsuleShape2D.radius
+#: doc/classes/CapsuleShape2D.xml
+msgid "The capsule's radius.\n[b]Note:[/b] The [member radius] of a capsule cannot be greater than half of its [member height]. Otherwise, the capsule becomes a circle. If the [member radius] is greater than half of the [member height], the properties adjust to a valid value."
+msgstr "A kapszula sugara.\n[b]Megjegyzés:[/b] A kapszula [member radius] értéke legfeljebb a [member height] fele lehet. Ellenkező esetben a kapszula körré válik. Ha a [member radius] értéke nagyobb a [member height] felénél, a tulajdonságok érvényes értékre állnak be."
+
+#. CircleShape2D.brief
+#: doc/classes/CircleShape2D.xml
+msgid "A 2D circle shape used for physics collision."
+msgstr "Kétdimenziós köralakzat fizikai ütközésekhez."
+
+#. CircleShape2D.description
+#: doc/classes/CircleShape2D.xml
+msgid "A 2D circle shape, intended for use in physics. Usually used to provide a shape for a [CollisionShape2D].\n[b]Performance:[/b] [CircleShape2D] is fast to check collisions against. It is faster than [RectangleShape2D] and [CapsuleShape2D]."
+msgstr "Fizikai ütközésekhez használható kétdimenziós köralakzat. Általában [CollisionShape2D] csomóponthoz adjuk meg alakzatként.\n[b]Teljesítmény:[/b] A [CircleShape2D] ütközésvizsgálata gyors. Kevesebb időt igényel, mint a [RectangleShape2D] vagy a [CapsuleShape2D] ütközésvizsgálata."
+
+#. CircleShape2D.radius
+#: doc/classes/CircleShape2D.xml
+msgid "The circle's radius."
+msgstr "A kör sugara."
+
+#. ConcavePolygonShape2D.brief
+#: doc/classes/ConcavePolygonShape2D.xml
+msgid "A 2D polyline shape used for physics collision."
+msgstr "Kétdimenziós törtvonal fizikai ütközésekhez."
+
+#. ConcavePolygonShape2D.description
+#: doc/classes/ConcavePolygonShape2D.xml
+msgid "A 2D polyline shape, intended for use in physics. Used internally in [CollisionPolygon2D] when it's in [constant CollisionPolygon2D.BUILD_SEGMENTS] mode.\nBeing just a collection of interconnected line segments, [ConcavePolygonShape2D] is the most freely configurable single 2D shape. It can be used to form polygons of any nature, or even shapes that don't enclose an area. However, [ConcavePolygonShape2D] is [i]hollow[/i] even if the interconnected line segments do enclose an area, which often makes it unsuitable for physics or detection.\n[b]Note:[/b] When used for collision, [ConcavePolygonShape2D] is intended to work with static [CollisionShape2D] nodes like [StaticBody2D] and will likely not behave well for [CharacterBody2D]s or [RigidBody2D]s in a mode other than Static.\n[b]Warning:[/b] Physics bodies that are small have a chance to clip through this shape when moving fast. This happens because on one frame, the physics body may be on the \"outside\" of the shape, and on the next frame it may be \"inside\" it. [ConcavePolygonShape2D] is hollow, so it won't detect a collision.\n[b]Performance:[/b] Due to its complexity, [ConcavePolygonShape2D] is the slowest 2D collision shape to check collisions against. Its use should generally be limited to level geometry. If the polyline is closed, [CollisionPolygon2D]'s [constant CollisionPolygon2D.BUILD_SOLIDS] mode can be used, which decomposes the polygon into convex ones; see [ConvexPolygonShape2D]'s documentation for instructions."
+msgstr "Fizikai ütközésekhez használható kétdimenziós törtvonal. A [CollisionPolygon2D] belsőleg ilyen alakzatot használ [constant CollisionPolygon2D.BUILD_SEGMENTS] módban.\nA [ConcavePolygonShape2D] egymáshoz kapcsolt szakaszokból áll, ezért az önálló kétdimenziós alakzatok közül ez alakítható a legszabadabban. Tetszőleges sokszög, sőt területet körül nem záró alakzat is kialakítható belőle. A [ConcavePolygonShape2D] akkor is [i]üreges[/i], ha a szakaszok zárt területet alkotnak. Emiatt gyakran alkalmatlan a fizikai szimulációra vagy az érzékelésre.\n[b]Megjegyzés:[/b] Ütközéshez a [ConcavePolygonShape2D] elsősorban statikus testek, például egy [StaticBody2D] csomópont [CollisionShape2D] alakzataként használható. [CharacterBody2D] vagy nem statikus módban működő [RigidBody2D] esetén várhatóan nem működik megfelelően.\n[b]Figyelmeztetés:[/b] A kis méretű fizikai test gyors mozgáskor átcsúszhat ezen az alakzaton. Az egyik képkockában a test még kívül lehet, a következőben pedig már belül. A [ConcavePolygonShape2D] üreges, így ilyenkor nem észlel ütközést.\n[b]Teljesítmény:[/b] Összetettsége miatt a [ConcavePolygonShape2D] ütközésvizsgálata a leglassabb a kétdimenziós alakzatok között. Általában csak a pálya geometriájához érdemes használni. Zárt törtvonal esetén a [CollisionPolygon2D] [constant CollisionPolygon2D.BUILD_SOLIDS] módja a sokszöget konvex részekre bontja. A részletekért lásd a [ConvexPolygonShape2D] dokumentációját."
+
+#. ConcavePolygonShape2D.segments
+#: doc/classes/ConcavePolygonShape2D.xml
+msgid "The array of points that make up the [ConcavePolygonShape2D]'s line segments. The array (of length divisible by two) is naturally divided into pairs (one pair for each segment); each pair consists of the starting point of a segment and the endpoint of a segment."
+msgstr "A [ConcavePolygonShape2D] szakaszait alkotó pontok tömbje. A tömb elemszáma páros. A tömb pontjait kettesével kell olvasni. Minden pár egy szakaszt határoz meg az első ponttól a másodikig."
+
+#. ConvexPolygonShape2D.brief
+#: doc/classes/ConvexPolygonShape2D.xml
+msgid "A 2D convex polygon shape used for physics collision."
+msgstr "Kétdimenziós konvex sokszög fizikai ütközésekhez."
+
+#. ConvexPolygonShape2D.description
+#: doc/classes/ConvexPolygonShape2D.xml
+msgid "A 2D convex polygon shape, intended for use in physics. Used internally in [CollisionPolygon2D] when it's in [constant CollisionPolygon2D.BUILD_SOLIDS] mode.\n[ConvexPolygonShape2D] is [i]solid[/i], which means it detects collisions from objects that are fully inside it, unlike [ConcavePolygonShape2D] which is hollow. This makes it more suitable for both detection and physics.\n[b]Convex decomposition:[/b] A concave polygon can be split up into several convex polygons. This allows dynamic physics bodies to have complex concave collisions (at a performance cost) and can be achieved by using several [ConvexPolygonShape2D] nodes or by using the [CollisionPolygon2D] node in [constant CollisionPolygon2D.BUILD_SOLIDS] mode. To generate a collision polygon from a sprite, select the [Sprite2D] node, go to the [b]Sprite2D[/b] menu that appears above the viewport, and choose [b]Create Polygon2D Sibling[/b].\n[b]Performance:[/b] [ConvexPolygonShape2D] is faster to check collisions against compared to [ConcavePolygonShape2D], but it is slower than primitive collision shapes such as [CircleShape2D] and [RectangleShape2D]. Its use should generally be limited to medium-sized objects that cannot have their collision accurately represented by primitive shapes."
+msgstr "Fizikai ütközésekhez használható kétdimenziós konvex sokszög. A [CollisionPolygon2D] belsőleg ilyen alakzatot használ [constant CollisionPolygon2D.BUILD_SOLIDS] módban.\nA [ConvexPolygonShape2D] [i]tömör[/i], így a teljesen benne lévő objektumokkal is észlel ütközést. A [ConcavePolygonShape2D] üreges, ezért a konvex alakzat érzékelésre és fizikai szimulációra egyaránt alkalmasabb.\n[b]Konvex felbontás:[/b] Egy konkáv sokszög több konvex sokszögre bontható. Így dinamikus fizikai testhez is rendelhetsz összetett, konkáv ütközési alakzatot, bár ez csökkentheti a teljesítményt. Használhatsz több [ConvexPolygonShape2D] alakzatot, vagy egy [CollisionPolygon2D] csomópontot [constant CollisionPolygon2D.BUILD_SOLIDS] módban. Ha sprite-ból szeretnél ütközési sokszöget létrehozni, jelöld ki a [Sprite2D] csomópontot, nyisd meg a nézetablak fölött megjelenő [b]Sprite2D[/b] menüt, és válaszd a [b]Create Polygon2D Sibling[/b] parancsot.\n[b]Teljesítmény:[/b] A [ConvexPolygonShape2D] ütközésvizsgálata gyorsabb a [ConcavePolygonShape2D] vizsgálatánál, de lassabb az olyan egyszerű alakzatokénál, mint a [CircleShape2D] és a [RectangleShape2D]. Általában közepes méretű objektumoknál érdemes használni, ha ütközési alakzatuk egyszerű formákkal nem adható meg elég pontosan."
+
+#. ConvexPolygonShape2D.set_point_cloud
+#: doc/classes/ConvexPolygonShape2D.xml
+msgid "Based on the set of points provided, this assigns the [member points] property using the convex hull algorithm, removing all unneeded points. See [method Geometry2D.convex_hull] for details."
+msgstr "A megadott pontokból konvexburkoló-algoritmussal állítja be a [member points] tulajdonságot, és elhagyja a felesleges pontokat. A részletekért lásd a [method Geometry2D.convex_hull] metódust."
+
+#. ConvexPolygonShape2D.points
+#: doc/classes/ConvexPolygonShape2D.xml
+msgid "The polygon's list of vertices that form a convex hull. Can be in either clockwise or counterclockwise order.\n[b]Warning:[/b] Only set this property to a list of points that actually form a convex hull. Use [method set_point_cloud] to generate the convex hull of an arbitrary set of points."
+msgstr "A sokszög konvex burkát alkotó csúcspontok listája. A pontok sorrendje lehet az óramutató járásával megegyező vagy azzal ellentétes.\n[b]Figyelmeztetés:[/b] Ehhez a tulajdonsághoz csak olyan pontlistát adj meg, amely már konvex burkot alkot. Tetszőleges ponthalmaz konvex burkát a [method set_point_cloud] metódussal állíthatod elő."
+
+#. RectangleShape2D.brief
+#: doc/classes/RectangleShape2D.xml
+msgid "A 2D rectangle shape used for physics collision."
+msgstr "Kétdimenziós téglalap fizikai ütközésekhez."
+
+#. RectangleShape2D.description
+#: doc/classes/RectangleShape2D.xml
+msgid "A 2D rectangle shape, intended for use in physics. Usually used to provide a shape for a [CollisionShape2D].\n[b]Performance:[/b] [RectangleShape2D] is fast to check collisions against. It is faster than [CapsuleShape2D], but slower than [CircleShape2D]."
+msgstr "Fizikai ütközésekhez használható kétdimenziós téglalap. Általában [CollisionShape2D] csomóponthoz adjuk meg alakzatként.\n[b]Teljesítmény:[/b] A [RectangleShape2D] ütközésvizsgálata gyorsabb a [CapsuleShape2D] vizsgálatánál, de lassabb a [CircleShape2D] vizsgálatánál."
+
+#. RectangleShape2D.size
+#: doc/classes/RectangleShape2D.xml
+msgid "The rectangle's width and height."
+msgstr "A téglalap szélessége és magassága."
+
+#. SegmentShape2D.brief
+#: doc/classes/SegmentShape2D.xml
+msgid "A 2D line segment shape used for physics collision."
+msgstr "Kétdimenziós szakasz fizikai ütközésekhez."
+
+#. SegmentShape2D.description
+#: doc/classes/SegmentShape2D.xml
+msgid "A 2D line segment shape, intended for use in physics. Usually used to provide a shape for a [CollisionShape2D]."
+msgstr "Fizikai ütközésekhez használható kétdimenziós szakasz. Általában [CollisionShape2D] csomóponthoz adjuk meg alakzatként."
+
+#. SegmentShape2D.a
+#: doc/classes/SegmentShape2D.xml
+msgid "The segment's first point position."
+msgstr "A szakasz első végpontjának pozíciója."
+
+#. SegmentShape2D.b
+#: doc/classes/SegmentShape2D.xml
+msgid "The segment's second point position."
+msgstr "A szakasz második végpontjának pozíciója."
+
+#. SeparationRayShape2D.brief
+#: doc/classes/SeparationRayShape2D.xml
+msgid "A 2D ray shape used for physics collision that tries to separate itself from any collider."
+msgstr "Kétdimenziós sugáralakzat fizikai ütközésekhez, amely megpróbál eltávolodni az útjába kerülő ütközőobjektumoktól."
+
+#. SeparationRayShape2D.description
+#: doc/classes/SeparationRayShape2D.xml
+msgid "A 2D ray shape, intended for use in physics. Usually used to provide a shape for a [CollisionShape2D]. When a [SeparationRayShape2D] collides with an object, it tries to separate itself from it by moving its endpoint to the collision point. For example, a [SeparationRayShape2D] next to a character can allow it to instantly move up when touching stairs."
+msgstr "Fizikai ütközésekhez használható kétdimenziós sugáralakzat. Általában [CollisionShape2D] csomóponthoz adjuk meg alakzatként. Ha a [SeparationRayShape2D] objektumnak ütközik, úgy próbál eltávolodni tőle, hogy a végpontját az ütközési pontra mozgatja. Egy karakter mellett elhelyezett [SeparationRayShape2D] például lehetővé teszi, hogy a karakter a lépcsőhöz érve azonnal fellépjen."
+
+#. SeparationRayShape2D.length
+#: doc/classes/SeparationRayShape2D.xml
+msgid "The ray's length."
+msgstr "A sugár hossza."
+
+#. SeparationRayShape2D.slide_on_slope
+#: doc/classes/SeparationRayShape2D.xml
+msgid "If [code]false[/code] (default), the shape always separates and returns a normal along its own direction.\nIf [code]true[/code], the shape can return the correct normal and separate in any direction, allowing sliding motion on slopes."
+msgstr "Ha az érték [code]false[/code] (alapértelmezés), az alakzat mindig a saját iránya mentén távolodik el az ütközőobjektumtól, és ebbe az irányba mutató normálvektort ad vissza.\nHa az érték [code]true[/code], az alakzat az ütközési felület tényleges normálvektorát adhatja vissza, és bármely irányban eltávolodhat az ütközőobjektumtól. Ez lehetővé teszi a csúszást a lejtőkön."
+
+#. Shape2D.brief
+#: doc/classes/Shape2D.xml
+msgid "Abstract base class for 2D shapes used for physics collision."
+msgstr "Fizikai ütközésekhez használt kétdimenziós alakzatok absztrakt alaposztálya."
+
+#. Shape2D.description
+#: doc/classes/Shape2D.xml
+msgid "Abstract base class for all 2D shapes, intended for use in physics.\n[b]Performance:[/b] Primitive shapes, especially [CircleShape2D], are fast to check collisions against. [ConvexPolygonShape2D] is slower, and [ConcavePolygonShape2D] is the slowest."
+msgstr "A fizikában használt összes kétdimenziós alakzat absztrakt alaposztálya.\n[b]Teljesítmény:[/b] Az egyszerű alakzatok, különösen a [CircleShape2D], gyorsan vizsgálhatók ütközés szempontjából. A [ConvexPolygonShape2D] lassabb, a [ConcavePolygonShape2D] pedig a leglassabb."
+
+#. Shape2D.collide
+#: doc/classes/Shape2D.xml
+msgid "Returns [code]true[/code] if this shape is colliding with another.\nThis method needs the transformation matrix for this shape ([param local_xform]), the shape to check collisions with ([param with_shape]), and the transformation matrix of that shape ([param shape_xform])."
+msgstr "[code]true[/code] értéket ad vissza, ha ez az alakzat ütközik egy másik alakzattal.\nA metódushoz meg kell adni ennek az alakzatnak a transzformációs mátrixát ([param local_xform]), a másik alakzatot ([param with_shape]) és annak transzformációs mátrixát ([param shape_xform])."
+
+#. Shape2D.collide_and_get_contacts
+#: doc/classes/Shape2D.xml
+msgid "Returns a list of contact point pairs where this shape touches another.\nIf there are no collisions, the returned list is empty. Otherwise, the returned list contains contact points arranged in pairs, with entries alternating between points on the boundary of this shape and points on the boundary of [param with_shape].\nA collision pair A, B can be used to calculate the collision normal with [code](B - A).normalized()[/code], and the collision depth with [code](B - A).length()[/code]. This information is typically used to separate shapes, particularly in collision solvers.\nThis method needs the transformation matrix for this shape ([param local_xform]), the shape to check collisions with ([param with_shape]), and the transformation matrix of that shape ([param shape_xform])."
+msgstr "Visszaadja azoknak az érintkezési pontpároknak a listáját, ahol ez az alakzat egy másikkal érintkezik.\nHa nincs ütközés, a lista üres. Egyébként a lista pontpárokat tartalmaz. Minden pár első pontja ennek az alakzatnak a határán, a második a [param with_shape] alakzat határán található.\nEgy A, B pontpárból az ütközési normálvektor a [code](B - A).normalized()[/code], az ütközési mélység pedig a [code](B - A).length()[/code] kifejezéssel számítható ki. Ezeket az adatokat általában az ütközésfeloldók használják az alakzatok szétválasztásához.\nA metódushoz meg kell adni ennek az alakzatnak a transzformációs mátrixát ([param local_xform]), a másik alakzatot ([param with_shape]) és annak transzformációs mátrixát ([param shape_xform])."
+
+#. Shape2D.collide_with_motion
+#: doc/classes/Shape2D.xml
+msgid "Returns whether this shape would collide with another, if a given movement was applied.\nThis method needs the transformation matrix for this shape ([param local_xform]), the movement to test on this shape ([param local_motion]), the shape to check collisions with ([param with_shape]), the transformation matrix of that shape ([param shape_xform]), and the movement to test onto the other object ([param shape_motion])."
+msgstr "Megadja, hogy a megadott elmozdulások hatására ez az alakzat ütközne-e egy másikkal.\nA metódushoz add meg ennek az alakzatnak a transzformációs mátrixát ([param local_xform]) és a vizsgálandó elmozdulását ([param local_motion]), valamint a másik alakzatot ([param with_shape]), annak transzformációs mátrixát ([param shape_xform]) és vizsgálandó elmozdulását ([param shape_motion])."
+
+#. Shape2D.collide_with_motion_and_get_contacts
+#: doc/classes/Shape2D.xml
+msgid "Returns a list of contact point pairs where this shape would touch another, if a given movement was applied.\nIf there would be no collisions, the returned list is empty. Otherwise, the returned list contains contact points arranged in pairs, with entries alternating between points on the boundary of this shape and points on the boundary of [param with_shape].\nA collision pair A, B can be used to calculate the collision normal with [code](B - A).normalized()[/code], and the collision depth with [code](B - A).length()[/code]. This information is typically used to separate shapes, particularly in collision solvers.\nThis method needs the transformation matrix for this shape ([param local_xform]), the movement to test on this shape ([param local_motion]), the shape to check collisions with ([param with_shape]), the transformation matrix of that shape ([param shape_xform]), and the movement to test onto the other object ([param shape_motion])."
+msgstr "Visszaadja azoknak az érintkezési pontpároknak a listáját, ahol ez az alakzat a megadott elmozdulások hatására érintene egy másik alakzatot.\nHa nem történne ütközés, a lista üres. Egyébként a lista pontpárokat tartalmaz. Minden pár első pontja ennek az alakzatnak a határán, a második a [param with_shape] alakzat határán található.\nEgy A, B pontpárból az ütközési normálvektor a [code](B - A).normalized()[/code], az ütközési mélység pedig a [code](B - A).length()[/code] kifejezéssel számítható ki. Ezeket az adatokat általában az ütközésfeloldók használják az alakzatok szétválasztásához.\nA metódushoz add meg ennek az alakzatnak a transzformációs mátrixát ([param local_xform]) és a vizsgálandó elmozdulását ([param local_motion]), valamint a másik alakzatot ([param with_shape]), annak transzformációs mátrixát ([param shape_xform]) és vizsgálandó elmozdulását ([param shape_motion])."
+
+#. Shape2D.draw
+#: doc/classes/Shape2D.xml
+msgid "Draws a solid shape onto a [CanvasItem] with the [RenderingServer] API filled with the specified [param color]. The exact drawing method is specific for each shape and cannot be configured."
+msgstr "Egy [CanvasItem] elemre kirajzolja a tömör alakzatot a [RenderingServer] API-jával, a megadott [param color] színnel kitöltve. A kirajzolás módja alakzattípusonként eltér, és nem állítható be."
+
+#. Shape2D.get_rect
+#: doc/classes/Shape2D.xml
+msgid "Returns a [Rect2] representing the shapes boundary."
+msgstr "Visszaadja az alakzat határoló téglalapját [Rect2] formájában."
+
+#. Shape2D.custom_solver_bias
+#: doc/classes/Shape2D.xml
+msgid "The shape's custom solver bias. Defines how much bodies react to enforce contact separation when this shape is involved.\nWhen set to [code]0[/code], the default value from [member ProjectSettings.physics/2d/solver/default_contact_bias] is used."
+msgstr "Az alakzat egyéni ütközésfeloldási tényezője. Meghatározza, mennyire erősen váljanak szét az érintkező testek, ha ez az alakzat érintett.\nHa az érték [code]0[/code], a rendszer a [member ProjectSettings.physics/2d/solver/default_contact_bias] alapértelmezett értékét használja."
+
+#. WorldBoundaryShape2D.brief
+#: doc/classes/WorldBoundaryShape2D.xml
+msgid "A 2D world boundary (half-plane) shape used for physics collision."
+msgstr "Kétdimenziós világhatár, vagyis félsík fizikai ütközésekhez."
+
+#. WorldBoundaryShape2D.description
+#: doc/classes/WorldBoundaryShape2D.xml
+msgid "A 2D world boundary shape, intended for use in physics. [WorldBoundaryShape2D] works like an infinite straight line that forces all physics bodies to stay above it. The line's normal determines which direction is considered as \"above\" and in the editor, the smaller line over it represents this direction. It can for example be used for endless flat floors."
+msgstr "Fizikai ütközésekhez használható kétdimenziós világhatár. A [WorldBoundaryShape2D] végtelen hosszú egyenesként működik, és a fizikai testeket az egyenes fölött tartja. Azt, hogy melyik irány számít felfelé mutatónak, az egyenes normálvektora határozza meg. A szerkesztőben az egyenes fölötti rövidebb vonal jelöli ezt az irányt. Használható például végtelen, sík padlóhoz."
+
+#. WorldBoundaryShape2D.distance
+#: doc/classes/WorldBoundaryShape2D.xml
+msgid "The distance from the origin to the line, expressed in terms of [member normal] (according to its direction and magnitude). Actual absolute distance from the origin to the line can be calculated as [code]abs(distance) / normal.length()[/code].\nIn the scalar equation of the line [code]ax + by = d[/code], this is [code]d[/code], while the [code](a, b)[/code] coordinates are represented by the [member normal] property."
+msgstr "Az origó és az egyenes távolsága a [member normal] irányától és nagyságától függően kifejezve. A tényleges, előjel nélküli távolság képlete [code]abs(distance) / normal.length()[/code].\nAz egyenes [code]ax + by = d[/code] skaláregyenletében ez a [code]d[/code] érték. Az [code](a, b)[/code] koordinátákat a [member normal] tulajdonság adja meg."
+
+#. WorldBoundaryShape2D.normal
+#: doc/classes/WorldBoundaryShape2D.xml
+msgid "The line's normal, typically a unit vector. Its direction indicates the non-colliding half-plane. Can be of any length but zero. Defaults to [constant Vector2.UP]."
+msgstr "Az egyenes normálvektora, amely általában egységvektor. Iránya az ütközésmentes félsíkot jelöli ki. Hossza bármilyen pozitív érték lehet. Az alapértelmezett érték [constant Vector2.UP]."
