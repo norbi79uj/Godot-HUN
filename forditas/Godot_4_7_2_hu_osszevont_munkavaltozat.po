@@ -10241,7 +10241,7 @@ msgstr "Visszaadja a [TextEdit] aktuális verzióját. A verzió a visszavonási
 #. TextEdit.get_visible_line_count
 #: doc/classes/TextEdit.xml
 msgid "Returns the number of lines that can visually fit, rounded down, based on this control's height."
-msgstr "Visszaadja a vezérlő magassága alapján láthatóan elférő sorok számát, lefelé kerekítve."
+msgstr "Visszaadja, hogy a vezérlő magasságában hány teljes sor fér el."
 
 #. TextEdit.get_visible_line_count_in_range
 #: doc/classes/TextEdit.xml
@@ -10266,7 +10266,7 @@ msgstr "Új sort szúr be a [param text] szöveggel a [param line] helyére."
 #. TextEdit.insert_text
 #: doc/classes/TextEdit.xml
 msgid "Inserts the [param text] at [param line] and [param column].\nIf [param before_selection_begin] is [code]true[/code], carets and selections that begin at [param line] and [param column] will moved to the end of the inserted text, along with all carets after it.\nIf [param before_selection_end] is [code]true[/code], selections that end at [param line] and [param column] will be extended to the end of the inserted text. These parameters can be used to insert text inside of or outside of selections."
-msgstr "Beszúrja a [param text] szöveget a [param line] sor [param column] oszlopába.\nHa a [param before_selection_begin] értéke [code]true[/code], a [param line] és [param column] helyen kezdődő kurzorok és kijelölések a beszúrt szöveg végére kerülnek, az utánuk lévő összes kurzorral együtt.\nHa a [param before_selection_end] értéke [code]true[/code], a [param line] és [param column] helyen végződő kijelölések a beszúrt szöveg végéig bővülnek. Ezekkel a paraméterekkel a kijelölésen belülre vagy azon kívülre is beszúrhatsz szöveget."
+msgstr "Beszúrja a [param text] szöveget a [param line] sor [param column] oszlopába.\nHa a [param before_selection_begin] értéke [code]true[/code], a [param line] és [param column] helyen álló kurzorok és az ott kezdődő kijelölések kezdőpontjai a beszúrt szöveg végére kerülnek. Az ezeket követő kurzorok is eltolódnak.\nHa a [param before_selection_end] értéke [code]true[/code], a [param line] és [param column] helyen végződő kijelölések a beszúrt szöveg végéig bővülnek. Ezekkel a paraméterekkel a kijelölésen belülre vagy azon kívülre is beszúrhatsz szöveget."
 
 #. TextEdit.insert_text_at_caret
 #: doc/classes/TextEdit.xml
@@ -10281,7 +10281,7 @@ msgstr "[code]true[/code] értéket ad vissza, ha a kijelölés kurzora a kijel�
 #. TextEdit.is_caret_visible
 #: doc/classes/TextEdit.xml
 msgid "Returns [code]true[/code] if the caret is visible, [code]false[/code] otherwise. A caret will be considered hidden if it is outside the scrollable area when scrolling is enabled.\n[b]Note:[/b] [method is_caret_visible] does not account for a caret being off-screen if it is still within the scrollable area. It will return [code]true[/code] even if the caret is off-screen as long as it meets [TextEdit]'s own conditions for being visible. This includes uses of [member scroll_fit_content_width] and [member scroll_fit_content_height] that cause the [TextEdit] to expand beyond the viewport's bounds.\n[b]Note:[/b] This method does [i]not[/i] guarantee an accurate visibility check immediately after setting the caret position. The correct value may only be available in the next frame after the [TextEdit] has finished drawing. This also applies to any operation that causes the [TextEdit] to change in size."
-msgstr "[code]true[/code] értéket ad vissza, ha a kurzor látható, egyébként [code]false[/code] értéket. Görgetés engedélyezésekor a kurzor rejtettnek számít, ha a görgethető területen kívül van.\n[b]Megjegyzés:[/b] A [method is_caret_visible] nem veszi figyelembe, ha a kurzor a képernyőn kívül van, de a görgethető területen belül marad. Ilyenkor [code]true[/code] értéket is adhat, ha teljesülnek a [TextEdit] saját láthatósági feltételei. Ez a [member scroll_fit_content_width] és a [member scroll_fit_content_height] használatakor is előfordulhat, ha a [TextEdit] túlnyúlik a nézet határain.\n[b]Megjegyzés:[/b] Ez a metódus [i]nem[/i] garantál pontos eredményt közvetlenül a kurzor helyének beállítása után. A helyes érték esetleg csak a következő képkockában érhető el, miután a [TextEdit] befejezte a kirajzolást. Ugyanez érvényes a [TextEdit] méretét módosító műveletekre."
+msgstr "Ha a szövegkurzor látható, [code]true[/code] értéket ad vissza, egyébként [code]false[/code] értéket. Görgetés engedélyezésekor a kurzor rejtettnek számít, ha a görgethető területen kívül van.\n[b]Megjegyzés:[/b] A [method is_caret_visible] a görgethető területen belüli kurzor esetén nem vizsgálja, hogy a kurzor a képernyőn van-e. Ha teljesülnek a [TextEdit] saját láthatósági feltételei, képernyőn kívüli kurzornál is [code]true[/code] értéket ad vissza. Ilyen eset, amikor a [member scroll_fit_content_width] vagy a [member scroll_fit_content_height] miatt a [TextEdit] túlnyúlik a nézet határain.\n[b]Megjegyzés:[/b] Ez a metódus [i]nem[/i] garantál pontos eredményt közvetlenül a kurzor helyének beállítása után. A helyes érték esetleg csak a következő képkockában érhető el, miután a [TextEdit] befejezte a kirajzolást. Ugyanez érvényes a [TextEdit] méretét módosító műveletekre."
 
 #. TextEdit.is_dragging_cursor
 #: doc/classes/TextEdit.xml
@@ -10381,7 +10381,7 @@ msgstr "Eltávolítja a megadott indexű oldalsávot."
 #. TextEdit.remove_line_at
 #: doc/classes/TextEdit.xml
 msgid "Removes the line of text at [param line]. Carets on this line will attempt to match their previous visual x position.\nIf [param move_carets_down] is [code]true[/code] carets will move to the next line down, otherwise carets will move up."
-msgstr "Eltávolítja a [param line] sorban lévő szöveget. Az ott található kurzorok megpróbálják megtartani korábbi vízszintes megjelenítési pozíciójukat.\nHa a [param move_carets_down] értéke [code]true[/code], a kurzorok a következő sorba kerülnek, egyébként felfelé mozognak."
+msgstr "Törli a [param line] sorindexű sort. Az innen áthelyezett kurzorok lehetőség szerint megtartják korábbi vízszintes pozíciójukat a képernyőn.\nHa a [param move_carets_down] értéke [code]true[/code], a kurzorok az eredeti sor alatti sorba kerülnek. Egyébként az eredeti sor fölötti sorba kerülnek."
 
 #. TextEdit.remove_secondary_carets
 #: doc/classes/TextEdit.xml
@@ -10431,7 +10431,7 @@ msgstr "Ha az érték [code]true[/code], az egérmutató mutató kézzé ([const
 #. TextEdit.set_gutter_custom_draw
 #: doc/classes/TextEdit.xml
 msgid "Set a custom draw callback for the gutter at the given index. [param draw_callback] must take the following arguments: A line index [int], a gutter index [int], and an area [Rect2]. This callback only works when the gutter type is [constant GUTTER_TYPE_CUSTOM] (see [method set_gutter_type])."
-msgstr "Egyéni kirajzolási visszahívást állít be a megadott indexű oldalsávhoz. A [param draw_callback] a következő argumentumokat fogadja: sorindex [int], oldalsávindex [int] és terület [Rect2]. Ez a visszahívás csak [constant GUTTER_TYPE_CUSTOM] oldalsávtípusnál működik (lásd: [method set_gutter_type])."
+msgstr "Egyéni kirajzolási visszahívást állít be a megadott indexű oldalsávhoz. A [param draw_callback] három argumentumot köteles fogadni ebben a sorrendben: a sor indexét [int], az oldalsáv indexét [int] és a kirajzolási területet [Rect2]. A visszahívás csak [constant GUTTER_TYPE_CUSTOM] típusú oldalsávnál működik (lásd: [method set_gutter_type])."
 
 #. TextEdit.set_gutter_draw
 #: doc/classes/TextEdit.xml
