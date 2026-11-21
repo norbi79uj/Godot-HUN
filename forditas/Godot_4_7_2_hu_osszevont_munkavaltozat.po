@@ -9016,22 +9016,22 @@ msgstr "A görgetősávok absztrakt alaposztálya."
 #. ScrollBar.description
 #: doc/classes/ScrollBar.xml
 msgid "Abstract base class for scrollbars, typically used to navigate through content that extends beyond the visible area of a control. Scrollbars are [Range]-based controls."
-msgstr "A görgetősávok absztrakt alaposztálya. A görgetősávok általában a vezérlőelem látható területén túlnyúló tartalomban való navigálásra szolgálnak, és a [Range] osztályon alapulnak."
+msgstr "A görgetősávok absztrakt alaposztálya. A görgetősávokkal a vezérlőelem látható területén túlra nyúló tartalomban lehet navigálni. A [Range] osztályra épülnek."
 
 #. ScrollBar.custom_step
 #: doc/classes/ScrollBar.xml
 msgid "Overrides the step used when clicking increment and decrement buttons or when using arrow keys when the [ScrollBar] is focused."
-msgstr "Felülírja a lépésközt, amelyet a növelő és csökkentő gombokra kattintáskor vagy a fókuszban lévő [ScrollBar] nyílbillentyűkkel történő vezérlésekor használ a rendszer."
+msgstr "Meghatározza a növelő- és csökkentőgombok, illetve a fókuszban lévő [ScrollBar] nyílbillentyűs vezérlésének lépésközét, felülírva az alapértelmezett értéket."
 
 #. ScrollBar.scrolling
 #: doc/classes/ScrollBar.xml
 msgid "Emitted when the scrollbar is being scrolled."
-msgstr "Akkor bocsátódik ki, amikor a görgetősávot görgetik."
+msgstr "A görgetősáv mozgatásakor kibocsátott jelzés."
 
 #. ScrollBar.decrement
 #: doc/classes/ScrollBar.xml
 msgid "Icon used as a button to scroll the [ScrollBar] left/up. Supports custom step using the [member ScrollBar.custom_step] property."
-msgstr "A [ScrollBar] balra/felfelé görgetésére szolgáló gomb ikonja. Egyéni lépésköz a [member ScrollBar.custom_step] tulajdonsággal állítható be."
+msgstr "A [ScrollBar] balra vagy felfelé görgető gombjának ikonja. A lépésköz a [member ScrollBar.custom_step] tulajdonsággal szabható testre."
 
 #. ScrollBar.decrement_highlight
 #: doc/classes/ScrollBar.xml
@@ -9046,7 +9046,7 @@ msgstr "A csökkentő gomb lenyomásakor jelenik meg."
 #. ScrollBar.increment
 #: doc/classes/ScrollBar.xml
 msgid "Icon used as a button to scroll the [ScrollBar] right/down. Supports custom step using the [member ScrollBar.custom_step] property."
-msgstr "A [ScrollBar] jobbra/lefelé görgetésére szolgáló gomb ikonja. Egyéni lépésköz a [member ScrollBar.custom_step] tulajdonsággal állítható be."
+msgstr "A [ScrollBar] jobbra vagy lefelé görgető gombjának ikonja. A lépésköz a [member ScrollBar.custom_step] tulajdonsággal szabható testre."
 
 #. ScrollBar.increment_highlight
 #: doc/classes/ScrollBar.xml
@@ -9061,7 +9061,7 @@ msgstr "A növelő gomb lenyomásakor jelenik meg."
 #. ScrollBar.grabber
 #: doc/classes/ScrollBar.xml
 msgid "Used as texture for the grabber, the draggable element representing current scroll."
-msgstr "A görgetés aktuális pozícióját jelző, húzható fogantyú textúrája."
+msgstr "A görgetősáv aktuális helyzetét jelző, egérrel húzható fogantyú textúrája."
 
 #. ScrollBar.grabber_highlight
 #: doc/classes/ScrollBar.xml
