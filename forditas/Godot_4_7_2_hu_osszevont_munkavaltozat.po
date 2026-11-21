@@ -8781,42 +8781,42 @@ msgstr "Akkor állítja be az ehhez a [SpinBox] elemhez tartozó [Range] érték
 #. SpinBox.down_disabled_icon_modulate
 #: doc/classes/SpinBox.xml
 msgid "Down button icon modulation color, when the button is disabled."
-msgstr "A lefelé mutató gomb ikonjának színmódosító színe letiltott állapotban."
+msgstr "A lefelé mutató gomb ikonjára alkalmazott szín letiltott állapotban."
 
 #. SpinBox.down_hover_icon_modulate
 #: doc/classes/SpinBox.xml
 msgid "Down button icon modulation color, when the button is hovered."
-msgstr "A lefelé mutató gomb ikonjának színmódosító színe, amikor az egérmutató fölötte van."
+msgstr "A lefelé mutató gomb ikonjára alkalmazott szín, amikor a gomb az egérmutató alatt van."
 
 #. SpinBox.down_icon_modulate
 #: doc/classes/SpinBox.xml
 msgid "Down button icon modulation color."
-msgstr "A lefelé mutató gomb ikonjának színmódosító színe."
+msgstr "A lefelé mutató gomb ikonjára alkalmazott szín."
 
 #. SpinBox.down_pressed_icon_modulate
 #: doc/classes/SpinBox.xml
 msgid "Down button icon modulation color, when the button is being pressed."
-msgstr "A lefelé mutató gomb ikonjának színmódosító színe lenyomott állapotban."
+msgstr "A lefelé mutató gomb ikonjára alkalmazott szín lenyomott állapotban."
 
 #. SpinBox.up_disabled_icon_modulate
 #: doc/classes/SpinBox.xml
 msgid "Up button icon modulation color, when the button is disabled."
-msgstr "A felfelé mutató gomb ikonjának színmódosító színe letiltott állapotban."
+msgstr "A felfelé mutató gomb ikonjára alkalmazott szín letiltott állapotban."
 
 #. SpinBox.up_hover_icon_modulate
 #: doc/classes/SpinBox.xml
 msgid "Up button icon modulation color, when the button is hovered."
-msgstr "A felfelé mutató gomb ikonjának színmódosító színe, amikor az egérmutató fölötte van."
+msgstr "A felfelé mutató gomb ikonjára alkalmazott szín, amikor a gomb az egérmutató alatt van."
 
 #. SpinBox.up_icon_modulate
 #: doc/classes/SpinBox.xml
 msgid "Up button icon modulation color."
-msgstr "A felfelé mutató gomb ikonjának színmódosító színe."
+msgstr "A felfelé mutató gomb ikonjára alkalmazott szín."
 
 #. SpinBox.up_pressed_icon_modulate
 #: doc/classes/SpinBox.xml
 msgid "Up button icon modulation color, when the button is being pressed."
-msgstr "A felfelé mutató gomb ikonjának színmódosító színe lenyomott állapotban."
+msgstr "A felfelé mutató gomb ikonjára alkalmazott szín lenyomott állapotban."
 
 #. SpinBox.buttons_vertical_separation
 #: doc/classes/SpinBox.xml
