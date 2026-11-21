@@ -1976,7 +1976,7 @@ msgstr "Azok a fizikai ütközési rétegek, amelyeken ez a CollisionObject2D m�
 #. CollisionObject2D.collision_priority
 #: doc/classes/CollisionObject2D.xml
 msgid "The priority used to solve colliding when occurring penetration. The higher the priority is, the lower the penetration into the object will be. This can for example be used to prevent the player from breaking through the boundaries of a level."
-msgstr "Az objektumok egymásba hatolásakor az ütközés feloldásához használt prioritás. Minél magasabb a prioritás, annál kisebb lesz a más testekkel való átfedés mértéke. Ez például segíthet megakadályozni, hogy a játékos áttörjön a pálya határain."
+msgstr "Az objektumok egymásba hatolásakor az ütközés feloldásához használt prioritás. Minél nagyobb ez az érték, annál kevésbé hatolnak bele más testek ebbe az objektumba. Ez például segíthet megakadályozni, hogy a játékos áttörjön a pálya határain."
 
 #. CollisionObject2D.disable_mode
 #: doc/classes/CollisionObject2D.xml
@@ -2090,12 +2090,12 @@ msgstr "Térbeli hangot játszik le 2D környezetben."
 #. AudioStreamPlayer2D.description
 #: doc/classes/AudioStreamPlayer2D.xml
 msgid "Plays audio that is attenuated with distance to the listener.\nBy default, audio is heard from the screen center. This can be changed by adding an [AudioListener2D] node to the scene and enabling it by calling [method AudioListener2D.make_current] on it.\nSee also [AudioStreamPlayer] to play a sound non-positionally.\n[b]Note:[/b] Hiding an [AudioStreamPlayer2D] node does not disable its audio output. To temporarily disable an [AudioStreamPlayer2D]'s audio output, set [member volume_db] to a very low value like [code]-100[/code] (which isn't audible to human hearing)."
-msgstr "Olyan hangot játszik le, amelynek hangereje a hallgatótól mért távolsággal csökken.\nAlapértelmezés szerint a képernyő középpontja szolgál hallgatói pozícióként. Ezt úgy módosíthatod, hogy [AudioListener2D] csomópontot adsz a jelenethez, majd a [method AudioListener2D.make_current] hívással aktiválod.\nHa térbeli elhelyezkedés nélkül szeretnél hangot lejátszani, lásd még: [AudioStreamPlayer].\n[b]Megjegyzés:[/b] Az [AudioStreamPlayer2D] csomópont elrejtése nem némítja el a hangot. A hangkimenet átmeneti letiltásához állítsd az [AudioStreamPlayer2D] [member volume_db] értékét nagyon alacsonyra, például [code]-100[/code] értékre (amit az emberi fül már nem hall)."
+msgstr "Olyan hangot játszik le, amelynek hangereje a hallgatótól mért távolsággal csökken.\nAlapértelmezés szerint a képernyő középpontja szolgál hallgatói pozícióként. Ezt úgy módosíthatod, hogy [AudioListener2D] csomópontot adsz a jelenethez, majd a [method AudioListener2D.make_current] hívással aktiválod.\nHa térbeli elhelyezkedés nélkül szeretnél hangot lejátszani, lásd még: [AudioStreamPlayer].\n[b]Megjegyzés:[/b] Az [AudioStreamPlayer2D] csomópont elrejtése nem némítja el a hangot. Az átmeneti elnémításhoz állítsd az [AudioStreamPlayer2D] [member volume_db] értékét nagyon alacsonyra, például [code]-100[/code] értékre (amit az emberi fül már nem hall)."
 
 #. AudioStreamPlayer2D.area_mask
 #: doc/classes/AudioStreamPlayer2D.xml
 msgid "Determines which [Area2D] layers affect the sound for reverb and audio bus effects. Areas can be used to redirect [AudioStream]s so that they play in a certain audio bus. An example of how you might use this is making a \"water\" area so that sounds played in the water are redirected through an audio bus to make them sound like they are being played underwater."
-msgstr "Meghatározza, hogy mely [Area2D] rétegek befolyásolják a hangot visszhang és hangbusz-effektek szempontjából. A területek segítségével az [AudioStream] hangfolyamok egy adott hangbuszra irányíthatók. Például létrehozhatsz egy „víz” területet, amely a benne megszólaló hangokat olyan hangbuszra irányítja, amely víz alatti hangzást ad nekik."
+msgstr "Meghatározza, hogy mely [Area2D] rétegek befolyásolják a hangot utózengés és hangbusz-effektek szempontjából. A területek segítségével az [AudioStream] hangfolyamok egy adott hangbuszra irányíthatók. Például létrehozhatsz egy „víz” területet, amely a benne megszólaló hangokat olyan hangbuszra irányítja, amely víz alatti hangzást ad nekik."
 
 #. AudioStreamPlayer2D.attenuation
 #: doc/classes/AudioStreamPlayer2D.xml
@@ -2130,7 +2130,7 @@ msgstr "A csomópont sztereó panorámázásának erősségét a [member Project
 #. AudioStreamPlayer2D.pitch_scale
 #: doc/classes/AudioStreamPlayer2D.xml
 msgid "The pitch and the tempo of the audio, as a multiplier of the audio sample's sample rate."
-msgstr "A hang magasságát és lejátszási tempóját meghatározó szorzótényező, amely a hangminta mintavételi frekvenciájára hat."
+msgstr "A mintavételi frekvencia szorzója. Ezzel együtt változik a hangmagasság és a lejátszás tempója."
 
 #. AudioStreamPlayer2D.playback_type
 #: doc/classes/AudioStreamPlayer2D.xml
@@ -2305,7 +2305,7 @@ msgstr "Ha az értéke [code]true[/code], az ügynök részt vesz a [NavigationS
 #. NavigationAgent2D.avoidance_layers
 #: doc/classes/NavigationAgent2D.xml
 msgid "A bitfield determining the avoidance layers for this NavigationAgent. Other agents with a matching bit on the [member avoidance_mask] will avoid this agent."
-msgstr "Az ügynök akadályelkerülési rétegeit meghatározó bitmező. Azok a többi ügynök, amelyek [member avoidance_mask] maszkjában legalább egy megfelelő bit be van állítva, elkerülik ezt az ügynököt."
+msgstr "Az ügynök akadályelkerülési rétegeit meghatározó bitmező. A többi ügynök közül azok kerülik el ezt az ügynököt, amelyek [member avoidance_mask] maszkjában legalább egy egyező bit be van állítva."
 
 #. NavigationAgent2D.avoidance_mask
 #: doc/classes/NavigationAgent2D.xml
@@ -2345,7 +2345,7 @@ msgstr "Az a távolsági küszöb, amelyen belül az útvonal egy pontját elér
 #. NavigationAgent2D.path_max_distance
 #: doc/classes/NavigationAgent2D.xml
 msgid "The maximum distance the agent is allowed away from the ideal path to the final position. This can happen due to trying to avoid collisions. When the maximum distance is exceeded, it recalculates the ideal path."
-msgstr "A legnagyobb megengedett távolság az ügynök és a végcélig vezető ideális útvonal között. Az akadályok kerülgetése miatt az ügynök letérhet az útvonalról. Ha a távolság túllépi ezt a korlátot, a rendszer újratervezi az ideális útvonalat."
+msgstr "A legnagyobb megengedett távolság az ügynök és a végcélig vezető ideális útvonal között. Ütközések elkerülése közben az ügynök letérhet az útvonalról. Ha a távolság túllépi ezt a korlátot, a rendszer újratervezi az ideális útvonalat."
 
 #. NavigationAgent2D.path_postprocessing
 #. NavigationPathQueryParameters2D.path_postprocessing
@@ -2758,7 +2758,7 @@ msgstr "2D-s navigációs háló, amely az útkereséshez használható bejárha
 #. NavigationPolygon.description
 #: doc/classes/NavigationPolygon.xml
 msgid "A navigation mesh can be created either by baking it with the help of the [NavigationServer2D], or by adding vertices and convex polygon indices arrays manually.\nTo bake a navigation mesh at least one outline needs to be added that defines the outer bounds of the baked area.\n[codeblocks]\n[gdscript]\nvar new_navigation_mesh = NavigationPolygon.new()\nvar bounding_outline = PackedVector2Array([Vector2(0, 0), Vector2(0, 50), Vector2(50, 50), Vector2(50, 0)])\nnew_navigation_mesh.add_outline(bounding_outline)\nNavigationServer2D.bake_from_source_geometry_data(new_navigation_mesh, NavigationMeshSourceGeometryData2D.new());\n$NavigationRegion2D.navigation_polygon = new_navigation_mesh\n[/gdscript]\n[csharp]\nvar newNavigationMesh = new NavigationPolygon();\nVector2[] boundingOutline = [new Vector2(0, 0), new Vector2(0, 50), new Vector2(50, 50), new Vector2(50, 0)];\nnewNavigationMesh.AddOutline(boundingOutline);\nNavigationServer2D.BakeFromSourceGeometryData(newNavigationMesh, new NavigationMeshSourceGeometryData2D());\nGetNode&lt;NavigationRegion2D&gt;(\"NavigationRegion2D\").NavigationPolygon = newNavigationMesh;\n[/csharp]\n[/codeblocks]\nAdding vertices and polygon indices manually.\n[codeblocks]\n[gdscript]\nvar new_navigation_mesh = NavigationPolygon.new()\nvar new_vertices = PackedVector2Array([Vector2(0, 0), Vector2(0, 50), Vector2(50, 50), Vector2(50, 0)])\nnew_navigation_mesh.vertices = new_vertices\nvar new_polygon_indices = PackedInt32Array([0, 1, 2, 3])\nnew_navigation_mesh.add_polygon(new_polygon_indices)\n$NavigationRegion2D.navigation_polygon = new_navigation_mesh\n[/gdscript]\n[csharp]\nvar newNavigationMesh = new NavigationPolygon();\nVector2[] newVertices = [new Vector2(0, 0), new Vector2(0, 50), new Vector2(50, 50), new Vector2(50, 0)];\nnewNavigationMesh.Vertices = newVertices;\nint[] newPolygonIndices = [0, 1, 2, 3];\nnewNavigationMesh.AddPolygon(newPolygonIndices);\nGetNode&lt;NavigationRegion2D&gt;(\"NavigationRegion2D\").NavigationPolygon = newNavigationMesh;\n[/csharp]\n[/codeblocks]"
-msgstr "Navigációs hálót a [NavigationServer2D] segítségével történő előállítással, illetve a csúcsok és a konvex sokszögek indexeit tartalmazó tömbök kézi megadásával is létrehozhatsz.\nA navigációs háló előállításához legalább egy körvonalat hozzá kell adni, amely meghatározza az előállított terület külső határait.\n[codeblocks]\n[gdscript]\nvar new_navigation_mesh = NavigationPolygon.new()\nvar bounding_outline = PackedVector2Array([Vector2(0, 0), Vector2(0, 50), Vector2(50, 50), Vector2(50, 0)])\nnew_navigation_mesh.add_outline(bounding_outline)\nNavigationServer2D.bake_from_source_geometry_data(new_navigation_mesh, NavigationMeshSourceGeometryData2D.new());\n$NavigationRegion2D.navigation_polygon = new_navigation_mesh\n[/gdscript]\n[csharp]\nvar newNavigationMesh = new NavigationPolygon();\nVector2[] boundingOutline = [new Vector2(0, 0), new Vector2(0, 50), new Vector2(50, 50), new Vector2(50, 0)];\nnewNavigationMesh.AddOutline(boundingOutline);\nNavigationServer2D.BakeFromSourceGeometryData(newNavigationMesh, new NavigationMeshSourceGeometryData2D());\nGetNode&lt;NavigationRegion2D&gt;(\"NavigationRegion2D\").NavigationPolygon = newNavigationMesh;\n[/csharp]\n[/codeblocks]\nCsúcsok és sokszögindexek kézi hozzáadása.\n[codeblocks]\n[gdscript]\nvar new_navigation_mesh = NavigationPolygon.new()\nvar new_vertices = PackedVector2Array([Vector2(0, 0), Vector2(0, 50), Vector2(50, 50), Vector2(50, 0)])\nnew_navigation_mesh.vertices = new_vertices\nvar new_polygon_indices = PackedInt32Array([0, 1, 2, 3])\nnew_navigation_mesh.add_polygon(new_polygon_indices)\n$NavigationRegion2D.navigation_polygon = new_navigation_mesh\n[/gdscript]\n[csharp]\nvar newNavigationMesh = new NavigationPolygon();\nVector2[] newVertices = [new Vector2(0, 0), new Vector2(0, 50), new Vector2(50, 50), new Vector2(50, 0)];\nnewNavigationMesh.Vertices = newVertices;\nint[] newPolygonIndices = [0, 1, 2, 3];\nnewNavigationMesh.AddPolygon(newPolygonIndices);\nGetNode&lt;NavigationRegion2D&gt;(\"NavigationRegion2D\").NavigationPolygon = newNavigationMesh;\n[/csharp]\n[/codeblocks]"
+msgstr "Navigációs hálót a [NavigationServer2D] segítségével történő előállítással, illetve a csúcsok és a konvex sokszögeket alkotó csúcsindexek tömbjeinek kézi megadásával is létrehozhatsz.\nA navigációs háló előállításához legalább egy körvonalat hozzá kell adni, amely meghatározza az előállított terület külső határait.\n[codeblocks]\n[gdscript]\nvar new_navigation_mesh = NavigationPolygon.new()\nvar bounding_outline = PackedVector2Array([Vector2(0, 0), Vector2(0, 50), Vector2(50, 50), Vector2(50, 0)])\nnew_navigation_mesh.add_outline(bounding_outline)\nNavigationServer2D.bake_from_source_geometry_data(new_navigation_mesh, NavigationMeshSourceGeometryData2D.new());\n$NavigationRegion2D.navigation_polygon = new_navigation_mesh\n[/gdscript]\n[csharp]\nvar newNavigationMesh = new NavigationPolygon();\nVector2[] boundingOutline = [new Vector2(0, 0), new Vector2(0, 50), new Vector2(50, 50), new Vector2(50, 0)];\nnewNavigationMesh.AddOutline(boundingOutline);\nNavigationServer2D.BakeFromSourceGeometryData(newNavigationMesh, new NavigationMeshSourceGeometryData2D());\nGetNode&lt;NavigationRegion2D&gt;(\"NavigationRegion2D\").NavigationPolygon = newNavigationMesh;\n[/csharp]\n[/codeblocks]\nCsúcsok és a sokszögeket alkotó csúcsindexek kézi hozzáadása.\n[codeblocks]\n[gdscript]\nvar new_navigation_mesh = NavigationPolygon.new()\nvar new_vertices = PackedVector2Array([Vector2(0, 0), Vector2(0, 50), Vector2(50, 50), Vector2(50, 0)])\nnew_navigation_mesh.vertices = new_vertices\nvar new_polygon_indices = PackedInt32Array([0, 1, 2, 3])\nnew_navigation_mesh.add_polygon(new_polygon_indices)\n$NavigationRegion2D.navigation_polygon = new_navigation_mesh\n[/gdscript]\n[csharp]\nvar newNavigationMesh = new NavigationPolygon();\nVector2[] newVertices = [new Vector2(0, 0), new Vector2(0, 50), new Vector2(50, 50), new Vector2(50, 0)];\nnewNavigationMesh.Vertices = newVertices;\nint[] newPolygonIndices = [0, 1, 2, 3];\nnewNavigationMesh.AddPolygon(newPolygonIndices);\nGetNode&lt;NavigationRegion2D&gt;(\"NavigationRegion2D\").NavigationPolygon = newNavigationMesh;\n[/csharp]\n[/codeblocks]"
 
 #. NavigationPolygon.agent_radius
 #: doc/classes/NavigationPolygon.xml
@@ -2803,7 +2803,7 @@ msgstr "A navigációs háló sokszögeinek létrehozásához használt feloszt�
 #. NavigationPolygon.source_geometry_group_name
 #: doc/classes/NavigationPolygon.xml
 msgid "The group name of nodes that should be parsed for baking source geometry.\nOnly used when [member source_geometry_mode] is [constant SOURCE_GEOMETRY_GROUPS_WITH_CHILDREN] or [constant SOURCE_GEOMETRY_GROUPS_EXPLICIT]."
-msgstr "Azon csomópontcsoport neve, amelynek tagjait a rendszer feldolgozza a navigációs geometria előállításakor.\nCsak akkor használatos, ha a [member source_geometry_mode] értéke [constant SOURCE_GEOMETRY_GROUPS_WITH_CHILDREN] vagy [constant SOURCE_GEOMETRY_GROUPS_EXPLICIT]."
+msgstr "Annak a csomópontcsoportnak a neve, amelyből a rendszer a navigációs háló előállításához szükséges forrásgeometriát gyűjti.\nCsak akkor használatos, ha a [member source_geometry_mode] értéke [constant SOURCE_GEOMETRY_GROUPS_WITH_CHILDREN] vagy [constant SOURCE_GEOMETRY_GROUPS_EXPLICIT]."
 
 #. NavigationPolygon.source_geometry_mode
 #: doc/classes/NavigationPolygon.xml
@@ -3073,7 +3073,7 @@ msgstr "Beállítja az akadály pozícióját világkoordinátákban."
 #. NavigationServer2D.obstacle_set_radius
 #: doc/classes/NavigationServer2D.xml
 msgid "Sets the radius of the dynamic obstacle."
-msgstr "Beállítja a mozgó akadály sugarát."
+msgstr "Beállítja a dinamikus akadály sugarát."
 
 #. NavigationServer2D.bake_from_source_geometry_data
 #: doc/classes/NavigationServer2D.xml
@@ -3503,7 +3503,7 @@ msgstr "Beállítja a [param link] kapcsolat [param travel_cost] haladási költ
 #. NavigationServer2D.map_force_update
 #: doc/classes/NavigationServer2D.xml
 msgid "This function immediately forces synchronization of the specified navigation [param map] [RID]. By default navigation maps are only synchronized at the end of each physics frame. This function can be used to immediately (re)calculate all the navigation meshes and region connections of the navigation map. This makes it possible to query a navigation path for a changed map immediately and in the same frame (multiple times if needed).\nDue to technical restrictions the current NavigationServer command queue will be flushed. This means all already queued update commands for this physics frame will be executed, even those intended for other maps, regions and agents not part of the specified map. The expensive computation of the navigation meshes and region connections of a map will only be done for the specified map. Other maps will receive the normal synchronization at the end of the physics frame. Should the specified map receive changes after the forced update it will update again as well when the other maps receive their update.\nAvoidance processing and dispatch of the [code]safe_velocity[/code] signals is unaffected by this function and continues to happen for all maps and agents at the end of the physics frame.\n[b]Note:[/b] With great power comes great responsibility. This function should only be used by users that really know what they are doing and have a good reason for it. Forcing an immediate update of a navigation map requires locking the NavigationServer and flushing the entire NavigationServer command queue. Not only can this severely impact the performance of a game but it can also introduce bugs if used inappropriately without much foresight."
-msgstr "Azonnal kikényszeríti a [param map] [RID] azonosítójú navigációs térkép szinkronizálását. Alapértelmezés szerint a navigációs térképek csak a fizikai képkockák végén szinkronizálódnak. Ezzel a függvénnyel azonnal újraszámíthatod a térkép navigációs hálóit és a területek közötti kapcsolatokat. Így egy módosított térkép útvonala már ugyanabban a képkockában lekérdezhető, szükség esetén többször is.\nTechnikai korlátok miatt a művelet kiüríti a NavigationServer aktuális parancssorát. Ez azt jelenti, hogy a képkockára korábban ütemezett összes frissítési parancs végrehajtódik, azok is, amelyek nem a megadott térképhez tartozó térképeket, területeket vagy ügynököket érintik. A navigációs hálók és területkapcsolatok költséges újraszámítása csak a megadott térképen történik meg. A többi térkép a fizikai képkocka végén a szokásos módon szinkronizálódik. Ha a megadott térkép a kényszerített frissítés után újra megváltozik, akkor a többi térképpel együtt ismét frissül.\nAz akadályelkerülés feldolgozását és a [code]safe_velocity[/code] jelzések továbbítását a függvény nem módosítja; ezek továbbra is az összes térképnél és ügynöknél a fizikai képkocka végén zajlanak.\n[b]Megjegyzés:[/b] Nagy hatalommal nagy felelősség jár. A függvényt csak akkor használd, ha pontosan érted a működését, és valóban szükséges. A navigációs térkép azonnali frissítése zárolja a NavigationServert és kiüríti annak teljes parancssorát. Ez súlyosan ronthatja a játék teljesítményét, és előrelátás nélkül használva hibákat is okozhat."
+msgstr "Azonnal kikényszeríti a [param map] [RID] azonosítójú navigációs térkép szinkronizálását. Alapértelmezés szerint a navigációs térképek csak a fizikai képkockák végén szinkronizálódnak. Ezzel a függvénnyel azonnal újraszámíthatod a térkép navigációs hálóit és a területek közötti kapcsolatokat. Így egy módosított térkép útvonala már ugyanabban a képkockában lekérdezhető, szükség esetén többször is.\nTechnikai korlátok miatt a művelet kiüríti a NavigationServer aktuális parancsvárólistáját. Ez azt jelenti, hogy a képkockára korábban ütemezett összes frissítési parancs végrehajtódik, azok is, amelyek nem a megadott térképhez tartozó térképeket, területeket vagy ügynököket érintik. A navigációs hálók és területkapcsolatok költséges újraszámítása csak a megadott térképen történik meg. A többi térkép a fizikai képkocka végén a szokásos módon szinkronizálódik. Ha a megadott térkép a kényszerített frissítés után újra megváltozik, akkor a többi térképpel együtt ismét frissül.\nAz akadályelkerülés feldolgozását és a [code]safe_velocity[/code] jelzések továbbítását a függvény nem módosítja; ezek továbbra is az összes térképnél és ügynöknél a fizikai képkocka végén zajlanak.\n[b]Megjegyzés:[/b] Nagy hatalommal nagy felelősség jár. A függvényt csak akkor használd, ha pontosan érted a működését, és valóban szükséges. A navigációs térkép azonnali frissítése zárolja a NavigationServert és kiüríti annak teljes parancsvárólistáját. Ez súlyosan ronthatja a játék teljesítményét, és előrelátás nélkül használva hibákat is okozhat."
 
 #. NavigationServer2D.obstacle_get_avoidance_enabled
 #: doc/classes/NavigationServer2D.xml
@@ -3788,7 +3788,7 @@ msgstr "Ha engedélyezett, és a rendszer feldolgozza az akadályt a navigáció
 #. NavigationObstacle2D.avoidance_enabled
 #: doc/classes/NavigationObstacle2D.xml
 msgid "If [code]true[/code] the obstacle affects avoidance using agents."
-msgstr "Ha [code]true[/code], az akadály befolyásolja az akadályelkerülést használó ügynökök mozgását."
+msgstr "Ha [code]true[/code], az akadályt figyelembe veszik az ügynökök akadályelkerülési számításai."
 
 #. NavigationObstacle2D.avoidance_layers
 #: doc/classes/NavigationObstacle2D.xml
@@ -3808,7 +3808,7 @@ msgstr "Beállítja az akadályelkerüléshez használt akadálysugarat."
 #. NavigationObstacle2D.velocity
 #: doc/classes/NavigationObstacle2D.xml
 msgid "Sets the wanted velocity for the obstacle so other agent's can better predict the obstacle if it is moved with a velocity regularly (every frame) instead of warped to a new position. Does only affect avoidance for the obstacles [member radius]. Does nothing for the obstacles static vertices."
-msgstr "Beállítja az akadály kívánt sebességét, hogy a többi ügynök jobban előre jelezhesse annak mozgását, ha az akadály képkockánként, sebesség alapján mozog, nem pedig azonnal új pozícióba kerül. Csak az akadály [member radius] sugarával történő akadályelkerülésre van hatása, a statikus csúcspontokra nincs."
+msgstr "Beállítja az akadály kívánt sebességét, hogy a többi ügynök jobban előre jelezhesse annak mozgását, ha az akadály képkockánként, sebesség alapján mozog, nem pedig azonnal új pozícióba kerül. A sebesség csak az akadály [member radius] sugara alapján számított elkerülésre hat. A statikus körvonal csúcspontjaira nincs hatása."
 
 #. NavigationObstacle2D.vertices
 #: doc/classes/NavigationObstacle2D.xml
@@ -3843,7 +3843,7 @@ msgstr "Visszaadja a testre ható gravitáció eredő vektorát. A számítás f
 #. PhysicsBody2D.move_and_collide
 #: doc/classes/PhysicsBody2D.xml
 msgid "Moves the body along the vector [param motion]. In order to be frame rate independent in [method Node._physics_process] or [method Node._process], [param motion] should be computed using [code]delta[/code].\nReturns a [KinematicCollision2D], which contains information about the collision when stopped, or when touching another body along the motion.\nIf [param test_only] is [code]true[/code], the body does not move but the would-be collision information is given.\n[param safe_margin] is the extra margin used for collision recovery (see [member CharacterBody2D.safe_margin] for more details).\nIf [param recovery_as_collision] is [code]true[/code], any depenetration from the recovery phase is also reported as a collision; this is used e.g. by [CharacterBody2D] for improving floor detection during floor snapping."
-msgstr "A testet a [param motion] vektor mentén mozgatja. A [method Node._physics_process] vagy [method Node._process] függvényben a képkockasebességtől független mozgáshoz a [param motion] értékét a [code]delta[/code] felhasználásával kell kiszámítani.\nHa ütközés állítja meg a mozgást, vagy a test mozgás közben egy másik testhez ér, a metódus az ütközés adatait tartalmazó [KinematicCollision2D] objektumot ad vissza.\nHa a [param test_only] értéke [code]true[/code], a test mozdulatlan marad, de a lehetséges ütközés adatait a metódus így is visszaadja.\nA [param safe_margin] az ütközésből való kiemeléshez használt további biztonsági távolság (részletek: [member CharacterBody2D.safe_margin]).\nHa a [param recovery_as_collision] értéke [code]true[/code], a helyreállítás közbeni átfedés-megszüntetést is ütközésként jelenti. Ezt például a [CharacterBody2D] használja a padló felismerésének javítására, amikor a testet a padlóhoz igazítja."
+msgstr "A testet a [param motion] vektor mentén mozgatja. A [method Node._physics_process] vagy [method Node._process] függvényben a képkockasebességtől független mozgáshoz a [param motion] értékét a [code]delta[/code] felhasználásával kell kiszámítani.\nHa ütközés állítja meg a mozgást, vagy a test mozgás közben egy másik testhez ér, a metódus az ütközés adatait tartalmazó [KinematicCollision2D] objektumot ad vissza.\nHa a [param test_only] értéke [code]true[/code], a test mozdulatlan marad, de a lehetséges ütközés adatait a metódus így is visszaadja.\nA [param safe_margin] az átfedő testek szétválasztásához használt ráhagyás (részletek: [member CharacterBody2D.safe_margin]).\nHa a [param recovery_as_collision] értéke [code]true[/code], a helyreállítás közbeni átfedés-megszüntetést is ütközésként jelenti. Ezt például a [CharacterBody2D] használja a padló felismerésének javítására, amikor a testet a padlóhoz igazítja."
 
 #. PhysicsBody2D.remove_collision_exception_with
 #: doc/classes/PhysicsBody2D.xml
@@ -4358,7 +4358,7 @@ msgstr "Ha [code]true[/code], a [Parallax2D] pozícióját nem befolyásolja a k
 #. Parallax2D.limit_begin
 #: doc/classes/Parallax2D.xml
 msgid "Top-left limits for scrolling to begin. If the camera is outside of this limit, the [Parallax2D] stops scrolling. Must be lower than [member limit_end] minus the viewport size to work."
-msgstr "A görgetési terület bal felső határa. Ha a kamera túllép ezen a határon, a [Parallax2D] görgetése leáll. A helyes működéshez az értéknek kisebbnek kell lennie a [member limit_end] értékénél, a nézetablak méretével csökkentve azt."
+msgstr "A görgetési terület bal felső határa. Ha a kamera túllép ezen a határon, a [Parallax2D] görgetése leáll. A helyes működéshez vond ki a nézetablak méretét a [member limit_end] értékéből. A bal felső határnak az így kapott értéknél kisebbnek kell lennie."
 
 #. Parallax2D.limit_end
 #: doc/classes/Parallax2D.xml
@@ -4373,7 +4373,7 @@ msgstr "A csomópont gyermekeinek [Texture2D] textúráit ismétli, és a megado
 #. Parallax2D.repeat_times
 #: doc/classes/Parallax2D.xml
 msgid "Overrides the amount of times the texture repeats. Each texture copy spreads evenly from the original by [member repeat_size]. Useful for when zooming out with a camera."
-msgstr "Felülírja, hogy a textúra hányszor ismétlődjön. A másolatok az eredeti textúrától a [member repeat_size] értékének megfelelő, egyenletes távolságokra helyezkednek el. Különösen hasznos a kamera távolításakor."
+msgstr "Felülírja, hogy a textúra hányszor ismétlődjön. A másolatok az eredeti textúrától a [member repeat_size] értékének megfelelő, egyenletes távolságokra helyezkednek el. Különösen hasznos a kamera nagyításának csökkentésekor."
 
 #. Parallax2D.screen_offset
 #: doc/classes/Parallax2D.xml
