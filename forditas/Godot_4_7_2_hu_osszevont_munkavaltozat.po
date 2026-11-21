@@ -12262,3 +12262,253 @@ msgstr "Az ütközésvizsgálathoz használt alakzat."
 #: doc/classes/ShapeCast2D.xml
 msgid "The shape's destination point, relative to this node's [member Node2D.position]."
 msgstr "Az alakzat célpontja a csomópont [member Node2D.position] értékéhez viszonyítva."
+
+#. RigidBody2D.brief
+#: doc/classes/RigidBody2D.xml
+msgid "A 2D physics body that is moved by a physics simulation."
+msgstr "Fizikai szimuláció által mozgatott kétdimenziós test."
+
+#. RigidBody2D.description
+#: doc/classes/RigidBody2D.xml
+msgid "[RigidBody2D] implements full 2D physics. It cannot be controlled directly, instead, you must apply forces to it (gravity, impulses, etc.), and the physics simulation will calculate the resulting movement, rotation, react to collisions, and affect other physics bodies in its path.\nThe body's behavior can be adjusted via [member lock_rotation], [member freeze], and [member freeze_mode]. By changing various properties of the object, such as [member mass], you can control how the physics simulation acts on it.\nA rigid body will always maintain its shape and size, even when forces are applied to it. It is useful for objects that can be interacted with in an environment, such as a tree that can be knocked over or a stack of crates that can be pushed around.\nIf you need to directly affect the body, prefer [method _integrate_forces] as it allows you to directly access the physics state.\nIf you need to override the default physics behavior, you can write a custom force integration function. See [member custom_integrator].\n[b]Note:[/b] Changing the 2D transform or [member linear_velocity] of a [RigidBody2D] very often may lead to some unpredictable behaviors. This also happens when a [RigidBody2D] is the descendant of a constantly moving node, like another [RigidBody2D], as that will cause its global transform to be set whenever its ancestor moves."
+msgstr "A [RigidBody2D] teljes kétdimenziós fizikai szimulációt használ. A test közvetlen vezérlése helyett erőkkel, gravitációval és impulzusokkal hathatsz rá. A szimuláció kiszámítja a test mozgását és forgását, kezeli az ütközéseket, és figyelembe veszi, hogyan hat a test az útjába kerülő más fizikai testekre.\nA test viselkedése a [member lock_rotation], a [member freeze] és a [member freeze_mode] tulajdonsággal állítható be. Az objektum tulajdonságai, például a [member mass] módosításával szabályozhatod a szimuláció testre gyakorolt hatását.\nA merev test erők hatására is megőrzi az alakját és a méretét. Használható például kidönthető fához vagy eltolható ládarakáshoz.\nHa közvetlenül kell hatnod a testre, használd a [method _integrate_forces] metódust, amellyel közvetlenül hozzáférhetsz a fizikai állapothoz.\nHa felül szeretnéd írni az alapértelmezett fizikai viselkedést, írhatsz saját erőintegráló függvényt. Lásd a [member custom_integrator] tulajdonságot.\n[b]Megjegyzés:[/b] A [RigidBody2D] 2D-s transzformációjának vagy [member linear_velocity] értékének gyakori módosítása kiszámíthatatlan viselkedést okozhat. Ez akkor is megtörténhet, ha a [RigidBody2D] egy folyamatosan mozgó csomópont, például egy másik [RigidBody2D] leszármazottja. Ilyenkor a szülő vagy más ős minden elmozdulása módosítja a test globális transzformációját."
+
+#. RigidBody2D._integrate_forces
+#: doc/classes/RigidBody2D.xml
+msgid "Called during physics processing, allowing you to read and safely modify the simulation state for the object. By default, it is called before the standard force integration, but the [member custom_integrator] property allows you to disable the standard force integration and do fully custom force integration for a body."
+msgstr "A fizikai feldolgozás során hívódik meg. Lehetővé teszi az objektum szimulációs állapotának beolvasását és biztonságos módosítását. Alapértelmezés szerint a szokásos erőintegrálás előtt fut le. A [member custom_integrator] tulajdonsággal kikapcsolhatod a szokásos erőintegrálást, és teljesen egyéni erőintegrálást alkalmazhatsz a testre."
+
+#. RigidBody2D.add_constant_central_force
+#: doc/classes/RigidBody2D.xml
+msgid "Adds a constant directional force without affecting rotation that keeps being applied over time until cleared with [code]constant_force = Vector2(0, 0)[/code].\nThis is equivalent to using [method add_constant_force] at the body's center of mass."
+msgstr "Állandó, adott irányú erőt ad a testhez anélkül, hogy befolyásolná a forgását. Az erő addig hat, amíg a [code]constant_force = Vector2(0, 0)[/code] utasítással nem törlöd.\nEz egyenértékű azzal, mintha az [method add_constant_force] metódussal a test tömegközéppontjában alkalmaznád az erőt."
+
+#. RigidBody2D.add_constant_force
+#: doc/classes/RigidBody2D.xml
+msgid "Adds a constant positioned force to the body that keeps being applied over time until cleared with [code]constant_force = Vector2(0, 0)[/code].\n[param position] is the offset from the body origin in global coordinates."
+msgstr "Adott pontban ható állandó erőt ad a testhez. Az erő addig hat, amíg a [code]constant_force = Vector2(0, 0)[/code] utasítással nem törlöd.\nA [param position] a test origójától számított eltolás globális koordinátákban."
+
+#. RigidBody2D.add_constant_torque
+#: doc/classes/RigidBody2D.xml
+msgid "Adds a constant rotational force without affecting position that keeps being applied over time until cleared with [code]constant_torque = 0[/code]."
+msgstr "Állandó forgatónyomatékot ad a testhez anélkül, hogy befolyásolná a helyzetét. A forgatónyomaték addig hat, amíg a [code]constant_torque = 0[/code] utasítással nem törlöd."
+
+#. RigidBody2D.apply_central_force
+#: doc/classes/RigidBody2D.xml
+msgid "Applies a directional force without affecting rotation. A force is time dependent and meant to be applied every physics update.\nThis is equivalent to using [method apply_force] at the body's center of mass."
+msgstr "Adott irányú erőt alkalmaz a forgás befolyásolása nélkül. Az erő időfüggő, ezért minden fizikai frissítéskor alkalmazni kell.\nEz egyenértékű azzal, mintha az [method apply_force] metódussal a test tömegközéppontjában alkalmaznád az erőt."
+
+#. RigidBody2D.apply_central_impulse
+#: doc/classes/RigidBody2D.xml
+msgid "Applies a directional impulse without affecting rotation.\nAn impulse is time-independent! Applying an impulse every frame would result in a framerate-dependent force. For this reason, it should only be used when simulating one-time impacts (use the \"_force\" functions otherwise).\nThis is equivalent to using [method apply_impulse] at the body's center of mass."
+msgstr "Adott irányú impulzust alkalmaz a forgás befolyásolása nélkül.\nAz impulzus időfüggetlen. Ha minden képkockában impulzust alkalmazol, az eredő erő a képkockasebességtől függ. Az impulzust ezért egyszeri ütközések szimulálására használd. Más esetekben válaszd a „_force” függvényeket.\nEz egyenértékű azzal, mintha az [method apply_impulse] metódussal a test tömegközéppontjában alkalmaznád az impulzust."
+
+#. RigidBody2D.apply_force
+#: doc/classes/RigidBody2D.xml
+msgid "Applies a positioned force to the body. A force is time dependent and meant to be applied every physics update.\n[param position] is the offset from the body origin in global coordinates."
+msgstr "Adott pontban ható erőt alkalmaz a testre. Az erő időfüggő, ezért minden fizikai frissítéskor alkalmazni kell.\nA [param position] a test origójától számított eltolás globális koordinátákban."
+
+#. RigidBody2D.apply_impulse
+#: doc/classes/RigidBody2D.xml
+msgid "Applies a positioned impulse to the body.\nAn impulse is time-independent! Applying an impulse every frame would result in a framerate-dependent force. For this reason, it should only be used when simulating one-time impacts (use the \"_force\" functions otherwise).\n[param position] is the offset from the body origin in global coordinates."
+msgstr "Adott pontban ható impulzust alkalmaz a testre.\nAz impulzus időfüggetlen. Ha minden képkockában impulzust alkalmazol, az eredő erő a képkockasebességtől függ. Az impulzust ezért egyszeri ütközések szimulálására használd. Más esetekben válaszd a „_force” függvényeket.\nA [param position] a test origójától számított eltolás globális koordinátákban."
+
+#. RigidBody2D.apply_torque
+#: doc/classes/RigidBody2D.xml
+msgid "Applies a rotational force without affecting position. A force is time dependent and meant to be applied every physics update.\n[b]Note:[/b] [member inertia] is required for this to work. To have [member inertia], an active [CollisionShape2D] must be a child of the node, or you can manually set [member inertia]."
+msgstr "Forgatónyomatékot alkalmaz a helyzet befolyásolása nélkül. A hatás időfüggő, ezért minden fizikai frissítéskor alkalmazni kell.\n[b]Megjegyzés:[/b] Ehhez a testnek [member inertia] értékkel kell rendelkeznie. A [member inertia] kiszámításához a testnek aktív [CollisionShape2D] gyermekcsomópontra van szüksége. A [member inertia] értékét kézzel is megadhatod."
+
+#. RigidBody2D.apply_torque_impulse
+#: doc/classes/RigidBody2D.xml
+msgid "Applies a rotational impulse to the body without affecting the position.\nAn impulse is time-independent! Applying an impulse every frame would result in a framerate-dependent force. For this reason, it should only be used when simulating one-time impacts (use the \"_force\" functions otherwise).\n[b]Note:[/b] [member inertia] is required for this to work. To have [member inertia], an active [CollisionShape2D] must be a child of the node, or you can manually set [member inertia]."
+msgstr "Forgási impulzust alkalmaz a testre a helyzet befolyásolása nélkül.\nAz impulzus időfüggetlen. Ha minden képkockában impulzust alkalmazol, az eredő erő a képkockasebességtől függ. Az impulzust ezért egyszeri ütközések szimulálására használd. Más esetekben válaszd a „_force” függvényeket.\n[b]Megjegyzés:[/b] Ehhez a testnek [member inertia] értékkel kell rendelkeznie. A [member inertia] kiszámításához a testnek aktív [CollisionShape2D] gyermekcsomópontra van szüksége. A [member inertia] értékét kézzel is megadhatod."
+
+#. RigidBody2D.get_colliding_bodies
+#: doc/classes/RigidBody2D.xml
+msgid "Returns a list of the bodies colliding with this one. Requires [member contact_monitor] to be set to [code]true[/code] and [member max_contacts_reported] to be set high enough to detect all the collisions.\n[b]Note:[/b] The result of this test is not immediate after moving objects. For performance, list of collisions is updated once per frame and before the physics step. Consider using signals instead."
+msgstr "Visszaadja az ezzel a testtel ütköző testek listáját. A [member contact_monitor] értékének [code]true[/code]-nak kell lennie, a [member max_contacts_reported] értékének pedig elég nagynak ahhoz, hogy minden ütközés észlelhető legyen.\n[b]Megjegyzés:[/b] Az objektumok elmozdítása után a vizsgálat eredménye nem frissül azonnal. Teljesítménybeli okokból az ütközések listája képkockánként egyszer, a fizikai lépés előtt frissül. Ilyen esetben érdemes jelzéseket használni."
+
+#. RigidBody2D.get_contact_count
+#: doc/classes/RigidBody2D.xml
+msgid "Returns the number of contacts this body has with other bodies. By default, this returns 0 unless bodies are configured to monitor contacts (see [member contact_monitor]).\n[b]Note:[/b] To retrieve the colliding bodies, use [method get_colliding_bodies]."
+msgstr "Visszaadja, hány érintkezési pontja van ennek a testnek más testekkel. Alapértelmezés szerint 0 az eredmény, amíg nincs bekapcsolva az érintkezések figyelése (lásd a [member contact_monitor] tulajdonságot).\n[b]Megjegyzés:[/b] Az ütköző testek a [method get_colliding_bodies] metódussal kérhetők le."
+
+#. RigidBody2D.set_axis_velocity
+#: doc/classes/RigidBody2D.xml
+msgid "Sets the body's velocity on the given axis. The velocity in the given vector axis will be set as the given vector length. This is useful for jumping behavior."
+msgstr "Beállítja a test sebességét a megadott tengely mentén. A tengelyt a megadott vektor iránya, az ezen a tengelyen beállított sebességet pedig a vektor hossza határozza meg. Ugrás megvalósításához hasznos."
+
+#. RigidBody2D.body_entered
+#: doc/classes/RigidBody2D.xml
+msgid "Emitted when a collision with another [PhysicsBody2D] or [TileMap] occurs. Requires [member contact_monitor] to be set to [code]true[/code] and [member max_contacts_reported] to be set high enough to detect all the collisions. [TileMap]s are detected if the [TileSet] has Collision [Shape2D]s.\n[param body] the [Node], if it exists in the tree, of the other [PhysicsBody2D] or [TileMap]."
+msgstr "A test ezt a jelzést küldi, amikor egy másik [PhysicsBody2D] vagy [TileMap] csomóponttal ütközik. Ehhez a [member contact_monitor] értékét [code]true[/code]-ra kell állítani, a [member max_contacts_reported] értékét pedig elég nagyra ahhoz, hogy minden ütközés észlelhető legyen. A [TileMap] akkor észlelhető, ha a [TileSet] ütközési [Shape2D] alakzatokat tartalmaz.\nA [param body] a másik [PhysicsBody2D] vagy [TileMap] [Node] csomópontja, ha szerepel a jelenetfában."
+
+#. RigidBody2D.body_exited
+#: doc/classes/RigidBody2D.xml
+msgid "Emitted when the collision with another [PhysicsBody2D] or [TileMap] ends. Requires [member contact_monitor] to be set to [code]true[/code] and [member max_contacts_reported] to be set high enough to detect all the collisions. [TileMap]s are detected if the [TileSet] has Collision [Shape2D]s.\n[param body] the [Node], if it exists in the tree, of the other [PhysicsBody2D] or [TileMap]."
+msgstr "A test ezt a jelzést küldi, amikor véget ér az ütközése egy másik [PhysicsBody2D] vagy [TileMap] csomóponttal. Ehhez a [member contact_monitor] értékét [code]true[/code]-ra kell állítani, a [member max_contacts_reported] értékét pedig elég nagyra ahhoz, hogy minden ütközés észlelhető legyen. A [TileMap] akkor észlelhető, ha a [TileSet] ütközési [Shape2D] alakzatokat tartalmaz.\nA [param body] a másik [PhysicsBody2D] vagy [TileMap] [Node] csomópontja, ha szerepel a jelenetfában."
+
+#. RigidBody2D.body_shape_entered
+#: doc/classes/RigidBody2D.xml
+msgid "Emitted when one of this RigidBody2D's [Shape2D]s collides with another [PhysicsBody2D] or [TileMap]'s [Shape2D]s. Requires [member contact_monitor] to be set to [code]true[/code] and [member max_contacts_reported] to be set high enough to detect all the collisions. [TileMap]s are detected if the [TileSet] has Collision [Shape2D]s.\n[param body_rid] the [RID] of the other [PhysicsBody2D] or [TileSet]'s [CollisionObject2D] used by the [PhysicsServer2D].\n[param body] the [Node], if it exists in the tree, of the other [PhysicsBody2D] or [TileMap].\n[param body_shape_index] the index of the [Shape2D] of the other [PhysicsBody2D] or [TileMap] used by the [PhysicsServer2D]. Get the [CollisionShape2D] node with [code]body.shape_owner_get_owner(body.shape_find_owner(body_shape_index))[/code].\n[param local_shape_index] the index of the [Shape2D] of this RigidBody2D used by the [PhysicsServer2D]. Get the [CollisionShape2D] node with [code]self.shape_owner_get_owner(self.shape_find_owner(local_shape_index))[/code]."
+msgstr "A test ezt a jelzést küldi, amikor a RigidBody2D egyik [Shape2D] alakzata egy másik [PhysicsBody2D] vagy [TileMap] valamelyik [Shape2D] alakzatával ütközik. Ehhez a [member contact_monitor] értékét [code]true[/code]-ra kell állítani, a [member max_contacts_reported] értékét pedig elég nagyra ahhoz, hogy minden ütközés észlelhető legyen. A [TileMap] akkor észlelhető, ha a [TileSet] ütközési [Shape2D] alakzatokat tartalmaz.\nA [param body_rid] a másik [PhysicsBody2D] vagy a [TileSet] [CollisionObject2D] objektumának a [PhysicsServer2D] által használt [RID] azonosítója.\nA [param body] a másik [PhysicsBody2D] vagy [TileMap] [Node] csomópontja, ha szerepel a jelenetfában.\nA [param body_shape_index] a másik [PhysicsBody2D] vagy [TileMap] [Shape2D] alakzatának [PhysicsServer2D] által használt indexe. A [CollisionShape2D] csomópont a [code]body.shape_owner_get_owner(body.shape_find_owner(body_shape_index))[/code] hívással kérhető le.\nA [param local_shape_index] ennek a RigidBody2D testnek a [Shape2D] alakzatához tartozó, a [PhysicsServer2D] által használt index. A [CollisionShape2D] csomópont a [code]self.shape_owner_get_owner(self.shape_find_owner(local_shape_index))[/code] hívással kérhető le."
+
+#. RigidBody2D.body_shape_exited
+#: doc/classes/RigidBody2D.xml
+msgid "Emitted when the collision between one of this RigidBody2D's [Shape2D]s and another [PhysicsBody2D] or [TileMap]'s [Shape2D]s ends. Requires [member contact_monitor] to be set to [code]true[/code] and [member max_contacts_reported] to be set high enough to detect all the collisions. [TileMap]s are detected if the [TileSet] has Collision [Shape2D]s.\n[param body_rid] the [RID] of the other [PhysicsBody2D] or [TileSet]'s [CollisionObject2D] used by the [PhysicsServer2D].\n[param body] the [Node], if it exists in the tree, of the other [PhysicsBody2D] or [TileMap].\n[param body_shape_index] the index of the [Shape2D] of the other [PhysicsBody2D] or [TileMap] used by the [PhysicsServer2D]. Get the [CollisionShape2D] node with [code]body.shape_owner_get_owner(body.shape_find_owner(body_shape_index))[/code].\n[param local_shape_index] the index of the [Shape2D] of this RigidBody2D used by the [PhysicsServer2D]. Get the [CollisionShape2D] node with [code]self.shape_owner_get_owner(self.shape_find_owner(local_shape_index))[/code]."
+msgstr "A test ezt a jelzést küldi, amikor véget ér az ütközés a RigidBody2D egyik [Shape2D] alakzata és egy másik [PhysicsBody2D] vagy [TileMap] valamelyik [Shape2D] alakzata között. Ehhez a [member contact_monitor] értékét [code]true[/code]-ra kell állítani, a [member max_contacts_reported] értékét pedig elég nagyra ahhoz, hogy minden ütközés észlelhető legyen. A [TileMap] akkor észlelhető, ha a [TileSet] ütközési [Shape2D] alakzatokat tartalmaz.\nA [param body_rid] a másik [PhysicsBody2D] vagy a [TileSet] [CollisionObject2D] objektumának a [PhysicsServer2D] által használt [RID] azonosítója.\nA [param body] a másik [PhysicsBody2D] vagy [TileMap] [Node] csomópontja, ha szerepel a jelenetfában.\nA [param body_shape_index] a másik [PhysicsBody2D] vagy [TileMap] [Shape2D] alakzatának [PhysicsServer2D] által használt indexe. A [CollisionShape2D] csomópont a [code]body.shape_owner_get_owner(body.shape_find_owner(body_shape_index))[/code] hívással kérhető le.\nA [param local_shape_index] ennek a RigidBody2D testnek a [Shape2D] alakzatához tartozó, a [PhysicsServer2D] által használt index. A [CollisionShape2D] csomópont a [code]self.shape_owner_get_owner(self.shape_find_owner(local_shape_index))[/code] hívással kérhető le."
+
+#. RigidBody2D.sleeping_state_changed
+#: doc/classes/RigidBody2D.xml
+msgid "Emitted when the physics engine changes the body's sleeping state.\n[b]Note:[/b] Changing the value [member sleeping] will not trigger this signal. It is only emitted if the sleeping state is changed by the physics engine or [code]emit_signal(\"sleeping_state_changed\")[/code] is used."
+msgstr "A test ezt a jelzést küldi, amikor a fizikai motor megváltoztatja az alvó állapotát.\n[b]Megjegyzés:[/b] A [member sleeping] értékének módosítása nem váltja ki ezt a jelzést. A jelzés csak akkor jön létre, ha a fizikai motor változtatja meg az alvó állapotot, vagy az [code]emit_signal(\"sleeping_state_changed\")[/code] hívással kézzel elküldöd."
+
+#. RigidBody2D.angular_damp
+#: doc/classes/RigidBody2D.xml
+msgid "Damps the body's rotation. By default, the body will use the [member ProjectSettings.physics/2d/default_angular_damp] setting or any value override set by an [Area2D] the body is in. Depending on [member angular_damp_mode], you can set [member angular_damp] to be added to or to replace the body's damping value.\nSee [member ProjectSettings.physics/2d/default_angular_damp] for more details about damping."
+msgstr "Csillapítja a test forgását. Alapértelmezés szerint a test a [member ProjectSettings.physics/2d/default_angular_damp] beállítást vagy a testet tartalmazó [Area2D] felülíró értékét használja. A [member angular_damp_mode] értékétől függően a [member angular_damp] hozzáadódik a test csillapítási értékéhez, vagy felülírja azt.\nA csillapításról a [member ProjectSettings.physics/2d/default_angular_damp] leírásában olvashatsz bővebben."
+
+#. RigidBody2D.angular_damp_mode
+#: doc/classes/RigidBody2D.xml
+msgid "Defines how [member angular_damp] is applied."
+msgstr "Megadja, hogyan érvényesül a [member angular_damp]."
+
+#. RigidBody2D.angular_velocity
+#: doc/classes/RigidBody2D.xml
+msgid "The body's rotational velocity in [i]radians[/i] per second."
+msgstr "A test szögsebessége másodpercenkénti [i]radiánban[/i]."
+
+#. RigidBody2D.can_sleep
+#: doc/classes/RigidBody2D.xml
+msgid "If [code]true[/code], the body can enter sleep mode when there is no movement. See [member sleeping]."
+msgstr "Ha az érték [code]true[/code], a test nyugalomban alvó módba kerülhet. Lásd a [member sleeping] tulajdonságot."
+
+#. RigidBody2D.center_of_mass
+#: doc/classes/RigidBody2D.xml
+msgid "The body's custom center of mass, relative to the body's origin position, when [member center_of_mass_mode] is set to [constant CENTER_OF_MASS_MODE_CUSTOM]. This is the balanced point of the body, where applied forces only cause linear acceleration. Applying forces outside of the center of mass causes angular acceleration.\nWhen [member center_of_mass_mode] is set to [constant CENTER_OF_MASS_MODE_AUTO] (default value), the center of mass is automatically determined, but this does not update the value of [member center_of_mass]."
+msgstr "A test egyéni tömegközéppontja az origójához képest, ha a [member center_of_mass_mode] értéke [constant CENTER_OF_MASS_MODE_CUSTOM]. Ez a test egyensúlyi pontja. Az itt alkalmazott erő csak lineáris gyorsulást okoz. A tömegközépponton kívül alkalmazott erő szöggyorsulást is okoz.\nHa a [member center_of_mass_mode] értéke [constant CENTER_OF_MASS_MODE_AUTO] (alapértelmezés), a motor automatikusan meghatározza a tömegközéppontot, de a [member center_of_mass] értékét nem frissíti."
+
+#. RigidBody2D.center_of_mass_mode
+#: doc/classes/RigidBody2D.xml
+msgid "Defines the way the body's center of mass is set."
+msgstr "Meghatározza, hogyan számítja ki vagy állítja be a motor a test tömegközéppontját."
+
+#. RigidBody2D.constant_force
+#: doc/classes/RigidBody2D.xml
+msgid "The body's total constant positional forces applied during each physics update.\nSee [method add_constant_force] and [method add_constant_central_force]."
+msgstr "A testre minden fizikai frissítéskor alkalmazott, adott pontokban ható állandó erők összege.\nLásd az [method add_constant_force] és az [method add_constant_central_force] metódust."
+
+#. RigidBody2D.constant_torque
+#: doc/classes/RigidBody2D.xml
+msgid "The body's total constant rotational forces applied during each physics update.\nSee [method add_constant_torque]."
+msgstr "A testre minden fizikai frissítéskor alkalmazott állandó forgatónyomatékok összege.\nLásd az [method add_constant_torque] metódust."
+
+#. RigidBody2D.contact_monitor
+#: doc/classes/RigidBody2D.xml
+msgid "If [code]true[/code], the RigidBody2D will emit signals when it collides with another body.\n[b]Note:[/b] By default the maximum contacts reported is set to 0, meaning nothing will be recorded, see [member max_contacts_reported]."
+msgstr "Ha az érték [code]true[/code], a RigidBody2D jelzéseket küld, amikor másik testtel ütközik.\n[b]Megjegyzés:[/b] A jelenthető érintkezések legnagyobb száma alapértelmezés szerint 0, ezért a rendszer egyet sem rögzít. Lásd a [member max_contacts_reported] tulajdonságot."
+
+#. RigidBody2D.continuous_cd
+#: doc/classes/RigidBody2D.xml
+msgid "Continuous collision detection mode.\nContinuous collision detection tries to predict where a moving body will collide instead of moving it and correcting its movement after collision. Continuous collision detection is slower, but more precise and misses fewer collisions with small, fast-moving objects. Raycasting and shapecasting methods are available."
+msgstr "A folyamatos ütközésérzékelés módja.\nA folyamatos ütközésérzékelés előre próbálja meghatározni, hol ütközik a mozgó test, így nem az elmozdítás után kell korrigálni a mozgását. Lassabb, viszont pontosabb, és ritkábban hagy ki ütközést kis méretű, gyorsan mozgó objektumokkal. Sugárral és alakzattal végzett vizsgálat is választható."
+
+#. RigidBody2D.custom_integrator
+#: doc/classes/RigidBody2D.xml
+msgid "If [code]true[/code], the standard force integration (like gravity or damping) will be disabled for this body. Other than collision response, the body will only move as determined by the [method _integrate_forces] method, if that virtual method is overridden.\nSetting this property will call the method [method PhysicsServer2D.body_set_omit_force_integration] internally."
+msgstr "Ha az érték [code]true[/code], a motor ennél a testnél kikapcsolja a szokásos erőintegrálást, így a gravitáció és a csillapítás automatikus alkalmazását is. Az ütközési reakción felül a test csak a [method _integrate_forces] metódus által meghatározott módon mozog, ha ezt a virtuális metódust felülírtad.\nA tulajdonság beállításakor a motor belsőleg meghívja a [method PhysicsServer2D.body_set_omit_force_integration] metódust."
+
+#. RigidBody2D.freeze
+#: doc/classes/RigidBody2D.xml
+msgid "If [code]true[/code], the body is frozen. Gravity and forces are not applied anymore.\nSee [member freeze_mode] to set the body's behavior when frozen.\n[b]Note:[/b] For a body that is always frozen, use [StaticBody2D] or [AnimatableBody2D] instead."
+msgstr "Ha az érték [code]true[/code], a test mozgása befagy. A gravitáció és az erők többé nem hatnak rá.\nA befagyasztott test viselkedését a [member freeze_mode] tulajdonsággal állíthatod be.\n[b]Megjegyzés:[/b] Ha a test mindig befagyasztva maradna, használj [StaticBody2D] vagy [AnimatableBody2D] csomópontot."
+
+#. RigidBody2D.freeze_mode
+#: doc/classes/RigidBody2D.xml
+msgid "The body's freeze mode. Determines the body's behavior when [member freeze] is [code]true[/code].\n[b]Note:[/b] For a body that is always frozen, use [StaticBody2D] or [AnimatableBody2D] instead."
+msgstr "A test befagyasztási módja. Meghatározza a test viselkedését, amikor a [member freeze] értéke [code]true[/code].\n[b]Megjegyzés:[/b] Ha a test mindig befagyasztva maradna, használj [StaticBody2D] vagy [AnimatableBody2D] csomópontot."
+
+#. RigidBody2D.gravity_scale
+#: doc/classes/RigidBody2D.xml
+msgid "Multiplies the gravity applied to the body. The body's gravity is calculated from the [member ProjectSettings.physics/2d/default_gravity] project setting and/or any additional gravity vector applied by [Area2D]s."
+msgstr "A testre ható gravitáció szorzója. A motor a gravitációt a [member ProjectSettings.physics/2d/default_gravity] projektbeállításból és/vagy az [Area2D] csomópontok által alkalmazott további gravitációs vektorból számítja ki."
+
+#. RigidBody2D.inertia
+#: doc/classes/RigidBody2D.xml
+msgid "The body's moment of inertia. This is like mass, but for rotation: it determines how much torque it takes to rotate the body. The moment of inertia is usually computed automatically from the mass and the shapes, but this property allows you to set a custom value.\nIf set to [code]0[/code], inertia is automatically computed (default value).\n[b]Note:[/b] This value does not change when inertia is automatically computed. Use [PhysicsServer2D] to get the computed inertia.\n[codeblocks]\n[gdscript]\n@onready var ball = $Ball\n\nfunc get_ball_inertia():\n\treturn 1.0 / PhysicsServer2D.body_get_direct_state(ball.get_rid()).inverse_inertia\n[/gdscript]\n[csharp]\nprivate RigidBody2D _ball;\n\npublic override void _Ready()\n{\n\t_ball = GetNode<RigidBody2D>(\"Ball\");\n}\n\nprivate float GetBallInertia()\n{\n\treturn 1.0f / PhysicsServer2D.BodyGetDirectState(_ball.GetRid()).InverseInertia;\n}\n[/csharp]\n[/codeblocks]"
+msgstr "A test tehetetlenségi nyomatéka. A forgásban a tömeghez hasonló szerepet tölt be: meghatározza, mekkora forgatónyomatékra van szükség a test elforgatásához. A motor általában a tömegből és az alakzatokból számítja ki, de itt egyéni értéket is megadhatsz.\nHa az érték [code]0[/code], a tehetetlenségi nyomatékot a motor automatikusan számítja ki. Ez az alapértelmezés.\n[b]Megjegyzés:[/b] Automatikus számításkor ez a tulajdonság nem változik. A kiszámított tehetetlenségi nyomatékot a [PhysicsServer2D] segítségével kérheted le.\n[codeblocks]\n[gdscript]\n@onready var ball = $Ball\n\nfunc get_ball_inertia():\n\treturn 1.0 / PhysicsServer2D.body_get_direct_state(ball.get_rid()).inverse_inertia\n[/gdscript]\n[csharp]\nprivate RigidBody2D _ball;\n\npublic override void _Ready()\n{\n\t_ball = GetNode<RigidBody2D>(\"Ball\");\n}\n\nprivate float GetBallInertia()\n{\n\treturn 1.0f / PhysicsServer2D.BodyGetDirectState(_ball.GetRid()).InverseInertia;\n}\n[/csharp]\n[/codeblocks]"
+
+#. RigidBody2D.linear_damp
+#: doc/classes/RigidBody2D.xml
+msgid "Damps the body's movement. By default, the body will use the [member ProjectSettings.physics/2d/default_linear_damp] setting or any value override set by an [Area2D] the body is in. Depending on [member linear_damp_mode], you can set [member linear_damp] to be added to or to replace the body's damping value.\nSee [member ProjectSettings.physics/2d/default_linear_damp] for more details about damping."
+msgstr "Csillapítja a test mozgását. Alapértelmezés szerint a test a [member ProjectSettings.physics/2d/default_linear_damp] beállítást vagy a testet tartalmazó [Area2D] felülíró értékét használja. A [member linear_damp_mode] értékétől függően a [member linear_damp] hozzáadódik a test csillapítási értékéhez, vagy felülírja azt.\nA csillapításról a [member ProjectSettings.physics/2d/default_linear_damp] leírásában olvashatsz bővebben."
+
+#. RigidBody2D.linear_damp_mode
+#: doc/classes/RigidBody2D.xml
+msgid "Defines how [member linear_damp] is applied."
+msgstr "Megadja, hogyan érvényesül a [member linear_damp]."
+
+#. RigidBody2D.linear_velocity
+#: doc/classes/RigidBody2D.xml
+msgid "The body's linear velocity in pixels per second. Can be used sporadically, but [b]don't set this every frame[/b], because physics may run in another thread and runs at a different granularity. Use [method _integrate_forces] as your process loop for precise control of the body state."
+msgstr "A test lineáris sebessége képpont/másodpercben. Alkalmanként beállíthatod, de [b]ne állítsd be minden képkockában[/b], mert a fizikai feldolgozás másik szálon és eltérő időlépéssel is futhat. A test állapotának pontos vezérléséhez a [method _integrate_forces] metódusban kezeld a testet a fizikai frissítések során."
+
+#. RigidBody2D.lock_rotation
+#: doc/classes/RigidBody2D.xml
+msgid "If [code]true[/code], the body cannot rotate. Gravity and forces only apply linear movement."
+msgstr "Ha az érték [code]true[/code], a test nem foroghat. A gravitáció és az erők csak a test elmozdulására hatnak."
+
+#. RigidBody2D.mass
+#: doc/classes/RigidBody2D.xml
+msgid "The body's mass."
+msgstr "A test tömege."
+
+#. RigidBody2D.sleeping
+#: doc/classes/RigidBody2D.xml
+msgid "If [code]true[/code], the body will not move and will not calculate forces until woken up by another body through, for example, a collision, or by using the [method apply_impulse] or [method apply_force] methods."
+msgstr "Ha az érték [code]true[/code], a test nem mozog, és a motor nem számolja ki a rá ható erőket, amíg egy másik test, például ütközéssel, fel nem ébreszti. Az [method apply_impulse] vagy az [method apply_force] metódussal is felébreszthető."
+
+#. RigidBody2D.DAMP_MODE_COMBINE
+#: doc/classes/RigidBody2D.xml
+msgid "In this mode, the body's damping value is added to any value set in areas or the default value."
+msgstr "Ebben a módban a test csillapítási értéke hozzáadódik a területeken megadott értékhez vagy az alapértelmezett értékhez."
+
+#. RigidBody2D.DAMP_MODE_REPLACE
+#: doc/classes/RigidBody2D.xml
+msgid "In this mode, the body's damping value replaces any value set in areas or the default value."
+msgstr "Ebben a módban a test csillapítási értéke felülírja a területeken megadott értéket vagy az alapértelmezett értéket."
+
+#. RigidBody2D.FREEZE_MODE_STATIC
+#: doc/classes/RigidBody2D.xml
+msgid "Static body freeze mode (default). The body is not affected by gravity and forces. It can be only moved by user code and doesn't collide with other bodies along its path."
+msgstr "Statikus befagyasztási mód (alapértelmezés). A gravitáció és az erők nem hatnak a testre. Csak saját kóddal mozgatható, és mozgatás közben nem ütközik az útjába kerülő testekkel."
+
+#. RigidBody2D.FREEZE_MODE_KINEMATIC
+#: doc/classes/RigidBody2D.xml
+msgid "Kinematic body freeze mode. Similar to [constant FREEZE_MODE_STATIC], but collides with other bodies along its path when moved. Useful for a frozen body that needs to be animated."
+msgstr "Kinematikus befagyasztási mód. Hasonló a [constant FREEZE_MODE_STATIC] módhoz, de a test mozgatásakor ütközik az útjába kerülő más testekkel. Akkor hasznos, ha egy befagyasztott testet animálni kell."
+
+#. RigidBody2D.CENTER_OF_MASS_MODE_AUTO
+#: doc/classes/RigidBody2D.xml
+msgid "In this mode, the body's center of mass is calculated automatically based on its shapes. This assumes that the shapes' origins are also their center of mass."
+msgstr "Ebben a módban a motor az alakzatok alapján automatikusan számítja ki a test tömegközéppontját. A számítás feltételezi, hogy az alakzatok origója egyben a tömegközéppontjuk is."
+
+#. RigidBody2D.CENTER_OF_MASS_MODE_CUSTOM
+#: doc/classes/RigidBody2D.xml
+msgid "In this mode, the body's center of mass is set through [member center_of_mass]. Defaults to the body's origin position."
+msgstr "Ebben a módban a test tömegközéppontját a [member center_of_mass] tulajdonság adja meg. Alapértelmezés szerint ez a test origója."
+
+#. RigidBody2D.CCD_MODE_DISABLED
+#: doc/classes/RigidBody2D.xml
+msgid "Continuous collision detection disabled. This is the fastest way to detect body collisions, but can miss small, fast-moving objects."
+msgstr "A folyamatos ütközésérzékelés ki van kapcsolva. Ez a leggyorsabb módszer a testek ütközésének észlelésére, de kis méretű, gyorsan mozgó objektumoknál elmaradhat az észlelés."
+
+#. RigidBody2D.CCD_MODE_CAST_RAY
+#: doc/classes/RigidBody2D.xml
+msgid "Continuous collision detection enabled using raycasting. This is faster than shapecasting but less precise."
+msgstr "Folyamatos ütközésérzékelés sugárvizsgálattal. Gyorsabb, de kevésbé pontos, mint az alakzattal végzett vizsgálat."
+
+#. RigidBody2D.CCD_MODE_CAST_SHAPE
+#: doc/classes/RigidBody2D.xml
+msgid "Continuous collision detection enabled using shapecasting. This is the slowest CCD method and the most precise."
+msgstr "Folyamatos ütközésérzékelés alakzattal végzett vizsgálattal. Ez a leglassabb és egyben a legpontosabb folyamatos ütközésérzékelési mód."
