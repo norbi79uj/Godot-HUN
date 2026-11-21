@@ -5559,7 +5559,7 @@ msgstr "A [FlowContainer] kizárólag függőleges elrendezésű változata. Ami
 #. ScrollContainer.brief
 #: doc/classes/ScrollContainer.xml
 msgid "A container used to provide scrollbars to a child control when needed."
-msgstr "Olyan tároló, amely szükség esetén görgetősávokat biztosít a gyermek vezérlőelemhez."
+msgstr "Olyan tároló, amely szükség esetén görgetősávokat ad a benne lévő gyermek vezérlőelemhez."
 
 #. ScrollContainer.description
 #: doc/classes/ScrollContainer.xml
@@ -5609,7 +5609,7 @@ msgstr "Meghatározza a görgetési jelzések megjelenítési módját. A jelzé
 #. ScrollContainer.scroll_horizontal
 #: doc/classes/ScrollContainer.xml
 msgid "The current horizontal scroll value.\n[b]Note:[/b] If you are setting this value in the [method Node._ready] function or earlier, it needs to be wrapped with [method Object.set_deferred], since scroll bar's [member Range.max_value] is not initialized yet.\n[codeblock]\nfunc _ready():\nset_deferred(\"scroll_horizontal\", 600)\n[/codeblock]"
-msgstr "A vízszintes görgetés aktuális értéke.\n[b]Megjegyzés:[/b] Ha ezt a [method Node._ready] függvényben vagy korábban állítod be, a [method Object.set_deferred] használatával késleltesd a módosítást, mert a görgetősáv [member Range.max_value] értéke még nincs inicializálva.\n[codeblock]\nfunc _ready():\nset_deferred(\"scroll_horizontal\", 600)\n[/codeblock]"
+msgstr "A vízszintes görgetés aktuális értéke.\n[b]Megjegyzés:[/b] Ha a [method Node._ready] metódusban vagy azt megelőzően állítod be ezt az értéket, a [method Object.set_deferred] metódussal késleltesd a módosítást, mivel a görgetősáv [member Range.max_value] értéke még nincs inicializálva.\n[codeblock]\nfunc _ready():\nset_deferred(\"scroll_horizontal\", 600)\n[/codeblock]"
 
 #. ScrollContainer.scroll_horizontal_by_default
 #: doc/classes/ScrollContainer.xml
@@ -5624,7 +5624,7 @@ msgstr "Felülírja a [member ScrollBar.custom_step] lépésközét a belső ví
 #. ScrollContainer.scroll_vertical
 #: doc/classes/ScrollContainer.xml
 msgid "The current vertical scroll value.\n[b]Note:[/b] Setting it early needs to be deferred, just like in [member scroll_horizontal].\n[codeblock]\nfunc _ready():\nset_deferred(\"scroll_vertical\", 600)\n[/codeblock]"
-msgstr "A függőleges görgetés aktuális értéke.\n[b]Megjegyzés:[/b] Korai beállítását késleltetni kell, akárcsak a [member scroll_horizontal] esetében.\n[codeblock]\nfunc _ready():\nset_deferred(\"scroll_vertical\", 600)\n[/codeblock]"
+msgstr "A függőleges görgetés aktuális értéke.\n[b]Megjegyzés:[/b] Ha ezt az értéket korán állítod be, a műveletet késleltetni kell, ugyanúgy, mint a [member scroll_horizontal] esetében.\n[codeblock]\nfunc _ready():\nset_deferred(\"scroll_vertical\", 600)\n[/codeblock]"
 
 #. ScrollContainer.scroll_vertical_custom_step
 #: doc/classes/ScrollContainer.xml
@@ -5644,12 +5644,12 @@ msgstr "Szabályozza, hogy a függőleges görgetősáv használható-e, és mik
 #. ScrollContainer.theme.scroll_hint_horizontal_color
 #: doc/classes/ScrollContainer.xml
 msgid "[Color] used to modulate the [theme_item scroll_hint_horizontal] texture."
-msgstr "A [theme_item scroll_hint_horizontal] textúra színezésére használt [Color]."
+msgstr "A [theme_item scroll_hint_horizontal] textúra színezéséhez használt [Color] érték."
 
 #. ScrollContainer.theme.scroll_hint_vertical_color
 #: doc/classes/ScrollContainer.xml
 msgid "[Color] used to modulate the [theme_item scroll_hint_vertical] texture."
-msgstr "A [theme_item scroll_hint_vertical] textúra színezésére használt [Color]."
+msgstr "A [theme_item scroll_hint_vertical] textúra színezéséhez használt [Color] érték."
 
 #. ScrollContainer.theme.scrollbar_h_separation
 #: doc/classes/ScrollContainer.xml
@@ -5664,12 +5664,12 @@ msgstr "A vízszintes görgetősáv és a ScrollContainer tartalma közötti fü
 #. ScrollContainer.theme.scroll_hint_horizontal
 #: doc/classes/ScrollContainer.xml
 msgid "The indicator that will be shown when the content can still be scrolled horizontally. See [member scroll_hint_mode]."
-msgstr "Akkor megjelenő jelzés, ha a tartalom vízszintes irányban még tovább görgethető. Lásd: [member scroll_hint_mode]."
+msgstr "A jelzés akkor jelenik meg, ha a tartalom vízszintesen még tovább görgethető. Lásd: [member scroll_hint_mode]."
 
 #. ScrollContainer.theme.scroll_hint_vertical
 #: doc/classes/ScrollContainer.xml
 msgid "The indicator that will be shown when the content can still be scrolled vertically. See [member scroll_hint_mode]."
-msgstr "Akkor megjelenő jelzés, ha a tartalom függőleges irányban még tovább görgethető. Lásd: [member scroll_hint_mode]."
+msgstr "A jelzés akkor jelenik meg, ha a tartalom függőlegesen még tovább görgethető. Lásd: [member scroll_hint_mode]."
 
 #. ScrollContainer.theme.focus
 #: doc/classes/ScrollContainer.xml
