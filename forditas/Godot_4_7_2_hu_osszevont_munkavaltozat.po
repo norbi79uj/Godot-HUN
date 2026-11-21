@@ -1656,7 +1656,7 @@ msgstr "Sprite-képkockák gyűjteménye az AnimatedSprite2D és AnimatedSprite3
 #. SpriteFrames.description
 #: doc/classes/SpriteFrames.xml
 msgid "Sprite frame library for an [AnimatedSprite2D] or [AnimatedSprite3D] node. Contains frames and animation data for playback."
-msgstr "Sprite-képkockák könyvtára egy [AnimatedSprite2D] vagy [AnimatedSprite3D] csomóponthoz. A lejátszáshoz szükséges képkockákat és animációs adatokat tárolja."
+msgstr "Sprite-képkockák könyvtára egy [AnimatedSprite2D] vagy [AnimatedSprite3D] csomóponthoz. Az animációk lejátszásához szükséges képkockákat és adatokat tartalmazza."
 
 #. SpriteFrames.add_animation
 #: doc/classes/SpriteFrames.xml
@@ -1676,7 +1676,7 @@ msgstr "Eltávolítja a [param anim] animáció összes képkockáját."
 #. SpriteFrames.clear_all
 #: doc/classes/SpriteFrames.xml
 msgid "Removes all animations. An empty [code]default[/code] animation will be created."
-msgstr "Eltávolítja az összes animációt, majd létrehoz egy üres [code]default[/code] animációt."
+msgstr "Törli az összes animációt, és helyettük létrehoz egy üres [code]default[/code] nevű animációt."
 
 #. SpriteFrames.duplicate_animation
 #: doc/classes/SpriteFrames.xml
@@ -1686,7 +1686,7 @@ msgstr "A [param anim_from] animációról [param anim_to] néven másolatot ké
 #. SpriteFrames.get_animation_loop
 #: doc/classes/SpriteFrames.xml
 msgid "Returns [code]true[/code] if [code]get_animation_loop_mode(anim) == LOOP_LINEAR[/code]. Otherwise, returns [code]false[/code]."
-msgstr "[code]true[/code] értéket ad vissza, ha [code]get_animation_loop_mode(anim) == LOOP_LINEAR[/code]. Egyébként [code]false[/code] értéket ad vissza."
+msgstr "[code]true[/code] értéket ad vissza, ha teljesül a [code]get_animation_loop_mode(anim) == LOOP_LINEAR[/code] feltétel; ellenkező esetben [code]false[/code] értéket."
 
 #. SpriteFrames.get_animation_names
 #: doc/classes/SpriteFrames.xml
@@ -1701,7 +1701,7 @@ msgstr "Visszaadja a [param anim] animáció lejátszási sebességét másodper
 #. SpriteFrames.get_frame_count
 #: doc/classes/SpriteFrames.xml
 msgid "Returns the number of frames for the [param anim] animation."
-msgstr "Visszaadja a [param anim] animáció képkockáinak számát."
+msgstr "Megadja, hány képkockából áll a [param anim] animáció."
 
 #. SpriteFrames.get_frame_duration
 #: doc/classes/SpriteFrames.xml
@@ -1731,17 +1731,17 @@ msgstr "Eltávolítja a [param anim] animáció [param idx] indexű képkockáj�
 #. SpriteFrames.rename_animation
 #: doc/classes/SpriteFrames.xml
 msgid "Changes the [param anim] animation's name to [param newname]."
-msgstr "Átnevezi a [param anim] animációt [param newname] névre."
+msgstr "A [param anim] animáció nevét [param newname] értékre módosítja."
 
 #. SpriteFrames.set_animation_loop
 #: doc/classes/SpriteFrames.xml
 msgid "If [param loop] is [code]false[/code] equivalent to [code]set_animation_loop_mode(LOOP_NONE)[/code].\nIf [param loop] is [code]true[/code] equivalent to [code]set_animation_loop_mode(LOOP_LINEAR)[/code]."
-msgstr "Ha [param loop] értéke [code]false[/code], ez megfelel a [code]set_animation_loop_mode(LOOP_NONE)[/code] beállításnak.\nHa [param loop] értéke [code]true[/code], ez megfelel a [code]set_animation_loop_mode(LOOP_LINEAR)[/code] beállításnak."
+msgstr "Ha a [param loop] értéke [code]false[/code], a művelet a [code]set_animation_loop_mode(LOOP_NONE)[/code] hívással egyenértékű.\nHa a [param loop] értéke [code]true[/code], a művelet a [code]set_animation_loop_mode(LOOP_LINEAR)[/code] hívással egyenértékű."
 
 #. SpriteFrames.set_animation_speed
 #: doc/classes/SpriteFrames.xml
 msgid "Sets the speed for the [param anim] animation in frames per second."
-msgstr "Beállítja a [param anim] animáció sebességét képkocka/másodperc egységben."
+msgstr "Beállítja a [param anim] animáció lejátszási sebességét másodpercenkénti képkockaszámban."
 
 #. SpriteFrames.set_frame
 #: doc/classes/SpriteFrames.xml
