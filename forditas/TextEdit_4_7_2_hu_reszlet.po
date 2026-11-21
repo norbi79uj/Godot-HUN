@@ -149,7 +149,7 @@ msgstr "Lezárja a [method begin_complex_operation] metódussal indított többr
 #. TextEdit.end_multicaret_edit
 #: doc/classes/TextEdit.xml
 msgid "Ends an edit for multiple carets, that was started with [method begin_multicaret_edit]. If this was the last [method end_multicaret_edit] and [method merge_overlapping_carets] was called, carets will be merged."
-msgstr "Lezárja a [method begin_multicaret_edit] metódussal indított, több szövegkurzort érintő szerkesztést. Ha ez volt az utolsó [method end_multicaret_edit] hívás, és meghívták a [method merge_overlapping_carets] metódust, a kurzorok összevonásra kerülnek."
+msgstr "Lezárja a [method begin_multicaret_edit] metódussal indított többkurzoros szerkesztést. Ha ez a legkülső szerkesztést lezáró [method end_multicaret_edit] hívás, és közben meghívták a [method merge_overlapping_carets] metódust, ekkor történik meg a kurzorok összevonása."
 
 #. TextEdit.get_caret_column
 #: doc/classes/TextEdit.xml
@@ -169,7 +169,7 @@ msgstr "Visszaadja a szövegkurzor kirajzolási pozícióját képpontokban."
 #. TextEdit.get_caret_index_edit_order
 #: doc/classes/TextEdit.xml
 msgid "Returns a list of caret indexes in their edit order, this done from bottom to top. Edit order refers to the way actions such as [method insert_text_at_caret] are applied."
-msgstr "Visszaadja a szövegkurzorok indexeit a szerkesztési sorrendjükben, alulról felfelé. Ez a sorrend határozza meg, hogy például a [method insert_text_at_caret] művelet milyen sorrendben hajtódik végre a kurzoroknál."
+msgstr "Alulról felfelé, a szerkesztés sorrendjében adja vissza a szövegkurzorok indexeit. Ebben a sorrendben alkalmazza az egyes kurzoroknál az olyan műveleteket, mint a [method insert_text_at_caret]."
 
 #. TextEdit.get_caret_line
 #: doc/classes/TextEdit.xml
@@ -294,7 +294,7 @@ msgstr "Visszaadja a [param line] sor [param wrap_index] tördelési szakaszána
 #. TextEdit.get_line_with_ime
 #: doc/classes/TextEdit.xml
 msgid "Returns line text as it is currently displayed, including IME composition string."
-msgstr "Visszaadja a sor jelenleg megjelenített szövegét, beleértve az IME-ben éppen összeállítás alatt álló szöveget is."
+msgstr "A sor képernyőn megjelenő szövegét adja vissza az IME-ben még szerkesztés alatt álló szövegrésszel együtt."
 
 #. TextEdit.get_line_wrap_count
 #: doc/classes/TextEdit.xml
@@ -324,7 +324,7 @@ msgstr "Visszaadja a [TextEdit] vezérlő [PopupMenu] helyi menüjét. Alapérte
 #. TextEdit.get_minimap_line_at_pos
 #: doc/classes/TextEdit.xml
 msgid "Returns the equivalent minimap line at [param position]."
-msgstr "Visszaadja a [param position] pozíciónak megfelelő sort a minitérképen."
+msgstr "Visszaadja annak a szövegsornak az indexét, amelynek a minitérképen a [param position] pozíció felel meg."
 
 #. TextEdit.get_minimap_visible_lines
 #: doc/classes/TextEdit.xml
@@ -479,7 +479,7 @@ msgstr "A szövegkurzor alatti szót tartalmazó [String] értéket adja vissza.
 #. TextEdit.has_ime_text
 #: doc/classes/TextEdit.xml
 msgid "Returns [code]true[/code] if the user has text in the [url=https://en.wikipedia.org/wiki/Input_method]Input Method Editor[/url] (IME)."
-msgstr "[code]true[/code] értéket ad vissza, ha a felhasználó az [url=https://en.wikipedia.org/wiki/Input_method]Input Method Editor[/url] (IME) beviteli rendszerben szöveget állított össze."
+msgstr "[code]true[/code] értéket ad vissza, ha az [url=https://en.wikipedia.org/wiki/Input_method]Input Method Editor[/url] (IME) még be nem illesztett szöveget tartalmaz."
 
 #. TextEdit.has_redo
 #: doc/classes/TextEdit.xml
@@ -544,7 +544,7 @@ msgstr "[code]true[/code] értéket ad vissza, ha a megadott indexű oldalsáv f
 #. TextEdit.is_in_mulitcaret_edit
 #: doc/classes/TextEdit.xml
 msgid "Returns [code]true[/code] if a [method begin_multicaret_edit] has been called and [method end_multicaret_edit] has not yet been called."
-msgstr "[code]true[/code] értéket ad vissza, ha a [method begin_multicaret_edit] már meghívódott, de a [method end_multicaret_edit] még nem."
+msgstr "[code]true[/code] értéket ad vissza, ha a [method begin_multicaret_edit] metódussal elindított szerkesztést még nem zárta le a hozzá tartozó [method end_multicaret_edit] hívás."
 
 #. TextEdit.is_line_gutter_clickable
 #: doc/classes/TextEdit.xml
@@ -579,7 +579,7 @@ msgstr "[code]true[/code] értéket ad vissza, ha a felülírási mód engedély
 #. TextEdit.menu_option
 #: doc/classes/TextEdit.xml
 msgid "Executes a given action as defined in the [enum MenuItems] enum."
-msgstr "Végrehajtja a [enum MenuItems] felsorolásban meghatározott műveletet."
+msgstr "Végrehajtja az [enum MenuItems] felsorolásban megadott menüműveletet."
 
 #. TextEdit.merge_gutters
 #: doc/classes/TextEdit.xml
@@ -709,22 +709,22 @@ msgstr "Beállítja a [param line] sor szövegét.\nA sorban lévő szövegkurzo
 #. TextEdit.set_line_as_center_visible
 #: doc/classes/TextEdit.xml
 msgid "Positions the [param wrap_index] of [param line] at the center of the viewport."
-msgstr "A [param line] sor [param wrap_index] tördelési szakaszát a nézet közepére helyezi."
+msgstr "Úgy görgeti a nézetet, hogy a [param line] sor [param wrap_index] tördelési szakasza középre kerüljön."
 
 #. TextEdit.set_line_as_first_visible
 #: doc/classes/TextEdit.xml
 msgid "Positions the [param wrap_index] of [param line] at the top of the viewport."
-msgstr "A [param line] sor [param wrap_index] tördelési szakaszát a nézet tetejére helyezi."
+msgstr "Úgy görgeti a nézetet, hogy a [param line] sor [param wrap_index] tördelési szakasza a felső szélére kerüljön."
 
 #. TextEdit.set_line_as_last_visible
 #: doc/classes/TextEdit.xml
 msgid "Positions the [param wrap_index] of [param line] at the bottom of the viewport."
-msgstr "A [param line] sor [param wrap_index] tördelési szakaszát a nézet aljára helyezi."
+msgstr "Úgy görgeti a nézetet, hogy a [param line] sor [param wrap_index] tördelési szakasza az alsó szélére kerüljön."
 
 #. TextEdit.set_line_background_color
 #: doc/classes/TextEdit.xml
 msgid "Sets the custom background color of the given line. If transparent, this color is applied on top of the default background color (See [theme_item background_color]). If set to [code]Color(0, 0, 0, 0)[/code], no additional color is applied."
-msgstr "Beállítja a megadott sor egyéni háttérszínét. Ha a szín áttetsző, az alapértelmezett háttérszínre kerül rá (lásd: [theme_item background_color]). Ha az érték [code]Color(0, 0, 0, 0)[/code], nem alkalmaz további színt."
+msgstr "Beállítja a megadott sor egyéni háttérszínét. Az áttetsző szín az alapértelmezett háttérszín fölött jelenik meg (lásd a [theme_item background_color] témaelemet). A [code]Color(0, 0, 0, 0)[/code] értékkel kikapcsolható az egyéni háttérszín."
 
 #. TextEdit.set_line_gutter_clickable
 #: doc/classes/TextEdit.xml
@@ -759,7 +759,7 @@ msgstr "Ha az érték [code]true[/code], engedélyezi a felülírási módot. Eb
 #. TextEdit.set_search_flags
 #: doc/classes/TextEdit.xml
 msgid "Sets the search [param flags]. This is used with [method set_search_text] to highlight occurrences of the searched text. Search flags can be specified from the [enum SearchFlags] enum."
-msgstr "Beállítja a keresési [param flags] jelzőket. A [method set_search_text] metódussal együtt használva kiemeli a keresett szöveg előfordulásait. A keresési jelzők a [enum SearchFlags] felsorolásból választhatók."
+msgstr "Beállítja a keresési [param flags] jelzőket. A [method set_search_text] metódussal együtt használható a találatok kiemelésére. A jelzők a [enum SearchFlags] felsorolás értékei."
 
 #. TextEdit.set_search_text
 #: doc/classes/TextEdit.xml
@@ -1324,7 +1324,7 @@ msgstr "A sortördelés ki van kapcsolva."
 #. TextEdit.LINE_WRAPPING_BOUNDARY
 #: doc/classes/TextEdit.xml
 msgid "Line wrapping occurs at the control boundary, beyond what would normally be visible."
-msgstr "A sorok a vezérlő határán tördelődnek, ahol a szöveg egyébként már nem lenne látható."
+msgstr "A szöveg a vezérlő szélén új sorban folytatódik ott, ahol egyébként már túlnyúlna a látható területen."
 
 #. TextEdit.GUTTER_TYPE_STRING
 #: doc/classes/TextEdit.xml
@@ -1364,7 +1364,7 @@ msgstr "A kurzort tartalmazó sor háttérszíne ([Color])."
 #. TextEdit.theme_item.font_color
 #: doc/classes/TextEdit.xml
 msgid "Sets the font [Color]."
-msgstr "Beállítja a betűk [Color] színét."
+msgstr "A megjelenített szöveg betűszíne ([Color])."
 
 #. TextEdit.theme_item.font_outline_color
 #: doc/classes/TextEdit.xml
@@ -1379,7 +1379,7 @@ msgstr "A [member placeholder_text] helyőrző szöveg betűszíne."
 #. TextEdit.theme_item.font_readonly_color
 #: doc/classes/TextEdit.xml
 msgid "Sets the font [Color] when [member editable] is disabled."
-msgstr "Beállítja a betűk [Color] színét, amikor a [member editable] ki van kapcsolva."
+msgstr "A szöveg betűszíne ([Color]), amikor a [member editable] ki van kapcsolva."
 
 #. TextEdit.theme_item.font_selected_color
 #: doc/classes/TextEdit.xml
@@ -1399,7 +1399,7 @@ msgstr "A keresési találat háttérszíne ([Color])."
 #. TextEdit.theme_item.selection_color
 #: doc/classes/TextEdit.xml
 msgid "Sets the highlight [Color] of text selections."
-msgstr "Beállítja a kijelölés kiemelő [Color] színét."
+msgstr "A kijelölt szöveg mögötti kiemelés színe ([Color])."
 
 #. TextEdit.theme_item.word_highlighted_color
 #: doc/classes/TextEdit.xml
@@ -1439,12 +1439,12 @@ msgstr "Beállítja az alapértelmezett betűméretet."
 #. TextEdit.theme_item.space
 #: doc/classes/TextEdit.xml
 msgid "Sets a custom [Texture2D] for space text characters."
-msgstr "Egyéni [Texture2D] textúrát állít be a szóközkarakterekhez."
+msgstr "A szóközök megjelenítéséhez használt egyéni [Texture2D] textúra."
 
 #. TextEdit.theme_item.tab
 #: doc/classes/TextEdit.xml
 msgid "Sets a custom [Texture2D] for tab text characters."
-msgstr "Egyéni [Texture2D] textúrát állít be a tabulátorkarakterekhez."
+msgstr "A tabulátorok megjelenítéséhez használt egyéni [Texture2D] textúra."
 
 #. TextEdit.theme_item.focus
 #: doc/classes/TextEdit.xml
