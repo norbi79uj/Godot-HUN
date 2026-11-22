@@ -49807,7 +49807,7 @@ msgstr "A [param array_index] által kijelölt attribútum eltolását adja viss
 #. RenderingServer.mesh_surface_get_format_skin_stride
 #: doc/classes/RenderingServer.xml
 msgid "Returns the stride of the skin buffer for a mesh with given [param format]."
-msgstr "A megadott [param format] formátumú háló egymást követő csúcspozícióinak bájttávolságát adja vissza. A pozíciók egymás után helyezkednek el a csúcspufferben, a normál- és érintővektoroktól elkülönítve."
+msgstr "A megadott [param format] formátumú háló skinpufferének bájtlépését adja vissza."
 
 #. RenderingServer.mesh_surface_get_material
 #: doc/classes/RenderingServer.xml
@@ -51244,7 +51244,7 @@ msgstr "A MultiMesh látható példányainak számát megadó beállítást adja
 #. RenderingServer.multimesh_instance_get_color
 #: doc/classes/RenderingServer.xml
 msgid "Returns the color by which the specified instance will be modulated."
-msgstr "A megadott példány színével összeszorzandó színt adja vissza."
+msgstr "A megadott példány színmodulációjához használt színt adja vissza."
 
 #. RenderingServer.multimesh_instance_get_custom_data
 #: doc/classes/RenderingServer.xml
@@ -51264,7 +51264,7 @@ msgstr "A megadott példány [Transform2D] transzformációját adja vissza. Akk
 #. RenderingServer.multimesh_instance_set_color
 #: doc/classes/RenderingServer.xml
 msgid "Sets the color by which this instance will be modulated. Equivalent to [method MultiMesh.set_instance_color]."
-msgstr "Beállítja a példány színével összeszorzandó színt. A [method MultiMesh.set_instance_color] metódusnak felel meg."
+msgstr "Beállítja a példány színmodulációjához használt színt. A [method MultiMesh.set_instance_color] metódusnak felel meg."
 
 #. RenderingServer.multimesh_instance_set_custom_data
 #: doc/classes/RenderingServer.xml
@@ -51309,7 +51309,7 @@ msgstr "Beállítja a megadott RID azonosítójú kitakaró hálóadatait. A há
 #. RenderingServer.particles_collision_set_attractor_attenuation
 #: doc/classes/RenderingServer.xml
 msgid "Sets the attenuation [param curve] for the 3D GPU particles attractor specified by the [param particles_collision] RID. Only used for attractors, not colliders. Equivalent to [member GPUParticlesAttractor3D.attenuation]."
-msgstr "Beállítja a [param particles_collision] RID-del megadott 3D-s GPU-részecskevonzó [param curve] csillapítási értékét. Csak a vonzókra hat, az ütközőkre nem. A [member GPUParticlesAttractor3D.attenuation] tulajdonságnak felel meg."
+msgstr "Beállítja a [param particles_collision] RID-del megadott 3D-s GPU-részecskevonzó csillapítási görbéjét meghatározó [param curve] értéket. Csak a vonzókra hat, az ütközőkre nem. A [member GPUParticlesAttractor3D.attenuation] tulajdonságnak felel meg."
 
 #. RenderingServer.skeleton_allocate_data
 #: doc/classes/RenderingServer.xml
@@ -51364,7 +51364,7 @@ msgstr "A MultiMesh fizikai interpolációja a gyorsabb számítást részesíti
 #. RenderingServer.MULTIMESH_INTERP_QUALITY_HIGH
 #: doc/classes/RenderingServer.xml
 msgid "MultiMesh physics interpolation favors quality over speed."
-msgstr "A MultiMesh fizikai interpolációja a pontosabb eredményt részesíti előnyben."
+msgstr "A MultiMesh fizikai interpolációja a minőséget részesíti előnyben a sebességgel szemben."
 
 #. RenderingServer.PARTICLES_MODE_2D
 #: doc/classes/RenderingServer.xml
