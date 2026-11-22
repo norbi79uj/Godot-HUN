@@ -27832,7 +27832,7 @@ msgstr "A szín alfaösszetevője, jellemzően 0 és 1 között. A 0 teljes átl
 #. Color.a8
 #: doc/classes/Color.xml
 msgid "Wrapper for [member a] that uses the range 0 to 255, instead of 0 to 1."
-msgstr "Az [member a] összetevő 0 és 255 közötti értékekkel kezelhető változata."
+msgstr "Az [member a] összetevő olyan változata, amely 0 és 1 közötti értékek helyett 0 és 255 közötti értékeket használ."
 
 #. Color.b
 #: doc/classes/Color.xml
@@ -27842,7 +27842,7 @@ msgstr "A szín kék összetevője, jellemzően 0 és 1 között."
 #. Color.b8
 #: doc/classes/Color.xml
 msgid "Wrapper for [member b] that uses the range 0 to 255, instead of 0 to 1."
-msgstr "A [member b] összetevő 0 és 255 közötti értékekkel kezelhető változata."
+msgstr "A [member b] összetevő olyan változata, amely 0 és 1 közötti értékek helyett 0 és 255 közötti értékeket használ."
 
 #. Color.g
 #: doc/classes/Color.xml
@@ -27852,7 +27852,7 @@ msgstr "A szín zöld összetevője, jellemzően 0 és 1 között."
 #. Color.g8
 #: doc/classes/Color.xml
 msgid "Wrapper for [member g] that uses the range 0 to 255, instead of 0 to 1."
-msgstr "A [member g] összetevő 0 és 255 közötti értékekkel kezelhető változata."
+msgstr "A [member g] összetevő olyan változata, amely 0 és 1 közötti értékek helyett 0 és 255 közötti értékeket használ."
 
 #. Color.h
 #: doc/classes/Color.xml
@@ -27882,7 +27882,7 @@ msgstr "A szín vörös összetevője, jellemzően 0 és 1 között."
 #. Color.r8
 #: doc/classes/Color.xml
 msgid "Wrapper for [member r] that uses the range 0 to 255, instead of 0 to 1."
-msgstr "Az [member r] összetevő 0 és 255 közötti értékekkel kezelhető változata."
+msgstr "Az [member r] összetevő olyan változata, amely 0 és 1 közötti értékek helyett 0 és 255 közötti értékeket használ."
 
 #. Color.s
 #: doc/classes/Color.xml
