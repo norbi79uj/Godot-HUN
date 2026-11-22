@@ -40052,887 +40052,887 @@ msgstr "Az érintkezések és a kényszerek megoldásakor használt iterációsz
 #. PhysicsDirectBodyState2DExtension.brief
 #: doc/classes/PhysicsDirectBodyState2DExtension.xml
 msgid "Provides virtual methods that can be overridden to create custom [PhysicsDirectBodyState2D] implementations."
-msgstr "Felülírható virtuális metódusokat biztosít a(z) [PhysicsDirectBodyState2D] egyéni megvalósításához."
+msgstr "Felülírható virtuális metódusokat biztosít a [PhysicsDirectBodyState2D] egyéni megvalósításához."
 
 #. PhysicsDirectBodyState2DExtension.description
 #: doc/classes/PhysicsDirectBodyState2DExtension.xml
 msgid "This class extends [PhysicsDirectBodyState2D] by providing additional virtual methods that can be overridden. When these methods are overridden, they will be called instead of the internal methods of the physics server.\nIntended for use with GDExtension to create custom implementations of [PhysicsDirectBodyState2D]."
-msgstr "Ez az osztály további felülírható virtuális metódusokkal egészíti ki a(z) [PhysicsDirectBodyState2D] osztályt. Ha felülírod ezeket a metódusokat, a fizikakiszolgáló a saját belső metódusai helyett a felülírt változatokat hívja.\nGDExtensionhöz készült, a(z) [PhysicsDirectBodyState2D] egyéni megvalósításához."
+msgstr "Ez az osztály további felülírható virtuális metódusokkal egészíti ki a [PhysicsDirectBodyState2D] osztályt. Ha felülírod ezeket a metódusokat, a fizikakiszolgáló a saját belső metódusai helyett a felülírt változatokat hívja.\nGDExtensionhöz készült, a [PhysicsDirectBodyState2D] egyéni megvalósításához."
 
 #. PhysicsDirectBodyState2DExtension._add_constant_central_force
 #: doc/classes/PhysicsDirectBodyState2DExtension.xml
 msgid "Overridable version of [method PhysicsDirectBodyState2D.add_constant_central_force]."
-msgstr "A(z) [method PhysicsDirectBodyState2D.add_constant_central_force] metódus felülírható változata."
+msgstr "A [method PhysicsDirectBodyState2D.add_constant_central_force] metódus felülírható változata."
 
 #. PhysicsDirectBodyState2DExtension._add_constant_force
 #: doc/classes/PhysicsDirectBodyState2DExtension.xml
 msgid "Overridable version of [method PhysicsDirectBodyState2D.add_constant_force]."
-msgstr "A(z) [method PhysicsDirectBodyState2D.add_constant_force] metódus felülírható változata."
+msgstr "A [method PhysicsDirectBodyState2D.add_constant_force] metódus felülírható változata."
 
 #. PhysicsDirectBodyState2DExtension._add_constant_torque
 #: doc/classes/PhysicsDirectBodyState2DExtension.xml
 msgid "Overridable version of [method PhysicsDirectBodyState2D.add_constant_torque]."
-msgstr "A(z) [method PhysicsDirectBodyState2D.add_constant_torque] metódus felülírható változata."
+msgstr "A [method PhysicsDirectBodyState2D.add_constant_torque] metódus felülírható változata."
 
 #. PhysicsDirectBodyState2DExtension._apply_central_force
 #: doc/classes/PhysicsDirectBodyState2DExtension.xml
 msgid "Overridable version of [method PhysicsDirectBodyState2D.apply_central_force]."
-msgstr "A(z) [method PhysicsDirectBodyState2D.apply_central_force] metódus felülírható változata."
+msgstr "A [method PhysicsDirectBodyState2D.apply_central_force] metódus felülírható változata."
 
 #. PhysicsDirectBodyState2DExtension._apply_central_impulse
 #: doc/classes/PhysicsDirectBodyState2DExtension.xml
 msgid "Overridable version of [method PhysicsDirectBodyState2D.apply_central_impulse]."
-msgstr "A(z) [method PhysicsDirectBodyState2D.apply_central_impulse] metódus felülírható változata."
+msgstr "A [method PhysicsDirectBodyState2D.apply_central_impulse] metódus felülírható változata."
 
 #. PhysicsDirectBodyState2DExtension._apply_force
 #: doc/classes/PhysicsDirectBodyState2DExtension.xml
 msgid "Overridable version of [method PhysicsDirectBodyState2D.apply_force]."
-msgstr "A(z) [method PhysicsDirectBodyState2D.apply_force] metódus felülírható változata."
+msgstr "A [method PhysicsDirectBodyState2D.apply_force] metódus felülírható változata."
 
 #. PhysicsDirectBodyState2DExtension._apply_impulse
 #: doc/classes/PhysicsDirectBodyState2DExtension.xml
 msgid "Overridable version of [method PhysicsDirectBodyState2D.apply_impulse]."
-msgstr "A(z) [method PhysicsDirectBodyState2D.apply_impulse] metódus felülírható változata."
+msgstr "A [method PhysicsDirectBodyState2D.apply_impulse] metódus felülírható változata."
 
 #. PhysicsDirectBodyState2DExtension._apply_torque
 #: doc/classes/PhysicsDirectBodyState2DExtension.xml
 msgid "Overridable version of [method PhysicsDirectBodyState2D.apply_torque]."
-msgstr "A(z) [method PhysicsDirectBodyState2D.apply_torque] metódus felülírható változata."
+msgstr "A [method PhysicsDirectBodyState2D.apply_torque] metódus felülírható változata."
 
 #. PhysicsDirectBodyState2DExtension._apply_torque_impulse
 #: doc/classes/PhysicsDirectBodyState2DExtension.xml
 msgid "Overridable version of [method PhysicsDirectBodyState2D.apply_torque_impulse]."
-msgstr "A(z) [method PhysicsDirectBodyState2D.apply_torque_impulse] metódus felülírható változata."
+msgstr "A [method PhysicsDirectBodyState2D.apply_torque_impulse] metódus felülírható változata."
 
 #. PhysicsDirectBodyState2DExtension._get_angular_velocity
 #: doc/classes/PhysicsDirectBodyState2DExtension.xml
 msgid "Implement to override the behavior of [member PhysicsDirectBodyState2D.angular_velocity] and its respective getter."
-msgstr "Az implementálásával felülírható a(z) [member PhysicsDirectBodyState2D.angular_velocity] tulajdonság és a hozzá tartozó lekérdező metódus viselkedése."
+msgstr "Az implementálásával felülírható a [member PhysicsDirectBodyState2D.angular_velocity] tulajdonság és a hozzá tartozó lekérdező metódus viselkedése."
 
 #. PhysicsDirectBodyState2DExtension._get_center_of_mass
 #: doc/classes/PhysicsDirectBodyState2DExtension.xml
 msgid "Implement to override the behavior of [member PhysicsDirectBodyState2D.center_of_mass] and its respective getter."
-msgstr "Az implementálásával felülírható a(z) [member PhysicsDirectBodyState2D.center_of_mass] tulajdonság és a hozzá tartozó lekérdező metódus viselkedése."
+msgstr "Az implementálásával felülírható a [member PhysicsDirectBodyState2D.center_of_mass] tulajdonság és a hozzá tartozó lekérdező metódus viselkedése."
 
 #. PhysicsDirectBodyState2DExtension._get_center_of_mass_local
 #: doc/classes/PhysicsDirectBodyState2DExtension.xml
 msgid "Implement to override the behavior of [member PhysicsDirectBodyState2D.center_of_mass_local] and its respective getter."
-msgstr "Az implementálásával felülírható a(z) [member PhysicsDirectBodyState2D.center_of_mass_local] tulajdonság és a hozzá tartozó lekérdező metódus viselkedése."
+msgstr "Az implementálásával felülírható a [member PhysicsDirectBodyState2D.center_of_mass_local] tulajdonság és a hozzá tartozó lekérdező metódus viselkedése."
 
 #. PhysicsDirectBodyState2DExtension._get_constant_force
 #: doc/classes/PhysicsDirectBodyState2DExtension.xml
 msgid "Overridable version of [method PhysicsDirectBodyState2D.get_constant_force]."
-msgstr "A(z) [method PhysicsDirectBodyState2D.get_constant_force] metódus felülírható változata."
+msgstr "A [method PhysicsDirectBodyState2D.get_constant_force] metódus felülírható változata."
 
 #. PhysicsDirectBodyState2DExtension._get_constant_torque
 #: doc/classes/PhysicsDirectBodyState2DExtension.xml
 msgid "Overridable version of [method PhysicsDirectBodyState2D.get_constant_torque]."
-msgstr "A(z) [method PhysicsDirectBodyState2D.get_constant_torque] metódus felülírható változata."
+msgstr "A [method PhysicsDirectBodyState2D.get_constant_torque] metódus felülírható változata."
 
 #. PhysicsDirectBodyState2DExtension._get_contact_collider
 #: doc/classes/PhysicsDirectBodyState2DExtension.xml
 msgid "Overridable version of [method PhysicsDirectBodyState2D.get_contact_collider]."
-msgstr "A(z) [method PhysicsDirectBodyState2D.get_contact_collider] metódus felülírható változata."
+msgstr "A [method PhysicsDirectBodyState2D.get_contact_collider] metódus felülírható változata."
 
 #. PhysicsDirectBodyState2DExtension._get_contact_collider_id
 #: doc/classes/PhysicsDirectBodyState2DExtension.xml
 msgid "Overridable version of [method PhysicsDirectBodyState2D.get_contact_collider_id]."
-msgstr "A(z) [method PhysicsDirectBodyState2D.get_contact_collider_id] metódus felülírható változata."
+msgstr "A [method PhysicsDirectBodyState2D.get_contact_collider_id] metódus felülírható változata."
 
 #. PhysicsDirectBodyState2DExtension._get_contact_collider_object
 #: doc/classes/PhysicsDirectBodyState2DExtension.xml
 msgid "Overridable version of [method PhysicsDirectBodyState2D.get_contact_collider_object]."
-msgstr "A(z) [method PhysicsDirectBodyState2D.get_contact_collider_object] metódus felülírható változata."
+msgstr "A [method PhysicsDirectBodyState2D.get_contact_collider_object] metódus felülírható változata."
 
 #. PhysicsDirectBodyState2DExtension._get_contact_collider_position
 #: doc/classes/PhysicsDirectBodyState2DExtension.xml
 msgid "Overridable version of [method PhysicsDirectBodyState2D.get_contact_collider_position]."
-msgstr "A(z) [method PhysicsDirectBodyState2D.get_contact_collider_position] metódus felülírható változata."
+msgstr "A [method PhysicsDirectBodyState2D.get_contact_collider_position] metódus felülírható változata."
 
 #. PhysicsDirectBodyState2DExtension._get_contact_collider_shape
 #: doc/classes/PhysicsDirectBodyState2DExtension.xml
 msgid "Overridable version of [method PhysicsDirectBodyState2D.get_contact_collider_shape]."
-msgstr "A(z) [method PhysicsDirectBodyState2D.get_contact_collider_shape] metódus felülírható változata."
+msgstr "A [method PhysicsDirectBodyState2D.get_contact_collider_shape] metódus felülírható változata."
 
 #. PhysicsDirectBodyState2DExtension._get_contact_collider_velocity_at_position
 #: doc/classes/PhysicsDirectBodyState2DExtension.xml
 msgid "Overridable version of [method PhysicsDirectBodyState2D.get_contact_collider_velocity_at_position]."
-msgstr "A(z) [method PhysicsDirectBodyState2D.get_contact_collider_velocity_at_position] metódus felülírható változata."
+msgstr "A [method PhysicsDirectBodyState2D.get_contact_collider_velocity_at_position] metódus felülírható változata."
 
 #. PhysicsDirectBodyState2DExtension._get_contact_count
 #: doc/classes/PhysicsDirectBodyState2DExtension.xml
 msgid "Overridable version of [method PhysicsDirectBodyState2D.get_contact_count]."
-msgstr "A(z) [method PhysicsDirectBodyState2D.get_contact_count] metódus felülírható változata."
+msgstr "A [method PhysicsDirectBodyState2D.get_contact_count] metódus felülírható változata."
 
 #. PhysicsDirectBodyState2DExtension._get_contact_impulse
 #: doc/classes/PhysicsDirectBodyState2DExtension.xml
 msgid "Overridable version of [method PhysicsDirectBodyState2D.get_contact_impulse]."
-msgstr "A(z) [method PhysicsDirectBodyState2D.get_contact_impulse] metódus felülírható változata."
+msgstr "A [method PhysicsDirectBodyState2D.get_contact_impulse] metódus felülírható változata."
 
 #. PhysicsDirectBodyState2DExtension._get_contact_local_normal
 #: doc/classes/PhysicsDirectBodyState2DExtension.xml
 msgid "Overridable version of [method PhysicsDirectBodyState2D.get_contact_local_normal]."
-msgstr "A(z) [method PhysicsDirectBodyState2D.get_contact_local_normal] metódus felülírható változata."
+msgstr "A [method PhysicsDirectBodyState2D.get_contact_local_normal] metódus felülírható változata."
 
 #. PhysicsDirectBodyState2DExtension._get_contact_local_position
 #: doc/classes/PhysicsDirectBodyState2DExtension.xml
 msgid "Overridable version of [method PhysicsDirectBodyState2D.get_contact_local_position]."
-msgstr "A(z) [method PhysicsDirectBodyState2D.get_contact_local_position] metódus felülírható változata."
+msgstr "A [method PhysicsDirectBodyState2D.get_contact_local_position] metódus felülírható változata."
 
 #. PhysicsDirectBodyState2DExtension._get_contact_local_shape
 #: doc/classes/PhysicsDirectBodyState2DExtension.xml
 msgid "Overridable version of [method PhysicsDirectBodyState2D.get_contact_local_shape]."
-msgstr "A(z) [method PhysicsDirectBodyState2D.get_contact_local_shape] metódus felülírható változata."
+msgstr "A [method PhysicsDirectBodyState2D.get_contact_local_shape] metódus felülírható változata."
 
 #. PhysicsDirectBodyState2DExtension._get_contact_local_velocity_at_position
 #: doc/classes/PhysicsDirectBodyState2DExtension.xml
 msgid "Overridable version of [method PhysicsDirectBodyState2D.get_contact_local_velocity_at_position]."
-msgstr "A(z) [method PhysicsDirectBodyState2D.get_contact_local_velocity_at_position] metódus felülírható változata."
+msgstr "A [method PhysicsDirectBodyState2D.get_contact_local_velocity_at_position] metódus felülírható változata."
 
 #. PhysicsDirectBodyState2DExtension._get_inverse_inertia
 #: doc/classes/PhysicsDirectBodyState2DExtension.xml
 msgid "Implement to override the behavior of [member PhysicsDirectBodyState2D.inverse_inertia] and its respective getter."
-msgstr "Az implementálásával felülírható a(z) [member PhysicsDirectBodyState2D.inverse_inertia] tulajdonság és a hozzá tartozó lekérdező metódus viselkedése."
+msgstr "Az implementálásával felülírható a [member PhysicsDirectBodyState2D.inverse_inertia] tulajdonság és a hozzá tartozó lekérdező metódus viselkedése."
 
 #. PhysicsDirectBodyState2DExtension._get_inverse_mass
 #: doc/classes/PhysicsDirectBodyState2DExtension.xml
 msgid "Implement to override the behavior of [member PhysicsDirectBodyState2D.inverse_mass] and its respective getter."
-msgstr "Az implementálásával felülírható a(z) [member PhysicsDirectBodyState2D.inverse_mass] tulajdonság és a hozzá tartozó lekérdező metódus viselkedése."
+msgstr "Az implementálásával felülírható a [member PhysicsDirectBodyState2D.inverse_mass] tulajdonság és a hozzá tartozó lekérdező metódus viselkedése."
 
 #. PhysicsDirectBodyState2DExtension._get_linear_velocity
 #: doc/classes/PhysicsDirectBodyState2DExtension.xml
 msgid "Implement to override the behavior of [member PhysicsDirectBodyState2D.linear_velocity] and its respective getter."
-msgstr "Az implementálásával felülírható a(z) [member PhysicsDirectBodyState2D.linear_velocity] tulajdonság és a hozzá tartozó lekérdező metódus viselkedése."
+msgstr "Az implementálásával felülírható a [member PhysicsDirectBodyState2D.linear_velocity] tulajdonság és a hozzá tartozó lekérdező metódus viselkedése."
 
 #. PhysicsDirectBodyState2DExtension._get_space_state
 #: doc/classes/PhysicsDirectBodyState2DExtension.xml
 msgid "Overridable version of [method PhysicsDirectBodyState2D.get_space_state]."
-msgstr "A(z) [method PhysicsDirectBodyState2D.get_space_state] metódus felülírható változata."
+msgstr "A [method PhysicsDirectBodyState2D.get_space_state] metódus felülírható változata."
 
 #. PhysicsDirectBodyState2DExtension._get_step
 #: doc/classes/PhysicsDirectBodyState2DExtension.xml
 msgid "Implement to override the behavior of [member PhysicsDirectBodyState2D.step] and its respective getter."
-msgstr "Az implementálásával felülírható a(z) [member PhysicsDirectBodyState2D.step] tulajdonság és a hozzá tartozó lekérdező metódus viselkedése."
+msgstr "Az implementálásával felülírható a [member PhysicsDirectBodyState2D.step] tulajdonság és a hozzá tartozó lekérdező metódus viselkedése."
 
 #. PhysicsDirectBodyState2DExtension._get_total_angular_damp
 #: doc/classes/PhysicsDirectBodyState2DExtension.xml
 msgid "Implement to override the behavior of [member PhysicsDirectBodyState2D.total_angular_damp] and its respective getter."
-msgstr "Az implementálásával felülírható a(z) [member PhysicsDirectBodyState2D.total_angular_damp] tulajdonság és a hozzá tartozó lekérdező metódus viselkedése."
+msgstr "Az implementálásával felülírható a [member PhysicsDirectBodyState2D.total_angular_damp] tulajdonság és a hozzá tartozó lekérdező metódus viselkedése."
 
 #. PhysicsDirectBodyState2DExtension._get_total_gravity
 #: doc/classes/PhysicsDirectBodyState2DExtension.xml
 msgid "Implement to override the behavior of [member PhysicsDirectBodyState2D.total_gravity] and its respective getter."
-msgstr "Az implementálásával felülírható a(z) [member PhysicsDirectBodyState2D.total_gravity] tulajdonság és a hozzá tartozó lekérdező metódus viselkedése."
+msgstr "Az implementálásával felülírható a [member PhysicsDirectBodyState2D.total_gravity] tulajdonság és a hozzá tartozó lekérdező metódus viselkedése."
 
 #. PhysicsDirectBodyState2DExtension._get_total_linear_damp
 #: doc/classes/PhysicsDirectBodyState2DExtension.xml
 msgid "Implement to override the behavior of [member PhysicsDirectBodyState2D.total_linear_damp] and its respective getter."
-msgstr "Az implementálásával felülírható a(z) [member PhysicsDirectBodyState2D.total_linear_damp] tulajdonság és a hozzá tartozó lekérdező metódus viselkedése."
+msgstr "Az implementálásával felülírható a [member PhysicsDirectBodyState2D.total_linear_damp] tulajdonság és a hozzá tartozó lekérdező metódus viselkedése."
 
 #. PhysicsDirectBodyState2DExtension._get_transform
 #: doc/classes/PhysicsDirectBodyState2DExtension.xml
 msgid "Implement to override the behavior of [member PhysicsDirectBodyState2D.transform] and its respective getter."
-msgstr "Az implementálásával felülírható a(z) [member PhysicsDirectBodyState2D.transform] tulajdonság és a hozzá tartozó lekérdező metódus viselkedése."
+msgstr "Az implementálásával felülírható a [member PhysicsDirectBodyState2D.transform] tulajdonság és a hozzá tartozó lekérdező metódus viselkedése."
 
 #. PhysicsDirectBodyState2DExtension._get_velocity_at_local_position
 #: doc/classes/PhysicsDirectBodyState2DExtension.xml
 msgid "Overridable version of [method PhysicsDirectBodyState2D.get_velocity_at_local_position]."
-msgstr "A(z) [method PhysicsDirectBodyState2D.get_velocity_at_local_position] metódus felülírható változata."
+msgstr "A [method PhysicsDirectBodyState2D.get_velocity_at_local_position] metódus felülírható változata."
 
 #. PhysicsDirectBodyState2DExtension._integrate_forces
 #: doc/classes/PhysicsDirectBodyState2DExtension.xml
 msgid "Overridable version of [method PhysicsDirectBodyState2D.integrate_forces]."
-msgstr "A(z) [method PhysicsDirectBodyState2D.integrate_forces] metódus felülírható változata."
+msgstr "A [method PhysicsDirectBodyState2D.integrate_forces] metódus felülírható változata."
 
 #. PhysicsDirectBodyState2DExtension._is_sleeping
 #: doc/classes/PhysicsDirectBodyState2DExtension.xml
 msgid "Implement to override the behavior of [member PhysicsDirectBodyState2D.sleeping] and its respective getter."
-msgstr "Az implementálásával felülírható a(z) [member PhysicsDirectBodyState2D.sleeping] tulajdonság és a hozzá tartozó lekérdező metódus viselkedése."
+msgstr "Az implementálásával felülírható a [member PhysicsDirectBodyState2D.sleeping] tulajdonság és a hozzá tartozó lekérdező metódus viselkedése."
 
 #. PhysicsDirectBodyState2DExtension._set_angular_velocity
 #: doc/classes/PhysicsDirectBodyState2DExtension.xml
 msgid "Implement to override the behavior of [member PhysicsDirectBodyState2D.angular_velocity] and its respective setter."
-msgstr "Az implementálásával felülírható a(z) [member PhysicsDirectBodyState2D.angular_velocity] tulajdonság és a hozzá tartozó beállító metódus viselkedése."
+msgstr "Az implementálásával felülírható a [member PhysicsDirectBodyState2D.angular_velocity] tulajdonság és a hozzá tartozó beállító metódus viselkedése."
 
 #. PhysicsDirectBodyState2DExtension._set_constant_force
 #: doc/classes/PhysicsDirectBodyState2DExtension.xml
 msgid "Overridable version of [method PhysicsDirectBodyState2D.set_constant_force]."
-msgstr "A(z) [method PhysicsDirectBodyState2D.set_constant_force] metódus felülírható változata."
+msgstr "A [method PhysicsDirectBodyState2D.set_constant_force] metódus felülírható változata."
 
 #. PhysicsDirectBodyState2DExtension._set_constant_torque
 #: doc/classes/PhysicsDirectBodyState2DExtension.xml
 msgid "Overridable version of [method PhysicsDirectBodyState2D.set_constant_torque]."
-msgstr "A(z) [method PhysicsDirectBodyState2D.set_constant_torque] metódus felülírható változata."
+msgstr "A [method PhysicsDirectBodyState2D.set_constant_torque] metódus felülírható változata."
 
 #. PhysicsDirectBodyState2DExtension._set_linear_velocity
 #: doc/classes/PhysicsDirectBodyState2DExtension.xml
 msgid "Implement to override the behavior of [member PhysicsDirectBodyState2D.linear_velocity] and its respective setter."
-msgstr "Az implementálásával felülírható a(z) [member PhysicsDirectBodyState2D.linear_velocity] tulajdonság és a hozzá tartozó beállító metódus viselkedése."
+msgstr "Az implementálásával felülírható a [member PhysicsDirectBodyState2D.linear_velocity] tulajdonság és a hozzá tartozó beállító metódus viselkedése."
 
 #. PhysicsDirectBodyState2DExtension._set_sleep_state
 #: doc/classes/PhysicsDirectBodyState2DExtension.xml
 msgid "Implement to override the behavior of [member PhysicsDirectBodyState2D.sleeping] and its respective setter."
-msgstr "Az implementálásával felülírható a(z) [member PhysicsDirectBodyState2D.sleeping] tulajdonság és a hozzá tartozó beállító metódus viselkedése."
+msgstr "Az implementálásával felülírható a [member PhysicsDirectBodyState2D.sleeping] tulajdonság és a hozzá tartozó beállító metódus viselkedése."
 
 #. PhysicsDirectBodyState2DExtension._set_transform
 #: doc/classes/PhysicsDirectBodyState2DExtension.xml
 msgid "Implement to override the behavior of [member PhysicsDirectBodyState2D.transform] and its respective setter."
-msgstr "Az implementálásával felülírható a(z) [member PhysicsDirectBodyState2D.transform] tulajdonság és a hozzá tartozó beállító metódus viselkedése."
+msgstr "Az implementálásával felülírható a [member PhysicsDirectBodyState2D.transform] tulajdonság és a hozzá tartozó beállító metódus viselkedése."
 
 #. PhysicsDirectBodyState3DExtension.brief
 #: doc/classes/PhysicsDirectBodyState3DExtension.xml
 msgid "Provides virtual methods that can be overridden to create custom [PhysicsDirectBodyState3D] implementations."
-msgstr "Felülírható virtuális metódusokat biztosít a(z) [PhysicsDirectBodyState3D] egyéni megvalósításához."
+msgstr "Felülírható virtuális metódusokat biztosít a [PhysicsDirectBodyState3D] egyéni megvalósításához."
 
 #. PhysicsDirectBodyState3DExtension.description
 #: doc/classes/PhysicsDirectBodyState3DExtension.xml
 msgid "This class extends [PhysicsDirectBodyState3D] by providing additional virtual methods that can be overridden. When these methods are overridden, they will be called instead of the internal methods of the physics server.\nIntended for use with GDExtension to create custom implementations of [PhysicsDirectBodyState3D]."
-msgstr "Ez az osztály további felülírható virtuális metódusokkal egészíti ki a(z) [PhysicsDirectBodyState3D] osztályt. Ha felülírod ezeket a metódusokat, a fizikakiszolgáló a saját belső metódusai helyett a felülírt változatokat hívja.\nGDExtensionhöz készült, a(z) [PhysicsDirectBodyState3D] egyéni megvalósításához."
+msgstr "Ez az osztály további felülírható virtuális metódusokkal egészíti ki a [PhysicsDirectBodyState3D] osztályt. Ha felülírod ezeket a metódusokat, a fizikakiszolgáló a saját belső metódusai helyett a felülírt változatokat hívja.\nGDExtensionhöz készült, a [PhysicsDirectBodyState3D] egyéni megvalósításához."
 
 #. PhysicsDirectSpaceState2DExtension.brief
 #: doc/classes/PhysicsDirectSpaceState2DExtension.xml
 msgid "Provides virtual methods that can be overridden to create custom [PhysicsDirectSpaceState2D] implementations."
-msgstr "Felülírható virtuális metódusokat biztosít a(z) [PhysicsDirectSpaceState2D] egyéni megvalósításához."
+msgstr "Felülírható virtuális metódusokat biztosít a [PhysicsDirectSpaceState2D] egyéni megvalósításához."
 
 #. PhysicsDirectSpaceState2DExtension.description
 #: doc/classes/PhysicsDirectSpaceState2DExtension.xml
 msgid "This class extends [PhysicsDirectSpaceState2D] by providing additional virtual methods that can be overridden. When these methods are overridden, they will be called instead of the internal methods of the physics server.\nIntended for use with GDExtension to create custom implementations of [PhysicsDirectSpaceState2D]."
-msgstr "Ez az osztály további felülírható virtuális metódusokkal egészíti ki a(z) [PhysicsDirectSpaceState2D] osztályt. Ha felülírod ezeket a metódusokat, a fizikakiszolgáló a saját belső metódusai helyett a felülírt változatokat hívja.\nGDExtensionhöz készült, a(z) [PhysicsDirectSpaceState2D] egyéni megvalósításához."
+msgstr "Ez az osztály további felülírható virtuális metódusokkal egészíti ki a [PhysicsDirectSpaceState2D] osztályt. Ha felülírod ezeket a metódusokat, a fizikakiszolgáló a saját belső metódusai helyett a felülírt változatokat hívja.\nGDExtensionhöz készült, a [PhysicsDirectSpaceState2D] egyéni megvalósításához."
 
 #. PhysicsDirectSpaceState3DExtension.brief
 #: doc/classes/PhysicsDirectSpaceState3DExtension.xml
 msgid "Provides virtual methods that can be overridden to create custom [PhysicsDirectSpaceState3D] implementations."
-msgstr "Felülírható virtuális metódusokat biztosít a(z) [PhysicsDirectSpaceState3D] egyéni megvalósításához."
+msgstr "Felülírható virtuális metódusokat biztosít a [PhysicsDirectSpaceState3D] egyéni megvalósításához."
 
 #. PhysicsDirectSpaceState3DExtension.description
 #: doc/classes/PhysicsDirectSpaceState3DExtension.xml
 msgid "This class extends [PhysicsDirectSpaceState3D] by providing additional virtual methods that can be overridden. When these methods are overridden, they will be called instead of the internal methods of the physics server.\nIntended for use with GDExtension to create custom implementations of [PhysicsDirectSpaceState3D]."
-msgstr "Ez az osztály további felülírható virtuális metódusokkal egészíti ki a(z) [PhysicsDirectSpaceState3D] osztályt. Ha felülírod ezeket a metódusokat, a fizikakiszolgáló a saját belső metódusai helyett a felülírt változatokat hívja.\nGDExtensionhöz készült, a(z) [PhysicsDirectSpaceState3D] egyéni megvalósításához."
+msgstr "Ez az osztály további felülírható virtuális metódusokkal egészíti ki a [PhysicsDirectSpaceState3D] osztályt. Ha felülírod ezeket a metódusokat, a fizikakiszolgáló a saját belső metódusai helyett a felülírt változatokat hívja.\nGDExtensionhöz készült, a [PhysicsDirectSpaceState3D] egyéni megvalósításához."
 
 #. PhysicsServer2DExtension.brief
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Provides virtual methods that can be overridden to create custom [PhysicsServer2D] implementations."
-msgstr "Felülírható virtuális metódusokat biztosít a(z) [PhysicsServer2D] egyéni megvalósításához."
+msgstr "Felülírható virtuális metódusokat biztosít a [PhysicsServer2D] egyéni megvalósításához."
 
 #. PhysicsServer2DExtension.description
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "This class extends [PhysicsServer2D] by providing additional virtual methods that can be overridden. When these methods are overridden, they will be called instead of the internal methods of the physics server.\nIntended for use with GDExtension to create custom implementations of [PhysicsServer2D]."
-msgstr "Ez az osztály további felülírható virtuális metódusokkal egészíti ki a(z) [PhysicsServer2D] osztályt. Ha felülírod ezeket a metódusokat, a fizikakiszolgáló a saját belső metódusai helyett a felülírt változatokat hívja.\nGDExtensionhöz készült, a(z) [PhysicsServer2D] egyéni megvalósításához."
+msgstr "Ez az osztály további felülírható virtuális metódusokkal egészíti ki a [PhysicsServer2D] osztályt. Ha felülírod ezeket a metódusokat, a fizikakiszolgáló a saját belső metódusai helyett a felülírt változatokat hívja.\nGDExtensionhöz készült, a [PhysicsServer2D] egyéni megvalósításához."
 
 #. PhysicsServer2DExtension._area_add_shape
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.area_add_shape]."
-msgstr "A(z) [method PhysicsServer2D.area_add_shape] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.area_add_shape] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._area_attach_canvas_instance_id
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.area_attach_canvas_instance_id]."
-msgstr "A(z) [method PhysicsServer2D.area_attach_canvas_instance_id] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.area_attach_canvas_instance_id] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._area_attach_object_instance_id
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.area_attach_object_instance_id]."
-msgstr "A(z) [method PhysicsServer2D.area_attach_object_instance_id] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.area_attach_object_instance_id] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._area_clear_shapes
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.area_clear_shapes]."
-msgstr "A(z) [method PhysicsServer2D.area_clear_shapes] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.area_clear_shapes] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._area_create
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.area_create]."
-msgstr "A(z) [method PhysicsServer2D.area_create] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.area_create] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._area_get_canvas_instance_id
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.area_get_canvas_instance_id]."
-msgstr "A(z) [method PhysicsServer2D.area_get_canvas_instance_id] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.area_get_canvas_instance_id] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._area_get_collision_layer
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.area_get_collision_layer]."
-msgstr "A(z) [method PhysicsServer2D.area_get_collision_layer] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.area_get_collision_layer] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._area_get_collision_mask
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.area_get_collision_mask]."
-msgstr "A(z) [method PhysicsServer2D.area_get_collision_mask] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.area_get_collision_mask] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._area_get_object_instance_id
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.area_get_object_instance_id]."
-msgstr "A(z) [method PhysicsServer2D.area_get_object_instance_id] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.area_get_object_instance_id] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._area_get_param
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.area_get_param]."
-msgstr "A(z) [method PhysicsServer2D.area_get_param] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.area_get_param] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._area_get_shape
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.area_get_shape]."
-msgstr "A(z) [method PhysicsServer2D.area_get_shape] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.area_get_shape] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._area_get_shape_count
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.area_get_shape_count]."
-msgstr "A(z) [method PhysicsServer2D.area_get_shape_count] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.area_get_shape_count] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._area_get_shape_transform
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.area_get_shape_transform]."
-msgstr "A(z) [method PhysicsServer2D.area_get_shape_transform] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.area_get_shape_transform] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._area_get_space
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.area_get_space]."
-msgstr "A(z) [method PhysicsServer2D.area_get_space] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.area_get_space] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._area_get_transform
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.area_get_transform]."
-msgstr "A(z) [method PhysicsServer2D.area_get_transform] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.area_get_transform] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._area_remove_shape
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.area_remove_shape]."
-msgstr "A(z) [method PhysicsServer2D.area_remove_shape] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.area_remove_shape] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._area_set_area_monitor_callback
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.area_set_area_monitor_callback]."
-msgstr "A(z) [method PhysicsServer2D.area_set_area_monitor_callback] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.area_set_area_monitor_callback] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._area_set_collision_layer
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.area_set_collision_layer]."
-msgstr "A(z) [method PhysicsServer2D.area_set_collision_layer] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.area_set_collision_layer] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._area_set_collision_mask
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.area_set_collision_mask]."
-msgstr "A(z) [method PhysicsServer2D.area_set_collision_mask] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.area_set_collision_mask] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._area_set_monitor_callback
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.area_set_monitor_callback]."
-msgstr "A(z) [method PhysicsServer2D.area_set_monitor_callback] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.area_set_monitor_callback] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._area_set_monitorable
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.area_set_monitorable]."
-msgstr "A(z) [method PhysicsServer2D.area_set_monitorable] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.area_set_monitorable] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._area_set_param
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.area_set_param]."
-msgstr "A(z) [method PhysicsServer2D.area_set_param] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.area_set_param] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._area_set_shape
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.area_set_shape]."
-msgstr "A(z) [method PhysicsServer2D.area_set_shape] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.area_set_shape] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._area_set_shape_disabled
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.area_set_shape_disabled]."
-msgstr "A(z) [method PhysicsServer2D.area_set_shape_disabled] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.area_set_shape_disabled] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._area_set_shape_transform
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.area_set_shape_transform]."
-msgstr "A(z) [method PhysicsServer2D.area_set_shape_transform] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.area_set_shape_transform] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._area_set_space
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.area_set_space]."
-msgstr "A(z) [method PhysicsServer2D.area_set_space] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.area_set_space] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._area_set_transform
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.area_set_transform]."
-msgstr "A(z) [method PhysicsServer2D.area_set_transform] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.area_set_transform] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_add_collision_exception
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_add_collision_exception]."
-msgstr "A(z) [method PhysicsServer2D.body_add_collision_exception] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_add_collision_exception] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_add_constant_central_force
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_add_constant_central_force]."
-msgstr "A(z) [method PhysicsServer2D.body_add_constant_central_force] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_add_constant_central_force] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_add_constant_force
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_add_constant_force]."
-msgstr "A(z) [method PhysicsServer2D.body_add_constant_force] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_add_constant_force] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_add_constant_torque
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_add_constant_torque]."
-msgstr "A(z) [method PhysicsServer2D.body_add_constant_torque] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_add_constant_torque] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_add_shape
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_add_shape]."
-msgstr "A(z) [method PhysicsServer2D.body_add_shape] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_add_shape] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_apply_central_force
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_apply_central_force]."
-msgstr "A(z) [method PhysicsServer2D.body_apply_central_force] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_apply_central_force] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_apply_central_impulse
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_apply_central_impulse]."
-msgstr "A(z) [method PhysicsServer2D.body_apply_central_impulse] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_apply_central_impulse] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_apply_force
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_apply_force]."
-msgstr "A(z) [method PhysicsServer2D.body_apply_force] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_apply_force] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_apply_impulse
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_apply_impulse]."
-msgstr "A(z) [method PhysicsServer2D.body_apply_impulse] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_apply_impulse] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_apply_torque
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_apply_torque]."
-msgstr "A(z) [method PhysicsServer2D.body_apply_torque] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_apply_torque] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_apply_torque_impulse
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_apply_torque_impulse]."
-msgstr "A(z) [method PhysicsServer2D.body_apply_torque_impulse] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_apply_torque_impulse] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_attach_canvas_instance_id
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_attach_canvas_instance_id]."
-msgstr "A(z) [method PhysicsServer2D.body_attach_canvas_instance_id] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_attach_canvas_instance_id] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_attach_object_instance_id
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_attach_object_instance_id]."
-msgstr "A(z) [method PhysicsServer2D.body_attach_object_instance_id] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_attach_object_instance_id] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_clear_shapes
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_clear_shapes]."
-msgstr "A(z) [method PhysicsServer2D.body_clear_shapes] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_clear_shapes] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_create
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_create]."
-msgstr "A(z) [method PhysicsServer2D.body_create] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_create] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_get_canvas_instance_id
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_get_canvas_instance_id]."
-msgstr "A(z) [method PhysicsServer2D.body_get_canvas_instance_id] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_get_canvas_instance_id] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_get_collision_layer
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_get_collision_layer]."
-msgstr "A(z) [method PhysicsServer2D.body_get_collision_layer] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_get_collision_layer] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_get_collision_mask
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_get_collision_mask]."
-msgstr "A(z) [method PhysicsServer2D.body_get_collision_mask] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_get_collision_mask] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_get_collision_priority
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_get_collision_priority]."
-msgstr "A(z) [method PhysicsServer2D.body_get_collision_priority] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_get_collision_priority] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_get_constant_force
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_get_constant_force]."
-msgstr "A(z) [method PhysicsServer2D.body_get_constant_force] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_get_constant_force] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_get_constant_torque
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_get_constant_torque]."
-msgstr "A(z) [method PhysicsServer2D.body_get_constant_torque] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_get_constant_torque] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_get_continuous_collision_detection_mode
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_get_continuous_collision_detection_mode]."
-msgstr "A(z) [method PhysicsServer2D.body_get_continuous_collision_detection_mode] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_get_continuous_collision_detection_mode] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_get_direct_state
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_get_direct_state]."
-msgstr "A(z) [method PhysicsServer2D.body_get_direct_state] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_get_direct_state] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_get_max_contacts_reported
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_get_max_contacts_reported]."
-msgstr "A(z) [method PhysicsServer2D.body_get_max_contacts_reported] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_get_max_contacts_reported] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_get_mode
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_get_mode]."
-msgstr "A(z) [method PhysicsServer2D.body_get_mode] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_get_mode] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_get_object_instance_id
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_get_object_instance_id]."
-msgstr "A(z) [method PhysicsServer2D.body_get_object_instance_id] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_get_object_instance_id] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_get_param
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_get_param]."
-msgstr "A(z) [method PhysicsServer2D.body_get_param] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_get_param] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_get_shape
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_get_shape]."
-msgstr "A(z) [method PhysicsServer2D.body_get_shape] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_get_shape] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_get_shape_count
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_get_shape_count]."
-msgstr "A(z) [method PhysicsServer2D.body_get_shape_count] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_get_shape_count] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_get_shape_transform
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_get_shape_transform]."
-msgstr "A(z) [method PhysicsServer2D.body_get_shape_transform] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_get_shape_transform] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_get_space
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_get_space]."
-msgstr "A(z) [method PhysicsServer2D.body_get_space] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_get_space] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_get_state
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_get_state]."
-msgstr "A(z) [method PhysicsServer2D.body_get_state] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_get_state] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_is_omitting_force_integration
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_is_omitting_force_integration]."
-msgstr "A(z) [method PhysicsServer2D.body_is_omitting_force_integration] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_is_omitting_force_integration] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_remove_collision_exception
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_remove_collision_exception]."
-msgstr "A(z) [method PhysicsServer2D.body_remove_collision_exception] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_remove_collision_exception] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_remove_shape
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_remove_shape]."
-msgstr "A(z) [method PhysicsServer2D.body_remove_shape] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_remove_shape] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_reset_mass_properties
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_reset_mass_properties]."
-msgstr "A(z) [method PhysicsServer2D.body_reset_mass_properties] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_reset_mass_properties] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_set_axis_velocity
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_set_axis_velocity]."
-msgstr "A(z) [method PhysicsServer2D.body_set_axis_velocity] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_set_axis_velocity] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_set_collision_layer
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_set_collision_layer]."
-msgstr "A(z) [method PhysicsServer2D.body_set_collision_layer] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_set_collision_layer] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_set_collision_mask
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_set_collision_mask]."
-msgstr "A(z) [method PhysicsServer2D.body_set_collision_mask] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_set_collision_mask] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_set_collision_priority
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_set_collision_priority]."
-msgstr "A(z) [method PhysicsServer2D.body_set_collision_priority] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_set_collision_priority] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_set_constant_force
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_set_constant_force]."
-msgstr "A(z) [method PhysicsServer2D.body_set_constant_force] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_set_constant_force] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_set_constant_torque
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_set_constant_torque]."
-msgstr "A(z) [method PhysicsServer2D.body_set_constant_torque] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_set_constant_torque] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_set_continuous_collision_detection_mode
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_set_continuous_collision_detection_mode]."
-msgstr "A(z) [method PhysicsServer2D.body_set_continuous_collision_detection_mode] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_set_continuous_collision_detection_mode] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_set_force_integration_callback
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_set_force_integration_callback]."
-msgstr "A(z) [method PhysicsServer2D.body_set_force_integration_callback] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_set_force_integration_callback] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_set_max_contacts_reported
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_set_max_contacts_reported]."
-msgstr "A(z) [method PhysicsServer2D.body_set_max_contacts_reported] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_set_max_contacts_reported] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_set_mode
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_set_mode]."
-msgstr "A(z) [method PhysicsServer2D.body_set_mode] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_set_mode] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_set_omit_force_integration
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_set_omit_force_integration]."
-msgstr "A(z) [method PhysicsServer2D.body_set_omit_force_integration] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_set_omit_force_integration] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_set_param
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_set_param]."
-msgstr "A(z) [method PhysicsServer2D.body_set_param] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_set_param] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_set_shape
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_set_shape]."
-msgstr "A(z) [method PhysicsServer2D.body_set_shape] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_set_shape] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_set_shape_as_one_way_collision
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_set_shape_as_one_way_collision]."
-msgstr "A(z) [method PhysicsServer2D.body_set_shape_as_one_way_collision] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_set_shape_as_one_way_collision] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_set_shape_disabled
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_set_shape_disabled]."
-msgstr "A(z) [method PhysicsServer2D.body_set_shape_disabled] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_set_shape_disabled] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_set_shape_transform
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_set_shape_transform]."
-msgstr "A(z) [method PhysicsServer2D.body_set_shape_transform] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_set_shape_transform] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_set_space
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_set_space]."
-msgstr "A(z) [method PhysicsServer2D.body_set_space] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_set_space] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_set_state
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_set_state]."
-msgstr "A(z) [method PhysicsServer2D.body_set_state] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.body_set_state] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._capsule_shape_create
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.capsule_shape_create]."
-msgstr "A(z) [method PhysicsServer2D.capsule_shape_create] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.capsule_shape_create] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._circle_shape_create
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.circle_shape_create]."
-msgstr "A(z) [method PhysicsServer2D.circle_shape_create] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.circle_shape_create] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._concave_polygon_shape_create
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.concave_polygon_shape_create]."
-msgstr "A(z) [method PhysicsServer2D.concave_polygon_shape_create] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.concave_polygon_shape_create] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._convex_polygon_shape_create
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.convex_polygon_shape_create]."
-msgstr "A(z) [method PhysicsServer2D.convex_polygon_shape_create] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.convex_polygon_shape_create] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._damped_spring_joint_get_param
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.damped_spring_joint_get_param]."
-msgstr "A(z) [method PhysicsServer2D.damped_spring_joint_get_param] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.damped_spring_joint_get_param] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._damped_spring_joint_set_param
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.damped_spring_joint_set_param]."
-msgstr "A(z) [method PhysicsServer2D.damped_spring_joint_set_param] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.damped_spring_joint_set_param] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._free_rid
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.free_rid]."
-msgstr "A(z) [method PhysicsServer2D.free_rid] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.free_rid] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._get_process_info
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.get_process_info]."
-msgstr "A(z) [method PhysicsServer2D.get_process_info] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.get_process_info] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._joint_clear
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.joint_clear]."
-msgstr "A(z) [method PhysicsServer2D.joint_clear] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.joint_clear] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._joint_create
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.joint_create]."
-msgstr "A(z) [method PhysicsServer2D.joint_create] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.joint_create] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._joint_disable_collisions_between_bodies
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.joint_disable_collisions_between_bodies]."
-msgstr "A(z) [method PhysicsServer2D.joint_disable_collisions_between_bodies] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.joint_disable_collisions_between_bodies] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._joint_get_param
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.joint_get_param]."
-msgstr "A(z) [method PhysicsServer2D.joint_get_param] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.joint_get_param] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._joint_get_type
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.joint_get_type]."
-msgstr "A(z) [method PhysicsServer2D.joint_get_type] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.joint_get_type] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._joint_is_disabled_collisions_between_bodies
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.joint_is_disabled_collisions_between_bodies]."
-msgstr "A(z) [method PhysicsServer2D.joint_is_disabled_collisions_between_bodies] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.joint_is_disabled_collisions_between_bodies] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._joint_make_damped_spring
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.joint_make_damped_spring]."
-msgstr "A(z) [method PhysicsServer2D.joint_make_damped_spring] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.joint_make_damped_spring] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._joint_make_groove
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.joint_make_groove]."
-msgstr "A(z) [method PhysicsServer2D.joint_make_groove] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.joint_make_groove] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._joint_make_pin
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.joint_make_pin]."
-msgstr "A(z) [method PhysicsServer2D.joint_make_pin] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.joint_make_pin] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._joint_set_param
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.joint_set_param]."
-msgstr "A(z) [method PhysicsServer2D.joint_set_param] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.joint_set_param] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._pin_joint_get_flag
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.pin_joint_get_flag]."
-msgstr "A(z) [method PhysicsServer2D.pin_joint_get_flag] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.pin_joint_get_flag] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._pin_joint_get_param
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.pin_joint_get_param]."
-msgstr "A(z) [method PhysicsServer2D.pin_joint_get_param] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.pin_joint_get_param] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._pin_joint_set_flag
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.pin_joint_set_flag]."
-msgstr "A(z) [method PhysicsServer2D.pin_joint_set_flag] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.pin_joint_set_flag] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._pin_joint_set_param
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.pin_joint_set_param]."
-msgstr "A(z) [method PhysicsServer2D.pin_joint_set_param] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.pin_joint_set_param] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._rectangle_shape_create
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.rectangle_shape_create]."
-msgstr "A(z) [method PhysicsServer2D.rectangle_shape_create] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.rectangle_shape_create] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._segment_shape_create
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.segment_shape_create]."
-msgstr "A(z) [method PhysicsServer2D.segment_shape_create] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.segment_shape_create] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._separation_ray_shape_create
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.separation_ray_shape_create]."
-msgstr "A(z) [method PhysicsServer2D.separation_ray_shape_create] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.separation_ray_shape_create] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._set_active
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.set_active]."
-msgstr "A(z) [method PhysicsServer2D.set_active] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.set_active] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._shape_get_data
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.shape_get_data]."
-msgstr "A(z) [method PhysicsServer2D.shape_get_data] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.shape_get_data] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._shape_get_type
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.shape_get_type]."
-msgstr "A(z) [method PhysicsServer2D.shape_get_type] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.shape_get_type] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._shape_set_data
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.shape_set_data]."
-msgstr "A(z) [method PhysicsServer2D.shape_set_data] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.shape_set_data] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._space_create
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.space_create]."
-msgstr "A(z) [method PhysicsServer2D.space_create] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.space_create] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._space_get_direct_state
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.space_get_direct_state]."
-msgstr "A(z) [method PhysicsServer2D.space_get_direct_state] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.space_get_direct_state] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._space_get_param
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.space_get_param]."
-msgstr "A(z) [method PhysicsServer2D.space_get_param] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.space_get_param] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._space_is_active
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.space_is_active]."
-msgstr "A(z) [method PhysicsServer2D.space_is_active] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.space_is_active] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._space_set_active
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.space_set_active]."
-msgstr "A(z) [method PhysicsServer2D.space_set_active] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.space_set_active] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._space_set_param
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.space_set_param]."
-msgstr "A(z) [method PhysicsServer2D.space_set_param] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.space_set_param] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._world_boundary_shape_create
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.world_boundary_shape_create]."
-msgstr "A(z) [method PhysicsServer2D.world_boundary_shape_create] metódus felülírható változata."
+msgstr "A [method PhysicsServer2D.world_boundary_shape_create] metódus felülírható változata."
 
 #. PhysicsServer2DExtension.body_test_motion_is_excluding_body
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Returns [code]true[/code] if the body with the given [RID] is being excluded from [method _body_test_motion]. See also [method Object.get_instance_id]."
-msgstr "[code]true[/code] értéket ad vissza, ha a(z) [method _body_test_motion] kizárja a megadott [RID] azonosítójú testet. Lásd még: [method Object.get_instance_id]."
+msgstr "[code]true[/code] értéket ad vissza, ha a [method _body_test_motion] kizárja a megadott [RID] azonosítójú testet. Lásd még: [method Object.get_instance_id]."
 
 #. PhysicsServer2DExtension.body_test_motion_is_excluding_object
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Returns [code]true[/code] if the object with the given instance ID is being excluded from [method _body_test_motion]. See also [method Object.get_instance_id]."
-msgstr "[code]true[/code] értéket ad vissza, ha a(z) [method _body_test_motion] kizárja a megadott példányazonosítójú objektumot. Lásd még: [method Object.get_instance_id]."
+msgstr "[code]true[/code] értéket ad vissza, ha a [method _body_test_motion] kizárja a megadott példányazonosítójú objektumot. Lásd még: [method Object.get_instance_id]."
 
 #. PhysicsServer3DExtension.brief
 #: doc/classes/PhysicsServer3DExtension.xml
 msgid "Provides virtual methods that can be overridden to create custom [PhysicsServer3D] implementations."
-msgstr "Felülírható virtuális metódusokat biztosít a(z) [PhysicsServer3D] egyéni megvalósításához."
+msgstr "Felülírható virtuális metódusokat biztosít a [PhysicsServer3D] egyéni megvalósításához."
 
 #. PhysicsServer3DExtension.description
 #: doc/classes/PhysicsServer3DExtension.xml
 msgid "This class extends [PhysicsServer3D] by providing additional virtual methods that can be overridden. When these methods are overridden, they will be called instead of the internal methods of the physics server.\nIntended for use with GDExtension to create custom implementations of [PhysicsServer3D]."
-msgstr "Ez az osztály további felülírható virtuális metódusokkal egészíti ki a(z) [PhysicsServer3D] osztályt. Ha felülírod ezeket a metódusokat, a fizikakiszolgáló a saját belső metódusai helyett a felülírt változatokat hívja.\nGDExtensionhöz készült, a(z) [PhysicsServer3D] egyéni megvalósításához."
+msgstr "Ez az osztály további felülírható virtuális metódusokkal egészíti ki a [PhysicsServer3D] osztályt. Ha felülírod ezeket a metódusokat, a fizikakiszolgáló a saját belső metódusai helyett a felülírt változatokat hívja.\nGDExtensionhöz készült, a [PhysicsServer3D] egyéni megvalósításához."
 
 #. PhysicsServer2DExtension._area_set_pickable
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "If set to [code]true[/code], allows the area with the given [RID] to detect mouse inputs when the mouse cursor is hovering on it.\nOverridable version of [PhysicsServer2D]'s internal [code]area_set_pickable[/code] method. Corresponds to [member CollisionObject2D.input_pickable]."
-msgstr "Ha az értéke [code]true[/code], a megadott [RID] azonosítójú terület érzékeli az egérbemenetet, amikor az egérmutató fölötte van.\nA [PhysicsServer2D] belső [code]area_set_pickable[/code] metódusának felülírható változata. A(z) [member CollisionObject2D.input_pickable] tulajdonságnak felel meg."
+msgstr "Ha az értéke [code]true[/code], a megadott [RID] azonosítójú terület érzékeli az egérbemenetet, amikor az egérmutató fölötte van.\nA [PhysicsServer2D] belső [code]area_set_pickable[/code] metódusának felülírható változata. A [member CollisionObject2D.input_pickable] tulajdonságnak felel meg."
 
 #. PhysicsServer2DExtension._body_get_collision_exceptions
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Returns the [RID]s of all bodies added as collision exceptions for the given [param body]. See also [method _body_add_collision_exception] and [method _body_remove_collision_exception].\nOverridable version of [PhysicsServer2D]'s internal [code]body_get_collision_exceptions[/code] method. Corresponds to [method PhysicsBody2D.get_collision_exceptions]."
-msgstr "Visszaadja az összes olyan test [RID] azonosítóját, amely a megadott [param body] ütközési kivételei között szerepel. Lásd még: [method _body_add_collision_exception] és [method _body_remove_collision_exception].\nA [PhysicsServer2D] belső [code]body_get_collision_exceptions[/code] metódusának felülírható változata. A(z) [method PhysicsBody2D.get_collision_exceptions] metódusnak felel meg."
+msgstr "Visszaadja az összes olyan test [RID] azonosítóját, amely a megadott [param body] ütközési kivételei között szerepel. Lásd még: [method _body_add_collision_exception] és [method _body_remove_collision_exception].\nA [PhysicsServer2D] belső [code]body_get_collision_exceptions[/code] metódusának felülírható változata. A [method PhysicsBody2D.get_collision_exceptions] metódusnak felel meg."
 
 #. PhysicsServer2DExtension._body_get_contacts_reported_depth_threshold
 #: doc/classes/PhysicsServer2DExtension.xml
@@ -40947,17 +40947,17 @@ msgstr "A [PhysicsServer2D] belső [code]body_set_contacts_reported_depth_thresh
 #. PhysicsServer2DExtension._body_set_pickable
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "If set to [code]true[/code], allows the body with the given [RID] to detect mouse inputs when the mouse cursor is hovering on it.\nOverridable version of [PhysicsServer2D]'s internal [code]body_set_pickable[/code] method. Corresponds to [member CollisionObject2D.input_pickable]."
-msgstr "Ha az értéke [code]true[/code], a megadott [RID] azonosítójú test érzékeli az egérbemenetet, amikor az egérmutató fölötte van.\nA [PhysicsServer2D] belső [code]body_set_pickable[/code] metódusának felülírható változata. A(z) [member CollisionObject2D.input_pickable] tulajdonságnak felel meg."
+msgstr "Ha az értéke [code]true[/code], a megadott [RID] azonosítójú test érzékeli az egérbemenetet, amikor az egérmutató fölötte van.\nA [PhysicsServer2D] belső [code]body_set_pickable[/code] metódusának felülírható változata. A [member CollisionObject2D.input_pickable] tulajdonságnak felel meg."
 
 #. PhysicsServer2DExtension._body_set_state_sync_callback
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Assigns the [param body] to call the given [param callable] during the synchronization phase of the loop, before [method _step] is called. See also [method _sync].\nOverridable version of [method PhysicsServer2D.body_set_state_sync_callback]."
-msgstr "Beállítja, hogy a(z) [param body] test a ciklus szinkronizálási szakaszában, a(z) [method _step] hívása előtt meghívja a megadott [param callable] függvényt. Lásd még: [method _sync].\nA(z) [method PhysicsServer2D.body_set_state_sync_callback] metódus felülírható változata."
+msgstr "Beállítja, hogy a [param body] test a ciklus szinkronizálási szakaszában, a [method _step] hívása előtt meghívja a megadott [param callable] függvényt. Lásd még: [method _sync].\nA [method PhysicsServer2D.body_set_state_sync_callback] metódus felülírható változata."
 
 #. PhysicsServer2DExtension._body_test_motion
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Overridable version of [method PhysicsServer2D.body_test_motion]. Unlike the exposed implementation, this method does not receive all of the arguments inside a [PhysicsTestMotionParameters2D]."
-msgstr "A(z) [method PhysicsServer2D.body_test_motion] metódus felülírható változata. A nyilvános változattól eltérően ez a metódus nem egy [PhysicsTestMotionParameters2D] objektumban kapja meg az összes argumentumot."
+msgstr "A [method PhysicsServer2D.body_test_motion] metódus felülírható változata. A nyilvános változattól eltérően ez a metódus nem egy [PhysicsTestMotionParameters2D] objektumban kapja meg az összes argumentumot."
 
 #. PhysicsServer2DExtension._end_sync
 #: doc/classes/PhysicsServer2DExtension.xml
@@ -40972,7 +40972,7 @@ msgstr "A fő ciklus lezárásakor hívódik meg a fizikakiszolgáló leállít�
 #. PhysicsServer2DExtension._flush_queries
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Called every physics step before [method _step] to process all remaining queries.\nOverridable version of [PhysicsServer2D]'s internal [code]flush_queries[/code] method."
-msgstr "Minden fizikai lépésben meghívódik a(z) [method _step] előtt a még függőben lévő lekérdezések feldolgozásához.\nA [PhysicsServer2D] belső [code]flush_queries[/code] metódusának felülírható változata."
+msgstr "Minden fizikai lépésben meghívódik a [method _step] előtt a még függőben lévő lekérdezések feldolgozásához.\nA [PhysicsServer2D] belső [code]flush_queries[/code] metódusának felülírható változata."
 
 #. PhysicsServer2DExtension._init
 #: doc/classes/PhysicsServer2DExtension.xml
@@ -40987,12 +40987,12 @@ msgstr "Felülírható metódus, amelynek [code]true[/code] értéket kell vissz
 #. PhysicsServer2DExtension._shape_collide
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Given two shapes and their parameters, should return [code]true[/code] if a collision between the two would occur, with additional details passed in [param r_results].\nOverridable version of [PhysicsServer2D]'s internal [code]shape_collide[/code] method. Corresponds to [method PhysicsDirectSpaceState2D.collide_shape]."
-msgstr "A két alakzat és paramétereik alapján [code]true[/code] értéket kell visszaadnia, ha az alakzatok ütköznének. A további részleteket a(z) [param r_results] paraméterben kell átadni.\nA [PhysicsServer2D] belső [code]shape_collide[/code] metódusának felülírható változata. A(z) [method PhysicsDirectSpaceState2D.collide_shape] metódusnak felel meg."
+msgstr "A két alakzat és paramétereik alapján [code]true[/code] értéket kell visszaadnia, ha az alakzatok ütköznének. A további részleteket a [param r_results] paraméterben kell átadni.\nA [PhysicsServer2D] belső [code]shape_collide[/code] metódusának felülírható változata. A [method PhysicsDirectSpaceState2D.collide_shape] metódusnak felel meg."
 
 #. PhysicsServer2DExtension._shape_get_custom_solver_bias
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Should return the custom solver bias of the given [param shape], which defines how much bodies are forced to separate on contact when this shape is involved.\nOverridable version of [PhysicsServer2D]'s internal [code]shape_get_custom_solver_bias[/code] method. Corresponds to [member Shape2D.custom_solver_bias]."
-msgstr "A megadott [param shape] alakzat egyéni megoldói korrekciós tényezőjét kell visszaadnia. Ez szabályozza, hogy a testek mennyire távolodjanak el egymástól, amikor ezzel az alakzattal érintkeznek.\nA [PhysicsServer2D] belső [code]shape_get_custom_solver_bias[/code] metódusának felülírható változata. A(z) [member Shape2D.custom_solver_bias] tulajdonságnak felel meg."
+msgstr "A megadott [param shape] alakzat egyéni megoldói korrekciós tényezőjét kell visszaadnia. Ez szabályozza, hogy a testek mennyire távolodjanak el egymástól, amikor ezzel az alakzattal érintkeznek.\nA [PhysicsServer2D] belső [code]shape_get_custom_solver_bias[/code] metódusának felülírható változata. A [member Shape2D.custom_solver_bias] tulajdonságnak felel meg."
 
 #. PhysicsServer2DExtension._space_get_contact_count
 #: doc/classes/PhysicsServer2DExtension.xml
@@ -41007,12 +41007,12 @@ msgstr "A megadott [param space] térben a legutóbbi fizikai lépésben törté
 #. PhysicsServer2DExtension._space_set_debug_contacts
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Used internally to allow the given [param space] to store contact points, up to [param max_contacts]. This is automatically set for the main [World2D]'s space when [member SceneTree.debug_collisions_hint] is [code]true[/code], or by checking \"Visible Collision Shapes\" in the editor. Only works in debug builds.\nOverridable version of [PhysicsServer2D]'s internal [code]space_set_debug_contacts[/code] method."
-msgstr "Belső használatú metódus, amellyel a megadott [param space] tér legfeljebb [param max_contacts] érintkezési pontot tárolhat. A fő [World2D] terében automatikusan beáll, ha a(z) [member SceneTree.debug_collisions_hint] értéke [code]true[/code], vagy a szerkesztőben bekapcsolod az „Ütközési alakzatok megjelenítése” lehetőséget. Csak hibakeresési buildekben működik.\nA [PhysicsServer2D] belső [code]space_set_debug_contacts[/code] metódusának felülírható változata."
+msgstr "Belső használatú metódus, amellyel a megadott [param space] tér legfeljebb [param max_contacts] érintkezési pontot tárolhat. A fő [World2D] terében automatikusan beáll, ha a [member SceneTree.debug_collisions_hint] értéke [code]true[/code], vagy a szerkesztőben bekapcsolod az „Ütközési alakzatok megjelenítése” lehetőséget. Csak hibakeresési buildekben működik.\nA [PhysicsServer2D] belső [code]space_set_debug_contacts[/code] metódusának felülírható változata."
 
 #. PhysicsServer2DExtension._step
 #: doc/classes/PhysicsServer2DExtension.xml
 msgid "Called every physics step to process the physics simulation. [param step] is the time elapsed since the last physics step, in seconds. It is usually the same as the value returned by [method Node.get_physics_process_delta_time].\nOverridable version of [PhysicsServer2D]'s internal [code skip-lint]step[/code] method."
-msgstr "Minden fizikai lépésben meghívódik a fizikai szimuláció feldolgozásához. A(z) [param step] az előző fizikai lépés óta eltelt idő másodpercben. Általában megegyezik a(z) [method Node.get_physics_process_delta_time] által visszaadott értékkel.\nA [PhysicsServer2D] belső [code skip-lint]step[/code] metódusának felülírható változata."
+msgstr "Minden fizikai lépésben meghívódik a fizikai szimuláció feldolgozásához. A [param step] az előző fizikai lépés óta eltelt idő másodpercben. Általában megegyezik a [method Node.get_physics_process_delta_time] által visszaadott értékkel.\nA [PhysicsServer2D] belső [code skip-lint]step[/code] metódusának felülírható változata."
 
 #. PhysicsServer2DExtension._sync
 #: doc/classes/PhysicsServer2DExtension.xml
@@ -41022,17 +41022,17 @@ msgstr "Akkor hívódik meg, amikor a fizikakiszolgáló szinkronizál, és kül
 #. PhysicsTestMotionParameters3D.brief
 #: doc/classes/PhysicsTestMotionParameters3D.xml
 msgid "Provides parameters for [method PhysicsServer3D.body_test_motion]."
-msgstr "Paramétereket biztosít a(z) [method PhysicsServer3D.body_test_motion] metódushoz."
+msgstr "Paramétereket biztosít a [method PhysicsServer3D.body_test_motion] metódushoz."
 
 #. PhysicsTestMotionParameters3D.description
 #: doc/classes/PhysicsTestMotionParameters3D.xml
 msgid "By changing various properties of this object, such as the motion, you can configure the parameters for [method PhysicsServer3D.body_test_motion]."
-msgstr "Az objektum tulajdonságaival, például a mozgás megadásával, beállíthatod a(z) [method PhysicsServer3D.body_test_motion] metódus paramétereit."
+msgstr "Az objektum tulajdonságaival, például a mozgás megadásával, beállíthatod a [method PhysicsServer3D.body_test_motion] metódus paramétereit."
 
 #. PhysicsTestMotionParameters3D.exclude_bodies
 #: doc/classes/PhysicsTestMotionParameters3D.xml
 msgid "Optional array of body [RID] to exclude from collision. Use [method CollisionObject3D.get_rid] to get the [RID] associated with a [CollisionObject3D]-derived node."
-msgstr "A teszt során az ütközésvizsgálatból kizárt testek [RID] azonosítóinak opcionális tömbje. A(z) [CollisionObject3D] osztályból származó csomópont [RID] azonosítóját a(z) [method CollisionObject3D.get_rid] metódussal kérheted le."
+msgstr "A teszt során az ütközésvizsgálatból kizárt testek [RID] azonosítóinak opcionális tömbje. A [CollisionObject3D] osztályból származó csomópont [RID] azonosítóját a [method CollisionObject3D.get_rid] metódussal kérheted le."
 
 #. PhysicsTestMotionParameters3D.from
 #: doc/classes/PhysicsTestMotionParameters3D.xml
@@ -41052,12 +41052,12 @@ msgstr "Ha az értéke [code]true[/code], a helyreállítási szakaszban az átf
 #. NavigationAgent2D.link_reached
 #: doc/classes/NavigationAgent2D.xml
 msgid "Signals that the agent reached a navigation link. Emitted when the agent moves within [member path_desired_distance] of the next position of the path when that position is a navigation link.\nThe details dictionary may contain the following keys depending on the value of [member path_metadata_flags]:\n- [code]position[/code]: The start position of the link that was reached.\n- [code]type[/code]: Always [constant NavigationPathQueryResult2D.PATH_SEGMENT_TYPE_LINK].\n- [code]rid[/code]: The [RID] of the link.\n- [code]owner[/code]: The object which manages the link (usually [NavigationLink2D]).\n- [code]link_entry_position[/code]: If [code]owner[/code] is available and the owner is a [NavigationLink2D], it will contain the global position of the link's point the agent is entering.\n- [code]link_exit_position[/code]: If [code]owner[/code] is available and the owner is a [NavigationLink2D], it will contain the global position of the link's point which the agent is exiting."
-msgstr "Jelzi, hogy az ügynök elért egy navigációs kapcsolatot. Akkor váltódik ki, amikor a kapcsolatot jelölő következő útvonalpont [member path_desired_distance] távolságon belülre kerül.\nA részleteket tartalmazó szótár a(z) [member path_metadata_flags] értékétől függően a következő kulcsokat tartalmazhatja:\n- [code]position[/code]: Az elért kapcsolat kezdőpontja.\n- [code]type[/code]: Mindig [constant NavigationPathQueryResult2D.PATH_SEGMENT_TYPE_LINK].\n- [code]rid[/code]: A kapcsolat [RID] azonosítója.\n- [code]owner[/code]: A kapcsolatot kezelő objektum (általában [NavigationLink2D]).\n- [code]link_entry_position[/code]: Ha van [code]owner[/code] érték, és az egy [NavigationLink2D], akkor ez annak a pontnak a globális helye, ahol az ügynök belép a kapcsolatba.\n- [code]link_exit_position[/code]: Ha van [code]owner[/code] érték, és az egy [NavigationLink2D], akkor ez annak a pontnak a globális helye, ahol az ügynök kilép a kapcsolatból."
+msgstr "Jelzi, hogy az ügynök elért egy navigációs kapcsolatot. Akkor váltódik ki, amikor a kapcsolatot jelölő következő útvonalpont [member path_desired_distance] távolságon belülre kerül.\nA részleteket tartalmazó szótár a [member path_metadata_flags] értékétől függően a következő kulcsokat tartalmazhatja:\n- [code]position[/code]: Az elért kapcsolat kezdőpontja.\n- [code]type[/code]: Mindig [constant NavigationPathQueryResult2D.PATH_SEGMENT_TYPE_LINK].\n- [code]rid[/code]: A kapcsolat [RID] azonosítója.\n- [code]owner[/code]: A kapcsolatot kezelő objektum (általában [NavigationLink2D]).\n- [code]link_entry_position[/code]: Ha van [code]owner[/code] érték, és az egy [NavigationLink2D], akkor ez annak a pontnak a globális helye, ahol az ügynök belép a kapcsolatba.\n- [code]link_exit_position[/code]: Ha van [code]owner[/code] érték, és az egy [NavigationLink2D], akkor ez annak a pontnak a globális helye, ahol az ügynök kilép a kapcsolatból."
 
 #. NavigationAgent2D.debug_path_custom_line_width
 #: doc/classes/NavigationAgent2D.xml
 msgid "If [member debug_use_custom] is [code]true[/code] uses this line width for rendering paths for this agent instead of global line width."
-msgstr "Ha a(z) [member debug_use_custom] értéke [code]true[/code], az ügynök útvonalainak kirajzolásakor ez a vonalvastagság lép a globális érték helyébe."
+msgstr "Ha a [member debug_use_custom] értéke [code]true[/code], az ügynök útvonalainak kirajzolásakor ez a vonalvastagság lép a globális érték helyébe."
 
 #. NavigationAgent3D.brief
 #: doc/classes/NavigationAgent3D.xml
@@ -41067,7 +41067,7 @@ msgstr "3D-s navigációs ügynök, amely útvonalat keres egy célponthoz, és 
 #. NavigationAgent3D.description
 #: doc/classes/NavigationAgent3D.xml
 msgid "A 3D agent used to pathfind to a position while avoiding static and dynamic obstacles. The calculation can be used by the parent node to dynamically move it along the path. Requires navigation data to work correctly.\nDynamic obstacles are avoided using RVO collision avoidance. Avoidance is computed before physics, so the pathfinding information can be used safely in the physics step.\n[b]Note:[/b] After setting the [member target_position] property, the [method get_next_path_position] method must be used once every physics frame to update the internal path logic of the navigation agent. The vector position it returns should be used as the next movement position for the agent's parent node.\n[b]Note:[/b] Several methods of this class, such as [method get_next_path_position], can trigger a new path calculation. Calling these in your callback to an agent's signal, such as [signal waypoint_reached], can cause infinite recursion. It is recommended to call these methods in the physics step or, alternatively, delay their call until the end of the frame (see [method Object.call_deferred] or [constant Object.CONNECT_DEFERRED])."
-msgstr "Útvonalat keres egy 3D-s célponthoz, és segít elkerülni az álló és mozgó akadályokat. Az eredmény alapján a szülőcsomópont dinamikusan mozgatható az útvonal mentén. A helyes működéshez navigációs adatokra van szükség.\nA dinamikus akadályok elkerüléséhez az RVO ütközéselkerülési eljárást használja. Az elkerülést a fizikai feldolgozás előtt számítja ki, így az útvonaladatok biztonságosan használhatók a fizikai lépésben.\n[b]Megjegyzés:[/b] A(z) [member target_position] beállítása után fizikai képkockánként egyszer meg kell hívni a(z) [method get_next_path_position] metódust az ügynök belső útvonalkezelésének frissítéséhez. Az így kapott helyvektort használd a szülőcsomópont következő célpontjaként.\n[b]Megjegyzés:[/b] Több metódus, köztük a(z) [method get_next_path_position], új útvonalszámítást indíthat. Ha az ügynök valamely jelzésének, például a(z) [signal waypoint_reached] jelzésnek a visszahívásából hívod őket, végtelen rekurzió léphet fel. Érdemes a fizikai lépésben meghívni ezeket a metódusokat, vagy a képkocka végére halasztani a hívást a(z) [method Object.call_deferred] metódussal vagy az [constant Object.CONNECT_DEFERRED] jelzővel."
+msgstr "Útvonalat keres egy 3D-s célponthoz, és segít elkerülni az álló és mozgó akadályokat. Az eredmény alapján a szülőcsomópont dinamikusan mozgatható az útvonal mentén. A helyes működéshez navigációs adatokra van szükség.\nA dinamikus akadályok elkerüléséhez az RVO ütközéselkerülési eljárást használja. Az elkerülést a fizikai feldolgozás előtt számítja ki, így az útvonaladatok biztonságosan használhatók a fizikai lépésben.\n[b]Megjegyzés:[/b] A [member target_position] beállítása után fizikai képkockánként egyszer meg kell hívni a [method get_next_path_position] metódust az ügynök belső útvonalkezelésének frissítéséhez. Az így kapott helyvektort használd a szülőcsomópont következő célpontjaként.\n[b]Megjegyzés:[/b] Több metódus, köztük a [method get_next_path_position], új útvonalszámítást indíthat. Ha az ügynök valamely jelzésének, például a [signal waypoint_reached] jelzésnek a visszahívásából hívod őket, végtelen rekurzió léphet fel. Érdemes a fizikai lépésben meghívni ezeket a metódusokat, vagy a képkocka végére halasztani a hívást az [method Object.call_deferred] metódussal vagy az [constant Object.CONNECT_DEFERRED] jelzővel."
 
 #. NavigationAgent3D.get_current_navigation_path_index
 #: doc/classes/NavigationAgent3D.xml
@@ -41082,12 +41082,12 @@ msgstr "Visszaadja az ügynök [RID] azonosítóját a [NavigationServer3D] kisz
 #. NavigationAgent3D.link_reached
 #: doc/classes/NavigationAgent3D.xml
 msgid "Signals that the agent reached a navigation link. Emitted when the agent moves within [member path_desired_distance] of the next position of the path when that position is a navigation link.\nThe details dictionary may contain the following keys depending on the value of [member path_metadata_flags]:\n- [code]position[/code]: The start position of the link that was reached.\n- [code]type[/code]: Always [constant NavigationPathQueryResult3D.PATH_SEGMENT_TYPE_LINK].\n- [code]rid[/code]: The [RID] of the link.\n- [code]owner[/code]: The object which manages the link (usually [NavigationLink3D]).\n- [code]link_entry_position[/code]: If [code]owner[/code] is available and the owner is a [NavigationLink3D], it will contain the global position of the link's point the agent is entering.\n- [code]link_exit_position[/code]: If [code]owner[/code] is available and the owner is a [NavigationLink3D], it will contain the global position of the link's point which the agent is exiting."
-msgstr "Jelzi, hogy az ügynök elért egy navigációs kapcsolatot. Akkor váltódik ki, amikor a kapcsolatot jelölő következő útvonalpont [member path_desired_distance] távolságon belülre kerül.\nA részleteket tartalmazó szótár a(z) [member path_metadata_flags] értékétől függően a következő kulcsokat tartalmazhatja:\n- [code]position[/code]: Az elért kapcsolat kezdőpontja.\n- [code]type[/code]: Mindig [constant NavigationPathQueryResult3D.PATH_SEGMENT_TYPE_LINK].\n- [code]rid[/code]: A kapcsolat [RID] azonosítója.\n- [code]owner[/code]: A kapcsolatot kezelő objektum (általában [NavigationLink3D]).\n- [code]link_entry_position[/code]: Ha van [code]owner[/code] érték, és az egy [NavigationLink3D], akkor ez annak a pontnak a globális helye, ahol az ügynök belép a kapcsolatba.\n- [code]link_exit_position[/code]: Ha van [code]owner[/code] érték, és az egy [NavigationLink3D], akkor ez annak a pontnak a globális helye, ahol az ügynök kilép a kapcsolatból."
+msgstr "Jelzi, hogy az ügynök elért egy navigációs kapcsolatot. Akkor váltódik ki, amikor a kapcsolatot jelölő következő útvonalpont [member path_desired_distance] távolságon belülre kerül.\nA részleteket tartalmazó szótár a [member path_metadata_flags] értékétől függően a következő kulcsokat tartalmazhatja:\n- [code]position[/code]: Az elért kapcsolat kezdőpontja.\n- [code]type[/code]: Mindig [constant NavigationPathQueryResult3D.PATH_SEGMENT_TYPE_LINK].\n- [code]rid[/code]: A kapcsolat [RID] azonosítója.\n- [code]owner[/code]: A kapcsolatot kezelő objektum (általában [NavigationLink3D]).\n- [code]link_entry_position[/code]: Ha van [code]owner[/code] érték, és az egy [NavigationLink3D], akkor ez annak a pontnak a globális helye, ahol az ügynök belép a kapcsolatba.\n- [code]link_exit_position[/code]: Ha van [code]owner[/code] érték, és az egy [NavigationLink3D], akkor ez annak a pontnak a globális helye, ahol az ügynök kilép a kapcsolatból."
 
 #. NavigationAgent3D.avoidance_enabled
 #: doc/classes/NavigationAgent3D.xml
 msgid "If [code]true[/code] the agent is registered for an RVO avoidance callback on the [NavigationServer3D]. When [member velocity] is set and the processing is completed a [code]safe_velocity[/code] Vector3 is received with a signal connection to [signal velocity_computed]. Avoidance processing with many registered agents has a significant performance cost and should only be enabled on agents that currently require it."
-msgstr "Ha az értéke [code]true[/code], az ügynök feliratkozik a [NavigationServer3D] RVO elkerülési visszahívására. A(z) [member velocity] beállítása és a számítás befejezése után a(z) [signal velocity_computed] jelzésen keresztül érkezik a [code]safe_velocity[/code] Vector3 érték. Sok regisztrált ügynök esetén az elkerülés számítása jelentős terhelést okoz, ezért csak azoknál kapcsold be, amelyeknek éppen szükségük van rá."
+msgstr "Ha az értéke [code]true[/code], az ügynök feliratkozik a [NavigationServer3D] RVO elkerülési visszahívására. A [member velocity] beállítása és a számítás befejezése után a [signal velocity_computed] jelzésen keresztül érkezik a [code]safe_velocity[/code] Vector3 érték. Sok regisztrált ügynök esetén az elkerülés számítása jelentős terhelést okoz, ezért csak azoknál kapcsold be, amelyeknek éppen szükségük van rá."
 
 #. NavigationAgent3D.height
 #: doc/classes/NavigationAgent3D.xml
@@ -41107,7 +41107,7 @@ msgstr "Az ügynök az útvonal minden pontjának Y koordinátájából levonja 
 #. NavigationAgent3D.radius
 #: doc/classes/NavigationAgent3D.xml
 msgid "The radius of the avoidance agent. This is the \"body\" of the avoidance agent and not the avoidance maneuver starting radius (which is controlled by [member neighbor_distance]).\nDoes not affect normal pathfinding. To change an actor's pathfinding radius bake [NavigationMesh] resources with a different [member NavigationMesh.agent_radius] property and use different navigation maps for each actor size."
-msgstr "Az ügynök sugara az elkerülés számításához. Ez az ügynök fizikai méretét adja meg az elkerülési számításban. Az elkerülés kezdőtávolságát a(z) [member neighbor_distance] határozza meg.\nA szokásos útvonalkeresést nem befolyásolja. Ha az útvonalkereséshez eltérő sugarakat szeretnél használni, süss [NavigationMesh] erőforrásokat különböző [member NavigationMesh.agent_radius] értékekkel, és minden szereplőmérethez használj külön navigációs térképet."
+msgstr "Az ügynök sugara az elkerülés számításához. Ez az ügynök fizikai méretét adja meg az elkerülési számításban. Az elkerülés kezdőtávolságát a [member neighbor_distance] határozza meg.\nA szokásos útvonalkeresést nem befolyásolja. Ha az útvonalkereséshez eltérő sugarakat szeretnél használni, süss [NavigationMesh] erőforrásokat különböző [member NavigationMesh.agent_radius] értékekkel, és minden szereplőmérethez használj külön navigációs térképet."
 
 #. NavigationAgent3D.use_3d_avoidance
 #: doc/classes/NavigationAgent3D.xml
@@ -41118,13 +41118,13 @@ msgstr "Ha az értéke [code]true[/code], az ügynök a 3D-s tér minden irány�
 #. NavigationServer3D.bake_from_source_geometry_data
 #: doc/classes/NavigationMeshGenerator.xml doc/classes/NavigationServer3D.xml
 msgid "Bakes the provided [param navigation_mesh] with the data from the provided [param source_geometry_data]. After the process is finished the optional [param callback] will be called."
-msgstr "A megadott [param navigation_mesh] navigációs hálót a(z) [param source_geometry_data] adataiból süti ki. A művelet végén meghívja a(z) [param callback] visszahívást, ha megadtad."
+msgstr "A megadott [param navigation_mesh] navigációs hálót a [param source_geometry_data] adataiból süti ki. A művelet végén meghívja a [param callback] visszahívást, ha megadtad."
 
 #. NavigationMeshGenerator.parse_source_geometry_data
 #. NavigationServer3D.parse_source_geometry_data
 #: doc/classes/NavigationMeshGenerator.xml doc/classes/NavigationServer3D.xml
 msgid "Parses the [SceneTree] for source geometry according to the properties of [param navigation_mesh]. Updates the provided [param source_geometry_data] resource with the resulting data. The resource can then be used to bake a navigation mesh with [method bake_from_source_geometry_data]. After the process is finished the optional [param callback] will be called.\n[b]Note:[/b] This function needs to run on the main thread or with a deferred call as the SceneTree is not thread-safe.\n[b]Performance:[/b] While convenient, reading data arrays from [Mesh] resources can affect the frame rate negatively. The data needs to be received from the GPU, stalling the [RenderingServer] in the process. For performance prefer the use of e.g. collision shapes or creating the data arrays entirely in code."
-msgstr "A(z) [param navigation_mesh] tulajdonságai alapján összegyűjti a forrásgeometriát a [SceneTree] jelenetfából. A kapott adatokkal frissíti a(z) [param source_geometry_data] erőforrást, amelyből a(z) [method bake_from_source_geometry_data] metódussal navigációs hálót süthetsz. A művelet végén meghívja a(z) [param callback] visszahívást, ha megadtad.\n[b]Megjegyzés:[/b] A jelenetfa nem szálbiztos, ezért ezt a függvényt a fő szálon vagy halasztott hívással kell futtatni.\n[b]Teljesítmény:[/b] A [Mesh] erőforrások adattömbjeinek kiolvasása kényelmes, de lassíthatja a képkockák megjelenítését. A GPU-tól érkező adatokra a [RenderingServer] kiszolgálónak várnia kell. A jobb teljesítmény érdekében használhatsz például ütközési alakzatokat, vagy kódból is összeállíthatod az adattömböket."
+msgstr "A [param navigation_mesh] tulajdonságai alapján összegyűjti a forrásgeometriát a [SceneTree] jelenetfából. A kapott adatokkal frissíti a [param source_geometry_data] erőforrást, amelyből a [method bake_from_source_geometry_data] metódussal navigációs hálót süthetsz. A művelet végén meghívja a [param callback] visszahívást, ha megadtad.\n[b]Megjegyzés:[/b] A jelenetfa nem szálbiztos, ezért ezt a függvényt a fő szálon vagy halasztott hívással kell futtatni.\n[b]Teljesítmény:[/b] A [Mesh] erőforrások adattömbjeinek kiolvasása kényelmes, de lassíthatja a képkockák megjelenítését. A GPU-tól érkező adatokra a [RenderingServer] kiszolgálónak várnia kell. A jobb teljesítmény érdekében használhatsz például ütközési alakzatokat, vagy kódból is összeállíthatod az adattömböket."
 
 #. NavigationObstacle3D.brief
 #: doc/classes/NavigationObstacle3D.xml
@@ -41134,7 +41134,7 @@ msgstr "3D-s akadály, amely befolyásolja a navigációs háló sütését, ill
 #. NavigationObstacle3D.description
 #: doc/classes/NavigationObstacle3D.xml
 msgid "An obstacle needs a navigation map and outline [member vertices] defined to work correctly. The outlines can not cross or overlap and are restricted to a plane projection. This means the y-axis of the vertices is ignored, instead the obstacle's global y-axis position is used for placement. The projected shape is extruded by the obstacles height along the y-axis.\nObstacles can be included in the navigation mesh baking process when [member affect_navigation_mesh] is enabled. They do not add walkable geometry, instead their role is to discard other source geometry inside the shape. This can be used to prevent navigation mesh from appearing in unwanted places, e.g. inside \"solid\" geometry or on top of it. If [member carve_navigation_mesh] is enabled the baked shape will not be affected by offsets of the navigation mesh baking, e.g. the agent radius.\nWith [member avoidance_enabled] the obstacle can constrain the avoidance velocities of avoidance using agents. If the obstacle's vertices are wound in clockwise order, avoidance agents will be pushed in by the obstacle, otherwise, avoidance agents will be pushed out. Obstacles using vertices and avoidance can warp to a new position but should not be moved every single frame as each change requires a rebuild of the avoidance map."
-msgstr "Az akadály helyes működéséhez navigációs térképre és a körvonalat megadó [member vertices] értékre van szükség. A körvonalak nem keresztezhetik és nem fedhetik egymást, és egy síkra kell vetülniük. A csúcspontok Y koordinátája így nem számít, az elhelyezéshez az akadály globális Y koordinátája szolgál. A vetített alakzatot az akadály magasságával nyújtja ki az Y tengely mentén.\nA(z) [member affect_navigation_mesh] bekapcsolásával az akadályok részt vesznek a navigációs háló sütésében. Az akadályok az alakzatukon belüli forrásgeometriát kizárják a feldolgozásból, így nem jön létre navigációs háló nem kívánt helyeken, például tömör geometria belsejében vagy tetején. Ha a(z) [member carve_navigation_mesh] be van kapcsolva, a sütéskor alkalmazott eltolások, például az ügynöksugár, nem befolyásolják a kivágott alakzatot.\nA(z) [member avoidance_enabled] bekapcsolásával az akadály korlátozhatja az elkerülést használó ügynökök sebességét. Ha a csúcspontok sorrendje megegyezik az óramutató járásával, az akadály befelé tereli az ügynököket. Ellenkező sorrendben kifelé tereli őket. A csúcspontokkal megadott, elkerülést használó akadály áthelyezhető, de ezt érdemes ritkán megtenni, mert minden helyváltoztatáskor újra fel kell építeni az elkerülési térképet."
+msgstr "Az akadály helyes működéséhez navigációs térképre és a körvonalat megadó [member vertices] értékre van szükség. A körvonalak nem keresztezhetik és nem fedhetik egymást, és egy síkra kell vetülniük. A csúcspontok Y koordinátája így nem számít, az elhelyezéshez az akadály globális Y koordinátája szolgál. A vetített alakzatot az akadály magasságával nyújtja ki az Y tengely mentén.\nAz [member affect_navigation_mesh] bekapcsolásával az akadályok részt vesznek a navigációs háló sütésében. Az akadályok az alakzatukon belüli forrásgeometriát kizárják a feldolgozásból, így nem jön létre navigációs háló nem kívánt helyeken, például tömör geometria belsejében vagy tetején. Ha a [member carve_navigation_mesh] be van kapcsolva, a sütéskor alkalmazott eltolások, például az ügynöksugár, nem befolyásolják a kivágott alakzatot.\nAz [member avoidance_enabled] bekapcsolásával az akadály korlátozhatja az elkerülést használó ügynökök sebességét. Ha a csúcspontok sorrendje megegyezik az óramutató járásával, az akadály befelé tereli az ügynököket. Ellenkező sorrendben kifelé tereli őket. A csúcspontokkal megadott, elkerülést használó akadály áthelyezhető, de ezt érdemes ritkán megtenni, mert minden helyváltoztatáskor újra fel kell építeni az elkerülési térképet."
 
 #. NavigationObstacle3D.get_rid
 #: doc/classes/NavigationObstacle3D.xml
@@ -41144,7 +41144,7 @@ msgstr "Visszaadja az akadály [RID] azonosítóját a [NavigationServer3D] kisz
 #. NavigationObstacle3D.affect_navigation_mesh
 #: doc/classes/NavigationObstacle3D.xml
 msgid "If enabled and parsed in a navigation mesh baking process the obstacle will discard source geometry inside its [member vertices] and [member height] defined shape."
-msgstr "Ha be van kapcsolva, és az akadályt feldolgozza a navigációs háló sütése, az akadály kizárja a(z) [member vertices] és [member height] által meghatározott alakzat belsejében lévő forrásgeometriát."
+msgstr "Ha be van kapcsolva, és az akadályt feldolgozza a navigációs háló sütése, az akadály kizárja a [member vertices] és [member height] által meghatározott alakzat belsejében lévő forrásgeometriát."
 
 #. NavigationObstacle3D.height
 #: doc/classes/NavigationObstacle3D.xml
@@ -41154,7 +41154,7 @@ msgstr "Beállítja a 2D-s elkerüléshez használt akadálymagasságot. A 2D-s 
 #. NavigationObstacle3D.use_3d_avoidance
 #: doc/classes/NavigationObstacle3D.xml
 msgid "If [code]true[/code] the obstacle affects 3D avoidance using agent's with obstacle [member radius].\nIf [code]false[/code] the obstacle affects 2D avoidance using agent's with both obstacle [member vertices] as well as obstacle [member radius]."
-msgstr "Ha az értéke [code]true[/code], az akadály a(z) [member radius] alapján befolyásolja a 3D-s elkerülést használó ügynököket.\nHa az értéke [code]false[/code], az akadály a(z) [member vertices] és a(z) [member radius] alapján befolyásolja a 2D-s elkerülést használó ügynököket."
+msgstr "Ha az értéke [code]true[/code], az akadály a [member radius] alapján befolyásolja a 3D-s elkerülést használó ügynököket.\nHa az értéke [code]false[/code], az akadály a [member vertices] és a [member radius] alapján befolyásolja a 2D-s elkerülést használó ügynököket."
 
 #. NavigationPathQueryParameters3D.brief
 #: doc/classes/NavigationPathQueryParameters3D.xml
@@ -41169,12 +41169,12 @@ msgstr "Az objektum tulajdonságaival, például a kiindulási hely és a célpo
 #. NavigationPathQueryParameters3D.excluded_regions
 #: doc/classes/NavigationPathQueryParameters3D.xml
 msgid "The list of region [RID]s that will be excluded from the path query. Use [method NavigationRegion3D.get_rid] to get the [RID] associated with a [NavigationRegion3D] node.\n[b]Note:[/b] The returned array is copied and any changes to it will not update the original property value. To update the value you need to modify the returned array, and then set it to the property again."
-msgstr "Az útvonal-lekérdezésből kizárt régiók [RID] azonosítóinak listája. A [NavigationRegion3D] csomópont [RID] azonosítóját a(z) [method NavigationRegion3D.get_rid] metódussal kérheted le.\n[b]Megjegyzés:[/b] A lekérdezés a tömb másolatát adja vissza. A másolat módosítása után állítsd be újra a tulajdonságot a módosított tömbbel."
+msgstr "Az útvonal-lekérdezésből kizárt régiók [RID] azonosítóinak listája. A [NavigationRegion3D] csomópont [RID] azonosítóját a [method NavigationRegion3D.get_rid] metódussal kérheted le.\n[b]Megjegyzés:[/b] A lekérdezés a tömb másolatát adja vissza. A másolat módosítása után állítsd be újra a tulajdonságot a módosított tömbbel."
 
 #. NavigationPathQueryParameters3D.included_regions
 #: doc/classes/NavigationPathQueryParameters3D.xml
 msgid "The list of region [RID]s that will be included by the path query. Use [method NavigationRegion3D.get_rid] to get the [RID] associated with a [NavigationRegion3D] node. If left empty all regions are included. If a region ends up being both included and excluded at the same time it will be excluded.\n[b]Note:[/b] The returned array is copied and any changes to it will not update the original property value. To update the value you need to modify the returned array, and then set it to the property again."
-msgstr "Az útvonal-lekérdezésben figyelembe vett régiók [RID] azonosítóinak listája. A [NavigationRegion3D] csomópont [RID] azonosítóját a(z) [method NavigationRegion3D.get_rid] metódussal kérheted le. Üres lista esetén minden régiót figyelembe vesz. Ha egy régió mindkét listában szerepel, kimarad a lekérdezésből.\n[b]Megjegyzés:[/b] A lekérdezés a tömb másolatát adja vissza. A másolat módosítása után állítsd be újra a tulajdonságot a módosított tömbbel."
+msgstr "Az útvonal-lekérdezésben figyelembe vett régiók [RID] azonosítóinak listája. A [NavigationRegion3D] csomópont [RID] azonosítóját a [method NavigationRegion3D.get_rid] metódussal kérheted le. Üres lista esetén minden régiót figyelembe vesz. Ha egy régió mindkét listában szerepel, kimarad a lekérdezésből.\n[b]Megjegyzés:[/b] A lekérdezés a tömb másolatát adja vissza. A másolat módosítása után állítsd be újra a tulajdonságot a módosított tömbbel."
 
 #. NavigationPathQueryParameters3D.path_return_max_radius
 #: doc/classes/NavigationPathQueryParameters3D.xml
@@ -41194,7 +41194,7 @@ msgstr "A [NavigationServer3D] 3D-s navigációs útvonal-lekérdezésének ered
 #. NavigationPathQueryResult3D.path
 #: doc/classes/NavigationPathQueryResult3D.xml
 msgid "The resulting path array from the navigation query. All path array positions are in global coordinates. Without customized query parameters this is the same path as returned by [method NavigationServer3D.map_get_path]."
-msgstr "A navigációs lekérdezés eredményeként kapott útvonal tömbje. Az útvonal minden pontja globális koordinátákban szerepel. Egyéni lekérdezési paraméterek nélkül az útvonal megegyezik a(z) [method NavigationServer3D.map_get_path] által visszaadott útvonallal."
+msgstr "A navigációs lekérdezés eredményeként kapott útvonal tömbje. Az útvonal minden pontja globális koordinátákban szerepel. Egyéni lekérdezési paraméterek nélkül az útvonal megegyezik a [method NavigationServer3D.map_get_path] által visszaadott útvonallal."
 
 #. NavigationRegion3D.brief
 #: doc/classes/NavigationRegion3D.xml
@@ -41204,12 +41204,12 @@ msgstr "Bejárható 3D-s régió, amelyet a [NavigationAgent3D] ügynökök útv
 #. NavigationRegion3D.description
 #: doc/classes/NavigationRegion3D.xml
 msgid "A traversable 3D region based on a [NavigationMesh] that [NavigationAgent3D]s can use for pathfinding.\nTwo regions can be connected to each other if they share a similar edge. You can set the minimum distance between two vertices required to connect two edges by using [method NavigationServer3D.map_set_edge_connection_margin].\n[b]Note:[/b] Overlapping two regions' navigation meshes is not enough for connecting two regions. They must share a similar edge.\nThe cost of entering this region from another region can be controlled with the [member enter_cost] value.\n[b]Note:[/b] This value is not added to the path cost when the start position is already inside this region.\nThe cost of traveling distances inside this region can be controlled with the [member travel_cost] multiplier.\n[b]Note:[/b] This node caches changes to its properties, so if you make changes to the underlying region [RID] in [NavigationServer3D], they will not be reflected in this node's properties."
-msgstr "[NavigationMesh] erőforráson alapuló bejárható 3D-s régió, amelyet a [NavigationAgent3D] ügynökök útvonalkeresésre használhatnak.\nKét régió összekapcsolható, ha van egymáshoz illeszkedő élük. A két él megfelelő csúcspontjai közti távolság küszöbét a(z) [method NavigationServer3D.map_set_edge_connection_margin] metódussal állíthatod be.\n[b]Megjegyzés:[/b] Két régió navigációs hálójának átfedése önmagában kevés az összekapcsoláshoz. A régióknak egymáshoz illeszkedő éllel kell rendelkezniük.\nA régióba másik régióból való belépés költségét a(z) [member enter_cost] értéke határozza meg.\n[b]Megjegyzés:[/b] Ez az érték nem adódik hozzá az útvonal költségéhez, ha a kiindulási pont már ebben a régióban van.\nA régión belüli haladás költségét a(z) [member travel_cost] szorzóval adhatod meg.\n[b]Megjegyzés:[/b] A csomópont helyben tárolja a tulajdonságai változásait. A [NavigationServer3D] kiszolgálón a régió [RID] azonosítóján keresztül végzett módosítások nem jelennek meg a csomópont tulajdonságaiban."
+msgstr "[NavigationMesh] erőforráson alapuló bejárható 3D-s régió, amelyet a [NavigationAgent3D] ügynökök útvonalkeresésre használhatnak.\nKét régió összekapcsolható, ha van egymáshoz illeszkedő élük. A két él megfelelő csúcspontjai közti távolság küszöbét a [method NavigationServer3D.map_set_edge_connection_margin] metódussal állíthatod be.\n[b]Megjegyzés:[/b] Két régió navigációs hálójának átfedése önmagában kevés az összekapcsoláshoz. A régióknak egymáshoz illeszkedő éllel kell rendelkezniük.\nA régióba másik régióból való belépés költségét az [member enter_cost] értéke határozza meg.\n[b]Megjegyzés:[/b] Ez az érték nem adódik hozzá az útvonal költségéhez, ha a kiindulási pont már ebben a régióban van.\nA régión belüli haladás költségét a [member travel_cost] szorzóval adhatod meg.\n[b]Megjegyzés:[/b] A csomópont helyben tárolja a tulajdonságai változásait. A [NavigationServer3D] kiszolgálón a régió [RID] azonosítóján keresztül végzett módosítások nem jelennek meg a csomópont tulajdonságaiban."
 
 #. NavigationRegion3D.bake_navigation_mesh
 #: doc/classes/NavigationRegion3D.xml
 msgid "Bakes the [NavigationMesh]. If [param on_thread] is set to [code]true[/code] (default), the baking is done on a separate thread. Baking on separate thread is useful because navigation baking is not a cheap operation. When it is completed, it automatically sets the new [NavigationMesh]. Please note that baking on separate thread may be very slow if geometry is parsed from meshes as async access to each mesh involves heavy synchronization. Also, please note that baking on a separate thread is automatically disabled on operating systems that cannot use threads (such as Web with threads disabled)."
-msgstr "Kisüti a [NavigationMesh] navigációs hálót. Ha a(z) [param on_thread] értéke [code]true[/code] (ez az alapértelmezés), a sütés külön szálon fut. Ez azért hasznos, mert a navigációs háló sütése számításigényes. A művelet végén automatikusan beállítja az új [NavigationMesh] erőforrást. Ha a forrásgeometriát hálókból olvassa ki, a sütés külön szálon nagyon lassú is lehet, mert az egyes hálók aszinkron eléréséhez sok szinkronizálás szükséges. A külön szálon végzett sütés automatikusan kikapcsol az olyan platformokon, amelyek nem használhatnak szálakat (például letiltott szálkezelésű webes export esetén)."
+msgstr "Kisüti a [NavigationMesh] navigációs hálót. Ha az [param on_thread] értéke [code]true[/code] (ez az alapértelmezés), a sütés külön szálon fut. Ez azért hasznos, mert a navigációs háló sütése számításigényes. A művelet végén automatikusan beállítja az új [NavigationMesh] erőforrást. Ha a forrásgeometriát hálókból olvassa ki, a sütés külön szálon nagyon lassú is lehet, mert az egyes hálók aszinkron eléréséhez sok szinkronizálás szükséges. A külön szálon végzett sütés automatikusan kikapcsol az olyan platformokon, amelyek nem használhatnak szálakat (például letiltott szálkezelésű webes export esetén)."
 
 #. NavigationRegion3D.get_bounds
 #: doc/classes/NavigationRegion3D.xml
@@ -41224,7 +41224,7 @@ msgstr "Visszaadja a régió [RID] azonosítóját a [NavigationServer3D] kiszol
 #. NavigationRegion3D.get_rid
 #: doc/classes/NavigationRegion3D.xml
 msgid "Returns the [RID] of this region on the [NavigationServer3D]. Combined with [method NavigationServer3D.map_get_closest_point_owner] can be used to identify the [NavigationRegion3D] closest to a point on the merged navigation map."
-msgstr "Visszaadja a régió [RID] azonosítóját a [NavigationServer3D] kiszolgálón. A(z) [method NavigationServer3D.map_get_closest_point_owner] metódussal együtt megkereshető vele az összevont navigációs térképen egy ponthoz legközelebb eső [NavigationRegion3D] régió."
+msgstr "Visszaadja a régió [RID] azonosítóját a [NavigationServer3D] kiszolgálón. A [method NavigationServer3D.map_get_closest_point_owner] metódussal együtt megkereshető vele az összevont navigációs térképen egy ponthoz legközelebb eső [NavigationRegion3D] régió."
 
 #. NavigationRegion3D.is_baking
 #: doc/classes/NavigationRegion3D.xml
@@ -41254,7 +41254,7 @@ msgstr "Meghatározza, hogy a [NavigationRegion3D] régió aktív-e."
 #. NavigationRegion3D.navigation_layers
 #: doc/classes/NavigationRegion3D.xml
 msgid "A bitfield determining all navigation layers the region belongs to. These navigation layers can be checked upon when requesting a path with [method NavigationServer3D.map_get_path]."
-msgstr "Bitmező, amely megadja, mely navigációs rétegekhez tartozik a régió. Az útvonal lekérdezésekor a(z) [method NavigationServer3D.map_get_path] metódussal szűrhetsz ezekre a rétegekre."
+msgstr "Bitmező, amely megadja, mely navigációs rétegekhez tartozik a régió. Az útvonal lekérdezésekor a [method NavigationServer3D.map_get_path] metódussal szűrhetsz ezekre a rétegekre."
 
 #. NavigationRegion3D.navigation_mesh
 #: doc/classes/NavigationRegion3D.xml
@@ -41308,27 +41308,27 @@ msgstr "[code]true[/code] értéket ad vissza, ha a megadott [param agent] ügyn
 #. NavigationServer3D.agent_set_avoidance_enabled
 #: doc/classes/NavigationServer3D.xml
 msgid "If [param enabled] is [code]true[/code], the provided [param agent] calculates avoidance."
-msgstr "Ha a(z) [param enabled] értéke [code]true[/code], a megadott [param agent] ügynök elkerülést számít."
+msgstr "Ha az [param enabled] értéke [code]true[/code], a megadott [param agent] ügynök elkerülést számít."
 
 #. NavigationServer3D.agent_set_height
 #: doc/classes/NavigationServer3D.xml
 msgid "Updates the provided [param agent] [param height]."
-msgstr "Frissíti a megadott [param agent] ügynök magasságát a(z) [param height] értékére."
+msgstr "Frissíti a megadott [param agent] ügynök magasságát a [param height] értékére."
 
 #. NavigationServer3D.agent_set_velocity
 #: doc/classes/NavigationServer3D.xml
 msgid "Sets [param velocity] as the new wanted velocity for the specified [param agent]. The avoidance simulation will try to fulfill this velocity if possible but will modify it to avoid collision with other agent's and obstacles. When an agent is teleported to a new position use [method agent_set_velocity_forced] as well to reset the internal simulation velocity."
-msgstr "A(z) [param velocity] értékét állítja be a megadott [param agent] ügynök kívánt új sebességeként. Az elkerülési szimuláció megpróbálja tartani ezt a sebességet, de módosítja, hogy az ügynök ne ütközzön más ügynökökkel vagy akadályokkal. Teleportáláskor hívd meg a(z) [method agent_set_velocity_forced] metódust is a szimulációban tárolt sebesség visszaállításához."
+msgstr "A [param velocity] értékét állítja be a megadott [param agent] ügynök kívánt új sebességeként. Az elkerülési szimuláció megpróbálja tartani ezt a sebességet, de módosítja, hogy az ügynök ne ütközzön más ügynökökkel vagy akadályokkal. Teleportáláskor hívd meg az [method agent_set_velocity_forced] metódust is a szimulációban tárolt sebesség visszaállításához."
 
 #. NavigationServer3D.agent_set_velocity_forced
 #: doc/classes/NavigationServer3D.xml
 msgid "Replaces the internal velocity in the collision avoidance simulation with [param velocity] for the specified [param agent]. When an agent is teleported to a new position this function should be used in the same frame. If called frequently this function can get agents stuck."
-msgstr "Az ütközéselkerülési szimulációban a megadott [param agent] ügynök belső sebességét a(z) [param velocity] értékére állítja. Az ügynök teleportálásakor ugyanabban a képkockában hívd meg. A túl gyakori hívás miatt az ügynökök elakadhatnak."
+msgstr "Az ütközéselkerülési szimulációban a megadott [param agent] ügynök belső sebességét a [param velocity] értékére állítja. Az ügynök teleportálásakor ugyanabban a képkockában hívd meg. A túl gyakori hívás miatt az ügynökök elakadhatnak."
 
 #. NavigationServer3D.bake_from_source_geometry_data_async
 #: doc/classes/NavigationServer3D.xml
 msgid "Bakes the provided [param navigation_mesh] with the data from the provided [param source_geometry_data] as an async task running on a background thread. After the process is finished the optional [param callback] will be called."
-msgstr "A megadott [param navigation_mesh] navigációs hálót a(z) [param source_geometry_data] adataiból süti ki, háttérszálon futó aszinkron feladatként. A művelet végén meghívja a(z) [param callback] visszahívást, ha megadtad."
+msgstr "A megadott [param navigation_mesh] navigációs hálót a [param source_geometry_data] adataiból süti ki, háttérszálon futó aszinkron feladatként. A művelet végén meghívja a [param callback] visszahívást, ha megadtad."
 
 #. NavigationServer3D.is_baking_navigation_mesh
 #: doc/classes/NavigationServer3D.xml
@@ -41338,7 +41338,7 @@ msgstr "[code]true[/code] értéket ad vissza, amíg a megadott navigációs há
 #. NavigationServer3D.link_set_navigation_layers
 #: doc/classes/NavigationServer3D.xml
 msgid "Set the links's navigation layers. This allows selecting links from a path request (when using [method NavigationServer3D.map_get_path])."
-msgstr "Beállítja a kapcsolat navigációs rétegeit. Így a(z) [method NavigationServer3D.map_get_path] metódussal végzett útvonal-lekérdezéskor szűrhetsz a kapcsolatokra."
+msgstr "Beállítja a kapcsolat navigációs rétegeit. Így a [method NavigationServer3D.map_get_path] metódussal végzett útvonal-lekérdezéskor szűrhetsz a kapcsolatokra."
 
 #. NavigationServer3D.map_get_cell_height
 #: doc/classes/NavigationServer3D.xml
@@ -41358,7 +41358,7 @@ msgstr "Visszaadja a navigációs [param map] térképen a megadott [param to_po
 #. NavigationServer3D.map_get_closest_point_to_segment
 #: doc/classes/NavigationServer3D.xml
 msgid "Returns the navigation mesh surface point closest to the provided [param start] and [param end] segment on the navigation [param map].\nIf [param use_collision] is [code]true[/code], a closest point test is only done when the segment intersects with the navigation mesh surface."
-msgstr "Visszaadja a navigációs [param map] térképen a két végponttal ([param start] és [param end]) megadott szakaszhoz legközelebb eső pontot a navigációs háló felületén.\nHa a(z) [param use_collision] értéke [code]true[/code], csak akkor keres legközelebbi pontot, ha a szakasz metszi a navigációs háló felületét."
+msgstr "Visszaadja a navigációs [param map] térképen a két végponttal ([param start] és [param end]) megadott szakaszhoz legközelebb eső pontot a navigációs háló felületén.\nHa az [param use_collision] értéke [code]true[/code], csak akkor keres legközelebbi pontot, ha a szakasz metszi a navigációs háló felületét."
 
 #. NavigationServer3D.map_get_edge_connection_margin
 #: doc/classes/NavigationServer3D.xml
@@ -41408,37 +41408,37 @@ msgstr "[code]true[/code] értéket ad vissza, ha a megadott [param obstacle] ak
 #. NavigationServer3D.obstacle_set_height
 #: doc/classes/NavigationServer3D.xml
 msgid "Sets the [param height] for the [param obstacle]. In 3D agents will ignore obstacles that are above or below them while using 2D avoidance."
-msgstr "Beállítja a megadott [param obstacle] akadály magasságát a(z) [param height] értékére. A 3D-s térben mozgó, 2D-s elkerülést használó ügynökök figyelmen kívül hagyják a fölöttük vagy alattuk lévő akadályokat."
+msgstr "Beállítja a megadott [param obstacle] akadály magasságát a [param height] értékére. A 3D-s térben mozgó, 2D-s elkerülést használó ügynökök figyelmen kívül hagyják a fölöttük vagy alattuk lévő akadályokat."
 
 #. NavigationServer3D.obstacle_set_map
 #: doc/classes/NavigationServer3D.xml
 msgid "Assigns the [param obstacle] to a navigation map."
-msgstr "Navigációs térképhez rendeli a(z) [param obstacle] akadályt."
+msgstr "Navigációs térképhez rendeli az [param obstacle] akadályt."
 
 #. NavigationServer3D.obstacle_set_position
 #: doc/classes/NavigationServer3D.xml
 msgid "Updates the [param position] in world space for the [param obstacle]."
-msgstr "Frissíti a(z) [param obstacle] akadály világtérbeli helyét a(z) [param position] értékére."
+msgstr "Frissíti az [param obstacle] akadály világtérbeli helyét a [param position] értékére."
 
 #. NavigationServer3D.obstacle_set_use_3d_avoidance
 #: doc/classes/NavigationServer3D.xml
 msgid "Sets if the [param obstacle] uses the 2D avoidance or the 3D avoidance while avoidance is enabled."
-msgstr "Beállítja, hogy a(z) [param obstacle] a bekapcsolt elkerülés során a 2D-s vagy a 3D-s elkerülésben vegyen részt."
+msgstr "Beállítja, hogy az [param obstacle] a bekapcsolt elkerülés során a 2D-s vagy a 3D-s elkerülésben vegyen részt."
 
 #. NavigationServer3D.query_path
 #: doc/classes/NavigationServer3D.xml
 msgid "Queries a path in a given navigation map. Start and target position and other parameters are defined through [NavigationPathQueryParameters3D]. Updates the provided [NavigationPathQueryResult3D] result object with the path among other results requested by the query. After the process is finished the optional [param callback] will be called."
-msgstr "Útvonalat keres egy megadott navigációs térképen. A kiindulási hely, a célpont és egyéb paraméterek a [NavigationPathQueryParameters3D] objektumban adhatók meg. Az útvonallal és a lekérdezés további kért eredményeivel frissíti a megadott [NavigationPathQueryResult3D] objektumot. A művelet végén meghívja a(z) [param callback] visszahívást, ha megadtad."
+msgstr "Útvonalat keres egy megadott navigációs térképen. A kiindulási hely, a célpont és egyéb paraméterek a [NavigationPathQueryParameters3D] objektumban adhatók meg. Az útvonallal és a lekérdezés további kért eredményeivel frissíti a megadott [NavigationPathQueryResult3D] objektumot. A művelet végén meghívja a [param callback] visszahívást, ha megadtad."
 
 #. NavigationServer3D.region_bake_navigation_mesh
 #: doc/classes/NavigationServer3D.xml
 msgid "Bakes the [param navigation_mesh] with bake source geometry collected starting from the [param root_node]."
-msgstr "A(z) [param root_node] csomóponttól kezdve összegyűjtött forrásgeometriából kisüti a(z) [param navigation_mesh] navigációs hálót."
+msgstr "A [param root_node] csomóponttól kezdve összegyűjtött forrásgeometriából kisüti a [param navigation_mesh] navigációs hálót."
 
 #. NavigationServer3D.region_get_bounds
 #: doc/classes/NavigationServer3D.xml
 msgid "Returns the axis-aligned bounding box for the [param region]'s transformed navigation mesh."
-msgstr "Visszaadja a(z) [param region] régió transzformált navigációs hálójának tengelyekhez igazított befoglaló dobozát."
+msgstr "Visszaadja a [param region] régió transzformált navigációs hálójának tengelyekhez igazított befoglaló dobozát."
 
 #. NavigationServer3D.region_get_closest_point_normal
 #: doc/classes/NavigationServer3D.xml
@@ -41448,7 +41448,7 @@ msgstr "Visszaadja a navigációs [param region] régióban a megadott [param to
 #. NavigationServer3D.region_get_closest_point_to_segment
 #: doc/classes/NavigationServer3D.xml
 msgid "Returns the navigation mesh surface point closest to the provided [param start] and [param end] segment on the navigation [param region].\nIf [param use_collision] is [code]true[/code], a closest point test is only done when the segment intersects with the navigation mesh surface."
-msgstr "Visszaadja a navigációs [param region] régióban a két végponttal ([param start] és [param end]) megadott szakaszhoz legközelebb eső pontot a navigációs háló felületén.\nHa a(z) [param use_collision] értéke [code]true[/code], csak akkor keres legközelebbi pontot, ha a szakasz metszi a navigációs háló felületét."
+msgstr "Visszaadja a navigációs [param region] régióban a két végponttal ([param start] és [param end]) megadott szakaszhoz legközelebb eső pontot a navigációs háló felületén.\nHa az [param use_collision] értéke [code]true[/code], csak akkor keres legközelebbi pontot, ha a szakasz metszi a navigációs háló felületét."
 
 #. NavigationServer3D.region_get_use_edge_connections
 #: doc/classes/NavigationServer3D.xml
@@ -41458,12 +41458,12 @@ msgstr "[code]true[/code] értéket ad vissza, ha a navigációs [param region] 
 #. NavigationServer3D.region_set_enabled
 #: doc/classes/NavigationServer3D.xml
 msgid "If [param enabled] is [code]true[/code], the specified [param region] will contribute to its current navigation map."
-msgstr "Ha a(z) [param enabled] értéke [code]true[/code], a megadott [param region] régió bekerül az aktuális navigációs térképébe."
+msgstr "Ha az [param enabled] értéke [code]true[/code], a megadott [param region] régió bekerül az aktuális navigációs térképébe."
 
 #. NavigationServer3D.region_set_navigation_layers
 #: doc/classes/NavigationServer3D.xml
 msgid "Set the region's navigation layers. This allows selecting regions from a path request (when using [method NavigationServer3D.map_get_path])."
-msgstr "Beállítja a régió navigációs rétegeit. Így az útvonal lekérdezésekor a(z) [method NavigationServer3D.map_get_path] metódussal szűrhetsz a régiókra."
+msgstr "Beállítja a régió navigációs rétegeit. Így az útvonal lekérdezésekor a [method NavigationServer3D.map_get_path] metódussal szűrhetsz a régiókra."
 
 #. NavigationServer3D.region_set_navigation_mesh
 #: doc/classes/NavigationServer3D.xml
@@ -41473,17 +41473,17 @@ msgstr "Beállítja a régió navigációs hálóját."
 #. NavigationServer3D.source_geometry_parser_set_callback
 #: doc/classes/NavigationServer3D.xml
 msgid "Sets the [param callback] [Callable] for the specific source geometry [param parser]. The [Callable] will receive a call with the following parameters:\n- [code]navigation_mesh[/code] - The [NavigationMesh] reference used to define the parse settings. Do NOT edit or add directly to the navigation mesh.\n- [code]source_geometry_data[/code] - The [NavigationMeshSourceGeometryData3D] reference. Add custom source geometry for navigation mesh baking to this object.\n- [code]node[/code] - The [Node] that is parsed."
-msgstr "Beállítja a(z) [param callback] [Callable] visszahívást a(z) [param parser] forrásgeometria-feldolgozóhoz. A [Callable] a következő paramétereket kapja:\n- [code]navigation_mesh[/code]: A feldolgozás beállításait meghatározó [NavigationMesh] hivatkozás. Ezen a hálón közvetlenül semmit sem szabad módosítani vagy hozzáadni.\n- [code]source_geometry_data[/code]: A [NavigationMeshSourceGeometryData3D] hivatkozás. Ehhez az objektumhoz add hozzá a navigációs háló sütéséhez használt saját forrásgeometriát.\n- [code]node[/code]: A feldolgozott [Node]."
+msgstr "Beállítja a [param callback] [Callable] visszahívást a [param parser] forrásgeometria-feldolgozóhoz. A [Callable] a következő paramétereket kapja:\n- [code]navigation_mesh[/code]: A feldolgozás beállításait meghatározó [NavigationMesh] hivatkozás. Ezen a hálón közvetlenül semmit sem szabad módosítani vagy hozzáadni.\n- [code]source_geometry_data[/code]: A [NavigationMeshSourceGeometryData3D] hivatkozás. Ehhez az objektumhoz add hozzá a navigációs háló sütéséhez használt saját forrásgeometriát.\n- [code]node[/code]: A feldolgozott [Node]."
 
 #. NavigationServer2D.description
 #: doc/classes/NavigationServer2D.xml
 msgid "NavigationServer2D is the server that handles navigation maps, regions and agents. It does not handle A* navigation from [AStar2D] or [AStarGrid2D].\nMaps are divided into regions, which are composed of navigation polygons. Together, they define the traversable areas in the 2D world.\n[b]Note:[/b] Most [NavigationServer2D] changes take effect after the next physics frame and not immediately. This includes all changes made to maps, regions or agents by navigation-related nodes in the scene tree or made through scripts.\nFor two regions to be connected to each other, they must share a similar edge. An edge is considered connected to another if both of its two vertices are at a distance less than [code]edge_connection_margin[/code] to the respective other edge's vertex.\nYou may assign navigation layers to regions with [method NavigationServer2D.region_set_navigation_layers], which then can be checked upon when requesting a path with [method NavigationServer2D.map_get_path]. This can be used to allow or deny certain areas for some objects.\nTo use the collision avoidance system, you may use agents. You can set an agent's target velocity, then the servers will emit a callback with a modified velocity.\n[b]Note:[/b] The collision avoidance system ignores regions. Using the modified velocity directly may move an agent outside of the traversable area. This is a limitation of the collision avoidance system, any more complex situation may require the use of the physics engine.\nThis server keeps tracks of any call and executes them during the sync phase. This means that you can request any change to the map, using any thread, without worrying."
-msgstr "A NavigationServer2D kezeli a navigációs térképeket, régiókat és ügynököket. Az [AStar2D] és az [AStarGrid2D] A* útvonalkeresését ezek az osztályok külön kezelik.\nA térképek navigációs sokszögekből álló régiókra oszlanak. Együtt határozzák meg a 2D-s világ bejárható területeit.\n[b]Megjegyzés:[/b] A [NavigationServer2D] legtöbb módosítása a következő fizikai képkocka után lép életbe. Ez vonatkozik a navigációs csomópontok és a szkriptek által a térképeken, régiókon vagy ügynökökön végzett módosításokra is.\nKét régió akkor kapcsolódhat össze, ha van egymáshoz illeszkedő élük. Ehhez az egyik él mindkét csúcspontjának az [code]edge_connection_margin[/code] értéknél közelebb kell lennie a másik él megfelelő csúcspontjához.\nA(z) [method NavigationServer2D.region_set_navigation_layers] metódussal navigációs rétegekhez rendelheted a régiókat. Ezekre a rétegekre a(z) [method NavigationServer2D.map_get_path] metódussal végzett útvonal-lekérdezéskor szűrhetsz. Így egyes objektumok számára engedélyezheted vagy kizárhatod az adott területeket.\nAz ütközéselkerülés ügynökökkel működik. Állítsd be az ügynök kívánt sebességét, és a kiszolgáló visszahívással adja át a módosított sebességet.\n[b]Megjegyzés:[/b] Az ütközéselkerülés figyelmen kívül hagyja a régiókat. A módosított sebesség közvetlen használatával az ügynök elhagyhatja a bejárható területet. Ez az ütközéselkerülés korlátja. Összetettebb helyzetekben szükség lehet a fizikai motorra is.\nA kiszolgáló nyilvántartja a hívásokat, és a szinkronizálási szakaszban hajtja végre őket. Így bármelyik szálról kérhetsz módosítást a térképen."
+msgstr "A NavigationServer2D kezeli a navigációs térképeket, régiókat és ügynököket. Az [AStar2D] és az [AStarGrid2D] A* útvonalkeresését ezek az osztályok külön kezelik.\nA térképek navigációs sokszögekből álló régiókra oszlanak. Együtt határozzák meg a 2D-s világ bejárható területeit.\n[b]Megjegyzés:[/b] A [NavigationServer2D] legtöbb módosítása a következő fizikai képkocka után lép életbe. Ez vonatkozik a navigációs csomópontok és a szkriptek által a térképeken, régiókon vagy ügynökökön végzett módosításokra is.\nKét régió akkor kapcsolódhat össze, ha van egymáshoz illeszkedő élük. Ehhez az egyik él mindkét csúcspontjának az [code]edge_connection_margin[/code] értéknél közelebb kell lennie a másik él megfelelő csúcspontjához.\nA [method NavigationServer2D.region_set_navigation_layers] metódussal navigációs rétegekhez rendelheted a régiókat. Ezekre a rétegekre a [method NavigationServer2D.map_get_path] metódussal végzett útvonal-lekérdezéskor szűrhetsz. Így egyes objektumok számára engedélyezheted vagy kizárhatod az adott területeket.\nAz ütközéselkerülés ügynökökkel működik. Állítsd be az ügynök kívánt sebességét, és a kiszolgáló visszahívással adja át a módosított sebességet.\n[b]Megjegyzés:[/b] Az ütközéselkerülés figyelmen kívül hagyja a régiókat. A módosított sebesség közvetlen használatával az ügynök elhagyhatja a bejárható területet. Ez az ütközéselkerülés korlátja. Összetettebb helyzetekben szükség lehet a fizikai motorra is.\nA kiszolgáló nyilvántartja a hívásokat, és a szinkronizálási szakaszban hajtja végre őket. Így bármelyik szálról kérhetsz módosítást a térképen."
 
 #. NavigationServer3D.description
 #: doc/classes/NavigationServer3D.xml
 msgid "NavigationServer3D is the server that handles navigation maps, regions and agents. It does not handle A* navigation from [AStar3D].\nMaps are divided into regions, which are composed of navigation meshes. Together, they define the navigable areas in the 3D world.\n[b]Note:[/b] Most [NavigationServer3D] changes take effect after the next physics frame and not immediately. This includes all changes made to maps, regions or agents by navigation-related nodes in the scene tree or made through scripts.\nFor two regions to be connected to each other, they must share a similar edge. An edge is considered connected to another if both of its two vertices are at a distance less than [code]edge_connection_margin[/code] to the respective other edge's vertex.\nYou may assign navigation layers to regions with [method NavigationServer3D.region_set_navigation_layers], which then can be checked upon when requesting a path with [method NavigationServer3D.map_get_path]. This can be used to allow or deny certain areas for some objects.\nTo use the collision avoidance system, you may use agents. You can set an agent's target velocity, then the servers will emit a callback with a modified velocity.\n[b]Note:[/b] The collision avoidance system ignores regions. Using the modified velocity directly may move an agent outside of the traversable area. This is a limitation of the collision avoidance system, any more complex situation may require the use of the physics engine.\nThis server keeps tracks of any call and executes them during the sync phase. This means that you can request any change to the map, using any thread, without worrying."
-msgstr "A NavigationServer3D kezeli a navigációs térképeket, régiókat és ügynököket. Az [AStar3D] A* útvonalkeresését ez az osztály külön kezeli.\nA térképek navigációs hálókból álló régiókra oszlanak. Együtt határozzák meg a 3D-s világ bejárható területeit.\n[b]Megjegyzés:[/b] A [NavigationServer3D] legtöbb módosítása a következő fizikai képkocka után lép életbe. Ez vonatkozik a navigációs csomópontok és a szkriptek által a térképeken, régiókon vagy ügynökökön végzett módosításokra is.\nKét régió akkor kapcsolódhat össze, ha van egymáshoz illeszkedő élük. Ehhez az egyik él mindkét csúcspontjának az [code]edge_connection_margin[/code] értéknél közelebb kell lennie a másik él megfelelő csúcspontjához.\nA(z) [method NavigationServer3D.region_set_navigation_layers] metódussal navigációs rétegekhez rendelheted a régiókat. Ezekre a rétegekre a(z) [method NavigationServer3D.map_get_path] metódussal végzett útvonal-lekérdezéskor szűrhetsz. Így egyes objektumok számára engedélyezheted vagy kizárhatod az adott területeket.\nAz ütközéselkerülés ügynökökkel működik. Állítsd be az ügynök kívánt sebességét, és a kiszolgáló visszahívással adja át a módosított sebességet.\n[b]Megjegyzés:[/b] Az ütközéselkerülés figyelmen kívül hagyja a régiókat. A módosított sebesség közvetlen használatával az ügynök elhagyhatja a bejárható területet. Ez az ütközéselkerülés korlátja. Összetettebb helyzetekben szükség lehet a fizikai motorra is.\nA kiszolgáló nyilvántartja a hívásokat, és a szinkronizálási szakaszban hajtja végre őket. Így bármelyik szálról kérhetsz módosítást a térképen."
+msgstr "A NavigationServer3D kezeli a navigációs térképeket, régiókat és ügynököket. Az [AStar3D] A* útvonalkeresését ez az osztály külön kezeli.\nA térképek navigációs hálókból álló régiókra oszlanak. Együtt határozzák meg a 3D-s világ bejárható területeit.\n[b]Megjegyzés:[/b] A [NavigationServer3D] legtöbb módosítása a következő fizikai képkocka után lép életbe. Ez vonatkozik a navigációs csomópontok és a szkriptek által a térképeken, régiókon vagy ügynökökön végzett módosításokra is.\nKét régió akkor kapcsolódhat össze, ha van egymáshoz illeszkedő élük. Ehhez az egyik él mindkét csúcspontjának az [code]edge_connection_margin[/code] értéknél közelebb kell lennie a másik él megfelelő csúcspontjához.\nA [method NavigationServer3D.region_set_navigation_layers] metódussal navigációs rétegekhez rendelheted a régiókat. Ezekre a rétegekre a [method NavigationServer3D.map_get_path] metódussal végzett útvonal-lekérdezéskor szűrhetsz. Így egyes objektumok számára engedélyezheted vagy kizárhatod az adott területeket.\nAz ütközéselkerülés ügynökökkel működik. Állítsd be az ügynök kívánt sebességét, és a kiszolgáló visszahívással adja át a módosított sebességet.\n[b]Megjegyzés:[/b] Az ütközéselkerülés figyelmen kívül hagyja a régiókat. A módosított sebesség közvetlen használatával az ügynök elhagyhatja a bejárható területet. Ez az ütközéselkerülés korlátja. Összetettebb helyzetekben szükség lehet a fizikai motorra is.\nA kiszolgáló nyilvántartja a hívásokat, és a szinkronizálási szakaszban hajtja végre őket. Így bármelyik szálról kérhetsz módosítást a térképen."
 
 #. PhysicsTestMotionResult2D.get_collision_local_shape
 #: doc/classes/PhysicsTestMotionResult2D.xml
@@ -41494,7 +41494,7 @@ msgstr "Ütközés esetén visszaadja a mozgó objektum ütközésben részt vev
 #. PhysicsTestMotionResult3D.description
 #: doc/classes/PhysicsTestMotionResult3D.xml
 msgid "Describes the motion and collision result from [method PhysicsServer3D.body_test_motion]."
-msgstr "A(z) [method PhysicsServer3D.body_test_motion] mozgásvizsgálat mozgási és ütközési eredményét írja le."
+msgstr "A [method PhysicsServer3D.body_test_motion] mozgásvizsgálat mozgási és ütközési eredményét írja le."
 
 #. PhysicsTestMotionResult3D.get_collider
 #: doc/classes/PhysicsTestMotionResult3D.xml
@@ -41544,7 +41544,7 @@ msgstr "Ütközés esetén visszaadja az ütközési pont globális koordinátá
 #. PhysicsTestMotionParameters3D.collide_separation_ray
 #: doc/classes/PhysicsTestMotionParameters3D.xml
 msgid "If set to [code]true[/code], shapes of type [constant PhysicsServer3D.SHAPE_SEPARATION_RAY] are used to detect collisions and can stop the motion. Can be useful when snapping to the ground.\nIf set to [code]false[/code], shapes of type [constant PhysicsServer3D.SHAPE_SEPARATION_RAY] are only used for separation when overlapping with other bodies. That's the main use for separation ray shapes."
-msgstr "Ha az értéke [code]true[/code], a(z) [constant PhysicsServer3D.SHAPE_SEPARATION_RAY] típusú alakzatok érzékelik az ütközéseket, és megállíthatják a mozgást. Ez például a talajhoz igazításkor hasznos.\nHa az értéke [code]false[/code], a(z) [constant PhysicsServer3D.SHAPE_SEPARATION_RAY] típusú alakzatokat csak szétválasztáshoz használja, amikor azok más testekkel átfedésbe kerülnek. Ez az ilyen alakzatok fő feladata."
+msgstr "Ha az értéke [code]true[/code], a [constant PhysicsServer3D.SHAPE_SEPARATION_RAY] típusú alakzatok érzékelik az ütközéseket, és megállíthatják a mozgást. Ez például a talajhoz igazításkor hasznos.\nHa az értéke [code]false[/code], a [constant PhysicsServer3D.SHAPE_SEPARATION_RAY] típusú alakzatokat csak szétválasztáshoz használja, amikor azok más testekkel átfedésbe kerülnek. Ez az ilyen alakzatok fő feladata."
 
 #. RigidBody3D.continuous_cd
 #: doc/classes/RigidBody3D.xml
@@ -41554,4 +41554,4 @@ msgstr "Ha az értéke [code]true[/code], folyamatos ütközésészlelést haszn
 #. RigidBody3D.linear_damp
 #: doc/classes/RigidBody3D.xml
 msgid "Damps the body's movement. By default, the body will use the [member ProjectSettings.physics/3d/default_linear_damp] project setting or any value override set by an [Area3D] the body is in. Depending on [member linear_damp_mode], you can set [member linear_damp] to be added to or to replace the body's damping value.\nSee [member ProjectSettings.physics/3d/default_linear_damp] for more details about damping."
-msgstr "Csillapítja a test mozgását. A test alapértelmezés szerint a projekt [member ProjectSettings.physics/3d/default_linear_damp] beállítását használja, vagy annak az [Area3D] területnek a felülbíráló értékét, amelyben tartózkodik. A(z) [member linear_damp_mode] beállításától függően a(z) [member linear_damp] értéke hozzáadódhat a test csillapításához, vagy helyettesítheti azt.\nA csillapításról részletesebben a(z) [member ProjectSettings.physics/3d/default_linear_damp] leírásában olvashatsz."
+msgstr "Csillapítja a test mozgását. A test alapértelmezés szerint a projekt [member ProjectSettings.physics/3d/default_linear_damp] beállítását használja, vagy annak az [Area3D] területnek a felülbíráló értékét, amelyben tartózkodik. A [member linear_damp_mode] beállításától függően a [member linear_damp] értéke hozzáadódhat a test csillapításához, vagy helyettesítheti azt.\nA csillapításról részletesebben a [member ProjectSettings.physics/3d/default_linear_damp] leírásában olvashatsz."
