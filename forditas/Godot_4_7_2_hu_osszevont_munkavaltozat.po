@@ -49958,3 +49958,504 @@ msgstr "A [member Viewport.use_debanding] tulajdonságnak felel meg. Lásd még 
 #: doc/classes/RenderingServer.xml
 msgid "If [code]true[/code], use temporal antialiasing. Equivalent to [member ProjectSettings.rendering/anti_aliasing/quality/use_taa] or [member Viewport.use_taa]."
 msgstr "Ha az értéke [code]true[/code], temporális élsimítást használ. A [member ProjectSettings.rendering/anti_aliasing/quality/use_taa] beállításnak vagy a [member Viewport.use_taa] tulajdonságnak felel meg."
+
+#. RDShaderFile.brief
+#: doc/classes/RDShaderFile.xml
+msgid "Compiled shader file in SPIR-V form (used by [RenderingDevice]). Not to be confused with Godot's own [Shader]."
+msgstr "SPIR-V formátumra fordított shaderfájl a [RenderingDevice] számára. Ez különbözik a Godot saját [Shader] erőforrásától."
+
+#. RDShaderFile.get_version_list
+#: doc/classes/RDShaderFile.xml
+msgid "Returns the list of compiled versions for this shader."
+msgstr "A shader lefordított változatainak listáját adja vissza."
+
+#. RDShaderFile.base_error
+#: doc/classes/RDShaderFile.xml
+msgid "The base compilation error message, which indicates errors not related to a specific shader stage if non-empty. If empty, shader compilation is not necessarily successful (check [RDShaderSPIRV]'s error message members)."
+msgstr "Az általános fordítási hibaüzenet. Ha van benne szöveg, az egyik shaderszakaszhoz sem köthető hibát jelez. Üres érték esetén az egyes szakaszok hibáit az [RDShaderSPIRV] tulajdonságaiban ellenőrizheted."
+
+#. RenderingDevice.compute_list_set_push_constant
+#: doc/classes/RenderingDevice.xml
+msgid "Sets the push constant data to [param buffer] for the specified [param compute_list]. The shader determines how this binary data is used. The buffer's size in bytes must also be specified in [param size_bytes] (this can be obtained by calling the [method PackedByteArray.size] method on the passed [param buffer])."
+msgstr "A megadott [param compute_list] parancslista push konstansainak adatait a [param buffer] puffer tartalmára állítja. A bináris adat felhasználását a shader határozza meg. A bájtban mért méretet is meg kell adni a [param size_bytes] paraméterben. Ezt a [param buffer] értékén meghívott [method PackedByteArray.size] adja meg."
+
+#. RenderingDevice.compute_pipeline_is_valid
+#: doc/classes/RenderingDevice.xml
+msgid "Returns [code]true[/code] if the compute pipeline specified by the [param compute_pipeline] RID is valid, [code]false[/code] otherwise."
+msgstr "[code]true[/code] értéket ad vissza, ha a [param compute_pipeline] RID-del megadott számítási folyamat érvényes. Egyébként az érték [code]false[/code]."
+
+#. RenderingDevice.create_local_device
+#: doc/classes/RenderingDevice.xml
+msgid "Create a new local [RenderingDevice]. This is most useful for performing compute operations on the GPU independently from the rest of the engine."
+msgstr "Új helyi [RenderingDevice] példányt hoz létre. Akkor hasznos, ha a motor többi részétől függetlenül szeretnél számításokat végezni a GPU-n."
+
+#. RenderingDevice.draw_command_end_label
+#: doc/classes/RenderingDevice.xml
+msgid "Ends the command buffer debug label region started by a [method draw_command_begin_label] call."
+msgstr "Lezárja a parancspuffer hibakeresési szakaszát, amelyet a [method draw_command_begin_label] hívása nyitott meg."
+
+#. RenderingDevice.draw_list_begin_split
+#. RenderingDevice.draw_list_switch_to_next_pass_split
+#: doc/classes/RenderingDevice.xml
+msgid "This method does nothing and always returns an empty [PackedInt64Array]."
+msgstr "A metódus nem végez műveletet, és mindig üres [PackedInt64Array] tömböt ad vissza."
+
+#. RenderingDevice.draw_list_bind_index_array
+#: doc/classes/RenderingDevice.xml
+msgid "Binds [param index_array] to the specified [param draw_list]."
+msgstr "Az [param index_array] indextömböt a megadott [param draw_list] rajzolási listához rendeli."
+
+#. RenderingDevice.draw_list_bind_render_pipeline
+#: doc/classes/RenderingDevice.xml
+msgid "Binds [param render_pipeline] to the specified [param draw_list]."
+msgstr "A [param render_pipeline] renderelési folyamatot a megadott [param draw_list] rajzolási listához rendeli."
+
+#. RenderingDevice.draw_list_bind_uniform_set
+#: doc/classes/RenderingDevice.xml
+msgid "Binds [param uniform_set] to the specified [param draw_list]. A [param set_index] must also be specified, which is an identifier starting from [code]0[/code] that must match the one expected by the draw list."
+msgstr "A [param uniform_set] uniformkészletet a megadott [param draw_list] rajzolási listához rendeli. A [param set_index] egy [code]0[/code]-tól számozott azonosító, amelynek egyeznie kell a rajzolási lista által várt értékkel."
+
+#. RenderingDevice.draw_list_bind_vertex_array
+#: doc/classes/RenderingDevice.xml
+msgid "Binds [param vertex_array] to the specified [param draw_list]."
+msgstr "A [param vertex_array] csúcstömböt a megadott [param draw_list] rajzolási listához rendeli."
+
+#. RenderingDevice.draw_list_bind_vertex_buffers_format
+#: doc/classes/RenderingDevice.xml
+msgid "Binds a set of [param vertex_buffers] directly to the specified [param draw_list] using [param vertex_format] without creating a vertex array RID. Provide the number of vertices in [param vertex_count]; optional per-buffer byte [param offsets] may also be supplied."
+msgstr "A [param vertex_buffers] csúcspuffereket közvetlenül a megadott [param draw_list] rajzolási listához rendeli a [param vertex_format] szerint, csúcstömb-RID létrehozása nélkül. A csúcsok számát a [param vertex_count] paraméterben add meg. Az opcionális [param offsets] pufferenként bájtban adja meg az eltolást."
+
+#. RenderingDevice.draw_list_disable_scissor
+#: doc/classes/RenderingDevice.xml
+msgid "Removes and disables the scissor rectangle for the specified [param draw_list]. See also [method draw_list_enable_scissor]."
+msgstr "Kikapcsolja és eltávolítja a megadott [param draw_list] vágási téglalapját. Lásd még a [method draw_list_enable_scissor] metódust."
+
+#. RenderingDevice.draw_list_draw
+#: doc/classes/RenderingDevice.xml
+msgid "Submits [param draw_list] for rendering on the GPU. This is the raster equivalent to [method compute_list_dispatch]."
+msgstr "A [param draw_list] rajzolási listát átadja a GPU-nak renderelésre. A [method compute_list_dispatch] raszterizálási megfelelője."
+
+#. RenderingDevice.draw_list_end
+#: doc/classes/RenderingDevice.xml
+msgid "Finishes a list of raster drawing commands created with the [code]draw_*[/code] methods."
+msgstr "Lezárja a [code]draw_*[/code] metódusokkal összeállított raszterizálási parancslistát."
+
+#. RenderingDevice.draw_list_set_blend_constants
+#: doc/classes/RenderingDevice.xml
+msgid "Sets blend constants for the specified [param draw_list] to [param color]. Blend constants are used only if the graphics pipeline is created with [constant DYNAMIC_STATE_BLEND_CONSTANTS] flag set."
+msgstr "A megadott [param draw_list] keverési konstansait a [param color] szín alapján állítja be. A konstansokat csak a [constant DYNAMIC_STATE_BLEND_CONSTANTS] jelzővel létrehozott grafikus folyamat használja."
+
+#. RenderingDevice.draw_list_set_push_constant
+#: doc/classes/RenderingDevice.xml
+msgid "Sets the push constant data to [param buffer] for the specified [param draw_list]. The shader determines how this binary data is used. The buffer's size in bytes must also be specified in [param size_bytes] (this can be obtained by calling the [method PackedByteArray.size] method on the passed [param buffer])."
+msgstr "A megadott [param draw_list] push konstansainak adatait a [param buffer] puffer tartalmára állítja. A bináris adat felhasználását a shader határozza meg. A bájtban mért méretet is meg kell adni a [param size_bytes] paraméterben. Ezt a [param buffer] értékén meghívott [method PackedByteArray.size] adja meg."
+
+#. RenderingDevice.draw_list_switch_to_next_pass
+#: doc/classes/RenderingDevice.xml
+msgid "Switches to the next draw pass."
+msgstr "Átvált a következő rajzolási menetre."
+
+#. RenderingDevice.framebuffer_format_create_empty
+#: doc/classes/RenderingDevice.xml
+msgid "Creates a new empty framebuffer format with the specified number of [param samples] and returns its ID."
+msgstr "Új üres képpufferformátumot hoz létre a megadott [param samples] mintaszámmal, és visszaadja az azonosítóját."
+
+#. RenderingDevice.framebuffer_format_create_multipass
+#: doc/classes/RenderingDevice.xml
+msgid "Creates a multipass framebuffer format with the specified [param attachments], [param passes] and [param view_count] and returns its ID. If [param view_count] is greater than or equal to [code]2[/code], enables multiview which is used for VR rendering. This requires support for the Vulkan multiview extension."
+msgstr "Többmenetes képpufferformátumot hoz létre a megadott [param attachments], [param passes] és [param view_count] értékekkel, majd visszaadja az azonosítóját. Ha a [param view_count] értéke legalább [code]2[/code], használható a VR-rendereléshez szükséges többnézetes mód. Ehhez a Vulkan többnézetes bővítményének támogatása szükséges."
+
+#. RenderingDevice.framebuffer_format_get_texture_samples
+#: doc/classes/RenderingDevice.xml
+msgid "Returns the number of texture samples used for the given framebuffer [param format] ID (returned by [method framebuffer_get_format])."
+msgstr "A [method framebuffer_get_format] által visszaadott [param format] képpufferformátum-azonosítóhoz tartozó textúraminták számát adja vissza."
+
+#. RenderingDevice.framebuffer_get_format
+#: doc/classes/RenderingDevice.xml
+msgid "Returns the format ID of the framebuffer specified by the [param framebuffer] RID. This ID is guaranteed to be unique for the same formats and does not need to be freed."
+msgstr "A [param framebuffer] RID-del megadott képpuffer formátumazonosítóját adja vissza. Azonos formátumhoz mindig ugyanaz az egyedi azonosító tartozik, amelyet nem kell felszabadítani."
+
+#. RenderingDevice.framebuffer_is_valid
+#: doc/classes/RenderingDevice.xml
+msgid "Returns [code]true[/code] if the framebuffer specified by the [param framebuffer] RID is valid, [code]false[/code] otherwise."
+msgstr "[code]true[/code] értéket ad vissza, ha a [param framebuffer] RID-del megadott képpuffer érvényes. Egyébként az érték [code]false[/code]."
+
+#. RenderingDevice.free_rid
+#: doc/classes/RenderingDevice.xml
+msgid "Tries to free an object in the RenderingDevice. To avoid memory leaks, this should be called after using an object as memory management does not occur automatically when using RenderingDevice directly."
+msgstr "Megpróbál felszabadítani egy objektumot a RenderingDevice-ban. A közvetlenül a RenderingDevice-on létrehozott objektumok memóriakezelése kézi. Ha egy ilyen objektumra már nincs szükség, ezzel a metódussal szabadítsd fel, hogy a memóriája ne maradjon foglalva."
+
+#. RenderingDevice.get_captured_timestamp_cpu_time
+#: doc/classes/RenderingDevice.xml
+msgid "Returns the timestamp in CPU time for the rendering step specified by [param index] (in microseconds since the engine started). See also [method get_captured_timestamp_gpu_time] and [method capture_timestamp]."
+msgstr "A [param index] által megadott renderelési lépés CPU-időbélyegét adja vissza a motor indulása óta eltelt mikroszekundumban. Lásd még a [method get_captured_timestamp_gpu_time] és a [method capture_timestamp] metódust."
+
+#. RenderingDevice.get_captured_timestamp_gpu_time
+#: doc/classes/RenderingDevice.xml
+msgid "Returns the timestamp in GPU time for the rendering step specified by [param index] (in microseconds since the engine started). See also [method get_captured_timestamp_cpu_time] and [method capture_timestamp]."
+msgstr "A [param index] által megadott renderelési lépés GPU-időbélyegét adja vissza a motor indulása óta eltelt mikroszekundumban. Lásd még a [method get_captured_timestamp_cpu_time] és a [method capture_timestamp] metódust."
+
+#. RenderingDevice.get_captured_timestamp_name
+#: doc/classes/RenderingDevice.xml
+msgid "Returns the timestamp's name for the rendering step specified by [param index]. See also [method capture_timestamp]."
+msgstr "A [param index] által megadott renderelési lépés időbélyegének nevét adja vissza. Lásd még a [method capture_timestamp] metódust."
+
+#. RenderingDevice.get_captured_timestamps_count
+#: doc/classes/RenderingDevice.xml
+msgid "Returns the total number of timestamps (rendering steps) available for profiling."
+msgstr "A teljesítményméréshez elérhető renderelési időbélyegek számát adja vissza."
+
+#. RenderingDevice.get_captured_timestamps_frame
+#: doc/classes/RenderingDevice.xml
+msgid "Returns the index of the last frame rendered that has rendering timestamps available for querying."
+msgstr "Az utolsó olyan kirajzolt képkocka indexét adja vissza, amelyhez lekérdezhető renderelési időbélyegek tartoznak."
+
+#. RenderingDevice.get_device_name
+#: doc/classes/RenderingDevice.xml
+msgid "Returns the name of the video adapter (e.g. \"GeForce GTX 1080/PCIe/SSE2\"). Equivalent to [method RenderingServer.get_video_adapter_name]. See also [method get_device_vendor_name]."
+msgstr "A videokártya nevét adja vissza, például „GeForce GTX 1080/PCIe/SSE2”. A [method RenderingServer.get_video_adapter_name] metódusnak felel meg. Lásd még a [method get_device_vendor_name] metódust."
+
+#. RenderingDevice.get_device_pipeline_cache_uuid
+#: doc/classes/RenderingDevice.xml
+msgid "Returns the universally unique identifier for the pipeline cache. This is used to cache shader files on disk, which avoids shader recompilations on subsequent engine runs. This UUID varies depending on the graphics card model, but also the driver version. Therefore, updating graphics drivers will invalidate the shader cache."
+msgstr "A grafikus folyamatok gyorsítótárának univerzálisan egyedi azonosítóját adja vissza. A lemezen gyorsítótárazott shaderfájlok révén a következő indításkor elkerülhető az újrafordítás. Az UUID a grafikus kártya típusától és az illesztőprogram verziójától függ, ezért egy illesztőprogram-frissítés érvényteleníti a shader-gyorsítótárat."
+
+#. RenderingDevice.get_device_vendor_name
+#: doc/classes/RenderingDevice.xml
+msgid "Returns the vendor of the video adapter (e.g. \"NVIDIA Corporation\"). Equivalent to [method RenderingServer.get_video_adapter_vendor]. See also [method get_device_name]."
+msgstr "A videokártya gyártóját adja vissza, például „NVIDIA Corporation”. A [method RenderingServer.get_video_adapter_vendor] metódusnak felel meg. Lásd még a [method get_device_name] metódust."
+
+#. RenderingDevice.get_driver_resource
+#: doc/classes/RenderingDevice.xml
+msgid "Returns the unique identifier of the driver [param resource] for the specified [param rid]. Some driver resource types ignore the specified [param rid]. [param index] is always ignored but must be specified anyway."
+msgstr "A megadott [param rid] azonosítóhoz tartozó illesztőprogram-erőforrás ([param resource]) egyedi azonosítóját adja vissza. Bizonyos erőforrástípusok figyelmen kívül hagyják a megadott [param rid] értéket. A [param index] értéke nem számít, de meg kell adni."
+
+#. RenderingDevice.get_frame_delay
+#: doc/classes/RenderingDevice.xml
+msgid "Returns the frame count kept by the graphics API. Higher values result in higher input lag, but with more consistent throughput. For the main [RenderingDevice], frames are cycled (usually 3 with triple-buffered V-Sync enabled). However, local [RenderingDevice]s only have 1 frame."
+msgstr "A grafikus API által fenntartott képkockák számát adja vissza. Nagyobb érték egyenletesebb feldolgozást, de nagyobb bemeneti késleltetést eredményez. A fő [RenderingDevice] a képkockákat felváltva használja, hárompufferes V-Sync esetén általában 3-at. A helyi [RenderingDevice] példányokhoz csak 1 képkocka tartozik."
+
+#. RenderingDevice.get_memory_usage
+#: doc/classes/RenderingDevice.xml
+msgid "Returns the memory usage in bytes corresponding to the given [param type]. When using Vulkan, these statistics are calculated by [url=https://github.com/GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator]Vulkan Memory Allocator[/url]."
+msgstr "A megadott [param type] típus memóriahasználatát adja vissza bájtban. Vulkan használatakor a statisztikát a [url=https://github.com/GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator]Vulkan Memory Allocator[/url] számítja ki."
+
+#. RenderingDevice.get_perf_report
+#: doc/classes/RenderingDevice.xml
+msgid "Returns a string with a performance report from the past frame. Updates every frame."
+msgstr "Sztringként adja vissza a legutóbbi képkocka teljesítményjelentését. A jelentés képkockánként frissül."
+
+#. RenderingDevice.has_feature
+#: doc/classes/RenderingDevice.xml
+msgid "Returns [code]true[/code] if the [param feature] is supported by the GPU."
+msgstr "[code]true[/code] értéket ad vissza, ha a GPU támogatja a [param feature] képességet."
+
+#. RenderingDevice.raytracing_list_bind_raytracing_pipeline
+#: doc/classes/RenderingDevice.xml
+msgid "Binds [param raytracing_pipeline] to the specified [param raytracing_list]."
+msgstr "A [param raytracing_pipeline] sugárkövetési folyamatot a megadott [param raytracing_list] parancslistához rendeli."
+
+#. RenderingDevice.raytracing_list_bind_uniform_set
+#: doc/classes/RenderingDevice.xml
+msgid "Binds the [param uniform_set] to this [param raytracing_list]."
+msgstr "A [param uniform_set] uniformkészletet a megadott [param raytracing_list] sugárkövetési parancslistához rendeli."
+
+#. RenderingDevice.raytracing_list_end
+#: doc/classes/RenderingDevice.xml
+msgid "Finishes a list of raytracing commands created with the [code]raytracing_*[/code] methods."
+msgstr "Lezárja a [code]raytracing_*[/code] metódusokkal összeállított sugárkövetési parancslistát."
+
+#. RenderingDevice.raytracing_list_set_push_constant
+#: doc/classes/RenderingDevice.xml
+msgid "Sets the push constant data to [param buffer] for the specified [param raytracing_list]. The shader determines how this binary data is used. The buffer's size in bytes must also be specified in [param size_bytes] (this can be obtained by calling the [method PackedByteArray.size] method on the passed [param buffer])."
+msgstr "A megadott [param raytracing_list] push konstansainak adatait a [param buffer] puffer tartalmára állítja. A bináris adat felhasználását a shader határozza meg. A bájtban mért méretet is meg kell adni a [param size_bytes] paraméterben. Ezt a [param buffer] értékén meghívott [method PackedByteArray.size] adja meg."
+
+#. RenderingDevice.raytracing_pipeline_is_valid
+#: doc/classes/RenderingDevice.xml
+msgid "Returns [code]true[/code] if the raytracing pipeline specified by the [param raytracing_pipeline] RID is valid, [code]false[/code] otherwise."
+msgstr "[code]true[/code] értéket ad vissza, ha a [param raytracing_pipeline] RID-del megadott sugárkövetési folyamat érvényes. Egyébként az érték [code]false[/code]."
+
+#. RenderingDevice.render_pipeline_is_valid
+#: doc/classes/RenderingDevice.xml
+msgid "Returns [code]true[/code] if the render pipeline specified by the [param render_pipeline] RID is valid, [code]false[/code] otherwise."
+msgstr "[code]true[/code] értéket ad vissza, ha a [param render_pipeline] RID-del megadott renderelési folyamat érvényes. Egyébként az érték [code]false[/code]."
+
+#. RenderingDevice.sampler_is_format_supported_for_filter
+#: doc/classes/RenderingDevice.xml
+msgid "Returns [code]true[/code] if implementation supports using a texture of [param format] with the given [param sampler_filter]."
+msgstr "[code]true[/code] értéket ad vissza, ha az adott megvalósítás támogatja a [param format] formátumú textúrát a megadott [param sampler_filter] szűrővel."
+
+#. RenderingDevice.shader_create_placeholder
+#: doc/classes/RenderingDevice.xml
+msgid "Create a placeholder RID by allocating an RID without initializing it for use in [method shader_create_from_bytecode]. This allows you to create an RID for a shader and pass it around, but defer compiling the shader to a later time."
+msgstr "Inicializálás nélkül lefoglal egy helyőrző RID-t a [method shader_create_from_bytecode] számára. Így már a fordítás előtt létrehozhatod és továbbadhatod a shader azonosítóját."
+
+#. RenderingDevice.shader_get_vertex_input_attribute_mask
+#: doc/classes/RenderingDevice.xml
+msgid "Returns the internal vertex input mask. Internally, the vertex input mask is an unsigned integer consisting of the locations (specified in GLSL via. [code]layout(location = ...)[/code]) of the input variables (specified in GLSL by the [code]in[/code] keyword)."
+msgstr "A belső csúcsbemeneti maszkot adja vissza. A maszk előjel nélküli egész szám, amelynek bitjei a GLSL-ben az [code]in[/code] kulcsszóval megadott bemeneti változók [code]layout(location = ...)[/code] helyeinek felelnek meg."
+
+#. RenderingDevice.texture_get_format
+#: doc/classes/RenderingDevice.xml
+msgid "Returns the data format used to create this texture."
+msgstr "A textúra létrehozásához használt adatformátumot adja vissza."
+
+#. RenderingDevice.texture_is_valid
+#: doc/classes/RenderingDevice.xml
+msgid "Returns [code]true[/code] if the [param texture] is valid, [code]false[/code] otherwise."
+msgstr "[code]true[/code] értéket ad vissza, ha a [param texture] textúra érvényes. Egyébként az érték [code]false[/code]."
+
+#. RenderingDevice.vertex_format_create
+#: doc/classes/RenderingDevice.xml
+msgid "Creates a new vertex format with the specified [param vertex_descriptions]. Returns a unique vertex format ID corresponding to the newly created vertex format."
+msgstr "A megadott [param vertex_descriptions] csúcsleírásokból új csúcsformátumot hoz létre, és visszaadja annak egyedi azonosítóját."
+
+#. RenderingServer.instance_geometry_set_cast_shadows_setting
+#: doc/classes/RenderingServer.xml
+msgid "Sets the shadow casting setting. Equivalent to [member GeometryInstance3D.cast_shadow]."
+msgstr "Beállítja az árnyékvetési módot. A [member GeometryInstance3D.cast_shadow] tulajdonságnak felel meg."
+
+#. RenderingServer.instance_geometry_set_flag
+#: doc/classes/RenderingServer.xml
+msgid "Sets the [param flag] for a given [param instance] to [param enabled]."
+msgstr "A megadott [param instance] példány [param flag] jelzőjét a [param enabled] értékre állítja."
+
+#. RenderingServer.instance_geometry_set_lightmap
+#: doc/classes/RenderingServer.xml
+msgid "Sets the lightmap GI instance to use for the specified 3D geometry instance. The lightmap UV scale for the specified instance (equivalent to [member GeometryInstance3D.gi_lightmap_scale]) and lightmap atlas slice must also be specified."
+msgstr "Beállítja a megadott 3D-s geometriapéldányhoz használt fénytérképes globális megvilágítási példányt. A példány fénytérképének UV-méretarányát, amely a [member GeometryInstance3D.gi_lightmap_scale] tulajdonságnak felel meg, valamint a fénytérképatlasz szeletét is meg kell adni."
+
+#. RenderingServer.instance_geometry_set_lod_bias
+#: doc/classes/RenderingServer.xml
+msgid "Sets the level of detail bias to use when rendering the specified 3D geometry instance. Higher values result in higher detail from further away. Equivalent to [member GeometryInstance3D.lod_bias]."
+msgstr "Beállítja a megadott 3D-s geometriapéldány renderelési részletességének eltolását. Nagyobb értékkel távolabbról is részletesebb marad. A [member GeometryInstance3D.lod_bias] tulajdonságnak felel meg."
+
+#. RenderingServer.instance_geometry_set_material_overlay
+#: doc/classes/RenderingServer.xml
+msgid "Sets a material that will be rendered for all surfaces on top of active materials for the mesh associated with this instance. Equivalent to [member GeometryInstance3D.material_overlay]."
+msgstr "Beállít egy anyagot, amelyet a renderelő a példányhoz tartozó háló összes felületén az aktív anyagok fölé rajzol. A [member GeometryInstance3D.material_overlay] tulajdonságnak felel meg."
+
+#. RenderingServer.instance_geometry_set_material_override
+#: doc/classes/RenderingServer.xml
+msgid "Sets a material that will override the material for all surfaces on the mesh associated with this instance. Equivalent to [member GeometryInstance3D.material_override]."
+msgstr "Beállít egy anyagot, amely a példányhoz tartozó háló összes felületének anyagát felülírja. A [member GeometryInstance3D.material_override] tulajdonságnak felel meg."
+
+#. RenderingServer.instance_geometry_set_shader_parameter
+#: doc/classes/RenderingServer.xml
+msgid "Sets the per-instance shader uniform on the specified 3D geometry instance. Equivalent to [method GeometryInstance3D.set_instance_shader_parameter]."
+msgstr "Beállítja a megadott 3D-s geometriapéldány egyedi shaderuniformját. A [method GeometryInstance3D.set_instance_shader_parameter] metódusnak felel meg."
+
+#. RenderingServer.instance_geometry_set_visibility_range
+#: doc/classes/RenderingServer.xml
+msgid "Sets the visibility range values for the given geometry instance. Equivalent to [member GeometryInstance3D.visibility_range_begin] and related properties."
+msgstr "Beállítja a geometriapéldány láthatósági tartományát. A [member GeometryInstance3D.visibility_range_begin] és a kapcsolódó tulajdonságok megfelelője."
+
+#. RenderingServer.instance_set_blend_shape_weight
+#: doc/classes/RenderingServer.xml
+msgid "Sets the weight for a given blend shape associated with this instance."
+msgstr "Beállítja a példányhoz tartozó megadott alakváltozat súlyát."
+
+#. RenderingServer.instance_set_custom_aabb
+#: doc/classes/RenderingServer.xml
+msgid "Sets a custom AABB to use when culling objects from the view frustum. Equivalent to setting [member GeometryInstance3D.custom_aabb]."
+msgstr "Egyéni, tengelyekhez igazított befoglaló dobozt állít be a látógúlán kívüli objektumok kiszűréséhez. A [member GeometryInstance3D.custom_aabb] beállításának felel meg."
+
+#. RenderingServer.instance_set_extra_visibility_margin
+#: doc/classes/RenderingServer.xml
+msgid "Sets a margin to increase the size of the AABB when culling objects from the view frustum. This allows you to avoid culling objects that fall outside the view frustum. Equivalent to [member GeometryInstance3D.extra_cull_margin]."
+msgstr "Megadja, mennyivel nőjön a tengelyekhez igazított befoglaló doboz a látógúla szerinti kiszűréshez. Így egy objektum akkor is megmaradhat, ha egyébként a látógúlán kívülre esne. A [member GeometryInstance3D.extra_cull_margin] tulajdonságnak felel meg."
+
+#. RenderingServer.instance_set_ignore_culling
+#: doc/classes/RenderingServer.xml
+msgid "If [code]true[/code], ignores all culling on the specified 3D geometry instance, including frustum culling, occlusion culling, and layer culling. This is not the same as [member GeometryInstance3D.ignore_occlusion_culling], which only ignores occlusion culling but leaves frustum and layer culling intact."
+msgstr "Ha az értéke [code]true[/code], a megadott 3D-s geometriapéldány esetében kimarad minden kiszűrés, beleértve a látógúla, a takarás és a rétegek szerinti szűrést. A [member GeometryInstance3D.ignore_occlusion_culling] csak a takarás alapján végzett kiszűrést kapcsolja ki."
+
+#. RenderingServer.instance_set_layer_mask
+#: doc/classes/RenderingServer.xml
+msgid "Sets the render layers that this instance will be drawn to. Equivalent to [member VisualInstance3D.layers]."
+msgstr "Beállítja, mely renderelési rétegekbe rajzolódjon a példány. A [member VisualInstance3D.layers] tulajdonságnak felel meg."
+
+#. RenderingServer.instance_set_pivot_data
+#: doc/classes/RenderingServer.xml
+msgid "Sets the sorting offset and switches between using the bounding box or instance origin for depth sorting."
+msgstr "Beállítja a rendezési eltolást, és kiválasztja, hogy a mélység szerinti rendezés a befoglaló dobozt vagy a példány origóját használja."
+
+#. RenderingServer.instance_set_scenario
+#: doc/classes/RenderingServer.xml
+msgid "Sets the scenario that the instance is in. The scenario is the 3D world that the objects will be displayed in."
+msgstr "Beállítja, melyik renderelési színtérhez tartozzon a példány. A színtér az a 3D-s világ, amelyben az objektumok megjelennek."
+
+#. RenderingServer.instance_set_surface_override_material
+#: doc/classes/RenderingServer.xml
+msgid "Sets the override material of a specific surface. Equivalent to [method MeshInstance3D.set_surface_override_material]."
+msgstr "Beállítja egy adott felület felülbíráló anyagát. A [method MeshInstance3D.set_surface_override_material] metódusnak felel meg."
+
+#. RenderingServer.instance_set_transform
+#: doc/classes/RenderingServer.xml
+msgid "Sets the world space transform of the instance. Equivalent to [member Node3D.global_transform]."
+msgstr "Beállítja a példány világkoordinátákban értelmezett transzformációját. A [member Node3D.global_transform] tulajdonságnak felel meg."
+
+#. RenderingServer.instance_set_visibility_parent
+#: doc/classes/RenderingServer.xml
+msgid "Sets the visibility parent for the given instance. Equivalent to [member Node3D.visibility_parent]."
+msgstr "Beállítja a példány láthatósági szülőjét. A [member Node3D.visibility_parent] tulajdonságnak felel meg."
+
+#. RenderingServer.instance_set_visible
+#: doc/classes/RenderingServer.xml
+msgid "Sets whether an instance is drawn or not. Equivalent to [member Node3D.visible]."
+msgstr "Beállítja, hogy a renderelő kirajzolja-e a példányt. A [member Node3D.visible] tulajdonságnak felel meg."
+
+#. RenderingServer.instance_teleport
+#: doc/classes/RenderingServer.xml
+msgid "Resets motion vectors and other interpolated values. Use this [i]after[/i] teleporting a mesh from one position to another to avoid ghosting artifacts."
+msgstr "Alaphelyzetbe állítja a mozgásvektorokat és a többi interpolált értéket. A háló azonnali áthelyezése [i]után[/i] hívd meg, hogy a kép ne legyen szellemképes."
+
+#. RenderingServer.is_on_render_thread
+#: doc/classes/RenderingServer.xml
+msgid "Returns [code]true[/code] if our code is currently executing on the rendering thread."
+msgstr "[code]true[/code] értéket ad vissza, ha a hívó kód a renderelési szálon fut."
+
+#. RenderingServer.light_area_set_normalize_energy
+#: doc/classes/RenderingServer.xml
+msgid "Defines whether the energy of an [AreaLight3D] is normalized (divided) by its area. If set to [code]true[/code], changing the size does not affect the total energy output. Equivalent to [member AreaLight3D.area_normalize_energy]."
+msgstr "Megadja, hogy az [AreaLight3D] energiája a felületével legyen-e elosztva. Ha az értéke [code]true[/code], a méret megváltoztatása nem befolyásolja a teljes kibocsátott energiát. A [member AreaLight3D.area_normalize_energy] tulajdonságnak felel meg."
+
+#. RenderingServer.light_area_set_size
+#: doc/classes/RenderingServer.xml
+msgid "Sets the extents (width and height) in meters for this area light. Equivalent to [member AreaLight3D.area_size]."
+msgstr "Beállítja a területi fény szélességét és magasságát méterben. A [member AreaLight3D.area_size] tulajdonságnak felel meg."
+
+#. RenderingServer.light_directional_set_blend_splits
+#: doc/classes/RenderingServer.xml
+msgid "If [code]true[/code], this directional light will blend between shadow map splits resulting in a smoother transition between them. Equivalent to [member DirectionalLight3D.directional_shadow_blend_splits]."
+msgstr "Ha az értéke [code]true[/code], az irányfény összekeveri az árnyéktérkép-kaszkádok szomszédos részeit, hogy simább legyen köztük az átmenet. A [member DirectionalLight3D.directional_shadow_blend_splits] tulajdonságnak felel meg."
+
+#. RenderingServer.light_directional_set_shadow_mode
+#: doc/classes/RenderingServer.xml
+msgid "Sets the shadow mode for this directional light. Equivalent to [member DirectionalLight3D.directional_shadow_mode]."
+msgstr "Beállítja az irányfény árnyékmódját. A [member DirectionalLight3D.directional_shadow_mode] tulajdonságnak felel meg."
+
+#. RenderingServer.light_omni_set_shadow_mode
+#: doc/classes/RenderingServer.xml
+msgid "Sets whether to use a dual paraboloid or a cubemap for the shadow map. Dual paraboloid is faster but may suffer from artifacts. Equivalent to [member OmniLight3D.omni_shadow_mode]."
+msgstr "Kiválasztja, hogy az árnyéktérkép kettős paraboloidot vagy kockatérképet használjon. A kettős paraboloid gyorsabb, de képhibákat okozhat. A [member OmniLight3D.omni_shadow_mode] tulajdonságnak felel meg."
+
+#. RenderingServer.light_projectors_set_filter
+#: doc/classes/RenderingServer.xml
+msgid "Sets the texture filter mode to use when rendering light projectors. This parameter is global and cannot be set on a per-light basis."
+msgstr "Beállítja a vetített fények textúraszűrési módját. Globális beállítás, ezért fényenként nem módosítható."
+
+#. RenderingServer.light_set_bake_mode
+#: doc/classes/RenderingServer.xml
+msgid "Sets the bake mode to use for the specified 3D light. Equivalent to [member Light3D.light_bake_mode]."
+msgstr "Beállítja a megadott 3D-s fény beégetési módját. A [member Light3D.light_bake_mode] tulajdonságnak felel meg."
+
+#. RenderingServer.light_set_color
+#: doc/classes/RenderingServer.xml
+msgid "Sets the color of the light. Equivalent to [member Light3D.light_color]."
+msgstr "Beállítja a fény színét. A [member Light3D.light_color] tulajdonságnak felel meg."
+
+#. RenderingServer.light_set_cull_mask
+#: doc/classes/RenderingServer.xml
+msgid "Sets the cull mask for this 3D light. Lights only affect objects in the selected layers. Equivalent to [member Light3D.light_cull_mask]."
+msgstr "Beállítja a 3D-s fény rétegmaszkját. A fény csak a kijelölt rétegek objektumaira hat. A [member Light3D.light_cull_mask] tulajdonságnak felel meg."
+
+#. RenderingServer.light_set_distance_fade
+#: doc/classes/RenderingServer.xml
+msgid "Sets the distance fade for this 3D light. This acts as a form of level of detail (LOD) and can be used to improve performance. Equivalent to [member Light3D.distance_fade_enabled], [member Light3D.distance_fade_begin], [member Light3D.distance_fade_shadow], and [member Light3D.distance_fade_length]."
+msgstr "Beállítja, hogyan halványuljon a 3D-s fény a távolsággal. Ez a részletességi szint (LOD) egyik formája, amellyel javítható a teljesítmény. A [member Light3D.distance_fade_enabled], [member Light3D.distance_fade_begin], [member Light3D.distance_fade_shadow] és [member Light3D.distance_fade_length] tulajdonságoknak felel meg."
+
+#. RenderingServer.light_set_max_sdfgi_cascade
+#: doc/classes/RenderingServer.xml
+msgid "Sets the maximum SDFGI cascade in which the 3D light's indirect lighting is rendered. Higher values allow the light to be rendered in SDFGI further away from the camera."
+msgstr "Beállítja a legnagyobb SDFGI-kaszkádot, amelybe a 3D-s fény közvetett megvilágítása bekerül. Nagyobb értéknél a fény közvetett hatása a kamerától távolabb is megjelenhet."
+
+#. RenderingServer.light_set_negative
+#: doc/classes/RenderingServer.xml
+msgid "If [code]true[/code], the 3D light will subtract light instead of adding light. Equivalent to [member Light3D.light_negative]."
+msgstr "Ha az értéke [code]true[/code], a 3D-s fény csökkenti a megvilágítást. A [member Light3D.light_negative] tulajdonságnak felel meg."
+
+#. RenderingServer.light_set_param
+#: doc/classes/RenderingServer.xml
+msgid "Sets the specified 3D light parameter. Equivalent to [method Light3D.set_param]."
+msgstr "Beállítja a 3D-s fény megadott paraméterét. A [method Light3D.set_param] metódusnak felel meg."
+
+#. RenderingServer.light_set_projector
+#: doc/classes/RenderingServer.xml
+msgid "Sets the projector texture to use for the specified 3D light. Equivalent to [member Light3D.light_projector]."
+msgstr "Beállítja a megadott 3D-s fény vetítőtextúráját. A [member Light3D.light_projector] tulajdonságnak felel meg."
+
+#. RenderingServer.light_set_reverse_cull_face_mode
+#: doc/classes/RenderingServer.xml
+msgid "If [code]true[/code], reverses the backface culling of the mesh. This can be useful when you have a flat mesh that has a light behind it. If you need to cast a shadow on both sides of the mesh, set the mesh to use double-sided shadows with [method instance_geometry_set_cast_shadows_setting]. Equivalent to [member Light3D.shadow_reverse_cull_face]."
+msgstr "Ha az értéke [code]true[/code], megfordítja a háló lapjainak kiszűrési irányát. Ez hasznos lehet, ha a fény egy sík háló mögött van. Ha a hálónak mindkét oldalról árnyékot kell vetnie, a [method instance_geometry_set_cast_shadows_setting] metódussal állíts be kétoldalas árnyékvetést. A [member Light3D.shadow_reverse_cull_face] tulajdonságnak felel meg."
+
+#. RenderingServer.light_set_shadow
+#: doc/classes/RenderingServer.xml
+msgid "If [code]true[/code], light will cast shadows. Equivalent to [member Light3D.shadow_enabled]."
+msgstr "Ha az értéke [code]true[/code], a fény árnyékot vet. A [member Light3D.shadow_enabled] tulajdonságnak felel meg."
+
+#. RenderingServer.light_set_shadow_caster_mask
+#: doc/classes/RenderingServer.xml
+msgid "Sets the shadow caster mask for this 3D light. Shadows will only be cast using objects in the selected layers. Equivalent to [member Light3D.shadow_caster_mask]."
+msgstr "Beállítja a 3D-s fény árnyékvetési rétegmaszkját. Csak a kijelölt rétegek objektumai vethetnek árnyékot. A [member Light3D.shadow_caster_mask] tulajdonságnak felel meg."
+
+#. RenderingServer.directional_shadow_atlas_set_size
+#: doc/classes/RenderingServer.xml
+msgid "Sets the [param size] of the directional light shadows in 3D. See also [member ProjectSettings.rendering/lights_and_shadows/directional_shadow/size]. This parameter is global and cannot be set on a per-viewport basis."
+msgstr "Beállítja a 3D-s irányfények árnyékatlaszának [param size] méretét. Lásd még a [member ProjectSettings.rendering/lights_and_shadows/directional_shadow/size] beállítást. Ez globális érték, ezért nézetablakonként nem állítható."
+
+#. RenderingServer.scenario_set_camera_attributes
+#: doc/classes/RenderingServer.xml
+msgid "Sets the camera attributes ([param effects]) that will be used with this scenario. See also [CameraAttributes]."
+msgstr "Beállítja a renderelési színtérhez használt [param effects] kamerajellemzőket. Lásd még a [CameraAttributes] osztályt."
+
+#. RenderingServer.scenario_set_compositor
+#: doc/classes/RenderingServer.xml
+msgid "Sets the compositor ([param compositor]) that will be used with this scenario. See also [Compositor]."
+msgstr "Beállítja a renderelési színtérhez használt [param compositor] kompozitort. Lásd még a [Compositor] osztályt."
+
+#. RenderingServer.scenario_set_environment
+#: doc/classes/RenderingServer.xml
+msgid "Sets the environment that will be used with this scenario. See also [Environment]."
+msgstr "Beállítja a renderelési színtér környezetét. Lásd még az [Environment] osztályt."
+
+#. RenderingServer.scenario_set_fallback_environment
+#: doc/classes/RenderingServer.xml
+msgid "Sets the fallback environment to be used by this scenario. The fallback environment is used if no environment is set. Internally, this is used by the editor to provide a default environment."
+msgstr "Beállítja a renderelési színtér tartalék környezetét. Ez akkor használatos, ha nincs megadva elsődleges környezet. A szerkesztő ezzel biztosít alapértelmezett környezetet."
+
+#. RenderingServer.shader_get_code
+#: doc/classes/RenderingServer.xml
+msgid "Returns a shader's source code as a string."
+msgstr "Sztringként adja vissza a shader forráskódját."
+
+#. RenderingServer.shader_get_parameter_default
+#: doc/classes/RenderingServer.xml
+msgid "Returns the default value for the specified shader uniform. This is usually the value written in the shader source code."
+msgstr "A megadott shaderuniform alapértelmezett értékét adja vissza. Ez rendszerint a shader forráskódjában megadott érték."
+
+#. RenderingServer.shader_set_code
+#: doc/classes/RenderingServer.xml
+msgid "Sets the shader's source code (which triggers recompilation after being changed)."
+msgstr "Beállítja a shader forráskódját. A kód módosítása újrafordítást indít."
+
+#. RenderingServer.shader_set_path_hint
+#: doc/classes/RenderingServer.xml
+msgid "Sets the path hint for the specified shader. This should generally match the [Shader] resource's [member Resource.resource_path]."
+msgstr "Beállítja a shaderhez tartozó tájékoztató útvonalat. Ennek általában egyeznie kell a [Shader] erőforrás [member Resource.resource_path] értékével."
+
+#. RenderingServer.sky_set_material
+#: doc/classes/RenderingServer.xml
+msgid "Sets the material that the sky uses to render the background, ambient and reflection maps."
+msgstr "Beállítja az égbolt anyagát, amelyből a renderelő a hátteret, a környezeti fényt és a tükröződési térképeket állítja elő."
+
+#. RenderingServer.sky_set_mode
+#: doc/classes/RenderingServer.xml
+msgid "Sets the process [param mode] of the sky specified by the [param sky] RID. Equivalent to [member Sky.process_mode]."
+msgstr "Beállítja a [param sky] RID-del megadott égbolt [param mode] feldolgozási módját. A [member Sky.process_mode] tulajdonságnak felel meg."
+
+#. RenderingServer.sky_set_radiance_size
+#: doc/classes/RenderingServer.xml
+msgid "Sets the [param radiance_size] of the sky specified by the [param sky] RID (in pixels). Equivalent to [member Sky.radiance_size]."
+msgstr "Beállítja a [param sky] RID-del megadott égbolt sugárzási térképének képpontban mért [param radiance_size] méretét. A [member Sky.radiance_size] tulajdonságnak felel meg."
