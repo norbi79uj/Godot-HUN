@@ -44899,7 +44899,7 @@ msgstr "[code]true[/code] értéket ad vissza, ha a megadott csomópontok portja
 #. VisualShader.disconnect_nodes
 #: modules/visual_shader/doc_classes/VisualShader.xml
 msgid "Connects the specified nodes and ports."
-msgstr "Összekapcsolja a megadott csomópontok portjait."
+msgstr "Megszünteti a megadott csomópontok portjai közötti kapcsolatot."
 
 #. VisualShader.connect_nodes_forced
 #: modules/visual_shader/doc_classes/VisualShader.xml
@@ -45252,7 +45252,7 @@ msgstr "A következő képlettel szépiaárnyalatot alkalmaz:\n[codeblock]\nvec3
 #. VisualShaderNodeColorFunc.FUNC_LINEAR_TO_SRGB
 #: modules/visual_shader/doc_classes/VisualShaderNodeColorFunc.xml
 msgid "Converts color from linear encoding to nonlinear sRGB encoding using the following formula:\n[codeblock]\nconst vec3 a = vec3(0.055f);\nreturn mix((vec3(1.0f) + a) * pow(c.rgb, vec3(1.0f / 2.4f)) - a, 12.92f * c.rgb, lessThan(c.rgb, vec3(0.0031308f)));\n[/codeblock]\nThe Compatibility renderer uses a simpler formula that may produce undefined behavior with negative input values:\n[codeblock]\nvec3 c = input;\nreturn max(vec3(1.055) * pow(c, vec3(0.416666667)) - vec3(0.055), vec3(0.0));\n[/codeblock]"
-msgstr "A lineáris kódolású színt a következő képlettel alakítja át nemlineáris sRGB-kódolásúvá:\n[codeblock]\nconst vec3 a = vec3(0.055f);\nreturn mix((vec3(1.0f) + a) * pow(c.rgb, vec3(1.0f / 2.4f)) - a, 12.92f * c.rgb, lessThan(c.rgb, vec3(0.0031308f)));\n[/codeblock]\nA Kompatibilitás renderelő egyszerűbb képletet használ, amely negatív bemeneteknél nem meghatározott eredményt adhat:\n[codeblock]\nvec3 c = input;\nreturn max(vec3(1.055) * pow(c, vec3(0.416666667)) - vec3(0.055), vec3(0.0));\n[/codeblock]"
+msgstr "A lineáris kódolású színt a következő képlettel alakítja át nemlineáris sRGB-kódolásúvá:\n[codeblock]\nconst vec3 a = vec3(0.055f);\nreturn mix((vec3(1.0f) + a) * pow(c.rgb, vec3(1.0f / 2.4f)) - a, 12.92f * c.rgb, lessThan(c.rgb, vec3(0.0031308f)));\n[/codeblock]\nA Kompatibilitás renderelő egyszerűbb képletet használ, amely negatív bemeneteknél nem meghatározott működéshez vezethet:\n[codeblock]\nvec3 c = input;\nreturn max(vec3(1.055) * pow(c, vec3(0.416666667)) - vec3(0.055), vec3(0.0));\n[/codeblock]"
 
 #. VisualShaderNodeColorFunc.FUNC_SRGB_TO_LINEAR
 #: modules/visual_shader/doc_classes/VisualShaderNodeColorFunc.xml
@@ -45826,7 +45826,7 @@ msgstr "Keret, amelyhez a vizuális shadergráf csomópontjait rendezés céljá
 #. VisualShaderNodeFrame.description
 #: modules/visual_shader/doc_classes/VisualShaderNodeFrame.xml
 msgid "A rectangular frame that can be used to group visual shader nodes together to improve organization.\nNodes attached to the frame will move with it when it is dragged and it can automatically resize to enclose all attached nodes.\nIts title, description and color can be customized."
-msgstr "Téglalap alakú keret a vizuális shadercsomópontok csoportosításához.\nHúzáskor a hozzá csatolt csomópontok a kerettel együtt mozognak. A keret automatikusan átméretezhető úgy, hogy az összes hozzá csatolt csomópont beleférjen.\nA cím, a leírás és a szín testreszabható."
+msgstr "Téglalap alakú keret a vizuális shadercsomópontok csoportosításához.\nHa elhúzod a keretet, a hozzá csatolt csomópontok is vele mozognak. A keret szükség esetén automatikusan úgy méreteződik, hogy mindegyik beleférjen.\nA cím, a leírás és a szín testreszabható."
 
 #. VisualShaderNodeFrame.add_attached_node
 #: modules/visual_shader/doc_classes/VisualShaderNodeFrame.xml
@@ -45981,7 +45981,7 @@ msgstr "Lebegőpontos összehasonlítás eredménye alapján 3D-s vektort ad ki 
 #. VisualShaderNodeIf.description
 #: modules/visual_shader/doc_classes/VisualShaderNodeIf.xml
 msgid "This visual shader node has six input ports:\n- Port [b]1[/b] and [b]2[/b] provide the two floating-point numbers [code]a[/code] and [code]b[/code] that will be compared.\n- Port [b]3[/b] is the tolerance, which allows similar floating-point numbers to be considered equal.\n- Ports [b]4[/b], [b]5[/b], and [b]6[/b] are the possible outputs, returned if [code]a == b[/code], [code]a > b[/code], or [code]a < b[/code] respectively."
-msgstr "A vizuális shadercsomópontnak hat bemeneti portja van:\n- Az [b]1[/b]. és a [b]2[/b]. porton érkezik az összehasonlítandó [code]a[/code] és [code]b[/code] lebegőpontos szám.\n- A [b]3[/b]. port a tűréshatár. Ezen belül a két szám egyenlőnek számít.\n- A [b]4[/b]., [b]5[/b]. és [b]6[/b]. port adja a lehetséges kimeneti értékeket, rendre akkor, ha [code]a == b[/code], [code]a > b[/code] vagy [code]a < b[/code]."
+msgstr "A csomópontnak hat bemenete van:\n- Az [b]1[/b]. és [b]2[/b]. porton kapja az összehasonlítandó [code]a[/code] és [code]b[/code] lebegőpontos számokat.\n- A [b]3[/b]. porton állíthatod be a tűréshatárt, amelyen belül a két szám egyenlőnek számít.\n- Ha [code]a == b[/code], a [b]4[/b]. port értékét adja ki; ha [code]a > b[/code], az [b]5[/b]. portét; ha [code]a < b[/code], a [b]6[/b]. portét."
 
 #. VisualShaderNodeInput.brief
 #: modules/visual_shader/doc_classes/VisualShaderNodeInput.xml
@@ -46001,7 +46001,7 @@ msgstr "Visszaadja a jelenlegi állandó nevét a Godot shadernyelvében. Péld�
 #. VisualShaderNodeInput.input_type_changed
 #: modules/visual_shader/doc_classes/VisualShaderNodeInput.xml
 msgid "Emitted when input is changed via [member input_name]."
-msgstr "Akkor váltódik ki, ha a bemenet a [member input_name] módosításával megváltozik."
+msgstr "A csomópont akkor küldi ezt a jelet, amikor a [member input_name] megváltoztatásával másik bemenetre váltasz."
 
 #. VisualShaderNodeInput.input_name
 #: modules/visual_shader/doc_classes/VisualShaderNodeInput.xml
