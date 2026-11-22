@@ -48453,3 +48453,508 @@ msgstr "Shaderforráskód a [RenderingDevice] számára."
 #: doc/classes/RDShaderSource.xml
 msgid "The language the shader is written in."
 msgstr "A shader forráskódjának nyelve."
+
+#. Compositor.brief
+#: doc/classes/Compositor.xml
+msgid "Stores attributes used to customize how a Viewport is rendered."
+msgstr "A nézetablak renderelését testreszabó beállításokat tárolja."
+
+#. Compositor.description
+#: doc/classes/Compositor.xml
+msgid "The compositor resource stores attributes used to customize how a [Viewport] is rendered."
+msgstr "A kompozitor erőforrás a [Viewport] renderelését testreszabó beállításokat tárolja."
+
+#. Compositor.compositor_effects
+#: doc/classes/Compositor.xml
+msgid "The custom [CompositorEffect]s that are applied during rendering of viewports using this compositor."
+msgstr "Az egyéni [CompositorEffect] effektek, amelyek a kompozitort használó nézetablakok renderelésekor futnak le."
+
+#. CompositorEffect.brief
+#: doc/classes/CompositorEffect.xml
+msgid "This resource allows for creating a custom rendering effect."
+msgstr "Ezzel az erőforrással egyéni renderelési effektet hozhatsz létre."
+
+#. CompositorEffect._render_callback
+#: doc/classes/CompositorEffect.xml
+msgid "Implement this function with your custom rendering code. [param effect_callback_type] should always match the effect callback type you've specified in [member effect_callback_type]. [param render_data] provides access to the rendering state, it is only valid during rendering and should not be stored."
+msgstr "Ebben a függvényben add meg az egyéni renderelési műveleteket. Az [param effect_callback_type] értéke mindig egyezzen az [member effect_callback_type] tulajdonságban megadott típussal. A [param render_data] hozzáférést ad a renderelés állapotához. Csak a renderelés alatt érvényes, ezért későbbi használatra ne tárold."
+
+#. CompositorEffect.effect_callback_type
+#: doc/classes/CompositorEffect.xml
+msgid "The type of effect that is implemented, determines at what stage of rendering the callback is called."
+msgstr "Az effekt típusa. Megadja, hogy a renderelés melyik szakaszában fusson le a visszahívás."
+
+#. CompositorEffect.enabled
+#: doc/classes/CompositorEffect.xml
+msgid "If [code]true[/code] this rendering effect is applied to any viewport it is added to."
+msgstr "Ha az értéke [code]true[/code], az effekt minden olyan nézetablak renderelésekor érvényesül, amelyhez hozzáadták."
+
+#. CompositorEffect.needs_separate_specular
+#: doc/classes/CompositorEffect.xml
+msgid "If [code]true[/code] this triggers specular data being rendered to a separate buffer and combined after effects have been applied, only applicable for the Forward+ renderer."
+msgstr "Ha az értéke [code]true[/code], a tükrös visszaverődés adatai külön pufferbe kerülnek, és a renderelő csak az effektek után egyesíti őket a többi adattal. Csak a Forward+ renderelőnél érvényes."
+
+#. CompositorEffect.EFFECT_CALLBACK_TYPE_PRE_OPAQUE
+#. RenderingServer.COMPOSITOR_EFFECT_CALLBACK_TYPE_PRE_OPAQUE
+#: doc/classes/CompositorEffect.xml doc/classes/RenderingServer.xml
+msgid "The callback is called before our opaque rendering pass, but after depth prepass (if applicable)."
+msgstr "A visszahívás az átlátszatlan felületek renderelése előtt, az esetleges előzetes mélységmenet után fut le."
+
+#. CompositorEffect.EFFECT_CALLBACK_TYPE_POST_OPAQUE
+#. RenderingServer.COMPOSITOR_EFFECT_CALLBACK_TYPE_POST_OPAQUE
+#: doc/classes/CompositorEffect.xml doc/classes/RenderingServer.xml
+msgid "The callback is called after our opaque rendering pass, but before our sky is rendered."
+msgstr "A visszahívás az átlátszatlan felületek renderelése után, az égbolt kirajzolása előtt fut le."
+
+#. CompositorEffect.EFFECT_CALLBACK_TYPE_POST_SKY
+#. RenderingServer.COMPOSITOR_EFFECT_CALLBACK_TYPE_POST_SKY
+#: doc/classes/CompositorEffect.xml doc/classes/RenderingServer.xml
+msgid "The callback is called after our sky is rendered, but before our back buffers are created (and if enabled, before subsurface scattering and/or screen space reflections)."
+msgstr "A visszahívás az égbolt renderelése után, a háttérpufferek létrehozása előtt fut le. Ha a felszín alatti szórás vagy a képernyőtérbeli tükröződés engedélyezve van, ezek is utána következnek."
+
+#. CompositorEffect.EFFECT_CALLBACK_TYPE_PRE_TRANSPARENT
+#. RenderingServer.COMPOSITOR_EFFECT_CALLBACK_TYPE_PRE_TRANSPARENT
+#: doc/classes/CompositorEffect.xml doc/classes/RenderingServer.xml
+msgid "The callback is called before our transparent rendering pass, but after our sky is rendered and we've created our back buffers."
+msgstr "A visszahívás az átlátszó felületek renderelése előtt, az égbolt kirajzolása és a háttérpufferek létrehozása után fut le."
+
+#. CompositorEffect.EFFECT_CALLBACK_TYPE_POST_TRANSPARENT
+#. RenderingServer.COMPOSITOR_EFFECT_CALLBACK_TYPE_POST_TRANSPARENT
+#: doc/classes/CompositorEffect.xml doc/classes/RenderingServer.xml
+msgid "The callback is called after our transparent rendering pass, but before any built-in post-processing effects and output to our render target."
+msgstr "A visszahívás az átlátszó felületek renderelése után, a beépített utófeldolgozás és a renderelési célba írás előtt fut le."
+
+#. CompositorEffect.EFFECT_CALLBACK_TYPE_MAX
+#: doc/classes/CompositorEffect.xml
+msgid "Represents the size of the [enum EffectCallbackType] enum."
+msgstr "Az [enum EffectCallbackType] felsorolás mérete."
+
+#. RDFramebufferPass.brief
+#: doc/classes/RDFramebufferPass.xml
+msgid "Framebuffer pass attachment description (used by [RenderingDevice])."
+msgstr "Egy képpuffer renderelési menetéhez tartozó csatolmányok leírása a [RenderingDevice] számára."
+
+#. RDFramebufferPass.color_attachments
+#: doc/classes/RDFramebufferPass.xml
+msgid "Color attachments in order starting from 0. If this attachment is not used by the shader, pass ATTACHMENT_UNUSED to skip."
+msgstr "A színcsatolmányok sorrendben, 0-tól számozva. Ha a shader nem használ egy csatolmányt, az ATTACHMENT_UNUSED értékkel átugorhatod."
+
+#. RDFramebufferPass.depth_attachment
+#: doc/classes/RDFramebufferPass.xml
+msgid "Depth attachment. ATTACHMENT_UNUSED should be used if no depth buffer is required for this pass."
+msgstr "A mélységcsatolmány. Ha a renderelési menethez nem kell mélységpuffer, add meg az ATTACHMENT_UNUSED értéket."
+
+#. RDFramebufferPass.input_attachments
+#: doc/classes/RDFramebufferPass.xml
+msgid "Used for multipass framebuffers (more than one render pass). Converts an attachment to an input. Make sure to also supply it properly in the [RDUniform] for the uniform set."
+msgstr "Többmenetes képpuffernél egy csatolmányt a renderelési menet bemenetévé tesz. Az uniformkészlet [RDUniform] objektumában is add meg a megfelelő csatolmányt."
+
+#. RDFramebufferPass.preserve_attachments
+#: doc/classes/RDFramebufferPass.xml
+msgid "Attachments to preserve in this pass (otherwise they are erased)."
+msgstr "A menet során megőrzendő csatolmányok. A többi csatolmány tartalma törlődik."
+
+#. RDFramebufferPass.resolve_attachments
+#: doc/classes/RDFramebufferPass.xml
+msgid "If the color attachments are multisampled, non-multisampled resolve attachments can be provided."
+msgstr "Többmintás színcsatolmányokhoz egymintás feloldási csatolmányokat is megadhatsz."
+
+#. RDFramebufferPass.ATTACHMENT_UNUSED
+#: doc/classes/RDFramebufferPass.xml
+msgid "Attachment is unused."
+msgstr "A csatolmány használaton kívül van."
+
+#. RDPipelineColorBlendState.brief
+#: doc/classes/RDPipelineColorBlendState.xml
+msgid "Pipeline color blend state (used by [RenderingDevice])."
+msgstr "A renderelési folyamat színkeverési állapota a [RenderingDevice] számára."
+
+#. RDPipelineColorBlendState.attachments
+#: doc/classes/RDPipelineColorBlendState.xml
+msgid "The attachments that are blended together."
+msgstr "A színkeverésben részt vevő csatolmányok."
+
+#. RDPipelineColorBlendState.blend_constant
+#: doc/classes/RDPipelineColorBlendState.xml
+msgid "The constant color to blend with. See also [method RenderingDevice.draw_list_set_blend_constants]."
+msgstr "A színkeveréshez használt állandó szín. Lásd még a [method RenderingDevice.draw_list_set_blend_constants] metódust."
+
+#. RDPipelineColorBlendState.enable_logic_op
+#: doc/classes/RDPipelineColorBlendState.xml
+msgid "If [code]true[/code], performs the logic operation defined in [member logic_op]."
+msgstr "Ha az értéke [code]true[/code], elvégzi a [member logic_op] tulajdonságban megadott logikai műveletet."
+
+#. RDPipelineColorBlendState.logic_op
+#: doc/classes/RDPipelineColorBlendState.xml
+msgid "The logic operation to perform for blending. Only effective if [member enable_logic_op] is [code]true[/code]."
+msgstr "A keveréshez használt logikai művelet. Csak akkor érvényesül, ha a [member enable_logic_op] értéke [code]true[/code]."
+
+#. RDPipelineColorBlendStateAttachment.brief
+#: doc/classes/RDPipelineColorBlendStateAttachment.xml
+msgid "Pipeline color blend state attachment (used by [RenderingDevice])."
+msgstr "A renderelési folyamat egyik csatolmányának színkeverési állapota a [RenderingDevice] számára."
+
+#. RDPipelineColorBlendStateAttachment.alpha_blend_op
+#: doc/classes/RDPipelineColorBlendStateAttachment.xml
+msgid "The blend mode to use for the alpha channel."
+msgstr "Az alfa-csatorna keverési művelete."
+
+#. RDPipelineColorBlendStateAttachment.color_blend_op
+#: doc/classes/RDPipelineColorBlendStateAttachment.xml
+msgid "The blend mode to use for the red/green/blue color channels."
+msgstr "A vörös, zöld és kék csatorna keverési művelete."
+
+#. RDPipelineColorBlendStateAttachment.dst_alpha_blend_factor
+#: doc/classes/RDPipelineColorBlendStateAttachment.xml
+msgid "Controls how the blend factor for the alpha channel is determined based on the destination's fragments."
+msgstr "Megadja, hogyan számítódjon az alfa-csatorna keverési tényezője a cél fragmentumainak értékeiből."
+
+#. RDPipelineColorBlendStateAttachment.dst_color_blend_factor
+#: doc/classes/RDPipelineColorBlendStateAttachment.xml
+msgid "Controls how the blend factor for the color channels is determined based on the destination's fragments."
+msgstr "Megadja, hogyan számítódjon a színcsatornák keverési tényezője a cél fragmentumainak értékeiből."
+
+#. RDPipelineColorBlendStateAttachment.src_alpha_blend_factor
+#: doc/classes/RDPipelineColorBlendStateAttachment.xml
+msgid "Controls how the blend factor for the alpha channel is determined based on the source's fragments."
+msgstr "Megadja, hogyan számítódjon az alfa-csatorna keverési tényezője a forrás fragmentumainak értékeiből."
+
+#. RDPipelineColorBlendStateAttachment.src_color_blend_factor
+#: doc/classes/RDPipelineColorBlendStateAttachment.xml
+msgid "Controls how the blend factor for the color channels is determined based on the source's fragments."
+msgstr "Megadja, hogyan számítódjon a színcsatornák keverési tényezője a forrás fragmentumainak értékeiből."
+
+#. RDPipelineColorBlendStateAttachment.write_a
+#: doc/classes/RDPipelineColorBlendStateAttachment.xml
+msgid "If [code]true[/code], writes the new alpha channel to the final result."
+msgstr "Ha az értéke [code]true[/code], az eredménybe írja az új alfa-csatornát."
+
+#. RDPipelineColorBlendStateAttachment.write_b
+#: doc/classes/RDPipelineColorBlendStateAttachment.xml
+msgid "If [code]true[/code], writes the new blue color channel to the final result."
+msgstr "Ha az értéke [code]true[/code], az eredménybe írja az új kék csatornát."
+
+#. RDPipelineColorBlendStateAttachment.write_g
+#: doc/classes/RDPipelineColorBlendStateAttachment.xml
+msgid "If [code]true[/code], writes the new green color channel to the final result."
+msgstr "Ha az értéke [code]true[/code], az eredménybe írja az új zöld csatornát."
+
+#. RDPipelineColorBlendStateAttachment.write_r
+#: doc/classes/RDPipelineColorBlendStateAttachment.xml
+msgid "If [code]true[/code], writes the new red color channel to the final result."
+msgstr "Ha az értéke [code]true[/code], az eredménybe írja az új vörös csatornát."
+
+#. RDPipelineMultisampleState.brief
+#: doc/classes/RDPipelineMultisampleState.xml
+msgid "Pipeline multisample state (used by [RenderingDevice])."
+msgstr "A renderelési folyamat többmintavételi állapota a [RenderingDevice] számára."
+
+#. RDPipelineMultisampleState.description
+#: doc/classes/RDPipelineMultisampleState.xml
+msgid "[RDPipelineMultisampleState] is used to control how multisample or supersample antialiasing is being performed when rendering using [RenderingDevice]."
+msgstr "Az [RDPipelineMultisampleState] a többmintavételes és a túlmintavételes élsimítás működését szabályozza a [RenderingDevice] renderelési folyamatában."
+
+#. RDPipelineMultisampleState.enable_alpha_to_coverage
+#: doc/classes/RDPipelineMultisampleState.xml
+msgid "If [code]true[/code], alpha to coverage is enabled. This generates a temporary coverage value based on the alpha component of the fragment's first color output. This allows alpha transparency to make use of multisample antialiasing."
+msgstr "Ha az értéke [code]true[/code], a fragmentum első színkimenetének alfaértéke alapján átmeneti lefedettség keletkezik. Így a többmintavételes élsimítás az alfaátlátszóság határain is alkalmazható."
+
+#. RDPipelineMultisampleState.enable_alpha_to_one
+#: doc/classes/RDPipelineMultisampleState.xml
+msgid "If [code]true[/code], alpha is forced to either [code]0.0[/code] or [code]1.0[/code]. This allows hardening the edges of antialiased alpha transparencies. Only relevant if [member enable_alpha_to_coverage] is [code]true[/code]."
+msgstr "Ha az értéke [code]true[/code], az alfaérték csak [code]0.0[/code] vagy [code]1.0[/code] lehet. Ettől élesebbé tehetők az élsimított, alfaátlátszóságot használó felületek szélei. Csak akkor érvényesül, ha a [member enable_alpha_to_coverage] értéke [code]true[/code]."
+
+#. RDPipelineMultisampleState.sample_masks
+#: doc/classes/RDPipelineMultisampleState.xml
+msgid "The sample mask array. See the [url=https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#fragops-samplemask]sample mask Vulkan documentation[/url] for more details."
+msgstr "A mintamaszkok tömbje. Részletekért lásd a Vulkan dokumentáció [url=https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#fragops-samplemask]mintamaszkról szóló részét[/url]."
+
+#. RDShaderSource.get_stage_source
+#: doc/classes/RDShaderSource.xml
+msgid "Returns source code for the specified shader [param stage]. Equivalent to getting one of [member source_compute], [member source_fragment], [member source_tesselation_control], [member source_tesselation_evaluation] or [member source_vertex]."
+msgstr "A megadott [param stage] shaderszakasz forráskódját adja vissza. A kód a megfelelő tulajdonságban is elérhető. Ezek a [member source_compute], a [member source_fragment], a [member source_tesselation_control], a [member source_tesselation_evaluation] és a [member source_vertex]."
+
+#. RDShaderSource.source_any_hit
+#: doc/classes/RDShaderSource.xml
+msgid "Source code for the shader's any hit stage."
+msgstr "A bármely találatnál futó shaderszakasz forráskódja."
+
+#. RDShaderSource.source_closest_hit
+#: doc/classes/RDShaderSource.xml
+msgid "Source code for the shader's closest hit stage."
+msgstr "A legközelebbi találatnál futó shaderszakasz forráskódja."
+
+#. RDShaderSource.source_compute
+#: doc/classes/RDShaderSource.xml
+msgid "Source code for the shader's compute stage."
+msgstr "A számítási shaderszakasz forráskódja."
+
+#. RDShaderSource.source_fragment
+#: doc/classes/RDShaderSource.xml
+msgid "Source code for the shader's fragment stage."
+msgstr "A fragmentshader-szakasz forráskódja."
+
+#. RDShaderSource.source_intersection
+#: doc/classes/RDShaderSource.xml
+msgid "Source code for the shader's intersection stage."
+msgstr "A metszésvizsgálati shaderszakasz forráskódja."
+
+#. RDShaderSource.source_miss
+#: doc/classes/RDShaderSource.xml
+msgid "Source code for the shader's miss stage."
+msgstr "A találat hiányában futó shaderszakasz forráskódja."
+
+#. RDShaderSource.source_raygen
+#: doc/classes/RDShaderSource.xml
+msgid "Source code for the shader's ray generation stage."
+msgstr "A sugárindítási shaderszakasz forráskódja."
+
+#. RDShaderSource.source_tesselation_control
+#: doc/classes/RDShaderSource.xml
+msgid "Source code for the shader's tessellation control stage."
+msgstr "A tesszellációt vezérlő shaderszakasz forráskódja."
+
+#. RDShaderSource.source_tesselation_evaluation
+#: doc/classes/RDShaderSource.xml
+msgid "Source code for the shader's tessellation evaluation stage."
+msgstr "A tesszellációt kiértékelő shaderszakasz forráskódja."
+
+#. RDShaderSource.source_vertex
+#: doc/classes/RDShaderSource.xml
+msgid "Source code for the shader's vertex stage."
+msgstr "A csúcsárnyalási szakasz forráskódja."
+
+#. RDTextureFormat.samples
+#: doc/classes/RDTextureFormat.xml
+msgid "The number of samples used when sampling the texture."
+msgstr "A textúra mintáinak száma."
+
+#. RDTextureFormat.texture_type
+#: doc/classes/RDTextureFormat.xml
+msgid "The texture type."
+msgstr "A textúra típusa."
+
+#. RDVertexAttribute.brief
+#: doc/classes/RDVertexAttribute.xml
+msgid "Vertex attribute (used by [RenderingDevice])."
+msgstr "Csúcsattribútum a [RenderingDevice] számára."
+
+#. RDVertexAttribute.format
+#: doc/classes/RDVertexAttribute.xml
+msgid "The way that this attribute's data is interpreted when sent to a shader."
+msgstr "Megadja, hogyan értelmezze a shader a neki átadott attribútumadatokat."
+
+#. RDVertexAttribute.frequency
+#: doc/classes/RDVertexAttribute.xml
+msgid "The rate at which this attribute is pulled from its vertex buffer."
+msgstr "Megadja, milyen gyakorisággal olvassa ki a renderelő az attribútumot a csúcspufferből."
+
+#. RDVertexAttribute.location
+#: doc/classes/RDVertexAttribute.xml
+msgid "The location in the shader that this attribute is bound to."
+msgstr "A shaderbeli hely, amelyhez az attribútum hozzá van rendelve."
+
+#. RDVertexAttribute.offset
+#: doc/classes/RDVertexAttribute.xml
+msgid "The number of bytes between the start of the vertex buffer and the first instance of this attribute."
+msgstr "A csúcspuffer kezdete és az attribútum első előfordulása közötti távolság bájtban."
+
+#. RDVertexAttribute.stride
+#: doc/classes/RDVertexAttribute.xml
+msgid "The number of bytes between the starts of consecutive instances of this attribute."
+msgstr "Az attribútum két egymást követő előfordulásának kezdete közötti távolság bájtban."
+
+#. RenderSceneBuffersConfiguration.brief
+#: doc/classes/RenderSceneBuffersConfiguration.xml
+msgid "Configuration object used to setup a [RenderSceneBuffers] object."
+msgstr "A [RenderSceneBuffers] objektum beállításához használt konfiguráció."
+
+#. RenderSceneBuffersConfiguration.description
+#: doc/classes/RenderSceneBuffersConfiguration.xml
+msgid "This configuration object is created and populated by the render engine on a viewport change and used to (re)configure a [RenderSceneBuffers] object."
+msgstr "A renderelőmotor a nézetablak változásakor hozza létre és tölti ki ezt a konfigurációt. Ezzel állítja be vagy konfigurálja újra a [RenderSceneBuffers] objektumot."
+
+#. RenderSceneBuffersConfiguration.anisotropic_filtering_level
+#: doc/classes/RenderSceneBuffersConfiguration.xml
+msgid "Level of the anisotropic filter."
+msgstr "Az anizotropikus szűrés szintje."
+
+#. RenderSceneBuffersConfiguration.fsr_sharpness
+#: doc/classes/RenderSceneBuffersConfiguration.xml
+msgid "FSR Sharpness applicable if FSR upscaling is used."
+msgstr "Az élesítés mértéke FSR-felskálázás használatakor."
+
+#. RenderSceneBuffersConfiguration.internal_size
+#: doc/classes/RenderSceneBuffersConfiguration.xml
+msgid "The size of the 3D render buffer used for rendering."
+msgstr "A 3D-s rendereléshez használt puffer mérete."
+
+#. RenderSceneBuffersConfiguration.msaa_3d
+#: doc/classes/RenderSceneBuffersConfiguration.xml
+msgid "The MSAA mode we're using for 3D rendering."
+msgstr "A 3D-s renderelésnél használt MSAA-mód."
+
+#. RenderSceneBuffersConfiguration.render_target
+#: doc/classes/RenderSceneBuffersConfiguration.xml
+msgid "The render target associated with these buffer."
+msgstr "A pufferekhez tartozó renderelési cél."
+
+#. RenderSceneBuffersConfiguration.scaling_3d_mode
+#: doc/classes/RenderSceneBuffersConfiguration.xml
+msgid "The requested scaling mode with which we upscale/downscale if [member internal_size] and [member target_size] are not equal."
+msgstr "A fel- vagy leskálázáshoz kért mód, ha az [member internal_size] és az [member target_size] eltér."
+
+#. RenderSceneBuffersConfiguration.screen_space_aa
+#: doc/classes/RenderSceneBuffersConfiguration.xml
+msgid "The requested screen space AA applied in post processing."
+msgstr "Az utófeldolgozáskor alkalmazandó képernyőtérbeli élsimítás."
+
+#. RenderSceneBuffersConfiguration.target_size
+#: doc/classes/RenderSceneBuffersConfiguration.xml
+msgid "The target (upscale) size if scaling is used."
+msgstr "Skálázás használatakor a kimeneti méret."
+
+#. RenderSceneBuffersConfiguration.view_count
+#: doc/classes/RenderSceneBuffersConfiguration.xml
+msgid "The number of views we're rendering."
+msgstr "A renderelt nézetek száma."
+
+#. RenderSceneBuffersRD.brief
+#: doc/classes/RenderSceneBuffersRD.xml
+msgid "Render scene buffer implementation for the RenderingDevice based renderers."
+msgstr "Jelenetpufferek megvalósítása a RenderingDevice-alapú renderelőkhöz."
+
+#. RenderSceneBuffersRD.clear_context
+#: doc/classes/RenderSceneBuffersRD.xml
+msgid "Frees all buffers related to this context."
+msgstr "Felszabadítja a környezethez tartozó összes puffert."
+
+#. RenderSceneBuffersRD.create_texture
+#: doc/classes/RenderSceneBuffersRD.xml
+msgid "Create a new texture with the given definition and cache this under the given name. Will return the existing texture if it already exists."
+msgstr "Létrehoz egy textúrát a megadott beállításokkal, és a megadott néven gyorsítótárazza. Ha már létezik ilyen nevű textúra, azt adja vissza."
+
+#. RenderSceneBuffersRD.create_texture_from_format
+#: doc/classes/RenderSceneBuffersRD.xml
+msgid "Create a new texture using the given format and view and cache this under the given name. Will return the existing texture if it already exists."
+msgstr "Létrehoz egy textúrát a megadott formátummal és nézettel, majd a megadott néven gyorsítótárazza. Ha már létezik ilyen nevű textúra, azt adja vissza."
+
+#. RenderSceneBuffersRD.create_texture_view
+#: doc/classes/RenderSceneBuffersRD.xml
+msgid "Create a new texture view for an existing texture and cache this under the given [param view_name]. Will return the existing texture view if it already exists. Will error if the source texture doesn't exist."
+msgstr "Nézetet hoz létre egy meglévő textúrához, és a megadott [param view_name] néven gyorsítótárazza. Ha a nézet már létezik, azt adja vissza. Ha a forrástextúra hiányzik, hibát jelez."
+
+#. RenderSceneBuffersRD.get_fsr_sharpness
+#: doc/classes/RenderSceneBuffersRD.xml
+msgid "Returns the FSR sharpness value used while rendering the 3D content (if [method get_scaling_3d_mode] is an FSR mode)."
+msgstr "A 3D-s tartalom renderelésekor használt FSR-élesítés mértékét adja vissza, ha a [method get_scaling_3d_mode] FSR-módot jelez."
+
+#. RenderSceneBuffersRD.get_internal_size
+#: doc/classes/RenderSceneBuffersRD.xml
+msgid "Returns the internal size of the render buffer (size before upscaling) with which textures are created by default."
+msgstr "A renderelési puffer belső, felskálázás előtti méretét adja vissza. Alapértelmezésben ekkora textúrák készülnek."
+
+#. RenderSceneBuffersRD.get_msaa_3d
+#: doc/classes/RenderSceneBuffersRD.xml
+msgid "Returns the applied 3D MSAA mode for this viewport."
+msgstr "A nézetablakban alkalmazott 3D-s MSAA-módot adja vissza."
+
+#. RenderSceneBuffersRD.get_render_target
+#: doc/classes/RenderSceneBuffersRD.xml
+msgid "Returns the render target associated with this buffers object."
+msgstr "A pufferobjektumhoz tartozó renderelési célt adja vissza."
+
+#. RenderSceneBuffersRD.get_scaling_3d_mode
+#: doc/classes/RenderSceneBuffersRD.xml
+msgid "Returns the scaling mode used for upscaling."
+msgstr "A felskálázáshoz használt módot adja vissza."
+
+#. RenderSceneBuffersRD.get_screen_space_aa
+#: doc/classes/RenderSceneBuffersRD.xml
+msgid "Returns the screen-space antialiasing method applied."
+msgstr "Az alkalmazott képernyőtérbeli élsimítási módot adja vissza."
+
+#. RenderSceneBuffersRD.get_target_size
+#: doc/classes/RenderSceneBuffersRD.xml
+msgid "Returns the target size of the render buffer (size after upscaling)."
+msgstr "A renderelési puffer célméretét, vagyis a felskálázás utáni méretét adja vissza."
+
+#. RenderSceneBuffersRD.get_texture
+#: doc/classes/RenderSceneBuffersRD.xml
+msgid "Returns a cached texture with this name."
+msgstr "A megadott nevű, gyorsítótárazott textúrát adja vissza."
+
+#. RenderSceneBuffersRD.get_texture_format
+#: doc/classes/RenderSceneBuffersRD.xml
+msgid "Returns the texture format information with which a cached texture was created."
+msgstr "A gyorsítótárazott textúra létrehozásához használt formátumadatokat adja vissza."
+
+#. RenderSceneBuffersRD.get_texture_samples
+#: doc/classes/RenderSceneBuffersRD.xml
+msgid "Returns the number of MSAA samples used."
+msgstr "Az MSAA-minták számát adja vissza."
+
+#. RenderSceneBuffersRD.get_texture_slice
+#: doc/classes/RenderSceneBuffersRD.xml
+msgid "Returns a specific slice (layer or mipmap) for a cached texture."
+msgstr "Egy gyorsítótárazott textúra kiválasztott rétegét vagy mipmapszintjét adja vissza."
+
+#. RenderSceneBuffersRD.get_texture_slice_size
+#: doc/classes/RenderSceneBuffersRD.xml
+msgid "Returns the texture size of a given slice of a cached texture."
+msgstr "Egy gyorsítótárazott textúra megadott rétegének vagy mipmapszintjének méretét adja vissza."
+
+#. RenderSceneBuffersRD.get_texture_slice_view
+#: doc/classes/RenderSceneBuffersRD.xml
+msgid "Returns a specific view of a slice (layer or mipmap) for a cached texture."
+msgstr "Nézetet ad vissza egy gyorsítótárazott textúra adott rétegéhez vagy mipmapszintjéhez."
+
+#. RenderSceneBuffersRD.get_use_debanding
+#: doc/classes/RenderSceneBuffersRD.xml
+msgid "Returns [code]true[/code] if debanding is enabled."
+msgstr "[code]true[/code] értéket ad vissza, ha a színsávok csökkentése engedélyezve van."
+
+#. RenderSceneBuffersRD.get_use_taa
+#: doc/classes/RenderSceneBuffersRD.xml
+msgid "Returns [code]true[/code] if TAA is enabled."
+msgstr "[code]true[/code] értéket ad vissza, ha a temporális élsimítás (TAA) engedélyezve van."
+
+#. RenderSceneBuffersRD.get_velocity_layer
+#: doc/classes/RenderSceneBuffersRD.xml
+msgid "Returns the specified layer from the velocity texture we are rendering 3D content to."
+msgstr "A 3D-s tartalomhoz használt mozgásvektor-textúra megadott rétegét adja vissza."
+
+#. RenderSceneBuffersRD.get_view_count
+#: doc/classes/RenderSceneBuffersRD.xml
+msgid "Returns the view count for the associated viewport."
+msgstr "A kapcsolódó nézetablak nézeteinek számát adja vissza."
+
+#. RenderSceneBuffersRD.has_texture
+#: doc/classes/RenderSceneBuffersRD.xml
+msgid "Returns [code]true[/code] if a cached texture exists for this name."
+msgstr "[code]true[/code] értéket ad vissza, ha a megadott néven van gyorsítótárazott textúra."
+
+#. RDAttachmentFormat.brief
+#: doc/classes/RDAttachmentFormat.xml
+msgid "Attachment format (used by [RenderingDevice])."
+msgstr "Csatolmányformátum a [RenderingDevice] számára."
+
+#. RDAttachmentFormat.format
+#: doc/classes/RDAttachmentFormat.xml
+msgid "The attachment's data format."
+msgstr "A csatolmány adatformátuma."
+
+#. RDAttachmentFormat.samples
+#: doc/classes/RDAttachmentFormat.xml
+msgid "The number of samples used when sampling the attachment."
+msgstr "A csatolmány mintáinak száma."
+
+#. RDAttachmentFormat.usage_flags
+#: doc/classes/RDAttachmentFormat.xml
+msgid "The attachment's usage flags, which determine what can be done with it."
+msgstr "A csatolmány használati jelzői. Ezek határozzák meg, milyen műveletekhez használható."
+
+#. RDShaderFile.get_spirv
+#: doc/classes/RDShaderFile.xml
+msgid "Returns the SPIR-V intermediate representation for the specified shader [param version]."
+msgstr "A megadott [param version] shaderváltozat SPIR-V köztes ábrázolását adja vissza."
