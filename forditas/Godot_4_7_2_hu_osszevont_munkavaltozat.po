@@ -47980,7 +47980,7 @@ msgstr "Az érték hiperbolikus tangensét adja vissza."
 #. VisualShaderNodeVectorFunc.FUNC_TRUNC
 #: modules/visual_shader/doc_classes/VisualShaderNodeVectorFunc.xml
 msgid "Returns a value equal to the nearest integer to the parameter whose absolute value is not larger than the absolute value of the parameter."
-msgstr "Az értéket nulla felé kerekíti a legközelebbi egészre."
+msgstr "A tört részt elhagyva, nulla felé kerekíti az értéket egészre."
 
 #. VisualShaderNodeVectorFunc.FUNC_ONEMINUS
 #: modules/visual_shader/doc_classes/VisualShaderNodeVectorFunc.xml
@@ -48035,7 +48035,7 @@ msgstr "Komponensenként elosztja az egyik vektort a másikkal."
 #. VisualShaderNodeVectorOp.OP_MOD
 #: modules/visual_shader/doc_classes/VisualShaderNodeVectorOp.xml
 msgid "Returns the remainder of the two vectors."
-msgstr "Komponensenként kiszámítja a két vektor értékeinek osztási maradékát."
+msgstr "Komponensenként modulóműveletet végez az első értéken a második értékkel."
 
 #. VisualShaderNodeVectorOp.OP_POW
 #: modules/visual_shader/doc_classes/VisualShaderNodeVectorOp.xml
@@ -48107,7 +48107,7 @@ msgstr "Megadja a hátoldali sablonérték összehasonlításba bevont bitjeit."
 #. RDPipelineDepthStencilState.back_op_depth_fail
 #: doc/classes/RDPipelineDepthStencilState.xml
 msgid "The operation to perform on the stencil buffer for back pixels that pass the stencil test but fail the depth test."
-msgstr "A sablonpufferen elvégzendő művelet, ha egy hátoldali képpont megfelel a sablonvizsgálaton, de elbukik a mélységvizsgálaton."
+msgstr "A sablonpufferen elvégzendő művelet, ha egy hátoldali képpont átmegy a sablonvizsgálaton, de nem megy át a mélységvizsgálaton."
 
 #. RDPipelineDepthStencilState.back_op_fail
 #: doc/classes/RDPipelineDepthStencilState.xml
@@ -48137,17 +48137,17 @@ msgstr "A korábbi és az aktuális mélységérték összehasonlításának mó
 #. RDPipelineDepthStencilState.depth_range_max
 #: doc/classes/RDPipelineDepthStencilState.xml
 msgid "The maximum depth that returns [code]true[/code] for [member enable_depth_range]."
-msgstr "A [member enable_depth_range] beállítással engedélyezett mélységtartomány felső határa. Ennél a határértéknél a vizsgálat eredménye [code]true[/code]."
+msgstr "A [member enable_depth_range] beállítással engedélyezett mélységtartomány-vizsgálat felső határa. A határérték még átmegy a vizsgálaton ([code]true[/code])."
 
 #. RDPipelineDepthStencilState.depth_range_min
 #: doc/classes/RDPipelineDepthStencilState.xml
 msgid "The minimum depth that returns [code]true[/code] for [member enable_depth_range]."
-msgstr "A [member enable_depth_range] beállítással engedélyezett mélységtartomány alsó határa. Ennél a határértéknél a vizsgálat eredménye [code]true[/code]."
+msgstr "A [member enable_depth_range] beállítással engedélyezett mélységtartomány-vizsgálat alsó határa. A határérték még átmegy a vizsgálaton ([code]true[/code])."
 
 #. RDPipelineDepthStencilState.enable_depth_range
 #: doc/classes/RDPipelineDepthStencilState.xml
 msgid "If [code]true[/code], each depth value will be tested to see if it is between [member depth_range_min] and [member depth_range_max]. If it is outside of these values, it is discarded."
-msgstr "Ha az értéke [code]true[/code], minden mélységértéket összevet a [member depth_range_min] és a [member depth_range_max] határral. A tartományon kívüli értékeket eldobja."
+msgstr "Ha az értéke [code]true[/code], a [member depth_range_min] és a [member depth_range_max] érték határolja az elfogadott mélységtartományt. Vulkan alatt a vizsgálat a mélységcsatolmányban tárolt értéket használja. Ha az kívül esik a tartományon, a minta kimarad."
 
 #. RDPipelineDepthStencilState.enable_depth_test
 #: doc/classes/RDPipelineDepthStencilState.xml
@@ -48172,7 +48172,7 @@ msgstr "Megadja az elülső oldalhoz tartozó sablonérték összehasonlításba
 #. RDPipelineDepthStencilState.front_op_depth_fail
 #: doc/classes/RDPipelineDepthStencilState.xml
 msgid "The operation to perform on the stencil buffer for front pixels that pass the stencil test but fail the depth test."
-msgstr "A sablonpufferen elvégzendő művelet, ha egy elülső oldali képpont megfelel a sablonvizsgálaton, de elbukik a mélységvizsgálaton."
+msgstr "A sablonpufferen elvégzendő művelet, ha egy elülső oldali képpont átmegy a sablonvizsgálaton, de nem megy át a mélységvizsgálaton."
 
 #. RDPipelineDepthStencilState.front_op_fail
 #: doc/classes/RDPipelineDepthStencilState.xml
@@ -48262,7 +48262,7 @@ msgstr "A textúramintavételező állapota a [RenderingDevice] számára."
 #. RDSamplerState.border_color
 #: doc/classes/RDSamplerState.xml
 msgid "The border color that will be returned when sampling outside the sampler's bounds and the [member repeat_u], [member repeat_v] or [member repeat_w] modes have repeating disabled."
-msgstr "A mintavételi tartományon kívül visszaadott peremszín, ha az érintett tengelyen a [member repeat_u], a [member repeat_v] vagy a [member repeat_w] kikapcsolja az ismétlést."
+msgstr "A textúra tartományán kívül használt peremszín. Akkor érvényes, ha az érintett tengely [member repeat_u], [member repeat_v] vagy [member repeat_w] beállítása peremszínes korlátozásra van állítva."
 
 #. RDSamplerState.compare_op
 #: doc/classes/RDSamplerState.xml
@@ -48347,7 +48347,7 @@ msgstr "A megadott [param stage] shaderszakasz fordítási hibaüzenetét a [par
 #. RDShaderSPIRV.bytecode_any_hit
 #: doc/classes/RDShaderSPIRV.xml
 msgid "The SPIR-V bytecode for the any hit shader stage."
-msgstr "Bármely találatnál futó shaderszakasz SPIR-V bájtkódja."
+msgstr "Az any-hit shaderszakasz SPIR-V bájtkódja."
 
 #. RDShaderSPIRV.bytecode_closest_hit
 #: doc/classes/RDShaderSPIRV.xml
@@ -48397,7 +48397,7 @@ msgstr "A csúcsárnyalási szakasz SPIR-V bájtkódja."
 #. RDShaderSPIRV.compile_error_any_hit
 #: doc/classes/RDShaderSPIRV.xml
 msgid "The compilation error message for the any hit shader stage (set by the SPIR-V compiler and Godot). If empty, shader compilation was successful."
-msgstr "A bármely találatnál futó shaderszakasz fordítási hibaüzenete, amelyet a SPIR-V fordító és a Godot állít be. Üres érték esetén a fordítás sikerült."
+msgstr "Az any-hit shaderszakasz fordítási hibaüzenete. A SPIR-V fordító és a Godot állítja be. Sikeres fordításkor üres."
 
 #. RDShaderSPIRV.compile_error_closest_hit
 #: doc/classes/RDShaderSPIRV.xml
@@ -48492,7 +48492,7 @@ msgstr "Ha az értéke [code]true[/code], az effekt minden olyan nézetablak ren
 #. CompositorEffect.needs_separate_specular
 #: doc/classes/CompositorEffect.xml
 msgid "If [code]true[/code] this triggers specular data being rendered to a separate buffer and combined after effects have been applied, only applicable for the Forward+ renderer."
-msgstr "Ha az értéke [code]true[/code], a tükrös visszaverődés adatai külön pufferbe kerülnek, és a renderelő csak az effektek után egyesíti őket a többi adattal. Csak a Forward+ renderelőnél érvényes."
+msgstr "Ha az értéke [code]true[/code], a tükrös visszaverődés adatai külön pufferbe kerülnek. A renderelő az effektek alkalmazása után egyesíti őket a többi adattal. Csak a Forward+ renderelőnél használható."
 
 #. CompositorEffect.EFFECT_CALLBACK_TYPE_PRE_OPAQUE
 #. RenderingServer.COMPOSITOR_EFFECT_CALLBACK_TYPE_PRE_OPAQUE
@@ -48510,7 +48510,7 @@ msgstr "A visszahívás az átlátszatlan felületek renderelése után, az égb
 #. RenderingServer.COMPOSITOR_EFFECT_CALLBACK_TYPE_POST_SKY
 #: doc/classes/CompositorEffect.xml doc/classes/RenderingServer.xml
 msgid "The callback is called after our sky is rendered, but before our back buffers are created (and if enabled, before subsurface scattering and/or screen space reflections)."
-msgstr "A visszahívás az égbolt renderelése után, a háttérpufferek létrehozása előtt fut le. Ha a felszín alatti szórás vagy a képernyőtérbeli tükröződés engedélyezve van, ezek is utána következnek."
+msgstr "A visszahívás az égbolt renderelése és a háttérpufferek létrehozása közötti szakaszban fut le. Ha a felszín alatti szórás vagy a képernyőtérbeli tükröződés engedélyezve van, a visszahívás ezeket is megelőzi."
 
 #. CompositorEffect.EFFECT_CALLBACK_TYPE_PRE_TRANSPARENT
 #. RenderingServer.COMPOSITOR_EFFECT_CALLBACK_TYPE_PRE_TRANSPARENT
@@ -48677,7 +48677,7 @@ msgstr "A megadott [param stage] shaderszakasz forráskódját adja vissza. A k�
 #. RDShaderSource.source_any_hit
 #: doc/classes/RDShaderSource.xml
 msgid "Source code for the shader's any hit stage."
-msgstr "A bármely találatnál futó shaderszakasz forráskódja."
+msgstr "Az any-hit shaderszakasz forráskódja."
 
 #. RDShaderSource.source_closest_hit
 #: doc/classes/RDShaderSource.xml
@@ -48822,7 +48822,7 @@ msgstr "A renderelt nézetek száma."
 #. RenderSceneBuffersRD.brief
 #: doc/classes/RenderSceneBuffersRD.xml
 msgid "Render scene buffer implementation for the RenderingDevice based renderers."
-msgstr "Jelenetpufferek megvalósítása a RenderingDevice-alapú renderelőkhöz."
+msgstr "Jelenetpuffereket kezel a RenderingDevice-alapú renderelők számára."
 
 #. RenderSceneBuffersRD.clear_context
 #: doc/classes/RenderSceneBuffersRD.xml
@@ -49187,7 +49187,7 @@ msgstr "A mintavétel a textúra ismétlésével folytatódik a széleken túl."
 #. RenderingDevice.SAMPLER_REPEAT_MODE_MIRRORED_REPEAT
 #: doc/classes/RenderingDevice.xml
 msgid "Sample with mirrored repeating enabled. When sampling outside the [code][0.0, 1.0][/code] range, return a mirrored version of the sampler. This mirrored version is mirrored again if sampling further away, with the pattern repeating indefinitely."
-msgstr "A textúra tükrözve ismétlődik. A [code][0.0, 1.0][/code] tartományon kívül a mintavétel a tükrözött textúrából olvas. Távolabb haladva a tükrözés minden ismétlésnél megfordul, és a minta korlátlanul folytatódik."
+msgstr "A textúra tükrözve ismétlődik. A [code][0.0, 1.0][/code] tartományon kívül a szomszédos ismétlés a textúra tükörképe. A minta felváltva tükrözött és eredeti irányban folytatódik."
 
 #. RenderingDevice.SAMPLER_REPEAT_MODE_CLAMP_TO_EDGE
 #: doc/classes/RenderingDevice.xml
@@ -49297,12 +49297,12 @@ msgstr "Csökkenti a gyorsítóstruktúra memóriaigényét. A sugarak bejárás
 #. RenderingDevice.ACCELERATION_STRUCTURE_GEOMETRY_OPAQUE_BIT
 #: doc/classes/RenderingDevice.xml
 msgid "An opaque geometry does not invoke the any hit shaders."
-msgstr "Az átlátszatlan geometria nem hívja meg a bármely találatnál futó shadereket."
+msgstr "Átlátszatlan geometria esetén az any-hit shaderek nem futnak le."
 
 #. RenderingDevice.ACCELERATION_STRUCTURE_GEOMETRY_NO_DUPLICATE_ANY_HIT_INVOCATION_BIT
 #: doc/classes/RenderingDevice.xml
 msgid "This geometry only calls the any hit shader a single time for each primitive."
-msgstr "A geometria primitívenként legfeljebb egyszer hívja meg a bármely találatnál futó shadert."
+msgstr "A geometria primitívenként legfeljebb egyszer hívja meg az any-hit shadert."
 
 #. RenderingDevice.ACCELERATION_STRUCTURE_INSTANCE_TRIANGLE_FACING_CULL_DISABLE_BIT
 #: doc/classes/RenderingDevice.xml
@@ -49317,12 +49317,12 @@ msgstr "A sugár bejárásakor megfordítja ennél a példánynál a háromszög
 #. RenderingDevice.ACCELERATION_STRUCTURE_INSTANCE_FORCE_OPAQUE_BIT
 #: doc/classes/RenderingDevice.xml
 msgid "Forces all geometries in this instance to be treated as opaque, preventing any hit shaders from being invoked."
-msgstr "A példány minden geometriáját átlátszatlanként kezeli, így a bármely találatnál futó shaderek kimaradnak."
+msgstr "A példány minden geometriáját átlátszatlanként kezeli, így az any-hit shaderek kimaradnak."
 
 #. RenderingDevice.ACCELERATION_STRUCTURE_INSTANCE_FORCE_NO_OPAQUE_BIT
 #: doc/classes/RenderingDevice.xml
 msgid "Forces all geometries in this instance to be treated as non-opaque, allowing any hit shaders to be invoked."
-msgstr "A példány minden geometriáját átlátszóként kezeli, így lefuthatnak a bármely találatnál futó shaderek."
+msgstr "A példány minden geometriáját nem átlátszatlanként kezeli, így az any-hit shaderek is lefuthatnak."
 
 #. RenderingDevice.UNIFORM_TYPE_SAMPLER
 #: doc/classes/RenderingDevice.xml
@@ -49447,12 +49447,12 @@ msgstr "A [param uniform_set] uniformkészletet a [param compute_list] parancsli
 #. RenderingDevice.compute_list_dispatch
 #: doc/classes/RenderingDevice.xml
 msgid "Submits the compute list for processing on the GPU. This is the compute equivalent to [method draw_list_draw]."
-msgstr "Elindítja a számítási műveletet a GPU-n. A [method draw_list_draw] metódus számítási megfelelője."
+msgstr "GPU-n végrehajtandó számítási műveletet rögzít a parancslistába. A [method draw_list_draw] számítási megfelelője."
 
 #. RenderingDevice.compute_list_dispatch_indirect
 #: doc/classes/RenderingDevice.xml
 msgid "Submits the compute list for processing on the GPU with the given group counts stored in the [param buffer] at [param offset]. Buffer must have been created with [constant STORAGE_BUFFER_USAGE_DISPATCH_INDIRECT] flag."
-msgstr "Elindítja a számítási műveletet a GPU-n. A munkacsoportok számát a [param buffer] pufferből, a [param offset] eltolástól olvassa ki. A puffert a [constant STORAGE_BUFFER_USAGE_DISPATCH_INDIRECT] jelzővel kell létrehozni."
+msgstr "GPU-n végrehajtandó közvetett számítási műveletet rögzít. A munkacsoportok számát a megadott [param buffer] pufferből, a [param offset] bájteltolástól olvassa ki a GPU. A puffert a [constant STORAGE_BUFFER_USAGE_DISPATCH_INDIRECT] jelzővel kell létrehozni."
 
 #. RenderingDevice.compute_list_end
 #: doc/classes/RenderingDevice.xml
@@ -49502,7 +49502,7 @@ msgstr "Beállítja a kamera [Transform3D] transzformációját."
 #. RenderingServer.camera_set_use_vertical_aspect
 #: doc/classes/RenderingServer.xml
 msgid "If [code]true[/code], preserves the horizontal aspect ratio which is equivalent to [constant Camera3D.KEEP_WIDTH]. If [code]false[/code], preserves the vertical aspect ratio which is equivalent to [constant Camera3D.KEEP_HEIGHT]."
-msgstr "A [code]true[/code] érték a vízszintes képarányt tartja meg a [constant Camera3D.KEEP_WIDTH] beállításnak megfelelően. A [code]false[/code] érték a függőleges képarányt tartja meg a [constant Camera3D.KEEP_HEIGHT] beállításnak megfelelően."
+msgstr "A [code]true[/code] érték a kamera vízszintes látómezejét, ortografikus vetítésnél a nézet szélességét tartja meg. Ez a [constant Camera3D.KEEP_WIDTH] mód. A [code]false[/code] érték a [constant Camera3D.KEEP_HEIGHT] módnak felel meg, és a függőleges látómezőt, illetve a nézet magasságát tartja meg."
 
 #. RenderingServer.canvas_item_set_copy_to_backbuffer
 #: doc/classes/RenderingServer.xml
@@ -49572,7 +49572,7 @@ msgstr "A [param item] RID-del megadott vászonelem saját színét szorozza meg
 #. RenderingServer.canvas_item_set_sort_children_by_y
 #: doc/classes/RenderingServer.xml
 msgid "If [param enabled] is [code]true[/code], child nodes with the lowest Y position are drawn before those with a higher Y position. Y-sorting only affects children that inherit from the canvas item specified by the [param item] RID, not the canvas item itself. Equivalent to [member CanvasItem.y_sort_enabled]."
-msgstr "Ha az [param enabled] értéke [code]true[/code], a kisebb Y-koordinátájú gyerekcsomópontok a nagyobb Y-koordinátájúak előtt jelennek meg. A rendezés a [param item] RID-del megadott vászonelemtől öröklő gyerekeket érinti, magát a vászonelemet nem. A [member CanvasItem.y_sort_enabled] tulajdonságnak felel meg."
+msgstr "Ha az [param enabled] értéke [code]true[/code], a renderelő előbb rajzolja ki a kisebb Y-koordinátájú gyerekcsomópontokat. A rendezés a [param item] RID-del megadott vászonelem gyerekeire vonatkozik. A vászonelem saját sorrendjét ez a beállítás nem módosítja. A [member CanvasItem.y_sort_enabled] tulajdonságnak felel meg."
 
 #. RenderingServer.canvas_item_set_transform
 #: doc/classes/RenderingServer.xml
@@ -49682,7 +49682,7 @@ msgstr "Egyéni látómezőt állít be a háttér [Sky] erőforrásához. A [me
 #. RenderingServer.environment_set_sky_orientation
 #: doc/classes/RenderingServer.xml
 msgid "Sets the rotation of the background [Sky] expressed as a [Basis]. Equivalent to [member Environment.sky_rotation], where the rotation vector is used to construct the [Basis]."
-msgstr "[Basis] értékként adja meg a háttér [Sky] erőforrásának elforgatását. A [member Environment.sky_rotation] tulajdonságnak felel meg, amelynek forgatásvektorából előáll a [Basis]."
+msgstr "A háttérként használt [Sky] erőforrás forgatását [Basis] értékként állítja be. A [member Environment.sky_rotation] ugyanezt forgatásvektorral adja meg, amelyből a [Basis] előállítható."
 
 #. RenderingServer.environment_set_ssao
 #: doc/classes/RenderingServer.xml
@@ -49797,7 +49797,7 @@ msgstr "A megadott [param format] formátumú háló indexpufferében az egymás
 #. RenderingServer.mesh_surface_get_format_normal_tangent_stride
 #: doc/classes/RenderingServer.xml
 msgid "Returns the stride of the combined normals and tangents for a mesh with given [param format]. Note importantly that, while normals and tangents are in the vertex buffer with vertices, they are only interleaved with each other and so have a different stride than vertex positions."
-msgstr "A megadott [param format] formátumú háló egymásba fűzött normál- és érintővektorainak bájtlépését adja vissza. A normál- és érintővektorok a pozíciókkal közös csúcspufferben vannak, de csak egymással vannak összefűzve, ezért más a bájtlépésük, mint a pozícióké."
+msgstr "A megadott [param format] formátumú háló normál- és érintővektorainak bájtlépését adja vissza. Közös csúcspufferben vannak a pozíciókkal, de a normál- és érintővektorok egymással váltakozva, a pozíciók pedig külön, egymás után helyezkednek el. Ezért a bájtlépésük eltér a csúcspozíciókétól."
 
 #. RenderingServer.mesh_surface_get_format_offset
 #: doc/classes/RenderingServer.xml
@@ -49862,7 +49862,7 @@ msgstr "Beállítja a [param viewport] RID-del megadott nézetablak vászoneleme
 #. RenderingServer.viewport_set_disable_2d
 #: doc/classes/RenderingServer.xml
 msgid "If [code]true[/code], the viewport's canvas (i.e. 2D and GUI elements) is not rendered."
-msgstr "Ha az értéke [code]true[/code], a nézetablak vászna, vagyis a 2D-s és felületi elemek nem jelennek meg."
+msgstr "Ha az értéke [code]true[/code], a renderelő kihagyja a nézetablak vásznát, így a 2D-s elemeket és a kezelőfelületet is."
 
 #. RenderingServer.viewport_set_disable_3d
 #: doc/classes/RenderingServer.xml
@@ -50013,7 +50013,7 @@ msgstr "A [param render_pipeline] renderelési folyamatot a megadott [param draw
 #. RenderingDevice.draw_list_bind_uniform_set
 #: doc/classes/RenderingDevice.xml
 msgid "Binds [param uniform_set] to the specified [param draw_list]. A [param set_index] must also be specified, which is an identifier starting from [code]0[/code] that must match the one expected by the draw list."
-msgstr "A [param uniform_set] uniformkészletet a megadott [param draw_list] rajzolási listához rendeli. A [param set_index] egy [code]0[/code]-tól számozott azonosító, amelynek egyeznie kell a rajzolási lista által várt értékkel."
+msgstr "A [param uniform_set] uniformkészletet a megadott [param draw_list] rajzolási listához rendeli. A [param set_index] a készlet [code]0[/code]-tól számozott helye, amelynek meg kell egyeznie a shader által várt készletindexszel."
 
 #. RenderingDevice.draw_list_bind_vertex_array
 #: doc/classes/RenderingDevice.xml
@@ -50033,7 +50033,7 @@ msgstr "Kikapcsolja és eltávolítja a megadott [param draw_list] vágási tég
 #. RenderingDevice.draw_list_draw
 #: doc/classes/RenderingDevice.xml
 msgid "Submits [param draw_list] for rendering on the GPU. This is the raster equivalent to [method compute_list_dispatch]."
-msgstr "A [param draw_list] rajzolási listát átadja a GPU-nak renderelésre. A [method compute_list_dispatch] raszterizálási megfelelője."
+msgstr "A [param draw_list] rajzolási listába GPU-n végrehajtandó rajzolási parancsot rögzít. A [method compute_list_dispatch] raszterizálási megfelelője."
 
 #. RenderingDevice.draw_list_end
 #: doc/classes/RenderingDevice.xml
@@ -50083,7 +50083,7 @@ msgstr "[code]true[/code] értéket ad vissza, ha a [param framebuffer] RID-del 
 #. RenderingDevice.free_rid
 #: doc/classes/RenderingDevice.xml
 msgid "Tries to free an object in the RenderingDevice. To avoid memory leaks, this should be called after using an object as memory management does not occur automatically when using RenderingDevice directly."
-msgstr "Megpróbál felszabadítani egy objektumot a RenderingDevice-ban. A közvetlenül a RenderingDevice-on létrehozott objektumok memóriakezelése kézi. Ha egy ilyen objektumra már nincs szükség, ezzel a metódussal szabadítsd fel, hogy a memóriája ne maradjon foglalva."
+msgstr "Felszabadítja a RenderingDevice-ban az azonosítóhoz tartozó erőforrást, ha létezik. A közvetlenül a RenderingDevice-on létrehozott erőforrásokat ezzel a metódussal szabadítsd fel, amikor már nincs rájuk szükség."
 
 #. RenderingDevice.get_captured_timestamp_cpu_time
 #: doc/classes/RenderingDevice.xml
@@ -50258,7 +50258,7 @@ msgstr "Beállítja a példányhoz tartozó megadott alakváltozat súlyát."
 #. RenderingServer.instance_set_custom_aabb
 #: doc/classes/RenderingServer.xml
 msgid "Sets a custom AABB to use when culling objects from the view frustum. Equivalent to setting [member GeometryInstance3D.custom_aabb]."
-msgstr "Egyéni, tengelyekhez igazított befoglaló dobozt állít be a látógúlán kívüli objektumok kiszűréséhez. A [member GeometryInstance3D.custom_aabb] beállításának felel meg."
+msgstr "Egyéni, tengelyekhez igazított befoglaló dobozt ad meg a látógúla szerinti kiszűréshez. A [member GeometryInstance3D.custom_aabb] beállításának felel meg."
 
 #. RenderingServer.instance_set_extra_visibility_margin
 #: doc/classes/RenderingServer.xml
@@ -50328,7 +50328,7 @@ msgstr "Beállítja a területi fény szélességét és magasságát méterben.
 #. RenderingServer.light_directional_set_blend_splits
 #: doc/classes/RenderingServer.xml
 msgid "If [code]true[/code], this directional light will blend between shadow map splits resulting in a smoother transition between them. Equivalent to [member DirectionalLight3D.directional_shadow_blend_splits]."
-msgstr "Ha az értéke [code]true[/code], az irányfény összekeveri az árnyéktérkép-kaszkádok szomszédos részeit, hogy simább legyen köztük az átmenet. A [member DirectionalLight3D.directional_shadow_blend_splits] tulajdonságnak felel meg."
+msgstr "Ha az értéke [code]true[/code], az irányfény sima átmenetet képez a szomszédos árnyéktérkép-kaszkádok között. A [member DirectionalLight3D.directional_shadow_blend_splits] tulajdonságnak felel meg."
 
 #. RenderingServer.light_directional_set_shadow_mode
 #: doc/classes/RenderingServer.xml
