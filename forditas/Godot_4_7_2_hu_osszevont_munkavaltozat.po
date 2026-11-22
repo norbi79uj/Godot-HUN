@@ -41612,17 +41612,17 @@ msgstr "Bináris kereséssel megkeresi az érték indexét. Ha az érték még n
 #. PackedByteArray.bswap16
 #: doc/classes/PackedByteArray.xml
 msgid "Swaps the byte order of [param count] 16-bit segments of the array starting at [param offset]. Swap is done in-place. If [param count] is less than zero, all segments to the end of array are processed, if processed data size is not a multiple of 2, the byte after the last processed 16-bit segment is not modified."
-msgstr "A [param offset] eltolástól kezdve felcseréli [param count] darab 16 bites szakasz bájtsorrendjét. A csere az eredeti tömbben történik. Negatív [param count] esetén a tömb végéig az összes teljes szakaszt feldolgozza. Ha a feldolgozandó bájtok száma nem osztható 2-vel, a utolsó 16 bites teljes szakasz utáni bájt érintetlen marad."
+msgstr "A [param offset] eltolástól kezdve felcseréli [param count] darab 16 bites szakasz bájtsorrendjét. A csere az eredeti tömbben történik. Negatív [param count] esetén a tömb végéig az összes teljes szakaszt feldolgozza. Ha a feldolgozandó bájtok száma nem osztható 2-vel, az utolsó 16 bites teljes szakasz utáni bájt érintetlen marad."
 
 #. PackedByteArray.bswap32
 #: doc/classes/PackedByteArray.xml
 msgid "Swaps the byte order of [param count] 32-bit segments of the array starting at [param offset]. Swap is done in-place. If [param count] is less than zero, all segments to the end of array are processed, if processed data size is not a multiple of 4, bytes after the last processed 32-bit segment are not modified."
-msgstr "A [param offset] eltolástól kezdve felcseréli [param count] darab 32 bites szakasz bájtsorrendjét. A csere az eredeti tömbben történik. Negatív [param count] esetén a tömb végéig az összes teljes szakaszt feldolgozza. Ha a feldolgozandó bájtok száma nem osztható 4-gyel, a utolsó 32 bites teljes szakasz utáni bájtok érintetlenek maradnak."
+msgstr "A [param offset] eltolástól kezdve felcseréli [param count] darab 32 bites szakasz bájtsorrendjét. A csere az eredeti tömbben történik. Negatív [param count] esetén a tömb végéig az összes teljes szakaszt feldolgozza. Ha a feldolgozandó bájtok száma nem osztható 4-gyel, az utolsó 32 bites teljes szakasz utáni bájtok érintetlenek maradnak."
 
 #. PackedByteArray.bswap64
 #: doc/classes/PackedByteArray.xml
 msgid "Swaps the byte order of [param count] 64-bit segments of the array starting at [param offset]. Swap is done in-place. If [param count] is less than zero, all segments to the end of array are processed, if processed data size is not a multiple of 8, bytes after the last processed 64-bit segment are not modified."
-msgstr "A [param offset] eltolástól kezdve felcseréli [param count] darab 64 bites szakasz bájtsorrendjét. A csere az eredeti tömbben történik. Negatív [param count] esetén a tömb végéig az összes teljes szakaszt feldolgozza. Ha a feldolgozandó bájtok száma nem osztható 8-cal, a utolsó 64 bites teljes szakasz utáni bájtok érintetlenek maradnak."
+msgstr "A [param offset] eltolástól kezdve felcseréli [param count] darab 64 bites szakasz bájtsorrendjét. A csere az eredeti tömbben történik. Negatív [param count] esetén a tömb végéig az összes teljes szakaszt feldolgozza. Ha a feldolgozandó bájtok száma nem osztható 8-cal, az utolsó 64 bites teljes szakasz utáni bájtok érintetlenek maradnak."
 
 #. PackedByteArray.clear
 #. PackedColorArray.clear
@@ -42861,7 +42861,7 @@ msgstr "[code]true[/code] értéket ad vissza, ha a sztring a megadott [param te
 #. StringName.erase
 #: doc/classes/String.xml doc/classes/StringName.xml
 msgid "Returns a string with [param chars] characters erased starting from [param position]. If [param chars] goes beyond the string's length given the specified [param position], fewer characters will be erased from the returned string. Returns an empty string if either [param position] or [param chars] is negative. Returns the original string unmodified if [param chars] is [code]0[/code]."
-msgstr "Olyan sztringet ad vissza, amelyből a [param position] helytől kezdve törölt [param chars] karaktert. Ha a [param position] helytől a sztring végéig kevesebb karakter marad, mint a [param chars] értéke, csak a fennmaradó karaktereket törli. Negatív [param position] vagy [param chars] esetén üres sztringet ad vissza. Ha a [param chars] értéke [code]0[/code], az eredeti sztringet változatlanul adja vissza."
+msgstr "A sztring olyan változatát adja vissza, amelyből a [param position] helytől kezdve [param chars] karakter hiányzik. Ha a [param position] helytől a sztring végéig kevesebb karakter marad, mint a [param chars] értéke, csak a fennmaradó karaktereket törli. Negatív [param position] vagy [param chars] esetén üres sztringet ad vissza. Ha a [param chars] értéke [code]0[/code], az eredeti sztringet változatlanul adja vissza."
 
 #. String.filecasecmp_to
 #. StringName.filecasecmp_to
@@ -43055,7 +43055,7 @@ msgstr "Visszaadja a sztring másolatát, amelyben a speciális karaktereket a J
 #. StringName.left
 #: doc/classes/String.xml doc/classes/StringName.xml
 msgid "Returns the first [param length] characters from the beginning of the string. If [param length] is negative, strips the last [param length] characters from the string's end.\n[codeblock]\nprint(\"Hello World!\".left(3))  # Prints \"Hel\"\nprint(\"Hello World!\".left(-4)) # Prints \"Hello Wo\"\n[/codeblock]"
-msgstr "Visszaadja a sztring első [param length] karakterét. Negatív [param length] esetén [param length] számú karaktert levágja a sztring végéről.\n[codeblock]\nprint(\"Hello World!\".left(3))  # Prints \"Hel\"\nprint(\"Hello World!\".left(-4)) # Prints \"Hello Wo\"\n[/codeblock]"
+msgstr "Visszaadja a sztring első [param length] karakterét. Negatív [param length] esetén a sztring végéről az érték abszolút értékének megfelelő számú karaktert távolít el.\n[codeblock]\nprint(\"Hello World!\".left(3))  # Prints \"Hel\"\nprint(\"Hello World!\".left(-4)) # Prints \"Hello Wo\"\n[/codeblock]"
 
 #. String.length
 #. StringName.length
@@ -43133,7 +43133,7 @@ msgstr "Eltávolítja a [param chars] karaktereinek minden előfordulását. Lá
 #. StringName.repeat
 #: doc/classes/String.xml doc/classes/StringName.xml
 msgid "Repeats this string a number of times. [param count] needs to be greater than [code]0[/code]. Otherwise, returns an empty string."
-msgstr "A megadott alkalommal megismétli a sztringet. A [param count] értékének nagyobbnak kell lennie, mint [code]0[/code]. Különben üres sztringet ad vissza."
+msgstr "A sztringet a megadott számú alkalommal ismétli meg. A [param count] értékének nagyobbnak kell lennie, mint [code]0[/code]. Különben üres sztringet ad vissza."
 
 #. String.replace
 #. StringName.replace
@@ -43175,7 +43175,7 @@ msgstr "Visszaadja a [param what] [b]utolsó[/b], [b]kis- és nagybetűtől füg
 #. StringName.right
 #: doc/classes/String.xml doc/classes/StringName.xml
 msgid "Returns the last [param length] characters from the end of the string. If [param length] is negative, strips the first [param length] characters from the string's beginning.\n[codeblock]\nprint(\"Hello World!\".right(3))  # Prints \"ld!\"\nprint(\"Hello World!\".right(-4)) # Prints \"o World!\"\n[/codeblock]"
-msgstr "Visszaadja a sztring utolsó [param length] karakterét. Negatív [param length] esetén [param length] számú karaktert levágja a sztring elejéről.\n[codeblock]\nprint(\"Hello World!\".right(3))  # Prints \"ld!\"\nprint(\"Hello World!\".right(-4)) # Prints \"o World!\"\n[/codeblock]"
+msgstr "Visszaadja a sztring utolsó [param length] karakterét. Negatív [param length] esetén a sztring elejéről az érték abszolút értékének megfelelő számú karaktert távolít el.\n[codeblock]\nprint(\"Hello World!\".right(3))  # Prints \"ld!\"\nprint(\"Hello World!\".right(-4)) # Prints \"o World!\"\n[/codeblock]"
 
 #. String.rpad
 #. StringName.rpad
