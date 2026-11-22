@@ -47946,3 +47946,510 @@ msgstr "A legközelebbi egészre kerekíti az értéket."
 #: modules/visual_shader/doc_classes/VisualShaderNodeVectorFunc.xml
 msgid "Finds the nearest even integer to the parameter."
 msgstr "A legközelebbi egészre kerekíti az értéket. Két egyformán közeli egész közül a párosat választja."
+
+#. VisualShaderNodeVectorFunc.FUNC_SIGN
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorFunc.xml
+msgid "Extracts the sign of the parameter, i.e. returns [code]-1[/code] if the parameter is negative, [code]1[/code] if it's positive and [code]0[/code] otherwise."
+msgstr "Az érték előjelét adja vissza. Negatív értéknél az eredmény [code]-1[/code], pozitívnál [code]1[/code], nullánál [code]0[/code]."
+
+#. VisualShaderNodeVectorFunc.FUNC_SIN
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorFunc.xml
+msgid "Returns the sine of the parameter."
+msgstr "Az érték szinuszát adja vissza."
+
+#. VisualShaderNodeVectorFunc.FUNC_SINH
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorFunc.xml
+msgid "Returns the hyperbolic sine of the parameter."
+msgstr "Az érték hiperbolikus szinuszát adja vissza."
+
+#. VisualShaderNodeVectorFunc.FUNC_SQRT
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorFunc.xml
+msgid "Returns the square root of the parameter."
+msgstr "Az érték négyzetgyökét adja vissza."
+
+#. VisualShaderNodeVectorFunc.FUNC_TAN
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorFunc.xml
+msgid "Returns the tangent of the parameter."
+msgstr "Az érték tangensét adja vissza."
+
+#. VisualShaderNodeVectorFunc.FUNC_TANH
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorFunc.xml
+msgid "Returns the hyperbolic tangent of the parameter."
+msgstr "Az érték hiperbolikus tangensét adja vissza."
+
+#. VisualShaderNodeVectorFunc.FUNC_TRUNC
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorFunc.xml
+msgid "Returns a value equal to the nearest integer to the parameter whose absolute value is not larger than the absolute value of the parameter."
+msgstr "Az értéket nulla felé kerekíti a legközelebbi egészre."
+
+#. VisualShaderNodeVectorFunc.FUNC_ONEMINUS
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorFunc.xml
+msgid "Returns [code]1.0 - vector[/code]."
+msgstr "A [code]1.0 - vector[/code] értéket adja vissza."
+
+#. VisualShaderNodeVectorLen.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorLen.xml
+msgid "Returns the length of a [Vector3] within the visual shader graph."
+msgstr "Egy [Vector3] vektor hosszát adja vissza a vizuális shadergráfban."
+
+#. VisualShaderNodeVectorLen.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorLen.xml
+msgid "Translated to [code]length(p0)[/code] in the shader language."
+msgstr "A shaderkódban a [code]length(p0)[/code] hívásnak felel meg."
+
+#. VisualShaderNodeVectorOp.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorOp.xml
+msgid "A vector operator to be used within the visual shader graph."
+msgstr "Vektorműveleti operátor a vizuális shadergráfhoz."
+
+#. VisualShaderNodeVectorOp.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorOp.xml
+msgid "A visual shader node for use of vector operators. Operates on vector [code]a[/code] and vector [code]b[/code]."
+msgstr "A vizuális shadercsomópont az [code]a[/code] és a [code]b[/code] vektoron végzi el a kiválasztott műveletet."
+
+#. VisualShaderNodeVectorOp.operator
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorOp.xml
+msgid "The operator to be used."
+msgstr "A végrehajtandó művelet."
+
+#. VisualShaderNodeVectorOp.OP_ADD
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorOp.xml
+msgid "Adds two vectors."
+msgstr "Összeadja a két vektort."
+
+#. VisualShaderNodeVectorOp.OP_SUB
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorOp.xml
+msgid "Subtracts a vector from a vector."
+msgstr "Kivonja az egyik vektort a másikból."
+
+#. VisualShaderNodeVectorOp.OP_MUL
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorOp.xml
+msgid "Multiplies two vectors."
+msgstr "Komponensenként összeszorozza a két vektort."
+
+#. VisualShaderNodeVectorOp.OP_DIV
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorOp.xml
+msgid "Divides vector by vector."
+msgstr "Komponensenként elosztja az egyik vektort a másikkal."
+
+#. VisualShaderNodeVectorOp.OP_MOD
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorOp.xml
+msgid "Returns the remainder of the two vectors."
+msgstr "Komponensenként kiszámítja a két vektor értékeinek osztási maradékát."
+
+#. VisualShaderNodeVectorOp.OP_POW
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorOp.xml
+msgid "Returns the value of the first parameter raised to the power of the second, for each component of the vectors."
+msgstr "Komponensenként a második érték hatványára emeli az elsőt."
+
+#. VisualShaderNodeVectorOp.OP_MAX
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorOp.xml
+msgid "Returns the greater of two values, for each component of the vectors."
+msgstr "Minden komponenshez a két érték közül a nagyobbat adja vissza."
+
+#. VisualShaderNodeVectorOp.OP_MIN
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorOp.xml
+msgid "Returns the lesser of two values, for each component of the vectors."
+msgstr "Minden komponenshez a két érték közül a kisebbet adja vissza."
+
+#. VisualShaderNodeVectorRefract.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorRefract.xml
+msgid "Returns the vector that points in the direction of refraction. For use within the visual shader graph."
+msgstr "A fénytörés irányába mutató vektort adja vissza a vizuális shadergráfban."
+
+#. VisualShaderNodeVectorRefract.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorRefract.xml
+msgid "Translated to [code]refract(I, N, eta)[/code] in the shader language, where [code]I[/code] is the incident vector, [code]N[/code] is the normal vector and [code]eta[/code] is the ratio of the indices of the refraction."
+msgstr "A shaderkódban a [code]refract(I, N, eta)[/code] hívásnak felel meg. Az [code]I[/code] a beeső vektor, az [code]N[/code] a felületi normálvektor, az [code]eta[/code] pedig a törésmutatók aránya."
+
+#. VisualShaderNodeWorldPositionFromDepth.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeWorldPositionFromDepth.xml
+msgid "A visual shader node that calculates the position of the pixel in world space using the depth texture."
+msgstr "A mélységtextúra alapján kiszámítja a képpont világkoordinátáit a vizuális shadergráfban."
+
+#. VisualShaderNodeWorldPositionFromDepth.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeWorldPositionFromDepth.xml
+msgid "The WorldPositionFromDepth node reconstructs the depth position of the pixel in world space. This can be used to obtain world space UVs for projection mapping like Caustics."
+msgstr "A WorldPositionFromDepth csomópont a mélységből állítja elő a képpont világkoordinátáit. Ezekből világkoordinátákhoz igazodó UV-koordinátákat képezhetsz vetítési effektekhez, például kausztikához."
+
+#. RDAttachmentFormat.description
+#. RDPipelineColorBlendState.description
+#. RDPipelineRasterizationState.description
+#. RDSamplerState.description
+#. RDTextureFormat.description
+#. RDTextureView.description
+#. RDUniform.description
+#. RDVertexAttribute.description
+#: doc/classes/RDAttachmentFormat.xml doc/classes/RDPipelineColorBlendState.xml doc/classes/RDPipelineRasterizationState.xml doc/classes/RDSamplerState.xml doc/classes/RDTextureFormat.xml doc/classes/RDTextureView.xml doc/classes/RDUniform.xml doc/classes/RDVertexAttribute.xml
+msgid "This object is used by [RenderingDevice]."
+msgstr "Ezt az objektumot a [RenderingDevice] használja."
+
+#. RDPipelineDepthStencilState.brief
+#: doc/classes/RDPipelineDepthStencilState.xml
+msgid "Pipeline depth/stencil state (used by [RenderingDevice])."
+msgstr "A renderelési folyamat mélység- és sablonállapota a [RenderingDevice] számára."
+
+#. RDPipelineDepthStencilState.description
+#: doc/classes/RDPipelineDepthStencilState.xml
+msgid "[RDPipelineDepthStencilState] controls the way depth and stencil comparisons are performed when sampling those values using [RenderingDevice]."
+msgstr "Az [RDPipelineDepthStencilState] szabályozza, hogyan hasonlítja össze a [RenderingDevice] a mélység- és sablonértékeket."
+
+#. RDPipelineDepthStencilState.back_op_compare
+#: doc/classes/RDPipelineDepthStencilState.xml
+msgid "The method used for comparing the previous back stencil value and [member back_op_reference]."
+msgstr "A hátoldalhoz tartozó korábbi sablonérték és a [member back_op_reference] érték összehasonlításának módja."
+
+#. RDPipelineDepthStencilState.back_op_compare_mask
+#: doc/classes/RDPipelineDepthStencilState.xml
+msgid "Selects which bits from the back stencil value will be compared."
+msgstr "Megadja a hátoldali sablonérték összehasonlításba bevont bitjeit."
+
+#. RDPipelineDepthStencilState.back_op_depth_fail
+#: doc/classes/RDPipelineDepthStencilState.xml
+msgid "The operation to perform on the stencil buffer for back pixels that pass the stencil test but fail the depth test."
+msgstr "A sablonpufferen elvégzendő művelet, ha egy hátoldali képpont megfelel a sablonvizsgálaton, de elbukik a mélységvizsgálaton."
+
+#. RDPipelineDepthStencilState.back_op_fail
+#: doc/classes/RDPipelineDepthStencilState.xml
+msgid "The operation to perform on the stencil buffer for back pixels that fail the stencil test."
+msgstr "A sablonpufferen elvégzendő művelet, ha egy hátoldali képpont elbukik a sablonvizsgálaton."
+
+#. RDPipelineDepthStencilState.back_op_pass
+#: doc/classes/RDPipelineDepthStencilState.xml
+msgid "The operation to perform on the stencil buffer for back pixels that pass the stencil test."
+msgstr "A sablonpufferen elvégzendő művelet, ha egy hátoldali képpont átmegy a sablonvizsgálaton és az esetleges mélységvizsgálaton."
+
+#. RDPipelineDepthStencilState.back_op_reference
+#: doc/classes/RDPipelineDepthStencilState.xml
+msgid "The value the previous back stencil value will be compared to."
+msgstr "A hátoldalhoz tartozó korábbi sablonérték összehasonlítási alapja."
+
+#. RDPipelineDepthStencilState.back_op_write_mask
+#: doc/classes/RDPipelineDepthStencilState.xml
+msgid "Selects which bits from the back stencil value will be changed."
+msgstr "Megadja a hátoldali sablonérték módosítható bitjeit."
+
+#. RDPipelineDepthStencilState.depth_compare_operator
+#: doc/classes/RDPipelineDepthStencilState.xml
+msgid "The method used for comparing the previous and current depth values."
+msgstr "A korábbi és az aktuális mélységérték összehasonlításának módja."
+
+#. RDPipelineDepthStencilState.depth_range_max
+#: doc/classes/RDPipelineDepthStencilState.xml
+msgid "The maximum depth that returns [code]true[/code] for [member enable_depth_range]."
+msgstr "A [member enable_depth_range] beállítással engedélyezett mélységtartomány felső határa. Ennél a határértéknél a vizsgálat eredménye [code]true[/code]."
+
+#. RDPipelineDepthStencilState.depth_range_min
+#: doc/classes/RDPipelineDepthStencilState.xml
+msgid "The minimum depth that returns [code]true[/code] for [member enable_depth_range]."
+msgstr "A [member enable_depth_range] beállítással engedélyezett mélységtartomány alsó határa. Ennél a határértéknél a vizsgálat eredménye [code]true[/code]."
+
+#. RDPipelineDepthStencilState.enable_depth_range
+#: doc/classes/RDPipelineDepthStencilState.xml
+msgid "If [code]true[/code], each depth value will be tested to see if it is between [member depth_range_min] and [member depth_range_max]. If it is outside of these values, it is discarded."
+msgstr "Ha az értéke [code]true[/code], minden mélységértéket összevet a [member depth_range_min] és a [member depth_range_max] határral. A tartományon kívüli értékeket eldobja."
+
+#. RDPipelineDepthStencilState.enable_depth_test
+#: doc/classes/RDPipelineDepthStencilState.xml
+msgid "If [code]true[/code], enables depth testing which allows objects to be automatically occluded by other objects based on their depth. This also allows objects to be partially occluded by other objects. If [code]false[/code], objects will appear in the order they were drawn (like in Godot's 2D renderer)."
+msgstr "Ha az értéke [code]true[/code], a mélységvizsgálat alapján a közelebbi objektumok részben vagy teljesen eltakarhatják a távolabbiakat. Ha az értéke [code]false[/code], a kirajzolás sorrendje határozza meg a takarást, akárcsak a Godot 2D-s renderelőjében."
+
+#. RDPipelineDepthStencilState.enable_depth_write
+#: doc/classes/RDPipelineDepthStencilState.xml
+msgid "If [code]true[/code], writes to the depth buffer whenever the depth test returns [code]true[/code]. Only works when enable_depth_test is also [code]true[/code]."
+msgstr "Ha az értéke [code]true[/code], a sikeres mélységvizsgálat ([code]true[/code]) után ír a mélységpufferbe. Ehhez az enable_depth_test beállításnak is [code]true[/code] értékűnek kell lennie."
+
+#. RDPipelineDepthStencilState.front_op_compare
+#: doc/classes/RDPipelineDepthStencilState.xml
+msgid "The method used for comparing the previous front stencil value and [member front_op_reference]."
+msgstr "Az elülső oldalhoz tartozó korábbi sablonérték és a [member front_op_reference] érték összehasonlításának módja."
+
+#. RDPipelineDepthStencilState.front_op_compare_mask
+#: doc/classes/RDPipelineDepthStencilState.xml
+msgid "Selects which bits from the front stencil value will be compared."
+msgstr "Megadja az elülső oldalhoz tartozó sablonérték összehasonlításba bevont bitjeit."
+
+#. RDPipelineDepthStencilState.front_op_depth_fail
+#: doc/classes/RDPipelineDepthStencilState.xml
+msgid "The operation to perform on the stencil buffer for front pixels that pass the stencil test but fail the depth test."
+msgstr "A sablonpufferen elvégzendő művelet, ha egy elülső oldali képpont megfelel a sablonvizsgálaton, de elbukik a mélységvizsgálaton."
+
+#. RDPipelineDepthStencilState.front_op_fail
+#: doc/classes/RDPipelineDepthStencilState.xml
+msgid "The operation to perform on the stencil buffer for front pixels that fail the stencil test."
+msgstr "A sablonpufferen elvégzendő művelet, ha egy elülső oldali képpont elbukik a sablonvizsgálaton."
+
+#. RDPipelineDepthStencilState.front_op_pass
+#: doc/classes/RDPipelineDepthStencilState.xml
+msgid "The operation to perform on the stencil buffer for front pixels that pass the stencil test."
+msgstr "A sablonpufferen elvégzendő művelet, ha egy elülső oldali képpont átmegy a sablonvizsgálaton és az esetleges mélységvizsgálaton."
+
+#. RDPipelineDepthStencilState.front_op_reference
+#: doc/classes/RDPipelineDepthStencilState.xml
+msgid "The value the previous front stencil value will be compared to."
+msgstr "Az elülső oldalhoz tartozó korábbi sablonérték összehasonlítási alapja."
+
+#. RDPipelineDepthStencilState.front_op_write_mask
+#: doc/classes/RDPipelineDepthStencilState.xml
+msgid "Selects which bits from the front stencil value will be changed."
+msgstr "Megadja az elülső oldalhoz tartozó sablonérték módosítható bitjeit."
+
+#. RDPipelineRasterizationState.brief
+#: doc/classes/RDPipelineRasterizationState.xml
+msgid "Pipeline rasterization state (used by [RenderingDevice])."
+msgstr "A renderelési folyamat raszterizálási állapota a [RenderingDevice] számára."
+
+#. RDPipelineRasterizationState.cull_mode
+#: doc/classes/RDPipelineRasterizationState.xml
+msgid "The cull mode to use when drawing polygons, which determines whether front faces or backfaces are hidden."
+msgstr "Megadja, hogy a sokszögek rajzolásakor az elülső vagy a hátsó lapok maradjanak ki."
+
+#. RDPipelineRasterizationState.depth_bias_clamp
+#: doc/classes/RDPipelineRasterizationState.xml
+msgid "A limit for how much each depth value can be offset. If negative, it serves as a minimum value, but if positive, it serves as a maximum value."
+msgstr "A mélységeltolás határértéke. A negatív érték alsó, a pozitív érték felső korlátot szab."
+
+#. RDPipelineRasterizationState.depth_bias_constant_factor
+#: doc/classes/RDPipelineRasterizationState.xml
+msgid "A constant offset added to each depth value. Applied after [member depth_bias_slope_factor]."
+msgstr "Minden mélységértékhez hozzáadott állandó eltolás. A [member depth_bias_slope_factor] alkalmazása után adódik hozzá."
+
+#. RDPipelineRasterizationState.depth_bias_enabled
+#: doc/classes/RDPipelineRasterizationState.xml
+msgid "If [code]true[/code], each generated depth value will by offset by some amount. The specific amount is generated per polygon based on the values of [member depth_bias_slope_factor] and [member depth_bias_constant_factor]."
+msgstr "Ha az értéke [code]true[/code], a renderelő eltolja a létrehozott mélységértékeket. Az eltolást sokszögenként a [member depth_bias_slope_factor] és a [member depth_bias_constant_factor] alapján számítja ki."
+
+#. RDPipelineRasterizationState.depth_bias_slope_factor
+#: doc/classes/RDPipelineRasterizationState.xml
+msgid "A constant scale applied to the slope of each polygons' depth. Applied before [member depth_bias_constant_factor]."
+msgstr "Az egyes sokszögek mélységének meredekségére alkalmazott állandó szorzó. A [member depth_bias_constant_factor] előtt érvényesül."
+
+#. RDPipelineRasterizationState.discard_primitives
+#: doc/classes/RDPipelineRasterizationState.xml
+msgid "If [code]true[/code], primitives are discarded immediately before the rasterization stage."
+msgstr "Ha az értéke [code]true[/code], a renderelő közvetlenül a raszterizálás előtt eldobja a primitíveket."
+
+#. RDPipelineRasterizationState.enable_depth_clamp
+#: doc/classes/RDPipelineRasterizationState.xml
+msgid "If [code]true[/code], clamps depth values according to the minimum and maximum depth of the associated viewport."
+msgstr "Ha az értéke [code]true[/code], a renderelő a kapcsolódó nézetablak alsó és felső mélységhatára közé szorítja a mélységértékeket."
+
+#. RDPipelineRasterizationState.front_face
+#: doc/classes/RDPipelineRasterizationState.xml
+msgid "The winding order to use to determine which face of a triangle is considered its front face."
+msgstr "A csúcsok körüljárási sorrendje, amely meghatározza, hogy a háromszög melyik oldala számít elülsőnek."
+
+#. RDPipelineRasterizationState.line_width
+#: doc/classes/RDPipelineRasterizationState.xml
+msgid "The line width to use when drawing lines (in pixels). Thick lines may not be supported on all hardware."
+msgstr "A vonalak szélessége képpontban. A vastag vonalakat csak bizonyos eszközök támogatják."
+
+#. RDPipelineRasterizationState.patch_control_points
+#: doc/classes/RDPipelineRasterizationState.xml
+msgid "The number of control points to use when drawing a patch with tessellation enabled. Higher values result in higher quality at the cost of performance."
+msgstr "Tesszelláció használatakor a felületelem rajzolásához megadott vezérlőpontok száma. Nagyobb értékkel jobb minőség érhető el nagyobb számítási költség mellett."
+
+#. RDPipelineRasterizationState.wireframe
+#: doc/classes/RDPipelineRasterizationState.xml
+msgid "If [code]true[/code], performs wireframe rendering for triangles instead of flat or textured rendering."
+msgstr "Ha az értéke [code]true[/code], a háromszögek kitöltött vagy textúrázott felület helyett drótvázként jelennek meg."
+
+#. RDSamplerState.brief
+#: doc/classes/RDSamplerState.xml
+msgid "Sampler state (used by [RenderingDevice])."
+msgstr "A textúramintavételező állapota a [RenderingDevice] számára."
+
+#. RDSamplerState.border_color
+#: doc/classes/RDSamplerState.xml
+msgid "The border color that will be returned when sampling outside the sampler's bounds and the [member repeat_u], [member repeat_v] or [member repeat_w] modes have repeating disabled."
+msgstr "A mintavételi tartományon kívül visszaadott peremszín, ha az érintett tengelyen a [member repeat_u], a [member repeat_v] vagy a [member repeat_w] kikapcsolja az ismétlést."
+
+#. RDSamplerState.compare_op
+#: doc/classes/RDSamplerState.xml
+msgid "The compare operation to use. Only effective if [member enable_compare] is [code]true[/code]."
+msgstr "A mintavételnél alkalmazott összehasonlítási művelet. Csak akkor hatásos, ha a [member enable_compare] értéke [code]true[/code]."
+
+#. RDSamplerState.enable_compare
+#: doc/classes/RDSamplerState.xml
+msgid "If [code]true[/code], returned values will be based on the comparison operation defined in [member compare_op]. This is a hardware-based approach and is therefore faster than performing this manually in a shader. For example, compare operations are used for shadow map rendering by comparing depth values from a shadow sampler."
+msgstr "Ha az értéke [code]true[/code], a mintavételező a [member compare_op] szerinti összehasonlítás eredménye alapján ad vissza értéket. Az összehasonlítás hardveresen történik, így gyorsabb a shaderben végzett műveletnél. Árnyéktérkép rajzolásakor például mélységértékeket hasonlíthat össze."
+
+#. RDSamplerState.lod_bias
+#: doc/classes/RDSamplerState.xml
+msgid "The mipmap LOD bias to use. Positive values will make the sampler blurrier at a given distance, while negative values will make the sampler sharper at a given distance (at the risk of looking grainy). Recommended values are between [code]-0.5[/code] and [code]0.0[/code]. Only effective if the sampler has mipmaps available."
+msgstr "A mipmapszint kiválasztásának eltolása. Pozitív értéknél a textúra azonos távolságból elmosódottabb, negatívnál élesebb, esetenként szemcsésebb. Az ajánlott tartomány [code]-0.5[/code] és [code]0.0[/code] közé esik. A beállítás csak mipmapszintekkel rendelkező textúrán hatásos."
+
+#. RDSamplerState.mag_filter
+#: doc/classes/RDSamplerState.xml
+msgid "The sampler's magnification filter. It is the filtering method used when sampling texels that appear bigger than on-screen pixels."
+msgstr "Nagyítási szűrő. Akkor érvényesül, amikor egy texel a képernyő egy képpontjánál nagyobbnak látszik."
+
+#. RDSamplerState.min_filter
+#: doc/classes/RDSamplerState.xml
+msgid "The sampler's minification filter. It is the filtering method used when sampling texels that appear smaller than on-screen pixels."
+msgstr "Kicsinyítési szűrő. Akkor érvényesül, amikor egy texel a képernyő egy képpontjánál kisebbnek látszik."
+
+#. RDSamplerState.mip_filter
+#: doc/classes/RDSamplerState.xml
+msgid "The filtering method to use for mipmaps."
+msgstr "A mipmapszintek mintavételezésénél alkalmazott szűrés."
+
+#. RDSamplerState.repeat_u
+#: doc/classes/RDSamplerState.xml
+msgid "The repeat mode to use along the U axis of UV coordinates. This affects the returned values if sampling outside the UV bounds."
+msgstr "Az ismétlési mód az UV-koordináták U tengelyén. Meghatározza, milyen értéket ad vissza a mintavétel az UV-tartományon kívül."
+
+#. RDSamplerState.repeat_v
+#: doc/classes/RDSamplerState.xml
+msgid "The repeat mode to use along the V axis of UV coordinates. This affects the returned values if sampling outside the UV bounds."
+msgstr "Az ismétlési mód az UV-koordináták V tengelyén. Meghatározza, milyen értéket ad vissza a mintavétel az UV-tartományon kívül."
+
+#. RDSamplerState.repeat_w
+#: doc/classes/RDSamplerState.xml
+msgid "The repeat mode to use along the W axis of UV coordinates. This affects the returned values if sampling outside the UV bounds. Only effective for 3D samplers."
+msgstr "Az ismétlési mód a textúrakoordináták W tengelyén. Meghatározza, milyen értéket ad vissza a mintavétel a koordinátatartományon kívül. Csak 3D-s mintavételezőnél hatásos."
+
+#. RDSamplerState.unnormalized_uvw
+#: doc/classes/RDSamplerState.xml
+msgid "If [code]true[/code], the texture will be sampled with coordinates ranging from 0 to the texture's resolution. Otherwise, the coordinates will be normalized and range from 0 to 1."
+msgstr "Ha az értéke [code]true[/code], a mintavételi koordináták 0-tól a textúra felbontásáig terjednek. Egyébként normalizáltak, és 0-tól 1-ig terjednek."
+
+#. RDSamplerState.use_anisotropy
+#: doc/classes/RDSamplerState.xml
+msgid "If [code]true[/code], perform anisotropic sampling. See [member anisotropy_max]."
+msgstr "Ha az értéke [code]true[/code], anizotropikus mintavételt használ. Lásd a [member anisotropy_max] tulajdonságot."
+
+#. RDShaderSPIRV.brief
+#: doc/classes/RDShaderSPIRV.xml
+msgid "SPIR-V intermediate representation as part of an [RDShaderFile] (used by [RenderingDevice])."
+msgstr "Egy [RDShaderFile] részét képező SPIR-V köztes ábrázolás a [RenderingDevice] számára."
+
+#. RDShaderSPIRV.get_stage_bytecode
+#: doc/classes/RDShaderSPIRV.xml
+msgid "Equivalent to getting one of [member bytecode_compute], [member bytecode_fragment], [member bytecode_tesselation_control], [member bytecode_tesselation_evaluation], [member bytecode_vertex]."
+msgstr "Ugyanazt az értéket adja vissza, mint a megfelelő tulajdonság lekérése. A választható tulajdonságok a [member bytecode_compute], a [member bytecode_fragment], a [member bytecode_tesselation_control], a [member bytecode_tesselation_evaluation] és a [member bytecode_vertex]."
+
+#. RDShaderSPIRV.get_stage_compile_error
+#: doc/classes/RDShaderSPIRV.xml
+msgid "Returns the compilation error message for the given shader [param stage]. Equivalent to getting one of [member compile_error_compute], [member compile_error_fragment], [member compile_error_tesselation_control], [member compile_error_tesselation_evaluation], [member compile_error_vertex]."
+msgstr "A megadott [param stage] shaderszakasz fordítási hibaüzenetét adja vissza. Ugyanez az érték a [member compile_error_compute], a [member compile_error_fragment], a [member compile_error_tesselation_control], a [member compile_error_tesselation_evaluation] vagy a [member compile_error_vertex] tulajdonságból is lekérhető."
+
+#. RDShaderSPIRV.set_stage_bytecode
+#: doc/classes/RDShaderSPIRV.xml
+msgid "Sets the SPIR-V [param bytecode] for the given shader [param stage]. Equivalent to setting one of [member bytecode_compute], [member bytecode_fragment], [member bytecode_tesselation_control], [member bytecode_tesselation_evaluation], [member bytecode_vertex]."
+msgstr "A megadott [param stage] shaderszakasz SPIR-V bájtkódját a [param bytecode] értékre állítja. A megfelelő tulajdonság közvetlenül is beállítható. Ezek a [member bytecode_compute], a [member bytecode_fragment], a [member bytecode_tesselation_control], a [member bytecode_tesselation_evaluation] és a [member bytecode_vertex]."
+
+#. RDShaderSPIRV.set_stage_compile_error
+#: doc/classes/RDShaderSPIRV.xml
+msgid "Sets the compilation error message for the given shader [param stage] to [param compile_error]. Equivalent to setting one of [member compile_error_compute], [member compile_error_fragment], [member compile_error_tesselation_control], [member compile_error_tesselation_evaluation], [member compile_error_vertex]."
+msgstr "A megadott [param stage] shaderszakasz fordítási hibaüzenetét a [param compile_error] értékre állítja. A megfelelő tulajdonság közvetlenül is beállítható. Ezek a [member compile_error_compute], a [member compile_error_fragment], a [member compile_error_tesselation_control], a [member compile_error_tesselation_evaluation] és a [member compile_error_vertex]."
+
+#. RDShaderSPIRV.bytecode_any_hit
+#: doc/classes/RDShaderSPIRV.xml
+msgid "The SPIR-V bytecode for the any hit shader stage."
+msgstr "Bármely találatnál futó shaderszakasz SPIR-V bájtkódja."
+
+#. RDShaderSPIRV.bytecode_closest_hit
+#: doc/classes/RDShaderSPIRV.xml
+msgid "The SPIR-V bytecode for the closest hit shader stage."
+msgstr "A legközelebbi találatnál futó shaderszakasz SPIR-V bájtkódja."
+
+#. RDShaderSPIRV.bytecode_compute
+#: doc/classes/RDShaderSPIRV.xml
+msgid "The SPIR-V bytecode for the compute shader stage."
+msgstr "A számítási shaderszakasz SPIR-V bájtkódja."
+
+#. RDShaderSPIRV.bytecode_fragment
+#: doc/classes/RDShaderSPIRV.xml
+msgid "The SPIR-V bytecode for the fragment shader stage."
+msgstr "A fragmentshader-szakasz SPIR-V bájtkódja."
+
+#. RDShaderSPIRV.bytecode_intersection
+#: doc/classes/RDShaderSPIRV.xml
+msgid "The SPIR-V bytecode for the intersection shader stage."
+msgstr "A metszésvizsgálati shaderszakasz SPIR-V bájtkódja."
+
+#. RDShaderSPIRV.bytecode_miss
+#: doc/classes/RDShaderSPIRV.xml
+msgid "The SPIR-V bytecode for the miss shader stage."
+msgstr "A találat hiányában futó shaderszakasz SPIR-V bájtkódja."
+
+#. RDShaderSPIRV.bytecode_raygen
+#: doc/classes/RDShaderSPIRV.xml
+msgid "The SPIR-V bytecode for the ray generation shader stage."
+msgstr "A sugárindítási shaderszakasz SPIR-V bájtkódja."
+
+#. RDShaderSPIRV.bytecode_tesselation_control
+#: doc/classes/RDShaderSPIRV.xml
+msgid "The SPIR-V bytecode for the tessellation control shader stage."
+msgstr "A tesszellációt vezérlő shaderszakasz SPIR-V bájtkódja."
+
+#. RDShaderSPIRV.bytecode_tesselation_evaluation
+#: doc/classes/RDShaderSPIRV.xml
+msgid "The SPIR-V bytecode for the tessellation evaluation shader stage."
+msgstr "A tesszellációt kiértékelő shaderszakasz SPIR-V bájtkódja."
+
+#. RDShaderSPIRV.bytecode_vertex
+#: doc/classes/RDShaderSPIRV.xml
+msgid "The SPIR-V bytecode for the vertex shader stage."
+msgstr "A csúcsárnyalási szakasz SPIR-V bájtkódja."
+
+#. RDShaderSPIRV.compile_error_any_hit
+#: doc/classes/RDShaderSPIRV.xml
+msgid "The compilation error message for the any hit shader stage (set by the SPIR-V compiler and Godot). If empty, shader compilation was successful."
+msgstr "A bármely találatnál futó shaderszakasz fordítási hibaüzenete, amelyet a SPIR-V fordító és a Godot állít be. Üres érték esetén a fordítás sikerült."
+
+#. RDShaderSPIRV.compile_error_closest_hit
+#: doc/classes/RDShaderSPIRV.xml
+msgid "The compilation error message for the closest hit shader stage (set by the SPIR-V compiler and Godot). If empty, shader compilation was successful."
+msgstr "A legközelebbi találatnál futó shaderszakasz fordítási hibaüzenete, amelyet a SPIR-V fordító és a Godot állít be. Üres érték esetén a fordítás sikerült."
+
+#. RDShaderSPIRV.compile_error_compute
+#: doc/classes/RDShaderSPIRV.xml
+msgid "The compilation error message for the compute shader stage (set by the SPIR-V compiler and Godot). If empty, shader compilation was successful."
+msgstr "A számítási shaderszakasz fordítási hibaüzenete, amelyet a SPIR-V fordító és a Godot állít be. Üres érték esetén a fordítás sikerült."
+
+#. RDShaderSPIRV.compile_error_fragment
+#: doc/classes/RDShaderSPIRV.xml
+msgid "The compilation error message for the fragment shader stage (set by the SPIR-V compiler and Godot). If empty, shader compilation was successful."
+msgstr "A fragmentshader-szakasz fordítási hibaüzenete, amelyet a SPIR-V fordító és a Godot állít be. Üres érték esetén a fordítás sikerült."
+
+#. RDShaderSPIRV.compile_error_intersection
+#: doc/classes/RDShaderSPIRV.xml
+msgid "The compilation error message for the intersection shader stage (set by the SPIR-V compiler and Godot). If empty, shader compilation was successful."
+msgstr "A metszésvizsgálati shaderszakasz fordítási hibaüzenete, amelyet a SPIR-V fordító és a Godot állít be. Üres érték esetén a fordítás sikerült."
+
+#. RDShaderSPIRV.compile_error_miss
+#: doc/classes/RDShaderSPIRV.xml
+msgid "The compilation error message for the miss shader stage (set by the SPIR-V compiler and Godot). If empty, shader compilation was successful."
+msgstr "A találat hiányában futó shaderszakasz fordítási hibaüzenete, amelyet a SPIR-V fordító és a Godot állít be. Üres érték esetén a fordítás sikerült."
+
+#. RDShaderSPIRV.compile_error_raygen
+#: doc/classes/RDShaderSPIRV.xml
+msgid "The compilation error message for the ray generation shader stage (set by the SPIR-V compiler and Godot). If empty, shader compilation was successful."
+msgstr "A sugárindítási shaderszakasz fordítási hibaüzenete, amelyet a SPIR-V fordító és a Godot állít be. Üres érték esetén a fordítás sikerült."
+
+#. RDShaderSPIRV.compile_error_tesselation_control
+#: doc/classes/RDShaderSPIRV.xml
+msgid "The compilation error message for the tessellation control shader stage (set by the SPIR-V compiler and Godot). If empty, shader compilation was successful."
+msgstr "A tesszellációt vezérlő shaderszakasz fordítási hibaüzenete, amelyet a SPIR-V fordító és a Godot állít be. Üres érték esetén a fordítás sikerült."
+
+#. RDShaderSPIRV.compile_error_tesselation_evaluation
+#: doc/classes/RDShaderSPIRV.xml
+msgid "The compilation error message for the tessellation evaluation shader stage (set by the SPIR-V compiler and Godot). If empty, shader compilation was successful."
+msgstr "A tesszellációt kiértékelő shaderszakasz fordítási hibaüzenete, amelyet a SPIR-V fordító és a Godot állít be. Üres érték esetén a fordítás sikerült."
+
+#. RDShaderSPIRV.compile_error_vertex
+#: doc/classes/RDShaderSPIRV.xml
+msgid "The compilation error message for the vertex shader stage (set by the SPIR-V compiler and Godot). If empty, shader compilation was successful."
+msgstr "A csúcsárnyalási szakasz fordítási hibaüzenete, amelyet a SPIR-V fordító és a Godot állít be. Üres érték esetén a fordítás sikerült."
+
+#. RDShaderSource.brief
+#: doc/classes/RDShaderSource.xml
+msgid "Shader source code (used by [RenderingDevice])."
+msgstr "Shaderforráskód a [RenderingDevice] számára."
+
+#. RDShaderSource.language
+#: doc/classes/RDShaderSource.xml
+msgid "The language the shader is written in."
+msgstr "A shader forráskódjának nyelve."
