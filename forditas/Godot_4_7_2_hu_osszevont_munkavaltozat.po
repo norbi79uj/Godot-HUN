@@ -49807,7 +49807,7 @@ msgstr "A [param array_index] által kijelölt attribútum eltolását adja viss
 #. RenderingServer.mesh_surface_get_format_skin_stride
 #: doc/classes/RenderingServer.xml
 msgid "Returns the stride of the skin buffer for a mesh with given [param format]."
-msgstr "A megadott [param format] formátumú háló egymást követő csúcspozícióinak bájttávolságát adja vissza. A pozíciók egymás után helyezkednek el a csúcspufferben, a normál- és érintővektoroktól elkülönítve."
+msgstr "A megadott [param format] formátumú háló skinpufferének bájtlépését adja vissza."
 
 #. RenderingServer.mesh_surface_get_material
 #: doc/classes/RenderingServer.xml
@@ -50959,3 +50959,504 @@ msgstr "Az árnyékmaszkolás ki van kapcsolva. A beégetés nem hoz létre árn
 #: doc/classes/ReflectionProbe.xml
 msgid "Captures its surroundings to create fast, accurate reflections from a given point."
 msgstr "Rögzíti a környezetét, hogy a renderelő gyorsan és pontosan jeleníthesse meg egy adott pontból mintavételezett tükröződéseket."
+
+#. RenderingServer.canvas_item_add_circle
+#: doc/classes/RenderingServer.xml
+msgid "Draws a circle on the [CanvasItem] pointed to by the [param item] [RID]. See also [method CanvasItem.draw_circle]."
+msgstr "Kört rajzol a [param item] [RID] által azonosított [CanvasItem] elemre. Lásd még a [method CanvasItem.draw_circle] metódust."
+
+#. RenderingServer.canvas_item_add_clip_ignore
+#: doc/classes/RenderingServer.xml
+msgid "If [param ignore] is [code]true[/code], ignore clipping on items drawn with this canvas item until this is called again with [param ignore] set to [code]false[/code]."
+msgstr "Ha az [param ignore] értéke [code]true[/code], a vászonelem következő rajzolási műveletei figyelmen kívül hagyják a vágást. A vágást úgy kapcsolhatod vissza, hogy újra meghívod a metódust [code]false[/code] értékű [param ignore] paraméterrel."
+
+#. RenderingServer.canvas_item_add_ellipse
+#: doc/classes/RenderingServer.xml
+msgid "Draws an ellipse with semi-major axis [param major] and semi-minor axis [param minor] on the [CanvasItem] pointed to by the [param item] [RID]. See also [method CanvasItem.draw_ellipse]."
+msgstr "A [param major] nagy és a [param minor] kis féltengelyű ellipszist rajzol a [param item] [RID] által azonosított [CanvasItem] elemre. Lásd még a [method CanvasItem.draw_ellipse] metódust."
+
+#. RenderingServer.canvas_item_add_lcd_texture_rect_region
+#: doc/classes/RenderingServer.xml
+msgid "See also [method CanvasItem.draw_lcd_texture_rect_region]."
+msgstr "Lásd még a [method CanvasItem.draw_lcd_texture_rect_region] metódust."
+
+#. RenderingServer.canvas_item_add_line
+#: doc/classes/RenderingServer.xml
+msgid "Draws a line on the [CanvasItem] pointed to by the [param item] [RID]. See also [method CanvasItem.draw_line]."
+msgstr "Vonalszakaszt rajzol a [param item] [RID] által azonosított [CanvasItem] elemre. Lásd még a [method CanvasItem.draw_line] metódust."
+
+#. RenderingServer.canvas_item_add_mesh
+#: doc/classes/RenderingServer.xml
+msgid "Draws a mesh created with [method mesh_create] with given [param transform], [param modulate] color, and [param texture]. This is used internally by [MeshInstance2D]."
+msgstr "A [method mesh_create] metódussal létrehozott hálót rajzolja ki a megadott [param transform] transzformációval, [param modulate] színszorzóval és [param texture] textúrával. A [MeshInstance2D] ezt a metódust használja belsőleg."
+
+#. RenderingServer.canvas_item_add_msdf_texture_rect_region
+#: doc/classes/RenderingServer.xml
+msgid "See also [method CanvasItem.draw_msdf_texture_rect_region]."
+msgstr "Lásd még a [method CanvasItem.draw_msdf_texture_rect_region] metódust."
+
+#. RenderingServer.canvas_item_add_multiline
+#: doc/classes/RenderingServer.xml
+msgid "Draws a 2D multiline on the [CanvasItem] pointed to by the [param item] [RID]. See also [method CanvasItem.draw_multiline] and [method CanvasItem.draw_multiline_colors]."
+msgstr "Különálló 2D-s vonalszakaszokat rajzol a [param item] [RID] által azonosított [CanvasItem] elemre. Lásd még a [method CanvasItem.draw_multiline] és a [method CanvasItem.draw_multiline_colors] metódust."
+
+#. RenderingServer.canvas_item_add_multimesh
+#: doc/classes/RenderingServer.xml
+msgid "Draws a 2D [MultiMesh] on the [CanvasItem] pointed to by the [param item] [RID]. See also [method CanvasItem.draw_multimesh]."
+msgstr "Kirajzol egy 2D-s [MultiMesh] erőforrást a [param item] [RID] által azonosított [CanvasItem] elemre. Lásd még a [method CanvasItem.draw_multimesh] metódust."
+
+#. RenderingServer.canvas_item_add_nine_patch
+#: doc/classes/RenderingServer.xml
+msgid "Draws a nine-patch rectangle on the [CanvasItem] pointed to by the [param item] [RID]."
+msgstr "Kilenc részre osztott téglalapot rajzol a [param item] [RID] által azonosított [CanvasItem] elemre."
+
+#. RenderingServer.canvas_item_add_particles
+#: doc/classes/RenderingServer.xml
+msgid "Draws particles on the [CanvasItem] pointed to by the [param item] [RID]."
+msgstr "Részecskéket rajzol a [param item] [RID] által azonosított [CanvasItem] elemre."
+
+#. RenderingServer.canvas_item_add_polyline
+#: doc/classes/RenderingServer.xml
+msgid "Draws a 2D polyline on the [CanvasItem] pointed to by the [param item] [RID]. See also [method CanvasItem.draw_polyline] and [method CanvasItem.draw_polyline_colors]."
+msgstr "Összefüggő 2D-s vonalszakaszokat rajzol a [param item] [RID] által azonosított [CanvasItem] elemre. Lásd még a [method CanvasItem.draw_polyline] és a [method CanvasItem.draw_polyline_colors] metódust."
+
+#. RenderingServer.canvas_item_add_primitive
+#: doc/classes/RenderingServer.xml
+msgid "Draws a 2D primitive on the [CanvasItem] pointed to by the [param item] [RID]. See also [method CanvasItem.draw_primitive]."
+msgstr "2D-s primitívet rajzol a [param item] [RID] által azonosított [CanvasItem] elemre. Lásd még a [method CanvasItem.draw_primitive] metódust."
+
+#. RenderingServer.canvas_item_add_rect
+#: doc/classes/RenderingServer.xml
+msgid "Draws a rectangle on the [CanvasItem] pointed to by the [param item] [RID]. See also [method CanvasItem.draw_rect]."
+msgstr "Téglalapot rajzol a [param item] [RID] által azonosított [CanvasItem] elemre. Lásd még a [method CanvasItem.draw_rect] metódust."
+
+#. RenderingServer.canvas_item_add_set_transform
+#: doc/classes/RenderingServer.xml
+msgid "Sets a [Transform2D] that will be used to transform subsequent canvas item commands."
+msgstr "Beállítja a vászonelem további rajzolási parancsaira alkalmazott [Transform2D] transzformációt."
+
+#. RenderingServer.canvas_item_add_texture_rect
+#: doc/classes/RenderingServer.xml
+msgid "Draws a 2D textured rectangle on the [CanvasItem] pointed to by the [param item] [RID]. See also [method CanvasItem.draw_texture_rect] and [method Texture2D.draw_rect]."
+msgstr "Textúrázott 2D-s téglalapot rajzol a [param item] [RID] által azonosított [CanvasItem] elemre. Lásd még a [method CanvasItem.draw_texture_rect] és a [method Texture2D.draw_rect] metódust."
+
+#. RenderingServer.canvas_item_add_texture_rect_region
+#: doc/classes/RenderingServer.xml
+msgid "Draws the specified region of a 2D textured rectangle on the [CanvasItem] pointed to by the [param item] [RID]. See also [method CanvasItem.draw_texture_rect_region] and [method Texture2D.draw_rect_region]."
+msgstr "A textúra megadott részét egy 2D-s téglalapba rajzolja a [param item] [RID] által azonosított [CanvasItem] elemen. Lásd még a [method CanvasItem.draw_texture_rect_region] és a [method Texture2D.draw_rect_region] metódust."
+
+#. RenderingServer.canvas_light_attach_to_canvas
+#: doc/classes/RenderingServer.xml
+msgid "Attaches the canvas light to the canvas. Removes it from its previous canvas."
+msgstr "A fényt a megadott vászonhoz rendeli, és leválasztja az előző vásznáról."
+
+#. RenderingServer.canvas_light_occluder_attach_to_canvas
+#: doc/classes/RenderingServer.xml
+msgid "Attaches a light occluder to the canvas. Removes it from its previous canvas."
+msgstr "A fénykitakarót a megadott vászonhoz rendeli, és leválasztja az előző vásznáról."
+
+#. RenderingServer.canvas_light_occluder_set_as_sdf_collision
+#: doc/classes/RenderingServer.xml
+msgid "Enables or disables using the light occluder as a signed distance field for 2D particle collision."
+msgstr "Beállítja, hogy a fénykitakaró bekerüljön-e a 2D-s részecskeütközésekhez használt előjeles távolságmezőbe."
+
+#. RenderingServer.canvas_light_occluder_set_enabled
+#: doc/classes/RenderingServer.xml
+msgid "Enables or disables light occluder."
+msgstr "Engedélyezi vagy letiltja a fénykitakarót."
+
+#. RenderingServer.canvas_light_occluder_set_interpolated
+#: doc/classes/RenderingServer.xml
+msgid "If [param interpolated] is [code]true[/code], turns on physics interpolation for the light occluder."
+msgstr "Ha az [param interpolated] értéke [code]true[/code], a fénykitakaró fizikai interpolációt használ."
+
+#. RenderingServer.canvas_light_occluder_set_light_mask
+#. RenderingServer.canvas_light_set_item_cull_mask
+#: doc/classes/RenderingServer.xml
+msgid "The light mask. See [LightOccluder2D] for more information on light masks."
+msgstr "A fénymaszk. A fénymaszk működéséről a [LightOccluder2D] osztály leírásában olvashatsz."
+
+#. RenderingServer.canvas_light_occluder_set_polygon
+#: doc/classes/RenderingServer.xml
+msgid "Sets a light occluder's polygon."
+msgstr "Beállítja a fénykitakaró sokszögét."
+
+#. RenderingServer.canvas_light_occluder_set_transform
+#: doc/classes/RenderingServer.xml
+msgid "Sets a light occluder's [Transform2D]."
+msgstr "Beállítja a fénykitakaró [Transform2D] transzformációját."
+
+#. RenderingServer.canvas_light_set_blend_mode
+#: doc/classes/RenderingServer.xml
+msgid "Sets the blend mode for the given canvas light to [param mode]. Equivalent to [member Light2D.blend_mode]."
+msgstr "A [param mode] értékre állítja a vászonfény keverési módját. A [member Light2D.blend_mode] tulajdonságnak felel meg."
+
+#. RenderingServer.canvas_light_set_color
+#: doc/classes/RenderingServer.xml
+msgid "Sets the color for a light."
+msgstr "Beállítja a fény színét."
+
+#. RenderingServer.canvas_light_set_enabled
+#: doc/classes/RenderingServer.xml
+msgid "Enables or disables a canvas light."
+msgstr "Engedélyezi vagy letiltja a vászonfényt."
+
+#. RenderingServer.canvas_light_set_energy
+#: doc/classes/RenderingServer.xml
+msgid "Sets a canvas light's energy."
+msgstr "Beállítja a vászonfény energiáját."
+
+#. RenderingServer.canvas_light_set_height
+#: doc/classes/RenderingServer.xml
+msgid "Sets a canvas light's height."
+msgstr "Beállítja a vászonfény magasságát."
+
+#. RenderingServer.canvas_light_set_interpolated
+#: doc/classes/RenderingServer.xml
+msgid "If [param interpolated] is [code]true[/code], turns on physics interpolation for the canvas light."
+msgstr "Ha az [param interpolated] értéke [code]true[/code], a vászonfény fizikai interpolációt használ."
+
+#. RenderingServer.canvas_light_set_item_shadow_cull_mask
+#: doc/classes/RenderingServer.xml
+msgid "The binary mask used to determine which layers this canvas light's shadows affects. See [LightOccluder2D] for more information on light masks."
+msgstr "A bitmaszk megadja, mely rétegekre hat a vászonfény árnyéka. A maszkokról a [LightOccluder2D] osztály leírásában olvashatsz."
+
+#. RenderingServer.canvas_light_set_layer_range
+#: doc/classes/RenderingServer.xml
+msgid "The layer range that gets rendered with this light."
+msgstr "A megvilágított vászonrétegek tartománya."
+
+#. RenderingServer.canvas_light_set_mode
+#: doc/classes/RenderingServer.xml
+msgid "Sets the mode of the canvas light."
+msgstr "Beállítja a vászonfény módját."
+
+#. RenderingServer.canvas_light_set_shadow_color
+#: doc/classes/RenderingServer.xml
+msgid "Sets the color of the canvas light's shadow."
+msgstr "Beállítja a vászonfény árnyékának színét."
+
+#. RenderingServer.canvas_light_set_shadow_enabled
+#: doc/classes/RenderingServer.xml
+msgid "Enables or disables the canvas light's shadow."
+msgstr "Engedélyezi vagy letiltja a vászonfény árnyékvetését."
+
+#. RenderingServer.canvas_light_set_shadow_filter
+#: doc/classes/RenderingServer.xml
+msgid "Sets the canvas light's shadow's filter."
+msgstr "Beállítja a vászonfény árnyékszűrését."
+
+#. RenderingServer.canvas_light_set_shadow_smooth
+#: doc/classes/RenderingServer.xml
+msgid "Smoothens the shadow. The lower, the smoother."
+msgstr "Módosítja az árnyékszűrő mintái közötti távolságot. Nagyobb értéknél a szűrő szélesebb tartományból vesz mintát."
+
+#. RenderingServer.canvas_light_set_texture
+#: doc/classes/RenderingServer.xml
+msgid "Sets the texture to be used by a [PointLight2D]. Equivalent to [member PointLight2D.texture]."
+msgstr "Beállítja a [PointLight2D] fényhez használt textúrát. A [member PointLight2D.texture] tulajdonságnak felel meg."
+
+#. RenderingServer.canvas_light_set_texture_offset
+#: doc/classes/RenderingServer.xml
+msgid "Sets the offset of a [PointLight2D]'s texture. Equivalent to [member PointLight2D.offset]."
+msgstr "Beállítja a [PointLight2D] fény textúrájának eltolását. A [member PointLight2D.offset] tulajdonságnak felel meg."
+
+#. RenderingServer.canvas_light_set_texture_scale
+#: doc/classes/RenderingServer.xml
+msgid "Sets the scale factor of a [PointLight2D]'s texture. Equivalent to [member PointLight2D.texture_scale]."
+msgstr "Beállítja a [PointLight2D] fény textúrájának méretezési tényezőjét. A [member PointLight2D.texture_scale] tulajdonságnak felel meg."
+
+#. RenderingServer.canvas_light_set_transform
+#: doc/classes/RenderingServer.xml
+msgid "Sets the canvas light's [Transform2D]."
+msgstr "Beállítja a vászonfény [Transform2D] transzformációját."
+
+#. RenderingServer.canvas_light_set_z_range
+#: doc/classes/RenderingServer.xml
+msgid "Sets the Z range of objects that will be affected by this light. Equivalent to [member Light2D.range_z_min] and [member Light2D.range_z_max]."
+msgstr "Beállítja, mely Z-indexek tartományában világítson meg objektumokat a fény. A [member Light2D.range_z_min] és a [member Light2D.range_z_max] tulajdonságnak felel meg."
+
+#. RenderingServer.canvas_occluder_polygon_set_cull_mode
+#: doc/classes/RenderingServer.xml
+msgid "Sets an occluder polygon's cull mode."
+msgstr "Beállítja a fénykitakaró sokszög oldal szerinti kiszűrési módját."
+
+#. RenderingServer.canvas_occluder_polygon_set_shape
+#: doc/classes/RenderingServer.xml
+msgid "Sets the shape of the occluder polygon."
+msgstr "Beállítja a fénykitakaró sokszög alakját."
+
+#. RenderingServer.CANVAS_LIGHT_MODE_POINT
+#: doc/classes/RenderingServer.xml
+msgid "2D point light (see [PointLight2D])."
+msgstr "2D-s pontfény. Lásd a [PointLight2D] osztályt."
+
+#. RenderingServer.CANVAS_LIGHT_MODE_DIRECTIONAL
+#: doc/classes/RenderingServer.xml
+msgid "2D directional (sun/moon) light (see [DirectionalLight2D])."
+msgstr "2D-s irányfény, például napfény vagy holdfény. Lásd a [DirectionalLight2D] osztályt."
+
+#. RenderingServer.CANVAS_LIGHT_BLEND_MODE_ADD
+#: doc/classes/RenderingServer.xml
+msgid "Adds light color additive to the canvas."
+msgstr "Hozzáadja a fény színét a vászon színéhez."
+
+#. RenderingServer.CANVAS_LIGHT_BLEND_MODE_SUB
+#: doc/classes/RenderingServer.xml
+msgid "Adds light color subtractive to the canvas."
+msgstr "Kivonja a fény színét a vászon színéből."
+
+#. RenderingServer.CANVAS_LIGHT_BLEND_MODE_MIX
+#: doc/classes/RenderingServer.xml
+msgid "The light adds color depending on transparency."
+msgstr "Az átlátszóság alapján keveri a fény színét a vászon színével."
+
+#. RenderingServer.multimesh_get_aabb
+#: doc/classes/RenderingServer.xml
+msgid "Calculates and returns the axis-aligned bounding box that encloses all instances within the multimesh."
+msgstr "Kiszámítja és visszaadja a MultiMesh összes példányát befoglaló, tengelyekhez igazított dobozt."
+
+#. RenderingServer.multimesh_get_buffer_rd_rid
+#: doc/classes/RenderingServer.xml
+msgid "Returns the [RenderingDevice] [RID] handle of the [MultiMesh], which can be used as any other buffer on the Rendering Device."
+msgstr "A [MultiMesh] pufferéhez tartozó [RenderingDevice] [RID] azonosítót adja vissza. A puffer a RenderingDevice más puffereihez hasonlóan használható."
+
+#. RenderingServer.multimesh_get_custom_aabb
+#: doc/classes/RenderingServer.xml
+msgid "Returns the custom AABB defined for this MultiMesh resource."
+msgstr "A MultiMesh erőforrás egyéni, tengelyekhez igazított befoglaló dobozát adja vissza."
+
+#. RenderingServer.multimesh_get_instance_count
+#: doc/classes/RenderingServer.xml
+msgid "Returns the number of instances allocated for this multimesh."
+msgstr "A MultiMesh számára lefoglalt példányok számát adja vissza."
+
+#. RenderingServer.multimesh_get_mesh
+#: doc/classes/RenderingServer.xml
+msgid "Returns the RID of the mesh that will be used in drawing this multimesh."
+msgstr "A MultiMesh kirajzolásához használt háló RID azonosítóját adja vissza."
+
+#. RenderingServer.multimesh_get_visible_instances
+#: doc/classes/RenderingServer.xml
+msgid "Returns the number of visible instances for this multimesh."
+msgstr "A MultiMesh látható példányainak számát megadó beállítást adja vissza."
+
+#. RenderingServer.multimesh_instance_get_color
+#: doc/classes/RenderingServer.xml
+msgid "Returns the color by which the specified instance will be modulated."
+msgstr "A megadott példány színmodulációjához használt színt adja vissza."
+
+#. RenderingServer.multimesh_instance_get_custom_data
+#: doc/classes/RenderingServer.xml
+msgid "Returns the custom data associated with the specified instance."
+msgstr "A megadott példányhoz tartozó egyéni adatokat adja vissza."
+
+#. RenderingServer.multimesh_instance_get_transform
+#: doc/classes/RenderingServer.xml
+msgid "Returns the [Transform3D] of the specified instance."
+msgstr "A megadott példány [Transform3D] transzformációját adja vissza."
+
+#. RenderingServer.multimesh_instance_get_transform_2d
+#: doc/classes/RenderingServer.xml
+msgid "Returns the [Transform2D] of the specified instance. For use when the multimesh is set to use 2D transforms."
+msgstr "A megadott példány [Transform2D] transzformációját adja vissza. Akkor használd, ha a MultiMesh 2D-s transzformációkat tárol."
+
+#. RenderingServer.multimesh_instance_set_color
+#: doc/classes/RenderingServer.xml
+msgid "Sets the color by which this instance will be modulated. Equivalent to [method MultiMesh.set_instance_color]."
+msgstr "Beállítja a példány színmodulációjához használt színt. A [method MultiMesh.set_instance_color] metódusnak felel meg."
+
+#. RenderingServer.multimesh_instance_set_custom_data
+#: doc/classes/RenderingServer.xml
+msgid "Sets the custom data for this instance. Custom data is passed as a [Color], but is interpreted as a [code]vec4[/code] in the shader. Equivalent to [method MultiMesh.set_instance_custom_data]."
+msgstr "Beállítja a példány egyéni adatait. Az adatokat [Color] értékként kell megadni, a shader azonban [code]vec4[/code] értékként értelmezi őket. A [method MultiMesh.set_instance_custom_data] metódusnak felel meg."
+
+#. RenderingServer.multimesh_instance_set_transform
+#: doc/classes/RenderingServer.xml
+msgid "Sets the [Transform3D] for this instance. Equivalent to [method MultiMesh.set_instance_transform]."
+msgstr "Beállítja a példány [Transform3D] transzformációját. A [method MultiMesh.set_instance_transform] metódusnak felel meg."
+
+#. RenderingServer.multimesh_instance_set_transform_2d
+#: doc/classes/RenderingServer.xml
+msgid "Sets the [Transform2D] for this instance. For use when multimesh is used in 2D. Equivalent to [method MultiMesh.set_instance_transform_2d]."
+msgstr "Beállítja a példány [Transform2D] transzformációját. 2D-s MultiMesh esetén használható. A [method MultiMesh.set_instance_transform_2d] metódusnak felel meg."
+
+#. RenderingServer.multimesh_set_custom_aabb
+#: doc/classes/RenderingServer.xml
+msgid "Sets the custom AABB for this MultiMesh resource."
+msgstr "Beállítja a MultiMesh erőforrás egyéni, tengelyekhez igazított befoglaló dobozát."
+
+#. RenderingServer.multimesh_set_mesh
+#: doc/classes/RenderingServer.xml
+msgid "Sets the mesh to be drawn by the multimesh. Equivalent to [member MultiMesh.mesh]."
+msgstr "Beállítja, melyik hálót rajzolja ki a MultiMesh. A [member MultiMesh.mesh] tulajdonságnak felel meg."
+
+#. RenderingServer.multimesh_set_physics_interpolated
+#: doc/classes/RenderingServer.xml
+msgid "Turns on and off physics interpolation for this MultiMesh resource."
+msgstr "Ki- vagy bekapcsolja a MultiMesh erőforrás fizikai interpolációját."
+
+#. RenderingServer.multimesh_set_visible_instances
+#: doc/classes/RenderingServer.xml
+msgid "Sets the number of instances visible at a given time. If -1, all instances that have been allocated are drawn. Equivalent to [member MultiMesh.visible_instance_count]."
+msgstr "Beállítja, egyszerre hány példány legyen látható. A -1 érték az összes lefoglalt példányt kirajzolja. A [member MultiMesh.visible_instance_count] tulajdonságnak felel meg."
+
+#. RenderingServer.occluder_set_mesh
+#: doc/classes/RenderingServer.xml
+msgid "Sets the mesh data for the given occluder RID, which controls the shape of the occlusion culling that will be performed."
+msgstr "Beállítja a megadott RID azonosítójú kitakaró hálóadatait. A háló alakja meghatározza a takarás alapú kiszűréshez használt felületet."
+
+#. RenderingServer.particles_collision_set_attractor_attenuation
+#: doc/classes/RenderingServer.xml
+msgid "Sets the attenuation [param curve] for the 3D GPU particles attractor specified by the [param particles_collision] RID. Only used for attractors, not colliders. Equivalent to [member GPUParticlesAttractor3D.attenuation]."
+msgstr "Beállítja a [param particles_collision] RID-del megadott 3D-s GPU-részecskevonzó csillapítási görbéjét meghatározó [param curve] értéket. Csak a vonzókra hat, az ütközőkre nem. A [member GPUParticlesAttractor3D.attenuation] tulajdonságnak felel meg."
+
+#. RenderingServer.skeleton_allocate_data
+#: doc/classes/RenderingServer.xml
+msgid "Allocates data for this skeleton using the number of bones specified in [param bones]. If [param is_2d_skeleton] is [code]true[/code], the skeleton will be treated as a 2D skeleton instead of a 3D skeleton. See also [method skeleton_get_bone_count]."
+msgstr "Helyet foglal a csontváz adatainak a [param bones] paraméterben megadott csontszám alapján. Ha az [param is_2d_skeleton] értéke [code]true[/code], a motor 2D-s csontvázként kezeli, egyébként 3D-sként. Lásd még a [method skeleton_get_bone_count] metódust."
+
+#. RenderingServer.skeleton_bone_get_transform
+#: doc/classes/RenderingServer.xml
+msgid "Returns the [Transform3D] set for a specific bone of this skeleton."
+msgstr "A csontváz megadott csontjához beállított [Transform3D] transzformációt adja vissza."
+
+#. RenderingServer.skeleton_bone_get_transform_2d
+#: doc/classes/RenderingServer.xml
+msgid "Returns the [Transform2D] set for a specific bone of this skeleton."
+msgstr "A csontváz megadott csontjához beállított [Transform2D] transzformációt adja vissza."
+
+#. RenderingServer.skeleton_bone_set_transform
+#: doc/classes/RenderingServer.xml
+msgid "Sets the [Transform3D] for a specific bone of this skeleton."
+msgstr "Beállítja a csontváz megadott csontjának [Transform3D] transzformációját."
+
+#. RenderingServer.skeleton_bone_set_transform_2d
+#: doc/classes/RenderingServer.xml
+msgid "Sets the [Transform2D] for a specific bone of this skeleton."
+msgstr "Beállítja a csontváz megadott csontjának [Transform2D] transzformációját."
+
+#. RenderingServer.skeleton_get_bone_count
+#: doc/classes/RenderingServer.xml
+msgid "Returns the number of bones allocated for this skeleton. See also [method skeleton_allocate_data]."
+msgstr "A csontváz számára lefoglalt csontok számát adja vissza. Lásd még a [method skeleton_allocate_data] metódust."
+
+#. RenderingServer.skeleton_set_base_transform_2d
+#: doc/classes/RenderingServer.xml
+msgid "Sets the base [Transform2D] to use for the specified skeleton."
+msgstr "Beállítja a megadott csontváz [Transform2D] alaptranszformációját."
+
+#. RenderingServer.MULTIMESH_TRANSFORM_2D
+#: doc/classes/RenderingServer.xml
+msgid "Use [Transform2D] to store MultiMesh transform."
+msgstr "A MultiMesh transzformációit [Transform2D] értékként tárolja."
+
+#. RenderingServer.MULTIMESH_TRANSFORM_3D
+#: doc/classes/RenderingServer.xml
+msgid "Use [Transform3D] to store MultiMesh transform."
+msgstr "A MultiMesh transzformációit [Transform3D] értékként tárolja."
+
+#. RenderingServer.MULTIMESH_INTERP_QUALITY_FAST
+#: doc/classes/RenderingServer.xml
+msgid "MultiMesh physics interpolation favors speed over quality."
+msgstr "A MultiMesh fizikai interpolációja a gyorsabb számítást részesíti előnyben."
+
+#. RenderingServer.MULTIMESH_INTERP_QUALITY_HIGH
+#: doc/classes/RenderingServer.xml
+msgid "MultiMesh physics interpolation favors quality over speed."
+msgstr "A MultiMesh fizikai interpolációja a minőséget részesíti előnyben a sebességgel szemben."
+
+#. RenderingServer.PARTICLES_MODE_2D
+#: doc/classes/RenderingServer.xml
+msgid "2D particles."
+msgstr "2D-s részecskék."
+
+#. RenderingServer.PARTICLES_MODE_3D
+#: doc/classes/RenderingServer.xml
+msgid "3D particles."
+msgstr "3D-s részecskék."
+
+#. RenderingServer.PARTICLES_TRANSFORM_ALIGN_LOCAL_BILLBOARD
+#: doc/classes/RenderingServer.xml
+msgid "Billboard each particles around a local axis."
+msgstr "A részecskéket egy helyi tengely körül a kamera felé fordítja."
+
+#. RenderingServer.PARTICLES_ALIGN_CHANNEL_FILTER_DISABLED
+#: doc/classes/RenderingServer.xml
+msgid "Do not read from CUSTOM when performing billboarding."
+msgstr "A kamerához igazítás nem olvas szögértéket a CUSTOM változóból."
+
+#. RenderingServer.PARTICLES_ALIGN_CHANNEL_FILTER_X
+#: doc/classes/RenderingServer.xml
+msgid "Read from [code]CUSTOM.x[/code] when performing billboarding and use it as an angle, in radians."
+msgstr "A kamerához igazításhoz radiánban értelmezett szögként olvassa ki a [code]CUSTOM.x[/code] értékét."
+
+#. RenderingServer.PARTICLES_ALIGN_CHANNEL_FILTER_Y
+#: doc/classes/RenderingServer.xml
+msgid "Read from [code]CUSTOM.y[/code] when performing billboarding and use it as an angle, in radians."
+msgstr "A kamerához igazításhoz radiánban értelmezett szögként olvassa ki a [code]CUSTOM.y[/code] értékét."
+
+#. RenderingServer.PARTICLES_ALIGN_CHANNEL_FILTER_Z
+#: doc/classes/RenderingServer.xml
+msgid "Read from [code]CUSTOM.z[/code] when performing billboarding and use it as an angle, in radians."
+msgstr "A kamerához igazításhoz radiánban értelmezett szögként olvassa ki a [code]CUSTOM.z[/code] értékét."
+
+#. RenderingServer.PARTICLES_ALIGN_CHANNEL_FILTER_W
+#: doc/classes/RenderingServer.xml
+msgid "Read from [code]CUSTOM.w[/code] when performing billboarding and use it as an angle, in radians."
+msgstr "A kamerához igazításhoz radiánban értelmezett szögként olvassa ki a [code]CUSTOM.w[/code] értékét."
+
+#. RenderingServer.PARTICLES_ALIGN_AXIS_X
+#: doc/classes/RenderingServer.xml
+msgid "Use the X axis for local billboarding."
+msgstr "A helyi X tengely körül fordítja a részecskét a kamera felé."
+
+#. RenderingServer.PARTICLES_ALIGN_AXIS_Y
+#: doc/classes/RenderingServer.xml
+msgid "Use the Y axis for local billboarding."
+msgstr "A helyi Y tengely körül fordítja a részecskét a kamera felé."
+
+#. RenderingServer.PARTICLES_DRAW_ORDER_INDEX
+#: doc/classes/RenderingServer.xml
+msgid "Draw particles in the order that they appear in the particles array."
+msgstr "A részecskéket a tömbben elfoglalt helyük sorrendjében rajzolja ki."
+
+#. RenderingServer.PARTICLES_DRAW_ORDER_LIFETIME
+#: doc/classes/RenderingServer.xml
+msgid "Sort particles based on their lifetime. In other words, the particle with the highest lifetime is drawn at the front."
+msgstr "A részecskéket a hátralévő élettartamuk szerint rendezi. A legtöbb hátralévő idővel rendelkező részecske jelenik meg elöl."
+
+#. RenderingServer.PARTICLES_DRAW_ORDER_REVERSE_LIFETIME
+#: doc/classes/RenderingServer.xml
+msgid "Sort particles based on the inverse of their lifetime. In other words, the particle with the lowest lifetime is drawn at the front."
+msgstr "A részecskéket a hátralévő élettartamuk szerint fordított sorrendbe rendezi. A legkevesebb hátralévő idővel rendelkező részecske jelenik meg elöl."
+
+#. RenderingServer.PARTICLES_DRAW_ORDER_VIEW_DEPTH
+#: doc/classes/RenderingServer.xml
+msgid "Sort particles based on their distance to the camera."
+msgstr "A részecskéket a kamerához viszonyított nézettérbeli mélység szerint rendezi."
+
+#. RenderingServer.PARTICLES_COLLISION_TYPE_SPHERE_ATTRACT
+#: doc/classes/RenderingServer.xml
+msgid "Sphere attractor type for [GPUParticles3D] (see [GPUParticlesAttractorSphere3D])."
+msgstr "Gömb alakú vonzó a [GPUParticles3D] részecskéihez. Lásd a [GPUParticlesAttractorSphere3D] osztályt."
+
+#. RenderingServer.PARTICLES_COLLISION_TYPE_BOX_ATTRACT
+#: doc/classes/RenderingServer.xml
+msgid "Box attractor type for [GPUParticles3D] (see [GPUParticlesAttractorBox3D])."
+msgstr "Doboz alakú vonzó a [GPUParticles3D] részecskéihez. Lásd a [GPUParticlesAttractorBox3D] osztályt."
+
+#. RenderingServer.PARTICLES_COLLISION_TYPE_VECTOR_FIELD_ATTRACT
+#: doc/classes/RenderingServer.xml
+msgid "Vector field attractor type for [GPUParticles3D] (see [GPUParticlesAttractorVectorField3D])."
+msgstr "Vektormezővel megadott vonzó a [GPUParticles3D] részecskéihez. Lásd a [GPUParticlesAttractorVectorField3D] osztályt."
+
+#. RenderingServer.PARTICLES_COLLISION_TYPE_SPHERE_COLLIDE
+#: doc/classes/RenderingServer.xml
+msgid "Sphere collision type for [GPUParticles3D] (see [GPUParticlesCollisionSphere3D])."
+msgstr "Gömb alakú ütköző a [GPUParticles3D] részecskéihez. Lásd a [GPUParticlesCollisionSphere3D] osztályt."
+
+#. RenderingServer.PARTICLES_COLLISION_TYPE_BOX_COLLIDE
+#: doc/classes/RenderingServer.xml
+msgid "Box collision type for [GPUParticles3D] (see [GPUParticlesCollisionBox3D])."
+msgstr "Doboz alakú ütköző a [GPUParticles3D] részecskéihez. Lásd a [GPUParticlesCollisionBox3D] osztályt."
