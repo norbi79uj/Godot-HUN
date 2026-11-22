@@ -48958,3 +48958,503 @@ msgstr "A csatolmány használati jelzői. Ezek határozzák meg, milyen művele
 #: doc/classes/RDShaderFile.xml
 msgid "Returns the SPIR-V intermediate representation for the specified shader [param version]."
 msgstr "A megadott [param version] shaderváltozat SPIR-V köztes ábrázolását adja vissza."
+
+#. RenderingDevice.BARRIER_MASK_VERTEX
+#: doc/classes/RenderingDevice.xml
+msgid "Vertex shader barrier mask."
+msgstr "A vertexshader szinkronizációs maszkja."
+
+#. RenderingDevice.BARRIER_MASK_FRAGMENT
+#: doc/classes/RenderingDevice.xml
+msgid "Fragment shader barrier mask."
+msgstr "A fragmentshader szinkronizációs maszkja."
+
+#. RenderingDevice.BARRIER_MASK_COMPUTE
+#: doc/classes/RenderingDevice.xml
+msgid "Compute barrier mask."
+msgstr "A számítási műveletek szinkronizációs maszkja."
+
+#. RenderingDevice.BARRIER_MASK_TRANSFER
+#: doc/classes/RenderingDevice.xml
+msgid "Transfer barrier mask."
+msgstr "Az adatátviteli műveletek szinkronizációs maszkja."
+
+#. RenderingDevice.BARRIER_MASK_RASTER
+#: doc/classes/RenderingDevice.xml
+msgid "Raster barrier mask (vertex and fragment). Equivalent to [code]BARRIER_MASK_VERTEX | BARRIER_MASK_FRAGMENT[/code]."
+msgstr "A raszterizálás szinkronizációs maszkja a vertex- és fragmentshaderekhez. Egyenértékű ezzel a kifejezéssel: [code]BARRIER_MASK_VERTEX | BARRIER_MASK_FRAGMENT[/code]."
+
+#. RenderingDevice.BARRIER_MASK_ALL_BARRIERS
+#: doc/classes/RenderingDevice.xml
+msgid "Barrier mask for all types (vertex, fragment, compute, transfer)."
+msgstr "Szinkronizációs maszk minden szakaszhoz, beleértve a vertex- és fragmentshadereket, a számítási műveleteket és az adatátvitelt."
+
+#. RenderingDevice.BARRIER_MASK_NO_BARRIER
+#: doc/classes/RenderingDevice.xml
+msgid "No barrier for any type."
+msgstr "Egyik szakaszhoz sem rendel szinkronizációt."
+
+#. RenderingDevice.TEXTURE_TYPE_1D
+#: doc/classes/RenderingDevice.xml
+msgid "1-dimensional texture."
+msgstr "Egydimenziós textúra."
+
+#. RenderingDevice.TEXTURE_TYPE_2D
+#: doc/classes/RenderingDevice.xml
+msgid "2-dimensional texture."
+msgstr "Kétdimenziós textúra."
+
+#. RenderingDevice.TEXTURE_TYPE_3D
+#: doc/classes/RenderingDevice.xml
+msgid "3-dimensional texture."
+msgstr "Háromdimenziós textúra."
+
+#. RenderingDevice.TEXTURE_TYPE_CUBE
+#: doc/classes/RenderingDevice.xml
+msgid "[Cubemap] texture."
+msgstr "[Cubemap] típusú kockatérkép."
+
+#. RenderingDevice.TEXTURE_TYPE_1D_ARRAY
+#: doc/classes/RenderingDevice.xml
+msgid "Array of 1-dimensional textures."
+msgstr "Egydimenziós textúrák tömbje."
+
+#. RenderingDevice.TEXTURE_TYPE_2D_ARRAY
+#: doc/classes/RenderingDevice.xml
+msgid "Array of 2-dimensional textures."
+msgstr "Kétdimenziós textúrák tömbje."
+
+#. RenderingDevice.TEXTURE_TYPE_CUBE_ARRAY
+#: doc/classes/RenderingDevice.xml
+msgid "Array of [Cubemap] textures."
+msgstr "[Cubemap] típusú kockatérképek tömbje."
+
+#. RenderingDevice.TEXTURE_SAMPLES_1
+#: doc/classes/RenderingDevice.xml
+msgid "Perform 1 texture sample (this is the fastest but lowest-quality for antialiasing)."
+msgstr "1 mintát vesz a textúrából. Ez a leggyorsabb beállítás, és ez adja a leggyengébb élsimítást."
+
+#. RenderingDevice.TEXTURE_SAMPLES_2
+#: doc/classes/RenderingDevice.xml
+msgid "Perform 2 texture samples."
+msgstr "2 mintát vesz a textúrából."
+
+#. RenderingDevice.TEXTURE_SAMPLES_4
+#: doc/classes/RenderingDevice.xml
+msgid "Perform 4 texture samples."
+msgstr "4 mintát vesz a textúrából."
+
+#. RenderingDevice.TEXTURE_SAMPLES_32
+#: doc/classes/RenderingDevice.xml
+msgid "Perform 32 texture samples. Not supported on most GPUs."
+msgstr "32 mintát vesz a textúrából. A legtöbb GPU nem támogatja."
+
+#. RenderingDevice.TEXTURE_SAMPLES_64
+#: doc/classes/RenderingDevice.xml
+msgid "Perform 64 texture samples (this is the slowest but highest-quality for antialiasing). Not supported on most GPUs."
+msgstr "64 mintát vesz a textúrából. Ez a leglassabb beállítás, és ez adja a legjobb élsimítást. A legtöbb GPU nem támogatja."
+
+#. RenderingDevice.TEXTURE_SAMPLES_MAX
+#: doc/classes/RenderingDevice.xml
+msgid "Represents the size of the [enum TextureSamples] enum."
+msgstr "A [enum TextureSamples] felsorolás mérete."
+
+#. RenderingDevice.TEXTURE_USAGE_SAMPLING_BIT
+#: doc/classes/RenderingDevice.xml
+msgid "Texture can be sampled."
+msgstr "A textúrából mintát lehet venni."
+
+#. RenderingDevice.TEXTURE_USAGE_COLOR_ATTACHMENT_BIT
+#: doc/classes/RenderingDevice.xml
+msgid "Texture can be used as a color attachment in a framebuffer."
+msgstr "A textúra képpuffer színcsatolmányaként használható."
+
+#. RenderingDevice.TEXTURE_USAGE_DEPTH_STENCIL_ATTACHMENT_BIT
+#: doc/classes/RenderingDevice.xml
+msgid "Texture can be used as a depth/stencil attachment in a framebuffer."
+msgstr "A textúra képpuffer mélység- és sabloncsatolmányaként használható."
+
+#. RenderingDevice.TEXTURE_USAGE_DEPTH_RESOLVE_ATTACHMENT_BIT
+#: doc/classes/RenderingDevice.xml
+msgid "Texture can be used as a depth/stencil resolve attachment in a framebuffer."
+msgstr "A textúra képpuffer többmintás mélység- és sablonadatainak feloldási céljaként használható."
+
+#. RenderingDevice.TEXTURE_USAGE_STORAGE_BIT
+#: doc/classes/RenderingDevice.xml
+msgid "Texture can be used as a [url=https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storageimage]storage image[/url]."
+msgstr "A textúra [url=https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storageimage]tárolóképként[/url] használható."
+
+#. RenderingDevice.TEXTURE_USAGE_STORAGE_ATOMIC_BIT
+#: doc/classes/RenderingDevice.xml
+msgid "Texture can be used as a [url=https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storageimage]storage image[/url] with support for atomic operations."
+msgstr "A textúra [url=https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-storageimage]tárolóképként[/url] használható, atomi műveletek támogatásával."
+
+#. RenderingDevice.TEXTURE_USAGE_CPU_READ_BIT
+#: doc/classes/RenderingDevice.xml
+msgid "Texture can be read back on the CPU using [method texture_get_data] faster than without this bit, since it is always kept in the system memory."
+msgstr "A textúra a rendszermemóriában marad, így a CPU gyorsabban olvashatja vissza a [method texture_get_data] metódussal."
+
+#. RenderingDevice.TEXTURE_USAGE_CAN_UPDATE_BIT
+#: doc/classes/RenderingDevice.xml
+msgid "Texture can be updated using [method texture_update]."
+msgstr "A textúra a [method texture_update] metódussal frissíthető."
+
+#. RenderingDevice.TEXTURE_USAGE_CAN_COPY_FROM_BIT
+#: doc/classes/RenderingDevice.xml
+msgid "Texture can be a source for [method texture_copy]."
+msgstr "A textúra a [method texture_copy] metódus forrása lehet."
+
+#. RenderingDevice.TEXTURE_USAGE_CAN_COPY_TO_BIT
+#: doc/classes/RenderingDevice.xml
+msgid "Texture can be a destination for [method texture_copy]."
+msgstr "A textúra a [method texture_copy] metódus célja lehet."
+
+#. RenderingDevice.TEXTURE_USAGE_INPUT_ATTACHMENT_BIT
+#: doc/classes/RenderingDevice.xml
+msgid "Texture can be used as a [url=https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-inputattachment]input attachment[/url] in a framebuffer."
+msgstr "A textúra [url=https://registry.khronos.org/vulkan/specs/1.3-extensions/html/vkspec.html#descriptorsets-inputattachment]bemeneti csatolmányként[/url] használható egy képpufferben."
+
+#. RenderingDevice.TEXTURE_SWIZZLE_IDENTITY
+#: doc/classes/RenderingDevice.xml
+msgid "Return the sampled value as-is."
+msgstr "A mintavételezett értéket változtatás nélkül adja vissza."
+
+#. RenderingDevice.TEXTURE_SWIZZLE_ZERO
+#: doc/classes/RenderingDevice.xml
+msgid "Always return [code]0.0[/code] when sampling."
+msgstr "Mintavételkor mindig [code]0.0[/code] értéket ad vissza."
+
+#. RenderingDevice.TEXTURE_SWIZZLE_ONE
+#: doc/classes/RenderingDevice.xml
+msgid "Always return [code]1.0[/code] when sampling."
+msgstr "Mintavételkor mindig [code]1.0[/code] értéket ad vissza."
+
+#. RenderingDevice.TEXTURE_SWIZZLE_R
+#: doc/classes/RenderingDevice.xml
+msgid "Sample the red color channel."
+msgstr "A vörös csatornából vesz mintát."
+
+#. RenderingDevice.TEXTURE_SWIZZLE_G
+#: doc/classes/RenderingDevice.xml
+msgid "Sample the green color channel."
+msgstr "A zöld csatornából vesz mintát."
+
+#. RenderingDevice.TEXTURE_SWIZZLE_B
+#: doc/classes/RenderingDevice.xml
+msgid "Sample the blue color channel."
+msgstr "A kék csatornából vesz mintát."
+
+#. RenderingDevice.TEXTURE_SWIZZLE_A
+#: doc/classes/RenderingDevice.xml
+msgid "Sample the alpha channel."
+msgstr "Az alfa-csatornából vesz mintát."
+
+#. RenderingDevice.TEXTURE_SWIZZLE_MAX
+#: doc/classes/RenderingDevice.xml
+msgid "Represents the size of the [enum TextureSwizzle] enum."
+msgstr "A [enum TextureSwizzle] felsorolás mérete."
+
+#. RenderingDevice.TEXTURE_SLICE_2D
+#: doc/classes/RenderingDevice.xml
+msgid "2-dimensional texture slice."
+msgstr "Kétdimenziós textúraszelet."
+
+#. RenderingDevice.TEXTURE_SLICE_CUBEMAP
+#: doc/classes/RenderingDevice.xml
+msgid "Cubemap texture slice."
+msgstr "Kockatérkép-textúra szelete."
+
+#. RenderingDevice.TEXTURE_SLICE_3D
+#: doc/classes/RenderingDevice.xml
+msgid "3-dimensional texture slice."
+msgstr "Háromdimenziós textúraszelet."
+
+#. RenderingDevice.SAMPLER_FILTER_NEAREST
+#: doc/classes/RenderingDevice.xml
+msgid "Nearest-neighbor sampler filtering. Sampling at higher resolutions than the source will result in a pixelated look."
+msgstr "Legközelebbi szomszéd szerinti szűrés. A forrásfelbontás fölé nagyítva a textúra pixelesnek látszik."
+
+#. RenderingDevice.SAMPLER_FILTER_LINEAR
+#: doc/classes/RenderingDevice.xml
+msgid "Bilinear sampler filtering. Sampling at higher resolutions than the source will result in a blurry look."
+msgstr "Bilineáris szűrés. A forrásfelbontás fölé nagyítva a textúra elmosódottnak látszik."
+
+#. RenderingDevice.SAMPLER_REPEAT_MODE_REPEAT
+#: doc/classes/RenderingDevice.xml
+msgid "Sample with repeating enabled."
+msgstr "A mintavétel a textúra ismétlésével folytatódik a széleken túl."
+
+#. RenderingDevice.SAMPLER_REPEAT_MODE_MIRRORED_REPEAT
+#: doc/classes/RenderingDevice.xml
+msgid "Sample with mirrored repeating enabled. When sampling outside the [code][0.0, 1.0][/code] range, return a mirrored version of the sampler. This mirrored version is mirrored again if sampling further away, with the pattern repeating indefinitely."
+msgstr "A textúra tükrözve ismétlődik. A [code][0.0, 1.0][/code] tartományon kívül a mintavétel a tükrözött textúrából olvas. Távolabb haladva a tükrözés minden ismétlésnél megfordul, és a minta korlátlanul folytatódik."
+
+#. RenderingDevice.SAMPLER_REPEAT_MODE_CLAMP_TO_EDGE
+#: doc/classes/RenderingDevice.xml
+msgid "Sample with repeating disabled. When sampling outside the [code][0.0, 1.0][/code] range, return the color of the last pixel on the edge."
+msgstr "Ismétlés nélküli mintavétel. A [code][0.0, 1.0][/code] tartományon kívül a textúra szélén lévő utolsó texel színét adja vissza."
+
+#. RenderingDevice.SAMPLER_REPEAT_MODE_CLAMP_TO_BORDER
+#: doc/classes/RenderingDevice.xml
+msgid "Sample with repeating disabled. When sampling outside the [code][0.0, 1.0][/code] range, return the specified [member RDSamplerState.border_color]."
+msgstr "Ismétlés nélküli mintavétel. A [code][0.0, 1.0][/code] tartományon kívül a [member RDSamplerState.border_color] tulajdonságban megadott peremszínt adja vissza."
+
+#. RenderingDevice.SAMPLER_REPEAT_MODE_MIRROR_CLAMP_TO_EDGE
+#: doc/classes/RenderingDevice.xml
+msgid "Sample with mirrored repeating enabled, but only once. When sampling in the [code][-1.0, 0.0][/code] range, return a mirrored version of the sampler. When sampling outside the [code][-1.0, 1.0][/code] range, return the color of the last pixel on the edge."
+msgstr "Egyszeri tükrözéssel mintavételez. A [code][-1.0, 0.0][/code] tartományban a tükrözött textúrából olvas. A [code][-1.0, 1.0][/code] tartományon kívül a legszélső texel színét adja vissza."
+
+#. RenderingDevice.SAMPLER_REPEAT_MODE_MAX
+#: doc/classes/RenderingDevice.xml
+msgid "Represents the size of the [enum SamplerRepeatMode] enum."
+msgstr "A [enum SamplerRepeatMode] felsorolás mérete."
+
+#. RenderingDevice.SAMPLER_BORDER_COLOR_FLOAT_TRANSPARENT_BLACK
+#: doc/classes/RenderingDevice.xml
+msgid "Return a floating-point transparent black color when sampling outside the [code][0.0, 1.0][/code] range. Only effective if the sampler repeat mode is [constant SAMPLER_REPEAT_MODE_CLAMP_TO_BORDER]."
+msgstr "A [code][0.0, 1.0][/code] tartományon kívül lebegőpontos átlátszó fekete színt ad vissza. Csak [constant SAMPLER_REPEAT_MODE_CLAMP_TO_BORDER] ismétlési módban érvényes."
+
+#. RenderingDevice.SAMPLER_BORDER_COLOR_INT_TRANSPARENT_BLACK
+#: doc/classes/RenderingDevice.xml
+msgid "Return an integer transparent black color when sampling outside the [code][0.0, 1.0][/code] range. Only effective if the sampler repeat mode is [constant SAMPLER_REPEAT_MODE_CLAMP_TO_BORDER]."
+msgstr "A [code][0.0, 1.0][/code] tartományon kívül egész értékekkel ábrázolt átlátszó fekete színt ad vissza. Csak [constant SAMPLER_REPEAT_MODE_CLAMP_TO_BORDER] ismétlési módban érvényes."
+
+#. RenderingDevice.SAMPLER_BORDER_COLOR_FLOAT_OPAQUE_BLACK
+#: doc/classes/RenderingDevice.xml
+msgid "Return a floating-point opaque black color when sampling outside the [code][0.0, 1.0][/code] range. Only effective if the sampler repeat mode is [constant SAMPLER_REPEAT_MODE_CLAMP_TO_BORDER]."
+msgstr "A [code][0.0, 1.0][/code] tartományon kívül lebegőpontos fedő fekete színt ad vissza. Csak [constant SAMPLER_REPEAT_MODE_CLAMP_TO_BORDER] ismétlési módban érvényes."
+
+#. RenderingDevice.SAMPLER_BORDER_COLOR_INT_OPAQUE_BLACK
+#: doc/classes/RenderingDevice.xml
+msgid "Return an integer opaque black color when sampling outside the [code][0.0, 1.0][/code] range. Only effective if the sampler repeat mode is [constant SAMPLER_REPEAT_MODE_CLAMP_TO_BORDER]."
+msgstr "A [code][0.0, 1.0][/code] tartományon kívül egész értékekkel ábrázolt fedő fekete színt ad vissza. Csak [constant SAMPLER_REPEAT_MODE_CLAMP_TO_BORDER] ismétlési módban érvényes."
+
+#. RenderingDevice.SAMPLER_BORDER_COLOR_FLOAT_OPAQUE_WHITE
+#: doc/classes/RenderingDevice.xml
+msgid "Return a floating-point opaque white color when sampling outside the [code][0.0, 1.0][/code] range. Only effective if the sampler repeat mode is [constant SAMPLER_REPEAT_MODE_CLAMP_TO_BORDER]."
+msgstr "A [code][0.0, 1.0][/code] tartományon kívül lebegőpontos fedő fehér színt ad vissza. Csak [constant SAMPLER_REPEAT_MODE_CLAMP_TO_BORDER] ismétlési módban érvényes."
+
+#. RenderingDevice.SAMPLER_BORDER_COLOR_INT_OPAQUE_WHITE
+#: doc/classes/RenderingDevice.xml
+msgid "Return an integer opaque white color when sampling outside the [code][0.0, 1.0][/code] range. Only effective if the sampler repeat mode is [constant SAMPLER_REPEAT_MODE_CLAMP_TO_BORDER]."
+msgstr "A [code][0.0, 1.0][/code] tartományon kívül egész értékekkel ábrázolt fedő fehér színt ad vissza. Csak [constant SAMPLER_REPEAT_MODE_CLAMP_TO_BORDER] ismétlési módban érvényes."
+
+#. RenderingDevice.SAMPLER_BORDER_COLOR_MAX
+#: doc/classes/RenderingDevice.xml
+msgid "Represents the size of the [enum SamplerBorderColor] enum."
+msgstr "A [enum SamplerBorderColor] felsorolás mérete."
+
+#. RenderingDevice.VERTEX_FREQUENCY_VERTEX
+#: doc/classes/RenderingDevice.xml
+msgid "Vertex attribute addressing is a function of the vertex. This is used to specify the rate at which vertex attributes are pulled from buffers."
+msgstr "A csúcsattribútum címét a csúcs indexe határozza meg. Ezzel az attribútumok csúcsonként olvashatók ki a pufferből."
+
+#. RenderingDevice.VERTEX_FREQUENCY_INSTANCE
+#: doc/classes/RenderingDevice.xml
+msgid "Vertex attribute addressing is a function of the instance index. This is used to specify the rate at which vertex attributes are pulled from buffers."
+msgstr "A csúcsattribútum címét a példány indexe határozza meg. Ezzel az attribútumok példányonként olvashatók ki a pufferből."
+
+#. RenderingDevice.INDEX_BUFFER_FORMAT_UINT16
+#: doc/classes/RenderingDevice.xml
+msgid "Index buffer in 16-bit unsigned integer format. This limits the maximum index that can be specified to [code]65535[/code]."
+msgstr "A puffer 16 bites előjel nélküli egész indexeket tárol. A legnagyobb megadható index [code]65535[/code]."
+
+#. RenderingDevice.INDEX_BUFFER_FORMAT_UINT32
+#: doc/classes/RenderingDevice.xml
+msgid "Index buffer in 32-bit unsigned integer format. This limits the maximum index that can be specified to [code]4294967295[/code]."
+msgstr "A puffer 32 bites előjel nélküli egész indexeket tárol. A legnagyobb megadható index [code]4294967295[/code]."
+
+#. RenderingDevice.BUFFER_CREATION_AS_STORAGE_BIT
+#: doc/classes/RenderingDevice.xml
+msgid "Set this flag so that it is created as storage. This is useful if Compute Shaders need access (for reading or writing) to the buffer, e.g. skeletal animations are processed in Compute Shaders which need access to vertex buffers, to be later consumed by vertex shaders as part of the regular rasterization pipeline."
+msgstr "Ezzel a jelzővel tárolópufferként hozhatod létre a puffert, hogy számítási shaderek olvashassák vagy írhassák. Csontvázanimációnál például a számítási shader frissítheti a csúcspuffert, amelyet később a raszterizálás során a vertexshader olvas."
+
+#. RenderingDevice.ACCELERATION_STRUCTURE_ALLOW_UPDATE_BIT
+#: doc/classes/RenderingDevice.xml
+msgid "Allows the acceleration structure to be updated after it has been built."
+msgstr "Lehetővé teszi a gyorsítóstruktúra frissítését a felépítése után."
+
+#. RenderingDevice.ACCELERATION_STRUCTURE_ALLOW_COMPACTION_BIT
+#: doc/classes/RenderingDevice.xml
+msgid "Allows the acceleration structure to be compacted to reduce memory usage after it has been built."
+msgstr "A felépítés után tömöríthetővé teszi a gyorsítóstruktúrát a memóriaigény csökkentéséhez."
+
+#. RenderingDevice.ACCELERATION_STRUCTURE_PREFER_FAST_TRACE_BIT
+#: doc/classes/RenderingDevice.xml
+msgid "Prioritizes ray traversal performance over build performance when building the acceleration structure."
+msgstr "A gyorsítóstruktúra létrehozásakor a sugarak gyors bejárását részesíti előnyben a gyors felépítéssel szemben."
+
+#. RenderingDevice.ACCELERATION_STRUCTURE_PREFER_FAST_BUILD_BIT
+#: doc/classes/RenderingDevice.xml
+msgid "Prioritizes build performance over ray traversal performance when building the acceleration structure."
+msgstr "A gyorsítóstruktúra gyors felépítését részesíti előnyben a sugarak gyors bejárásával szemben."
+
+#. RenderingDevice.ACCELERATION_STRUCTURE_LOW_MEMORY_BIT
+#: doc/classes/RenderingDevice.xml
+msgid "Reduces the memory usage of the acceleration structure, potentially at the cost of reduced ray traversal performance."
+msgstr "Csökkenti a gyorsítóstruktúra memóriaigényét. A sugarak bejárása ettől lassabb lehet."
+
+#. RenderingDevice.ACCELERATION_STRUCTURE_GEOMETRY_OPAQUE_BIT
+#: doc/classes/RenderingDevice.xml
+msgid "An opaque geometry does not invoke the any hit shaders."
+msgstr "Az átlátszatlan geometria nem hívja meg a bármely találatnál futó shadereket."
+
+#. RenderingDevice.ACCELERATION_STRUCTURE_GEOMETRY_NO_DUPLICATE_ANY_HIT_INVOCATION_BIT
+#: doc/classes/RenderingDevice.xml
+msgid "This geometry only calls the any hit shader a single time for each primitive."
+msgstr "A geometria primitívenként legfeljebb egyszer hívja meg a bármely találatnál futó shadert."
+
+#. RenderingDevice.ACCELERATION_STRUCTURE_INSTANCE_TRIANGLE_FACING_CULL_DISABLE_BIT
+#: doc/classes/RenderingDevice.xml
+msgid "Disables triangle face culling for this instance during ray traversal."
+msgstr "A sugár bejárásakor kikapcsolja ennél a példánynál a háromszöglapok irány szerinti eldobását."
+
+#. RenderingDevice.ACCELERATION_STRUCTURE_INSTANCE_TRIANGLE_FLIP_FACING_BIT
+#: doc/classes/RenderingDevice.xml
+msgid "Flips the triangle facing direction for this instance during ray traversal."
+msgstr "A sugár bejárásakor megfordítja ennél a példánynál a háromszögek lapirányát."
+
+#. RenderingDevice.ACCELERATION_STRUCTURE_INSTANCE_FORCE_OPAQUE_BIT
+#: doc/classes/RenderingDevice.xml
+msgid "Forces all geometries in this instance to be treated as opaque, preventing any hit shaders from being invoked."
+msgstr "A példány minden geometriáját átlátszatlanként kezeli, így a bármely találatnál futó shaderek kimaradnak."
+
+#. RenderingDevice.ACCELERATION_STRUCTURE_INSTANCE_FORCE_NO_OPAQUE_BIT
+#: doc/classes/RenderingDevice.xml
+msgid "Forces all geometries in this instance to be treated as non-opaque, allowing any hit shaders to be invoked."
+msgstr "A példány minden geometriáját átlátszóként kezeli, így lefuthatnak a bármely találatnál futó shaderek."
+
+#. RenderingDevice.UNIFORM_TYPE_SAMPLER
+#: doc/classes/RenderingDevice.xml
+msgid "Sampler uniform."
+msgstr "Textúramintavételező uniform."
+
+#. RenderingDevice.UNIFORM_TYPE_SAMPLER_WITH_TEXTURE
+#: doc/classes/RenderingDevice.xml
+msgid "Sampler uniform with a texture."
+msgstr "Textúrával együtt megadott mintavételező uniform."
+
+#. RenderingDevice.UNIFORM_TYPE_TEXTURE
+#: doc/classes/RenderingDevice.xml
+msgid "Texture uniform."
+msgstr "Textúrauniform."
+
+#. RenderingDevice.UNIFORM_TYPE_IMAGE
+#: doc/classes/RenderingDevice.xml
+msgid "Image uniform."
+msgstr "Képuniform."
+
+#. RenderingDevice.UNIFORM_TYPE_TEXTURE_BUFFER
+#: doc/classes/RenderingDevice.xml
+msgid "Texture buffer uniform."
+msgstr "Textúrapuffer-uniform."
+
+#. RenderingDevice.UNIFORM_TYPE_SAMPLER_WITH_TEXTURE_BUFFER
+#: doc/classes/RenderingDevice.xml
+msgid "Sampler uniform with a texture buffer."
+msgstr "Textúrapufferrel együtt megadott mintavételező uniform."
+
+#. RenderingDevice.UNIFORM_TYPE_IMAGE_BUFFER
+#: doc/classes/RenderingDevice.xml
+msgid "Image buffer uniform."
+msgstr "Képpuffer-uniform."
+
+#. RenderingDevice.UNIFORM_TYPE_UNIFORM_BUFFER
+#: doc/classes/RenderingDevice.xml
+msgid "Uniform buffer uniform."
+msgstr "Uniformpufferhez tartozó uniform."
+
+#. RenderingDevice.UNIFORM_TYPE_STORAGE_BUFFER
+#: doc/classes/RenderingDevice.xml
+msgid "[url=https://vkguide.dev/docs/chapter-4/storage_buffers/]Storage buffer[/url] uniform."
+msgstr "[url=https://vkguide.dev/docs/chapter-4/storage_buffers/]Tárolópufferhez[/url] tartozó uniform."
+
+#. RenderingDevice.UNIFORM_TYPE_INPUT_ATTACHMENT
+#: doc/classes/RenderingDevice.xml
+msgid "Input attachment uniform."
+msgstr "Bemeneti csatolmányhoz tartozó uniform."
+
+#. RenderingDevice.UNIFORM_TYPE_ACCELERATION_STRUCTURE
+#: doc/classes/RenderingDevice.xml
+msgid "Acceleration structure uniform."
+msgstr "Gyorsítóstruktúrához tartozó uniform."
+
+#. RenderingDevice.UNIFORM_TYPE_MAX
+#: doc/classes/RenderingDevice.xml
+msgid "Represents the size of the [enum UniformType] enum."
+msgstr "A [enum UniformType] felsorolás mérete."
+
+#. RDUniform.brief
+#: doc/classes/RDUniform.xml
+msgid "Shader uniform (used by [RenderingDevice])."
+msgstr "Shaderuniform a [RenderingDevice] számára."
+
+#. RDUniform.add_id
+#: doc/classes/RDUniform.xml
+msgid "Binds the given id to the uniform. The data associated with the id is then used when the uniform is passed to a shader."
+msgstr "Hozzárendeli a megadott azonosítót az uniformhoz. Az azonosítóhoz tartozó adatot a shader akkor használhatja, amikor megkapja az uniformot."
+
+#. RDUniform.clear_ids
+#: doc/classes/RDUniform.xml
+msgid "Unbinds all ids currently bound to the uniform."
+msgstr "Megszünteti az uniformhoz rendelt összes azonosító kötését."
+
+#. RDUniform.get_ids
+#: doc/classes/RDUniform.xml
+msgid "Returns an array of all ids currently bound to the uniform."
+msgstr "Tömbben adja vissza az uniformhoz rendelt összes azonosítót."
+
+#. RDUniform.binding
+#: doc/classes/RDUniform.xml
+msgid "The uniform's binding."
+msgstr "Az uniform kötési helye."
+
+#. RDUniform.uniform_type
+#: doc/classes/RDUniform.xml
+msgid "The uniform's data type."
+msgstr "Az uniform adattípusa."
+
+#. RenderingDevice.brief
+#: doc/classes/RenderingDevice.xml
+msgid "Abstraction for working with modern low-level graphics APIs."
+msgstr "Absztrakciós réteg a modern, alacsony szintű grafikus API-k használatához."
+
+#. RenderingDevice.blas_build
+#: doc/classes/RenderingDevice.xml
+msgid "Builds the [param blas]."
+msgstr "Felépíti a [param blas] alsó szintű gyorsítóstruktúrát."
+
+#. RenderingDevice.capture_timestamp
+#: doc/classes/RenderingDevice.xml
+msgid "Creates a timestamp marker with the specified [param name]. This is used for performance reporting with the [method get_captured_timestamp_cpu_time], [method get_captured_timestamp_gpu_time] and [method get_captured_timestamp_name] methods."
+msgstr "Időbélyegjelölőt hoz létre a megadott [param name] néven. A teljesítmény méréséhez a [method get_captured_timestamp_cpu_time], a [method get_captured_timestamp_gpu_time] és a [method get_captured_timestamp_name] metódussal kérhetők le az adatai."
+
+#. RenderingDevice.compute_list_add_barrier
+#: doc/classes/RenderingDevice.xml
+msgid "Raises a Vulkan compute barrier in the specified [param compute_list]."
+msgstr "Vulkan számítási szinkronizációs pontot illeszt a megadott [param compute_list] parancslistába."
+
+#. RenderingDevice.compute_list_bind_compute_pipeline
+#: doc/classes/RenderingDevice.xml
+msgid "Tells the GPU what compute pipeline to use when processing the compute list. If the shader has changed since the last time this function was called, Godot will unbind all descriptor sets and will re-bind them inside [method compute_list_dispatch]."
+msgstr "Megadja, melyik számítási folyamatot használja a GPU a parancslista végrehajtásához. Ha a shader megváltozott a legutóbbi hívás óta, a Godot leválasztja az összes leírókészletet, majd a [method compute_list_dispatch] hívásban újra hozzárendeli őket."
+
+#. RenderingDevice.compute_list_bind_uniform_set
+#: doc/classes/RenderingDevice.xml
+msgid "Binds the [param uniform_set] to this [param compute_list]. Godot ensures that all textures in the uniform set have the correct Vulkan access masks. If Godot had to change access masks of textures, it will raise a Vulkan image memory barrier."
+msgstr "A [param uniform_set] uniformkészletet a [param compute_list] parancslistához rendeli. A Godot gondoskodik a készlethez tartozó textúrák megfelelő Vulkan hozzáférési maszkjáról, és ha módosítania kell ezeket, képmemória-szinkronizációt iktat be."
+
+#. RenderingDevice.compute_list_dispatch
+#: doc/classes/RenderingDevice.xml
+msgid "Submits the compute list for processing on the GPU. This is the compute equivalent to [method draw_list_draw]."
+msgstr "Elindítja a számítási műveletet a GPU-n. A [method draw_list_draw] metódus számítási megfelelője."
+
+#. RenderingDevice.compute_list_dispatch_indirect
+#: doc/classes/RenderingDevice.xml
+msgid "Submits the compute list for processing on the GPU with the given group counts stored in the [param buffer] at [param offset]. Buffer must have been created with [constant STORAGE_BUFFER_USAGE_DISPATCH_INDIRECT] flag."
+msgstr "Elindítja a számítási műveletet a GPU-n. A munkacsoportok számát a [param buffer] pufferből, a [param offset] eltolástól olvassa ki. A puffert a [constant STORAGE_BUFFER_USAGE_DISPATCH_INDIRECT] jelzővel kell létrehozni."
+
+#. RenderingDevice.compute_list_end
+#: doc/classes/RenderingDevice.xml
+msgid "Finishes a list of compute commands created with the [code]compute_*[/code] methods."
+msgstr "Lezárja a [code]compute_*[/code] metódusokkal összeállított számítási parancslistát."
