@@ -44314,3 +44314,553 @@ msgstr "A kérés fogadása és feldolgozása után a kiszolgáló választ kül
 #: doc/classes/JSONRPC.xml
 msgid "Creates a response which indicates a previous reply has failed in some way.\n- [param code]: The error code corresponding to what kind of error this is. See the [enum ErrorCode] constants.\n- [param message]: A custom message about this error.\n- [param id]: The request this error is a response to."
 msgstr "Olyan választ hoz létre, amely jelzi, hogy az adott kérés feldolgozása hibába ütközött.\n- [param code]: A hiba típusát megadó hibakód. Lásd az [enum ErrorCode] állandóit.\n- [param message]: A hibát leíró egyéni üzenet.\n- [param id]: Annak a kérésnek az azonosítója, amelyhez a hibaválasz tartozik."
+
+#. ConfigFile.brief
+#: doc/classes/ConfigFile.xml
+msgid "Helper class to handle INI-style files."
+msgstr "Segédosztály INI-szerű fájlok kezelésére."
+
+#. ConfigFile.description
+#: doc/classes/ConfigFile.xml
+msgid "This helper class can be used to store [Variant] values on the filesystem using INI-style formatting. The stored values are identified by a section and a key:\n[codeblock lang=text]\n[section]\nsome_key=42\nstring_example=\"Hello World3D!\"\na_vector=Vector3(1, 0, 2)\n[/codeblock]\nThe stored data can be saved to or parsed from a file, though ConfigFile objects can also be used directly without accessing the filesystem.\nThe following example shows how to create a simple [ConfigFile] and save it on disc:\n[codeblocks]\n[gdscript]\n# Create new ConfigFile object.\nvar config = ConfigFile.new()\n\n# Store some values.\nconfig.set_value(\"Player1\", \"player_name\", \"Steve\")\nconfig.set_value(\"Player1\", \"best_score\", 10)\nconfig.set_value(\"Player2\", \"player_name\", \"V3geta\")\nconfig.set_value(\"Player2\", \"best_score\", 9001)\n\n# Save it to a file (overwrite if already exists).\nconfig.save(\"user://scores.cfg\")\n[/gdscript]\n[csharp]\n// Create new ConfigFile object.\nvar config = new ConfigFile();\n\n// Store some values.\nconfig.SetValue(\"Player1\", \"player_name\", \"Steve\");\nconfig.SetValue(\"Player1\", \"best_score\", 10);\nconfig.SetValue(\"Player2\", \"player_name\", \"V3geta\");\nconfig.SetValue(\"Player2\", \"best_score\", 9001);\n\n// Save it to a file (overwrite if already exists).\nconfig.Save(\"user://scores.cfg\");\n[/csharp]\n[/codeblocks]\nThis example shows how the above file could be loaded:\n[codeblocks]\n[gdscript]\nvar score_data = {}\nvar config = ConfigFile.new()\n\n# Load data from a file.\nvar err = config.load(\"user://scores.cfg\")\n\n# If the file didn't load, ignore it.\nif err != OK:\n\treturn\n\n# Iterate over all sections.\nfor player in config.get_sections():\n\t# Fetch the data for each section.\n\tvar player_name = config.get_value(player, \"player_name\")\n\tvar player_score = config.get_value(player, \"best_score\")\n\tscore_data[player_name] = player_score\n[/gdscript]\n[csharp]\nvar score_data = new Godot.Collections.Dictionary();\nvar config = new ConfigFile();\n\n// Load data from a file.\nError err = config.Load(\"user://scores.cfg\");\n\n// If the file didn't load, ignore it.\nif (err != Error.Ok)\n{\n\treturn;\n}\n\n// Iterate over all sections.\nforeach (String player in config.GetSections())\n{\n\t// Fetch the data for each section.\n\tvar player_name = (String)config.GetValue(player, \"player_name\");\n\tvar player_score = (int)config.GetValue(player, \"best_score\");\n\tscore_data[player_name] = player_score;\n}\n[/csharp]\n[/codeblocks]\nAny operation that mutates the ConfigFile such as [method set_value], [method clear], or [method erase_section], only changes what is loaded in memory. If you want to write the change to a file, you have to save the changes with [method save], [method save_encrypted], or [method save_encrypted_pass].\nKeep in mind that section and property names can't contain spaces. Anything after a space will be ignored on save and on load.\nConfigFiles can also contain manually written comment lines starting with a semicolon ([code];[/code]). Those lines will be ignored when parsing the file. Note that comments will be lost when saving the ConfigFile. This can still be useful for dedicated server configuration files, which are typically never overwritten without explicit user action.\n[b]Note:[/b] The file extension given to a ConfigFile does not have any impact on its formatting or behavior. By convention, the [code].cfg[/code] extension is used here, but any other extension such as [code].ini[/code] is also valid. Since neither [code].cfg[/code] nor [code].ini[/code] are standardized, Godot's ConfigFile formatting may differ from files written by other programs."
+msgstr "Ezzel a segédosztállyal [Variant] értékeket tárolhatsz a fájlrendszerben, INI-szerű formátumban. Minden tárolt értéket egy szakasz és egy kulcs azonosít:\n[codeblock lang=text]\n[section]\nsome_key=42\nstring_example=\"Hello World3D!\"\na_vector=Vector3(1, 0, 2)\n[/codeblock]\nAz adatokat fájlba mentheted, vagy fájlból olvashatod be. A ConfigFile objektumot közvetlenül, fájlművelet nélkül is használhatod.\nA következő példa egy egyszerű [ConfigFile] létrehozását és lemezre mentését mutatja be:\n[codeblocks]\n[gdscript]\n# Create new ConfigFile object.\nvar config = ConfigFile.new()\n\n# Store some values.\nconfig.set_value(\"Player1\", \"player_name\", \"Steve\")\nconfig.set_value(\"Player1\", \"best_score\", 10)\nconfig.set_value(\"Player2\", \"player_name\", \"V3geta\")\nconfig.set_value(\"Player2\", \"best_score\", 9001)\n\n# Save it to a file (overwrite if already exists).\nconfig.save(\"user://scores.cfg\")\n[/gdscript]\n[csharp]\n// Create new ConfigFile object.\nvar config = new ConfigFile();\n\n// Store some values.\nconfig.SetValue(\"Player1\", \"player_name\", \"Steve\");\nconfig.SetValue(\"Player1\", \"best_score\", 10);\nconfig.SetValue(\"Player2\", \"player_name\", \"V3geta\");\nconfig.SetValue(\"Player2\", \"best_score\", 9001);\n\n// Save it to a file (overwrite if already exists).\nconfig.Save(\"user://scores.cfg\");\n[/csharp]\n[/codeblocks]\nÍgy töltheted be a fenti fájlt:\n[codeblocks]\n[gdscript]\nvar score_data = {}\nvar config = ConfigFile.new()\n\n# Load data from a file.\nvar err = config.load(\"user://scores.cfg\")\n\n# If the file didn't load, ignore it.\nif err != OK:\n\treturn\n\n# Iterate over all sections.\nfor player in config.get_sections():\n\t# Fetch the data for each section.\n\tvar player_name = config.get_value(player, \"player_name\")\n\tvar player_score = config.get_value(player, \"best_score\")\n\tscore_data[player_name] = player_score\n[/gdscript]\n[csharp]\nvar score_data = new Godot.Collections.Dictionary();\nvar config = new ConfigFile();\n\n// Load data from a file.\nError err = config.Load(\"user://scores.cfg\");\n\n// If the file didn't load, ignore it.\nif (err != Error.Ok)\n{\n\treturn;\n}\n\n// Iterate over all sections.\nforeach (String player in config.GetSections())\n{\n\t// Fetch the data for each section.\n\tvar player_name = (String)config.GetValue(player, \"player_name\");\n\tvar player_score = (int)config.GetValue(player, \"best_score\");\n\tscore_data[player_name] = player_score;\n}\n[/csharp]\n[/codeblocks]\nA ConfigFile tartalmát módosító műveletek, például a [method set_value], a [method clear] és a [method erase_section], csak a memóriában tárolt adatokra hatnak. A változásokat a [method save], a [method save_encrypted] vagy a [method save_encrypted_pass] hívásával írhatod fájlba.\nA szakaszok és a tulajdonságok neve nem tartalmazhat szóközt. A szóköz utáni részt a mentés és a betöltés is figyelmen kívül hagyja.\nA ConfigFile fájlok kézzel írt, pontosvesszővel ([code];[/code]) kezdődő megjegyzéssorokat is tartalmazhatnak. Ezeket az osztály beolvasáskor figyelmen kívül hagyja, mentéskor pedig elhagyja. A megjegyzéssorok így is jól jöhetnek például dedikált kiszolgálók konfigurációs fájljaiban, amelyeket általában csak a felhasználó kifejezett kérésére írnak felül.\n[b]Megjegyzés:[/b] A fájlkiterjesztés nem befolyásolja a ConfigFile formátumát vagy működését. A szokásos kiterjesztés a [code].cfg[/code], de más kiterjesztés, például az [code].ini[/code] is használható. A [code].cfg[/code] és az [code].ini[/code] formátuma sem szabványos, ezért a Godot ConfigFile formátuma eltérhet a más programok által írt fájlokétól."
+
+#. ConfigFile.clear
+#: doc/classes/ConfigFile.xml
+msgid "Removes the entire contents of the config."
+msgstr "Törli a konfiguráció teljes tartalmát."
+
+#. ConfigFile.encode_to_text
+#: doc/classes/ConfigFile.xml
+msgid "Obtain the text version of this config file (the same text that would be written to a file)."
+msgstr "Visszaadja a konfiguráció szöveges alakját, vagyis ugyanazt a szöveget, amely mentéskor a fájlba kerülne."
+
+#. ConfigFile.erase_section
+#: doc/classes/ConfigFile.xml
+msgid "Deletes the specified section along with all the key-value pairs inside. Raises an error if the section does not exist."
+msgstr "Törli a megadott szakaszt a benne lévő összes kulcs–érték párral együtt. Ha a szakasz nem létezik, hibát jelez."
+
+#. ConfigFile.erase_section_key
+#: doc/classes/ConfigFile.xml
+msgid "Deletes the specified key in a section. Raises an error if either the section or the key do not exist."
+msgstr "Törli a megadott kulcsot a szakaszból. Ha a szakasz vagy a kulcs nem létezik, hibát jelez."
+
+#. ConfigFile.get_section_keys
+#: doc/classes/ConfigFile.xml
+msgid "Returns an array of all defined key identifiers in the specified section. Raises an error and returns an empty array if the section does not exist."
+msgstr "Tömbben adja vissza a megadott szakasz összes kulcsát. Ha a szakasz nem létezik, hibát jelez és üres tömböt ad vissza."
+
+#. ConfigFile.get_sections
+#: doc/classes/ConfigFile.xml
+msgid "Returns an array of all defined section identifiers."
+msgstr "Tömbben adja vissza az összes szakasz azonosítóját."
+
+#. ConfigFile.get_value
+#: doc/classes/ConfigFile.xml
+msgid "Returns the current value for the specified section and key. If either the section or the key do not exist, the method returns the fallback [param default] value. If [param default] is not specified or set to [code]null[/code], an error is also raised."
+msgstr "Visszaadja a megadott szakasz és kulcs aktuális értékét. Ha a szakasz vagy a kulcs nem létezik, a [param default] tartalékértéket adja vissza. Ha a [param default] paramétert elhagyod, vagy [code]null[/code] értéket adsz meg, hibát is jelez."
+
+#. ConfigFile.has_section
+#: doc/classes/ConfigFile.xml
+msgid "Returns [code]true[/code] if the specified section exists."
+msgstr "[code]true[/code] értéket ad vissza, ha a megadott szakasz létezik."
+
+#. ConfigFile.has_section_key
+#: doc/classes/ConfigFile.xml
+msgid "Returns [code]true[/code] if the specified section-key pair exists."
+msgstr "[code]true[/code] értéket ad vissza, ha a kulcs létezik a megadott szakaszban."
+
+#. ConfigFile.load
+#: doc/classes/ConfigFile.xml
+msgid "Loads the config file specified as a parameter. The file's contents are parsed and loaded in the [ConfigFile] object which the method was called on.\nReturns [constant OK] on success, or one of the other [enum Error] values if the operation failed."
+msgstr "Betölti a paraméterként megadott konfigurációs fájlt. A fájl tartalmát feldolgozza, és betölti abba a [ConfigFile] objektumba, amelyen a metódust meghívtad.\nSiker esetén [constant OK], sikertelen művelet esetén az [enum Error] valamelyik másik értéke az eredmény."
+
+#. ConfigFile.load_encrypted
+#: doc/classes/ConfigFile.xml
+msgid "Loads the encrypted config file specified as a parameter, using the provided [param key] to decrypt it. The file's contents are parsed and loaded in the [ConfigFile] object which the method was called on.\nReturns [constant OK] on success, or one of the other [enum Error] values if the operation failed."
+msgstr "A megadott [param key] kulccsal visszafejti és betölti a paraméterként megadott, titkosított konfigurációs fájlt. A fájl tartalmát feldolgozza, és betölti abba a [ConfigFile] objektumba, amelyen a metódust meghívtad.\nSiker esetén [constant OK], sikertelen művelet esetén az [enum Error] valamelyik másik értéke az eredmény."
+
+#. ConfigFile.load_encrypted_pass
+#: doc/classes/ConfigFile.xml
+msgid "Loads the encrypted config file specified as a parameter, using the provided [param password] to decrypt it. The file's contents are parsed and loaded in the [ConfigFile] object which the method was called on.\nReturns [constant OK] on success, or one of the other [enum Error] values if the operation failed."
+msgstr "A megadott [param password] jelszóval visszafejti és betölti a paraméterként megadott, titkosított konfigurációs fájlt. A fájl tartalmát feldolgozza, és betölti abba a [ConfigFile] objektumba, amelyen a metódust meghívtad.\nSiker esetén [constant OK], sikertelen művelet esetén az [enum Error] valamelyik másik értéke az eredmény."
+
+#. ConfigFile.parse
+#: doc/classes/ConfigFile.xml
+msgid "Parses the passed string as the contents of a config file. The string is parsed and loaded in the ConfigFile object which the method was called on.\nReturns [constant OK] on success, or one of the other [enum Error] values if the operation failed."
+msgstr "A kapott sztringet konfigurációs fájl tartalmaként dolgozza fel, és betölti abba a ConfigFile objektumba, amelyen a metódust meghívtad.\nSiker esetén [constant OK], sikertelen művelet esetén az [enum Error] valamelyik másik értéke az eredmény."
+
+#. ConfigFile.save
+#: doc/classes/ConfigFile.xml
+msgid "Saves the contents of the [ConfigFile] object to the file specified as a parameter. The output file uses an INI-style structure.\nReturns [constant OK] on success, or one of the other [enum Error] values if the operation failed."
+msgstr "A [ConfigFile] objektum tartalmát a paraméterként megadott fájlba menti. A kimeneti fájl szerkezete INI-szerű.\nSiker esetén [constant OK], sikertelen művelet esetén az [enum Error] valamelyik másik értéke az eredmény."
+
+#. ConfigFile.save_encrypted
+#: doc/classes/ConfigFile.xml
+msgid "Saves the contents of the [ConfigFile] object to the AES-256 encrypted file specified as a parameter, using the provided [param key] to encrypt it. The output file uses an INI-style structure.\nReturns [constant OK] on success, or one of the other [enum Error] values if the operation failed."
+msgstr "A [ConfigFile] objektum tartalmát a paraméterként megadott fájlba menti, AES-256 titkosítással. A titkosításhoz a megadott [param key] kulcsot használja. A kimeneti fájl szerkezete INI-szerű.\nSiker esetén [constant OK], sikertelen művelet esetén az [enum Error] valamelyik másik értéke az eredmény."
+
+#. ConfigFile.save_encrypted_pass
+#: doc/classes/ConfigFile.xml
+msgid "Saves the contents of the [ConfigFile] object to the AES-256 encrypted file specified as a parameter, using the provided [param password] to encrypt it. The output file uses an INI-style structure.\nReturns [constant OK] on success, or one of the other [enum Error] values if the operation failed."
+msgstr "A [ConfigFile] objektum tartalmát a paraméterként megadott fájlba menti, AES-256 titkosítással. A titkosításhoz a megadott [param password] jelszót használja. A kimeneti fájl szerkezete INI-szerű.\nSiker esetén [constant OK], sikertelen művelet esetén az [enum Error] valamelyik másik értéke az eredmény."
+
+#. ConfigFile.set_value
+#: doc/classes/ConfigFile.xml
+msgid "Assigns a value to the specified key of the specified section. If either the section or the key do not exist, they are created. Passing a [code]null[/code] value deletes the specified key if it exists, and deletes the section if it ends up empty once the key has been removed."
+msgstr "Értéket rendel a megadott szakasz megadott kulcsához. Szükség esetén létrehozza a szakaszt vagy a kulcsot. A [code]null[/code] érték átadása törli a kulcsot, ha létezik. Ha ettől a szakasz kiürül, magát a szakaszt is törli."
+
+#. DirAccess.brief
+#: doc/classes/DirAccess.xml
+msgid "Provides methods for managing directories and their content."
+msgstr "Metódusokat biztosít a mappák és tartalmuk kezeléséhez."
+
+#. DirAccess.description
+#: doc/classes/DirAccess.xml
+msgid "This class is used to manage directories and their content, even outside of the project folder.\n[DirAccess] can't be instantiated directly. Instead it is created with a static method that takes a path for which it will be opened.\nMost of the methods have a static alternative that can be used without creating a [DirAccess]. Static methods only support absolute paths (including [code]res://[/code] and [code]user://[/code]).\n[codeblock]\n# Standard\nvar dir = DirAccess.open(\"user://levels\")\ndir.make_dir(\"world1\")\n# Static\nDirAccess.make_dir_absolute(\"user://levels/world1\")\n[/codeblock]\n[b]Note:[/b] Accessing project (\"res://\") directories once exported may behave unexpectedly as some files are converted to engine-specific formats and their original source files may not be present in the expected PCK package. Because of this, to access resources in an exported project, it is recommended to use [ResourceLoader] instead of [FileAccess].\nHere is an example on how to iterate through the files of a directory:\n[codeblocks]\n[gdscript]\nfunc dir_contents(path):\n\tvar dir = DirAccess.open(path)\n\tif dir:\n\t\tdir.list_dir_begin()\n\t\tvar file_name = dir.get_next()\n\t\twhile file_name != \"\":\n\t\t\tif dir.current_is_dir():\n\t\t\t\tprint(\"Found directory: \" + file_name)\n\t\t\telse:\n\t\t\t\tprint(\"Found file: \" + file_name)\n\t\t\tfile_name = dir.get_next()\n\telse:\n\t\tprint(\"An error occurred when trying to access the path.\")\n[/gdscript]\n[csharp]\npublic void DirContents(string path)\n{\n\tusing var dir = DirAccess.Open(path);\n\tif (dir != null)\n\t{\n\t\tdir.ListDirBegin();\n\t\tstring fileName = dir.GetNext();\n\t\twhile (fileName != \"\")\n\t\t{\n\t\t\tif (dir.CurrentIsDir())\n\t\t\t{\n\t\t\t\tGD.Print($\"Found directory: {fileName}\");\n\t\t\t}\n\t\t\telse\n\t\t\t{\n\t\t\t\tGD.Print($\"Found file: {fileName}\");\n\t\t\t}\n\t\t\tfileName = dir.GetNext();\n\t\t}\n\t}\n\telse\n\t{\n\t\tGD.Print(\"An error occurred when trying to access the path.\");\n\t}\n}\n[/csharp]\n[/codeblocks]\nKeep in mind that file names may change or be remapped after export. If you want to see the actual resource file list as it appears in the editor, use [method ResourceLoader.list_directory] instead."
+msgstr "Ezzel az osztállyal a projektmappán belüli és kívüli mappákat, illetve azok tartalmát kezelheted.\nA [DirAccess] közvetlenül nem példányosítható. Egy statikus metódussal hozhatsz létre példányt, és annak adhatod át a megnyitandó mappa útvonalát.\nA legtöbb metódusnak van statikus változata, amely [DirAccess] példány nélkül is használható. A statikus metódusok csak abszolút útvonalakat támogatnak (ideértve a [code]res://[/code] és a [code]user://[/code] kezdetű útvonalakat).\n[codeblock]\n# Standard\nvar dir = DirAccess.open(\"user://levels\")\ndir.make_dir(\"world1\")\n# Static\nDirAccess.make_dir_absolute(\"user://levels/world1\")\n[/codeblock]\n[b]Megjegyzés:[/b] Exportálás után a projektmappák („res://”) elérése eltérhet a szerkesztőben tapasztaltaktól. Egyes fájlokat a motor saját formátumára alakít, így az eredeti forrásfájlok hiányozhatnak a PCK-csomagból. Exportált projektben ezért az erőforrásokat a [ResourceLoader] használatával érdemes elérni a [FileAccess] helyett.\nPélda arra, hogyan járhatod be egy mappa fájljait:\n[codeblocks]\n[gdscript]\nfunc dir_contents(path):\n\tvar dir = DirAccess.open(path)\n\tif dir:\n\t\tdir.list_dir_begin()\n\t\tvar file_name = dir.get_next()\n\t\twhile file_name != \"\":\n\t\t\tif dir.current_is_dir():\n\t\t\t\tprint(\"Found directory: \" + file_name)\n\t\t\telse:\n\t\t\t\tprint(\"Found file: \" + file_name)\n\t\t\tfile_name = dir.get_next()\n\telse:\n\t\tprint(\"An error occurred when trying to access the path.\")\n[/gdscript]\n[csharp]\npublic void DirContents(string path)\n{\n\tusing var dir = DirAccess.Open(path);\n\tif (dir != null)\n\t{\n\t\tdir.ListDirBegin();\n\t\tstring fileName = dir.GetNext();\n\t\twhile (fileName != \"\")\n\t\t{\n\t\t\tif (dir.CurrentIsDir())\n\t\t\t{\n\t\t\t\tGD.Print($\"Found directory: {fileName}\");\n\t\t\t}\n\t\t\telse\n\t\t\t{\n\t\t\t\tGD.Print($\"Found file: {fileName}\");\n\t\t\t}\n\t\t\tfileName = dir.GetNext();\n\t\t}\n\t}\n\telse\n\t{\n\t\tGD.Print(\"An error occurred when trying to access the path.\");\n\t}\n}\n[/csharp]\n[/codeblocks]\nExportáláskor a fájlnevek megváltozhatnak, vagy a motor más útvonalra irányíthatja őket. Ha az erőforrásokat a szerkesztőben látható nevükön szeretnéd felsorolni, használd a [method ResourceLoader.list_directory] metódust."
+
+#. DirAccess.change_dir
+#: doc/classes/DirAccess.xml
+msgid "Changes the currently opened directory to the one passed as an argument. The argument can be relative to the current directory (e.g. [code]newdir[/code] or [code]../newdir[/code]), or an absolute path (e.g. [code]/tmp/newdir[/code] or [code]res://somedir/newdir[/code]).\nReturns one of the [enum Error] code constants ([constant OK] on success).\n[b]Note:[/b] The new directory must be within the same scope, e.g. when you had opened a directory inside [code]res://[/code], you can't change it to [code]user://[/code] directory. If you need to open a directory in another access scope, use [method open] to create a new instance instead."
+msgstr "Az éppen megnyitott mappát az argumentumként átadott mappára váltja. Az útvonal lehet az aktuális mappához viszonyított (például [code]newdir[/code] vagy [code]../newdir[/code]), illetve abszolút (például [code]/tmp/newdir[/code] vagy [code]res://somedir/newdir[/code]).\nAz [enum Error] valamelyik hibakódját adja vissza (siker esetén [constant OK]).\n[b]Megjegyzés:[/b] Az új mappának ugyanabban a hozzáférési tartományban kell lennie. Például egy [code]res://[/code] alatti mappából nem válthatsz [code]user://[/code] alatti mappára. Másik hozzáférési tartományban a [method open] metódussal hozz létre új példányt."
+
+#. DirAccess.copy
+#: doc/classes/DirAccess.xml
+msgid "Copies the [param from] file to the [param to] destination. Both arguments should be paths to files, either relative or absolute. If the destination file exists and is not access-protected, it will be overwritten.\nIf [param chmod_flags] is different than [code]-1[/code], the Unix permissions for the destination path will be set to the provided value, if available on the current operating system.\nReturns one of the [enum Error] code constants ([constant OK] on success)."
+msgstr "A [param from] fájlt a [param to] célhelyre másolja. Mindkét argumentumnak relatív vagy abszolút fájlútvonalnak kell lennie. Ha a célfájl létezik, és a hozzáférése nincs korlátozva, a metódus felülírja.\nHa a [param chmod_flags] értéke eltér a [code]-1[/code] értéktől, a megadott értékre állítja a célfájl Unix-jogosultságait, amennyiben ezt az operációs rendszer támogatja.\nAz [enum Error] valamelyik hibakódját adja vissza (siker esetén [constant OK])."
+
+#. DirAccess.copy_absolute
+#: doc/classes/DirAccess.xml
+msgid "Static version of [method copy]. Supports only absolute paths."
+msgstr "A [method copy] statikus változata. Csak abszolút útvonalakat támogat."
+
+#. DirAccess.create_link
+#: doc/classes/DirAccess.xml
+msgid "Creates symbolic link between files or folders.\n[b]Note:[/b] On Windows, this method works only if the application is running with elevated privileges or Developer Mode is enabled.\n[b]Note:[/b] This method is implemented on macOS, Linux, and Windows."
+msgstr "Szimbolikus hivatkozást hoz létre fájlok vagy mappák között.\n[b]Megjegyzés:[/b] Windowson csak akkor működik, ha az alkalmazás emelt jogosultsággal fut, vagy be van kapcsolva a fejlesztői mód.\n[b]Megjegyzés:[/b] A metódus macOS-en, Linuxon és Windowson érhető el."
+
+#. DirAccess.create_temp
+#: doc/classes/DirAccess.xml
+msgid "Creates a temporary directory. This directory will be freed when the returned [DirAccess] is freed.\nIf [param prefix] is not empty, it will be prefixed to the directory name, separated by a [code]-[/code].\nIf [param keep] is [code]true[/code], the directory is not deleted when the returned [DirAccess] is freed.\nReturns [code]null[/code] if opening the directory failed. You can use [method get_open_error] to check the error that occurred."
+msgstr "Ideiglenes mappát hoz létre. A mappa a visszaadott [DirAccess] felszabadításakor törlődik.\nHa a [param prefix] nem üres, az előtag a mappa nevének elejére kerül, [code]-[/code] jellel elválasztva.\nHa a [param keep] értéke [code]true[/code], a visszaadott [DirAccess] felszabadításakor a mappa megmarad.\nHa a mappa megnyitása sikertelen, [code]null[/code] értéket ad vissza. A hibakódot a [method get_open_error] metódussal kérheted le."
+
+#. DirAccess.current_is_dir
+#: doc/classes/DirAccess.xml
+msgid "Returns whether the current item processed with the last [method get_next] call is a directory ([code].[/code] and [code]..[/code] are considered directories)."
+msgstr "Megadja, hogy a [method get_next] legutóbbi hívásával kapott elem mappa-e. A [code].[/code] és a [code]..[/code] is mappának számít."
+
+#. DirAccess.dir_exists
+#: doc/classes/DirAccess.xml
+msgid "Returns whether the target directory exists. The argument can be relative to the current directory, or an absolute path.\n[b]Note:[/b] The returned [bool] in the editor and after exporting when used on a path in the [code]res://[/code] directory may be different. Some files are converted to engine-specific formats when exported, potentially changing the directory structure."
+msgstr "Megadja, hogy a célmappa létezik-e. Az argumentum az aktuális mappához viszonyított vagy abszolút útvonal lehet.\n[b]Megjegyzés:[/b] A [code]res://[/code] alatti útvonalaknál a szerkesztőben és az exportált projektben eltérhet a visszaadott [bool] érték. A motor exportáláskor a saját formátumára alakíthat egyes fájlokat, ami megváltoztathatja a mappaszerkezetet."
+
+#. DirAccess.dir_exists_absolute
+#: doc/classes/DirAccess.xml
+msgid "Static version of [method dir_exists]. Supports only absolute paths.\n[b]Note:[/b] The returned [bool] in the editor and after exporting when used on a path in the [code]res://[/code] directory may be different. Some files are converted to engine-specific formats when exported, potentially changing the directory structure."
+msgstr "A [method dir_exists] statikus változata. Csak abszolút útvonalakat támogat.\n[b]Megjegyzés:[/b] A [code]res://[/code] alatti útvonalaknál a szerkesztőben és az exportált projektben eltérhet a visszaadott [bool] érték. A motor exportáláskor a saját formátumára alakíthat egyes fájlokat, ami megváltoztathatja a mappaszerkezetet."
+
+#. DirAccess.file_exists
+#: doc/classes/DirAccess.xml
+msgid "Returns whether the target file exists. The argument can be relative to the current directory, or an absolute path.\nFor a static equivalent, use [method FileAccess.file_exists].\n[b]Note:[/b] Many resources types are imported (e.g. textures or sound files), and their source asset will not be included in the exported game, as only the imported version is used. See [method ResourceLoader.exists] for an alternative approach that takes resource remapping into account."
+msgstr "Megadja, hogy a célfájl létezik-e. Az argumentum az aktuális mappához viszonyított vagy abszolút útvonal lehet.\nA statikus megfelelője a [method FileAccess.file_exists].\n[b]Megjegyzés:[/b] A Godot számos erőforrástípust importál, például textúrákat és hangfájlokat. Az exportált játék csak az importált változatot használja, ezért az eredeti fájl nem kerül bele. A [method ResourceLoader.exists] az exportált erőforrások átirányított útvonalát is figyelembe veszi."
+
+#. DirAccess.get_current_dir
+#: doc/classes/DirAccess.xml
+msgid "Returns the absolute path to the currently opened directory (e.g. [code]res://folder[/code] or [code]C:\\tmp\\folder[/code])."
+msgstr "Visszaadja az éppen megnyitott mappa abszolút útvonalát (például [code]res://folder[/code] vagy [code]C:\\tmp\\folder[/code])."
+
+#. DirAccess.get_current_drive
+#: doc/classes/DirAccess.xml
+msgid "Returns the currently opened directory's drive index. See [method get_drive_name] to convert returned index to the name of the drive."
+msgstr "Visszaadja az éppen megnyitott mappa meghajtójának indexét. Az indexhez tartozó meghajtó nevét a [method get_drive_name] metódussal kérheted le."
+
+#. DirAccess.get_directories
+#: doc/classes/DirAccess.xml
+msgid "Returns a [PackedStringArray] containing filenames of the directory contents, excluding files. The array is sorted alphabetically.\nAffected by [member include_hidden] and [member include_navigational].\n[b]Note:[/b] The returned directories in the editor and after exporting in the [code]res://[/code] directory may differ as some files are converted to engine-specific formats when exported."
+msgstr "Betűrendbe állított [PackedStringArray] tömbben adja vissza az aktuális mappában található mappák nevét. A fájlok nem szerepelnek a tömbben.\nA [member include_hidden] és a [member include_navigational] beállítás befolyásolja az eredményt.\n[b]Megjegyzés:[/b] A [code]res://[/code] útvonalon felsorolt mappák eltérhetnek a szerkesztőben és az exportált projektben, mert exportáláskor a motor egyes fájlokat saját formátumra alakít."
+
+#. DirAccess.get_directories_at
+#: doc/classes/DirAccess.xml
+msgid "Returns a [PackedStringArray] containing filenames of the directory contents, excluding files, at the given [param path]. The array is sorted alphabetically.\nUse [method get_directories] if you want more control of what gets included.\n[b]Note:[/b] The returned directories in the editor and after exporting in the [code]res://[/code] directory may differ as some files are converted to engine-specific formats when exported."
+msgstr "Betűrendbe állított [PackedStringArray] tömbben adja vissza a megadott [param path] alatti mappák nevét. A fájlok nem szerepelnek a tömbben.\nHa szabályozni szeretnéd, mely mappák kerüljenek a tömbbe, használd a [method get_directories] metódust.\n[b]Megjegyzés:[/b] A [code]res://[/code] útvonalon felsorolt mappák eltérhetnek a szerkesztőben és az exportált projektben, mert exportáláskor a motor egyes fájlokat saját formátumra alakít."
+
+#. DirAccess.get_drive_count
+#: doc/classes/DirAccess.xml
+msgid "On Windows, returns the number of drives (partitions) mounted on the current filesystem.\nOn macOS and Android, returns the number of mounted volumes.\nOn Linux, returns the number of mounted volumes and GTK 3 bookmarks.\nOn other platforms, the method returns 0."
+msgstr "Windowson az aktuális fájlrendszerbe csatolt meghajtók (partíciók) számát adja vissza.\nmacOS-en és Androidon a csatolt kötetek számát adja vissza.\nLinuxon a csatolt kötetek és a GTK 3-könyvjelzők számát adja vissza.\nMás platformokon 0 az eredmény."
+
+#. DirAccess.get_drive_label
+#: doc/classes/DirAccess.xml
+msgid "On Windows, returns the label of the drive (partition) passed as an argument.\nOn other platforms, or if the requested drive does not exist, returns an empty String."
+msgstr "Windowson az argumentumként átadott meghajtó (partíció) címkéjét adja vissza.\nMás platformon, illetve ha a kért meghajtó nem létezik, az eredmény üres sztring."
+
+#. DirAccess.get_drive_name
+#: doc/classes/DirAccess.xml
+msgid "On Windows, returns the name of the drive (partition) passed as an argument (e.g. [code]C:[/code]).\nOn macOS, returns the path to the mounted volume passed as an argument.\nOn Linux, returns the path to the mounted volume or GTK 3 bookmark passed as an argument.\nOn Android (API level 30+), returns the path to the mounted volume as an argument.\nOn other platforms, or if the requested drive does not exist, returns an empty String."
+msgstr "Windowson az argumentumként átadott meghajtó (partíció) nevét adja vissza (például [code]C:[/code]).\nmacOS-en az argumentumként megadott csatolt kötet útvonalát adja vissza.\nLinuxon az argumentumként megadott csatolt kötet vagy GTK 3-könyvjelző útvonalát adja vissza.\nAndroidon (30-as API-szinttől) az argumentumként megadott csatolt kötet útvonalát adja vissza.\nMás platformon, illetve ha a kért meghajtó nem létezik, az eredmény üres sztring."
+
+#. DirAccess.get_files
+#: doc/classes/DirAccess.xml
+msgid "Returns a [PackedStringArray] containing filenames of the directory contents, excluding directories. The array is sorted alphabetically.\nAffected by [member include_hidden].\n[b]Note:[/b] When used on a [code]res://[/code] path in an exported project, only the files actually included in the PCK at the given folder level are returned. In practice, this means that since imported resources are stored in a top-level [code].godot/[/code] folder, only paths to [code]*.gd[/code] and [code]*.import[/code] files are returned (plus a few files such as [code]project.godot[/code] or [code]project.binary[/code] and the project icon). In an exported project, the list of returned files will also vary depending on whether [member ProjectSettings.editor/export/convert_text_resources_to_binary] is [code]true[/code]."
+msgstr "Betűrendbe állított [PackedStringArray] tömbben adja vissza az aktuális mappában található fájlok nevét. A mappák nem szerepelnek a tömbben.\nA [member include_hidden] beállítás befolyásolja az eredményt.\n[b]Megjegyzés:[/b] Ha exportált projektben [code]res://[/code] kezdetű útvonalon hívod meg, csak a PCK-csomag adott mappájában ténylegesen szereplő fájlokat adja vissza. Az importált erőforrások a legfelső szintű [code].godot/[/code] mappában vannak, így a gyakorlatban csak a [code]*.gd[/code] és [code]*.import[/code] fájlok útvonalait kapod meg, néhány egyéb fájl, például a [code]project.godot[/code] vagy a [code]project.binary[/code] és a projektikon mellett. Exportált projektben a lista attól is függ, hogy a [member ProjectSettings.editor/export/convert_text_resources_to_binary] értéke [code]true[/code]-e."
+
+#. DirAccess.get_filesystem_type
+#: doc/classes/DirAccess.xml
+msgid "Returns file system type name of the current directory's disk. Returned values are uppercase strings like [code]NTFS[/code], [code]FAT32[/code], [code]EXFAT[/code], [code]APFS[/code], [code]EXT4[/code], [code]BTRFS[/code], and so on.\n[b]Note:[/b] This method is implemented on macOS, Linux, Windows and for PCK virtual file system."
+msgstr "Visszaadja az aktuális mappát tartalmazó meghajtó fájlrendszerének típusát. A visszaadott érték nagybetűs sztring, például [code]NTFS[/code], [code]FAT32[/code], [code]EXFAT[/code], [code]APFS[/code], [code]EXT4[/code] vagy [code]BTRFS[/code].\n[b]Megjegyzés:[/b] A metódus macOS-en, Linuxon, Windowson és a virtuális PCK-fájlrendszeren érhető el."
+
+#. DirAccess.get_next
+#: doc/classes/DirAccess.xml
+msgid "Returns the next element (file or directory) in the current directory.\nThe name of the file or directory is returned (and not its full path). Once the stream has been fully processed, the method returns an empty [String] and closes the stream automatically (i.e. [method list_dir_end] would not be mandatory in such a case)."
+msgstr "Visszaadja az aktuális mappa következő elemét (fájlt vagy mappát).\nA metódus a fájl vagy mappa nevét adja vissza. A bejárás végén üres [String] értéket ad, és automatikusan lezárja a bejárást. Ilyenkor nem kötelező meghívni a [method list_dir_end] metódust."
+
+#. DirAccess.get_space_left
+#: doc/classes/DirAccess.xml
+msgid "Returns the available space on the current directory's disk, in bytes. Returns [code]0[/code] if the platform-specific method to query the available space fails."
+msgstr "Bájtban adja vissza az aktuális mappát tartalmazó meghajtó szabad helyét. Ha a platformon a szabad hely lekérdezése sikertelen, [code]0[/code] az eredmény."
+
+#. DirAccess.is_bundle
+#: doc/classes/DirAccess.xml
+msgid "Returns [code]true[/code] if the directory is a macOS bundle.\n[b]Note:[/b] This method is implemented on macOS."
+msgstr "[code]true[/code] értéket ad vissza, ha a mappa macOS-alkalmazáscsomag vagy más macOS-csomag.\n[b]Megjegyzés:[/b] A metódus macOS-en érhető el."
+
+#. DirAccess.is_case_sensitive
+#: doc/classes/DirAccess.xml
+msgid "Returns [code]true[/code] if the file system or directory use case sensitive file names.\n[b]Note:[/b] This method is implemented on macOS, Linux (for EXT4 and F2FS filesystems only) and Windows. On other platforms, it always returns [code]true[/code]."
+msgstr "[code]true[/code] értéket ad vissza, ha a fájlrendszer vagy a mappa megkülönbözteti a kis- és nagybetűket a fájlnevekben.\n[b]Megjegyzés:[/b] Ez a metódus macOS-en, Linuxon (csak EXT4 és F2FS fájlrendszeren), valamint Windowson működik. Más platformokon mindig [code]true[/code] az eredmény."
+
+#. DirAccess.is_equivalent
+#: doc/classes/DirAccess.xml
+msgid "Returns [code]true[/code] if paths [param path_a] and [param path_b] resolve to the same file system object. Returns [code]false[/code] otherwise, even if the files are bit-for-bit identical (e.g., identical copies of the file that are not symbolic links)."
+msgstr "[code]true[/code] értéket ad vissza, ha a [param path_a] és a [param path_b] ugyanarra a fájlrendszerbeli objektumra mutat. Egyébként [code]false[/code] az eredmény akkor is, ha a fájlok bitről bitre megegyeznek (például ha egymás pontos másolatai, és egyik sem szimbolikus hivatkozás)."
+
+#. DirAccess.is_link
+#: doc/classes/DirAccess.xml
+msgid "Returns [code]true[/code] if the file or directory is a symbolic link, directory junction, or other reparse point.\n[b]Note:[/b] This method is implemented on macOS, Linux, and Windows."
+msgstr "[code]true[/code] értéket ad vissza, ha a fájl vagy mappa szimbolikus hivatkozás, mappacsatolás (junction) vagy más újraelemzési pont.\n[b]Megjegyzés:[/b] A metódus macOS-en, Linuxon és Windowson érhető el."
+
+#. DirAccess.list_dir_begin
+#: doc/classes/DirAccess.xml
+msgid "Initializes the stream used to list all files and directories using the [method get_next] function, closing the currently opened stream if needed. Once the stream has been processed, it should typically be closed with [method list_dir_end].\nAffected by [member include_hidden] and [member include_navigational].\n[b]Note:[/b] The order of files and directories returned by this method is not deterministic, and can vary between operating systems. If you want a list of all files or folders sorted alphabetically, use [method get_files] or [method get_directories]."
+msgstr "Elindítja a mappa fájljainak és almappáinak felsorolását. Az elemeket a [method get_next] függvénnyel kérheted le. Szükség esetén lezárja a korábban megnyitott bejárást. A lista feldolgozása után a bejárást általában a [method list_dir_end] metódussal érdemes lezárni.\nA [member include_hidden] és a [member include_navigational] beállítás befolyásolja az eredményt.\n[b]Megjegyzés:[/b] A metódus nem garantálja az elemek sorrendjét, amely operációs rendszerenként eltérhet. Betűrendbe állított listához használd a [method get_files] vagy a [method get_directories] metódust."
+
+#. DirAccess.list_dir_end
+#: doc/classes/DirAccess.xml
+msgid "Closes the current stream opened with [method list_dir_begin] (whether it has been fully processed with [method get_next] does not matter)."
+msgstr "Lezárja a [method list_dir_begin] hívásával megnyitott bejárást akkor is, ha a [method get_next] metódussal még nem olvastad ki az összes elemet."
+
+#. DirAccess.make_dir
+#: doc/classes/DirAccess.xml
+msgid "Creates a directory. The argument can be relative to the current directory, or an absolute path. The target directory should be placed in an already existing directory (to create the full path recursively, see [method make_dir_recursive]).\nReturns one of the [enum Error] code constants ([constant OK] on success)."
+msgstr "Mappát hoz létre. Az argumentum az aktuális mappához viszonyított vagy abszolút útvonal lehet. A célmappa szülőmappájának már léteznie kell. A teljes útvonal rekurzív létrehozásához használd a [method make_dir_recursive] metódust.\nAz [enum Error] valamelyik hibakódját adja vissza (siker esetén [constant OK])."
+
+#. DirAccess.make_dir_absolute
+#: doc/classes/DirAccess.xml
+msgid "Static version of [method make_dir]. Supports only absolute paths."
+msgstr "A [method make_dir] statikus változata. Csak abszolút útvonalakat támogat."
+
+#. DirAccess.make_dir_recursive
+#: doc/classes/DirAccess.xml
+msgid "Creates a target directory and all necessary intermediate directories in its path, by calling [method make_dir] recursively. The argument can be relative to the current directory, or an absolute path.\nReturns one of the [enum Error] code constants ([constant OK] on success)."
+msgstr "A [method make_dir] ismételt hívásával létrehozza a célmappát és az útvonalához szükséges összes köztes mappát. Az argumentum az aktuális mappához viszonyított vagy abszolút útvonal lehet.\nAz [enum Error] valamelyik hibakódját adja vissza (siker esetén [constant OK])."
+
+#. DirAccess.make_dir_recursive_absolute
+#: doc/classes/DirAccess.xml
+msgid "Static version of [method make_dir_recursive]. Supports only absolute paths."
+msgstr "A [method make_dir_recursive] statikus változata. Csak abszolút útvonalakat támogat."
+
+#. DirAccess.open
+#: doc/classes/DirAccess.xml
+msgid "Creates a new [DirAccess] object and opens an existing directory of the filesystem. The [param path] argument can be within the project tree ([code]res://folder[/code]), the user directory ([code]user://folder[/code]) or an absolute path of the user filesystem (e.g. [code]/tmp/folder[/code] or [code]C:\\tmp\\folder[/code]).\nReturns [code]null[/code] if opening the directory failed. You can use [method get_open_error] to check the error that occurred."
+msgstr "Új [DirAccess] objektumot hoz létre, és megnyitja a fájlrendszer egyik létező mappáját. A [param path] a projekten belüli útvonal ([code]res://folder[/code]), a felhasználói mappán belüli útvonal ([code]user://folder[/code]) vagy a felhasználó fájlrendszerének abszolút útvonala (például [code]/tmp/folder[/code] vagy [code]C:\\tmp\\folder[/code]) lehet.\nHa a mappa megnyitása sikertelen, [code]null[/code] értéket ad vissza. A hibakódot a [method get_open_error] metódussal kérheted le."
+
+#. DirAccess.read_link
+#: doc/classes/DirAccess.xml
+msgid "Returns target of the symbolic link.\n[b]Note:[/b] This method is implemented on macOS, Linux, and Windows."
+msgstr "Visszaadja a szimbolikus hivatkozás célját.\n[b]Megjegyzés:[/b] A metódus macOS-en, Linuxon és Windowson érhető el."
+
+#. DirAccess.remove
+#: doc/classes/DirAccess.xml
+msgid "Permanently deletes the target file or an empty directory. The argument can be relative to the current directory, or an absolute path. If the target directory is not empty, the operation will fail.\nIf you don't want to delete the file/directory permanently, use [method OS.move_to_trash] instead.\nReturns one of the [enum Error] code constants ([constant OK] on success)."
+msgstr "Véglegesen törli a célfájlt vagy az üres célmappát. Az argumentum az aktuális mappához viszonyított vagy abszolút útvonal lehet. Ha a célmappa nem üres, a művelet sikertelen.\nHa a fájlt vagy mappát a lomtárba szeretnéd helyezni, használd a [method OS.move_to_trash] metódust.\nAz [enum Error] valamelyik hibakódját adja vissza (siker esetén [constant OK])."
+
+#. DirAccess.remove_absolute
+#: doc/classes/DirAccess.xml
+msgid "Static version of [method remove]. Supports only absolute paths."
+msgstr "A [method remove] statikus változata. Csak abszolút útvonalakat támogat."
+
+#. DirAccess.rename
+#: doc/classes/DirAccess.xml
+msgid "Renames (move) the [param from] file or directory to the [param to] destination. Both arguments should be paths to files or directories, either relative or absolute. If the destination file or directory exists and is not access-protected, it will be overwritten.\nReturns one of the [enum Error] code constants ([constant OK] on success)."
+msgstr "Átnevezi vagy áthelyezi a [param from] fájlt vagy mappát a [param to] célhelyre. Mindkét argumentum relatív vagy abszolút fájl- vagy mappaútvonal lehet. Ha a célfájl vagy célmappa létezik, és a hozzáférése nincs korlátozva, a metódus felülírja.\nAz [enum Error] valamelyik hibakódját adja vissza (siker esetén [constant OK])."
+
+#. DirAccess.rename_absolute
+#: doc/classes/DirAccess.xml
+msgid "Static version of [method rename]. Supports only absolute paths."
+msgstr "A [method rename] statikus változata. Csak abszolút útvonalakat támogat."
+
+#. DirAccess.include_hidden
+#: doc/classes/DirAccess.xml
+msgid "If [code]true[/code], hidden files are included when navigating the directory.\nAffects [method list_dir_begin], [method get_directories] and [method get_files]."
+msgstr "Ha az értéke [code]true[/code], a bejárás a rejtett fájlokat is felsorolja.\nA [method list_dir_begin], a [method get_directories] és a [method get_files] eredményére hat."
+
+#. DirAccess.include_navigational
+#: doc/classes/DirAccess.xml
+msgid "If [code]true[/code], [code].[/code] and [code]..[/code] are included when navigating the directory.\nAffects [method list_dir_begin] and [method get_directories]."
+msgstr "Ha az értéke [code]true[/code], a bejárás a [code].[/code] és a [code]..[/code] bejegyzést is felsorolja.\nA [method list_dir_begin] és a [method get_directories] eredményére hat."
+
+#. DirAccess.get_files_at
+#: doc/classes/DirAccess.xml
+msgid "Returns a [PackedStringArray] containing filenames of the directory contents, excluding directories, at the given [param path]. The array is sorted alphabetically.\nUse [method get_files] if you want more control of what gets included.\n[b]Note:[/b] When used on a [code]res://[/code] path in an exported project, only the files included in the PCK at the given folder level are returned. In practice, this means that since imported resources are stored in a top-level [code].godot/[/code] folder, only paths to [code].gd[/code] and [code].import[/code] files are returned (plus a few other files, such as [code]project.godot[/code] or [code]project.binary[/code] and the project icon). In an exported project, the list of returned files will also vary depending on [member ProjectSettings.editor/export/convert_text_resources_to_binary]."
+msgstr "Betűrendbe állított [PackedStringArray] tömbben adja vissza a megadott [param path] mappában található fájlok nevét. A mappák nem szerepelnek a tömbben.\nHa szabályozni szeretnéd, mely fájlok kerüljenek a tömbbe, használd a [method get_files] metódust.\n[b]Megjegyzés:[/b] Exportált projektben [code]res://[/code] kezdetű útvonalon csak a PCK-csomag adott mappájában szereplő fájlokat adja vissza. Az importált erőforrások a legfelső szintű [code].godot/[/code] mappában vannak, így a gyakorlatban csak a [code].gd[/code] és [code].import[/code] kiterjesztésű fájlok útvonalait kapod meg, néhány egyéb fájl, például a [code]project.godot[/code] vagy a [code]project.binary[/code] és a projektikon mellett. Exportált projektben a lista a [member ProjectSettings.editor/export/convert_text_resources_to_binary] beállítástól is függ."
+
+#. FileAccess.brief
+#: doc/classes/FileAccess.xml
+msgid "Provides methods for file reading and writing operations."
+msgstr "Metódusokat biztosít fájlok olvasásához és írásához."
+
+#. FileAccess.description
+#: doc/classes/FileAccess.xml
+msgid "This class can be used to permanently store data in the user device's file system and to read from it. This is useful for storing game save data or player configuration files.\n[b]Example:[/b] How to write and read from a file. The file named [code]\"save_game.dat\"[/code] will be stored in the user data folder, as specified in the [url=$DOCS_URL/tutorials/io/data_paths.html]Data paths[/url] documentation:\n[codeblocks]\n[gdscript]\nfunc save_to_file(content):\n\tvar file = FileAccess.open(\"user://save_game.dat\", FileAccess.WRITE)\n\tfile.store_string(content)\n\nfunc load_from_file():\n\tvar file = FileAccess.open(\"user://save_game.dat\", FileAccess.READ)\n\tvar content = file.get_as_text()\n\treturn content\n[/gdscript]\n[csharp]\npublic void SaveToFile(string content)\n{\n\tusing var file = FileAccess.Open(\"user://save_game.dat\", FileAccess.ModeFlags.Write);\n\tfile.StoreString(content);\n}\n\npublic string LoadFromFile()\n{\n\tusing var file = FileAccess.Open(\"user://save_game.dat\", FileAccess.ModeFlags.Read);\n\tstring content = file.GetAsText();\n\treturn content;\n}\n[/csharp]\n[/codeblocks]\nA [FileAccess] instance has its own file cursor, which is the position in bytes in the file where the next read/write operation will occur. Functions such as [method get_8], [method get_16], [method store_8], and [method store_16] will move the file cursor forward by the number of bytes read/written. The file cursor can be moved to a specific position using [method seek] or [method seek_end], and its position can be retrieved using [method get_position].\nA [FileAccess] instance will close its file when the instance is freed. Since it inherits [RefCounted], this happens automatically when it is no longer in use. [method close] can be called to close it earlier. In C#, the reference must be disposed manually, which can be done with the [code]using[/code] statement or by calling the [code]Dispose[/code] method directly.\n[b]Note:[/b] To access project resources once exported, it is recommended to use [ResourceLoader] instead of [FileAccess], as some files are converted to engine-specific formats and their original source files might not be present in the exported PCK package. If using [FileAccess], make sure the file is included in the export by changing its import mode to [b]Keep File (exported as is)[/b] in the Import dock, or, for files where this option is not available, change the non-resource export filter in the Export dialog to include the file's extension (e.g. [code]*.txt[/code]).\n[b]Note:[/b] Files are automatically closed only if the process exits \"normally\" (such as by clicking the window manager's close button or pressing [kbd]Alt + F4[/kbd]). If you stop the project execution by pressing [kbd]F8[/kbd] while the project is running, the file won't be closed as the game process will be killed. You can work around this by calling [method flush] at regular intervals."
+msgstr "Ezzel az osztállyal tartósan tárolhatsz és visszaolvashatsz adatokat a felhasználó eszközének fájlrendszerében. Így mentheted például a játékállást vagy a játékos beállításait.\n[b]Példa:[/b] Fájl írása és visszaolvasása. A [code]\"save_game.dat\"[/code] nevű fájl a felhasználói adatmappába kerül, amelyről az [url=$DOCS_URL/tutorials/io/data_paths.html]Adatútvonalak[/url] dokumentációban olvashatsz:\n[codeblocks]\n[gdscript]\nfunc save_to_file(content):\n\tvar file = FileAccess.open(\"user://save_game.dat\", FileAccess.WRITE)\n\tfile.store_string(content)\n\nfunc load_from_file():\n\tvar file = FileAccess.open(\"user://save_game.dat\", FileAccess.READ)\n\tvar content = file.get_as_text()\n\treturn content\n[/gdscript]\n[csharp]\npublic void SaveToFile(string content)\n{\n\tusing var file = FileAccess.Open(\"user://save_game.dat\", FileAccess.ModeFlags.Write);\n\tfile.StoreString(content);\n}\n\npublic string LoadFromFile()\n{\n\tusing var file = FileAccess.Open(\"user://save_game.dat\", FileAccess.ModeFlags.Read);\n\tstring content = file.GetAsText();\n\treturn content;\n}\n[/csharp]\n[/codeblocks]\nMinden [FileAccess] példányhoz külön fájlpozíció tartozik. Ez bájtban adja meg, hol kezdődik a következő olvasás vagy írás. A [method get_8], [method get_16], [method store_8] és [method store_16] metódus az olvasott vagy írt bájtok számával lépteti előre a fájlpozíciót. Adott helyre a [method seek] vagy a [method seek_end] metódussal ugorhatsz, a jelenlegi pozíciót pedig a [method get_position] metódussal kérheted le.\nA [FileAccess] példány a felszabadításakor bezárja a fájlt. Mivel a [RefCounted] osztályból származik, ez automatikusan megtörténik, ha már nincs rá hivatkozás. Ha hamarabb szeretnéd bezárni a fájlt, hívd meg a [method close] metódust. C#-ban az erőforrást külön fel kell szabadítani a [code]using[/code] utasítással vagy a [code]Dispose[/code] metódus közvetlen hívásával.\n[b]Megjegyzés:[/b] Exportálás után a projekt erőforrásait érdemes a [ResourceLoader] használatával elérni a [FileAccess] helyett. A motor néhány fájlt saját formátumára alakít, így az eredeti forrásfájl hiányozhat az exportált PCK-csomagból. Ha [FileAccess] segítségével olvasol egy fájlt, az Importálás dokkban válaszd a [b]Fájl megtartása (exportálás változtatás nélkül)[/b] importálási módot. Azoknál a fájltípusoknál, ahol ez a lehetőség nem érhető el, vedd fel a kiterjesztést (például [code]*.txt[/code]) az Exportálás ablak nem erőforrásfájlokra vonatkozó szűrőjébe.\n[b]Megjegyzés:[/b] A fájlok csak szabályos kilépéskor záródnak be automatikusan, például az ablak bezárásakor vagy az [kbd]Alt + F4[/kbd] megnyomásakor. Ha futás közben az [kbd]F8[/kbd] billentyűvel állítod le a projektet, a játékfolyamat kényszerített leállítása miatt a fájl szabályos bezárása elmarad. Az addig írt adatok megőrzéséhez rendszeresen meghívhatod a [method flush] metódust."
+
+#. FileAccess.close
+#: doc/classes/FileAccess.xml
+msgid "Closes the currently opened file and prevents subsequent read/write operations. Use [method flush] to persist the data to disk without closing the file.\n[b]Note:[/b] [FileAccess] will automatically close when it's freed, which happens when it goes out of scope or when it gets assigned with [code]null[/code]. In C# the reference must be disposed after we are done using it, this can be done with the [code]using[/code] statement or calling the [code]Dispose[/code] method directly."
+msgstr "Bezárja az éppen megnyitott fájlt, így azon további olvasás vagy írás nem végezhető. Ha a fájl bezárása nélkül szeretnéd lemezre írni az adatokat, használd a [method flush] metódust.\n[b]Megjegyzés:[/b] A [FileAccess] felszabadításakor automatikusan bezárja a fájlt. Ez például akkor történik meg, ha az utolsó hivatkozás kikerül a hatókörből, vagy [code]null[/code] értéket kap. C#-ban használat után fel kell szabadítani az erőforrást a [code]using[/code] utasítással vagy a [code]Dispose[/code] metódus közvetlen hívásával."
+
+#. FileAccess.create_temp
+#: doc/classes/FileAccess.xml
+msgid "Creates a temporary file. This file will be freed when the returned [FileAccess] is freed.\nIf [param prefix] is not empty, it will be prefixed to the file name, separated by a [code]-[/code].\nIf [param extension] is not empty, it will be appended to the temporary file name.\nIf [param keep] is [code]true[/code], the file is not deleted when the returned [FileAccess] is freed.\nReturns [code]null[/code] if opening the file failed. You can use [method get_open_error] to check the error that occurred."
+msgstr "Ideiglenes fájlt hoz létre. A fájl a visszaadott [FileAccess] felszabadításakor törlődik.\nHa a [param prefix] nem üres, az előtag a fájlnevet megelőzve, [code]-[/code] jellel elválasztva jelenik meg.\nHa a [param extension] nem üres, a kiterjesztés az ideiglenes fájl nevének végére kerül.\nHa a [param keep] értéke [code]true[/code], a visszaadott [FileAccess] felszabadításakor a fájl megmarad.\nHa a fájl megnyitása sikertelen, [code]null[/code] értéket ad vissza. A hibakódot a [method get_open_error] metódussal kérheted le."
+
+#. FileAccess.eof_reached
+#: doc/classes/FileAccess.xml
+msgid "Returns [code]true[/code] if the file cursor has already read past the end of the file.\n[b]Note:[/b] [code]eof_reached() == false[/code] cannot be used to check whether there is more data available. To loop while there is more data available, use:\n[codeblocks]\n[gdscript]\nwhile file.get_position() < file.get_length():\n\t# Read data\n[/gdscript]\n[csharp]\nwhile (file.GetPosition() < file.GetLength())\n{\n\t// Read data\n}\n[/csharp]\n[/codeblocks]"
+msgstr "[code]true[/code] értéket ad vissza, ha az olvasás már túllépte a fájl végét.\n[b]Megjegyzés:[/b] Az [code]eof_reached() == false[/code] feltétel önmagában nem jelzi, hogy van-e még olvasható adat. Az olvasási ciklust így tarthatod fenn, amíg van adat:\n[codeblocks]\n[gdscript]\nwhile file.get_position() < file.get_length():\n\t# Read data\n[/gdscript]\n[csharp]\nwhile (file.GetPosition() < file.GetLength())\n{\n\t// Read data\n}\n[/csharp]\n[/codeblocks]"
+
+#. FileAccess.file_exists
+#: doc/classes/FileAccess.xml
+msgid "Returns [code]true[/code] if the file exists in the given path.\n[b]Note:[/b] Many resources types are imported (e.g. textures or sound files), and their source asset will not be included in the exported game, as only the imported version is used. See [method ResourceLoader.exists] for an alternative approach that takes resource remapping into account.\nFor a non-static, relative equivalent, use [method DirAccess.file_exists]."
+msgstr "[code]true[/code] értéket ad vissza, ha a megadott útvonalon létezik a fájl.\n[b]Megjegyzés:[/b] A Godot számos erőforrástípust importál, például textúrákat és hangfájlokat. Az exportált játék csak az importált változatot használja, ezért az eredeti fájl nem kerül bele. A [method ResourceLoader.exists] az exportált erőforrások átirányított útvonalát is figyelembe veszi.\nHa példánymetódusra van szükséged, amely relatív útvonalat is elfogad, használd a [method DirAccess.file_exists] metódust."
+
+#. FileAccess.flush
+#: doc/classes/FileAccess.xml
+msgid "Writes the file's buffer to disk. Flushing is automatically performed when the file is closed. This means you don't need to call [method flush] manually before closing a file. Still, calling [method flush] can be used to ensure the data is safe even if the project crashes instead of being closed gracefully.\n[b]Note:[/b] Only call [method flush] when you actually need it. Otherwise, it will decrease performance due to constant disk writes."
+msgstr "Lemezre írja a fájl pufferét. Bezáráskor ez automatikusan megtörténik, ezért nem kell előtte kézzel meghívnod a [method flush] metódust. Ha azonban a projekt szabályos bezárás helyett összeomlik, a korábban meghívott [method flush] gondoskodik róla, hogy az addigi adatok lemezen legyenek.\n[b]Megjegyzés:[/b] Csak akkor hívd meg a [method flush] metódust, amikor szükséged van rá. A folyamatos lemezírás rontja a teljesítményt."
+
+#. FileAccess.get_csv_line
+#: doc/classes/FileAccess.xml
+msgid "Returns the next value of the file in CSV (Comma-Separated Values) format. You can pass a different delimiter [param delim] to use other than the default [code]\",\"[/code] (comma). This delimiter must be one-character long, and cannot be a double quotation mark.\nText is interpreted as being UTF-8 encoded. Text values must be enclosed in double quotes if they include the delimiter character. Double quotes within a text value can be escaped by doubling their occurrence. This advances the file cursor to after the newline character at the end of the line.\nFor example, the following CSV lines are valid and will be properly parsed as two strings each:\n[codeblock lang=text]\nAlice,\"Hello, Bob!\"\nBob,Alice! What a surprise!\nAlice,\"I thought you'd reply with \"\"Hello, world\"\".\"\n[/codeblock]\nNote how the second line can omit the enclosing quotes as it does not include the delimiter. However it [i]could[/i] very well use quotes, it was only written without for demonstration purposes. The third line must use [code]\"\"[/code] for each quotation mark that needs to be interpreted as such instead of the end of a text value."
+msgstr "CSV-formátumban (vesszővel elválasztott értékekként) beolvassa a fájl következő sorát. Az alapértelmezett [code]\",\"[/code] (vessző) helyett a [param delim] paraméterben más elválasztót is megadhatsz. Az elválasztó egyetlen karakter lehet, és nem lehet dupla idézőjel.\nA szöveget UTF-8 kódolásúként olvassa be. Ha egy mező tartalmazza az elválasztó karaktert, a mezőt dupla idézőjelek közé kell tenni. A mezőn belüli dupla idézőjelet két egymást követő dupla idézőjellel adhatod meg. A fájlpozíció a sort lezáró újsorjel mögé kerül.\nAz alábbi CSV-sorok mind érvényesek. Mindegyikből két sztringet olvas be a metódus:\n[codeblock lang=text]\nAlice,\"Hello, Bob!\"\nBob,Alice! What a surprise!\nAlice,\"I thought you'd reply with \"\"Hello, world\"\".\"\n[/codeblock]\nA második sorban elhagyhatók a határoló idézőjelek, mert az értékek nem tartalmazzák az elválasztót. A sor [i]lehetne[/i] idézőjelek között is, a példa csak az elhagyás lehetőségét mutatja. A harmadik sorban minden olyan idézőjelet [code]\"\"[/code] alakban kell írni, amely az érték része, és nem a mezőt zárja le."
+
+#. FileAccess.get_extended_attribute
+#: doc/classes/FileAccess.xml
+msgid "Reads the file extended attribute with name [param attribute_name] as a byte array.\n[b]Note:[/b] This method is implemented on Linux, macOS, and Windows.\n[b]Note:[/b] Extended attributes support depends on the file system. Attributes will be lost when the file is moved between incompatible file systems.\n[b]Note:[/b] On Linux, only \"user\" namespace attributes are accessible, namespace prefix should not be included.\n[b]Note:[/b] On Windows, alternate data streams are used to store extended attributes."
+msgstr "Bájttömbként olvassa be a [param attribute_name] nevű kiterjesztett fájlattribútumot.\n[b]Megjegyzés:[/b] A metódus Linuxon, macOS-en és Windowson érhető el.\n[b]Megjegyzés:[/b] A kiterjesztett attribútumok támogatása a fájlrendszertől függ. Ha a fájlt nem kompatibilis fájlrendszerre helyezed át, az attribútumok elvesznek.\n[b]Megjegyzés:[/b] Linuxon csak a „user” névtér attribútumai érhetők el. A névtér előtagját el kell hagyni.\n[b]Megjegyzés:[/b] Windows a kiterjesztett attribútumokat alternatív adatfolyamokban tárolja."
+
+#. FileAccess.get_extended_attribute_string
+#: doc/classes/FileAccess.xml
+msgid "Reads the file extended attribute with name [param attribute_name] as a UTF-8 encoded string.\n[b]Note:[/b] This method is implemented on Linux, macOS, and Windows.\n[b]Note:[/b] Extended attributes support depends on the file system. Attributes will be lost when the file is moved between incompatible file systems.\n[b]Note:[/b] On Linux, only \"user\" namespace attributes are accessible, namespace prefix should not be included.\n[b]Note:[/b] On Windows, alternate data streams are used to store extended attributes."
+msgstr "UTF-8 kódolású sztringként olvassa be a [param attribute_name] nevű kiterjesztett fájlattribútumot.\n[b]Megjegyzés:[/b] A metódus Linuxon, macOS-en és Windowson érhető el.\n[b]Megjegyzés:[/b] A kiterjesztett attribútumok támogatása a fájlrendszertől függ. Ha a fájlt nem kompatibilis fájlrendszerre helyezed át, az attribútumok elvesznek.\n[b]Megjegyzés:[/b] Linuxon csak a „user” névtér attribútumai érhetők el. A névtér előtagját el kell hagyni.\n[b]Megjegyzés:[/b] Windows a kiterjesztett attribútumokat alternatív adatfolyamokban tárolja."
+
+#. FileAccess.get_extended_attributes_list
+#: doc/classes/FileAccess.xml
+msgid "Returns a list of file extended attributes.\n[b]Note:[/b] This method is implemented on Linux, macOS, and Windows.\n[b]Note:[/b] Extended attributes support depends on the file system. Attributes will be lost when the file is moved between incompatible file systems.\n[b]Note:[/b] On Linux, only \"user\" namespace attributes are accessible, namespace prefix should not be included.\n[b]Note:[/b] On Windows, alternate data streams are used to store extended attributes."
+msgstr "Felsorolja a fájl kiterjesztett attribútumait.\n[b]Megjegyzés:[/b] A metódus Linuxon, macOS-en és Windowson érhető el.\n[b]Megjegyzés:[/b] A kiterjesztett attribútumok támogatása a fájlrendszertől függ. Ha a fájlt nem kompatibilis fájlrendszerre helyezed át, az attribútumok elvesznek.\n[b]Megjegyzés:[/b] Linuxon csak a „user” névtér attribútumai érhetők el. A névtér előtagját el kell hagyni.\n[b]Megjegyzés:[/b] Windows a kiterjesztett attribútumokat alternatív adatfolyamokban tárolja."
+
+#. FileAccess.get_line
+#: doc/classes/FileAccess.xml
+msgid "Returns the next line of the file as a [String]. The returned string doesn't include newline ([code]\\n[/code]) or carriage return ([code]\\r[/code]) characters, but does include any other leading or trailing whitespace. This advances the file cursor to after the newline character at the end of the line.\nText is interpreted as being UTF-8 encoded."
+msgstr "A fájl következő sorát [String] értékként adja vissza. Az újsor ([code]\\n[/code]) és a kocsivissza ([code]\\r[/code]) karaktert elhagyja, a többi kezdő és záró térközkaraktert megőrzi. A fájlpozíciót a sort lezáró újsorjel mögé állítja.\nA szöveget UTF-8 kódolásúként olvassa be."
+
+#. FileAccess.get_real
+#: doc/classes/FileAccess.xml
+msgid "Returns the next bits from the file as a floating-point number. This advances the file cursor by either 4 or 8 bytes, depending on the precision used by the Godot build that saved the file.\nIf the file was saved by a Godot build compiled with the [code]precision=single[/code] option (the default), the number of read bits for that file is 32. Otherwise, if compiled with the [code]precision=double[/code] option, the number of read bits is 64."
+msgstr "A fájl aktuális pozíciójáról lebegőpontos számot olvas be. A fájlpozíció 4 vagy 8 bájttal lép előre attól függően, hogy a fájlt mentő Godot-verzió milyen pontosságot használt.\nHa a fájlt mentő Godot a [code]precision=single[/code] beállítással készült (ez az alapértelmezés), a metódus 32 bitet olvas. A [code]precision=double[/code] beállítással készült Godot által mentett fájlból 64 bitet olvas."
+
+#. FileAccess.get_var
+#: doc/classes/FileAccess.xml
+msgid "Returns the next [Variant] value from the file. If [param allow_objects] is [code]true[/code], decoding objects is allowed. This advances the file cursor by the number of bytes read.\nInternally, this uses the same decoding mechanism as the [method @GlobalScope.bytes_to_var] method, as described in the [url=$DOCS_URL/tutorials/io/binary_serialization_api.html]Binary serialization API[/url] documentation.\n[b]Warning:[/b] Deserialized objects can contain code which gets executed. Do not use this option if the serialized object comes from untrusted sources to avoid potential security threats such as remote code execution."
+msgstr "A fájl következő [Variant] értékét adja vissza. Ha a [param allow_objects] értéke [code]true[/code], az objektumok visszaállítása is engedélyezett. A fájlpozíció az olvasott bájtok számával lép előre.\nA metódus belsőleg ugyanazt a dekódolást használja, mint a [method @GlobalScope.bytes_to_var]. A részleteket a [url=$DOCS_URL/tutorials/io/binary_serialization_api.html]bináris szerializálási API[/url] dokumentációja ismerteti.\n[b]Figyelmeztetés:[/b] A visszaállított objektumok futtatható kódot tartalmazhatnak, amely végre is hajtódhat. Ha az objektum nem megbízható forrásból származik, ne kapcsold be ezt a beállítást, mert például távoli kódfuttatást tehet lehetővé."
+
+#. FileAccess.open_compressed
+#: doc/classes/FileAccess.xml
+msgid "Creates a new [FileAccess] object and opens a compressed file for reading or writing.\n[b]Note:[/b] [method open_compressed] can only read files that were saved by Godot, not third-party compression formats. See [url=https://github.com/godotengine/godot/issues/28999]GitHub issue #28999[/url] for a workaround.\nReturns [code]null[/code] if opening the file failed. You can use [method get_open_error] to check the error that occurred."
+msgstr "Új [FileAccess] objektumot hoz létre, és olvasásra vagy írásra megnyit egy tömörített fájlt.\n[b]Megjegyzés:[/b] A [method open_compressed] csak a Godot által mentett fájlokat tudja olvasni. Más eszközökkel készült tömörített fájlokhoz a [url=https://github.com/godotengine/godot/issues/28999]#28999-es GitHub-hibajegy[/url] mutat kerülő megoldást.\nHa a fájl megnyitása sikertelen, [code]null[/code] értéket ad vissza. A hibakódot a [method get_open_error] metódussal kérheted le."
+
+#. FileAccess.open_encrypted
+#: doc/classes/FileAccess.xml
+msgid "Creates a new [FileAccess] object and opens an encrypted file in write or read mode. You need to pass a binary key to encrypt/decrypt it.\n[b]Note:[/b] The provided key must be 32 bytes long.\nReturns [code]null[/code] if opening the file failed. You can use [method get_open_error] to check the error that occurred."
+msgstr "Új [FileAccess] objektumot hoz létre, és írásra vagy olvasásra megnyit egy titkosított fájlt. A titkosításhoz vagy visszafejtéshez bináris kulcsot kell megadnod.\n[b]Megjegyzés:[/b] A megadott kulcsnak 32 bájt hosszúnak kell lennie.\nHa a fájl megnyitása sikertelen, [code]null[/code] értéket ad vissza. A hibakódot a [method get_open_error] metódussal kérheted le."
+
+#. FileAccess.remove_extended_attribute
+#: doc/classes/FileAccess.xml
+msgid "Removes file extended attribute with name [param attribute_name].\n[b]Note:[/b] This method is implemented on Linux, macOS, and Windows.\n[b]Note:[/b] Extended attributes support depends on the file system. Attributes will be lost when the file is moved between incompatible file systems.\n[b]Note:[/b] On Linux, only \"user\" namespace attributes are accessible, namespace prefix should not be included.\n[b]Note:[/b] On Windows, alternate data streams are used to store extended attributes."
+msgstr "Eltávolítja a [param attribute_name] nevű kiterjesztett fájlattribútumot.\n[b]Megjegyzés:[/b] A metódus Linuxon, macOS-en és Windowson érhető el.\n[b]Megjegyzés:[/b] A kiterjesztett attribútumok támogatása a fájlrendszertől függ. Ha a fájlt nem kompatibilis fájlrendszerre helyezed át, az attribútumok elvesznek.\n[b]Megjegyzés:[/b] Linuxon csak a „user” névtér attribútumai érhetők el. A névtér előtagját el kell hagyni.\n[b]Megjegyzés:[/b] Windows a kiterjesztett attribútumokat alternatív adatfolyamokban tárolja."
+
+#. FileAccess.set_extended_attribute
+#: doc/classes/FileAccess.xml
+msgid "Writes file extended attribute with name [param attribute_name] as a byte array.\n[b]Note:[/b] This method is implemented on Linux, macOS, and Windows.\n[b]Note:[/b] Extended attributes support depends on the file system. Attributes will be lost when the file is moved between incompatible file systems.\n[b]Note:[/b] On Linux, only \"user\" namespace attributes are accessible, namespace prefix should not be included.\n[b]Note:[/b] On Windows, alternate data streams are used to store extended attributes."
+msgstr "A [param attribute_name] nevű kiterjesztett fájlattribútum értékét bájttömbként írja ki.\n[b]Megjegyzés:[/b] A metódus Linuxon, macOS-en és Windowson érhető el.\n[b]Megjegyzés:[/b] A kiterjesztett attribútumok támogatása a fájlrendszertől függ. Ha a fájlt nem kompatibilis fájlrendszerre helyezed át, az attribútumok elvesznek.\n[b]Megjegyzés:[/b] Linuxon csak a „user” névtér attribútumai érhetők el. A névtér előtagját el kell hagyni.\n[b]Megjegyzés:[/b] Windows a kiterjesztett attribútumokat alternatív adatfolyamokban tárolja."
+
+#. FileAccess.set_extended_attribute_string
+#: doc/classes/FileAccess.xml
+msgid "Writes file extended attribute with name [param attribute_name] as a UTF-8 encoded string.\n[b]Note:[/b] This method is implemented on Linux, macOS, and Windows.\n[b]Note:[/b] Extended attributes support depends on the file system. Attributes will be lost when the file is moved between incompatible file systems.\n[b]Note:[/b] On Linux, only \"user\" namespace attributes are accessible, namespace prefix should not be included.\n[b]Note:[/b] On Windows, alternate data streams are used to store extended attributes."
+msgstr "A [param attribute_name] nevű kiterjesztett fájlattribútum értékét UTF-8 kódolású sztringként írja ki.\n[b]Megjegyzés:[/b] A metódus Linuxon, macOS-en és Windowson érhető el.\n[b]Megjegyzés:[/b] A kiterjesztett attribútumok támogatása a fájlrendszertől függ. Ha a fájlt nem kompatibilis fájlrendszerre helyezed át, az attribútumok elvesznek.\n[b]Megjegyzés:[/b] Linuxon csak a „user” névtér attribútumai érhetők el. A névtér előtagját el kell hagyni.\n[b]Megjegyzés:[/b] Windows a kiterjesztett attribútumokat alternatív adatfolyamokban tárolja."
+
+#. FileAccess.store_8
+#: doc/classes/FileAccess.xml
+msgid "Stores an integer as 8 bits in the file. This advances the file cursor by 1 byte. Returns [code]true[/code] if the operation is successful.\n[b]Note:[/b] The [param value] should lie in the interval [code][0, 255][/code]. Any other value will overflow and wrap around.\n[b]Note:[/b] If an error occurs, the resulting value of the file position indicator is indeterminate.\nTo store a signed integer, use [method store_64], or convert it manually (see [method store_16] for an example)."
+msgstr "8 bites egészként írja a számot a fájlba. A fájlpozíció 1 bájttal lép előre. Siker esetén [code]true[/code] értéket ad vissza.\n[b]Megjegyzés:[/b] A [param value] értékének a [code][0, 255][/code] tartományba kell esnie. A tartományon kívüli érték túlcsordul és átfordul.\n[b]Megjegyzés:[/b] Hiba esetén a fájlpozíció értéke nem meghatározott.\nElőjeles egész számhoz használd a [method store_64] metódust, vagy végezd el kézzel az átalakítást (példa a [method store_16] leírásában)."
+
+#. FileAccess.store_16
+#: doc/classes/FileAccess.xml
+msgid "Stores an integer as 16 bits in the file. This advances the file cursor by 2 bytes. Returns [code]true[/code] if the operation is successful.\n[b]Note:[/b] The [param value] should lie in the interval [code][0, 2^16 - 1][/code]. Any other value will overflow and wrap around.\n[b]Note:[/b] If an error occurs, the resulting value of the file position indicator is indeterminate.\nTo store a signed integer, use [method store_64] or store a signed integer from the interval [code][-2^15, 2^15 - 1][/code] (i.e. keeping one bit for the signedness) and compute its sign manually when reading. For example:\n[codeblocks]\n[gdscript]\nconst MAX_15B = 1 << 15\nconst MAX_16B = 1 << 16\n\nfunc unsigned16_to_signed(unsigned):\n\treturn (unsigned + MAX_15B) % MAX_16B - MAX_15B\n\nfunc _ready():\n\tvar f = FileAccess.open(\"user://file.dat\", FileAccess.WRITE_READ)\n\tf.store_16(-42) # This wraps around and stores 65494 (2^16 - 42).\n\tf.store_16(121) # In bounds, will store 121.\n\tf.seek(0) # Go back to start to read the stored value.\n\tvar read1 = f.get_16() # 65494\n\tvar read2 = f.get_16() # 121\n\tvar converted1 = unsigned16_to_signed(read1) # -42\n\tvar converted2 = unsigned16_to_signed(read2) # 121\n[/gdscript]\n[csharp]\npublic override void _Ready()\n{\n\tusing var f = FileAccess.Open(\"user://file.dat\", FileAccess.ModeFlags.WriteRead);\n\tf.Store16(unchecked((ushort)-42)); // This wraps around and stores 65494 (2^16 - 42).\n\tf.Store16(121); // In bounds, will store 121.\n\tf.Seek(0); // Go back to start to read the stored value.\n\tushort read1 = f.Get16(); // 65494\n\tushort read2 = f.Get16(); // 121\n\tshort converted1 = (short)read1; // -42\n\tshort converted2 = (short)read2; // 121\n}\n[/csharp]\n[/codeblocks]"
+msgstr "16 bites egészként írja a számot a fájlba. A fájlpozíció 2 bájttal lép előre. Siker esetén [code]true[/code] értéket ad vissza.\n[b]Megjegyzés:[/b] A [param value] értékének a [code][0, 2^16 - 1][/code] tartományba kell esnie. A tartományon kívüli érték túlcsordul és átfordul.\n[b]Megjegyzés:[/b] Hiba esetén a fájlpozíció értéke nem meghatározott.\nElőjeles egész számhoz használd a [method store_64] metódust, vagy tárolj egy [code][-2^15, 2^15 - 1][/code] tartományba eső előjeles számot (egy bitet fenntartva az előjelnek), és olvasáskor kézzel állítsd vissza az előjelet. Példa:\n[codeblocks]\n[gdscript]\nconst MAX_15B = 1 << 15\nconst MAX_16B = 1 << 16\n\nfunc unsigned16_to_signed(unsigned):\n\treturn (unsigned + MAX_15B) % MAX_16B - MAX_15B\n\nfunc _ready():\n\tvar f = FileAccess.open(\"user://file.dat\", FileAccess.WRITE_READ)\n\tf.store_16(-42) # This wraps around and stores 65494 (2^16 - 42).\n\tf.store_16(121) # In bounds, will store 121.\n\tf.seek(0) # Go back to start to read the stored value.\n\tvar read1 = f.get_16() # 65494\n\tvar read2 = f.get_16() # 121\n\tvar converted1 = unsigned16_to_signed(read1) # -42\n\tvar converted2 = unsigned16_to_signed(read2) # 121\n[/gdscript]\n[csharp]\npublic override void _Ready()\n{\n\tusing var f = FileAccess.Open(\"user://file.dat\", FileAccess.ModeFlags.WriteRead);\n\tf.Store16(unchecked((ushort)-42)); // This wraps around and stores 65494 (2^16 - 42).\n\tf.Store16(121); // In bounds, will store 121.\n\tf.Seek(0); // Go back to start to read the stored value.\n\tushort read1 = f.Get16(); // 65494\n\tushort read2 = f.Get16(); // 121\n\tshort converted1 = (short)read1; // -42\n\tshort converted2 = (short)read2; // 121\n}\n[/csharp]\n[/codeblocks]"
+
+#. FileAccess.store_32
+#: doc/classes/FileAccess.xml
+msgid "Stores an integer as 32 bits in the file. This advances the file cursor by 4 bytes. Returns [code]true[/code] if the operation is successful.\n[b]Note:[/b] The [param value] should lie in the interval [code][0, 2^32 - 1][/code]. Any other value will overflow and wrap around.\n[b]Note:[/b] If an error occurs, the resulting value of the file position indicator is indeterminate.\nTo store a signed integer, use [method store_64], or convert it manually (see [method store_16] for an example)."
+msgstr "32 bites egészként írja a számot a fájlba. A fájlpozíció 4 bájttal lép előre. Siker esetén [code]true[/code] értéket ad vissza.\n[b]Megjegyzés:[/b] A [param value] értékének a [code][0, 2^32 - 1][/code] tartományba kell esnie. A tartományon kívüli érték túlcsordul és átfordul.\n[b]Megjegyzés:[/b] Hiba esetén a fájlpozíció értéke nem meghatározott.\nElőjeles egész számhoz használd a [method store_64] metódust, vagy végezd el kézzel az átalakítást (példa a [method store_16] leírásában)."
+
+#. FileAccess.store_64
+#: doc/classes/FileAccess.xml
+msgid "Stores an integer as 64 bits in the file. This advances the file cursor by 8 bytes. Returns [code]true[/code] if the operation is successful.\n[b]Note:[/b] The [param value] must lie in the interval [code][-2^63, 2^63 - 1][/code] (i.e. be a valid [int] value).\n[b]Note:[/b] If an error occurs, the resulting value of the file position indicator is indeterminate."
+msgstr "64 bites egészként írja a számot a fájlba. A fájlpozíció 8 bájttal lép előre. Siker esetén [code]true[/code] értéket ad vissza.\n[b]Megjegyzés:[/b] A [param value] értékének a [code][-2^63, 2^63 - 1][/code] tartományba kell esnie, vagyis érvényes [int] értéknek kell lennie.\n[b]Megjegyzés:[/b] Hiba esetén a fájlpozíció értéke nem meghatározott."
+
+#. FileAccess.store_csv_line
+#: doc/classes/FileAccess.xml
+msgid "Stores the given [PackedStringArray] in the file as a line formatted in the CSV (Comma-Separated Values) format. You can pass a different delimiter [param delim] to use other than the default [code]\",\"[/code] (comma). This delimiter must be one-character long.\nText will be encoded as UTF-8. Returns [code]true[/code] if the operation is successful.\n[b]Note:[/b] If an error occurs, the resulting value of the file position indicator is indeterminate."
+msgstr "A megadott [PackedStringArray] értéket egyetlen, elválasztóval tagolt CSV-sorként írja a fájlba. Az alapértelmezett [code]\",\"[/code] (vessző) helyett a [param delim] paraméterben más elválasztót is megadhatsz. Az elválasztónak egyetlen karakterből kell állnia.\nA szöveget UTF-8 kódolással írja ki. Siker esetén [code]true[/code] értéket ad vissza.\n[b]Megjegyzés:[/b] Hiba esetén a fájlpozíció értéke nem meghatározott."
+
+#. FileAccess.store_line
+#: doc/classes/FileAccess.xml
+msgid "Stores [param line] in the file followed by a newline character ([code]\\n[/code]), encoding the text as UTF-8. This advances the file cursor by the length of the line, after the newline character. The amount of bytes written depends on the UTF-8 encoded bytes, which may be different from [method String.length] which counts the number of UTF-32 codepoints. Returns [code]true[/code] if the operation is successful.\n[b]Note:[/b] If an error occurs, the resulting value of the file position indicator is indeterminate."
+msgstr "A [param line] értéket UTF-8 kódolással, egy lezáró újsorjellel ([code]\\n[/code]) írja a fájlba. A fájlpozíció a kiírt sor hosszával lép előre, az újsorjel utánra. A kiírt bájtok számát az UTF-8 kódolás határozza meg. Ez eltérhet a [method String.length] eredményétől, amely az UTF-32 kódpontok számát adja meg. Siker esetén [code]true[/code] értéket ad vissza.\n[b]Megjegyzés:[/b] Hiba esetén a fájlpozíció értéke nem meghatározott."
+
+#. FileAccess.store_real
+#: doc/classes/FileAccess.xml
+msgid "Stores a floating-point number in the file. This advances the file cursor by either 4 or 8 bytes, depending on the precision used by the current Godot build.\nIf using a Godot build compiled with the [code]precision=single[/code] option (the default), this method will save a 32-bit float. Otherwise, if compiled with the [code]precision=double[/code] option, this will save a 64-bit float. Returns [code]true[/code] if the operation is successful.\n[b]Note:[/b] If an error occurs, the resulting value of the file position indicator is indeterminate."
+msgstr "Lebegőpontos számot ír a fájlba. A fájlpozíció 4 vagy 8 bájttal lép előre az éppen futó Godot pontossági beállításától függően.\n[code]precision=single[/code] beállítással fordított Godot esetén (ez az alapértelmezés) a metódus 32 bites lebegőpontos számot ír. [code]precision=double[/code] esetén 64 bites lebegőpontos számot ír. Siker esetén [code]true[/code] értéket ad vissza.\n[b]Megjegyzés:[/b] Hiba esetén a fájlpozíció értéke nem meghatározott."
+
+#. FileAccess.store_string
+#: doc/classes/FileAccess.xml
+msgid "Stores [param string] in the file without a newline character ([code]\\n[/code]), encoding the text as UTF-8. This advances the file cursor by the length of the string in UTF-8 encoded bytes, which may be different from [method String.length] which counts the number of UTF-32 codepoints. Returns [code]true[/code] if the operation is successful.\n[b]Note:[/b] This method is intended to be used to write text files. The string is stored as a UTF-8 encoded buffer without string length or terminating zero, which means that it can't be loaded back easily. If you want to store a retrievable string in a binary file, consider using [method store_pascal_string] instead. For retrieving strings from a text file, you can use [code]get_buffer(length).get_string_from_utf8()[/code] (if you know the length) or [method get_as_text].\n[b]Note:[/b] If an error occurs, the resulting value of the file position indicator is indeterminate."
+msgstr "A [param string] szöveget UTF-8 kódolással, hozzáfűzött újsorjel ([code]\\n[/code]) nélkül írja a fájlba. A fájlpozíció az UTF-8 kódolású sztring bájtban mért hosszával lép előre. Ez eltérhet a [method String.length] eredményétől, amely az UTF-32 kódpontok számát adja meg. Siker esetén [code]true[/code] értéket ad vissza.\n[b]Megjegyzés:[/b] A metódus szövegfájlok írására szolgál. A sztringet UTF-8 kódolású pufferként tárolja, hosszelőtag és lezáró nullabájt nélkül, így a sztring határait visszaolvasáskor nem lehet közvetlenül megállapítani. Ha bináris fájlba írsz és később külön szeretnéd visszaolvasni a sztringet, érdemes a [method store_pascal_string] metódust használni. Szövegfájlból a [code]get_buffer(length).get_string_from_utf8()[/code] hívással (ha ismered a bájthosszt) vagy a [method get_as_text] metódussal olvashatsz be szöveget.\n[b]Megjegyzés:[/b] Hiba esetén a fájlpozíció értéke nem meghatározott."
+
+#. FileAccess.store_var
+#: doc/classes/FileAccess.xml
+msgid "Stores any Variant value in the file. If [param full_objects] is [code]true[/code], encoding objects is allowed (and can potentially include code). This advances the file cursor by the number of bytes written. Returns [code]true[/code] if the operation is successful.\nInternally, this uses the same encoding mechanism as the [method @GlobalScope.var_to_bytes] method, as described in the [url=$DOCS_URL/tutorials/io/binary_serialization_api.html]Binary serialization API[/url] documentation.\n[b]Note:[/b] Not all properties are included. Only properties that are configured with the [constant PROPERTY_USAGE_STORAGE] flag set will be serialized. You can add a new usage flag to a property by overriding the [method Object._get_property_list] method in your class. You can also check how property usage is configured by calling [method Object._get_property_list]. See [enum PropertyUsageFlags] for the possible usage flags.\n[b]Note:[/b] If an error occurs, the resulting value of the file position indicator is indeterminate."
+msgstr "Tetszőleges Variant értéket ír a fájlba. Ha a [param full_objects] értéke [code]true[/code], objektumokat is szerializálhat, a bennük lévő kóddal együtt. A fájlpozíció a kiírt bájtok számával lép előre. Siker esetén [code]true[/code] értéket ad vissza.\nA metódus belsőleg ugyanazt a kódolást használja, mint a [method @GlobalScope.var_to_bytes]. A részleteket a [url=$DOCS_URL/tutorials/io/binary_serialization_api.html]bináris szerializálási API[/url] dokumentációja ismerteti.\n[b]Megjegyzés:[/b] Csak a [constant PROPERTY_USAGE_STORAGE] jelzővel ellátott tulajdonságok kerülnek a szerializált adatokba. Tulajdonsághoz a [method Object._get_property_list] felülírásával adhatsz hozzá új használati jelzőt. A használati beállításokat a [method Object._get_property_list] hívásával is ellenőrizheted. A lehetséges használati jelzőket a [enum PropertyUsageFlags] sorolja fel.\n[b]Megjegyzés:[/b] Hiba esetén a fájlpozíció értéke nem meghatározott."
+
+#. FileAccess.big_endian
+#: doc/classes/FileAccess.xml
+msgid "If [code]true[/code], the file is read with big-endian [url=https://en.wikipedia.org/wiki/Endianness]endianness[/url]. If [code]false[/code], the file is read with little-endian endianness. If in doubt, leave this to [code]false[/code] as most files are written with little-endian endianness.\n[b]Note:[/b] This is always reset to system endianness, which is little-endian on all supported platforms, whenever you open the file. Therefore, you must set [member big_endian] [i]after[/i] opening the file, not before."
+msgstr "[code]true[/code] esetén a fájlt a legnagyobb helyi értékű bájttal kezdődő (big-endian) [url=https://en.wikipedia.org/wiki/Endianness]bájtsorrendben[/url] olvassa. [code]false[/code] esetén a legkisebb helyi értékű bájttal kezdődő (little-endian) sorrendben olvassa. Ha nem ismered a fájl bájtsorrendjét, hagyd a beállítást [code]false[/code] értéken, mert a legtöbb fájl little-endian sorrendben készül.\n[b]Megjegyzés:[/b] A fájl megnyitásakor az érték mindig visszaáll a rendszer bájtsorrendjére, amely az összes támogatott platformon little-endian. A [member big_endian] értékét ezért a fájl megnyitása [i]után[/i] állítsd be."
+
+#. FileAccess.READ
+#: doc/classes/FileAccess.xml
+msgid "Opens the file for read operations. The file cursor is positioned at the beginning of the file."
+msgstr "Olvasásra nyitja meg a fájlt. A fájlpozíció a fájl elejére kerül."
+
+#. FileAccess.WRITE
+#: doc/classes/FileAccess.xml
+msgid "Opens the file for write operations. If the file exists, it is truncated to zero length and its contents are cleared. Otherwise, it is created.\n[b]Note:[/b] When creating a file it must be in an already existing directory. To recursively create directories for a file path, see [method DirAccess.make_dir_recursive]."
+msgstr "Írásra nyitja meg a fájlt. Ha a fájl létezik, nullára csökkenti a hosszát, és törli a korábbi tartalmat. Ha még nem létezik, létrehozza.\n[b]Megjegyzés:[/b] Fájlt csak létező mappában lehet létrehozni. Az útvonal hiányzó mappáinak létrehozásához lásd a [method DirAccess.make_dir_recursive] metódust."
+
+#. FileAccess.READ_WRITE
+#: doc/classes/FileAccess.xml
+msgid "Opens the file for read and write operations. Does not truncate the file. The file cursor is positioned at the beginning of the file."
+msgstr "Olvasásra és írásra nyitja meg a fájlt. A meglévő tartalmat megőrzi, a fájlpozíciót a fájl elejére állítja."
+
+#. FileAccess.WRITE_READ
+#: doc/classes/FileAccess.xml
+msgid "Opens the file for read and write operations. If the file exists, it is truncated to zero length and its contents are cleared. Otherwise, it is created. The file cursor is positioned at the beginning of the file.\n[b]Note:[/b] When creating a file it must be in an already existing directory. To recursively create directories for a file path, see [method DirAccess.make_dir_recursive]."
+msgstr "Írásra és olvasásra nyitja meg a fájlt. Ha a fájl létezik, nullára csökkenti a hosszát, és törli a korábbi tartalmat. Ha még nem létezik, létrehozza. A fájlpozíció a fájl elejére kerül.\n[b]Megjegyzés:[/b] Fájlt csak létező mappában lehet létrehozni. Az útvonal hiányzó mappáinak létrehozásához lásd a [method DirAccess.make_dir_recursive] metódust."
+
+#. FileAccess.COMPRESSION_FASTLZ
+#: doc/classes/FileAccess.xml
+msgid "Uses the [url=https://fastlz.org/]FastLZ[/url] compression method."
+msgstr "A [url=https://fastlz.org/]FastLZ[/url] tömörítési eljárást használja."
+
+#. FileAccess.COMPRESSION_DEFLATE
+#: doc/classes/FileAccess.xml
+msgid "Uses the [url=https://en.wikipedia.org/wiki/DEFLATE]DEFLATE[/url] compression method."
+msgstr "A [url=https://en.wikipedia.org/wiki/DEFLATE]DEFLATE[/url] tömörítési eljárást használja."
+
+#. FileAccess.COMPRESSION_ZSTD
+#: doc/classes/FileAccess.xml
+msgid "Uses the [url=https://facebook.github.io/zstd/]Zstandard[/url] compression method."
+msgstr "A [url=https://facebook.github.io/zstd/]Zstandard[/url] tömörítési eljárást használja."
+
+#. FileAccess.COMPRESSION_GZIP
+#: doc/classes/FileAccess.xml
+msgid "Uses the [url=https://www.gzip.org/]gzip[/url] compression method."
+msgstr "A [url=https://www.gzip.org/]gzip[/url] tömörítési eljárást használja."
+
+#. FileAccess.COMPRESSION_BROTLI
+#: doc/classes/FileAccess.xml
+msgid "Uses the [url=https://github.com/google/brotli]brotli[/url] compression method (only decompression is supported)."
+msgstr "A [url=https://github.com/google/brotli]brotli[/url] tömörítési eljárást használja. Csak a kitömörítés támogatott."
+
+#. FileAccess.UNIX_READ_OWNER
+#: doc/classes/FileAccess.xml
+msgid "Read for owner bit."
+msgstr "A tulajdonos olvasási jogosultságának bitje."
+
+#. FileAccess.UNIX_WRITE_OWNER
+#: doc/classes/FileAccess.xml
+msgid "Write for owner bit."
+msgstr "A tulajdonos írási jogosultságának bitje."
+
+#. FileAccess.UNIX_EXECUTE_OWNER
+#: doc/classes/FileAccess.xml
+msgid "Execute for owner bit."
+msgstr "A tulajdonos futtatási jogosultságának bitje."
+
+#. FileAccess.UNIX_READ_GROUP
+#: doc/classes/FileAccess.xml
+msgid "Read for group bit."
+msgstr "A csoport olvasási jogosultságának bitje."
+
+#. FileAccess.UNIX_WRITE_GROUP
+#: doc/classes/FileAccess.xml
+msgid "Write for group bit."
+msgstr "A csoport írási jogosultságának bitje."
+
+#. FileAccess.UNIX_EXECUTE_GROUP
+#: doc/classes/FileAccess.xml
+msgid "Execute for group bit."
+msgstr "A csoport futtatási jogosultságának bitje."
+
+#. FileAccess.UNIX_READ_OTHER
+#: doc/classes/FileAccess.xml
+msgid "Read for other bit."
+msgstr "A többi felhasználó olvasási jogosultságának bitje."
+
+#. FileAccess.UNIX_WRITE_OTHER
+#: doc/classes/FileAccess.xml
+msgid "Write for other bit."
+msgstr "A többi felhasználó írási jogosultságának bitje."
+
+#. FileAccess.UNIX_EXECUTE_OTHER
+#: doc/classes/FileAccess.xml
+msgid "Execute for other bit."
+msgstr "A többi felhasználó futtatási jogosultságának bitje."
+
+#. FileAccess.UNIX_SET_USER_ID
+#: doc/classes/FileAccess.xml
+msgid "Set user id on execution bit."
+msgstr "A futtatáskori felhasználóazonosító beállítására szolgáló bit (setuid)."
+
+#. FileAccess.UNIX_SET_GROUP_ID
+#: doc/classes/FileAccess.xml
+msgid "Set group id on execution bit."
+msgstr "A futtatáskori csoportazonosító beállítására szolgáló bit (setgid)."
+
+#. FileAccess.UNIX_RESTRICTED_DELETE
+#: doc/classes/FileAccess.xml
+msgid "Restricted deletion (sticky) bit."
+msgstr "A törlés korlátozására szolgáló bit (sticky bit)."
