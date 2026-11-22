@@ -46884,3 +46884,504 @@ msgstr "A paraméter törtrészét számítja ki."
 #: modules/visual_shader/doc_classes/VisualShaderNodeVectorFunc.xml
 msgid "Returns the inverse of the square root of the parameter."
 msgstr "A paraméter négyzetgyökének reciprokát adja vissza."
+
+#. VisualShaderNodeCustom.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeCustom.xml
+msgid "Virtual class to define custom [VisualShaderNode]s for use in the Visual Shader Editor."
+msgstr "Virtuális osztály, amellyel saját [VisualShaderNode] csomópontokat készíthetsz a vizuális shaderszerkesztőhöz."
+
+#. VisualShaderNodeCustom.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeCustom.xml
+msgid "By inheriting this class you can create a custom [VisualShader] script addon which will be automatically added to the Visual Shader Editor. The [VisualShaderNode]'s behavior is defined by overriding the provided virtual methods.\nIn order for the node to be registered as an editor addon, you must use the [code]@tool[/code] annotation and provide a [code]class_name[/code] for your custom script. For example:\n[codeblock]\n@tool\nextends VisualShaderNodeCustom\nclass_name VisualShaderNodeNoise\n[/codeblock]"
+msgstr "Ebből az osztályból származtatva saját szkriptalapú bővítményt készíthetsz, amelyet a [VisualShader] szerkesztő automatikusan felvesz. A [VisualShaderNode] viselkedését a megadott virtuális metódusok felülírásával határozhatod meg.\nA szerkesztő akkor regisztrálja a csomópontot bővítményként, ha a szkriptben szerepel a [code]@tool[/code] jelölés és megadsz egy [code]class_name[/code] deklarációt. Példa:\n[codeblock]\n@tool\nextends VisualShaderNodeCustom\nclass_name VisualShaderNodeNoise\n[/codeblock]"
+
+#. VisualShaderNodeCustom._get_category
+#: modules/visual_shader/doc_classes/VisualShaderNodeCustom.xml
+msgid "Override this method to define the path to the associated custom node in the Visual Shader Editor's members dialog. The path may look like [code]\"MyGame/MyFunctions/Noise\"[/code].\nDefining this method is [b]optional[/b]. If not overridden, the node will be filed under the \"Addons\" category."
+msgstr "Írd felül ezt a metódust, ha meg szeretnéd adni, melyik útvonalon jelenjen meg az egyéni csomópont a vizuális shaderszerkesztő csomópontválasztójában. Az útvonal lehet például [code]\"MyGame/MyFunctions/Noise\"[/code].\nA felülírás [b]opcionális[/b]. Alapértelmezés szerint a csomópont az „Addons” kategóriába kerül."
+
+#. VisualShaderNodeCustom._get_code
+#: modules/visual_shader/doc_classes/VisualShaderNodeCustom.xml
+msgid "Override this method to define the actual shader code of the associated custom node. The shader code should be returned as a string, which can have multiple lines (the [code]\"\"\"[/code] multiline string construct can be used for convenience).\nThe [param input_vars] and [param output_vars] arrays contain the string names of the various input and output variables, as defined by [code]_get_input_*[/code] and [code]_get_output_*[/code] virtual methods in this class.\nThe output ports can be assigned values in the shader code. For example, [code]return output_vars[0] + \" = \" + input_vars[0] + \";\"[/code].\nYou can customize the generated code based on the shader [param mode] and/or [param type].\nDefining this method is [b]required[/b]."
+msgstr "Írd felül ezt a metódust az egyéni csomópont shaderkódjának megadásához. A kódot sztringként add vissza. Több sorhoz a [code]\"\"\"[/code] jelöléssel határolt sztringet is használhatod.\nA [param input_vars] és a [param output_vars] tömb a bemeneti, illetve kimeneti változók nevét tartalmazza sztringként. A neveket az osztály [code]_get_input_*[/code] és [code]_get_output_*[/code] virtuális metódusai határozzák meg.\nA shaderkódban értéket rendelhetsz a kimeneti portokhoz. Például [code]return output_vars[0] + \" = \" + input_vars[0] + \";\"[/code].\nA létrehozott kódot a shader [param mode] vagy [param type] értéke alapján alakíthatod. Mindkettőt figyelembe veheted.\nA metódus felülírása [b]kötelező[/b]."
+
+#. VisualShaderNodeCustom._get_default_input_port
+#: modules/visual_shader/doc_classes/VisualShaderNodeCustom.xml
+msgid "Override this method to define the input port which should be connected by default when this node is created as a result of dragging a connection from an existing node to the empty space on the graph.\nDefining this method is [b]optional[/b]. If not overridden, the connection will be created to the first valid port."
+msgstr "Írd felül ezt a metódust, ha meg szeretnéd adni az alapértelmezett bemeneti portot. A szerkesztő ehhez a porthoz kapcsolódik, ha a csomópontot egy meglévő csomópontból a gráf üres részére húzott vezetékkel hozod létre.\nA felülírás [b]opcionális[/b]. Alapértelmezés szerint a vezeték az első érvényes portra csatlakozik."
+
+#. VisualShaderNodeCustom._get_description
+#: modules/visual_shader/doc_classes/VisualShaderNodeCustom.xml
+msgid "Override this method to define the description of the associated custom node in the Visual Shader Editor's members dialog.\nDefining this method is [b]optional[/b]."
+msgstr "Írd felül ezt a metódust az egyéni csomópont leírásának megadásához. A leírás a vizuális shaderszerkesztő csomópontválasztójában jelenik meg.\nA felülírás [b]opcionális[/b]."
+
+#. VisualShaderNodeCustom._get_func_code
+#: modules/visual_shader/doc_classes/VisualShaderNodeCustom.xml
+msgid "Override this method to add a shader code to the beginning of each shader function (once). The shader code should be returned as a string, which can have multiple lines (the [code]\"\"\"[/code] multiline string construct can be used for convenience).\nIf there are multiple custom nodes of different types which use this feature the order of each insertion is undefined.\nYou can customize the generated code based on the shader [param mode] and/or [param type].\nDefining this method is [b]optional[/b]."
+msgstr "Írd felül ezt a metódust, ha minden shaderfüggvény elejére egyszer szeretnél kódot illeszteni. A kódot sztringként add vissza. Több sorhoz a [code]\"\"\"[/code] jelöléssel határolt sztringet is használhatod.\nHa több különböző típusú egyéni csomópont él ezzel a lehetőséggel, a beillesztések sorrendje nincs meghatározva.\nA létrehozott kódot a shader [param mode] vagy [param type] értéke alapján alakíthatod. Mindkettőt figyelembe veheted.\nA felülírás [b]opcionális[/b]."
+
+#. VisualShaderNodeCustom._get_global_code
+#: modules/visual_shader/doc_classes/VisualShaderNodeCustom.xml
+msgid "Override this method to add shader code on top of the global shader, to define your own standard library of reusable methods, varyings, constants, uniforms, etc. The shader code should be returned as a string, which can have multiple lines (the [code]\"\"\"[/code] multiline string construct can be used for convenience).\nBe careful with this functionality as it can cause name conflicts with other custom nodes, so be sure to give the defined entities unique names.\nYou can customize the generated code based on the shader [param mode].\nDefining this method is [b]optional[/b]."
+msgstr "Írd felül ezt a metódust, ha a shader elejére globális kódot szeretnél illeszteni. Itt saját függvénykönyvtárat, átadott változókat (varying), állandókat vagy uniformokat definiálhatsz. A kódot sztringként add vissza. Több sorhoz a [code]\"\"\"[/code] jelöléssel határolt sztringet is használhatod.\nA névütközések elkerüléséhez adj egyedi nevet minden olyan elemnek, amelyet itt hozol létre.\nA létrehozott kódot a shader [param mode] értéke alapján alakíthatod.\nA felülírás [b]opcionális[/b]."
+
+#. VisualShaderNodeCustom._get_input_port_count
+#: modules/visual_shader/doc_classes/VisualShaderNodeCustom.xml
+msgid "Override this method to define the number of input ports of the associated custom node.\nDefining this method is [b]required[/b]. If not overridden, the node has no input ports."
+msgstr "Írd felül ezt a metódust, ha meg szeretnéd adni az egyéni csomópont bemeneti portjainak számát.\nA felülírás [b]kötelező[/b]. A csomópont bemeneti portok nélkül jön létre, ha kihagyod."
+
+#. VisualShaderNodeCustom._get_input_port_default_value
+#: modules/visual_shader/doc_classes/VisualShaderNodeCustom.xml
+msgid "Override this method to define the default value for the specified input port. Prefer use this over [method VisualShaderNode.set_input_port_default_value].\nDefining this method is [b]required[/b]. If not overridden, the node has no default values for their input ports."
+msgstr "Írd felül ezt a metódust a megadott bemeneti port alapértelmezett értékének beállításához. Ezt érdemes használni a [method VisualShaderNode.set_input_port_default_value] helyett.\nA felülírás [b]kötelező[/b]. Enélkül a bemeneti portoknak nincs alapértelmezett értékük."
+
+#. VisualShaderNodeCustom._get_input_port_name
+#: modules/visual_shader/doc_classes/VisualShaderNodeCustom.xml
+msgid "Override this method to define the names of input ports of the associated custom node. The names are used both for the input slots in the editor and as identifiers in the shader code, and are passed in the [code]input_vars[/code] array in [method _get_code].\nDefining this method is [b]optional[/b], but recommended. If not overridden, input ports are named as [code]\"in\" + str(port)[/code]."
+msgstr "Írd felül ezt a metódust az egyéni csomópont bemeneti portjainak elnevezéséhez. Ezek a nevek látszanak a szerkesztőben, és a shaderkód is ezeket használja azonosítóként. A [method _get_code] az [code]input_vars[/code] tömbben kapja meg a neveket.\nA felülírás [b]opcionális[/b], de ajánlott. Alapértelmezés szerint a bemenetek neve a [code]\"in\" + str(port)[/code] kifejezésből adódik."
+
+#. VisualShaderNodeCustom._get_input_port_type
+#: modules/visual_shader/doc_classes/VisualShaderNodeCustom.xml
+msgid "Override this method to define the returned type of each input port of the associated custom node.\nDefining this method is [b]optional[/b], but recommended. If not overridden, input ports will return the [constant VisualShaderNode.PORT_TYPE_SCALAR] type."
+msgstr "Írd felül ezt a metódust az egyéni csomópont bemeneti porttípusainak megadásához.\nA felülírás [b]opcionális[/b], de ajánlott. A bemeneti portok alapértelmezett típusa [constant VisualShaderNode.PORT_TYPE_SCALAR]."
+
+#. VisualShaderNodeCustom._get_name
+#: modules/visual_shader/doc_classes/VisualShaderNodeCustom.xml
+msgid "Override this method to define the name of the associated custom node in the Visual Shader Editor's members dialog and graph.\nDefining this method is [b]optional[/b], but recommended. If not overridden, the node will be named as \"Unnamed\"."
+msgstr "Írd felül ezt a metódust az egyéni csomópont nevének megadásához. Ez a név jelenik meg a gráfban és a szerkesztő csomópontválasztójában.\nA felülírás [b]opcionális[/b], de ajánlott. Az alapértelmezett név „Unnamed”."
+
+#. VisualShaderNodeCustom._get_output_port_count
+#: modules/visual_shader/doc_classes/VisualShaderNodeCustom.xml
+msgid "Override this method to define the number of output ports of the associated custom node.\nDefining this method is [b]required[/b]. If not overridden, the node has no output ports."
+msgstr "Írd felül ezt a metódust, ha meg szeretnéd adni az egyéni csomópont kimeneti portjainak számát.\nA felülírás [b]kötelező[/b]. A csomópont kimeneti portok nélkül jön létre, ha kihagyod."
+
+#. VisualShaderNodeCustom._get_output_port_name
+#: modules/visual_shader/doc_classes/VisualShaderNodeCustom.xml
+msgid "Override this method to define the names of output ports of the associated custom node. The names are used both for the output slots in the editor and as identifiers in the shader code, and are passed in the [code]output_vars[/code] array in [method _get_code].\nDefining this method is [b]optional[/b], but recommended. If not overridden, output ports are named as [code]\"out\" + str(port)[/code]."
+msgstr "Írd felül ezt a metódust az egyéni csomópont kimeneti portjainak elnevezéséhez. Ezek a nevek látszanak a szerkesztőben, és a shaderkód is ezeket használja azonosítóként. A [method _get_code] az [code]output_vars[/code] tömbben kapja meg a neveket.\nA felülírás [b]opcionális[/b], de ajánlott. Alapértelmezés szerint a kimenetek neve a [code]\"out\" + str(port)[/code] kifejezésből adódik."
+
+#. VisualShaderNodeCustom._get_output_port_type
+#: modules/visual_shader/doc_classes/VisualShaderNodeCustom.xml
+msgid "Override this method to define the returned type of each output port of the associated custom node.\nDefining this method is [b]optional[/b], but recommended. If not overridden, output ports will return the [constant VisualShaderNode.PORT_TYPE_SCALAR] type."
+msgstr "Írd felül ezt a metódust az egyéni csomópont kimeneti porttípusainak megadásához.\nA felülírás [b]opcionális[/b], de ajánlott. A kimeneti portok alapértelmezett típusa [constant VisualShaderNode.PORT_TYPE_SCALAR]."
+
+#. VisualShaderNodeCustom._get_property_count
+#: modules/visual_shader/doc_classes/VisualShaderNodeCustom.xml
+msgid "Override this method to define the number of the properties.\nDefining this method is [b]optional[/b]."
+msgstr "Írd felül ezt a metódust a tulajdonságok számának megadásához.\nA felülírás [b]opcionális[/b]."
+
+#. VisualShaderNodeCustom._get_property_default_index
+#: modules/visual_shader/doc_classes/VisualShaderNodeCustom.xml
+msgid "Override this method to define the default index of the property of the associated custom node.\nDefining this method is [b]optional[/b]."
+msgstr "Írd felül ezt a metódust, ha meg szeretnéd adni az egyéni csomópont tulajdonságához tartozó alapértelmezett indexet.\nA felülírás [b]opcionális[/b]."
+
+#. VisualShaderNodeCustom._get_property_name
+#: modules/visual_shader/doc_classes/VisualShaderNodeCustom.xml
+msgid "Override this method to define the names of the property of the associated custom node.\nDefining this method is [b]optional[/b]."
+msgstr "Írd felül ezt a metódust az egyéni csomópont tulajdonságainak elnevezéséhez.\nA felülírás [b]opcionális[/b]."
+
+#. VisualShaderNodeCustom._get_property_options
+#: modules/visual_shader/doc_classes/VisualShaderNodeCustom.xml
+msgid "Override this method to define the options inside the drop-down list property of the associated custom node.\nDefining this method is [b]optional[/b]."
+msgstr "Írd felül ezt a metódust, ha meg szeretnéd adni a tulajdonság lenyíló listájában választható lehetőségeket.\nA felülírás [b]opcionális[/b]."
+
+#. VisualShaderNodeCustom._get_return_icon_type
+#: modules/visual_shader/doc_classes/VisualShaderNodeCustom.xml
+msgid "Override this method to define the return icon of the associated custom node in the Visual Shader Editor's members dialog.\nDefining this method is [b]optional[/b]. If not overridden, no return icon is shown."
+msgstr "Írd felül ezt a metódust, ha meg szeretnéd adni az egyéni csomópont visszatérési ikonját a szerkesztő csomópontválasztójában.\nA felülírás [b]opcionális[/b]. Alapértelmezés szerint ilyen ikon nem jelenik meg."
+
+#. VisualShaderNodeCustom._is_available
+#: modules/visual_shader/doc_classes/VisualShaderNodeCustom.xml
+msgid "Override this method to prevent the node to be visible in the member dialog for the certain [param mode] and/or [param type].\nDefining this method is [b]optional[/b]. If not overridden, it's [code]true[/code]."
+msgstr "Írd felül ezt a metódust, ha bizonyos [param mode] vagy [param type] esetén el szeretnéd rejteni a csomópontot a választóban. A két feltételt együtt is megadhatod.\nA felülírás [b]opcionális[/b]. Alapértelmezés szerint [code]true[/code] az eredmény."
+
+#. VisualShaderNodeCustom._is_highend
+#: modules/visual_shader/doc_classes/VisualShaderNodeCustom.xml
+msgid "Override this method to enable the high-end mark in the Visual Shader Editor's members dialog. This should return [code]true[/code] for nodes that only work when using the Forward+ and Mobile renderers.\nDefining this method is [b]optional[/b]. If not overridden, it's [code]false[/code], which indicates this node works with all renderers (including Compatibility)."
+msgstr "Írd felül ezt a metódust, ha a csomóponton meg szeretnéd jeleníteni a fejlett renderelőt jelző ikont a vizuális shaderszerkesztő választójában. A metódus adjon [code]true[/code] értéket az olyan csomópontoknál, amelyek kizárólag a Forward+ és a Mobil renderelővel működnek.\nA felülírás [b]opcionális[/b]. Az alapértelmezett [code]false[/code] érték azt jelzi, hogy a csomópont minden renderelővel, így a Kompatibilitás renderelővel is működik."
+
+#. VisualShaderNodeCustom.get_option_index
+#: modules/visual_shader/doc_classes/VisualShaderNodeCustom.xml
+msgid "Returns the selected index of the drop-down list option within a graph. You may use this function to define the specific behavior in the [method _get_code] or [method _get_global_code]."
+msgstr "A gráfban lévő lenyíló listában kiválasztott elem indexét adja vissza. Ezt a [method _get_code] vagy a [method _get_global_code] metódusban használhatod az egyéni működés meghatározásához."
+
+#. VisualShaderNodeParticleAccelerator.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeParticleAccelerator.xml
+msgid "A visual shader node that accelerates particles."
+msgstr "Részecskéket gyorsító vizuális shadercsomópont."
+
+#. VisualShaderNodeParticleAccelerator.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeParticleAccelerator.xml
+msgid "Particle accelerator can be used in \"process\" step of particle shader. It will accelerate the particles. Connect it to the Velocity output port."
+msgstr "A részecskeshader „process” szakaszában gyorsítja a részecskéket. Kösd a Velocity kimeneti portra."
+
+#. VisualShaderNodeParticleAccelerator.mode
+#: modules/visual_shader/doc_classes/VisualShaderNodeParticleAccelerator.xml
+msgid "Defines in what manner the particles will be accelerated."
+msgstr "Megadja, hogyan gyorsuljanak a részecskék."
+
+#. VisualShaderNodeParticleAccelerator.MODE_LINEAR
+#: modules/visual_shader/doc_classes/VisualShaderNodeParticleAccelerator.xml
+msgid "The particles will be accelerated based on their velocity."
+msgstr "A részecskék a sebességük alapján gyorsulnak."
+
+#. VisualShaderNodeParticleAccelerator.MODE_RADIAL
+#: modules/visual_shader/doc_classes/VisualShaderNodeParticleAccelerator.xml
+msgid "The particles will be accelerated towards or away from the center."
+msgstr "A részecskék a középpont felé vagy attól elfelé gyorsulnak."
+
+#. VisualShaderNodeParticleAccelerator.MODE_TANGENTIAL
+#: modules/visual_shader/doc_classes/VisualShaderNodeParticleAccelerator.xml
+msgid "The particles will be accelerated tangentially to the radius vector from center to their position."
+msgstr "A részecskék a középpontból a helyzetükbe mutató sugárra merőlegesen, érintőirányban gyorsulnak."
+
+#. VisualShaderNodeParticleBoxEmitter.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeParticleBoxEmitter.xml
+msgid "A visual shader node that makes particles emitted in a box shape."
+msgstr "Doboz alakú térrészből bocsát ki részecskéket."
+
+#. VisualShaderNodeParticleBoxEmitter.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeParticleBoxEmitter.xml
+msgid "[VisualShaderNodeParticleEmitter] that makes the particles emitted in box shape with the specified extents."
+msgstr "[VisualShaderNodeParticleEmitter] csomópont, amely a megadott kiterjedésű dobozból bocsát ki részecskéket."
+
+#. VisualShaderNodeParticleConeVelocity.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeParticleConeVelocity.xml
+msgid "A visual shader node that makes particles move in a cone shape."
+msgstr "Kúp alakban indítja útjukra a részecskéket."
+
+#. VisualShaderNodeParticleConeVelocity.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeParticleConeVelocity.xml
+msgid "This node can be used in \"start\" step of particle shader. It defines the initial velocity of the particles, making them move in cone shape starting from the center, with a given spread."
+msgstr "A csomópont a részecskeshader „start” szakaszában használható. Olyan kezdősebességet ad a részecskéknek, amellyel a középpontból a megadott szórással, kúp alakban repülnek szét."
+
+#. VisualShaderNodeParticleEmit.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeParticleEmit.xml
+msgid "A visual shader node that forces to emit a particle from a sub-emitter."
+msgstr "Részecskét bocsát ki egy alárendelt kibocsátóból."
+
+#. VisualShaderNodeParticleEmit.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeParticleEmit.xml
+msgid "This node internally calls [code]emit_subparticle[/code] shader method. It will emit a particle from the configured sub-emitter and also allows to customize how its emitted. Requires a sub-emitter assigned to the particles node with this shader."
+msgstr "A csomópont az [code]emit_subparticle[/code] shaderfüggvényt hívja meg. Részecskét bocsát ki a beállított alárendelt kibocsátóból, és megadhatod a kibocsátás módját is. Ehhez rendelj alárendelt kibocsátót az ezt a shadert használó részecskecsomóponthoz."
+
+#. VisualShaderNodeParticleEmit.flags
+#: modules/visual_shader/doc_classes/VisualShaderNodeParticleEmit.xml
+msgid "Flags used to override the properties defined in the sub-emitter's process material."
+msgstr "Jelzők, amelyekkel felülírhatod az alárendelt kibocsátó feldolgozóanyagában megadott tulajdonságokat."
+
+#. VisualShaderNodeParticleEmit.EMIT_FLAG_POSITION
+#: modules/visual_shader/doc_classes/VisualShaderNodeParticleEmit.xml
+msgid "If enabled, the particle starts with the position defined by this node."
+msgstr "Bekapcsolva a részecske ebből a csomópontból kapja a kezdőpozícióját."
+
+#. VisualShaderNodeParticleEmit.EMIT_FLAG_ROT_SCALE
+#: modules/visual_shader/doc_classes/VisualShaderNodeParticleEmit.xml
+msgid "If enabled, the particle starts with the rotation and scale defined by this node."
+msgstr "Bekapcsolva a részecske ebből a csomópontból kapja a kezdeti elforgatását és méretezését."
+
+#. VisualShaderNodeParticleEmit.EMIT_FLAG_VELOCITY
+#: modules/visual_shader/doc_classes/VisualShaderNodeParticleEmit.xml
+msgid "If enabled,the particle starts with the velocity defined by this node."
+msgstr "Bekapcsolva a részecske ebből a csomópontból kapja a kezdősebességét."
+
+#. VisualShaderNodeParticleEmit.EMIT_FLAG_COLOR
+#: modules/visual_shader/doc_classes/VisualShaderNodeParticleEmit.xml
+msgid "If enabled, the particle starts with the color defined by this node."
+msgstr "Bekapcsolva a részecske ebből a csomópontból kapja a kezdeti színét."
+
+#. VisualShaderNodeParticleEmit.EMIT_FLAG_CUSTOM
+#: modules/visual_shader/doc_classes/VisualShaderNodeParticleEmit.xml
+msgid "If enabled, the particle starts with the [code]CUSTOM[/code] data defined by this node."
+msgstr "Bekapcsolva a részecske ebből a csomópontból kapja a kezdeti [code]CUSTOM[/code] adatokat."
+
+#. VisualShaderNodeParticleEmitter.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeParticleEmitter.xml
+msgid "A base class for particle emitters."
+msgstr "A részecskekibocsátók alaposztálya."
+
+#. VisualShaderNodeParticleEmitter.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeParticleEmitter.xml
+msgid "Particle emitter nodes can be used in \"start\" step of particle shaders and they define the starting position of the particles. Connect them to the Position output port."
+msgstr "A részecskekibocsátó csomópontok a részecskeshaderek „start” szakaszában használhatók. A részecskék kiindulási helyét adják meg. Kösd őket a Position kimeneti portra."
+
+#. VisualShaderNodeParticleEmitter.mode_2d
+#: modules/visual_shader/doc_classes/VisualShaderNodeParticleEmitter.xml
+msgid "If [code]true[/code], the result of this emitter is projected to 2D space. By default it is [code]false[/code] and meant for use in 3D space."
+msgstr "Ha az érték [code]true[/code], a kibocsátó eredménye 2D-s síkra vetül. Alapértelmezés szerint [code]false[/code] az érték, és a csomópont 3D-s térben használható."
+
+#. VisualShaderNodeParticleMeshEmitter.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeParticleMeshEmitter.xml
+msgid "A visual shader node that makes particles emitted in a shape defined by a [Mesh]."
+msgstr "A [Mesh] alakja szerint bocsát ki részecskéket."
+
+#. VisualShaderNodeParticleMeshEmitter.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeParticleMeshEmitter.xml
+msgid "[VisualShaderNodeParticleEmitter] that makes the particles emitted in a shape of the assigned [member mesh]. It will emit from the mesh's surfaces, either all or only the specified one."
+msgstr "[VisualShaderNodeParticleEmitter] csomópont, amely a hozzárendelt [member mesh] alakja szerint bocsát ki részecskéket. Kiválaszthatod, hogy a háló összes felületéről vagy csak egy adott felületéről induljanak."
+
+#. VisualShaderNodeParticleMeshEmitter.mesh
+#: modules/visual_shader/doc_classes/VisualShaderNodeParticleMeshEmitter.xml
+msgid "The [Mesh] that defines emission shape."
+msgstr "A kibocsátás alakját meghatározó [Mesh]."
+
+#. VisualShaderNodeParticleMeshEmitter.surface_index
+#: modules/visual_shader/doc_classes/VisualShaderNodeParticleMeshEmitter.xml
+msgid "Index of the surface that emits particles. [member use_all_surfaces] must be [code]false[/code] for this to take effect."
+msgstr "Annak a felületnek az indexe, amelyről a részecskék indulnak. A beállítás akkor érvényes, ha a [member use_all_surfaces] értéke [code]false[/code]."
+
+#. VisualShaderNodeParticleMeshEmitter.use_all_surfaces
+#: modules/visual_shader/doc_classes/VisualShaderNodeParticleMeshEmitter.xml
+msgid "If [code]true[/code], the particles will emit from all surfaces of the mesh."
+msgstr "Ha az érték [code]true[/code], a részecskék a háló összes felületéről indulhatnak."
+
+#. VisualShaderNodeParticleMultiplyByAxisAngle.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeParticleMultiplyByAxisAngle.xml
+msgid "A visual shader helper node for multiplying position and rotation of particles."
+msgstr "Segédcsomópont a részecskék helyvektorának elforgatásához."
+
+#. VisualShaderNodeParticleMultiplyByAxisAngle.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeParticleMultiplyByAxisAngle.xml
+msgid "This node helps to multiply a position input vector by rotation using specific axis. Intended to work with emitters."
+msgstr "A bemeneten kapott helyvektort a megadott tengely körül forgatja el. Részecskekibocsátókkal használható."
+
+#. VisualShaderNodeParticleMultiplyByAxisAngle.degrees_mode
+#: modules/visual_shader/doc_classes/VisualShaderNodeParticleMultiplyByAxisAngle.xml
+msgid "If [code]true[/code], the angle will be interpreted in degrees instead of radians."
+msgstr "Ha az érték [code]true[/code], fokban értelmezi a szöget radián helyett."
+
+#. VisualShaderNodeParticleOutput.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeParticleOutput.xml
+msgid "Visual shader node that defines output values for particle emitting."
+msgstr "A részecskék kibocsátásához ad meg kimeneti értékeket."
+
+#. VisualShaderNodeParticleOutput.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeParticleOutput.xml
+msgid "This node defines how particles are emitted. It allows to customize e.g. position and velocity. Available ports are different depending on which function this node is inside (start, process, collision) and whether custom data is enabled."
+msgstr "A csomópont a részecskék kibocsátását szabályozza. Beállíthatod például a részecskék helyét és sebességét. Az elérhető portok attól függnek, hogy a csomópont melyik függvényben szerepel (indítás, feldolgozás vagy ütközés), és hogy engedélyezve vannak-e az egyéni adatok."
+
+#. VisualShaderNodeParticleRandomness.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeParticleRandomness.xml
+msgid "Visual shader node for randomizing particle values."
+msgstr "Véletlenszerű részecskeértékeket előállító vizuális shadercsomópont."
+
+#. VisualShaderNodeParticleRandomness.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeParticleRandomness.xml
+msgid "Randomness node will output pseudo-random values of the given type based on the specified minimum and maximum values."
+msgstr "A megadott típusú pszeudovéletlen értékeket ad ki a megadott alsó és felső határ között."
+
+#. VisualShaderNodeParticleRingEmitter.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeParticleRingEmitter.xml
+msgid "A visual shader node that makes particles emitted in a ring shape."
+msgstr "Gyűrű alakú térrészből bocsát ki részecskéket."
+
+#. VisualShaderNodeParticleRingEmitter.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeParticleRingEmitter.xml
+msgid "[VisualShaderNodeParticleEmitter] that makes the particles emitted in ring shape with the specified inner and outer radii and height."
+msgstr "[VisualShaderNodeParticleEmitter] csomópont, amely a megadott magasságú, belső és külső sugarú gyűrűből bocsát ki részecskéket."
+
+#. VisualShaderNodeParticleSphereEmitter.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeParticleSphereEmitter.xml
+msgid "A visual shader node that makes particles emitted in a sphere shape."
+msgstr "Gömb alakú térrészből bocsát ki részecskéket."
+
+#. VisualShaderNodeParticleSphereEmitter.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeParticleSphereEmitter.xml
+msgid "[VisualShaderNodeParticleEmitter] that makes the particles emitted in sphere shape with the specified inner and outer radii."
+msgstr "[VisualShaderNodeParticleEmitter] csomópont, amely a megadott belső és külső sugár közötti gömbhéjból bocsát ki részecskéket."
+
+#. VisualShaderNodeProximityFade.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeProximityFade.xml
+msgid "A visual shader node representing proximity fade effect."
+msgstr "Közelség alapján halványító vizuális shadercsomópont."
+
+#. VisualShaderNodeProximityFade.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeProximityFade.xml
+msgid "The proximity fade effect fades out each pixel based on its distance to another object."
+msgstr "A képpontokat aszerint halványítja, hogy milyen távol vannak egy másik objektumtól."
+
+#. VisualShaderNodeRandomRange.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeRandomRange.xml
+msgid "A visual shader node that generates a pseudo-random scalar."
+msgstr "Pszeudovéletlen skalárt előállító vizuális shadercsomópont."
+
+#. VisualShaderNodeRandomRange.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeRandomRange.xml
+msgid "Random range node will output a pseudo-random scalar value in the specified range, based on the seed. The value is always the same for the given seed and range, so you should provide a changing input, e.g. by using time."
+msgstr "A megadott tartományból választ egy pszeudovéletlen skalárértéket a véletlenmag alapján. Azonos mag és tartomány esetén az érték mindig ugyanaz, ezért a bemenethez adj változó értéket, például az időt."
+
+#. VisualShaderNodeRemap.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeRemap.xml
+msgid "A visual shader node for remap function."
+msgstr "Értéket képez át egyik tartományból a másikba a vizuális shadergráfban."
+
+#. VisualShaderNodeRemap.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeRemap.xml
+msgid "Remap will transform the input range into output range, e.g. you can change a [code]0..1[/code] value to [code]-2..2[/code] etc. See [method @GlobalScope.remap] for more details."
+msgstr "A bemeneti tartomány értékeit a kimeneti tartományra képezi le. Például egy [code]0..1[/code] közötti értéket átszámíthatsz a [code]-2..2[/code] tartományra. A részletekért lásd a [method @GlobalScope.remap] metódust."
+
+#. VisualShaderNodeReroute.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeReroute.xml
+msgid "A node that allows rerouting a connection within the visual shader graph."
+msgstr "A gráfban átvezeti a kapcsolatot, így a vezetéket más útvonalon vezetheted."
+
+#. VisualShaderNodeReroute.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeReroute.xml
+msgid "Automatically adapts its port type to the type of the incoming connection and ensures valid connections."
+msgstr "A porttípusát automatikusan a bejövő kapcsolathoz igazítja, és gondoskodik arról, hogy a kapcsolatok érvényesek legyenek."
+
+#. VisualShaderNodeReroute.get_port_type
+#: modules/visual_shader/doc_classes/VisualShaderNodeReroute.xml
+msgid "Returns the port type of the reroute node."
+msgstr "Visszaadja az átvezető csomópont porttípusát."
+
+#. VisualShaderNodeResizableBase.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeResizableBase.xml
+msgid "Base class for resizable nodes in a visual shader graph."
+msgstr "A vizuális shadergráf átméretezhető csomópontjainak alaposztálya."
+
+#. VisualShaderNodeResizableBase.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeResizableBase.xml
+msgid "Resizable nodes have a handle that allows the user to adjust their size as needed."
+msgstr "Az átméretezhető csomópontokon húzófogantyú található, amellyel beállíthatod a méretüket."
+
+#. VisualShaderNodeResizableBase.size
+#: modules/visual_shader/doc_classes/VisualShaderNodeResizableBase.xml
+msgid "The size of the node in the visual shader graph."
+msgstr "A csomópont mérete a vizuális shadergráfban."
+
+#. VisualShaderNodeRotationByAxis.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeRotationByAxis.xml
+msgid "A visual shader node that modifies the rotation of the object using a rotation matrix."
+msgstr "Forgatási mátrixszal forgatja el az objektumot a vizuális shadergráfban."
+
+#. VisualShaderNodeRotationByAxis.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeRotationByAxis.xml
+msgid "RotationByAxis node will transform the vertices of a mesh with specified axis and angle in radians. It can be used to rotate an object in an arbitrary axis."
+msgstr "A háló csúcspontjait a megadott tengely körül, a radiánban megadott szöggel forgatja el. Tetszőleges tengely körüli forgatáshoz használható."
+
+#. VisualShaderNodeSDFRaymarch.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeSDFRaymarch.xml
+msgid "SDF raymarching algorithm to be used within the visual shader graph."
+msgstr "Előjeles távolságmezőben (SDF) léptet sugarat a vizuális shadergráfban."
+
+#. VisualShaderNodeSDFRaymarch.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeSDFRaymarch.xml
+msgid "Casts a ray against the screen SDF (signed-distance field) and returns the distance travelled."
+msgstr "Sugarat indít a képernyő előjeles távolságmezőjében (SDF), és visszaadja a megtett távolságot."
+
+#. VisualShaderNodeSDFToScreenUV.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeSDFToScreenUV.xml
+msgid "A function to convert an SDF (signed-distance field) to screen UV, to be used within the visual shader graph."
+msgstr "Az előjeles távolságmező (SDF) koordinátáit képernyő-UV-koordinátákká alakítja."
+
+#. VisualShaderNodeSDFToScreenUV.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeSDFToScreenUV.xml
+msgid "Translates to [code]sdf_to_screen_uv(sdf_pos)[/code] in the shader language."
+msgstr "A shaderkódban a [code]sdf_to_screen_uv(sdf_pos)[/code] hívásnak felel meg."
+
+#. VisualShaderNodeSample3D.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeSample3D.xml
+msgid "A base node for nodes which samples 3D textures in the visual shader graph."
+msgstr "A vizuális shadergráf 3D-s textúrákat mintavételező csomópontjainak alaposztálya."
+
+#. VisualShaderNodeSample3D.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeSample3D.xml
+msgid "A virtual class, use the descendants instead."
+msgstr "Virtuális osztály. A leszármazott osztályait használhatod."
+
+#. VisualShaderNodeSample3D.source
+#: modules/visual_shader/doc_classes/VisualShaderNodeSample3D.xml
+msgid "An input source type."
+msgstr "A bemeneti forrás típusa."
+
+#. VisualShaderNodeSample3D.SOURCE_TEXTURE
+#: modules/visual_shader/doc_classes/VisualShaderNodeSample3D.xml
+msgid "Creates internal uniform and provides a way to assign it within node."
+msgstr "Belső uniformot hoz létre, amelyhez a csomóponton belül rendelhetsz textúrát."
+
+#. VisualShaderNodeSample3D.SOURCE_PORT
+#: modules/visual_shader/doc_classes/VisualShaderNodeSample3D.xml
+msgid "Use the uniform texture from sampler port."
+msgstr "A mintavételező porton kapott uniform textúrát használja."
+
+#. VisualShaderNodeScreenNormalWorldSpace.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeScreenNormalWorldSpace.xml
+msgid "A visual shader node that unpacks the screen normal texture in World Space."
+msgstr "A képernyő normáltextúrájából kiolvassa a normálvektorokat, és világkoordinátákra alakítja őket."
+
+#. VisualShaderNodeScreenNormalWorldSpace.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeScreenNormalWorldSpace.xml
+msgid "The ScreenNormalWorldSpace node allows to create outline effects."
+msgstr "A ScreenNormalWorldSpace csomópont körvonalhatások készítéséhez használható."
+
+#. VisualShaderNodeScreenUVToSDF.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeScreenUVToSDF.xml
+msgid "A function to convert screen UV to an SDF (signed-distance field), to be used within the visual shader graph."
+msgstr "A képernyő UV-koordinátáit az előjeles távolságmező (SDF) koordinátáira alakítja."
+
+#. VisualShaderNodeScreenUVToSDF.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeScreenUVToSDF.xml
+msgid "Translates to [code]screen_uv_to_sdf(uv)[/code] in the shader language. If the UV port isn't connected, [code]SCREEN_UV[/code] is used instead."
+msgstr "A shaderkódban a [code]screen_uv_to_sdf(uv)[/code] hívásnak felel meg. Ha az UV-port nincs bekötve, a [code]SCREEN_UV[/code] értéket használja."
+
+#. VisualShaderNodeSmoothStep.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeSmoothStep.xml
+msgid "Calculates a SmoothStep function within the visual shader graph."
+msgstr "Simított lépcsőfüggvényt számít a vizuális shadergráfban."
+
+#. VisualShaderNodeStep.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeStep.xml
+msgid "Calculates a Step function within the visual shader graph."
+msgstr "Lépcsőfüggvényt számít a vizuális shadergráfban."
+
+#. VisualShaderNodeStep.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeStep.xml
+msgid "Translates to [code]step(edge, x)[/code] in the shader language.\nReturns [code]0.0[/code] if [code]x[/code] is smaller than [code]edge[/code] and [code]1.0[/code] otherwise."
+msgstr "A shaderkódban a [code]step(edge, x)[/code] hívásnak felel meg.\nHa [code]x[/code] kisebb a [code]edge[/code] határértéknél, [code]0.0[/code] az eredmény. Egyébként [code]1.0[/code] értéket ad vissza."
+
+#. VisualShaderNodeStep.OP_TYPE_VECTOR_2D_SCALAR
+#: modules/visual_shader/doc_classes/VisualShaderNodeStep.xml
+msgid "The [code]x[/code] port uses a 2D vector type, while the [code]edge[/code] port uses a floating-point scalar type."
+msgstr "Az [code]x[/code] port 2D-s vektort, az [code]edge[/code] port pedig lebegőpontos skalárt fogad."
+
+#. VisualShaderNodeStep.OP_TYPE_VECTOR_3D_SCALAR
+#: modules/visual_shader/doc_classes/VisualShaderNodeStep.xml
+msgid "The [code]x[/code] port uses a 3D vector type, while the [code]edge[/code] port uses a floating-point scalar type."
+msgstr "Az [code]x[/code] port 3D-s vektort, az [code]edge[/code] port pedig lebegőpontos skalárt fogad."
+
+#. VisualShaderNodeSwitch.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeSwitch.xml
+msgid "A selector function for use within the visual shader graph."
+msgstr "Logikai érték alapján választ két bemenet közül a vizuális shadergráfban."
+
+#. VisualShaderNodeSwitch.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeSwitch.xml
+msgid "Returns an associated value of the [member op_type] type if the provided boolean value is [code]true[/code] or [code]false[/code]."
+msgstr "A megadott logikai értéktől ([code]true[/code] vagy [code]false[/code]) függően az egyik vagy a másik [member op_type] típusú értéket adja vissza."
+
+#. VisualShaderNodeSwitch.OP_TYPE_TRANSFORM
+#: modules/visual_shader/doc_classes/VisualShaderNodeSwitch.xml
+msgid "A transform type."
+msgstr "Transzformációs típus."
+
+#. VisualShaderNodeTexture.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeTexture.xml
+msgid "Performs a 2D texture lookup within the visual shader graph."
+msgstr "2D-s textúrából vesz mintát a vizuális shadergráfban."
+
+#. VisualShaderNodeTexture.description
+#. VisualShaderNodeTexture3D.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeTexture.xml modules/visual_shader/doc_classes/VisualShaderNodeTexture3D.xml
+msgid "Performs a lookup operation on the provided texture, with support for multiple texture sources to choose from."
+msgstr "A megadott textúrából vesz mintát. Többféle textúraforrás közül választhatsz."
+
+#. VisualShaderNodeVectorOp.OP_CROSS
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorOp.xml
+msgid "Calculates the cross product of two vectors."
+msgstr "Kiszámítja két vektor vektoriális szorzatát."
+
+#. VisualShaderNodeVectorOp.OP_REFLECT
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorOp.xml
+msgid "Returns the vector that points in the direction of reflection. [code]a[/code] is incident vector and [code]b[/code] is the normal vector."
+msgstr "A visszaverődés irányába mutató vektort adja vissza. Az [code]a[/code] a beeső vektor, a [code]b[/code] a felületi normálvektor."
