@@ -1,0 +1,45 @@
+name: Egyszeri Godot F1 öt szövegjavítás
+on:
+  push:
+    branches:
+      - i18n/f1-canvas-multimesh-particles-20261122
+    paths:
+      - .github/workflows/egyszeri-f1-javitas.yml
+permissions:
+  contents: write
+jobs:
+  javitas:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: i18n/f1-canvas-multimesh-particles-20261122
+      - name: Az öt magyar fordítás javítása
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path('forditas/Godot_4_7_2_hu_osszevont_munkavaltozat.po')
+          original = p.read_text(encoding='utf-8')
+          updated = original
+          pairs = [["Beállítja a [param particles_collision] RID-del megadott 3D-s GPU-részecskevonzó [param curve] csillapítási értékét. Csak a vonzókra hat, az ütközőkre nem. A [member GPUParticlesAttractor3D.attenuation] tulajdonságnak felel meg.","Beállítja a [param particles_collision] RID-del megadott 3D-s GPU-részecskevonzó csillapítási görbéjét meghatározó [param curve] értéket. Csak a vonzókra hat, az ütközőkre nem. A [member GPUParticlesAttractor3D.attenuation] tulajdonságnak felel meg."],["A megadott példány színével összeszorzandó színt adja vissza.","A megadott példány színmodulációjához használt színt adja vissza."],["Beállítja a példány színével összeszorzandó színt. A [method MultiMesh.set_instance_color] metódusnak felel meg.","Beállítja a példány színmodulációjához használt színt. A [method MultiMesh.set_instance_color] metódusnak felel meg."],["A MultiMesh fizikai interpolációja a pontosabb eredményt részesíti előnyben.","A MultiMesh fizikai interpolációja a minőséget részesíti előnyben a sebességgel szemben."],["A megadott [param format] formátumú háló egymást követő csúcspozícióinak bájttávolságát adja vissza. A pozíciók egymás után helyezkednek el a csúcspufferben, a normál- és érintővektoroktól elkülönítve.","A megadott [param format] formátumú háló skinpufferének bájtlépését adja vissza."]]
+          for old, new in pairs:
+              needle = 'msgstr "' + old + '"'
+              assert updated.count(needle) == 1, f'Nem egyedi eredeti fordítás: {old[:55]}'
+              updated = updated.replace(needle, 'msgstr "' + new + '"')
+          assert updated.count('\nmsgid ') == original.count('\nmsgid ')
+          assert updated.count('\nmsgstr ') == original.count('\nmsgstr ')
+          assert updated != original
+          p.write_text(updated, encoding='utf-8')
+          print('Pontosan öt msgstr javítva, változatlan rekordmennyiség.')
+          PY
+          git diff --check
+          git diff --numstat
+      - name: Pontosítások visszaírása az eredeti PR-ágra
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add forditas/Godot_4_7_2_hu_osszevont_munkavaltozat.po
+          git commit -m 'fix(i18n): öt Godot F1-súgófordítás pontosítása'
+          git push origin HEAD:refs/heads/i18n/f1-canvas-multimesh-particles-20261122
