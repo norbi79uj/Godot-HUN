@@ -23838,3 +23838,2587 @@ msgstr "A teljes [GridMap] alapértelmezett súrlódási és visszapattanási be
 #: modules/gridmap/doc_classes/GridMap.xml
 msgid "Invalid cell item that can be used in [method set_cell_item] to clear cells (or represent an empty cell in [method get_cell_item])."
 msgstr "Érvénytelen cellaelem. Cellák törlésére használható a [method set_cell_item] metódusban. A [method get_cell_item] visszatérési értékeként üres cellát jelöl."
+
+#. Animation.animation_track_get_key_animation
+#: doc/classes/Animation.xml
+msgid "Returns the animation name at the key identified by [param key_idx]. The [param track_idx] must be the index of an Animation Track."
+msgstr "Visszaadja a [param key_idx] indexű kulcshoz tartozó animáció nevét. A [param track_idx] egy animációs sáv indexe legyen."
+
+#. Animation.animation_track_insert_key
+#: doc/classes/Animation.xml
+msgid "Inserts a key with value [param animation] at the given [param time] (in seconds). The [param track_idx] must be the index of an Animation Track."
+msgstr "Beszúr egy [param animation] értékű kulcsot a [param time] időpontra, másodpercben megadva. A [param track_idx] egy animációs sáv indexe legyen."
+
+#. Animation.animation_track_set_key_animation
+#: doc/classes/Animation.xml
+msgid "Sets the key identified by [param key_idx] to value [param animation]. The [param track_idx] must be the index of an Animation Track."
+msgstr "A [param key_idx] indexű kulcs értékét [param animation] értékre állítja. A [param track_idx] egy animációs sáv indexe legyen."
+
+#. Animation.audio_track_get_key_end_offset
+#: doc/classes/Animation.xml
+msgid "Returns the end offset of the key identified by [param key_idx]. The [param track_idx] must be the index of an Audio Track.\nEnd offset is the number of seconds cut off at the ending of the audio stream."
+msgstr "Visszaadja a [param key_idx] indexű kulcs végi eltolását. A [param track_idx] egy hangsáv indexe legyen.\nA végi eltolás az a másodpercben megadott idő, amelyet a hangfolyam végéről le kell vágni."
+
+#. Animation.audio_track_get_key_start_offset
+#: doc/classes/Animation.xml
+msgid "Returns the start offset of the key identified by [param key_idx]. The [param track_idx] must be the index of an Audio Track.\nStart offset is the number of seconds cut off at the beginning of the audio stream."
+msgstr "Visszaadja a [param key_idx] indexű kulcs kezdő eltolását. A [param track_idx] egy hangsáv indexe legyen.\nA kezdő eltolás az a másodpercben megadott idő, amelyet a hangfolyam elejéről le kell vágni."
+
+#. Animation.audio_track_get_key_stream
+#: doc/classes/Animation.xml
+msgid "Returns the audio stream of the key identified by [param key_idx]. The [param track_idx] must be the index of an Audio Track."
+msgstr "Visszaadja a [param key_idx] indexű kulcs hangfolyamát. A [param track_idx] egy hangsáv indexe legyen."
+
+#. Animation.audio_track_insert_key
+#: doc/classes/Animation.xml
+msgid "Inserts an Audio Track key at the given [param time] in seconds. The [param track_idx] must be the index of an Audio Track.\n[param stream] is the [AudioStream] resource to play. [param start_offset] is the number of seconds cut off at the beginning of the audio stream, while [param end_offset] is at the ending."
+msgstr "Hangsávkulcsot szúr be a másodpercben megadott [param time] időpontra. A [param track_idx] egy hangsáv indexe legyen.\nA [param stream] a lejátszandó [AudioStream] erőforrás. A [param start_offset] a hangfolyam elejéről, a [param end_offset] a végéről levágandó idő másodpercben."
+
+#. Animation.audio_track_is_use_blend
+#: doc/classes/Animation.xml
+msgid "Returns [code]true[/code] if the track at [param track_idx] will be blended with other animations."
+msgstr "[code]true[/code] értéket ad vissza, ha a [param track_idx] indexű sáv más animációkkal keveredik."
+
+#. Animation.audio_track_set_key_end_offset
+#: doc/classes/Animation.xml
+msgid "Sets the end offset of the key identified by [param key_idx] to value [param offset]. The [param track_idx] must be the index of an Audio Track."
+msgstr "A [param key_idx] indexű kulcs végi eltolását a [param offset] értékére állítja. A [param track_idx] egy hangsáv indexe legyen."
+
+#. Animation.audio_track_set_key_start_offset
+#: doc/classes/Animation.xml
+msgid "Sets the start offset of the key identified by [param key_idx] to value [param offset]. The [param track_idx] must be the index of an Audio Track."
+msgstr "A [param key_idx] indexű kulcs kezdő eltolását a [param offset] értékére állítja. A [param track_idx] egy hangsáv indexe legyen."
+
+#. Animation.audio_track_set_key_stream
+#: doc/classes/Animation.xml
+msgid "Sets the stream of the key identified by [param key_idx] to value [param stream]. The [param track_idx] must be the index of an Audio Track."
+msgstr "A [param key_idx] indexű kulcs hangfolyamát a [param stream] értékére állítja. A [param track_idx] egy hangsáv indexe legyen."
+
+#. Animation.audio_track_set_use_blend
+#: doc/classes/Animation.xml
+msgid "Sets whether the track will be blended with other animations. If [code]true[/code], the audio playback volume changes depending on the blend value."
+msgstr "Beállítja, hogy a sáv keveredjen-e más animációkkal. Ha az értéke [code]true[/code], a lejátszás hangereje a keverési értéktől függ."
+
+#. Animation.bezier_track_get_key_in_handle
+#: doc/classes/Animation.xml
+msgid "Returns the in handle of the key identified by [param key_idx]. The [param track_idx] must be the index of a Bezier Track."
+msgstr "Visszaadja a [param key_idx] indexű kulcs bejövő fogantyúját. A [param track_idx] egy Bézier-sáv indexe legyen."
+
+#. Animation.bezier_track_get_key_out_handle
+#: doc/classes/Animation.xml
+msgid "Returns the out handle of the key identified by [param key_idx]. The [param track_idx] must be the index of a Bezier Track."
+msgstr "Visszaadja a [param key_idx] indexű kulcs kimenő fogantyúját. A [param track_idx] egy Bézier-sáv indexe legyen."
+
+#. Animation.bezier_track_get_key_value
+#: doc/classes/Animation.xml
+msgid "Returns the value of the key identified by [param key_idx]. The [param track_idx] must be the index of a Bezier Track."
+msgstr "Visszaadja a [param key_idx] indexű kulcs értékét. A [param track_idx] egy Bézier-sáv indexe legyen."
+
+#. Animation.bezier_track_interpolate
+#: doc/classes/Animation.xml
+msgid "Returns the interpolated value at the given [param time] (in seconds). The [param track_idx] must be the index of a Bezier Track."
+msgstr "Visszaadja az interpolált értéket a másodpercben megadott [param time] időpontban. A [param track_idx] egy Bézier-sáv indexe legyen."
+
+#. Animation.bezier_track_set_key_in_handle
+#: doc/classes/Animation.xml
+msgid "Sets the in handle of the key identified by [param key_idx] to value [param in_handle]. The [param track_idx] must be the index of a Bezier Track."
+msgstr "A [param key_idx] indexű kulcs bejövő fogantyúját a [param in_handle] értékére állítja. A [param track_idx] egy Bézier-sáv indexe legyen."
+
+#. Animation.bezier_track_set_key_out_handle
+#: doc/classes/Animation.xml
+msgid "Sets the out handle of the key identified by [param key_idx] to value [param out_handle]. The [param track_idx] must be the index of a Bezier Track."
+msgstr "A [param key_idx] indexű kulcs kimenő fogantyúját a [param out_handle] értékére állítja. A [param track_idx] egy Bézier-sáv indexe legyen."
+
+#. Animation.bezier_track_set_key_value
+#: doc/classes/Animation.xml
+msgid "Sets the value of the key identified by [param key_idx] to the given value. The [param track_idx] must be the index of a Bezier Track."
+msgstr "A [param key_idx] indexű kulcs értékét a megadott értékre állítja. A [param track_idx] egy Bézier-sáv indexe legyen."
+
+#. Animation.blend_shape_track_insert_key
+#: doc/classes/Animation.xml
+msgid "Inserts a key in a given blend shape track. Returns the key index."
+msgstr "Kulcsot szúr be a megadott alakváltozati sávba. Visszaadja a kulcs indexét."
+
+#. Animation.blend_shape_track_interpolate
+#: doc/classes/Animation.xml
+msgid "Returns the interpolated blend shape value at the given time (in seconds). The [param track_idx] must be the index of a blend shape track."
+msgstr "Visszaadja az alakváltozat interpolált értékét a megadott időpontban, másodpercben számolva. A [param track_idx] egy alakváltozati sáv indexe legyen."
+
+#. Animation.copy_track
+#: doc/classes/Animation.xml
+msgid "Adds a new track to [param to_animation] that is a copy of the given track from this animation."
+msgstr "A [param to_animation] animációhoz új sávot ad hozzá, amely az itteni megadott sáv másolata."
+
+#. Animation.get_marker_at_time
+#: doc/classes/Animation.xml
+msgid "Returns the name of the marker located at the given time."
+msgstr "Visszaadja a megadott időpontban lévő jelölő nevét."
+
+#. Animation.get_marker_color
+#: doc/classes/Animation.xml
+msgid "Returns the given marker's color."
+msgstr "Visszaadja a megadott jelölő színét."
+
+#. Animation.get_next_marker
+#: doc/classes/Animation.xml
+msgid "Returns the closest marker that comes after the given time. If no such marker exists, an empty string is returned."
+msgstr "Visszaadja a megadott időpont utáni legközelebbi jelölőt. Ha ilyen nincs, üres szöveget ad vissza."
+
+#. Animation.get_prev_marker
+#: doc/classes/Animation.xml
+msgid "Returns the closest marker that comes before the given time. If no such marker exists, an empty string is returned."
+msgstr "Visszaadja a megadott időpont előtti legközelebbi jelölőt. Ha ilyen nincs, üres szöveget ad vissza."
+
+#. Animation.method_track_get_name
+#: doc/classes/Animation.xml
+msgid "Returns the method name of a method track."
+msgstr "Visszaadja a metódussáv által hívott metódus nevét."
+
+#. Animation.method_track_get_params
+#: doc/classes/Animation.xml
+msgid "Returns the arguments values to be called on a method track for a given key in a given track."
+msgstr "Visszaadja a megadott metódussáv megadott kulcsához tartozó hívási argumentumok értékeit."
+
+#. Animation.optimize
+#: doc/classes/Animation.xml
+msgid "Optimize the animation and all its tracks in-place. This will preserve only as many keys as are necessary to keep the animation within the specified bounds."
+msgstr "Helyben optimalizálja az animációt és annak összes sávját. Csak annyi kulcsot tart meg, amennyi a megadott eltérési határok betartásához szükséges."
+
+#. Animation.position_track_insert_key
+#: doc/classes/Animation.xml
+msgid "Inserts a key in a given 3D position track. Returns the key index."
+msgstr "Kulcsot szúr be a megadott 3D pozíciósávba. Visszaadja a kulcs indexét."
+
+#. Animation.position_track_interpolate
+#: doc/classes/Animation.xml
+msgid "Returns the interpolated position value at the given time (in seconds). The [param track_idx] must be the index of a 3D position track."
+msgstr "Visszaadja az interpolált pozíciót a megadott időpontban, másodpercben számolva. A [param track_idx] egy 3D pozíciósáv indexe legyen."
+
+#. Animation.rotation_track_insert_key
+#: doc/classes/Animation.xml
+msgid "Inserts a key in a given 3D rotation track. Returns the key index."
+msgstr "Kulcsot szúr be a megadott 3D forgatási sávba. Visszaadja a kulcs indexét."
+
+#. Animation.rotation_track_interpolate
+#: doc/classes/Animation.xml
+msgid "Returns the interpolated rotation value at the given time (in seconds). The [param track_idx] must be the index of a 3D rotation track."
+msgstr "Visszaadja az interpolált forgatást a megadott időpontban, másodpercben számolva. A [param track_idx] egy 3D forgatási sáv indexe legyen."
+
+#. Animation.scale_track_insert_key
+#: doc/classes/Animation.xml
+msgid "Inserts a key in a given 3D scale track. Returns the key index."
+msgstr "Kulcsot szúr be a megadott 3D méretezési sávba. Visszaadja a kulcs indexét."
+
+#. Animation.scale_track_interpolate
+#: doc/classes/Animation.xml
+msgid "Returns the interpolated scale value at the given time (in seconds). The [param track_idx] must be the index of a 3D scale track."
+msgstr "Visszaadja az interpolált skálát a megadott időpontban, másodpercben számolva. A [param track_idx] egy 3D méretezési sáv indexe legyen."
+
+#. Animation.set_marker_color
+#: doc/classes/Animation.xml
+msgid "Sets the given marker's color."
+msgstr "Beállítja a megadott jelölő színét."
+
+#. Animation.track_get_interpolation_loop_wrap
+#: doc/classes/Animation.xml
+msgid "Returns [code]true[/code] if the track at [param track_idx] wraps the interpolation loop. New tracks wrap the interpolation loop by default."
+msgstr "[code]true[/code] értéket ad vissza, ha a [param track_idx] indexű sáv a ciklushatáron át is interpolál. Az új sávok alapértelmezésben a ciklushatáron át is interpolálnak."
+
+#. Animation.track_get_interpolation_type
+#: doc/classes/Animation.xml
+msgid "Returns the interpolation type of a given track."
+msgstr "Visszaadja a megadott sáv interpolációs típusát."
+
+#. Animation.track_get_key_time
+#: doc/classes/Animation.xml
+msgid "Returns the time at which the key is located."
+msgstr "Visszaadja a kulcs időpontját."
+
+#. Animation.track_get_key_transition
+#: doc/classes/Animation.xml
+msgid "Returns the transition curve (easing) for a specific key (see the built-in math function [method @GlobalScope.ease])."
+msgstr "Visszaadja a kiválasztott kulcs átmeneti görbéjét (lásd a beépített [method @GlobalScope.ease] matematikai függvényt)."
+
+#. Animation.track_get_key_value
+#: doc/classes/Animation.xml
+msgid "Returns the value of a given key in a given track."
+msgstr "Visszaadja a megadott sáv megadott kulcsának értékét."
+
+#. Animation.track_get_type
+#: doc/classes/Animation.xml
+msgid "Gets the type of a track."
+msgstr "Lekéri a sáv típusát."
+
+#. Animation.track_is_compressed
+#: doc/classes/Animation.xml
+msgid "Returns [code]true[/code] if the track is compressed, [code]false[/code] otherwise. See also [method compress]."
+msgstr "[code]true[/code] értéket ad vissza, ha a sáv tömörített, egyébként [code]false[/code] értéket ad vissza. Lásd még: [method compress]."
+
+#. Animation.track_is_imported
+#: doc/classes/Animation.xml
+msgid "Returns [code]true[/code] if the given track is imported. Else, return [code]false[/code]."
+msgstr "[code]true[/code] értéket ad vissza, ha a megadott sáv importált. Egyébként [code]false[/code] értéket ad vissza."
+
+#. Animation.track_move_down
+#: doc/classes/Animation.xml
+msgid "Moves a track down."
+msgstr "A sávot lejjebb mozgatja."
+
+#. Animation.track_move_to
+#: doc/classes/Animation.xml
+msgid "Changes the index position of track [param track_idx] to the one defined in [param to_idx]."
+msgstr "A [param track_idx] indexű sávot a [param to_idx] által megadott indexre helyezi."
+
+#. Animation.track_move_up
+#: doc/classes/Animation.xml
+msgid "Moves a track up."
+msgstr "A sávot feljebb mozgatja."
+
+#. Animation.track_remove_key_at_time
+#: doc/classes/Animation.xml
+msgid "Removes a key at [param time] in a given track."
+msgstr "Eltávolítja a megadott sáv [param time] időpontban lévő kulcsát."
+
+#. Animation.track_set_imported
+#: doc/classes/Animation.xml
+msgid "Sets the given track as imported or not."
+msgstr "Beállítja, hogy a megadott sáv importáltként legyen-e megjelölve."
+
+#. Animation.track_set_interpolation_loop_wrap
+#: doc/classes/Animation.xml
+msgid "If [code]true[/code], the track at [param track_idx] wraps the interpolation loop."
+msgstr "Ha az értéke [code]true[/code], a [param track_idx] indexű sáv a ciklushatáron át is interpolál."
+
+#. Animation.track_set_interpolation_type
+#: doc/classes/Animation.xml
+msgid "Sets the interpolation type of a given track."
+msgstr "Beállítja a megadott sáv interpolációs típusát."
+
+#. Animation.track_set_key_time
+#: doc/classes/Animation.xml
+msgid "Sets the time of an existing key."
+msgstr "Beállítja egy meglévő kulcs időpontját."
+
+#. Animation.track_set_key_transition
+#: doc/classes/Animation.xml
+msgid "Sets the transition curve (easing) for a specific key (see the built-in math function [method @GlobalScope.ease])."
+msgstr "Beállítja a kiválasztott kulcs átmeneti görbéjét (lásd a beépített [method @GlobalScope.ease] matematikai függvényt)."
+
+#. Animation.track_set_key_value
+#: doc/classes/Animation.xml
+msgid "Sets the value of an existing key."
+msgstr "Beállítja egy meglévő kulcs értékét."
+
+#. Animation.track_swap
+#: doc/classes/Animation.xml
+msgid "Swaps the track [param track_idx]'s index position with the track [param with_idx]."
+msgstr "Felcseréli a [param track_idx] és a [param with_idx] indexű sávok sorrendjét."
+
+#. Animation.value_track_get_update_mode
+#: doc/classes/Animation.xml
+msgid "Returns the update mode of a value track."
+msgstr "Visszaadja az értéksáv frissítési módját."
+
+#. Animation.value_track_set_update_mode
+#: doc/classes/Animation.xml
+msgid "Sets the update mode of a value track."
+msgstr "Beállítja az értéksáv frissítési módját."
+
+#. Animation.TYPE_POSITION_3D
+#: doc/classes/Animation.xml
+msgid "3D position track (values are stored in [Vector3]s)."
+msgstr "3D pozíciósáv, [Vector3] értékekkel."
+
+#. Animation.TYPE_ROTATION_3D
+#: doc/classes/Animation.xml
+msgid "3D rotation track (values are stored in [Quaternion]s)."
+msgstr "3D forgatási sáv, [Quaternion] értékekkel."
+
+#. Animation.TYPE_SCALE_3D
+#: doc/classes/Animation.xml
+msgid "3D scale track (values are stored in [Vector3]s)."
+msgstr "3D méretezési sáv, [Vector3] értékekkel."
+
+#. Animation.TYPE_BLEND_SHAPE
+#: doc/classes/Animation.xml
+msgid "Blend shape track."
+msgstr "Alakváltozati sáv."
+
+#. Animation.TYPE_METHOD
+#: doc/classes/Animation.xml
+msgid "Method tracks call functions with given arguments per key."
+msgstr "A metódussávok minden kulcsnál meghívják a megadott függvényt a hozzá tartozó argumentumokkal."
+
+#. Animation.TYPE_BEZIER
+#: doc/classes/Animation.xml
+msgid "Bezier tracks are used to interpolate a value using custom curves. They can also be used to animate sub-properties of vectors and colors (e.g. alpha value of a [Color])."
+msgstr "A Bézier-sávok egyéni görbével interpolálnak egy értéket. Vektorok és színek résztulajdonságai is animálhatók velük, például egy [Color] alfaértéke."
+
+#. Animation.TYPE_AUDIO
+#: doc/classes/Animation.xml
+msgid "Audio tracks are used to play an audio stream with either type of [AudioStreamPlayer]. The stream can be trimmed and previewed in the animation."
+msgstr "A hangsávok hangfolyamot játszanak le a [AudioStreamPlayer] valamelyik változatával. A hangfolyam az animációban megvágható és meghallgatható."
+
+#. Animation.TYPE_ANIMATION
+#: doc/classes/Animation.xml
+msgid "Animation tracks play animations in other [AnimationPlayer] nodes."
+msgstr "Az animációs sávok más [AnimationPlayer] csomópontok animációit játsszák le."
+
+#. Animation.INTERPOLATION_NEAREST
+#: doc/classes/Animation.xml
+msgid "No interpolation (nearest value)."
+msgstr "Nincs interpoláció, a legközelebbi értéket használja."
+
+#. Animation.INTERPOLATION_LINEAR_ANGLE
+#: doc/classes/Animation.xml
+msgid "Linear interpolation with shortest path rotation.\n[b]Note:[/b] The result value is always normalized and may not match the key value."
+msgstr "Lineáris interpoláció a rövidebb forgási útvonal mentén.\n[b]Megjegyzés:[/b] Az eredmény mindig normált, ezért eltérhet a kulcs értékétől."
+
+#. Animation.INTERPOLATION_CUBIC_ANGLE
+#: doc/classes/Animation.xml
+msgid "Cubic interpolation with shortest path rotation.\n[b]Note:[/b] The result value is always normalized and may not match the key value."
+msgstr "Köbös interpoláció a rövidebb forgási útvonal mentén.\n[b]Megjegyzés:[/b] Az eredmény mindig normált, ezért eltérhet a kulcs értékétől."
+
+#. Animation.UPDATE_CONTINUOUS
+#: doc/classes/Animation.xml
+msgid "Update between keyframes and hold the value."
+msgstr "A kulcskockák között is frissíti, majd megtartja az értéket."
+
+#. Animation.UPDATE_DISCRETE
+#: doc/classes/Animation.xml
+msgid "Update at the keyframes."
+msgstr "A kulcskockák időpontjában frissíti az értéket."
+
+#. Animation.LOOP_NONE
+#: doc/classes/Animation.xml
+msgid "At both ends of the animation, the animation will stop playing."
+msgstr "Az animáció mindkét végpontján megáll a lejátszás."
+
+#. Animation.LOOP_LINEAR
+#: doc/classes/Animation.xml
+msgid "At both ends of the animation, the animation will be repeated without changing the playback direction."
+msgstr "Az animáció a két végpont bármelyikénél újraindul, a lejátszás irányának megváltoztatása nélkül."
+
+#. Animation.LOOP_PINGPONG
+#: doc/classes/Animation.xml
+msgid "Repeats playback and reverse playback at both ends of the animation."
+msgstr "Az animáció ismétlődik, és a két végpontnál megfordul a lejátszás iránya."
+
+#. Animation.LOOPED_FLAG_NONE
+#: doc/classes/Animation.xml
+msgid "This flag indicates that the animation proceeds without any looping."
+msgstr "A jelző azt jelenti, hogy az animáció ismétlés nélkül halad."
+
+#. Animation.LOOPED_FLAG_END
+#: doc/classes/Animation.xml
+msgid "This flag indicates that the animation has reached the end of the animation and just after loop processed."
+msgstr "A jelző azt jelenti, hogy az animáció elérte a végét, és a ciklusváltás már megtörtént."
+
+#. Animation.LOOPED_FLAG_START
+#: doc/classes/Animation.xml
+msgid "This flag indicates that the animation has reached the start of the animation and just after loop processed."
+msgstr "A jelző azt jelenti, hogy az animáció elérte az elejét, és a ciklusváltás már megtörtént."
+
+#. Animation.FIND_MODE_EXACT
+#: doc/classes/Animation.xml
+msgid "Finds only the key with matching the time."
+msgstr "Csak a megadott időpontnak pontosan megfelelő kulcsot keresi."
+
+#. AnimationLibrary.brief
+#: doc/classes/AnimationLibrary.xml
+msgid "Container for [Animation] resources."
+msgstr "[Animation] erőforrások tárolója."
+
+#. AnimationLibrary.description
+#: doc/classes/AnimationLibrary.xml
+msgid "An animation library stores a set of animations accessible through [StringName] keys, for use with [AnimationPlayer] nodes."
+msgstr "Az animációkönyvtár [StringName] kulcsokkal elérhető animációkat tárol az [AnimationPlayer] csomópontok számára."
+
+#. AnimationLibrary.add_animation
+#: doc/classes/AnimationLibrary.xml
+msgid "Adds the [param animation] to the library, accessible by the key [param name]."
+msgstr "Hozzáadja a [param animation] animációt a könyvtárhoz. A [param name] kulccsal érhető el."
+
+#. AnimationLibrary.get_animation
+#. AnimationMixer.get_animation
+#: doc/classes/AnimationLibrary.xml doc/classes/AnimationMixer.xml
+msgid "Returns the [Animation] with the key [param name]. If the animation does not exist, [code]null[/code] is returned and an error is logged."
+msgstr "Visszaadja a [param name] kulcsú [Animation] erőforrást. Ha az animáció nem létezik, [code]null[/code] értéket ad vissza, és hibát naplóz."
+
+#. AnimationLibrary.get_animation_list
+#: doc/classes/AnimationLibrary.xml
+msgid "Returns the keys for the [Animation]s stored in the library."
+msgstr "Visszaadja a könyvtárban tárolt [Animation] erőforrások kulcsait."
+
+#. AnimationLibrary.get_animation_list_size
+#: doc/classes/AnimationLibrary.xml
+msgid "Returns the key count for the [Animation]s stored in the library."
+msgstr "Visszaadja a könyvtárban tárolt [Animation] erőforrások kulcsainak számát."
+
+#. AnimationLibrary.has_animation
+#: doc/classes/AnimationLibrary.xml
+msgid "Returns [code]true[/code] if the library stores an [Animation] with [param name] as the key."
+msgstr "[code]true[/code] értéket ad vissza, ha a könyvtár [param name] kulccsal tárol egy [Animation] erőforrást."
+
+#. AnimationLibrary.remove_animation
+#: doc/classes/AnimationLibrary.xml
+msgid "Removes the [Animation] with the key [param name]."
+msgstr "Eltávolítja a [param name] kulcsú [Animation] erőforrást."
+
+#. AnimationLibrary.rename_animation
+#: doc/classes/AnimationLibrary.xml
+msgid "Changes the key of the [Animation] associated with the key [param name] to [param newname]."
+msgstr "A [param name] kulcshoz társított [Animation] erőforrás kulcsát [param newname] értékre módosítja."
+
+#. AnimationLibrary.animation_added
+#: doc/classes/AnimationLibrary.xml
+msgid "Emitted when an [Animation] is added, under the key [param anim_name]."
+msgstr "Akkor jelez, amikor [Animation] erőforrás kerül a könyvtárba [param anim_name] kulccsal."
+
+#. AnimationLibrary.animation_changed
+#: doc/classes/AnimationLibrary.xml
+msgid "Emitted when there's a change in one of the animations, e.g. tracks are added, moved or have changed paths. [param anim_name] is the key of the animation that was changed.\nSee also [signal Resource.changed], which this acts as a relay for."
+msgstr "Akkor jelez, ha egy animáció változik, például sávot adnak hozzá, sávot mozgatnak vagy módosítják a sáv útvonalát. A [param anim_name] a megváltozott animáció kulcsa.\nLásd még a [signal Resource.changed] jelzést, amelyet ez a jelzés közvetít."
+
+#. AnimationLibrary.animation_removed
+#: doc/classes/AnimationLibrary.xml
+msgid "Emitted when an [Animation] stored with the key [param anim_name] is removed."
+msgstr "Akkor jelez, amikor eltávolítják a [param anim_name] kulccsal tárolt [Animation] erőforrást."
+
+#. AnimationLibrary.animation_renamed
+#: doc/classes/AnimationLibrary.xml
+msgid "Emitted when the key for an [Animation] is changed, from [param old_name] to [param new_name]."
+msgstr "Akkor jelez, amikor egy [Animation] kulcsa [param old_name] értékről [param new_name] értékre változik."
+
+#. AnimationMixer.brief
+#: doc/classes/AnimationMixer.xml
+msgid "Base class for [AnimationPlayer] and [AnimationTree]."
+msgstr "Az [AnimationPlayer] és az [AnimationTree] alaposztálya."
+
+#. AnimationMixer.advance
+#: doc/classes/AnimationMixer.xml
+msgid "Manually advance the animations by the specified time (in seconds)."
+msgstr "Kézzel előrelépteti az animációkat a megadott idővel, másodpercben számolva."
+
+#. AnimationMixer.clear_caches
+#: doc/classes/AnimationMixer.xml
+msgid "[AnimationMixer] caches animated nodes. It may not notice if a node disappears; [method clear_caches] forces it to update the cache again."
+msgstr "Az [AnimationMixer] gyorsítótárban tárolja az animált csomópontokat. Ha egy csomópont eltűnik, előfordulhat, hogy ezt nem érzékeli. A [method clear_caches] kényszeríti a gyorsítótár frissítését."
+
+#. AnimationMixer.find_animation
+#: doc/classes/AnimationMixer.xml
+msgid "Returns the key of [param animation] or an empty [StringName] if not found."
+msgstr "Visszaadja a [param animation] animáció kulcsát, vagy üres [StringName] értéket, ha nem található."
+
+#. AnimationMixer.find_animation_library
+#: doc/classes/AnimationMixer.xml
+msgid "Returns the key for the [AnimationLibrary] that contains [param animation] or an empty [StringName] if not found."
+msgstr "Visszaadja a [param animation] animációt tartalmazó [AnimationLibrary] kulcsát, vagy üres [StringName] értéket, ha nem található."
+
+#. AnimationMixer.get_animation_library_list
+#: doc/classes/AnimationMixer.xml
+msgid "Returns the list of stored library keys."
+msgstr "Visszaadja a tárolt animációkönyvtárak kulcsainak listáját."
+
+#. AnimationMixer.get_animation_list
+#: doc/classes/AnimationMixer.xml
+msgid "Returns the list of stored animation keys."
+msgstr "Visszaadja a tárolt animációk kulcsainak listáját."
+
+#. AnimationMixer.has_animation
+#: doc/classes/AnimationMixer.xml
+msgid "Returns [code]true[/code] if the [AnimationMixer] stores an [Animation] with key [param name]."
+msgstr "[code]true[/code] értéket ad vissza, ha az [AnimationMixer] a [param name] kulccsal tárol egy [Animation] erőforrást."
+
+#. AnimationMixer.has_animation_library
+#: doc/classes/AnimationMixer.xml
+msgid "Returns [code]true[/code] if the [AnimationMixer] stores an [AnimationLibrary] with key [param name]."
+msgstr "[code]true[/code] értéket ad vissza, ha az [AnimationMixer] a [param name] kulccsal tárol egy [AnimationLibrary] erőforrást."
+
+#. AnimationMixer.remove_animation_library
+#: doc/classes/AnimationMixer.xml
+msgid "Removes the [AnimationLibrary] associated with the key [param name]."
+msgstr "Eltávolítja a [param name] kulcshoz társított [AnimationLibrary] erőforrást."
+
+#. AnimationNodeAdd2.brief
+#: doc/classes/AnimationNodeAdd2.xml
+msgid "Blends two animations additively inside of an [AnimationNodeBlendTree]."
+msgstr "Két animációt additívan kever egy [AnimationNodeBlendTree] fában."
+
+#. AnimationNodeAdd3.brief
+#: doc/classes/AnimationNodeAdd3.xml
+msgid "Blends two of three animations additively inside of an [AnimationNodeBlendTree]."
+msgstr "Három animáció közül kettőt additívan kever egy [AnimationNodeBlendTree] fában."
+
+#. AnimationNodeAnimation.brief
+#: doc/classes/AnimationNodeAnimation.xml
+msgid "An input animation for an [AnimationNodeBlendTree]."
+msgstr "Bemeneti animáció az [AnimationNodeBlendTree] számára."
+
+#. AnimationNodeAnimation.description
+#: doc/classes/AnimationNodeAnimation.xml
+msgid "A resource to add to an [AnimationNodeBlendTree]. Only has one output port using the [member animation] property. Used as an input for [AnimationNode]s that blend animations together."
+msgstr "Az [AnimationNodeBlendTree] fához adható erőforrás. Egyetlen kimeneti portja van, amely a [member animation] tulajdonságot használja. Animációkat keverő [AnimationNode] csomópontok bemeneteként szolgál."
+
+#. AnimationNodeAnimation.animation
+#: doc/classes/AnimationNodeAnimation.xml
+msgid "Animation to use as an output. It is one of the animations provided by [member AnimationTree.anim_player]."
+msgstr "A kimenetként használt animáció. A [member AnimationTree.anim_player] által biztosított animációk egyike."
+
+#. AnimationNodeAnimation.play_mode
+#: doc/classes/AnimationNodeAnimation.xml
+msgid "Determines the playback direction of the animation."
+msgstr "Meghatározza az animáció lejátszási irányát."
+
+#. AnimationNodeAnimation.start_offset
+#: doc/classes/AnimationNodeAnimation.xml
+msgid "If [member use_custom_timeline] is [code]true[/code], offset the start position of the animation.\nThis is useful for adjusting which foot steps first in 3D walking animations."
+msgstr "Ha a [member use_custom_timeline] értéke [code]true[/code], eltolja az animáció kezdőpozícióját.\nEzzel például beállítható, hogy egy 3D járásanimációban melyik láb lépjen először."
+
+#. AnimationNodeAnimation.timeline_length
+#: doc/classes/AnimationNodeAnimation.xml
+msgid "The length of the custom timeline.\nIf [member stretch_time_scale] is [code]true[/code], scales the animation to this length."
+msgstr "Az egyéni idővonal hossza.\nHa a [member stretch_time_scale] értéke [code]true[/code], az animációt erre a hosszra méretezi."
+
+#. AnimationNodeAnimation.use_custom_timeline
+#: doc/classes/AnimationNodeAnimation.xml
+msgid "If [code]true[/code], [AnimationNode] provides an animation based on the [Animation] resource with some parameters adjusted."
+msgstr "Ha az értéke [code]true[/code], az [AnimationNode] az [Animation] erőforráson alapuló, módosított paraméterű animációt biztosít."
+
+#. AnimationNodeAnimation.PLAY_MODE_FORWARD
+#: doc/classes/AnimationNodeAnimation.xml
+msgid "Plays animation in forward direction."
+msgstr "Előrefelé játssza le az animációt."
+
+#. AnimationNodeAnimation.PLAY_MODE_BACKWARD
+#: doc/classes/AnimationNodeAnimation.xml
+msgid "Plays animation in backward direction."
+msgstr "Visszafelé játssza le az animációt."
+
+#. AnimationNodeBlend2.brief
+#: doc/classes/AnimationNodeBlend2.xml
+msgid "Blends two animations linearly inside of an [AnimationNodeBlendTree]."
+msgstr "Két animációt lineárisan kever egy [AnimationNodeBlendTree] fában."
+
+#. AnimationNodeBlend3.brief
+#: doc/classes/AnimationNodeBlend3.xml
+msgid "Blends two of three animations linearly inside of an [AnimationNodeBlendTree]."
+msgstr "Három animáció közül kettőt lineárisan kever egy [AnimationNodeBlendTree] fában."
+
+#. AnimationNodeBlendSpace1D.find_blend_point_by_name
+#. AnimationNodeBlendSpace2D.find_blend_point_by_name
+#: doc/classes/AnimationNodeBlendSpace1D.xml doc/classes/AnimationNodeBlendSpace2D.xml
+msgid "Returns the index of the blend point with the given [param name]. Returns [code]-1[/code] if no blend point with that name is found."
+msgstr "Visszaadja a [param name] nevű keverési pont indexét. Ha ilyen nevű pont nincs, [code]-1[/code] értéket ad vissza."
+
+#. AnimationNodeBlendSpace1D.get_blend_point_count
+#: doc/classes/AnimationNodeBlendSpace1D.xml
+msgid "Returns the number of points on the blend axis."
+msgstr "Visszaadja a keverési tengelyen lévő pontok számát."
+
+#. AnimationNodeBlendSpace1D.get_blend_point_name
+#. AnimationNodeBlendSpace2D.get_blend_point_name
+#: doc/classes/AnimationNodeBlendSpace1D.xml doc/classes/AnimationNodeBlendSpace2D.xml
+msgid "Returns the name of the blend point at index [param point]."
+msgstr "Visszaadja a [param point] indexű keverési pont nevét."
+
+#. AnimationNodeBlendSpace1D.get_blend_point_node
+#: doc/classes/AnimationNodeBlendSpace1D.xml
+msgid "Returns the [AnimationNode] referenced by the point at index [param point]."
+msgstr "Visszaadja a [param point] indexű pont által hivatkozott [AnimationNode] csomópontot."
+
+#. AnimationNodeBlendSpace1D.get_blend_point_position
+#. AnimationNodeBlendSpace2D.get_blend_point_position
+#: doc/classes/AnimationNodeBlendSpace1D.xml doc/classes/AnimationNodeBlendSpace2D.xml
+msgid "Returns the position of the point at index [param point]."
+msgstr "Visszaadja a [param point] indexű pont helyét."
+
+#. AnimationNodeBlendSpace1D.remove_blend_point
+#: doc/classes/AnimationNodeBlendSpace1D.xml
+msgid "Removes the point at index [param point] from the blend axis."
+msgstr "Eltávolítja a [param point] indexű pontot a keverési tengelyről."
+
+#. AnimationNodeBlendSpace1D.reorder_blend_point
+#. AnimationNodeBlendSpace2D.reorder_blend_point
+#: doc/classes/AnimationNodeBlendSpace1D.xml doc/classes/AnimationNodeBlendSpace2D.xml
+msgid "Swaps the blend points at indices [param from_index] and [param to_index], exchanging their positions and properties."
+msgstr "Felcseréli a [param from_index] és a [param to_index] indexű keverési pontok helyét és tulajdonságait."
+
+#. AnimationNodeBlendSpace1D.set_blend_point_name
+#. AnimationNodeBlendSpace2D.set_blend_point_name
+#: doc/classes/AnimationNodeBlendSpace1D.xml doc/classes/AnimationNodeBlendSpace2D.xml
+msgid "Sets the name of the blend point at index [param point]. If the name conflicts with an existing point, a unique name will be generated automatically."
+msgstr "Beállítja a [param point] indexű keverési pont nevét. Ha már van ilyen nevű pont, automatikusan egyedi nevet hoz létre."
+
+#. AnimationNodeBlendSpace1D.set_blend_point_node
+#. AnimationNodeBlendSpace2D.set_blend_point_node
+#: doc/classes/AnimationNodeBlendSpace1D.xml doc/classes/AnimationNodeBlendSpace2D.xml
+msgid "Changes the [AnimationNode] referenced by the point at index [param point]."
+msgstr "Módosítja a [param point] indexű pont által hivatkozott [AnimationNode] csomópontot."
+
+#. AnimationNodeBlendSpace1D.set_blend_point_position
+#: doc/classes/AnimationNodeBlendSpace1D.xml
+msgid "Updates the position of the point at index [param point] on the blend axis."
+msgstr "Frissíti a [param point] indexű pont helyét a keverési tengelyen."
+
+#. AnimationNodeBlendSpace1D.blend_mode
+#. AnimationNodeBlendSpace2D.blend_mode
+#: doc/classes/AnimationNodeBlendSpace1D.xml doc/classes/AnimationNodeBlendSpace2D.xml
+msgid "Controls the interpolation between animations."
+msgstr "Az animációk közötti interpolációt szabályozza."
+
+#. AnimationNodeBlendSpace1D.max_space
+#: doc/classes/AnimationNodeBlendSpace1D.xml
+msgid "The blend space's axis's upper limit for the points' position. See [method add_blend_point]."
+msgstr "A pontok helyének felső határa a keverési tengelyen. Lásd: [method add_blend_point]."
+
+#. AnimationNodeBlendSpace1D.min_space
+#: doc/classes/AnimationNodeBlendSpace1D.xml
+msgid "The blend space's axis's lower limit for the points' position. See [method add_blend_point]."
+msgstr "A pontok helyének alsó határa a keverési tengelyen. Lásd: [method add_blend_point]."
+
+#. AnimationNodeBlendSpace1D.snap
+#: doc/classes/AnimationNodeBlendSpace1D.xml
+msgid "Position increment to snap to when moving a point on the axis."
+msgstr "A tengelyen mozgatott pontok igazítási lépésköze."
+
+#. AnimationNodeBlendSpace1D.sync
+#. AnimationNodeBlendSpace2D.sync
+#: doc/classes/AnimationNodeBlendSpace1D.xml doc/classes/AnimationNodeBlendSpace2D.xml
+msgid "If [code]true[/code], sync mode is enabled (equivalent to [constant SYNC_MODE_INDEPENDENT]). This property is kept for backward compatibility."
+msgstr "Ha az értéke [code]true[/code], bekapcsolja a szinkronizálást, ugyanúgy, mint a [constant SYNC_MODE_INDEPENDENT]. A tulajdonság a visszamenőleges kompatibilitást szolgálja."
+
+#. AnimationNodeBlendSpace1D.sync_mode
+#. AnimationNodeBlendSpace2D.sync_mode
+#: doc/classes/AnimationNodeBlendSpace1D.xml doc/classes/AnimationNodeBlendSpace2D.xml
+msgid "Controls how animations are synced when blended. See [enum SyncMode] for available options."
+msgstr "Megadja, hogyan szinkronizálódnak az animációk keverés közben. A választható módokat az [enum SyncMode] felsorolás tartalmazza."
+
+#. AnimationNodeBlendSpace1D.value_label
+#: doc/classes/AnimationNodeBlendSpace1D.xml
+msgid "Label of the virtual axis of the blend space."
+msgstr "A keverési tér virtuális tengelyének felirata."
+
+#. AnimationNodeBlendSpace1D.BLEND_MODE_INTERPOLATED
+#. AnimationNodeBlendSpace2D.BLEND_MODE_INTERPOLATED
+#: doc/classes/AnimationNodeBlendSpace1D.xml doc/classes/AnimationNodeBlendSpace2D.xml
+msgid "The interpolation between animations is linear."
+msgstr "Az animációk közötti interpoláció lineáris."
+
+#. AnimationNodeBlendSpace1D.BLEND_MODE_DISCRETE
+#. AnimationNodeBlendSpace2D.BLEND_MODE_DISCRETE
+#: doc/classes/AnimationNodeBlendSpace1D.xml doc/classes/AnimationNodeBlendSpace2D.xml
+msgid "The blend space plays the animation of the animation node which blending position is closest to. Useful for frame-by-frame 2D animations."
+msgstr "A keverési tér a keverési helyhez legközelebbi animációs csomópont animációját játssza le. Képkockánként rajzolt 2D animációkhoz hasznos."
+
+#. AnimationNodeBlendSpace1D.BLEND_MODE_DISCRETE_CARRY
+#. AnimationNodeBlendSpace2D.BLEND_MODE_DISCRETE_CARRY
+#: doc/classes/AnimationNodeBlendSpace1D.xml doc/classes/AnimationNodeBlendSpace2D.xml
+msgid "Similar to [constant BLEND_MODE_DISCRETE], but starts the new animation at the last animation's playback position."
+msgstr "A [constant BLEND_MODE_DISCRETE] módhoz hasonló, de az új animációt az előző animáció lejátszási pozíciójától indítja."
+
+#. AnimationNodeBlendSpace1D.SYNC_MODE_NONE
+#. AnimationNodeBlendSpace2D.SYNC_MODE_NONE
+#: doc/classes/AnimationNodeBlendSpace1D.xml doc/classes/AnimationNodeBlendSpace2D.xml
+msgid "Inactive animations are frozen and do not advance."
+msgstr "A nem aktív animációk megállnak, és nem lépnek tovább."
+
+#. AnimationNodeBlendSpace1D.SYNC_MODE_INDEPENDENT
+#. AnimationNodeBlendSpace2D.SYNC_MODE_INDEPENDENT
+#: doc/classes/AnimationNodeBlendSpace1D.xml doc/classes/AnimationNodeBlendSpace2D.xml
+msgid "Inactive animations advance with a weight of [code]0[/code]. This is equivalent to the previous [code]sync = true[/code] behavior."
+msgstr "A nem aktív animációk [code]0[/code] súllyal tovább futnak. Ez megegyezik a korábbi [code]sync = true[/code] beállítás viselkedésével."
+
+#. AnimationNodeBlendSpace2D.get_blend_point_count
+#: doc/classes/AnimationNodeBlendSpace2D.xml
+msgid "Returns the number of points in the blend space."
+msgstr "Visszaadja a keverési tér pontjainak számát."
+
+#. AnimationNodeBlendSpace2D.get_blend_point_node
+#: doc/classes/AnimationNodeBlendSpace2D.xml
+msgid "Returns the [AnimationRootNode] referenced by the point at index [param point]."
+msgstr "Visszaadja a [param point] indexű pont által hivatkozott [AnimationRootNode] csomópontot."
+
+#. AnimationNodeBlendSpace2D.get_triangle_count
+#: doc/classes/AnimationNodeBlendSpace2D.xml
+msgid "Returns the number of triangles in the blend space."
+msgstr "Visszaadja a keverési térben lévő háromszögek számát."
+
+#. AnimationNodeBlendSpace2D.remove_blend_point
+#: doc/classes/AnimationNodeBlendSpace2D.xml
+msgid "Removes the point at index [param point] from the blend space."
+msgstr "Eltávolítja a [param point] indexű pontot a keverési térből."
+
+#. AnimationNodeBlendSpace2D.remove_triangle
+#: doc/classes/AnimationNodeBlendSpace2D.xml
+msgid "Removes the triangle at index [param triangle] from the blend space."
+msgstr "Eltávolítja a [param triangle] indexű háromszöget a keverési térből."
+
+#. AnimationNodeBlendSpace2D.set_blend_point_position
+#: doc/classes/AnimationNodeBlendSpace2D.xml
+msgid "Updates the position of the point at index [param point] in the blend space."
+msgstr "Frissíti a [param point] indexű pont helyét a keverési térben."
+
+#. AnimationNodeBlendSpace2D.triangles_updated
+#: doc/classes/AnimationNodeBlendSpace2D.xml
+msgid "Emitted every time the blend space's triangles are created, removed, or when one of their vertices changes position."
+msgstr "Akkor jelez, ha a keverési térben háromszög jön létre, háromszög szűnik meg, vagy valamelyik csúcs helye megváltozik."
+
+#. AnimationNodeBlendSpace2D.auto_triangles
+#: doc/classes/AnimationNodeBlendSpace2D.xml
+msgid "If [code]true[/code], the blend space is triangulated automatically. The mesh updates every time you add or remove points with [method add_blend_point] and [method remove_blend_point]."
+msgstr "Ha az értéke [code]true[/code], a motor automatikusan háromszögekre bontja a keverési teret. A háromszögháló minden pont hozzáadásakor vagy eltávolításakor frissül a [method add_blend_point] és a [method remove_blend_point] használatával."
+
+#. AnimationNodeBlendSpace2D.max_space
+#: doc/classes/AnimationNodeBlendSpace2D.xml
+msgid "The blend space's X and Y axes' upper limit for the points' position. See [method add_blend_point]."
+msgstr "A pontok helyének felső határa a keverési tér X és Y tengelyén. Lásd: [method add_blend_point]."
+
+#. AnimationNodeBlendSpace2D.min_space
+#: doc/classes/AnimationNodeBlendSpace2D.xml
+msgid "The blend space's X and Y axes' lower limit for the points' position. See [method add_blend_point]."
+msgstr "A pontok helyének alsó határa a keverési tér X és Y tengelyén. Lásd: [method add_blend_point]."
+
+#. AnimationNodeBlendSpace2D.snap
+#: doc/classes/AnimationNodeBlendSpace2D.xml
+msgid "Position increment to snap to when moving a point."
+msgstr "A mozgatott pontok igazítási lépésköze."
+
+#. AnimationNodeBlendSpace2D.x_label
+#: doc/classes/AnimationNodeBlendSpace2D.xml
+msgid "Name of the blend space's X axis."
+msgstr "A keverési tér X tengelyének neve."
+
+#. AnimationNodeBlendSpace2D.y_label
+#: doc/classes/AnimationNodeBlendSpace2D.xml
+msgid "Name of the blend space's Y axis."
+msgstr "A keverési tér Y tengelyének neve."
+
+#. AnimationNodeOneShot.brief
+#: doc/classes/AnimationNodeOneShot.xml
+msgid "Plays an animation once in an [AnimationNodeBlendTree]."
+msgstr "Egyszer játszik le egy animációt az [AnimationNodeBlendTree] fában."
+
+#. AnimationNodeOneShot.abort_on_reset
+#: doc/classes/AnimationNodeOneShot.xml
+msgid "If [code]true[/code], the sub-animation will abort if resumed with a reset after a prior interruption."
+msgstr "Ha az értéke [code]true[/code], a részanimáció leáll, ha egy korábbi megszakítás után visszaállítással folytatnák."
+
+#. AnimationNodeOneShot.autorestart_delay
+#: doc/classes/AnimationNodeOneShot.xml
+msgid "The delay after which the automatic restart is triggered, in seconds."
+msgstr "Az automatikus újraindítás előtti késleltetés másodpercben."
+
+#. AnimationNodeOneShot.autorestart_random_delay
+#: doc/classes/AnimationNodeOneShot.xml
+msgid "If [member autorestart] is [code]true[/code], a random additional delay (in seconds) between 0 and this value will be added to [member autorestart_delay]."
+msgstr "Ha az [member autorestart] értéke [code]true[/code], az [member autorestart_delay] késleltetéshez a motor további, nulla és e tulajdonság értéke közötti véletlenszerű késleltetést ad, másodpercben."
+
+#. AnimationNodeOneShot.break_loop_at_end
+#. AnimationNodeStateMachineTransition.break_loop_at_end
+#. AnimationNodeTransition.set_input_break_loop_at_end
+#: doc/classes/AnimationNodeOneShot.xml doc/classes/AnimationNodeStateMachineTransition.xml doc/classes/AnimationNodeTransition.xml
+msgid "If [code]true[/code], breaks the loop at the end of the loop cycle for transition, even if the animation is looping."
+msgstr "Ha az értéke [code]true[/code], a váltáshoz az aktuális ciklus végén kilép az ismétlésből akkor is, ha az animáció ismétlődő."
+
+#. AnimationNodeOneShot.fadein_curve
+#. AnimationNodeOneShot.fadeout_curve
+#. AnimationNodeTransition.xfade_curve
+#: doc/classes/AnimationNodeOneShot.xml doc/classes/AnimationNodeTransition.xml
+msgid "Determines how cross-fading between animations is eased. If empty, the transition will be linear. Should be a unit [Curve]."
+msgstr "Meghatározza az animációk közötti átúsztatás görbéjét. Ha nincs megadva, az átmenet lineáris. Egységnyi tartományú [Curve] erőforrás legyen."
+
+#. AnimationNodeOneShot.mix_mode
+#: doc/classes/AnimationNodeOneShot.xml
+msgid "The blend type."
+msgstr "A keverés típusa."
+
+#. AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE
+#: doc/classes/AnimationNodeOneShot.xml
+msgid "The request to play the animation connected to \"shot\" port."
+msgstr "A „shot” portra kötött animáció lejátszását kéri."
+
+#. AnimationNodeOneShot.ONE_SHOT_REQUEST_ABORT
+#: doc/classes/AnimationNodeOneShot.xml
+msgid "The request to stop the animation connected to \"shot\" port."
+msgstr "A „shot” portra kötött animáció leállítását kéri."
+
+#. AnimationNodeOneShot.ONE_SHOT_REQUEST_FADE_OUT
+#: doc/classes/AnimationNodeOneShot.xml
+msgid "The request to fade out the animation connected to \"shot\" port."
+msgstr "A „shot” portra kötött animáció fokozatos kikeverését kéri."
+
+#. AnimationNodeOneShot.MIX_MODE_BLEND
+#: doc/classes/AnimationNodeOneShot.xml
+msgid "Blends two animations. See also [AnimationNodeBlend2]."
+msgstr "Két animációt kever. Lásd még: [AnimationNodeBlend2]."
+
+#. AnimationNodeOneShot.MIX_MODE_ADD
+#: doc/classes/AnimationNodeOneShot.xml
+msgid "Blends two animations additively. See also [AnimationNodeAdd2]."
+msgstr "Két animációt additívan kever. Lásd még: [AnimationNodeAdd2]."
+
+#. AnimationNodeOutput.brief
+#: doc/classes/AnimationNodeOutput.xml
+msgid "The animation output node of an [AnimationNodeBlendTree]."
+msgstr "Az [AnimationNodeBlendTree] animációs kimeneti csomópontja."
+
+#. AnimationNodeOutput.description
+#: doc/classes/AnimationNodeOutput.xml
+msgid "A node created automatically in an [AnimationNodeBlendTree] that outputs the final animation."
+msgstr "Az [AnimationNodeBlendTree] fában automatikusan létrejövő csomópont, amely a végső animációt adja ki."
+
+#. AnimationNodeStateMachine.STATE_MACHINE_TYPE_ROOT
+#: doc/classes/AnimationNodeStateMachine.xml
+msgid "Seeking to the beginning is treated as playing from the start state. Transition to the end state is treated as exiting the state machine."
+msgstr "Az elejére ugrást a kezdőállapotból induló lejátszásként kezeli. A végállapotba váltás kilép az állapotgépből."
+
+#. AnimationNodeStateMachinePlayback.brief
+#: doc/classes/AnimationNodeStateMachinePlayback.xml
+msgid "Provides playback control for an [AnimationNodeStateMachine]."
+msgstr "Az [AnimationNodeStateMachine] lejátszását vezérli."
+
+#. AnimationNodeStateMachinePlayback.get_current_node
+#: doc/classes/AnimationNodeStateMachinePlayback.xml
+msgid "Returns the currently playing animation state.\n[b]Note:[/b] When using a cross-fade, the current state changes to the next state immediately after the cross-fade begins."
+msgstr "Visszaadja a jelenleg lejátszott animáció állapotát.\n[b]Megjegyzés:[/b] Átúsztatáskor az aktuális állapot már az átúsztatás kezdetekor a következő állapotra vált."
+
+#. AnimationNodeStateMachinePlayback.get_current_play_position
+#: doc/classes/AnimationNodeStateMachinePlayback.xml
+msgid "Returns the playback position within the current animation state."
+msgstr "Visszaadja a lejátszási pozíciót az aktuális animációs állapoton belül."
+
+#. AnimationNodeStateMachinePlayback.get_fading_from_node
+#: doc/classes/AnimationNodeStateMachinePlayback.xml
+msgid "Returns the starting state of currently fading animation."
+msgstr "Visszaadja a folyamatban lévő átúsztatás kiinduló állapotát."
+
+#. AnimationNodeStateMachinePlayback.get_fading_from_play_position
+#: doc/classes/AnimationNodeStateMachinePlayback.xml
+msgid "Returns the playback position of the node from [method get_fading_from_node]. Returns [code]0[/code] if no animation fade is occurring."
+msgstr "Visszaadja a [method get_fading_from_node] által megadott csomópont lejátszási pozícióját. Ha nincs átúsztatás, [code]0[/code] értéket ad vissza."
+
+#. AnimationNodeStateMachinePlayback.get_travel_path
+#: doc/classes/AnimationNodeStateMachinePlayback.xml
+msgid "Returns the current travel path as computed internally by the A* algorithm."
+msgstr "Visszaadja az A* algoritmussal kiszámított aktuális útvonalat az állapotok között."
+
+#. AnimationNodeStateMachinePlayback.is_playing
+#: doc/classes/AnimationNodeStateMachinePlayback.xml
+msgid "Returns [code]true[/code] if an animation is playing."
+msgstr "[code]true[/code] értéket ad vissza, ha animáció van lejátszás alatt."
+
+#. AnimationNodeStateMachinePlayback.next
+#: doc/classes/AnimationNodeStateMachinePlayback.xml
+msgid "If there is a next path by travel or auto advance, immediately transitions from the current state to the next state."
+msgstr "Ha létezik következő állapot az útvonalon vagy automatikus továbblépéssel, azonnal átvált az aktuális állapotról a következőre."
+
+#. AnimationNodeStateMachinePlayback.start
+#: doc/classes/AnimationNodeStateMachinePlayback.xml
+msgid "Starts playing the given animation.\nIf [param reset] is [code]true[/code], the animation is played from the beginning."
+msgstr "Elindítja a megadott animáció lejátszását.\nHa a [param reset] értéke [code]true[/code], az animáció az elejéről indul."
+
+#. AnimationNodeStateMachinePlayback.stop
+#: doc/classes/AnimationNodeStateMachinePlayback.xml
+msgid "Stops the currently playing animation."
+msgstr "Leállítja a jelenleg lejátszott animációt."
+
+#. AnimationNodeStateMachinePlayback.state_started
+#: doc/classes/AnimationNodeStateMachinePlayback.xml
+msgid "Emitted when the [param state] starts playback. If [param state] is a state machine set to grouped mode, its signals are passed through with its name prefixed."
+msgstr "Akkor jelez, amikor a [param state] lejátszása elkezdődik. Ha a [param state] csoportosított módú állapotgép, a jelzései az állapotgép nevével előtagolva továbbítódnak."
+
+#. AnimationNodeStateMachineTransition.brief
+#: doc/classes/AnimationNodeStateMachineTransition.xml
+msgid "A transition within an [AnimationNodeStateMachine] connecting two [AnimationRootNode]s."
+msgstr "Az [AnimationNodeStateMachine] két [AnimationRootNode] csomópontját összekötő átmenet."
+
+#. AnimationNodeStateMachineTransition.description
+#: doc/classes/AnimationNodeStateMachineTransition.xml
+msgid "The path generated when using [method AnimationNodeStateMachinePlayback.travel] is limited to the nodes connected by [AnimationNodeStateMachineTransition].\nYou can set the timing and conditions of the transition in detail."
+msgstr "A [method AnimationNodeStateMachinePlayback.travel] által létrehozott útvonal csak az [AnimationNodeStateMachineTransition] átmenetekkel összekötött csomópontokon haladhat át.\nAz átmenet időzítése és feltételei részletesen beállíthatók."
+
+#. AnimationNodeStateMachineTransition.advance_condition_changed
+#: doc/classes/AnimationNodeStateMachineTransition.xml
+msgid "Emitted when [member advance_condition] is changed."
+msgstr "A [member advance_condition] változásakor jelez."
+
+#. AnimationNodeStateMachineTransition.priority
+#: doc/classes/AnimationNodeStateMachineTransition.xml
+msgid "Lower priority transitions are preferred when travelling through the tree via [method AnimationNodeStateMachinePlayback.travel] or [member advance_mode] is set to [constant ADVANCE_MODE_AUTO]."
+msgstr "Az alacsonyabb prioritásértékű átmenetek élveznek elsőbbséget a [method AnimationNodeStateMachinePlayback.travel] útvonalkeresésekor, illetve ha a [member advance_mode] értéke [constant ADVANCE_MODE_AUTO]."
+
+#. AnimationNodeStateMachineTransition.reset
+#: doc/classes/AnimationNodeStateMachineTransition.xml
+msgid "If [code]true[/code], the destination animation is played back from the beginning when switched."
+msgstr "Ha az értéke [code]true[/code], váltáskor a célanimáció az elejéről indul."
+
+#. AnimationNodeStateMachineTransition.switch_mode
+#: doc/classes/AnimationNodeStateMachineTransition.xml
+msgid "The transition type."
+msgstr "Az átmenet típusa."
+
+#. AnimationNodeStateMachineTransition.SWITCH_MODE_SYNC
+#: doc/classes/AnimationNodeStateMachineTransition.xml
+msgid "Switch to the next state immediately, but will seek the new state to the playback position of the old state."
+msgstr "Azonnal a következő állapotra vált, de az új állapot lejátszása a régi lejátszási pozíciójáról folytatódik."
+
+#. AnimationNodeStateMachineTransition.SWITCH_MODE_AT_END
+#: doc/classes/AnimationNodeStateMachineTransition.xml
+msgid "Wait for the current state playback to end, then switch to the beginning of the next state animation."
+msgstr "Megvárja, amíg az aktuális állapot lejátszása befejeződik, majd a következő állapot animációjának elejére vált."
+
+#. AnimationNodeStateMachineTransition.ADVANCE_MODE_DISABLED
+#: doc/classes/AnimationNodeStateMachineTransition.xml
+msgid "Don't use this transition."
+msgstr "Kikapcsolja ezt az átmenetet."
+
+#. AnimationNodeStateMachineTransition.ADVANCE_MODE_ENABLED
+#: doc/classes/AnimationNodeStateMachineTransition.xml
+msgid "Only use this transition during [method AnimationNodeStateMachinePlayback.travel]."
+msgstr "Csak a [method AnimationNodeStateMachinePlayback.travel] hívásakor használja az átmenetet."
+
+#. AnimationNodeStateMachineTransition.ADVANCE_MODE_AUTO
+#: doc/classes/AnimationNodeStateMachineTransition.xml
+msgid "Automatically use this transition if the [member advance_condition] and [member advance_expression] checks are [code]true[/code] (if assigned)."
+msgstr "Automatikusan használja az átmenetet, ha a megadott [member advance_condition] és [member advance_expression] ellenőrzések eredménye [code]true[/code]."
+
+#. AnimationNodeSub2.brief
+#: doc/classes/AnimationNodeSub2.xml
+msgid "Blends two animations subtractively inside of an [AnimationNodeBlendTree]."
+msgstr "Két animációt kivonásos keveréssel kombinál egy [AnimationNodeBlendTree] fában."
+
+#. AnimationNodeSync.brief
+#: doc/classes/AnimationNodeSync.xml
+msgid "Base class for [AnimationNode]s with multiple input ports that must be synchronized."
+msgstr "Több, szinkronban tartandó bemeneti porttal rendelkező [AnimationNode] csomópontok alaposztálya."
+
+#. AnimationNodeSync.description
+#: doc/classes/AnimationNodeSync.xml
+msgid "An animation node used to combine, mix, or blend two or more animations together while keeping them synchronized within an [AnimationTree]."
+msgstr "Két vagy több animáció összekapcsolására és keverésére szolgáló animációs csomópont, amely azokat szinkronban tartja az [AnimationTree] fában."
+
+#. AnimationNodeTimeScale.brief
+#: doc/classes/AnimationNodeTimeScale.xml
+msgid "A time-scaling animation node used in [AnimationTree]."
+msgstr "Az [AnimationTree] animációinak időskáláját módosító csomópont."
+
+#. AnimationNodeTimeScale.description
+#: doc/classes/AnimationNodeTimeScale.xml
+msgid "Allows to scale the speed of the animation (or reverse it) in any child [AnimationNode]s. Setting it to [code]0.0[/code] will pause the animation."
+msgstr "Módosíthatja vagy megfordíthatja az animáció lejátszási sebességét bármely [AnimationNode] gyermekcsomópontban. A [code]0.0[/code] érték szünetelteti az animációt."
+
+#. AnimationNodeTimeSeek.brief
+#: doc/classes/AnimationNodeTimeSeek.xml
+msgid "A time-seeking animation node used in [AnimationTree]."
+msgstr "Adott animációs időpontra ugró csomópont az [AnimationTree] fában."
+
+#. AnimationNodeTimeSeek.explicit_elapse
+#: doc/classes/AnimationNodeTimeSeek.xml
+msgid "If [code]true[/code], some processes are executed to handle keys between seeks, such as calculating root motion and finding the nearest discrete key."
+msgstr "Ha az értéke [code]true[/code], az ugrások közötti kulcsok kezeléséhez egyes műveletek is lefutnak, például a gyökérmozgás kiszámítása és a legközelebbi diszkrét kulcs megkeresése."
+
+#. AnimationNodeTransition.brief
+#: doc/classes/AnimationNodeTransition.xml
+msgid "A transition within an [AnimationTree] connecting two [AnimationNode]s."
+msgstr "Két [AnimationNode] csomópontot összekötő átmenet az [AnimationTree] fában."
+
+#. AnimationNodeTransition.is_input_loop_broken_at_end
+#: doc/classes/AnimationNodeTransition.xml
+msgid "Returns whether the animation breaks the loop at the end of the loop cycle for transition."
+msgstr "Megadja, hogy váltáskor az animáció az aktuális ismétlési ciklus végén kilép-e az ismétlésből."
+
+#. AnimationNodeTransition.is_input_reset
+#: doc/classes/AnimationNodeTransition.xml
+msgid "Returns whether the animation restarts when the animation transitions from the other animation."
+msgstr "Megadja, hogy az animáció újraindul-e, amikor egy másik animációról erre vált."
+
+#. AnimationNodeTransition.is_input_set_as_auto_advance
+#: doc/classes/AnimationNodeTransition.xml
+msgid "Returns [code]true[/code] if auto-advance is enabled for the given [param input] index."
+msgstr "[code]true[/code] értéket ad vissza, ha a [param input] indexű bemenethez engedélyezve van az automatikus továbblépés."
+
+#. AnimationNodeTransition.set_input_as_auto_advance
+#: doc/classes/AnimationNodeTransition.xml
+msgid "Enables or disables auto-advance for the given [param input] index. If enabled, state changes to the next input after playing the animation once. If enabled for the last input state, it loops to the first."
+msgstr "Engedélyezi vagy letiltja az automatikus továbblépést a [param input] indexű bemenetnél. Ha engedélyezve van, az animáció egyszeri lejátszása után a következő bemenetre vált. Az utolsó bemenetről az elsőre tér vissza."
+
+#. AnimationNodeTransition.set_input_reset
+#: doc/classes/AnimationNodeTransition.xml
+msgid "If [code]true[/code], the destination animation is restarted when the animation transitions."
+msgstr "Ha az értéke [code]true[/code], váltáskor a célanimáció újraindul."
+
+#. AnimationNodeTransition.input_count
+#: doc/classes/AnimationNodeTransition.xml
+msgid "The number of enabled input ports for this animation node."
+msgstr "Az animációs csomópont engedélyezett bemeneti portjainak száma."
+
+#. AnimationTree.animation_player_changed
+#: doc/classes/AnimationTree.xml
+msgid "Emitted when the [member anim_player] is changed."
+msgstr "A [member anim_player] változásakor jelez."
+
+#. CallbackTweener.brief
+#: doc/classes/CallbackTweener.xml
+msgid "Calls the specified method after optional delay."
+msgstr "A megadott metódust a választható késleltetés után hívja meg."
+
+#. CallbackTweener.set_delay
+#: doc/classes/CallbackTweener.xml
+msgid "Makes the callback call delayed by given time in seconds.\n[b]Example:[/b] Call [method Node.queue_free] after 2 seconds:\n[codeblock]\nvar tween = get_tree().create_tween()\ntween.tween_callback(queue_free).set_delay(2)\n[/codeblock]"
+msgstr "A megadott másodpercig késlelteti a visszahívást.\n[b]Példa:[/b] A [method Node.queue_free] meghívása két másodperc után:\n[codeblock]\nvar tween = get_tree().create_tween()\ntween.tween_callback(queue_free).set_delay(2)\n[/codeblock]"
+
+#. IntervalTweener.brief
+#: doc/classes/IntervalTweener.xml
+msgid "Creates an idle interval in a [Tween] animation."
+msgstr "Szünetet hoz létre egy [Tween] animációban."
+
+#. IntervalTweener.description
+#: doc/classes/IntervalTweener.xml
+msgid "[IntervalTweener] is used to make delays in a tweening sequence. See [method Tween.tween_interval] for more usage information.\n[b]Note:[/b] [method Tween.tween_interval] is the only correct way to create [IntervalTweener]. Any [IntervalTweener] created manually will not function correctly."
+msgstr "Az [IntervalTweener] késleltetést szúr be egy Tween műveletsorába. További információért lásd a [method Tween.tween_interval] metódust.\n[b]Megjegyzés:[/b] Az [IntervalTweener] létrehozásához a [method Tween.tween_interval] metódust kell használni. A kézzel létrehozott [IntervalTweener] működése hibás lesz."
+
+#. MethodTweener.brief
+#: doc/classes/MethodTweener.xml
+msgid "Interpolates an abstract value and supplies it to a method called over time."
+msgstr "Egy tetszőleges értéket interpolál, és az animáció során ismételten meghívott metódusnak adja át."
+
+#. MethodTweener.set_delay
+#: doc/classes/MethodTweener.xml
+msgid "Sets the time in seconds after which the [MethodTweener] will start interpolating. By default there's no delay."
+msgstr "Megadja másodpercben, mennyi idő múlva kezdjen interpolálni a [MethodTweener]. Alapértelmezésben nincs késleltetés."
+
+#. MethodTweener.set_ease
+#. PropertyTweener.set_ease
+#: doc/classes/MethodTweener.xml doc/classes/PropertyTweener.xml
+msgid "Sets the type of used easing from [enum Tween.EaseType]. If not set, the default easing is used from the [Tween] that contains this Tweener."
+msgstr "Beállítja az [enum Tween.EaseType] szerinti gyorsulási módot. Ha nincs megadva, a Tweenert tartalmazó [Tween] alapértelmezett beállítását használja."
+
+#. MethodTweener.set_trans
+#. PropertyTweener.set_trans
+#: doc/classes/MethodTweener.xml doc/classes/PropertyTweener.xml
+msgid "Sets the type of used transition from [enum Tween.TransitionType]. If not set, the default transition is used from the [Tween] that contains this Tweener."
+msgstr "Beállítja az [enum Tween.TransitionType] szerinti átmenettípust. Ha nincs megadva, a Tweenert tartalmazó [Tween] alapértelmezett beállítását használja."
+
+#. PhysicalBoneSimulator3D.physical_bones_add_collision_exception
+#. Skeleton3D.physical_bones_add_collision_exception
+#: doc/classes/PhysicalBoneSimulator3D.xml doc/classes/Skeleton3D.xml
+msgid "Adds a collision exception to the physical bone.\nWorks just like the [RigidBody3D] node."
+msgstr "Ütközési kivételt ad hozzá a fizikai csonthoz.\nUgyanúgy működik, mint a [RigidBody3D] csomóponton."
+
+#. PhysicalBoneSimulator3D.physical_bones_remove_collision_exception
+#. Skeleton3D.physical_bones_remove_collision_exception
+#: doc/classes/PhysicalBoneSimulator3D.xml doc/classes/Skeleton3D.xml
+msgid "Removes a collision exception to the physical bone.\nWorks just like the [RigidBody3D] node."
+msgstr "Eltávolít egy ütközési kivételt a fizikai csontról.\nUgyanúgy működik, mint a [RigidBody3D] csomóponton."
+
+#. PhysicalBoneSimulator3D.physical_bones_start_simulation
+#. Skeleton3D.physical_bones_start_simulation
+#: doc/classes/PhysicalBoneSimulator3D.xml doc/classes/Skeleton3D.xml
+msgid "Tells the [PhysicalBone3D] nodes in the Skeleton to start simulating and reacting to the physics world.\nOptionally, a list of bone names can be passed-in, allowing only the passed-in bones to be simulated."
+msgstr "Elindítja a csontváz [PhysicalBone3D] csomópontjainak szimulációját, hogy reagáljanak a fizikai világra.\nOpcionálisan megadható a csontnevek listája. Ekkor csak a felsorolt csontok szimulációja indul el."
+
+#. PhysicalBoneSimulator3D.physical_bones_stop_simulation
+#. Skeleton3D.physical_bones_stop_simulation
+#: doc/classes/PhysicalBoneSimulator3D.xml doc/classes/Skeleton3D.xml
+msgid "Tells the [PhysicalBone3D] nodes in the Skeleton to stop simulating."
+msgstr "Leállítja a csontváz [PhysicalBone3D] csomópontjainak szimulációját."
+
+#. PropertyTweener.brief
+#: doc/classes/PropertyTweener.xml
+msgid "Interpolates an [Object]'s property over time."
+msgstr "Egy [Object] tulajdonságát interpolálja az idő függvényében."
+
+#. PropertyTweener.set_delay
+#: doc/classes/PropertyTweener.xml
+msgid "Sets the time in seconds after which the [PropertyTweener] will start interpolating. By default there's no delay."
+msgstr "Megadja másodpercben, mennyi idő múlva kezdjen interpolálni a [PropertyTweener]. Alapértelmezésben nincs késleltetés."
+
+#. Skeleton3D.brief
+#: doc/classes/Skeleton3D.xml
+msgid "A node containing a bone hierarchy, used to create a 3D skeletal animation."
+msgstr "Csonthierarchiát tároló csomópont 3D csontvázas animációhoz."
+
+#. Skeleton3D.add_bone
+#: doc/classes/Skeleton3D.xml
+msgid "Adds a new bone with the given name. Returns the new bone's index, or [code]-1[/code] if this method fails.\n[b]Note:[/b] Bone names should be unique, non empty, and cannot include the [code]:[/code] and [code]/[/code] characters."
+msgstr "Hozzáad egy új csontot a megadott névvel. Visszaadja az új csont indexét, hiba esetén pedig [code]-1[/code] értéket ad vissza.\n[b]Megjegyzés:[/b] A csontnevek legyenek egyediek és nem üresek, valamint ne tartalmazzák a [code]:[/code] és [code]/[/code] karaktereket."
+
+#. Skeleton3D.advance
+#: doc/classes/Skeleton3D.xml
+msgid "Manually advance the child [SkeletonModifier3D]s by the specified time (in seconds).\n[b]Note:[/b] The [param delta] is temporarily accumulated in the [Skeleton3D], and the deferred process uses the accumulated value to process the modification."
+msgstr "Kézzel előrelépteti a [SkeletonModifier3D] gyermekcsomópontokat a megadott idővel, másodpercben számolva.\n[b]Megjegyzés:[/b] A [param delta] értékét a [Skeleton3D] átmenetileg összegzi. A halasztott feldolgozás az összegzett értékkel számítja ki a módosítást."
+
+#. Skeleton3D.clear_bones
+#: doc/classes/Skeleton3D.xml
+msgid "Clear all the bones in this skeleton."
+msgstr "Törli a csontváz összes csontját."
+
+#. Skeleton3D.clear_bones_global_pose_override
+#: doc/classes/Skeleton3D.xml
+msgid "Removes the global pose override on all bones in the skeleton."
+msgstr "Eltávolítja a globális póz felülbírálását a csontváz összes csontjáról."
+
+#. Skeleton3D.find_bone
+#: doc/classes/Skeleton3D.xml
+msgid "Returns the bone index that matches [param name] as its name. Returns [code]-1[/code] if no bone with this name exists."
+msgstr "Visszaadja a [param name] nevű csont indexét. Ha ilyen nevű csont nincs, [code]-1[/code] értéket ad vissza."
+
+#. Skeleton3D.force_update_all_bone_transforms
+#: doc/classes/Skeleton3D.xml
+msgid "Force updates the bone transforms/poses for all bones in the skeleton."
+msgstr "Azonnal frissíti a csontváz összes csontjának transzformációját és pózát."
+
+#. Skeleton3D.force_update_bone_child_transform
+#: doc/classes/Skeleton3D.xml
+msgid "Force updates the bone transform for the bone at [param bone_idx] and all of its children."
+msgstr "Kényszeríti a [param bone_idx] indexű csont és az összes gyermekcsont transzformációjának frissítését."
+
+#. Skeleton3D.get_bone_children
+#: doc/classes/Skeleton3D.xml
+msgid "Returns an array containing the bone indexes of all the child node of the passed in bone, [param bone_idx]."
+msgstr "A [param bone_idx] indexű csont közvetlen gyermekcsontjainak indexeit adja vissza tömbként."
+
+#. Skeleton3D.get_bone_count
+#: doc/classes/Skeleton3D.xml
+msgid "Returns the number of bones in the skeleton."
+msgstr "Visszaadja a csontvázban lévő csontok számát."
+
+#. Skeleton3D.get_bone_global_pose_no_override
+#: doc/classes/Skeleton3D.xml
+msgid "Returns the overall transform of the specified bone, with respect to the skeleton, but without any global pose overrides. Being relative to the skeleton frame, this is not the actual \"global\" transform of the bone."
+msgstr "Visszaadja a megadott csont csontvázhoz viszonyított teljes transzformációját, a globális póz felülbírálása nélkül. Mivel a csontváz koordináta-rendszeréhez viszonyít, az eredmény nem a csont világkoordinátákban megadott transzformációja."
+
+#. Skeleton3D.get_bone_global_pose_override
+#: doc/classes/Skeleton3D.xml
+msgid "Returns the global pose override transform for [param bone_idx]."
+msgstr "Visszaadja a [param bone_idx] indexű csont globális pózát felülbíráló transzformációt."
+
+#. Skeleton3D.get_bone_global_rest
+#: doc/classes/Skeleton3D.xml
+msgid "Returns the global rest transform for [param bone_idx]."
+msgstr "Visszaadja a [param bone_idx] indexű csont globális nyugalmi transzformációját."
+
+#. Skeleton3D.get_bone_meta
+#: doc/classes/Skeleton3D.xml
+msgid "Returns the metadata with the given [param key] for the bone at index [param bone_idx]."
+msgstr "Visszaadja a [param bone_idx] indexű csont megadott [param key] kulcsú metaadatát."
+
+#. Skeleton3D.get_bone_meta_list
+#: doc/classes/Skeleton3D.xml
+msgid "Returns the list of all metadata keys for the bone at index [param bone_idx]."
+msgstr "Visszaadja a [param bone_idx] indexű csont összes metaadatkulcsának listáját."
+
+#. Skeleton3D.get_bone_name
+#: doc/classes/Skeleton3D.xml
+msgid "Returns the name of the bone at index [param bone_idx]."
+msgstr "Visszaadja a [param bone_idx] indexű csont nevét."
+
+#. Skeleton3D.get_bone_parent
+#: doc/classes/Skeleton3D.xml
+msgid "Returns the bone index which is the parent of the bone at [param bone_idx]. If -1, then bone has no parent.\n[b]Note:[/b] The parent bone returned will always be less than [param bone_idx]."
+msgstr "Visszaadja a [param bone_idx] indexű csont szülőcsontjának indexét. A -1 érték azt jelzi, hogy a csontnak nincs szülője.\n[b]Megjegyzés:[/b] A visszaadott szülőindex mindig kisebb a [param bone_idx] értékénél."
+
+#. Skeleton3D.get_bone_pose
+#: doc/classes/Skeleton3D.xml
+msgid "Returns the pose transform of the specified bone.\n[b]Note:[/b] This is the pose you set to the skeleton in the process, the final pose can get overridden by modifiers in the deferred process, if you want to access the final pose, use [signal SkeletonModifier3D.modification_processed]."
+msgstr "Visszaadja a megadott csont póztranszformációját.\n[b]Megjegyzés:[/b] Ez a feldolgozáskor beállított póz. A végső pózt a módosítók felülbírálhatják a halasztott feldolgozás során. A végső póz eléréséhez használd a [signal SkeletonModifier3D.modification_processed] jelzést."
+
+#. Skeleton3D.get_bone_pose_rotation
+#: doc/classes/Skeleton3D.xml
+msgid "Returns the pose rotation of the bone at [param bone_idx]. The returned [Quaternion] is local to the bone with respect to the rotation of any parent bones."
+msgstr "Visszaadja a [param bone_idx] indexű csont pózának forgatását. A visszaadott [Quaternion] helyi forgatás, a szülőcsontok forgatásához viszonyítva."
+
+#. Skeleton3D.get_bone_pose_scale
+#: doc/classes/Skeleton3D.xml
+msgid "Returns the pose scale of the bone at [param bone_idx]."
+msgstr "Visszaadja a [param bone_idx] indexű csont pózának skáláját."
+
+#. Skeleton3D.get_bone_rest
+#: doc/classes/Skeleton3D.xml
+msgid "Returns the rest transform for a bone [param bone_idx]."
+msgstr "Visszaadja a [param bone_idx] indexű csont nyugalmi transzformációját."
+
+#. Skeleton3D.get_concatenated_bone_names
+#: doc/classes/Skeleton3D.xml
+msgid "Returns all bone names concatenated with commas ([code],[/code]) as a single [StringName].\nIt is useful to set it as a hint for the enum property."
+msgstr "Az összes csontnevet vesszővel ([code],[/code]) összefűzve, egyetlen [StringName] értékként adja vissza.\nHasználható felsorolás típusú tulajdonság értékeinek megadására."
+
+#. Skeleton3D.get_parentless_bones
+#: doc/classes/Skeleton3D.xml
+msgid "Returns an array with all of the bones that are parentless. Another way to look at this is that it returns the indexes of all the bones that are not dependent or modified by other bones in the Skeleton."
+msgstr "Tömbként visszaadja az összes szülő nélküli csont indexét. Ezek a csontok a hierarchiában nem függenek más csontoktól, így más csontok transzformációi sem módosítják őket."
+
+#. Skeleton3D.get_version
+#: doc/classes/Skeleton3D.xml
+msgid "Returns the number of times the bone hierarchy has changed within this skeleton, including renames.\nThe Skeleton version is not serialized: only use within a single instance of Skeleton3D.\nUse for invalidating caches in IK solvers and other nodes which process bones."
+msgstr "Visszaadja, hányszor változott ennek a csontváznak a csonthierarchiája, az átnevezéseket is beleszámítva.\nA csontváz verzióját a motor nem menti el. Csak ugyanazon Skeleton3D példányon belül használd.\nEzzel érvényteleníthető az inverz kinematikát számító eljárások és más csontfeldolgozó csomópontok gyorsítótára."
+
+#. Skeleton3D.has_bone_meta
+#: doc/classes/Skeleton3D.xml
+msgid "Returns [code]true[/code] if the bone at index [param bone_idx] has metadata with the given [param key]."
+msgstr "[code]true[/code] értéket ad vissza, ha a [param bone_idx] indexű csont rendelkezik [param key] kulcsú metaadattal."
+
+#. Skeleton3D.is_bone_enabled
+#: doc/classes/Skeleton3D.xml
+msgid "Returns whether the bone pose for the bone at [param bone_idx] is enabled."
+msgstr "Megadja, hogy a [param bone_idx] indexű csont póza engedélyezve van-e."
+
+#. Skeleton3D.register_skin
+#: doc/classes/Skeleton3D.xml
+msgid "Binds the given Skin to the Skeleton."
+msgstr "A megadott Skin erőforrást a csontvázhoz köti."
+
+#. Skeleton3D.reset_bone_pose
+#: doc/classes/Skeleton3D.xml
+msgid "Sets the bone pose to rest for [param bone_idx]."
+msgstr "Nyugalmi pózba állítja a [param bone_idx] indexű csontot."
+
+#. Skeleton3D.reset_bone_poses
+#: doc/classes/Skeleton3D.xml
+msgid "Sets all bone poses to rests."
+msgstr "Az összes csontot nyugalmi pózba állítja."
+
+#. Skeleton3D.set_bone_enabled
+#: doc/classes/Skeleton3D.xml
+msgid "Disables the pose for the bone at [param bone_idx] if [code]false[/code], enables the bone pose if [code]true[/code]."
+msgstr "[code]false[/code] értéknél letiltja a [param bone_idx] indexű csont pózát, [code]true[/code] értéknél engedélyezi."
+
+#. Skeleton3D.set_bone_meta
+#: doc/classes/Skeleton3D.xml
+msgid "Sets the metadata with the given [param key] to [param value] for the bone at index [param bone_idx]."
+msgstr "A [param bone_idx] indexű csont [param key] kulcsú metaadatát [param value] értékre állítja."
+
+#. Skeleton3D.set_bone_name
+#: doc/classes/Skeleton3D.xml
+msgid "Sets the bone name, [param name], for the bone at [param bone_idx]."
+msgstr "A [param bone_idx] indexű csont nevét a megadott [param name] értékre állítja."
+
+#. Skeleton3D.set_bone_parent
+#: doc/classes/Skeleton3D.xml
+msgid "Sets the bone index [param parent_idx] as the parent of the bone at [param bone_idx]. If -1, then bone has no parent.\n[b]Note:[/b] [param parent_idx] must be less than [param bone_idx]."
+msgstr "A [param parent_idx] indexű csontot a [param bone_idx] indexű csont szülőjeként állítja be. A -1 érték megszünteti a szülőkapcsolatot.\n[b]Megjegyzés:[/b] A [param parent_idx] értékének kisebbnek kell lennie a [param bone_idx] értékénél."
+
+#. Skeleton3D.set_bone_pose
+#: doc/classes/Skeleton3D.xml
+msgid "Sets the pose transform, [param pose], for the bone at [param bone_idx]."
+msgstr "A [param bone_idx] indexű csont póztranszformációját a megadott [param pose] értékre állítja."
+
+#. Skeleton3D.set_bone_pose_rotation
+#: doc/classes/Skeleton3D.xml
+msgid "Sets the pose rotation of the bone at [param bone_idx] to [param rotation]. [param rotation] is a [Quaternion] describing a rotation in the bone's local coordinate space with respect to the rotation of any parent bones."
+msgstr "A [param bone_idx] indexű csont pózának forgatását a [param rotation] értékre állítja. A [param rotation] egy [Quaternion], amely a szülőcsontok forgatásához viszonyított helyi forgatást adja meg."
+
+#. Skeleton3D.set_bone_pose_scale
+#: doc/classes/Skeleton3D.xml
+msgid "Sets the pose scale of the bone at [param bone_idx] to [param scale]."
+msgstr "A [param bone_idx] indexű csont pózának skáláját a [param scale] értékre állítja."
+
+#. Skeleton3D.set_bone_rest
+#: doc/classes/Skeleton3D.xml
+msgid "Sets the rest transform for bone [param bone_idx]."
+msgstr "Beállítja a [param bone_idx] indexű csont nyugalmi transzformációját."
+
+#. Skeleton3D.bone_enabled_changed
+#: doc/classes/Skeleton3D.xml
+msgid "Emitted when the bone at [param bone_idx] is toggled with [method set_bone_enabled]. Use [method is_bone_enabled] to check the new value."
+msgstr "Akkor jelez, amikor a [param bone_idx] indexű csont állapotát a [method set_bone_enabled] módosítja. Az új érték lekérdezéséhez használd a [method is_bone_enabled] metódust."
+
+#. Skeleton3D.bone_list_changed
+#: doc/classes/Skeleton3D.xml
+msgid "Emitted when the list of bones changes, such as when calling [method add_bone], [method set_bone_parent], [method unparent_bone_and_rest], or [method clear_bones]."
+msgstr "A csontlista megváltozásakor jelez. Ez például a [method add_bone], a [method set_bone_parent], a [method unparent_bone_and_rest] vagy a [method clear_bones] hívásakor történhet."
+
+#. Skeleton3D.pose_updated
+#: doc/classes/Skeleton3D.xml
+msgid "Emitted when the pose is updated.\n[b]Note:[/b] During the update process, this signal is not fired, so modification by [SkeletonModifier3D] is not detected."
+msgstr "A póz frissítésekor jelez.\n[b]Megjegyzés:[/b] A frissítési folyamat közben nem jelez, ezért a [SkeletonModifier3D] által végzett módosítások így nem észlelhetők."
+
+#. Skeleton3D.rest_updated
+#: doc/classes/Skeleton3D.xml
+msgid "Emitted when the rest is updated."
+msgstr "A nyugalmi póz módosításakor jelez."
+
+#. Skeleton3D.show_rest_only_changed
+#: doc/classes/Skeleton3D.xml
+msgid "Emitted when the value of [member show_rest_only] changes."
+msgstr "A [member show_rest_only] értékének változásakor jelez."
+
+#. Skeleton3D.skeleton_updated
+#: doc/classes/Skeleton3D.xml
+msgid "Emitted when the final pose has been calculated will be applied to the skin in the update process.\nThis means that all [SkeletonModifier3D] processing is complete. In order to detect the completion of the processing of each [SkeletonModifier3D], use [signal SkeletonModifier3D.modification_processed]."
+msgstr "Akkor jelez, amikor a frissítési folyamat kiszámította a bőrre alkalmazandó végső pózt.\nEkkorra az összes [SkeletonModifier3D] befejezte a feldolgozást. Az egyes [SkeletonModifier3D] módosítók feldolgozásának végét a [signal SkeletonModifier3D.modification_processed] jelzés jelzi."
+
+#. Skeleton3D.modifier_callback_mode_process
+#: doc/classes/Skeleton3D.xml
+msgid "Sets the processing timing for the Modifier."
+msgstr "Beállítja a módosítók feldolgozásának időzítését."
+
+#. Skeleton3D.motion_scale
+#: doc/classes/Skeleton3D.xml
+msgid "Multiplies the 3D position track animation.\n[b]Note:[/b] Unless this value is [code]1.0[/code], the key value in animation will not match the actual position value."
+msgstr "Megszorozza a 3D pozíciósáv animált értékeit.\n[b]Megjegyzés:[/b] Ha a szorzó nem [code]1.0[/code], az animáció kulcsértéke eltér a tényleges pozíciótól."
+
+#. Skeleton3D.show_rest_only
+#: doc/classes/Skeleton3D.xml
+msgid "If [code]true[/code], forces the bones in their default rest pose, regardless of their values. In the editor, this also prevents the bones from being edited."
+msgstr "Ha az értéke [code]true[/code], a csontokat a pillanatnyi értékeiktől függetlenül alapértelmezett nyugalmi pózukba kényszeríti. A szerkesztőben ilyenkor a csontok sem szerkeszthetők."
+
+#. Skeleton3D.NOTIFICATION_UPDATE_SKELETON
+#: doc/classes/Skeleton3D.xml
+msgid "Notification received when this skeleton's pose needs to be updated. In that case, this is called only once per frame in a deferred process."
+msgstr "Akkor érkezik, amikor a csontváz pózát frissíteni kell. Képkockánként legfeljebb egyszer, halasztott feldolgozás során fut le."
+
+#. Skeleton3D.MODIFIER_CALLBACK_MODE_PROCESS_PHYSICS
+#: doc/classes/Skeleton3D.xml
+msgid "Set a flag to process modification during physics frames (see [constant Node.NOTIFICATION_INTERNAL_PHYSICS_PROCESS])."
+msgstr "A csontvázmódosításokat a fizikai képkockák alatt dolgozza fel (lásd: [constant Node.NOTIFICATION_INTERNAL_PHYSICS_PROCESS])."
+
+#. Skeleton3D.MODIFIER_CALLBACK_MODE_PROCESS_IDLE
+#: doc/classes/Skeleton3D.xml
+msgid "Set a flag to process modification during process frames (see [constant Node.NOTIFICATION_INTERNAL_PROCESS])."
+msgstr "A csontvázmódosításokat a feldolgozási képkockák alatt dolgozza fel (lásd: [constant Node.NOTIFICATION_INTERNAL_PROCESS])."
+
+#. Skeleton3D.MODIFIER_CALLBACK_MODE_PROCESS_MANUAL
+#: doc/classes/Skeleton3D.xml
+msgid "Do not process modification. Use [method advance] to process the modification manually."
+msgstr "Nem dolgozza fel automatikusan a csontvázmódosításokat. A kézi feldolgozáshoz használd a [method advance] metódust."
+
+#. Tween.brief
+#: doc/classes/Tween.xml
+msgid "Lightweight object used for general-purpose animation via script, using [Tweener]s."
+msgstr "Kis erőforrásigényű objektum általános célú szkriptelt animációkhoz, [Tweener] műveletekkel."
+
+#. Tween.get_loops_left
+#: doc/classes/Tween.xml
+msgid "Returns the number of remaining loops for this [Tween] (see [method set_loops]). A return value of [code]-1[/code] indicates an infinitely looping [Tween], and a return value of [code]0[/code] indicates that the [Tween] has already finished."
+msgstr "Visszaadja, hány ismétlés van hátra ebből a [Tween] animációból (lásd: [method set_loops]). A [code]-1[/code] érték végtelenül ismétlődő [Tween] animációt jelent. A [code]0[/code] érték azt jelenti, hogy a [Tween] már befejeződött."
+
+#. Tween.has_tweeners
+#: doc/classes/Tween.xml
+msgid "Returns [code]true[/code] if any [Tweener] has been added to the [Tween] and the [Tween] is valid. Useful when tweeners are added dynamically and the tween can end up empty. Killing an empty tween before it starts will prevent errors."
+msgstr "[code]true[/code] értéket ad vissza, ha legalább egy [Tweener] hozzá lett adva a [Tween] objektumhoz, és a [Tween] érvényes. Ez akkor hasznos, ha a műveleteket futás közben adod hozzá, és előfordulhat, hogy a Tween üres marad. Az üres Tween indítás előtti leállításával elkerülhető a hiba."
+
+#. Tween.pause
+#: doc/classes/Tween.xml
+msgid "Pauses the tweening. The animation can be resumed by using [method play].\n[b]Note:[/b] If a Tween is paused and not bound to any node, it will exist indefinitely until manually started or invalidated. If you lose a reference to such Tween, you can retrieve it using [method SceneTree.get_processed_tweens]."
+msgstr "Szünetelteti a Tween animációt. A [method play] metódussal folytatható.\n[b]Megjegyzés:[/b] Ha egy szüneteltetett Tween egyetlen csomóponthoz sincs kötve, egészen a kézi indításáig vagy érvénytelenítéséig megmarad. Ha elveszíted a hivatkozását, a [method SceneTree.get_processed_tweens] metódussal visszakeresheted."
+
+#. Tween.TWEEN_PROCESS_PHYSICS
+#: doc/classes/Tween.xml
+msgid "The [Tween] updates after each physics frame (see [method Node._physics_process])."
+msgstr "A [Tween] minden fizikai képkocka után frissül (lásd: [method Node._physics_process])."
+
+#. Tween.TWEEN_PROCESS_IDLE
+#: doc/classes/Tween.xml
+msgid "The [Tween] updates after each process frame (see [method Node._process])."
+msgstr "A [Tween] minden feldolgozási képkocka után frissül (lásd: [method Node._process])."
+
+#. Tween.TWEEN_PAUSE_BOUND
+#: doc/classes/Tween.xml
+msgid "If the [Tween] has a bound node, it will process when that node can process (see [member Node.process_mode]). Otherwise it's the same as [constant TWEEN_PAUSE_STOP]."
+msgstr "Ha a [Tween] csomóponthoz van kötve, akkor fut, amikor a csomópont feldolgozható (lásd: [member Node.process_mode]). Egyébként úgy működik, mint a [constant TWEEN_PAUSE_STOP]."
+
+#. Tween.TWEEN_PAUSE_STOP
+#: doc/classes/Tween.xml
+msgid "If [SceneTree] is paused, the [Tween] will also pause."
+msgstr "Ha a [SceneTree] szünetel, a [Tween] is szünetel."
+
+#. Tween.TWEEN_PAUSE_PROCESS
+#: doc/classes/Tween.xml
+msgid "The [Tween] will process regardless of whether [SceneTree] is paused."
+msgstr "A [Tween] akkor is fut, ha a [SceneTree] szünetel."
+
+#. Tween.TRANS_LINEAR
+#: doc/classes/Tween.xml
+msgid "The animation is interpolated linearly."
+msgstr "Az animáció lineárisan interpolál."
+
+#. Tween.TRANS_SINE
+#: doc/classes/Tween.xml
+msgid "The animation is interpolated using a sine function."
+msgstr "Az animáció szinuszfüggvénnyel interpolál."
+
+#. Tween.TRANS_QUINT
+#: doc/classes/Tween.xml
+msgid "The animation is interpolated with a quintic (to the power of 5) function."
+msgstr "Az animáció ötödfokú függvénnyel interpolál."
+
+#. Tween.TRANS_QUART
+#: doc/classes/Tween.xml
+msgid "The animation is interpolated with a quartic (to the power of 4) function."
+msgstr "Az animáció negyedfokú függvénnyel interpolál."
+
+#. Tween.TRANS_QUAD
+#: doc/classes/Tween.xml
+msgid "The animation is interpolated with a quadratic (to the power of 2) function."
+msgstr "Az animáció másodfokú függvénnyel interpolál."
+
+#. Tween.TRANS_EXPO
+#: doc/classes/Tween.xml
+msgid "The animation is interpolated with an exponential (to the power of x) function."
+msgstr "Az animáció exponenciális függvénnyel interpolál."
+
+#. Tween.TRANS_ELASTIC
+#: doc/classes/Tween.xml
+msgid "The animation is interpolated with elasticity, wiggling around the edges."
+msgstr "Az animáció rugalmasan interpolál, a végpontok körül kileng."
+
+#. Tween.TRANS_CUBIC
+#: doc/classes/Tween.xml
+msgid "The animation is interpolated with a cubic (to the power of 3) function."
+msgstr "Az animáció harmadfokú függvénnyel interpolál."
+
+#. Tween.TRANS_CIRC
+#: doc/classes/Tween.xml
+msgid "The animation is interpolated with a function using square roots."
+msgstr "Az animáció négyzetgyököt használó függvénnyel interpolál."
+
+#. Tween.TRANS_BOUNCE
+#: doc/classes/Tween.xml
+msgid "The animation is interpolated by bouncing at the end."
+msgstr "Az interpoláció a végén visszapattanó mozgást ad."
+
+#. Tween.TRANS_BACK
+#: doc/classes/Tween.xml
+msgid "The animation is interpolated backing out at ends."
+msgstr "Az interpoláció a végpontoknál röviden az ellenkező irányba mozdul."
+
+#. Tween.TRANS_SPRING
+#: doc/classes/Tween.xml
+msgid "The animation is interpolated like a spring towards the end."
+msgstr "Az interpoláció a vége felé rugószerű mozgást ad."
+
+#. Tween.EASE_IN
+#: doc/classes/Tween.xml
+msgid "The interpolation starts slowly and speeds up towards the end."
+msgstr "Az interpoláció lassan indul, majd a vége felé felgyorsul."
+
+#. Tween.EASE_OUT
+#: doc/classes/Tween.xml
+msgid "The interpolation starts quickly and slows down towards the end."
+msgstr "Az interpoláció gyorsan indul, majd a vége felé lelassul."
+
+#. Tween.EASE_IN_OUT
+#: doc/classes/Tween.xml
+msgid "A combination of [constant EASE_IN] and [constant EASE_OUT]. The interpolation is slowest at both ends."
+msgstr "A [constant EASE_IN] és a [constant EASE_OUT] kombinációja. Az interpoláció mindkét végén a leglassabb."
+
+#. Tween.EASE_OUT_IN
+#: doc/classes/Tween.xml
+msgid "A combination of [constant EASE_IN] and [constant EASE_OUT]. The interpolation is fastest at both ends."
+msgstr "A [constant EASE_IN] és a [constant EASE_OUT] kombinációja. Az interpoláció mindkét végén a leggyorsabb."
+
+#. Tweener.brief
+#: doc/classes/Tweener.xml
+msgid "Abstract class for all Tweeners used by [Tween]."
+msgstr "A [Tween] objektumok által használt Tweenerek absztrakt alaposztálya."
+
+#. Tweener.description
+#: doc/classes/Tweener.xml
+msgid "Tweeners are objects that perform a specific animating task, e.g. interpolating a property or calling a method at a given time. A [Tweener] can't be created manually, you need to use a dedicated method from [Tween]."
+msgstr "A Tweenerek egy-egy animációs műveletet végeznek, például tulajdonságot interpolálnak vagy adott időpontban metódust hívnak. A [Tweener] közvetlenül nem hozható létre. A [Tween] erre szolgáló metódusát kell használni."
+
+#. Tweener.finished
+#: doc/classes/Tweener.xml
+msgid "Emitted when the [Tweener] has just finished its job or became invalid (e.g. due to a freed object)."
+msgstr "Akkor jelez, amikor a [Tweener] befejezi a műveletét vagy érvénytelenné válik, például egy objektum felszabadítása miatt."
+
+#. AnimationMixer.animation_libraries_updated
+#: doc/classes/AnimationMixer.xml
+msgid "Notifies when the animation libraries have changed."
+msgstr "Az animációkönyvtárak megváltozásakor jelez."
+
+#. AnimationMixer.animation_list_changed
+#: doc/classes/AnimationMixer.xml
+msgid "Notifies when an animation list is changed."
+msgstr "Az animációlista megváltozásakor jelez."
+
+#. AnimationMixer.caches_cleared
+#: doc/classes/AnimationMixer.xml
+msgid "Notifies when the caches have been cleared, either automatically, or manually via [method clear_caches]."
+msgstr "A gyorsítótárak törlésekor jelez. Akkor is jelez, ha a törlés automatikus, és akkor is, ha a [method clear_caches] hívása indította."
+
+#. AnimationMixer.mixer_applied
+#: doc/classes/AnimationMixer.xml
+msgid "Notifies when the blending result related have been applied to the target objects."
+msgstr "Akkor jelez, amikor a keverés eredménye érvényesült a célobjektumokon."
+
+#. AnimationMixer.active
+#: doc/classes/AnimationMixer.xml
+msgid "If [code]true[/code], the [AnimationMixer] will be processing."
+msgstr "Ha az értéke [code]true[/code], az [AnimationMixer] feldolgozza az animációkat."
+
+#. AnimationMixer.callback_mode_method
+#: doc/classes/AnimationMixer.xml
+msgid "The call mode used for \"Call Method\" tracks."
+msgstr "A metódushívási sávokban használt hívási mód."
+
+#. AnimationMixer.callback_mode_process
+#: doc/classes/AnimationMixer.xml
+msgid "The process notification in which to update animations."
+msgstr "Az a feldolgozási értesítés, amely az animációk frissítését indítja."
+
+#. AnimationMixer.ANIMATION_CALLBACK_MODE_PROCESS_MANUAL
+#: doc/classes/AnimationMixer.xml
+msgid "Do not process animation. Use [method advance] to process the animation manually."
+msgstr "Nem dolgozza fel automatikusan az animációt. A kézi feldolgozáshoz használd a [method advance] metódust."
+
+#. BoneAttachment3D.brief
+#: doc/classes/BoneAttachment3D.xml
+msgid "А node that dynamically copies or overrides the 3D transform of a bone in its parent [Skeleton3D]."
+msgstr "A szülő [Skeleton3D] egyik csontjának 3D transzformációját dinamikusan másoló vagy felülbíráló csomópont."
+
+#. BoneAttachment3D.description
+#: doc/classes/BoneAttachment3D.xml
+msgid "This node selects a bone in a [Skeleton3D] and attaches to it. This means that the [BoneAttachment3D] node will either dynamically copy or override the 3D transform of the selected bone."
+msgstr "A csomópont a [Skeleton3D] egyik kiválasztott csontjához csatlakozik. A [BoneAttachment3D] csomópont így dinamikusan másolja vagy felülbírálja a kiválasztott csont 3D transzformációját."
+
+#. BoneAttachment3D.get_skeleton
+#: doc/classes/BoneAttachment3D.xml
+msgid "Returns the parent or external [Skeleton3D] node if it exists, otherwise returns [code]null[/code]."
+msgstr "Visszaadja a szülő vagy külső [Skeleton3D] csomópontot, ha létezik. Egyébként [code]null[/code] értéket ad vissza."
+
+#. BoneAttachment3D.on_skeleton_update
+#: doc/classes/BoneAttachment3D.xml
+msgid "A function that is called automatically when the [Skeleton3D] is updated. This function is where the [BoneAttachment3D] node updates its position so it is correctly bound when it is [i]not[/i] set to override the bone pose."
+msgstr "A [Skeleton3D] frissítésekor automatikusan meghívott függvény. Ha a [BoneAttachment3D] [i]nem[/i] bírálja felül a csont pózát, itt frissíti a helyzetét, hogy kövesse a csontot."
+
+#. BoneAttachment3D.bone_idx
+#. ModifierBoneTarget3D.bone
+#. SpringBoneCollision3D.bone
+#: doc/classes/BoneAttachment3D.xml doc/classes/ModifierBoneTarget3D.xml doc/classes/SpringBoneCollision3D.xml
+msgid "The index of the attached bone."
+msgstr "A csatlakoztatott csont indexe."
+
+#. BoneAttachment3D.bone_name
+#. ModifierBoneTarget3D.bone_name
+#. SpringBoneCollision3D.bone_name
+#: doc/classes/BoneAttachment3D.xml doc/classes/ModifierBoneTarget3D.xml doc/classes/SpringBoneCollision3D.xml
+msgid "The name of the attached bone."
+msgstr "A csatlakoztatott csont neve."
+
+#. BoneAttachment3D.external_skeleton
+#: doc/classes/BoneAttachment3D.xml
+msgid "The [NodePath] to the external [Skeleton3D] node."
+msgstr "A külső [Skeleton3D] csomópont [NodePath] útvonala."
+
+#. BoneMap.brief
+#: doc/classes/BoneMap.xml
+msgid "Describes a mapping of bone names for retargeting [Skeleton3D] into common names defined by a [SkeletonProfile]."
+msgstr "A csontnevek megfeleltetését írja le a [Skeleton3D] animációinak átviteléhez, a [SkeletonProfile] közös neveit használva."
+
+#. BoneMap.description
+#: doc/classes/BoneMap.xml
+msgid "This class contains a dictionary that uses a list of bone names in [SkeletonProfile] as key names.\nBy assigning the actual [Skeleton3D] bone name as the key value, it maps the [Skeleton3D] to the [SkeletonProfile]."
+msgstr "Az osztály olyan szótárat tartalmaz, amelynek kulcsai a [SkeletonProfile] csontnevei.\nA kulcsokhoz a [Skeleton3D] tényleges csontneveit rendelve megfeleltethető a [Skeleton3D] a [SkeletonProfile] profilnak."
+
+#. BoneMap.find_profile_bone_name
+#: doc/classes/BoneMap.xml
+msgid "Returns a profile bone name having [param skeleton_bone_name]. If not found, an empty [StringName] will be returned.\nIn the retargeting process, the returned bone name is the bone name of the target skeleton."
+msgstr "Visszaadja a [param skeleton_bone_name] nevű csonthoz rendelt profilbeli csontnevet. Ha nincs találat, üres [StringName] értéket ad vissza.\nAnimációátvitelnél ez a célcsontváz csontneve."
+
+#. BoneMap.get_skeleton_bone_name
+#: doc/classes/BoneMap.xml
+msgid "Returns a skeleton bone name is mapped to [param profile_bone_name].\nIn the retargeting process, the returned bone name is the bone name of the source skeleton."
+msgstr "Visszaadja a [param profile_bone_name] profilbeli csontnévhez rendelt csontvázbeli csontnevet.\nAnimációátvitelnél ez a forráscsontváz csontneve."
+
+#. BoneMap.set_skeleton_bone_name
+#: doc/classes/BoneMap.xml
+msgid "Maps a skeleton bone name to [param profile_bone_name].\nIn the retargeting process, the setting bone name is the bone name of the source skeleton."
+msgstr "Csontvázbeli csontnevet rendel a [param profile_bone_name] profilbeli csontnévhez.\nAnimációátvitelnél a beállított név a forráscsontváz csontneve."
+
+#. BoneMap.bone_map_updated
+#: doc/classes/BoneMap.xml
+msgid "This signal is emitted when change the key value in the [BoneMap]. This is used to validate mapping and to update [BoneMap] editor."
+msgstr "A [BoneMap] egyik kulcsához rendelt érték változásakor jelez. A megfeleltetés ellenőrzésére és a [BoneMap] szerkesztőjének frissítésére használható."
+
+#. BoneMap.profile_updated
+#: doc/classes/BoneMap.xml
+msgid "This signal is emitted when change the value in profile or change the reference of profile. This is used to update key names in the [BoneMap] and to redraw the [BoneMap] editor."
+msgstr "Akkor jelez, amikor a profil értéke vagy maga a profilhivatkozás megváltozik. A [BoneMap] kulcsainak frissítésére és a [BoneMap] szerkesztőjének újrarajzolására használható."
+
+#. BoneMap.profile
+#: doc/classes/BoneMap.xml
+msgid "A [SkeletonProfile] of the mapping target. Key names in the [BoneMap] are synchronized with it."
+msgstr "A megfeleltetés céljaként használt [SkeletonProfile]. A [BoneMap] kulcsai ehhez igazodnak."
+
+#. BoneTwistDisperser3D.clear_settings
+#. IKModifier3D.clear_settings
+#. SpringBoneSimulator3D.clear_settings
+#: doc/classes/BoneTwistDisperser3D.xml doc/classes/IKModifier3D.xml doc/classes/SpringBoneSimulator3D.xml
+msgid "Clears all settings."
+msgstr "Törli az összes beállítást."
+
+#. BoneTwistDisperser3D.get_end_bone
+#. ChainIK3D.get_end_bone
+#. LimitAngularVelocityModifier3D.get_end_bone
+#. SpringBoneSimulator3D.get_end_bone
+#: doc/classes/BoneTwistDisperser3D.xml doc/classes/ChainIK3D.xml doc/classes/LimitAngularVelocityModifier3D.xml doc/classes/SpringBoneSimulator3D.xml
+msgid "Returns the end bone index of the bone chain."
+msgstr "Visszaadja a csontlánc végcsontjának indexét."
+
+#. BoneTwistDisperser3D.get_end_bone_direction
+#. ChainIK3D.get_end_bone_direction
+#. SpringBoneSimulator3D.get_end_bone_direction
+#: doc/classes/BoneTwistDisperser3D.xml doc/classes/ChainIK3D.xml doc/classes/SpringBoneSimulator3D.xml
+msgid "Returns the tail direction of the end bone of the bone chain when [method is_end_bone_extended] is [code]true[/code]."
+msgstr "Visszaadja a csontlánc végcsontja meghosszabbításának irányát, ha a [method is_end_bone_extended] értéke [code]true[/code]."
+
+#. BoneTwistDisperser3D.get_end_bone_name
+#. ChainIK3D.get_end_bone_name
+#. LimitAngularVelocityModifier3D.get_end_bone_name
+#. SpringBoneSimulator3D.get_end_bone_name
+#: doc/classes/BoneTwistDisperser3D.xml doc/classes/ChainIK3D.xml doc/classes/LimitAngularVelocityModifier3D.xml doc/classes/SpringBoneSimulator3D.xml
+msgid "Returns the end bone name of the bone chain."
+msgstr "Visszaadja a csontlánc végcsontjának nevét."
+
+#. BoneTwistDisperser3D.get_joint_bone
+#. ChainIK3D.get_joint_bone
+#. SpringBoneSimulator3D.get_joint_bone
+#: doc/classes/BoneTwistDisperser3D.xml doc/classes/ChainIK3D.xml doc/classes/SpringBoneSimulator3D.xml
+msgid "Returns the bone index at [param joint] in the bone chain's joint list."
+msgstr "Visszaadja a csontlánc csuklólistájában a [param joint] helyen lévő csont indexét."
+
+#. BoneTwistDisperser3D.get_joint_bone_name
+#. ChainIK3D.get_joint_bone_name
+#. SpringBoneSimulator3D.get_joint_bone_name
+#: doc/classes/BoneTwistDisperser3D.xml doc/classes/ChainIK3D.xml doc/classes/SpringBoneSimulator3D.xml
+msgid "Returns the bone name at [param joint] in the bone chain's joint list."
+msgstr "Visszaadja a csontlánc csuklólistájában a [param joint] helyen lévő csont nevét."
+
+#. BoneTwistDisperser3D.get_joint_count
+#. ChainIK3D.get_joint_count
+#. SpringBoneSimulator3D.get_joint_count
+#: doc/classes/BoneTwistDisperser3D.xml doc/classes/ChainIK3D.xml doc/classes/SpringBoneSimulator3D.xml
+msgid "Returns the joint count of the bone chain's joint list."
+msgstr "Visszaadja a csontlánc csuklóinak számát."
+
+#. BoneTwistDisperser3D.get_root_bone
+#. ChainIK3D.get_root_bone
+#. LimitAngularVelocityModifier3D.get_root_bone
+#. SpringBoneSimulator3D.get_root_bone
+#: doc/classes/BoneTwistDisperser3D.xml doc/classes/ChainIK3D.xml doc/classes/LimitAngularVelocityModifier3D.xml doc/classes/SpringBoneSimulator3D.xml
+msgid "Returns the root bone index of the bone chain."
+msgstr "Visszaadja a csontlánc gyökércsontjának indexét."
+
+#. BoneTwistDisperser3D.get_root_bone_name
+#. ChainIK3D.get_root_bone_name
+#. LimitAngularVelocityModifier3D.get_root_bone_name
+#. SpringBoneSimulator3D.get_root_bone_name
+#: doc/classes/BoneTwistDisperser3D.xml doc/classes/ChainIK3D.xml doc/classes/LimitAngularVelocityModifier3D.xml doc/classes/SpringBoneSimulator3D.xml
+msgid "Returns the root bone name of the bone chain."
+msgstr "Visszaadja a csontlánc gyökércsontjának nevét."
+
+#. BoneTwistDisperser3D.is_end_bone_extended
+#. ChainIK3D.is_end_bone_extended
+#. SpringBoneSimulator3D.is_end_bone_extended
+#. TwoBoneIK3D.is_end_bone_extended
+#: doc/classes/BoneTwistDisperser3D.xml doc/classes/ChainIK3D.xml doc/classes/SpringBoneSimulator3D.xml doc/classes/TwoBoneIK3D.xml
+msgid "Returns [code]true[/code] if the end bone is extended to have a tail."
+msgstr "[code]true[/code] értéket ad vissza, ha a végcsont meghosszabbítással rendelkezik."
+
+#. BoneTwistDisperser3D.set_end_bone
+#. ChainIK3D.set_end_bone
+#. LimitAngularVelocityModifier3D.set_end_bone
+#. SpringBoneSimulator3D.set_end_bone
+#: doc/classes/BoneTwistDisperser3D.xml doc/classes/ChainIK3D.xml doc/classes/LimitAngularVelocityModifier3D.xml doc/classes/SpringBoneSimulator3D.xml
+msgid "Sets the end bone index of the bone chain."
+msgstr "Beállítja a csontlánc végcsontjának indexét."
+
+#. BoneTwistDisperser3D.set_end_bone_direction
+#. ChainIK3D.set_end_bone_direction
+#. SpringBoneSimulator3D.set_end_bone_direction
+#: doc/classes/BoneTwistDisperser3D.xml doc/classes/ChainIK3D.xml doc/classes/SpringBoneSimulator3D.xml
+msgid "Sets the end bone tail direction of the bone chain when [method is_end_bone_extended] is [code]true[/code]."
+msgstr "Beállítja a csontlánc végcsontja meghosszabbításának irányát, ha a [method is_end_bone_extended] értéke [code]true[/code]."
+
+#. BoneTwistDisperser3D.set_root_bone
+#. ChainIK3D.set_root_bone
+#. LimitAngularVelocityModifier3D.set_root_bone
+#. SpringBoneSimulator3D.set_root_bone
+#: doc/classes/BoneTwistDisperser3D.xml doc/classes/ChainIK3D.xml doc/classes/LimitAngularVelocityModifier3D.xml doc/classes/SpringBoneSimulator3D.xml
+msgid "Sets the root bone index of the bone chain."
+msgstr "Beállítja a csontlánc gyökércsontjának indexét."
+
+#. BoneTwistDisperser3D.set_root_bone_name
+#. ChainIK3D.set_root_bone_name
+#. LimitAngularVelocityModifier3D.set_root_bone_name
+#. SpringBoneSimulator3D.set_root_bone_name
+#: doc/classes/BoneTwistDisperser3D.xml doc/classes/ChainIK3D.xml doc/classes/LimitAngularVelocityModifier3D.xml doc/classes/SpringBoneSimulator3D.xml
+msgid "Sets the root bone name of the bone chain."
+msgstr "Beállítja a csontlánc gyökércsontjának nevét."
+
+#. BoneTwistDisperser3D.setting_count
+#. IterateIK3D.setting_count
+#. SplineIK3D.setting_count
+#. SpringBoneSimulator3D.setting_count
+#. TwoBoneIK3D.setting_count
+#: doc/classes/BoneTwistDisperser3D.xml doc/classes/IterateIK3D.xml doc/classes/SplineIK3D.xml doc/classes/SpringBoneSimulator3D.xml doc/classes/TwoBoneIK3D.xml
+msgid "The number of settings."
+msgstr "A beállítások száma."
+
+#. ChainIK3D.get_end_bone_length
+#. SpringBoneSimulator3D.get_end_bone_length
+#. TwoBoneIK3D.get_end_bone_length
+#: doc/classes/ChainIK3D.xml doc/classes/SpringBoneSimulator3D.xml doc/classes/TwoBoneIK3D.xml
+msgid "Returns the end bone tail length of the bone chain when [method is_end_bone_extended] is [code]true[/code]."
+msgstr "Visszaadja a csontlánc végcsontja meghosszabbításának hosszát, ha a [method is_end_bone_extended] értéke [code]true[/code]."
+
+#. ChainIK3D.set_end_bone_length
+#. SpringBoneSimulator3D.set_end_bone_length
+#: doc/classes/ChainIK3D.xml doc/classes/SpringBoneSimulator3D.xml
+msgid "Sets the end bone tail length of the bone chain when [method is_end_bone_extended] is [code]true[/code]."
+msgstr "Beállítja a csontlánc végcsontja meghosszabbításának hosszát, ha a [method is_end_bone_extended] értéke [code]true[/code]."
+
+#. IterateIK3D.get_joint_rotation_axis
+#. SpringBoneSimulator3D.get_joint_rotation_axis
+#: doc/classes/IterateIK3D.xml doc/classes/SpringBoneSimulator3D.xml
+msgid "Returns the rotation axis at [param joint] in the bone chain's joint list."
+msgstr "Visszaadja a csontlánc [param joint] indexű csuklójának forgástengelyét."
+
+#. PhysicalBoneSimulator3D.brief
+#. PhysicalBoneSimulator3D.description
+#: doc/classes/PhysicalBoneSimulator3D.xml
+msgid "Node that can be the parent of [PhysicalBone3D] and can apply the simulation results to [Skeleton3D]."
+msgstr "[PhysicalBone3D] csomópontok szülőjeként használható csomópont, amely a szimuláció eredményét a [Skeleton3D] csontvázra alkalmazza."
+
+#. PhysicalBoneSimulator3D.is_simulating_physics
+#: doc/classes/PhysicalBoneSimulator3D.xml
+msgid "Returns a boolean that indicates whether the [PhysicalBoneSimulator3D] is running and simulating."
+msgstr "Logikai értéket ad vissza, amely jelzi, hogy fut-e a [PhysicalBoneSimulator3D] fizikai szimulációja."
+
+#. SkeletonModifier3D.brief
+#: doc/classes/SkeletonModifier3D.xml
+msgid "A node that may modify a Skeleton3D's bones."
+msgstr "A Skeleton3D csontjainak módosítására szolgáló csomópont."
+
+#. SkeletonModifier3D._skeleton_changed
+#: doc/classes/SkeletonModifier3D.xml
+msgid "Called when the skeleton is changed."
+msgstr "A csontváz változásakor hívódik meg."
+
+#. SkeletonModifier3D._validate_bone_names
+#: doc/classes/SkeletonModifier3D.xml
+msgid "Called when bone names and indices need to be validated, such as when entering the scene tree or changing skeleton."
+msgstr "Akkor hívódik meg, amikor ellenőrizni kell a csontneveket és indexeket, például a jelenetfába lépéskor vagy a csontváz cseréjekor."
+
+#. SkeletonModifier3D.get_skeleton
+#: doc/classes/SkeletonModifier3D.xml
+msgid "Returns the parent [Skeleton3D] node if it exists. Otherwise, returns [code]null[/code]."
+msgstr "Visszaadja a szülő [Skeleton3D] csomópontot, ha létezik. Egyébként [code]null[/code] értéket ad vissza."
+
+#. SkeletonModifier3D.active
+#: doc/classes/SkeletonModifier3D.xml
+msgid "If [code]true[/code], the [SkeletonModifier3D] will be processing."
+msgstr "Ha az értéke [code]true[/code], fut a [SkeletonModifier3D] feldolgozása."
+
+#. SkeletonModifier3D.influence
+#: doc/classes/SkeletonModifier3D.xml
+msgid "Sets the influence of the modification.\n[b]Note:[/b] This value is used by [Skeleton3D] to blend, so the [SkeletonModifier3D] should always apply only 100% of the result without interpolation."
+msgstr "Beállítja a módosítás mértékét.\n[b]Megjegyzés:[/b] Ezt az értéket a [Skeleton3D] használja a keveréshez. A [SkeletonModifier3D] mindig a teljes eredményt adja át interpoláció nélkül."
+
+#. SkeletonModifier3D.BONE_DIRECTION_FROM_PARENT
+#: doc/classes/SkeletonModifier3D.xml
+msgid "Enumerated value for the axis from a parent bone to the child bone."
+msgstr "A szülőcsonttól a gyermekcsont felé mutató tengelyt jelölő felsorolásérték."
+
+#. SkeletonModifier3D.SECONDARY_DIRECTION_NONE
+#: doc/classes/SkeletonModifier3D.xml
+msgid "Enumerated value for the case when the axis is undefined."
+msgstr "A meghatározatlan tengelyt jelölő felsorolásérték."
+
+#. SkeletonModifier3D.SECONDARY_DIRECTION_CUSTOM
+#: doc/classes/SkeletonModifier3D.xml
+msgid "Enumerated value for an optional axis."
+msgstr "A választható tengelyt jelölő felsorolásérték."
+
+#. SkeletonModifier3D.ROTATION_AXIS_X
+#: doc/classes/SkeletonModifier3D.xml
+msgid "Enumerated value for the rotation of the X axis."
+msgstr "Az X tengely körüli forgatást jelölő felsorolásérték."
+
+#. SkeletonModifier3D.ROTATION_AXIS_Y
+#: doc/classes/SkeletonModifier3D.xml
+msgid "Enumerated value for the rotation of the Y axis."
+msgstr "Az Y tengely körüli forgatást jelölő felsorolásérték."
+
+#. SkeletonModifier3D.ROTATION_AXIS_Z
+#: doc/classes/SkeletonModifier3D.xml
+msgid "Enumerated value for the rotation of the Z axis."
+msgstr "A Z tengely körüli forgatást jelölő felsorolásérték."
+
+#. SkeletonModifier3D.ROTATION_AXIS_ALL
+#: doc/classes/SkeletonModifier3D.xml
+msgid "Enumerated value for the unconstrained rotation."
+msgstr "A korlátozás nélküli forgatást jelölő felsorolásérték."
+
+#. SkeletonModifier3D.ROTATION_AXIS_CUSTOM
+#: doc/classes/SkeletonModifier3D.xml
+msgid "Enumerated value for an optional rotation axis."
+msgstr "A választható forgástengelyt jelölő felsorolásérték."
+
+#. SkeletonProfile.brief
+#: doc/classes/SkeletonProfile.xml
+msgid "Base class for a profile of a virtual skeleton used as a target for retargeting."
+msgstr "Az animációátvitel céljaként használt virtuális csontvázprofil alaposztálya."
+
+#. SkeletonProfile.find_bone
+#: doc/classes/SkeletonProfile.xml
+msgid "Returns the bone index that matches [param bone_name] as its name."
+msgstr "Visszaadja a [param bone_name] nevű csont indexét."
+
+#. SkeletonProfile.get_bone_name
+#: doc/classes/SkeletonProfile.xml
+msgid "Returns the name of the bone at [param bone_idx] that will be the key name in the [BoneMap].\nIn the retargeting process, the returned bone name is the bone name of the target skeleton."
+msgstr "Visszaadja a [param bone_idx] indexű csont nevét, amely a [BoneMap] kulcsa lesz.\nAnimációátvitelnél a visszaadott név a célcsontváz csontneve."
+
+#. SkeletonProfile.get_bone_parent
+#: doc/classes/SkeletonProfile.xml
+msgid "Returns the name of the bone which is the parent to the bone at [param bone_idx]. The result is empty if the bone has no parent."
+msgstr "Visszaadja a [param bone_idx] indexű csont szülőcsontjának nevét. Ha nincs szülőcsont, az eredmény üres."
+
+#. SkeletonProfile.get_bone_tail
+#: doc/classes/SkeletonProfile.xml
+msgid "Returns the name of the bone which is the tail of the bone at [param bone_idx]."
+msgstr "Visszaadja a [param bone_idx] indexű csont végpontját kijelölő csont nevét."
+
+#. SkeletonProfile.get_group
+#: doc/classes/SkeletonProfile.xml
+msgid "Returns the group of the bone at [param bone_idx]."
+msgstr "Visszaadja a [param bone_idx] indexű csont csoportját."
+
+#. SkeletonProfile.get_group_name
+#: doc/classes/SkeletonProfile.xml
+msgid "Returns the name of the group at [param group_idx] that will be the drawing group in the [BoneMap] editor."
+msgstr "Visszaadja a [param group_idx] indexű csoport megjelenítési nevét a [BoneMap] szerkesztőjében."
+
+#. SkeletonProfile.get_handle_offset
+#: doc/classes/SkeletonProfile.xml
+msgid "Returns the offset of the bone at [param bone_idx] that will be the button position in the [BoneMap] editor.\nThis is the offset with origin at the top left corner of the square."
+msgstr "Visszaadja a [param bone_idx] indexű csont eltolását, amely a hozzá tartozó gomb helye lesz a [BoneMap] szerkesztőjében.\nAz eltolás a négyzet bal felső sarkától értendő."
+
+#. SkeletonProfile.get_reference_pose
+#: doc/classes/SkeletonProfile.xml
+msgid "Returns the reference pose transform for bone [param bone_idx]."
+msgstr "Visszaadja a [param bone_idx] indexű csont referenciapózának transzformációját."
+
+#. SkeletonProfile.get_tail_direction
+#: doc/classes/SkeletonProfile.xml
+msgid "Returns the tail direction of the bone at [param bone_idx]."
+msgstr "Visszaadja a [param bone_idx] indexű csont végpontjának iránybeállítását."
+
+#. SkeletonProfile.get_texture
+#: doc/classes/SkeletonProfile.xml
+msgid "Returns the texture of the group at [param group_idx] that will be the drawing group background image in the [BoneMap] editor."
+msgstr "Visszaadja a [param group_idx] indexű csoport textúráját, amely a csoport háttérképe lesz a [BoneMap] szerkesztőjében."
+
+#. SkeletonProfile.is_required
+#: doc/classes/SkeletonProfile.xml
+msgid "Returns whether the bone at [param bone_idx] is required for retargeting.\nThis value is used by the bone map editor. If this method returns [code]true[/code], and no bone is assigned, the handle color will be red on the bone map editor."
+msgstr "Megadja, hogy a [param bone_idx] indexű csont kötelező-e az animációátvitelhez.\nEzt az értéket a csontmegfeleltető szerkesztő használja. Ha a visszatérési érték [code]true[/code], de nincs hozzárendelt csont, a szerkesztőben a fogantyú vörös lesz."
+
+#. SkeletonProfile.set_bone_name
+#: doc/classes/SkeletonProfile.xml
+msgid "Sets the name of the bone at [param bone_idx] that will be the key name in the [BoneMap].\nIn the retargeting process, the setting bone name is the bone name of the target skeleton."
+msgstr "Beállítja a [param bone_idx] indexű csont nevét, amely a [BoneMap] kulcsa lesz.\nAnimációátvitelnél a beállított név a célcsontváz csontneve."
+
+#. SkeletonProfile.set_bone_parent
+#: doc/classes/SkeletonProfile.xml
+msgid "Sets the bone with name [param bone_parent] as the parent of the bone at [param bone_idx]. If an empty string is passed, then the bone has no parent."
+msgstr "A [param bone_parent] nevű csontot a [param bone_idx] indexű csont szülőjeként állítja be. Üres név esetén a csontnak nem lesz szülője."
+
+#. SkeletonProfile.set_bone_tail
+#: doc/classes/SkeletonProfile.xml
+msgid "Sets the bone with name [param bone_tail] as the tail of the bone at [param bone_idx]."
+msgstr "A [param bone_tail] nevű csonttal jelöli ki a [param bone_idx] indexű csont végpontját."
+
+#. SkeletonProfile.set_group
+#: doc/classes/SkeletonProfile.xml
+msgid "Sets the group of the bone at [param bone_idx]."
+msgstr "Beállítja a [param bone_idx] indexű csont csoportját."
+
+#. SkeletonProfile.set_group_name
+#: doc/classes/SkeletonProfile.xml
+msgid "Sets the name of the group at [param group_idx] that will be the drawing group in the [BoneMap] editor."
+msgstr "Beállítja a [param group_idx] indexű csoport megjelenítési nevét a [BoneMap] szerkesztőjében."
+
+#. SkeletonProfile.set_handle_offset
+#: doc/classes/SkeletonProfile.xml
+msgid "Sets the offset of the bone at [param bone_idx] that will be the button position in the [BoneMap] editor.\nThis is the offset with origin at the top left corner of the square."
+msgstr "Beállítja a [param bone_idx] indexű csont eltolását, amely a hozzá tartozó gomb helye lesz a [BoneMap] szerkesztőjében.\nAz eltolás a négyzet bal felső sarkától értendő."
+
+#. SkeletonProfile.set_reference_pose
+#: doc/classes/SkeletonProfile.xml
+msgid "Sets the reference pose transform for bone [param bone_idx]."
+msgstr "Beállítja a [param bone_idx] indexű csont referenciapózának transzformációját."
+
+#. SkeletonProfile.set_required
+#: doc/classes/SkeletonProfile.xml
+msgid "Sets the required status for bone [param bone_idx] to [param required]."
+msgstr "A [param required] értékkel beállítja, hogy a [param bone_idx] indexű csont kötelező-e."
+
+#. SkeletonProfile.set_tail_direction
+#: doc/classes/SkeletonProfile.xml
+msgid "Sets the tail direction of the bone at [param bone_idx].\n[b]Note:[/b] This only specifies the method of calculation. The actual coordinates required should be stored in an external skeleton, so the calculation itself needs to be done externally."
+msgstr "Beállítja a [param bone_idx] indexű csont végpontjának irányát.\n[b]Megjegyzés:[/b] Ez csak a számítás módját határozza meg. A számításhoz szükséges tényleges koordinátákat egy külső csontvázban kell tárolni, magát a számítást pedig külsőleg kell elvégezni."
+
+#. SkeletonProfile.set_texture
+#: doc/classes/SkeletonProfile.xml
+msgid "Sets the texture of the group at [param group_idx] that will be the drawing group background image in the [BoneMap] editor."
+msgstr "Beállítja a [param group_idx] indexű csoport textúráját, amely a csoport háttérképe lesz a [BoneMap] szerkesztőjében."
+
+#. SkeletonProfile.group_size
+#: doc/classes/SkeletonProfile.xml
+msgid "The amount of groups of bones in retargeting section's [BoneMap] editor. For example, [SkeletonProfileHumanoid] has 4 groups.\nThis property exists to separate the bone list into several sections in the editor."
+msgstr "A csontcsoportok száma a [BoneMap] animációátviteli szerkesztőjében. A [SkeletonProfileHumanoid] például négy csoportot tartalmaz.\nEzzel a tulajdonsággal a szerkesztő több részre osztja a csontlistát."
+
+#. SkeletonProfile.TAIL_DIRECTION_AVERAGE_CHILDREN
+#: doc/classes/SkeletonProfile.xml
+msgid "Direction to the average coordinates of bone children."
+msgstr "A gyermekcsontok átlagos koordinátája felé mutató irány."
+
+#. SkeletonProfile.TAIL_DIRECTION_SPECIFIC_CHILD
+#: doc/classes/SkeletonProfile.xml
+msgid "Direction to the coordinates of specified bone child."
+msgstr "A kiválasztott gyermekcsont koordinátái felé mutató irány."
+
+#. SkeletonProfile.TAIL_DIRECTION_END
+#: doc/classes/SkeletonProfile.xml
+msgid "Direction is not calculated."
+msgstr "A motor nem számít irányt."
+
+#. SkeletonProfileHumanoid.brief
+#: doc/classes/SkeletonProfileHumanoid.xml
+msgid "A humanoid [SkeletonProfile] preset."
+msgstr "Ember alakú csontvázhoz készült [SkeletonProfile] előbeállítás."
+
+#. SkinReference.brief
+#: doc/classes/SkinReference.xml
+msgid "A reference-counted holder object for a skeleton RID used in the [RenderingServer]."
+msgstr "A [RenderingServer] által használt csontváz RID azonosítóját tároló, hivatkozásszámlált objektum."
+
+#. SkinReference.get_skeleton
+#: doc/classes/SkinReference.xml
+msgid "Returns the [RID] owned by this SkinReference, as returned by [method RenderingServer.skeleton_create]."
+msgstr "Visszaadja a SkinReference által tárolt [RID] azonosítót, amelyet a [method RenderingServer.skeleton_create] hozott létre."
+
+#. SpringBoneCollision3D.brief
+#: doc/classes/SpringBoneCollision3D.xml
+msgid "A base class of the collision that interacts with [SpringBoneSimulator3D]."
+msgstr "A [SpringBoneSimulator3D] által használt ütközési alakzatok alaposztálya."
+
+#. SpringBoneCollision3D.get_skeleton
+#: doc/classes/SpringBoneCollision3D.xml
+msgid "Get parent [Skeleton3D] node of the parent [SpringBoneSimulator3D] if found."
+msgstr "Visszaadja a szülő [SpringBoneSimulator3D] csomópont szülő [Skeleton3D] csomópontját, ha megtalálható."
+
+#. SpringBoneCollision3D.position_offset
+#: doc/classes/SpringBoneCollision3D.xml
+msgid "The offset of the position from [Skeleton3D]'s [member bone] pose position."
+msgstr "A helyzet eltolása a [Skeleton3D] csontvázban kijelölt [member bone] csont pózának helyzetéhez képest."
+
+#. SpringBoneCollision3D.rotation_offset
+#: doc/classes/SpringBoneCollision3D.xml
+msgid "The offset of the rotation from [Skeleton3D]'s [member bone] pose rotation."
+msgstr "A forgatás eltolása a [Skeleton3D] csontvázban kijelölt [member bone] csont pózának forgatásához képest."
+
+#. SpringBoneCollisionCapsule3D.brief
+#. SpringBoneCollisionCapsule3D.description
+#: doc/classes/SpringBoneCollisionCapsule3D.xml
+msgid "A capsule shape collision that interacts with [SpringBoneSimulator3D]."
+msgstr "A [SpringBoneSimulator3D] által kezelt, kapszula alakú ütközési alakzat."
+
+#. SpringBoneCollisionCapsule3D.inside
+#. SpringBoneCollisionSphere3D.inside
+#: doc/classes/SpringBoneCollisionCapsule3D.xml doc/classes/SpringBoneCollisionSphere3D.xml
+msgid "If [code]true[/code], the collision acts to trap the joint within the collision."
+msgstr "Ha az értéke [code]true[/code], az ütközési alakzat a belsejében tartja a csuklót."
+
+#. SpringBoneCollisionPlane3D.brief
+#: doc/classes/SpringBoneCollisionPlane3D.xml
+msgid "An infinite plane collision that interacts with [SpringBoneSimulator3D]."
+msgstr "A [SpringBoneSimulator3D] által kezelt, végtelen kiterjedésű ütközési sík."
+
+#. SpringBoneCollisionPlane3D.description
+#: doc/classes/SpringBoneCollisionPlane3D.xml
+msgid "An infinite plane collision that interacts with [SpringBoneSimulator3D]. It is an infinite size XZ plane, and the +Y direction is treated as normal."
+msgstr "A [SpringBoneSimulator3D] által kezelt, végtelen kiterjedésű ütközési sík. Az XZ síkban fekszik, normálvektora a pozitív Y irányba mutat."
+
+#. SpringBoneCollisionSphere3D.brief
+#. SpringBoneCollisionSphere3D.description
+#: doc/classes/SpringBoneCollisionSphere3D.xml
+msgid "A sphere shape collision that interacts with [SpringBoneSimulator3D]."
+msgstr "A [SpringBoneSimulator3D] által kezelt, gömb alakú ütközési alakzat."
+
+#. SpringBoneCollisionSphere3D.radius
+#: doc/classes/SpringBoneCollisionSphere3D.xml
+msgid "The sphere's radius."
+msgstr "A gömb sugara."
+
+#. SpringBoneSimulator3D.brief
+#: doc/classes/SpringBoneSimulator3D.xml
+msgid "A [SkeletonModifier3D] to apply inertial wavering to bone chains."
+msgstr "[SkeletonModifier3D], amely tehetetlenségből eredő lengést ad a csontláncokhoz."
+
+#. SpringBoneSimulator3D.get_center_bone
+#: doc/classes/SpringBoneSimulator3D.xml
+msgid "Returns the center bone index of the bone chain."
+msgstr "Visszaadja a csontlánc középpontját meghatározó csont indexét."
+
+#. SpringBoneSimulator3D.get_center_bone_name
+#: doc/classes/SpringBoneSimulator3D.xml
+msgid "Returns the center bone name of the bone chain."
+msgstr "Visszaadja a csontlánc középpontját meghatározó csont nevét."
+
+#. SpringBoneSimulator3D.get_center_from
+#: doc/classes/SpringBoneSimulator3D.xml
+msgid "Returns what the center originates from in the bone chain."
+msgstr "Visszaadja, hogy mi határozza meg a csontlánc középpontját."
+
+#. SpringBoneSimulator3D.get_center_node
+#: doc/classes/SpringBoneSimulator3D.xml
+msgid "Returns the center node path of the bone chain."
+msgstr "Visszaadja a csontlánc középpontját meghatározó csomópont útvonalát."
+
+#. SpringBoneSimulator3D.get_gravity
+#: doc/classes/SpringBoneSimulator3D.xml
+msgid "Returns the gravity amount of the bone chain."
+msgstr "Visszaadja a csontláncra ható gravitáció erősségét."
+
+#. SpringBoneSimulator3D.get_gravity_direction
+#: doc/classes/SpringBoneSimulator3D.xml
+msgid "Returns the gravity direction of the bone chain."
+msgstr "Visszaadja a csontláncra ható gravitáció irányát."
+
+#. SpringBoneSimulator3D.get_radius
+#: doc/classes/SpringBoneSimulator3D.xml
+msgid "Returns the joint radius of the bone chain."
+msgstr "Visszaadja a csontlánc csuklóinak sugarát."
+
+#. SpringBoneSimulator3D.get_rotation_axis
+#: doc/classes/SpringBoneSimulator3D.xml
+msgid "Returns the rotation axis of the bone chain."
+msgstr "Visszaadja a csontlánc forgástengelyét."
+
+#. SpringBoneSimulator3D.get_gravity_damping_curve
+#: doc/classes/SpringBoneSimulator3D.xml
+msgid "Returns the gravity amount damping curve of the bone chain."
+msgstr "Visszaadja a csontláncra ható gravitáció csillapítási görbéjét."
+
+#. SpringBoneSimulator3D.get_radius_damping_curve
+#: doc/classes/SpringBoneSimulator3D.xml
+msgid "Returns the joint radius damping curve of the bone chain."
+msgstr "Visszaadja a csontlánc csuklósugarának csillapítási görbéjét."
+
+#. SpringBoneSimulator3D.is_config_individual
+#: doc/classes/SpringBoneSimulator3D.xml
+msgid "Returns [code]true[/code] if the config can be edited individually for each joint."
+msgstr "[code]true[/code] értéket ad vissza, ha a csuklók külön-külön beállíthatók."
+
+#. AimModifier3D.is_relative
+#. ConvertTransformModifier3D.is_relative
+#. CopyTransformModifier3D.is_relative
+#: doc/classes/AimModifier3D.xml doc/classes/ConvertTransformModifier3D.xml doc/classes/CopyTransformModifier3D.xml
+msgid "Returns [code]true[/code] if the relative option is enabled in the setting at [param index]."
+msgstr "[code]true[/code] értéket ad vissza, ha a [param index] indexű beállításban a relatív mód engedélyezve van."
+
+#. AimModifier3D.setting_count
+#. ConvertTransformModifier3D.setting_count
+#. CopyTransformModifier3D.setting_count
+#: doc/classes/AimModifier3D.xml doc/classes/ConvertTransformModifier3D.xml doc/classes/CopyTransformModifier3D.xml
+msgid "The number of settings in the modifier."
+msgstr "A módosító beállításainak száma."
+
+#. Bone2D.brief
+#: doc/classes/Bone2D.xml
+msgid "A joint used with [Skeleton2D] to control and animate other nodes."
+msgstr "A [Skeleton2D] csontvázzal együtt használt csukló más csomópontok vezérléséhez és animálásához."
+
+#. Bone2D.apply_rest
+#: doc/classes/Bone2D.xml
+msgid "Resets the bone to the rest pose. This is equivalent to setting [member Node2D.transform] to [member rest]."
+msgstr "Visszaállítja a csontot nyugalmi pózba. Ugyanazt eredményezi, mint a [member Node2D.transform] beállítása a [member rest] értékére."
+
+#. Bone2D.get_index_in_skeleton
+#: doc/classes/Bone2D.xml
+msgid "Returns the node's index as part of the entire skeleton. See [Skeleton2D]."
+msgstr "Visszaadja a csomópont indexét a teljes csontvázban. Lásd: [Skeleton2D]."
+
+#. Bone2D.get_length
+#: doc/classes/Bone2D.xml
+msgid "Returns the length of the bone in the [Bone2D] node."
+msgstr "Visszaadja a [Bone2D] csomópontban lévő csont hosszát."
+
+#. Bone2D.set_length
+#: doc/classes/Bone2D.xml
+msgid "Sets the length of the bone in the [Bone2D]."
+msgstr "Beállítja a [Bone2D] csontjának hosszát."
+
+#. Bone2D.rest
+#: doc/classes/Bone2D.xml
+msgid "Rest transform of the bone. You can reset the node's transforms to this value using [method apply_rest]."
+msgstr "A csont nyugalmi transzformációja. A csomópont transzformációja a [method apply_rest] metódussal állítható erre az értékre."
+
+#. BoneConstraint3D.brief
+#: doc/classes/BoneConstraint3D.xml
+msgid "A node that may modify Skeleton3D's bone with associating the two bones."
+msgstr "Csomópont, amely két csont összekapcsolásával módosíthatja a Skeleton3D egyik csontját."
+
+#. BoneConstraint3D.get_amount
+#: doc/classes/BoneConstraint3D.xml
+msgid "Returns the apply amount of the setting at [param index]."
+msgstr "Visszaadja a [param index] indexű beállítás alkalmazási mértékét."
+
+#. BoneConstraint3D.get_apply_bone
+#: doc/classes/BoneConstraint3D.xml
+msgid "Returns the apply bone of the setting at [param index]. This bone will be modified."
+msgstr "Visszaadja a [param index] indexű beállítás célcsontját. A módosító ezt a csontot változtatja meg."
+
+#. BoneConstraint3D.get_apply_bone_name
+#: doc/classes/BoneConstraint3D.xml
+msgid "Returns the apply bone name of the setting at [param index]. This bone will be modified."
+msgstr "Visszaadja a [param index] indexű beállítás célcsontjának nevét. A módosító ezt a csontot változtatja meg."
+
+#. BoneConstraint3D.get_reference_bone
+#: doc/classes/BoneConstraint3D.xml
+msgid "Returns the reference bone of the setting at [param index].\nThis bone will be only referenced and not modified by this modifier."
+msgstr "Visszaadja a [param index] indexű beállítás referenciacsontját.\nA módosító ezt a csontot csak hivatkozásként használja."
+
+#. BoneConstraint3D.get_reference_bone_name
+#: doc/classes/BoneConstraint3D.xml
+msgid "Returns the reference bone name of the setting at [param index].\nThis bone will be only referenced and not modified by this modifier."
+msgstr "Visszaadja a [param index] indexű beállítás referenciacsontjának nevét.\nA módosító ezt a csontot csak hivatkozásként használja."
+
+#. BoneConstraint3D.get_reference_node
+#: doc/classes/BoneConstraint3D.xml
+msgid "Returns the reference node path of the setting at [param index].\nThis node will be only referenced and not modified by this modifier."
+msgstr "Visszaadja a [param index] indexű beállítás referenciacsomópontjának útvonalát.\nA módosító ezt a csomópontot csak hivatkozásként használja."
+
+#. BoneConstraint3D.get_reference_type
+#: doc/classes/BoneConstraint3D.xml
+msgid "Returns the reference target type of the setting at [param index]. See also [enum ReferenceType]."
+msgstr "Visszaadja a [param index] indexű beállítás referenciacéljának típusát. Lásd még: [enum ReferenceType]."
+
+#. BoneConstraint3D.set_amount
+#: doc/classes/BoneConstraint3D.xml
+msgid "Sets the apply amount of the setting at [param index] to [param amount]."
+msgstr "A [param index] indexű beállítás alkalmazási mértékét [param amount] értékre állítja."
+
+#. BoneConstraint3D.set_apply_bone
+#: doc/classes/BoneConstraint3D.xml
+msgid "Sets the apply bone of the setting at [param index] to [param bone]. This bone will be modified."
+msgstr "A [param index] indexű beállítás célcsontját [param bone] értékre állítja. A módosító ezt a csontot változtatja meg."
+
+#. BoneConstraint3D.set_apply_bone_name
+#: doc/classes/BoneConstraint3D.xml
+msgid "Sets the apply bone of the setting at [param index] to [param bone_name]. This bone will be modified."
+msgstr "A [param index] indexű beállítás célcsontjának nevét [param bone_name] értékre állítja. A módosító ezt a csontot változtatja meg."
+
+#. BoneConstraint3D.set_reference_bone
+#: doc/classes/BoneConstraint3D.xml
+msgid "Sets the reference bone of the setting at [param index] to [param bone].\nThis bone will be only referenced and not modified by this modifier."
+msgstr "A [param index] indexű beállítás referenciacsontját [param bone] értékre állítja.\nA módosító ezt a csontot csak hivatkozásként használja."
+
+#. BoneConstraint3D.set_reference_bone_name
+#: doc/classes/BoneConstraint3D.xml
+msgid "Sets the reference bone of the setting at [param index] to [param bone_name].\nThis bone will be only referenced and not modified by this modifier."
+msgstr "A [param index] indexű beállítás referenciacsontjának nevét [param bone_name] értékre állítja.\nA módosító ezt a csontot csak hivatkozásként használja."
+
+#. BoneConstraint3D.set_reference_node
+#: doc/classes/BoneConstraint3D.xml
+msgid "Sets the reference node path of the setting at [param index] to [param node].\nThis node will be only referenced and not modified by this modifier."
+msgstr "A [param index] indexű beállítás referenciacsomópontjának útvonalát [param node] értékre állítja.\nA módosító ezt a csomópontot csak hivatkozásként használja."
+
+#. BoneConstraint3D.set_reference_type
+#: doc/classes/BoneConstraint3D.xml
+msgid "Sets the reference target type of the setting at [param index] to [param type]. See also [enum ReferenceType]."
+msgstr "A [param index] indexű beállítás referenciacéljának típusát [param type] értékre állítja. Lásd még: [enum ReferenceType]."
+
+#. BoneConstraint3D.set_setting_count
+#: doc/classes/BoneConstraint3D.xml
+msgid "Sets the number of settings in the modifier."
+msgstr "Beállítja a módosító beállításainak számát."
+
+#. BoneConstraint3D.REFERENCE_TYPE_BONE
+#: doc/classes/BoneConstraint3D.xml
+msgid "The reference target is a bone. In this case, the reference target spaces is local space."
+msgstr "A referenciacél egy csont. Ebben az esetben a referenciacél koordinátái a helyi térben értendők."
+
+#. CCDIK3D.brief
+#: doc/classes/CCDIK3D.xml
+msgid "Rotation based cyclic coordinate descent inverse kinematics solver."
+msgstr "Forgatáson alapuló, ciklikus koordinátacsökkentést alkalmazó inverz kinematikai megoldó."
+
+#. ChainIK3D.brief
+#: doc/classes/ChainIK3D.xml
+msgid "A [SkeletonModifier3D] to apply inverse kinematics to bone chains containing an arbitrary number of bones."
+msgstr "Tetszőleges számú csontból álló láncra inverz kinematikát alkalmazó [SkeletonModifier3D]."
+
+#. ConvertTransformModifier3D.is_additive
+#. CopyTransformModifier3D.is_additive
+#: doc/classes/ConvertTransformModifier3D.xml doc/classes/CopyTransformModifier3D.xml
+msgid "Returns [code]true[/code] if the additive option is enabled in the setting at [param index]."
+msgstr "[code]true[/code] értéket ad vissza, ha a [param index] indexű beállításban az additív mód engedélyezve van."
+
+#. CopyTransformModifier3D.brief
+#: doc/classes/CopyTransformModifier3D.xml
+msgid "A [SkeletonModifier3D] that apply transform to the bone which copied from reference."
+msgstr "[SkeletonModifier3D], amely a referenciáról másolt transzformációt alkalmazza a csontra."
+
+#. CopyTransformModifier3D.get_axis_flags
+#: doc/classes/CopyTransformModifier3D.xml
+msgid "Returns the axis flags of the setting at [param index]."
+msgstr "Visszaadja a [param index] indexű beállítás tengelyjelzőit."
+
+#. CopyTransformModifier3D.get_copy_flags
+#: doc/classes/CopyTransformModifier3D.xml
+msgid "Returns the copy flags of the setting at [param index]."
+msgstr "Visszaadja a [param index] indexű beállítás másolási jelzőit."
+
+#. CopyTransformModifier3D.get_invert_flags
+#: doc/classes/CopyTransformModifier3D.xml
+msgid "Returns the invert flags of the setting at [param index]."
+msgstr "Visszaadja a [param index] indexű beállítás irányfordítási jelzőit."
+
+#. CopyTransformModifier3D.is_position_copying
+#: doc/classes/CopyTransformModifier3D.xml
+msgid "Returns [code]true[/code] if the copy flags has the flag for the position in the setting at [param index]. See also [method set_copy_flags]."
+msgstr "[code]true[/code] értéket ad vissza, ha a [param index] indexű beállításban a helyzet másolási jelzője aktív. Lásd még: [method set_copy_flags]."
+
+#. CopyTransformModifier3D.is_rotation_copying
+#: doc/classes/CopyTransformModifier3D.xml
+msgid "Returns [code]true[/code] if the copy flags has the flag for the rotation in the setting at [param index]. See also [method set_copy_flags]."
+msgstr "[code]true[/code] értéket ad vissza, ha a [param index] indexű beállításban a forgatás másolási jelzője aktív. Lásd még: [method set_copy_flags]."
+
+#. CopyTransformModifier3D.is_scale_copying
+#: doc/classes/CopyTransformModifier3D.xml
+msgid "Returns [code]true[/code] if the copy flags has the flag for the scale in the setting at [param index]. See also [method set_copy_flags]."
+msgstr "[code]true[/code] értéket ad vissza, ha a [param index] indexű beállításban a méretezés másolási jelzője aktív. Lásd még: [method set_copy_flags]."
+
+#. CopyTransformModifier3D.set_axis_flags
+#: doc/classes/CopyTransformModifier3D.xml
+msgid "Sets the flags to copy axes. If the flag is valid, the axis is copied."
+msgstr "Beállítja a tengelymásolási jelzőket. Az aktív jelzőhöz tartozó tengely értéke másolódik."
+
+#. CopyTransformModifier3D.set_copy_position
+#: doc/classes/CopyTransformModifier3D.xml
+msgid "If sets [param enabled] to [code]true[/code], the position will be copied."
+msgstr "Ha a [param enabled] értéke [code]true[/code], a helyzet másolódik."
+
+#. CopyTransformModifier3D.set_copy_rotation
+#: doc/classes/CopyTransformModifier3D.xml
+msgid "If sets [param enabled] to [code]true[/code], the rotation will be copied."
+msgstr "Ha a [param enabled] értéke [code]true[/code], a forgatás másolódik."
+
+#. CopyTransformModifier3D.set_copy_scale
+#: doc/classes/CopyTransformModifier3D.xml
+msgid "If sets [param enabled] to [code]true[/code], the scale will be copied."
+msgstr "Ha a [param enabled] értéke [code]true[/code], a méretezés másolódik."
+
+#. CopyTransformModifier3D.TRANSFORM_FLAG_POSITION
+#: doc/classes/CopyTransformModifier3D.xml
+msgid "If set, allows to copy the position."
+msgstr "Aktív állapotban engedélyezi a helyzet másolását."
+
+#. CopyTransformModifier3D.TRANSFORM_FLAG_ROTATION
+#: doc/classes/CopyTransformModifier3D.xml
+msgid "If set, allows to copy the rotation."
+msgstr "Aktív állapotban engedélyezi a forgatás másolását."
+
+#. CopyTransformModifier3D.TRANSFORM_FLAG_SCALE
+#: doc/classes/CopyTransformModifier3D.xml
+msgid "If set, allows to copy the scale."
+msgstr "Aktív állapotban engedélyezi a méretezés másolását."
+
+#. CopyTransformModifier3D.TRANSFORM_FLAG_ALL
+#: doc/classes/CopyTransformModifier3D.xml
+msgid "If set, allows to copy the position/rotation/scale."
+msgstr "Aktív állapotban engedélyezi a helyzet, a forgatás és a méretezés másolását."
+
+#. FABRIK3D.brief
+#: doc/classes/FABRIK3D.xml
+msgid "Position based forward and backward reaching inverse kinematics solver."
+msgstr "Helyzetalapú inverz kinematikai megoldó, amely előre és visszafelé is végighalad a láncon."
+
+#. IKModifier3D.brief
+#: doc/classes/IKModifier3D.xml
+msgid "A node for inverse kinematics which may modify more than one bone."
+msgstr "Inverz kinematikai csomópont, amely több csontot is módosíthat."
+
+#. IKModifier3D.get_setting_count
+#: doc/classes/IKModifier3D.xml
+msgid "Returns the number of settings."
+msgstr "Visszaadja a beállítások számát."
+
+#. IKModifier3D.reset
+#: doc/classes/IKModifier3D.xml
+msgid "Resets a state with respect to the current bone pose."
+msgstr "Az aktuális csontpóz alapján visszaállítja a megoldó állapotát."
+
+#. IterateIK3D.get_target_node
+#. TwoBoneIK3D.get_target_node
+#: doc/classes/IterateIK3D.xml doc/classes/TwoBoneIK3D.xml
+msgid "Returns the target node that the end bone is trying to reach."
+msgstr "Visszaadja azt a célcsomópontot, amelyet a végcsont próbál elérni."
+
+#. IterateIK3D.set_target_node
+#. TwoBoneIK3D.set_target_node
+#: doc/classes/IterateIK3D.xml doc/classes/TwoBoneIK3D.xml
+msgid "Sets the target node that the end bone is trying to reach."
+msgstr "Beállítja azt a célcsomópontot, amelyet a végcsont próbál elérni."
+
+#. JointLimitation3D.brief
+#: doc/classes/JointLimitation3D.xml
+msgid "A base class of the limitation that interacts with [ChainIK3D]."
+msgstr "A [ChainIK3D] által használt forgáskorlátozások alaposztálya."
+
+#. JointLimitation3D.description
+#: doc/classes/JointLimitation3D.xml
+msgid "The limitation is attached to each joint and limits the rotation of the bone."
+msgstr "A korlátozás az egyes csuklókhoz kapcsolódik, és határt szab a csont elfordulásának."
+
+#. LookAtModifier3D.brief
+#: doc/classes/LookAtModifier3D.xml
+msgid "The [LookAtModifier3D] rotates a bone to look at a target."
+msgstr "A [LookAtModifier3D] úgy forgatja el a csontot, hogy az a cél felé nézzen."
+
+#. LookAtModifier3D.get_interpolation_remaining
+#: doc/classes/LookAtModifier3D.xml
+msgid "Returns the remaining seconds of the time-based interpolation."
+msgstr "Visszaadja az időalapú interpolációból hátralévő másodpercek számát."
+
+#. LookAtModifier3D.bone
+#: doc/classes/LookAtModifier3D.xml
+msgid "Index of the [member bone_name] in the parent [Skeleton3D]."
+msgstr "A [member bone_name] nevű csont indexe a szülő [Skeleton3D] csontvázban."
+
+#. LookAtModifier3D.bone_name
+#: doc/classes/LookAtModifier3D.xml
+msgid "The bone name of the [Skeleton3D] that the modification will operate on."
+msgstr "A módosítással érintett csont neve a [Skeleton3D] csontvázban."
+
+#. LookAtModifier3D.ease_type
+#: doc/classes/LookAtModifier3D.xml
+msgid "The ease type of the time-based interpolation. See also [enum Tween.EaseType]."
+msgstr "Az időalapú interpoláció gyorsulási módja. Lásd még: [enum Tween.EaseType]."
+
+#. LookAtModifier3D.forward_axis
+#: doc/classes/LookAtModifier3D.xml
+msgid "The forward axis of the bone. This [SkeletonModifier3D] modifies the bone so that this axis points toward the [member target_node]."
+msgstr "A csont előre mutató tengelye. A [SkeletonModifier3D] úgy módosítja a csontot, hogy ez a tengely a [member target_node] felé mutasson."
+
+#. LookAtModifier3D.origin_bone
+#: doc/classes/LookAtModifier3D.xml
+msgid "Index of the [member origin_bone_name] in the parent [Skeleton3D]."
+msgstr "A [member origin_bone_name] nevű csont indexe a szülő [Skeleton3D] csontvázban."
+
+#. LookAtModifier3D.origin_bone_name
+#: doc/classes/LookAtModifier3D.xml
+msgid "If [member origin_from] is [constant ORIGIN_FROM_SPECIFIC_BONE], the bone global pose position specified for this is used as origin."
+msgstr "Ha a [member origin_from] értéke [constant ORIGIN_FROM_SPECIFIC_BONE], a megadott csont globális pózának helyzete lesz az origó."
+
+#. LookAtModifier3D.origin_external_node
+#: doc/classes/LookAtModifier3D.xml
+msgid "If [member origin_from] is [constant ORIGIN_FROM_EXTERNAL_NODE], the global position of the [Node3D] specified for this is used as origin."
+msgstr "Ha a [member origin_from] értéke [constant ORIGIN_FROM_EXTERNAL_NODE], a megadott [Node3D] csomópont világkoordinátákban vett helyzete lesz az origó."
+
+#. LookAtModifier3D.origin_from
+#: doc/classes/LookAtModifier3D.xml
+msgid "This value determines from what origin is retrieved for use in the calculation of the forward vector."
+msgstr "Meghatározza az előre mutató vektor kiszámításához használt origó forrását."
+
+#. LookAtModifier3D.origin_safe_margin
+#: doc/classes/LookAtModifier3D.xml
+msgid "If the target passes through too close to the origin than this value, time-based interpolation is used even if the target is within the angular limitations, to prevent the angular velocity from becoming too high."
+msgstr "Ha a cél az origóhoz ennél közelebb halad el, a módosító akkor is időalapú interpolációt használ, ha a cél a szöghatárokon belül marad. Így a szögsebesség nem nő túl nagyra."
+
+#. LookAtModifier3D.primary_limit_angle
+#: doc/classes/LookAtModifier3D.xml
+msgid "The limit angle of the primary rotation when [member symmetry_limitation] is [code]true[/code], in radians."
+msgstr "Az elsődleges forgás határszöge radiánban, ha a [member symmetry_limitation] értéke [code]true[/code]."
+
+#. LookAtModifier3D.primary_negative_damp_threshold
+#: doc/classes/LookAtModifier3D.xml
+msgid "The threshold to start damping for [member primary_negative_limit_angle]."
+msgstr "Az elsődleges forgás csillapítási küszöbe a [member primary_negative_limit_angle] felé."
+
+#. LookAtModifier3D.primary_negative_limit_angle
+#: doc/classes/LookAtModifier3D.xml
+msgid "The limit angle of negative side of the primary rotation when [member symmetry_limitation] is [code]false[/code], in radians."
+msgstr "Az elsődleges forgás negatív oldali határszöge radiánban, ha a [member symmetry_limitation] értéke [code]false[/code]."
+
+#. LookAtModifier3D.primary_positive_damp_threshold
+#: doc/classes/LookAtModifier3D.xml
+msgid "The threshold to start damping for [member primary_positive_limit_angle]."
+msgstr "Az elsődleges forgás csillapítási küszöbe a [member primary_positive_limit_angle] felé."
+
+#. LookAtModifier3D.primary_positive_limit_angle
+#: doc/classes/LookAtModifier3D.xml
+msgid "The limit angle of positive side of the primary rotation when [member symmetry_limitation] is [code]false[/code], in radians."
+msgstr "Az elsődleges forgás pozitív oldali határszöge radiánban, ha a [member symmetry_limitation] értéke [code]false[/code]."
+
+#. LookAtModifier3D.secondary_damp_threshold
+#: doc/classes/LookAtModifier3D.xml
+msgid "The threshold to start damping for [member secondary_limit_angle]."
+msgstr "A másodlagos forgás csillapítási küszöbe a [member secondary_limit_angle] felé."
+
+#. LookAtModifier3D.secondary_limit_angle
+#: doc/classes/LookAtModifier3D.xml
+msgid "The limit angle of the secondary rotation when [member symmetry_limitation] is [code]true[/code], in radians."
+msgstr "A másodlagos forgás határszöge radiánban, ha a [member symmetry_limitation] értéke [code]true[/code]."
+
+#. LookAtModifier3D.secondary_negative_damp_threshold
+#: doc/classes/LookAtModifier3D.xml
+msgid "The threshold to start damping for [member secondary_negative_limit_angle]."
+msgstr "A másodlagos forgás csillapítási küszöbe a [member secondary_negative_limit_angle] felé."
+
+#. LookAtModifier3D.secondary_negative_limit_angle
+#: doc/classes/LookAtModifier3D.xml
+msgid "The limit angle of negative side of the secondary rotation when [member symmetry_limitation] is [code]false[/code], in radians."
+msgstr "A másodlagos forgás negatív oldali határszöge radiánban, ha a [member symmetry_limitation] értéke [code]false[/code]."
+
+#. LookAtModifier3D.secondary_positive_damp_threshold
+#: doc/classes/LookAtModifier3D.xml
+msgid "The threshold to start damping for [member secondary_positive_limit_angle]."
+msgstr "A másodlagos forgás csillapítási küszöbe a [member secondary_positive_limit_angle] felé."
+
+#. LookAtModifier3D.secondary_positive_limit_angle
+#: doc/classes/LookAtModifier3D.xml
+msgid "The limit angle of positive side of the secondary rotation when [member symmetry_limitation] is [code]false[/code], in radians."
+msgstr "A másodlagos forgás pozitív oldali határszöge radiánban, ha a [member symmetry_limitation] értéke [code]false[/code]."
+
+#. LookAtModifier3D.symmetry_limitation
+#: doc/classes/LookAtModifier3D.xml
+msgid "If [code]true[/code], the limitations are spread from the bone symmetrically.\nIf [code]false[/code], the limitation can be specified separately for each side of the bone rest."
+msgstr "Ha az értéke [code]true[/code], a forgáshatárok szimmetrikusak a csont nyugalmi helyzetéhez képest.\nHa az értéke [code]false[/code], a nyugalmi helyzet két oldalán külön határok állíthatók be."
+
+#. LookAtModifier3D.target_node
+#: doc/classes/LookAtModifier3D.xml
+msgid "The [NodePath] to the node that is the target for the look at modification. This node is what the modification will rotate the bone to."
+msgstr "A célcsomópont [NodePath] útvonala. A módosító e csomópont felé fordítja a csontot."
+
+#. LookAtModifier3D.transition_type
+#: doc/classes/LookAtModifier3D.xml
+msgid "The transition type of the time-based interpolation. See also [enum Tween.TransitionType]."
+msgstr "Az időalapú interpoláció átmenettípusa. Lásd még: [enum Tween.TransitionType]."
+
+#. LookAtModifier3D.use_secondary_rotation
+#: doc/classes/LookAtModifier3D.xml
+msgid "If [code]true[/code], provides rotation by two axes."
+msgstr "Ha az értéke [code]true[/code], a csont két tengely körül foroghat."
+
+#. LookAtModifier3D.ORIGIN_FROM_SELF
+#: doc/classes/LookAtModifier3D.xml
+msgid "The bone rest position of the bone specified in [member bone] is used as origin."
+msgstr "Az origó a [member bone] által megadott csont nyugalmi helyzete."
+
+#. RetargetModifier3D.brief
+#: doc/classes/RetargetModifier3D.xml
+msgid "A modifier to transfer parent skeleton poses (or global poses) to child skeletons in model space with different rests."
+msgstr "A szülőcsontváz pózait vagy globális pózait modelltérben átviszi az eltérő nyugalmi pózú gyermekcsontvázakra."
+
+#. RetargetModifier3D.is_position_enabled
+#: doc/classes/RetargetModifier3D.xml
+msgid "Returns [code]true[/code] if [member enable] has [constant TRANSFORM_FLAG_POSITION]."
+msgstr "[code]true[/code] értéket ad vissza, ha a [member enable] tartalmazza a [constant TRANSFORM_FLAG_POSITION] jelzőt."
+
+#. RetargetModifier3D.is_rotation_enabled
+#: doc/classes/RetargetModifier3D.xml
+msgid "Returns [code]true[/code] if [member enable] has [constant TRANSFORM_FLAG_ROTATION]."
+msgstr "[code]true[/code] értéket ad vissza, ha a [member enable] tartalmazza a [constant TRANSFORM_FLAG_ROTATION] jelzőt."
+
+#. RetargetModifier3D.is_scale_enabled
+#: doc/classes/RetargetModifier3D.xml
+msgid "Returns [code]true[/code] if [member enable] has [constant TRANSFORM_FLAG_SCALE]."
+msgstr "[code]true[/code] értéket ad vissza, ha a [member enable] tartalmazza a [constant TRANSFORM_FLAG_SCALE] jelzőt."
+
+#. RetargetModifier3D.enable
+#: doc/classes/RetargetModifier3D.xml
+msgid "Flags to control the process of the transform elements individually when [member use_global_pose] is disabled."
+msgstr "A transzformáció összetevőinek feldolgozását külön vezérlő jelzők, ha a [member use_global_pose] ki van kapcsolva."
+
+#. RetargetModifier3D.profile
+#: doc/classes/RetargetModifier3D.xml
+msgid "[SkeletonProfile] for retargeting bones with names matching the bone list."
+msgstr "A csontlistával egyező nevű csontok animációátviteléhez használt [SkeletonProfile]."
+
+#. RetargetModifier3D.TRANSFORM_FLAG_POSITION
+#: doc/classes/RetargetModifier3D.xml
+msgid "If set, allows to retarget the position."
+msgstr "Aktív állapotban engedélyezi a helyzet átvitelét."
+
+#. RetargetModifier3D.TRANSFORM_FLAG_ROTATION
+#: doc/classes/RetargetModifier3D.xml
+msgid "If set, allows to retarget the rotation."
+msgstr "Aktív állapotban engedélyezi a forgatás átvitelét."
+
+#. RetargetModifier3D.TRANSFORM_FLAG_SCALE
+#: doc/classes/RetargetModifier3D.xml
+msgid "If set, allows to retarget the scale."
+msgstr "Aktív állapotban engedélyezi a méretezés átvitelét."
+
+#. RetargetModifier3D.TRANSFORM_FLAG_ALL
+#: doc/classes/RetargetModifier3D.xml
+msgid "If set, allows to retarget the position/rotation/scale."
+msgstr "Aktív állapotban engedélyezi a helyzet, a forgatás és a méretezés átvitelét."
+
+#. RootMotionView.brief
+#: doc/classes/RootMotionView.xml
+msgid "Editor-only helper for setting up root motion in [AnimationMixer]."
+msgstr "Csak a szerkesztőben használható segédeszköz az [AnimationMixer] gyökérmozgásának beállításához."
+
+#. RootMotionView.animation_path
+#: doc/classes/RootMotionView.xml
+msgid "Path to an [AnimationMixer] node to use as a basis for root motion."
+msgstr "A gyökérmozgás alapjaként használt [AnimationMixer] csomópont útvonala."
+
+#. RootMotionView.cell_size
+#: doc/classes/RootMotionView.xml
+msgid "The grid's cell size in 3D units."
+msgstr "A rácscella mérete a 3D tér egységeiben."
+
+#. RootMotionView.color
+#: doc/classes/RootMotionView.xml
+msgid "The grid's color."
+msgstr "A rács színe."
+
+#. RootMotionView.radius
+#: doc/classes/RootMotionView.xml
+msgid "The grid's radius in 3D units. The grid's opacity will fade gradually as the distance from the origin increases until this [member radius] is reached."
+msgstr "A rács sugara a 3D tér egységeiben. Az origótól távolodva a rács fokozatosan elhalványul a megadott [member radius] értékig."
+
+#. RootMotionView.zero_y
+#: doc/classes/RootMotionView.xml
+msgid "If [code]true[/code], the grid's points will all be on the same Y coordinate ([i]local[/i] Y = 0). If [code]false[/code], the points' original Y coordinate is preserved."
+msgstr "Ha az értéke [code]true[/code], a rács pontjai azonos Y koordinátán lesznek ([i]helyi[/i] Y = 0). Ha az értéke [code]false[/code], mindegyik pont megtartja az eredeti Y koordinátáját."
+
+#. Skeleton2D.brief
+#: doc/classes/Skeleton2D.xml
+msgid "The parent of a hierarchy of [Bone2D]s, used to create a 2D skeletal animation."
+msgstr "Egy [Bone2D] hierarchia szülője, amely 2D csontvázas animációhoz használható."
+
+#. Skeleton2D.get_bone_count
+#: doc/classes/Skeleton2D.xml
+msgid "Returns the number of [Bone2D] nodes in the node hierarchy parented by Skeleton2D."
+msgstr "Visszaadja a Skeleton2D alatti hierarchiában lévő [Bone2D] csomópontok számát."
+
+#. Skeleton2D.get_bone_local_pose_override
+#: doc/classes/Skeleton2D.xml
+msgid "Returns the local pose override transform for [param bone_idx]."
+msgstr "Visszaadja a [param bone_idx] indexű csont helyi pózát felülbíráló transzformációt."
+
+#. Skeleton2D.get_modification_stack
+#: doc/classes/Skeleton2D.xml
+msgid "Returns the [SkeletonModificationStack2D] attached to this skeleton, if one exists."
+msgstr "Visszaadja a csontvázhoz kapcsolt [SkeletonModificationStack2D] erőforrást, ha van ilyen."
+
+#. Skeleton2D.get_skeleton
+#: doc/classes/Skeleton2D.xml
+msgid "Returns the [RID] of a Skeleton2D instance."
+msgstr "Visszaadja a Skeleton2D példány [RID] azonosítóját."
+
+#. Skeleton2D.set_modification_stack
+#: doc/classes/Skeleton2D.xml
+msgid "Sets the [SkeletonModificationStack2D] attached to this skeleton."
+msgstr "Beállítja a csontvázhoz kapcsolt [SkeletonModificationStack2D] erőforrást."
