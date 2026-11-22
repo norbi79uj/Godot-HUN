@@ -49458,3 +49458,503 @@ msgstr "Elindítja a számítási műveletet a GPU-n. A munkacsoportok számát 
 #: doc/classes/RenderingDevice.xml
 msgid "Finishes a list of compute commands created with the [code]compute_*[/code] methods."
 msgstr "Lezárja a [code]compute_*[/code] metódusokkal összeállított számítási parancslistát."
+
+#. RenderingServer.camera_set_camera_attributes
+#: doc/classes/RenderingServer.xml
+msgid "Sets the camera_attributes created with [method camera_attributes_create] to the given camera."
+msgstr "A [method camera_attributes_create] metódussal létrehozott kamerajellemzőket a megadott kamerához rendeli."
+
+#. RenderingServer.camera_set_compositor
+#: doc/classes/RenderingServer.xml
+msgid "Sets the compositor used by this camera. Equivalent to [member Camera3D.compositor]."
+msgstr "Beállítja a kamera kompozitorát. A [member Camera3D.compositor] tulajdonságnak felel meg."
+
+#. RenderingServer.camera_set_cull_mask
+#: doc/classes/RenderingServer.xml
+msgid "Sets the cull mask associated with this camera. The cull mask describes which 3D layers are rendered by this camera. Equivalent to [member Camera3D.cull_mask]."
+msgstr "Beállítja a kamera láthatósági maszkját. Ez szabja meg, mely 3D-s rétegeket rajzolja ki a kamera. A [member Camera3D.cull_mask] tulajdonságnak felel meg."
+
+#. RenderingServer.camera_set_environment
+#: doc/classes/RenderingServer.xml
+msgid "Sets the environment used by this camera. Equivalent to [member Camera3D.environment]."
+msgstr "Beállítja a kamera környezetét. A [member Camera3D.environment] tulajdonságnak felel meg."
+
+#. RenderingServer.camera_set_frustum
+#: doc/classes/RenderingServer.xml
+msgid "Sets camera to use frustum projection. This mode allows adjusting the [param offset] argument to create \"tilted frustum\" effects."
+msgstr "Látógúla-vetítésre állítja a kamerát. Az [param offset] módosításával eltolt látógúla hozható létre."
+
+#. RenderingServer.camera_set_orthogonal
+#: doc/classes/RenderingServer.xml
+msgid "Sets camera to use orthogonal projection, also known as orthographic projection. Objects remain the same size on the screen no matter how far away they are."
+msgstr "Ortogonális, más néven ortografikus vetítésre állítja a kamerát. Az objektumok képernyőn látható mérete a távolságtól független."
+
+#. RenderingServer.camera_set_perspective
+#: doc/classes/RenderingServer.xml
+msgid "Sets camera to use perspective projection. Objects on the screen becomes smaller when they are far away."
+msgstr "Perspektivikus vetítésre állítja a kamerát. A távolabbi objektumok kisebbnek látszanak a képernyőn."
+
+#. RenderingServer.camera_set_transform
+#: doc/classes/RenderingServer.xml
+msgid "Sets [Transform3D] of camera."
+msgstr "Beállítja a kamera [Transform3D] transzformációját."
+
+#. RenderingServer.camera_set_use_vertical_aspect
+#: doc/classes/RenderingServer.xml
+msgid "If [code]true[/code], preserves the horizontal aspect ratio which is equivalent to [constant Camera3D.KEEP_WIDTH]. If [code]false[/code], preserves the vertical aspect ratio which is equivalent to [constant Camera3D.KEEP_HEIGHT]."
+msgstr "A [code]true[/code] érték a vízszintes képarányt tartja meg a [constant Camera3D.KEEP_WIDTH] beállításnak megfelelően. A [code]false[/code] érték a függőleges képarányt tartja meg a [constant Camera3D.KEEP_HEIGHT] beállításnak megfelelően."
+
+#. RenderingServer.canvas_item_set_copy_to_backbuffer
+#: doc/classes/RenderingServer.xml
+msgid "Sets the [CanvasItem] to copy a rect to the backbuffer."
+msgstr "Beállítja, hogy a [CanvasItem] egy téglalap alakú területet a háttérpufferbe másoljon."
+
+#. RenderingServer.canvas_item_set_default_texture_filter
+#: doc/classes/RenderingServer.xml
+msgid "Sets the default texture filter mode for the canvas item specified by the [param item] RID. Equivalent to [member CanvasItem.texture_filter]."
+msgstr "Beállítja a [param item] RID-del megadott vászonelem alapértelmezett textúraszűrési módját. A [member CanvasItem.texture_filter] tulajdonságnak felel meg."
+
+#. RenderingServer.canvas_item_set_default_texture_repeat
+#: doc/classes/RenderingServer.xml
+msgid "Sets the default texture repeat mode for the canvas item specified by the [param item] RID. Equivalent to [member CanvasItem.texture_repeat]."
+msgstr "Beállítja a [param item] RID-del megadott vászonelem alapértelmezett textúraismétlési módját. A [member CanvasItem.texture_repeat] tulajdonságnak felel meg."
+
+#. RenderingServer.canvas_item_set_distance_field_mode
+#: doc/classes/RenderingServer.xml
+msgid "If [param enabled] is [code]true[/code], enables multichannel signed distance field rendering mode for the canvas item specified by the [param item] RID. This is meant to be used for font rendering, or with specially generated images using [url=https://github.com/Chlumsky/msdfgen]msdfgen[/url]."
+msgstr "Ha az [param enabled] értéke [code]true[/code], bekapcsolja a többcsatornás előjeles távolságmező renderelését a [param item] RID-del megadott vászonelemnél. Betűkészletekhez vagy az [url=https://github.com/Chlumsky/msdfgen]msdfgen[/url] eszközzel előállított képekhez használható."
+
+#. RenderingServer.canvas_item_set_draw_behind_parent
+#: doc/classes/RenderingServer.xml
+msgid "If [param enabled] is [code]true[/code], draws the canvas item specified by the [param item] RID behind its parent. Equivalent to [member CanvasItem.show_behind_parent]."
+msgstr "Ha az [param enabled] értéke [code]true[/code], a [param item] RID-del megadott vászonelem a szülője mögé kerül. A [member CanvasItem.show_behind_parent] tulajdonságnak felel meg."
+
+#. RenderingServer.canvas_item_set_draw_index
+#: doc/classes/RenderingServer.xml
+msgid "Sets the index for the [CanvasItem]."
+msgstr "Beállítja a [CanvasItem] kirajzolási indexét."
+
+#. RenderingServer.canvas_item_set_instance_shader_parameter
+#: doc/classes/RenderingServer.xml
+msgid "Sets the per-instance shader uniform on the specified canvas item instance. Equivalent to [method CanvasItem.set_instance_shader_parameter]."
+msgstr "Beállítja a megadott vászonelem-példány egyedi shaderuniformját. A [method CanvasItem.set_instance_shader_parameter] metódusnak felel meg."
+
+#. RenderingServer.canvas_item_set_interpolated
+#: doc/classes/RenderingServer.xml
+msgid "If [param interpolated] is [code]true[/code], turns on physics interpolation for the canvas item."
+msgstr "Ha az [param interpolated] értéke [code]true[/code], bekapcsolja a fizikai interpolációt a vászonelemnél."
+
+#. RenderingServer.canvas_item_set_light_mask
+#: doc/classes/RenderingServer.xml
+msgid "Sets the light [param mask] for the canvas item specified by the [param item] RID. Equivalent to [member CanvasItem.light_mask]."
+msgstr "Beállítja a [param item] RID-del megadott vászonelem [param mask] fénymaszkját. A [member CanvasItem.light_mask] tulajdonságnak felel meg."
+
+#. RenderingServer.canvas_item_set_material
+#: doc/classes/RenderingServer.xml
+msgid "Sets a new [param material] to the canvas item specified by the [param item] RID. Equivalent to [member CanvasItem.material]."
+msgstr "A [param material] anyagot a [param item] RID-del megadott vászonelemhez rendeli. A [member CanvasItem.material] tulajdonságnak felel meg."
+
+#. RenderingServer.canvas_item_set_modulate
+#: doc/classes/RenderingServer.xml
+msgid "Multiplies the color of the canvas item specified by the [param item] RID, while affecting its children. See also [method canvas_item_set_self_modulate]. Equivalent to [member CanvasItem.modulate]."
+msgstr "Megszorozza a [param item] RID-del megadott vászonelem színét, és a színmódosítást a gyerekeire is alkalmazza. Lásd még a [method canvas_item_set_self_modulate] metódust. A [member CanvasItem.modulate] tulajdonságnak felel meg."
+
+#. RenderingServer.canvas_item_set_parent
+#: doc/classes/RenderingServer.xml
+msgid "Sets a parent [CanvasItem] to the [CanvasItem]. The item will inherit transform, modulation and visibility from its parent, like [CanvasItem] nodes in the scene tree."
+msgstr "Szülő [CanvasItem] elemet rendel a [CanvasItem] elemhez. A jelenetfa [CanvasItem] csomópontjaihoz hasonlóan az elem örökli szülője transzformációját, színmódosítását és láthatóságát."
+
+#. RenderingServer.canvas_item_set_self_modulate
+#: doc/classes/RenderingServer.xml
+msgid "Multiplies the color of the canvas item specified by the [param item] RID, without affecting its children. See also [method canvas_item_set_modulate]. Equivalent to [member CanvasItem.self_modulate]."
+msgstr "A [param item] RID-del megadott vászonelem saját színét szorozza meg. A gyerekeire ez a beállítás nem hat. Lásd még a [method canvas_item_set_modulate] metódust. A [member CanvasItem.self_modulate] tulajdonságnak felel meg."
+
+#. RenderingServer.canvas_item_set_sort_children_by_y
+#: doc/classes/RenderingServer.xml
+msgid "If [param enabled] is [code]true[/code], child nodes with the lowest Y position are drawn before those with a higher Y position. Y-sorting only affects children that inherit from the canvas item specified by the [param item] RID, not the canvas item itself. Equivalent to [member CanvasItem.y_sort_enabled]."
+msgstr "Ha az [param enabled] értéke [code]true[/code], a kisebb Y-koordinátájú gyerekcsomópontok a nagyobb Y-koordinátájúak előtt jelennek meg. A rendezés a [param item] RID-del megadott vászonelemtől öröklő gyerekeket érinti, magát a vászonelemet nem. A [member CanvasItem.y_sort_enabled] tulajdonságnak felel meg."
+
+#. RenderingServer.canvas_item_set_transform
+#: doc/classes/RenderingServer.xml
+msgid "Sets the [param transform] of the canvas item specified by the [param item] RID. This affects where and how the item will be drawn. Child canvas items' transforms are multiplied by their parent's transform. Equivalent to [member Node2D.transform]."
+msgstr "Beállítja a [param item] RID-del megadott vászonelem [param transform] transzformációját. Ettől függ, hol és hogyan jelenik meg az elem. A gyerekeinek transzformációját a szülő transzformációjával szorozza meg. A [member Node2D.transform] tulajdonságnak felel meg."
+
+#. RenderingServer.canvas_item_set_use_parent_material
+#: doc/classes/RenderingServer.xml
+msgid "Sets if the [CanvasItem] uses its parent's material."
+msgstr "Beállítja, hogy a [CanvasItem] a szülő anyagát használja-e."
+
+#. RenderingServer.canvas_item_set_visibility_layer
+#: doc/classes/RenderingServer.xml
+msgid "Sets the rendering visibility layer associated with this [CanvasItem]. Only [Viewport] nodes with a matching rendering mask will render this [CanvasItem]."
+msgstr "Beállítja a [CanvasItem] renderelési láthatósági rétegét. Csak az egyező renderelési maszkkal rendelkező [Viewport] csomópontok rajzolják ki ezt a [CanvasItem] elemet."
+
+#. RenderingServer.canvas_item_set_visible
+#: doc/classes/RenderingServer.xml
+msgid "Sets the visibility of the [CanvasItem]."
+msgstr "Beállítja a [CanvasItem] láthatóságát."
+
+#. RenderingServer.canvas_item_set_z_as_relative_to_parent
+#: doc/classes/RenderingServer.xml
+msgid "If this is enabled, the Z index of the parent will be added to the children's Z index."
+msgstr "Ha engedélyezve van, a szülő Z-indexe hozzáadódik a gyerekek Z-indexéhez."
+
+#. RenderingServer.canvas_item_set_z_index
+#: doc/classes/RenderingServer.xml
+msgid "Sets the [CanvasItem]'s Z index, i.e. its draw order (lower indexes are drawn first)."
+msgstr "Beállítja a [CanvasItem] Z-indexét, vagyis a kirajzolási sorrendjét. A kisebb indexű elemek kerülnek sorra először."
+
+#. RenderingServer.environment_set_adjustment
+#: doc/classes/RenderingServer.xml
+msgid "Sets the values to be used with the \"adjustments\" post-process effect. See [Environment] for more details."
+msgstr "Beállítja a képbeállítások utófeldolgozási effektjének értékeit. A részletekért lásd az [Environment] osztályt."
+
+#. RenderingServer.environment_set_ambient_light
+#: doc/classes/RenderingServer.xml
+msgid "Sets the values to be used for ambient light rendering. See [Environment] for more details."
+msgstr "Beállítja a környezeti fény rendereléséhez használt értékeket. A részletekért lásd az [Environment] osztályt."
+
+#. RenderingServer.environment_set_background
+#: doc/classes/RenderingServer.xml
+msgid "Sets the environment's background mode. Equivalent to [member Environment.background_mode]."
+msgstr "Beállítja a környezet hátterének módját. A [member Environment.background_mode] tulajdonságnak felel meg."
+
+#. RenderingServer.environment_set_bg_color
+#: doc/classes/RenderingServer.xml
+msgid "Color displayed for clear areas of the scene. Only effective if using the [constant ENV_BG_COLOR] background mode."
+msgstr "A jelenet üres területein megjelenő szín. Csak az [constant ENV_BG_COLOR] háttérmódban érvényes."
+
+#. RenderingServer.environment_set_bg_energy
+#: doc/classes/RenderingServer.xml
+msgid "Sets the intensity of the background color."
+msgstr "Beállítja a háttérszín intenzitását."
+
+#. RenderingServer.environment_set_canvas_max_layer
+#: doc/classes/RenderingServer.xml
+msgid "Sets the maximum layer to use if using Canvas background mode."
+msgstr "Vászon háttérmódban beállítja a használható legfelső vászonréteget."
+
+#. RenderingServer.environment_set_fog
+#: doc/classes/RenderingServer.xml
+msgid "Configures fog for the specified environment RID. See [code]fog_*[/code] properties in [Environment] for more information."
+msgstr "Beállítja a ködöt a megadott környezet-RID-hez. Részletekért lásd az [Environment] osztály [code]fog_*[/code] tulajdonságait."
+
+#. RenderingServer.environment_set_fog_depth
+#: doc/classes/RenderingServer.xml
+msgid "Configures fog depth for the specified environment RID. Only has an effect when the fog mode of the environment is [constant ENV_FOG_MODE_DEPTH]. See [code]fog_depth_*[/code] properties in [Environment] for more information."
+msgstr "Beállítja a távolságalapú köd értékeit a megadott környezet-RID-hez. Csak az [constant ENV_FOG_MODE_DEPTH] ködmódban hatásos. Részletekért lásd az [Environment] osztály [code]fog_depth_*[/code] tulajdonságait."
+
+#. RenderingServer.environment_set_glow
+#: doc/classes/RenderingServer.xml
+msgid "Configures glow for the specified environment RID. See [code]glow_*[/code] properties in [Environment] for more information."
+msgstr "Beállítja a ragyogáseffektet a megadott környezet-RID-hez. Részletekért lásd az [Environment] osztály [code]glow_*[/code] tulajdonságait."
+
+#. RenderingServer.environment_set_sdfgi
+#: doc/classes/RenderingServer.xml
+msgid "Configures signed distance field global illumination for the specified environment RID. See [code]sdfgi_*[/code] properties in [Environment] for more information."
+msgstr "Beállítja az előjeles távolságmezőn alapuló globális megvilágítást a megadott környezet-RID-hez. Részletekért lásd az [Environment] osztály [code]sdfgi_*[/code] tulajdonságait."
+
+#. RenderingServer.environment_set_sdfgi_frames_to_converge
+#: doc/classes/RenderingServer.xml
+msgid "Sets the number of frames to use for converging signed distance field global illumination. Equivalent to [member ProjectSettings.rendering/global_illumination/sdfgi/frames_to_converge]."
+msgstr "Megadja, hány képkocka alatt közelítsen végleges értékéhez az előjeles távolságmezőn alapuló globális megvilágítás. A [member ProjectSettings.rendering/global_illumination/sdfgi/frames_to_converge] beállításnak felel meg."
+
+#. RenderingServer.environment_set_sdfgi_frames_to_update_light
+#: doc/classes/RenderingServer.xml
+msgid "Sets the update speed for dynamic lights' indirect lighting when computing signed distance field global illumination. Equivalent to [member ProjectSettings.rendering/global_illumination/sdfgi/frames_to_update_lights]."
+msgstr "Beállítja, milyen gyorsan frissüljön a mozgó vagy változó fényforrások közvetett megvilágítása az előjeles távolságmezőn alapuló globális megvilágítás számításakor. A [member ProjectSettings.rendering/global_illumination/sdfgi/frames_to_update_lights] beállításnak felel meg."
+
+#. RenderingServer.environment_set_sdfgi_ray_count
+#: doc/classes/RenderingServer.xml
+msgid "Sets the number of rays to throw per frame when computing signed distance field global illumination. Equivalent to [member ProjectSettings.rendering/global_illumination/sdfgi/probe_ray_count]."
+msgstr "Beállítja, hány sugarat kövessen képkockánként az előjeles távolságmezőn alapuló globális megvilágítás. A [member ProjectSettings.rendering/global_illumination/sdfgi/probe_ray_count] beállításnak felel meg."
+
+#. RenderingServer.environment_set_sky
+#: doc/classes/RenderingServer.xml
+msgid "Sets the [Sky] to be used as the environment's background when using [i]BGMode[/i] sky. Equivalent to [member Environment.sky]."
+msgstr "Beállítja a környezet háttereként megjelenő [Sky] erőforrást, ha a [i]BGMode[/i] értéke az égbolt. A [member Environment.sky] tulajdonságnak felel meg."
+
+#. RenderingServer.environment_set_sky_custom_fov
+#: doc/classes/RenderingServer.xml
+msgid "Sets a custom field of view for the background [Sky]. Equivalent to [member Environment.sky_custom_fov]."
+msgstr "Egyéni látómezőt állít be a háttér [Sky] erőforrásához. A [member Environment.sky_custom_fov] tulajdonságnak felel meg."
+
+#. RenderingServer.environment_set_sky_orientation
+#: doc/classes/RenderingServer.xml
+msgid "Sets the rotation of the background [Sky] expressed as a [Basis]. Equivalent to [member Environment.sky_rotation], where the rotation vector is used to construct the [Basis]."
+msgstr "[Basis] értékként adja meg a háttér [Sky] erőforrásának elforgatását. A [member Environment.sky_rotation] tulajdonságnak felel meg, amelynek forgatásvektorából előáll a [Basis]."
+
+#. RenderingServer.environment_set_ssao
+#: doc/classes/RenderingServer.xml
+msgid "Sets the variables to be used with the screen-space ambient occlusion (SSAO) post-process effect. See [Environment] for more details."
+msgstr "Beállítja a képernyőtérbeli környezeti takarás (SSAO) utófeldolgozási effektjének értékeit. A részletekért lásd az [Environment] osztályt."
+
+#. RenderingServer.environment_set_tonemap
+#: doc/classes/RenderingServer.xml
+msgid "Sets the variables to be used with the \"tonemap\" post-process effect. See [Environment] for more details."
+msgstr "Beállítja a tónusleképezés utófeldolgozási effektjének értékeit. A részletekért lásd az [Environment] osztályt."
+
+#. RenderingServer.environment_set_volumetric_fog
+#: doc/classes/RenderingServer.xml
+msgid "Sets the variables to be used with the volumetric fog post-process effect. See [Environment] for more details."
+msgstr "Beállítja a térfogati köd utófeldolgozási effektjének értékeit. A részletekért lásd az [Environment] osztályt."
+
+#. RenderingServer.environment_set_volumetric_fog_filter_active
+#: doc/classes/RenderingServer.xml
+msgid "Enables filtering of the volumetric fog scattering buffer. This results in much smoother volumes with very few under-sampling artifacts."
+msgstr "Bekapcsolja a térfogati köd szórási pufferének szűrését. A térfogatok így sokkal simábbak lesznek, és kevesebb elégtelen mintavételből eredő képhiba látszik."
+
+#. RenderingServer.environment_set_volumetric_fog_volume_size
+#: doc/classes/RenderingServer.xml
+msgid "Sets the resolution of the volumetric fog's froxel buffer. [param size] is modified by the screen's aspect ratio and then used to set the width and height of the buffer. While [param depth] is directly used to set the depth of the buffer."
+msgstr "Beállítja a térfogati köd froxelpufferének felbontását. A puffer szélességét és magasságát a képernyő képarányával módosított [param size] adja meg. A [param depth] közvetlenül a puffer mélységét határozza meg."
+
+#. RenderingServer.material_get_param
+#: doc/classes/RenderingServer.xml
+msgid "Returns the value of a certain material's parameter."
+msgstr "A megadott anyag egyik paraméterének értékét adja vissza."
+
+#. RenderingServer.material_set_next_pass
+#: doc/classes/RenderingServer.xml
+msgid "Sets an object's next material."
+msgstr "Beállítja az objektum következő renderelési menetében használt anyagot."
+
+#. RenderingServer.material_set_param
+#: doc/classes/RenderingServer.xml
+msgid "Sets a material's parameter."
+msgstr "Beállítja egy anyag paraméterének értékét."
+
+#. RenderingServer.material_set_render_priority
+#: doc/classes/RenderingServer.xml
+msgid "Sets a material's render priority."
+msgstr "Beállítja az anyag renderelési prioritását."
+
+#. RenderingServer.material_set_shader
+#: doc/classes/RenderingServer.xml
+msgid "Sets a shader material's shader."
+msgstr "Beállítja a shaderanyag shaderét."
+
+#. RenderingServer.mesh_clear
+#: doc/classes/RenderingServer.xml
+msgid "Removes all surfaces from a mesh."
+msgstr "Eltávolítja a háló összes felületét."
+
+#. RenderingServer.mesh_get_blend_shape_count
+#: doc/classes/RenderingServer.xml
+msgid "Returns a mesh's blend shape count."
+msgstr "A háló alakváltozatainak számát adja vissza."
+
+#. RenderingServer.mesh_get_blend_shape_mode
+#: doc/classes/RenderingServer.xml
+msgid "Returns a mesh's blend shape mode."
+msgstr "A háló alakváltozatainak keverési módját adja vissza."
+
+#. RenderingServer.mesh_get_custom_aabb
+#: doc/classes/RenderingServer.xml
+msgid "Returns a mesh's custom aabb."
+msgstr "A háló egyéni, tengelyekhez igazított befoglaló dobozát adja vissza."
+
+#. RenderingServer.mesh_get_surface
+#: doc/classes/RenderingServer.xml
+msgid "Returns a mesh's surface as a dictionary following the same structure as described in [method mesh_add_surface]."
+msgstr "A háló felületét szótárként adja vissza. A szótár szerkezetét a [method mesh_add_surface] metódus leírása ismerteti."
+
+#. RenderingServer.mesh_get_surface_count
+#: doc/classes/RenderingServer.xml
+msgid "Returns a mesh's number of surfaces."
+msgstr "A háló felületeinek számát adja vissza."
+
+#. RenderingServer.mesh_set_blend_shape_mode
+#: doc/classes/RenderingServer.xml
+msgid "Sets a mesh's blend shape mode."
+msgstr "Beállítja a háló alakváltozatainak keverési módját."
+
+#. RenderingServer.mesh_set_custom_aabb
+#: doc/classes/RenderingServer.xml
+msgid "Sets a mesh's custom aabb."
+msgstr "Beállítja a háló egyéni, tengelyekhez igazított befoglaló dobozát."
+
+#. RenderingServer.mesh_surface_get_arrays
+#: doc/classes/RenderingServer.xml
+msgid "Returns a mesh's surface's buffer arrays."
+msgstr "A háló felületéhez tartozó puffertömböket adja vissza."
+
+#. RenderingServer.mesh_surface_get_blend_shape_arrays
+#: doc/classes/RenderingServer.xml
+msgid "Returns a mesh's surface's arrays for blend shapes."
+msgstr "A háló felületének alakváltozataihoz tartozó tömböket adja vissza."
+
+#. RenderingServer.mesh_surface_get_format_attribute_stride
+#: doc/classes/RenderingServer.xml
+msgid "Returns the stride of the attribute buffer for a mesh with given [param format]."
+msgstr "A megadott [param format] formátumú háló attribútumpufferében az egymást követő elemek kezdete közötti bájttávolságot adja vissza."
+
+#. RenderingServer.mesh_surface_get_format_index_stride
+#: doc/classes/RenderingServer.xml
+msgid "Returns the stride of the index buffer for a mesh with the given [param format]."
+msgstr "A megadott [param format] formátumú háló indexpufferében az egymást követő elemek kezdete közötti bájttávolságot adja vissza."
+
+#. RenderingServer.mesh_surface_get_format_normal_tangent_stride
+#: doc/classes/RenderingServer.xml
+msgid "Returns the stride of the combined normals and tangents for a mesh with given [param format]. Note importantly that, while normals and tangents are in the vertex buffer with vertices, they are only interleaved with each other and so have a different stride than vertex positions."
+msgstr "A megadott [param format] formátumú háló egymásba fűzött normál- és érintővektorainak bájtlépését adja vissza. A normál- és érintővektorok a pozíciókkal közös csúcspufferben vannak, de csak egymással vannak összefűzve, ezért más a bájtlépésük, mint a pozícióké."
+
+#. RenderingServer.mesh_surface_get_format_offset
+#: doc/classes/RenderingServer.xml
+msgid "Returns the offset of a given attribute by [param array_index] in the start of its respective buffer."
+msgstr "A [param array_index] által kijelölt attribútum eltolását adja vissza a hozzá tartozó puffer kezdetéhez képest."
+
+#. RenderingServer.mesh_surface_get_format_skin_stride
+#: doc/classes/RenderingServer.xml
+msgid "Returns the stride of the skin buffer for a mesh with given [param format]."
+msgstr "A megadott [param format] formátumú háló egymást követő csúcspozícióinak bájttávolságát adja vissza. A pozíciók egymás után helyezkednek el a csúcspufferben, a normál- és érintővektoroktól elkülönítve."
+
+#. RenderingServer.mesh_surface_get_material
+#: doc/classes/RenderingServer.xml
+msgid "Returns a mesh's surface's material."
+msgstr "A háló felületéhez rendelt anyagot adja vissza."
+
+#. RenderingServer.mesh_surface_set_material
+#: doc/classes/RenderingServer.xml
+msgid "Sets a mesh's surface's material."
+msgstr "Beállítja a háló felületéhez rendelt anyagot."
+
+#. RenderingServer.mesh_surface_update_index_region
+#: doc/classes/RenderingServer.xml
+msgid "Updates the index buffer of the mesh surface with the given [param data]. The expected data are 16 or 32-bit unsigned integers, which can be determined with [method mesh_surface_get_format_index_stride]."
+msgstr "A [param data] értékével frissíti a háló felületének indexpufferét. Az adatoknak 16 vagy 32 bites előjel nélküli egész értékekből kell állniuk. A szükséges méret a [method mesh_surface_get_format_index_stride] metódussal kérdezhető le."
+
+#. RenderingServer.viewport_set_active
+#: doc/classes/RenderingServer.xml
+msgid "If [code]true[/code], sets the viewport active, else sets it inactive."
+msgstr "Ha az értéke [code]true[/code], aktiválja a nézetablakot. Egyébként inaktiválja."
+
+#. RenderingServer.viewport_set_canvas_cull_mask
+#: doc/classes/RenderingServer.xml
+msgid "Sets the rendering mask associated with this [Viewport]. Only [CanvasItem] nodes with a matching rendering visibility layer will be rendered by this [Viewport]."
+msgstr "Beállítja a [Viewport] renderelési maszkját. A [Viewport] csak azokat a [CanvasItem] csomópontokat rajzolja ki, amelyek renderelési láthatósági rétege szerepel a maszkban."
+
+#. RenderingServer.viewport_set_canvas_transform
+#: doc/classes/RenderingServer.xml
+msgid "Sets the transformation of a viewport's canvas."
+msgstr "Beállítja a nézetablak vásznának transzformációját."
+
+#. RenderingServer.viewport_set_clear_mode
+#: doc/classes/RenderingServer.xml
+msgid "Sets the clear mode of a viewport."
+msgstr "Beállítja a nézetablak törlési módját."
+
+#. RenderingServer.viewport_set_debug_draw
+#: doc/classes/RenderingServer.xml
+msgid "Sets the debug draw mode of a viewport."
+msgstr "Beállítja a nézetablak hibakeresési rajzolási módját."
+
+#. RenderingServer.viewport_set_default_canvas_item_texture_filter
+#: doc/classes/RenderingServer.xml
+msgid "Sets the default texture filtering mode for the specified [param viewport] RID."
+msgstr "Beállítja a [param viewport] RID-del megadott nézetablak vászonelemeinek alapértelmezett textúraszűrését."
+
+#. RenderingServer.viewport_set_default_canvas_item_texture_repeat
+#: doc/classes/RenderingServer.xml
+msgid "Sets the default texture repeat mode for the specified [param viewport] RID."
+msgstr "Beállítja a [param viewport] RID-del megadott nézetablak vászonelemeinek alapértelmezett textúraismétlését."
+
+#. RenderingServer.viewport_set_disable_2d
+#: doc/classes/RenderingServer.xml
+msgid "If [code]true[/code], the viewport's canvas (i.e. 2D and GUI elements) is not rendered."
+msgstr "Ha az értéke [code]true[/code], a nézetablak vászna, vagyis a 2D-s és felületi elemek nem jelennek meg."
+
+#. RenderingServer.viewport_set_disable_3d
+#: doc/classes/RenderingServer.xml
+msgid "If [code]true[/code], the viewport's 3D elements are not rendered."
+msgstr "Ha az értéke [code]true[/code], a nézetablak 3D-s elemei nem jelennek meg."
+
+#. RenderingServer.viewport_set_global_canvas_transform
+#: doc/classes/RenderingServer.xml
+msgid "Sets the viewport's global transformation matrix."
+msgstr "Beállítja a nézetablak globális transzformációs mátrixát."
+
+#. RenderingServer.viewport_set_measure_render_time
+#: doc/classes/RenderingServer.xml
+msgid "Sets the measurement for the given [param viewport] RID (obtained using [method Viewport.get_viewport_rid]). Once enabled, [method viewport_get_measured_render_time_cpu] and [method viewport_get_measured_render_time_gpu] will return values greater than [code]0.0[/code] when queried with the given [param viewport]."
+msgstr "Beállítja a renderelési idő mérését a [param viewport] RID-del megadott nézetablakhoz. Az azonosító a [method Viewport.get_viewport_rid] metódussal kérhető le. A mérés bekapcsolása után a [method viewport_get_measured_render_time_cpu] és a [method viewport_get_measured_render_time_gpu] a megadott [param viewport] értékhez [code]0.0[/code]-nál nagyobb eredményt ad."
+
+#. RenderingServer.viewport_set_msaa_2d
+#: doc/classes/RenderingServer.xml
+msgid "Sets the multisample antialiasing mode for 2D/Canvas on the specified [param viewport] RID. Equivalent to [member ProjectSettings.rendering/anti_aliasing/quality/msaa_2d] or [member Viewport.msaa_2d]."
+msgstr "Beállítja a [param viewport] RID-del megadott nézetablak 2D-s vásznának többmintavételes élsimítását. A [member ProjectSettings.rendering/anti_aliasing/quality/msaa_2d] beállításnak vagy a [member Viewport.msaa_2d] tulajdonságnak felel meg."
+
+#. RenderingServer.viewport_set_msaa_3d
+#: doc/classes/RenderingServer.xml
+msgid "Sets the multisample antialiasing mode for 3D on the specified [param viewport] RID. Equivalent to [member ProjectSettings.rendering/anti_aliasing/quality/msaa_3d] or [member Viewport.msaa_3d]."
+msgstr "Beállítja a [param viewport] RID-del megadott nézetablak 3D-s többmintavételes élsimítását. A [member ProjectSettings.rendering/anti_aliasing/quality/msaa_3d] beállításnak vagy a [member Viewport.msaa_3d] tulajdonságnak felel meg."
+
+#. RenderingServer.viewport_set_occlusion_culling_build_quality
+#: doc/classes/RenderingServer.xml
+msgid "Sets the [member ProjectSettings.rendering/occlusion_culling/bvh_build_quality] to use for occlusion culling. This parameter is global and cannot be set on a per-viewport basis."
+msgstr "Beállítja a takarásalapú kiszűréshez használt [member ProjectSettings.rendering/occlusion_culling/bvh_build_quality] értéket. Globális beállítás, ezért nézetablakonként nem állítható."
+
+#. RenderingServer.viewport_set_occlusion_rays_per_thread
+#: doc/classes/RenderingServer.xml
+msgid "Sets the [member ProjectSettings.rendering/occlusion_culling/occlusion_rays_per_thread] to use for occlusion culling. This parameter is global and cannot be set on a per-viewport basis."
+msgstr "Beállítja a takarásalapú kiszűréshez használt [member ProjectSettings.rendering/occlusion_culling/occlusion_rays_per_thread] értéket. Globális beállítás, ezért nézetablakonként nem állítható."
+
+#. RenderingServer.viewport_set_parent_viewport
+#: doc/classes/RenderingServer.xml
+msgid "Sets the viewport's parent to the viewport specified by the [param parent_viewport] RID."
+msgstr "A [param parent_viewport] RID-del megadott nézetablakot állítja be szülőként."
+
+#. RenderingServer.viewport_set_positional_shadow_atlas_quadrant_subdivision
+#: doc/classes/RenderingServer.xml
+msgid "Sets the number of subdivisions to use in the specified shadow atlas [param quadrant] for omni and spot shadows. See also [method Viewport.set_positional_shadow_atlas_quadrant_subdiv]."
+msgstr "Megadja, hány részre oszoljon a pont- és spotfényárnyékok atlaszának megadott [param quadrant] negyede. Lásd még a [method Viewport.set_positional_shadow_atlas_quadrant_subdiv] metódust."
+
+#. RenderingServer.viewport_set_scenario
+#: doc/classes/RenderingServer.xml
+msgid "Sets a viewport's scenario. The scenario contains information about environment information, reflection atlas, etc."
+msgstr "Beállítja a nézetablak renderelési színterét. A színtér tartalmazza például a környezet és a tükröződési atlasz adatait."
+
+#. RenderingServer.viewport_set_screen_space_aa
+#: doc/classes/RenderingServer.xml
+msgid "Sets the viewport's screen-space antialiasing mode. Equivalent to [member ProjectSettings.rendering/anti_aliasing/quality/screen_space_aa] or [member Viewport.screen_space_aa]."
+msgstr "Beállítja a nézetablak képernyőtérbeli élsimítási módját. A [member ProjectSettings.rendering/anti_aliasing/quality/screen_space_aa] beállításnak vagy a [member Viewport.screen_space_aa] tulajdonságnak felel meg."
+
+#. RenderingServer.viewport_set_sdf_oversize_and_scale
+#: doc/classes/RenderingServer.xml
+msgid "Sets the viewport's 2D signed distance field [member ProjectSettings.rendering/2d/sdf/oversize] and [member ProjectSettings.rendering/2d/sdf/scale]. This is used when sampling the signed distance field in [CanvasItem] shaders as well as [GPUParticles2D] collision. This is [i]not[/i] used by SDFGI in 3D rendering."
+msgstr "Beállítja a nézetablak 2D-s előjeles távolságmezőjének túlnyúlását ([member ProjectSettings.rendering/2d/sdf/oversize]) és méretarányát ([member ProjectSettings.rendering/2d/sdf/scale]). Ez a [CanvasItem] shaderek távolságmező-mintavételére és a [GPUParticles2D] ütközéseire is hat. A 3D-s renderelés SDFGI rendszere ezt [i]nem[/i] használja."
+
+#. RenderingServer.viewport_set_size
+#: doc/classes/RenderingServer.xml
+msgid "Sets the viewport's [param width] and [param height] in pixels. Optionally the [param view_count] can be set to increase the number of view layers for stereo rendering."
+msgstr "Beállítja a nézetablak [param width] szélességét és [param height] magasságát képpontban. A [param view_count] megadásával több nézetréteg használható a sztereó rendereléshez."
+
+#. RenderingServer.viewport_set_snap_2d_transforms_to_pixel
+#: doc/classes/RenderingServer.xml
+msgid "If [code]true[/code], canvas item transforms (i.e. origin position) are snapped to the nearest pixel when rendering. This can lead to a crisper appearance at the cost of less smooth movement, especially when [Camera2D] smoothing is enabled. Equivalent to [member ProjectSettings.rendering/2d/snap/snap_2d_transforms_to_pixel]."
+msgstr "Ha az értéke [code]true[/code], rendereléskor a vászonelemek transzformációjának origója a legközelebbi képponthoz igazodik. A kép élesebb lehet, de a mozgás darabosabbnak tűnhet, különösen a [Camera2D] simításával együtt. A [member ProjectSettings.rendering/2d/snap/snap_2d_transforms_to_pixel] beállításnak felel meg."
+
+#. RenderingServer.viewport_set_snap_2d_vertices_to_pixel
+#: doc/classes/RenderingServer.xml
+msgid "If [code]true[/code], canvas item vertices (i.e. polygon points) are snapped to the nearest pixel when rendering. This can lead to a crisper appearance at the cost of less smooth movement, especially when [Camera2D] smoothing is enabled. Equivalent to [member ProjectSettings.rendering/2d/snap/snap_2d_vertices_to_pixel]."
+msgstr "Ha az értéke [code]true[/code], rendereléskor a vászonelemek sokszögcsúcsai a legközelebbi képponthoz igazodnak. A kép élesebb lehet, de a mozgás darabosabbnak tűnhet, különösen a [Camera2D] simításával együtt. A [member ProjectSettings.rendering/2d/snap/snap_2d_vertices_to_pixel] beállításnak felel meg."
+
+#. RenderingServer.viewport_set_transparent_background
+#: doc/classes/RenderingServer.xml
+msgid "If [code]true[/code], the viewport renders its background as transparent."
+msgstr "Ha az értéke [code]true[/code], a nézetablak háttere átlátszóként jelenik meg a renderelésben."
+
+#. RenderingServer.viewport_set_update_mode
+#: doc/classes/RenderingServer.xml
+msgid "Sets when the viewport should be updated."
+msgstr "Beállítja, mikor frissüljön a nézetablak."
+
+#. RenderingServer.viewport_set_use_debanding
+#: doc/classes/RenderingServer.xml
+msgid "Equivalent to [member Viewport.use_debanding]. See also [member ProjectSettings.rendering/anti_aliasing/quality/use_debanding]."
+msgstr "A [member Viewport.use_debanding] tulajdonságnak felel meg. Lásd még a [member ProjectSettings.rendering/anti_aliasing/quality/use_debanding] beállítást."
+
+#. RenderingServer.viewport_set_use_taa
+#: doc/classes/RenderingServer.xml
+msgid "If [code]true[/code], use temporal antialiasing. Equivalent to [member ProjectSettings.rendering/anti_aliasing/quality/use_taa] or [member Viewport.use_taa]."
+msgstr "Ha az értéke [code]true[/code], temporális élsimítást használ. A [member ProjectSettings.rendering/anti_aliasing/quality/use_taa] beállításnak vagy a [member Viewport.use_taa] tulajdonságnak felel meg."
