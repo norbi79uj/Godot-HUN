@@ -44869,3 +44869,2018 @@ msgstr "A futtatáskori csoportazonosító beállítására szolgáló bit (setg
 #: doc/classes/FileAccess.xml
 msgid "Restricted deletion (sticky) bit."
 msgstr "A törlés korlátozására szolgáló bit (sticky bit)."
+
+#. VisualShader.brief
+#: modules/visual_shader/doc_classes/VisualShader.xml
+msgid "A custom shader program with a visual editor."
+msgstr "Egyéni shaderprogram vizuális szerkesztővel."
+
+#. VisualShader.description
+#: modules/visual_shader/doc_classes/VisualShader.xml
+msgid "This class provides a graph-like visual editor for creating a [Shader]. Although [VisualShader]s do not require coding, they share the same logic with script shaders. They use [VisualShaderNode]s that can be connected to each other to control the flow of the shader. The visual shader graph is converted to a script shader behind the scenes."
+msgstr "Az osztály gráfalapú vizuális szerkesztőt biztosít [Shader] létrehozásához. A [VisualShader] használatához nem kell kódot írni, de ugyanazt a logikát használja, mint a kódban írt shader. Az egymáshoz kapcsolható [VisualShaderNode] csomópontok határozzák meg, hogyan haladnak át az adatok a shaderen. A motor a háttérben shaderkóddá alakítja a vizuális gráfot."
+
+#. VisualShader.add_node
+#: modules/visual_shader/doc_classes/VisualShader.xml
+msgid "Adds the specified [param node] to the shader."
+msgstr "Hozzáadja a megadott [param node] csomópontot a shaderhez."
+
+#. VisualShader.attach_node_to_frame
+#: modules/visual_shader/doc_classes/VisualShader.xml
+msgid "Attaches the given node to the given frame."
+msgstr "A megadott kerethez csatolja a csomópontot."
+
+#. VisualShader.can_connect_nodes
+#: modules/visual_shader/doc_classes/VisualShader.xml
+msgid "Returns [code]true[/code] if the specified nodes and ports can be connected together."
+msgstr "[code]true[/code] értéket ad vissza, ha a megadott csomópontok portjai összekapcsolhatók."
+
+#. VisualShader.connect_nodes
+#. VisualShader.disconnect_nodes
+#: modules/visual_shader/doc_classes/VisualShader.xml
+msgid "Connects the specified nodes and ports."
+msgstr "Összekapcsolja a megadott csomópontok portjait."
+
+#. VisualShader.connect_nodes_forced
+#: modules/visual_shader/doc_classes/VisualShader.xml
+msgid "Connects the specified nodes and ports, even if they can't be connected. Such connection is invalid and will not function properly."
+msgstr "Akkor is összekapcsolja a megadott csomópontok portjait, ha azok nem kapcsolhatók össze. Az így kényszerített, érvénytelen kapcsolat nem működik megfelelően."
+
+#. VisualShader.detach_node_from_frame
+#: modules/visual_shader/doc_classes/VisualShader.xml
+msgid "Detaches the given node from the frame it is attached to."
+msgstr "Leválasztja a csomópontot arról a keretről, amelyhez hozzá van csatolva."
+
+#. VisualShader.get_node
+#: modules/visual_shader/doc_classes/VisualShader.xml
+msgid "Returns the shader node instance with specified [param type] and [param id]."
+msgstr "Visszaadja a megadott [param type] típusú és [param id] azonosítójú shadercsomópont példányát."
+
+#. VisualShader.get_node_list
+#: modules/visual_shader/doc_classes/VisualShader.xml
+msgid "Returns the list of all nodes in the shader with the specified type."
+msgstr "Felsorolja a shader összes megadott típusú csomópontját."
+
+#. VisualShader.get_node_position
+#: modules/visual_shader/doc_classes/VisualShader.xml
+msgid "Returns the position of the specified node within the shader graph."
+msgstr "Visszaadja a megadott csomópont helyét a shadergráfban."
+
+#. VisualShader.get_valid_node_id
+#: modules/visual_shader/doc_classes/VisualShader.xml
+msgid "Returns next valid node ID that can be added to the shader graph."
+msgstr "Visszaadja a következő érvényes csomópont-azonosítót, amellyel új csomópont adható a shadergráfhoz."
+
+#. VisualShader.has_varying
+#: modules/visual_shader/doc_classes/VisualShader.xml
+msgid "Returns [code]true[/code] if the shader has a varying with the given [param name]."
+msgstr "[code]true[/code] értéket ad vissza, ha a shaderben létezik a megadott [param name] nevű átadott változó."
+
+#. VisualShader.is_node_connection
+#: modules/visual_shader/doc_classes/VisualShader.xml
+msgid "Returns [code]true[/code] if the specified node and port connection exist."
+msgstr "[code]true[/code] értéket ad vissza, ha a megadott csomópontok portjai között létezik a kapcsolat."
+
+#. VisualShader.remove_node
+#: modules/visual_shader/doc_classes/VisualShader.xml
+msgid "Removes the specified node from the shader."
+msgstr "Eltávolítja a megadott csomópontot a shaderből."
+
+#. VisualShader.replace_node
+#: modules/visual_shader/doc_classes/VisualShader.xml
+msgid "Replaces the specified node with a node of new class type."
+msgstr "A megadott csomópontot egy másik osztályba tartozó csomópontra cseréli."
+
+#. VisualShader.set_mode
+#: modules/visual_shader/doc_classes/VisualShader.xml
+msgid "Sets the mode of this shader."
+msgstr "Beállítja a shader módját."
+
+#. VisualShader.set_node_position
+#: modules/visual_shader/doc_classes/VisualShader.xml
+msgid "Sets the position of the specified node."
+msgstr "Beállítja a megadott csomópont helyét."
+
+#. VisualShader.TYPE_VERTEX
+#: modules/visual_shader/doc_classes/VisualShader.xml
+msgid "A vertex shader, operating on vertices."
+msgstr "Csúcspontokon futó vertexshader."
+
+#. VisualShader.TYPE_FRAGMENT
+#: modules/visual_shader/doc_classes/VisualShader.xml
+msgid "A fragment shader, operating on fragments (pixels)."
+msgstr "A fragmenseken (képpontokon) futó fragmentshader."
+
+#. VisualShader.TYPE_LIGHT
+#: modules/visual_shader/doc_classes/VisualShader.xml
+msgid "A shader for light calculations."
+msgstr "A megvilágítás kiszámítására szolgáló shader."
+
+#. VisualShader.TYPE_START
+#: modules/visual_shader/doc_classes/VisualShader.xml
+msgid "A function for the \"start\" stage of particle shader."
+msgstr "A részecskeshader „start” szakaszának függvénye."
+
+#. VisualShader.TYPE_PROCESS
+#: modules/visual_shader/doc_classes/VisualShader.xml
+msgid "A function for the \"process\" stage of particle shader."
+msgstr "A részecskeshader „process” szakaszának függvénye."
+
+#. VisualShader.TYPE_COLLIDE
+#: modules/visual_shader/doc_classes/VisualShader.xml
+msgid "A function for the \"collide\" stage (particle collision handler) of particle shader."
+msgstr "A részecskeshader „collide” szakaszának függvénye, amely a részecskék ütközéseit kezeli."
+
+#. VisualShader.TYPE_START_CUSTOM
+#: modules/visual_shader/doc_classes/VisualShader.xml
+msgid "A function for the \"start\" stage of particle shader, with customized output."
+msgstr "A részecskeshader „start” szakaszának függvénye, egyéni kimenettel."
+
+#. VisualShader.TYPE_PROCESS_CUSTOM
+#: modules/visual_shader/doc_classes/VisualShader.xml
+msgid "A function for the \"process\" stage of particle shader, with customized output."
+msgstr "A részecskeshader „process” szakaszának függvénye, egyéni kimenettel."
+
+#. VisualShader.TYPE_SKY
+#: modules/visual_shader/doc_classes/VisualShader.xml
+msgid "A shader for 3D environment's sky."
+msgstr "A 3D-s környezet egét kirajzoló shader."
+
+#. VisualShader.TYPE_FOG
+#: modules/visual_shader/doc_classes/VisualShader.xml
+msgid "A compute shader that runs for each froxel of the volumetric fog map."
+msgstr "A térfogati ködtérkép minden elemi térfogatán (froxelén) lefutó számítási shader."
+
+#. VisualShader.TYPE_TEXTURE_BLIT
+#: modules/visual_shader/doc_classes/VisualShader.xml
+msgid "A shader used to process blit calls to a DrawableTexture."
+msgstr "A DrawableTexture textúrára irányuló képmásolási (blit) hívásokat feldolgozó shader."
+
+#. VisualShader.VARYING_MODE_VERTEX_TO_FRAG_LIGHT
+#: modules/visual_shader/doc_classes/VisualShader.xml
+msgid "Varying is passed from [code]Vertex[/code] function to [code]Fragment[/code] and [code]Light[/code] functions."
+msgstr "Az átadott változó a [code]Vertex[/code] függvénytől a [code]Fragment[/code] és a [code]Light[/code] függvényhez jut."
+
+#. VisualShader.VARYING_MODE_FRAG_TO_LIGHT
+#: modules/visual_shader/doc_classes/VisualShader.xml
+msgid "Varying is passed from [code]Fragment[/code] function to [code]Light[/code] function."
+msgstr "Az átadott változó a [code]Fragment[/code] függvénytől a [code]Light[/code] függvényhez jut."
+
+#. VisualShader.VARYING_TYPE_UINT
+#: modules/visual_shader/doc_classes/VisualShader.xml
+msgid "Varying is of type unsigned [int]."
+msgstr "Az átadott változó előjel nélküli egész ([int]) típusú."
+
+#. VisualShader.NODE_ID_INVALID
+#: modules/visual_shader/doc_classes/VisualShader.xml
+msgid "Indicates an invalid [VisualShader] node."
+msgstr "Érvénytelen [VisualShader] csomópontot jelöl."
+
+#. VisualShader.NODE_ID_OUTPUT
+#: modules/visual_shader/doc_classes/VisualShader.xml
+msgid "Indicates an output node of [VisualShader]."
+msgstr "A [VisualShader] kimeneti csomópontját jelöli."
+
+#. VisualShaderNode.brief
+#: modules/visual_shader/doc_classes/VisualShaderNode.xml
+msgid "Base class for [VisualShader] nodes. Not related to scene nodes."
+msgstr "A [VisualShader] csomópontjainak alaposztálya. A jelenet csomópontjaitól független."
+
+#. VisualShaderNode.description
+#: modules/visual_shader/doc_classes/VisualShaderNode.xml
+msgid "Visual shader graphs consist of various nodes. Each node in the graph is a separate object and they are represented as a rectangular boxes with title and a set of properties. Each node also has connection ports that allow to connect it to another nodes and control the flow of the shader."
+msgstr "A vizuális shadergráf különálló objektumokból, úgynevezett csomópontokból áll. A szerkesztő a csomópontokat címmel és tulajdonságokkal ellátott téglalapként jeleníti meg. A portjaikon keresztül egymáshoz kapcsolhatók, és a kapcsolatok határozzák meg az adatok útját a shaderben."
+
+#. VisualShaderNode.clear_default_input_values
+#: modules/visual_shader/doc_classes/VisualShaderNode.xml
+msgid "Clears the default input ports value."
+msgstr "Törli a bemeneti portok alapértelmezett értékeit."
+
+#. VisualShaderNode.get_default_input_port
+#: modules/visual_shader/doc_classes/VisualShaderNode.xml
+msgid "Returns the input port which should be connected by default when this node is created as a result of dragging a connection from an existing node to the empty space on the graph."
+msgstr "Visszaadja azt a bemeneti portot, amelyhez alapértelmezés szerint csatlakozik a kapcsolat, ha ezt a csomópontot úgy hozod létre, hogy egy meglévő portból a gráf üres területére húzol egy kapcsolatot."
+
+#. VisualShaderNode.get_default_input_values
+#: modules/visual_shader/doc_classes/VisualShaderNode.xml
+msgid "Returns an [Array] containing default values for all of the input ports of the node in the form [code][index0, value0, index1, value1, ...][/code]."
+msgstr "[Array] tömbben adja vissza a csomópont összes bemeneti portjának alapértelmezett értékét, [code][index0, value0, index1, value1, ...][/code] formában."
+
+#. VisualShaderNode.get_input_port_default_value
+#: modules/visual_shader/doc_classes/VisualShaderNode.xml
+msgid "Returns the default value of the input [param port]."
+msgstr "Visszaadja a bemeneti [param port] alapértelmezett értékét."
+
+#. VisualShaderNode.remove_input_port_default_value
+#: modules/visual_shader/doc_classes/VisualShaderNode.xml
+msgid "Removes the default value of the input [param port]."
+msgstr "Törli a bemeneti [param port] alapértelmezett értékét."
+
+#. VisualShaderNode.set_default_input_values
+#: modules/visual_shader/doc_classes/VisualShaderNode.xml
+msgid "Sets the default input ports values using an [Array] of the form [code][index0, value0, index1, value1, ...][/code]. For example: [code][0, Vector3(0, 0, 0), 1, Vector3(0, 0, 0)][/code]."
+msgstr "Beállítja a bemeneti portok alapértelmezett értékeit egy [Array] tömbből, amelynek formátuma [code][index0, value0, index1, value1, ...][/code]. Példa: [code][0, Vector3(0, 0, 0), 1, Vector3(0, 0, 0)][/code]."
+
+#. VisualShaderNode.set_input_port_default_value
+#: modules/visual_shader/doc_classes/VisualShaderNode.xml
+msgid "Sets the default [param value] for the selected input [param port]."
+msgstr "A kiválasztott bemeneti [param port] alapértelmezett értékét [param value] értékre állítja."
+
+#. VisualShaderNode.linked_parent_graph_frame
+#: modules/visual_shader/doc_classes/VisualShaderNode.xml
+msgid "Represents the index of the frame this node is linked to. If set to [code]-1[/code] the node is not linked to any frame."
+msgstr "Annak a keretnek az indexe, amelyhez ez a csomópont hozzá van csatolva. A [code]-1[/code] érték azt jelzi, hogy a csomópont nincs kerethez csatolva."
+
+#. VisualShaderNode.output_port_for_preview
+#: modules/visual_shader/doc_classes/VisualShaderNode.xml
+msgid "Sets the output port index which will be showed for preview. If set to [code]-1[/code] no port will be open for preview."
+msgstr "Kiválasztja az előnézetben megjelenítendő kimeneti port indexét. A [code]-1[/code] érték kikapcsolja a portok előnézetét."
+
+#. VisualShaderNode.PORT_TYPE_SAMPLER
+#: modules/visual_shader/doc_classes/VisualShaderNode.xml
+msgid "Sampler type. Translated to reference of sampler uniform in shader code. Can only be used for input ports in non-uniform nodes."
+msgstr "Textúramintavételező típus. A shaderkódban egy uniform mintavételezőre hivatkozik. Csak uniformnak nem minősülő csomópontok bemeneti portján használható."
+
+#. VisualShaderNodeBillboard.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeBillboard.xml
+msgid "A node that controls how the object faces the camera to be used within the visual shader graph."
+msgstr "A vizuális shadergráfban szabályozza, hogyan forduljon az objektum a kamera felé."
+
+#. VisualShaderNodeBillboard.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeBillboard.xml
+msgid "The output port of this node needs to be connected to [code]Model View Matrix[/code] port of [VisualShaderNodeOutput]."
+msgstr "A csomópont kimeneti portját a [VisualShaderNodeOutput] [code]Model View Matrix[/code] portjához kell csatlakoztatni."
+
+#. VisualShaderNodeBillboard.billboard_type
+#: modules/visual_shader/doc_classes/VisualShaderNodeBillboard.xml
+msgid "Controls how the object faces the camera."
+msgstr "Szabályozza, hogyan forduljon az objektum a kamera felé."
+
+#. VisualShaderNodeBillboard.keep_scale
+#: modules/visual_shader/doc_classes/VisualShaderNodeBillboard.xml
+msgid "If [code]true[/code], the shader will keep the scale set for the mesh. Otherwise, the scale is lost when billboarding."
+msgstr "Ha az érték [code]true[/code], a shader megőrzi a háló beállított méretezését. Egyébként a kamerához igazításkor a méretezés elvész."
+
+#. VisualShaderNodeBillboard.BILLBOARD_TYPE_DISABLED
+#: modules/visual_shader/doc_classes/VisualShaderNodeBillboard.xml
+msgid "Billboarding is disabled and the node does nothing."
+msgstr "A kamerához igazítás ki van kapcsolva, így a csomópontnak nincs hatása."
+
+#. VisualShaderNodeBillboard.BILLBOARD_TYPE_ENABLED
+#: modules/visual_shader/doc_classes/VisualShaderNodeBillboard.xml
+msgid "A standard billboarding algorithm is enabled."
+msgstr "Bekapcsolja a szokásos kamerához igazítást."
+
+#. VisualShaderNodeBillboard.BILLBOARD_TYPE_FIXED_Y
+#: modules/visual_shader/doc_classes/VisualShaderNodeBillboard.xml
+msgid "A billboarding algorithm to rotate around Y-axis is enabled."
+msgstr "Bekapcsolja a csak az Y tengely körüli forgatással végzett kamerához igazítást."
+
+#. VisualShaderNodeBillboard.BILLBOARD_TYPE_PARTICLES
+#: modules/visual_shader/doc_classes/VisualShaderNodeBillboard.xml
+msgid "A billboarding algorithm designed to use on particles is enabled."
+msgstr "Bekapcsolja a részecskékhez készült kamerához igazítást."
+
+#. VisualShaderNodeBooleanConstant.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeBooleanConstant.xml
+msgid "Has only one output port and no inputs.\nTranslated to [code skip-lint]bool[/code] in the shader language."
+msgstr "Egyetlen kimeneti portja van, bemenete nincs.\nA shadernyelvben [code skip-lint]bool[/code] típusként jelenik meg."
+
+#. VisualShaderNodeBooleanParameter.default_value
+#. VisualShaderNodeColorParameter.default_value
+#. VisualShaderNodeFloatParameter.default_value
+#. VisualShaderNodeTransformParameter.default_value
+#. VisualShaderNodeVec2Parameter.default_value
+#. VisualShaderNodeVec3Parameter.default_value
+#. VisualShaderNodeVec4Parameter.default_value
+#: modules/visual_shader/doc_classes/VisualShaderNodeBooleanParameter.xml modules/visual_shader/doc_classes/VisualShaderNodeColorParameter.xml modules/visual_shader/doc_classes/VisualShaderNodeFloatParameter.xml modules/visual_shader/doc_classes/VisualShaderNodeTransformParameter.xml modules/visual_shader/doc_classes/VisualShaderNodeVec2Parameter.xml modules/visual_shader/doc_classes/VisualShaderNodeVec3Parameter.xml modules/visual_shader/doc_classes/VisualShaderNodeVec4Parameter.xml
+msgid "A default value to be assigned within the shader."
+msgstr "A shaderben hozzárendelendő alapértelmezett érték."
+
+#. VisualShaderNodeBooleanParameter.default_value_enabled
+#. VisualShaderNodeColorParameter.default_value_enabled
+#. VisualShaderNodeFloatParameter.default_value_enabled
+#. VisualShaderNodeTransformParameter.default_value_enabled
+#. VisualShaderNodeVec2Parameter.default_value_enabled
+#. VisualShaderNodeVec3Parameter.default_value_enabled
+#. VisualShaderNodeVec4Parameter.default_value_enabled
+#: modules/visual_shader/doc_classes/VisualShaderNodeBooleanParameter.xml modules/visual_shader/doc_classes/VisualShaderNodeColorParameter.xml modules/visual_shader/doc_classes/VisualShaderNodeFloatParameter.xml modules/visual_shader/doc_classes/VisualShaderNodeTransformParameter.xml modules/visual_shader/doc_classes/VisualShaderNodeVec2Parameter.xml modules/visual_shader/doc_classes/VisualShaderNodeVec3Parameter.xml modules/visual_shader/doc_classes/VisualShaderNodeVec4Parameter.xml
+msgid "Enables usage of the [member default_value]."
+msgstr "Engedélyezi a [member default_value] használatát."
+
+#. VisualShaderNodeClamp.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeClamp.xml
+msgid "Clamps a value within the visual shader graph."
+msgstr "Értéket korlátoz egy tartományra a vizuális shadergráfban."
+
+#. VisualShaderNodeClamp.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeClamp.xml
+msgid "Constrains a value to lie between [code]min[/code] and [code]max[/code] values."
+msgstr "Az értéket a [code]min[/code] és a [code]max[/code] közötti tartományra korlátozza."
+
+#. VisualShaderNodeClamp.op_type
+#. VisualShaderNodeDerivativeFunc.op_type
+#. VisualShaderNodeMix.op_type
+#. VisualShaderNodeMultiplyAdd.op_type
+#. VisualShaderNodeParticleRandomness.op_type
+#. VisualShaderNodeSmoothStep.op_type
+#. VisualShaderNodeStep.op_type
+#. VisualShaderNodeSwitch.op_type
+#: modules/visual_shader/doc_classes/VisualShaderNodeClamp.xml modules/visual_shader/doc_classes/VisualShaderNodeDerivativeFunc.xml modules/visual_shader/doc_classes/VisualShaderNodeMix.xml modules/visual_shader/doc_classes/VisualShaderNodeMultiplyAdd.xml modules/visual_shader/doc_classes/VisualShaderNodeParticleRandomness.xml modules/visual_shader/doc_classes/VisualShaderNodeSmoothStep.xml modules/visual_shader/doc_classes/VisualShaderNodeStep.xml modules/visual_shader/doc_classes/VisualShaderNodeSwitch.xml
+msgid "A type of operands and returned value."
+msgstr "Az operandusok és a visszaadott érték típusa."
+
+#. VisualShaderNodeClamp.OP_TYPE_FLOAT
+#. VisualShaderNodeCompare.CTYPE_SCALAR
+#. VisualShaderNodeDerivativeFunc.OP_TYPE_SCALAR
+#. VisualShaderNodeMix.OP_TYPE_SCALAR
+#. VisualShaderNodeParticleRandomness.OP_TYPE_SCALAR
+#. VisualShaderNodeSwitch.OP_TYPE_FLOAT
+#: modules/visual_shader/doc_classes/VisualShaderNodeClamp.xml modules/visual_shader/doc_classes/VisualShaderNodeCompare.xml modules/visual_shader/doc_classes/VisualShaderNodeDerivativeFunc.xml modules/visual_shader/doc_classes/VisualShaderNodeMix.xml modules/visual_shader/doc_classes/VisualShaderNodeParticleRandomness.xml modules/visual_shader/doc_classes/VisualShaderNodeSwitch.xml
+msgid "A floating-point scalar."
+msgstr "Lebegőpontos skalár."
+
+#. VisualShaderNodeClamp.OP_TYPE_INT
+#. VisualShaderNodeCompare.CTYPE_SCALAR_INT
+#. VisualShaderNodeSwitch.OP_TYPE_INT
+#: modules/visual_shader/doc_classes/VisualShaderNodeClamp.xml modules/visual_shader/doc_classes/VisualShaderNodeCompare.xml modules/visual_shader/doc_classes/VisualShaderNodeSwitch.xml
+msgid "An integer scalar."
+msgstr "Egész skalár."
+
+#. VisualShaderNodeClamp.OP_TYPE_UINT
+#. VisualShaderNodeCompare.CTYPE_SCALAR_UINT
+#. VisualShaderNodeSwitch.OP_TYPE_UINT
+#: modules/visual_shader/doc_classes/VisualShaderNodeClamp.xml modules/visual_shader/doc_classes/VisualShaderNodeCompare.xml modules/visual_shader/doc_classes/VisualShaderNodeSwitch.xml
+msgid "An unsigned integer scalar."
+msgstr "Előjel nélküli egész skalár."
+
+#. VisualShaderNodeColorConstant.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeColorConstant.xml
+msgid "Has two output ports representing RGB and alpha channels of [Color].\nTranslated to [code]vec3 rgb[/code] and [code]float alpha[/code] in the shader language."
+msgstr "Két kimeneti portja a [Color] RGB-, illetve alfacsatornáját adja ki.\nA shadernyelvben [code]vec3 rgb[/code] és [code]float alpha[/code] az alakja."
+
+#. VisualShaderNodeColorFunc.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeColorFunc.xml
+msgid "Accept a [Color] to the input port and transform it according to [member function]."
+msgstr "A bemeneti portra érkező [Color] értéket a [member function] szerint alakítja át."
+
+#. VisualShaderNodeColorFunc.function
+#: modules/visual_shader/doc_classes/VisualShaderNodeColorFunc.xml
+msgid "A function to be applied to the input color."
+msgstr "A bemeneti színre alkalmazandó függvény."
+
+#. VisualShaderNodeColorFunc.FUNC_GRAYSCALE
+#: modules/visual_shader/doc_classes/VisualShaderNodeColorFunc.xml
+msgid "Converts the color to grayscale using the following formula:\n[codeblock]\nvec3 c = input;\nfloat max1 = max(c.r, c.g);\nfloat max2 = max(max1, c.b);\nfloat max3 = max(max1, max2);\nreturn vec3(max3, max3, max3);\n[/codeblock]"
+msgstr "A következő képlettel szürkeárnyalatossá alakítja a színt:\n[codeblock]\nvec3 c = input;\nfloat max1 = max(c.r, c.g);\nfloat max2 = max(max1, c.b);\nfloat max3 = max(max1, max2);\nreturn vec3(max3, max3, max3);\n[/codeblock]"
+
+#. VisualShaderNodeColorFunc.FUNC_HSV2RGB
+#: modules/visual_shader/doc_classes/VisualShaderNodeColorFunc.xml
+msgid "Converts HSV vector to RGB equivalent."
+msgstr "A HSV-vektort a megfelelő RGB-vektorrá alakítja."
+
+#. VisualShaderNodeColorFunc.FUNC_RGB2HSV
+#: modules/visual_shader/doc_classes/VisualShaderNodeColorFunc.xml
+msgid "Converts RGB vector to HSV equivalent."
+msgstr "Az RGB-vektort a megfelelő HSV-vektorrá alakítja."
+
+#. VisualShaderNodeColorFunc.FUNC_SEPIA
+#: modules/visual_shader/doc_classes/VisualShaderNodeColorFunc.xml
+msgid "Applies sepia tone effect using the following formula:\n[codeblock]\nvec3 c = input;\nfloat r = (c.r * 0.393) + (c.g * 0.769) + (c.b * 0.189);\nfloat g = (c.r * 0.349) + (c.g * 0.686) + (c.b * 0.168);\nfloat b = (c.r * 0.272) + (c.g * 0.534) + (c.b * 0.131);\nreturn vec3(r, g, b);\n[/codeblock]"
+msgstr "A következő képlettel szépiaárnyalatot alkalmaz:\n[codeblock]\nvec3 c = input;\nfloat r = (c.r * 0.393) + (c.g * 0.769) + (c.b * 0.189);\nfloat g = (c.r * 0.349) + (c.g * 0.686) + (c.b * 0.168);\nfloat b = (c.r * 0.272) + (c.g * 0.534) + (c.b * 0.131);\nreturn vec3(r, g, b);\n[/codeblock]"
+
+#. VisualShaderNodeColorFunc.FUNC_LINEAR_TO_SRGB
+#: modules/visual_shader/doc_classes/VisualShaderNodeColorFunc.xml
+msgid "Converts color from linear encoding to nonlinear sRGB encoding using the following formula:\n[codeblock]\nconst vec3 a = vec3(0.055f);\nreturn mix((vec3(1.0f) + a) * pow(c.rgb, vec3(1.0f / 2.4f)) - a, 12.92f * c.rgb, lessThan(c.rgb, vec3(0.0031308f)));\n[/codeblock]\nThe Compatibility renderer uses a simpler formula that may produce undefined behavior with negative input values:\n[codeblock]\nvec3 c = input;\nreturn max(vec3(1.055) * pow(c, vec3(0.416666667)) - vec3(0.055), vec3(0.0));\n[/codeblock]"
+msgstr "A lineáris kódolású színt a következő képlettel alakítja át nemlineáris sRGB-kódolásúvá:\n[codeblock]\nconst vec3 a = vec3(0.055f);\nreturn mix((vec3(1.0f) + a) * pow(c.rgb, vec3(1.0f / 2.4f)) - a, 12.92f * c.rgb, lessThan(c.rgb, vec3(0.0031308f)));\n[/codeblock]\nA Kompatibilitás renderelő egyszerűbb képletet használ, amely negatív bemeneteknél nem meghatározott eredményt adhat:\n[codeblock]\nvec3 c = input;\nreturn max(vec3(1.055) * pow(c, vec3(0.416666667)) - vec3(0.055), vec3(0.0));\n[/codeblock]"
+
+#. VisualShaderNodeColorFunc.FUNC_SRGB_TO_LINEAR
+#: modules/visual_shader/doc_classes/VisualShaderNodeColorFunc.xml
+msgid "Converts color from nonlinear sRGB encoding to linear encoding using the following formula:\n[codeblock]\nvec3 c = input;\nreturn mix(pow((c.rgb + vec3(0.055)) * (1.0 / (1.0 + 0.055)), vec3(2.4)), c.rgb * (1.0 / 12.92), lessThan(c.rgb, vec3(0.04045)));\n[/codeblock]\nThe Compatibility renderer uses a simpler formula that behaves poorly with negative input values:\n[codeblock]\nvec3 c = input;\nreturn c * (c * (c * 0.305306011 + 0.682171111) + 0.012522878);\n[/codeblock]"
+msgstr "A nemlineáris sRGB-kódolású színt a következő képlettel alakítja át lineáris kódolásúvá:\n[codeblock]\nvec3 c = input;\nreturn mix(pow((c.rgb + vec3(0.055)) * (1.0 / (1.0 + 0.055)), vec3(2.4)), c.rgb * (1.0 / 12.92), lessThan(c.rgb, vec3(0.04045)));\n[/codeblock]\nA Kompatibilitás renderelő egyszerűbb képletet használ, amely negatív bemeneteknél pontatlan eredményt adhat:\n[codeblock]\nvec3 c = input;\nreturn c * (c * (c * 0.305306011 + 0.682171111) + 0.012522878);\n[/codeblock]"
+
+#. VisualShaderNodeColorOp.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeColorOp.xml
+msgid "Applies [member operator] to two color inputs."
+msgstr "A [member operator] által kiválasztott műveletet két bemeneti színre alkalmazza."
+
+#. VisualShaderNodeColorOp.operator
+#. VisualShaderNodeFloatOp.operator
+#. VisualShaderNodeIntOp.operator
+#. VisualShaderNodeUIntOp.operator
+#: modules/visual_shader/doc_classes/VisualShaderNodeColorOp.xml modules/visual_shader/doc_classes/VisualShaderNodeFloatOp.xml modules/visual_shader/doc_classes/VisualShaderNodeIntOp.xml modules/visual_shader/doc_classes/VisualShaderNodeUIntOp.xml
+msgid "An operator to be applied to the inputs."
+msgstr "A bemenetekre alkalmazandó művelet."
+
+#. VisualShaderNodeColorOp.OP_SCREEN
+#: modules/visual_shader/doc_classes/VisualShaderNodeColorOp.xml
+msgid "Produce a screen effect with the following formula:\n[codeblock]\nresult = vec3(1.0) - (vec3(1.0) - a) * (vec3(1.0) - b);\n[/codeblock]"
+msgstr "Szitázás (Screen) keverési mód a következő képlettel:\n[codeblock]\nresult = vec3(1.0) - (vec3(1.0) - a) * (vec3(1.0) - b);\n[/codeblock]"
+
+#. VisualShaderNodeColorOp.OP_DIFFERENCE
+#: modules/visual_shader/doc_classes/VisualShaderNodeColorOp.xml
+msgid "Produce a difference effect with the following formula:\n[codeblock]\nresult = abs(a - b);\n[/codeblock]"
+msgstr "Különbség (Difference) keverési mód a következő képlettel:\n[codeblock]\nresult = abs(a - b);\n[/codeblock]"
+
+#. VisualShaderNodeColorOp.OP_DARKEN
+#: modules/visual_shader/doc_classes/VisualShaderNodeColorOp.xml
+msgid "Produce a darken effect with the following formula:\n[codeblock]\nresult = min(a, b);\n[/codeblock]"
+msgstr "Sötétítés (Darken) keverési mód a következő képlettel:\n[codeblock]\nresult = min(a, b);\n[/codeblock]"
+
+#. VisualShaderNodeColorOp.OP_LIGHTEN
+#: modules/visual_shader/doc_classes/VisualShaderNodeColorOp.xml
+msgid "Produce a lighten effect with the following formula:\n[codeblock]\nresult = max(a, b);\n[/codeblock]"
+msgstr "Világosítás (Lighten) keverési mód a következő képlettel:\n[codeblock]\nresult = max(a, b);\n[/codeblock]"
+
+#. VisualShaderNodeColorOp.OP_OVERLAY
+#: modules/visual_shader/doc_classes/VisualShaderNodeColorOp.xml
+msgid "Produce an overlay effect with the following formula:\n[codeblock]\nfor (int i = 0; i < 3; i++) {\n\tfloat base = a[i];\n\tfloat blend = b[i];\n\tif (base < 0.5) {\n\t\tresult[i] = 2.0 * base * blend;\n\t} else {\n\t\tresult[i] = 1.0 - 2.0 * (1.0 - blend) * (1.0 - base);\n\t}\n}\n[/codeblock]"
+msgstr "Átfedés (Overlay) keverési mód a következő képlettel:\n[codeblock]\nfor (int i = 0; i < 3; i++) {\n\tfloat base = a[i];\n\tfloat blend = b[i];\n\tif (base < 0.5) {\n\t\tresult[i] = 2.0 * base * blend;\n\t} else {\n\t\tresult[i] = 1.0 - 2.0 * (1.0 - blend) * (1.0 - base);\n\t}\n}\n[/codeblock]"
+
+#. VisualShaderNodeColorOp.OP_DODGE
+#: modules/visual_shader/doc_classes/VisualShaderNodeColorOp.xml
+msgid "Produce a dodge effect with the following formula:\n[codeblock]\nresult = a / (vec3(1.0) - b);\n[/codeblock]"
+msgstr "Színfakítás (Dodge) keverési mód a következő képlettel:\n[codeblock]\nresult = a / (vec3(1.0) - b);\n[/codeblock]"
+
+#. VisualShaderNodeColorOp.OP_BURN
+#: modules/visual_shader/doc_classes/VisualShaderNodeColorOp.xml
+msgid "Produce a burn effect with the following formula:\n[codeblock]\nresult = vec3(1.0) - (vec3(1.0) - a) / b;\n[/codeblock]"
+msgstr "Színégetés (Burn) keverési mód a következő képlettel:\n[codeblock]\nresult = vec3(1.0) - (vec3(1.0) - a) / b;\n[/codeblock]"
+
+#. VisualShaderNodeColorOp.OP_SOFT_LIGHT
+#: modules/visual_shader/doc_classes/VisualShaderNodeColorOp.xml
+msgid "Produce a soft light effect with the following formula:\n[codeblock]\nfor (int i = 0; i < 3; i++) {\n\tfloat base = a[i];\n\tfloat blend = b[i];\n\tif (base < 0.5) {\n\t\tresult[i] = base * (blend + 0.5);\n\t} else {\n\t\tresult[i] = 1.0 - (1.0 - base) * (1.0 - (blend - 0.5));\n\t}\n}\n[/codeblock]"
+msgstr "Lágy fény (Soft Light) keverési mód a következő képlettel:\n[codeblock]\nfor (int i = 0; i < 3; i++) {\n\tfloat base = a[i];\n\tfloat blend = b[i];\n\tif (base < 0.5) {\n\t\tresult[i] = base * (blend + 0.5);\n\t} else {\n\t\tresult[i] = 1.0 - (1.0 - base) * (1.0 - (blend - 0.5));\n\t}\n}\n[/codeblock]"
+
+#. VisualShaderNodeColorOp.OP_HARD_LIGHT
+#: modules/visual_shader/doc_classes/VisualShaderNodeColorOp.xml
+msgid "Produce a hard light effect with the following formula:\n[codeblock]\nfor (int i = 0; i < 3; i++) {\n\tfloat base = a[i];\n\tfloat blend = b[i];\n\tif (base < 0.5) {\n\t\tresult[i] = base * (2.0 * blend);\n\t} else {\n\t\tresult[i] = 1.0 - (1.0 - base) * (1.0 - 2.0 * (blend - 0.5));\n\t}\n}\n[/codeblock]"
+msgstr "Kemény fény (Hard Light) keverési mód a következő képlettel:\n[codeblock]\nfor (int i = 0; i < 3; i++) {\n\tfloat base = a[i];\n\tfloat blend = b[i];\n\tif (base < 0.5) {\n\t\tresult[i] = base * (2.0 * blend);\n\t} else {\n\t\tresult[i] = 1.0 - (1.0 - base) * (1.0 - 2.0 * (blend - 0.5));\n\t}\n}\n[/codeblock]"
+
+#. VisualShaderNodeComment.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeComment.xml
+msgid "Only exists for compatibility. Use [VisualShaderNodeFrame] as a replacement."
+msgstr "Kompatibilitási okokból maradt meg. Helyette a [VisualShaderNodeFrame] használható."
+
+#. VisualShaderNodeComment.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeComment.xml
+msgid "This node was replaced by [VisualShaderNodeFrame] and only exists to preserve compatibility. In the [VisualShader] editor it behaves exactly like [VisualShaderNodeFrame]."
+msgstr "A csomópontot a [VisualShaderNodeFrame] váltotta fel. Kompatibilitási okokból maradt meg, és a [VisualShader] szerkesztőben pontosan úgy működik, mint a [VisualShaderNodeFrame]."
+
+#. VisualShaderNodeComment.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeComment.xml
+msgid "This property only exists to preserve data authored in earlier versions of Godot. It has currently no function."
+msgstr "A tulajdonság a Godot régebbi verzióiban létrehozott adatok megőrzésére szolgál. Jelenleg nincs egyéb szerepe."
+
+#. VisualShaderNodeCompare.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeCompare.xml
+msgid "A comparison function for common types within the visual shader graph."
+msgstr "Gyakori típusok összehasonlítására szolgáló függvény a vizuális shadergráfban."
+
+#. VisualShaderNodeCompare.function
+#: modules/visual_shader/doc_classes/VisualShaderNodeCompare.xml
+msgid "A comparison function."
+msgstr "Összehasonlító függvény."
+
+#. VisualShaderNodeCompare.type
+#: modules/visual_shader/doc_classes/VisualShaderNodeCompare.xml
+msgid "The type to be used in the comparison."
+msgstr "Az összehasonlításhoz használt típus."
+
+#. VisualShaderNodeCompare.CTYPE_BOOLEAN
+#. VisualShaderNodeSwitch.OP_TYPE_BOOLEAN
+#: modules/visual_shader/doc_classes/VisualShaderNodeCompare.xml modules/visual_shader/doc_classes/VisualShaderNodeSwitch.xml
+msgid "A boolean type."
+msgstr "Logikai típus."
+
+#. VisualShaderNodeCompare.CTYPE_TRANSFORM
+#: modules/visual_shader/doc_classes/VisualShaderNodeCompare.xml
+msgid "A transform ([code]mat4[/code]) type."
+msgstr "Transzformációs ([code]mat4[/code]) típus."
+
+#. VisualShaderNodeCompare.FUNC_EQUAL
+#: modules/visual_shader/doc_classes/VisualShaderNodeCompare.xml
+msgid "Comparison for equality ([code]a == b[/code])."
+msgstr "Egyenlőség vizsgálata ([code]a == b[/code])."
+
+#. VisualShaderNodeCompare.FUNC_NOT_EQUAL
+#: modules/visual_shader/doc_classes/VisualShaderNodeCompare.xml
+msgid "Comparison for inequality ([code]a != b[/code])."
+msgstr "Egyenlőtlenség vizsgálata ([code]a != b[/code])."
+
+#. VisualShaderNodeCompare.COND_ALL
+#: modules/visual_shader/doc_classes/VisualShaderNodeCompare.xml
+msgid "The result will be [code]true[/code] if all components in the vector satisfy the comparison condition."
+msgstr "Az eredmény [code]true[/code], ha a vektor minden összetevője teljesíti az összehasonlítási feltételt."
+
+#. VisualShaderNodeCompare.COND_ANY
+#: modules/visual_shader/doc_classes/VisualShaderNodeCompare.xml
+msgid "The result will be [code]true[/code] if any component in the vector satisfies the comparison condition."
+msgstr "Az eredmény [code]true[/code], ha a vektor legalább egy összetevője teljesíti az összehasonlítási feltételt."
+
+#. VisualShaderNodeConstant.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeConstant.xml
+msgid "A base type for the constants within the visual shader graph."
+msgstr "A vizuális shadergráf állandóinak alaptípusa."
+
+#. VisualShaderNodeConstant.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeConstant.xml
+msgid "This is an abstract class. See the derived types for descriptions of the possible values."
+msgstr "Absztrakt osztály. A lehetséges értékeket a leszármazott típusok leírása ismerteti."
+
+#. VisualShaderNodeCubemap.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeCubemap.xml
+msgid "A [Cubemap] sampling node to be used within the visual shader graph."
+msgstr "[Cubemap]-mintavételező csomópont a vizuális shadergráfhoz."
+
+#. VisualShaderNodeCubemap.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeCubemap.xml
+msgid "Translated to [code]texture(cubemap, vec3)[/code] in the shader language. Returns a color vector and alpha channel as scalar."
+msgstr "A shadernyelvben [code]texture(cubemap, vec3)[/code] hívásra fordul. A színt vektorként, az alfacsatornát skalárként adja vissza."
+
+#. VisualShaderNodeCubemap.cube_map
+#: modules/visual_shader/doc_classes/VisualShaderNodeCubemap.xml
+msgid "The [Cubemap] texture to sample when using [constant SOURCE_TEXTURE] as [member source]."
+msgstr "A mintavételezendő [Cubemap] textúra, amikor a [member source] értéke [constant SOURCE_TEXTURE]."
+
+#. VisualShaderNodeCubemap.source
+#: modules/visual_shader/doc_classes/VisualShaderNodeCubemap.xml
+msgid "Defines which source should be used for the sampling."
+msgstr "Megadja a mintavételezés forrását."
+
+#. VisualShaderNodeCubemap.texture_type
+#. VisualShaderNodeTextureParameter.texture_type
+#: modules/visual_shader/doc_classes/VisualShaderNodeCubemap.xml modules/visual_shader/doc_classes/VisualShaderNodeTextureParameter.xml
+msgid "Defines the type of data provided by the source texture."
+msgstr "Megadja a forrástextúrából származó adatok típusát."
+
+#. VisualShaderNodeCubemap.SOURCE_TEXTURE
+#: modules/visual_shader/doc_classes/VisualShaderNodeCubemap.xml
+msgid "Use the [Cubemap] set via [member cube_map]. If this is set to [member source], the [code]samplerCube[/code] port is ignored."
+msgstr "A [member cube_map] tulajdonságban beállított [Cubemap] textúrát használja. Ha a [member source] értéke ez a beállítás, a [code]samplerCube[/code] portnak nincs hatása."
+
+#. VisualShaderNodeCubemap.SOURCE_PORT
+#: modules/visual_shader/doc_classes/VisualShaderNodeCubemap.xml
+msgid "Use the [Cubemap] sampler reference passed via the [code]samplerCube[/code] port. If this is set to [member source], the [member cube_map] texture is ignored."
+msgstr "A [code]samplerCube[/code] porton átadott [Cubemap]-mintavételezőt használja. Ha a [member source] értéke ez a beállítás, a [member cube_map] textúrát figyelmen kívül hagyja."
+
+#. VisualShaderNodeCubemap.TYPE_DATA
+#. VisualShaderNodeTexture.TYPE_DATA
+#. VisualShaderNodeTextureParameter.TYPE_DATA
+#: modules/visual_shader/doc_classes/VisualShaderNodeCubemap.xml modules/visual_shader/doc_classes/VisualShaderNodeTexture.xml modules/visual_shader/doc_classes/VisualShaderNodeTextureParameter.xml
+msgid "No hints are added to the uniform declaration."
+msgstr "Az uniform deklarációjához nem ad meg tippet."
+
+#. VisualShaderNodeCubemap.TYPE_COLOR
+#. VisualShaderNodeTexture.TYPE_COLOR
+#. VisualShaderNodeTextureParameter.TYPE_COLOR
+#: modules/visual_shader/doc_classes/VisualShaderNodeCubemap.xml modules/visual_shader/doc_classes/VisualShaderNodeTexture.xml modules/visual_shader/doc_classes/VisualShaderNodeTextureParameter.xml
+msgid "Adds [code]source_color[/code] as hint to the uniform declaration for proper conversion from nonlinear sRGB encoding to linear encoding."
+msgstr "A [code]source_color[/code] tippet adja az uniform deklarációjához, hogy a nemlineáris sRGB-kódolás megfelelően alakuljon át lineárissá."
+
+#. VisualShaderNodeCubemap.TYPE_NORMAL_MAP
+#. VisualShaderNodeTexture.TYPE_NORMAL_MAP
+#. VisualShaderNodeTextureParameter.TYPE_NORMAL_MAP
+#: modules/visual_shader/doc_classes/VisualShaderNodeCubemap.xml modules/visual_shader/doc_classes/VisualShaderNodeTexture.xml modules/visual_shader/doc_classes/VisualShaderNodeTextureParameter.xml
+msgid "Adds [code]hint_normal[/code] as hint to the uniform declaration, which internally converts the texture for proper usage as normal map."
+msgstr "A [code]hint_normal[/code] tippet adja az uniform deklarációjához. Ennek hatására a motor úgy alakítja át a textúrát, hogy helyesen legyen használható normáltérképként."
+
+#. VisualShaderNodeCubemapParameter.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeCubemapParameter.xml
+msgid "Translated to [code]uniform samplerCube[/code] in the shader language. The output value can be used as port for [VisualShaderNodeCubemap]."
+msgstr "A shadernyelvben [code]uniform samplerCube[/code] alakban jelenik meg. A kimenete a [VisualShaderNodeCubemap] bemenetére köthető."
+
+#. VisualShaderNodeCurveTexture.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeCurveTexture.xml
+msgid "Performs a [CurveTexture] lookup within the visual shader graph."
+msgstr "[CurveTexture] textúrából vesz mintát a vizuális shadergráfban."
+
+#. VisualShaderNodeCurveTexture.description
+#. VisualShaderNodeCurveXYZTexture.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeCurveTexture.xml modules/visual_shader/doc_classes/VisualShaderNodeCurveXYZTexture.xml
+msgid "Comes with a built-in editor for texture's curves."
+msgstr "A textúra görbéihez beépített szerkesztőt biztosít."
+
+#. VisualShaderNodeCurveTexture.texture
+#. VisualShaderNodeCurveXYZTexture.texture
+#: modules/visual_shader/doc_classes/VisualShaderNodeCurveTexture.xml modules/visual_shader/doc_classes/VisualShaderNodeCurveXYZTexture.xml
+msgid "The source texture."
+msgstr "A forrástextúra."
+
+#. VisualShaderNodeCurveXYZTexture.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeCurveXYZTexture.xml
+msgid "Performs a [CurveXYZTexture] lookup within the visual shader graph."
+msgstr "[CurveXYZTexture] textúrából vesz mintát a vizuális shadergráfban."
+
+#. VisualShaderNodeDerivativeFunc.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeDerivativeFunc.xml
+msgid "Calculates a derivative within the visual shader graph."
+msgstr "Deriváltat számít a vizuális shadergráfban."
+
+#. VisualShaderNodeDerivativeFunc.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeDerivativeFunc.xml
+msgid "This node is only available in [code]Fragment[/code] and [code]Light[/code] visual shaders."
+msgstr "Ez a csomópont csak [code]Fragment[/code] és [code]Light[/code] típusú vizuális shaderekben érhető el."
+
+#. VisualShaderNodeDerivativeFunc.function
+#: modules/visual_shader/doc_classes/VisualShaderNodeDerivativeFunc.xml
+msgid "A derivative function type."
+msgstr "A deriváláshoz használt függvény típusa."
+
+#. VisualShaderNodeDerivativeFunc.precision
+#: modules/visual_shader/doc_classes/VisualShaderNodeDerivativeFunc.xml
+msgid "Sets the level of precision to use for the derivative function. When using the Compatibility renderer, this setting has no effect."
+msgstr "Beállítja a derivált számítási pontosságát. A Kompatibilitás renderelőnél a beállítás hatástalan."
+
+#. VisualShaderNodeDerivativeFunc.FUNC_SUM
+#: modules/visual_shader/doc_classes/VisualShaderNodeDerivativeFunc.xml
+msgid "Sum of absolute derivative in [code]x[/code] and [code]y[/code]."
+msgstr "Az [code]x[/code] és [code]y[/code] irány szerinti deriváltak abszolút értékének összege."
+
+#. VisualShaderNodeDerivativeFunc.FUNC_X
+#: modules/visual_shader/doc_classes/VisualShaderNodeDerivativeFunc.xml
+msgid "Derivative in [code]x[/code] using local differencing."
+msgstr "Derivált az [code]x[/code] irányban, helyi differenciával számítva."
+
+#. VisualShaderNodeDerivativeFunc.FUNC_Y
+#: modules/visual_shader/doc_classes/VisualShaderNodeDerivativeFunc.xml
+msgid "Derivative in [code]y[/code] using local differencing."
+msgstr "Derivált az [code]y[/code] irányban, helyi differenciával számítva."
+
+#. VisualShaderNodeDerivativeFunc.PRECISION_NONE
+#: modules/visual_shader/doc_classes/VisualShaderNodeDerivativeFunc.xml
+msgid "No precision is specified, the GPU driver is allowed to use whatever level of precision it chooses. This is the default option and is equivalent to using [code]dFdx()[/code] or [code]dFdy()[/code] in text shaders."
+msgstr "A pontosság nincs megadva, így a grafikus illesztőprogram választja meg. Ez az alapértelmezés, és megfelel a szöveges shaderben használt [code]dFdx()[/code] vagy [code]dFdy()[/code] hívásnak."
+
+#. VisualShaderNodeDerivativeFunc.PRECISION_COARSE
+#: modules/visual_shader/doc_classes/VisualShaderNodeDerivativeFunc.xml
+msgid "The derivative will be calculated using the current fragment's neighbors (which may not include the current fragment). This tends to be faster than using [constant PRECISION_FINE], but may not be suitable when more precision is needed. This is equivalent to using [code]dFdxCoarse()[/code] or [code]dFdyCoarse()[/code] in text shaders."
+msgstr "A derivált az aktuális fragmens környezetéből számítható, akár magának az aktuális fragmensnek a kihagyásával is. Általában gyorsabb a [constant PRECISION_FINE] módnál, de kevésbé alkalmas, amikor pontosabb eredmény kell. Szöveges shaderben a [code]dFdxCoarse()[/code] vagy [code]dFdyCoarse()[/code] hívás felel meg ennek."
+
+#. VisualShaderNodeDerivativeFunc.PRECISION_FINE
+#: modules/visual_shader/doc_classes/VisualShaderNodeDerivativeFunc.xml
+msgid "The derivative will be calculated using the current fragment and its immediate neighbors. This tends to be slower than using [constant PRECISION_COARSE], but may be necessary when more precision is needed. This is equivalent to using [code]dFdxFine()[/code] or [code]dFdyFine()[/code] in text shaders."
+msgstr "A derivált az aktuális fragmensből és a közvetlen szomszédaiból számítható. Általában lassabb a [constant PRECISION_COARSE] módnál, de szükséges lehet a pontosabb eredményhez. Szöveges shaderben a [code]dFdxFine()[/code] vagy [code]dFdyFine()[/code] hívás felel meg ennek."
+
+#. VisualShaderNodeDeterminant.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeDeterminant.xml
+msgid "Calculates the determinant of a [Transform3D] within the visual shader graph."
+msgstr "[Transform3D] transzformáció determinánsát számítja ki a vizuális shadergráfban."
+
+#. VisualShaderNodeDistanceFade.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeDistanceFade.xml
+msgid "A visual shader node representing distance fade effect."
+msgstr "Távolságfüggő elhalványítást végző vizuális shadercsomópont."
+
+#. VisualShaderNodeDotProduct.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeDotProduct.xml
+msgid "Calculates a dot product of two vectors within the visual shader graph."
+msgstr "Két vektor skalárszorzatát számítja ki a vizuális shadergráfban."
+
+#. VisualShaderNodeExpression.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeExpression.xml
+msgid "A custom visual shader graph expression written in Godot Shading Language."
+msgstr "A vizuális shadergráf Godot shadernyelven írt egyéni kifejezése."
+
+#. VisualShaderNodeExpression.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeExpression.xml
+msgid "Custom Godot Shading Language expression, with a custom number of input and output ports.\nThe provided code is directly injected into the graph's matching shader function ([code]vertex[/code], [code]fragment[/code], or [code]light[/code]), so it cannot be used to declare functions, varyings, uniforms, or global constants. See [VisualShaderNodeGlobalExpression] for such global definitions."
+msgstr "Egyéni kifejezés a Godot shadernyelvében, tetszőleges számú bemeneti és kimeneti porttal.\nA megadott kód közvetlenül a gráf megfelelő shaderfüggvényébe ([code]vertex[/code], [code]fragment[/code] vagy [code]light[/code]) kerül. Itt nem deklarálhatsz függvényeket, átadott változókat (varying), uniformokat vagy globális állandókat. Az ilyen globális deklarációkhoz lásd a [VisualShaderNodeGlobalExpression] osztályt."
+
+#. VisualShaderNodeExpression.expression
+#: modules/visual_shader/doc_classes/VisualShaderNodeExpression.xml
+msgid "An expression in Godot Shading Language, which will be injected at the start of the graph's matching shader function ([code]vertex[/code], [code]fragment[/code], or [code]light[/code]), and thus cannot be used to declare functions, varyings, uniforms, or global constants."
+msgstr "A Godot shadernyelvén írt kifejezés, amely a gráf megfelelő shaderfüggvényének ([code]vertex[/code], [code]fragment[/code] vagy [code]light[/code]) elejére kerül. Itt nem deklarálhatsz függvényeket, átadott változókat (varying), uniformokat vagy globális állandókat."
+
+#. VisualShaderNodeFloatConstant.constant
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatConstant.xml
+msgid "A floating-point constant which represents a state of this node."
+msgstr "A csomópont állapotát meghatározó lebegőpontos állandó."
+
+#. VisualShaderNodeFloatFunc.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatFunc.xml
+msgid "Accept a floating-point scalar ([code]x[/code]) to the input port and transform it according to [member function]."
+msgstr "A bemeneti portra érkező lebegőpontos [code]x[/code] skalárt a [member function] szerint alakítja át."
+
+#. VisualShaderNodeFloatFunc.function
+#. VisualShaderNodeIntFunc.function
+#. VisualShaderNodeUIntFunc.function
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatFunc.xml modules/visual_shader/doc_classes/VisualShaderNodeIntFunc.xml modules/visual_shader/doc_classes/VisualShaderNodeUIntFunc.xml
+msgid "A function to be applied to the scalar."
+msgstr "A skalárra alkalmazandó függvény."
+
+#. VisualShaderNodeFloatFunc.FUNC_SIN
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatFunc.xml
+msgid "Returns the sine of the parameter. Translates to [code]sin(x)[/code] in the Godot Shader Language."
+msgstr "A paraméter szinuszát adja vissza. A Godot shadernyelvében [code]sin(x)[/code] alakban jelenik meg."
+
+#. VisualShaderNodeFloatFunc.FUNC_COS
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatFunc.xml
+msgid "Returns the cosine of the parameter. Translates to [code]cos(x)[/code] in the Godot Shader Language."
+msgstr "A paraméter koszinuszát adja vissza. A Godot shadernyelvében [code]cos(x)[/code] alakban jelenik meg."
+
+#. VisualShaderNodeFloatFunc.FUNC_TAN
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatFunc.xml
+msgid "Returns the tangent of the parameter. Translates to [code]tan(x)[/code] in the Godot Shader Language."
+msgstr "A paraméter tangensét adja vissza. A Godot shadernyelvében [code]tan(x)[/code] alakban jelenik meg."
+
+#. VisualShaderNodeFloatFunc.FUNC_ASIN
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatFunc.xml
+msgid "Returns the arc-sine of the parameter. Translates to [code]asin(x)[/code] in the Godot Shader Language."
+msgstr "A paraméter arkuszszinuszát adja vissza. A Godot shadernyelvében [code]asin(x)[/code] alakban jelenik meg."
+
+#. VisualShaderNodeFloatFunc.FUNC_ACOS
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatFunc.xml
+msgid "Returns the arc-cosine of the parameter. Translates to [code]acos(x)[/code] in the Godot Shader Language."
+msgstr "A paraméter arkuszkoszinuszát adja vissza. A Godot shadernyelvében [code]acos(x)[/code] alakban jelenik meg."
+
+#. VisualShaderNodeFloatFunc.FUNC_ATAN
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatFunc.xml
+msgid "Returns the arc-tangent of the parameter. Translates to [code]atan(x)[/code] in the Godot Shader Language."
+msgstr "A paraméter arkusztangensét adja vissza. A Godot shadernyelvében [code]atan(x)[/code] alakban jelenik meg."
+
+#. VisualShaderNodeFloatFunc.FUNC_SINH
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatFunc.xml
+msgid "Returns the hyperbolic sine of the parameter. Translates to [code]sinh(x)[/code] in the Godot Shader Language."
+msgstr "A paraméter hiperbolikus szinuszát adja vissza. A Godot shadernyelvében [code]sinh(x)[/code] alakban jelenik meg."
+
+#. VisualShaderNodeFloatFunc.FUNC_COSH
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatFunc.xml
+msgid "Returns the hyperbolic cosine of the parameter. Translates to [code]cosh(x)[/code] in the Godot Shader Language."
+msgstr "A paraméter hiperbolikus koszinuszát adja vissza. A Godot shadernyelvében [code]cosh(x)[/code] alakban jelenik meg."
+
+#. VisualShaderNodeFloatFunc.FUNC_TANH
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatFunc.xml
+msgid "Returns the hyperbolic tangent of the parameter. Translates to [code]tanh(x)[/code] in the Godot Shader Language."
+msgstr "A paraméter hiperbolikus tangensét adja vissza. A Godot shadernyelvében [code]tanh(x)[/code] alakban jelenik meg."
+
+#. VisualShaderNodeFloatFunc.FUNC_LOG
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatFunc.xml
+msgid "Returns the natural logarithm of the parameter. Translates to [code]log(x)[/code] in the Godot Shader Language."
+msgstr "A paraméter természetes logaritmusát adja vissza. A Godot shadernyelvében [code]log(x)[/code] alakban jelenik meg."
+
+#. VisualShaderNodeFloatFunc.FUNC_EXP
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatFunc.xml
+msgid "Returns the natural exponentiation of the parameter. Translates to [code]exp(x)[/code] in the Godot Shader Language."
+msgstr "Az Euler-féle számot a paraméter szerinti hatványra emeli. A Godot shadernyelvében [code]exp(x)[/code] alakban jelenik meg."
+
+#. VisualShaderNodeFloatFunc.FUNC_SQRT
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatFunc.xml
+msgid "Returns the square root of the parameter. Translates to [code]sqrt(x)[/code] in the Godot Shader Language."
+msgstr "A paraméter négyzetgyökét adja vissza. A Godot shadernyelvében [code]sqrt(x)[/code] alakban jelenik meg."
+
+#. VisualShaderNodeFloatFunc.FUNC_ABS
+#. VisualShaderNodeIntFunc.FUNC_ABS
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatFunc.xml modules/visual_shader/doc_classes/VisualShaderNodeIntFunc.xml
+msgid "Returns the absolute value of the parameter. Translates to [code]abs(x)[/code] in the Godot Shader Language."
+msgstr "A paraméter abszolút értékét adja vissza. A Godot shadernyelvében [code]abs(x)[/code] alakban jelenik meg."
+
+#. VisualShaderNodeFloatFunc.FUNC_SIGN
+#. VisualShaderNodeIntFunc.FUNC_SIGN
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatFunc.xml modules/visual_shader/doc_classes/VisualShaderNodeIntFunc.xml
+msgid "Extracts the sign of the parameter. Translates to [code]sign(x)[/code] in the Godot Shader Language."
+msgstr "A paraméter előjelét adja vissza. A Godot shadernyelvében [code]sign(x)[/code] alakban jelenik meg."
+
+#. VisualShaderNodeFloatFunc.FUNC_FLOOR
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatFunc.xml
+msgid "Finds the nearest integer less than or equal to the parameter. Translates to [code]floor(x)[/code] in the Godot Shader Language."
+msgstr "A paraméternél nem nagyobb legközelebbi egész értéket adja vissza. A Godot shadernyelvében [code]floor(x)[/code] alakban jelenik meg."
+
+#. VisualShaderNodeFloatFunc.FUNC_ROUND
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatFunc.xml
+msgid "Finds the nearest integer to the parameter. Translates to [code]round(x)[/code] in the Godot Shader Language."
+msgstr "A paraméterhez legközelebbi egész értéket adja vissza. A Godot shadernyelvében [code]round(x)[/code] alakban jelenik meg."
+
+#. VisualShaderNodeFloatFunc.FUNC_CEIL
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatFunc.xml
+msgid "Finds the nearest integer that is greater than or equal to the parameter. Translates to [code]ceil(x)[/code] in the Godot Shader Language."
+msgstr "A paraméternél nem kisebb legközelebbi egész értéket adja vissza. A Godot shadernyelvében [code]ceil(x)[/code] alakban jelenik meg."
+
+#. VisualShaderNodeFloatFunc.FUNC_FRACT
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatFunc.xml
+msgid "Computes the fractional part of the argument. Translates to [code]fract(x)[/code] in the Godot Shader Language."
+msgstr "A paraméter törtrészét számítja ki. A Godot shadernyelvében [code]fract(x)[/code] alakban jelenik meg."
+
+#. VisualShaderNodeFloatFunc.FUNC_SATURATE
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatFunc.xml
+msgid "Clamps the value between [code]0.0[/code] and [code]1.0[/code] using [code]min(max(x, 0.0), 1.0)[/code]."
+msgstr "A [code]min(max(x, 0.0), 1.0)[/code] kifejezéssel a [code]0.0[/code] és [code]1.0[/code] közötti tartományra korlátozza az értéket."
+
+#. VisualShaderNodeFloatFunc.FUNC_NEGATE
+#. VisualShaderNodeIntFunc.FUNC_NEGATE
+#. VisualShaderNodeUIntFunc.FUNC_NEGATE
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatFunc.xml modules/visual_shader/doc_classes/VisualShaderNodeIntFunc.xml modules/visual_shader/doc_classes/VisualShaderNodeUIntFunc.xml
+msgid "Negates the [code]x[/code] using [code]-(x)[/code]."
+msgstr "A [code]x[/code] értéket a [code]-(x)[/code] kifejezéssel negálja."
+
+#. VisualShaderNodeFloatFunc.FUNC_ACOSH
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatFunc.xml
+msgid "Returns the arc-hyperbolic-cosine of the parameter. Translates to [code]acosh(x)[/code] in the Godot Shader Language."
+msgstr "A paraméter inverz hiperbolikus koszinuszát adja vissza. A Godot shadernyelvében [code]acosh(x)[/code] alakban jelenik meg."
+
+#. VisualShaderNodeFloatFunc.FUNC_ASINH
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatFunc.xml
+msgid "Returns the arc-hyperbolic-sine of the parameter. Translates to [code]asinh(x)[/code] in the Godot Shader Language."
+msgstr "A paraméter inverz hiperbolikus szinuszát adja vissza. A Godot shadernyelvében [code]asinh(x)[/code] alakban jelenik meg."
+
+#. VisualShaderNodeFloatFunc.FUNC_ATANH
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatFunc.xml
+msgid "Returns the arc-hyperbolic-tangent of the parameter. Translates to [code]atanh(x)[/code] in the Godot Shader Language."
+msgstr "A paraméter inverz hiperbolikus tangensét adja vissza. A Godot shadernyelvében [code]atanh(x)[/code] alakban jelenik meg."
+
+#. VisualShaderNodeFloatFunc.FUNC_DEGREES
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatFunc.xml
+msgid "Convert a quantity in radians to degrees. Translates to [code]degrees(x)[/code] in the Godot Shader Language."
+msgstr "Radiánról fokra váltja át a szöget. A Godot shadernyelvében [code]degrees(x)[/code] alakban jelenik meg."
+
+#. VisualShaderNodeFloatFunc.FUNC_EXP2
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatFunc.xml
+msgid "Returns 2 raised by the power of the parameter. Translates to [code]exp2(x)[/code] in the Godot Shader Language."
+msgstr "2-t emel a paraméter szerinti hatványra. A Godot shadernyelvében [code]exp2(x)[/code] alakban jelenik meg."
+
+#. VisualShaderNodeFloatFunc.FUNC_INVERSE_SQRT
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatFunc.xml
+msgid "Returns the inverse of the square root of the parameter. Translates to [code]inversesqrt(x)[/code] in the Godot Shader Language."
+msgstr "A paraméter négyzetgyökének reciprokát adja vissza. A Godot shadernyelvében [code]inversesqrt(x)[/code] alakban jelenik meg."
+
+#. VisualShaderNodeFloatFunc.FUNC_LOG2
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatFunc.xml
+msgid "Returns the base 2 logarithm of the parameter. Translates to [code]log2(x)[/code] in the Godot Shader Language."
+msgstr "A paraméter 2-es alapú logaritmusát adja vissza. A Godot shadernyelvében [code]log2(x)[/code] alakban jelenik meg."
+
+#. VisualShaderNodeFloatFunc.FUNC_RADIANS
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatFunc.xml
+msgid "Convert a quantity in degrees to radians. Translates to [code]radians(x)[/code] in the Godot Shader Language."
+msgstr "Fokról radiánra váltja át a szöget. A Godot shadernyelvében [code]radians(x)[/code] alakban jelenik meg."
+
+#. VisualShaderNodeFloatFunc.FUNC_RECIPROCAL
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatFunc.xml
+msgid "Finds reciprocal value of dividing 1 by [code]x[/code] (i.e. [code]1 / x[/code])."
+msgstr "1-et osztja a [code]x[/code] értékkel, vagyis [code]1 / x[/code] értékét adja vissza."
+
+#. VisualShaderNodeFloatFunc.FUNC_TRUNC
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatFunc.xml
+msgid "Returns a value equal to the nearest integer to [code]x[/code] whose absolute value is not larger than the absolute value of [code]x[/code]. Translates to [code]trunc(x)[/code] in the Godot Shader Language."
+msgstr "A [code]x[/code] értéket nullához közelítve egészre csonkolja. A kapott egész abszolút értéke legfeljebb akkora, mint [code]x[/code] abszolút értéke. A Godot shadernyelvében [code]trunc(x)[/code] alakban jelenik meg."
+
+#. VisualShaderNodeFloatFunc.FUNC_ONEMINUS
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatFunc.xml
+msgid "Subtracts scalar [code]x[/code] from 1 (i.e. [code]1 - x[/code])."
+msgstr "1-ből kivonja a [code]x[/code] skalárt, vagyis [code]1 - x[/code] értékét adja vissza."
+
+#. VisualShaderNodeFloatOp.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatOp.xml
+msgid "Applies [member operator] to two floating-point inputs: [code]a[/code] and [code]b[/code]."
+msgstr "A [member operator] műveletet két lebegőpontos bemenetre alkalmazza: [code]a[/code] és [code]b[/code]."
+
+#. VisualShaderNodeFloatOp.OP_ADD
+#. VisualShaderNodeIntOp.OP_ADD
+#. VisualShaderNodeUIntOp.OP_ADD
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatOp.xml modules/visual_shader/doc_classes/VisualShaderNodeIntOp.xml modules/visual_shader/doc_classes/VisualShaderNodeUIntOp.xml
+msgid "Sums two numbers using [code]a + b[/code]."
+msgstr "A [code]a + b[/code] kifejezéssel összeadja a két számot."
+
+#. VisualShaderNodeFloatOp.OP_SUB
+#. VisualShaderNodeIntOp.OP_SUB
+#. VisualShaderNodeUIntOp.OP_SUB
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatOp.xml modules/visual_shader/doc_classes/VisualShaderNodeIntOp.xml modules/visual_shader/doc_classes/VisualShaderNodeUIntOp.xml
+msgid "Subtracts two numbers using [code]a - b[/code]."
+msgstr "A [code]a - b[/code] kifejezéssel kivonja a második számot az elsőből."
+
+#. VisualShaderNodeFloatOp.OP_MUL
+#. VisualShaderNodeIntOp.OP_MUL
+#. VisualShaderNodeUIntOp.OP_MUL
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatOp.xml modules/visual_shader/doc_classes/VisualShaderNodeIntOp.xml modules/visual_shader/doc_classes/VisualShaderNodeUIntOp.xml
+msgid "Multiplies two numbers using [code]a * b[/code]."
+msgstr "A [code]a * b[/code] kifejezéssel összeszorozza a két számot."
+
+#. VisualShaderNodeFloatOp.OP_DIV
+#. VisualShaderNodeIntOp.OP_DIV
+#. VisualShaderNodeUIntOp.OP_DIV
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatOp.xml modules/visual_shader/doc_classes/VisualShaderNodeIntOp.xml modules/visual_shader/doc_classes/VisualShaderNodeUIntOp.xml
+msgid "Divides two numbers using [code]a / b[/code]."
+msgstr "A [code]a / b[/code] kifejezéssel elosztja az első számot a másodikkal."
+
+#. VisualShaderNodeFloatOp.OP_MOD
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatOp.xml
+msgid "Calculates the remainder of two numbers. Translates to [code]mod(a, b)[/code] in the Godot Shader Language."
+msgstr "Kiszámítja a két szám osztási maradékát. A Godot shadernyelvében [code]mod(a, b)[/code] alakban jelenik meg."
+
+#. VisualShaderNodeFloatOp.OP_POW
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatOp.xml
+msgid "Raises the [code]a[/code] to the power of [code]b[/code]. Translates to [code]pow(a, b)[/code] in the Godot Shader Language."
+msgstr "A [code]a[/code] értéket a [code]b[/code] kitevő szerinti hatványra emeli. A Godot shadernyelvében [code]pow(a, b)[/code] alakban jelenik meg."
+
+#. VisualShaderNodeFloatOp.OP_MAX
+#. VisualShaderNodeIntOp.OP_MAX
+#. VisualShaderNodeUIntOp.OP_MAX
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatOp.xml modules/visual_shader/doc_classes/VisualShaderNodeIntOp.xml modules/visual_shader/doc_classes/VisualShaderNodeUIntOp.xml
+msgid "Returns the greater of two numbers. Translates to [code]max(a, b)[/code] in the Godot Shader Language."
+msgstr "A két szám közül a nagyobbat adja vissza. A Godot shadernyelvében [code]max(a, b)[/code] alakban jelenik meg."
+
+#. VisualShaderNodeFloatOp.OP_MIN
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatOp.xml
+msgid "Returns the lesser of two numbers. Translates to [code]min(a, b)[/code] in the Godot Shader Language."
+msgstr "A két szám közül a kisebbet adja vissza. A Godot shadernyelvében [code]min(a, b)[/code] alakban jelenik meg."
+
+#. VisualShaderNodeFloatOp.OP_ATAN2
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatOp.xml
+msgid "Returns the arc-tangent of the parameters. Translates to [code]atan(a, b)[/code] in the Godot Shader Language."
+msgstr "A kétparaméteres arkusztangenst adja vissza. A Godot shadernyelvében [code]atan(a, b)[/code] alakban jelenik meg."
+
+#. VisualShaderNodeFloatOp.OP_STEP
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatOp.xml
+msgid "Generates a step function by comparing [code]b[/code](x) to [code]a[/code](edge). Returns 0.0 if [code]x[/code] is smaller than [code]edge[/code] and otherwise 1.0. Translates to [code]step(a, b)[/code] in the Godot Shader Language."
+msgstr "Lépcsőfüggvényt képez a [code]b[/code] (x) és az [code]a[/code] (edge) összehasonlításával. Ha [code]x[/code] kisebb, mint [code]edge[/code], az eredmény 0.0, egyébként 1.0. A Godot shadernyelvében [code]step(a, b)[/code] alakban jelenik meg."
+
+#. VisualShaderNodeFloatParameter.hint
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatParameter.xml
+msgid "A hint applied to the uniform, which controls the values it can take when set through the Inspector."
+msgstr "Az uniform változóhoz tartozó tipp, amely szabályozza, milyen értékek állíthatók be a Felügyelőben."
+
+#. VisualShaderNodeFloatParameter.step
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatParameter.xml
+msgid "Step (increment) value for the range hint with step. Used if [member hint] is set to [constant HINT_RANGE_STEP]."
+msgstr "A lépésközös tartomány lépésköze. Akkor érvényes, ha a [member hint] értéke [constant HINT_RANGE_STEP]."
+
+#. VisualShaderNodeFloatParameter.HINT_NONE
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatParameter.xml
+msgid "No hint used."
+msgstr "Nincs használatban tipp."
+
+#. VisualShaderNodeFloatParameter.HINT_RANGE
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatParameter.xml
+msgid "A range hint for scalar value, which limits possible input values between [member min] and [member max]. Translated to [code]hint_range(min, max)[/code] in shader code."
+msgstr "A skalár lehetséges bemeneti értékeit a [member min] és a [member max] közötti tartományra korlátozza. A shaderkódban [code]hint_range(min, max)[/code] alakban jelenik meg."
+
+#. VisualShaderNodeFloatParameter.HINT_RANGE_STEP
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatParameter.xml
+msgid "A range hint for scalar value with step, which limits possible input values between [member min] and [member max], with a step (increment) of [member step]). Translated to [code]hint_range(min, max, step)[/code] in shader code."
+msgstr "A skalár lehetséges bemeneti értékeit a [member min] és a [member max] közötti tartományra korlátozza, [member step] lépésközzel. A shaderkódban [code]hint_range(min, max, step)[/code] alakban jelenik meg."
+
+#. VisualShaderNodeFrame.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeFrame.xml
+msgid "A frame other visual shader nodes can be attached to for better organization."
+msgstr "Keret, amelyhez a vizuális shadergráf csomópontjait rendezés céljából hozzá lehet csatolni."
+
+#. VisualShaderNodeFrame.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeFrame.xml
+msgid "A rectangular frame that can be used to group visual shader nodes together to improve organization.\nNodes attached to the frame will move with it when it is dragged and it can automatically resize to enclose all attached nodes.\nIts title, description and color can be customized."
+msgstr "Téglalap alakú keret a vizuális shadercsomópontok csoportosításához.\nHúzáskor a hozzá csatolt csomópontok a kerettel együtt mozognak. A keret automatikusan átméretezhető úgy, hogy az összes hozzá csatolt csomópont beleférjen.\nA cím, a leírás és a szín testreszabható."
+
+#. VisualShaderNodeFrame.add_attached_node
+#: modules/visual_shader/doc_classes/VisualShaderNodeFrame.xml
+msgid "Adds a node to the list of nodes attached to the frame. Should not be called directly, use the [method VisualShader.attach_node_to_frame] method instead."
+msgstr "Csomópontot ad a kerethez csatolt csomópontok listájához. Közvetlen hívás helyett használd a [method VisualShader.attach_node_to_frame] metódust."
+
+#. VisualShaderNodeFrame.remove_attached_node
+#: modules/visual_shader/doc_classes/VisualShaderNodeFrame.xml
+msgid "Removes a node from the list of nodes attached to the frame. Should not be called directly, use the [method VisualShader.detach_node_from_frame] method instead."
+msgstr "Eltávolítja a csomópontot a kerethez csatolt csomópontok listájáról. Közvetlen hívás helyett használd a [method VisualShader.detach_node_from_frame] metódust."
+
+#. VisualShaderNodeFrame.attached_nodes
+#: modules/visual_shader/doc_classes/VisualShaderNodeFrame.xml
+msgid "The list of nodes attached to the frame."
+msgstr "A kerethez csatolt csomópontok listája."
+
+#. VisualShaderNodeFrame.autoshrink
+#: modules/visual_shader/doc_classes/VisualShaderNodeFrame.xml
+msgid "If [code]true[/code], the frame will automatically resize to enclose all attached nodes."
+msgstr "Ha az érték [code]true[/code], a keret automatikusan átméretezi magát, hogy az összes hozzá csatolt csomópont beleférjen."
+
+#. VisualShaderNodeFrame.tint_color_enabled
+#: modules/visual_shader/doc_classes/VisualShaderNodeFrame.xml
+msgid "If [code]true[/code], the frame will be tinted with the color specified in [member tint_color]."
+msgstr "Ha az érték [code]true[/code], a keret a [member tint_color] tulajdonságban megadott színt kapja."
+
+#. VisualShaderNodeFrame.title
+#: modules/visual_shader/doc_classes/VisualShaderNodeFrame.xml
+msgid "The title of the node."
+msgstr "A csomópont címe."
+
+#. VisualShaderNodeFresnel.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeFresnel.xml
+msgid "A Fresnel effect to be used within the visual shader graph."
+msgstr "Fresnel-effektus a vizuális shadergráfhoz."
+
+#. VisualShaderNodeFresnel.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeFresnel.xml
+msgid "Returns falloff based on the dot product of surface normal and view direction of camera (pass associated inputs to it)."
+msgstr "A felületi normál és a kamera nézési irányának skalárszorzata alapján adja vissza a hatás lecsengését. Ezeket a vektorokat a megfelelő bemenetekre kell kötni."
+
+#. VisualShaderNodeGlobalExpression.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeGlobalExpression.xml
+msgid "A custom global visual shader graph expression written in Godot Shading Language."
+msgstr "Egyéni globális kifejezés a vizuális shadergráfhoz, Godot shadernyelven."
+
+#. VisualShaderNodeGlobalExpression.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeGlobalExpression.xml
+msgid "Custom Godot Shader Language expression, which is placed on top of the generated shader. You can place various function definitions inside to call later in [VisualShaderNodeExpression]s (which are injected in the main shader functions). You can also declare varyings, uniforms and global constants."
+msgstr "A generált shaderkód elejére illesztett, Godot shadernyelven írt egyéni kifejezés. Itt olyan függvényeket definiálhatsz, amelyeket később a fő shaderfüggvényekbe illesztett [VisualShaderNodeExpression] csomópontokból hívhatsz meg. Átadott változókat (varying), uniformokat és globális állandókat is deklarálhatsz."
+
+#. VisualShaderNodeGroupBase.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeGroupBase.xml
+msgid "Base class for a family of nodes with variable number of input and output ports within the visual shader graph."
+msgstr "A változó számú bemeneti és kimeneti porttal rendelkező vizuális shadercsomópontok alaposztálya."
+
+#. VisualShaderNodeGroupBase.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeGroupBase.xml
+msgid "Currently, has no direct usage, use the derived classes instead."
+msgstr "Közvetlen használat helyett a leszármazott osztályok használhatók."
+
+#. VisualShaderNodeGroupBase.add_input_port
+#: modules/visual_shader/doc_classes/VisualShaderNodeGroupBase.xml
+msgid "Adds an input port with the specified [param type] (see [enum VisualShaderNode.PortType]) and [param name]."
+msgstr "Bemeneti portot ad hozzá a megadott [param type] típussal (lásd [enum VisualShaderNode.PortType]) és [param name] névvel."
+
+#. VisualShaderNodeGroupBase.add_output_port
+#: modules/visual_shader/doc_classes/VisualShaderNodeGroupBase.xml
+msgid "Adds an output port with the specified [param type] (see [enum VisualShaderNode.PortType]) and [param name]."
+msgstr "Kimeneti portot ad hozzá a megadott [param type] típussal (lásd [enum VisualShaderNode.PortType]) és [param name] névvel."
+
+#. VisualShaderNodeGroupBase.clear_input_ports
+#: modules/visual_shader/doc_classes/VisualShaderNodeGroupBase.xml
+msgid "Removes all previously specified input ports."
+msgstr "Eltávolítja az összes korábban megadott bemeneti portot."
+
+#. VisualShaderNodeGroupBase.clear_output_ports
+#: modules/visual_shader/doc_classes/VisualShaderNodeGroupBase.xml
+msgid "Removes all previously specified output ports."
+msgstr "Eltávolítja az összes korábban megadott kimeneti portot."
+
+#. VisualShaderNodeGroupBase.get_free_input_port_id
+#: modules/visual_shader/doc_classes/VisualShaderNodeGroupBase.xml
+msgid "Returns a free input port ID which can be used in [method add_input_port]."
+msgstr "Szabad bemenetiport-azonosítót ad vissza, amelyet a [method add_input_port] hívásakor használhatsz."
+
+#. VisualShaderNodeGroupBase.get_free_output_port_id
+#: modules/visual_shader/doc_classes/VisualShaderNodeGroupBase.xml
+msgid "Returns a free output port ID which can be used in [method add_output_port]."
+msgstr "Szabad kimenetiport-azonosítót ad vissza, amelyet a [method add_output_port] hívásakor használhatsz."
+
+#. VisualShaderNodeGroupBase.get_input_port_count
+#: modules/visual_shader/doc_classes/VisualShaderNodeGroupBase.xml
+msgid "Returns the number of input ports in use. Alternative for [method get_free_input_port_id]."
+msgstr "Visszaadja a használatban lévő bemeneti portok számát. A [method get_free_input_port_id] alternatívája."
+
+#. VisualShaderNodeGroupBase.get_output_port_count
+#: modules/visual_shader/doc_classes/VisualShaderNodeGroupBase.xml
+msgid "Returns the number of output ports in use. Alternative for [method get_free_output_port_id]."
+msgstr "Visszaadja a használatban lévő kimeneti portok számát. A [method get_free_output_port_id] alternatívája."
+
+#. VisualShaderNodeGroupBase.has_input_port
+#: modules/visual_shader/doc_classes/VisualShaderNodeGroupBase.xml
+msgid "Returns [code]true[/code] if the specified input port exists."
+msgstr "[code]true[/code] értéket ad vissza, ha a megadott bemeneti port létezik."
+
+#. VisualShaderNodeGroupBase.has_output_port
+#: modules/visual_shader/doc_classes/VisualShaderNodeGroupBase.xml
+msgid "Returns [code]true[/code] if the specified output port exists."
+msgstr "[code]true[/code] értéket ad vissza, ha a megadott kimeneti port létezik."
+
+#. VisualShaderNodeGroupBase.is_valid_port_name
+#: modules/visual_shader/doc_classes/VisualShaderNodeGroupBase.xml
+msgid "Returns [code]true[/code] if the specified port name does not override an existed port name and is valid within the shader."
+msgstr "[code]true[/code] értéket ad vissza, ha a megadott portnév egyedi és érvényes a shaderben."
+
+#. VisualShaderNodeGroupBase.remove_input_port
+#: modules/visual_shader/doc_classes/VisualShaderNodeGroupBase.xml
+msgid "Removes the specified input port."
+msgstr "Eltávolítja a megadott bemeneti portot."
+
+#. VisualShaderNodeGroupBase.remove_output_port
+#: modules/visual_shader/doc_classes/VisualShaderNodeGroupBase.xml
+msgid "Removes the specified output port."
+msgstr "Eltávolítja a megadott kimeneti portot."
+
+#. VisualShaderNodeGroupBase.set_input_port_name
+#: modules/visual_shader/doc_classes/VisualShaderNodeGroupBase.xml
+msgid "Renames the specified input port."
+msgstr "Átnevezi a megadott bemeneti portot."
+
+#. VisualShaderNodeGroupBase.set_input_port_type
+#: modules/visual_shader/doc_classes/VisualShaderNodeGroupBase.xml
+msgid "Sets the specified input port's type (see [enum VisualShaderNode.PortType])."
+msgstr "Beállítja a megadott bemeneti port típusát (lásd [enum VisualShaderNode.PortType])."
+
+#. VisualShaderNodeGroupBase.set_output_port_name
+#: modules/visual_shader/doc_classes/VisualShaderNodeGroupBase.xml
+msgid "Renames the specified output port."
+msgstr "Átnevezi a megadott kimeneti portot."
+
+#. VisualShaderNodeGroupBase.set_output_port_type
+#: modules/visual_shader/doc_classes/VisualShaderNodeGroupBase.xml
+msgid "Sets the specified output port's type (see [enum VisualShaderNode.PortType])."
+msgstr "Beállítja a megadott kimeneti port típusát (lásd [enum VisualShaderNode.PortType])."
+
+#. VisualShaderNodeIf.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeIf.xml
+msgid "Outputs a 3D vector based on the result of a floating-point comparison within the visual shader graph."
+msgstr "Lebegőpontos összehasonlítás eredménye alapján 3D-s vektort ad ki a vizuális shadergráfban."
+
+#. VisualShaderNodeIf.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeIf.xml
+msgid "This visual shader node has six input ports:\n- Port [b]1[/b] and [b]2[/b] provide the two floating-point numbers [code]a[/code] and [code]b[/code] that will be compared.\n- Port [b]3[/b] is the tolerance, which allows similar floating-point numbers to be considered equal.\n- Ports [b]4[/b], [b]5[/b], and [b]6[/b] are the possible outputs, returned if [code]a == b[/code], [code]a > b[/code], or [code]a < b[/code] respectively."
+msgstr "A vizuális shadercsomópontnak hat bemeneti portja van:\n- Az [b]1[/b]. és a [b]2[/b]. porton érkezik az összehasonlítandó [code]a[/code] és [code]b[/code] lebegőpontos szám.\n- A [b]3[/b]. port a tűréshatár. Ezen belül a két szám egyenlőnek számít.\n- A [b]4[/b]., [b]5[/b]. és [b]6[/b]. port adja a lehetséges kimeneti értékeket, rendre akkor, ha [code]a == b[/code], [code]a > b[/code] vagy [code]a < b[/code]."
+
+#. VisualShaderNodeInput.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeInput.xml
+msgid "Represents the input shader parameter within the visual shader graph."
+msgstr "A shader bemeneti paraméterét képviseli a vizuális shadergráfban."
+
+#. VisualShaderNodeInput.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeInput.xml
+msgid "Gives access to input variables (built-ins) available for the shader. See the shading reference for the list of available built-ins for each shader type (check [code]Tutorials[/code] section for link)."
+msgstr "Hozzáférést ad a shader beépített bemeneti változóihoz. Az egyes shadertípusok változóit a shadernyelv kézikönyve sorolja fel, amely a [code]Tutorials[/code] szakaszban érhető el."
+
+#. VisualShaderNodeInput.get_input_real_name
+#: modules/visual_shader/doc_classes/VisualShaderNodeInput.xml
+msgid "Returns a translated name of the current constant in the Godot Shader Language. E.g. [code]\"ALBEDO\"[/code] if the [member input_name] equal to [code]\"albedo\"[/code]."
+msgstr "Visszaadja a jelenlegi állandó nevét a Godot shadernyelvében. Például [code]\"ALBEDO\"[/code] az eredmény, ha a [member input_name] értéke [code]\"albedo\"[/code]."
+
+#. VisualShaderNodeInput.input_type_changed
+#: modules/visual_shader/doc_classes/VisualShaderNodeInput.xml
+msgid "Emitted when input is changed via [member input_name]."
+msgstr "Akkor váltódik ki, ha a bemenet a [member input_name] módosításával megváltozik."
+
+#. VisualShaderNodeInput.input_name
+#: modules/visual_shader/doc_classes/VisualShaderNodeInput.xml
+msgid "One of the several input constants in lower-case style like: \"vertex\" ([code]VERTEX[/code]) or \"point_size\" ([code]POINT_SIZE[/code])."
+msgstr "A bemeneti állandók egyikének kisbetűs neve, például „vertex” ([code]VERTEX[/code]) vagy „point_size” ([code]POINT_SIZE[/code])."
+
+#. VisualShaderNodeIntConstant.constant
+#: modules/visual_shader/doc_classes/VisualShaderNodeIntConstant.xml
+msgid "An integer constant which represents a state of this node."
+msgstr "A csomópont állapotát meghatározó egész állandó."
+
+#. VisualShaderNodeIntFunc.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeIntFunc.xml
+msgid "Accept an integer scalar ([code]x[/code]) to the input port and transform it according to [member function]."
+msgstr "A bemeneti portra érkező egész [code]x[/code] skalárt a [member function] szerint alakítja át."
+
+#. VisualShaderNodeIntFunc.FUNC_BITWISE_NOT
+#. VisualShaderNodeUIntFunc.FUNC_BITWISE_NOT
+#: modules/visual_shader/doc_classes/VisualShaderNodeIntFunc.xml modules/visual_shader/doc_classes/VisualShaderNodeUIntFunc.xml
+msgid "Returns the result of bitwise [code]NOT[/code] operation on the integer. Translates to [code]~a[/code] in the Godot Shader Language."
+msgstr "Az egész számon végzett bitenkénti [code]NOT[/code] művelet eredményét adja vissza. A Godot shadernyelvében [code]~a[/code] alakban jelenik meg."
+
+#. VisualShaderNodeIntOp.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeIntOp.xml
+msgid "Applies [member operator] to two integer inputs: [code]a[/code] and [code]b[/code]."
+msgstr "A [member operator] műveletet két egész bemenetre alkalmazza: [code]a[/code] és [code]b[/code]."
+
+#. VisualShaderNodeIntOp.OP_MOD
+#. VisualShaderNodeUIntOp.OP_MOD
+#: modules/visual_shader/doc_classes/VisualShaderNodeIntOp.xml modules/visual_shader/doc_classes/VisualShaderNodeUIntOp.xml
+msgid "Calculates the remainder of two numbers using [code]a % b[/code]."
+msgstr "A [code]a % b[/code] kifejezéssel számítja ki az osztási maradékot."
+
+#. VisualShaderNodeIntOp.OP_BITWISE_AND
+#. VisualShaderNodeUIntOp.OP_BITWISE_AND
+#: modules/visual_shader/doc_classes/VisualShaderNodeIntOp.xml modules/visual_shader/doc_classes/VisualShaderNodeUIntOp.xml
+msgid "Returns the result of bitwise [code]AND[/code] operation on the integer. Translates to [code]a & b[/code] in the Godot Shader Language."
+msgstr "Az egész számokon végzett bitenkénti [code]AND[/code] művelet eredményét adja vissza. A Godot shadernyelvében [code]a & b[/code] alakban jelenik meg."
+
+#. VisualShaderNodeIntOp.OP_BITWISE_OR
+#. VisualShaderNodeUIntOp.OP_BITWISE_OR
+#: modules/visual_shader/doc_classes/VisualShaderNodeIntOp.xml modules/visual_shader/doc_classes/VisualShaderNodeUIntOp.xml
+msgid "Returns the result of bitwise [code]OR[/code] operation for two integers. Translates to [code]a | b[/code] in the Godot Shader Language."
+msgstr "A két egész számon végzett bitenkénti [code]OR[/code] művelet eredményét adja vissza. A Godot shadernyelvében [code]a | b[/code] alakban jelenik meg."
+
+#. VisualShaderNodeIntOp.OP_BITWISE_XOR
+#. VisualShaderNodeUIntOp.OP_BITWISE_XOR
+#: modules/visual_shader/doc_classes/VisualShaderNodeIntOp.xml modules/visual_shader/doc_classes/VisualShaderNodeUIntOp.xml
+msgid "Returns the result of bitwise [code]XOR[/code] operation for two integers. Translates to [code]a ^ b[/code] in the Godot Shader Language."
+msgstr "A két egész számon végzett bitenkénti [code]XOR[/code] művelet eredményét adja vissza. A Godot shadernyelvében [code]a ^ b[/code] alakban jelenik meg."
+
+#. VisualShaderNodeIntOp.OP_BITWISE_LEFT_SHIFT
+#. VisualShaderNodeUIntOp.OP_BITWISE_LEFT_SHIFT
+#: modules/visual_shader/doc_classes/VisualShaderNodeIntOp.xml modules/visual_shader/doc_classes/VisualShaderNodeUIntOp.xml
+msgid "Returns the result of bitwise left shift operation on the integer. Translates to [code]a << b[/code] in the Godot Shader Language."
+msgstr "Az egész szám bitjeinek balra tolásából kapott eredményt adja vissza. A Godot shadernyelvében [code]a << b[/code] alakban jelenik meg."
+
+#. VisualShaderNodeIntOp.OP_BITWISE_RIGHT_SHIFT
+#. VisualShaderNodeUIntOp.OP_BITWISE_RIGHT_SHIFT
+#: modules/visual_shader/doc_classes/VisualShaderNodeIntOp.xml modules/visual_shader/doc_classes/VisualShaderNodeUIntOp.xml
+msgid "Returns the result of bitwise right shift operation on the integer. Translates to [code]a >> b[/code] in the Godot Shader Language."
+msgstr "Az egész szám bitjeinek jobbra tolásából kapott eredményt adja vissza. A Godot shadernyelvében [code]a >> b[/code] alakban jelenik meg."
+
+#. VisualShaderNodeIntParameter.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeIntParameter.xml
+msgid "A visual shader node for shader parameter (uniform) of type [int]."
+msgstr "[int] típusú shaderparamétert (uniformot) képviselő vizuális csomópont."
+
+#. VisualShaderNodeIntParameter.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeIntParameter.xml
+msgid "A [VisualShaderNodeParameter] of type [int]. Offers additional customization for range of accepted values."
+msgstr "[int] típusú [VisualShaderNodeParameter]. Testreszabható az elfogadott értékek tartománya."
+
+#. VisualShaderNodeIntParameter.default_value
+#. VisualShaderNodeUIntParameter.default_value
+#: modules/visual_shader/doc_classes/VisualShaderNodeIntParameter.xml modules/visual_shader/doc_classes/VisualShaderNodeUIntParameter.xml
+msgid "Default value of this parameter, which will be used if not set externally. [member default_value_enabled] must be enabled; defaults to [code]0[/code] otherwise."
+msgstr "A paraméter értéke, ha kívülről nem állították be. Ehhez engedélyezni kell a [member default_value_enabled] tulajdonságot. Egyébként az alapértelmezés [code]0[/code]."
+
+#. VisualShaderNodeIntParameter.default_value_enabled
+#. VisualShaderNodeUIntParameter.default_value_enabled
+#: modules/visual_shader/doc_classes/VisualShaderNodeIntParameter.xml modules/visual_shader/doc_classes/VisualShaderNodeUIntParameter.xml
+msgid "If [code]true[/code], the node will have a custom default value."
+msgstr "Ha az érték [code]true[/code], a csomópont egyéni alapértelmezett értéket használ."
+
+#. VisualShaderNodeIntParameter.enum_names
+#: modules/visual_shader/doc_classes/VisualShaderNodeIntParameter.xml
+msgid "The names used for the enum select in the editor. [member hint] must be [constant HINT_ENUM] for this to take effect."
+msgstr "A szerkesztő felsorolásválasztójában megjelenő nevek. Akkor érvényes, ha a [member hint] értéke [constant HINT_ENUM]."
+
+#. VisualShaderNodeIntParameter.hint
+#: modules/visual_shader/doc_classes/VisualShaderNodeIntParameter.xml
+msgid "Range hint of this node. Use it to customize valid parameter range."
+msgstr "A csomóponthoz tartozó tartománytipp. A paraméter érvényes értéktartománya ezzel szabályozható."
+
+#. VisualShaderNodeIntParameter.max
+#: modules/visual_shader/doc_classes/VisualShaderNodeIntParameter.xml
+msgid "The maximum value this parameter can take. [member hint] must be either [constant HINT_RANGE] or [constant HINT_RANGE_STEP] for this to take effect."
+msgstr "A paraméter legnagyobb lehetséges értéke. Akkor érvényes, ha a [member hint] értéke [constant HINT_RANGE] vagy [constant HINT_RANGE_STEP]."
+
+#. VisualShaderNodeIntParameter.min
+#: modules/visual_shader/doc_classes/VisualShaderNodeIntParameter.xml
+msgid "The minimum value this parameter can take. [member hint] must be either [constant HINT_RANGE] or [constant HINT_RANGE_STEP] for this to take effect."
+msgstr "A paraméter legkisebb lehetséges értéke. Akkor érvényes, ha a [member hint] értéke [constant HINT_RANGE] vagy [constant HINT_RANGE_STEP]."
+
+#. VisualShaderNodeIntParameter.step
+#: modules/visual_shader/doc_classes/VisualShaderNodeIntParameter.xml
+msgid "The step between parameter's values. Forces the parameter to be a multiple of the given value. [member hint] must be [constant HINT_RANGE_STEP] for this to take effect."
+msgstr "A paraméter értékei közötti lépésköz. A paraméter csak a megadott érték többszöröse lehet. Akkor érvényes, ha a [member hint] értéke [constant HINT_RANGE_STEP]."
+
+#. VisualShaderNodeIntParameter.HINT_NONE
+#: modules/visual_shader/doc_classes/VisualShaderNodeIntParameter.xml
+msgid "The parameter will not constrain its value."
+msgstr "A paraméter értéke nincs tartományra korlátozva."
+
+#. VisualShaderNodeIntParameter.HINT_RANGE
+#: modules/visual_shader/doc_classes/VisualShaderNodeIntParameter.xml
+msgid "The parameter's value must be within the specified [member min]/[member max] range."
+msgstr "A paraméter értékének a [member min] és a [member max] közötti tartományba kell esnie."
+
+#. VisualShaderNodeIntParameter.HINT_RANGE_STEP
+#: modules/visual_shader/doc_classes/VisualShaderNodeIntParameter.xml
+msgid "The parameter's value must be within the specified range, with the given [member step] between values."
+msgstr "A paraméter értékének a megadott tartományba kell esnie, a [member step] lépésközzel."
+
+#. VisualShaderNodeIntParameter.HINT_ENUM
+#: modules/visual_shader/doc_classes/VisualShaderNodeIntParameter.xml
+msgid "The parameter uses an enum to associate preset values to names in the editor."
+msgstr "A paraméter felsorolással rendeli az előre beállított értékeket a szerkesztőben megjelenő nevekhez."
+
+#. VisualShaderNodeIs.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeIs.xml
+msgid "A boolean comparison operator to be used within the visual shader graph."
+msgstr "Logikai eredményt adó összehasonlító művelet a vizuális shadergráfban."
+
+#. VisualShaderNodeIs.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeIs.xml
+msgid "Returns the boolean result of the comparison between [code]INF[/code] or [code]NaN[/code] and a scalar parameter."
+msgstr "Azt vizsgálja, hogy a skalárparaméter [code]INF[/code] vagy [code]NaN[/code] értékű-e, és logikai értéket ad vissza."
+
+#. VisualShaderNodeIs.function
+#: modules/visual_shader/doc_classes/VisualShaderNodeIs.xml
+msgid "The comparison function."
+msgstr "Az összehasonlító függvény."
+
+#. VisualShaderNodeIs.FUNC_IS_INF
+#: modules/visual_shader/doc_classes/VisualShaderNodeIs.xml
+msgid "Comparison with [code]INF[/code] (Infinity)."
+msgstr "Összehasonlítás [code]INF[/code] (végtelen) értékkel."
+
+#. VisualShaderNodeIs.FUNC_IS_NAN
+#: modules/visual_shader/doc_classes/VisualShaderNodeIs.xml
+msgid "Comparison with [code]NaN[/code] (Not a Number; indicates invalid numeric results, such as division by zero)."
+msgstr "Összehasonlítás [code]NaN[/code] („nem szám”) értékkel. Ez érvénytelen numerikus eredményt jelezhet, például nullával való osztásnál."
+
+#. VisualShaderNodeLinearSceneDepth.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeLinearSceneDepth.xml
+msgid "This node can be used in fragment shaders."
+msgstr "A csomópont fragmentshaderekben használható."
+
+#. VisualShaderNodeMix.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeMix.xml
+msgid "Linearly interpolates between two values within the visual shader graph."
+msgstr "Két érték között lineárisan interpolál a vizuális shadergráfban."
+
+#. VisualShaderNodeMultiplyAdd.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeMultiplyAdd.xml
+msgid "Performs a fused multiply-add operation within the visual shader graph."
+msgstr "Egyesített szorzás-összeadást végez a vizuális shadergráfban."
+
+#. VisualShaderNodeMultiplyAdd.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeMultiplyAdd.xml
+msgid "Uses three operands to compute [code](a * b + c)[/code] expression."
+msgstr "Három operandusból számítja ki a [code](a * b + c)[/code] kifejezés értékét."
+
+#. VisualShaderNodeMultiplyAdd.OP_TYPE_SCALAR
+#. VisualShaderNodeRemap.OP_TYPE_SCALAR
+#. VisualShaderNodeSmoothStep.OP_TYPE_SCALAR
+#. VisualShaderNodeStep.OP_TYPE_SCALAR
+#: modules/visual_shader/doc_classes/VisualShaderNodeMultiplyAdd.xml modules/visual_shader/doc_classes/VisualShaderNodeRemap.xml modules/visual_shader/doc_classes/VisualShaderNodeSmoothStep.xml modules/visual_shader/doc_classes/VisualShaderNodeStep.xml
+msgid "A floating-point scalar type."
+msgstr "Lebegőpontos skalártípus."
+
+#. VisualShaderNodeOuterProduct.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeOuterProduct.xml
+msgid "Calculates an outer product of two vectors within the visual shader graph."
+msgstr "Két vektor külső szorzatát számítja ki a vizuális shadergráfban."
+
+#. VisualShaderNodeOuterProduct.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeOuterProduct.xml
+msgid "[code]OuterProduct[/code] treats the first parameter [code]c[/code] as a column vector (matrix with one column) and the second parameter [code]r[/code] as a row vector (matrix with one row) and does a linear algebraic matrix multiply [code]c * r[/code], yielding a matrix whose number of rows is the number of components in [code]c[/code] and whose number of columns is the number of components in [code]r[/code]."
+msgstr "Az [code]OuterProduct[/code] az első [code]c[/code] paramétert oszlopvektorként (egyoszlopos mátrixként), a második [code]r[/code] paramétert sorvektorként (egysoros mátrixként) kezeli. A [code]c * r[/code] mátrixszorzat olyan mátrixot ad, amelyben a sorok száma a [code]c[/code], az oszlopok száma pedig az [code]r[/code] összetevőinek száma."
+
+#. VisualShaderNodeOutput.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeOutput.xml
+msgid "Represents the output shader parameters within the visual shader graph."
+msgstr "A shader kimeneti paramétereit képviseli a vizuális shadergráfban."
+
+#. VisualShaderNodeOutput.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeOutput.xml
+msgid "This visual shader node is present in all shader graphs in form of \"Output\" block with multiple output value ports."
+msgstr "Ez a vizuális shadercsomópont minden shadergráfban jelen van, „Output” blokként, több értékporttal."
+
+#. VisualShaderNodeParameter.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeParameter.xml
+msgid "A base type for the parameters within the visual shader graph."
+msgstr "A vizuális shadergráf paramétereinek alaptípusa."
+
+#. VisualShaderNodeParameter.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeParameter.xml
+msgid "A parameter represents a variable in the shader which is set externally, i.e. from the [ShaderMaterial]. Parameters are exposed as properties in the [ShaderMaterial] and can be assigned from the Inspector or from a script."
+msgstr "A paraméter egy shaderbeli változó, amely kívülről állítható be, például a [ShaderMaterial] felől. A paraméterek a [ShaderMaterial] tulajdonságaiként jelennek meg, így a Felügyelőben vagy szkriptből is beállíthatók."
+
+#. VisualShaderNodeParameter.instance_index
+#: modules/visual_shader/doc_classes/VisualShaderNodeParameter.xml
+msgid "The index within 0-15 range, which is used to avoid clashes when shader used on multiple materials."
+msgstr "0–15 közötti index, amellyel elkerülhetők az ütközések, ha ugyanazt a shadert több anyag használja."
+
+#. VisualShaderNodeParameter.parameter_name
+#: modules/visual_shader/doc_classes/VisualShaderNodeParameter.xml
+msgid "Name of the parameter, by which it can be accessed through the [ShaderMaterial] properties."
+msgstr "A paraméter neve, amelyen a [ShaderMaterial] tulajdonságai között elérhető."
+
+#. VisualShaderNodeParameter.qualifier
+#: modules/visual_shader/doc_classes/VisualShaderNodeParameter.xml
+msgid "Defines the scope of the parameter."
+msgstr "A paraméter hatókörét határozza meg."
+
+#. VisualShaderNodeParameter.QUAL_NONE
+#: modules/visual_shader/doc_classes/VisualShaderNodeParameter.xml
+msgid "The parameter will be tied to the [ShaderMaterial] using this shader."
+msgstr "A paraméter a shadert használó [ShaderMaterial] anyaghoz tartozik."
+
+#. VisualShaderNodeParameter.QUAL_GLOBAL
+#: modules/visual_shader/doc_classes/VisualShaderNodeParameter.xml
+msgid "The parameter will use a global value, defined in Project Settings."
+msgstr "A paraméter a projektbeállításokban megadott globális értéket használja."
+
+#. VisualShaderNodeParameter.QUAL_INSTANCE
+#: modules/visual_shader/doc_classes/VisualShaderNodeParameter.xml
+msgid "The parameter will be tied to the node with attached [ShaderMaterial] using this shader."
+msgstr "A paraméter ahhoz a csomóponthoz tartozik, amelyhez az ezt a shadert használó [ShaderMaterial] hozzá van rendelve."
+
+#. VisualShaderNodeParameter.QUAL_INSTANCE_INDEX
+#: modules/visual_shader/doc_classes/VisualShaderNodeParameter.xml
+msgid "The parameter will be tied to the node with attached [ShaderMaterial] using this shader. Enables setting a [member instance_index] property."
+msgstr "A paraméter ahhoz a csomóponthoz tartozik, amelyhez az ezt a shadert használó [ShaderMaterial] hozzá van rendelve. Beállíthatóvá teszi az [member instance_index] tulajdonságot."
+
+#. VisualShaderNodeParameterRef.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeParameterRef.xml
+msgid "A reference to an existing [VisualShaderNodeParameter]."
+msgstr "Hivatkozás létező [VisualShaderNodeParameter] csomópontra."
+
+#. VisualShaderNodeParameterRef.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeParameterRef.xml
+msgid "Creating a reference to a [VisualShaderNodeParameter] allows you to reuse this parameter in different shaders or shader stages easily."
+msgstr "A [VisualShaderNodeParameter] csomópontra mutató hivatkozással ugyanazt a paramétert több shaderben vagy shaderszakaszban is felhasználhatod."
+
+#. VisualShaderNodeParameterRef.parameter_name
+#: modules/visual_shader/doc_classes/VisualShaderNodeParameterRef.xml
+msgid "The name of the parameter which this reference points to."
+msgstr "Annak a paraméternek a neve, amelyre ez a hivatkozás mutat."
+
+#. VisualShaderNodeTexture.source
+#: modules/visual_shader/doc_classes/VisualShaderNodeTexture.xml
+msgid "Determines the source for the lookup."
+msgstr "Meghatározza a mintavételezés forrását."
+
+#. VisualShaderNodeTexture.texture
+#: modules/visual_shader/doc_classes/VisualShaderNodeTexture.xml
+msgid "The source texture, if needed for the selected [member source]."
+msgstr "A forrástextúra, ha a kiválasztott [member source] beállításhoz szükség van rá."
+
+#. VisualShaderNodeTexture.texture_type
+#: modules/visual_shader/doc_classes/VisualShaderNodeTexture.xml
+msgid "Specifies the type of the texture if [member source] is set to [constant SOURCE_TEXTURE]."
+msgstr "A textúra típusát adja meg, ha a [member source] értéke [constant SOURCE_TEXTURE]."
+
+#. VisualShaderNodeTexture.SOURCE_TEXTURE
+#: modules/visual_shader/doc_classes/VisualShaderNodeTexture.xml
+msgid "Use the texture given as an argument for this function."
+msgstr "A függvény argumentumként megadott textúrát használja."
+
+#. VisualShaderNodeTexture.SOURCE_SCREEN
+#: modules/visual_shader/doc_classes/VisualShaderNodeTexture.xml
+msgid "Use the current viewport's texture as the source."
+msgstr "Forrásként az aktuális megjelenítési nézet textúráját használja."
+
+#. VisualShaderNodeTexture.SOURCE_2D_TEXTURE
+#: modules/visual_shader/doc_classes/VisualShaderNodeTexture.xml
+msgid "Use the texture from this shader's texture built-in (e.g. a texture of a [Sprite2D])."
+msgstr "A shader beépített textúráját használja, például egy [Sprite2D] textúráját."
+
+#. VisualShaderNodeTexture.SOURCE_2D_NORMAL
+#: modules/visual_shader/doc_classes/VisualShaderNodeTexture.xml
+msgid "Use the texture from this shader's normal map built-in."
+msgstr "A shader beépített normáltérkép-textúráját használja."
+
+#. VisualShaderNodeTexture.SOURCE_DEPTH
+#: modules/visual_shader/doc_classes/VisualShaderNodeTexture.xml
+msgid "Use the depth texture captured during the depth prepass. Only available when the depth prepass is used (i.e. in spatial shaders and in the forward_plus or gl_compatibility renderers)."
+msgstr "A mélységi előmenetben rögzített mélységtextúrát használja. Csak akkor érhető el, ha van mélységi előmenet, vagyis térbeli shaderekben, forward_plus vagy gl_compatibility renderelővel."
+
+#. VisualShaderNodeTexture.SOURCE_PORT
+#: modules/visual_shader/doc_classes/VisualShaderNodeTexture.xml
+msgid "Use the texture provided in the input port for this function."
+msgstr "A függvény a bemeneti porton átadott textúrát használja."
+
+#. VisualShaderNodeTexture.SOURCE_3D_NORMAL
+#: modules/visual_shader/doc_classes/VisualShaderNodeTexture.xml
+msgid "Use the normal buffer captured during the depth prepass. Only available when the normal-roughness buffer is available (i.e. in spatial shaders and in the forward_plus renderer)."
+msgstr "A mélységi előmenetben rögzített normálpuffert használja. Csak a normál- és érdességi puffer meglétekor érhető el, vagyis térbeli shadereknél, forward_plus renderelővel."
+
+#. VisualShaderNodeTexture.SOURCE_ROUGHNESS
+#: modules/visual_shader/doc_classes/VisualShaderNodeTexture.xml
+msgid "Use the roughness buffer captured during the depth prepass. Only available when the normal-roughness buffer is available (i.e. in spatial shaders and in the forward_plus renderer)."
+msgstr "A mélységi előmenetben rögzített érdességi puffert használja. Csak a normál- és érdességi puffer meglétekor érhető el, vagyis térbeli shadereknél, forward_plus renderelővel."
+
+#. VisualShaderNodeTexture2DArray.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeTexture2DArray.xml
+msgid "A 2D texture uniform array to be used within the visual shader graph."
+msgstr "2D-s uniform textúratömb a vizuális shadergráfhoz."
+
+#. VisualShaderNodeTexture2DArray.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeTexture2DArray.xml
+msgid "Translated to [code]uniform sampler2DArray[/code] in the shader language."
+msgstr "A shadernyelvben [code]uniform sampler2DArray[/code] alakban jelenik meg."
+
+#. VisualShaderNodeTexture2DArray.texture_array
+#: modules/visual_shader/doc_classes/VisualShaderNodeTexture2DArray.xml
+msgid "A source texture array. Used if [member VisualShaderNodeSample3D.source] is set to [constant VisualShaderNodeSample3D.SOURCE_TEXTURE]."
+msgstr "A forrástextúrák tömbje. Akkor használja, ha a [member VisualShaderNodeSample3D.source] értéke [constant VisualShaderNodeSample3D.SOURCE_TEXTURE]."
+
+#. VisualShaderNodeTexture2DArrayParameter.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeTexture2DArrayParameter.xml
+msgid "A visual shader node for shader parameter (uniform) of type [Texture2DArray]."
+msgstr "[Texture2DArray] típusú shaderparamétert (uniformot) képviselő vizuális csomópont."
+
+#. VisualShaderNodeTexture2DArrayParameter.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeTexture2DArrayParameter.xml
+msgid "This parameter allows to provide a collection of textures for the shader. You can use [VisualShaderNodeTexture2DArray] to extract the textures from array."
+msgstr "Ezzel a paraméterrel textúrák gyűjteményét adhatod át a shadernek. A tömb textúráiból a [VisualShaderNodeTexture2DArray] segítségével vehetsz mintát."
+
+#. VisualShaderNodeTexture2DParameter.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeTexture2DParameter.xml
+msgid "Provides a 2D texture parameter within the visual shader graph."
+msgstr "2D-s textúraparamétert biztosít a vizuális shadergráfban."
+
+#. VisualShaderNodeTexture2DParameter.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeTexture2DParameter.xml
+msgid "Translated to [code]uniform sampler2D[/code] in the shader language."
+msgstr "A shadernyelvben [code]uniform sampler2D[/code] alakban jelenik meg."
+
+#. VisualShaderNodeTexture3D.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeTexture3D.xml
+msgid "Performs a 3D texture lookup within the visual shader graph."
+msgstr "3D-s textúrából vesz mintát a vizuális shadergráfban."
+
+#. VisualShaderNodeTexture3D.texture
+#: modules/visual_shader/doc_classes/VisualShaderNodeTexture3D.xml
+msgid "A source texture. Used if [member VisualShaderNodeSample3D.source] is set to [constant VisualShaderNodeSample3D.SOURCE_TEXTURE]."
+msgstr "A forrástextúra. Akkor használja, ha a [member VisualShaderNodeSample3D.source] értéke [constant VisualShaderNodeSample3D.SOURCE_TEXTURE]."
+
+#. VisualShaderNodeTexture3DParameter.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeTexture3DParameter.xml
+msgid "Provides a 3D texture parameter within the visual shader graph."
+msgstr "3D-s textúraparamétert biztosít a vizuális shadergráfban."
+
+#. VisualShaderNodeTexture3DParameter.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeTexture3DParameter.xml
+msgid "Translated to [code]uniform sampler3D[/code] in the shader language."
+msgstr "A shadernyelvben [code]uniform sampler3D[/code] alakban jelenik meg."
+
+#. VisualShaderNodeTextureParameter.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeTextureParameter.xml
+msgid "Performs a uniform texture lookup within the visual shader graph."
+msgstr "Uniformként átadott textúrából vesz mintát a vizuális shadergráfban."
+
+#. VisualShaderNodeTextureParameter.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeTextureParameter.xml
+msgid "Performs a lookup operation on the texture provided as a uniform for the shader."
+msgstr "A shadernek uniformként átadott textúrából vesz mintát."
+
+#. VisualShaderNodeTextureParameter.color_default
+#: modules/visual_shader/doc_classes/VisualShaderNodeTextureParameter.xml
+msgid "Sets the default color if no texture is assigned to the uniform."
+msgstr "Beállítja az alapértelmezett színt arra az esetre, ha az uniformhoz nincs textúra rendelve."
+
+#. VisualShaderNodeTextureParameter.texture_filter
+#: modules/visual_shader/doc_classes/VisualShaderNodeTextureParameter.xml
+msgid "Sets the texture filtering mode."
+msgstr "Beállítja a textúraszűrési módot."
+
+#. VisualShaderNodeTextureParameter.texture_repeat
+#: modules/visual_shader/doc_classes/VisualShaderNodeTextureParameter.xml
+msgid "Sets the texture repeating mode."
+msgstr "Beállítja a textúra ismétlődési módját."
+
+#. VisualShaderNodeTextureParameter.texture_source
+#: modules/visual_shader/doc_classes/VisualShaderNodeTextureParameter.xml
+msgid "Sets the texture source mode. Used for reading from the screen, depth, or normal_roughness texture."
+msgstr "Beállítja a textúra forrását. A képernyőtextúra, a mélységtextúra vagy a normal_roughness textúra olvasására szolgál."
+
+#. VisualShaderNodeTextureParameter.TYPE_ANISOTROPY
+#: modules/visual_shader/doc_classes/VisualShaderNodeTextureParameter.xml
+msgid "Adds [code]hint_anisotropy[/code] as hint to the uniform declaration to use for a flowmap."
+msgstr "A [code]hint_anisotropy[/code] tippet adja az uniform deklarációjához, áramlástérképként (flowmap) való használathoz."
+
+#. VisualShaderNodeTextureParameter.COLOR_DEFAULT_WHITE
+#: modules/visual_shader/doc_classes/VisualShaderNodeTextureParameter.xml
+msgid "Defaults to fully opaque white color."
+msgstr "Az alapértelmezett szín teljesen átlátszatlan fehér."
+
+#. VisualShaderNodeTextureParameter.COLOR_DEFAULT_BLACK
+#: modules/visual_shader/doc_classes/VisualShaderNodeTextureParameter.xml
+msgid "Defaults to fully opaque black color."
+msgstr "Az alapértelmezett szín teljesen átlátszatlan fekete."
+
+#. VisualShaderNodeTextureParameter.COLOR_DEFAULT_TRANSPARENT
+#: modules/visual_shader/doc_classes/VisualShaderNodeTextureParameter.xml
+msgid "Defaults to fully transparent black color."
+msgstr "Az alapértelmezett szín teljesen átlátszó fekete."
+
+#. VisualShaderNodeTextureParameter.FILTER_DEFAULT
+#: modules/visual_shader/doc_classes/VisualShaderNodeTextureParameter.xml
+msgid "Sample the texture using the filter determined by the node this shader is attached to."
+msgstr "A textúrából a shaderhez rendelt csomópont szűrési beállítása alapján vesz mintát."
+
+#. VisualShaderNodeTextureParameter.REPEAT_DEFAULT
+#: modules/visual_shader/doc_classes/VisualShaderNodeTextureParameter.xml
+msgid "Sample the texture using the repeat mode determined by the node this shader is attached to."
+msgstr "A textúrából a shadert használó csomópont ismétlődési beállítása alapján vesz mintát."
+
+#. VisualShaderNodeTextureParameter.REPEAT_ENABLED
+#: modules/visual_shader/doc_classes/VisualShaderNodeTextureParameter.xml
+msgid "Texture will repeat normally."
+msgstr "A textúra ismétlődik."
+
+#. VisualShaderNodeTextureParameter.REPEAT_DISABLED
+#: modules/visual_shader/doc_classes/VisualShaderNodeTextureParameter.xml
+msgid "Texture will not repeat."
+msgstr "A textúra nem ismétlődik."
+
+#. VisualShaderNodeTextureParameter.SOURCE_NONE
+#: modules/visual_shader/doc_classes/VisualShaderNodeTextureParameter.xml
+msgid "The texture source is not specified in the shader."
+msgstr "A shader nem ad meg textúraforrást."
+
+#. VisualShaderNodeTextureParameter.SOURCE_SCREEN
+#: modules/visual_shader/doc_classes/VisualShaderNodeTextureParameter.xml
+msgid "The texture source is the screen texture which captures all opaque objects drawn this frame."
+msgstr "A textúra forrása a képernyőtextúra, amely az aktuális képkockában megrajzolt összes átlátszatlan objektumot tartalmazza."
+
+#. VisualShaderNodeTextureParameter.SOURCE_DEPTH
+#: modules/visual_shader/doc_classes/VisualShaderNodeTextureParameter.xml
+msgid "The texture source is the depth texture from the depth prepass."
+msgstr "A textúra forrása a mélységi előmenet mélységtextúrája."
+
+#. VisualShaderNodeTextureParameter.SOURCE_NORMAL_ROUGHNESS
+#: modules/visual_shader/doc_classes/VisualShaderNodeTextureParameter.xml
+msgid "The texture source is the normal-roughness buffer from the depth prepass."
+msgstr "A textúra forrása a mélységi előmenet normál- és érdességi puffere."
+
+#. VisualShaderNodeTextureParameterTriplanar.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeTextureParameterTriplanar.xml
+msgid "Performs a uniform texture lookup with triplanar within the visual shader graph."
+msgstr "Uniformként átadott textúrából háromsíkú leképezéssel vesz mintát a vizuális shadergráfban."
+
+#. VisualShaderNodeTextureParameterTriplanar.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeTextureParameterTriplanar.xml
+msgid "Performs a lookup operation on the texture provided as a uniform for the shader, with support for triplanar mapping."
+msgstr "A shadernek uniformként átadott textúrából vesz mintát, háromsíkú leképezés támogatásával."
+
+#. VisualShaderNodeTextureSDF.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeTextureSDF.xml
+msgid "Performs an SDF (signed-distance field) texture lookup within the visual shader graph."
+msgstr "Előjeles távolságmező (SDF) textúrából vesz mintát a vizuális shadergráfban."
+
+#. VisualShaderNodeTextureSDF.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeTextureSDF.xml
+msgid "Translates to [code]texture_sdf(sdf_pos)[/code] in the shader language."
+msgstr "A shadernyelvben [code]texture_sdf(sdf_pos)[/code] hívásra fordul."
+
+#. VisualShaderNodeTextureSDFNormal.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeTextureSDFNormal.xml
+msgid "Translates to [code]texture_sdf_normal(sdf_pos)[/code] in the shader language."
+msgstr "A shadernyelvben [code]texture_sdf_normal(sdf_pos)[/code] hívásra fordul."
+
+#. VisualShaderNodeTransformCompose.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeTransformCompose.xml
+msgid "Composes a [Transform3D] from four [Vector3]s within the visual shader graph."
+msgstr "Négy [Vector3] vektorból állít össze egy [Transform3D] transzformációt a vizuális shadergráfban."
+
+#. VisualShaderNodeTransformConstant.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeTransformConstant.xml
+msgid "A [Transform3D] constant for use within the visual shader graph."
+msgstr "[Transform3D] állandó a vizuális shadergráfhoz."
+
+#. VisualShaderNodeTransformConstant.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeTransformConstant.xml
+msgid "A constant [Transform3D], which can be used as an input node."
+msgstr "Állandó [Transform3D] érték, amely bemeneti csomópontként használható."
+
+#. VisualShaderNodeTransformConstant.constant
+#: modules/visual_shader/doc_classes/VisualShaderNodeTransformConstant.xml
+msgid "A [Transform3D] constant which represents the state of this node."
+msgstr "A csomópont állapotát meghatározó [Transform3D] állandó."
+
+#. VisualShaderNodeTransformDecompose.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeTransformDecompose.xml
+msgid "Decomposes a [Transform3D] into four [Vector3]s within the visual shader graph."
+msgstr "Egy [Transform3D] transzformációt négy [Vector3] vektorra bont a vizuális shadergráfban."
+
+#. VisualShaderNodeTransformFunc.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeTransformFunc.xml
+msgid "Computes a [Transform3D] function within the visual shader graph."
+msgstr "[Transform3D] értéken végez műveletet a vizuális shadergráfban."
+
+#. VisualShaderNodeTransformFunc.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeTransformFunc.xml
+msgid "Computes an inverse or transpose function on the provided [Transform3D]."
+msgstr "Kiszámítja a megadott [Transform3D] inverzét vagy transzponáltját."
+
+#. VisualShaderNodeTransformFunc.function
+#: modules/visual_shader/doc_classes/VisualShaderNodeTransformFunc.xml
+msgid "The function to be computed."
+msgstr "Az elvégzendő művelet."
+
+#. VisualShaderNodeTransformFunc.FUNC_INVERSE
+#: modules/visual_shader/doc_classes/VisualShaderNodeTransformFunc.xml
+msgid "Perform the inverse operation on the [Transform3D] matrix."
+msgstr "Kiszámítja a [Transform3D] mátrix inverzét."
+
+#. VisualShaderNodeTransformFunc.FUNC_TRANSPOSE
+#: modules/visual_shader/doc_classes/VisualShaderNodeTransformFunc.xml
+msgid "Perform the transpose operation on the [Transform3D] matrix."
+msgstr "Transzponálja a [Transform3D] mátrixot."
+
+#. VisualShaderNodeTransformOp.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeTransformOp.xml
+msgid "A [Transform3D] operator to be used within the visual shader graph."
+msgstr "[Transform3D] típuson működő operátor a vizuális shadergráfhoz."
+
+#. VisualShaderNodeTransformOp.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeTransformOp.xml
+msgid "Applies [member operator] to two transform (4×4 matrices) inputs."
+msgstr "A [member operator] műveletet két transzformációs bemenetre alkalmazza. Mindkét bemenet 4×4-es mátrix."
+
+#. VisualShaderNodeTransformOp.operator
+#: modules/visual_shader/doc_classes/VisualShaderNodeTransformOp.xml
+msgid "The type of the operation to be performed on the transforms."
+msgstr "A transzformációkon végzett művelet típusa."
+
+#. VisualShaderNodeTransformOp.OP_AxB
+#: modules/visual_shader/doc_classes/VisualShaderNodeTransformOp.xml
+msgid "Multiplies transform [code]a[/code] by the transform [code]b[/code]."
+msgstr "Az [code]a[/code] transzformációt megszorozza a [code]b[/code] transzformációval."
+
+#. VisualShaderNodeTransformOp.OP_BxA
+#: modules/visual_shader/doc_classes/VisualShaderNodeTransformOp.xml
+msgid "Multiplies transform [code]b[/code] by the transform [code]a[/code]."
+msgstr "A [code]b[/code] transzformációt megszorozza az [code]a[/code] transzformációval."
+
+#. VisualShaderNodeTransformOp.OP_AxB_COMP
+#: modules/visual_shader/doc_classes/VisualShaderNodeTransformOp.xml
+msgid "Performs a component-wise multiplication of transform [code]a[/code] by the transform [code]b[/code]."
+msgstr "Elemenként szorozza az [code]a[/code] transzformációt a [code]b[/code] transzformációval."
+
+#. VisualShaderNodeTransformOp.OP_BxA_COMP
+#: modules/visual_shader/doc_classes/VisualShaderNodeTransformOp.xml
+msgid "Performs a component-wise multiplication of transform [code]b[/code] by the transform [code]a[/code]."
+msgstr "Elemenként szorozza a [code]b[/code] transzformációt az [code]a[/code] transzformációval."
+
+#. VisualShaderNodeTransformOp.OP_ADD
+#: modules/visual_shader/doc_classes/VisualShaderNodeTransformOp.xml
+msgid "Adds two transforms."
+msgstr "Összead két transzformációt."
+
+#. VisualShaderNodeTransformOp.OP_A_DIV_B
+#: modules/visual_shader/doc_classes/VisualShaderNodeTransformOp.xml
+msgid "Divides the transform [code]a[/code] by the transform [code]b[/code]."
+msgstr "Az [code]a[/code] transzformációt elosztja a [code]b[/code] transzformációval."
+
+#. VisualShaderNodeTransformOp.OP_B_DIV_A
+#: modules/visual_shader/doc_classes/VisualShaderNodeTransformOp.xml
+msgid "Divides the transform [code]b[/code] by the transform [code]a[/code]."
+msgstr "A [code]b[/code] transzformációt elosztja az [code]a[/code] transzformációval."
+
+#. VisualShaderNodeTransformParameter.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeTransformParameter.xml
+msgid "A [Transform3D] parameter for use within the visual shader graph."
+msgstr "[Transform3D] paraméter a vizuális shadergráfhoz."
+
+#. VisualShaderNodeTransformParameter.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeTransformParameter.xml
+msgid "Translated to [code]uniform mat4[/code] in the shader language."
+msgstr "A shadernyelvben [code]uniform mat4[/code] alakban jelenik meg."
+
+#. VisualShaderNodeTransformVecMult.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeTransformVecMult.xml
+msgid "Multiplies a [Transform3D] and a [Vector3] within the visual shader graph."
+msgstr "[Transform3D] transzformáció és [Vector3] vektor szorzását végzi a vizuális shadergráfban."
+
+#. VisualShaderNodeTransformVecMult.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeTransformVecMult.xml
+msgid "A multiplication operation on a transform (4×4 matrix) and a vector, with support for different multiplication operators."
+msgstr "Transzformáció (4×4-es mátrix) és vektor szorzása, többféle szorzási művelettel."
+
+#. VisualShaderNodeTransformVecMult.operator
+#: modules/visual_shader/doc_classes/VisualShaderNodeTransformVecMult.xml
+msgid "The multiplication type to be performed."
+msgstr "Az elvégzendő szorzás típusa."
+
+#. VisualShaderNodeTransformVecMult.OP_AxB
+#: modules/visual_shader/doc_classes/VisualShaderNodeTransformVecMult.xml
+msgid "Multiplies transform [code]a[/code] by the vector [code]b[/code]."
+msgstr "Az [code]a[/code] transzformációt megszorozza a [code]b[/code] vektorral."
+
+#. VisualShaderNodeTransformVecMult.OP_BxA
+#: modules/visual_shader/doc_classes/VisualShaderNodeTransformVecMult.xml
+msgid "Multiplies vector [code]b[/code] by the transform [code]a[/code]."
+msgstr "A [code]b[/code] vektort megszorozza az [code]a[/code] transzformációval."
+
+#. VisualShaderNodeTransformVecMult.OP_3x3_AxB
+#: modules/visual_shader/doc_classes/VisualShaderNodeTransformVecMult.xml
+msgid "Multiplies transform [code]a[/code] by the vector [code]b[/code], skipping the last row and column of the transform."
+msgstr "Az [code]a[/code] transzformációt megszorozza a [code]b[/code] vektorral, a transzformáció utolsó sorának és oszlopának kihagyásával."
+
+#. VisualShaderNodeTransformVecMult.OP_3x3_BxA
+#: modules/visual_shader/doc_classes/VisualShaderNodeTransformVecMult.xml
+msgid "Multiplies vector [code]b[/code] by the transform [code]a[/code], skipping the last row and column of the transform."
+msgstr "A [code]b[/code] vektort megszorozza az [code]a[/code] transzformációval, a transzformáció utolsó sorának és oszlopának kihagyásával."
+
+#. VisualShaderNodeUIntConstant.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeUIntConstant.xml
+msgid "An unsigned scalar integer constant to be used within the visual shader graph."
+msgstr "Előjel nélküli egész skalárállandó a vizuális shadergráfhoz."
+
+#. VisualShaderNodeUIntConstant.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeUIntConstant.xml
+msgid "Translated to [code]uint[/code] in the shader language."
+msgstr "A shadernyelvben [code]uint[/code] típusként jelenik meg."
+
+#. VisualShaderNodeUIntConstant.constant
+#: modules/visual_shader/doc_classes/VisualShaderNodeUIntConstant.xml
+msgid "An unsigned integer constant which represents a state of this node."
+msgstr "A csomópont állapotát meghatározó előjel nélküli egész állandó."
+
+#. VisualShaderNodeUIntFunc.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeUIntFunc.xml
+msgid "An unsigned scalar integer function to be used within the visual shader graph."
+msgstr "Előjel nélküli egész skaláron működő függvény a vizuális shadergráfhoz."
+
+#. VisualShaderNodeUIntFunc.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeUIntFunc.xml
+msgid "Accept an unsigned integer scalar ([code]x[/code]) to the input port and transform it according to [member function]."
+msgstr "A bemeneti portra érkező előjel nélküli egész [code]x[/code] skalárt a [member function] szerint alakítja át."
+
+#. VisualShaderNodeUIntOp.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeUIntOp.xml
+msgid "An unsigned integer scalar operator to be used within the visual shader graph."
+msgstr "Előjel nélküli egész skaláron működő operátor a vizuális shadergráfhoz."
+
+#. VisualShaderNodeUIntOp.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeUIntOp.xml
+msgid "Applies [member operator] to two unsigned integer inputs: [code]a[/code] and [code]b[/code]."
+msgstr "A [member operator] műveletet két előjel nélküli egész bemenetre alkalmazza: [code]a[/code] és [code]b[/code]."
+
+#. VisualShaderNodeUIntParameter.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeUIntParameter.xml
+msgid "A visual shader node for shader parameter (uniform) of type unsigned [int]."
+msgstr "Előjel nélküli egész ([int]) típusú shaderparamétert (uniformot) képviselő vizuális csomópont."
+
+#. VisualShaderNodeUIntParameter.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeUIntParameter.xml
+msgid "A [VisualShaderNodeParameter] of type unsigned [int]. Offers additional customization for range of accepted values."
+msgstr "Előjel nélküli egész ([int]) típusú [VisualShaderNodeParameter]. Testreszabható az elfogadott értékek tartománya."
+
+#. VisualShaderNodeUVFunc.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeUVFunc.xml
+msgid "Contains functions to modify texture coordinates ([code]uv[/code]) to be used within the visual shader graph."
+msgstr "Textúrakoordinátákat ([code]uv[/code]) módosító függvényeket biztosít a vizuális shadergráfhoz."
+
+#. VisualShaderNodeUVFunc.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeUVFunc.xml
+msgid "UV functions are similar to [Vector2] functions, but the input port of this node uses the shader's UV value by default."
+msgstr "Az UV-függvények a [Vector2] műveleteihez hasonlók, de a csomópont bemeneti portja alapértelmezésben a shader UV-értékét használja."
+
+#. VisualShaderNodeUVFunc.function
+#: modules/visual_shader/doc_classes/VisualShaderNodeUVFunc.xml
+msgid "A function to be applied to the texture coordinates."
+msgstr "A textúrakoordinátákra alkalmazandó függvény."
+
+#. VisualShaderNodeUVFunc.FUNC_PANNING
+#: modules/visual_shader/doc_classes/VisualShaderNodeUVFunc.xml
+msgid "Translates [code]uv[/code] by using [code]scale[/code] and [code]offset[/code] values using the following formula: [code]uv = uv + offset * scale[/code]. [code]uv[/code] port is connected to [code]UV[/code] built-in by default."
+msgstr "A [code]scale[/code] és az [code]offset[/code] érték alapján eltolja az [code]uv[/code] koordinátákat a [code]uv = uv + offset * scale[/code] képlettel. Az [code]uv[/code] port alapértelmezés szerint a beépített [code]UV[/code] értékhez kapcsolódik."
+
+#. VisualShaderNodeUVFunc.FUNC_SCALING
+#: modules/visual_shader/doc_classes/VisualShaderNodeUVFunc.xml
+msgid "Scales [code]uv[/code] by using [code]scale[/code] and [code]pivot[/code] values using the following formula: [code]uv = (uv - pivot) * scale + pivot[/code]. [code]uv[/code] port is connected to [code]UV[/code] built-in by default."
+msgstr "A [code]scale[/code] és a [code]pivot[/code] érték alapján átméretezi az [code]uv[/code] koordinátákat a [code]uv = (uv - pivot) * scale + pivot[/code] képlettel. Az [code]uv[/code] port alapértelmezés szerint a beépített [code]UV[/code] értékhez kapcsolódik."
+
+#. VisualShaderNodeUVPolarCoord.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeUVPolarCoord.xml
+msgid "A visual shader node that modifies the texture UV using polar coordinates."
+msgstr "A textúra UV-koordinátáit polárkoordinátákkal módosító vizuális shadercsomópont."
+
+#. VisualShaderNodeUVPolarCoord.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeUVPolarCoord.xml
+msgid "UV polar coord node will transform UV values into polar coordinates, with specified scale, zoom strength and repeat parameters. It can be used to create various swirl distortions."
+msgstr "A csomópont a megadott méretezéssel, nagyítási mértékkel és ismétléssel polárkoordinátákká alakítja az UV-értékeket. Különféle örvényszerű torzításokhoz használható."
+
+#. VisualShaderNodeVarying.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeVarying.xml
+msgid "A visual shader node that represents a \"varying\" shader value."
+msgstr "Különböző shaderfüggvények között átadott változót (varying) képviselő vizuális shadercsomópont."
+
+#. VisualShaderNodeVarying.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeVarying.xml
+msgid "Varying values are shader variables that can be passed between shader functions, e.g. from Vertex shader to Fragment shader."
+msgstr "Az átadott változók (varying) shaderfüggvények között továbbíthatók, például a vertexshaderből a fragmentshaderbe."
+
+#. VisualShaderNodeVarying.varying_name
+#: modules/visual_shader/doc_classes/VisualShaderNodeVarying.xml
+msgid "Name of the variable. Must be unique."
+msgstr "A változó neve. Egyedinek kell lennie."
+
+#. VisualShaderNodeVaryingGetter.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeVaryingGetter.xml
+msgid "A visual shader node that gets a value of a varying."
+msgstr "Átadott változó értékét kiolvasó vizuális shadercsomópont."
+
+#. VisualShaderNodeVaryingGetter.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeVaryingGetter.xml
+msgid "Outputs a value of a varying defined in the shader. You need to first create a varying that can be used in the given function, e.g. varying getter in Fragment shader requires a varying with mode set to [constant VisualShader.VARYING_MODE_VERTEX_TO_FRAG_LIGHT]."
+msgstr "A shaderben definiált átadott változó értékét adja ki. Először egy olyan átadott változót kell létrehoznod, amely elérhető az adott shaderfüggvényben. Például a fragmentshaderbeli kiolvasáshoz a változó módját [constant VisualShader.VARYING_MODE_VERTEX_TO_FRAG_LIGHT] értékre kell állítanod."
+
+#. VisualShaderNodeVaryingSetter.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeVaryingSetter.xml
+msgid "A visual shader node that sets a value of a varying."
+msgstr "Átadott változó értékét beállító vizuális shadercsomópont."
+
+#. VisualShaderNodeVaryingSetter.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeVaryingSetter.xml
+msgid "Inputs a value to a varying defined in the shader. You need to first create a varying that can be used in the given function, e.g. varying setter in Fragment shader requires a varying with mode set to [constant VisualShader.VARYING_MODE_FRAG_TO_LIGHT]."
+msgstr "A shaderben definiált átadott változónak ad értéket. Először egy olyan átadott változót kell létrehoznod, amely az adott shaderfüggvényben beállítható. Például a fragmentshaderbeli beállításhoz a változó módját [constant VisualShader.VARYING_MODE_FRAG_TO_LIGHT] értékre kell állítanod."
+
+#. VisualShaderNodeVectorCompose.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorCompose.xml
+msgid "Creates a [code]vec2[/code], [code]vec3[/code] or [code]vec4[/code] using scalar values that can be provided from separate inputs."
+msgstr "Külön bemeneteken is megadható skalárértékekből állít elő [code]vec2[/code], [code]vec3[/code] vagy [code]vec4[/code] értéket."
+
+#. VisualShaderNodeVectorDecompose.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorDecompose.xml
+msgid "Takes a [code]vec2[/code], [code]vec3[/code] or [code]vec4[/code] and decomposes it into scalar values that can be used as separate outputs."
+msgstr "A bemeneti [code]vec2[/code], [code]vec3[/code] vagy [code]vec4[/code] vektort külön kimeneteken használható skalárértékekre bontja."
+
+#. VisualShaderNodeVectorDistance.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorDistance.xml
+msgid "Returns the distance between two points. To be used within the visual shader graph."
+msgstr "Két pont távolságát adja vissza a vizuális shadergráfban."
+
+#. VisualShaderNodeVectorDistance.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorDistance.xml
+msgid "Calculates distance from point represented by vector [code]p0[/code] to vector [code]p1[/code].\nTranslated to [code]distance(p0, p1)[/code] in the shader language."
+msgstr "A [code]p0[/code] és a [code]p1[/code] vektorral megadott pontok közötti távolságot számítja ki.\nA shadernyelvben [code]distance(p0, p1)[/code] hívásra fordul."
+
+#. VisualShaderNodeVectorFunc.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorFunc.xml
+msgid "A vector function to be used within the visual shader graph."
+msgstr "Vektorfüggvény a vizuális shadergráfhoz."
+
+#. VisualShaderNodeVectorFunc.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorFunc.xml
+msgid "A visual shader node able to perform different functions using vectors."
+msgstr "Különféle vektorfüggvényeket végrehajtó vizuális shadercsomópont."
+
+#. VisualShaderNodeVectorFunc.function
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorFunc.xml
+msgid "The function to be performed."
+msgstr "A végrehajtandó függvény."
+
+#. VisualShaderNodeVectorFunc.FUNC_NORMALIZE
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorFunc.xml
+msgid "Normalizes the vector so that it has a length of [code]1[/code] but points in the same direction."
+msgstr "Normalizálja a vektort, vagyis a hosszát [code]1[/code] értékre állítja, miközben az iránya változatlan marad."
+
+#. VisualShaderNodeVectorFunc.FUNC_SATURATE
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorFunc.xml
+msgid "Clamps the value between [code]0.0[/code] and [code]1.0[/code]."
+msgstr "A [code]0.0[/code] és [code]1.0[/code] közötti tartományra korlátozza az értéket."
+
+#. VisualShaderNodeVectorFunc.FUNC_NEGATE
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorFunc.xml
+msgid "Returns the opposite value of the parameter."
+msgstr "A paraméter ellentettjét adja vissza."
+
+#. VisualShaderNodeVectorFunc.FUNC_RECIPROCAL
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorFunc.xml
+msgid "Returns [code]1/vector[/code]."
+msgstr "A [code]1/vector[/code] értéket adja vissza."
+
+#. VisualShaderNodeVectorFunc.FUNC_ABS
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorFunc.xml
+msgid "Returns the absolute value of the parameter."
+msgstr "A paraméter abszolút értékét adja vissza."
+
+#. VisualShaderNodeVectorFunc.FUNC_ACOS
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorFunc.xml
+msgid "Returns the arc-cosine of the parameter."
+msgstr "A paraméter arkuszkoszinuszát adja vissza."
+
+#. VisualShaderNodeVectorFunc.FUNC_ACOSH
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorFunc.xml
+msgid "Returns the inverse hyperbolic cosine of the parameter."
+msgstr "A paraméter inverz hiperbolikus koszinuszát adja vissza."
+
+#. VisualShaderNodeVectorFunc.FUNC_ASIN
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorFunc.xml
+msgid "Returns the arc-sine of the parameter."
+msgstr "A paraméter arkuszszinuszát adja vissza."
+
+#. VisualShaderNodeVectorFunc.FUNC_ASINH
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorFunc.xml
+msgid "Returns the inverse hyperbolic sine of the parameter."
+msgstr "A paraméter inverz hiperbolikus szinuszát adja vissza."
+
+#. VisualShaderNodeVectorFunc.FUNC_ATAN
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorFunc.xml
+msgid "Returns the arc-tangent of the parameter."
+msgstr "A paraméter arkusztangensét adja vissza."
+
+#. VisualShaderNodeVectorFunc.FUNC_ATANH
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorFunc.xml
+msgid "Returns the inverse hyperbolic tangent of the parameter."
+msgstr "A paraméter inverz hiperbolikus tangensét adja vissza."
+
+#. VisualShaderNodeVectorFunc.FUNC_CEIL
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorFunc.xml
+msgid "Finds the nearest integer that is greater than or equal to the parameter."
+msgstr "A paraméternél nem kisebb legközelebbi egész értéket adja vissza."
+
+#. VisualShaderNodeVectorFunc.FUNC_COS
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorFunc.xml
+msgid "Returns the cosine of the parameter."
+msgstr "A paraméter koszinuszát adja vissza."
+
+#. VisualShaderNodeVectorFunc.FUNC_COSH
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorFunc.xml
+msgid "Returns the hyperbolic cosine of the parameter."
+msgstr "A paraméter hiperbolikus koszinuszát adja vissza."
+
+#. VisualShaderNodeVectorFunc.FUNC_DEGREES
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorFunc.xml
+msgid "Converts a quantity in radians to degrees."
+msgstr "Radiánról fokra váltja át a szöget."
+
+#. VisualShaderNodeVectorFunc.FUNC_EXP
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorFunc.xml
+msgid "Base-e Exponential."
+msgstr "Az Euler-féle szám alapú exponenciális függvény."
+
+#. VisualShaderNodeVectorFunc.FUNC_EXP2
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorFunc.xml
+msgid "Base-2 Exponential."
+msgstr "2-es alapú exponenciális függvény."
+
+#. VisualShaderNodeVectorFunc.FUNC_FLOOR
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorFunc.xml
+msgid "Finds the nearest integer less than or equal to the parameter."
+msgstr "A paraméternél nem nagyobb legközelebbi egész értéket adja vissza."
+
+#. VisualShaderNodeVectorFunc.FUNC_FRACT
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorFunc.xml
+msgid "Computes the fractional part of the argument."
+msgstr "A paraméter törtrészét számítja ki."
+
+#. VisualShaderNodeVectorFunc.FUNC_INVERSE_SQRT
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorFunc.xml
+msgid "Returns the inverse of the square root of the parameter."
+msgstr "A paraméter négyzetgyökének reciprokát adja vissza."
