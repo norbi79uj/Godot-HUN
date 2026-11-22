@@ -26952,7 +26952,7 @@ msgstr "HTML-színkódból vagy szabványos színnévből [Color] értéket hoz 
 #. Color.Color
 #: doc/classes/Color.xml
 msgid "Constructs a [Color] either from an HTML color code or from a standardized color name, with [param alpha] on the range of 0.0 to 1.0. The supported color names are the same as the constants."
-msgstr "HTML-színkódból vagy szabványos színnévből [Color] értéket hoz létre, 0,0 és 1,0 közötti [param alpha] értékkel. A támogatott színnevek megegyeznek az állandók neveivel."
+msgstr "HTML-színkódból vagy szabványos színnévből [Color] értéket hoz létre, 0.0 és 1.0 közötti [param alpha] értékkel. A támogatott színnevek megegyeznek az állandók neveivel."
 
 #. Color.clamp
 #: doc/classes/Color.xml
@@ -26962,17 +26962,17 @@ msgstr "Új színt ad vissza. Minden összetevőt a [param min] és a [param max
 #. Color.darkened
 #: doc/classes/Color.xml
 msgid "Returns a new color resulting from making this color darker by the specified [param amount] (ratio from 0.0 to 1.0). See also [method lightened].\n[codeblocks]\n[gdscript]\nvar green = Color(0.0, 1.0, 0.0)\nvar darkgreen = green.darkened(0.2) # 20% darker than regular green\n[/gdscript]\n[csharp]\nvar green = new Color(0.0f, 1.0f, 0.0f);\nColor darkgreen = green.Darkened(0.2f); // 20% darker than regular green\n[/csharp]\n[/codeblocks]"
-msgstr "A megadott [param amount] mértékben sötétített új színt ad vissza. A mérték 0,0 és 1,0 közötti arány. Lásd még: [method lightened].\n[codeblocks]\n[gdscript]\nvar green = Color(0.0, 1.0, 0.0)\nvar darkgreen = green.darkened(0.2) # 20% darker than regular green\n[/gdscript]\n[csharp]\nvar green = new Color(0.0f, 1.0f, 0.0f);\nColor darkgreen = green.Darkened(0.2f); // 20% darker than regular green\n[/csharp]\n[/codeblocks]"
+msgstr "A megadott [param amount] mértékben sötétített új színt ad vissza. A mérték 0.0 és 1.0 közötti arány. Lásd még: [method lightened].\n[codeblocks]\n[gdscript]\nvar green = Color(0.0, 1.0, 0.0)\nvar darkgreen = green.darkened(0.2) # 20% darker than regular green\n[/gdscript]\n[csharp]\nvar green = new Color(0.0f, 1.0f, 0.0f);\nColor darkgreen = green.Darkened(0.2f); // 20% darker than regular green\n[/csharp]\n[/codeblocks]"
 
 #. Color.from_hsv
 #: doc/classes/Color.xml
 msgid "Constructs a color from an [url=https://en.wikipedia.org/wiki/HSL_and_HSV]HSV profile[/url]. The hue ([param h]), saturation ([param s]), and value ([param v]) are typically between 0.0 and 1.0.\n[codeblocks]\n[gdscript]\nvar color = Color.from_hsv(0.58, 0.5, 0.79, 0.8)\n[/gdscript]\n[csharp]\nvar color = Color.FromHsv(0.58f, 0.5f, 0.79f, 0.8f);\n[/csharp]\n[/codeblocks]"
-msgstr "[url=https://en.wikipedia.org/wiki/HSL_and_HSV]HSV-profilból[/url] hoz létre színt. A színárnyalat ([param h]), a telítettség ([param s]) és a világossági érték ([param v]) általában 0,0 és 1,0 közé esik.\n[codeblocks]\n[gdscript]\nvar color = Color.from_hsv(0.58, 0.5, 0.79, 0.8)\n[/gdscript]\n[csharp]\nvar color = Color.FromHsv(0.58f, 0.5f, 0.79f, 0.8f);\n[/csharp]\n[/codeblocks]"
+msgstr "[url=https://en.wikipedia.org/wiki/HSL_and_HSV]HSV-profilból[/url] hoz létre színt. A színárnyalat ([param h]), a telítettség ([param s]) és a világossági érték ([param v]) általában 0.0 és 1.0 közé esik.\n[codeblocks]\n[gdscript]\nvar color = Color.from_hsv(0.58, 0.5, 0.79, 0.8)\n[/gdscript]\n[csharp]\nvar color = Color.FromHsv(0.58f, 0.5f, 0.79f, 0.8f);\n[/csharp]\n[/codeblocks]"
 
 #. Color.from_ok_hsl
 #: doc/classes/Color.xml
 msgid "Constructs a color from an [url=https://bottosson.github.io/posts/colorpicker/]OK HSL profile[/url]. The hue ([param h]), saturation ([param s]), and lightness ([param l]) are typically between 0.0 and 1.0.\n[codeblocks]\n[gdscript]\nvar color = Color.from_ok_hsl(0.58, 0.5, 0.79, 0.8)\n[/gdscript]\n[csharp]\nvar color = Color.FromOkHsl(0.58f, 0.5f, 0.79f, 0.8f);\n[/csharp]\n[/codeblocks]"
-msgstr "[url=https://bottosson.github.io/posts/colorpicker/]OK HSL-profilból[/url] hoz létre színt. A színárnyalat ([param h]), a telítettség ([param s]) és a világosság ([param l]) általában 0,0 és 1,0 közé esik.\n[codeblocks]\n[gdscript]\nvar color = Color.from_ok_hsl(0.58, 0.5, 0.79, 0.8)\n[/gdscript]\n[csharp]\nvar color = Color.FromOkHsl(0.58f, 0.5f, 0.79f, 0.8f);\n[/csharp]\n[/codeblocks]"
+msgstr "[url=https://bottosson.github.io/posts/colorpicker/]OK HSL-profilból[/url] hoz létre színt. A színárnyalat ([param h]), a telítettség ([param s]) és a világosság ([param l]) általában 0.0 és 1.0 közé esik.\n[codeblocks]\n[gdscript]\nvar color = Color.from_ok_hsl(0.58, 0.5, 0.79, 0.8)\n[/gdscript]\n[csharp]\nvar color = Color.FromOkHsl(0.58f, 0.5f, 0.79f, 0.8f);\n[/csharp]\n[/codeblocks]"
 
 #. Color.from_rgbe9995
 #: doc/classes/Color.xml
@@ -26992,7 +26992,7 @@ msgstr "[code]true[/code] értéket ad vissza, ha ez a szín és a [param to] k�
 #. Color.lightened
 #: doc/classes/Color.xml
 msgid "Returns a new color resulting from making this color lighter by the specified [param amount], which should be a ratio from 0.0 to 1.0. See also [method darkened].\n[codeblocks]\n[gdscript]\nvar green = Color(0.0, 1.0, 0.0)\nvar light_green = green.lightened(0.2) # 20% lighter than regular green\n[/gdscript]\n[csharp]\nvar green = new Color(0.0f, 1.0f, 0.0f);\nColor lightGreen = green.Lightened(0.2f); // 20% lighter than regular green\n[/csharp]\n[/codeblocks]"
-msgstr "A megadott [param amount] mértékben világosított új színt ad vissza. A mérték 0,0 és 1,0 közötti arány legyen. Lásd még: [method darkened].\n[codeblocks]\n[gdscript]\nvar green = Color(0.0, 1.0, 0.0)\nvar light_green = green.lightened(0.2) # 20% lighter than regular green\n[/gdscript]\n[csharp]\nvar green = new Color(0.0f, 1.0f, 0.0f);\nColor lightGreen = green.Lightened(0.2f); // 20% lighter than regular green\n[/csharp]\n[/codeblocks]"
+msgstr "A megadott [param amount] mértékben világosított új színt ad vissza. A mérték 0.0 és 1.0 közötti arány legyen. Lásd még: [method darkened].\n[codeblocks]\n[gdscript]\nvar green = Color(0.0, 1.0, 0.0)\nvar light_green = green.lightened(0.2) # 20% lighter than regular green\n[/gdscript]\n[csharp]\nvar green = new Color(0.0f, 1.0f, 0.0f);\nColor lightGreen = green.Lightened(0.2f); // 20% lighter than regular green\n[/csharp]\n[/codeblocks]"
 
 #. Color.linear_to_srgb
 #: doc/classes/Color.xml
@@ -27752,7 +27752,7 @@ msgstr "RGBA-formátumban ábrázolt szín a vörös ([member r]), zöld ([membe
 #. Color.Color
 #: doc/classes/Color.xml
 msgid "Constructs a [Color] from RGBA values, typically between 0.0 and 1.0.\n[codeblocks]\n[gdscript]\nvar color = Color(0.2, 1.0, 0.7, 0.8) # Similar to `Color.from_rgba8(51, 255, 178, 204)`\n[/gdscript]\n[csharp]\nvar color = new Color(0.2f, 1.0f, 0.7f, 0.8f); // Similar to `Color.Color8(51, 255, 178, 255, 204)`\n[/csharp]\n[/codeblocks]"
-msgstr "Az RGBA-összetevőkből [Color] értéket hoz létre. Az értékek általában 0,0 és 1,0 közé esnek.\n[codeblocks]\n[gdscript]\nvar color = Color(0.2, 1.0, 0.7, 0.8) # Similar to `Color.from_rgba8(51, 255, 178, 204)`\n[/gdscript]\n[csharp]\nvar color = new Color(0.2f, 1.0f, 0.7f, 0.8f); // Similar to `Color.Color8(51, 255, 178, 255, 204)`\n[/csharp]\n[/codeblocks]"
+msgstr "Az RGBA-összetevőkből [Color] értéket hoz létre. Az értékek általában 0.0 és 1.0 közé esnek.\n[codeblocks]\n[gdscript]\nvar color = Color(0.2, 1.0, 0.7, 0.8) # Similar to `Color.from_rgba8(51, 255, 178, 204)`\n[/gdscript]\n[csharp]\nvar color = new Color(0.2f, 1.0f, 0.7f, 0.8f); // Similar to `Color.Color8(51, 255, 178, 255, 204)`\n[/csharp]\n[/codeblocks]"
 
 #. Color.hex64
 #: doc/classes/Color.xml
@@ -27772,7 +27772,7 @@ msgstr "A színt az [member r], [member g] és [member b] összetevők invertál
 #. Color.lerp
 #: doc/classes/Color.xml
 msgid "Returns the linear interpolation between this color's components and [param to]'s components. The interpolation factor [param weight] should be between 0.0 and 1.0 (inclusive). See also [method @GlobalScope.lerp].\n[codeblocks]\n[gdscript]\nvar red = Color(1.0, 0.0, 0.0)\nvar aqua = Color(0.0, 1.0, 0.8)\n\nred.lerp(aqua, 0.2) # Returns Color(0.8, 0.2, 0.16)\nred.lerp(aqua, 0.5) # Returns Color(0.5, 0.5, 0.4)\nred.lerp(aqua, 1.0) # Returns Color(0.0, 1.0, 0.8)\n[/gdscript]\n[csharp]\nvar red = new Color(1.0f, 0.0f, 0.0f);\nvar aqua = new Color(0.0f, 1.0f, 0.8f);\n\nred.Lerp(aqua, 0.2f); // Returns Color(0.8f, 0.2f, 0.16f)\nred.Lerp(aqua, 0.5f); // Returns Color(0.5f, 0.5f, 0.4f)\nred.Lerp(aqua, 1.0f); // Returns Color(0.0f, 1.0f, 0.8f)\n[/csharp]\n[/codeblocks]"
-msgstr "Lineárisan interpolál ez a szín és a [param to] szín összetevői között. A [param weight] interpolációs tényező 0,0 és 1,0 közé essen, a határértékeket is beleértve. Lásd még: [method @GlobalScope.lerp].\n[codeblocks]\n[gdscript]\nvar red = Color(1.0, 0.0, 0.0)\nvar aqua = Color(0.0, 1.0, 0.8)\n\nred.lerp(aqua, 0.2) # Returns Color(0.8, 0.2, 0.16)\nred.lerp(aqua, 0.5) # Returns Color(0.5, 0.5, 0.4)\nred.lerp(aqua, 1.0) # Returns Color(0.0, 1.0, 0.8)\n[/gdscript]\n[csharp]\nvar red = new Color(1.0f, 0.0f, 0.0f);\nvar aqua = new Color(0.0f, 1.0f, 0.8f);\n\nred.Lerp(aqua, 0.2f); // Returns Color(0.8f, 0.2f, 0.16f)\nred.Lerp(aqua, 0.5f); // Returns Color(0.5f, 0.5f, 0.4f)\nred.Lerp(aqua, 1.0f); // Returns Color(0.0f, 1.0f, 0.8f)\n[/csharp]\n[/codeblocks]"
+msgstr "Lineárisan interpolál ez a szín és a [param to] szín összetevői között. A [param weight] interpolációs tényező 0.0 és 1.0 közé essen, a határértékeket is beleértve. Lásd még: [method @GlobalScope.lerp].\n[codeblocks]\n[gdscript]\nvar red = Color(1.0, 0.0, 0.0)\nvar aqua = Color(0.0, 1.0, 0.8)\n\nred.lerp(aqua, 0.2) # Returns Color(0.8, 0.2, 0.16)\nred.lerp(aqua, 0.5) # Returns Color(0.5, 0.5, 0.4)\nred.lerp(aqua, 1.0) # Returns Color(0.0, 1.0, 0.8)\n[/gdscript]\n[csharp]\nvar red = new Color(1.0f, 0.0f, 0.0f);\nvar aqua = new Color(0.0f, 1.0f, 0.8f);\n\nred.Lerp(aqua, 0.2f); // Returns Color(0.8f, 0.2f, 0.16f)\nred.Lerp(aqua, 0.5f); // Returns Color(0.5f, 0.5f, 0.4f)\nred.Lerp(aqua, 1.0f); // Returns Color(0.0f, 1.0f, 0.8f)\n[/csharp]\n[/codeblocks]"
 
 #. Color.to_abgr32
 #: doc/classes/Color.xml
