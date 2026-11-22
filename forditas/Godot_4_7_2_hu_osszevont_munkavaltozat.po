@@ -43055,7 +43055,7 @@ msgstr "Visszaadja a sztring másolatát, amelyben a speciális karaktereket a J
 #. StringName.left
 #: doc/classes/String.xml doc/classes/StringName.xml
 msgid "Returns the first [param length] characters from the beginning of the string. If [param length] is negative, strips the last [param length] characters from the string's end.\n[codeblock]\nprint(\"Hello World!\".left(3))  # Prints \"Hel\"\nprint(\"Hello World!\".left(-4)) # Prints \"Hello Wo\"\n[/codeblock]"
-msgstr "Visszaadja a sztring első [param length] karakterét. Negatív [param length] esetén a sztring végéről az érték abszolút értékének megfelelő számú karaktert távolít el.\n[codeblock]\nprint(\"Hello World!\".left(3))  # Prints \"Hel\"\nprint(\"Hello World!\".left(-4)) # Prints \"Hello Wo\"\n[/codeblock]"
+msgstr "Visszaadja a sztring első [param length] karakterét. Negatív [param length] esetén a sztring végéről a [param length] abszolút értékének megfelelő számú karaktert távolít el.\n[codeblock]\nprint(\"Hello World!\".left(3))  # Prints \"Hel\"\nprint(\"Hello World!\".left(-4)) # Prints \"Hello Wo\"\n[/codeblock]"
 
 #. String.length
 #. StringName.length
@@ -43175,7 +43175,7 @@ msgstr "Visszaadja a [param what] [b]utolsó[/b], [b]kis- és nagybetűtől füg
 #. StringName.right
 #: doc/classes/String.xml doc/classes/StringName.xml
 msgid "Returns the last [param length] characters from the end of the string. If [param length] is negative, strips the first [param length] characters from the string's beginning.\n[codeblock]\nprint(\"Hello World!\".right(3))  # Prints \"ld!\"\nprint(\"Hello World!\".right(-4)) # Prints \"o World!\"\n[/codeblock]"
-msgstr "Visszaadja a sztring utolsó [param length] karakterét. Negatív [param length] esetén a sztring elejéről az érték abszolút értékének megfelelő számú karaktert távolít el.\n[codeblock]\nprint(\"Hello World!\".right(3))  # Prints \"ld!\"\nprint(\"Hello World!\".right(-4)) # Prints \"o World!\"\n[/codeblock]"
+msgstr "Visszaadja a sztring utolsó [param length] karakterét. Negatív [param length] esetén a sztring elejéről a [param length] abszolút értékének megfelelő számú karaktert távolít el.\n[codeblock]\nprint(\"Hello World!\".right(3))  # Prints \"ld!\"\nprint(\"Hello World!\".right(-4)) # Prints \"o World!\"\n[/codeblock]"
 
 #. String.rpad
 #. StringName.rpad
