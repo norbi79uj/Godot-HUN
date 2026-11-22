@@ -26422,3 +26422,2550 @@ msgstr "Visszaadja a Skeleton2D példány [RID] azonosítóját."
 #: doc/classes/Skeleton2D.xml
 msgid "Sets the [SkeletonModificationStack2D] attached to this skeleton."
 msgstr "Beállítja a csontvázhoz kapcsolt [SkeletonModificationStack2D] erőforrást."
+
+#. Image.brief
+#: doc/classes/Image.xml
+msgid "Image datatype."
+msgstr "Kép adattípus."
+
+#. Image.adjust_bcs
+#: doc/classes/Image.xml
+msgid "Adjusts this image's [param brightness], [param contrast], and [param saturation] by the given values. Does not work if the image is compressed (see [method is_compressed])."
+msgstr "A megadott értékekkel módosítja a kép fényerejét ([param brightness]), kontrasztját ([param contrast]) és telítettségét ([param saturation]). Tömörített képen nem működik (lásd: [method is_compressed])."
+
+#. Image.blend_rect
+#: doc/classes/Image.xml
+msgid "Alpha-blends [param src_rect] from [param src] image to this image at coordinates [param dst], clipped accordingly to both image bounds. This image and [param src] image [b]must[/b] have the same format. [param src_rect] with non-positive size is treated as empty."
+msgstr "Alfa-csatorna alapján összekeveri a [param src] kép [param src_rect] területét az aktuális képpel a [param dst] koordinátán. A művelet mindkét kép határain belül marad. Az aktuális kép és a [param src] kép formátuma [b]azonos kell legyen[/b]. A nem pozitív méretű [param src_rect] üresnek számít."
+
+#. Image.bump_map_to_normal_map
+#: doc/classes/Image.xml
+msgid "Converts a bump map to a normal map. A bump map provides a height offset per-pixel, while a normal map provides a normal direction per pixel."
+msgstr "Domborulattérképet alakít normáltérképpé. A domborulattérkép képpontonként magassági eltérést, a normáltérkép pedig normálirányt ad meg."
+
+#. Image.clear_mipmaps
+#: doc/classes/Image.xml
+msgid "Removes the image's mipmaps."
+msgstr "Eltávolítja a kép mipmapszintjeit."
+
+#. Image.compute_image_metrics
+#: doc/classes/Image.xml
+msgid "Compute image metrics on the current image and the compared image. This can be used to calculate the similarity between two images.\nThe dictionary contains [code]max[/code], [code]mean[/code], [code]mean_squared[/code], [code]root_mean_squared[/code] and [code]peak_snr[/code]."
+msgstr "Kiszámítja az aktuális és az összehasonlításra megadott kép közötti eltérés mérőszámait. Ezekkel a két kép hasonlósága mérhető.\nA szótár a [code]max[/code], [code]mean[/code], [code]mean_squared[/code], [code]root_mean_squared[/code] és [code]peak_snr[/code] értékeket tartalmazza."
+
+#. Image.convert
+#: doc/classes/Image.xml
+msgid "Converts this image's format to the given [param format]."
+msgstr "A képet a megadott [param format] formátumba alakítja."
+
+#. Image.copy_from
+#: doc/classes/Image.xml
+msgid "Copies [param src] image to this image."
+msgstr "A [param src] képet ebbe a képbe másolja."
+
+#. Image.create
+#. Image.create_empty
+#: doc/classes/Image.xml
+msgid "Creates an empty image of the given size and format. If [param use_mipmaps] is [code]true[/code], generates mipmaps for this image (see [method generate_mipmaps])."
+msgstr "Üres képet hoz létre a megadott mérettel és formátummal. Ha a [param use_mipmaps] értéke [code]true[/code], mipmapszinteket is készít hozzá (lásd: [method generate_mipmaps])."
+
+#. Image.create_from_data
+#: doc/classes/Image.xml
+msgid "Creates a new image of the given size and format. Fills the image with the given raw data. If [param use_mipmaps] is [code]true[/code], loads the mipmaps for this image from [param data]. See [method generate_mipmaps]."
+msgstr "Új képet hoz létre a megadott mérettel és formátummal, és kitölti a megadott nyers adatokkal. Ha a [param use_mipmaps] értéke [code]true[/code], a mipmapszinteket a [param data] adataiból tölti be. Lásd: [method generate_mipmaps]."
+
+#. Image.crop
+#: doc/classes/Image.xml
+msgid "Crops the image to the given [param width] and [param height]. If the specified size is larger than the current size, the extra area is filled with black pixels."
+msgstr "A képet a megadott [param width] szélességre és [param height] magasságra vágja. Ha a megadott méret nagyobb a jelenleginél, a hozzáadott területet fekete képpontokkal tölti ki."
+
+#. Image.detect_used_channels
+#: doc/classes/Image.xml
+msgid "Returns the color channels used by this image. If the image is compressed, the original [param source] must be specified."
+msgstr "Visszaadja a kép által használt színcsatornákat. Tömörített képnél meg kell adni az eredeti [param source] értéket."
+
+#. Image.fill
+#: doc/classes/Image.xml
+msgid "Fills the image with [param color]."
+msgstr "Kitölti a képet a [param color] színnel."
+
+#. Image.fill_rect
+#: doc/classes/Image.xml
+msgid "Fills [param rect] with [param color]."
+msgstr "Kitölti a [param rect] területet a [param color] színnel."
+
+#. Image.fix_alpha_edges
+#: doc/classes/Image.xml
+msgid "Blends low-alpha pixels with nearby pixels."
+msgstr "Az alacsony alfaértékű képpontokat a környező képpontokkal keveri."
+
+#. Image.flip_x
+#: doc/classes/Image.xml
+msgid "Flips the image horizontally."
+msgstr "Vízszintesen tükrözi a képet."
+
+#. Image.flip_y
+#: doc/classes/Image.xml
+msgid "Flips the image vertically."
+msgstr "Függőlegesen tükrözi a képet."
+
+#. Image.get_data
+#: doc/classes/Image.xml
+msgid "Returns a copy of the image's raw data."
+msgstr "Visszaadja a kép nyers adatainak másolatát."
+
+#. Image.get_data_size
+#: doc/classes/Image.xml
+msgid "Returns size (in bytes) of the image's raw data."
+msgstr "Visszaadja a kép nyers adatainak méretét bájtban."
+
+#. Image.get_format
+#: doc/classes/Image.xml
+msgid "Returns this image's format."
+msgstr "Visszaadja a kép formátumát."
+
+#. Image.get_height
+#: doc/classes/Image.xml
+msgid "Returns the image's height."
+msgstr "Visszaadja a kép magasságát."
+
+#. Image.get_mipmap_count
+#: doc/classes/Image.xml
+msgid "Returns the number of mipmap levels or 0 if the image has no mipmaps. The largest main level image is not counted as a mipmap level by this method, so if you want to include it you can add 1 to this count."
+msgstr "Visszaadja a mipmapszintek számát. Ha a képnek nincsenek mipmapszintjei, az eredmény 0. A legnagyobb, eredeti kép nem számít bele, így a teljes szintszámhoz adj egyet a visszaadott értékhez."
+
+#. Image.get_pixel
+#: doc/classes/Image.xml
+msgid "Returns the color of the pixel at [code](x, y)[/code].\nThis is the same as [method get_pixelv], but with two integer arguments instead of a [Vector2i] argument."
+msgstr "Visszaadja a [code](x, y)[/code] helyen lévő képpont színét.\nUgyanazt végzi, mint a [method get_pixelv], de egy [Vector2i] helyett két egész számot vár."
+
+#. Image.get_pixelv
+#: doc/classes/Image.xml
+msgid "Returns the color of the pixel at [param point].\nThis is the same as [method get_pixel], but with a [Vector2i] argument instead of two integer arguments."
+msgstr "Visszaadja a [param point] helyen lévő képpont színét.\nUgyanazt végzi, mint a [method get_pixel], de két egész szám helyett egy [Vector2i] értéket vár."
+
+#. Image.get_region
+#: doc/classes/Image.xml
+msgid "Returns a new [Image] that is a copy of this [Image]'s area specified with [param region]."
+msgstr "Új [Image] erőforrást ad vissza, amely az aktuális [Image] [param region] által megadott területének másolata."
+
+#. Image.get_size
+#: doc/classes/Image.xml
+msgid "Returns the image's size (width and height)."
+msgstr "Visszaadja a kép méretét, vagyis a szélességét és magasságát."
+
+#. Image.get_used_rect
+#: doc/classes/Image.xml
+msgid "Returns a [Rect2i] enclosing the visible portion of the image, considering each pixel with a non-zero alpha channel as visible."
+msgstr "A kép látható részét befoglaló [Rect2i] téglalapot adja vissza. Minden nem nulla alfaértékű képpontot láthatónak tekint."
+
+#. Image.get_width
+#: doc/classes/Image.xml
+msgid "Returns the image's width."
+msgstr "Visszaadja a kép szélességét."
+
+#. Image.has_mipmaps
+#: doc/classes/Image.xml
+msgid "Returns [code]true[/code] if the image has generated mipmaps."
+msgstr "[code]true[/code] értéket ad vissza, ha a képhez készültek mipmapszintek."
+
+#. Image.is_compressed
+#: doc/classes/Image.xml
+msgid "Returns [code]true[/code] if the image is compressed."
+msgstr "[code]true[/code] értéket ad vissza, ha a kép tömörített."
+
+#. Image.is_empty
+#: doc/classes/Image.xml
+msgid "Returns [code]true[/code] if the image has no data."
+msgstr "[code]true[/code] értéket ad vissza, ha a kép nem tartalmaz adatot."
+
+#. Image.is_invisible
+#: doc/classes/Image.xml
+msgid "Returns [code]true[/code] if all the image's pixels have an alpha value of 0. Returns [code]false[/code] if any pixel has an alpha value higher than 0."
+msgstr "[code]true[/code] értéket ad vissza, ha a kép összes képpontjának alfaértéke nulla. Ha bármely képpont alfaértéke nagyobb nullánál, [code]false[/code] értéket ad vissza."
+
+#. Image.linear_to_srgb
+#: doc/classes/Image.xml
+msgid "Converts the entire image from linear encoding to nonlinear sRGB encoding by using a lookup table. Only works on images with [constant FORMAT_RGB8] or [constant FORMAT_RGBA8] formats."
+msgstr "Keresőtáblával a teljes képet lineáris kódolásból nemlineáris sRGB-kódolásba alakítja. Csak [constant FORMAT_RGB8] vagy [constant FORMAT_RGBA8] formátumú képeken működik."
+
+#. Image.load_dds_from_buffer
+#: doc/classes/Image.xml
+msgid "Loads an image from the binary contents of a DDS file.\n[b]Note:[/b] This method is only available in engine builds with the DDS module enabled. By default, the DDS module is enabled, but it can be disabled at build-time using the [code]module_dds_enabled=no[/code] SCons option."
+msgstr "DDS-fájl bináris tartalmából tölti be a képet.\n[b]Megjegyzés:[/b] A metódus csak a DDS-modult tartalmazó motorverziókban érhető el. A modul alapértelmezésben engedélyezve van, de a motor összeállításakor a [code]module_dds_enabled=no[/code] SCons-beállítással kikapcsolható."
+
+#. Image.load_exr_from_buffer
+#: doc/classes/Image.xml
+msgid "Loads an image from the binary contents of an OpenEXR file."
+msgstr "OpenEXR-fájl bináris tartalmából tölti be a képet."
+
+#. Image.load_from_file
+#: doc/classes/Image.xml
+msgid "Creates a new [Image] and loads data from the specified file."
+msgstr "Új [Image] erőforrást hoz létre, és betölti a megadott fájl adatait."
+
+#. Image.load_jpg_from_buffer
+#: doc/classes/Image.xml
+msgid "Loads an image from the binary contents of a JPEG file."
+msgstr "JPEG-fájl bináris tartalmából tölti be a képet."
+
+#. Image.load_png_from_buffer
+#: doc/classes/Image.xml
+msgid "Loads an image from the binary contents of a PNG file."
+msgstr "PNG-fájl bináris tartalmából tölti be a képet."
+
+#. Image.load_tga_from_buffer
+#: doc/classes/Image.xml
+msgid "Loads an image from the binary contents of a TGA file.\n[b]Note:[/b] This method is only available in engine builds with the TGA module enabled. By default, the TGA module is enabled, but it can be disabled at build-time using the [code]module_tga_enabled=no[/code] SCons option."
+msgstr "TGA-fájl bináris tartalmából tölti be a képet.\n[b]Megjegyzés:[/b] A metódus csak a TGA-modult tartalmazó motorverziókban érhető el. A modul alapértelmezésben engedélyezve van, de a motor összeállításakor a [code]module_tga_enabled=no[/code] SCons-beállítással kikapcsolható."
+
+#. Image.load_webp_from_buffer
+#: doc/classes/Image.xml
+msgid "Loads an image from the binary contents of a WebP file."
+msgstr "WebP-fájl bináris tartalmából tölti be a képet."
+
+#. Image.premultiply_alpha
+#: doc/classes/Image.xml
+msgid "Multiplies color values with alpha values. Resulting color values for a pixel are [code](color * alpha)/256[/code]. See also [member CanvasItemMaterial.blend_mode]."
+msgstr "A színértékeket megszorozza az alfaértékekkel. A képpont eredményül kapott színértékei [code](color * alpha)/256[/code]. Lásd még: [member CanvasItemMaterial.blend_mode]."
+
+#. Image.rgbe_to_srgb
+#: doc/classes/Image.xml
+msgid "Converts a standard linear RGBE (Red Green Blue Exponent) image to an image that uses nonlinear sRGB encoding."
+msgstr "Szabványos lineáris RGBE (vörös, zöld, kék, kitevő) képet nemlineáris sRGB-kódolású képpé alakít."
+
+#. Image.save_png
+#: doc/classes/Image.xml
+msgid "Saves the image as a PNG file to the file at [param path]."
+msgstr "A képet PNG-fájlként menti a [param path] útvonalra."
+
+#. Image.save_png_to_buffer
+#: doc/classes/Image.xml
+msgid "Saves the image as a PNG file to a byte array."
+msgstr "A képet PNG-formátumban bájttömbbe menti."
+
+#. Image.set_data
+#: doc/classes/Image.xml
+msgid "Overwrites data of an existing [Image]. Non-static equivalent of [method create_from_data]."
+msgstr "Felülírja egy meglévő [Image] adatait. A [method create_from_data] példányon meghívható megfelelője."
+
+#. Image.shrink_x2
+#: doc/classes/Image.xml
+msgid "Shrinks the image by a factor of 2 on each axis (this divides the pixel count by 4)."
+msgstr "Mindkét tengely mentén felére csökkenti a kép méretét, így negyedannyi képpont marad."
+
+#. Image.data
+#: doc/classes/Image.xml
+msgid "Holds all the image's color data in a given format. See [enum Format] constants."
+msgstr "A kép összes színadatát tárolja egy meghatározott formátumban. Lásd az [enum Format] felsorolás állandóit."
+
+#. Image.MAX_WIDTH
+#: doc/classes/Image.xml
+msgid "The maximal width allowed for [Image] resources."
+msgstr "Az [Image] erőforrások megengedett legnagyobb szélessége."
+
+#. Image.MAX_HEIGHT
+#: doc/classes/Image.xml
+msgid "The maximal height allowed for [Image] resources."
+msgstr "Az [Image] erőforrások megengedett legnagyobb magassága."
+
+#. Image.FORMAT_LA8
+#: doc/classes/Image.xml
+msgid "OpenGL texture format with two values, luminance and alpha each stored with 8 bits."
+msgstr "Két összetevős OpenGL-textúraformátum. A fénysűrűséget és az alfaértéket is 8 biten tárolja."
+
+#. Image.FORMAT_R8
+#: doc/classes/Image.xml
+msgid "OpenGL texture format [code]RED[/code] with a single component and a bitdepth of 8."
+msgstr "[code]RED[/code] OpenGL-textúraformátum, egyetlen 8 bites összetevővel."
+
+#. Image.FORMAT_RG8
+#: doc/classes/Image.xml
+msgid "OpenGL texture format [code]RG[/code] with two components and a bitdepth of 8 for each."
+msgstr "[code]RG[/code] OpenGL-textúraformátum, két összetevővel, összetevőnként 8 bittel."
+
+#. Image.FORMAT_RGB8
+#: doc/classes/Image.xml
+msgid "OpenGL texture format [code]RGB[/code] with three components, each with a bitdepth of 8.\n[b]Note:[/b] When creating an [ImageTexture], a nonlinear sRGB to linear encoding conversion is performed."
+msgstr "[code]RGB[/code] OpenGL-textúraformátum, három összetevővel, összetevőnként 8 bittel.\n[b]Megjegyzés:[/b] Egy [ImageTexture] létrehozásakor a nemlineáris sRGB-kódolás lineáris kódolássá alakul."
+
+#. Image.FORMAT_RGBA8
+#: doc/classes/Image.xml
+msgid "OpenGL texture format [code]RGBA[/code] with four components, each with a bitdepth of 8.\n[b]Note:[/b] When creating an [ImageTexture], a nonlinear sRGB to linear encoding conversion is performed."
+msgstr "[code]RGBA[/code] OpenGL-textúraformátum, négy összetevővel, összetevőnként 8 bittel.\n[b]Megjegyzés:[/b] Egy [ImageTexture] létrehozásakor a nemlineáris sRGB-kódolás lineáris kódolássá alakul."
+
+#. Image.FORMAT_RGBA4444
+#: doc/classes/Image.xml
+msgid "OpenGL texture format [code]RGBA[/code] with four components, each with a bitdepth of 4."
+msgstr "[code]RGBA[/code] OpenGL-textúraformátum, négy összetevővel, összetevőnként 4 bittel."
+
+#. Image.FORMAT_RGB565
+#: doc/classes/Image.xml
+msgid "OpenGL texture format [code]RGB[/code] with three components. Red and blue have a bitdepth of 5, and green has a bitdepth of 6."
+msgstr "[code]RGB[/code] OpenGL-textúraformátum három összetevővel. A vörös és a kék összetevő 5 bites, a zöld 6 bites."
+
+#. Image.FORMAT_RF
+#: doc/classes/Image.xml
+msgid "OpenGL texture format [code]GL_R32F[/code] where there's one component, a 32-bit floating-point value."
+msgstr "[code]GL_R32F[/code] OpenGL-textúraformátum, egyetlen 32 bites lebegőpontos összetevővel."
+
+#. Image.FORMAT_RGF
+#: doc/classes/Image.xml
+msgid "OpenGL texture format [code]GL_RG32F[/code] where there are two components, each a 32-bit floating-point values."
+msgstr "[code]GL_RG32F[/code] OpenGL-textúraformátum, két 32 bites lebegőpontos összetevővel."
+
+#. Image.FORMAT_RGBF
+#: doc/classes/Image.xml
+msgid "OpenGL texture format [code]GL_RGB32F[/code] where there are three components, each a 32-bit floating-point values."
+msgstr "[code]GL_RGB32F[/code] OpenGL-textúraformátum, három 32 bites lebegőpontos összetevővel."
+
+#. Image.FORMAT_RGBAF
+#: doc/classes/Image.xml
+msgid "OpenGL texture format [code]GL_RGBA32F[/code] where there are four components, each a 32-bit floating-point values."
+msgstr "[code]GL_RGBA32F[/code] OpenGL-textúraformátum, négy 32 bites lebegőpontos összetevővel."
+
+#. Image.FORMAT_RH
+#: doc/classes/Image.xml
+msgid "OpenGL texture format [code]GL_R16F[/code] where there's one component, a 16-bit \"half-precision\" floating-point value."
+msgstr "[code]GL_R16F[/code] OpenGL-textúraformátum, egyetlen 16 bites, félpontosságú lebegőpontos összetevővel."
+
+#. Image.FORMAT_RGH
+#: doc/classes/Image.xml
+msgid "OpenGL texture format [code]GL_RG16F[/code] where there are two components, each a 16-bit \"half-precision\" floating-point value."
+msgstr "[code]GL_RG16F[/code] OpenGL-textúraformátum, két 16 bites, félpontosságú lebegőpontos összetevővel."
+
+#. Image.FORMAT_RGBH
+#: doc/classes/Image.xml
+msgid "OpenGL texture format [code]GL_RGB16F[/code] where there are three components, each a 16-bit \"half-precision\" floating-point value."
+msgstr "[code]GL_RGB16F[/code] OpenGL-textúraformátum, három 16 bites, félpontosságú lebegőpontos összetevővel."
+
+#. Image.FORMAT_RGBAH
+#: doc/classes/Image.xml
+msgid "OpenGL texture format [code]GL_RGBA16F[/code] where there are four components, each a 16-bit \"half-precision\" floating-point value."
+msgstr "[code]GL_RGBA16F[/code] OpenGL-textúraformátum, négy 16 bites, félpontosságú lebegőpontos összetevővel."
+
+#. Image.FORMAT_RGBE9995
+#: doc/classes/Image.xml
+msgid "A special OpenGL texture format where the three color components have 9 bits of precision and all three share a single 5-bit exponent."
+msgstr "Speciális OpenGL-textúraformátum, amelyben a három színösszetevő egyenként 9 bites, és közös 5 bites kitevőt használ."
+
+#. Image.FORMAT_RGTC_R
+#: doc/classes/Image.xml
+msgid "Texture format that uses [url=https://www.khronos.org/opengl/wiki/Red_Green_Texture_Compression]Red Green Texture Compression[/url], normalizing the red channel data using the same compression algorithm that DXT5 uses for the alpha channel."
+msgstr "[url=https://www.khronos.org/opengl/wiki/Red_Green_Texture_Compression]Red Green Texture Compression[/url] tömörítésű textúraformátum. A vörös csatornát ugyanazzal az algoritmussal normálja, amelyet a DXT5 az alfa-csatornához használ."
+
+#. Image.FORMAT_RGTC_RG
+#: doc/classes/Image.xml
+msgid "Texture format that uses [url=https://www.khronos.org/opengl/wiki/Red_Green_Texture_Compression]Red Green Texture Compression[/url], normalizing the red and green channel data using the same compression algorithm that DXT5 uses for the alpha channel."
+msgstr "[url=https://www.khronos.org/opengl/wiki/Red_Green_Texture_Compression]Red Green Texture Compression[/url] tömörítésű textúraformátum. A vörös és zöld csatornát ugyanazzal az algoritmussal normálja, amelyet a DXT5 az alfa-csatornához használ."
+
+#. Image.FORMAT_BPTC_RGBA
+#: doc/classes/Image.xml
+msgid "Texture format that uses [url=https://www.khronos.org/opengl/wiki/BPTC_Texture_Compression]BPTC[/url] compression with unsigned normalized RGBA components.\n[b]Note:[/b] When creating an [ImageTexture], a nonlinear sRGB to linear encoding conversion is performed."
+msgstr "[url=https://www.khronos.org/opengl/wiki/BPTC_Texture_Compression]BPTC[/url]-tömörítést használó textúraformátum előjel nélküli, normált RGBA-összetevőkkel.\n[b]Megjegyzés:[/b] Egy [ImageTexture] létrehozásakor a nemlineáris sRGB-kódolás lineáris kódolássá alakul."
+
+#. Image.FORMAT_BPTC_RGBF
+#: doc/classes/Image.xml
+msgid "Texture format that uses [url=https://www.khronos.org/opengl/wiki/BPTC_Texture_Compression]BPTC[/url] compression with signed floating-point RGB components."
+msgstr "[url=https://www.khronos.org/opengl/wiki/BPTC_Texture_Compression]BPTC[/url]-tömörítést használó textúraformátum előjeles, lebegőpontos RGB-összetevőkkel."
+
+#. Image.FORMAT_BPTC_RGBFU
+#: doc/classes/Image.xml
+msgid "Texture format that uses [url=https://www.khronos.org/opengl/wiki/BPTC_Texture_Compression]BPTC[/url] compression with unsigned floating-point RGB components."
+msgstr "[url=https://www.khronos.org/opengl/wiki/BPTC_Texture_Compression]BPTC[/url]-tömörítést használó textúraformátum előjel nélküli, lebegőpontos RGB-összetevőkkel."
+
+#. Image.FORMAT_ETC
+#: doc/classes/Image.xml
+msgid "[url=https://en.wikipedia.org/wiki/Ericsson_Texture_Compression#ETC1]Ericsson Texture Compression format 1[/url], also referred to as \"ETC1\", and is part of the OpenGL ES graphics standard. This format cannot store an alpha channel."
+msgstr "Az [url=https://en.wikipedia.org/wiki/Ericsson_Texture_Compression#ETC1]Ericsson Texture Compression 1[/url], röviden ETC1, az OpenGL ES grafikus szabvány része. A formátum nem tud alfa-csatornát tárolni."
+
+#. Image.FORMAT_ETC2_R11
+#: doc/classes/Image.xml
+msgid "[url=https://en.wikipedia.org/wiki/Ericsson_Texture_Compression#ETC2_and_EAC]Ericsson Texture Compression format 2[/url] ([code]R11_EAC[/code] variant), which provides one channel of unsigned data."
+msgstr "Az [url=https://en.wikipedia.org/wiki/Ericsson_Texture_Compression#ETC2_and_EAC]Ericsson Texture Compression 2[/url] formátum [code]R11_EAC[/code] változata, egy előjel nélküli adatcsatornával."
+
+#. Image.FORMAT_ETC2_R11S
+#: doc/classes/Image.xml
+msgid "[url=https://en.wikipedia.org/wiki/Ericsson_Texture_Compression#ETC2_and_EAC]Ericsson Texture Compression format 2[/url] ([code]SIGNED_R11_EAC[/code] variant), which provides one channel of signed data."
+msgstr "Az [url=https://en.wikipedia.org/wiki/Ericsson_Texture_Compression#ETC2_and_EAC]Ericsson Texture Compression 2[/url] formátum [code]SIGNED_R11_EAC[/code] változata, egy előjeles adatcsatornával."
+
+#. Image.FORMAT_ETC2_RG11
+#: doc/classes/Image.xml
+msgid "[url=https://en.wikipedia.org/wiki/Ericsson_Texture_Compression#ETC2_and_EAC]Ericsson Texture Compression format 2[/url] ([code]RG11_EAC[/code] variant), which provides two channels of unsigned data."
+msgstr "Az [url=https://en.wikipedia.org/wiki/Ericsson_Texture_Compression#ETC2_and_EAC]Ericsson Texture Compression 2[/url] formátum [code]RG11_EAC[/code] változata, két előjel nélküli adatcsatornával."
+
+#. Image.FORMAT_ETC2_RG11S
+#: doc/classes/Image.xml
+msgid "[url=https://en.wikipedia.org/wiki/Ericsson_Texture_Compression#ETC2_and_EAC]Ericsson Texture Compression format 2[/url] ([code]SIGNED_RG11_EAC[/code] variant), which provides two channels of signed data."
+msgstr "Az [url=https://en.wikipedia.org/wiki/Ericsson_Texture_Compression#ETC2_and_EAC]Ericsson Texture Compression 2[/url] formátum [code]SIGNED_RG11_EAC[/code] változata, két előjeles adatcsatornával."
+
+#. Image.FORMAT_ASTC_4x4
+#: doc/classes/Image.xml
+msgid "[url=https://en.wikipedia.org/wiki/Adaptive_scalable_texture_compression]Adaptive Scalable Texture Compression[/url]. This implements the 4×4 (high quality) mode."
+msgstr "Az [url=https://en.wikipedia.org/wiki/Adaptive_scalable_texture_compression]Adaptive Scalable Texture Compression[/url] jó minőségű, 4×4-es módja."
+
+#. Image.FORMAT_ASTC_4x4_HDR
+#: doc/classes/Image.xml
+msgid "Same format as [constant FORMAT_ASTC_4x4], but with the hint to let the GPU know it is used for HDR."
+msgstr "A [constant FORMAT_ASTC_4x4] formátummal azonos, de a GPU jelzést kap a HDR-használatról."
+
+#. Image.FORMAT_ASTC_8x8
+#: doc/classes/Image.xml
+msgid "[url=https://en.wikipedia.org/wiki/Adaptive_scalable_texture_compression]Adaptive Scalable Texture Compression[/url]. This implements the 8×8 (low quality) mode."
+msgstr "Az [url=https://en.wikipedia.org/wiki/Adaptive_scalable_texture_compression]Adaptive Scalable Texture Compression[/url] kisebb minőségű, 8×8-as módja."
+
+#. Image.FORMAT_ASTC_8x8_HDR
+#: doc/classes/Image.xml
+msgid "Same format as [constant FORMAT_ASTC_8x8], but with the hint to let the GPU know it is used for HDR."
+msgstr "A [constant FORMAT_ASTC_8x8] formátummal azonos, de a GPU jelzést kap a HDR-használatról."
+
+#. Image.INTERPOLATE_NEAREST
+#: doc/classes/Image.xml
+msgid "Performs nearest-neighbor interpolation. If the image is resized, it will be pixelated."
+msgstr "Legközelebbi szomszéd szerinti interpoláció. Átméretezéskor a kép pixelesnek látszik."
+
+#. Image.INTERPOLATE_BILINEAR
+#: doc/classes/Image.xml
+msgid "Performs bilinear interpolation. If the image is resized, it will be blurry. This mode is faster than [constant INTERPOLATE_CUBIC], but it results in lower quality."
+msgstr "Bilineáris interpoláció. Átméretezéskor a kép elmosódik. Gyorsabb a [constant INTERPOLATE_CUBIC] módnál, de kisebb képminőséget ad."
+
+#. Image.INTERPOLATE_CUBIC
+#: doc/classes/Image.xml
+msgid "Performs cubic interpolation. If the image is resized, it will be blurry. This mode often gives better results compared to [constant INTERPOLATE_BILINEAR], at the cost of being slower."
+msgstr "Köbös interpoláció. Átméretezéskor a kép elmosódik. Gyakran jobb eredményt ad a [constant INTERPOLATE_BILINEAR] módnál, de lassabb."
+
+#. Image.INTERPOLATE_LANCZOS
+#: doc/classes/Image.xml
+msgid "Performs Lanczos interpolation. This is the slowest image resizing mode, but it typically gives the best results, especially when downscaling images."
+msgstr "Lanczos-interpoláció. Ez a leglassabb átméretezési mód, de rendszerint a legjobb eredményt adja, különösen kicsinyítéskor."
+
+#. Image.ALPHA_NONE
+#: doc/classes/Image.xml
+msgid "Image is fully opaque. It does not store alpha data."
+msgstr "A kép teljesen átlátszatlan. Nem tárol alfaadatot."
+
+#. Image.ALPHA_BIT
+#: doc/classes/Image.xml
+msgid "Image stores either fully opaque or fully transparent pixels. Also known as punchthrough alpha."
+msgstr "A képpontok vagy teljesen átlátszatlanok, vagy teljesen átlátszók. Ezt kivágásos alfának is nevezik."
+
+#. Image.ALPHA_BLEND
+#: doc/classes/Image.xml
+msgid "Image stores alpha data with values varying between [code]0.0[/code] and [code]1.0[/code]."
+msgstr "A kép [code]0.0[/code] és [code]1.0[/code] közötti alfaértékeket tárol."
+
+#. Image.USED_CHANNELS_L
+#: doc/classes/Image.xml
+msgid "The image only uses one channel for luminance (grayscale)."
+msgstr "A kép egyetlen fénysűrűség-csatornát használ, így szürkeárnyalatos."
+
+#. Image.USED_CHANNELS_LA
+#: doc/classes/Image.xml
+msgid "The image uses two channels for luminance and alpha, respectively."
+msgstr "A kép két csatornát használ, egyet a fénysűrűséghez és egyet az alfaértékhez."
+
+#. Image.USED_CHANNELS_R
+#: doc/classes/Image.xml
+msgid "The image only uses the red channel."
+msgstr "A kép csak a vörös csatornát használja."
+
+#. Image.USED_CHANNELS_RG
+#: doc/classes/Image.xml
+msgid "The image uses two channels for red and green."
+msgstr "A kép két csatornát használ, a vöröset és a zöldet."
+
+#. Image.USED_CHANNELS_RGB
+#: doc/classes/Image.xml
+msgid "The image uses three channels for red, green, and blue."
+msgstr "A kép három csatornát használ, a vöröset, a zöldet és a kéket."
+
+#. Image.USED_CHANNELS_RGBA
+#: doc/classes/Image.xml
+msgid "The image uses four channels for red, green, blue, and alpha."
+msgstr "A kép négy csatornát használ, a vöröset, a zöldet, a kéket és az alfa-csatornát."
+
+#. Image.COMPRESS_SOURCE_SRGB
+#: doc/classes/Image.xml
+msgid "Source texture (before compression) uses nonlinear sRGB encoding."
+msgstr "A tömörítés előtti forrástextúra nemlineáris sRGB-kódolású."
+
+#. Image.COMPRESS_SOURCE_NORMAL
+#: doc/classes/Image.xml
+msgid "Source texture (before compression) is a normal texture (e.g. it can be compressed into two channels)."
+msgstr "A tömörítés előtti forrástextúra normáltérkép, amely például két csatornába tömöríthető."
+
+#. ImageFormatLoader.description
+#: doc/classes/ImageFormatLoader.xml
+msgid "The engine supports multiple image formats out of the box (PNG, SVG, JPEG, WebP to name a few), but you can choose to implement support for additional image formats by extending [ImageFormatLoaderExtension]."
+msgstr "A motor alapból több képformátumot támogat, például a PNG-t, az SVG-t, a JPEG-et és a WebP-t. További képformátumokhoz az [ImageFormatLoaderExtension] osztály leszármazottjában valósítható meg a támogatás."
+
+#. ImageFormatLoaderExtension.brief
+#: doc/classes/ImageFormatLoaderExtension.xml
+msgid "Base class for creating [ImageFormatLoader] extensions (adding support for extra image formats)."
+msgstr "Az [ImageFormatLoader] bővítményeinek alaposztálya további képformátumok támogatásához."
+
+#. ImageFormatLoaderExtension._get_recognized_extensions
+#: doc/classes/ImageFormatLoaderExtension.xml
+msgid "Returns the list of file extensions for this image format. Files with the given extensions will be treated as image file and loaded using this class."
+msgstr "Visszaadja a képformátum fájlkiterjesztéseit. A megadott kiterjesztésű fájlok képfájlnak számítanak, és ezzel az osztállyal töltődnek be."
+
+#. ImageFormatLoaderExtension._load_image
+#: doc/classes/ImageFormatLoaderExtension.xml
+msgid "Loads the content of [param fileaccess] into the provided [param image]."
+msgstr "Betölti a [param fileaccess] tartalmát a megadott [param image] képbe."
+
+#. ImageFormatLoaderExtension.add_format_loader
+#: doc/classes/ImageFormatLoaderExtension.xml
+msgid "Add this format loader to the engine, allowing it to recognize the file extensions returned by [method _get_recognized_extensions]."
+msgstr "Hozzáadja ezt a formátumbetöltőt a motorhoz. Ezzel a motor felismeri a [method _get_recognized_extensions] által visszaadott fájlkiterjesztéseket."
+
+#. ImageFormatLoaderExtension.remove_format_loader
+#: doc/classes/ImageFormatLoaderExtension.xml
+msgid "Remove this format loader from the engine."
+msgstr "Eltávolítja ezt a formátumbetöltőt a motorból."
+
+#. Color.brief
+#: doc/classes/Color.xml
+msgid "A color represented in RGBA format."
+msgstr "RGBA-formátumban ábrázolt szín."
+
+#. Color.Color
+#: doc/classes/Color.xml
+msgid "Constructs a default [Color] from opaque black. This is the same as [constant BLACK].\n[b]Note:[/b] In C#, this constructs a [Color] with all of its components set to [code]0.0[/code] (transparent black)."
+msgstr "Fedő feketéből alapértelmezett [Color] értéket hoz létre. Ez a [constant BLACK] értékkel egyezik meg.\n[b]Megjegyzés:[/b] C#-ban olyan [Color] értéket hoz létre, amelynek minden összetevője [code]0.0[/code] (átlátszó fekete)."
+
+#. Color.Color
+#: doc/classes/Color.xml
+msgid "Constructs a [Color] from the existing color, with [member a] set to the given [param alpha] value.\n[codeblocks]\n[gdscript]\nvar red = Color(Color.RED, 0.2) # 20% opaque red.\n[/gdscript]\n[csharp]\nvar red = new Color(Colors.Red, 0.2f); // 20% opaque red.\n[/csharp]\n[/codeblocks]"
+msgstr "A meglévő színből [Color] értéket hoz létre, amelynek [member a] összetevője a megadott [param alpha] lesz.\n[codeblocks]\n[gdscript]\nvar red = Color(Color.RED, 0.2) # 20% opaque red.\n[/gdscript]\n[csharp]\nvar red = new Color(Colors.Red, 0.2f); // 20% opaque red.\n[/csharp]\n[/codeblocks]"
+
+#. Color.Color
+#: doc/classes/Color.xml
+msgid "Constructs a [Color] as a copy of the given [Color]."
+msgstr "A megadott [Color] másolataként új [Color] értéket hoz létre."
+
+#. Color.Color
+#: doc/classes/Color.xml
+msgid "Constructs a [Color] either from an HTML color code or from a standardized color name. The supported color names are the same as the constants."
+msgstr "HTML-színkódból vagy szabványos színnévből [Color] értéket hoz létre. A támogatott színnevek megegyeznek az állandók neveivel."
+
+#. Color.Color
+#: doc/classes/Color.xml
+msgid "Constructs a [Color] either from an HTML color code or from a standardized color name, with [param alpha] on the range of 0.0 to 1.0. The supported color names are the same as the constants."
+msgstr "HTML-színkódból vagy szabványos színnévből [Color] értéket hoz létre, 0.0 és 1.0 közötti [param alpha] értékkel. A támogatott színnevek megegyeznek az állandók neveivel."
+
+#. Color.clamp
+#: doc/classes/Color.xml
+msgid "Returns a new color with all components clamped between the components of [param min] and [param max], by running [method @GlobalScope.clamp] on each component."
+msgstr "Új színt ad vissza. Minden összetevőt a [param min] és a [param max] megfelelő összetevői közé korlátoz a [method @GlobalScope.clamp] függvénnyel."
+
+#. Color.darkened
+#: doc/classes/Color.xml
+msgid "Returns a new color resulting from making this color darker by the specified [param amount] (ratio from 0.0 to 1.0). See also [method lightened].\n[codeblocks]\n[gdscript]\nvar green = Color(0.0, 1.0, 0.0)\nvar darkgreen = green.darkened(0.2) # 20% darker than regular green\n[/gdscript]\n[csharp]\nvar green = new Color(0.0f, 1.0f, 0.0f);\nColor darkgreen = green.Darkened(0.2f); // 20% darker than regular green\n[/csharp]\n[/codeblocks]"
+msgstr "A megadott [param amount] mértékben sötétített új színt ad vissza. A mérték 0.0 és 1.0 közötti arány. Lásd még: [method lightened].\n[codeblocks]\n[gdscript]\nvar green = Color(0.0, 1.0, 0.0)\nvar darkgreen = green.darkened(0.2) # 20% darker than regular green\n[/gdscript]\n[csharp]\nvar green = new Color(0.0f, 1.0f, 0.0f);\nColor darkgreen = green.Darkened(0.2f); // 20% darker than regular green\n[/csharp]\n[/codeblocks]"
+
+#. Color.from_hsv
+#: doc/classes/Color.xml
+msgid "Constructs a color from an [url=https://en.wikipedia.org/wiki/HSL_and_HSV]HSV profile[/url]. The hue ([param h]), saturation ([param s]), and value ([param v]) are typically between 0.0 and 1.0.\n[codeblocks]\n[gdscript]\nvar color = Color.from_hsv(0.58, 0.5, 0.79, 0.8)\n[/gdscript]\n[csharp]\nvar color = Color.FromHsv(0.58f, 0.5f, 0.79f, 0.8f);\n[/csharp]\n[/codeblocks]"
+msgstr "[url=https://en.wikipedia.org/wiki/HSL_and_HSV]HSV-profilból[/url] hoz létre színt. A színárnyalat ([param h]), a telítettség ([param s]) és a világossági érték ([param v]) általában 0.0 és 1.0 közé esik.\n[codeblocks]\n[gdscript]\nvar color = Color.from_hsv(0.58, 0.5, 0.79, 0.8)\n[/gdscript]\n[csharp]\nvar color = Color.FromHsv(0.58f, 0.5f, 0.79f, 0.8f);\n[/csharp]\n[/codeblocks]"
+
+#. Color.from_ok_hsl
+#: doc/classes/Color.xml
+msgid "Constructs a color from an [url=https://bottosson.github.io/posts/colorpicker/]OK HSL profile[/url]. The hue ([param h]), saturation ([param s]), and lightness ([param l]) are typically between 0.0 and 1.0.\n[codeblocks]\n[gdscript]\nvar color = Color.from_ok_hsl(0.58, 0.5, 0.79, 0.8)\n[/gdscript]\n[csharp]\nvar color = Color.FromOkHsl(0.58f, 0.5f, 0.79f, 0.8f);\n[/csharp]\n[/codeblocks]"
+msgstr "[url=https://bottosson.github.io/posts/colorpicker/]OK HSL-profilból[/url] hoz létre színt. A színárnyalat ([param h]), a telítettség ([param s]) és a világosság ([param l]) általában 0.0 és 1.0 közé esik.\n[codeblocks]\n[gdscript]\nvar color = Color.from_ok_hsl(0.58, 0.5, 0.79, 0.8)\n[/gdscript]\n[csharp]\nvar color = Color.FromOkHsl(0.58f, 0.5f, 0.79f, 0.8f);\n[/csharp]\n[/codeblocks]"
+
+#. Color.from_rgbe9995
+#: doc/classes/Color.xml
+msgid "Decodes a [Color] from an RGBE9995 format integer. See [constant Image.FORMAT_RGBE9995]."
+msgstr "RGBE9995 formátumú egész számból [Color] értéket dekódol. Lásd: [constant Image.FORMAT_RGBE9995]."
+
+#. Color.from_string
+#: doc/classes/Color.xml
+msgid "Creates a [Color] from the given string, which can be either an HTML color code or a named color (case-insensitive). Returns [param default] if the color cannot be inferred from the string.\nIf you want to create a color from String in a constant expression, use the equivalent constructor instead (i.e. [code]Color(\"color string\")[/code])."
+msgstr "A megadott karakterláncból [Color] értéket hoz létre. A karakterlánc HTML-színkód vagy színnév lehet, a kis- és nagybetűk megkülönböztetése nélkül. Ha a szín nem ismerhető fel, [param default] értéket ad vissza.\nHa konstans kifejezésben szeretnél karakterláncból színt létrehozni, használd az egyenértékű konstruktort ([code]Color(\"color string\")[/code])."
+
+#. Color.is_equal_approx
+#: doc/classes/Color.xml
+msgid "Returns [code]true[/code] if this color and [param to] are approximately equal, by running [method @GlobalScope.is_equal_approx] on each component."
+msgstr "[code]true[/code] értéket ad vissza, ha ez a szín és a [param to] közel egyenlők. Összetevőnként a [method @GlobalScope.is_equal_approx] függvényt használja."
+
+#. Color.lightened
+#: doc/classes/Color.xml
+msgid "Returns a new color resulting from making this color lighter by the specified [param amount], which should be a ratio from 0.0 to 1.0. See also [method darkened].\n[codeblocks]\n[gdscript]\nvar green = Color(0.0, 1.0, 0.0)\nvar light_green = green.lightened(0.2) # 20% lighter than regular green\n[/gdscript]\n[csharp]\nvar green = new Color(0.0f, 1.0f, 0.0f);\nColor lightGreen = green.Lightened(0.2f); // 20% lighter than regular green\n[/csharp]\n[/codeblocks]"
+msgstr "A megadott [param amount] mértékben világosított új színt ad vissza. A mérték 0.0 és 1.0 közötti arány legyen. Lásd még: [method darkened].\n[codeblocks]\n[gdscript]\nvar green = Color(0.0, 1.0, 0.0)\nvar light_green = green.lightened(0.2) # 20% lighter than regular green\n[/gdscript]\n[csharp]\nvar green = new Color(0.0f, 1.0f, 0.0f);\nColor lightGreen = green.Lightened(0.2f); // 20% lighter than regular green\n[/csharp]\n[/codeblocks]"
+
+#. Color.linear_to_srgb
+#: doc/classes/Color.xml
+msgid "Returns a copy of the color that is encoded using the [url=https://en.wikipedia.org/wiki/SRGB]nonlinear sRGB transfer function[/url]. This method requires the original color to use linear encoding. See also [method srgb_to_linear] which performs the opposite operation.\n[b]Note:[/b] The color's alpha channel ([member a]) is not affected. The alpha channel is always stored with linear encoding, regardless of the color space of the other color channels."
+msgstr "A szín [url=https://en.wikipedia.org/wiki/SRGB]nemlineáris sRGB átviteli függvénnyel[/url] kódolt másolatát adja vissza. Az eredeti színnek lineáris kódolásúnak kell lennie. Az ellenkező művelethez lásd a [method srgb_to_linear] metódust.\n[b]Megjegyzés:[/b] A szín alfa-csatornája ([member a]) változatlan marad. Az alfa-csatorna a többi színcsatorna színterétől függetlenül mindig lineáris kódolású."
+
+#. Color.srgb_to_linear
+#: doc/classes/Color.xml
+msgid "Returns a copy of the color that uses linear encoding. This method requires the original color to be encoded using the [url=https://en.wikipedia.org/wiki/SRGB]nonlinear sRGB transfer function[/url]. See also [method linear_to_srgb] which performs the opposite operation.\n[b]Note:[/b] The color's alpha channel ([member a]) is not affected. The alpha channel is always stored with linear encoding, regardless of the color space of the other color channels."
+msgstr "A szín lineáris kódolású másolatát adja vissza. Az eredeti színnek a [url=https://en.wikipedia.org/wiki/SRGB]nemlineáris sRGB átviteli függvényt[/url] kell használnia. Az ellenkező művelethez lásd a [method linear_to_srgb] metódust.\n[b]Megjegyzés:[/b] A szín alfa-csatornája ([member a]) változatlan marad. Az alfa-csatorna a többi színcsatorna színterétől függetlenül mindig lineáris kódolású."
+
+#. Color.operator *
+#: doc/classes/Color.xml
+msgid "Multiplies each component of the [Color] by the components of the given [Color]."
+msgstr "A [Color] minden összetevőjét megszorozza a megadott [Color] megfelelő összetevőjével."
+
+#. Color.operator *
+#: doc/classes/Color.xml
+msgid "Multiplies each component of the [Color] by the given [float]."
+msgstr "A [Color] minden összetevőjét megszorozza a megadott [float] értékkel."
+
+#. Color.operator *
+#: doc/classes/Color.xml
+msgid "Multiplies each component of the [Color] by the given [int]."
+msgstr "A [Color] minden összetevőjét megszorozza a megadott [int] értékkel."
+
+#. Color.operator +
+#: doc/classes/Color.xml
+msgid "Adds each component of the [Color] with the components of the given [Color]."
+msgstr "A [Color] minden összetevőjéhez hozzáadja a megadott [Color] megfelelő összetevőjét."
+
+#. Color.operator -
+#: doc/classes/Color.xml
+msgid "Subtracts each component of the [Color] by the components of the given [Color]."
+msgstr "A [Color] minden összetevőjéből kivonja a megadott [Color] megfelelő összetevőjét."
+
+#. Color.operator /
+#: doc/classes/Color.xml
+msgid "Divides each component of the [Color] by the components of the given [Color]."
+msgstr "A [Color] minden összetevőjét elosztja a megadott [Color] megfelelő összetevőjével."
+
+#. Color.operator /
+#: doc/classes/Color.xml
+msgid "Divides each component of the [Color] by the given [float]."
+msgstr "A [Color] minden összetevőjét elosztja a megadott [float] értékkel."
+
+#. Color.operator /
+#: doc/classes/Color.xml
+msgid "Divides each component of the [Color] by the given [int]."
+msgstr "A [Color] minden összetevőjét elosztja a megadott [int] értékkel."
+
+#. Color.operator []
+#: doc/classes/Color.xml
+msgid "Access color components using their index. [code][0][/code] is equivalent to [member r], [code][1][/code] is equivalent to [member g], [code][2][/code] is equivalent to [member b], and [code][3][/code] is equivalent to [member a]."
+msgstr "A színösszetevőket index alapján éri el. A [code][0][/code] az [member r], a [code][1][/code] a [member g], a [code][2][/code] a [member b], a [code][3][/code] pedig az [member a] megfelelője."
+
+#. Color.BLACK
+#: doc/classes/Color.xml
+msgid "Black color. In GDScript, this is the default value of any color."
+msgstr "Fekete szín. GDScriptben ez a színek alapértelmezett értéke."
+
+#. Color.TRANSPARENT
+#: doc/classes/Color.xml
+msgid "Transparent color (white with zero alpha)."
+msgstr "Átlátszó szín (fehér, nulla alfaértékkel)."
+
+#. Color.ALICE_BLUE
+#: doc/classes/Color.xml
+msgid "Alice blue color."
+msgstr "Alice-kék szín."
+
+#. Color.ANTIQUE_WHITE
+#: doc/classes/Color.xml
+msgid "Antique white color."
+msgstr "Antikfehér szín."
+
+#. Color.AQUA
+#: doc/classes/Color.xml
+msgid "Aqua color."
+msgstr "Akvakék szín."
+
+#. Color.AQUAMARINE
+#: doc/classes/Color.xml
+msgid "Aquamarine color."
+msgstr "Akvamarin szín."
+
+#. Color.AZURE
+#: doc/classes/Color.xml
+msgid "Azure color."
+msgstr "Azúrkék szín."
+
+#. Color.BEIGE
+#: doc/classes/Color.xml
+msgid "Beige color."
+msgstr "Bézs szín."
+
+#. Color.BISQUE
+#: doc/classes/Color.xml
+msgid "Bisque color."
+msgstr "Világos barackbézs szín."
+
+#. Color.BLANCHED_ALMOND
+#: doc/classes/Color.xml
+msgid "Blanched almond color."
+msgstr "Hántolt mandula szín."
+
+#. Color.BLUE
+#: doc/classes/Color.xml
+msgid "Blue color."
+msgstr "Kék szín."
+
+#. Color.BLUE_VIOLET
+#: doc/classes/Color.xml
+msgid "Blue violet color."
+msgstr "Kékesibolya szín."
+
+#. Color.BROWN
+#: doc/classes/Color.xml
+msgid "Brown color."
+msgstr "Barna szín."
+
+#. Color.CADET_BLUE
+#: doc/classes/Color.xml
+msgid "Cadet blue color."
+msgstr "Kadétkék szín."
+
+#. Color.CHARTREUSE
+#: doc/classes/Color.xml
+msgid "Chartreuse color."
+msgstr "Élénk sárgászöld szín."
+
+#. Color.CHOCOLATE
+#: doc/classes/Color.xml
+msgid "Chocolate color."
+msgstr "Csokoládébarna szín."
+
+#. Color.CORAL
+#: doc/classes/Color.xml
+msgid "Coral color."
+msgstr "Korallszín."
+
+#. Color.CORNFLOWER_BLUE
+#: doc/classes/Color.xml
+msgid "Cornflower blue color."
+msgstr "Búzavirágkék szín."
+
+#. Color.CORNSILK
+#: doc/classes/Color.xml
+msgid "Cornsilk color."
+msgstr "Kukoricaselyem szín."
+
+#. Color.CRIMSON
+#: doc/classes/Color.xml
+msgid "Crimson color."
+msgstr "Karmazsinvörös szín."
+
+#. Color.CYAN
+#: doc/classes/Color.xml
+msgid "Cyan color."
+msgstr "Cián szín."
+
+#. Color.DARK_BLUE
+#: doc/classes/Color.xml
+msgid "Dark blue color."
+msgstr "Sötétkék szín."
+
+#. Color.DARK_CYAN
+#: doc/classes/Color.xml
+msgid "Dark cyan color."
+msgstr "Sötétcián szín."
+
+#. Color.DARK_GRAY
+#: doc/classes/Color.xml
+msgid "Dark gray color."
+msgstr "Sötétszürke szín."
+
+#. Color.DARK_GREEN
+#: doc/classes/Color.xml
+msgid "Dark green color."
+msgstr "Sötétzöld szín."
+
+#. Color.DARK_KHAKI
+#: doc/classes/Color.xml
+msgid "Dark khaki color."
+msgstr "Sötét khaki szín."
+
+#. Color.DARK_MAGENTA
+#: doc/classes/Color.xml
+msgid "Dark magenta color."
+msgstr "Sötét magenta szín."
+
+#. Color.DARK_OLIVE_GREEN
+#: doc/classes/Color.xml
+msgid "Dark olive green color."
+msgstr "Sötét olívazöld szín."
+
+#. Color.DARK_ORANGE
+#: doc/classes/Color.xml
+msgid "Dark orange color."
+msgstr "Sötétnarancs szín."
+
+#. Color.DARK_ORCHID
+#: doc/classes/Color.xml
+msgid "Dark orchid color."
+msgstr "Sötét orchidealila szín."
+
+#. Color.DARK_RED
+#: doc/classes/Color.xml
+msgid "Dark red color."
+msgstr "Sötétvörös szín."
+
+#. Color.DARK_SALMON
+#: doc/classes/Color.xml
+msgid "Dark salmon color."
+msgstr "Sötét lazacszín."
+
+#. Color.DARK_SEA_GREEN
+#: doc/classes/Color.xml
+msgid "Dark sea green color."
+msgstr "Sötét tengerzöld szín."
+
+#. Color.DARK_SLATE_BLUE
+#: doc/classes/Color.xml
+msgid "Dark slate blue color."
+msgstr "Sötét palakék szín."
+
+#. Color.DARK_SLATE_GRAY
+#: doc/classes/Color.xml
+msgid "Dark slate gray color."
+msgstr "Sötét palaszürke szín."
+
+#. Color.DARK_TURQUOISE
+#: doc/classes/Color.xml
+msgid "Dark turquoise color."
+msgstr "Sötét türkiz szín."
+
+#. Color.DARK_VIOLET
+#: doc/classes/Color.xml
+msgid "Dark violet color."
+msgstr "Sötét ibolya szín."
+
+#. Color.DEEP_PINK
+#: doc/classes/Color.xml
+msgid "Deep pink color."
+msgstr "Mélyrózsaszín."
+
+#. Color.DEEP_SKY_BLUE
+#: doc/classes/Color.xml
+msgid "Deep sky blue color."
+msgstr "Mély égkék szín."
+
+#. Color.DIM_GRAY
+#: doc/classes/Color.xml
+msgid "Dim gray color."
+msgstr "Tompa szürke szín."
+
+#. Color.FIREBRICK
+#: doc/classes/Color.xml
+msgid "Firebrick color."
+msgstr "Téglavörös szín."
+
+#. Color.FLORAL_WHITE
+#: doc/classes/Color.xml
+msgid "Floral white color."
+msgstr "Virágfehér szín."
+
+#. Color.FOREST_GREEN
+#: doc/classes/Color.xml
+msgid "Forest green color."
+msgstr "Erdőzöld szín."
+
+#. Color.FUCHSIA
+#: doc/classes/Color.xml
+msgid "Fuchsia color."
+msgstr "Fukszia szín."
+
+#. Color.GHOST_WHITE
+#: doc/classes/Color.xml
+msgid "Ghost white color."
+msgstr "Szellemfehér szín."
+
+#. Color.GOLD
+#: doc/classes/Color.xml
+msgid "Gold color."
+msgstr "Aranyszín."
+
+#. Color.GOLDENROD
+#: doc/classes/Color.xml
+msgid "Goldenrod color."
+msgstr "Aranyvesszősárga szín."
+
+#. Color.GRAY
+#: doc/classes/Color.xml
+msgid "Gray color."
+msgstr "Szürke szín."
+
+#. Color.GREEN
+#: doc/classes/Color.xml
+msgid "Green color."
+msgstr "Zöld szín."
+
+#. Color.GREEN_YELLOW
+#: doc/classes/Color.xml
+msgid "Green yellow color."
+msgstr "Zöldessárga szín."
+
+#. Color.HONEYDEW
+#: doc/classes/Color.xml
+msgid "Honeydew color."
+msgstr "Mézdinnyezöld szín."
+
+#. Color.HOT_PINK
+#: doc/classes/Color.xml
+msgid "Hot pink color."
+msgstr "Élénkrózsaszín."
+
+#. Color.INDIAN_RED
+#: doc/classes/Color.xml
+msgid "Indian red color."
+msgstr "Indiai vörös szín."
+
+#. Color.INDIGO
+#: doc/classes/Color.xml
+msgid "Indigo color."
+msgstr "Indigó szín."
+
+#. Color.IVORY
+#: doc/classes/Color.xml
+msgid "Ivory color."
+msgstr "Elefántcsontszín."
+
+#. Color.KHAKI
+#: doc/classes/Color.xml
+msgid "Khaki color."
+msgstr "Khaki szín."
+
+#. Color.LAVENDER
+#: doc/classes/Color.xml
+msgid "Lavender color."
+msgstr "Levendulaszín."
+
+#. Color.LAWN_GREEN
+#: doc/classes/Color.xml
+msgid "Lawn green color."
+msgstr "Gyepzöld szín."
+
+#. Color.LIGHT_BLUE
+#: doc/classes/Color.xml
+msgid "Light blue color."
+msgstr "Világoskék szín."
+
+#. Color.LIGHT_CORAL
+#: doc/classes/Color.xml
+msgid "Light coral color."
+msgstr "Világos korallszín."
+
+#. Color.LIGHT_CYAN
+#: doc/classes/Color.xml
+msgid "Light cyan color."
+msgstr "Világoscián szín."
+
+#. Color.LIGHT_GRAY
+#: doc/classes/Color.xml
+msgid "Light gray color."
+msgstr "Világosszürke szín."
+
+#. Color.LIGHT_GREEN
+#: doc/classes/Color.xml
+msgid "Light green color."
+msgstr "Világoszöld szín."
+
+#. Color.LIGHT_PINK
+#: doc/classes/Color.xml
+msgid "Light pink color."
+msgstr "Világos rózsaszín."
+
+#. Color.LIGHT_SALMON
+#: doc/classes/Color.xml
+msgid "Light salmon color."
+msgstr "Világos lazacszín."
+
+#. Color.LIGHT_SEA_GREEN
+#: doc/classes/Color.xml
+msgid "Light sea green color."
+msgstr "Világos tengerzöld szín."
+
+#. Color.LIGHT_SKY_BLUE
+#: doc/classes/Color.xml
+msgid "Light sky blue color."
+msgstr "Világos égkék szín."
+
+#. Color.LIGHT_SLATE_GRAY
+#: doc/classes/Color.xml
+msgid "Light slate gray color."
+msgstr "Világos palaszürke szín."
+
+#. Color.LIGHT_STEEL_BLUE
+#: doc/classes/Color.xml
+msgid "Light steel blue color."
+msgstr "Világos acélkék szín."
+
+#. Color.LIGHT_YELLOW
+#: doc/classes/Color.xml
+msgid "Light yellow color."
+msgstr "Világossárga szín."
+
+#. Color.LIME
+#: doc/classes/Color.xml
+msgid "Lime color."
+msgstr "Limezöld szín."
+
+#. Color.LIME_GREEN
+#: doc/classes/Color.xml
+msgid "Lime green color."
+msgstr "Élénk limezöld szín."
+
+#. Color.LINEN
+#: doc/classes/Color.xml
+msgid "Linen color."
+msgstr "Lenvászonszín."
+
+#. Color.MAGENTA
+#: doc/classes/Color.xml
+msgid "Magenta color."
+msgstr "Magenta szín."
+
+#. Color.MAROON
+#: doc/classes/Color.xml
+msgid "Maroon color."
+msgstr "Gesztenyebarna szín."
+
+#. Color.MEDIUM_AQUAMARINE
+#: doc/classes/Color.xml
+msgid "Medium aquamarine color."
+msgstr "Közepes akvamarin szín."
+
+#. Color.MEDIUM_BLUE
+#: doc/classes/Color.xml
+msgid "Medium blue color."
+msgstr "Középkék szín."
+
+#. Color.MEDIUM_ORCHID
+#: doc/classes/Color.xml
+msgid "Medium orchid color."
+msgstr "Közepes orchidealila szín."
+
+#. Color.MEDIUM_PURPLE
+#: doc/classes/Color.xml
+msgid "Medium purple color."
+msgstr "Középlila szín."
+
+#. Color.MEDIUM_SEA_GREEN
+#: doc/classes/Color.xml
+msgid "Medium sea green color."
+msgstr "Közepes tengerzöld szín."
+
+#. Color.MEDIUM_SLATE_BLUE
+#: doc/classes/Color.xml
+msgid "Medium slate blue color."
+msgstr "Közepes palakék szín."
+
+#. Color.MEDIUM_SPRING_GREEN
+#: doc/classes/Color.xml
+msgid "Medium spring green color."
+msgstr "Közepes tavaszzöld szín."
+
+#. Color.MEDIUM_TURQUOISE
+#: doc/classes/Color.xml
+msgid "Medium turquoise color."
+msgstr "Közepes türkiz szín."
+
+#. Color.MEDIUM_VIOLET_RED
+#: doc/classes/Color.xml
+msgid "Medium violet red color."
+msgstr "Közepes ibolyavörös szín."
+
+#. Color.MIDNIGHT_BLUE
+#: doc/classes/Color.xml
+msgid "Midnight blue color."
+msgstr "Éjkék szín."
+
+#. Color.MINT_CREAM
+#: doc/classes/Color.xml
+msgid "Mint cream color."
+msgstr "Mentakrém szín."
+
+#. Color.MISTY_ROSE
+#: doc/classes/Color.xml
+msgid "Misty rose color."
+msgstr "Ködös rózsaszín."
+
+#. Color.MOCCASIN
+#: doc/classes/Color.xml
+msgid "Moccasin color."
+msgstr "Mokaszinszín."
+
+#. Color.NAVAJO_WHITE
+#: doc/classes/Color.xml
+msgid "Navajo white color."
+msgstr "Navahófehér szín."
+
+#. Color.NAVY_BLUE
+#: doc/classes/Color.xml
+msgid "Navy blue color."
+msgstr "Tengerészkék szín."
+
+#. Color.OLD_LACE
+#: doc/classes/Color.xml
+msgid "Old lace color."
+msgstr "Ócsipkefehér szín."
+
+#. Color.OLIVE
+#: doc/classes/Color.xml
+msgid "Olive color."
+msgstr "Olívazöld szín."
+
+#. Color.OLIVE_DRAB
+#: doc/classes/Color.xml
+msgid "Olive drab color."
+msgstr "Tompa olívazöld szín."
+
+#. Color.ORANGE
+#: doc/classes/Color.xml
+msgid "Orange color."
+msgstr "Narancssárga szín."
+
+#. Color.ORANGE_RED
+#: doc/classes/Color.xml
+msgid "Orange red color."
+msgstr "Narancsvörös szín."
+
+#. Color.ORCHID
+#: doc/classes/Color.xml
+msgid "Orchid color."
+msgstr "Orchidealila szín."
+
+#. Color.PALE_GOLDENROD
+#: doc/classes/Color.xml
+msgid "Pale goldenrod color."
+msgstr "Halvány aranyvesszősárga szín."
+
+#. Color.PALE_GREEN
+#: doc/classes/Color.xml
+msgid "Pale green color."
+msgstr "Halványzöld szín."
+
+#. Color.PALE_TURQUOISE
+#: doc/classes/Color.xml
+msgid "Pale turquoise color."
+msgstr "Halvány türkiz szín."
+
+#. Color.PALE_VIOLET_RED
+#: doc/classes/Color.xml
+msgid "Pale violet red color."
+msgstr "Halvány ibolyavörös szín."
+
+#. Color.PAPAYA_WHIP
+#: doc/classes/Color.xml
+msgid "Papaya whip color."
+msgstr "Papájakrém szín."
+
+#. Color.PEACH_PUFF
+#: doc/classes/Color.xml
+msgid "Peach puff color."
+msgstr "Halvány barackszín."
+
+#. Color.PERU
+#: doc/classes/Color.xml
+msgid "Peru color."
+msgstr "Perubarna szín."
+
+#. Color.PINK
+#: doc/classes/Color.xml
+msgid "Pink color."
+msgstr "Rózsaszín."
+
+#. Color.PLUM
+#: doc/classes/Color.xml
+msgid "Plum color."
+msgstr "Szilvalila szín."
+
+#. Color.POWDER_BLUE
+#: doc/classes/Color.xml
+msgid "Powder blue color."
+msgstr "Púderkék szín."
+
+#. Color.PURPLE
+#: doc/classes/Color.xml
+msgid "Purple color."
+msgstr "Lila szín."
+
+#. Color.REBECCA_PURPLE
+#: doc/classes/Color.xml
+msgid "Rebecca purple color."
+msgstr "Rebecca-lila szín."
+
+#. Color.RED
+#: doc/classes/Color.xml
+msgid "Red color."
+msgstr "Vörös szín."
+
+#. Color.ROSY_BROWN
+#: doc/classes/Color.xml
+msgid "Rosy brown color."
+msgstr "Rózsásbarna szín."
+
+#. Color.ROYAL_BLUE
+#: doc/classes/Color.xml
+msgid "Royal blue color."
+msgstr "Királykék szín."
+
+#. Color.SADDLE_BROWN
+#: doc/classes/Color.xml
+msgid "Saddle brown color."
+msgstr "Nyeregbarna szín."
+
+#. Color.SALMON
+#: doc/classes/Color.xml
+msgid "Salmon color."
+msgstr "Lazacszín."
+
+#. Color.SANDY_BROWN
+#: doc/classes/Color.xml
+msgid "Sandy brown color."
+msgstr "Homokbarna szín."
+
+#. Color.SEA_GREEN
+#: doc/classes/Color.xml
+msgid "Sea green color."
+msgstr "Tengerzöld szín."
+
+#. Color.SEASHELL
+#: doc/classes/Color.xml
+msgid "Seashell color."
+msgstr "Kagylófehér szín."
+
+#. Color.SIENNA
+#: doc/classes/Color.xml
+msgid "Sienna color."
+msgstr "Sziénabarna szín."
+
+#. Color.SILVER
+#: doc/classes/Color.xml
+msgid "Silver color."
+msgstr "Ezüstszín."
+
+#. Color.SKY_BLUE
+#: doc/classes/Color.xml
+msgid "Sky blue color."
+msgstr "Égkék szín."
+
+#. Color.SLATE_BLUE
+#: doc/classes/Color.xml
+msgid "Slate blue color."
+msgstr "Palakék szín."
+
+#. Color.SLATE_GRAY
+#: doc/classes/Color.xml
+msgid "Slate gray color."
+msgstr "Palaszürke szín."
+
+#. Color.SNOW
+#: doc/classes/Color.xml
+msgid "Snow color."
+msgstr "Hófehér szín."
+
+#. Color.SPRING_GREEN
+#: doc/classes/Color.xml
+msgid "Spring green color."
+msgstr "Tavaszzöld szín."
+
+#. Color.STEEL_BLUE
+#: doc/classes/Color.xml
+msgid "Steel blue color."
+msgstr "Acélkék szín."
+
+#. Color.TAN
+#: doc/classes/Color.xml
+msgid "Tan color."
+msgstr "Világos barnássárga szín."
+
+#. Color.TEAL
+#: doc/classes/Color.xml
+msgid "Teal color."
+msgstr "Kékeszöld szín."
+
+#. Color.THISTLE
+#: doc/classes/Color.xml
+msgid "Thistle color."
+msgstr "Bogáncslila szín."
+
+#. Color.TOMATO
+#: doc/classes/Color.xml
+msgid "Tomato color."
+msgstr "Paradicsomvörös szín."
+
+#. Color.TURQUOISE
+#: doc/classes/Color.xml
+msgid "Turquoise color."
+msgstr "Türkiz szín."
+
+#. Color.VIOLET
+#: doc/classes/Color.xml
+msgid "Violet color."
+msgstr "Ibolya szín."
+
+#. Color.WEB_GRAY
+#: doc/classes/Color.xml
+msgid "Web gray color."
+msgstr "Webes szürke szín."
+
+#. Color.WEB_GREEN
+#: doc/classes/Color.xml
+msgid "Web green color."
+msgstr "Webes zöld szín."
+
+#. Color.WEB_MAROON
+#: doc/classes/Color.xml
+msgid "Web maroon color."
+msgstr "Webes gesztenyebarna szín."
+
+#. Color.WEB_PURPLE
+#: doc/classes/Color.xml
+msgid "Web purple color."
+msgstr "Webes lila szín."
+
+#. Color.WHEAT
+#: doc/classes/Color.xml
+msgid "Wheat color."
+msgstr "Búzaszín."
+
+#. Color.WHITE
+#: doc/classes/Color.xml
+msgid "White color."
+msgstr "Fehér szín."
+
+#. Color.WHITE_SMOKE
+#: doc/classes/Color.xml
+msgid "White smoke color."
+msgstr "Füstfehér szín."
+
+#. Color.YELLOW
+#: doc/classes/Color.xml
+msgid "Yellow color."
+msgstr "Sárga szín."
+
+#. Color.YELLOW_GREEN
+#: doc/classes/Color.xml
+msgid "Yellow green color."
+msgstr "Sárgászöld szín."
+
+#. Color.description
+#: doc/classes/Color.xml
+msgid "A color represented in RGBA format by a red ([member r]), green ([member g]), blue ([member b]), and alpha ([member a]) component. Each component is a 32-bit floating-point value, usually ranging from [code]0.0[/code] to [code]1.0[/code]. Some properties (such as [member CanvasItem.modulate]) may support values greater than [code]1.0[/code], for overbright or HDR (High Dynamic Range) colors.\nColors can be created in a number of ways: By the various [Color] constructors, by static methods such as [method from_hsv], and by using a name from the set of standardized colors based on [url=https://en.wikipedia.org/wiki/X11_color_names]X11 color names[/url] with the addition of [constant TRANSPARENT].\n[url=https://raw.githubusercontent.com/godotengine/godot-docs/master/img/color_constants.png]Color constants cheatsheet[/url]\nAlthough [Color] may be used to store values of any encoding, the red ([member r]), green ([member g]), and blue ([member b]) properties of [Color] are expected by Godot to be encoded using the [url=https://en.wikipedia.org/wiki/SRGB#Transfer_function_(%22gamma%22)]nonlinear sRGB transfer function[/url] unless otherwise stated. This color encoding is used by many traditional art and web tools, making it easy to match colors between Godot and these tools. Godot uses [url=https://en.wikipedia.org/wiki/Rec._709]Rec. ITU-R BT.709[/url] color primaries, which are used by the sRGB standard.\nAll physical simulation, such as lighting calculations, and colorimetry transformations, such as [method get_luminance], must be performed on linearly encoded values to produce correct results. When performing these calculations, convert [Color] to and from linear encoding using [method srgb_to_linear] and [method linear_to_srgb].\n[b]Note:[/b] In a boolean context, a Color will evaluate to [code]false[/code] if it is equal to [code]Color(0, 0, 0, 1)[/code] (opaque black). Otherwise, a Color will always evaluate to [code]true[/code].\n[b]Note:[/b] In C#, color constants are defined in the [code]Colors[/code] static class instead of [code skip-lint]Color[/code]. Additionally, named colors use [code]PascalCase[/code] syntax instead of [code]UPPER_SNAKE_CASE[/code]. For example, [code skip-lint]Color.ALICE_BLUE[/code] in GDScript is [code skip-lint]Colors.AliceBlue[/code] in C#."
+msgstr "RGBA-formátumban ábrázolt szín a vörös ([member r]), zöld ([member g]), kék ([member b]) és alfa ([member a]) összetevővel. Minden összetevő 32 bites lebegőpontos érték, általában [code]0.0[/code] és [code]1.0[/code] között. Egyes tulajdonságok, például a [member CanvasItem.modulate], [code]1.0[/code] fölötti értéket is elfogadnak a túlfényes vagy nagy dinamikatartományú (HDR) színekhez.\nSzínt többféleképpen lehet létrehozni: a [Color] konstruktoraival, statikus metódusokkal, például a [method from_hsv] segítségével, vagy az [url=https://en.wikipedia.org/wiki/X11_color_names]X11 színneveken[/url] alapuló szabványos színnevekkel. A [constant TRANSPARENT] is használható névként.\n[url=https://raw.githubusercontent.com/godotengine/godot-docs/master/img/color_constants.png]A színállandók áttekintése[/url]\nA [Color] bármilyen kódolású értéket tárolhat. Eltérő jelzés hiányában a Godot azt feltételezi, hogy a [Color] vörös ([member r]), zöld ([member g]) és kék ([member b]) összetevője a [url=https://en.wikipedia.org/wiki/SRGB#Transfer_function_(%22gamma%22)]nemlineáris sRGB átviteli függvényt[/url] használja. Sok grafikai és webes eszköz ugyanezt a kódolást használja, így a színek könnyen egyeztethetők a Godottal. A Godot az sRGB szabványban is használt [url=https://en.wikipedia.org/wiki/Rec._709]Rec. ITU-R BT.709[/url] alapszíneket alkalmazza.\nA helyes eredményhez a fizikai szimulációkat, például a megvilágítás számítását, és a színmérési átalakításokat, például a [method get_luminance] hívását, lineárisan kódolt értékeken kell végezni. A [Color] lineáris kódolásra és onnan vissza a [method srgb_to_linear] és a [method linear_to_srgb] metódussal alakítható át.\n[b]Megjegyzés:[/b] Logikai kifejezésben a Color értéke [code]false[/code], ha megegyezik a [code]Color(0, 0, 0, 1)[/code] értékkel (fedő fekete). Minden más szín [code]true[/code] értéknek számít.\n[b]Megjegyzés:[/b] A C# színállandói a [code]Colors[/code] statikus osztályban vannak a [code skip-lint]Color[/code] helyett. A név szerinti színek [code]PascalCase[/code] írásmódot használnak [code]UPPER_SNAKE_CASE[/code] helyett. A GDScriptbeli [code skip-lint]Color.ALICE_BLUE[/code] például C#-ban [code skip-lint]Colors.AliceBlue[/code]."
+
+#. Color.Color
+#: doc/classes/Color.xml
+msgid "Constructs a [Color] from RGBA values, typically between 0.0 and 1.0.\n[codeblocks]\n[gdscript]\nvar color = Color(0.2, 1.0, 0.7, 0.8) # Similar to `Color.from_rgba8(51, 255, 178, 204)`\n[/gdscript]\n[csharp]\nvar color = new Color(0.2f, 1.0f, 0.7f, 0.8f); // Similar to `Color.Color8(51, 255, 178, 255, 204)`\n[/csharp]\n[/codeblocks]"
+msgstr "Az RGBA-összetevőkből [Color] értéket hoz létre. Az értékek általában 0.0 és 1.0 közé esnek.\n[codeblocks]\n[gdscript]\nvar color = Color(0.2, 1.0, 0.7, 0.8) # Similar to `Color.from_rgba8(51, 255, 178, 204)`\n[/gdscript]\n[csharp]\nvar color = new Color(0.2f, 1.0f, 0.7f, 0.8f); // Similar to `Color.Color8(51, 255, 178, 255, 204)`\n[/csharp]\n[/codeblocks]"
+
+#. Color.hex64
+#: doc/classes/Color.xml
+msgid "Returns the [Color] associated with the provided [param hex] integer in 64-bit RGBA format (16 bits per channel). This method is the inverse of [method to_rgba64].\nIn GDScript and C#, the [int] is best visualized with hexadecimal notation ([code]\"0x\"[/code] prefix, making it [code]\"0xRRRRGGGGBBBBAAAA\"[/code])."
+msgstr "A megadott [param hex] egész számhoz tartozó [Color] értéket adja vissza 64 bites RGBA-formátumban, csatornánként 16 bittel. A [method to_rgba64] metódus inverze.\nGDScriptben és C#-ban az [int] érték hexadecimális alakban szemléletesebb, [code]\"0x\"[/code] előtaggal: [code]\"0xRRRRGGGGBBBBAAAA\"[/code]."
+
+#. Color.html_is_valid
+#: doc/classes/Color.xml
+msgid "Returns [code]true[/code] if [param color] is a valid HTML hexadecimal color string. The string must be a hexadecimal value (case-insensitive) of either 3, 4, 6 or 8 digits, and may be prefixed by a hash sign ([code]#[/code]). This method is identical to [method String.is_valid_html_color].\n[codeblocks]\n[gdscript]\nColor.html_is_valid(\"#55aaFF\")   # Returns true\nColor.html_is_valid(\"#55AAFF20\") # Returns true\nColor.html_is_valid(\"55AAFF\")    # Returns true\nColor.html_is_valid(\"#F2C\")      # Returns true\n\nColor.html_is_valid(\"#AABBC\")    # Returns false\nColor.html_is_valid(\"#55aaFF5\")  # Returns false\n[/gdscript]\n[csharp]\nColor.HtmlIsValid(\"#55AAFF\");   // Returns true\nColor.HtmlIsValid(\"#55AAFF20\"); // Returns true\nColor.HtmlIsValid(\"55AAFF\");    // Returns true\nColor.HtmlIsValid(\"#F2C\");      // Returns true\n\nColor.HtmlIsValid(\"#AABBC\");    // Returns false\nColor.HtmlIsValid(\"#55aaFF5\");  // Returns false\n[/csharp]\n[/codeblocks]"
+msgstr "[code]true[/code] értéket ad vissza, ha a [param color] érvényes HTML-színkód. A kódnak 3, 4, 6 vagy 8 hexadecimális számjegyből kell állnia. A kis- és nagybetűk nem különböznek, és a kód kezdődhet kettőskereszttel ([code]#[/code]). A metódus azonos a [method String.is_valid_html_color] metódussal.\n[codeblocks]\n[gdscript]\nColor.html_is_valid(\"#55aaFF\")   # Returns true\nColor.html_is_valid(\"#55AAFF20\") # Returns true\nColor.html_is_valid(\"55AAFF\")    # Returns true\nColor.html_is_valid(\"#F2C\")      # Returns true\n\nColor.html_is_valid(\"#AABBC\")    # Returns false\nColor.html_is_valid(\"#55aaFF5\")  # Returns false\n[/gdscript]\n[csharp]\nColor.HtmlIsValid(\"#55AAFF\");   // Returns true\nColor.HtmlIsValid(\"#55AAFF20\"); // Returns true\nColor.HtmlIsValid(\"55AAFF\");    // Returns true\nColor.HtmlIsValid(\"#F2C\");      // Returns true\n\nColor.HtmlIsValid(\"#AABBC\");    // Returns false\nColor.HtmlIsValid(\"#55aaFF5\");  // Returns false\n[/csharp]\n[/codeblocks]"
+
+#. Color.inverted
+#: doc/classes/Color.xml
+msgid "Returns the color with its [member r], [member g], and [member b] components inverted ([code](1 - r, 1 - g, 1 - b, a)[/code]).\n[codeblocks]\n[gdscript]\nvar black = Color.WHITE.inverted()\nvar color = Color(0.3, 0.4, 0.9)\nvar inverted_color = color.inverted() # Equivalent to `Color(0.7, 0.6, 0.1)`\n[/gdscript]\n[csharp]\nvar black = Colors.White.Inverted();\nvar color = new Color(0.3f, 0.4f, 0.9f);\nColor invertedColor = color.Inverted(); // Equivalent to `new Color(0.7f, 0.6f, 0.1f)`\n[/csharp]\n[/codeblocks]"
+msgstr "A színt az [member r], [member g] és [member b] összetevők invertálásával adja vissza ([code](1 - r, 1 - g, 1 - b, a)[/code]).\n[codeblocks]\n[gdscript]\nvar black = Color.WHITE.inverted()\nvar color = Color(0.3, 0.4, 0.9)\nvar inverted_color = color.inverted() # Equivalent to `Color(0.7, 0.6, 0.1)`\n[/gdscript]\n[csharp]\nvar black = Colors.White.Inverted();\nvar color = new Color(0.3f, 0.4f, 0.9f);\nColor invertedColor = color.Inverted(); // Equivalent to `new Color(0.7f, 0.6f, 0.1f)`\n[/csharp]\n[/codeblocks]"
+
+#. Color.lerp
+#: doc/classes/Color.xml
+msgid "Returns the linear interpolation between this color's components and [param to]'s components. The interpolation factor [param weight] should be between 0.0 and 1.0 (inclusive). See also [method @GlobalScope.lerp].\n[codeblocks]\n[gdscript]\nvar red = Color(1.0, 0.0, 0.0)\nvar aqua = Color(0.0, 1.0, 0.8)\n\nred.lerp(aqua, 0.2) # Returns Color(0.8, 0.2, 0.16)\nred.lerp(aqua, 0.5) # Returns Color(0.5, 0.5, 0.4)\nred.lerp(aqua, 1.0) # Returns Color(0.0, 1.0, 0.8)\n[/gdscript]\n[csharp]\nvar red = new Color(1.0f, 0.0f, 0.0f);\nvar aqua = new Color(0.0f, 1.0f, 0.8f);\n\nred.Lerp(aqua, 0.2f); // Returns Color(0.8f, 0.2f, 0.16f)\nred.Lerp(aqua, 0.5f); // Returns Color(0.5f, 0.5f, 0.4f)\nred.Lerp(aqua, 1.0f); // Returns Color(0.0f, 1.0f, 0.8f)\n[/csharp]\n[/codeblocks]"
+msgstr "Lineárisan interpolál ez a szín és a [param to] szín összetevői között. A [param weight] interpolációs tényező 0.0 és 1.0 közé essen, a határértékeket is beleértve. Lásd még: [method @GlobalScope.lerp].\n[codeblocks]\n[gdscript]\nvar red = Color(1.0, 0.0, 0.0)\nvar aqua = Color(0.0, 1.0, 0.8)\n\nred.lerp(aqua, 0.2) # Returns Color(0.8, 0.2, 0.16)\nred.lerp(aqua, 0.5) # Returns Color(0.5, 0.5, 0.4)\nred.lerp(aqua, 1.0) # Returns Color(0.0, 1.0, 0.8)\n[/gdscript]\n[csharp]\nvar red = new Color(1.0f, 0.0f, 0.0f);\nvar aqua = new Color(0.0f, 1.0f, 0.8f);\n\nred.Lerp(aqua, 0.2f); // Returns Color(0.8f, 0.2f, 0.16f)\nred.Lerp(aqua, 0.5f); // Returns Color(0.5f, 0.5f, 0.4f)\nred.Lerp(aqua, 1.0f); // Returns Color(0.0f, 1.0f, 0.8f)\n[/csharp]\n[/codeblocks]"
+
+#. Color.to_abgr32
+#: doc/classes/Color.xml
+msgid "Returns the color converted to a 32-bit integer in ABGR format (each component is 8 bits). ABGR is the reversed version of the default RGBA format.\n[codeblocks]\n[gdscript]\nvar color = Color(1, 0.5, 0.2)\nprint(color.to_abgr32()) # Prints 4281565439\n[/gdscript]\n[csharp]\nvar color = new Color(1.0f, 0.5f, 0.2f);\nGD.Print(color.ToAbgr32()); // Prints 4281565439\n[/csharp]\n[/codeblocks]"
+msgstr "A színt ABGR-formátumú, 32 bites egész számmá alakítva adja vissza, összetevőnként 8 bittel. Az ABGR az alapértelmezett RGBA sorrendjének fordítottja.\n[codeblocks]\n[gdscript]\nvar color = Color(1, 0.5, 0.2)\nprint(color.to_abgr32()) # Prints 4281565439\n[/gdscript]\n[csharp]\nvar color = new Color(1.0f, 0.5f, 0.2f);\nGD.Print(color.ToAbgr32()); // Prints 4281565439\n[/csharp]\n[/codeblocks]"
+
+#. Color.to_abgr64
+#: doc/classes/Color.xml
+msgid "Returns the color converted to a 64-bit integer in ABGR format (each component is 16 bits). ABGR is the reversed version of the default RGBA format.\n[codeblocks]\n[gdscript]\nvar color = Color(1, 0.5, 0.2)\nprint(color.to_abgr64()) # Prints -225178692812801\n[/gdscript]\n[csharp]\nvar color = new Color(1.0f, 0.5f, 0.2f);\nGD.Print(color.ToAbgr64()); // Prints -225178692812801\n[/csharp]\n[/codeblocks]"
+msgstr "A színt ABGR-formátumú, 64 bites egész számmá alakítva adja vissza, összetevőnként 16 bittel. Az ABGR az alapértelmezett RGBA sorrendjének fordítottja.\n[codeblocks]\n[gdscript]\nvar color = Color(1, 0.5, 0.2)\nprint(color.to_abgr64()) # Prints -225178692812801\n[/gdscript]\n[csharp]\nvar color = new Color(1.0f, 0.5f, 0.2f);\nGD.Print(color.ToAbgr64()); // Prints -225178692812801\n[/csharp]\n[/codeblocks]"
+
+#. Color.to_argb32
+#: doc/classes/Color.xml
+msgid "Returns the color converted to a 32-bit integer in ARGB format (each component is 8 bits). ARGB is more compatible with DirectX.\n[codeblocks]\n[gdscript]\nvar color = Color(1, 0.5, 0.2)\nprint(color.to_argb32()) # Prints 4294934323\n[/gdscript]\n[csharp]\nvar color = new Color(1.0f, 0.5f, 0.2f);\nGD.Print(color.ToArgb32()); // Prints 4294934323\n[/csharp]\n[/codeblocks]"
+msgstr "A színt ARGB-formátumú, 32 bites egész számmá alakítva adja vissza, összetevőnként 8 bittel. Az ARGB jobban illeszkedik a DirectX-hez.\n[codeblocks]\n[gdscript]\nvar color = Color(1, 0.5, 0.2)\nprint(color.to_argb32()) # Prints 4294934323\n[/gdscript]\n[csharp]\nvar color = new Color(1.0f, 0.5f, 0.2f);\nGD.Print(color.ToArgb32()); // Prints 4294934323\n[/csharp]\n[/codeblocks]"
+
+#. Color.to_argb64
+#: doc/classes/Color.xml
+msgid "Returns the color converted to a 64-bit integer in ARGB format (each component is 16 bits). ARGB is more compatible with DirectX.\n[codeblocks]\n[gdscript]\nvar color = Color(1, 0.5, 0.2)\nprint(color.to_argb64()) # Prints -2147470541\n[/gdscript]\n[csharp]\nvar color = new Color(1.0f, 0.5f, 0.2f);\nGD.Print(color.ToArgb64()); // Prints -2147470541\n[/csharp]\n[/codeblocks]"
+msgstr "A színt ARGB-formátumú, 64 bites egész számmá alakítva adja vissza, összetevőnként 16 bittel. Az ARGB jobban illeszkedik a DirectX-hez.\n[codeblocks]\n[gdscript]\nvar color = Color(1, 0.5, 0.2)\nprint(color.to_argb64()) # Prints -2147470541\n[/gdscript]\n[csharp]\nvar color = new Color(1.0f, 0.5f, 0.2f);\nGD.Print(color.ToArgb64()); // Prints -2147470541\n[/csharp]\n[/codeblocks]"
+
+#. Color.to_html
+#: doc/classes/Color.xml
+msgid "Returns the color converted to an HTML hexadecimal color [String] in RGBA format, without the hash ([code]#[/code]) prefix.\nSetting [param with_alpha] to [code]false[/code], excludes alpha from the hexadecimal string, using RGB format instead of RGBA format.\n[codeblocks]\n[gdscript]\nvar white = Color(1, 1, 1, 0.5)\nvar with_alpha = white.to_html() # Returns \"ffffff7f\"\nvar without_alpha = white.to_html(false) # Returns \"ffffff\"\n[/gdscript]\n[csharp]\nvar white = new Color(1, 1, 1, 0.5f);\nstring withAlpha = white.ToHtml(); // Returns \"ffffff7f\"\nstring withoutAlpha = white.ToHtml(false); // Returns \"ffffff\"\n[/csharp]\n[/codeblocks]"
+msgstr "A színt RGBA-formátumú hexadecimális HTML-színkódként ([String]) adja vissza, kettőskereszt ([code]#[/code]) nélkül.\nHa a [param with_alpha] értéke [code]false[/code], a kód nem tartalmazza az alfaértéket, így az RGBA helyett RGB-formátumú lesz.\n[codeblocks]\n[gdscript]\nvar white = Color(1, 1, 1, 0.5)\nvar with_alpha = white.to_html() # Returns \"ffffff7f\"\nvar without_alpha = white.to_html(false) # Returns \"ffffff\"\n[/gdscript]\n[csharp]\nvar white = new Color(1, 1, 1, 0.5f);\nstring withAlpha = white.ToHtml(); // Returns \"ffffff7f\"\nstring withoutAlpha = white.ToHtml(false); // Returns \"ffffff\"\n[/csharp]\n[/codeblocks]"
+
+#. Color.to_rgba32
+#: doc/classes/Color.xml
+msgid "Returns the color converted to a 32-bit integer in RGBA format (each component is 8 bits). RGBA is Godot's default format. This method is the inverse of [method hex].\n[codeblocks]\n[gdscript]\nvar color = Color(1, 0.5, 0.2)\nprint(color.to_rgba32()) # Prints 4286526463\n[/gdscript]\n[csharp]\nvar color = new Color(1, 0.5f, 0.2f);\nGD.Print(color.ToRgba32()); // Prints 4286526463\n[/csharp]\n[/codeblocks]"
+msgstr "A színt RGBA-formátumú, 32 bites egész számmá alakítva adja vissza, összetevőnként 8 bittel. A Godot alapértelmezett formátuma az RGBA. A [method hex] metódus inverze.\n[codeblocks]\n[gdscript]\nvar color = Color(1, 0.5, 0.2)\nprint(color.to_rgba32()) # Prints 4286526463\n[/gdscript]\n[csharp]\nvar color = new Color(1, 0.5f, 0.2f);\nGD.Print(color.ToRgba32()); // Prints 4286526463\n[/csharp]\n[/codeblocks]"
+
+#. Color.to_rgba64
+#: doc/classes/Color.xml
+msgid "Returns the color converted to a 64-bit integer in RGBA format (each component is 16 bits). RGBA is Godot's default format. This method is the inverse of [method hex64].\n[codeblocks]\n[gdscript]\nvar color = Color(1, 0.5, 0.2)\nprint(color.to_rgba64()) # Prints -140736629309441\n[/gdscript]\n[csharp]\nvar color = new Color(1, 0.5f, 0.2f);\nGD.Print(color.ToRgba64()); // Prints -140736629309441\n[/csharp]\n[/codeblocks]"
+msgstr "A színt RGBA-formátumú, 64 bites egész számmá alakítva adja vissza, összetevőnként 16 bittel. A Godot alapértelmezett formátuma az RGBA. A [method hex64] metódus inverze.\n[codeblocks]\n[gdscript]\nvar color = Color(1, 0.5, 0.2)\nprint(color.to_rgba64()) # Prints -140736629309441\n[/gdscript]\n[csharp]\nvar color = new Color(1, 0.5f, 0.2f);\nGD.Print(color.ToRgba64()); // Prints -140736629309441\n[/csharp]\n[/codeblocks]"
+
+#. Color.operator !=
+#: doc/classes/Color.xml
+msgid "Returns [code]true[/code] if the colors are not exactly equal.\n[b]Note:[/b] Due to floating-point precision errors, consider using [method is_equal_approx] instead, which is more reliable."
+msgstr "[code]true[/code] értéket ad vissza, ha a két szín nem pontosan egyenlő.\n[b]Megjegyzés:[/b] A lebegőpontos kerekítési hibák miatt érdemes az erre kevésbé érzékeny [method is_equal_approx] metódust használni."
+
+#. Color.operator ==
+#: doc/classes/Color.xml
+msgid "Returns [code]true[/code] if the colors are exactly equal.\n[b]Note:[/b] Due to floating-point precision errors, consider using [method is_equal_approx] instead, which is more reliable."
+msgstr "[code]true[/code] értéket ad vissza, ha a két szín pontosan egyenlő.\n[b]Megjegyzés:[/b] A lebegőpontos kerekítési hibák miatt érdemes az erre kevésbé érzékeny [method is_equal_approx] metódust használni."
+
+#. Color.operator unary-
+#: doc/classes/Color.xml
+msgid "Inverts the given color. This is equivalent to [code]Color.WHITE - c[/code] or [code]Color(1 - c.r, 1 - c.g, 1 - c.b, 1 - c.a)[/code]. Unlike with [method inverted], the [member a] component is inverted, too."
+msgstr "Invertálja a megadott színt. Ez megegyezik a [code]Color.WHITE - c[/code] vagy a [code]Color(1 - c.r, 1 - c.g, 1 - c.b, 1 - c.a)[/code] kifejezés eredményével. A [method inverted] metódussal ellentétben az [member a] összetevőt is invertálja."
+
+#. Color.a
+#: doc/classes/Color.xml
+msgid "The color's alpha component, typically on the range of 0 to 1. A value of 0 means that the color is fully transparent. A value of 1 means that the color is fully opaque.\n[b]Note:[/b] The alpha channel is always stored with linear encoding, regardless of the encoding of the other color channels. The [method linear_to_srgb] and [method srgb_to_linear] methods do not affect the alpha channel."
+msgstr "A szín alfaösszetevője, jellemzően 0 és 1 között. A 0 teljes átlátszóságot, az 1 teljes fedettséget jelöl.\n[b]Megjegyzés:[/b] Az alfa-csatorna a többi színcsatorna kódolásától függetlenül mindig lineáris kódolású. A [method linear_to_srgb] és a [method srgb_to_linear] nem módosítja az alfa-csatornát."
+
+#. Color.a8
+#: doc/classes/Color.xml
+msgid "Wrapper for [member a] that uses the range 0 to 255, instead of 0 to 1."
+msgstr "Az [member a] összetevő olyan változata, amely 0 és 1 közötti értékek helyett 0 és 255 közötti értékeket használ."
+
+#. Color.b
+#: doc/classes/Color.xml
+msgid "The color's blue component, typically on the range of 0 to 1."
+msgstr "A szín kék összetevője, jellemzően 0 és 1 között."
+
+#. Color.b8
+#: doc/classes/Color.xml
+msgid "Wrapper for [member b] that uses the range 0 to 255, instead of 0 to 1."
+msgstr "A [member b] összetevő olyan változata, amely 0 és 1 közötti értékek helyett 0 és 255 közötti értékeket használ."
+
+#. Color.g
+#: doc/classes/Color.xml
+msgid "The color's green component, typically on the range of 0 to 1."
+msgstr "A szín zöld összetevője, jellemzően 0 és 1 között."
+
+#. Color.g8
+#: doc/classes/Color.xml
+msgid "Wrapper for [member g] that uses the range 0 to 255, instead of 0 to 1."
+msgstr "A [member g] összetevő olyan változata, amely 0 és 1 közötti értékek helyett 0 és 255 közötti értékeket használ."
+
+#. Color.h
+#: doc/classes/Color.xml
+msgid "The HSV hue of this color, on the range 0 to 1."
+msgstr "A szín HSV szerinti árnyalata 0 és 1 között."
+
+#. Color.ok_hsl_h
+#: doc/classes/Color.xml
+msgid "The OKHSL hue of this color, on the range 0 to 1."
+msgstr "A szín OKHSL szerinti árnyalata 0 és 1 között."
+
+#. Color.ok_hsl_l
+#: doc/classes/Color.xml
+msgid "The OKHSL lightness of this color, on the range 0 to 1."
+msgstr "A szín OKHSL szerinti világossága 0 és 1 között."
+
+#. Color.ok_hsl_s
+#: doc/classes/Color.xml
+msgid "The OKHSL saturation of this color, on the range 0 to 1."
+msgstr "A szín OKHSL szerinti telítettsége 0 és 1 között."
+
+#. Color.r
+#: doc/classes/Color.xml
+msgid "The color's red component, typically on the range of 0 to 1."
+msgstr "A szín vörös összetevője, jellemzően 0 és 1 között."
+
+#. Color.r8
+#: doc/classes/Color.xml
+msgid "Wrapper for [member r] that uses the range 0 to 255, instead of 0 to 1."
+msgstr "Az [member r] összetevő olyan változata, amely 0 és 1 közötti értékek helyett 0 és 255 közötti értékeket használ."
+
+#. Color.s
+#: doc/classes/Color.xml
+msgid "The HSV saturation of this color, on the range 0 to 1."
+msgstr "A szín HSV szerinti telítettsége 0 és 1 között."
+
+#. Color.v
+#: doc/classes/Color.xml
+msgid "The HSV value (brightness) of this color, on the range 0 to 1."
+msgstr "A szín HSV szerinti értéke (fényereje) 0 és 1 között."
+
+#. Vector2.brief
+#: doc/classes/Vector2.xml
+msgid "A 2D vector using floating-point coordinates."
+msgstr "Lebegőpontos koordinátákat használó 2D vektor."
+
+#. Vector3.brief
+#: doc/classes/Vector3.xml
+msgid "A 3D vector using floating-point coordinates."
+msgstr "Lebegőpontos koordinátákat használó 3D vektor."
+
+#. Vector3i.brief
+#: doc/classes/Vector3i.xml
+msgid "A 3D vector using integer coordinates."
+msgstr "Egész koordinátákat használó 3D vektor."
+
+#. Vector4.brief
+#: doc/classes/Vector4.xml
+msgid "A 4D vector using floating-point coordinates."
+msgstr "Lebegőpontos koordinátákat használó 4D vektor."
+
+#. Vector4i.brief
+#: doc/classes/Vector4i.xml
+msgid "A 4D vector using integer coordinates."
+msgstr "Egész koordinátákat használó 4D vektor."
+
+#. Basis.brief
+#: doc/classes/Basis.xml
+msgid "A 3×3 matrix for representing 3D rotation and scale."
+msgstr "A 3D forgatást és méretezést leíró 3×3-as mátrix."
+
+#. Vector2.Vector2
+#: doc/classes/Vector2.xml
+msgid "Constructs a default-initialized [Vector2] with all components set to [code]0[/code]."
+msgstr "Alapértelmezett [Vector2] értéket hoz létre. Minden összetevője [code]0[/code]."
+
+#. Vector2.Vector2
+#: doc/classes/Vector2.xml
+msgid "Constructs a [Vector2] as a copy of the given [Vector2]."
+msgstr "A megadott [Vector2] másolataként új [Vector2] értéket hoz létre."
+
+#. Vector2.Vector2
+#: doc/classes/Vector2.xml
+msgid "Constructs a new [Vector2] from [Vector2i]."
+msgstr "A megadott [Vector2i] értékből új [Vector2] értéket hoz létre."
+
+#. Vector2.max
+#: doc/classes/Vector2.xml
+msgid "Returns the component-wise maximum of this and [param with], equivalent to [code]Vector2(maxf(x, with.x), maxf(y, with.y))[/code]."
+msgstr "Összetevőnként visszaadja e vektor és a [param with] közül a nagyobb értéket. Ez egyenértékű a [code]Vector2(maxf(x, with.x), maxf(y, with.y))[/code] kifejezéssel."
+
+#. Vector2.maxf
+#: doc/classes/Vector2.xml
+msgid "Returns the component-wise maximum of this and [param with], equivalent to [code]Vector2(maxf(x, with), maxf(y, with))[/code]."
+msgstr "Összetevőnként visszaadja e vektor és a [param with] közül a nagyobb értéket. Ez egyenértékű a [code]Vector2(maxf(x, with), maxf(y, with))[/code] kifejezéssel."
+
+#. Vector2.min
+#: doc/classes/Vector2.xml
+msgid "Returns the component-wise minimum of this and [param with], equivalent to [code]Vector2(minf(x, with.x), minf(y, with.y))[/code]."
+msgstr "Összetevőnként visszaadja e vektor és a [param with] közül a kisebb értéket. Ez egyenértékű a [code]Vector2(minf(x, with.x), minf(y, with.y))[/code] kifejezéssel."
+
+#. Vector2.min_axis_index
+#. Vector2i.min_axis_index
+#: doc/classes/Vector2.xml doc/classes/Vector2i.xml
+msgid "Returns the axis of the vector's lowest value. See [code]AXIS_*[/code] constants. If all components are equal, this method returns [constant AXIS_Y]."
+msgstr "A legkisebb összetevőhöz tartozó tengelyt adja vissza. Lásd a [code]AXIS_*[/code] állandókat. Ha minden összetevő azonos, [constant AXIS_Y] értéket ad vissza."
+
+#. Vector2.minf
+#: doc/classes/Vector2.xml
+msgid "Returns the component-wise minimum of this and [param with], equivalent to [code]Vector2(minf(x, with), minf(y, with))[/code]."
+msgstr "Összetevőnként visszaadja e vektor és a [param with] közül a kisebb értéket. Ez egyenértékű a [code]Vector2(minf(x, with), minf(y, with))[/code] kifejezéssel."
+
+#. Vector2.operator *
+#: doc/classes/Vector2.xml
+msgid "Multiplies each component of the [Vector2] by the components of the given [Vector2].\n[codeblock]\nprint(Vector2(10, 20) * Vector2(3, 4)) # Prints (30.0, 80.0)\n[/codeblock]"
+msgstr "A [Vector2] minden összetevőjét megszorozza a megadott [Vector2] megfelelő összetevőjével.\n[codeblock]\nprint(Vector2(10, 20) * Vector2(3, 4)) # Prints (30.0, 80.0)\n[/codeblock]"
+
+#. Vector2.operator *
+#: doc/classes/Vector2.xml
+msgid "Multiplies each component of the [Vector2] by the given [float]."
+msgstr "A [Vector2] minden összetevőjét megszorozza a megadott [float] értékkel."
+
+#. Vector2.operator *
+#: doc/classes/Vector2.xml
+msgid "Multiplies each component of the [Vector2] by the given [int]."
+msgstr "A [Vector2] minden összetevőjét megszorozza a megadott [int] értékkel."
+
+#. Vector2.operator +
+#: doc/classes/Vector2.xml
+msgid "Adds each component of the [Vector2] by the components of the given [Vector2].\n[codeblock]\nprint(Vector2(10, 20) + Vector2(3, 4)) # Prints (13.0, 24.0)\n[/codeblock]"
+msgstr "A [Vector2] minden összetevőjéhez hozzáadja a megadott [Vector2] megfelelő összetevőjét.\n[codeblock]\nprint(Vector2(10, 20) + Vector2(3, 4)) # Prints (13.0, 24.0)\n[/codeblock]"
+
+#. Vector2.operator -
+#: doc/classes/Vector2.xml
+msgid "Subtracts each component of the [Vector2] by the components of the given [Vector2].\n[codeblock]\nprint(Vector2(10, 20) - Vector2(3, 4)) # Prints (7.0, 16.0)\n[/codeblock]"
+msgstr "A [Vector2] minden összetevőjéből kivonja a megadott [Vector2] megfelelő összetevőjét.\n[codeblock]\nprint(Vector2(10, 20) - Vector2(3, 4)) # Prints (7.0, 16.0)\n[/codeblock]"
+
+#. Vector2.operator /
+#: doc/classes/Vector2.xml
+msgid "Divides each component of the [Vector2] by the components of the given [Vector2].\n[codeblock]\nprint(Vector2(10, 20) / Vector2(2, 5)) # Prints (5.0, 4.0)\n[/codeblock]"
+msgstr "A [Vector2] minden összetevőjét elosztja a megadott [Vector2] megfelelő összetevőjével.\n[codeblock]\nprint(Vector2(10, 20) / Vector2(2, 5)) # Prints (5.0, 4.0)\n[/codeblock]"
+
+#. Vector2.operator /
+#: doc/classes/Vector2.xml
+msgid "Divides each component of the [Vector2] by the given [float]."
+msgstr "A [Vector2] minden összetevőjét elosztja a megadott [float] értékkel."
+
+#. Vector2.operator /
+#: doc/classes/Vector2.xml
+msgid "Divides each component of the [Vector2] by the given [int]."
+msgstr "A [Vector2] minden összetevőjét elosztja a megadott [int] értékkel."
+
+#. Vector2.x
+#. Vector2i.x
+#. Vector3.x
+#. Vector3i.x
+#. Vector4.x
+#. Vector4i.x
+#: doc/classes/Vector2.xml doc/classes/Vector2i.xml doc/classes/Vector3.xml doc/classes/Vector3i.xml doc/classes/Vector4.xml doc/classes/Vector4i.xml
+msgid "The vector's X component. Also accessible by using the index position [code][0][/code]."
+msgstr "A vektor X összetevője. A [code][0][/code] indexszel is elérhető."
+
+#. Vector2.y
+#. Vector2i.y
+#. Vector3.y
+#. Vector3i.y
+#. Vector4.y
+#. Vector4i.y
+#: doc/classes/Vector2.xml doc/classes/Vector2i.xml doc/classes/Vector3.xml doc/classes/Vector3i.xml doc/classes/Vector4.xml doc/classes/Vector4i.xml
+msgid "The vector's Y component. Also accessible by using the index position [code][1][/code]."
+msgstr "A vektor Y összetevője. A [code][1][/code] indexszel is elérhető."
+
+#. Vector2.AXIS_X
+#. Vector2i.AXIS_X
+#. Vector3.AXIS_X
+#. Vector3i.AXIS_X
+#. Vector4.AXIS_X
+#. Vector4i.AXIS_X
+#: doc/classes/Vector2.xml doc/classes/Vector2i.xml doc/classes/Vector3.xml doc/classes/Vector3i.xml doc/classes/Vector4.xml doc/classes/Vector4i.xml
+msgid "Enumerated value for the X axis. Returned by [method max_axis_index] and [method min_axis_index]."
+msgstr "Az X tengely felsorolásértéke. A [method max_axis_index] és a [method min_axis_index] is visszaadhatja."
+
+#. Vector2.AXIS_Y
+#. Vector2i.AXIS_Y
+#. Vector3.AXIS_Y
+#. Vector3i.AXIS_Y
+#. Vector4.AXIS_Y
+#. Vector4i.AXIS_Y
+#: doc/classes/Vector2.xml doc/classes/Vector2i.xml doc/classes/Vector3.xml doc/classes/Vector3i.xml doc/classes/Vector4.xml doc/classes/Vector4i.xml
+msgid "Enumerated value for the Y axis. Returned by [method max_axis_index] and [method min_axis_index]."
+msgstr "Az Y tengely felsorolásértéke. A [method max_axis_index] és a [method min_axis_index] is visszaadhatja."
+
+#. Vector2i.Vector2i
+#: doc/classes/Vector2i.xml
+msgid "Constructs a default-initialized [Vector2i] with all components set to [code]0[/code]."
+msgstr "Alapértelmezett [Vector2i] értéket hoz létre. Minden összetevője [code]0[/code]."
+
+#. Vector2i.Vector2i
+#: doc/classes/Vector2i.xml
+msgid "Constructs a [Vector2i] as a copy of the given [Vector2i]."
+msgstr "A megadott [Vector2i] másolataként új [Vector2i] értéket hoz létre."
+
+#. Vector2i.max
+#: doc/classes/Vector2i.xml
+msgid "Returns the component-wise maximum of this and [param with], equivalent to [code]Vector2i(maxi(x, with.x), maxi(y, with.y))[/code]."
+msgstr "Összetevőnként visszaadja e vektor és a [param with] közül a nagyobb értéket. Ez egyenértékű a [code]Vector2i(maxi(x, with.x), maxi(y, with.y))[/code] kifejezéssel."
+
+#. Vector2i.maxi
+#: doc/classes/Vector2i.xml
+msgid "Returns the component-wise maximum of this and [param with], equivalent to [code]Vector2i(maxi(x, with), maxi(y, with))[/code]."
+msgstr "Összetevőnként visszaadja e vektor és a [param with] közül a nagyobb értéket. Ez egyenértékű a [code]Vector2i(maxi(x, with), maxi(y, with))[/code] kifejezéssel."
+
+#. Vector2i.min
+#: doc/classes/Vector2i.xml
+msgid "Returns the component-wise minimum of this and [param with], equivalent to [code]Vector2i(mini(x, with.x), mini(y, with.y))[/code]."
+msgstr "Összetevőnként visszaadja e vektor és a [param with] közül a kisebb értéket. Ez egyenértékű a [code]Vector2i(mini(x, with.x), mini(y, with.y))[/code] kifejezéssel."
+
+#. Vector2i.mini
+#: doc/classes/Vector2i.xml
+msgid "Returns the component-wise minimum of this and [param with], equivalent to [code]Vector2i(mini(x, with), mini(y, with))[/code]."
+msgstr "Összetevőnként visszaadja e vektor és a [param with] közül a kisebb értéket. Ez egyenértékű a [code]Vector2i(mini(x, with), mini(y, with))[/code] kifejezéssel."
+
+#. Vector2i.operator *
+#: doc/classes/Vector2i.xml
+msgid "Multiplies each component of the [Vector2i] by the components of the given [Vector2i].\n[codeblock]\nprint(Vector2i(10, 20) * Vector2i(3, 4)) # Prints (30, 80)\n[/codeblock]"
+msgstr "A [Vector2i] minden összetevőjét megszorozza a megadott [Vector2i] megfelelő összetevőjével.\n[codeblock]\nprint(Vector2i(10, 20) * Vector2i(3, 4)) # Prints (30, 80)\n[/codeblock]"
+
+#. Vector2i.operator *
+#: doc/classes/Vector2i.xml
+msgid "Multiplies each component of the [Vector2i] by the given [int]."
+msgstr "A [Vector2i] minden összetevőjét megszorozza a megadott [int] értékkel."
+
+#. Vector2i.operator +
+#: doc/classes/Vector2i.xml
+msgid "Adds each component of the [Vector2i] by the components of the given [Vector2i].\n[codeblock]\nprint(Vector2i(10, 20) + Vector2i(3, 4)) # Prints (13, 24)\n[/codeblock]"
+msgstr "A [Vector2i] minden összetevőjéhez hozzáadja a megadott [Vector2i] megfelelő összetevőjét.\n[codeblock]\nprint(Vector2i(10, 20) + Vector2i(3, 4)) # Prints (13, 24)\n[/codeblock]"
+
+#. Vector2i.operator -
+#: doc/classes/Vector2i.xml
+msgid "Subtracts each component of the [Vector2i] by the components of the given [Vector2i].\n[codeblock]\nprint(Vector2i(10, 20) - Vector2i(3, 4)) # Prints (7, 16)\n[/codeblock]"
+msgstr "A [Vector2i] minden összetevőjéből kivonja a megadott [Vector2i] megfelelő összetevőjét.\n[codeblock]\nprint(Vector2i(10, 20) - Vector2i(3, 4)) # Prints (7, 16)\n[/codeblock]"
+
+#. Vector2i.operator /
+#: doc/classes/Vector2i.xml
+msgid "Divides each component of the [Vector2i] by the components of the given [Vector2i].\n[codeblock]\nprint(Vector2i(10, 20) / Vector2i(2, 5)) # Prints (5, 4)\n[/codeblock]"
+msgstr "A [Vector2i] minden összetevőjét elosztja a megadott [Vector2i] megfelelő összetevőjével.\n[codeblock]\nprint(Vector2i(10, 20) / Vector2i(2, 5)) # Prints (5, 4)\n[/codeblock]"
+
+#. Vector2i.operator /
+#: doc/classes/Vector2i.xml
+msgid "Divides each component of the [Vector2i] by the given [int]."
+msgstr "A [Vector2i] minden összetevőjét elosztja a megadott [int] értékkel."
+
+#. Vector3.Vector3
+#: doc/classes/Vector3.xml
+msgid "Constructs a default-initialized [Vector3] with all components set to [code]0[/code]."
+msgstr "Alapértelmezett [Vector3] értéket hoz létre. Minden összetevője [code]0[/code]."
+
+#. Vector3.Vector3
+#: doc/classes/Vector3.xml
+msgid "Constructs a [Vector3] as a copy of the given [Vector3]."
+msgstr "A megadott [Vector3] másolataként új [Vector3] értéket hoz létre."
+
+#. Vector3.Vector3
+#: doc/classes/Vector3.xml
+msgid "Constructs a new [Vector3] from [Vector3i]."
+msgstr "A megadott [Vector3i] értékből új [Vector3] értéket hoz létre."
+
+#. Vector3.Vector3
+#: doc/classes/Vector3.xml
+msgid "Returns a [Vector3] with the given components."
+msgstr "A megadott összetevőkből [Vector3] értéket ad vissza."
+
+#. Vector3.inverse
+#: doc/classes/Vector3.xml
+msgid "Returns the inverse of the vector. This is the same as [code]Vector3(1.0 / v.x, 1.0 / v.y, 1.0 / v.z)[/code]."
+msgstr "A vektor összetevőinek reciprokát adja vissza. Ez megegyezik a [code]Vector3(1.0 / v.x, 1.0 / v.y, 1.0 / v.z)[/code] kifejezés eredményével."
+
+#. Vector3.max
+#: doc/classes/Vector3.xml
+msgid "Returns the component-wise maximum of this and [param with], equivalent to [code]Vector3(maxf(x, with.x), maxf(y, with.y), maxf(z, with.z))[/code]."
+msgstr "Összetevőnként visszaadja e vektor és a [param with] közül a nagyobb értéket. Ez egyenértékű a [code]Vector3(maxf(x, with.x), maxf(y, with.y), maxf(z, with.z))[/code] kifejezéssel."
+
+#. Vector3.maxf
+#: doc/classes/Vector3.xml
+msgid "Returns the component-wise maximum of this and [param with], equivalent to [code]Vector3(maxf(x, with), maxf(y, with), maxf(z, with))[/code]."
+msgstr "Összetevőnként visszaadja e vektor és a [param with] közül a nagyobb értéket. Ez egyenértékű a [code]Vector3(maxf(x, with), maxf(y, with), maxf(z, with))[/code] kifejezéssel."
+
+#. Vector3.min
+#: doc/classes/Vector3.xml
+msgid "Returns the component-wise minimum of this and [param with], equivalent to [code]Vector3(minf(x, with.x), minf(y, with.y), minf(z, with.z))[/code]."
+msgstr "Összetevőnként visszaadja e vektor és a [param with] közül a kisebb értéket. Ez egyenértékű a [code]Vector3(minf(x, with.x), minf(y, with.y), minf(z, with.z))[/code] kifejezéssel."
+
+#. Vector3.min_axis_index
+#. Vector3i.min_axis_index
+#: doc/classes/Vector3.xml doc/classes/Vector3i.xml
+msgid "Returns the axis of the vector's lowest value. See [code]AXIS_*[/code] constants. If all components are equal, this method returns [constant AXIS_Z]."
+msgstr "A legkisebb összetevőhöz tartozó tengelyt adja vissza. Lásd a [code]AXIS_*[/code] állandókat. Ha minden összetevő azonos, [constant AXIS_Z] értéket ad vissza."
+
+#. Vector3.minf
+#: doc/classes/Vector3.xml
+msgid "Returns the component-wise minimum of this and [param with], equivalent to [code]Vector3(minf(x, with), minf(y, with), minf(z, with))[/code]."
+msgstr "Összetevőnként visszaadja e vektor és a [param with] közül a kisebb értéket. Ez egyenértékű a [code]Vector3(minf(x, with), minf(y, with), minf(z, with))[/code] kifejezéssel."
+
+#. Vector3.operator *
+#: doc/classes/Vector3.xml
+msgid "Multiplies each component of the [Vector3] by the components of the given [Vector3].\n[codeblock]\nprint(Vector3(10, 20, 30) * Vector3(3, 4, 5)) # Prints (30.0, 80.0, 150.0)\n[/codeblock]"
+msgstr "A [Vector3] minden összetevőjét megszorozza a megadott [Vector3] megfelelő összetevőjével.\n[codeblock]\nprint(Vector3(10, 20, 30) * Vector3(3, 4, 5)) # Prints (30.0, 80.0, 150.0)\n[/codeblock]"
+
+#. Vector3.operator *
+#. float.operator *
+#: doc/classes/Vector3.xml doc/classes/float.xml
+msgid "Multiplies each component of the [Vector3] by the given [float]."
+msgstr "A [Vector3] minden összetevőjét megszorozza a megadott [float] értékkel."
+
+#. Vector3.operator *
+#: doc/classes/Vector3.xml
+msgid "Multiplies each component of the [Vector3] by the given [int]."
+msgstr "A [Vector3] minden összetevőjét megszorozza a megadott [int] értékkel."
+
+#. Vector3.operator +
+#: doc/classes/Vector3.xml
+msgid "Adds each component of the [Vector3] by the components of the given [Vector3].\n[codeblock]\nprint(Vector3(10, 20, 30) + Vector3(3, 4, 5)) # Prints (13.0, 24.0, 35.0)\n[/codeblock]"
+msgstr "A [Vector3] minden összetevőjéhez hozzáadja a megadott [Vector3] megfelelő összetevőjét.\n[codeblock]\nprint(Vector3(10, 20, 30) + Vector3(3, 4, 5)) # Prints (13.0, 24.0, 35.0)\n[/codeblock]"
+
+#. Vector3.operator -
+#: doc/classes/Vector3.xml
+msgid "Subtracts each component of the [Vector3] by the components of the given [Vector3].\n[codeblock]\nprint(Vector3(10, 20, 30) - Vector3(3, 4, 5)) # Prints (7.0, 16.0, 25.0)\n[/codeblock]"
+msgstr "A [Vector3] minden összetevőjéből kivonja a megadott [Vector3] megfelelő összetevőjét.\n[codeblock]\nprint(Vector3(10, 20, 30) - Vector3(3, 4, 5)) # Prints (7.0, 16.0, 25.0)\n[/codeblock]"
+
+#. Vector3.operator /
+#: doc/classes/Vector3.xml
+msgid "Divides each component of the [Vector3] by the components of the given [Vector3].\n[codeblock]\nprint(Vector3(10, 20, 30) / Vector3(2, 5, 3)) # Prints (5.0, 4.0, 10.0)\n[/codeblock]"
+msgstr "A [Vector3] minden összetevőjét elosztja a megadott [Vector3] megfelelő összetevőjével.\n[codeblock]\nprint(Vector3(10, 20, 30) / Vector3(2, 5, 3)) # Prints (5.0, 4.0, 10.0)\n[/codeblock]"
+
+#. Vector3.operator /
+#: doc/classes/Vector3.xml
+msgid "Divides each component of the [Vector3] by the given [float]."
+msgstr "A [Vector3] minden összetevőjét elosztja a megadott [float] értékkel."
+
+#. Vector3.operator /
+#: doc/classes/Vector3.xml
+msgid "Divides each component of the [Vector3] by the given [int]."
+msgstr "A [Vector3] minden összetevőjét elosztja a megadott [int] értékkel."
+
+#. Vector3.z
+#. Vector3i.z
+#. Vector4.z
+#. Vector4i.z
+#: doc/classes/Vector3.xml doc/classes/Vector3i.xml doc/classes/Vector4.xml doc/classes/Vector4i.xml
+msgid "The vector's Z component. Also accessible by using the index position [code][2][/code]."
+msgstr "A vektor Z összetevője. A [code][2][/code] indexszel is elérhető."
+
+#. Vector3.AXIS_Z
+#. Vector3i.AXIS_Z
+#. Vector4.AXIS_Z
+#. Vector4i.AXIS_Z
+#: doc/classes/Vector3.xml doc/classes/Vector3i.xml doc/classes/Vector4.xml doc/classes/Vector4i.xml
+msgid "Enumerated value for the Z axis. Returned by [method max_axis_index] and [method min_axis_index]."
+msgstr "Az Z tengely felsorolásértéke. A [method max_axis_index] és a [method min_axis_index] is visszaadhatja."
+
+#. Vector3i.Vector3i
+#: doc/classes/Vector3i.xml
+msgid "Constructs a default-initialized [Vector3i] with all components set to [code]0[/code]."
+msgstr "Alapértelmezett [Vector3i] értéket hoz létre. Minden összetevője [code]0[/code]."
+
+#. Vector3i.Vector3i
+#: doc/classes/Vector3i.xml
+msgid "Constructs a [Vector3i] as a copy of the given [Vector3i]."
+msgstr "A megadott [Vector3i] másolataként új [Vector3i] értéket hoz létre."
+
+#. Vector3i.Vector3i
+#: doc/classes/Vector3i.xml
+msgid "Returns a [Vector3i] with the given components."
+msgstr "A megadott összetevőkből [Vector3i] értéket ad vissza."
+
+#. Vector3i.max
+#: doc/classes/Vector3i.xml
+msgid "Returns the component-wise maximum of this and [param with], equivalent to [code]Vector3i(maxi(x, with.x), maxi(y, with.y), maxi(z, with.z))[/code]."
+msgstr "Összetevőnként visszaadja e vektor és a [param with] közül a nagyobb értéket. Ez egyenértékű a [code]Vector3i(maxi(x, with.x), maxi(y, with.y), maxi(z, with.z))[/code] kifejezéssel."
+
+#. Vector3i.maxi
+#: doc/classes/Vector3i.xml
+msgid "Returns the component-wise maximum of this and [param with], equivalent to [code]Vector3i(maxi(x, with), maxi(y, with), maxi(z, with))[/code]."
+msgstr "Összetevőnként visszaadja e vektor és a [param with] közül a nagyobb értéket. Ez egyenértékű a [code]Vector3i(maxi(x, with), maxi(y, with), maxi(z, with))[/code] kifejezéssel."
+
+#. Vector3i.min
+#: doc/classes/Vector3i.xml
+msgid "Returns the component-wise minimum of this and [param with], equivalent to [code]Vector3i(mini(x, with.x), mini(y, with.y), mini(z, with.z))[/code]."
+msgstr "Összetevőnként visszaadja e vektor és a [param with] közül a kisebb értéket. Ez egyenértékű a [code]Vector3i(mini(x, with.x), mini(y, with.y), mini(z, with.z))[/code] kifejezéssel."
+
+#. Vector3i.mini
+#: doc/classes/Vector3i.xml
+msgid "Returns the component-wise minimum of this and [param with], equivalent to [code]Vector3i(mini(x, with), mini(y, with), mini(z, with))[/code]."
+msgstr "Összetevőnként visszaadja e vektor és a [param with] közül a kisebb értéket. Ez egyenértékű a [code]Vector3i(mini(x, with), mini(y, with), mini(z, with))[/code] kifejezéssel."
+
+#. Vector3i.operator *
+#: doc/classes/Vector3i.xml
+msgid "Multiplies each component of the [Vector3i] by the components of the given [Vector3i].\n[codeblock]\nprint(Vector3i(10, 20, 30) * Vector3i(3, 4, 5)) # Prints (30, 80, 150)\n[/codeblock]"
+msgstr "A [Vector3i] minden összetevőjét megszorozza a megadott [Vector3i] megfelelő összetevőjével.\n[codeblock]\nprint(Vector3i(10, 20, 30) * Vector3i(3, 4, 5)) # Prints (30, 80, 150)\n[/codeblock]"
+
+#. Vector3i.operator *
+#: doc/classes/Vector3i.xml
+msgid "Multiplies each component of the [Vector3i] by the given [int]."
+msgstr "A [Vector3i] minden összetevőjét megszorozza a megadott [int] értékkel."
+
+#. Vector3i.operator +
+#: doc/classes/Vector3i.xml
+msgid "Adds each component of the [Vector3i] by the components of the given [Vector3i].\n[codeblock]\nprint(Vector3i(10, 20, 30) + Vector3i(3, 4, 5)) # Prints (13, 24, 35)\n[/codeblock]"
+msgstr "A [Vector3i] minden összetevőjéhez hozzáadja a megadott [Vector3i] megfelelő összetevőjét.\n[codeblock]\nprint(Vector3i(10, 20, 30) + Vector3i(3, 4, 5)) # Prints (13, 24, 35)\n[/codeblock]"
+
+#. Vector3i.operator -
+#: doc/classes/Vector3i.xml
+msgid "Subtracts each component of the [Vector3i] by the components of the given [Vector3i].\n[codeblock]\nprint(Vector3i(10, 20, 30) - Vector3i(3, 4, 5)) # Prints (7, 16, 25)\n[/codeblock]"
+msgstr "A [Vector3i] minden összetevőjéből kivonja a megadott [Vector3i] megfelelő összetevőjét.\n[codeblock]\nprint(Vector3i(10, 20, 30) - Vector3i(3, 4, 5)) # Prints (7, 16, 25)\n[/codeblock]"
+
+#. Vector3i.operator /
+#: doc/classes/Vector3i.xml
+msgid "Divides each component of the [Vector3i] by the components of the given [Vector3i].\n[codeblock]\nprint(Vector3i(10, 20, 30) / Vector3i(2, 5, 3)) # Prints (5, 4, 10)\n[/codeblock]"
+msgstr "A [Vector3i] minden összetevőjét elosztja a megadott [Vector3i] megfelelő összetevőjével.\n[codeblock]\nprint(Vector3i(10, 20, 30) / Vector3i(2, 5, 3)) # Prints (5, 4, 10)\n[/codeblock]"
+
+#. Vector3i.operator /
+#: doc/classes/Vector3i.xml
+msgid "Divides each component of the [Vector3i] by the given [int]."
+msgstr "A [Vector3i] minden összetevőjét elosztja a megadott [int] értékkel."
+
+#. Vector4.Vector4
+#: doc/classes/Vector4.xml
+msgid "Constructs a default-initialized [Vector4] with all components set to [code]0[/code]."
+msgstr "Alapértelmezett [Vector4] értéket hoz létre. Minden összetevője [code]0[/code]."
+
+#. Vector4.Vector4
+#: doc/classes/Vector4.xml
+msgid "Constructs a [Vector4] as a copy of the given [Vector4]."
+msgstr "A megadott [Vector4] másolataként új [Vector4] értéket hoz létre."
+
+#. Vector4.Vector4
+#: doc/classes/Vector4.xml
+msgid "Constructs a new [Vector4] from the given [Vector4i]."
+msgstr "A megadott [Vector4i] értékből új [Vector4] értéket hoz létre."
+
+#. Vector4.Vector4
+#: doc/classes/Vector4.xml
+msgid "Returns a [Vector4] with the given components."
+msgstr "A megadott összetevőkből [Vector4] értéket ad vissza."
+
+#. Vector4.inverse
+#: doc/classes/Vector4.xml
+msgid "Returns the inverse of the vector. This is the same as [code]Vector4(1.0 / v.x, 1.0 / v.y, 1.0 / v.z, 1.0 / v.w)[/code]."
+msgstr "A vektor összetevőinek reciprokát adja vissza. Ez megegyezik a [code]Vector4(1.0 / v.x, 1.0 / v.y, 1.0 / v.z, 1.0 / v.w)[/code] kifejezés eredményével."
+
+#. Vector4.max
+#: doc/classes/Vector4.xml
+msgid "Returns the component-wise maximum of this and [param with], equivalent to [code]Vector4(maxf(x, with.x), maxf(y, with.y), maxf(z, with.z), maxf(w, with.w))[/code]."
+msgstr "Összetevőnként visszaadja e vektor és a [param with] közül a nagyobb értéket. Ez egyenértékű a [code]Vector4(maxf(x, with.x), maxf(y, with.y), maxf(z, with.z), maxf(w, with.w))[/code] kifejezéssel."
+
+#. Vector4.maxf
+#: doc/classes/Vector4.xml
+msgid "Returns the component-wise maximum of this and [param with], equivalent to [code]Vector4(maxf(x, with), maxf(y, with), maxf(z, with), maxf(w, with))[/code]."
+msgstr "Összetevőnként visszaadja e vektor és a [param with] közül a nagyobb értéket. Ez egyenértékű a [code]Vector4(maxf(x, with), maxf(y, with), maxf(z, with), maxf(w, with))[/code] kifejezéssel."
+
+#. Vector4.min
+#: doc/classes/Vector4.xml
+msgid "Returns the component-wise minimum of this and [param with], equivalent to [code]Vector4(minf(x, with.x), minf(y, with.y), minf(z, with.z), minf(w, with.w))[/code]."
+msgstr "Összetevőnként visszaadja e vektor és a [param with] közül a kisebb értéket. Ez egyenértékű a [code]Vector4(minf(x, with.x), minf(y, with.y), minf(z, with.z), minf(w, with.w))[/code] kifejezéssel."
+
+#. Vector4.min_axis_index
+#. Vector4i.min_axis_index
+#: doc/classes/Vector4.xml doc/classes/Vector4i.xml
+msgid "Returns the axis of the vector's lowest value. See [code]AXIS_*[/code] constants. If all components are equal, this method returns [constant AXIS_W]."
+msgstr "A legkisebb összetevőhöz tartozó tengelyt adja vissza. Lásd a [code]AXIS_*[/code] állandókat. Ha minden összetevő azonos, [constant AXIS_W] értéket ad vissza."
+
+#. Vector4.minf
+#: doc/classes/Vector4.xml
+msgid "Returns the component-wise minimum of this and [param with], equivalent to [code]Vector4(minf(x, with), minf(y, with), minf(z, with), minf(w, with))[/code]."
+msgstr "Összetevőnként visszaadja e vektor és a [param with] közül a kisebb értéket. Ez egyenértékű a [code]Vector4(minf(x, with), minf(y, with), minf(z, with), minf(w, with))[/code] kifejezéssel."
+
+#. Vector4.operator *
+#: doc/classes/Vector4.xml
+msgid "Multiplies each component of the [Vector4] by the components of the given [Vector4].\n[codeblock]\nprint(Vector4(10, 20, 30, 40) * Vector4(3, 4, 5, 6)) # Prints (30.0, 80.0, 150.0, 240.0)\n[/codeblock]"
+msgstr "A [Vector4] minden összetevőjét megszorozza a megadott [Vector4] megfelelő összetevőjével.\n[codeblock]\nprint(Vector4(10, 20, 30, 40) * Vector4(3, 4, 5, 6)) # Prints (30.0, 80.0, 150.0, 240.0)\n[/codeblock]"
+
+#. Vector4.operator *
+#: doc/classes/Vector4.xml
+msgid "Multiplies each component of the [Vector4] by the given [float].\n[codeblock]\nprint(Vector4(10, 20, 30, 40) * 2) # Prints (20.0, 40.0, 60.0, 80.0)\n[/codeblock]"
+msgstr "A [Vector4] minden összetevőjét megszorozza a megadott [float] értékkel.\n[codeblock]\nprint(Vector4(10, 20, 30, 40) * 2) # Prints (20.0, 40.0, 60.0, 80.0)\n[/codeblock]"
+
+#. Vector4.operator *
+#: doc/classes/Vector4.xml
+msgid "Multiplies each component of the [Vector4] by the given [int]."
+msgstr "A [Vector4] minden összetevőjét megszorozza a megadott [int] értékkel."
+
+#. Vector4.operator +
+#: doc/classes/Vector4.xml
+msgid "Adds each component of the [Vector4] by the components of the given [Vector4].\n[codeblock]\nprint(Vector4(10, 20, 30, 40) + Vector4(3, 4, 5, 6)) # Prints (13.0, 24.0, 35.0, 46.0)\n[/codeblock]"
+msgstr "A [Vector4] minden összetevőjéhez hozzáadja a megadott [Vector4] megfelelő összetevőjét.\n[codeblock]\nprint(Vector4(10, 20, 30, 40) + Vector4(3, 4, 5, 6)) # Prints (13.0, 24.0, 35.0, 46.0)\n[/codeblock]"
+
+#. Vector4.operator -
+#: doc/classes/Vector4.xml
+msgid "Subtracts each component of the [Vector4] by the components of the given [Vector4].\n[codeblock]\nprint(Vector4(10, 20, 30, 40) - Vector4(3, 4, 5, 6)) # Prints (7.0, 16.0, 25.0, 34.0)\n[/codeblock]"
+msgstr "A [Vector4] minden összetevőjéből kivonja a megadott [Vector4] megfelelő összetevőjét.\n[codeblock]\nprint(Vector4(10, 20, 30, 40) - Vector4(3, 4, 5, 6)) # Prints (7.0, 16.0, 25.0, 34.0)\n[/codeblock]"
+
+#. Vector4.operator /
+#: doc/classes/Vector4.xml
+msgid "Divides each component of the [Vector4] by the components of the given [Vector4].\n[codeblock]\nprint(Vector4(10, 20, 30, 40) / Vector4(2, 5, 3, 4)) # Prints (5.0, 4.0, 10.0, 10.0)\n[/codeblock]"
+msgstr "A [Vector4] minden összetevőjét elosztja a megadott [Vector4] megfelelő összetevőjével.\n[codeblock]\nprint(Vector4(10, 20, 30, 40) / Vector4(2, 5, 3, 4)) # Prints (5.0, 4.0, 10.0, 10.0)\n[/codeblock]"
+
+#. Vector4.operator /
+#: doc/classes/Vector4.xml
+msgid "Divides each component of the [Vector4] by the given [float].\n[codeblock]\nprint(Vector4(10, 20, 30, 40) / 2) # Prints (5.0, 10.0, 15.0, 20.0)\n[/codeblock]"
+msgstr "A [Vector4] minden összetevőjét elosztja a megadott [float] értékkel.\n[codeblock]\nprint(Vector4(10, 20, 30, 40) / 2) # Prints (5.0, 10.0, 15.0, 20.0)\n[/codeblock]"
+
+#. Vector4.operator /
+#: doc/classes/Vector4.xml
+msgid "Divides each component of the [Vector4] by the given [int]."
+msgstr "A [Vector4] minden összetevőjét elosztja a megadott [int] értékkel."
+
+#. Vector4.w
+#. Vector4i.w
+#: doc/classes/Vector4.xml doc/classes/Vector4i.xml
+msgid "The vector's W component. Also accessible by using the index position [code][3][/code]."
+msgstr "A vektor W összetevője. A [code][3][/code] indexszel is elérhető."
+
+#. Vector4.AXIS_W
+#. Vector4i.AXIS_W
+#: doc/classes/Vector4.xml doc/classes/Vector4i.xml
+msgid "Enumerated value for the W axis. Returned by [method max_axis_index] and [method min_axis_index]."
+msgstr "Az W tengely felsorolásértéke. A [method max_axis_index] és a [method min_axis_index] is visszaadhatja."
+
+#. Vector4i.Vector4i
+#: doc/classes/Vector4i.xml
+msgid "Constructs a default-initialized [Vector4i] with all components set to [code]0[/code]."
+msgstr "Alapértelmezett [Vector4i] értéket hoz létre. Minden összetevője [code]0[/code]."
+
+#. Vector4i.Vector4i
+#: doc/classes/Vector4i.xml
+msgid "Constructs a [Vector4i] as a copy of the given [Vector4i]."
+msgstr "A megadott [Vector4i] másolataként új [Vector4i] értéket hoz létre."
+
+#. Vector4i.Vector4i
+#: doc/classes/Vector4i.xml
+msgid "Returns a [Vector4i] with the given components."
+msgstr "A megadott összetevőkből [Vector4i] értéket ad vissza."
+
+#. Vector4i.max
+#: doc/classes/Vector4i.xml
+msgid "Returns the component-wise maximum of this and [param with], equivalent to [code]Vector4i(maxi(x, with.x), maxi(y, with.y), maxi(z, with.z), maxi(w, with.w))[/code]."
+msgstr "Összetevőnként visszaadja e vektor és a [param with] közül a nagyobb értéket. Ez egyenértékű a [code]Vector4i(maxi(x, with.x), maxi(y, with.y), maxi(z, with.z), maxi(w, with.w))[/code] kifejezéssel."
+
+#. Vector4i.maxi
+#: doc/classes/Vector4i.xml
+msgid "Returns the component-wise maximum of this and [param with], equivalent to [code]Vector4i(maxi(x, with), maxi(y, with), maxi(z, with), maxi(w, with))[/code]."
+msgstr "Összetevőnként visszaadja e vektor és a [param with] közül a nagyobb értéket. Ez egyenértékű a [code]Vector4i(maxi(x, with), maxi(y, with), maxi(z, with), maxi(w, with))[/code] kifejezéssel."
+
+#. Vector4i.min
+#: doc/classes/Vector4i.xml
+msgid "Returns the component-wise minimum of this and [param with], equivalent to [code]Vector4i(mini(x, with.x), mini(y, with.y), mini(z, with.z), mini(w, with.w))[/code]."
+msgstr "Összetevőnként visszaadja e vektor és a [param with] közül a kisebb értéket. Ez egyenértékű a [code]Vector4i(mini(x, with.x), mini(y, with.y), mini(z, with.z), mini(w, with.w))[/code] kifejezéssel."
+
+#. Vector4i.mini
+#: doc/classes/Vector4i.xml
+msgid "Returns the component-wise minimum of this and [param with], equivalent to [code]Vector4i(mini(x, with), mini(y, with), mini(z, with), mini(w, with))[/code]."
+msgstr "Összetevőnként visszaadja e vektor és a [param with] közül a kisebb értéket. Ez egyenértékű a [code]Vector4i(mini(x, with), mini(y, with), mini(z, with), mini(w, with))[/code] kifejezéssel."
+
+#. Vector4i.operator *
+#: doc/classes/Vector4i.xml
+msgid "Multiplies each component of the [Vector4i] by the components of the given [Vector4i].\n[codeblock]\nprint(Vector4i(10, 20, 30, 40) * Vector4i(3, 4, 5, 6)) # Prints (30, 80, 150, 240)\n[/codeblock]"
+msgstr "A [Vector4i] minden összetevőjét megszorozza a megadott [Vector4i] megfelelő összetevőjével.\n[codeblock]\nprint(Vector4i(10, 20, 30, 40) * Vector4i(3, 4, 5, 6)) # Prints (30, 80, 150, 240)\n[/codeblock]"
+
+#. Vector4i.operator *
+#: doc/classes/Vector4i.xml
+msgid "Multiplies each component of the [Vector4i] by the given [int]."
+msgstr "A [Vector4i] minden összetevőjét megszorozza a megadott [int] értékkel."
+
+#. Vector4i.operator +
+#: doc/classes/Vector4i.xml
+msgid "Adds each component of the [Vector4i] by the components of the given [Vector4i].\n[codeblock]\nprint(Vector4i(10, 20, 30, 40) + Vector4i(3, 4, 5, 6)) # Prints (13, 24, 35, 46)\n[/codeblock]"
+msgstr "A [Vector4i] minden összetevőjéhez hozzáadja a megadott [Vector4i] megfelelő összetevőjét.\n[codeblock]\nprint(Vector4i(10, 20, 30, 40) + Vector4i(3, 4, 5, 6)) # Prints (13, 24, 35, 46)\n[/codeblock]"
+
+#. Vector4i.operator -
+#: doc/classes/Vector4i.xml
+msgid "Subtracts each component of the [Vector4i] by the components of the given [Vector4i].\n[codeblock]\nprint(Vector4i(10, 20, 30, 40) - Vector4i(3, 4, 5, 6)) # Prints (7, 16, 25, 34)\n[/codeblock]"
+msgstr "A [Vector4i] minden összetevőjéből kivonja a megadott [Vector4i] megfelelő összetevőjét.\n[codeblock]\nprint(Vector4i(10, 20, 30, 40) - Vector4i(3, 4, 5, 6)) # Prints (7, 16, 25, 34)\n[/codeblock]"
+
+#. Vector4i.operator /
+#: doc/classes/Vector4i.xml
+msgid "Divides each component of the [Vector4i] by the components of the given [Vector4i].\n[codeblock]\nprint(Vector4i(10, 20, 30, 40) / Vector4i(2, 5, 3, 4)) # Prints (5, 4, 10, 10)\n[/codeblock]"
+msgstr "A [Vector4i] minden összetevőjét elosztja a megadott [Vector4i] megfelelő összetevőjével.\n[codeblock]\nprint(Vector4i(10, 20, 30, 40) / Vector4i(2, 5, 3, 4)) # Prints (5, 4, 10, 10)\n[/codeblock]"
+
+#. Vector4i.operator /
+#: doc/classes/Vector4i.xml
+msgid "Divides each component of the [Vector4i] by the given [int]."
+msgstr "A [Vector4i] minden összetevőjét elosztja a megadott [int] értékkel."
+
+#. Vector2.abs
+#. Vector2i.abs
+#. Vector3.abs
+#. Vector3i.abs
+#. Vector4.abs
+#. Vector4i.abs
+#: doc/classes/Vector2.xml doc/classes/Vector2i.xml doc/classes/Vector3.xml doc/classes/Vector3i.xml doc/classes/Vector4.xml doc/classes/Vector4i.xml
+msgid "Returns a new vector with all components in absolute values (i.e. positive)."
+msgstr "Új vektort ad vissza, amely az eredeti összetevők abszolút értékeit tartalmazza."
+
+#. Vector2.length
+#. Vector2i.length
+#. Vector3.length
+#. Vector3i.length
+#. Vector4.length
+#. Vector4i.length
+#: doc/classes/Vector2.xml doc/classes/Vector2i.xml doc/classes/Vector3.xml doc/classes/Vector3i.xml doc/classes/Vector4.xml doc/classes/Vector4i.xml
+msgid "Returns the length (magnitude) of this vector."
+msgstr "Visszaadja a vektor hosszát (nagyságát)."
+
+#. Basis.Basis
+#: doc/classes/Basis.xml
+msgid "Constructs a [Basis] identical to [constant IDENTITY].\n[b]Note:[/b] In C#, this constructs a [Basis] with all of its components set to [constant Vector3.ZERO]."
+msgstr "A [constant IDENTITY] értékkel azonos [Basis] bázist hoz létre.\n[b]Megjegyzés:[/b] C#-ban olyan [Basis] jön létre, amelynek minden tengelye [constant Vector3.ZERO]."
+
+#. Basis.Basis
+#: doc/classes/Basis.xml
+msgid "Constructs a [Basis] as a copy of the given [Basis]."
+msgstr "A megadott [Basis] másolataként új [Basis] értéket hoz létre."
+
+#. Basis.Basis
+#: doc/classes/Basis.xml
+msgid "Constructs a [Basis] that only represents rotation from the given [Quaternion].\n[b]Note:[/b] Quaternions [i]only[/i] store rotation, not scale. Because of this, conversions from [Basis] to [Quaternion] cannot always be reversed."
+msgstr "A megadott [Quaternion] alapján olyan [Basis] értéket hoz létre, amely csak forgatást ábrázol.\n[b]Megjegyzés:[/b] A kvaterniók [i]csak[/i] a forgatást tárolják, a méretezést nem. Emiatt a [Basis] és a [Quaternion] közötti átalakítás nem mindig fordítható vissza."
+
+#. Basis.Basis
+#: doc/classes/Basis.xml
+msgid "Constructs a [Basis] from 3 axis vectors. These are the columns of the basis matrix."
+msgstr "Három tengelyvektorból [Basis] értéket hoz létre. A vektorok a bázismátrix oszlopai."
+
+#. Basis.get_rotation_quaternion
+#: doc/classes/Basis.xml
+msgid "Returns this basis's rotation as a [Quaternion].\n[b]Note:[/b] Quaternions are much more suitable for 3D math but are less intuitive. For user interfaces, consider using the [method get_euler] method, which returns Euler angles."
+msgstr "A bázis forgatását [Quaternion] értékként adja vissza.\n[b]Megjegyzés:[/b] A kvaterniók jobban alkalmasak 3D számításokra, de nehezebben értelmezhetők. Felhasználói felületen érdemes lehet az Euler-szögeket visszaadó [method get_euler] metódust használni."
+
+#. Basis.inverse
+#: doc/classes/Basis.xml
+msgid "Returns the [url=https://en.wikipedia.org/wiki/Invertible_matrix]inverse of this basis's matrix[/url]."
+msgstr "Visszaadja a [url=https://en.wikipedia.org/wiki/Invertible_matrix]bázismátrix inverzét[/url]."
+
+#. Basis.is_conformal
+#: doc/classes/Basis.xml
+msgid "Returns [code]true[/code] if this basis is conformal. A conformal basis is both [i]orthogonal[/i] (the axes are perpendicular to each other) and [i]uniform[/i] (the axes share the same length). This method can be especially useful during physics calculations."
+msgstr "[code]true[/code] értéket ad vissza, ha a bázis konform. A konform bázis [i]ortogonális[/i] (a tengelyei merőlegesek egymásra) és [i]egyenletes méretezésű[/i] (a tengelyei egyforma hosszúak). A metódus fizikai számításoknál különösen hasznos."
+
+#. Basis.is_equal_approx
+#: doc/classes/Basis.xml
+msgid "Returns [code]true[/code] if this basis and [param b] are approximately equal, by calling [method @GlobalScope.is_equal_approx] on all vector components."
+msgstr "[code]true[/code] értéket ad vissza, ha ez a bázis és a [param b] közel egyenlő. Az összes vektorösszetevőt a [method @GlobalScope.is_equal_approx] függvénnyel hasonlítja össze."
+
+#. Basis.is_finite
+#: doc/classes/Basis.xml
+msgid "Returns [code]true[/code] if this basis is finite, by calling [method @GlobalScope.is_finite] on all vector components."
+msgstr "[code]true[/code] értéket ad vissza, ha a bázis véges. Az összes vektorösszetevőt a [method @GlobalScope.is_finite] függvénnyel ellenőrzi."
+
+#. Basis.operator *
+#: doc/classes/Basis.xml
+msgid "Transforms (multiplies) the [param right] basis by this basis.\nThis is the operation performed between parent and child [Node3D]s."
+msgstr "Ezzel a bázissal transzformálja, azaz megszorozza a [param right] bázist.\nA szülő és a gyermek [Node3D] csomópont között is ez a művelet történik."
+
+#. Basis.operator *
+#: doc/classes/Basis.xml
+msgid "Multiplies all components of the [Basis] by the given [float]. This affects the basis's scale uniformly, resizing all 3 axes by the [param right] value."
+msgstr "A [Basis] összes összetevőjét megszorozza a megadott [float] értékkel. A bázist egyenletesen méretezi, mindhárom tengelyt a [param right] értékkel szorozza."
+
+#. Basis.operator *
+#: doc/classes/Basis.xml
+msgid "Multiplies all components of the [Basis] by the given [int]. This affects the basis's scale uniformly, resizing all 3 axes by the [param right] value."
+msgstr "A [Basis] összes összetevőjét megszorozza a megadott [int] értékkel. A bázist egyenletesen méretezi, mindhárom tengelyt a [param right] értékkel szorozza."
+
+#. Basis.operator /
+#: doc/classes/Basis.xml
+msgid "Divides all components of the [Basis] by the given [float]. This affects the basis's scale uniformly, resizing all 3 axes by the [param right] value."
+msgstr "A [Basis] összes összetevőjét elosztja a megadott [float] értékkel. A bázist egyenletesen méretezi, mindhárom tengelyt a [param right] értékkel osztja."
+
+#. Basis.operator /
+#: doc/classes/Basis.xml
+msgid "Divides all components of the [Basis] by the given [int]. This affects the basis's scale uniformly, resizing all 3 axes by the [param right] value."
+msgstr "A [Basis] összes összetevőjét elosztja a megadott [int] értékkel. A bázist egyenletesen méretezi, mindhárom tengelyt a [param right] értékkel osztja."
+
+#. Basis.operator ==
+#: doc/classes/Basis.xml
+msgid "Returns [code]true[/code] if the components of both [Basis] matrices are exactly equal.\n[b]Note:[/b] Due to floating-point precision errors, consider using [method is_equal_approx] instead, which is more reliable."
+msgstr "[code]true[/code] értéket ad vissza, ha a két [Basis] mátrix összetevői pontosan egyeznek.\n[b]Megjegyzés:[/b] A lebegőpontos kerekítési hibák miatt érdemes a megbízhatóbb [method is_equal_approx] metódust használni."
+
+#. Basis.x
+#: doc/classes/Basis.xml
+msgid "The basis's X axis, and the column [code]0[/code] of the matrix.\nOn the identity basis, this vector points right ([constant Vector3.RIGHT])."
+msgstr "A bázis X tengelye, a mátrix [code]0[/code] indexű oszlopa.\nAz egységbázisban ez a vektor jobbra mutat ([constant Vector3.RIGHT])."
+
+#. Basis.y
+#: doc/classes/Basis.xml
+msgid "The basis's Y axis, and the column [code]1[/code] of the matrix.\nOn the identity basis, this vector points up ([constant Vector3.UP])."
+msgstr "A bázis Y tengelye, a mátrix [code]1[/code] indexű oszlopa.\nAz egységbázisban ez a vektor felfelé mutat ([constant Vector3.UP])."
+
+#. Basis.z
+#: doc/classes/Basis.xml
+msgid "The basis's Z axis, and the column [code]2[/code] of the matrix.\nOn the identity basis, this vector points back ([constant Vector3.BACK])."
+msgstr "A bázis Z tengelye, a mátrix [code]2[/code] indexű oszlopa.\nAz egységbázisban ez a vektor hátrafelé mutat ([constant Vector3.BACK])."
+
+#. Basis.FLIP_X
+#: doc/classes/Basis.xml
+msgid "When any basis is multiplied by [constant FLIP_X], it negates all components of the [member x] axis (the X column).\nWhen [constant FLIP_X] is multiplied by any basis, it negates the [member Vector3.x] component of all axes (the X row)."
+msgstr "A bázis jobbról [constant FLIP_X] értékkel szorozva az [member x] tengely minden összetevőjének előjelét megfordítja (az X oszlopban).\nA [constant FLIP_X] értékkel balról szorozva minden tengely [member Vector3.x] összetevőjének előjele megfordul (az X sorban)."
+
+#. Basis.FLIP_Y
+#: doc/classes/Basis.xml
+msgid "When any basis is multiplied by [constant FLIP_Y], it negates all components of the [member y] axis (the Y column).\nWhen [constant FLIP_Y] is multiplied by any basis, it negates the [member Vector3.y] component of all axes (the Y row)."
+msgstr "A bázis jobbról [constant FLIP_Y] értékkel szorozva a [member y] tengely minden összetevőjének előjelét megfordítja (az Y oszlopban).\nA [constant FLIP_Y] értékkel balról szorozva minden tengely [member Vector3.y] összetevőjének előjele megfordul (az Y sorban)."
+
+#. Basis.FLIP_Z
+#: doc/classes/Basis.xml
+msgid "When any basis is multiplied by [constant FLIP_Z], it negates all components of the [member z] axis (the Z column).\nWhen [constant FLIP_Z] is multiplied by any basis, it negates the [member Vector3.z] component of all axes (the Z row)."
+msgstr "A bázis jobbról [constant FLIP_Z] értékkel szorozva a [member z] tengely minden összetevőjének előjelét megfordítja (a Z oszlopban).\nA [constant FLIP_Z] értékkel balról szorozva minden tengely [member Vector3.z] összetevőjének előjele megfordul (a Z sorban)."
+
+#. Quaternion.brief
+#: doc/classes/Quaternion.xml
+msgid "A unit quaternion used for representing 3D rotations."
+msgstr "3D forgatások ábrázolására szolgáló egységkvaternió."
+
+#. Quaternion.Quaternion
+#: doc/classes/Quaternion.xml
+msgid "Constructs a [Quaternion] identical to [constant IDENTITY].\n[b]Note:[/b] In C#, this constructs a [Quaternion] with all of its components set to [code]0.0[/code]."
+msgstr "A [constant IDENTITY] értékkel azonos [Quaternion] értéket hoz létre.\n[b]Megjegyzés:[/b] C#-ban olyan [Quaternion] jön létre, amelynek minden összetevője [code]0.0[/code]."
+
+#. Quaternion.Quaternion
+#: doc/classes/Quaternion.xml
+msgid "Constructs a [Quaternion] as a copy of the given [Quaternion]."
+msgstr "A megadott [Quaternion] másolataként új [Quaternion] értéket hoz létre."
+
+#. Quaternion.Quaternion
+#: doc/classes/Quaternion.xml
+msgid "Constructs a [Quaternion] representing the shortest arc between [param arc_from] and [param arc_to]. These can be imagined as two points intersecting a sphere's surface, with a radius of [code]1.0[/code]."
+msgstr "A [param arc_from] és a [param arc_to] közötti legrövidebb ívet leíró [Quaternion] értéket hoz létre. A két érték egy [code]1.0[/code] sugarú gömb felszínén lévő pontként képzelhető el."
+
+#. Quaternion.Quaternion
+#: doc/classes/Quaternion.xml
+msgid "Constructs a [Quaternion] representing rotation around the [param axis] by the given [param angle], in radians. The axis must be a normalized vector."
+msgstr "A [param axis] tengely körüli, radiánban megadott [param angle] szögű forgatást leíró [Quaternion] értéket hoz létre. A tengelynek egységvektornak kell lennie."
+
+#. Quaternion.Quaternion
+#: doc/classes/Quaternion.xml
+msgid "Constructs a [Quaternion] from the given rotation [Basis].\nThis constructor is faster than [method Basis.get_rotation_quaternion], but the given basis must be [i]orthonormalized[/i] (see [method Basis.orthonormalized]). Otherwise, the constructor fails and returns [constant IDENTITY]."
+msgstr "A megadott forgatási [Basis] alapján [Quaternion] értéket hoz létre.\nEz a konstruktor gyorsabb a [method Basis.get_rotation_quaternion] metódusnál, de a bázisnak [i]ortonormáltnak[/i] kell lennie (lásd: [method Basis.orthonormalized]). Ellenkező esetben a konstruktor hibát jelez, és [constant IDENTITY] értéket ad vissza."
+
+#. Quaternion.Quaternion
+#: doc/classes/Quaternion.xml
+msgid "Constructs a [Quaternion] defined by the given values.\n[b]Note:[/b] Only normalized quaternions represent rotation; if these values are not normalized, the new [Quaternion] will not be a valid rotation."
+msgstr "A megadott értékekből hoz létre [Quaternion] értéket.\n[b]Megjegyzés:[/b] Csak normált kvaterniók ábrázolnak forgatást. Ha a megadott értékek nem normáltak, az új [Quaternion] nem ábrázol érvényes forgatást."
+
+#. Quaternion.dot
+#: doc/classes/Quaternion.xml
+msgid "Returns the dot product between this quaternion and [param with].\nThis is equivalent to [code](quat.x * with.x) + (quat.y * with.y) + (quat.z * with.z) + (quat.w * with.w)[/code]."
+msgstr "Visszaadja e kvaternió és a [param with] skalárszorzatát.\nEz egyenértékű a [code](quat.x * with.x) + (quat.y * with.y) + (quat.z * with.z) + (quat.w * with.w)[/code] kifejezéssel."
+
+#. Quaternion.from_euler
+#: doc/classes/Quaternion.xml
+msgid "Constructs a new [Quaternion] from the given [Vector3] of [url=https://en.wikipedia.org/wiki/Euler_angles]Euler angles[/url], in radians. In Godot, Euler angles always use intrinsic order. This method always uses the intrinsic YXZ convention ([constant EULER_ORDER_YXZ])."
+msgstr "Új [Quaternion] értéket hoz létre a radiánban megadott [url=https://en.wikipedia.org/wiki/Euler_angles]Euler-szögeket[/url] tartalmazó [Vector3] alapján. A Godot az Euler-szögeket mindig a forgó koordináta-rendszer tengelyei szerint értelmezi. Ez a metódus az YXZ sorrendet használja ([constant EULER_ORDER_YXZ])."
+
+#. Quaternion.get_angle
+#: doc/classes/Quaternion.xml
+msgid "Returns the angle of the rotation represented by this quaternion.\n[b]Note:[/b] The quaternion must be normalized."
+msgstr "Visszaadja a kvaternió által leírt forgatás szögét.\n[b]Megjegyzés:[/b] A kvaterniónak normáltnak kell lennie."
+
+#. Quaternion.get_axis
+#: doc/classes/Quaternion.xml
+msgid "Returns the rotation axis of the rotation represented by this quaternion."
+msgstr "Visszaadja a kvaternió által leírt forgatás tengelyét."
+
+#. Quaternion.is_equal_approx
+#: doc/classes/Quaternion.xml
+msgid "Returns [code]true[/code] if this quaternion and [param to] are approximately equal, by calling [method @GlobalScope.is_equal_approx] on each component."
+msgstr "[code]true[/code] értéket ad vissza, ha ez a kvaternió és a [param to] közel egyenlő. Minden összetevőt a [method @GlobalScope.is_equal_approx] függvénnyel hasonlít össze."
+
+#. Quaternion.is_finite
+#: doc/classes/Quaternion.xml
+msgid "Returns [code]true[/code] if this quaternion is finite, by calling [method @GlobalScope.is_finite] on each component."
+msgstr "[code]true[/code] értéket ad vissza, ha a kvaternió véges. Minden összetevőt a [method @GlobalScope.is_finite] függvénnyel ellenőriz."
+
+#. Quaternion.is_normalized
+#: doc/classes/Quaternion.xml
+msgid "Returns [code]true[/code] if this quaternion is normalized. See also [method normalized]."
+msgstr "[code]true[/code] értéket ad vissza, ha a kvaternió normált. Lásd még: [method normalized]."
+
+#. Quaternion.length
+#: doc/classes/Quaternion.xml
+msgid "Returns this quaternion's length, also called magnitude."
+msgstr "Visszaadja a kvaternió hosszát, más néven a nagyságát."
+
+#. Quaternion.length_squared
+#: doc/classes/Quaternion.xml
+msgid "Returns this quaternion's length, squared.\n[b]Note:[/b] This method is faster than [method length], so prefer it if you only need to compare quaternion lengths."
+msgstr "Visszaadja a kvaternió hosszának négyzetét.\n[b]Megjegyzés:[/b] Gyorsabb a [method length] metódusnál, ezért érdemes ezt használni, ha csak kvaternióhosszakat hasonlítasz össze."
+
+#. Quaternion.normalized
+#: doc/classes/Quaternion.xml
+msgid "Returns a copy of this quaternion, normalized so that its length is [code]1.0[/code]. See also [method is_normalized]."
+msgstr "Úgy normálja a kvaternió másolatát, hogy a hossza [code]1.0[/code] legyen, majd visszaadja a másolatot. Lásd még: [method is_normalized]."
+
+#. Quaternion.slerp
+#: doc/classes/Quaternion.xml
+msgid "Performs a spherical-linear interpolation with the [param to] quaternion, given a [param weight] and returns the result. Both this quaternion and [param to] must be normalized."
+msgstr "Gömbi lineáris interpolációt végez e kvaternió és a [param to] között a [param weight] súllyal, és visszaadja az eredményt. Ennek a kvaterniónak és a [param to] kvaterniónak is normáltnak kell lennie."
+
+#. Quaternion.spherical_cubic_interpolate
+#: doc/classes/Quaternion.xml
+msgid "Performs a spherical cubic interpolation between quaternions [param pre_a], this vector, [param b], and [param post_b], by the given amount [param weight]."
+msgstr "Gömbi köbös interpolációt végez a [param pre_a], az aktuális kvaternió, a [param b] és a [param post_b] között, a megadott [param weight] súllyal."
+
+#. Quaternion.spherical_cubic_interpolate_in_time
+#: doc/classes/Quaternion.xml
+msgid "Performs a spherical cubic interpolation between quaternions [param pre_a], this vector, [param b], and [param post_b], by the given amount [param weight].\nIt can perform smoother interpolation than [method spherical_cubic_interpolate] by the time values."
+msgstr "Gömbi köbös interpolációt végez a [param pre_a], az aktuális kvaternió, a [param b] és a [param post_b] között, a megadott [param weight] súllyal.\nAz időértékek használatával simább átmenetet adhat a [method spherical_cubic_interpolate] metódusnál."
+
+#. Quaternion.operator *
+#: doc/classes/Quaternion.xml
+msgid "Composes (multiplies) two quaternions. This rotates the [param right] quaternion (the child) by this quaternion (the parent)."
+msgstr "Összetesz (összeszoroz) két kvaterniót. A [param right] kvaterniót (a gyermeket) ezzel a kvaternióval (a szülővel) forgatja el."
+
+#. Quaternion.operator *
+#: doc/classes/Quaternion.xml
+msgid "Rotates (multiplies) the [param right] vector by this quaternion, returning a [Vector3]."
+msgstr "Ezzel a kvaternióval elforgatja (megszorozza) a [param right] vektort. Az eredmény [Vector3]."
+
+#. Quaternion.operator *
+#: doc/classes/Quaternion.xml
+msgid "Multiplies each component of the [Quaternion] by the right [float] value.\nThis operation is not meaningful on its own, but it can be used as a part of a larger expression."
+msgstr "A [Quaternion] minden összetevőjét megszorozza a jobb oldali [float] értékkel.\nA művelet önmagában nem értelmezhető forgatásként, de nagyobb kifejezés részeként használható."
+
+#. Quaternion.operator *
+#: doc/classes/Quaternion.xml
+msgid "Multiplies each component of the [Quaternion] by the right [int] value.\nThis operation is not meaningful on its own, but it can be used as a part of a larger expression."
+msgstr "A [Quaternion] minden összetevőjét megszorozza a jobb oldali [int] értékkel.\nA művelet önmagában nem értelmezhető forgatásként, de nagyobb kifejezés részeként használható."
+
+#. Quaternion.operator +
+#: doc/classes/Quaternion.xml
+msgid "Adds each component of the left [Quaternion] to the right [Quaternion].\nThis operation is not meaningful on its own, but it can be used as a part of a larger expression, such as approximating an intermediate rotation between two nearby rotations."
+msgstr "A bal oldali [Quaternion] összetevőihez hozzáadja a jobb oldali [Quaternion] megfelelő összetevőit.\nA művelet önmagában nem értelmezhető forgatásként, de nagyobb kifejezés részeként használható, például két közeli forgatás közötti átmenet közelítésére."
+
+#. Quaternion.operator -
+#: doc/classes/Quaternion.xml
+msgid "Subtracts each component of the left [Quaternion] by the right [Quaternion].\nThis operation is not meaningful on its own, but it can be used as a part of a larger expression."
+msgstr "A bal oldali [Quaternion] minden összetevőjéből kivonja a jobb oldali [Quaternion] megfelelő összetevőjét.\nA művelet önmagában nem értelmezhető forgatásként, de nagyobb kifejezés részeként használható."
+
+#. Quaternion.operator /
+#: doc/classes/Quaternion.xml
+msgid "Divides each component of the [Quaternion] by the right [float] value.\nThis operation is not meaningful on its own, but it can be used as a part of a larger expression."
+msgstr "A [Quaternion] minden összetevőjét elosztja a jobb oldali [float] értékkel.\nA művelet önmagában nem értelmezhető forgatásként, de nagyobb kifejezés részeként használható."
+
+#. Quaternion.operator /
+#: doc/classes/Quaternion.xml
+msgid "Divides each component of the [Quaternion] by the right [int] value.\nThis operation is not meaningful on its own, but it can be used as a part of a larger expression."
+msgstr "A [Quaternion] minden összetevőjét elosztja a jobb oldali [int] értékkel.\nA művelet önmagában nem értelmezhető forgatásként, de nagyobb kifejezés részeként használható."
+
+#. Quaternion.operator ==
+#: doc/classes/Quaternion.xml
+msgid "Returns [code]true[/code] if the components of both quaternions are exactly equal.\n[b]Note:[/b] Due to floating-point precision errors, consider using [method is_equal_approx] instead, which is more reliable."
+msgstr "[code]true[/code] értéket ad vissza, ha a két kvaternió összetevői pontosan egyeznek.\n[b]Megjegyzés:[/b] A lebegőpontos kerekítési hibák miatt érdemes a megbízhatóbb [method is_equal_approx] metódust használni."
+
+#. Quaternion.operator []
+#: doc/classes/Quaternion.xml
+msgid "Accesses each component of this quaternion by their index.\nIndex [code]0[/code] is the same as [member x], index [code]1[/code] is the same as [member y], index [code]2[/code] is the same as [member z], and index [code]3[/code] is the same as [member w]."
+msgstr "Index alapján éri el a kvaternió összetevőit.\nA [code]0[/code] index az [member x], az [code]1[/code] index a [member y], a [code]2[/code] index a [member z], a [code]3[/code] index pedig a [member w] megfelelője."
+
+#. Quaternion.operator unary-
+#: doc/classes/Quaternion.xml
+msgid "Returns the negative value of the [Quaternion]. This is the same as multiplying all components by [code]-1[/code]. This operation results in a quaternion that represents the same rotation."
+msgstr "A [Quaternion] ellentettjét adja vissza. Ez megegyezik azzal, mintha minden összetevőt [code]-1[/code] értékkel szoroznánk. Az eredmény ugyanazt a forgatást ábrázolja."
+
+#. Quaternion.w
+#: doc/classes/Quaternion.xml
+msgid "W component of the quaternion. This is the \"real\" part.\n[b]Note:[/b] Quaternion components should usually not be manipulated directly."
+msgstr "A kvaternió W összetevője, vagyis a valós része.\n[b]Megjegyzés:[/b] A kvaternió összetevőit általában nem célszerű közvetlenül módosítani."
+
+#. Quaternion.x
+#: doc/classes/Quaternion.xml
+msgid "X component of the quaternion. This is the value along the \"imaginary\" [code]i[/code] axis.\n[b]Note:[/b] Quaternion components should usually not be manipulated directly."
+msgstr "A kvaternió X összetevője, vagyis az [code]i[/code] képzetes tengely menti érték.\n[b]Megjegyzés:[/b] A kvaternió összetevőit általában nem célszerű közvetlenül módosítani."
+
+#. Quaternion.y
+#: doc/classes/Quaternion.xml
+msgid "Y component of the quaternion. This is the value along the \"imaginary\" [code]j[/code] axis.\n[b]Note:[/b] Quaternion components should usually not be manipulated directly."
+msgstr "A kvaternió Y összetevője, vagyis a [code]j[/code] képzetes tengely menti érték.\n[b]Megjegyzés:[/b] A kvaternió összetevőit általában nem célszerű közvetlenül módosítani."
+
+#. Quaternion.z
+#: doc/classes/Quaternion.xml
+msgid "Z component of the quaternion. This is the value along the \"imaginary\" [code]k[/code] axis.\n[b]Note:[/b] Quaternion components should usually not be manipulated directly."
+msgstr "A kvaternió Z összetevője, vagyis a [code]k[/code] képzetes tengely menti érték.\n[b]Megjegyzés:[/b] A kvaternió összetevőit általában nem célszerű közvetlenül módosítani."
+
+#. Transform2D.brief
+#: doc/classes/Transform2D.xml
+msgid "A 2×3 matrix representing a 2D transformation."
+msgstr "2D transzformációt ábrázoló 2×3-as mátrix."
+
+#. Transform2D.Transform2D
+#: doc/classes/Transform2D.xml
+msgid "Constructs a [Transform2D] identical to [constant IDENTITY].\n[b]Note:[/b] In C#, this constructs a [Transform2D] with all of its components set to [constant Vector2.ZERO]."
+msgstr "A [constant IDENTITY] értékkel azonos [Transform2D] transzformációt hoz létre.\n[b]Megjegyzés:[/b] C#-ban olyan [Transform2D] jön létre, amelynek minden oszlopa [constant Vector2.ZERO]."
+
+#. Transform2D.Transform2D
+#: doc/classes/Transform2D.xml
+msgid "Constructs a [Transform2D] as a copy of the given [Transform2D]."
+msgstr "A megadott [Transform2D] másolataként új [Transform2D] értéket hoz létre."
+
+#. Transform2D.Transform2D
+#: doc/classes/Transform2D.xml
+msgid "Constructs a [Transform2D] from a given angle (in radians) and position."
+msgstr "A megadott, radiánban mért szögből és a megadott helyzetből [Transform2D] értéket hoz létre."
+
+#. Transform2D.Transform2D
+#: doc/classes/Transform2D.xml
+msgid "Constructs a [Transform2D] from a given angle (in radians), scale, skew (in radians), and position."
+msgstr "A megadott szögből (radiánban), méretezésből, nyírásból (radiánban) és helyzetből [Transform2D] értéket hoz létre."
+
+#. Transform2D.Transform2D
+#: doc/classes/Transform2D.xml
+msgid "Constructs a [Transform2D] from 3 [Vector2] values representing [member x], [member y], and the [member origin] (the three matrix columns)."
+msgstr "Három [Vector2] értékből [Transform2D] értéket hoz létre. A vektorok a mátrix három oszlopát adják meg: [member x], [member y] és [member origin]."
+
+#. Transform2D.basis_xform
+#: doc/classes/Transform2D.xml
+msgid "Returns a copy of the [param v] vector, transformed (multiplied) by the transform basis's matrix. Unlike the multiplication operator ([code]*[/code]), this method ignores the [member origin]."
+msgstr "A transzformáció bázismátrixával transzformált [param v] vektor másolatát adja vissza. A szorzás operátorával ([code]*[/code]) ellentétben ez a metódus figyelmen kívül hagyja az [member origin] eltolást."
+
+#. Transform2D.get_origin
+#: doc/classes/Transform2D.xml
+msgid "Returns this transform's translation. Equivalent to [member origin]."
+msgstr "Visszaadja a transzformáció eltolását. Megegyezik az [member origin] értékével."
+
+#. Transform2D.get_rotation
+#: doc/classes/Transform2D.xml
+msgid "Returns this transform's rotation (in radians). This is equivalent to [member x]'s angle (see [method Vector2.angle])."
+msgstr "Visszaadja a transzformáció forgatását radiánban. Ez megegyezik az [member x] tengely szögével (lásd: [method Vector2.angle])."
+
+#. Transform2D.get_skew
+#: doc/classes/Transform2D.xml
+msgid "Returns this transform's skew (in radians)."
+msgstr "Visszaadja a transzformáció nyírási szögét radiánban."
+
+#. Transform2D.is_equal_approx
+#. Transform3D.is_equal_approx
+#: doc/classes/Transform2D.xml doc/classes/Transform3D.xml
+msgid "Returns [code]true[/code] if this transform and [param xform] are approximately equal, by running [method @GlobalScope.is_equal_approx] on each component."
+msgstr "[code]true[/code] értéket ad vissza, ha ez a transzformáció és a [param xform] közel egyenlő. Minden összetevőt a [method @GlobalScope.is_equal_approx] függvénnyel hasonlít össze."
+
+#. Transform2D.is_finite
+#. Transform3D.is_finite
+#: doc/classes/Transform2D.xml doc/classes/Transform3D.xml
+msgid "Returns [code]true[/code] if this transform is finite, by calling [method @GlobalScope.is_finite] on each component."
+msgstr "[code]true[/code] értéket ad vissza, ha a transzformáció véges. Minden összetevőt a [method @GlobalScope.is_finite] függvénnyel ellenőriz."
+
+#. Transform2D.looking_at
+#: doc/classes/Transform2D.xml
+msgid "Returns a copy of the transform rotated such that the rotated X-axis points towards the [param target] position, in global space."
+msgstr "A transzformáció elforgatott másolatát adja vissza. Az elforgatott X tengely a világkoordinátákban megadott [param target] hely felé mutat."
+
+#. Transform2D.operator !=
+#. Transform3D.operator !=
+#: doc/classes/Transform2D.xml doc/classes/Transform3D.xml
+msgid "Returns [code]true[/code] if the components of both transforms are not equal.\n[b]Note:[/b] Due to floating-point precision errors, consider using [method is_equal_approx] instead, which is more reliable."
+msgstr "[code]true[/code] értéket ad vissza, ha a két transzformáció összetevői nem egyeznek.\n[b]Megjegyzés:[/b] A lebegőpontos kerekítési hibák miatt érdemes a megbízhatóbb [method is_equal_approx] metódust használni."
+
+#. Transform2D.operator *
+#: doc/classes/Transform2D.xml
+msgid "Transforms (multiplies) every [Vector2] element of the given [PackedVector2Array] by this transformation matrix.\nOn larger arrays, this operation is much faster than transforming each [Vector2] individually."
+msgstr "Ezzel a mátrixszal transzformálja (megszorozza) a megadott [PackedVector2Array] összes [Vector2] elemét.\nNagy tömb esetén jóval gyorsabb, mint az egyes [Vector2] értékek külön transzformálása."
+
+#. Transform2D.operator *
+#: doc/classes/Transform2D.xml
+msgid "Transforms (multiplies) the [Rect2] by this transformation matrix."
+msgstr "Ezzel a mátrixszal transzformálja (megszorozza) a [Rect2] értéket."
+
+#. Transform2D.operator *
+#: doc/classes/Transform2D.xml
+msgid "Transforms (multiplies) the [Vector2] by this transformation matrix."
+msgstr "Ezzel a mátrixszal transzformálja (megszorozza) a [Vector2] értéket."
+
+#. Transform2D.operator *
+#: doc/classes/Transform2D.xml
+msgid "Multiplies all components of the [Transform2D] by the given [float], including the [member origin]. This affects the transform's scale uniformly."
+msgstr "A [Transform2D] összes összetevőjét a megadott [float] értékkel szorozza, az [member origin] eltolást is beleértve. A transzformáció minden irányban azonos mértékben skálázódik."
+
+#. Transform2D.operator *
+#: doc/classes/Transform2D.xml
+msgid "Multiplies all components of the [Transform2D] by the given [int], including the [member origin]. This affects the transform's scale uniformly."
+msgstr "A [Transform2D] összes összetevőjét a megadott [int] értékkel szorozza, az [member origin] eltolást is beleértve. A transzformáció minden irányban azonos mértékben skálázódik."
+
+#. Transform2D.operator /
+#: doc/classes/Transform2D.xml
+msgid "Divides all components of the [Transform2D] by the given [float], including the [member origin]. This affects the transform's scale uniformly."
+msgstr "A [Transform2D] összes összetevőjét a megadott [float] értékkel osztja, az [member origin] eltolást is beleértve. A transzformáció minden irányban azonos mértékben skálázódik."
+
+#. Transform2D.operator /
+#: doc/classes/Transform2D.xml
+msgid "Divides all components of the [Transform2D] by the given [int], including the [member origin]. This affects the transform's scale uniformly."
+msgstr "A [Transform2D] összes összetevőjét a megadott [int] értékkel osztja, az [member origin] eltolást is beleértve. A transzformáció minden irányban azonos mértékben skálázódik."
+
+#. Transform2D.operator ==
+#. Transform3D.operator ==
+#: doc/classes/Transform2D.xml doc/classes/Transform3D.xml
+msgid "Returns [code]true[/code] if the components of both transforms are exactly equal.\n[b]Note:[/b] Due to floating-point precision errors, consider using [method is_equal_approx] instead, which is more reliable."
+msgstr "[code]true[/code] értéket ad vissza, ha a két transzformáció összetevői pontosan egyeznek.\n[b]Megjegyzés:[/b] A lebegőpontos kerekítési hibák miatt érdemes a megbízhatóbb [method is_equal_approx] metódust használni."
+
+#. Transform2D.operator []
+#: doc/classes/Transform2D.xml
+msgid "Accesses each axis (column) of this transform by their index. Index [code]0[/code] is the same as [member x], index [code]1[/code] is the same as [member y], and index [code]2[/code] is the same as [member origin]."
+msgstr "Index alapján éri el a transzformáció oszlopait. A [code]0[/code] index az [member x], az [code]1[/code] index a [member y], a [code]2[/code] index pedig az [member origin] megfelelője."
+
+#. Transform2D.origin
+#: doc/classes/Transform2D.xml
+msgid "The translation offset of this transform, and the column [code]2[/code] of the matrix. In 2D space, this can be seen as the position."
+msgstr "A transzformáció eltolása, a mátrix [code]2[/code] indexű oszlopa. A 2D térben helyzetként értelmezhető."
+
+#. Transform2D.x
+#: doc/classes/Transform2D.xml
+msgid "The transform basis's X axis, and the column [code]0[/code] of the matrix. Combined with [member y], this represents the transform's rotation, scale, and skew.\nOn the identity transform, this vector points right ([constant Vector2.RIGHT])."
+msgstr "A transzformáció bázisának X tengelye, a mátrix [code]0[/code] indexű oszlopa. A [member y] tengellyel együtt a transzformáció forgatását, méretezését és nyírását adja meg.\nAz egységtranszformációban ez a vektor jobbra mutat ([constant Vector2.RIGHT])."
+
+#. Transform2D.y
+#: doc/classes/Transform2D.xml
+msgid "The transform basis's Y axis, and the column [code]1[/code] of the matrix. Combined with [member x], this represents the transform's rotation, scale, and skew.\nOn the identity transform, this vector points down ([constant Vector2.DOWN])."
+msgstr "A transzformáció bázisának Y tengelye, a mátrix [code]1[/code] indexű oszlopa. Az [member x] tengellyel együtt a transzformáció forgatását, méretezését és nyírását adja meg.\nAz egységtranszformációban ez a vektor lefelé mutat ([constant Vector2.DOWN])."
+
+#. Transform3D.brief
+#: doc/classes/Transform3D.xml
+msgid "A 3×4 matrix representing a 3D transformation."
+msgstr "3D transzformációt ábrázoló 3×4-es mátrix."
+
+#. Transform3D.Transform3D
+#: doc/classes/Transform3D.xml
+msgid "Constructs a [Transform3D] identical to [constant IDENTITY].\n[b]Note:[/b] In C#, this constructs a [Transform3D] with its [member origin] and the components of its [member basis] set to [constant Vector3.ZERO]."
+msgstr "A [constant IDENTITY] értékkel azonos [Transform3D] transzformációt hoz létre.\n[b]Megjegyzés:[/b] C#-ban olyan [Transform3D] jön létre, amelynek [member origin] eltolása és [member basis] oszlopai [constant Vector3.ZERO] értékűek."
+
+#. Transform3D.Transform3D
+#: doc/classes/Transform3D.xml
+msgid "Constructs a [Transform3D] as a copy of the given [Transform3D]."
+msgstr "A megadott [Transform3D] másolataként új [Transform3D] értéket hoz létre."
+
+#. Transform3D.Transform3D
+#: doc/classes/Transform3D.xml
+msgid "Constructs a [Transform3D] from a [Basis] and [Vector3]."
+msgstr "Egy [Basis] bázisból és egy [Vector3] vektorból [Transform3D] értéket hoz létre."
+
+#. Transform3D.Transform3D
+#: doc/classes/Transform3D.xml
+msgid "Constructs a [Transform3D] from four [Vector3] values (also called matrix columns).\nThe first three arguments are the [member basis]'s axes ([member Basis.x], [member Basis.y], and [member Basis.z])."
+msgstr "Négy [Vector3] értékből (mátrixoszlopból) [Transform3D] értéket hoz létre.\nAz első három argumentum a [member basis] tengelyeit adja meg ([member Basis.x], [member Basis.y] és [member Basis.z])."
+
+#. Transform3D.operator *
+#: doc/classes/Transform3D.xml
+msgid "Transforms (multiplies) the [AABB] by this transformation matrix."
+msgstr "Ezzel a mátrixszal transzformálja (megszorozza) az [AABB] értéket."
+
+#. Transform3D.operator *
+#: doc/classes/Transform3D.xml
+msgid "Transforms (multiplies) every [Vector3] element of the given [PackedVector3Array] by this transformation matrix.\nOn larger arrays, this operation is much faster than transforming each [Vector3] individually."
+msgstr "Ezzel a mátrixszal transzformálja (megszorozza) a megadott [PackedVector3Array] összes [Vector3] elemét.\nNagy tömb esetén jóval gyorsabb, mint az egyes [Vector3] értékek külön transzformálása."
+
+#. Transform3D.operator *
+#: doc/classes/Transform3D.xml
+msgid "Transforms (multiplies) the [Plane] by this transformation matrix."
+msgstr "Ezzel a mátrixszal transzformálja (megszorozza) a [Plane] értéket."
+
+#. Transform3D.operator *
+#: doc/classes/Transform3D.xml
+msgid "Transforms (multiplies) the [Vector3] by this transformation matrix."
+msgstr "Ezzel a mátrixszal transzformálja (megszorozza) a [Vector3] értéket."
+
+#. Transform3D.operator *
+#: doc/classes/Transform3D.xml
+msgid "Multiplies all components of the [Transform3D] by the given [float], including the [member origin]. This affects the transform's scale uniformly, scaling the [member basis]."
+msgstr "A [Transform3D] összes összetevőjét a megadott [float] értékkel szorozza, az [member origin] eltolást is beleértve. A bázis ([member basis]) minden irányban azonos mértékben skálázódik."
+
+#. Transform3D.operator *
+#: doc/classes/Transform3D.xml
+msgid "Multiplies all components of the [Transform3D] by the given [int], including the [member origin]. This affects the transform's scale uniformly, scaling the [member basis]."
+msgstr "A [Transform3D] összes összetevőjét a megadott [int] értékkel szorozza, az [member origin] eltolást is beleértve. A bázis ([member basis]) minden irányban azonos mértékben skálázódik."
+
+#. Transform3D.operator /
+#: doc/classes/Transform3D.xml
+msgid "Divides all components of the [Transform3D] by the given [float], including the [member origin]. This affects the transform's scale uniformly, scaling the [member basis]."
+msgstr "A [Transform3D] összes összetevőjét a megadott [float] értékkel osztja, az [member origin] eltolást is beleértve. A bázis ([member basis]) minden irányban azonos mértékben skálázódik."
+
+#. Transform3D.operator /
+#: doc/classes/Transform3D.xml
+msgid "Divides all components of the [Transform3D] by the given [int], including the [member origin]. This affects the transform's scale uniformly, scaling the [member basis]."
+msgstr "A [Transform3D] összes összetevőjét a megadott [int] értékkel osztja, az [member origin] eltolást is beleértve. A bázis ([member basis]) minden irányban azonos mértékben skálázódik."
+
+#. Transform3D.basis
+#: doc/classes/Transform3D.xml
+msgid "The [Basis] of this transform. It is composed by 3 axes ([member Basis.x], [member Basis.y], and [member Basis.z]). Together, these represent the transform's rotation, scale, and shear."
+msgstr "A transzformáció [Basis] bázisa. Három tengely alkotja ([member Basis.x], [member Basis.y] és [member Basis.z]). Együtt a transzformáció forgatását, méretezését és nyírását adják meg."
+
+#. Transform3D.origin
+#: doc/classes/Transform3D.xml
+msgid "The translation offset of this transform. In 3D space, this can be seen as the position."
+msgstr "A transzformáció eltolása. A 3D térben helyzetként értelmezhető."
+
+#. Transform3D.FLIP_X
+#: doc/classes/Transform3D.xml
+msgid "[Transform3D] with mirroring applied perpendicular to the YZ plane. Its [member basis] is equal to [constant Basis.FLIP_X]."
+msgstr "[Transform3D] érték az YZ síkra merőleges irányú tükrözéssel. A [member basis] értéke [constant Basis.FLIP_X]."
+
+#. Transform3D.FLIP_Y
+#: doc/classes/Transform3D.xml
+msgid "[Transform3D] with mirroring applied perpendicular to the XZ plane. Its [member basis] is equal to [constant Basis.FLIP_Y]."
+msgstr "[Transform3D] érték az XZ síkra merőleges irányú tükrözéssel. A [member basis] értéke [constant Basis.FLIP_Y]."
+
+#. Transform3D.FLIP_Z
+#: doc/classes/Transform3D.xml
+msgid "[Transform3D] with mirroring applied perpendicular to the XY plane. Its [member basis] is equal to [constant Basis.FLIP_Z]."
+msgstr "[Transform3D] érték az XY síkra merőleges irányú tükrözéssel. A [member basis] értéke [constant Basis.FLIP_Z]."
