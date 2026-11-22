@@ -44878,7 +44878,7 @@ msgstr "Egyéni shaderprogram vizuális szerkesztővel."
 #. VisualShader.description
 #: modules/visual_shader/doc_classes/VisualShader.xml
 msgid "This class provides a graph-like visual editor for creating a [Shader]. Although [VisualShader]s do not require coding, they share the same logic with script shaders. They use [VisualShaderNode]s that can be connected to each other to control the flow of the shader. The visual shader graph is converted to a script shader behind the scenes."
-msgstr "Az osztály gráfalapú vizuális szerkesztőt biztosít [Shader] létrehozásához. A [VisualShader] használatához nem kell kódot írni, de ugyanazt a logikát használja, mint a kódban írt shader. Az egymáshoz kapcsolható [VisualShaderNode] csomópontok határozzák meg, hogyan haladnak át az adatok a shaderen. A motor a háttérben shaderkóddá alakítja a vizuális gráfot."
+msgstr "Ebben a vizuális szerkesztőben gráfból készíthetsz [Shader] erőforrást. A [VisualShader] a kódban írt shaderek logikáját követi, így kódírás nélkül állíthatod össze a műveleteket. A gráfban a [VisualShaderNode] csomópontok összekötésével adod meg az adatok útját. A motor a háttérben shaderkódot állít elő a gráfból."
 
 #. VisualShader.add_node
 #: modules/visual_shader/doc_classes/VisualShader.xml
@@ -44899,17 +44899,17 @@ msgstr "[code]true[/code] értéket ad vissza, ha a megadott csomópontok portja
 #. VisualShader.disconnect_nodes
 #: modules/visual_shader/doc_classes/VisualShader.xml
 msgid "Connects the specified nodes and ports."
-msgstr "Megszünteti a megadott csomópontok portjai közötti kapcsolatot."
+msgstr "A megadott csomópontok portjai közötti kapcsolatot kezeli. A connect_nodes létrehozza a kapcsolatot, a disconnect_nodes megszünteti."
 
 #. VisualShader.connect_nodes_forced
 #: modules/visual_shader/doc_classes/VisualShader.xml
 msgid "Connects the specified nodes and ports, even if they can't be connected. Such connection is invalid and will not function properly."
-msgstr "Akkor is összekapcsolja a megadott csomópontok portjait, ha azok nem kapcsolhatók össze. Az így kényszerített, érvénytelen kapcsolat nem működik megfelelően."
+msgstr "A megadott portok között a szokásos ellenőrzés megkerülésével hoz létre kapcsolatot. Ha a két port nem illik össze, a kapcsolat nem működik megfelelően."
 
 #. VisualShader.detach_node_from_frame
 #: modules/visual_shader/doc_classes/VisualShader.xml
 msgid "Detaches the given node from the frame it is attached to."
-msgstr "Leválasztja a csomópontot arról a keretről, amelyhez hozzá van csatolva."
+msgstr "Leválasztja a csomópontot a keretéről."
 
 #. VisualShader.get_node
 #: modules/visual_shader/doc_classes/VisualShader.xml
@@ -44919,7 +44919,7 @@ msgstr "Visszaadja a megadott [param type] típusú és [param id] azonosítój�
 #. VisualShader.get_node_list
 #: modules/visual_shader/doc_classes/VisualShader.xml
 msgid "Returns the list of all nodes in the shader with the specified type."
-msgstr "Felsorolja a shader összes megadott típusú csomópontját."
+msgstr "Felsorolja a shader megadott szakaszához tartozó összes csomópontot."
 
 #. VisualShader.get_node_position
 #: modules/visual_shader/doc_classes/VisualShader.xml
@@ -44929,7 +44929,7 @@ msgstr "Visszaadja a megadott csomópont helyét a shadergráfban."
 #. VisualShader.get_valid_node_id
 #: modules/visual_shader/doc_classes/VisualShader.xml
 msgid "Returns next valid node ID that can be added to the shader graph."
-msgstr "Visszaadja a következő érvényes csomópont-azonosítót, amellyel új csomópont adható a shadergráfhoz."
+msgstr "Visszaadja azt a következő szabad azonosítót, amelyet a gráfhoz adott új csomópont kaphat."
 
 #. VisualShader.has_varying
 #: modules/visual_shader/doc_classes/VisualShader.xml
@@ -45009,7 +45009,7 @@ msgstr "A 3D-s környezet egét kirajzoló shader."
 #. VisualShader.TYPE_FOG
 #: modules/visual_shader/doc_classes/VisualShader.xml
 msgid "A compute shader that runs for each froxel of the volumetric fog map."
-msgstr "A térfogati ködtérkép minden elemi térfogatán (froxelén) lefutó számítási shader."
+msgstr "A térfogati köd minden cellájához (froxeléhez) lefutó számítási shader."
 
 #. VisualShader.TYPE_TEXTURE_BLIT
 #: modules/visual_shader/doc_classes/VisualShader.xml
@@ -45059,7 +45059,7 @@ msgstr "Törli a bemeneti portok alapértelmezett értékeit."
 #. VisualShaderNode.get_default_input_port
 #: modules/visual_shader/doc_classes/VisualShaderNode.xml
 msgid "Returns the input port which should be connected by default when this node is created as a result of dragging a connection from an existing node to the empty space on the graph."
-msgstr "Visszaadja azt a bemeneti portot, amelyhez alapértelmezés szerint csatlakozik a kapcsolat, ha ezt a csomópontot úgy hozod létre, hogy egy meglévő portból a gráf üres területére húzol egy kapcsolatot."
+msgstr "Visszaadja, melyik bemenetre kerüljön az új kapcsolat, ha a csomópontot úgy hozod létre, hogy egy meglévő portból a gráf üres részére húzol egy vezetéket."
 
 #. VisualShaderNode.get_default_input_values
 #: modules/visual_shader/doc_classes/VisualShaderNode.xml
@@ -45094,7 +45094,7 @@ msgstr "Annak a keretnek az indexe, amelyhez ez a csomópont hozzá van csatolva
 #. VisualShaderNode.output_port_for_preview
 #: modules/visual_shader/doc_classes/VisualShaderNode.xml
 msgid "Sets the output port index which will be showed for preview. If set to [code]-1[/code] no port will be open for preview."
-msgstr "Kiválasztja az előnézetben megjelenítendő kimeneti port indexét. A [code]-1[/code] érték kikapcsolja a portok előnézetét."
+msgstr "Annak a kimeneti portnak az indexe, amelynek az értéke megjelenik az előnézetben. A [code]-1[/code] érték kikapcsolja az előnézetet."
 
 #. VisualShaderNode.PORT_TYPE_SAMPLER
 #: modules/visual_shader/doc_classes/VisualShaderNode.xml
@@ -45119,7 +45119,7 @@ msgstr "Szabályozza, hogyan forduljon az objektum a kamera felé."
 #. VisualShaderNodeBillboard.keep_scale
 #: modules/visual_shader/doc_classes/VisualShaderNodeBillboard.xml
 msgid "If [code]true[/code], the shader will keep the scale set for the mesh. Otherwise, the scale is lost when billboarding."
-msgstr "Ha az érték [code]true[/code], a shader megőrzi a háló beállított méretezését. Egyébként a kamerához igazításkor a méretezés elvész."
+msgstr "Ha az érték [code]true[/code], a háló megtartja a méretezését, amikor a kamera felé fordul. Egyébként a kamerához igazítás felülírja a méretezést."
 
 #. VisualShaderNodeBillboard.BILLBOARD_TYPE_DISABLED
 #: modules/visual_shader/doc_classes/VisualShaderNodeBillboard.xml
@@ -45217,7 +45217,7 @@ msgstr "Előjel nélküli egész skalár."
 #. VisualShaderNodeColorConstant.description
 #: modules/visual_shader/doc_classes/VisualShaderNodeColorConstant.xml
 msgid "Has two output ports representing RGB and alpha channels of [Color].\nTranslated to [code]vec3 rgb[/code] and [code]float alpha[/code] in the shader language."
-msgstr "Két kimeneti portja a [Color] RGB-, illetve alfacsatornáját adja ki.\nA shadernyelvben [code]vec3 rgb[/code] és [code]float alpha[/code] az alakja."
+msgstr "A csomópont az RGB-értéket az egyik kimenetre, a [Color] alfaértékét a másikra adja.\nA shaderkódban a két kimenet alakja [code]vec3 rgb[/code] és [code]float alpha[/code]."
 
 #. VisualShaderNodeColorFunc.description
 #: modules/visual_shader/doc_classes/VisualShaderNodeColorFunc.xml
@@ -45417,33 +45417,33 @@ msgstr "Megadja a forrástextúrából származó adatok típusát."
 #. VisualShaderNodeCubemap.SOURCE_TEXTURE
 #: modules/visual_shader/doc_classes/VisualShaderNodeCubemap.xml
 msgid "Use the [Cubemap] set via [member cube_map]. If this is set to [member source], the [code]samplerCube[/code] port is ignored."
-msgstr "A [member cube_map] tulajdonságban beállított [Cubemap] textúrát használja. Ha a [member source] értéke ez a beállítás, a [code]samplerCube[/code] portnak nincs hatása."
+msgstr "A [member cube_map] tulajdonságban megadott [Cubemap] textúrát használja. Ha ezt választod a [member source] beállításban, a csomópont figyelmen kívül hagyja a [code]samplerCube[/code] bemenetet."
 
 #. VisualShaderNodeCubemap.SOURCE_PORT
 #: modules/visual_shader/doc_classes/VisualShaderNodeCubemap.xml
 msgid "Use the [Cubemap] sampler reference passed via the [code]samplerCube[/code] port. If this is set to [member source], the [member cube_map] texture is ignored."
-msgstr "A [code]samplerCube[/code] porton átadott [Cubemap]-mintavételezőt használja. Ha a [member source] értéke ez a beállítás, a [member cube_map] textúrát figyelmen kívül hagyja."
+msgstr "A [code]samplerCube[/code] porton átadott [Cubemap]-mintavételezőt használja. Ha ezt választod a [member source] beállításban, a csomópont figyelmen kívül hagyja a [member cube_map] tulajdonságban megadott textúrát."
 
 #. VisualShaderNodeCubemap.TYPE_DATA
 #. VisualShaderNodeTexture.TYPE_DATA
 #. VisualShaderNodeTextureParameter.TYPE_DATA
 #: modules/visual_shader/doc_classes/VisualShaderNodeCubemap.xml modules/visual_shader/doc_classes/VisualShaderNodeTexture.xml modules/visual_shader/doc_classes/VisualShaderNodeTextureParameter.xml
 msgid "No hints are added to the uniform declaration."
-msgstr "Az uniform deklarációjához nem ad meg tippet."
+msgstr "Tipp nélkül deklarálja az uniformot."
 
 #. VisualShaderNodeCubemap.TYPE_COLOR
 #. VisualShaderNodeTexture.TYPE_COLOR
 #. VisualShaderNodeTextureParameter.TYPE_COLOR
 #: modules/visual_shader/doc_classes/VisualShaderNodeCubemap.xml modules/visual_shader/doc_classes/VisualShaderNodeTexture.xml modules/visual_shader/doc_classes/VisualShaderNodeTextureParameter.xml
 msgid "Adds [code]source_color[/code] as hint to the uniform declaration for proper conversion from nonlinear sRGB encoding to linear encoding."
-msgstr "A [code]source_color[/code] tippet adja az uniform deklarációjához, hogy a nemlineáris sRGB-kódolás megfelelően alakuljon át lineárissá."
+msgstr "Az uniform deklarációjához hozzáadja a [code]source_color[/code] tippet. Ez biztosítja az sRGB-színek helyes átalakítását lineáris színtérbe."
 
 #. VisualShaderNodeCubemap.TYPE_NORMAL_MAP
 #. VisualShaderNodeTexture.TYPE_NORMAL_MAP
 #. VisualShaderNodeTextureParameter.TYPE_NORMAL_MAP
 #: modules/visual_shader/doc_classes/VisualShaderNodeCubemap.xml modules/visual_shader/doc_classes/VisualShaderNodeTexture.xml modules/visual_shader/doc_classes/VisualShaderNodeTextureParameter.xml
 msgid "Adds [code]hint_normal[/code] as hint to the uniform declaration, which internally converts the texture for proper usage as normal map."
-msgstr "A [code]hint_normal[/code] tippet adja az uniform deklarációjához. Ennek hatására a motor úgy alakítja át a textúrát, hogy helyesen legyen használható normáltérképként."
+msgstr "Az uniform deklarációjához hozzáadja a [code]hint_normal[/code] tippet, hogy a motor normáltérképként tudja használni a textúrát."
 
 #. VisualShaderNodeCubemapParameter.description
 #: modules/visual_shader/doc_classes/VisualShaderNodeCubemapParameter.xml
@@ -45490,7 +45490,7 @@ msgstr "A deriváláshoz használt függvény típusa."
 #. VisualShaderNodeDerivativeFunc.precision
 #: modules/visual_shader/doc_classes/VisualShaderNodeDerivativeFunc.xml
 msgid "Sets the level of precision to use for the derivative function. When using the Compatibility renderer, this setting has no effect."
-msgstr "Beállítja a derivált számítási pontosságát. A Kompatibilitás renderelőnél a beállítás hatástalan."
+msgstr "Megadja, milyen pontossággal számolja a csomópont a deriváltat. A Kompatibilitás renderelő figyelmen kívül hagyja ezt a beállítást."
 
 #. VisualShaderNodeDerivativeFunc.FUNC_SUM
 #: modules/visual_shader/doc_classes/VisualShaderNodeDerivativeFunc.xml
@@ -45515,12 +45515,12 @@ msgstr "A pontosság nincs megadva, így a grafikus illesztőprogram választja 
 #. VisualShaderNodeDerivativeFunc.PRECISION_COARSE
 #: modules/visual_shader/doc_classes/VisualShaderNodeDerivativeFunc.xml
 msgid "The derivative will be calculated using the current fragment's neighbors (which may not include the current fragment). This tends to be faster than using [constant PRECISION_FINE], but may not be suitable when more precision is needed. This is equivalent to using [code]dFdxCoarse()[/code] or [code]dFdyCoarse()[/code] in text shaders."
-msgstr "A derivált az aktuális fragmens környezetéből számítható, akár magának az aktuális fragmensnek a kihagyásával is. Általában gyorsabb a [constant PRECISION_FINE] módnál, de kevésbé alkalmas, amikor pontosabb eredmény kell. Szöveges shaderben a [code]dFdxCoarse()[/code] vagy [code]dFdyCoarse()[/code] hívás felel meg ennek."
+msgstr "A deriváltat a környező fragmensekből számolja, esetenként az aktuális fragmens kihagyásával. Ez általában gyorsabb a [constant PRECISION_FINE] módnál, de pontatlanabb lehet. Szöveges shaderben a [code]dFdxCoarse()[/code] vagy a [code]dFdyCoarse()[/code] hívásnak felel meg."
 
 #. VisualShaderNodeDerivativeFunc.PRECISION_FINE
 #: modules/visual_shader/doc_classes/VisualShaderNodeDerivativeFunc.xml
 msgid "The derivative will be calculated using the current fragment and its immediate neighbors. This tends to be slower than using [constant PRECISION_COARSE], but may be necessary when more precision is needed. This is equivalent to using [code]dFdxFine()[/code] or [code]dFdyFine()[/code] in text shaders."
-msgstr "A derivált az aktuális fragmensből és a közvetlen szomszédaiból számítható. Általában lassabb a [constant PRECISION_COARSE] módnál, de szükséges lehet a pontosabb eredményhez. Szöveges shaderben a [code]dFdxFine()[/code] vagy [code]dFdyFine()[/code] hívás felel meg ennek."
+msgstr "A deriváltat az aktuális fragmensből és közvetlen szomszédaiból számolja. Ez jellemzően lassabb a [constant PRECISION_COARSE] módnál, és akkor hasznos, ha nagyobb pontosságra van szükség. Szöveges shaderben a [code]dFdxFine()[/code] vagy a [code]dFdyFine()[/code] hívásnak felel meg."
 
 #. VisualShaderNodeDeterminant.brief
 #: modules/visual_shader/doc_classes/VisualShaderNodeDeterminant.xml
@@ -45622,7 +45622,7 @@ msgstr "A paraméter természetes logaritmusát adja vissza. A Godot shadernyelv
 #. VisualShaderNodeFloatFunc.FUNC_EXP
 #: modules/visual_shader/doc_classes/VisualShaderNodeFloatFunc.xml
 msgid "Returns the natural exponentiation of the parameter. Translates to [code]exp(x)[/code] in the Godot Shader Language."
-msgstr "Az Euler-féle számot a paraméter szerinti hatványra emeli. A Godot shadernyelvében [code]exp(x)[/code] alakban jelenik meg."
+msgstr "Az e számot a paraméterben megadott hatványra emeli. A Godot shadernyelvében ez az [code]exp(x)[/code] hívás."
 
 #. VisualShaderNodeFloatFunc.FUNC_SQRT
 #: modules/visual_shader/doc_classes/VisualShaderNodeFloatFunc.xml
@@ -45769,7 +45769,7 @@ msgstr "Kiszámítja a két szám osztási maradékát. A Godot shadernyelvében
 #. VisualShaderNodeFloatOp.OP_POW
 #: modules/visual_shader/doc_classes/VisualShaderNodeFloatOp.xml
 msgid "Raises the [code]a[/code] to the power of [code]b[/code]. Translates to [code]pow(a, b)[/code] in the Godot Shader Language."
-msgstr "A [code]a[/code] értéket a [code]b[/code] kitevő szerinti hatványra emeli. A Godot shadernyelvében [code]pow(a, b)[/code] alakban jelenik meg."
+msgstr "Az [code]a[/code] alapot a [code]b[/code] hatványra emeli. A Godot shadernyelvében ez a [code]pow(a, b)[/code] hívás."
 
 #. VisualShaderNodeFloatOp.OP_MAX
 #. VisualShaderNodeIntOp.OP_MAX
@@ -45796,12 +45796,12 @@ msgstr "Lépcsőfüggvényt képez a [code]b[/code] (x) és az [code]a[/code] (e
 #. VisualShaderNodeFloatParameter.hint
 #: modules/visual_shader/doc_classes/VisualShaderNodeFloatParameter.xml
 msgid "A hint applied to the uniform, which controls the values it can take when set through the Inspector."
-msgstr "Az uniform változóhoz tartozó tipp, amely szabályozza, milyen értékek állíthatók be a Felügyelőben."
+msgstr "Az uniform változóhoz tartozó tipp szabályozza, hogy milyen értékeket adhatsz meg a Felügyelőben."
 
 #. VisualShaderNodeFloatParameter.step
 #: modules/visual_shader/doc_classes/VisualShaderNodeFloatParameter.xml
 msgid "Step (increment) value for the range hint with step. Used if [member hint] is set to [constant HINT_RANGE_STEP]."
-msgstr "A lépésközös tartomány lépésköze. Akkor érvényes, ha a [member hint] értéke [constant HINT_RANGE_STEP]."
+msgstr "Két szomszédos választható érték közötti lépésköz. Akkor érvényes, ha a [member hint] értéke [constant HINT_RANGE_STEP]."
 
 #. VisualShaderNodeFloatParameter.HINT_NONE
 #: modules/visual_shader/doc_classes/VisualShaderNodeFloatParameter.xml
@@ -45981,7 +45981,7 @@ msgstr "Lebegőpontos összehasonlítás eredménye alapján 3D-s vektort ad ki 
 #. VisualShaderNodeIf.description
 #: modules/visual_shader/doc_classes/VisualShaderNodeIf.xml
 msgid "This visual shader node has six input ports:\n- Port [b]1[/b] and [b]2[/b] provide the two floating-point numbers [code]a[/code] and [code]b[/code] that will be compared.\n- Port [b]3[/b] is the tolerance, which allows similar floating-point numbers to be considered equal.\n- Ports [b]4[/b], [b]5[/b], and [b]6[/b] are the possible outputs, returned if [code]a == b[/code], [code]a > b[/code], or [code]a < b[/code] respectively."
-msgstr "A csomópontnak hat bemenete van:\n- Az [b]1[/b]. és [b]2[/b]. porton kapja az összehasonlítandó [code]a[/code] és [code]b[/code] lebegőpontos számokat.\n- A [b]3[/b]. porton állíthatod be a tűréshatárt, amelyen belül a két szám egyenlőnek számít.\n- Ha [code]a == b[/code], a [b]4[/b]. port értékét adja ki; ha [code]a > b[/code], az [b]5[/b]. portét; ha [code]a < b[/code], a [b]6[/b]. portét."
+msgstr "A csomópontnak hat bemenete van:\n- Az [b]1[/b]. és a [b]2[/b]. bemenetre kösd az összehasonlítandó [code]a[/code] és [code]b[/code] lebegőpontos értéket.\n- A [b]3[/b]. bemeneten add meg a tűréshatárt. A csomópont egyenlőnek tekinti a két számot, ha a különbségük abszolút értéke kisebb ennél.\n- Ha a két szám egyenlőnek számít ([code]a == b[/code]), a [b]4[/b]. bemenet értéke kerül a kimenetre. Ha a két szám a tűréshatár szerint különbözik, és [code]a < b[/code], a [b]6[/b]. bemenet értékét kapod. Egyébként az [b]5[/b]. bemenet értékét kapod, például ha [code]a > b[/code] és a különbség eléri a tűréshatárt."
 
 #. VisualShaderNodeInput.brief
 #: modules/visual_shader/doc_classes/VisualShaderNodeInput.xml
@@ -45996,12 +45996,12 @@ msgstr "Hozzáférést ad a shader beépített bemeneti változóihoz. Az egyes 
 #. VisualShaderNodeInput.get_input_real_name
 #: modules/visual_shader/doc_classes/VisualShaderNodeInput.xml
 msgid "Returns a translated name of the current constant in the Godot Shader Language. E.g. [code]\"ALBEDO\"[/code] if the [member input_name] equal to [code]\"albedo\"[/code]."
-msgstr "Visszaadja a jelenlegi állandó nevét a Godot shadernyelvében. Például [code]\"ALBEDO\"[/code] az eredmény, ha a [member input_name] értéke [code]\"albedo\"[/code]."
+msgstr "Visszaadja a kiválasztott bemenet nevét a Godot shadernyelvében. Ha például a [member input_name] értéke [code]\"albedo\"[/code], a metódus [code]\"ALBEDO\"[/code] szöveget ad vissza."
 
 #. VisualShaderNodeInput.input_type_changed
 #: modules/visual_shader/doc_classes/VisualShaderNodeInput.xml
 msgid "Emitted when input is changed via [member input_name]."
-msgstr "A csomópont akkor küldi ezt a jelet, amikor a [member input_name] megváltoztatásával másik bemenetre váltasz."
+msgstr "A jel akkor érkezik, ha a [member input_name] módosítása megváltoztatja a bemenet típusát."
 
 #. VisualShaderNodeInput.input_name
 #: modules/visual_shader/doc_classes/VisualShaderNodeInput.xml
@@ -46095,7 +46095,7 @@ msgstr "A szerkesztő felsorolásválasztójában megjelenő nevek. Akkor érvé
 #. VisualShaderNodeIntParameter.hint
 #: modules/visual_shader/doc_classes/VisualShaderNodeIntParameter.xml
 msgid "Range hint of this node. Use it to customize valid parameter range."
-msgstr "A csomóponthoz tartozó tartománytipp. A paraméter érvényes értéktartománya ezzel szabályozható."
+msgstr "A csomópont beállítása, amellyel a paraméter választható értékeit tartományra korlátozhatod."
 
 #. VisualShaderNodeIntParameter.max
 #: modules/visual_shader/doc_classes/VisualShaderNodeIntParameter.xml
@@ -46193,7 +46193,7 @@ msgstr "Két vektor külső szorzatát számítja ki a vizuális shadergráfban.
 #. VisualShaderNodeOuterProduct.description
 #: modules/visual_shader/doc_classes/VisualShaderNodeOuterProduct.xml
 msgid "[code]OuterProduct[/code] treats the first parameter [code]c[/code] as a column vector (matrix with one column) and the second parameter [code]r[/code] as a row vector (matrix with one row) and does a linear algebraic matrix multiply [code]c * r[/code], yielding a matrix whose number of rows is the number of components in [code]c[/code] and whose number of columns is the number of components in [code]r[/code]."
-msgstr "Az [code]OuterProduct[/code] az első [code]c[/code] paramétert oszlopvektorként (egyoszlopos mátrixként), a második [code]r[/code] paramétert sorvektorként (egysoros mátrixként) kezeli. A [code]c * r[/code] mátrixszorzat olyan mátrixot ad, amelyben a sorok száma a [code]c[/code], az oszlopok száma pedig az [code]r[/code] összetevőinek száma."
+msgstr "Az [code]OuterProduct[/code] az első paramétert ([code]c[/code]) oszlopvektornak, a másodikat ([code]r[/code]) sorvektornak veszi. A szorzatuk ([code]c * r[/code]) egy mátrix. A sorok számát a [code]c[/code], az oszlopokét az [code]r[/code] vektor komponenseinek száma adja meg."
 
 #. VisualShaderNodeOutput.brief
 #: modules/visual_shader/doc_classes/VisualShaderNodeOutput.xml
@@ -46288,7 +46288,7 @@ msgstr "A függvény argumentumként megadott textúrát használja."
 #. VisualShaderNodeTexture.SOURCE_SCREEN
 #: modules/visual_shader/doc_classes/VisualShaderNodeTexture.xml
 msgid "Use the current viewport's texture as the source."
-msgstr "Forrásként az aktuális megjelenítési nézet textúráját használja."
+msgstr "Az aktuális nézetablak textúrájából vesz mintát."
 
 #. VisualShaderNodeTexture.SOURCE_2D_TEXTURE
 #: modules/visual_shader/doc_classes/VisualShaderNodeTexture.xml
@@ -46408,7 +46408,7 @@ msgstr "Beállítja a textúra forrását. A képernyőtextúra, a mélységtext
 #. VisualShaderNodeTextureParameter.TYPE_ANISOTROPY
 #: modules/visual_shader/doc_classes/VisualShaderNodeTextureParameter.xml
 msgid "Adds [code]hint_anisotropy[/code] as hint to the uniform declaration to use for a flowmap."
-msgstr "A [code]hint_anisotropy[/code] tippet adja az uniform deklarációjához, áramlástérképként (flowmap) való használathoz."
+msgstr "Az uniform deklarációjához hozzáadja a [code]hint_anisotropy[/code] tippet, így a textúra áramlástérképként (flowmap) használható."
 
 #. VisualShaderNodeTextureParameter.COLOR_DEFAULT_WHITE
 #: modules/visual_shader/doc_classes/VisualShaderNodeTextureParameter.xml
