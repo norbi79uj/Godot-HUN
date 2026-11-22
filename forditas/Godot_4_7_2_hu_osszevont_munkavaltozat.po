@@ -47385,3 +47385,564 @@ msgstr "Kiszámítja két vektor vektoriális szorzatát."
 #: modules/visual_shader/doc_classes/VisualShaderNodeVectorOp.xml
 msgid "Returns the vector that points in the direction of reflection. [code]a[/code] is incident vector and [code]b[/code] is the normal vector."
 msgstr "A visszaverődés irányába mutató vektort adja vissza. Az [code]a[/code] a beeső vektor, a [code]b[/code] a felületi normálvektor."
+
+#. RenderingDevice.TEXTURE_TYPE_MAX
+#. VisualShaderNodeCubemap.TYPE_MAX
+#. VisualShaderNodeTexture.TYPE_MAX
+#. VisualShaderNodeTextureParameter.TYPE_MAX
+#: doc/classes/RenderingDevice.xml modules/visual_shader/doc_classes/VisualShaderNodeCubemap.xml modules/visual_shader/doc_classes/VisualShaderNodeTexture.xml modules/visual_shader/doc_classes/VisualShaderNodeTextureParameter.xml
+msgid "Represents the size of the [enum TextureType] enum."
+msgstr "A [enum TextureType] felsorolás mérete."
+
+#. VisualShader.TYPE_MAX
+#: modules/visual_shader/doc_classes/VisualShader.xml
+msgid "Represents the size of the [enum Type] enum."
+msgstr "A [enum Type] felsorolás mérete."
+
+#. VisualShader.VARYING_MODE_MAX
+#: modules/visual_shader/doc_classes/VisualShader.xml
+msgid "Represents the size of the [enum VaryingMode] enum."
+msgstr "A [enum VaryingMode] felsorolás mérete."
+
+#. VisualShader.VARYING_TYPE_FLOAT
+#: modules/visual_shader/doc_classes/VisualShader.xml
+msgid "Varying is of type [float]."
+msgstr "Az átadott változó típusa [float]."
+
+#. VisualShader.VARYING_TYPE_INT
+#: modules/visual_shader/doc_classes/VisualShader.xml
+msgid "Varying is of type [int]."
+msgstr "Az átadott változó típusa [int]."
+
+#. VisualShader.VARYING_TYPE_VECTOR_2D
+#: modules/visual_shader/doc_classes/VisualShader.xml
+msgid "Varying is of type [Vector2]."
+msgstr "Az átadott változó típusa [Vector2]."
+
+#. VisualShader.VARYING_TYPE_VECTOR_3D
+#: modules/visual_shader/doc_classes/VisualShader.xml
+msgid "Varying is of type [Vector3]."
+msgstr "Az átadott változó típusa [Vector3]."
+
+#. VisualShader.VARYING_TYPE_VECTOR_4D
+#: modules/visual_shader/doc_classes/VisualShader.xml
+msgid "Varying is of type [Vector4]."
+msgstr "Az átadott változó típusa [Vector4]."
+
+#. VisualShader.VARYING_TYPE_BOOLEAN
+#: modules/visual_shader/doc_classes/VisualShader.xml
+msgid "Varying is of type [bool]."
+msgstr "Az átadott változó típusa [bool]."
+
+#. VisualShader.VARYING_TYPE_TRANSFORM
+#: modules/visual_shader/doc_classes/VisualShader.xml
+msgid "Varying is of type [Transform3D]."
+msgstr "Az átadott változó típusa [Transform3D]."
+
+#. VisualShader.VARYING_TYPE_MAX
+#: modules/visual_shader/doc_classes/VisualShader.xml
+msgid "Represents the size of the [enum VaryingType] enum."
+msgstr "A [enum VaryingType] felsorolás mérete."
+
+#. VisualShaderNode.PORT_TYPE_SCALAR
+#: modules/visual_shader/doc_classes/VisualShaderNode.xml
+msgid "Floating-point scalar. Translated to [code skip-lint]float[/code] type in shader code."
+msgstr "Lebegőpontos skalár. A shaderkódban a [code skip-lint]float[/code] típusnak felel meg."
+
+#. VisualShaderNode.PORT_TYPE_SCALAR_INT
+#: modules/visual_shader/doc_classes/VisualShaderNode.xml
+msgid "Integer scalar. Translated to [code skip-lint]int[/code] type in shader code."
+msgstr "Egész skalár. A shaderkódban az [code skip-lint]int[/code] típusnak felel meg."
+
+#. VisualShaderNode.PORT_TYPE_SCALAR_UINT
+#: modules/visual_shader/doc_classes/VisualShaderNode.xml
+msgid "Unsigned integer scalar. Translated to [code skip-lint]uint[/code] type in shader code."
+msgstr "Előjel nélküli egész skalár. A shaderkódban a [code skip-lint]uint[/code] típusnak felel meg."
+
+#. VisualShaderNode.PORT_TYPE_VECTOR_2D
+#: modules/visual_shader/doc_classes/VisualShaderNode.xml
+msgid "2D vector of floating-point values. Translated to [code skip-lint]vec2[/code] type in shader code."
+msgstr "Lebegőpontos értékekből álló 2D-s vektor. A shaderkódban a [code skip-lint]vec2[/code] típusnak felel meg."
+
+#. VisualShaderNode.PORT_TYPE_VECTOR_3D
+#: modules/visual_shader/doc_classes/VisualShaderNode.xml
+msgid "3D vector of floating-point values. Translated to [code skip-lint]vec3[/code] type in shader code."
+msgstr "Lebegőpontos értékekből álló 3D-s vektor. A shaderkódban a [code skip-lint]vec3[/code] típusnak felel meg."
+
+#. VisualShaderNode.PORT_TYPE_VECTOR_4D
+#: modules/visual_shader/doc_classes/VisualShaderNode.xml
+msgid "4D vector of floating-point values. Translated to [code skip-lint]vec4[/code] type in shader code."
+msgstr "Lebegőpontos értékekből álló 4D-s vektor. A shaderkódban a [code skip-lint]vec4[/code] típusnak felel meg."
+
+#. VisualShaderNode.PORT_TYPE_BOOLEAN
+#: modules/visual_shader/doc_classes/VisualShaderNode.xml
+msgid "Boolean type. Translated to [code skip-lint]bool[/code] type in shader code."
+msgstr "Logikai típus. A shaderkódban a [code skip-lint]bool[/code] típusnak felel meg."
+
+#. VisualShaderNode.PORT_TYPE_TRANSFORM
+#: modules/visual_shader/doc_classes/VisualShaderNode.xml
+msgid "Transform type. Translated to [code skip-lint]mat4[/code] type in shader code."
+msgstr "Transzformációs típus. A shaderkódban a [code skip-lint]mat4[/code] típusnak felel meg."
+
+#. VisualShaderNode.PORT_TYPE_MAX
+#: modules/visual_shader/doc_classes/VisualShaderNode.xml
+msgid "Represents the size of the [enum PortType] enum."
+msgstr "A [enum PortType] felsorolás mérete."
+
+#. VisualShaderNodeBillboard.BILLBOARD_TYPE_MAX
+#: modules/visual_shader/doc_classes/VisualShaderNodeBillboard.xml
+msgid "Represents the size of the [enum BillboardType] enum."
+msgstr "A [enum BillboardType] felsorolás mérete."
+
+#. VisualShaderNodeBooleanConstant.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeBooleanConstant.xml
+msgid "A boolean constant to be used within the visual shader graph."
+msgstr "Logikai állandó a vizuális shadergráfhoz."
+
+#. VisualShaderNodeBooleanConstant.constant
+#: modules/visual_shader/doc_classes/VisualShaderNodeBooleanConstant.xml
+msgid "A boolean constant which represents a state of this node."
+msgstr "A csomópont állapotát meghatározó logikai állandó."
+
+#. VisualShaderNodeBooleanParameter.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeBooleanParameter.xml
+msgid "A boolean parameter to be used within the visual shader graph."
+msgstr "Logikai paraméter a vizuális shadergráfhoz."
+
+#. VisualShaderNodeBooleanParameter.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeBooleanParameter.xml
+msgid "Translated to [code]uniform bool[/code] in the shader language."
+msgstr "A shaderkódban a [code]uniform bool[/code] deklarációnak felel meg."
+
+#. VisualShaderNodeClamp.OP_TYPE_VECTOR_2D
+#. VisualShaderNodeCompare.CTYPE_VECTOR_2D
+#. VisualShaderNodeDerivativeFunc.OP_TYPE_VECTOR_2D
+#. VisualShaderNodeMix.OP_TYPE_VECTOR_2D
+#. VisualShaderNodeMultiplyAdd.OP_TYPE_VECTOR_2D
+#. VisualShaderNodeParticleRandomness.OP_TYPE_VECTOR_2D
+#. VisualShaderNodeRemap.OP_TYPE_VECTOR_2D
+#. VisualShaderNodeSmoothStep.OP_TYPE_VECTOR_2D
+#. VisualShaderNodeStep.OP_TYPE_VECTOR_2D
+#. VisualShaderNodeSwitch.OP_TYPE_VECTOR_2D
+#. VisualShaderNodeVectorBase.OP_TYPE_VECTOR_2D
+#: modules/visual_shader/doc_classes/VisualShaderNodeClamp.xml modules/visual_shader/doc_classes/VisualShaderNodeCompare.xml modules/visual_shader/doc_classes/VisualShaderNodeDerivativeFunc.xml modules/visual_shader/doc_classes/VisualShaderNodeMix.xml modules/visual_shader/doc_classes/VisualShaderNodeMultiplyAdd.xml modules/visual_shader/doc_classes/VisualShaderNodeParticleRandomness.xml modules/visual_shader/doc_classes/VisualShaderNodeRemap.xml modules/visual_shader/doc_classes/VisualShaderNodeSmoothStep.xml modules/visual_shader/doc_classes/VisualShaderNodeStep.xml modules/visual_shader/doc_classes/VisualShaderNodeSwitch.xml modules/visual_shader/doc_classes/VisualShaderNodeVectorBase.xml
+msgid "A 2D vector type."
+msgstr "2D-s vektortípus."
+
+#. VisualShaderNodeClamp.OP_TYPE_VECTOR_3D
+#. VisualShaderNodeCompare.CTYPE_VECTOR_3D
+#. VisualShaderNodeDerivativeFunc.OP_TYPE_VECTOR_3D
+#. VisualShaderNodeMix.OP_TYPE_VECTOR_3D
+#. VisualShaderNodeMultiplyAdd.OP_TYPE_VECTOR_3D
+#. VisualShaderNodeParticleRandomness.OP_TYPE_VECTOR_3D
+#. VisualShaderNodeRemap.OP_TYPE_VECTOR_3D
+#. VisualShaderNodeSmoothStep.OP_TYPE_VECTOR_3D
+#. VisualShaderNodeStep.OP_TYPE_VECTOR_3D
+#. VisualShaderNodeSwitch.OP_TYPE_VECTOR_3D
+#. VisualShaderNodeVectorBase.OP_TYPE_VECTOR_3D
+#: modules/visual_shader/doc_classes/VisualShaderNodeClamp.xml modules/visual_shader/doc_classes/VisualShaderNodeCompare.xml modules/visual_shader/doc_classes/VisualShaderNodeDerivativeFunc.xml modules/visual_shader/doc_classes/VisualShaderNodeMix.xml modules/visual_shader/doc_classes/VisualShaderNodeMultiplyAdd.xml modules/visual_shader/doc_classes/VisualShaderNodeParticleRandomness.xml modules/visual_shader/doc_classes/VisualShaderNodeRemap.xml modules/visual_shader/doc_classes/VisualShaderNodeSmoothStep.xml modules/visual_shader/doc_classes/VisualShaderNodeStep.xml modules/visual_shader/doc_classes/VisualShaderNodeSwitch.xml modules/visual_shader/doc_classes/VisualShaderNodeVectorBase.xml
+msgid "A 3D vector type."
+msgstr "3D-s vektortípus."
+
+#. VisualShaderNodeClamp.OP_TYPE_VECTOR_4D
+#. VisualShaderNodeCompare.CTYPE_VECTOR_4D
+#. VisualShaderNodeDerivativeFunc.OP_TYPE_VECTOR_4D
+#. VisualShaderNodeMix.OP_TYPE_VECTOR_4D
+#. VisualShaderNodeMultiplyAdd.OP_TYPE_VECTOR_4D
+#. VisualShaderNodeParticleRandomness.OP_TYPE_VECTOR_4D
+#. VisualShaderNodeRemap.OP_TYPE_VECTOR_4D
+#. VisualShaderNodeSmoothStep.OP_TYPE_VECTOR_4D
+#. VisualShaderNodeStep.OP_TYPE_VECTOR_4D
+#. VisualShaderNodeSwitch.OP_TYPE_VECTOR_4D
+#. VisualShaderNodeVectorBase.OP_TYPE_VECTOR_4D
+#: modules/visual_shader/doc_classes/VisualShaderNodeClamp.xml modules/visual_shader/doc_classes/VisualShaderNodeCompare.xml modules/visual_shader/doc_classes/VisualShaderNodeDerivativeFunc.xml modules/visual_shader/doc_classes/VisualShaderNodeMix.xml modules/visual_shader/doc_classes/VisualShaderNodeMultiplyAdd.xml modules/visual_shader/doc_classes/VisualShaderNodeParticleRandomness.xml modules/visual_shader/doc_classes/VisualShaderNodeRemap.xml modules/visual_shader/doc_classes/VisualShaderNodeSmoothStep.xml modules/visual_shader/doc_classes/VisualShaderNodeStep.xml modules/visual_shader/doc_classes/VisualShaderNodeSwitch.xml modules/visual_shader/doc_classes/VisualShaderNodeVectorBase.xml
+msgid "A 4D vector type."
+msgstr "4D-s vektortípus."
+
+#. VisualShaderNodeClamp.OP_TYPE_MAX
+#. VisualShaderNodeDerivativeFunc.OP_TYPE_MAX
+#. VisualShaderNodeMix.OP_TYPE_MAX
+#. VisualShaderNodeMultiplyAdd.OP_TYPE_MAX
+#. VisualShaderNodeParticleRandomness.OP_TYPE_MAX
+#. VisualShaderNodeRemap.OP_TYPE_MAX
+#. VisualShaderNodeSmoothStep.OP_TYPE_MAX
+#. VisualShaderNodeStep.OP_TYPE_MAX
+#. VisualShaderNodeSwitch.OP_TYPE_MAX
+#. VisualShaderNodeVectorBase.OP_TYPE_MAX
+#: modules/visual_shader/doc_classes/VisualShaderNodeClamp.xml modules/visual_shader/doc_classes/VisualShaderNodeDerivativeFunc.xml modules/visual_shader/doc_classes/VisualShaderNodeMix.xml modules/visual_shader/doc_classes/VisualShaderNodeMultiplyAdd.xml modules/visual_shader/doc_classes/VisualShaderNodeParticleRandomness.xml modules/visual_shader/doc_classes/VisualShaderNodeRemap.xml modules/visual_shader/doc_classes/VisualShaderNodeSmoothStep.xml modules/visual_shader/doc_classes/VisualShaderNodeStep.xml modules/visual_shader/doc_classes/VisualShaderNodeSwitch.xml modules/visual_shader/doc_classes/VisualShaderNodeVectorBase.xml
+msgid "Represents the size of the [enum OpType] enum."
+msgstr "Az [enum OpType] felsorolás mérete."
+
+#. VisualShaderNodeColorConstant.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeColorConstant.xml
+msgid "A [Color] constant to be used within the visual shader graph."
+msgstr "[Color] típusú állandó a vizuális shadergráfhoz."
+
+#. VisualShaderNodeColorConstant.constant
+#: modules/visual_shader/doc_classes/VisualShaderNodeColorConstant.xml
+msgid "A [Color] constant which represents a state of this node."
+msgstr "A csomópont állapotát meghatározó [Color] típusú állandó."
+
+#. VisualShaderNodeColorFunc.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeColorFunc.xml
+msgid "A [Color] function to be used within the visual shader graph."
+msgstr "[Color] típusú értékeken működő függvény a vizuális shadergráfhoz."
+
+#. VisualShaderNodeColorFunc.FUNC_MAX
+#. VisualShaderNodeCompare.FUNC_MAX
+#. VisualShaderNodeDerivativeFunc.FUNC_MAX
+#. VisualShaderNodeFloatFunc.FUNC_MAX
+#. VisualShaderNodeIntFunc.FUNC_MAX
+#. VisualShaderNodeIs.FUNC_MAX
+#. VisualShaderNodeTransformFunc.FUNC_MAX
+#. VisualShaderNodeUIntFunc.FUNC_MAX
+#. VisualShaderNodeUVFunc.FUNC_MAX
+#. VisualShaderNodeVectorFunc.FUNC_MAX
+#: modules/visual_shader/doc_classes/VisualShaderNodeColorFunc.xml modules/visual_shader/doc_classes/VisualShaderNodeCompare.xml modules/visual_shader/doc_classes/VisualShaderNodeDerivativeFunc.xml modules/visual_shader/doc_classes/VisualShaderNodeFloatFunc.xml modules/visual_shader/doc_classes/VisualShaderNodeIntFunc.xml modules/visual_shader/doc_classes/VisualShaderNodeIs.xml modules/visual_shader/doc_classes/VisualShaderNodeTransformFunc.xml modules/visual_shader/doc_classes/VisualShaderNodeUIntFunc.xml modules/visual_shader/doc_classes/VisualShaderNodeUVFunc.xml modules/visual_shader/doc_classes/VisualShaderNodeVectorFunc.xml
+msgid "Represents the size of the [enum Function] enum."
+msgstr "A [enum Function] felsorolás mérete."
+
+#. VisualShaderNodeColorOp.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeColorOp.xml
+msgid "A [Color] operator to be used within the visual shader graph."
+msgstr "[Color] típusú értékeken működő operátor a vizuális shadergráfhoz."
+
+#. VisualShaderNodeColorOp.OP_MAX
+#. VisualShaderNodeFloatOp.OP_ENUM_SIZE
+#. VisualShaderNodeIntOp.OP_ENUM_SIZE
+#. VisualShaderNodeTransformOp.OP_MAX
+#. VisualShaderNodeTransformVecMult.OP_MAX
+#. VisualShaderNodeUIntOp.OP_ENUM_SIZE
+#. VisualShaderNodeVectorOp.OP_ENUM_SIZE
+#: modules/visual_shader/doc_classes/VisualShaderNodeColorOp.xml modules/visual_shader/doc_classes/VisualShaderNodeFloatOp.xml modules/visual_shader/doc_classes/VisualShaderNodeIntOp.xml modules/visual_shader/doc_classes/VisualShaderNodeTransformOp.xml modules/visual_shader/doc_classes/VisualShaderNodeTransformVecMult.xml modules/visual_shader/doc_classes/VisualShaderNodeUIntOp.xml modules/visual_shader/doc_classes/VisualShaderNodeVectorOp.xml
+msgid "Represents the size of the [enum Operator] enum."
+msgstr "Az [enum Operator] felsorolás mérete."
+
+#. VisualShaderNodeColorParameter.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeColorParameter.xml
+msgid "A [Color] parameter to be used within the visual shader graph."
+msgstr "[Color] típusú paraméter a vizuális shadergráfhoz."
+
+#. VisualShaderNodeColorParameter.description
+#. VisualShaderNodeVec4Parameter.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeColorParameter.xml modules/visual_shader/doc_classes/VisualShaderNodeVec4Parameter.xml
+msgid "Translated to [code]uniform vec4[/code] in the shader language."
+msgstr "A shaderkódban a [code]uniform vec4[/code] deklarációnak felel meg."
+
+#. VisualShaderNodeCompare.CTYPE_MAX
+#: modules/visual_shader/doc_classes/VisualShaderNodeCompare.xml
+msgid "Represents the size of the [enum ComparisonType] enum."
+msgstr "A [enum ComparisonType] felsorolás mérete."
+
+#. VisualShaderNodeCompare.FUNC_GREATER_THAN
+#: modules/visual_shader/doc_classes/VisualShaderNodeCompare.xml
+msgid "Comparison for greater than ([code]a > b[/code]). Cannot be used if [member type] set to [constant CTYPE_BOOLEAN] or [constant CTYPE_TRANSFORM]."
+msgstr "Szigorúan nagyobb ([code]a > b[/code]). Akkor használható, ha a [member type] beállítás értéke eltér a [constant CTYPE_BOOLEAN] és a [constant CTYPE_TRANSFORM] értékétől is."
+
+#. VisualShaderNodeCompare.FUNC_GREATER_THAN_EQUAL
+#: modules/visual_shader/doc_classes/VisualShaderNodeCompare.xml
+msgid "Comparison for greater than or equal ([code]a >= b[/code]). Cannot be used if [member type] set to [constant CTYPE_BOOLEAN] or [constant CTYPE_TRANSFORM]."
+msgstr "Nagyobb vagy egyenlő ([code]a >= b[/code]). Akkor használható, ha a [member type] beállítás értéke eltér a [constant CTYPE_BOOLEAN] és a [constant CTYPE_TRANSFORM] értékétől is."
+
+#. VisualShaderNodeCompare.FUNC_LESS_THAN
+#: modules/visual_shader/doc_classes/VisualShaderNodeCompare.xml
+msgid "Comparison for less than ([code]a < b[/code]). Cannot be used if [member type] set to [constant CTYPE_BOOLEAN] or [constant CTYPE_TRANSFORM]."
+msgstr "Szigorúan kisebb ([code]a < b[/code]). Akkor használható, ha a [member type] beállítás értéke eltér a [constant CTYPE_BOOLEAN] és a [constant CTYPE_TRANSFORM] értékétől is."
+
+#. VisualShaderNodeCompare.FUNC_LESS_THAN_EQUAL
+#: modules/visual_shader/doc_classes/VisualShaderNodeCompare.xml
+msgid "Comparison for less than or equal ([code]a <= b[/code]). Cannot be used if [member type] set to [constant CTYPE_BOOLEAN] or [constant CTYPE_TRANSFORM]."
+msgstr "Kisebb vagy egyenlő ([code]a <= b[/code]). Akkor használható, ha a [member type] beállítás értéke eltér a [constant CTYPE_BOOLEAN] és a [constant CTYPE_TRANSFORM] értékétől is."
+
+#. VisualShaderNodeCompare.COND_MAX
+#: modules/visual_shader/doc_classes/VisualShaderNodeCompare.xml
+msgid "Represents the size of the [enum Condition] enum."
+msgstr "A [enum Condition] felsorolás mérete."
+
+#. VisualShaderNodeCubemap.SOURCE_MAX
+#. VisualShaderNodeSample3D.SOURCE_MAX
+#. VisualShaderNodeTexture.SOURCE_MAX
+#: modules/visual_shader/doc_classes/VisualShaderNodeCubemap.xml modules/visual_shader/doc_classes/VisualShaderNodeSample3D.xml modules/visual_shader/doc_classes/VisualShaderNodeTexture.xml
+msgid "Represents the size of the [enum Source] enum."
+msgstr "A [enum Source] felsorolás mérete."
+
+#. VisualShaderNodeCubemapParameter.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeCubemapParameter.xml
+msgid "A [Cubemap] parameter node to be used within the visual shader graph."
+msgstr "[Cubemap] típusú paramétercsomópont a vizuális shadergráfhoz."
+
+#. VisualShaderNodeDerivativeFunc.PRECISION_MAX
+#: modules/visual_shader/doc_classes/VisualShaderNodeDerivativeFunc.xml
+msgid "Represents the size of the [enum Precision] enum."
+msgstr "A [enum Precision] felsorolás mérete."
+
+#. VisualShaderNodeDeterminant.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeDeterminant.xml
+msgid "Translates to [code]determinant(x)[/code] in the shader language."
+msgstr "A shaderkódban a [code]determinant(x)[/code] hívásnak felel meg."
+
+#. VisualShaderNodeDotProduct.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeDotProduct.xml
+msgid "Translates to [code]dot(a, b)[/code] in the shader language."
+msgstr "A shaderkódban a [code]dot(a, b)[/code] hívásnak felel meg."
+
+#. VisualShaderNodeFaceForward.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeFaceForward.xml
+msgid "Translates to [code]faceforward(N, I, Nref)[/code] in the shader language. The function has three vector parameters: [code]N[/code], the vector to orient, [code]I[/code], the incident vector, and [code]Nref[/code], the reference vector. If the dot product of [code]I[/code] and [code]Nref[/code] is smaller than zero the return value is [code]N[/code]. Otherwise, [code]-N[/code] is returned."
+msgstr "A shaderkódban a [code]faceforward(N, I, Nref)[/code] hívásnak felel meg. A függvény három vektort kap. Az [code]N[/code] az irányítandó vektor, az [code]I[/code] a beeső vektor, az [code]Nref[/code] pedig a referenciavektor. Ha az [code]I[/code] és az [code]Nref[/code] skalárszorzata negatív, a függvény az [code]N[/code] vektort adja vissza. Egyébként az eredmény [code]-N[/code]."
+
+#. VisualShaderNodeFloatConstant.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatConstant.xml
+msgid "A scalar floating-point constant to be used within the visual shader graph."
+msgstr "Lebegőpontos skalárállandó a vizuális shadergráfhoz."
+
+#. VisualShaderNodeFloatConstant.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatConstant.xml
+msgid "Translated to [code skip-lint]float[/code] in the shader language."
+msgstr "A shaderkódban a [code skip-lint]float[/code] típusnak felel meg."
+
+#. VisualShaderNodeFloatFunc.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatFunc.xml
+msgid "A scalar floating-point function to be used within the visual shader graph."
+msgstr "Lebegőpontos skalárokon működő függvény a vizuális shadergráfhoz."
+
+#. VisualShaderNodeFloatFunc.FUNC_ROUNDEVEN
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatFunc.xml
+msgid "Finds the nearest even integer to the parameter. Translates to [code]roundEven(x)[/code] in the Godot Shader Language."
+msgstr "A legközelebbi egészre kerekíti az értéket. Két egyformán közeli egész közül a párosat választja. A Godot shadernyelvében a [code]roundEven(x)[/code] hívásnak felel meg."
+
+#. VisualShaderNodeFloatOp.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatOp.xml
+msgid "A floating-point scalar operator to be used within the visual shader graph."
+msgstr "Lebegőpontos skalárokon működő operátor a vizuális shadergráfhoz."
+
+#. VisualShaderNodeFloatParameter.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatParameter.xml
+msgid "A scalar float parameter to be used within the visual shader graph."
+msgstr "Lebegőpontos skalárparaméter a vizuális shadergráfhoz."
+
+#. VisualShaderNodeFloatParameter.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatParameter.xml
+msgid "Translated to [code]uniform float[/code] in the shader language."
+msgstr "A shaderkódban a [code]uniform float[/code] deklarációnak felel meg."
+
+#. VisualShaderNodeFloatParameter.HINT_MAX
+#. VisualShaderNodeIntParameter.HINT_MAX
+#: modules/visual_shader/doc_classes/VisualShaderNodeFloatParameter.xml modules/visual_shader/doc_classes/VisualShaderNodeIntParameter.xml
+msgid "Represents the size of the [enum Hint] enum."
+msgstr "A [enum Hint] felsorolás mérete."
+
+#. VisualShaderNodeIntConstant.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeIntConstant.xml
+msgid "A scalar integer constant to be used within the visual shader graph."
+msgstr "Egész skalárállandó a vizuális shadergráfhoz."
+
+#. VisualShaderNodeIntConstant.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeIntConstant.xml
+msgid "Translated to [code skip-lint]int[/code] in the shader language."
+msgstr "A shaderkódban a [code skip-lint]int[/code] típusnak felel meg."
+
+#. VisualShaderNodeIntFunc.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeIntFunc.xml
+msgid "A scalar integer function to be used within the visual shader graph."
+msgstr "Egész skalárokon működő függvény a vizuális shadergráfhoz."
+
+#. VisualShaderNodeIntOp.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeIntOp.xml
+msgid "An integer scalar operator to be used within the visual shader graph."
+msgstr "Egész skalárokon működő operátor a vizuális shadergráfhoz."
+
+#. VisualShaderNodeLinearSceneDepth.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeLinearSceneDepth.xml
+msgid "A visual shader node that returns the depth value of the DEPTH_TEXTURE node in a linear space."
+msgstr "A mélységtextúrából kiolvasott mélységértéket linearizálja a vizuális shadergráfban."
+
+#. VisualShaderNodeMix.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeMix.xml
+msgid "Translates to [code]mix(a, b, weight)[/code] in the shader language."
+msgstr "A shaderkódban a [code]mix(a, b, weight)[/code] hívásnak felel meg."
+
+#. VisualShaderNodeMix.OP_TYPE_VECTOR_2D_SCALAR
+#: modules/visual_shader/doc_classes/VisualShaderNodeMix.xml
+msgid "The [code]a[/code] and [code]b[/code] ports use a 2D vector type. The [code]weight[/code] port uses a scalar type."
+msgstr "Az [code]a[/code] és a [code]b[/code] port 2D-s vektort fogad. A [code]weight[/code] port skalárt fogad."
+
+#. VisualShaderNodeMix.OP_TYPE_VECTOR_3D_SCALAR
+#: modules/visual_shader/doc_classes/VisualShaderNodeMix.xml
+msgid "The [code]a[/code] and [code]b[/code] ports use a 3D vector type. The [code]weight[/code] port uses a scalar type."
+msgstr "Az [code]a[/code] és a [code]b[/code] port 3D-s vektort fogad. A [code]weight[/code] port skalárt fogad."
+
+#. VisualShaderNodeParameter.QUAL_MAX
+#: modules/visual_shader/doc_classes/VisualShaderNodeParameter.xml
+msgid "Represents the size of the [enum Qualifier] enum."
+msgstr "A [enum Qualifier] felsorolás mérete."
+
+#. VisualShaderNodeParticleAccelerator.MODE_MAX
+#: modules/visual_shader/doc_classes/VisualShaderNodeParticleAccelerator.xml
+msgid "Represents the size of the [enum Mode] enum."
+msgstr "A [enum Mode] felsorolás mérete."
+
+#. VisualShaderNodeRemap.OP_TYPE_VECTOR_2D_SCALAR
+#: modules/visual_shader/doc_classes/VisualShaderNodeRemap.xml
+msgid "The [code]value[/code] port uses a 2D vector type, while the [code]input min[/code], [code]input max[/code], [code]output min[/code], and [code]output max[/code] ports use a floating-point scalar type."
+msgstr "A [code]value[/code] port 2D-s vektort fogad. Az [code]input min[/code], [code]input max[/code], [code]output min[/code] és [code]output max[/code] port lebegőpontos skalárt fogad."
+
+#. VisualShaderNodeRemap.OP_TYPE_VECTOR_3D_SCALAR
+#: modules/visual_shader/doc_classes/VisualShaderNodeRemap.xml
+msgid "The [code]value[/code] port uses a 3D vector type, while the [code]input min[/code], [code]input max[/code], [code]output min[/code], and [code]output max[/code] ports use a floating-point scalar type."
+msgstr "A [code]value[/code] port 3D-s vektort fogad. Az [code]input min[/code], [code]input max[/code], [code]output min[/code] és [code]output max[/code] port lebegőpontos skalárt fogad."
+
+#. VisualShaderNodeRemap.OP_TYPE_VECTOR_4D_SCALAR
+#: modules/visual_shader/doc_classes/VisualShaderNodeRemap.xml
+msgid "The [code]value[/code] port uses a 4D vector type, while the [code]input min[/code], [code]input max[/code], [code]output min[/code], and [code]output max[/code] ports use a floating-point scalar type."
+msgstr "A [code]value[/code] port 4D-s vektort fogad. Az [code]input min[/code], [code]input max[/code], [code]output min[/code] és [code]output max[/code] port lebegőpontos skalárt fogad."
+
+#. VisualShaderNodeSmoothStep.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeSmoothStep.xml
+msgid "Translates to [code]smoothstep(edge0, edge1, x)[/code] in the shader language.\nReturns [code]0.0[/code] if [code]x[/code] is smaller than [code]edge0[/code] and [code]1.0[/code] if [code]x[/code] is larger than [code]edge1[/code]. Otherwise, the return value is interpolated between [code]0.0[/code] and [code]1.0[/code] using Hermite polynomials."
+msgstr "A shaderkódban a [code]smoothstep(edge0, edge1, x)[/code] hívásnak felel meg.\nHa [code]x[/code] kisebb [code]edge0[/code] értékénél, az eredmény [code]0.0[/code]. Ha [code]x[/code] nagyobb [code]edge1[/code] értékénél, az eredmény [code]1.0[/code]. A két határ között az eredmény [code]0.0[/code] és [code]1.0[/code] közé esik, és Hermite-polinommal számított interpoláció adja."
+
+#. VisualShaderNodeSmoothStep.OP_TYPE_VECTOR_2D_SCALAR
+#: modules/visual_shader/doc_classes/VisualShaderNodeSmoothStep.xml
+msgid "The [code]x[/code] port uses a 2D vector type. The first two ports use a floating-point scalar type."
+msgstr "Az [code]x[/code] port 2D-s vektort fogad. Az első két port lebegőpontos skalárt fogad."
+
+#. VisualShaderNodeSmoothStep.OP_TYPE_VECTOR_3D_SCALAR
+#: modules/visual_shader/doc_classes/VisualShaderNodeSmoothStep.xml
+msgid "The [code]x[/code] port uses a 3D vector type. The first two ports use a floating-point scalar type."
+msgstr "Az [code]x[/code] port 3D-s vektort fogad. Az első két port lebegőpontos skalárt fogad."
+
+#. VisualShaderNodeTextureParameter.COLOR_DEFAULT_MAX
+#: modules/visual_shader/doc_classes/VisualShaderNodeTextureParameter.xml
+msgid "Represents the size of the [enum ColorDefault] enum."
+msgstr "A [enum ColorDefault] felsorolás mérete."
+
+#. VisualShaderNodeTextureParameter.FILTER_NEAREST_MIPMAP_ANISOTROPIC
+#: modules/visual_shader/doc_classes/VisualShaderNodeTextureParameter.xml
+msgid "The texture filter reads from the nearest pixel and blends between 2 mipmaps (or uses the nearest mipmap if [member ProjectSettings.rendering/textures/default_filters/use_nearest_mipmap_filter] is [code]true[/code]) based on the angle between the surface and the camera view. This makes the texture look pixelated from up close, and smooth from a distance. Anisotropic filtering improves texture quality on surfaces that are almost in line with the camera, but is slightly slower. The anisotropic filtering level can be changed by adjusting [member ProjectSettings.rendering/textures/default_filters/anisotropic_filtering_level].\n[b]Note:[/b] This texture filter is rarely useful in 2D projects. [constant FILTER_NEAREST_MIPMAP] is usually more appropriate in this case."
+msgstr "A textúraszűrő a legközelebbi texelből vesz mintát, és a felület és a kamera nézési iránya közötti szögtől függően 2 mipmapszint között interpolál. Ha a [member ProjectSettings.rendering/textures/default_filters/use_nearest_mipmap_filter] értéke [code]true[/code], a legközelebbi mipmapszintet használja. Ettől a textúra közelről pixelesnek, távolról simának látszik. Az anizotropikus szűrés javítja a kamera nézési irányával majdnem párhuzamos felületek textúraminőségét, de valamivel lassabb. Az anizotropikus szűrés szintjét a [member ProjectSettings.rendering/textures/default_filters/anisotropic_filtering_level] beállítással módosíthatod.\n[b]Megjegyzés:[/b] Ez a textúraszűrő ritkán hasznos 2D-s projektekben. Ilyenkor általában a [constant FILTER_NEAREST_MIPMAP] a megfelelőbb."
+
+#. VisualShaderNodeTextureParameter.FILTER_LINEAR_MIPMAP_ANISOTROPIC
+#: modules/visual_shader/doc_classes/VisualShaderNodeTextureParameter.xml
+msgid "The texture filter blends between the nearest 4 pixels and blends between 2 mipmaps (or uses the nearest mipmap if [member ProjectSettings.rendering/textures/default_filters/use_nearest_mipmap_filter] is [code]true[/code]) based on the angle between the surface and the camera view. This makes the texture look smooth from up close, and smooth from a distance. Anisotropic filtering improves texture quality on surfaces that are almost in line with the camera, but is slightly slower. The anisotropic filtering level can be changed by adjusting [member ProjectSettings.rendering/textures/default_filters/anisotropic_filtering_level].\n[b]Note:[/b] This texture filter is rarely useful in 2D projects. [constant FILTER_LINEAR_MIPMAP] is usually more appropriate in this case."
+msgstr "A textúraszűrő a legközelebbi 4 texelből interpolál, és a felület és a kamera nézési iránya közötti szögtől függően 2 mipmapszint között is interpolál. Ha a [member ProjectSettings.rendering/textures/default_filters/use_nearest_mipmap_filter] értéke [code]true[/code], a legközelebbi mipmapszintet használja. Ettől a textúra közelről és távolról is simának látszik. Az anizotropikus szűrés javítja a kamera nézési irányával majdnem párhuzamos felületek textúraminőségét, de valamivel lassabb. Az anizotropikus szűrés szintjét a [member ProjectSettings.rendering/textures/default_filters/anisotropic_filtering_level] beállítással módosíthatod.\n[b]Megjegyzés:[/b] Ez a textúraszűrő ritkán hasznos 2D-s projektekben. Ilyenkor általában a [constant FILTER_LINEAR_MIPMAP] a megfelelőbb."
+
+#. VisualShaderNodeTextureParameter.SOURCE_MAX
+#: modules/visual_shader/doc_classes/VisualShaderNodeTextureParameter.xml
+msgid "Represents the size of the [enum TextureSource] enum."
+msgstr "A [enum TextureSource] felsorolás mérete."
+
+#. VisualShaderNodeTextureSDFNormal.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeTextureSDFNormal.xml
+msgid "Performs an SDF (signed-distance field) normal texture lookup within the visual shader graph."
+msgstr "A vizuális shadergráfban mintát vesz az előjeles távolságmező (SDF) normálvektoraiból."
+
+#. VisualShaderNodeVec2Constant.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeVec2Constant.xml
+msgid "A [Vector2] constant to be used within the visual shader graph."
+msgstr "[Vector2] típusú állandó a vizuális shadergráfhoz."
+
+#. VisualShaderNodeVec2Constant.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeVec2Constant.xml
+msgid "A constant [Vector2], which can be used as an input node."
+msgstr "Bemeneti csomópontként használható [Vector2] állandó."
+
+#. VisualShaderNodeVec2Constant.constant
+#: modules/visual_shader/doc_classes/VisualShaderNodeVec2Constant.xml
+msgid "A [Vector2] constant which represents the state of this node."
+msgstr "A csomópont állapotát meghatározó [Vector2] állandó."
+
+#. VisualShaderNodeVec2Parameter.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeVec2Parameter.xml
+msgid "A [Vector2] parameter to be used within the visual shader graph."
+msgstr "[Vector2] típusú paraméter a vizuális shadergráfhoz."
+
+#. VisualShaderNodeVec2Parameter.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeVec2Parameter.xml
+msgid "Translated to [code]uniform vec2[/code] in the shader language."
+msgstr "A shaderkódban a [code]uniform vec2[/code] deklarációnak felel meg."
+
+#. VisualShaderNodeVec3Constant.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeVec3Constant.xml
+msgid "A [Vector3] constant to be used within the visual shader graph."
+msgstr "[Vector3] típusú állandó a vizuális shadergráfhoz."
+
+#. VisualShaderNodeVec3Constant.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeVec3Constant.xml
+msgid "A constant [Vector3], which can be used as an input node."
+msgstr "Bemeneti csomópontként használható [Vector3] állandó."
+
+#. VisualShaderNodeVec3Constant.constant
+#: modules/visual_shader/doc_classes/VisualShaderNodeVec3Constant.xml
+msgid "A [Vector3] constant which represents the state of this node."
+msgstr "A csomópont állapotát meghatározó [Vector3] állandó."
+
+#. VisualShaderNodeVec3Parameter.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeVec3Parameter.xml
+msgid "A [Vector3] parameter to be used within the visual shader graph."
+msgstr "[Vector3] típusú paraméter a vizuális shadergráfhoz."
+
+#. VisualShaderNodeVec3Parameter.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeVec3Parameter.xml
+msgid "Translated to [code]uniform vec3[/code] in the shader language."
+msgstr "A shaderkódban a [code]uniform vec3[/code] deklarációnak felel meg."
+
+#. VisualShaderNodeVec4Constant.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeVec4Constant.xml
+msgid "A 4D vector constant to be used within the visual shader graph."
+msgstr "4D-s vektorállandó a vizuális shadergráfhoz."
+
+#. VisualShaderNodeVec4Constant.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeVec4Constant.xml
+msgid "A constant 4D vector, which can be used as an input node."
+msgstr "Bemeneti csomópontként használható 4D-s vektorállandó."
+
+#. VisualShaderNodeVec4Constant.constant
+#: modules/visual_shader/doc_classes/VisualShaderNodeVec4Constant.xml
+msgid "A 4D vector (represented as a [Quaternion]) constant which represents the state of this node."
+msgstr "A csomópont állapotát meghatározó 4D-s vektorállandó, amelyet [Quaternion] képvisel."
+
+#. VisualShaderNodeVec4Parameter.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeVec4Parameter.xml
+msgid "A 4D vector parameter to be used within the visual shader graph."
+msgstr "4D-s vektorparaméter a vizuális shadergráfhoz."
+
+#. VisualShaderNodeVectorBase.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorBase.xml
+msgid "A base type for the nodes that perform vector operations within the visual shader graph."
+msgstr "A vizuális shadergráfban vektorműveleteket végző csomópontok alaptípusa."
+
+#. VisualShaderNodeVectorBase.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorBase.xml
+msgid "This is an abstract class. See the derived types for descriptions of the possible operations."
+msgstr "Ez egy absztrakt osztály. A választható műveletek leírását a leszármazott típusokban találod."
+
+#. VisualShaderNodeVectorBase.op_type
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorBase.xml
+msgid "A vector type that this operation is performed on."
+msgstr "Annak a vektornak a típusa, amelyen a művelet fut."
+
+#. VisualShaderNodeVectorFunc.FUNC_LOG
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorFunc.xml
+msgid "Natural logarithm."
+msgstr "Természetes logaritmus."
+
+#. VisualShaderNodeVectorFunc.FUNC_LOG2
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorFunc.xml
+msgid "Base-2 logarithm."
+msgstr "2-es alapú logaritmus."
+
+#. VisualShaderNodeVectorFunc.FUNC_RADIANS
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorFunc.xml
+msgid "Converts a quantity in degrees to radians."
+msgstr "Fokban megadott értéket radiánra vált."
+
+#. VisualShaderNodeVectorFunc.FUNC_ROUND
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorFunc.xml
+msgid "Finds the nearest integer to the parameter."
+msgstr "A legközelebbi egészre kerekíti az értéket."
+
+#. VisualShaderNodeVectorFunc.FUNC_ROUNDEVEN
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorFunc.xml
+msgid "Finds the nearest even integer to the parameter."
+msgstr "A legközelebbi egészre kerekíti az értéket. Két egyformán közeli egész közül a párosat választja."
