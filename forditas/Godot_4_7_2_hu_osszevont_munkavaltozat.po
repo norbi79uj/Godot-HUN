@@ -53988,3 +53988,510 @@ msgstr "A megadott súlyok alapján véletlenszerűen választ hangfolyamot. Ha 
 #: doc/classes/AudioStreamRandomizer.xml
 msgid "Play streams in the order they appear in the stream pool. If only 1 sound is present in the pool, the same sound will always play."
 msgstr "A gyűjteményben elfoglalt sorrendjükben játssza le a hangfolyamokat. Ha csak 1 hang van a gyűjteményben, minden alkalommal az szólal meg."
+
+#. AudioEffectDistortion.drive
+#: doc/classes/AudioEffectDistortion.xml
+msgid "Distortion intensity. Controls how much of the input audio is affected by the distortion curve by moving from a linear function to a nonlinear one. Value can range from 0 to 1."
+msgstr "A torzítás erőssége. Meghatározza, milyen mértékben alakítsa át a nemlineáris torzítási görbe a bemeneti jelet. Az érték 0 és 1 közé eshet."
+
+#. AudioEffectDistortion.keep_hf_hz
+#: doc/classes/AudioEffectDistortion.xml
+msgid "High-pass filter, in Hz. Frequencies higher than this value will not be affected by the distortion. Value can range from 1 to 20000."
+msgstr "A torzítás nélkül továbbengedett magas frekvenciák határfrekvenciája hertzben. A magasabb frekvenciák megkerülik a torzítást. Az érték 1 és 20000 közé eshet."
+
+#. AudioEffectDistortion.mode
+#: doc/classes/AudioEffectDistortion.xml
+msgid "Distortion type. Changes the nonlinear function used to distort the waveform. See [enum Mode]."
+msgstr "A torzítás típusa. Meghatározza a hullámformát alakító nemlineáris függvényt. Lásd a [enum Mode] felsorolást."
+
+#. AudioEffectDistortion.post_gain
+#: doc/classes/AudioEffectDistortion.xml
+msgid "Gain after the effect, in dB. Value can range from -80 to 24."
+msgstr "Az effekt után alkalmazott erősítés decibelben. Az érték −80 és 24 közé eshet."
+
+#. AudioEffectDistortion.pre_gain
+#: doc/classes/AudioEffectDistortion.xml
+msgid "Gain before the effect, in dB. Value can range from -60 to 60."
+msgstr "Az effekt előtt alkalmazott erősítés decibelben. Az érték −60 és 60 közé eshet."
+
+#. AudioEffectDistortion.MODE_CLIP
+#: doc/classes/AudioEffectDistortion.xml
+msgid "Flattens the waveform at 0 dB in a sharp manner. [member drive] increases amplitude of samples exponentially. This mode functions as a hard clipper if [member drive] is set to 0, and is the only mode that clips audio signals at 0 dB."
+msgstr "A torzítási fokozat 0 dB-es határnál élesen levágja a hullámforma csúcsait. A [member drive] az amplitúdóra alkalmazott hatvány kitevőjét módosítja. Ha a [member drive] értéke 0, a fokozat egyszerű kemény vágásként működik. A torzítási módok közül csak ez alkalmaz rögzített 0 dB-es vágási határt."
+
+#. AudioEffectDistortion.MODE_LOFI
+#: doc/classes/AudioEffectDistortion.xml
+msgid "Decreases audio bit depth to achieve a low-resolution audio signal, going from 16-bit to 2-bit. Can be used to emulate the sound of early digital audio devices."
+msgstr "A bitmélységet 16 bitről akár 2 bitre csökkenti. Ezzel a korai digitális hangeszközök hangzása utánozható."
+
+#. AudioEffectDistortion.MODE_OVERDRIVE
+#: doc/classes/AudioEffectDistortion.xml
+msgid "Emulates the warm distortion produced by a field effect transistor, which is commonly used in solid-state musical instrument amplifiers. [member drive] has no effect in this mode."
+msgstr "A félvezetős hangszererősítőkben gyakori térvezérlésű tranzisztor meleg torzítását utánozza. Ebben a módban a [member drive] beállítás hatástalan."
+
+#. AudioEffectDistortion.MODE_WAVESHAPE
+#: doc/classes/AudioEffectDistortion.xml
+msgid "Flattens the waveform in a smooth manner, until it reaches a sharp peak at [code]drive = 1[/code], following a generic absolute sigmoid function."
+msgstr "Szigmoid alakú görbével fokozatosan lapítja le a hullámforma csúcsait. A [code]drive = 1[/code] beállításnál a görbe meredekké válik."
+
+#. AudioEffectEQ.get_band_count
+#: doc/classes/AudioEffectEQ.xml
+msgid "Returns the number of bands of the equalizer."
+msgstr "A hangszínszabályzó frekvenciasávjainak számát adja vissza."
+
+#. AudioEffectEQ.get_band_gain_db
+#: doc/classes/AudioEffectEQ.xml
+msgid "Returns the band's gain at the specified index, in dB."
+msgstr "A megadott indexű frekvenciasáv erősítését adja vissza decibelben."
+
+#. AudioEffectEQ.set_band_gain_db
+#: doc/classes/AudioEffectEQ.xml
+msgid "Sets band's gain at the specified index, in dB."
+msgstr "Beállítja a megadott indexű frekvenciasáv erősítését decibelben."
+
+#. AudioEffectFilter.brief
+#: doc/classes/AudioEffectFilter.xml
+msgid "Base class for filters. Use effects that inherit this class instead of using it directly."
+msgstr "A hangszűrők alaposztálya. Az ebből származó effektosztályokon keresztül használható."
+
+#. AudioEffectFilter.cutoff_hz
+#: doc/classes/AudioEffectFilter.xml
+msgid "Frequency threshold for the filter, in Hz. Value can range from 1 to 20500."
+msgstr "A szűrő határfrekvenciája hertzben. Az érték 1 és 20500 közé eshet."
+
+#. AudioEffectFilter.db
+#: doc/classes/AudioEffectFilter.xml
+msgid "Steepness of the cutoff curve in dB per octave (twice the frequency above [member cutoff_hz], or half the frequency below [member cutoff_hz]), also known as the \"order\" of the filter. Higher orders have a more aggressive cutoff."
+msgstr "A szűrő átmenetének meredeksége oktávonkénti decibelben, amelyet a szűrő rendje határoz meg. Egy oktávval a [member cutoff_hz] fölött kétszeres, egy oktávval a [member cutoff_hz] alatt fele akkora a frekvencia. A magasabb rendű szűrő meredekebben csillapít."
+
+#. AudioEffectFilter.gain
+#: doc/classes/AudioEffectFilter.xml
+msgid "Gain of the frequencies affected by the filter. This property is only available for [AudioEffectLowShelfFilter] and [AudioEffectHighShelfFilter]. Value can range from 0 to 4."
+msgstr "A szűrt frekvenciák erősítése. Csak az [AudioEffectLowShelfFilter] és az [AudioEffectHighShelfFilter] osztálynál érhető el. Az érték 0 és 4 közé eshet."
+
+#. AudioEffectFilter.FILTER_6DB
+#: doc/classes/AudioEffectFilter.xml
+msgid "Cutting off at 6 dB per octave. One octave is twice the frequency above [member cutoff_hz], or half the frequency below [member cutoff_hz]."
+msgstr "A szűrő meredeksége oktávonként 6 dB. Egy oktávval a [member cutoff_hz] fölött kétszeres, egy oktávval a [member cutoff_hz] alatt fele akkora a frekvencia."
+
+#. AudioEffectFilter.FILTER_12DB
+#: doc/classes/AudioEffectFilter.xml
+msgid "Cutting off at 12 dB per octave. One octave is twice the frequency above [member cutoff_hz], or half the frequency below [member cutoff_hz]."
+msgstr "A szűrő meredeksége oktávonként 12 dB. Egy oktávval a [member cutoff_hz] fölött kétszeres, egy oktávval a [member cutoff_hz] alatt fele akkora a frekvencia."
+
+#. AudioEffectFilter.FILTER_18DB
+#: doc/classes/AudioEffectFilter.xml
+msgid "Cutting off at 18 dB per octave. One octave is twice the frequency above [member cutoff_hz], or half the frequency below [member cutoff_hz]."
+msgstr "A szűrő meredeksége oktávonként 18 dB. Egy oktávval a [member cutoff_hz] fölött kétszeres, egy oktávval a [member cutoff_hz] alatt fele akkora a frekvencia."
+
+#. AudioEffectFilter.FILTER_24DB
+#: doc/classes/AudioEffectFilter.xml
+msgid "Cutting off at 24 dB per octave. One octave is twice the frequency above [member cutoff_hz], or half the frequency below [member cutoff_hz]."
+msgstr "A szűrő meredeksége oktávonként 24 dB. Egy oktávval a [member cutoff_hz] fölött kétszeres, egy oktávval a [member cutoff_hz] alatt fele akkora a frekvencia."
+
+#. AudioEffectHardLimiter.pre_gain_db
+#: doc/classes/AudioEffectHardLimiter.xml
+msgid "Gain before limiting, in dB. Value can range from -24 to 24."
+msgstr "A határolás előtt alkalmazott erősítés decibelben. Az érték −24 és 24 közé eshet."
+
+#. AudioEffectHardLimiter.release
+#: doc/classes/AudioEffectHardLimiter.xml
+msgid "Time it takes in seconds for the gain reduction to fully release. Value can range from 0.01 to 3."
+msgstr "Az az idő másodpercben, amely alatt a határoló teljesen felengedi a csillapítást. Az érték 0,01 és 3 közé eshet."
+
+#. AudioEffectHighPassFilter.brief
+#: doc/classes/AudioEffectHighPassFilter.xml
+msgid "Adds a high-pass filter to an audio bus."
+msgstr "Felüláteresztő szűrőt ad egy hangbuszhoz."
+
+#. AudioEffectHighShelfFilter.brief
+#: doc/classes/AudioEffectHighShelfFilter.xml
+msgid "Adds a high-shelf filter to an audio bus."
+msgstr "A magas frekvenciákat egységesen erősítő vagy csillapító polcszűrőt ad egy hangbuszhoz."
+
+#. AudioEffectInstance.brief
+#: doc/classes/AudioEffectInstance.xml
+msgid "Manipulates the audio it receives for a given effect."
+msgstr "A hozzá tartozó effekt szerint módosítja a beérkező hangjelet."
+
+#. AudioEffectInstance.description
+#: doc/classes/AudioEffectInstance.xml
+msgid "An audio effect instance manipulates the audio it receives for a given effect. This instance is automatically created by an [AudioEffect] when it is added to a bus, and should usually not be created directly. If necessary, it can be fetched at run-time with [method AudioServer.get_bus_effect_instance]."
+msgstr "A hangeffektpéldány a hozzá tartozó effekt szerint dolgozza fel a beérkező hangjelet. Az [AudioEffect] automatikusan létrehozza a példányt, amikor hozzáadják egy hangbuszhoz. Szükség esetén futás közben az [method AudioServer.get_bus_effect_instance] metódussal kérheted le."
+
+#. AudioEffectLimiter.brief
+#: doc/classes/AudioEffectLimiter.xml
+msgid "Adds a soft-clip limiter audio effect to an audio bus."
+msgstr "Lágy vágású csúcshatárolót ad egy hangbuszhoz."
+
+#. AudioEffectLimiter.ceiling_db
+#: doc/classes/AudioEffectLimiter.xml
+msgid "The waveform's maximum allowed value, in dB. Value can range from -20 to -0.1."
+msgstr "A hullámforma legnagyobb megengedett szintje decibelben. Az érték −20 és −0,1 közé eshet."
+
+#. AudioEffectLimiter.soft_clip_db
+#: doc/classes/AudioEffectLimiter.xml
+msgid "Modifies the volume of the limited waves, in dB. Value can range from 0 to 6."
+msgstr "Módosítja a határolt hullámok hangerőszintjét decibelben. Az érték 0 és 6 közé eshet."
+
+#. AudioEffectLimiter.soft_clip_ratio
+#: doc/classes/AudioEffectLimiter.xml
+msgid "This property has no effect on the audio. Use [AudioEffectHardLimiter] instead, as this Limiter effect is deprecated."
+msgstr "Ez a tulajdonság nem módosítja a hangjelet. Az effekt elavult, ezért az [AudioEffectHardLimiter] használandó."
+
+#. AudioEffectLimiter.threshold_db
+#: doc/classes/AudioEffectLimiter.xml
+msgid "The volume threshold level from which the limiter begins to be active, in dB. Value can range from -30 to 0."
+msgstr "Az a hangerőküszöb decibelben, amely fölött a határoló működésbe lép. Az érték −30 és 0 közé eshet."
+
+#. AudioEffectLowPassFilter.brief
+#: doc/classes/AudioEffectLowPassFilter.xml
+msgid "Adds a low-pass filter to an audio bus."
+msgstr "Aluláteresztő szűrőt ad egy hangbuszhoz."
+
+#. AudioEffectLowShelfFilter.brief
+#: doc/classes/AudioEffectLowShelfFilter.xml
+msgid "Adds a low-shelf filter to an audio bus."
+msgstr "A mély frekvenciákat egységesen erősítő vagy csillapító polcszűrőt ad egy hangbuszhoz."
+
+#. AudioEffectNotchFilter.brief
+#: doc/classes/AudioEffectNotchFilter.xml
+msgid "Adds a notch filter to an audio bus."
+msgstr "Keskeny frekvenciasávot elnyomó szűrőt ad egy hangbuszhoz."
+
+#. AudioEffectPanner.pan
+#: doc/classes/AudioEffectPanner.xml
+msgid "Pan position. Negative values pan the sound to the left, positive pan to the right. Value can range from -1 to 1."
+msgstr "A panorámapozíció. A negatív érték balra, a pozitív jobbra tolja a hangot. Az érték −1 és 1 közé eshet."
+
+#. AudioEffectPhaser.depth
+#: doc/classes/AudioEffectPhaser.xml
+msgid "Intensity of the effect. Value can range from 0.1 to 4.0."
+msgstr "Az effekt intenzitása. Az érték 0,1 és 4,0 közé eshet."
+
+#. AudioEffectPhaser.feedback
+#: doc/classes/AudioEffectPhaser.xml
+msgid "The volume ratio of the filtered audio that is fed back to the all-pass filters. The higher the value, the sharper and louder the peak filters created by the effect. Value can range from 0.1 to 0.9."
+msgstr "A szűrt jel azon része, amelyet az effekt a mindentáteresztő szűrőkre visszavezet. Nagyobb értéknél keskenyebbek és erősebbek az effekt frekvenciakiemelései. Az érték 0,1 és 0,9 közé eshet."
+
+#. AudioEffectPhaser.range_max_hz
+#: doc/classes/AudioEffectPhaser.xml
+msgid "Determines the maximum frequency affected by the low-frequency oscillator modulations, in Hz. Value can range from 10 to 10000."
+msgstr "Az alacsony frekvenciájú oszcillátor modulációja által érintett legmagasabb frekvencia hertzben. Az érték 10 és 10000 közé eshet."
+
+#. AudioEffectPhaser.range_min_hz
+#: doc/classes/AudioEffectPhaser.xml
+msgid "Determines the minimum frequency affected by the low-frequency oscillator modulations, in Hz. Value can range from 10 to 10000."
+msgstr "Az alacsony frekvenciájú oszcillátor modulációja által érintett legalacsonyabb frekvencia hertzben. Az érték 10 és 10000 közé eshet."
+
+#. AudioEffectPhaser.rate_hz
+#: doc/classes/AudioEffectPhaser.xml
+msgid "Adjusts the rate in Hz at which the effect sweeps up and down across the frequency range. Value can range from 0.01 to 20."
+msgstr "Az a hertzben megadott frekvencia, amellyel az effekt fel-le pásztázza a frekvenciatartományt. Az érték 0,01 és 20 közé eshet."
+
+#. AudioEffectPitchShift.description
+#: doc/classes/AudioEffectPitchShift.xml
+msgid "Allows modulation of pitch without modifying speed. All frequencies can be raised or lowered with minimal effect on transients."
+msgstr "A lejátszási sebesség módosítása nélkül változtatja meg a hangmagasságot. Minden frekvenciát feljebb vagy lejjebb tolhat, miközben a hang hirtelen változásait csak kis mértékben érinti."
+
+#. AudioEffectPitchShift.fft_size
+#: doc/classes/AudioEffectPitchShift.xml
+msgid "The size of the [url=https://en.wikipedia.org/wiki/Fast_Fourier_transform]Fast Fourier transform[/url] buffer. Higher values smooth out the effect over time, but have greater latency. The effects of this higher latency are especially noticeable on audio signals that have sudden amplitude changes."
+msgstr "A [url=https://en.wikipedia.org/wiki/Fast_Fourier_transform]gyors Fourier-transzformáció[/url] puffermérete. A nagyobb puffer egyenletesebbé teszi az effektet, de növeli a késleltetést. A késleltetés hirtelen amplitúdóváltozásnál különösen észrevehető."
+
+#. AudioEffectPitchShift.oversampling
+#: doc/classes/AudioEffectPitchShift.xml
+msgid "The oversampling factor to use. Higher values result in better quality, but are more demanding on the CPU and may cause audio cracking if the CPU can't keep up."
+msgstr "A túlmintavételezés szorzója. Nagyobb értékkel jobb minőség érhető el, de a CPU terhelése is nő. Ha a processzor nem tud lépést tartani, a hang recseghet."
+
+#. AudioEffectPitchShift.pitch_scale
+#: doc/classes/AudioEffectPitchShift.xml
+msgid "The pitch scale to use. [code]1.0[/code] is the default pitch and plays sounds unaffected. [member pitch_scale] can range from 0 (infinitely low pitch, inaudible) to 16 (16 times higher than the initial pitch)."
+msgstr "A hangmagasság szorzója. Az alapértelmezett [code]1.0[/code] változatlan hangmagasságon játszik le. A [member pitch_scale] értéke 0 és 16 közé eshet. A 0 hallhatatlanul mély hangnak, a 16 az eredeti frekvencia tizenhatszorosának felel meg."
+
+#. AudioEffectPitchShift.FFT_SIZE_256
+#. AudioEffectSpectrumAnalyzer.FFT_SIZE_256
+#: doc/classes/AudioEffectPitchShift.xml doc/classes/AudioEffectSpectrumAnalyzer.xml
+msgid "Use a buffer of 256 samples for the Fast Fourier transform. Lowest latency, but least stable over time."
+msgstr "256 mintás puffert használ a gyors Fourier-transzformációhoz. A késleltetés itt a legkisebb, de az eredmény időben a legkevésbé stabil."
+
+#. AudioEffectPitchShift.FFT_SIZE_512
+#. AudioEffectSpectrumAnalyzer.FFT_SIZE_512
+#: doc/classes/AudioEffectPitchShift.xml doc/classes/AudioEffectSpectrumAnalyzer.xml
+msgid "Use a buffer of 512 samples for the Fast Fourier transform. Low latency, but less stable over time."
+msgstr "512 mintás puffert használ a gyors Fourier-transzformációhoz. Kicsi a késleltetés, de az eredmény kevésbé stabil."
+
+#. AudioEffectPitchShift.FFT_SIZE_1024
+#. AudioEffectSpectrumAnalyzer.FFT_SIZE_1024
+#: doc/classes/AudioEffectPitchShift.xml doc/classes/AudioEffectSpectrumAnalyzer.xml
+msgid "Use a buffer of 1024 samples for the Fast Fourier transform. This is a compromise between latency and stability over time."
+msgstr "1024 mintás puffert használ a gyors Fourier-transzformációhoz. Egyensúlyt teremt a késleltetés és az eredmény időbeli stabilitása között."
+
+#. AudioEffectPitchShift.FFT_SIZE_2048
+#. AudioEffectSpectrumAnalyzer.FFT_SIZE_2048
+#: doc/classes/AudioEffectPitchShift.xml doc/classes/AudioEffectSpectrumAnalyzer.xml
+msgid "Use a buffer of 2048 samples for the Fast Fourier transform. High latency, but stable over time."
+msgstr "2048 mintás puffert használ a gyors Fourier-transzformációhoz. A késleltetés nagy, de az eredmény időben stabil."
+
+#. AudioEffectPitchShift.FFT_SIZE_4096
+#. AudioEffectSpectrumAnalyzer.FFT_SIZE_4096
+#: doc/classes/AudioEffectPitchShift.xml doc/classes/AudioEffectSpectrumAnalyzer.xml
+msgid "Use a buffer of 4096 samples for the Fast Fourier transform. Highest latency, but most stable over time."
+msgstr "4096 mintás puffert használ a gyors Fourier-transzformációhoz. A késleltetés itt a legnagyobb, de az eredmény időben a legstabilabb."
+
+#. AudioEffectPitchShift.FFT_SIZE_MAX
+#. AudioEffectSpectrumAnalyzer.FFT_SIZE_MAX
+#: doc/classes/AudioEffectPitchShift.xml doc/classes/AudioEffectSpectrumAnalyzer.xml
+msgid "Represents the size of the [enum FFTSize] enum."
+msgstr "A [enum FFTSize] felsorolás mérete."
+
+#. AudioEffectRecord.brief
+#: doc/classes/AudioEffectRecord.xml
+msgid "Audio effect used for recording the sound from an audio bus."
+msgstr "Egy hangbusz hangjának rögzítésére használható effekt."
+
+#. AudioEffectRecord.get_recording
+#: doc/classes/AudioEffectRecord.xml
+msgid "Returns the recorded sample."
+msgstr "A rögzített hangmintát adja vissza."
+
+#. AudioEffectRecord.is_recording_active
+#: doc/classes/AudioEffectRecord.xml
+msgid "Returns whether the recording is active or not."
+msgstr "Megadja, hogy folyamatban van-e a hangrögzítés."
+
+#. AudioEffectRecord.set_recording_active
+#: doc/classes/AudioEffectRecord.xml
+msgid "If [code]true[/code], the sound will be recorded. Note that restarting the recording will remove the previously recorded sample."
+msgstr "Ha az értéke [code]true[/code], elindul a hangrögzítés. A rögzítés újbóli indítása törli a korábban rögzített hangmintát."
+
+#. AudioEffectRecord.format
+#: doc/classes/AudioEffectRecord.xml
+msgid "Specifies the format in which the sample will be recorded."
+msgstr "Megadja a rögzített hangminta formátumát."
+
+#. AudioEffectReverb.damping
+#: doc/classes/AudioEffectReverb.xml
+msgid "Defines how reflective the imaginary room's walls are. The more reflective, the more high frequency content the reverb has. Value can range from 0 to 1."
+msgstr "A szimulált helyiség falainak hangvisszaverését szabályozza. Erősebb visszaverődésnél több magas frekvencia marad az utózengésben. Az érték 0 és 1 közé eshet."
+
+#. AudioEffectReverb.dry
+#: doc/classes/AudioEffectReverb.xml
+msgid "The volume ratio of the original audio. At 0, only the modified audio is outputted. Value can range from 0 to 1."
+msgstr "Az eredeti jel aránya a kimenetben. A 0 értéknél csak a feldolgozott jel hallható. Az érték 0 és 1 közé eshet."
+
+#. AudioEffectReverb.hipass
+#: doc/classes/AudioEffectReverb.xml
+msgid "High-pass filter allows frequencies higher than a certain cutoff threshold and attenuates frequencies lower than the cutoff threshold. Value can range from 0 to 1."
+msgstr "A felüláteresztő szűrő átengedi a határfrekvencia fölötti összetevőket, az alatta lévőket pedig csillapítja. A beállítás értéke 0 és 1 közé eshet."
+
+#. AudioEffectReverb.predelay_feedback
+#: doc/classes/AudioEffectReverb.xml
+msgid "Gain of early reflection copies. At higher values, early reflection copies are louder and ring out for longer. Value can range from 0 to 1."
+msgstr "A korai visszaverődések visszacsatolt másolatainak erősítése. Nagyobb értéknél hangosabbak, és tovább hallhatók. Az érték 0 és 1 közé eshet."
+
+#. AudioEffectReverb.predelay_msec
+#: doc/classes/AudioEffectReverb.xml
+msgid "Time between the original audio and the early reflections of the reverb signal, in milliseconds. Value can range from 20 to 500."
+msgstr "Az eredeti hang és az utózengés korai visszaverődései között eltelt idő ezredmásodpercben. Az érték 20 és 500 közé eshet."
+
+#. AudioEffectReverb.room_size
+#: doc/classes/AudioEffectReverb.xml
+msgid "Dimensions of simulated room. Bigger means more echoes. Value can range from 0 to 1."
+msgstr "A szimulált helyiség mérete. Nagyobb helyiségben több visszhang hallható. Az érték 0 és 1 közé eshet."
+
+#. AudioEffectReverb.spread
+#: doc/classes/AudioEffectReverb.xml
+msgid "Widens or narrows the stereo image of the reverb tail. At 1, it fully widens. Value can range from 0 to 1."
+msgstr "Szélesíti vagy szűkíti az utózengés lecsengésének sztereó képét. Az 1 érték adja a legszélesebb sztereó képet. Az érték 0 és 1 közé eshet."
+
+#. AudioEffectReverb.wet
+#: doc/classes/AudioEffectReverb.xml
+msgid "The volume ratio of the modified audio. At 0, only the original audio is outputted. Value can range from 0 to 1."
+msgstr "A feldolgozott jel aránya a kimenetben. A 0 értéknél csak az eredeti jel hallható. Az érték 0 és 1 közé eshet."
+
+#. AudioEffectSpectrumAnalyzer.brief
+#: doc/classes/AudioEffectSpectrumAnalyzer.xml
+msgid "Creates an [AudioEffectInstance] which performs frequency analysis and exposes results to be accessed in real-time."
+msgstr "Olyan [AudioEffectInstance] példányt hoz létre, amely frekvenciaelemzést végez, és valós időben hozzáférést ad az eredményekhez."
+
+#. AudioEffectSpectrumAnalyzer.buffer_length
+#: doc/classes/AudioEffectSpectrumAnalyzer.xml
+msgid "The length of the buffer to keep, in seconds. Higher values keep data around for longer, but require more memory. Value can range from 0.1 to 4."
+msgstr "A pufferben tárolt hang időtartama másodpercben. Nagyobb értéknél tovább maradnak elérhetők az adatok, de nő a memóriaigény. Az érték 0,1 és 4 közé eshet."
+
+#. AudioEffectSpectrumAnalyzer.fft_size
+#: doc/classes/AudioEffectSpectrumAnalyzer.xml
+msgid "The size of the [url=https://en.wikipedia.org/wiki/Fast_Fourier_transform]Fast Fourier transform[/url] buffer. Higher values smooth out the spectrum analysis over time, but have greater latency. The effects of this higher latency are especially noticeable with sudden amplitude changes."
+msgstr "A [url=https://en.wikipedia.org/wiki/Fast_Fourier_transform]gyors Fourier-transzformáció[/url] puffermérete. Nagyobb pufferrel egyenletesebb az időbeli spektrumelemzés, de nő a késleltetés. A különbség hirtelen amplitúdóváltozásnál különösen észrevehető."
+
+#. AudioEffectSpectrumAnalyzerInstance.brief
+#: doc/classes/AudioEffectSpectrumAnalyzerInstance.xml
+msgid "Queryable instance of an [AudioEffectSpectrumAnalyzer]."
+msgstr "Egy [AudioEffectSpectrumAnalyzer] lekérdezhető példánya."
+
+#. AudioEffectSpectrumAnalyzerInstance.MAGNITUDE_AVERAGE
+#: doc/classes/AudioEffectSpectrumAnalyzerInstance.xml
+msgid "Use the average value across the frequency range as magnitude."
+msgstr "A frekvenciatartomány átlagos értékét használja amplitúdóként."
+
+#. AudioEffectSpectrumAnalyzerInstance.MAGNITUDE_MAX
+#: doc/classes/AudioEffectSpectrumAnalyzerInstance.xml
+msgid "Use the maximum value of the frequency range as magnitude."
+msgstr "A frekvenciatartomány legnagyobb értékét használja amplitúdóként."
+
+#. AudioEffectStereoEnhance.description
+#: doc/classes/AudioEffectStereoEnhance.xml
+msgid "Adjusts gain of the left and right channels, and makes mono sounds stereo through phase shifting."
+msgstr "Beállítja a bal és a jobb csatorna erősítését, és fáziseltolással sztereó hatást ad a monó hangnak."
+
+#. AudioEffectStereoEnhance.pan_pullout
+#: doc/classes/AudioEffectStereoEnhance.xml
+msgid "Gain of the side channels, if they exist. A value of 0 will downmix stereo to mono. Value can range from 0 to 4."
+msgstr "A sztereó jel oldalsó összetevőjének erősítése, ha van ilyen összetevő. A 0 érték monóvá keveri a sztereó jelet. Az érték 0 és 4 közé eshet."
+
+#. AudioEffectStereoEnhance.surround
+#: doc/classes/AudioEffectStereoEnhance.xml
+msgid "Widens the stereo image through phase shifting in conjunction with [member time_pullout_ms]. Just pans sound to the left channel if [member time_pullout_ms] is 0. Value can range from 0 to 1."
+msgstr "A [member time_pullout_ms] beállítással együtt, fáziseltolással szélesíti a sztereó képet. Ha a [member time_pullout_ms] értéke 0, a beállítás balra tolja a hangképet. Az érték 0 és 1 közé eshet."
+
+#. AudioEffectStereoEnhance.time_pullout_ms
+#: doc/classes/AudioEffectStereoEnhance.xml
+msgid "Widens the stereo image through phase shifting in conjunction with [member surround]. Just delays the right channel if [member surround] is 0. Value is in milliseconds, and can range from 0 to 50."
+msgstr "A [member surround] beállítással együtt, fáziseltolással szélesíti a sztereó képet. Ha a [member surround] értéke 0, a beállítás csak a jobb csatornát késlelteti. Az érték ezredmásodpercben értendő, és 0 és 50 közé eshet."
+
+#. AudioStreamPlayer.brief
+#: doc/classes/AudioStreamPlayer.xml
+msgid "A node for audio playback."
+msgstr "Hanglejátszó csomópont."
+
+#. AudioStreamPlayer.get_stream_playback
+#: doc/classes/AudioStreamPlayer.xml
+msgid "Returns the latest [AudioStreamPlayback] of this node, usually the most recently created by [method play]. If no sounds are playing, this method fails and returns an empty playback."
+msgstr "A csomópont legutóbbi [AudioStreamPlayback] példányát adja vissza. Ez általában a [method play] legutóbbi hívásával létrehozott példány. Ha semmilyen hang nem szól, a metódus hibát jelez, és üres lejátszási példányt ad vissza."
+
+#. AudioStreamPlayer.has_stream_playback
+#: doc/classes/AudioStreamPlayer.xml
+msgid "Returns [code]true[/code] if any sound is active, even if [member stream_paused] is set to [code]true[/code]. See also [member playing] and [method get_stream_playback]."
+msgstr "[code]true[/code] értéket ad vissza, ha van aktív hang. Ez akkor is igaz, ha a [member stream_paused] értéke [code]true[/code]. Lásd még a [member playing] tulajdonságot és a [method get_stream_playback] metódust."
+
+#. AudioStreamPlayer.play
+#: doc/classes/AudioStreamPlayer.xml
+msgid "Plays a sound from the beginning, or the given [param from_position] in seconds."
+msgstr "A hangot az elejétől vagy a másodpercben megadott [param from_position] pozíciótól játssza le."
+
+#. AudioStreamPlayer.seek
+#: doc/classes/AudioStreamPlayer.xml
+msgid "Restarts all sounds to be played from the given [param to_position], in seconds. Does nothing if no sounds are playing."
+msgstr "Minden éppen lejátszott hangot újraindít a másodpercben megadott [param to_position] pozíciótól. Ha semmilyen hang nem szól, a metódusnak nincs hatása."
+
+#. AudioStreamPlayer.stop
+#: doc/classes/AudioStreamPlayer.xml
+msgid "Stops all sounds from this node."
+msgstr "Leállítja a csomópont összes hangját."
+
+#. AudioStreamPlayer.finished
+#: doc/classes/AudioStreamPlayer.xml
+msgid "Emitted when a sound finishes playing without interruptions. This signal is [i]not[/i] emitted when calling [method stop], or when exiting the tree while sounds are playing."
+msgstr "A jelzés akkor érkezik, amikor egy hang megszakítás nélkül a végére ér. [i]Nem[/i] érkezik jelzés a [method stop] hívásakor, illetve akkor sem, ha a csomópont lejátszás közben kilép a jelenetfából."
+
+#. AudioStreamPlayer.autoplay
+#: doc/classes/AudioStreamPlayer.xml
+msgid "If [code]true[/code], this node calls [method play] when entering the tree."
+msgstr "Ha az értéke [code]true[/code], a csomópont a jelenetfába lépéskor meghívja a [method play] metódust."
+
+#. AudioStreamPlayer.max_polyphony
+#: doc/classes/AudioStreamPlayer.xml
+msgid "The maximum number of sounds this node can play at the same time. Calling [method play] after this value is reached will cut off the oldest sounds."
+msgstr "A csomóponton egyszerre lejátszható hangok legnagyobb száma. Ha a határ elérése után meghívod a [method play] metódust, a lejátszó a legrégebben elindított hangokat állítja le."
+
+#. AudioStreamPlayer.mix_target
+#: doc/classes/AudioStreamPlayer.xml
+msgid "The mix target channels. Has no effect when two speakers or less are detected (see [enum AudioServer.SpeakerMode])."
+msgstr "Meghatározza, mely csatornákra keverje a hangot. Legfeljebb két hangsugárzó esetén hatástalan. Lásd az [enum AudioServer.SpeakerMode] felsorolást."
+
+#. AudioStreamPlayer.pitch_scale
+#: doc/classes/AudioStreamPlayer.xml
+msgid "The audio's pitch and tempo, as a multiplier of the [member stream]'s sample rate. A value of [code]2.0[/code] doubles the audio's pitch, while a value of [code]0.5[/code] halves the pitch."
+msgstr "A hangmagasságot és az ütemet módosító szorzó, amely a [member stream] mintavételi frekvenciájára hat. A [code]2.0[/code] érték kétszeresére, a [code]0.5[/code] pedig felére változtatja a hang frekvenciáját."
+
+#. AudioStreamPlayer.playing
+#: doc/classes/AudioStreamPlayer.xml
+msgid "If [code]true[/code], this node is playing sounds. Setting this property has the same effect as [method play] and [method stop]."
+msgstr "Ha az értéke [code]true[/code], a csomópont hangot játszik le. A tulajdonság beállítása ugyanúgy működik, mint a [method play] vagy a [method stop] meghívása."
+
+#. AudioStreamPlayer.stream
+#: doc/classes/AudioStreamPlayer.xml
+msgid "The [AudioStream] resource to be played. Setting this property stops all currently playing sounds. If left empty, the [AudioStreamPlayer] does not work."
+msgstr "A lejátszandó [AudioStream] erőforrás. A tulajdonság módosításakor minden éppen szóló hang leáll. Ha üresen hagyod, az [AudioStreamPlayer] nem játszik le hangot."
+
+#. AudioStreamPlayer.MIX_TARGET_SURROUND
+#: doc/classes/AudioStreamPlayer.xml
+msgid "The audio will be played on all surround channels."
+msgstr "A hang minden térhangcsatornán megszólal."
+
+#. AudioStreamPlayer2D.finished
+#. AudioStreamPlayer3D.finished
+#: doc/classes/AudioStreamPlayer2D.xml doc/classes/AudioStreamPlayer3D.xml
+msgid "Emitted when the audio stops playing."
+msgstr "A jelzés akkor érkezik, amikor egy hang lejátszása befejeződik."
+
+#. AudioStreamPlayer3D.brief
+#: doc/classes/AudioStreamPlayer3D.xml
+msgid "Plays positional sound in 3D space."
+msgstr "A forrás helyétől függő hangot játszik le a 3D-s térben."
+
+#. AudioStreamPlayer3D.get_stream_playback
+#: doc/classes/AudioStreamPlayer3D.xml
+msgid "Returns the [AudioStreamPlayback] object associated with this [AudioStreamPlayer3D]."
+msgstr "Az ehhez az [AudioStreamPlayer3D] csomóponthoz tartozó [AudioStreamPlayback] példányt adja vissza."
+
+#. AudioStreamPlayer3D.attenuation_filter_cutoff_hz
+#: doc/classes/AudioStreamPlayer3D.xml
+msgid "The cutoff frequency of the attenuation low-pass filter, in Hz. A sound above this frequency is attenuated more than a sound below this frequency. To disable this effect, set this to [code]20500[/code] as this frequency is above the human hearing limit."
+msgstr "A távolságfüggő csillapításhoz használt aluláteresztő szűrő határfrekvenciája hertzben. A határ fölötti hangokat a szűrő erősebben csillapítja. A hatás kikapcsolásához állítsd az értéket [code]20500[/code]-ra, amely az emberi hallás jellemző felső határa fölött van."
+
+#. AudioStreamPlayer3D.attenuation_model
+#: doc/classes/AudioStreamPlayer3D.xml
+msgid "Decides if audio should get quieter with distance linearly, quadratically, logarithmically, or not be affected by distance, effectively disabling attenuation."
+msgstr "Meghatározza a távolságfüggő hangerőcsillapítás modelljét. A csillapítás követheti a távolság reciprokát, a távolság négyzetének reciprokát vagy logaritmikus görbét. A távolságfüggő csillapítás ki is kapcsolható."
+
+#. AudioStreamSynchronized.brief
+#: modules/interactive_music/doc_classes/AudioStreamSynchronized.xml
+msgid "Stream that can be fitted with sub-streams, which will be played in-sync."
+msgstr "Együtt, szinkronban megszólaló hangfolyamokat tartalmazhat."
+
+#. AudioStreamSynchronized.description
+#: modules/interactive_music/doc_classes/AudioStreamSynchronized.xml
+msgid "This is a stream that can be fitted with sub-streams, which will be played in-sync. The streams begin at exactly the same time when play is pressed, and will end when the last of them ends. If one of the sub-streams loops, then playback will continue."
+msgstr "Több hangfolyam szinkron lejátszására szolgál. A hangfolyamok egyszerre indulnak, és a lejátszás az utolsó hangfolyam végén fejeződik be. Ha valamelyik hangfolyam ismétlődik, a lejátszás folytatódik."
+
+#. AudioStreamSynchronized.get_sync_stream
+#: modules/interactive_music/doc_classes/AudioStreamSynchronized.xml
+msgid "Get one of the synchronized streams, by index."
+msgstr "A megadott indexű szinkronizált hangfolyamot adja vissza."
+
+#. AudioStreamSynchronized.get_sync_stream_volume
+#: modules/interactive_music/doc_classes/AudioStreamSynchronized.xml
+msgid "Get the volume of one of the synchronized streams, by index."
+msgstr "A megadott indexű szinkronizált hangfolyam hangerejét adja vissza."
+
+#. AudioStreamSynchronized.set_sync_stream
+#: modules/interactive_music/doc_classes/AudioStreamSynchronized.xml
+msgid "Set one of the synchronized streams, by index."
+msgstr "Beállítja a megadott indexű szinkronizált hangfolyamot."
+
+#. AudioStreamSynchronized.set_sync_stream_volume
+#: modules/interactive_music/doc_classes/AudioStreamSynchronized.xml
+msgid "Set the volume of one of the synchronized streams, by index."
+msgstr "Beállítja a megadott indexű szinkronizált hangfolyam hangerejét."
+
+#. AudioStreamSynchronized.stream_count
+#: modules/interactive_music/doc_classes/AudioStreamSynchronized.xml
+msgid "Set the total amount of streams that will be played back synchronized."
+msgstr "Beállítja az együtt lejátszandó hangfolyamok számát."
+
+#. AudioStreamSynchronized.MAX_STREAMS
+#: modules/interactive_music/doc_classes/AudioStreamSynchronized.xml
+msgid "Maximum amount of streams that can be synchronized."
+msgstr "A szinkronizálható hangfolyamok legnagyobb száma."
