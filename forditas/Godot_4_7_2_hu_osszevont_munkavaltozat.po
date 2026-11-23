@@ -53085,25 +53085,25 @@ msgstr "A következő hangkeverésig hátralévő időt adja vissza másodpercbe
 #. AudioServer.set_bus_bypass_effects
 #: doc/classes/AudioServer.xml
 msgid "If [code]true[/code], the bus at index [param bus_idx] is bypassing effects."
-msgstr "A [code]true[/code] visszatérési érték azt jelzi, hogy a [param bus_idx] indexű hangbusz megkerüli az effektjeit."
+msgstr "A [code]true[/code] érték esetén a [param bus_idx] indexű hangbusz megkerüli az effektjeit."
 
 #. AudioServer.is_bus_effect_enabled
 #. AudioServer.set_bus_effect_enabled
 #: doc/classes/AudioServer.xml
 msgid "If [code]true[/code], the effect at index [param effect_idx] on the bus at index [param bus_idx] is enabled."
-msgstr "A [code]true[/code] visszatérési érték azt jelzi, hogy a [param bus_idx] indexű hangbusz [param effect_idx] indexű effektje engedélyezve van."
+msgstr "A [code]true[/code] érték esetén a [param bus_idx] indexű hangbusz [param effect_idx] indexű effektje engedélyezve van."
 
 #. AudioServer.is_bus_mute
 #. AudioServer.set_bus_mute
 #: doc/classes/AudioServer.xml
 msgid "If [code]true[/code], the bus at index [param bus_idx] is muted."
-msgstr "A [code]true[/code] visszatérési érték azt jelzi, hogy a [param bus_idx] indexű hangbusz el van némítva."
+msgstr "A [code]true[/code] érték esetén a [param bus_idx] indexű hangbusz el van némítva."
 
 #. AudioServer.is_bus_solo
 #. AudioServer.set_bus_solo
 #: doc/classes/AudioServer.xml
 msgid "If [code]true[/code], the bus at index [param bus_idx] is in solo mode."
-msgstr "A [code]true[/code] visszatérési érték azt jelzi, hogy a [param bus_idx] indexű hangbusz szóló módban van."
+msgstr "A [code]true[/code] érték esetén a [param bus_idx] indexű hangbusz szóló módban van."
 
 #. AudioServer.move_bus
 #: doc/classes/AudioServer.xml
