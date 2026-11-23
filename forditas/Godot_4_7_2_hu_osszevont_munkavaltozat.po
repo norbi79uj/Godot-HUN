@@ -56010,7 +56010,7 @@ msgstr "Beállítja azt a további forgatást, amelyet a motor a módosítás ut
 #. SkeletonModification2DLookAt.description
 #: doc/classes/SkeletonModification2DLookAt.xml
 msgid "This [SkeletonModification2D] rotates a bone to look a target. This is extremely helpful for moving character's head to look at the player, rotating a turret to look at a target, or any other case where you want to make a bone rotate towards something quickly and easily."
-msgstr "Ez a [SkeletonModification2D] a megadott cél felé fordítja a csontot. Használhatod például arra, hogy egy karakter feje kövesse a játékost, vagy hogy egy forgatható csomópont a kijelölt cél felé nézzen."
+msgstr "Ez a [SkeletonModification2D] a megadott cél felé fordítja a csontot. Használhatod például arra, hogy egy karakter feje kövesse a játékost, vagy hogy egy lövegtorony a kijelölt célpontra forduljon."
 
 #. SkeletonModification2DLookAt.set_constraint_angle_invert
 #: doc/classes/SkeletonModification2DLookAt.xml
@@ -56321,7 +56321,7 @@ msgstr "Csillapítja a test forgását. A kiinduló csillapítást a [member Pro
 #. PhysicalBone3D.angular_velocity
 #: doc/classes/PhysicalBone3D.xml
 msgid "The PhysicalBone3D's rotational velocity in [i]radians[/i] per second."
-msgstr "A PhysicalBone3D szögsebessége másodpercenkénti [i]radiánban[/i]."
+msgstr "A PhysicalBone3D szögsebessége [i]radián[/i]/másodpercben (rad/s)."
 
 #. PhysicalBone3D.body_offset
 #: doc/classes/PhysicalBone3D.xml
@@ -56519,4 +56519,4 @@ msgstr "Az [AnimationTree] által gyökércsontként használt csont neve. Ember
 #. SkeletonProfile.scale_base_bone
 #: doc/classes/SkeletonProfile.xml
 msgid "A bone name which will use model's height as the coefficient for normalization. For example, [SkeletonProfileHumanoid] defines it as [code]Hips[/code]."
-msgstr "Annak a csontnak a neve, amelynek magasságából a motor kiszámítja a mozgás méretének normalizálásához használt tényezőt. A [SkeletonProfileHumanoid] például a [code]Hips[/code] csontot használja."
+msgstr "Annak a csontnak a neve, amelynek a modellben elfoglalt magassági helyzetét a motor a mozgás méretarányának normalizálásához használja. A [SkeletonProfileHumanoid] például a [code]Hips[/code] csontot használja."
