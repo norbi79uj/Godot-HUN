@@ -54871,7 +54871,7 @@ msgstr "A megadott elérési úton lévő fájlból új [AudioStreamMP3] példá
 #. AudioStreamOggVorbis.bar_beats
 #: modules/mp3/doc_classes/AudioStreamMP3.xml modules/vorbis/doc_classes/AudioStreamOggVorbis.xml
 msgid "The number of beats within a single bar in the audio track."
-msgstr "A hangsáv egy ütemére jutó ütések száma."
+msgstr "Az ütések száma egy ütemben."
 
 #. AudioStreamMP3.beat_count
 #. AudioStreamOggVorbis.beat_count
@@ -54987,12 +54987,12 @@ msgstr "A véletlenszerű hangmagasság-változtatás legnagyobb eltérése fél
 #. AudioStreamRandomizer.stream_{index}/stream
 #: doc/classes/AudioStreamRandomizer.xml
 msgid "The [AudioStream] at [code]index[/code].\n[b]Note:[/b] [code]index[/code] is a value in the [code]0 .. streams_count - 1[/code] range."
-msgstr "Az [code]index[/code] helyen lévő [AudioStream] hangfolyam.\n[b]Megjegyzés:[/b] Az [code]index[/code] értékének a [code]0 .. streams_count - 1[/code] tartományba kell esnie."
+msgstr "Az [code]index[/code] sorszámú [AudioStream] hangfolyam.\n[b]Megjegyzés:[/b] Az [code]index[/code] értékének a [code]0 .. streams_count - 1[/code] tartományba kell esnie."
 
 #. AudioStreamRandomizer.stream_{index}/weight
 #: doc/classes/AudioStreamRandomizer.xml
 msgid "The probability weight of the [AudioStream] at [code]index[/code].\n[b]Note:[/b] [code]index[/code] is a value in the [code]0 .. streams_count - 1[/code] range."
-msgstr "Az [code]index[/code] helyen lévő [AudioStream] kiválasztásának valószínűségi súlya.\n[b]Megjegyzés:[/b] Az [code]index[/code] értékének a [code]0 .. streams_count - 1[/code] tartományba kell esnie."
+msgstr "Az [code]index[/code] sorszámú [AudioStream] kiválasztásának valószínűségi súlya.\n[b]Megjegyzés:[/b] Az [code]index[/code] értékének a [code]0 .. streams_count - 1[/code] tartományba kell esnie."
 
 #. AudioStreamPlaybackPolyphonic.description
 #: doc/classes/AudioStreamPlaybackPolyphonic.xml
