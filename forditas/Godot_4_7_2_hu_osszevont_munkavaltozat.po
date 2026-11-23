@@ -53469,3 +53469,522 @@ msgstr "A lejátszási listában szereplő hangfolyamok száma."
 #: modules/interactive_music/doc_classes/AudioStreamPlaylist.xml
 msgid "Maximum amount of streams supported in the playlist."
 msgstr "A lejátszási listában szereplő hangfolyamok legnagyobb száma."
+
+#. AudioEffectAmplify.description
+#: doc/classes/AudioEffectAmplify.xml
+msgid "Increases or decreases the volume being routed through the audio bus."
+msgstr "Növeli vagy csökkenti a hangbuszon átvezetett jel hangerejét."
+
+#. AudioEffectAmplify.volume_db
+#: doc/classes/AudioEffectAmplify.xml
+msgid "Amount of amplification in dB. Positive values make the sound louder, negative values make it quieter. Value can range from -80 to 24."
+msgstr "Az erősítés mértéke decibelben. A pozitív érték hangosítja, a negatív halkítja a jelet. Az érték −80 és 24 közé eshet."
+
+#. AudioEffectBandLimitFilter.brief
+#: doc/classes/AudioEffectBandLimitFilter.xml
+msgid "Adds a band-limit filter to an audio bus."
+msgstr "Sávkorlátozó szűrőt ad egy hangbuszhoz."
+
+#. AudioEffectBandPassFilter.brief
+#: doc/classes/AudioEffectBandPassFilter.xml
+msgid "Adds a band-pass filter to an audio bus."
+msgstr "Sáváteresztő szűrőt ad egy hangbuszhoz."
+
+#. AudioEffectCapture.brief
+#: doc/classes/AudioEffectCapture.xml
+msgid "Exposes audio samples from an audio bus in real-time, such that it can be accessed as data."
+msgstr "Valós időben, feldolgozható adatként teszi elérhetővé egy hangbusz hangmintáit."
+
+#. AudioEffectCapture.can_get_buffer
+#: doc/classes/AudioEffectCapture.xml
+msgid "Returns [code]true[/code] if at least [param frames] samples are available to read in the internal ring buffer."
+msgstr "[code]true[/code] értéket ad vissza, ha a belső körpufferből legalább [param frames] hangkeret olvasható ki."
+
+#. AudioEffectCapture.get_buffer_length_frames
+#: doc/classes/AudioEffectCapture.xml
+msgid "Returns the total size of the internal ring buffer in number of samples."
+msgstr "A belső körpuffer teljes kapacitását adja vissza hangkeretekben."
+
+#. AudioEffectCapture.get_discarded_frames
+#: doc/classes/AudioEffectCapture.xml
+msgid "Returns the number of samples discarded from the audio bus due to full buffer."
+msgstr "A megtelt puffer miatt eldobott hangkeretek számát adja vissza."
+
+#. AudioEffectCapture.get_frames_available
+#: doc/classes/AudioEffectCapture.xml
+msgid "Returns the number of samples available to read using [method get_buffer]."
+msgstr "A [method get_buffer] metódussal kiolvasható hangkeretek számát adja vissza."
+
+#. AudioEffectCapture.get_pushed_frames
+#: doc/classes/AudioEffectCapture.xml
+msgid "Returns the number of samples inserted from the audio bus."
+msgstr "A hangbuszról a pufferbe írt hangkeretek számát adja vissza."
+
+#. AudioEffectChorus.get_voice_cutoff_hz
+#: doc/classes/AudioEffectChorus.xml
+msgid "Returns the frequency threshold of a given [param voice_idx]'s low-pass filter in Hz. Frequencies above this value are removed from the voice."
+msgstr "A [param voice_idx] indexű szólam aluláteresztő szűrőjének határfrekvenciáját adja vissza hertzben. A szűrő csillapítja a szólam ennél magasabb frekvenciájú összetevőit."
+
+#. AudioEffectChorus.get_voice_delay_ms
+#: doc/classes/AudioEffectChorus.xml
+msgid "Returns the delay of a given [param voice_idx] in milliseconds, compared to the original audio."
+msgstr "A [param voice_idx] indexű szólam eredeti hanghoz viszonyított késleltetését adja vissza ezredmásodpercben."
+
+#. AudioEffectChorus.get_voice_depth_ms
+#: doc/classes/AudioEffectChorus.xml
+msgid "Returns the depth of a given [param voice_idx]'s low-frequency oscillator in milliseconds."
+msgstr "A [param voice_idx] indexű szólam alacsony frekvenciájú oszcillátorának modulációs mélységét adja vissza ezredmásodpercben."
+
+#. AudioEffectChorus.get_voice_level_db
+#: doc/classes/AudioEffectChorus.xml
+msgid "Returns the gain of a given [param voice_idx] in dB."
+msgstr "A [param voice_idx] indexű szólam erősítését adja vissza decibelben."
+
+#. AudioEffectChorus.get_voice_pan
+#: doc/classes/AudioEffectChorus.xml
+msgid "Returns the pan position of a given [param voice_idx]. Negative values mean the left channel, positive mean the right."
+msgstr "A [param voice_idx] indexű szólam panorámapozícióját adja vissza. A negatív értékek a bal, a pozitív értékek a jobb csatorna felé tolják a hangot."
+
+#. AudioEffectChorus.get_voice_rate_hz
+#: doc/classes/AudioEffectChorus.xml
+msgid "Returns the rate of a given [param voice_idx]'s low-frequency oscillator in Hz."
+msgstr "A [param voice_idx] indexű szólam alacsony frekvenciájú oszcillátorának frekvenciáját adja vissza hertzben."
+
+#. AudioEffectChorus.set_voice_cutoff_hz
+#: doc/classes/AudioEffectChorus.xml
+msgid "Sets the frequency threshold of a given [param voice_idx]'s low-pass filter in Hz. Frequencies above [param cutoff_hz] are removed from [param voice_idx]. Value can range from 1 to 20500."
+msgstr "Beállítja a [param voice_idx] indexű szólam aluláteresztő szűrőjének határfrekvenciáját hertzben. A [param cutoff_hz] fölötti frekvenciákat csillapítja a [param voice_idx] indexű szólamban. Az érték 1 és 20500 közé eshet."
+
+#. AudioEffectChorus.set_voice_delay_ms
+#: doc/classes/AudioEffectChorus.xml
+msgid "Sets the delay of a given [param voice_idx] in milliseconds, compared to the original audio. Value can range from 0 to 50."
+msgstr "Beállítja a [param voice_idx] indexű szólam eredeti hanghoz viszonyított késleltetését ezredmásodpercben. Az érték 0 és 50 közé eshet."
+
+#. AudioEffectChorus.set_voice_depth_ms
+#: doc/classes/AudioEffectChorus.xml
+msgid "Sets the depth of a given [param voice_idx]'s low-frequency oscillator in milliseconds. Value can range from 0 to 20."
+msgstr "Beállítja a [param voice_idx] indexű szólam alacsony frekvenciájú oszcillátorának modulációs mélységét ezredmásodpercben. Az érték 0 és 20 közé eshet."
+
+#. AudioEffectChorus.set_voice_level_db
+#: doc/classes/AudioEffectChorus.xml
+msgid "Sets the gain of a given [param voice_idx] in dB. Value can range from -60 to 24."
+msgstr "Beállítja a [param voice_idx] indexű szólam erősítését decibelben. Az érték −60 és 24 közé eshet."
+
+#. AudioEffectChorus.set_voice_pan
+#: doc/classes/AudioEffectChorus.xml
+msgid "Sets the pan position of a given [param voice_idx]. Negative values pan the sound to the left, positive pan to the right. Value can range from -1 to 1."
+msgstr "Beállítja a [param voice_idx] indexű szólam panorámapozícióját. A negatív érték balra, a pozitív jobbra tolja a hangot. Az érték −1 és 1 közé eshet."
+
+#. AudioEffectChorus.set_voice_rate_hz
+#: doc/classes/AudioEffectChorus.xml
+msgid "Sets the rate of a given [param voice_idx]'s low-frequency oscillator in Hz. Value can range from 0.1 to 20."
+msgstr "Beállítja a [param voice_idx] indexű szólam alacsony frekvenciájú oszcillátorának frekvenciáját hertzben. Az érték 0,1 és 20 közé eshet."
+
+#. AudioEffectChorus.dry
+#. AudioEffectDelay.dry
+#: doc/classes/AudioEffectChorus.xml doc/classes/AudioEffectDelay.xml
+msgid "The volume ratio of the original audio. Value can range from 0 to 1."
+msgstr "Az eredeti hang aránya a kimenetben. Az érték 0 és 1 közé eshet."
+
+#. AudioEffectChorus.voice/1/cutoff_hz
+#. AudioEffectChorus.voice/2/cutoff_hz
+#. AudioEffectChorus.voice/3/cutoff_hz
+#. AudioEffectChorus.voice/4/cutoff_hz
+#: doc/classes/AudioEffectChorus.xml
+msgid "The frequency threshold of the voice's low-pass filter in Hz."
+msgstr "A szólam aluláteresztő szűrőjének határfrekvenciája hertzben."
+
+#. AudioEffectChorus.voice/1/delay_ms
+#. AudioEffectChorus.voice/2/delay_ms
+#. AudioEffectChorus.voice/3/delay_ms
+#. AudioEffectChorus.voice/4/delay_ms
+#: doc/classes/AudioEffectChorus.xml
+msgid "The delay of the voice in milliseconds, compared to the original audio."
+msgstr "A szólam késleltetése az eredeti hanghoz képest, ezredmásodpercben."
+
+#. AudioEffectChorus.voice/1/depth_ms
+#. AudioEffectChorus.voice/2/depth_ms
+#. AudioEffectChorus.voice/3/depth_ms
+#. AudioEffectChorus.voice/4/depth_ms
+#: doc/classes/AudioEffectChorus.xml
+msgid "The depth of the voice's low-frequency oscillator in milliseconds."
+msgstr "A szólam alacsony frekvenciájú oszcillátorának modulációs mélysége ezredmásodpercben."
+
+#. AudioEffectChorus.voice/1/level_db
+#. AudioEffectChorus.voice/2/level_db
+#. AudioEffectChorus.voice/3/level_db
+#. AudioEffectChorus.voice/4/level_db
+#: doc/classes/AudioEffectChorus.xml
+msgid "The gain of the voice in dB."
+msgstr "A szólam erősítése decibelben."
+
+#. AudioEffectChorus.voice/1/pan
+#. AudioEffectChorus.voice/2/pan
+#. AudioEffectChorus.voice/3/pan
+#. AudioEffectChorus.voice/4/pan
+#: doc/classes/AudioEffectChorus.xml
+msgid "The pan position of the voice."
+msgstr "A szólam panorámapozíciója."
+
+#. AudioEffectChorus.voice/1/rate_hz
+#. AudioEffectChorus.voice/2/rate_hz
+#. AudioEffectChorus.voice/3/rate_hz
+#. AudioEffectChorus.voice/4/rate_hz
+#: doc/classes/AudioEffectChorus.xml
+msgid "The rate of the voice's low-frequency oscillator in Hz."
+msgstr "A szólam alacsony frekvenciájú oszcillátorának frekvenciája hertzben."
+
+#. AudioEffectChorus.voice_count
+#: doc/classes/AudioEffectChorus.xml
+msgid "The number of voices in the effect. Value can range from 1 to 4."
+msgstr "Az effekt szólamainak száma. Az érték 1 és 4 közé eshet."
+
+#. AudioEffectChorus.wet
+#: doc/classes/AudioEffectChorus.xml
+msgid "The volume ratio of all voices. Value can range from 0 to 1."
+msgstr "A feldolgozott szólamok együttes aránya a kimenetben. Az érték 0 és 1 közé eshet."
+
+#. AudioEffectCompressor.attack_us
+#: doc/classes/AudioEffectCompressor.xml
+msgid "Compressor's reaction time when the audio exceeds the volume threshold level, in microseconds. Value can range from 20 to 2000."
+msgstr "A kompresszor reakcióideje a hangerőküszöb átlépése után, mikroszekundumban. Az érték 20 és 2000 közé eshet."
+
+#. AudioEffectCompressor.gain
+#: doc/classes/AudioEffectCompressor.xml
+msgid "Gain of the audio signal, in dB. Value can range from -20 to 20."
+msgstr "A hangjel erősítése decibelben. Az érték −20 és 20 közé eshet."
+
+#. AudioEffectCompressor.mix
+#: doc/classes/AudioEffectCompressor.xml
+msgid "Balance between the original audio and the compressed audio. Value can range from 0 (totally dry) to 1 (totally wet)."
+msgstr "Az eredeti és a kompresszált jel keverési aránya. A 0 érték teljesen eredeti, az 1 érték kizárólag kompresszált jelet ad."
+
+#. AudioEffectCompressor.ratio
+#: doc/classes/AudioEffectCompressor.xml
+msgid "Amount of compression applied to the audio once it passes the volume threshold level. The higher the ratio, the stronger the compression applied to audio signals that pass the volume threshold level. Value can range from 1 to 48."
+msgstr "A hangerőküszöb fölötti kompresszió aránya. Nagyobb értéknél a kompresszor erősebben csillapítja a küszöb fölötti jelet. Az érték 1 és 48 közé eshet."
+
+#. AudioEffectCompressor.release_ms
+#: doc/classes/AudioEffectCompressor.xml
+msgid "Compressor's delay time to stop decreasing the volume after the it falls below the volume threshold level, in milliseconds. Value can range from 20 to 2000."
+msgstr "A kompresszor elengedési ideje ezredmásodpercben. Miután a jel a hangerőküszöb alá esik, ennyi idő alatt csökken a kompresszor csillapítása. Az érték 20 és 2000 közé eshet."
+
+#. AudioEffectCompressor.sidechain
+#: doc/classes/AudioEffectCompressor.xml
+msgid "Audio bus to use for the volume threshold detection."
+msgstr "Az a hangbusz, amelynek jelszintjét a kompresszor a küszöb átlépéséhez figyeli."
+
+#. AudioEffectCompressor.threshold
+#: doc/classes/AudioEffectCompressor.xml
+msgid "The volume level above which compression is applied to the audio, in dB. Value can range from -60 to 0."
+msgstr "Az a jelszint decibelben, amely fölött a kompresszor működésbe lép. Az érték −60 és 0 közé eshet."
+
+#. AudioEffectDelay.feedback_active
+#: doc/classes/AudioEffectDelay.xml
+msgid "If [code]true[/code], feedback is enabled, repeating taps after they are played."
+msgstr "Ha az értéke [code]true[/code], a visszacsatolás ismétli a késleltetett jeleket."
+
+#. AudioEffectDelay.feedback_delay_ms
+#: doc/classes/AudioEffectDelay.xml
+msgid "Feedback delay time in milliseconds. Value can range from 0 to 1500."
+msgstr "A visszacsatolás késleltetése ezredmásodpercben. Az érték 0 és 1500 közé eshet."
+
+#. AudioEffectDelay.feedback_level_db
+#: doc/classes/AudioEffectDelay.xml
+msgid "Gain for feedback, in dB. Value can range from -60 to 0."
+msgstr "A visszacsatolt jel erősítése decibelben. Az érték −60 és 0 közé eshet."
+
+#. AudioEffectDelay.feedback_lowpass
+#: doc/classes/AudioEffectDelay.xml
+msgid "Low-pass filter for feedback, in Hz. Frequencies above this value are filtered out. Value can range from 1 to 16000."
+msgstr "A visszacsatolt jel aluláteresztő szűrőjének határfrekvenciája hertzben. A szűrő csillapítja az ennél magasabb frekvenciákat. Az érték 1 és 16000 közé eshet."
+
+#. AudioEffectDelay.tap1_active
+#: doc/classes/AudioEffectDelay.xml
+msgid "If [code]true[/code], the first tap will be enabled."
+msgstr "Ha az értéke [code]true[/code], az első késleltetett jel megszólal."
+
+#. AudioEffectDelay.tap1_delay_ms
+#: doc/classes/AudioEffectDelay.xml
+msgid "First tap delay time in milliseconds, compared to the original audio. Value can range from 0 to 1500."
+msgstr "Az első késleltetett jel késése az eredeti hanghoz képest, ezredmásodpercben. Az érték 0 és 1500 közé eshet."
+
+#. AudioEffectDelay.tap1_level_db
+#: doc/classes/AudioEffectDelay.xml
+msgid "Gain for the first tap, in dB. Value can range from -60 to 0."
+msgstr "Az első késleltetett jel erősítése decibelben. Az érték −60 és 0 közé eshet."
+
+#. AudioEffectDelay.tap1_pan
+#: doc/classes/AudioEffectDelay.xml
+msgid "Pan position for the first tap. Negative values pan the sound to the left, positive pan to the right. Value can range from -1 to 1."
+msgstr "Az első késleltetett jel panorámapozíciója. A negatív érték balra, a pozitív jobbra tolja a hangot. Az érték −1 és 1 közé eshet."
+
+#. AudioEffectDelay.tap2_active
+#: doc/classes/AudioEffectDelay.xml
+msgid "If [code]true[/code], the second tap will be enabled."
+msgstr "Ha az értéke [code]true[/code], a második késleltetett jel megszólal."
+
+#. AudioEffectDelay.tap2_delay_ms
+#: doc/classes/AudioEffectDelay.xml
+msgid "Second tap delay time in milliseconds, compared to the original audio. Value can range from 0 to 1500."
+msgstr "A második késleltetett jel késése az eredeti hanghoz képest, ezredmásodpercben. Az érték 0 és 1500 közé eshet."
+
+#. AudioEffectDelay.tap2_level_db
+#: doc/classes/AudioEffectDelay.xml
+msgid "Gain for the second tap, in dB. Value can range from -60 to 0."
+msgstr "A második késleltetett jel erősítése decibelben. Az érték −60 és 0 közé eshet."
+
+#. AudioEffectDelay.tap2_pan
+#: doc/classes/AudioEffectDelay.xml
+msgid "Pan position for the second tap. Negative values pan the sound to the left, positive pan to the right. Value can range from -1 to 1."
+msgstr "A második késleltetett jel panorámapozíciója. A negatív érték balra, a pozitív jobbra tolja a hangot. Az érték −1 és 1 közé eshet."
+
+#. AudioStream._get_bar_beats
+#: doc/classes/AudioStream.xml
+msgid "Override this method to return the bar beats of this stream."
+msgstr "Írd felül ezt a metódust, hogy visszaadja a hangfolyam egy ütemére jutó ütések számát."
+
+#. AudioStream._get_parameter_list
+#: doc/classes/AudioStream.xml
+msgid "Return the controllable parameters of this stream. This array contains dictionaries with a property info description format (see [method Object.get_property_list]). Additionally, the default value for this parameter must be added tho each dictionary in \"default_value\" field."
+msgstr "A hangfolyam szabályozható paramétereit adja vissza. A tömb a tulajdonságleírások formátumát követő szótárakat tartalmaz. Lásd a [method Object.get_property_list] metódust. Minden szótárhoz hozzá kell adni a paraméter alapértékét a „default_value” mezőben."
+
+#. AudioStream._get_stream_name
+#: doc/classes/AudioStream.xml
+msgid "Override this method to customize the name assigned to this audio stream. Unused by the engine."
+msgstr "Írd felül ezt a metódust a hangfolyam nevének megadásához. A motor ezt a nevet nem használja."
+
+#. AudioStream._has_loop
+#: doc/classes/AudioStream.xml
+msgid "Override this method to return [code]true[/code] if this stream has a loop."
+msgstr "Írd felül ezt a metódust, hogy [code]true[/code] értéket adjon vissza, ha a hangfolyam ismétlődik."
+
+#. AudioStream._instantiate_playback
+#: doc/classes/AudioStream.xml
+msgid "Override this method to customize the returned value of [method instantiate_playback]. Should return a new [AudioStreamPlayback] created when the stream is played (such as by an [AudioStreamPlayer])."
+msgstr "A [method instantiate_playback] visszatérési értékének testreszabásához írd felül ezt a metódust. Akkor kell új [AudioStreamPlayback] példányt visszaadnia, amikor a hangfolyam megszólal, például egy [AudioStreamPlayer] elindításakor."
+
+#. AudioStream.can_be_sampled
+#: doc/classes/AudioStream.xml
+msgid "Returns if the current [AudioStream] can be used as a sample. Only static streams can be sampled."
+msgstr "Megadja, hogy az aktuális [AudioStream] használható-e hangmintaként. Csak statikus hangfolyamból készíthető hangminta."
+
+#. AudioStream.generate_sample
+#: doc/classes/AudioStream.xml
+msgid "Generates an [AudioSample] based on the current stream."
+msgstr "Az aktuális hangfolyamból [AudioSample] erőforrást állít elő."
+
+#. AudioStream.get_length
+#: doc/classes/AudioStream.xml
+msgid "Returns the length of the audio stream in seconds. If this stream is an [AudioStreamRandomizer], returns the length of the last played stream. If this stream has an indefinite length (such as for [AudioStreamGenerator] and [AudioStreamMicrophone]), returns [code]0.0[/code]."
+msgstr "A hangfolyam hosszát adja vissza másodpercben. [AudioStreamRandomizer] esetén a legutóbb lejátszott hangfolyam hosszát adja meg. Határozatlan hosszúságú hangfolyamoknál, például [AudioStreamGenerator] és [AudioStreamMicrophone] esetén az eredmény [code]0.0[/code]."
+
+#. AudioStream.is_meta_stream
+#: doc/classes/AudioStream.xml
+msgid "Returns [code]true[/code] if the stream is a collection of other streams, [code]false[/code] otherwise."
+msgstr "[code]true[/code] értéket ad vissza, ha a hangfolyam más hangfolyamok gyűjteménye. Egyébként az eredmény [code]false[/code]."
+
+#. AudioStream.parameter_list_changed
+#: doc/classes/AudioStream.xml
+msgid "Signal to be emitted to notify when the parameter list changed."
+msgstr "Ezt a jelzést akkor küldd ki, amikor megváltozik a paraméterlista."
+
+#. AudioStreamPlayback.brief
+#: doc/classes/AudioStreamPlayback.xml
+msgid "Meta class for playing back audio."
+msgstr "A hanglejátszási példányok alaposztálya."
+
+#. AudioStreamPlayback.description
+#: doc/classes/AudioStreamPlayback.xml
+msgid "Can play, loop, pause a scroll through audio. See [AudioStream] and [AudioStreamOggVorbis] for usage."
+msgstr "A hangfolyam lejátszását, ismétlését, szüneteltetését és a lejátszási pozíció módosítását kezeli. A használatát az [AudioStream] és az [AudioStreamOggVorbis] leírása mutatja be."
+
+#. AudioStreamPlayback._get_loop_count
+#: doc/classes/AudioStreamPlayback.xml
+msgid "Overridable method. Should return how many times this audio stream has looped. Most built-in playbacks always return [code]0[/code]."
+msgstr "Felülírható metódus. Megadja, hányszor ismétlődött a hangfolyam. A legtöbb beépített lejátszási példány mindig [code]0[/code] értéket ad vissza."
+
+#. AudioStreamPlayback._get_parameter
+#: doc/classes/AudioStreamPlayback.xml
+msgid "Return the current value of a playback parameter by name (see [method AudioStream._get_parameter_list])."
+msgstr "A lejátszási paraméter aktuális értékét adja vissza a neve alapján. Lásd az [method AudioStream._get_parameter_list] metódust."
+
+#. AudioStreamPlayback._get_playback_position
+#: doc/classes/AudioStreamPlayback.xml
+msgid "Overridable method. Should return the current progress along the audio stream, in seconds."
+msgstr "Felülírható metódus. A hangfolyam aktuális lejátszási pozícióját kell visszaadnia másodpercben."
+
+#. AudioStreamPlayback._is_playing
+#: doc/classes/AudioStreamPlayback.xml
+msgid "Overridable method. Should return [code]true[/code] if this playback is active and playing its audio stream."
+msgstr "Felülírható metódus. Akkor kell [code]true[/code] értéket visszaadnia, ha a lejátszás aktív és a hangfolyam éppen szól."
+
+#. AudioStreamPlayback._seek
+#: doc/classes/AudioStreamPlayback.xml
+msgid "Override this method to customize what happens when seeking this audio stream at the given [param position], such as by calling [method AudioStreamPlayer.seek]."
+msgstr "Írd felül ezt a metódust annak meghatározásához, mi történjen, amikor a hangfolyam a megadott [param position] pozícióra ugrik. Ilyenkor például meghívható az [method AudioStreamPlayer.seek] metódus."
+
+#. AudioStreamPlayback._set_parameter
+#: doc/classes/AudioStreamPlayback.xml
+msgid "Set the current value of a playback parameter by name (see [method AudioStream._get_parameter_list])."
+msgstr "A lejátszási paraméter aktuális értékét állítja be a neve alapján. Lásd az [method AudioStream._get_parameter_list] metódust."
+
+#. AudioStreamPlayback._start
+#: doc/classes/AudioStreamPlayback.xml
+msgid "Override this method to customize what happens when the playback starts at the given position, such as by calling [method AudioStreamPlayer.play]."
+msgstr "Írd felül ezt a metódust annak meghatározásához, mi történjen, amikor a lejátszás a megadott pozícióról indul. Ilyenkor például meghívható az [method AudioStreamPlayer.play] metódus."
+
+#. AudioStreamPlayback._stop
+#: doc/classes/AudioStreamPlayback.xml
+msgid "Override this method to customize what happens when the playback is stopped, such as by calling [method AudioStreamPlayer.stop]."
+msgstr "Írd felül ezt a metódust annak meghatározásához, mi történjen a lejátszás leállításakor. Ilyenkor például meghívható az [method AudioStreamPlayer.stop] metódus."
+
+#. AudioStreamPlayback._tag_used_streams
+#: doc/classes/AudioStreamPlayback.xml
+msgid "Overridable method. Called whenever the audio stream is mixed if the playback is active and [method AudioServer.set_enable_tagging_used_audio_streams] has been set to [code]true[/code]. Editor plugins may use this method to \"tag\" the current position along the audio stream and display it in a preview."
+msgstr "Felülírható metódus. Minden hangkeveréskor meghívódik, ha a lejátszás aktív, és az [method AudioServer.set_enable_tagging_used_audio_streams] metódust [code]true[/code] értékkel hívták meg. A szerkesztőbővítmények ezzel megjelölhetik a lejátszás aktuális helyét, és megjeleníthetik az előnézetben."
+
+#. AudioStreamPlayback.get_loop_count
+#: doc/classes/AudioStreamPlayback.xml
+msgid "Returns the number of times the stream has looped."
+msgstr "A hangfolyam eddigi ismétléseinek számát adja vissza."
+
+#. AudioStreamPlayback.get_playback_position
+#: doc/classes/AudioStreamPlayback.xml
+msgid "Returns the current position in the stream, in seconds."
+msgstr "A hangfolyam aktuális lejátszási pozícióját adja vissza másodpercben."
+
+#. AudioStreamPlayback.get_sample_playback
+#: doc/classes/AudioStreamPlayback.xml
+msgid "Returns the [AudioSamplePlayback] associated with this [AudioStreamPlayback] for playing back the audio sample of this stream."
+msgstr "Az ehhez az [AudioStreamPlayback] példányhoz rendelt [AudioSamplePlayback] példányt adja vissza, amely a hangfolyam hangmintáját játssza le."
+
+#. AudioStreamPlayback.is_playing
+#: doc/classes/AudioStreamPlayback.xml
+msgid "Returns [code]true[/code] if the stream is playing."
+msgstr "[code]true[/code] értéket ad vissza, ha a hangfolyam lejátszása folyamatban van."
+
+#. AudioStreamPlayback.seek
+#: doc/classes/AudioStreamPlayback.xml
+msgid "Seeks the stream at the given [param time], in seconds."
+msgstr "A hangfolyam megadott [param time] időpontjára ugrik. Az időpont másodpercben értendő."
+
+#. AudioStreamPlayback.set_sample_playback
+#: doc/classes/AudioStreamPlayback.xml
+msgid "Associates [AudioSamplePlayback] to this [AudioStreamPlayback] for playing back the audio sample of this stream."
+msgstr "Az [AudioSamplePlayback] példányt ehhez az [AudioStreamPlayback] példányhoz rendeli a hangfolyam hangmintájának lejátszásához."
+
+#. AudioStreamPlayback.start
+#: doc/classes/AudioStreamPlayback.xml
+msgid "Starts the stream from the given [param from_pos], in seconds."
+msgstr "A [param from_pos] pozíciótól indítja a hangfolyam lejátszását. A pozíció másodpercben értendő."
+
+#. AudioStreamPlayback.stop
+#: doc/classes/AudioStreamPlayback.xml
+msgid "Stops the stream."
+msgstr "Leállítja a hangfolyam lejátszását."
+
+#. AudioStreamPlaybackPolyphonic.brief
+#: doc/classes/AudioStreamPlaybackPolyphonic.xml
+msgid "Playback instance for [AudioStreamPolyphonic]."
+msgstr "Az [AudioStreamPolyphonic] lejátszási példánya."
+
+#. AudioStreamPlaybackPolyphonic.is_stream_playing
+#: doc/classes/AudioStreamPlaybackPolyphonic.xml
+msgid "Returns [code]true[/code] if the stream associated with the given integer ID is still playing. Check [method play_stream] for information on when this ID becomes invalid."
+msgstr "[code]true[/code] értéket ad vissza, ha a megadott egész azonosítóhoz tartozó hangfolyam még szól. Az azonosító érvényességéről a [method play_stream] leírásában olvashatsz."
+
+#. AudioStreamPlaybackPolyphonic.set_stream_pitch_scale
+#: doc/classes/AudioStreamPlaybackPolyphonic.xml
+msgid "Change the stream pitch scale. The [param stream] argument is an integer ID returned by [method play_stream]."
+msgstr "Módosítja a hangfolyam hangmagasságának szorzóját. A [param stream] a [method play_stream] által visszaadott egész azonosító."
+
+#. AudioStreamPlaybackPolyphonic.set_stream_volume
+#: doc/classes/AudioStreamPlaybackPolyphonic.xml
+msgid "Change the stream volume (in db). The [param stream] argument is an integer ID returned by [method play_stream]."
+msgstr "Decibelben módosítja a hangfolyam hangerejét. A [param stream] a [method play_stream] által visszaadott egész azonosító."
+
+#. AudioStreamPlaybackPolyphonic.stop_stream
+#: doc/classes/AudioStreamPlaybackPolyphonic.xml
+msgid "Stop a stream. The [param stream] argument is an integer ID returned by [method play_stream], which becomes invalid after calling this function."
+msgstr "Leállít egy hangfolyamot. A [param stream] a [method play_stream] által visszaadott egész azonosító, amely e hívás után érvénytelenné válik."
+
+#. AudioStreamPlaybackPolyphonic.INVALID_ID
+#: doc/classes/AudioStreamPlaybackPolyphonic.xml
+msgid "Returned by [method play_stream] in case it could not allocate a stream for playback."
+msgstr "A [method play_stream] ezt az értéket adja vissza, ha nem tud hangfolyamot lefoglalni a lejátszáshoz."
+
+#. AudioStreamRandomizer.brief
+#: doc/classes/AudioStreamRandomizer.xml
+msgid "Wraps a pool of audio streams with pitch and volume shifting."
+msgstr "Hangfolyamok gyűjteménye, amely lejátszáskor módosíthatja a hangmagasságot és a hangerőt."
+
+#. AudioStreamRandomizer.description
+#: doc/classes/AudioStreamRandomizer.xml
+msgid "Picks a random AudioStream from the pool, depending on the playback mode, and applies random pitch shifting and volume shifting during playback."
+msgstr "A lejátszási mód szerint választ hangfolyamot a gyűjteményből. A beállításoktól függően lejátszáskor véletlenszerűen módosíthatja a hangmagasságot és a hangerőt."
+
+#. AudioStreamRandomizer.add_stream
+#: doc/classes/AudioStreamRandomizer.xml
+msgid "Insert a stream at the specified index. If the index is less than zero, the insertion occurs at the end of the underlying pool."
+msgstr "Hangfolyamot szúr be a megadott indexre. Negatív indexnél a gyűjtemény végére szúrja be."
+
+#. AudioStreamRandomizer.get_stream
+#: doc/classes/AudioStreamRandomizer.xml
+msgid "Returns the stream at the specified index."
+msgstr "A megadott indexű hangfolyamot adja vissza."
+
+#. AudioStreamRandomizer.get_stream_probability_weight
+#: doc/classes/AudioStreamRandomizer.xml
+msgid "Returns the probability weight associated with the stream at the given index."
+msgstr "A megadott indexű hangfolyam kiválasztási súlyát adja vissza."
+
+#. AudioStreamRandomizer.move_stream
+#: doc/classes/AudioStreamRandomizer.xml
+msgid "Move a stream from one index to another."
+msgstr "Másik indexre helyez át egy hangfolyamot."
+
+#. AudioStreamRandomizer.remove_stream
+#: doc/classes/AudioStreamRandomizer.xml
+msgid "Remove the stream at the specified index."
+msgstr "Eltávolítja a megadott indexű hangfolyamot."
+
+#. AudioStreamRandomizer.set_stream
+#: doc/classes/AudioStreamRandomizer.xml
+msgid "Set the AudioStream at the specified index."
+msgstr "Beállítja a megadott indexű hangfolyamot."
+
+#. AudioStreamRandomizer.set_stream_probability_weight
+#: doc/classes/AudioStreamRandomizer.xml
+msgid "Set the probability weight of the stream at the specified index. The higher this value, the more likely that the randomizer will choose this stream during random playback modes."
+msgstr "Beállítja a megadott indexű hangfolyam kiválasztási súlyát. Véletlen sorrendű lejátszásnál nagyobb súllyal nagyobb eséllyel választja ki ezt a hangfolyamot."
+
+#. AudioStreamRandomizer.playback_mode
+#: doc/classes/AudioStreamRandomizer.xml
+msgid "Controls how this AudioStreamRandomizer picks which AudioStream to play next."
+msgstr "Megadja, hogyan válassza ki az AudioStreamRandomizer a következő hangfolyamot."
+
+#. AudioStreamRandomizer.random_volume_offset_db
+#: doc/classes/AudioStreamRandomizer.xml
+msgid "The intensity of random volume variation. Volume will be increased or decreased by a random value up to [code skip-lint]random_volume_offset_db[/code]. A value of [code]0.0[/code] means no variation. A value of [code]3.0[/code] means volume will be randomized between [code]-3.0 dB[/code] and [code]+3.0 dB[/code]."
+msgstr "A véletlenszerű hangerőváltozás mértéke. A hangerő legfeljebb [code skip-lint]random_volume_offset_db[/code] értékkel nőhet vagy csökkenhet. [code]0.0[/code] esetén nincs eltérés. [code]3.0[/code] esetén a véletlenszerű eltérés [code]-3.0 dB[/code] és [code]+3.0 dB[/code] közé esik."
+
+#. AudioStreamRandomizer.streams_count
+#: doc/classes/AudioStreamRandomizer.xml
+msgid "The number of streams in the stream pool."
+msgstr "A gyűjteményben lévő hangfolyamok száma."
+
+#. AudioStreamRandomizer.PLAYBACK_RANDOM_NO_REPEATS
+#: doc/classes/AudioStreamRandomizer.xml
+msgid "Pick a stream at random according to the probability weights chosen for each stream, but avoid playing the same stream twice in a row whenever possible. If only 1 sound is present in the pool, the same sound will always play, effectively allowing repeats to occur."
+msgstr "A megadott súlyok alapján véletlenszerűen választ hangfolyamot. Ha lehet, ugyanaz a hangfolyam nem szólal meg kétszer egymás után. Ha csak 1 hang van a gyűjteményben, minden alkalommal az szólal meg."
+
+#. AudioStreamRandomizer.PLAYBACK_RANDOM
+#: doc/classes/AudioStreamRandomizer.xml
+msgid "Pick a stream at random according to the probability weights chosen for each stream. If only 1 sound is present in the pool, the same sound will always play."
+msgstr "A megadott súlyok alapján véletlenszerűen választ hangfolyamot. Ha csak 1 hang van a gyűjteményben, minden alkalommal az szólal meg."
+
+#. AudioStreamRandomizer.PLAYBACK_SEQUENTIAL
+#: doc/classes/AudioStreamRandomizer.xml
+msgid "Play streams in the order they appear in the stream pool. If only 1 sound is present in the pool, the same sound will always play."
+msgstr "A gyűjteményben elfoglalt sorrendjükben játssza le a hangfolyamokat. Ha csak 1 hang van a gyűjteményben, minden alkalommal az szólal meg."
