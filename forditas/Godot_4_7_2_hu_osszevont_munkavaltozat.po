@@ -54495,3 +54495,511 @@ msgstr "Beállítja az együtt lejátszandó hangfolyamok számát."
 #: modules/interactive_music/doc_classes/AudioStreamSynchronized.xml
 msgid "Maximum amount of streams that can be synchronized."
 msgstr "A szinkronizálható hangfolyamok legnagyobb száma."
+
+#. AudioListener2D.brief
+#. AudioListener3D.brief
+#: doc/classes/AudioListener2D.xml doc/classes/AudioListener3D.xml
+msgid "Overrides the location sounds are heard from."
+msgstr "Meghatározza, melyik pontból halljuk a hangokat."
+
+#. AudioListener2D.description
+#: doc/classes/AudioListener2D.xml
+msgid "Once added to the scene tree and enabled using [method make_current], this node will override the location sounds are heard from. Only one [AudioListener2D] can be current. Using [method make_current] will disable the previous [AudioListener2D].\nIf there is no active [AudioListener2D] in the current [Viewport], center of the screen will be used as a hearing point for the audio. [AudioListener2D] needs to be inside [SceneTree] to function."
+msgstr "A jelenetfához adott csomópont a [method make_current] hívással aktiválható, és átveszi a hallgatási pont szerepét. Egyszerre csak egy [AudioListener2D] lehet aktív. A [method make_current] kikapcsolja a korábban aktív [AudioListener2D] csomópontot.\nHa az aktuális [Viewport] területén nincs aktív [AudioListener2D], a hallgatási pont a képernyő közepe. Az [AudioListener2D] csak a [SceneTree] részeként működik."
+
+#. AudioListener2D.clear_current
+#: doc/classes/AudioListener2D.xml
+msgid "Disables the [AudioListener2D]. If it's not set as current, this method will have no effect."
+msgstr "Kikapcsolja az [AudioListener2D] csomópontot. Ha a csomópont inaktív, a hívásnak nincs hatása."
+
+#. AudioListener2D.is_current
+#: doc/classes/AudioListener2D.xml
+msgid "Returns [code]true[/code] if this [AudioListener2D] is currently active."
+msgstr "[code]true[/code] értéket ad vissza, ha ez az [AudioListener2D] csomópont aktív."
+
+#. AudioListener2D.make_current
+#: doc/classes/AudioListener2D.xml
+msgid "Makes the [AudioListener2D] active, setting it as the hearing point for the sounds. If there is already another active [AudioListener2D], it will be disabled.\nThis method will have no effect if the [AudioListener2D] is not added to [SceneTree]."
+msgstr "Aktívvá teszi az [AudioListener2D] csomópontot, és annak helyére állítja a hallgatási pontot. Ha már van másik aktív [AudioListener2D], azt kikapcsolja.\nA hívásnak csak akkor van hatása, ha az [AudioListener2D] a [SceneTree] része."
+
+#. AudioListener3D.description
+#: doc/classes/AudioListener3D.xml
+msgid "Once added to the scene tree and enabled using [method make_current], this node will override the location sounds are heard from. This can be used to listen from a location different from the [Camera3D]."
+msgstr "A jelenetfához adott csomópont a [method make_current] hívással aktiválható, és átveszi a hallgatási pont szerepét. Így a hangokat a [Camera3D] helyétől eltérő pontból is hallhatjuk."
+
+#. AudioListener3D.clear_current
+#: doc/classes/AudioListener3D.xml
+msgid "Disables the listener to use the current camera's listener instead."
+msgstr "Kikapcsolja ezt a hallgatót, így a motor az aktuális kamera hallgatási pontját használja."
+
+#. AudioListener3D.get_listener_transform
+#: doc/classes/AudioListener3D.xml
+msgid "Returns the listener's global orthonormalized [Transform3D]."
+msgstr "A hallgató globális, ortonormált [Transform3D] transzformációját adja vissza."
+
+#. AudioListener3D.is_current
+#: doc/classes/AudioListener3D.xml
+msgid "Returns [code]true[/code] if the listener was made current using [method make_current], [code]false[/code] otherwise.\n[b]Note:[/b] There may be more than one AudioListener3D marked as \"current\" in the scene tree, but only the one that was made current last will be used."
+msgstr "[code]true[/code] értéket ad vissza, ha a hallgatót a [method make_current] hívással aktívvá tették, egyébként [code]false[/code] értéket ad.\n[b]Megjegyzés:[/b] A jelenetfában több AudioListener3D is megjelölhető aktívként, de közülük a motor a legutóbb aktiváltat használja."
+
+#. AudioListener3D.make_current
+#: doc/classes/AudioListener3D.xml
+msgid "Enables the listener. This will override the current camera's listener."
+msgstr "Bekapcsolja a hallgatót, amely átveszi az aktuális kamera hallgatási pontjának szerepét."
+
+#. AudioListener3D.doppler_tracking
+#: doc/classes/AudioListener3D.xml
+msgid "If not [constant DOPPLER_TRACKING_DISABLED], this listener will simulate the [url=https://en.wikipedia.org/wiki/Doppler_effect]Doppler effect[/url] for objects changed in particular [code]_process[/code] methods.\n[b]Note:[/b] The Doppler effect will only be heard on [AudioStreamPlayer3D]s if [member AudioStreamPlayer3D.doppler_tracking] is not set to [constant AudioStreamPlayer3D.DOPPLER_TRACKING_DISABLED]."
+msgstr "Ha az érték eltér a [constant DOPPLER_TRACKING_DISABLED] állandótól, a hallgató a beállításnak megfelelő [code]_process[/code] metódusban mozgatott objektumoknál szimulálja a [url=https://en.wikipedia.org/wiki/Doppler_effect]Doppler-effektust[/url].\n[b]Megjegyzés:[/b] A Doppler-effektus csak azoknál az [AudioStreamPlayer3D] csomópontoknál hallható, amelyeknél a [member AudioStreamPlayer3D.doppler_tracking] értéke eltér a [constant AudioStreamPlayer3D.DOPPLER_TRACKING_DISABLED] állandótól."
+
+#. AudioListener3D.DOPPLER_TRACKING_IDLE_STEP
+#: doc/classes/AudioListener3D.xml
+msgid "Simulate [url=https://en.wikipedia.org/wiki/Doppler_effect]Doppler effect[/url] by tracking positions of objects that are changed in [code]_process[/code]. Changes in the relative velocity of this listener compared to those objects affect how audio is perceived (changing the audio's [member AudioStreamPlayer3D.pitch_scale])."
+msgstr "A [url=https://en.wikipedia.org/wiki/Doppler_effect]Doppler-effektust[/url] a [code]_process[/code] metódusban mozgatott objektumok helyzetének követésével számítja ki. Az objektumok és a hallgató egymáshoz viszonyított sebességének változása módosítja a hallható hangmagasságot a [member AudioStreamPlayer3D.pitch_scale] arányán keresztül."
+
+#. AudioListener3D.DOPPLER_TRACKING_PHYSICS_STEP
+#: doc/classes/AudioListener3D.xml
+msgid "Simulate [url=https://en.wikipedia.org/wiki/Doppler_effect]Doppler effect[/url] by tracking positions of objects that are changed in [code]_physics_process[/code]. Changes in the relative velocity of this listener compared to those objects affect how audio is perceived (changing the audio's [member AudioStreamPlayer3D.pitch_scale])."
+msgstr "A [url=https://en.wikipedia.org/wiki/Doppler_effect]Doppler-effektust[/url] a [code]_physics_process[/code] metódusban mozgatott objektumok helyzetének követésével számítja ki. Az objektumok és a hallgató egymáshoz viszonyított sebességének változása módosítja a hallható hangmagasságot a [member AudioStreamPlayer3D.pitch_scale] arányán keresztül."
+
+#. AudioServer.get_bus_volume_linear
+#: doc/classes/AudioServer.xml
+msgid "Returns the volume of the bus at index [param bus_idx] as a linear value.\n[b]Note:[/b] The returned value is equivalent to the result of [method @GlobalScope.db_to_linear] on the result of [method get_bus_volume_db]."
+msgstr "Lineáris értékként adja vissza a [param bus_idx] indexű hangbusz hangerejét.\n[b]Megjegyzés:[/b] Az eredmény megegyezik azzal, amit akkor kapunk, ha a [method get_bus_volume_db] eredményét átadjuk a [method @GlobalScope.db_to_linear] függvénynek."
+
+#. AudioServer.get_driver_name
+#: doc/classes/AudioServer.xml
+msgid "Returns the name of the current audio driver. The default usually depends on the operating system, but may be overridden via the [code]--audio-driver[/code] [url=$DOCS_URL/tutorials/editor/command_line_tutorial.html]command line argument[/url]. [code]--headless[/code] also automatically sets the audio driver to [code]Dummy[/code]. See also [member ProjectSettings.audio/driver/driver]."
+msgstr "Az aktuális hangillesztő nevét adja vissza. Alapértelmezésben ez általában az operációs rendszertől függ, de a [code]--audio-driver[/code] [url=$DOCS_URL/tutorials/editor/command_line_tutorial.html]parancssori argumentummal[/url] felülírható. A [code]--headless[/code] kapcsoló automatikusan a [code]Dummy[/code] hangillesztőt választja. Lásd még a [member ProjectSettings.audio/driver/driver] beállítást."
+
+#. AudioServer.get_input_device_list
+#: doc/classes/AudioServer.xml
+msgid "Returns the names of all audio input devices detected on the system.\n[b]Note:[/b] [member ProjectSettings.audio/driver/enable_input] must be [code]true[/code] for audio input to work. See also that setting's description for caveats related to permissions and operating system privacy settings."
+msgstr "A rendszeren észlelt összes hangbemeneti eszköz nevét adja vissza.\n[b]Megjegyzés:[/b] A hangbemenet működéséhez a [member ProjectSettings.audio/driver/enable_input] értéke legyen [code]true[/code]. Az engedélyekkel és az operációs rendszer adatvédelmi beállításaival kapcsolatos tudnivalókat lásd a beállítás leírásában."
+
+#. AudioServer.get_input_frames
+#: doc/classes/AudioServer.xml
+msgid "Returns a [PackedVector2Array] containing exactly [param frames] audio samples from the internal microphone buffer if available, otherwise returns an empty [PackedVector2Array].\nThe buffer is filled at the rate of [method get_input_mix_rate] frames per second when [method set_input_device_active] has successfully been set to [code]true[/code].\nThe samples are signed floating-point PCM values between [code]-1[/code] and [code]1[/code]."
+msgstr "Ha rendelkezésre áll a kért mennyiség, egy [PackedVector2Array] tömböt ad vissza, amely pontosan [param frames] sztereó hangképkockát tartalmaz a mikrofon belső pufferéből. Ellenkező esetben üres [PackedVector2Array] tömböt ad.\nHa a [method set_input_device_active] hívással sikerült bekapcsolni a bemenetet ([code]true[/code]), a puffer másodpercenként a [method get_input_mix_rate] által megadott számú képkockával töltődik fel.\nA minták [code]-1[/code] és [code]1[/code] közötti, előjeles lebegőpontos PCM-értékek."
+
+#. AudioServer.get_output_latency
+#: doc/classes/AudioServer.xml
+msgid "Returns the audio driver's effective output latency. This is based on [member ProjectSettings.audio/driver/output_latency], but the exact returned value will differ depending on the operating system and audio driver.\n[b]Note:[/b] This can be expensive; it is not recommended to call [method get_output_latency] every frame."
+msgstr "A hangillesztő tényleges kimeneti késleltetését adja vissza. Az érték alapja a [member ProjectSettings.audio/driver/output_latency], a pontos eredmény azonban az operációs rendszertől és a hangillesztőtől függ.\n[b]Megjegyzés:[/b] A lekérdezés számításigényes lehet, ezért a [method get_output_latency] képkockánkénti hívása kerülendő."
+
+#. AudioServer.is_stream_registered_as_sample
+#: doc/classes/AudioServer.xml
+msgid "If [code]true[/code], the stream is registered as a sample. The engine will not have to register it before playing the sample.\nIf [code]false[/code], the stream will have to be registered before playing it. To prevent lag spikes, register the stream as sample with [method register_stream_as_sample]."
+msgstr "A [code]true[/code] érték azt jelzi, hogy a hangfolyam már regisztrálva van hangmintaként, így a motor lejátszás előtt kihagyhatja a regisztrációt.\nA [code]false[/code] érték esetén a hangfolyamot még regisztrálni kell a lejátszás előtt. A pillanatnyi megakadások elkerüléséhez előre regisztrálhatod a [method register_stream_as_sample] metódussal."
+
+#. AudioServer.lock
+#: doc/classes/AudioServer.xml
+msgid "Locks the audio driver's main loop.\n[b]Note:[/b] Remember to unlock it afterwards."
+msgstr "Zárolja a hangillesztő fő ciklusát.\n[b]Megjegyzés:[/b] A művelet befejezése után oldd fel a zárolást."
+
+#. AudioServer.register_stream_as_sample
+#: doc/classes/AudioServer.xml
+msgid "Forces the registration of a stream as a sample.\n[b]Note:[/b] Lag spikes may occur when calling this method, especially on single-threaded builds. It is suggested to call this method while loading assets, where the lag spike could be masked, instead of registering the sample right before it needs to be played."
+msgstr "Azonnal regisztrálja a hangfolyamot hangmintaként.\n[b]Megjegyzés:[/b] A hívás pillanatnyi megakadást okozhat, különösen egyszálú összeállításban. Célszerű az erőforrások betöltése közben regisztrálni, amikor a megakadás kevésbé feltűnő, és így a minta már rendelkezésre áll a lejátszáshoz."
+
+#. AudioServer.set_bus_volume_linear
+#: doc/classes/AudioServer.xml
+msgid "Sets the volume as a linear value of the bus at index [param bus_idx] to [param volume_linear].\n[b]Note:[/b] Using this method is equivalent to calling [method set_bus_volume_db] with the result of [method @GlobalScope.linear_to_db] on a value."
+msgstr "A [param bus_idx] indexű hangbusz hangerejét a lineárisan megadott [param volume_linear] értékre állítja.\n[b]Megjegyzés:[/b] A hívás egyenértékű azzal, mintha az értéket a [method @GlobalScope.linear_to_db] függvénnyel átszámítanánk, majd az eredményt átadnánk a [method set_bus_volume_db] metódusnak."
+
+#. AudioServer.set_enable_tagging_used_audio_streams
+#: doc/classes/AudioServer.xml
+msgid "If set to [code]true[/code], all instances of [AudioStreamPlayback] will call [method AudioStreamPlayback._tag_used_streams] every mix step.\n[b]Note:[/b] This is enabled by default in the editor, as it is used by editor plugins for the audio stream previews."
+msgstr "Ha az érték [code]true[/code], minden [AudioStreamPlayback] példány minden keverési lépésben meghívja a [method AudioStreamPlayback._tag_used_streams] metódust.\n[b]Megjegyzés:[/b] A szerkesztőben ez alapértelmezés szerint be van kapcsolva, mert a bővítmények erre támaszkodnak a hangfolyamok előnézetéhez."
+
+#. AudioServer.set_input_device_active
+#: doc/classes/AudioServer.xml
+msgid "If [param active] is [code]true[/code], starts the microphone input stream specified by [member input_device] or returns an error if it failed.\nIf [param active] is [code]false[/code], stops the input stream if it is running."
+msgstr "Ha a [param active] értéke [code]true[/code], elindítja a [member input_device] által megadott mikrofon bemeneti hangfolyamát. Sikertelen indításkor hibakódot ad vissza.\nHa a [param active] értéke [code]false[/code], leállítja a bemeneti hangfolyamot, ha fut."
+
+#. AudioServer.input_device
+#: doc/classes/AudioServer.xml
+msgid "Name of the current device for audio input (see [method get_input_device_list]). On systems with multiple audio inputs (such as analog, USB and HDMI audio), this can be used to select the audio input device. The value [code]\"Default\"[/code] will record audio on the system-wide default audio input. If an invalid device name is set, the value will be reverted back to [code]\"Default\"[/code].\n[b]Note:[/b] [member ProjectSettings.audio/driver/enable_input] must be [code]true[/code] for audio input to work. See also that setting's description for caveats related to permissions and operating system privacy settings."
+msgstr "Az aktuális hangbemeneti eszköz neve (lásd [method get_input_device_list]). Több bemenettel rendelkező rendszeren, például analóg, USB- és HDMI-hangeszközök mellett ezzel választható ki a bemenet. A [code]\"Default\"[/code] érték a rendszer alapértelmezett hangbemenetét használja a felvételhez. Érvénytelen eszköznév megadásakor az érték visszaáll [code]\"Default\"[/code]-ra.\n[b]Megjegyzés:[/b] A hangbemenet működéséhez a [member ProjectSettings.audio/driver/enable_input] értéke legyen [code]true[/code]. Az engedélyekkel és a rendszer adatvédelmi beállításaival kapcsolatos tudnivalókat lásd a beállítás leírásában."
+
+#. AudioServer.output_device
+#: doc/classes/AudioServer.xml
+msgid "Name of the current device for audio output (see [method get_output_device_list]). On systems with multiple audio outputs (such as analog, USB and HDMI audio), this can be used to select the audio output device. The value [code]\"Default\"[/code] will play audio on the system-wide default audio output. If an invalid device name is set, the value will be reverted back to [code]\"Default\"[/code]."
+msgstr "Az aktuális hangkimeneti eszköz neve (lásd [method get_output_device_list]). Több kimenettel rendelkező rendszeren, például analóg, USB- és HDMI-hangeszközök mellett ezzel választható ki a kimenet. A [code]\"Default\"[/code] érték a rendszer alapértelmezett hangkimenetén játssza le a hangot. Érvénytelen eszköznév megadásakor az érték visszaáll [code]\"Default\"[/code]-ra."
+
+#. AudioServer.PLAYBACK_TYPE_SAMPLE
+#: doc/classes/AudioServer.xml
+msgid "Force the playback to be considered as a sample. This can provide lower latency and more stable playback (with less risk of audio crackling), at the cost of having less flexibility.\n[b]Note:[/b] Only currently supported on the web platform.\n[b]Note:[/b] [AudioEffect]s are not supported when playback is considered as a sample."
+msgstr "Kikényszeríti a hangmintaként történő lejátszást. Ez kisebb késleltetést és stabilabb lejátszást eredményezhet, például ritkább recsegéssel, viszont kevesebb beállítási lehetőséget kínál.\n[b]Megjegyzés:[/b] Jelenleg csak webes környezetben támogatott.\n[b]Megjegyzés:[/b] Hangmintaként történő lejátszáskor az [AudioEffect] effektek nem használhatók."
+
+#. AudioStream._get_tags
+#: doc/classes/AudioStream.xml
+msgid "Override this method to customize the tags for this audio stream. Should return a [Dictionary] of strings with the tag as the key and its content as the value.\nCommonly used tags include [code]title[/code], [code]artist[/code], [code]album[/code], [code]tracknumber[/code], and [code]date[/code]."
+msgstr "Írd felül ezt a metódust, ha saját címkéket szeretnél megadni a hangfolyamhoz. Egy [Dictionary] szótárat kell visszaadnia, amelyben a címke neve a kulcs, a tartalma pedig az érték. Mindkettő szöveg.\nGyakori címkék a [code]title[/code], [code]artist[/code], [code]album[/code], [code]tracknumber[/code] és [code]date[/code]."
+
+#. AudioStreamGenerator.brief
+#: doc/classes/AudioStreamGenerator.xml
+msgid "An audio stream with utilities for procedural sound generation."
+msgstr "Hangfolyam, amelynek mintáit programból lehet előállítani."
+
+#. AudioStreamGenerator.buffer_length
+#: doc/classes/AudioStreamGenerator.xml
+msgid "The length of the buffer to generate (in seconds). Lower values result in less latency, but require the script to generate audio data faster, resulting in increased CPU usage and more risk for audio cracking if the CPU can't keep up."
+msgstr "A hangminták számára fenntartott puffer hossza másodpercben. Kisebb értéknél csökken a késleltetés, de a szkriptnek gyorsabban kell előállítania a hangadatokat. Ez jobban terheli a processzort, és ha az nem győzi a tempót, a hang recseghet."
+
+#. AudioStreamGenerator.mix_rate_mode
+#: doc/classes/AudioStreamGenerator.xml
+msgid "Mixing rate mode. If set to [constant MIX_RATE_CUSTOM], [member mix_rate] is used, otherwise current [AudioServer] mixing rate is used."
+msgstr "A keverési frekvencia kiválasztásának módja. A [constant MIX_RATE_CUSTOM] beállítás a [member mix_rate] értékét használja, a többi mód az [AudioServer] aktuális keverési frekvenciáját veszi alapul."
+
+#. AudioStreamGenerator.MIX_RATE_OUTPUT
+#: doc/classes/AudioStreamGenerator.xml
+msgid "Current [AudioServer] output mixing rate."
+msgstr "Az [AudioServer] aktuális kimeneti keverési frekvenciája."
+
+#. AudioStreamGenerator.MIX_RATE_INPUT
+#: doc/classes/AudioStreamGenerator.xml
+msgid "Current [AudioServer] input mixing rate."
+msgstr "Az [AudioServer] aktuális bemeneti keverési frekvenciája."
+
+#. AudioStreamGenerator.MIX_RATE_CUSTOM
+#: doc/classes/AudioStreamGenerator.xml
+msgid "Custom mixing rate, specified by [member mix_rate]."
+msgstr "A [member mix_rate] tulajdonságban megadott egyéni keverési frekvencia."
+
+#. AudioStreamGenerator.MIX_RATE_MAX
+#: doc/classes/AudioStreamGenerator.xml
+msgid "Maximum value for the mixing rate mode enum."
+msgstr "A keverési frekvencia módjait felsoroló enum legnagyobb értéke."
+
+#. AudioStreamGeneratorPlayback.brief
+#: doc/classes/AudioStreamGeneratorPlayback.xml
+msgid "Plays back audio generated using [AudioStreamGenerator]."
+msgstr "Az [AudioStreamGenerator] által előállított hangot játssza le."
+
+#. AudioStreamGeneratorPlayback.description
+#: doc/classes/AudioStreamGeneratorPlayback.xml
+msgid "This class is meant to be used with [AudioStreamGenerator] to play back the generated audio in real-time."
+msgstr "Az [AudioStreamGenerator] osztállyal együtt használható az előállított hang valós idejű lejátszásához."
+
+#. AudioStreamGeneratorPlayback.can_push_buffer
+#: doc/classes/AudioStreamGeneratorPlayback.xml
+msgid "Returns [code]true[/code] if a buffer of the size [param amount] can be pushed to the audio sample data buffer without overflowing it, [code]false[/code] otherwise."
+msgstr "[code]true[/code] értéket ad vissza, ha [param amount] képkockányi adat még elfér a hangmintapufferben. Egyébként az eredmény [code]false[/code]."
+
+#. AudioStreamGeneratorPlayback.clear_buffer
+#: doc/classes/AudioStreamGeneratorPlayback.xml
+msgid "Clears the audio sample data buffer."
+msgstr "Kiüríti a hangmintapuffert."
+
+#. AudioStreamGeneratorPlayback.get_frames_available
+#: doc/classes/AudioStreamGeneratorPlayback.xml
+msgid "Returns the number of frames that can be pushed to the audio sample data buffer without overflowing it. If the result is [code]0[/code], the buffer is full."
+msgstr "Visszaadja, hány képkockányi hangadat fér még a hangmintapufferbe. A [code]0[/code] érték azt jelzi, hogy a puffer megtelt."
+
+#. AudioStreamGeneratorPlayback.get_skips
+#: doc/classes/AudioStreamGeneratorPlayback.xml
+msgid "Returns the number of times the playback skipped due to a buffer underrun in the audio sample data. This value is reset at the start of the playback."
+msgstr "Visszaadja, hányszor akadt meg a lejátszás, mert elfogytak a hangminták a pufferből. A számláló a lejátszás kezdetekor nullázódik."
+
+#. AudioStreamGeneratorPlayback.push_buffer
+#: doc/classes/AudioStreamGeneratorPlayback.xml
+msgid "Pushes several audio data frames to the buffer. This is usually more efficient than [method push_frame] in C# and compiled languages via GDExtension, but [method push_buffer] may be [i]less[/i] efficient in GDScript."
+msgstr "Több hangképkockát helyez a pufferbe. C#-ban, valamint a GDExtensionön keresztül használt fordított nyelveken általában hatékonyabb a [method push_frame] metódusnál, GDScriptben azonban a [method push_buffer] akár [i]lassabb[/i] is lehet."
+
+#. AudioStreamGeneratorPlayback.push_frame
+#: doc/classes/AudioStreamGeneratorPlayback.xml
+msgid "Pushes a single audio data frame to the buffer. This is usually less efficient than [method push_buffer] in C# and compiled languages via GDExtension, but [method push_frame] may be [i]more[/i] efficient in GDScript."
+msgstr "Egyetlen hangképkockát helyez a pufferbe. C#-ban, valamint a GDExtensionön keresztül használt fordított nyelveken általában kevésbé hatékony a [method push_buffer] metódusnál, GDScriptben azonban a [method push_frame] akár [i]gyorsabb[/i] is lehet."
+
+#. AudioStreamMicrophone.brief
+#: doc/classes/AudioStreamMicrophone.xml
+msgid "Plays real-time audio input data."
+msgstr "Valós időben játssza le a hangbemenet adatait."
+
+#. AudioStreamMicrophone.description
+#: doc/classes/AudioStreamMicrophone.xml
+msgid "When used directly in an [AudioStreamPlayer] node, [AudioStreamMicrophone] plays back microphone input in real-time. This can be used in conjunction with [AudioEffectCapture] to process the data or save it.\n[b]Note:[/b] [member ProjectSettings.audio/driver/enable_input] must be [code]true[/code] for audio input to work. See also that setting's description for caveats related to permissions and operating system privacy settings."
+msgstr "Közvetlenül egy [AudioStreamPlayer] csomóponthoz rendelve az [AudioStreamMicrophone] valós időben játssza le a mikrofon jelét. Az adatokat az [AudioEffectCapture] segítségével kiolvashatod feldolgozáshoz vagy mentéshez.\n[b]Megjegyzés:[/b] A hangbemenet működéséhez a [member ProjectSettings.audio/driver/enable_input] értéke legyen [code]true[/code]. Az engedélyekkel és a rendszer adatvédelmi beállításaival kapcsolatos tudnivalókat lásd a beállítás leírásában."
+
+#. AudioStreamPlaybackResampled.brief
+#: doc/classes/AudioStreamPlaybackResampled.xml
+msgid "Playback class used for resampled [AudioStream]s."
+msgstr "Újramintavételezett [AudioStream] hangfolyamok lejátszására szolgáló osztály."
+
+#. AudioStreamPlaybackResampled.description
+#: doc/classes/AudioStreamPlaybackResampled.xml
+msgid "Playback class used to mix an [AudioStream]'s audio samples to [method AudioServer.get_mix_rate] using cubic interpolation."
+msgstr "Köbös interpolációval alakítja át egy [AudioStream] hangmintáit a [method AudioServer.get_mix_rate] által megadott keverési frekvenciára."
+
+#. AudioStreamPlaybackResampled._get_stream_sampling_rate
+#: doc/classes/AudioStreamPlaybackResampled.xml
+msgid "Returns an [AudioStream]'s sample rate, in Hz. Used to perform resampling."
+msgstr "Az [AudioStream] mintavételi frekvenciáját adja vissza hertzben. Az újramintavételezés ezt az értéket veszi alapul."
+
+#. AudioStreamPlaybackInteractive.get_current_clip_index
+#: modules/interactive_music/doc_classes/AudioStreamPlaybackInteractive.xml
+msgid "Return the index of the currently playing clip. You can use this to get the name of the currently playing clip with [method AudioStreamInteractive.get_clip_name].\n[b]Example:[/b] Get the currently playing clip name from inside an [AudioStreamPlayer] node.\n[codeblocks]\n[gdscript]\nvar playing_clip_name = stream.get_clip_name(get_stream_playback().get_current_clip_index())\n[/gdscript]\n[/codeblocks]"
+msgstr "Az éppen lejátszott klip indexét adja vissza. Az indexből az [method AudioStreamInteractive.get_clip_name] metódussal kérheted le a klip nevét.\n[b]Példa:[/b] Az éppen lejátszott klip nevének lekérése egy [AudioStreamPlayer] csomóponton belül.\n[codeblocks]\n[gdscript]\nvar playing_clip_name = stream.get_clip_name(get_stream_playback().get_current_clip_index())\n[/gdscript]\n[/codeblocks]"
+
+#. AudioStreamPlaybackResampled.begin_resample
+#: doc/classes/AudioStreamPlaybackResampled.xml
+msgid "Called when an [AudioStream] is played. Clears the cubic interpolation history and starts mixing by calling [method _mix_resampled]."
+msgstr "Egy [AudioStream] lejátszásakor hívódik meg. Törli a köbös interpoláció korábbi mintáit, majd a [method _mix_resampled] meghívásával megkezdi a keverést."
+
+#. AudioStreamWAV.brief
+#: doc/classes/AudioStreamWAV.xml
+msgid "Stores audio data loaded from WAV files."
+msgstr "WAV-fájlból betöltött hangadatokat tárol."
+
+#. AudioStreamWAV.description
+#: doc/classes/AudioStreamWAV.xml
+msgid "AudioStreamWAV stores sound samples loaded from WAV files. To play the stored sound, use an [AudioStreamPlayer] (for non-positional audio) or [AudioStreamPlayer2D]/[AudioStreamPlayer3D] (for positional audio). The sound can be looped.\nThis class can also be used to store dynamically-generated PCM audio data. See also [AudioStreamGenerator] for procedural audio generation."
+msgstr "Az AudioStreamWAV WAV-fájlból betöltött hangmintákat tárol. A hang lejátszásához helyzettől függetlenül az [AudioStreamPlayer], térbeli hangforráshoz pedig az [AudioStreamPlayer2D] vagy az [AudioStreamPlayer3D] használható. A hang ismételhető.\nAz osztály futás közben előállított PCM-hangadatok tárolására is alkalmas. Az eljárásalapú hangelőállításról lásd még az [AudioStreamGenerator] osztályt."
+
+#. AudioStreamWAV.load_from_buffer
+#: doc/classes/AudioStreamWAV.xml
+msgid "Creates a new [AudioStreamWAV] instance from the given buffer. The buffer must contain WAV data.\nThe keys and values of [param options] match the properties of [ResourceImporterWAV]. The usage of [param options] is identical to [method AudioStreamWAV.load_from_file]."
+msgstr "A megadott pufferből új [AudioStreamWAV] példányt hoz létre. A puffernek WAV-adatokat kell tartalmaznia.\nA [param options] kulcsai és értékei megfelelnek a [ResourceImporterWAV] tulajdonságainak. A [param options] használata megegyezik a [method AudioStreamWAV.load_from_file] metóduséval."
+
+#. AudioStreamWAV.load_from_file
+#: doc/classes/AudioStreamWAV.xml
+msgid "Creates a new [AudioStreamWAV] instance from the given file path. The file must be in WAV format.\nThe keys and values of [param options] match the properties of [ResourceImporterWAV].\n[b]Example:[/b] Load the first file dropped as a WAV and play it:\n[codeblock]\n@onready var audio_player = $AudioStreamPlayer\n\nfunc _ready():\n\tget_window().files_dropped.connect(_on_files_dropped)\n\nfunc _on_files_dropped(files):\n\tif files[0].get_extension() == \"wav\":\n\t\taudio_player.stream = AudioStreamWAV.load_from_file(files[0], {\n\t\t\t\t\"force/max_rate\": true,\n\t\t\t\t\"force/max_rate_hz\": 11025\n\t\t\t})\n\t\taudio_player.play()\n[/codeblock]"
+msgstr "A megadott elérési úton lévő WAV-fájlból új [AudioStreamWAV] példányt hoz létre. A fájlnak WAV formátumúnak kell lennie.\nA [param options] kulcsai és értékei megfelelnek a [ResourceImporterWAV] tulajdonságainak.\n[b]Példa:[/b] Az ablakra húzott fájlok közül az első betöltése és lejátszása, ha WAV formátumú.\n[codeblock]\n@onready var audio_player = $AudioStreamPlayer\n\nfunc _ready():\n\tget_window().files_dropped.connect(_on_files_dropped)\n\nfunc _on_files_dropped(files):\n\tif files[0].get_extension() == \"wav\":\n\t\taudio_player.stream = AudioStreamWAV.load_from_file(files[0], {\n\t\t\t\t\"force/max_rate\": true,\n\t\t\t\t\"force/max_rate_hz\": 11025\n\t\t\t})\n\t\taudio_player.play()\n[/codeblock]"
+
+#. AudioStreamWAV.save_to_wav
+#: doc/classes/AudioStreamWAV.xml
+msgid "Saves the AudioStreamWAV as a WAV file to [param path]. Samples with IMA ADPCM or Quite OK Audio formats can't be saved.\n[b]Note:[/b] A [code].wav[/code] extension is automatically appended to [param path] if it is missing."
+msgstr "WAV-fájlba menti az AudioStreamWAV adatait a [param path] útvonalon. IMA ADPCM vagy Quite OK Audio formátumú minták így nem menthetők.\n[b]Megjegyzés:[/b] Ha a [param path] végéről hiányzik a [code].wav[/code] kiterjesztés, a metódus automatikusan hozzáfűzi."
+
+#. AudioStreamWAV.data
+#: doc/classes/AudioStreamWAV.xml
+msgid "Contains the audio data in bytes.\n[b]Note:[/b] If [member format] is set to [constant FORMAT_8_BITS], this property expects signed 8-bit PCM data. To convert from unsigned 8-bit PCM, subtract 128 from each byte.\n[b]Note:[/b] If [member format] is set to [constant FORMAT_QOA], this property expects data from a full QOA file."
+msgstr "A hangadatokat bájtokban tárolja.\n[b]Megjegyzés:[/b] Ha a [member format] értéke [constant FORMAT_8_BITS], a tulajdonság előjeles, 8 bites PCM-adatokat vár. Előjel nélküli 8 bites PCM-adatok átalakításához minden bájtból vonj ki 128-at.\n[b]Megjegyzés:[/b] Ha a [member format] értéke [constant FORMAT_QOA], a tulajdonság egy teljes QOA-fájl adatait várja."
+
+#. AudioStreamWAV.format
+#: doc/classes/AudioStreamWAV.xml
+msgid "Audio format."
+msgstr "A hangadatok formátuma."
+
+#. AudioStreamWAV.loop_begin
+#: doc/classes/AudioStreamWAV.xml
+msgid "The loop start point (in number of samples, relative to the beginning of the stream)."
+msgstr "Az ismétlődő szakasz kezdete a hangfolyam elejétől számított mintákban."
+
+#. AudioStreamWAV.loop_end
+#: doc/classes/AudioStreamWAV.xml
+msgid "The loop end point (in number of samples, relative to the beginning of the stream)."
+msgstr "Az ismétlődő szakasz vége a hangfolyam elejétől számított mintákban."
+
+#. AudioStreamWAV.loop_mode
+#: doc/classes/AudioStreamWAV.xml
+msgid "The loop mode."
+msgstr "Az ismétlés módja."
+
+#. AudioStreamWAV.stereo
+#: doc/classes/AudioStreamWAV.xml
+msgid "If [code]true[/code], audio is stereo."
+msgstr "Ha az érték [code]true[/code], a hang sztereó."
+
+#. AudioStreamWAV.tags
+#: doc/classes/AudioStreamWAV.xml
+msgid "Contains user-defined tags if found in the WAV data.\nCommonly used tags include [code]title[/code], [code]artist[/code], [code]album[/code], [code]tracknumber[/code], and [code]date[/code] ([code]date[/code] does not have a standard date format).\n[b]Note:[/b] No tag is [i]guaranteed[/i] to be present in every file, so make sure to account for the keys not always existing.\n[b]Note:[/b] Only WAV files using a [code]LIST[/code] chunk with an identifier of [code]INFO[/code] to encode the tags are currently supported."
+msgstr "A felhasználó által megadott címkéket tartalmazza, ha szerepelnek a WAV-adatokban.\nGyakori címkék a [code]title[/code], [code]artist[/code], [code]album[/code], [code]tracknumber[/code] és [code]date[/code]. A [code]date[/code] címkének nincs szabványos dátumformátuma.\n[b]Megjegyzés:[/b] Egyetlen címke jelenléte sem [i]garantált[/i] minden fájlban. A kulcsok kiolvasásakor számolj azzal, hogy egyes címkék hiányozhatnak.\n[b]Megjegyzés:[/b] Jelenleg azoknak a WAV-fájloknak a címkéi olvashatók ki, amelyek [code]INFO[/code] azonosítójú [code]LIST[/code] adatblokkban tárolják őket."
+
+#. AudioStreamWAV.FORMAT_8_BITS
+#: doc/classes/AudioStreamWAV.xml
+msgid "8-bit PCM audio codec."
+msgstr "8 bites PCM hangkodek."
+
+#. AudioStreamWAV.FORMAT_16_BITS
+#: doc/classes/AudioStreamWAV.xml
+msgid "16-bit PCM audio codec."
+msgstr "16 bites PCM hangkodek."
+
+#. AudioStreamWAV.FORMAT_IMA_ADPCM
+#: doc/classes/AudioStreamWAV.xml
+msgid "Audio is lossily compressed as IMA ADPCM."
+msgstr "A hang IMA ADPCM formátumban, veszteségesen tömörítve van."
+
+#. AudioStreamWAV.FORMAT_QOA
+#: doc/classes/AudioStreamWAV.xml
+msgid "Audio is lossily compressed as [url=https://qoaformat.org/]Quite OK Audio[/url]."
+msgstr "A hang [url=https://qoaformat.org/]Quite OK Audio[/url] formátumban, veszteségesen tömörítve van."
+
+#. AudioStreamWAV.LOOP_DISABLED
+#: doc/classes/AudioStreamWAV.xml
+msgid "Audio does not loop."
+msgstr "A hang ismétlés nélkül játszódik le."
+
+#. AudioStreamWAV.LOOP_FORWARD
+#: doc/classes/AudioStreamWAV.xml
+msgid "Audio loops the data between [member loop_begin] and [member loop_end], playing forward only."
+msgstr "A [member loop_begin] és a [member loop_end] közötti szakasz előrefelé ismétlődik."
+
+#. AudioStreamWAV.LOOP_PINGPONG
+#: doc/classes/AudioStreamWAV.xml
+msgid "Audio loops the data between [member loop_begin] and [member loop_end], playing back and forth."
+msgstr "A [member loop_begin] és a [member loop_end] közötti szakasz felváltva előre- és visszafelé játszódik le."
+
+#. AudioStreamWAV.LOOP_BACKWARD
+#: doc/classes/AudioStreamWAV.xml
+msgid "Audio loops the data between [member loop_begin] and [member loop_end], playing backward only."
+msgstr "A [member loop_begin] és a [member loop_end] közötti szakasz visszafelé ismétlődik."
+
+#. AudioStreamMP3.brief
+#: modules/mp3/doc_classes/AudioStreamMP3.xml
+msgid "MP3 audio stream driver."
+msgstr "MP3 formátumú hangfolyamot kezel."
+
+#. AudioStreamMP3.description
+#: modules/mp3/doc_classes/AudioStreamMP3.xml
+msgid "MP3 audio stream driver. See [member data] if you want to load an MP3 file at run-time. More info can be found in [ResourceImporterMP3].\n[b]Note:[/b] This class can optionally support legacy MP1 and MP2 formats, provided that the engine is compiled with the [code]minimp3_extra_formats=yes[/code] SCons option. These extra formats are not enabled by default."
+msgstr "MP3 formátumú hangfolyamot kezel. MP3-fájl futás közbeni betöltéséhez lásd a [member data] tulajdonságot. Az importálás részletei a [ResourceImporterMP3] leírásában találhatók.\n[b]Megjegyzés:[/b] A régebbi MP1 és MP2 formátum akkor támogatott, ha a motort a [code]minimp3_extra_formats=yes[/code] SCons-beállítással fordították. Ezek a formátumok alapértelmezés szerint ki vannak kapcsolva."
+
+#. AudioStreamMP3.load_from_buffer
+#: modules/mp3/doc_classes/AudioStreamMP3.xml
+msgid "Creates a new [AudioStreamMP3] instance from the given buffer. The buffer must contain MP3 data."
+msgstr "A megadott pufferből új [AudioStreamMP3] példányt hoz létre. A puffernek MP3-adatokat kell tartalmaznia."
+
+#. AudioStreamMP3.load_from_file
+#: modules/mp3/doc_classes/AudioStreamMP3.xml
+msgid "Creates a new [AudioStreamMP3] instance from the given file path. The file must be in MP3 format."
+msgstr "A megadott elérési úton lévő fájlból új [AudioStreamMP3] példányt hoz létre. A fájlnak MP3 formátumúnak kell lennie."
+
+#. AudioStreamMP3.bar_beats
+#. AudioStreamOggVorbis.bar_beats
+#: modules/mp3/doc_classes/AudioStreamMP3.xml modules/vorbis/doc_classes/AudioStreamOggVorbis.xml
+msgid "The number of beats within a single bar in the audio track."
+msgstr "A hangsáv egy ütemére jutó ütések száma."
+
+#. AudioStreamMP3.beat_count
+#. AudioStreamOggVorbis.beat_count
+#: modules/mp3/doc_classes/AudioStreamMP3.xml modules/vorbis/doc_classes/AudioStreamOggVorbis.xml
+msgid "The length of the audio track, in beats. The actual duration of the audio file might be longer than what is indicated by this property. It defines the end of the audio for looping, [AudioStreamPlaylist], and [AudioStreamInteractive]."
+msgstr "A hangsáv hossza ütésekben. A hangfájl tényleges időtartama hosszabb is lehet. Ez az érték határozza meg a hang végét ismétléskor, illetve az [AudioStreamPlaylist] és az [AudioStreamInteractive] használatakor."
+
+#. AudioStreamMP3.bpm
+#. AudioStreamOggVorbis.bpm
+#: modules/mp3/doc_classes/AudioStreamMP3.xml modules/vorbis/doc_classes/AudioStreamOggVorbis.xml
+msgid "The tempo of the audio track, measured in beats per minute."
+msgstr "A hangsáv tempója percenkénti ütésekben."
+
+#. AudioStreamMP3.loop
+#. AudioStreamOggVorbis.loop
+#: modules/mp3/doc_classes/AudioStreamMP3.xml modules/vorbis/doc_classes/AudioStreamOggVorbis.xml
+msgid "If [code]true[/code], the stream will play again from the specified [member loop_offset] once it reaches the end of the audio track, or once it reaches the end of the last beat according to the amount specified in [member beat_count]. Useful for ambient sounds and background music."
+msgstr "Ha az érték [code]true[/code], a hangfolyam a [member loop_offset] által megadott ponttól újraindul, amikor eléri a hangsáv végét vagy a [member beat_count] szerinti utolsó ütés végét. Környezeti hangokhoz és háttérzenéhez használható."
+
+#. AudioStreamMP3.loop_offset
+#. AudioStreamOggVorbis.loop_offset
+#: modules/mp3/doc_classes/AudioStreamMP3.xml modules/vorbis/doc_classes/AudioStreamOggVorbis.xml
+msgid "Time in seconds at which the stream starts after being looped."
+msgstr "Az időpont másodpercben, ahonnan a hangfolyam ismétléskor újraindul."
+
+#. AudioStreamOggVorbis.brief
+#: modules/vorbis/doc_classes/AudioStreamOggVorbis.xml
+msgid "A class representing an Ogg Vorbis audio stream."
+msgstr "Ogg Vorbis formátumú hangfolyamot képvisel."
+
+#. AudioStreamOggVorbis.description
+#: modules/vorbis/doc_classes/AudioStreamOggVorbis.xml
+msgid "The AudioStreamOggVorbis class is a specialized [AudioStream] for handling Ogg Vorbis file formats. It offers functionality for loading and playing back Ogg Vorbis files, as well as managing looping and other playback properties. More info can be found in [ResourceImporterOggVorbis].\nThis class is part of the audio stream system, which also supports WAV files through the [AudioStreamWAV] class, and MP3 files through the [AudioStreamMP3] class."
+msgstr "Az AudioStreamOggVorbis olyan [AudioStream], amely Ogg Vorbis-fájlok kezelésére szolgál. A betöltés és lejátszás mellett az ismétlés és más lejátszási beállítások is vezérelhetők vele. Az importálás részletei a [ResourceImporterOggVorbis] leírásában találhatók.\nA hangfolyamrendszer a WAV-fájlokat az [AudioStreamWAV], az MP3-fájlokat az [AudioStreamMP3] osztállyal kezeli."
+
+#. AudioStreamOggVorbis.load_from_buffer
+#. ResourceImporterOggVorbis.load_from_buffer
+#: modules/vorbis/doc_classes/AudioStreamOggVorbis.xml modules/vorbis/doc_classes/ResourceImporterOggVorbis.xml
+msgid "Creates a new [AudioStreamOggVorbis] instance from the given buffer. The buffer must contain Ogg Vorbis data."
+msgstr "A megadott pufferből új [AudioStreamOggVorbis] példányt hoz létre. A puffernek Ogg Vorbis-adatokat kell tartalmaznia."
+
+#. AudioStreamOggVorbis.load_from_file
+#. ResourceImporterOggVorbis.load_from_file
+#: modules/vorbis/doc_classes/AudioStreamOggVorbis.xml modules/vorbis/doc_classes/ResourceImporterOggVorbis.xml
+msgid "Creates a new [AudioStreamOggVorbis] instance from the given file path. The file must be in Ogg Vorbis format."
+msgstr "A megadott elérési úton lévő fájlból új [AudioStreamOggVorbis] példányt hoz létre. A fájlnak Ogg Vorbis formátumúnak kell lennie."
+
+#. AudioStreamOggVorbis.packet_sequence
+#: modules/vorbis/doc_classes/AudioStreamOggVorbis.xml
+msgid "Contains the raw Ogg data for this stream."
+msgstr "A hangfolyam nyers Ogg-adatait tartalmazza."
+
+#. AudioStreamOggVorbis.tags
+#: modules/vorbis/doc_classes/AudioStreamOggVorbis.xml
+msgid "Contains user-defined tags if found in the Ogg Vorbis data.\nCommonly used tags include [code]title[/code], [code]artist[/code], [code]album[/code], [code]tracknumber[/code], and [code]date[/code] ([code]date[/code] does not have a standard date format).\n[b]Note:[/b] No tag is [i]guaranteed[/i] to be present in every file, so make sure to account for the keys not always existing."
+msgstr "A felhasználó által megadott címkéket tartalmazza, ha szerepelnek az Ogg Vorbis-adatokban.\nGyakori címkék a [code]title[/code], [code]artist[/code], [code]album[/code], [code]tracknumber[/code] és [code]date[/code]. A [code]date[/code] címkének nincs szabványos dátumformátuma.\n[b]Megjegyzés:[/b] Egyetlen címke jelenléte sem [i]garantált[/i] minden fájlban. A kulcsok kiolvasásakor számolj azzal, hogy egyes címkék hiányozhatnak."
+
+#. AudioStreamPlaybackOggVorbis.brief
+#: modules/vorbis/doc_classes/AudioStreamPlaybackOggVorbis.xml
+msgid "Playback class used for [AudioStreamOggVorbis]."
+msgstr "Az [AudioStreamOggVorbis] lejátszására szolgáló osztály."
+
+#. AudioStreamPlaybackOggVorbis.description
+#: modules/vorbis/doc_classes/AudioStreamPlaybackOggVorbis.xml
+msgid "Playback component of [AudioStreamOggVorbis]. Uses [OggPacketSequencePlayback] for playback data."
+msgstr "Az [AudioStreamOggVorbis] lejátszását végző összetevő. A lejátszáshoz az [OggPacketSequencePlayback] adatait használja."
+
+#. AudioStreamPlaybackPlaylist.brief
+#: modules/interactive_music/doc_classes/AudioStreamPlaybackPlaylist.xml
+msgid "Playback class used for [AudioStreamPlaylist]."
+msgstr "Az [AudioStreamPlaylist] lejátszására szolgáló osztály."
+
+#. AudioStreamPlaybackPlaylist.description
+#: modules/interactive_music/doc_classes/AudioStreamPlaybackPlaylist.xml
+msgid "Playback component of [AudioStreamPlaylist]. Handles the playback of multiple [AudioStream]s in sequence."
+msgstr "Az [AudioStreamPlaylist] lejátszását végző összetevő. Egymás után játssza le az [AudioStream] hangfolyamokat."
+
+#. AudioStreamPlaybackSynchronized.brief
+#: modules/interactive_music/doc_classes/AudioStreamPlaybackSynchronized.xml
+msgid "Playback class used for [AudioStreamSynchronized]."
+msgstr "Az [AudioStreamSynchronized] lejátszására szolgáló osztály."
+
+#. AudioStreamPlaybackSynchronized.description
+#: modules/interactive_music/doc_classes/AudioStreamPlaybackSynchronized.xml
+msgid "Playback component of [AudioStreamSynchronized]. Handles the playback of multiple [AudioStream]s in synchrony."
+msgstr "Az [AudioStreamSynchronized] lejátszását végző összetevő. Több [AudioStream] hangfolyam szinkron lejátszását kezeli."
+
+#. AudioStreamPolyphonic.brief
+#: doc/classes/AudioStreamPolyphonic.xml
+msgid "AudioStream that lets the user play custom streams at any time from code, simultaneously using a single player."
+msgstr "Olyan AudioStream, amellyel kódból, egyetlen lejátszón keresztül bármikor több hangfolyamot indíthatsz el párhuzamosan."
+
+#. AudioStreamPolyphonic.description
+#: doc/classes/AudioStreamPolyphonic.xml
+msgid "AudioStream that lets the user play custom streams at any time from code, simultaneously using a single player.\nPlayback control is done via the [AudioStreamPlaybackPolyphonic] instance set inside the player, which can be obtained via [method AudioStreamPlayer.get_stream_playback], [method AudioStreamPlayer2D.get_stream_playback] or [method AudioStreamPlayer3D.get_stream_playback] methods. Obtaining the playback instance is only valid after the [code]stream[/code] property is set as an [AudioStreamPolyphonic] in those players."
+msgstr "Olyan AudioStream, amellyel kódból, egyetlen lejátszón keresztül bármikor több hangfolyamot indíthatsz el párhuzamosan.\nA lejátszást a lejátszóhoz tartozó [AudioStreamPlaybackPolyphonic] példány vezérli. Ezt a [method AudioStreamPlayer.get_stream_playback], a [method AudioStreamPlayer2D.get_stream_playback] vagy a [method AudioStreamPlayer3D.get_stream_playback] metódussal kérheted le. A példány csak azután kérhető le, hogy a lejátszó [code]stream[/code] tulajdonságához [AudioStreamPolyphonic] erőforrást rendeltél."
+
+#. AudioStreamPolyphonic.polyphony
+#: doc/classes/AudioStreamPolyphonic.xml
+msgid "Maximum amount of simultaneous streams that can be played."
+msgstr "Az egyidejűleg lejátszható hangfolyamok legnagyobb száma."
+
+#. AudioStreamRandomizer.random_pitch
+#: doc/classes/AudioStreamRandomizer.xml
+msgid "The largest possible frequency multiplier of the random pitch variation. Pitch will be randomly chosen within a range of [code skip-lint]1.0 / random_pitch[/code] and [code skip-lint]random_pitch[/code]. A value of [code]1.0[/code] means no variation. A value of [code]2.0[/code] means pitch will be randomized between double and half.\n[b]Note:[/b] Setting this property also sets [member random_pitch_semitones]."
+msgstr "A véletlenszerű hangmagasság-változtatáshoz használható legnagyobb frekvenciaszorzó. A hangmagassághoz tartozó szorzót a motor [code skip-lint]1.0 / random_pitch[/code] és [code skip-lint]random_pitch[/code] között választja ki. A [code]1.0[/code] érték kikapcsolja a változtatást. A [code]2.0[/code] értéknél a frekvencia az eredeti felétől a kétszereséig terjedhet.\n[b]Megjegyzés:[/b] A tulajdonság beállítása a [member random_pitch_semitones] értékét is módosítja."
+
+#. AudioStreamRandomizer.random_pitch_semitones
+#: doc/classes/AudioStreamRandomizer.xml
+msgid "The largest possible distance, in semitones, of the random pitch variation. A value of [code]0.0[/code] means no variation.\n[b]Note:[/b] Setting this property also sets [member random_pitch]."
+msgstr "A véletlenszerű hangmagasság-változtatás legnagyobb eltérése félhangokban. A [code]0.0[/code] érték kikapcsolja a változtatást.\n[b]Megjegyzés:[/b] A tulajdonság beállítása a [member random_pitch] értékét is módosítja."
+
+#. AudioStreamRandomizer.stream_{index}/stream
+#: doc/classes/AudioStreamRandomizer.xml
+msgid "The [AudioStream] at [code]index[/code].\n[b]Note:[/b] [code]index[/code] is a value in the [code]0 .. streams_count - 1[/code] range."
+msgstr "Az [code]index[/code] helyen lévő [AudioStream] hangfolyam.\n[b]Megjegyzés:[/b] Az [code]index[/code] értékének a [code]0 .. streams_count - 1[/code] tartományba kell esnie."
+
+#. AudioStreamRandomizer.stream_{index}/weight
+#: doc/classes/AudioStreamRandomizer.xml
+msgid "The probability weight of the [AudioStream] at [code]index[/code].\n[b]Note:[/b] [code]index[/code] is a value in the [code]0 .. streams_count - 1[/code] range."
+msgstr "Az [code]index[/code] helyen lévő [AudioStream] kiválasztásának valószínűségi súlya.\n[b]Megjegyzés:[/b] Az [code]index[/code] értékének a [code]0 .. streams_count - 1[/code] tartományba kell esnie."
+
+#. AudioStreamPlaybackPolyphonic.description
+#: doc/classes/AudioStreamPlaybackPolyphonic.xml
+msgid "Playback instance for [AudioStreamPolyphonic]. After setting the [code]stream[/code] property of [AudioStreamPlayer], [AudioStreamPlayer2D], or [AudioStreamPlayer3D], the playback instance can be obtained by calling [method AudioStreamPlayer.get_stream_playback], [method AudioStreamPlayer2D.get_stream_playback] or [method AudioStreamPlayer3D.get_stream_playback] methods."
+msgstr "Az [AudioStreamPolyphonic] lejátszási példánya. Miután beállítottad az [AudioStreamPlayer], az [AudioStreamPlayer2D] vagy az [AudioStreamPlayer3D] csomópont [code]stream[/code] tulajdonságát, a példányt a [method AudioStreamPlayer.get_stream_playback], a [method AudioStreamPlayer2D.get_stream_playback] vagy a [method AudioStreamPlayer3D.get_stream_playback] metódussal kérheted le."
+
+#. AudioStreamPlaybackPolyphonic.play_stream
+#: doc/classes/AudioStreamPlaybackPolyphonic.xml
+msgid "Play an [AudioStream] at a given offset, volume, pitch scale, playback type, and bus. Playback starts immediately.\nThe return value is a unique integer ID that is associated to this playback stream and which can be used to control it.\nThis ID becomes invalid when the stream ends (if it does not loop), when the [AudioStreamPlaybackPolyphonic] is stopped, or when [method stop_stream] is called.\nThis function returns [constant INVALID_ID] if the amount of streams currently playing equals [member AudioStreamPolyphonic.polyphony]. If you need a higher amount of maximum polyphony, raise this value."
+msgstr "A megadott kezdőpozícióval, hangerővel, hangmagasság-szorzóval, lejátszási móddal és hangbusszal játssza le az [AudioStream] hangfolyamot. A lejátszás azonnal elindul.\nA metódus egy egész számot ad vissza, amely egyedileg azonosítja az elindított hangfolyamot, és a vezérlésére használható.\nAz azonosító érvényét veszti, ha a hangfolyam ismétlés nélkül a végére ér, ha az [AudioStreamPlaybackPolyphonic] leáll, vagy ha meghívod a [method stop_stream] metódust.\nHa az egyidejűleg szóló hangfolyamok száma eléri az [member AudioStreamPolyphonic.polyphony] értékét, a metódus [constant INVALID_ID] értéket ad vissza. Több egyidejű hanghoz növeld a tulajdonság értékét."
