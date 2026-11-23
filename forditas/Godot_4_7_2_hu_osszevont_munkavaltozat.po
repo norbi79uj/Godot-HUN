@@ -55506,3 +55506,503 @@ msgstr "Akkor jelez, amikor az előző animáció végén elindul a sorban köve
 #: doc/classes/AnimationRootNode.xml
 msgid "Base class for [AnimationNode]s that hold one or multiple composite animations. Usually used for [member AnimationTree.tree_root]."
 msgstr "Egy vagy több összetett animációt tartalmazó [AnimationNode] csomópontok alaposztálya. Jellemzően az [member AnimationTree.tree_root] tulajdonsághoz rendelik."
+
+#. Bone2D.description
+#: doc/classes/Bone2D.xml
+msgid "A hierarchy of [Bone2D]s can be bound to a [Skeleton2D] to control and animate other [Node2D] nodes.\nYou can use [Bone2D] and [Skeleton2D] nodes to animate 2D meshes created with the [Polygon2D] UV editor.\nEach bone has a [member rest] transform that you can reset to with [method apply_rest]. These rest poses are relative to the bone's parent.\nIf in the editor, you can set the rest pose of an entire skeleton using a menu option, from the code, you need to iterate over the bones to set their individual rest poses."
+msgstr "A [Bone2D] csomópontok hierarchiáját egy [Skeleton2D] csomóponthoz kötheted, és így más [Node2D] csomópontokat vezérelhetsz vagy animálhatsz.\nA [Bone2D] és a [Skeleton2D] segítségével a [Polygon2D] UV-szerkesztőjében létrehozott 2D-s hálókat is animálhatod.\nMinden csont nyugalmi transzformációját a [member rest] tárolja. A [method apply_rest] visszaállítja a csontot ebbe a pózba. A nyugalmi póz a csont szülőjéhez viszonyított.\nA szerkesztőben menüponttal állíthatod be a teljes csontváz nyugalmi pózát. Kódból egyenként kell végigjárnod a csontokat és beállítanod a nyugalmi pózukat."
+
+#. Bone2D.get_autocalculate_length_and_angle
+#: doc/classes/Bone2D.xml
+msgid "Returns whether this [Bone2D] is going to autocalculate its length and bone angle using its first [Bone2D] child node, if one exists. If there are no [Bone2D] children, then it cannot autocalculate these values and will print a warning."
+msgstr "Azt adja vissza, hogy ez a [Bone2D] automatikusan kiszámítja-e a hosszát és a csontszögét az első [Bone2D] gyermekcsomópont alapján. Ha nincs [Bone2D] gyermeke, a számítás nem végezhető el, és a motor figyelmeztetést ír ki."
+
+#. Bone2D.get_bone_angle
+#: doc/classes/Bone2D.xml
+msgid "Returns the angle of the bone in the [Bone2D].\n[b]Note:[/b] This is different from the [Bone2D]'s rotation. The bone's angle is the rotation of the bone shown by the gizmo, which is unaffected by the [Bone2D]'s [member Node2D.transform]."
+msgstr "A [Bone2D] csontszögét adja vissza.\n[b]Megjegyzés:[/b] Ez eltér a [Bone2D] csomópont forgatásától. A csontszög a szerkesztő segédábráján látható [Bone2D] csont helyi irányát adja meg, a [member Node2D.transform] értékétől függetlenül."
+
+#. Bone2D.set_autocalculate_length_and_angle
+#: doc/classes/Bone2D.xml
+msgid "When set to [code]true[/code], the [Bone2D] node will attempt to automatically calculate the bone angle and length using the first child [Bone2D] node, if one exists. If none exist, the [Bone2D] cannot automatically calculate these values and will print a warning."
+msgstr "Ha az érték [code]true[/code], a [Bone2D] az első [Bone2D] gyermekcsomópont helyzetéből próbálja kiszámítani a csontszöget és a hosszt. Ha nincs [Bone2D] gyermeke, a számítás nem végezhető el, és a motor figyelmeztetést ír ki."
+
+#. Bone2D.set_bone_angle
+#: doc/classes/Bone2D.xml
+msgid "Sets the bone angle for the [Bone2D]. This is typically set to the rotation from the [Bone2D] to a child [Bone2D] node.\n[b]Note:[/b] This is different from the [Bone2D]'s rotation. The bone's angle is the rotation of the bone shown by the gizmo, which is unaffected by the [Bone2D]'s [member Node2D.transform]."
+msgstr "Beállítja a [Bone2D] csontszögét. Ez általában azt a szöget adja meg, amelyben a [Bone2D] egy [Bone2D] gyermekcsomópont felé mutat.\n[b]Megjegyzés:[/b] Ez eltér a [Bone2D] csomópont forgatásától. A csontszög a szerkesztő segédábráján látható [Bone2D] csont helyi irányát adja meg, a [member Node2D.transform] értékétől függetlenül."
+
+#. BoneAttachment3D.override_pose
+#: doc/classes/BoneAttachment3D.xml
+msgid "Whether the [BoneAttachment3D] node will override the bone pose of the bone it is attached to. When set to [code]true[/code], the [BoneAttachment3D] node can change the pose of the bone. When set to [code]false[/code], the [BoneAttachment3D] will always be set to the bone's transform.\n[b]Note:[/b] This override performs interruptively in the skeleton update process using signals due to the old design. It may cause unintended behavior when used at the same time with [SkeletonModifier3D]."
+msgstr "Meghatározza, hogy a [BoneAttachment3D] felülbírálja-e annak a csontnak a pózát, amelyhez kapcsolódik. Ha az érték [code]true[/code], a [BoneAttachment3D] módosíthatja a csont pózát. Ha [code]false[/code], a [BoneAttachment3D] mindig követi a csont transzformációját.\n[b]Megjegyzés:[/b] A korábbi megvalósítás miatt a felülbírálás jelzéseken keresztül, a csontváz frissítésébe közbeavatkozva történik. [SkeletonModifier3D] mellett ez váratlan eredményt okozhat."
+
+#. BoneAttachment3D.use_external_skeleton
+#: doc/classes/BoneAttachment3D.xml
+msgid "Whether the [BoneAttachment3D] node will use an external [Skeleton3D] node rather than attempting to use its parent node as the [Skeleton3D]. When set to [code]true[/code], the [BoneAttachment3D] node will use the external [Skeleton3D] node set in [member external_skeleton]."
+msgstr "Meghatározza, hogy a [BoneAttachment3D] külső [Skeleton3D] csomópontot használjon-e a szülőcsomópont [Skeleton3D] csomópontként való kezelése helyett. Ha az érték [code]true[/code], a [BoneAttachment3D] az [member external_skeleton] tulajdonságban megadott külső [Skeleton3D] csomópontot használja."
+
+#. PhysicalBone2D.brief
+#: doc/classes/PhysicalBone2D.xml
+msgid "A [RigidBody2D]-derived node used to make [Bone2D]s in a [Skeleton2D] react to physics."
+msgstr "[RigidBody2D] alapú csomópont, amellyel egy [Skeleton2D] [Bone2D] csontjai reagálhatnak a fizikai szimulációra."
+
+#. PhysicalBone2D.description
+#: doc/classes/PhysicalBone2D.xml
+msgid "The [PhysicalBone2D] node is a [RigidBody2D]-based node that can be used to make [Bone2D]s in a [Skeleton2D] react to physics.\n[b]Note:[/b] To make the [Bone2D]s visually follow the [PhysicalBone2D] node, use a [SkeletonModification2DPhysicalBones] modification on the [Skeleton2D] parent.\n[b]Note:[/b] The [PhysicalBone2D] node does not automatically create a [Joint2D] node to keep [PhysicalBone2D] nodes together. They must be created manually. For most cases, you want to use a [PinJoint2D] node. The [PhysicalBone2D] node will automatically configure the [Joint2D] node once it's been added as a child node."
+msgstr "A [PhysicalBone2D] egy [RigidBody2D] alapú csomópont, amellyel egy [Skeleton2D] [Bone2D] csontjai reagálhatnak a fizikai szimulációra.\n[b]Megjegyzés:[/b] Ahhoz, hogy a [Bone2D] csontok láthatóan kövessék a [PhysicalBone2D] csomópontot, adj [SkeletonModification2DPhysicalBones] módosítást a szülő [Skeleton2D] csomóponthoz.\n[b]Megjegyzés:[/b] A [PhysicalBone2D] nem hoz létre magától [Joint2D] csomópontot a [PhysicalBone2D] csomópontok összekötésére. A csuklókat kézzel kell létrehozni. A legtöbb esetben egy [PinJoint2D] alkalmas erre. A [PhysicalBone2D] automatikusan beállítja a [Joint2D] csomópontot, amikor gyermekeként hozzáadod."
+
+#. PhysicalBone2D.get_joint
+#: doc/classes/PhysicalBone2D.xml
+msgid "Returns the first [Joint2D] child node, if one exists. This is mainly a helper function to make it easier to get the [Joint2D] that the [PhysicalBone2D] is autoconfiguring."
+msgstr "Az első [Joint2D] gyermekcsomópontot adja vissza, ha van ilyen. Ezzel könnyen lekérheted a [Joint2D] csomópontot, amelyet a [PhysicalBone2D] automatikusan beállít."
+
+#. PhysicalBone2D.is_simulating_physics
+#: doc/classes/PhysicalBone2D.xml
+msgid "Returns a boolean that indicates whether the [PhysicalBone2D] is running and simulating using the Godot 2D physics engine. When [code]true[/code], the PhysicalBone2D node is using physics."
+msgstr "Azt adja vissza, hogy a [PhysicalBone2D] részt vesz-e a Godot 2D-s fizikai szimulációjában. A [code]true[/code] érték azt jelzi, hogy a PhysicalBone2D fizikája aktív."
+
+#. PhysicalBone2D.auto_configure_joint
+#: doc/classes/PhysicalBone2D.xml
+msgid "If [code]true[/code], the [PhysicalBone2D] will automatically configure the first [Joint2D] child node. The automatic configuration is limited to setting up the node properties and positioning the [Joint2D]."
+msgstr "Ha az érték [code]true[/code], a [PhysicalBone2D] automatikusan konfigurálja az első [Joint2D] gyermekcsomópontot. Az automatikus beállítás a [Joint2D] tulajdonságait és pozícióját érinti."
+
+#. PhysicalBone2D.bone2d_index
+#: doc/classes/PhysicalBone2D.xml
+msgid "The index of the [Bone2D] that this [PhysicalBone2D] should simulate."
+msgstr "A [Bone2D] csont indexe, amelyet ez a [PhysicalBone2D] szimulál."
+
+#. PhysicalBone2D.bone2d_nodepath
+#: doc/classes/PhysicalBone2D.xml
+msgid "The [NodePath] to the [Bone2D] that this [PhysicalBone2D] should simulate."
+msgstr "A [Bone2D] csont [NodePath] útvonala, amelyet ez a [PhysicalBone2D] szimulál."
+
+#. PhysicalBone2D.follow_bone_when_simulating
+#: doc/classes/PhysicalBone2D.xml
+msgid "If [code]true[/code], the [PhysicalBone2D] will keep the transform of the bone it is bound to when simulating physics."
+msgstr "Ha az érték [code]true[/code], a [PhysicalBone2D] futó fizikai szimuláció mellett is követi a hozzá rendelt csont transzformációját."
+
+#. PhysicalBone2D.simulate_physics
+#: doc/classes/PhysicalBone2D.xml
+msgid "If [code]true[/code], the [PhysicalBone2D] will start simulating using physics. If [code]false[/code], the [PhysicalBone2D] will follow the transform of the [Bone2D] node.\n[b]Note:[/b] To have the [Bone2D]s visually follow the [PhysicalBone2D], use a [SkeletonModification2DPhysicalBones] modification on the [Skeleton2D] node with the [Bone2D] nodes."
+msgstr "Ha az érték [code]true[/code], elindul a [PhysicalBone2D] fizikai szimulációja. Ha [code]false[/code], a [PhysicalBone2D] a [Bone2D] csomópont transzformációját követi.\n[b]Megjegyzés:[/b] Ahhoz, hogy a [Bone2D] csontok láthatóan kövessék a [PhysicalBone2D] csomópontot, adj [SkeletonModification2DPhysicalBones] módosítást a [Bone2D] csontokat tartalmazó [Skeleton2D] csomóponthoz."
+
+#. Skeleton2D.description
+#: doc/classes/Skeleton2D.xml
+msgid "[Skeleton2D] parents a hierarchy of [Bone2D] nodes. It holds a reference to each [Bone2D]'s rest pose and acts as a single point of access to its bones.\nTo set up different types of inverse kinematics for the given Skeleton2D, a [SkeletonModificationStack2D] should be created. The inverse kinematics be applied by increasing [member SkeletonModificationStack2D.modification_count] and creating the desired number of modifications."
+msgstr "A [Skeleton2D] a [Bone2D] csomópontok hierarchiájának szülője. Nyilvántartja az egyes [Bone2D] csontok nyugalmi pózát, és egy helyen ad hozzáférést a csontokhoz.\nA Skeleton2D különféle inverz kinematikai módosításaihoz hozz létre egy [SkeletonModificationStack2D] erőforrást. Növeld a [member SkeletonModificationStack2D.modification_count] értékét, és hozd létre a kívánt módosításokat."
+
+#. Skeleton2D.execute_modifications
+#: doc/classes/Skeleton2D.xml
+msgid "Executes all the modifications on the [SkeletonModificationStack2D], if the Skeleton2D has one assigned."
+msgstr "Végrehajtja a [SkeletonModificationStack2D] összes módosítását, ha a Skeleton2D csomóponthoz hozzá van rendelve ilyen erőforrás."
+
+#. Skeleton2D.get_bone
+#: doc/classes/Skeleton2D.xml
+msgid "Returns a [Bone2D] from the node hierarchy parented by Skeleton2D. The object to return is identified by the parameter [param idx]. Bones are indexed by descending the node hierarchy from top to bottom, adding the children of each branch before moving to the next sibling."
+msgstr "A Skeleton2D alatti hierarchiából a [param idx] indexű [Bone2D] csomópontot adja vissza. Az indexek kiosztása felülről lefelé halad. A bejárás egy ág minden gyermekét feldolgozza, mielőtt a következő testvércsomópontra lép."
+
+#. IKModifier3D.description
+#: doc/classes/IKModifier3D.xml
+msgid "Base class of [SkeletonModifier3D]s that has some joint lists and applies inverse kinematics. This class has some structs, enums, and helper methods which are useful to solve inverse kinematics."
+msgstr "Az inverz kinematikát alkalmazó és ízületlistákat kezelő [SkeletonModifier3D] osztályok alapja. Az osztály az inverz kinematikai feladatok megoldását segítő adatstruktúrákat, felsorolásokat és metódusokat biztosít."
+
+#. Skeleton2D.bone_setup_changed
+#: doc/classes/Skeleton2D.xml
+msgid "Emitted when the [Bone2D] setup attached to this skeletons changes. This is primarily used internally within the skeleton."
+msgstr "Akkor jelez, ha megváltozik a csontvázhoz kapcsolt [Bone2D] csontok összeállítása. A jelzést elsősorban a csontváz belső működése használja."
+
+#. Skeleton3D.description
+#: doc/classes/Skeleton3D.xml
+msgid "[Skeleton3D] provides an interface for managing a hierarchy of bones, including pose, rest and animation (see [Animation]). It can also use ragdoll physics.\nThe overall transform of a bone with respect to the skeleton is determined by bone pose. Bone rest defines the initial transform of the bone pose.\nNote that \"global pose\" below refers to the overall transform of the bone with respect to skeleton, so it is not the actual global/world transform of the bone."
+msgstr "A [Skeleton3D] a csonthierarchia, a nyugalmi és aktuális pózok, valamint az animációk kezelésére szolgál (lásd [Animation]). Ragdoll-szimulációt is támogat.\nA csont csontvázhoz viszonyított transzformációját a csont póza határozza meg. A nyugalmi póz a csont kezdeti transzformációját adja meg.\nAz itt használt „globális póz” a csont teljes, csontvázhoz viszonyított transzformációját jelenti. A világkoordinátákhoz a csontváz világtranszformációját is figyelembe kell venni."
+
+#. Skeleton3D.get_bone_global_pose
+#: doc/classes/Skeleton3D.xml
+msgid "Returns the overall transform of the specified bone, with respect to the skeleton. Being relative to the skeleton frame, this is not the actual \"global\" transform of the bone.\n[b]Note:[/b] This is the global pose you set to the skeleton in the process, the final global pose can get overridden by modifiers in the deferred process, if you want to access the final global pose, use [signal SkeletonModifier3D.modification_processed]."
+msgstr "A megadott csont teljes, csontvázhoz viszonyított transzformációját adja vissza. A „globális” itt a csontváz koordináta-rendszerére vonatkozik, nem a világéra.\n[b]Megjegyzés:[/b] Ez a feldolgozás során beállított globális póz. A módosítók a halasztott feldolgozás alatt felülbírálhatják. A végleges globális póz kiolvasásához használd a [signal SkeletonModifier3D.modification_processed] jelzést."
+
+#. Skeleton3D.set_bone_global_pose
+#: doc/classes/Skeleton3D.xml
+msgid "Sets the global pose transform, [param pose], for the bone at [param bone_idx].\n[b]Note:[/b] If other bone poses have been changed, this method executes a dirty poses recalculation and will cause performance to deteriorate. If you know that multiple global poses will be applied, consider using [method set_bone_pose] with precalculation."
+msgstr "A [param bone_idx] indexű csont globális pózát a [param pose] transzformációra állítja.\n[b]Megjegyzés:[/b] Ha más csontok pózai közben megváltoztak, a metódus újraszámolja az érvénytelenné vált pózokat. Ez lassíthatja a feldolgozást. Ha több globális pózt állítasz be, érdemes előre kiszámítani a helyi pózokat, és a [method set_bone_pose] metódussal alkalmazni őket."
+
+#. Skeleton3D.set_bone_global_pose_override
+#: doc/classes/Skeleton3D.xml
+msgid "Sets the global pose transform, [param pose], for the bone at [param bone_idx].\n[param amount] is the interpolation strength that will be used when applying the pose, and [param persistent] determines if the applied pose will remain.\n[b]Note:[/b] The pose transform needs to be a global pose! To convert a world transform from a [Node3D] to a global bone pose, multiply the [method Transform3D.affine_inverse] of the node's [member Node3D.global_transform] by the desired world transform."
+msgstr "A [param bone_idx] indexű csont globális pózát a megadott [param pose] transzformációval bírálja felül.\nA [param amount] az interpoláció súlyát adja meg, a [param persistent] pedig azt, hogy érvényben marad-e a felülbírálás.\n[b]Megjegyzés:[/b] A pózt a csontváz koordináta-rendszerében kell megadni. Egy [Node3D] világtranszformációjának átalakításához balról szorozd meg a kívánt világtranszformációt a csontváz [member Node3D.global_transform] értékének [method Transform3D.affine_inverse] metódussal kiszámított inverzével."
+
+#. Skeleton3D.animate_physical_bones
+#: doc/classes/Skeleton3D.xml
+msgid "If you follow the recommended workflow and explicitly have [PhysicalBoneSimulator3D] as a child of [Skeleton3D], you can control whether it is affected by raycasting without running [method physical_bones_start_simulation], by its [member SkeletonModifier3D.active].\nHowever, for old (deprecated) configurations, [Skeleton3D] has an internal virtual [PhysicalBoneSimulator3D] for compatibility. This property controls the internal virtual [PhysicalBoneSimulator3D]'s [member SkeletonModifier3D.active]."
+msgstr "Az ajánlott felépítésben a [PhysicalBoneSimulator3D] a [Skeleton3D] közvetlen gyermeke. Ilyenkor a [member SkeletonModifier3D.active] tulajdonsággal vezérelheted, hogy a sugártesztek érzékeljék-e a fizikai csontokat a [method physical_bones_start_simulation] meghívása nélkül.\nA régi, elavult felépítéshez a [Skeleton3D] kompatibilitási okból egy belső [PhysicalBoneSimulator3D] példányt tart fenn. Ez a tulajdonság annak a belső [PhysicalBoneSimulator3D] példánynak a [member SkeletonModifier3D.active] értékét vezérli."
+
+#. SkeletonModification2D.brief
+#: doc/classes/SkeletonModification2D.xml
+msgid "Base class for resources that operate on [Bone2D]s in a [Skeleton2D]."
+msgstr "A [Skeleton2D] [Bone2D] csontjait módosító erőforrások alaposztálya."
+
+#. SkeletonModification2D.description
+#: doc/classes/SkeletonModification2D.xml
+msgid "This resource provides an interface that can be expanded so code that operates on [Bone2D] nodes in a [Skeleton2D] can be mixed and matched together to create complex interactions.\nThis is used to provide Godot with a flexible and powerful Inverse Kinematics solution that can be adapted for many different uses."
+msgstr "Bővíthető felületet ad egy [Skeleton2D] [Bone2D] csontjait vezérlő módosításokhoz. A módosítások egymással is kombinálhatók összetett mozgásokhoz.\nEz teszi lehetővé, hogy a Godot inverz kinematikai megoldását különféle feladatokhoz igazítsd."
+
+#. SkeletonModification2D._draw_editor_gizmo
+#: doc/classes/SkeletonModification2D.xml
+msgid "Used for drawing [b]editor-only[/b] modification gizmos. This function will only be called in the Godot editor and can be overridden to draw custom gizmos.\n[b]Note:[/b] You will need to use the Skeleton2D from [method SkeletonModificationStack2D.get_skeleton] and it's draw functions, as the [SkeletonModification2D] resource cannot draw on its own."
+msgstr "A módosítás [b]csak a szerkesztőben látható[/b] segédábráinak kirajzolására szolgál. A Godot csak a szerkesztőben hívja. Felülírhatod saját segédábrák rajzolásához.\n[b]Megjegyzés:[/b] Kérd le a Skeleton2D csomópontot a [method SkeletonModificationStack2D.get_skeleton] metódussal, és annak rajzolófüggvényeit hívd. A [SkeletonModification2D] erőforrás önmagában nem tud rajzolni."
+
+#. SkeletonModification2D._execute
+#: doc/classes/SkeletonModification2D.xml
+msgid "Executes the given modification. This is where the modification performs whatever function it is designed to do."
+msgstr "Végrehajtja a módosítást. Itt fut a módosításhoz tartozó művelet."
+
+#. SkeletonModification2D._setup_modification
+#: doc/classes/SkeletonModification2D.xml
+msgid "Called when the modification is setup. This is where the modification performs initialization."
+msgstr "A módosítás beállításakor hívódik meg. Itt végezhető el az inicializálás."
+
+#. SkeletonModification2D.clamp_angle
+#: doc/classes/SkeletonModification2D.xml
+msgid "Takes an angle and clamps it so it is within the passed-in [param min] and [param max] range. [param invert] will inversely clamp the angle, clamping it to the range outside of the given bounds."
+msgstr "A szöget a megadott [param min] és [param max] közötti tartományra korlátozza. A [param invert] megfordítja a korlátozást, és a megadott határokon kívüli szögeket engedi meg."
+
+#. SkeletonModification2D.get_editor_draw_gizmo
+#: doc/classes/SkeletonModification2D.xml
+msgid "Returns whether this modification will call [method _draw_editor_gizmo] in the Godot editor to draw modification-specific gizmos."
+msgstr "Azt adja vissza, hogy a módosítás a szerkesztőben meghívja-e a [method _draw_editor_gizmo] metódust a saját segédábráinak kirajzolására."
+
+#. SkeletonModification2D.get_is_setup
+#: doc/classes/SkeletonModification2D.xml
+msgid "Returns whether this modification has been successfully setup or not."
+msgstr "Azt adja vissza, hogy sikeresen beállították-e a módosítást."
+
+#. SkeletonModification2D.get_modification_stack
+#: doc/classes/SkeletonModification2D.xml
+msgid "Returns the [SkeletonModificationStack2D] that this modification is bound to. Through the modification stack, you can access the Skeleton2D the modification is operating on."
+msgstr "Azt a [SkeletonModificationStack2D] erőforrást adja vissza, amelyhez a módosítás tartozik. Ezen keresztül érheted el a módosított Skeleton2D csomópontot."
+
+#. SkeletonModification2D.set_editor_draw_gizmo
+#: doc/classes/SkeletonModification2D.xml
+msgid "Sets whether this modification will call [method _draw_editor_gizmo] in the Godot editor to draw modification-specific gizmos."
+msgstr "Beállítja, hogy a módosítás a szerkesztőben meghívja-e a [method _draw_editor_gizmo] metódust a saját segédábráinak kirajzolására."
+
+#. SkeletonModification2D.set_is_setup
+#: doc/classes/SkeletonModification2D.xml
+msgid "Manually allows you to set the setup state of the modification. This function should only rarely be used, as the [SkeletonModificationStack2D] the modification is bound to should handle setting the modification up."
+msgstr "Kézzel jelölhető vele a módosítás beállítási állapota. Ritkán van rá szükség, mert a beállításról rendszerint az a [SkeletonModificationStack2D] gondoskodik, amelyhez a módosítás tartozik."
+
+#. SkeletonModification2D.enabled
+#: doc/classes/SkeletonModification2D.xml
+msgid "If [code]true[/code], the modification's [method _execute] function will be called by the [SkeletonModificationStack2D]."
+msgstr "Ha az érték [code]true[/code], a [SkeletonModificationStack2D] meghívja a módosítás [method _execute] metódusát."
+
+#. SkeletonModification2D.execution_mode
+#: doc/classes/SkeletonModification2D.xml
+msgid "The execution mode for the modification. This tells the modification stack when to execute the modification. Some modifications have settings that are only available in certain execution modes."
+msgstr "A végrehajtási mód szabja meg, mikor futtatja a gyűjtemény ezt a módosítást. Egyes beállítások csak meghatározott végrehajtási módokban érhetők el."
+
+#. SkeletonModification2DCCDIK.brief
+#: doc/classes/SkeletonModification2DCCDIK.xml
+msgid "A modification that uses CCDIK to manipulate a series of bones to reach a target in 2D."
+msgstr "A CCDIK eljárással úgy mozgat egy 2D-s csontláncot, hogy a lánc vége elérje a célt."
+
+#. SkeletonModification2DCCDIK.get_ccdik_joint_bone2d_node
+#: doc/classes/SkeletonModification2DCCDIK.xml
+msgid "Returns the [Bone2D] node assigned to the CCDIK joint at [param joint_idx]."
+msgstr "A [param joint_idx] indexű CCDIK-ízülethez rendelt [Bone2D] csomópontot adja vissza."
+
+#. SkeletonModification2DCCDIK.get_ccdik_joint_bone_index
+#: doc/classes/SkeletonModification2DCCDIK.xml
+msgid "Returns the index of the [Bone2D] node assigned to the CCDIK joint at [param joint_idx]."
+msgstr "A [param joint_idx] indexű CCDIK-ízülethez rendelt [Bone2D] csont indexét adja vissza."
+
+#. SkeletonModification2DCCDIK.get_ccdik_joint_constraint_angle_invert
+#: doc/classes/SkeletonModification2DCCDIK.xml
+msgid "Returns whether the CCDIK joint at [param joint_idx] uses an inverted joint constraint. See [method set_ccdik_joint_constraint_angle_invert] for details."
+msgstr "Azt adja vissza, hogy a [param joint_idx] indexű CCDIK-ízület fordított szögkorlátozást használ-e. A részleteket lásd a [method set_ccdik_joint_constraint_angle_invert] metódusnál."
+
+#. SkeletonModification2DCCDIK.get_ccdik_joint_constraint_angle_max
+#: doc/classes/SkeletonModification2DCCDIK.xml
+msgid "Returns the maximum angle constraint for the joint at [param joint_idx]."
+msgstr "A [param joint_idx] indexű ízület felső szöghatárát adja vissza."
+
+#. SkeletonModification2DCCDIK.get_ccdik_joint_constraint_angle_min
+#: doc/classes/SkeletonModification2DCCDIK.xml
+msgid "Returns the minimum angle constraint for the joint at [param joint_idx]."
+msgstr "A [param joint_idx] indexű ízület alsó szöghatárát adja vissza."
+
+#. SkeletonModification2DCCDIK.get_ccdik_joint_enable_constraint
+#: doc/classes/SkeletonModification2DCCDIK.xml
+msgid "Returns whether angle constraints on the CCDIK joint at [param joint_idx] are enabled."
+msgstr "Azt adja vissza, hogy aktív-e a szögkorlátozás a [param joint_idx] indexű CCDIK-ízületnél."
+
+#. SkeletonModification2DCCDIK.get_ccdik_joint_rotate_from_joint
+#: doc/classes/SkeletonModification2DCCDIK.xml
+msgid "Returns whether the joint at [param joint_idx] is set to rotate from the joint, [code]true[/code], or to rotate from the tip, [code]false[/code]. The default is to rotate from the tip."
+msgstr "Azt adja vissza, hogyan forgatja a megoldó a [param joint_idx] indexű ízületet. Ha az érték [code]true[/code], az ízület közvetlenül a cél felé fordul. Ha [code]false[/code], a forgatás a lánc végpontját igazítja a cél irányába. Az utóbbi az alapértelmezett mód."
+
+#. SkeletonModification2DCCDIK.set_ccdik_joint_bone2d_node
+#: doc/classes/SkeletonModification2DCCDIK.xml
+msgid "Sets the [Bone2D] node assigned to the CCDIK joint at [param joint_idx]."
+msgstr "Beállítja a [param joint_idx] indexű CCDIK-ízülethez rendelt [Bone2D] csomópontot."
+
+#. SkeletonModification2DCCDIK.set_ccdik_joint_bone_index
+#: doc/classes/SkeletonModification2DCCDIK.xml
+msgid "Sets the bone index, [param bone_idx], of the CCDIK joint at [param joint_idx]. When possible, this will also update the [code]bone2d_node[/code] of the CCDIK joint based on data provided by the linked skeleton."
+msgstr "A [param joint_idx] indexű CCDIK-ízület csontindexét a [param bone_idx] értékre állítja. Ha lehetséges, a hozzárendelt csontváz adatai alapján a CCDIK-ízület [code]bone2d_node[/code] értékét is frissíti."
+
+#. SkeletonModification2DCCDIK.set_ccdik_joint_constraint_angle_invert
+#: doc/classes/SkeletonModification2DCCDIK.xml
+msgid "Sets whether the CCDIK joint at [param joint_idx] uses an inverted joint constraint.\nAn inverted joint constraint only constraints the CCDIK joint to the angles [i]outside of[/i] the inputted minimum and maximum angles. For this reason, it is referred to as an inverted joint constraint, as it constraints the joint to the outside of the inputted values."
+msgstr "Beállítja, hogy a [param joint_idx] indexű CCDIK-ízület fordított szögkorlátozást használjon-e.\nA fordított szögkorlátozás csak a megadott alsó és felső szöghatáron [i]kívüli[/i] szögeket engedi meg a CCDIK-ízületnek. A korlátozás tehát a kijelölt tartományon kívül enged mozgást."
+
+#. SkeletonModification2DCCDIK.set_ccdik_joint_constraint_angle_max
+#: doc/classes/SkeletonModification2DCCDIK.xml
+msgid "Sets the maximum angle constraint for the joint at [param joint_idx]."
+msgstr "Beállítja a [param joint_idx] indexű ízület felső szöghatárát."
+
+#. SkeletonModification2DCCDIK.set_ccdik_joint_constraint_angle_min
+#: doc/classes/SkeletonModification2DCCDIK.xml
+msgid "Sets the minimum angle constraint for the joint at [param joint_idx]."
+msgstr "Beállítja a [param joint_idx] indexű ízület alsó szöghatárát."
+
+#. SkeletonModification2DCCDIK.set_ccdik_joint_enable_constraint
+#: doc/classes/SkeletonModification2DCCDIK.xml
+msgid "Determines whether angle constraints on the CCDIK joint at [param joint_idx] are enabled. When [code]true[/code], constraints will be enabled and taken into account when solving."
+msgstr "Beállítja, hogy a [param joint_idx] indexű CCDIK-ízület alkalmazzon-e szögkorlátozást. Ha az érték [code]true[/code], a megoldó figyelembe veszi a szöghatárokat."
+
+#. SkeletonModification2DCCDIK.set_ccdik_joint_rotate_from_joint
+#: doc/classes/SkeletonModification2DCCDIK.xml
+msgid "Sets whether the joint at [param joint_idx] is set to rotate from the joint, [code]true[/code], or to rotate from the tip, [code]false[/code]."
+msgstr "Beállítja a [param joint_idx] indexű ízület forgatási módját. Ha az érték [code]true[/code], az ízület közvetlenül a cél felé fordul. Ha [code]false[/code], a forgatás a lánc végpontját igazítja a cél irányába."
+
+#. SkeletonModification2DCCDIK.ccdik_data_chain_length
+#: doc/classes/SkeletonModification2DCCDIK.xml
+msgid "The number of CCDIK joints in the CCDIK modification."
+msgstr "A CCDIK-módosításban szereplő ízületek száma."
+
+#. SkeletonModification2DCCDIK.target_nodepath
+#: doc/classes/SkeletonModification2DCCDIK.xml
+msgid "The NodePath to the node that is the target for the CCDIK modification. This node is what the CCDIK chain will attempt to rotate the bone chain to."
+msgstr "A célcsomópont NodePath útvonala. A CCDIK a csontláncot úgy próbálja elforgatni, hogy a végpontja elérje ezt a csomópontot."
+
+#. SkeletonModification2DFABRIK.brief
+#: doc/classes/SkeletonModification2DFABRIK.xml
+msgid "A modification that uses FABRIK to manipulate a series of [Bone2D] nodes to reach a target."
+msgstr "A FABRIK eljárással úgy igazítja a [Bone2D] csontok láncát, hogy az elérje a célt."
+
+#. SkeletonModification2DFABRIK.get_fabrik_joint_bone2d_node
+#: doc/classes/SkeletonModification2DFABRIK.xml
+msgid "Returns the [Bone2D] node assigned to the FABRIK joint at [param joint_idx]."
+msgstr "A [param joint_idx] indexű FABRIK-ízülethez rendelt [Bone2D] csomópontot adja vissza."
+
+#. SkeletonModification2DFABRIK.get_fabrik_joint_bone_index
+#: doc/classes/SkeletonModification2DFABRIK.xml
+msgid "Returns the index of the [Bone2D] node assigned to the FABRIK joint at [param joint_idx]."
+msgstr "A [param joint_idx] indexű FABRIK-ízülethez rendelt [Bone2D] csont indexét adja vissza."
+
+#. SkeletonModification2DFABRIK.get_fabrik_joint_magnet_position
+#: doc/classes/SkeletonModification2DFABRIK.xml
+msgid "Returns the magnet position vector for the joint at [param joint_idx]."
+msgstr "A [param joint_idx] indexű ízületet irányító segédpont helyzetvektorát adja vissza."
+
+#. SkeletonModification2DFABRIK.get_fabrik_joint_use_target_rotation
+#: doc/classes/SkeletonModification2DFABRIK.xml
+msgid "Returns whether the joint is using the target's rotation rather than allowing FABRIK to rotate the joint. This option only applies to the tip/final joint in the chain."
+msgstr "Azt adja vissza, hogy az ízület átveszi-e a cél forgatását a FABRIK által kiszámított forgatás helyett. A beállítás csak a lánc utolsó ízületére vonatkozik."
+
+#. SkeletonModification2DFABRIK.set_fabrik_joint_bone2d_node
+#: doc/classes/SkeletonModification2DFABRIK.xml
+msgid "Sets the [Bone2D] node assigned to the FABRIK joint at [param joint_idx]."
+msgstr "Beállítja a [param joint_idx] indexű FABRIK-ízülethez rendelt [Bone2D] csomópontot."
+
+#. SkeletonModification2DFABRIK.set_fabrik_joint_bone_index
+#: doc/classes/SkeletonModification2DFABRIK.xml
+msgid "Sets the bone index, [param bone_idx], of the FABRIK joint at [param joint_idx]. When possible, this will also update the [code]bone2d_node[/code] of the FABRIK joint based on data provided by the linked skeleton."
+msgstr "A [param joint_idx] indexű FABRIK-ízület csontindexét a [param bone_idx] értékre állítja. Ha lehetséges, a hozzárendelt csontváz adatai alapján a FABRIK-ízület [code]bone2d_node[/code] értékét is frissíti."
+
+#. SkeletonModification2DFABRIK.set_fabrik_joint_magnet_position
+#: doc/classes/SkeletonModification2DFABRIK.xml
+msgid "Sets the magnet position vector for the joint at [param joint_idx]."
+msgstr "Beállítja a [param joint_idx] indexű ízületet irányító segédpont helyzetvektorát."
+
+#. SkeletonModification2DFABRIK.set_fabrik_joint_use_target_rotation
+#: doc/classes/SkeletonModification2DFABRIK.xml
+msgid "Sets whether the joint at [param joint_idx] will use the target node's rotation rather than letting FABRIK rotate the node.\n[b]Note:[/b] This option only works for the tip/final joint in the chain. For all other nodes, this option will be ignored."
+msgstr "Beállítja, hogy a [param joint_idx] indexű ízület átvegye-e a célcsomópont forgatását a FABRIK által kiszámított forgatás helyett.\n[b]Megjegyzés:[/b] Ez a beállítás csak a lánc utolsó ízületénél érvényes. A többi csomópontnál hatástalan."
+
+#. SkeletonModification2DFABRIK.fabrik_data_chain_length
+#: doc/classes/SkeletonModification2DFABRIK.xml
+msgid "The number of FABRIK joints in the FABRIK modification."
+msgstr "A FABRIK-módosításban szereplő ízületek száma."
+
+#. SkeletonModification2DFABRIK.target_nodepath
+#: doc/classes/SkeletonModification2DFABRIK.xml
+msgid "The NodePath to the node that is the target for the FABRIK modification. This node is what the FABRIK chain will attempt to rotate the bone chain to."
+msgstr "A célcsomópont NodePath útvonala. A FABRIK a csontláncot úgy próbálja igazítani, hogy a végpontja elérje ezt a csomópontot."
+
+#. SkeletonModification2DJiggle.brief
+#: doc/classes/SkeletonModification2DJiggle.xml
+msgid "A modification that jiggles [Bone2D] nodes as they move towards a target."
+msgstr "A cél felé tartó [Bone2D] csontok mozgásához rugózást ad."
+
+#. SkeletonModification2DJiggle.get_collision_mask
+#: doc/classes/SkeletonModification2DJiggle.xml
+msgid "Returns the collision mask used by the Jiggle modifier when collisions are enabled."
+msgstr "A Jiggle módosítás ütközési maszkját adja vissza. Ez a maszk akkor érvényes, ha az ütközések kezelése be van kapcsolva."
+
+#. SkeletonModification2DJiggle.get_jiggle_joint_bone2d_node
+#: doc/classes/SkeletonModification2DJiggle.xml
+msgid "Returns the [Bone2D] node assigned to the Jiggle joint at [param joint_idx]."
+msgstr "A [param joint_idx] indexű Jiggle-ízülethez rendelt [Bone2D] csomópontot adja vissza."
+
+#. SkeletonModification2DJiggle.get_jiggle_joint_bone_index
+#: doc/classes/SkeletonModification2DJiggle.xml
+msgid "Returns the index of the [Bone2D] node assigned to the Jiggle joint at [param joint_idx]."
+msgstr "A [param joint_idx] indexű Jiggle-ízülethez rendelt [Bone2D] csont indexét adja vissza."
+
+#. SkeletonModification2DJiggle.get_jiggle_joint_damping
+#: doc/classes/SkeletonModification2DJiggle.xml
+msgid "Returns the amount of damping of the Jiggle joint at [param joint_idx]."
+msgstr "A [param joint_idx] indexű Jiggle-ízület csillapítását adja vissza."
+
+#. SkeletonModification2DJiggle.get_jiggle_joint_gravity
+#: doc/classes/SkeletonModification2DJiggle.xml
+msgid "Returns a [Vector2] representing the amount of gravity the Jiggle joint at [param joint_idx] is influenced by."
+msgstr "A [param joint_idx] indexű Jiggle-ízületre ható gravitációt adja vissza [Vector2] vektorként."
+
+#. SkeletonModification2DJiggle.get_jiggle_joint_mass
+#: doc/classes/SkeletonModification2DJiggle.xml
+msgid "Returns the amount of mass of the jiggle joint at [param joint_idx]."
+msgstr "A [param joint_idx] indexű Jiggle-ízület tömegét adja vissza."
+
+#. SkeletonModification2DJiggle.get_jiggle_joint_override
+#: doc/classes/SkeletonModification2DJiggle.xml
+msgid "Returns a boolean that indicates whether the joint at [param joint_idx] is overriding the default Jiggle joint data defined in the modification."
+msgstr "Azt adja vissza, hogy a [param joint_idx] indexű ízület felülírja-e a módosításban megadott alapértelmezett Jiggle-beállításokat."
+
+#. SkeletonModification2DJiggle.get_jiggle_joint_stiffness
+#: doc/classes/SkeletonModification2DJiggle.xml
+msgid "Returns the stiffness of the Jiggle joint at [param joint_idx]."
+msgstr "A [param joint_idx] indexű Jiggle-ízület merevségét adja vissza."
+
+#. SkeletonModification2DJiggle.get_jiggle_joint_use_gravity
+#: doc/classes/SkeletonModification2DJiggle.xml
+msgid "Returns a boolean that indicates whether the joint at [param joint_idx] is using gravity or not."
+msgstr "Azt adja vissza, hogy hat-e gravitáció a [param joint_idx] indexű ízületre."
+
+#. SkeletonModification2DJiggle.get_use_colliders
+#: doc/classes/SkeletonModification2DJiggle.xml
+msgid "Returns whether the jiggle modifier is taking physics colliders into account when solving."
+msgstr "Azt adja vissza, hogy a Jiggle módosítás a számítás során figyelembe veszi-e a fizikai ütközőobjektumokat."
+
+#. SkeletonModification2DJiggle.reset
+#: doc/classes/SkeletonModification2DJiggle.xml
+msgid "Resets the internal jiggle simulation state to the current bone positions, clearing velocity, acceleration, and accumulated forces."
+msgstr "A belső szimuláció állapotát a csontok aktuális helyzetéhez igazítja, és nullázza a sebességet, a gyorsulást és az összegyűlt erőket."
+
+#. SkeletonModification2DJiggle.set_collision_mask
+#: doc/classes/SkeletonModification2DJiggle.xml
+msgid "Sets the collision mask that the Jiggle modifier will use when reacting to colliders, if the Jiggle modifier is set to take colliders into account."
+msgstr "Beállítja a Jiggle módosítás ütközési maszkját. A módosítás akkor veszi figyelembe a maszkot, ha az ütközések kezelése be van kapcsolva."
+
+#. SkeletonModification2DJiggle.set_jiggle_joint_bone2d_node
+#: doc/classes/SkeletonModification2DJiggle.xml
+msgid "Sets the [Bone2D] node assigned to the Jiggle joint at [param joint_idx]."
+msgstr "Beállítja a [param joint_idx] indexű Jiggle-ízülethez rendelt [Bone2D] csomópontot."
+
+#. SkeletonModification2DJiggle.set_jiggle_joint_bone_index
+#: doc/classes/SkeletonModification2DJiggle.xml
+msgid "Sets the bone index, [param bone_idx], of the Jiggle joint at [param joint_idx]. When possible, this will also update the [code]bone2d_node[/code] of the Jiggle joint based on data provided by the linked skeleton."
+msgstr "A [param joint_idx] indexű Jiggle-ízület csontindexét a [param bone_idx] értékre állítja. Ha lehetséges, a hozzárendelt csontváz adatai alapján a Jiggle-ízület [code]bone2d_node[/code] értékét is frissíti."
+
+#. SkeletonModification2DJiggle.set_jiggle_joint_damping
+#: doc/classes/SkeletonModification2DJiggle.xml
+msgid "Sets the amount of damping of the Jiggle joint at [param joint_idx]."
+msgstr "Beállítja a [param joint_idx] indexű Jiggle-ízület csillapítását."
+
+#. SkeletonModification2DJiggle.set_jiggle_joint_gravity
+#: doc/classes/SkeletonModification2DJiggle.xml
+msgid "Sets the gravity vector of the Jiggle joint at [param joint_idx]."
+msgstr "Beállítja a [param joint_idx] indexű Jiggle-ízületre ható gravitáció vektorát."
+
+#. SkeletonModification2DJiggle.set_jiggle_joint_mass
+#: doc/classes/SkeletonModification2DJiggle.xml
+msgid "Sets the of mass of the Jiggle joint at [param joint_idx]."
+msgstr "Beállítja a [param joint_idx] indexű Jiggle-ízület tömegét."
+
+#. SkeletonModification2DJiggle.set_jiggle_joint_override
+#: doc/classes/SkeletonModification2DJiggle.xml
+msgid "Sets whether the Jiggle joint at [param joint_idx] should override the default Jiggle joint settings. Setting this to [code]true[/code] will make the joint use its own settings rather than the default ones attached to the modification."
+msgstr "Beállítja, hogy a [param joint_idx] indexű Jiggle-ízület felülírja-e az alapértelmezett ízületi beállításokat. Ha az érték [code]true[/code], az ízület a módosítás alapértékei helyett a saját beállításait használja."
+
+#. SkeletonModification2DJiggle.set_jiggle_joint_stiffness
+#: doc/classes/SkeletonModification2DJiggle.xml
+msgid "Sets the of stiffness of the Jiggle joint at [param joint_idx]."
+msgstr "Beállítja a [param joint_idx] indexű Jiggle-ízület merevségét."
+
+#. SkeletonModification2DJiggle.set_jiggle_joint_use_gravity
+#: doc/classes/SkeletonModification2DJiggle.xml
+msgid "Sets whether the Jiggle joint at [param joint_idx] should use gravity."
+msgstr "Beállítja, hogy hasson-e gravitáció a [param joint_idx] indexű Jiggle-ízületre."
+
+#. SkeletonModification2DJiggle.set_use_colliders
+#: doc/classes/SkeletonModification2DJiggle.xml
+msgid "If [code]true[/code], the Jiggle modifier will take colliders into account, keeping them from entering into these collision objects."
+msgstr "Ha az érték [code]true[/code], a Jiggle módosítás figyelembe veszi az ütközőobjektumokat, és akadályozza, hogy az ízületek beléjük hatoljanak."
+
+#. SkeletonModification2DJiggle.gravity
+#: doc/classes/SkeletonModification2DJiggle.xml
+msgid "The default amount of gravity applied to the Jiggle joints, if they are not overridden."
+msgstr "A Jiggle-ízületekre ható alapértelmezett gravitáció. Azok az ízületek használják, amelyeknél nincs egyedi beállítás."
+
+#. SkeletonModification2DJiggle.jiggle_data_chain_length
+#: doc/classes/SkeletonModification2DJiggle.xml
+msgid "The amount of Jiggle joints in the Jiggle modification."
+msgstr "A Jiggle-módosításban szereplő ízületek száma."
+
+#. SkeletonModification2DJiggle.stiffness
+#: doc/classes/SkeletonModification2DJiggle.xml
+msgid "The default amount of stiffness assigned to the Jiggle joints, if they are not overridden. Higher values act more like springs, quickly moving into the correct position."
+msgstr "A Jiggle-ízületek alapértelmezett merevsége. Azok az ízületek használják, amelyeknél nincs egyedi beállítás. Nagyobb értéknél erősebb a rugóhatás, így az ízület gyorsabban közelíti meg a célt."
+
+#. SkeletonModification2DJiggle.use_gravity
+#: doc/classes/SkeletonModification2DJiggle.xml
+msgid "Whether the gravity vector, [member gravity], should be applied to the Jiggle joints, assuming they are not overriding the default settings."
+msgstr "Meghatározza, hogy a [member gravity] gravitációs vektor hasson-e azokra a Jiggle-ízületekre, amelyek az alapértelmezett beállításokat használják."
+
+#. SkeletonModification2DLookAt.brief
+#: doc/classes/SkeletonModification2DLookAt.xml
+msgid "A modification that rotates a [Bone2D] node to look at a target."
+msgstr "Egy [Bone2D] csontot a megadott cél felé fordít."
+
+#. SkeletonModification2DLookAt.get_additional_rotation
+#: doc/classes/SkeletonModification2DLookAt.xml
+msgid "Returns the amount of additional rotation that is applied after the LookAt modification executes."
+msgstr "A LookAt módosítás után alkalmazott további forgatás szögét adja vissza."
+
+#. SkeletonModification2DLookAt.get_constraint_angle_invert
+#: doc/classes/SkeletonModification2DLookAt.xml
+msgid "Returns whether the constraints to this modification are inverted or not."
+msgstr "Azt adja vissza, hogy a módosítás fordított szögkorlátozást használ-e."
+
+#. SkeletonModification2DLookAt.get_constraint_angle_max
+#: doc/classes/SkeletonModification2DLookAt.xml
+msgid "Returns the constraint's maximum allowed angle."
+msgstr "Visszaadja a legnagyobb megengedett szöget."
+
+#. SkeletonModification2DLookAt.get_constraint_angle_min
+#: doc/classes/SkeletonModification2DLookAt.xml
+msgid "Returns the constraint's minimum allowed angle."
+msgstr "Visszaadja a legkisebb megengedett szöget."
+
+#. SkeletonModification2DLookAt.get_enable_constraint
+#: doc/classes/SkeletonModification2DLookAt.xml
+msgid "Returns [code]true[/code] if the LookAt modification is using constraints."
+msgstr "[code]true[/code] értéket ad vissza, ha a LookAt módosítás szögkorlátozást használ."
+
+#. SkeletonModification2DLookAt.set_additional_rotation
+#: doc/classes/SkeletonModification2DLookAt.xml
+msgid "Sets the amount of additional rotation that is to be applied after executing the modification. This allows for offsetting the results by the inputted rotation amount."
+msgstr "Beállítja azt a további forgatást, amelyet a motor a módosítás után alkalmaz. Így a kiszámított szög a megadott értékkel eltolható."
