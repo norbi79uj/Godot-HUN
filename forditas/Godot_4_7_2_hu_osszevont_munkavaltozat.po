@@ -55003,3 +55003,506 @@ msgstr "Az [AudioStreamPolyphonic] lejátszási példánya. Miután beállított
 #: doc/classes/AudioStreamPlaybackPolyphonic.xml
 msgid "Play an [AudioStream] at a given offset, volume, pitch scale, playback type, and bus. Playback starts immediately.\nThe return value is a unique integer ID that is associated to this playback stream and which can be used to control it.\nThis ID becomes invalid when the stream ends (if it does not loop), when the [AudioStreamPlaybackPolyphonic] is stopped, or when [method stop_stream] is called.\nThis function returns [constant INVALID_ID] if the amount of streams currently playing equals [member AudioStreamPolyphonic.polyphony]. If you need a higher amount of maximum polyphony, raise this value."
 msgstr "A megadott kezdőpozícióval, hangerővel, hangmagasság-szorzóval, lejátszási móddal és hangbusszal játssza le az [AudioStream] hangfolyamot. A lejátszás azonnal elindul.\nA metódus egy egész számot ad vissza, amely egyedileg azonosítja az elindított hangfolyamot, és a vezérlésére használható.\nAz azonosító érvényét veszti, ha a hangfolyam ismétlés nélkül a végére ér, ha az [AudioStreamPlaybackPolyphonic] leáll, vagy ha meghívod a [method stop_stream] metódust.\nHa az egyidejűleg szóló hangfolyamok száma eléri az [member AudioStreamPolyphonic.polyphony] értékét, a metódus [constant INVALID_ID] értéket ad vissza. Több egyidejű hanghoz növeld a tulajdonság értékét."
+
+#. Animation.bezier_track_insert_key
+#: doc/classes/Animation.xml
+msgid "Inserts a Bezier Track key at the given [param time] in seconds. The [param track_idx] must be the index of a Bezier Track.\n[param in_handle] is the left-side weight of the added Bezier curve point, [param out_handle] is the right-side one, while [param value] is the actual value at this point."
+msgstr "Kulcsképkockát szúr be a másodpercben megadott [param time] időponthoz. A [param track_idx] egy Bézier-sáv indexe.\nA [param in_handle] az új Bézier-pont bal oldali, a [param out_handle] a jobb oldali fogantyújának eltolása. A [param value] a pontban felvett érték."
+
+#. Animation.compress
+#: doc/classes/Animation.xml
+msgid "Compress the animation and all its tracks in-place. This will make [method track_is_compressed] return [code]true[/code] once called on this [Animation]. Compressed tracks require less memory to be played, and are designed to be used for complex 3D animations (such as cutscenes) imported from external 3D software. Compression is lossy, but the difference is usually not noticeable in real world conditions.\n[b]Note:[/b] Compressed tracks have various limitations (such as not being editable from the editor), so only use compressed animations if you actually need them."
+msgstr "Helyben tömöríti az animációt és az összes sávját. A tömörített sávokra ezen az [Animation] erőforráson a [method track_is_compressed] értéke [code]true[/code] lesz. A tömörített sávok lejátszásához kevesebb memória kell. Elsősorban külső 3D-s programból importált, összetett animációkhoz, például átvezető jelenetekhez valók. A tömörítés veszteséges, de a különbség a gyakorlatban általában észrevehetetlen.\n[b]Megjegyzés:[/b] A tömörített sávok használata korlátozásokkal jár, például nem módosíthatók a szerkesztőben. Csak akkor tömöríts animációt, ha erre szükség van."
+
+#. Animation.track_find_key
+#: doc/classes/Animation.xml
+msgid "Finds the key index by time in a given track. Optionally, only find it if the approx/exact time is given.\nIf [param limit] is [code]true[/code], it does not return keys outside the animation range.\nIf [param backward] is [code]true[/code], the direction is reversed in methods that rely on one directional processing.\nFor example, in case [param find_mode] is [constant FIND_MODE_NEAREST], if there is no key in the current position just after seeked, the first key found is retrieved by searching before the position, but if [param backward] is [code]true[/code], the first key found is retrieved after the position."
+msgstr "Megkeresi egy sáv kulcsképkockájának indexét az időpont alapján. A keresés korlátozható a megadott időponthoz közel eső vagy pontosan arra eső kulcsképkockákra.\nHa a [param limit] értéke [code]true[/code], az animáció tartományán kívüli kulcsképkockákat kihagyja.\nHa a [param backward] értéke [code]true[/code], az egy irányban végzett keresés iránya megfordul.\nHa például a [param find_mode] értéke [constant FIND_MODE_NEAREST], és az új lejátszási pozíciónál nincs kulcsképkocka, a keresés először a pozíció előtti kulcsképkockát keresi. Ha a [param backward] értéke [code]true[/code], a pozíció után keres."
+
+#. Animation.value_track_interpolate
+#: doc/classes/Animation.xml
+msgid "Returns the interpolated value at the given time (in seconds). The [param track_idx] must be the index of a value track.\nA [param backward] mainly affects the direction of key retrieval of the track with [constant UPDATE_DISCRETE] converted by [constant AnimationMixer.ANIMATION_CALLBACK_MODE_DISCRETE_FORCE_CONTINUOUS] to match the result with [method track_find_key]."
+msgstr "A másodpercben megadott időpontban interpolált értéket adja vissza. A [param track_idx] egy értéksáv indexe.\nA [param backward] főként akkor szabja meg a kulcsképkocka kiválasztásának irányát, ha a keverő a [constant UPDATE_DISCRETE] módú sávot a [constant AnimationMixer.ANIMATION_CALLBACK_MODE_DISCRETE_FORCE_CONTINUOUS] beállítással folyamatosként kezeli. Így az eredmény megfelel a [method track_find_key] viselkedésének."
+
+#. Animation.capture_included
+#: doc/classes/Animation.xml
+msgid "Returns [code]true[/code] if the capture track is included. This is a cached readonly value for performance."
+msgstr "[code]true[/code] értéket ad, ha az animáció tartalmaz rögzítési sávot. A gyorsabb lekérdezéshez az érték gyorsítótárazott és csak olvasható."
+
+#. Animation.TYPE_VALUE
+#: doc/classes/Animation.xml
+msgid "Value tracks set values in node properties, but only those which can be interpolated. For 3D position/rotation/scale, using the dedicated [constant TYPE_POSITION_3D], [constant TYPE_ROTATION_3D] and [constant TYPE_SCALE_3D] track types instead of [constant TYPE_VALUE] is recommended for performance reasons."
+msgstr "Az értéksávok a csomópontok olyan tulajdonságait állítják be, amelyek értékei interpolálhatók. A 3D-s pozícióhoz, forgatáshoz és méretezéshez a jobb teljesítmény érdekében használd a [constant TYPE_POSITION_3D], a [constant TYPE_ROTATION_3D] és a [constant TYPE_SCALE_3D] sávfajtákat az általános [constant TYPE_VALUE] helyett."
+
+#. Animation.INTERPOLATION_CUBIC
+#: doc/classes/Animation.xml
+msgid "Cubic interpolation. This looks smoother than linear interpolation, but is more expensive to interpolate. Stick to [constant INTERPOLATION_LINEAR] for complex 3D animations imported from external software, even if it requires using a higher animation framerate in return."
+msgstr "Köbös interpoláció. A lineáris interpolációnál simább mozgást ad, de nagyobb a számításigénye. Külső programból importált, összetett 3D-s animációhoz érdemes a [constant INTERPOLATION_LINEAR] módot használni, még akkor is, ha ehhez sűrűbben kell mintavételezni az animációt."
+
+#. Animation.UPDATE_CAPTURE
+#: doc/classes/Animation.xml
+msgid "Same as [constant UPDATE_CONTINUOUS] but works as a flag to capture the value of the current object and perform interpolation in some methods. See also [method AnimationMixer.capture], [member AnimationPlayer.playback_auto_capture], and [method AnimationPlayer.play_with_capture]."
+msgstr "A [constant UPDATE_CONTINUOUS] módhoz hasonlóan működik, és azt is jelzi, hogy bizonyos metódusoknak rögzíteniük kell az objektum aktuális értékét, majd abból kell interpolálniuk. Lásd még a [method AnimationMixer.capture] és a [method AnimationPlayer.play_with_capture] metódust, valamint a [member AnimationPlayer.playback_auto_capture] tulajdonságot."
+
+#. Animation.FIND_MODE_APPROX
+#: doc/classes/Animation.xml
+msgid "Finds only the key with approximating the time."
+msgstr "Csak akkor talál kulcsképkockát, ha annak időpontja közelítőleg megegyezik a keresett időponttal."
+
+#. AnimationMixer.description
+#: doc/classes/AnimationMixer.xml
+msgid "Base class for [AnimationPlayer] and [AnimationTree] to manage animation lists. It also has general properties and methods for playback and blending.\nAfter instantiating the playback information data within the extended class, the blending is processed by the [AnimationMixer]."
+msgstr "Az [AnimationPlayer] és az [AnimationTree] alaposztálya. Az animációlistákat kezeli, és közös tulajdonságokat és metódusokat biztosít a lejátszáshoz és a keveréshez.\nA leszármazott osztály előkészíti a lejátszási adatokat, az [AnimationMixer] pedig ezek alapján elvégzi a keverést."
+
+#. AnimationMixer._post_process_key_value
+#: doc/classes/AnimationMixer.xml
+msgid "A virtual function for processing after getting a key during playback."
+msgstr "Virtuális metódus, amellyel lejátszás közben feldolgozható a kiolvasott kulcsképkocka értéke."
+
+#. AnimationMixer.add_animation_library
+#: doc/classes/AnimationMixer.xml
+msgid "Adds [param library] to the animation player, under the key [param name].\nAnimationMixer has a global library by default with an empty string as key. For adding an animation to the global library:\n[codeblocks]\n[gdscript]\nvar global_library = mixer.get_animation_library(\"\")\nglobal_library.add_animation(\"animation_name\", animation_resource)\n[/gdscript]\n[/codeblocks]"
+msgstr "A [param library] animációkönyvtárat a [param name] kulcson adja hozzá az animációkeverőhöz.\nAz AnimationMixer alapértelmezett globális könyvtárának kulcsa az üres karakterlánc. Az alábbi példa ebbe a könyvtárba ad hozzá egy animációt.\n[codeblocks]\n[gdscript]\nvar global_library = mixer.get_animation_library(\"\")\nglobal_library.add_animation(\"animation_name\", animation_resource)\n[/gdscript]\n[/codeblocks]"
+
+#. AnimationMixer.get_animation_library
+#: doc/classes/AnimationMixer.xml
+msgid "Returns the first [AnimationLibrary] with key [param name] or [code]null[/code] if not found.\nTo get the [AnimationMixer]'s global animation library, use [code]get_animation_library(\"\")[/code]."
+msgstr "A [param name] kulcshoz tartozó első [AnimationLibrary] erőforrást adja vissza. Ha nincs ilyen, az eredmény [code]null[/code].\nAz [AnimationMixer] globális animációkönyvtára a [code]get_animation_library(\"\")[/code] hívással kérhető le."
+
+#. AnimationMixer.get_root_motion_rotation
+#: doc/classes/AnimationMixer.xml
+msgid "Retrieve the motion delta of rotation with the [member root_motion_track] as a [Quaternion] that can be used elsewhere.\nIf [member root_motion_track] is not a path to a track of type [constant Animation.TYPE_ROTATION_3D], returns [code]Quaternion(0, 0, 0, 1)[/code].\nSee also [member root_motion_track] and [RootMotionView].\nThe most basic example is applying rotation to [CharacterBody3D]:\n[codeblocks]\n[gdscript]\nfunc _process(delta):\n\tif Input.is_action_just_pressed(\"animate\"):\n\t\tstate_machine.travel(\"Animate\")\n\tset_quaternion(get_quaternion() * animation_tree.get_root_motion_rotation())\n[/gdscript]\n[/codeblocks]"
+msgstr "A [member root_motion_track] alapján kiszámított gyökérmozgás forgásváltozását adja vissza [Quaternion] értékként, amely másutt is felhasználható.\nHa a [member root_motion_track] útvonala nem [constant Animation.TYPE_ROTATION_3D] típusú sávra mutat, az eredmény [code]Quaternion(0, 0, 0, 1)[/code].\nLásd még a [member root_motion_track] tulajdonságot és a [RootMotionView] osztályt.\nA legegyszerűbb példa a forgás alkalmazása egy [CharacterBody3D] csomóponton.\n[codeblocks]\n[gdscript]\nfunc _process(delta):\n\tif Input.is_action_just_pressed(\"animate\"):\n\t\tstate_machine.travel(\"Animate\")\n\tset_quaternion(get_quaternion() * animation_tree.get_root_motion_rotation())\n[/gdscript]\n[/codeblocks]"
+
+#. AnimationMixer.rename_animation_library
+#: doc/classes/AnimationMixer.xml
+msgid "Moves the [AnimationLibrary] associated with the key [param name] to the key [param newname]."
+msgstr "A [param name] kulcshoz rendelt [AnimationLibrary] erőforrást átteszi a [param newname] kulcsra."
+
+#. AnimationMixer.animation_finished
+#: doc/classes/AnimationMixer.xml
+msgid "Notifies when an animation finished playing.\n[b]Note:[/b] This signal is not emitted if an animation is looping."
+msgstr "Jelzi, hogy egy animáció lejátszása véget ért.\n[b]Megjegyzés:[/b] Ismétlődő animációknál a jelzés nem érkezik meg."
+
+#. AnimationNode.brief
+#: doc/classes/AnimationNode.xml
+msgid "Base class for [AnimationTree] nodes. Not related to scene nodes."
+msgstr "Az [AnimationTree] animációs csomópontjainak alaposztálya. Ezek a csomópontok a jelenetfától függetlenek."
+
+#. AnimationMixer.audio_max_polyphony
+#: doc/classes/AnimationMixer.xml
+msgid "The number of possible simultaneous sounds for each of the assigned AudioStreamPlayers.\nFor example, if this value is [code]32[/code] and the animation has two audio tracks, the two [AudioStreamPlayer]s assigned can play simultaneously up to [code]32[/code] voices each."
+msgstr "Az egyidejűleg megszólaltatható hangok száma minden hozzárendelt AudioStreamPlayer esetében külön-külön.\nHa például az érték [code]32[/code], és az animáció két hangsávot tartalmaz, a két hozzárendelt [AudioStreamPlayer] egyenként legfeljebb [code]32[/code] hangot tud egyszerre lejátszani."
+
+#. AnimationMixer.reset_on_save
+#: doc/classes/AnimationMixer.xml
+msgid "This is used by the editor. If set to [code]true[/code], the scene will be saved with the effects of the reset animation (the animation with the key [code]\"RESET\"[/code]) applied as if it had been seeked to time 0, with the editor keeping the values that the scene had before saving.\nThis makes it more convenient to preview and edit animations in the editor, as changes to the scene will not be saved as long as they are set in the reset animation."
+msgstr "A szerkesztő használja. Ha az érték [code]true[/code], a jelenetet úgy menti, mintha a [code]\"RESET\"[/code] kulcsú visszaállító animáció a 0. másodpercre lenne állítva. A szerkesztőben közben megmaradnak a mentés előtti értékek.\nEz megkönnyíti az animációk előnézetét és szerkesztését. A jelenetben végzett átmeneti módosítások nem kerülnek a mentésbe azoknál a tulajdonságoknál, amelyeket a visszaállító animáció beállít."
+
+#. AnimationMixer.root_node
+#: doc/classes/AnimationMixer.xml
+msgid "The node which node path references will travel from."
+msgstr "Az a csomópont, amelyhez képest az animáció értelmezi a relatív csomópontútvonalakat."
+
+#. AnimationMixer.ANIMATION_CALLBACK_MODE_PROCESS_PHYSICS
+#: doc/classes/AnimationMixer.xml
+msgid "Process animation during physics frames (see [constant Node.NOTIFICATION_INTERNAL_PHYSICS_PROCESS]). This is especially useful when animating physics bodies."
+msgstr "Az animációt a fizikai képkockákban dolgozza fel (lásd [constant Node.NOTIFICATION_INTERNAL_PHYSICS_PROCESS]). Fizikai testek animálásakor különösen hasznos."
+
+#. AnimationMixer.ANIMATION_CALLBACK_MODE_PROCESS_IDLE
+#: doc/classes/AnimationMixer.xml
+msgid "Process animation during process frames (see [constant Node.NOTIFICATION_INTERNAL_PROCESS])."
+msgstr "Az animációt a normál feldolgozási képkockákban dolgozza fel (lásd [constant Node.NOTIFICATION_INTERNAL_PROCESS])."
+
+#. AnimationMixer.ANIMATION_CALLBACK_MODE_METHOD_DEFERRED
+#: doc/classes/AnimationMixer.xml
+msgid "Batch method calls during the animation process, then do the calls after events are processed. This avoids bugs involving deleting nodes or modifying the AnimationPlayer while playing."
+msgstr "Az animáció feldolgozása közben összegyűjti a metódushívásokat, és az események feldolgozása után hajtja végre őket. Így elkerülhetők a lejátszás közbeni csomóponttörlésből vagy az AnimationPlayer módosításából eredő hibák."
+
+#. AnimationMixer.ANIMATION_CALLBACK_MODE_METHOD_IMMEDIATE
+#: doc/classes/AnimationMixer.xml
+msgid "Make method calls immediately when reached in the animation."
+msgstr "Az animáció a metódushívásokat azonnal végrehajtja, amint eléri a hozzájuk tartozó kulcsképkockát."
+
+#. AnimationMixer.ANIMATION_CALLBACK_MODE_DISCRETE_DOMINANT
+#: doc/classes/AnimationMixer.xml
+msgid "An [constant Animation.UPDATE_DISCRETE] track value takes precedence when blending [constant Animation.UPDATE_CONTINUOUS] or [constant Animation.UPDATE_CAPTURE] track values and [constant Animation.UPDATE_DISCRETE] track values."
+msgstr "Ha [constant Animation.UPDATE_CONTINUOUS] vagy [constant Animation.UPDATE_CAPTURE] módú sávot kever egy [constant Animation.UPDATE_DISCRETE] módú sávval, a [constant Animation.UPDATE_DISCRETE] módú sáv értéke élvez elsőbbséget."
+
+#. AnimationMixer.ANIMATION_CALLBACK_MODE_DISCRETE_RECESSIVE
+#: doc/classes/AnimationMixer.xml
+msgid "An [constant Animation.UPDATE_CONTINUOUS] or [constant Animation.UPDATE_CAPTURE] track value takes precedence when blending the [constant Animation.UPDATE_CONTINUOUS] or [constant Animation.UPDATE_CAPTURE] track values and the [constant Animation.UPDATE_DISCRETE] track values. This is the default behavior for [AnimationPlayer]."
+msgstr "Ha [constant Animation.UPDATE_CONTINUOUS] vagy [constant Animation.UPDATE_CAPTURE] módú sávot kever egy [constant Animation.UPDATE_DISCRETE] módú sávval, a [constant Animation.UPDATE_CONTINUOUS] vagy [constant Animation.UPDATE_CAPTURE] módú sáv értéke élvez elsőbbséget. Ez az [AnimationPlayer] alapértelmezett viselkedése."
+
+#. AnimationNode._get_caption
+#: doc/classes/AnimationNode.xml
+msgid "When inheriting from [AnimationRootNode], implement this virtual method to override the text caption for this animation node."
+msgstr "Az [AnimationRootNode] leszármazottaiban ezzel a virtuális metódussal adható meg az animációs csomópont megjelenő felirata."
+
+#. AnimationNode._get_child_by_name
+#: doc/classes/AnimationNode.xml
+msgid "When inheriting from [AnimationRootNode], implement this virtual method to return a child animation node by its [param name]."
+msgstr "Az [AnimationRootNode] leszármazottaiban ez a virtuális metódus adja vissza a [param name] nevű gyermekcsomópontot."
+
+#. AnimationNode._get_child_nodes
+#: doc/classes/AnimationNode.xml
+msgid "When inheriting from [AnimationRootNode], implement this virtual method to return all child animation nodes in order as a [code]name: node[/code] dictionary."
+msgstr "Az [AnimationRootNode] leszármazottaiban ez a virtuális metódus adja vissza az összes gyermekcsomópontot a sorrendjükben, [code]name: node[/code] szerkezetű szótárként."
+
+#. AnimationNode._get_parameter_default_value
+#: doc/classes/AnimationNode.xml
+msgid "When inheriting from [AnimationRootNode], implement this virtual method to return the default value of a [param parameter]. Parameters are custom local memory used for your animation nodes, given a resource can be reused in multiple trees."
+msgstr "Az [AnimationRootNode] leszármazottaiban ez a virtuális metódus adja vissza a [param parameter] alapértékét. A paraméterek csomópontonként tárolt adatok, így ugyanaz az erőforrás több példányban is felhasználható az animációs fákban."
+
+#. AnimationNode._get_parameter_list
+#: doc/classes/AnimationNode.xml
+msgid "When inheriting from [AnimationRootNode], implement this virtual method to return a list of the properties on this animation node. Parameters are custom local memory used for your animation nodes, given a resource can be reused in multiple trees. Format is similar to [method Object.get_property_list]."
+msgstr "Az [AnimationRootNode] leszármazottaiban ez a virtuális metódus sorolja fel a csomópont paramétereit. Ezek csomópontonként tárolt adatok, így ugyanaz az erőforrás több példányban is felhasználható az animációs fákban. A formátum a [method Object.get_property_list] eredményéhez hasonló."
+
+#. AnimationNode._has_filter
+#: doc/classes/AnimationNode.xml
+msgid "When inheriting from [AnimationRootNode], implement this virtual method to return whether the blend tree editor should display filter editing on this animation node."
+msgstr "Az [AnimationRootNode] leszármazottaiban ez a virtuális metódus határozza meg, hogy a keverési fa szerkesztője megjelenítse-e a szűrők szerkesztési lehetőségét ezen a csomóponton."
+
+#. AnimationNode._is_parameter_read_only
+#: doc/classes/AnimationNode.xml
+msgid "When inheriting from [AnimationRootNode], implement this virtual method to return whether the [param parameter] is read-only. Parameters are custom local memory used for your animation nodes, given a resource can be reused in multiple trees."
+msgstr "Az [AnimationRootNode] leszármazottaiban ez a virtuális metódus határozza meg, hogy a [param parameter] csak olvasható-e. A paraméterek csomópontonként tárolt adatok, így ugyanaz az erőforrás több példányban is felhasználható az animációs fákban."
+
+#. AnimationNode.blend_node
+#: doc/classes/AnimationNode.xml
+msgid "Blend another animation node (in case this animation node contains child animation nodes). This function is only useful if you inherit from [AnimationRootNode] instead, otherwise editors will not display your animation node for addition."
+msgstr "Egy másik animációs csomópont kimenetét keveri be. Ez akkor hasznos, ha ez a csomópont más animációs csomópontokat tartalmaz. Olyan csomópontból hívd, amely az [AnimationRootNode] leszármazottja. Különben a szerkesztő nem kínálja fel hozzáadásra a csomópontot."
+
+#. AnimationNode.find_input
+#: doc/classes/AnimationNode.xml
+msgid "Returns the input index which corresponds to [param name]. If not found, returns [code]-1[/code]."
+msgstr "A [param name] nevű bemenet indexét adja vissza. Ha nincs ilyen bemenet, az eredmény [code]-1[/code]."
+
+#. AnimationNode.get_input_count
+#: doc/classes/AnimationNode.xml
+msgid "Amount of inputs in this animation node, only useful for animation nodes that go into [AnimationNodeBlendTree]."
+msgstr "A csomópont bemeneteinek száma. Az [AnimationNodeBlendTree] fába illeszthető animációs csomópontoknál hasznos."
+
+#. AnimationNode.get_input_name
+#: doc/classes/AnimationNode.xml
+msgid "Gets the name of an input by index."
+msgstr "Az indexével megadott bemenet nevét adja vissza."
+
+#. AnimationNode.get_parameter
+#: doc/classes/AnimationNode.xml
+msgid "Gets the value of a parameter. Parameters are custom local memory used for your animation nodes, given a resource can be reused in multiple trees."
+msgstr "A megadott paraméter értékét adja vissza. A paraméterek csomópontonként tárolt adatok, így ugyanaz az erőforrás több példányban is felhasználható az animációs fákban."
+
+#. AnimationNode.is_path_filtered
+#: doc/classes/AnimationNode.xml
+msgid "Returns [code]true[/code] if the given path is filtered."
+msgstr "[code]true[/code] értéket ad vissza, ha az útvonal szerepel a szűrőben."
+
+#. AnimationNode.set_filter_path
+#: doc/classes/AnimationNode.xml
+msgid "Adds or removes a path for the filter."
+msgstr "Hozzáadja az útvonalat a szűrőhöz, vagy eltávolítja belőle."
+
+#. AnimationNode.set_input_name
+#: doc/classes/AnimationNode.xml
+msgid "Sets the name of the input at the given [param input] index. If the setting fails, returns [code]false[/code]."
+msgstr "Beállítja a [param input] indexű bemenet nevét. Ha a művelet sikertelen, [code]false[/code] értékkel tér vissza."
+
+#. AnimationNode.set_parameter
+#: doc/classes/AnimationNode.xml
+msgid "Sets a custom parameter. These are used as local memory, because resources can be reused across the tree or scenes."
+msgstr "Beállít egy egyéni paramétert. Ezeket az adatokat a csomópont külön tárolja, így ugyanaz az erőforrás több helyen vagy több jelenetben is felhasználható."
+
+#. AnimationNode.animation_node_removed
+#: doc/classes/AnimationNode.xml
+msgid "Emitted by nodes that inherit from this class and that have an internal tree when one of their animation nodes removes. The animation nodes that emit this signal are [AnimationNodeBlendSpace1D], [AnimationNodeBlendSpace2D], [AnimationNodeStateMachine], and [AnimationNodeBlendTree]."
+msgstr "Akkor jelez, amikor egy belső fával rendelkező leszármazottból eltávolítanak egy animációs csomópontot. A jelzést az [AnimationNodeBlendSpace1D], az [AnimationNodeBlendSpace2D], az [AnimationNodeStateMachine] és az [AnimationNodeBlendTree] bocsátja ki."
+
+#. AnimationNode.animation_node_renamed
+#: doc/classes/AnimationNode.xml
+msgid "Emitted by nodes that inherit from this class and that have an internal tree when one of their animation node names changes. The animation nodes that emit this signal are [AnimationNodeBlendSpace1D], [AnimationNodeBlendSpace2D], [AnimationNodeStateMachine], and [AnimationNodeBlendTree]."
+msgstr "Akkor jelez, amikor egy belső fával rendelkező leszármazottban átneveznek egy animációs csomópontot. A jelzést az [AnimationNodeBlendSpace1D], az [AnimationNodeBlendSpace2D], az [AnimationNodeStateMachine] és az [AnimationNodeBlendTree] bocsátja ki."
+
+#. AnimationNode.tree_changed
+#: doc/classes/AnimationNode.xml
+msgid "Emitted by nodes that inherit from this class and that have an internal tree when one of their animation nodes changes. The animation nodes that emit this signal are [AnimationNodeBlendSpace1D], [AnimationNodeBlendSpace2D], [AnimationNodeStateMachine], [AnimationNodeBlendTree] and [AnimationNodeTransition]."
+msgstr "Akkor jelez, amikor egy belső fával rendelkező leszármazott animációs csomópontja megváltozik. A jelzést az [AnimationNodeBlendSpace1D], az [AnimationNodeBlendSpace2D], az [AnimationNodeStateMachine], az [AnimationNodeBlendTree] és az [AnimationNodeTransition] bocsátja ki."
+
+#. AnimationNode.filter_enabled
+#: doc/classes/AnimationNode.xml
+msgid "If [code]true[/code], filtering is enabled."
+msgstr "Ha az érték [code]true[/code], a szűrés aktív."
+
+#. AnimationNode.FILTER_IGNORE
+#: doc/classes/AnimationNode.xml
+msgid "Do not use filtering."
+msgstr "Figyelmen kívül hagyja a szűrőt."
+
+#. AnimationNode.FILTER_PASS
+#: doc/classes/AnimationNode.xml
+msgid "Paths matching the filter will be allowed to pass."
+msgstr "Átengedi a szűrőben szereplő útvonalakat."
+
+#. AnimationNode.FILTER_STOP
+#: doc/classes/AnimationNode.xml
+msgid "Paths matching the filter will be discarded."
+msgstr "Kiszűri a szűrőben szereplő útvonalakat."
+
+#. AnimationNode.FILTER_BLEND
+#: doc/classes/AnimationNode.xml
+msgid "Paths matching the filter will be blended (by the blend value)."
+msgstr "A szűrőben szereplő útvonalakat a keverési súly alapján keveri."
+
+#. AnimationNodeAdd2.description
+#: doc/classes/AnimationNodeAdd2.xml
+msgid "A resource to add to an [AnimationNodeBlendTree]. Blends two animations additively based on the amount value.\nIf the amount is greater than [code]1.0[/code], the animation connected to \"in\" port is blended with the amplified animation connected to \"add\" port.\nIf the amount is less than [code]0.0[/code], the animation connected to \"in\" port is blended with the inverted animation connected to \"add\" port."
+msgstr "Az [AnimationNodeBlendTree] fába illeszthető erőforrás. A megadott súly szerint adja hozzá az egyik animációt a másikhoz.\n[code]1.0[/code] fölötti súlynál az „in” bemenet animációjához felerősítve adja hozzá az „add” bemenet animációját.\n[code]0.0[/code] alatti súlynál az „in” bemenet animációjához fordított előjellel adja hozzá az „add” bemenet animációját."
+
+#. AnimationNodeAnimation.loop_mode
+#: doc/classes/AnimationNodeAnimation.xml
+msgid "If [member use_custom_timeline] is [code]true[/code], override the loop settings of the original [Animation] resource with the value.\n[b]Note:[/b] If the [member Animation.loop_mode] isn't set to looping, the [method Animation.track_set_interpolation_loop_wrap] option will not be respected. If you cannot get the expected behavior, consider duplicating the [Animation] resource and changing the loop settings."
+msgstr "Ha a [member use_custom_timeline] értéke [code]true[/code], ez a beállítás felülírja az eredeti [Animation] erőforrás ismétlési módját.\n[b]Megjegyzés:[/b] Ha a [member Animation.loop_mode] szerint az eredeti animáció nem ismétlődik, a [method Animation.track_set_interpolation_loop_wrap] beállítása hatástalan. Ha az eredmény eltér a várttól, érdemes másolatot készíteni az [Animation] erőforrásról, és abban módosítani az ismétlési beállításokat."
+
+#. AnimationNodeBlend2.description
+#: doc/classes/AnimationNodeBlend2.xml
+msgid "A resource to add to an [AnimationNodeBlendTree]. Blends two animations linearly based on the amount value.\nIn general, the blend value should be in the [code][0.0, 1.0][/code] range. Values outside of this range can blend amplified or inverted animations, however, [AnimationNodeAdd2] works better for this purpose."
+msgstr "Az [AnimationNodeBlendTree] fába illeszthető erőforrás. Két animációt kever lineárisan a megadott súly alapján.\nA keverési súlyt általában a [code][0.0, 1.0][/code] tartományban érdemes megadni. Az ezen kívüli értékek felerősíthetik vagy megfordíthatják az animáció hozzájárulását. Erre a célra az [AnimationNodeAdd2] alkalmasabb."
+
+#. AnimationNodeBlend3.description
+#: doc/classes/AnimationNodeBlend3.xml
+msgid "A resource to add to an [AnimationNodeBlendTree]. Blends two animations out of three linearly out of three based on the amount value.\nThis animation node has three inputs:\n- The base animation to blend with\n- A \"-blend\" animation to blend with when the blend amount is negative value\n- A \"+blend\" animation to blend with when the blend amount is positive value\nIn general, the blend value should be in the [code][-1.0, 1.0][/code] range. Values outside of this range can blend amplified animations, however, [AnimationNodeAdd3] works better for this purpose."
+msgstr "Az [AnimationNodeBlendTree] fába illeszthető erőforrás. A megadott súly alapján a három animáció közül kettőt kever lineárisan.\nA csomópontnak három bemenete van:\n- Az alapanimáció\n- A „-blend” animáció negatív keverési súlyhoz\n- A „+blend” animáció pozitív keverési súlyhoz\nA keverési súlyt általában a [code][-1.0, 1.0][/code] tartományban érdemes megadni. Az ezen kívüli értékek felerősíthetik vagy megfordíthatják az animáció hozzájárulását. Erre a célra az [AnimationNodeAdd3] alkalmasabb."
+
+#. AnimationNodeBlendSpace1D.brief
+#: doc/classes/AnimationNodeBlendSpace1D.xml
+msgid "A set of [AnimationRootNode]s placed on a virtual axis, crossfading between the two adjacent ones. Used by [AnimationTree]."
+msgstr "Virtuális tengelyen elhelyezett [AnimationRootNode] csomópontok, amelyek közül a két szomszédos között fokozatos az átmenet. Az [AnimationTree] használja."
+
+#. AnimationNodeBlendSpace1D.description
+#: doc/classes/AnimationNodeBlendSpace1D.xml
+msgid "A resource used by [AnimationNodeBlendTree].\n[AnimationNodeBlendSpace1D] represents a virtual axis on which any type of [AnimationRootNode]s can be added using [method add_blend_point]. Outputs the linear blend of the two [AnimationRootNode]s adjacent to the current value.\nYou can set the extents of the axis with [member min_space] and [member max_space]."
+msgstr "Az [AnimationNodeBlendTree] által használt erőforrás.\nAz [AnimationNodeBlendSpace1D] virtuális tengelyére a [method add_blend_point] metódussal bármilyen [AnimationRootNode] elhelyezhető. A kimenet az aktuális értéket közrefogó két [AnimationRootNode] lineáris keveréke.\nA tengely határait a [member min_space] és a [member max_space] adja meg."
+
+#. AnimationNodeBlendSpace1D.cyclic_length
+#. AnimationNodeBlendSpace2D.cyclic_length
+#: doc/classes/AnimationNodeBlendSpace1D.xml doc/classes/AnimationNodeBlendSpace2D.xml
+msgid "The cycle length in seconds used by [constant SYNC_MODE_CYCLIC_CONSTANT]. All animations are time-scaled so they complete one full cycle in this duration. Must be greater than [code]0[/code] for cyclic sync to take effect."
+msgstr "A [constant SYNC_MODE_CYCLIC_CONSTANT] módban használt ciklushossz másodpercben. A motor úgy változtatja az animációk sebességét, hogy mindegyik ennyi idő alatt járjon be egy teljes ciklust. A ciklikus szinkronizáláshoz az értéknek [code]0[/code]-nál nagyobbnak kell lennie."
+
+#. AnimationNodeBlendSpace1D.SYNC_MODE_CYCLIC_MUTABLE
+#. AnimationNodeBlendSpace2D.SYNC_MODE_CYCLIC_MUTABLE
+#: doc/classes/AnimationNodeBlendSpace1D.xml doc/classes/AnimationNodeBlendSpace2D.xml
+msgid "All animations are time-scaled so they stay in sync, with the cycle length dynamically computed from active blend weights. This is self-normalizing: a solo animation plays at normal speed.\n[b]Note:[/b] If you apply [AnimationNodeTimeSeek] to the result when handling animations of different lengths, synchronization will be broken. In such cases, it is recommended to use [member AnimationNodeAnimation.use_custom_timeline] to align the animation lengths."
+msgstr "A motor összehangolja az animációk sebességét, és az aktuális keverési súlyokból számítja ki a közös ciklushosszt. A súlyokhoz igazodó számítás miatt az önmagában játszott animáció az eredeti sebességén fut.\n[b]Megjegyzés:[/b] Eltérő hosszúságú animációk esetén az [AnimationNodeTimeSeek] alkalmazása a kimenetre megszakítja a szinkronizálást. Ilyenkor a [member AnimationNodeAnimation.use_custom_timeline] beállítással érdemes az animációk hosszát egymáshoz igazítani."
+
+#. AnimationNodeBlendSpace1D.SYNC_MODE_CYCLIC_CONSTANT
+#. AnimationNodeBlendSpace2D.SYNC_MODE_CYCLIC_CONSTANT
+#: doc/classes/AnimationNodeBlendSpace1D.xml doc/classes/AnimationNodeBlendSpace2D.xml
+msgid "All animations are time-scaled so they complete one cycle in [member cyclic_length] seconds, keeping them in sync regardless of their individual lengths.\n[b]Note:[/b] If you apply [AnimationNodeTimeSeek] to the result when handling animations of different lengths, synchronization will be broken. In such cases, it is recommended to use [member AnimationNodeAnimation.use_custom_timeline] to align the animation lengths."
+msgstr "A motor úgy állítja be az animációk sebességét, hogy mindegyik [member cyclic_length] másodperc alatt járjon be egy ciklust. Így eredeti hosszuktól függetlenül szinkronban maradnak.\n[b]Megjegyzés:[/b] Eltérő hosszúságú animációk esetén az [AnimationNodeTimeSeek] alkalmazása a kimenetre megszakítja a szinkronizálást. Ilyenkor a [member AnimationNodeAnimation.use_custom_timeline] beállítással érdemes az animációk hosszát egymáshoz igazítani."
+
+#. AnimationNodeBlendSpace2D.brief
+#: doc/classes/AnimationNodeBlendSpace2D.xml
+msgid "A set of [AnimationRootNode]s placed on 2D coordinates, crossfading between the three adjacent ones. Used by [AnimationTree]."
+msgstr "2D-s koordinátákon elhelyezett [AnimationRootNode] csomópontok, amelyek közül a három szomszédos között fokozatos az átmenet. Az [AnimationTree] használja."
+
+#. AnimationNodeBlendSpace2D.description
+#: doc/classes/AnimationNodeBlendSpace2D.xml
+msgid "A resource used by [AnimationNodeBlendTree].\n[AnimationNodeBlendSpace2D] represents a virtual 2D space on which [AnimationRootNode]s are placed. Outputs the linear blend of the three adjacent animations using a [Vector2] weight. Adjacent in this context means the three [AnimationRootNode]s making up the triangle that contains the current value.\nYou can add vertices to the blend space with [method add_blend_point] and automatically triangulate it by setting [member auto_triangles] to [code]true[/code]. Otherwise, use [method add_triangle] and [method remove_triangle] to triangulate the blend space by hand."
+msgstr "Az [AnimationNodeBlendTree] által használt erőforrás.\nAz [AnimationNodeBlendSpace2D] virtuális síkján [AnimationRootNode] csomópontok helyezhetők el. A [Vector2] értékű keverési pozíció alapján a három szomszédos [AnimationRootNode] animációját keveri lineárisan. Ezek annak a háromszögnek a csúcsai, amelybe az aktuális pozíció esik.\nA csúcsokat a [method add_blend_point] metódussal adhatod hozzá. Ha az [member auto_triangles] értéke [code]true[/code], a háromszögek automatikusan létrejönnek. Kézzel a [method add_triangle] és a [method remove_triangle] metódussal módosíthatod őket."
+
+#. AnimationNodeBlendSpace2D.add_triangle
+#: doc/classes/AnimationNodeBlendSpace2D.xml
+msgid "Creates a new triangle using three points [param x], [param y], and [param z]. Triangles can overlap. You can insert the triangle at a specific index using the [param at_index] argument. If you use the default value for [param at_index], the point is inserted at the end of the blend points array."
+msgstr "A [param x], [param y] és [param z] pontból új háromszöget hoz létre. A háromszögek átfedhetik egymást. Egy adott indexre a [param at_index] argumentummal szúrhatod be. Ha a [param at_index] az alapértékén marad, a háromszög a tömb végére kerül."
+
+#. AnimationNodeBlendTree.brief
+#: doc/classes/AnimationNodeBlendTree.xml
+msgid "A sub-tree of many type [AnimationNode]s used for complex animations. Used by [AnimationTree]."
+msgstr "Összetett animációkhoz használható részfa, amely különféle [AnimationNode] csomópontokat tartalmazhat. Az [AnimationTree] használja."
+
+#. AnimationNodeBlendTree.description
+#: doc/classes/AnimationNodeBlendTree.xml
+msgid "This animation node may contain a sub-tree of any other type animation nodes, such as [AnimationNodeTransition], [AnimationNodeBlend2], [AnimationNodeBlend3], [AnimationNodeOneShot], etc. This is one of the most commonly used animation node roots.\nAn [AnimationNodeOutput] node named [code]output[/code] is created by default."
+msgstr "Ez az animációs csomópont különféle animációs csomópontokból álló részfát tartalmazhat. Ilyen például az [AnimationNodeTransition], az [AnimationNodeBlend2], az [AnimationNodeBlend3] és az [AnimationNodeOneShot]. Ez az egyik leggyakrabban használt animációs gyökércsomópont.\nAlapból létrejön benne egy [code]output[/code] nevű [AnimationNodeOutput] csomópont."
+
+#. AnimationNodeBlendTree.add_node
+#: doc/classes/AnimationNodeBlendTree.xml
+msgid "Adds an [AnimationNode] at the given [param position]. The [param name] is used to identify the created sub animation node later."
+msgstr "Hozzáad egy [AnimationNode] csomópontot a megadott [param position] pozícióban. A részfában a csomópont később a [param name] névvel azonosítható."
+
+#. AnimationNodeBlendTree.connect_node
+#: doc/classes/AnimationNodeBlendTree.xml
+msgid "Connects the output of an [AnimationNode] as input for another [AnimationNode], at the input port specified by [param input_index]."
+msgstr "Egy [AnimationNode] kimenetét egy másik [AnimationNode] [param input_index] indexű bemenetére kapcsolja."
+
+#. AnimationNodeBlendTree.disconnect_node
+#: doc/classes/AnimationNodeBlendTree.xml
+msgid "Disconnects the animation node connected to the specified input."
+msgstr "Megszünteti a megadott bemenetre kötött animációs csomópont kapcsolatát."
+
+#. AnimationNodeBlendTree.get_node
+#: doc/classes/AnimationNodeBlendTree.xml
+msgid "Returns the sub animation node with the specified [param name]."
+msgstr "A [param name] nevű animációs csomópontot adja vissza a részfából."
+
+#. AnimationNodeBlendTree.get_node_list
+#: doc/classes/AnimationNodeBlendTree.xml
+msgid "Returns a list containing the names of all sub animation nodes in this blend tree."
+msgstr "A keverési fában lévő animációs csomópontok neveinek listáját adja vissza."
+
+#. AnimationNodeBlendTree.get_node_position
+#: doc/classes/AnimationNodeBlendTree.xml
+msgid "Returns the position of the sub animation node with the specified [param name]."
+msgstr "A [param name] nevű animációs csomópont helyét adja vissza."
+
+#. AnimationNodeBlendTree.has_node
+#: doc/classes/AnimationNodeBlendTree.xml
+msgid "Returns [code]true[/code] if a sub animation node with specified [param name] exists."
+msgstr "[code]true[/code] értéket ad vissza, ha a részfában van [param name] nevű animációs csomópont."
+
+#. AnimationNodeBlendTree.remove_node
+#: doc/classes/AnimationNodeBlendTree.xml
+msgid "Removes a sub animation node."
+msgstr "Eltávolít egy animációs csomópontot a részfából."
+
+#. AnimationNodeBlendTree.rename_node
+#: doc/classes/AnimationNodeBlendTree.xml
+msgid "Changes the name of a sub animation node."
+msgstr "Átnevez egy animációs csomópontot a részfában."
+
+#. AnimationNodeBlendTree.set_node_position
+#: doc/classes/AnimationNodeBlendTree.xml
+msgid "Modifies the position of a sub animation node."
+msgstr "Módosítja egy animációs csomópont helyét a részfában."
+
+#. AnimationNodeBlendTree.CONNECTION_OK
+#: doc/classes/AnimationNodeBlendTree.xml
+msgid "The connection was successful."
+msgstr "A kapcsolat létrejött."
+
+#. AnimationNodeBlendTree.CONNECTION_ERROR_NO_INPUT
+#: doc/classes/AnimationNodeBlendTree.xml
+msgid "The input node is [code]null[/code]."
+msgstr "A bemeneti csomópont értéke [code]null[/code]."
+
+#. AnimationNodeBlendTree.CONNECTION_ERROR_NO_INPUT_INDEX
+#: doc/classes/AnimationNodeBlendTree.xml
+msgid "The specified input port is out of range."
+msgstr "A megadott bemeneti port indexe kívül esik az érvényes tartományon."
+
+#. AnimationNodeBlendTree.CONNECTION_ERROR_NO_OUTPUT
+#: doc/classes/AnimationNodeBlendTree.xml
+msgid "The output node is [code]null[/code]."
+msgstr "A kimeneti csomópont értéke [code]null[/code]."
+
+#. AnimationNodeBlendTree.CONNECTION_ERROR_SAME_NODE
+#: doc/classes/AnimationNodeBlendTree.xml
+msgid "Input and output nodes are the same."
+msgstr "A bemenet és a kimenet ugyanahhoz a csomóponthoz tartozik."
+
+#. AnimationNodeBlendTree.CONNECTION_ERROR_CONNECTION_EXISTS
+#: doc/classes/AnimationNodeBlendTree.xml
+msgid "The specified connection already exists."
+msgstr "A megadott kapcsolat már létezik."
+
+#. AnimationNodeExtension.brief
+#: doc/classes/AnimationNodeExtension.xml
+msgid "Base class for extending [AnimationRootNode]s from GDScript, C#, or C++."
+msgstr "Alaposztály az [AnimationRootNode] bővítéséhez GDScriptben, C#-ban vagy C++-ban."
+
+#. AnimationNodeExtension.is_looping
+#: doc/classes/AnimationNodeExtension.xml
+msgid "Returns [code]true[/code] if the animation for the given [param node_info] is looping."
+msgstr "[code]true[/code] értéket ad vissza, ha a [param node_info] adataihoz tartozó animáció ismétlődik."
+
+#. AnimationNodeOneShot.autorestart
+#: doc/classes/AnimationNodeOneShot.xml
+msgid "If [code]true[/code], the sub-animation will restart automatically after finishing.\nIn other words, to start auto restarting, the animation must be played once with the [constant ONE_SHOT_REQUEST_FIRE] request. The [constant ONE_SHOT_REQUEST_ABORT] request stops the auto restarting, but it does not disable the [member autorestart] itself. So, the [constant ONE_SHOT_REQUEST_FIRE] request will start auto restarting again."
+msgstr "Ha az érték [code]true[/code], a beágyazott animáció a végén automatikusan újraindul.\nAz ismétlés azután kezdődhet, hogy az animációt egyszer elindítottad a [constant ONE_SHOT_REQUEST_FIRE] kéréssel. A [constant ONE_SHOT_REQUEST_ABORT] kérés leállítja az ismétlést, miközben a [member autorestart] beállítás értéke megmarad. Egy újabb [constant ONE_SHOT_REQUEST_FIRE] kérés ismét elindítja az automatikus újraindulást."
+
+#. AnimationNodeOneShot.ONE_SHOT_REQUEST_NONE
+#: doc/classes/AnimationNodeOneShot.xml
+msgid "The default state of the request. Nothing is done."
+msgstr "Alapállapot. Nincs függőben művelet."
+
+#. AnimationNodeStateMachine.STATE_MACHINE_TYPE_GROUPED
+#: doc/classes/AnimationNodeStateMachine.xml
+msgid "This is a grouped state machine that can be controlled from a parent state machine. It does not work independently. There must be a state machine with [member state_machine_type] of [constant STATE_MACHINE_TYPE_ROOT] or [constant STATE_MACHINE_TYPE_NESTED] in the parent or ancestor."
+msgstr "Csoportosított állapotgép, amelyet a szülő állapotgép vezérel. Önállóan nem fut. A szülő vagy valamelyik felmenő [member state_machine_type] értékének [constant STATE_MACHINE_TYPE_ROOT] vagy [constant STATE_MACHINE_TYPE_NESTED] állandónak kell lennie."
+
+#. AnimationNodeStateMachinePlayback.description
+#: doc/classes/AnimationNodeStateMachinePlayback.xml
+msgid "Allows control of [AnimationTree] state machines created with [AnimationNodeStateMachine]. Retrieve with [code]$AnimationTree.get(\"parameters/playback\")[/code].\n[codeblocks]\n[gdscript]\nvar state_machine = $AnimationTree.get(\"parameters/playback\")\nstate_machine.travel(\"some_state\")\n[/gdscript]\n[csharp]\nvar stateMachine = GetNode<AnimationTree>(\"AnimationTree\").Get(\"parameters/playback\").As<AnimationNodeStateMachinePlayback>();\nstateMachine.Travel(\"some_state\");\n[/csharp]\n[/codeblocks]"
+msgstr "Az [AnimationNodeStateMachine] segítségével létrehozott [AnimationTree] állapotgépek vezérlésére szolgál. A vezérlőt a [code]$AnimationTree.get(\"parameters/playback\")[/code] hívással kérheted le.\n[codeblocks]\n[gdscript]\nvar state_machine = $AnimationTree.get(\"parameters/playback\")\nstate_machine.travel(\"some_state\")\n[/gdscript]\n[csharp]\nvar stateMachine = GetNode<AnimationTree>(\"AnimationTree\").Get(\"parameters/playback\").As<AnimationNodeStateMachinePlayback>();\nstateMachine.Travel(\"some_state\");\n[/csharp]\n[/codeblocks]"
+
+#. AnimationNodeStateMachinePlayback.get_fading_from_length
+#: doc/classes/AnimationNodeStateMachinePlayback.xml
+msgid "Returns the playback state length of the node from [method get_fading_from_node]. Returns [code]0[/code] if no animation fade is occurring."
+msgstr "A [method get_fading_from_node] által megadott kifutó csomópont lejátszási hosszát adja vissza. Ha éppen nincs átkeverés, az eredmény [code]0[/code]."
+
+#. AnimationNodeStateMachinePlayback.travel
+#: doc/classes/AnimationNodeStateMachinePlayback.xml
+msgid "Transitions from the current state to another one, following the shortest path.\nIf the path does not connect from the current state, the animation will play after the state teleports.\nIf [param reset_on_teleport] is [code]true[/code], the animation is played from the beginning when the travel cause a teleportation."
+msgstr "A legrövidebb átmeneti útvonalon visz át az aktuális állapotból a célállapotba.\nHa az aktuális állapotból nem vezet út a célhoz, az állapotgép közvetlenül a célállapotba ugrik, és ott folytatja a lejátszást.\nHa a [param reset_on_teleport] értéke [code]true[/code], közvetlen ugráskor a célanimáció az elejéről indul."
+
+#. AnimationNodeStateMachinePlayback.state_finished
+#: doc/classes/AnimationNodeStateMachinePlayback.xml
+msgid "Emitted when the [param state] finishes playback. If [param state] is a state machine set to grouped mode, its signals are passed through with its name prefixed.\nIf there is a crossfade, this will be fired when the influence of the [method get_fading_from_node] animation is no longer present."
+msgstr "Akkor jelez, amikor a [param state] állapot lejátszása véget ér. Ha a [param state] csoportosított állapotgép, a jelzései a saját nevével előtagolva jutnak tovább.\nÁtkeveréskor a jelzés akkor fut le, amikor a [method get_fading_from_node] által megadott animáció már nincs hatással a kimenetre."
+
+#. AnimationNodeStateMachineTransition.advance_expression
+#: doc/classes/AnimationNodeStateMachineTransition.xml
+msgid "Use an expression as a condition for state machine transitions. It is possible to create complex animation advance conditions for switching between states and gives much greater flexibility for creating complex state machines by directly interfacing with the script code."
+msgstr "Kifejezéssel adható meg az állapotok közötti átmenet feltétele. Így összetett továbblépési feltételeket is megadhatsz, akár közvetlenül a szkriptben elérhető értékekre hivatkozva."
+
+#. AnimationNodeStateMachineTransition.advance_mode
+#: doc/classes/AnimationNodeStateMachineTransition.xml
+msgid "Determines whether the transition should be disabled, enabled when using [method AnimationNodeStateMachinePlayback.travel], or traversed automatically if the [member advance_condition] and [member advance_expression] checks are [code]true[/code] (if assigned)."
+msgstr "Meghatározza, hogy az átmenet le van-e tiltva, a [method AnimationNodeStateMachinePlayback.travel] hívásával vehető-e igénybe, vagy automatikusan megtörténik, amikor a megadott [member advance_condition] és [member advance_expression] ellenőrzés eredménye [code]true[/code]."
+
+#. AnimationNodeStateMachineTransition.xfade_curve
+#: doc/classes/AnimationNodeStateMachineTransition.xml
+msgid "Ease curve for better control over cross-fade between this state and the next. Should be a unit [Curve]."
+msgstr "Az aktuális és a következő állapot közötti átkeverés lefutását szabályozó görbe. A [Curve] görbét a 0 és 1 közötti egységtartományban add meg."
+
+#. AnimationNodeSync.sync
+#: doc/classes/AnimationNodeSync.xml
+msgid "If [code]false[/code], the blended animations' frame are stopped when the blend value is [code]0[/code].\nIf [code]true[/code], forcing the blended animations to advance frame."
+msgstr "Ha az érték [code]false[/code], a [code]0[/code] súlyú animáció lejátszási pozíciója nem halad tovább.\nHa az érték [code]true[/code], a kevert animációk lejátszási pozíciója ilyenkor is előrehalad."
+
+#. AnimationNodeTransition.allow_transition_to_self
+#: doc/classes/AnimationNodeTransition.xml
+msgid "If [code]true[/code], allows transition to the self state. When the reset option is enabled in input, the animation is restarted. If [code]false[/code], nothing happens on the transition to the self state."
+msgstr "Ha az érték [code]true[/code], az állapotból önmagába is át lehet lépni. Ha a bemenet visszaállítási beállítása aktív, az animáció újraindul. Ha az érték [code]false[/code], az önmagába történő átmenetnek nincs hatása."
+
+#. AnimationPlayer.play_section_backwards
+#: doc/classes/AnimationPlayer.xml
+msgid "Plays the animation with key [param name] and the section starting from [param start_time] and ending on [param end_time] in reverse.\nThis method is a shorthand for [method play_section] with [code]custom_speed = -1.0[/code] and [code]from_end = true[/code], see its description for more information."
+msgstr "A [param name] kulcsú animáció [param start_time] és [param end_time] közötti részét visszafelé játssza le.\nEz a [method play_section] rövid alakja [code]custom_speed = -1.0[/code] és [code]from_end = true[/code] beállítással. A részleteket lásd a metódus leírásában."
+
+#. AnimationPlayer.play_section_with_markers
+#: doc/classes/AnimationPlayer.xml
+msgid "Plays the animation with key [param name] and the section starting from [param start_marker] and ending on [param end_marker].\nIf the start marker is empty, the section starts from the beginning of the animation. If the end marker is empty, the section ends on the end of the animation. See also [method play]."
+msgstr "A [param name] kulcsú animáció [param start_marker] és [param end_marker] jelölő közötti részét játssza le.\nHa a kezdő jelölő üres, a szakasz az animáció elején kezdődik. Ha a záró jelölő üres, a szakasz az animáció végén ér véget. Lásd még a [method play] metódust."
+
+#. AnimationPlayer.play_section_with_markers_backwards
+#: doc/classes/AnimationPlayer.xml
+msgid "Plays the animation with key [param name] and the section starting from [param start_marker] and ending on [param end_marker] in reverse.\nThis method is a shorthand for [method play_section_with_markers] with [code]custom_speed = -1.0[/code] and [code]from_end = true[/code], see its description for more information."
+msgstr "A [param name] kulcsú animáció [param start_marker] és [param end_marker] jelölő közötti részét visszafelé játssza le.\nEz a [method play_section_with_markers] rövid alakja [code]custom_speed = -1.0[/code] és [code]from_end = true[/code] beállítással. A részleteket lásd a metódus leírásában."
+
+#. AnimationPlayer.set_section_with_markers
+#: doc/classes/AnimationPlayer.xml
+msgid "Changes the start and end markers of the section being played. The current playback position will be clamped within the new section. See also [method play_section_with_markers].\nIf the argument is empty, the section uses the beginning or end of the animation. If both are empty, it means that the section is not set."
+msgstr "Módosítja az éppen lejátszott szakasz kezdő és záró jelölőjét. Az aktuális lejátszási pozíciót az új szakasz határai közé szorítja. Lásd még a [method play_section_with_markers] metódust.\nÜres kezdő vagy záró jelölő esetén az animáció elejét, illetve végét használja. Ha mindkettő üres, nincs külön lejátszási szakasz."
+
+#. AnimationPlayer.animation_changed
+#: doc/classes/AnimationPlayer.xml
+msgid "Emitted when a queued animation plays after the previous animation finished. See also [method AnimationPlayer.queue].\n[b]Note:[/b] The signal is not emitted when the animation is changed via [method AnimationPlayer.play] or by an [AnimationTree]."
+msgstr "Akkor jelez, amikor az előző animáció végén elindul a sorban következő animáció. Lásd még a [method AnimationPlayer.queue] metódust.\n[b]Megjegyzés:[/b] A jelzés nem fut le, ha az animációt a [method AnimationPlayer.play] vagy egy [AnimationTree] váltja át."
+
+#. AnimationRootNode.brief
+#: doc/classes/AnimationRootNode.xml
+msgid "Base class for [AnimationNode]s that hold one or multiple composite animations. Usually used for [member AnimationTree.tree_root]."
+msgstr "Egy vagy több összetett animációt tartalmazó [AnimationNode] csomópontok alaposztálya. Jellemzően az [member AnimationTree.tree_root] tulajdonsághoz rendelik."
