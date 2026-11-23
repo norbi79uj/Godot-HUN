@@ -51460,3 +51460,503 @@ msgstr "Gömb alakú ütköző a [GPUParticles3D] részecskéihez. Lásd a [GPUP
 #: doc/classes/RenderingServer.xml
 msgid "Box collision type for [GPUParticles3D] (see [GPUParticlesCollisionBox3D])."
 msgstr "Doboz alakú ütköző a [GPUParticles3D] részecskéihez. Lásd a [GPUParticlesCollisionBox3D] osztályt."
+
+#. RenderingServer.CANVAS_ITEM_Z_MIN
+#: doc/classes/RenderingServer.xml
+msgid "The minimum Z-layer for canvas items."
+msgstr "A vászonelemek legkisebb megengedett Z-indexe."
+
+#. RenderingServer.CANVAS_ITEM_Z_MAX
+#: doc/classes/RenderingServer.xml
+msgid "The maximum Z-layer for canvas items."
+msgstr "A vászonelemek legnagyobb megengedett Z-indexe."
+
+#. RenderingServer.CANVAS_LAYER_MIN
+#: doc/classes/RenderingServer.xml
+msgid "The minimum canvas layer."
+msgstr "A legkisebb megengedett vászonréteg-index."
+
+#. RenderingServer.CANVAS_LAYER_MAX
+#: doc/classes/RenderingServer.xml
+msgid "The maximum canvas layer."
+msgstr "A legnagyobb megengedett vászonréteg-index."
+
+#. RenderingServer.VIEWPORT_SCALING_3D_MODE_BILINEAR
+#: doc/classes/RenderingServer.xml
+msgid "Use bilinear scaling for the viewport's 3D buffer. The amount of scaling can be set using [member Viewport.scaling_3d_scale]. Values less than [code]1.0[/code] will result in undersampling while values greater than [code]1.0[/code] will result in supersampling. A value of [code]1.0[/code] disables scaling."
+msgstr "Bilineáris skálázást használ a nézetablak 3D-s pufferén. A méretarányt a [member Viewport.scaling_3d_scale] tulajdonság adja meg. [code]1.0[/code] alatti értéknél alulmintavételezést, [code]1.0[/code] fölött túlmintavételezést használ. A [code]1.0[/code] érték kikapcsolja a skálázást."
+
+#. RenderingServer.VIEWPORT_SCALING_3D_MODE_FSR
+#: doc/classes/RenderingServer.xml
+msgid "Use AMD FidelityFX Super Resolution 1.0 upscaling for the viewport's 3D buffer. The amount of scaling can be set using [member Viewport.scaling_3d_scale]. Values less than [code]1.0[/code] will result in the viewport being upscaled using FSR. Values greater than [code]1.0[/code] are not supported and bilinear downsampling will be used instead. A value of [code]1.0[/code] disables scaling."
+msgstr "Az AMD FidelityFX Super Resolution 1.0 eljárást használja a nézetablak 3D-s pufferének felskálázásához. A méretarányt a [member Viewport.scaling_3d_scale] tulajdonság adja meg. [code]1.0[/code] alatti értéknél az FSR skálázza fel a képet. [code]1.0[/code] fölött a renderelő bilineáris leskálázást használ. A [code]1.0[/code] érték kikapcsolja a skálázást."
+
+#. RenderingServer.VIEWPORT_SCALING_3D_MODE_FSR2
+#: doc/classes/RenderingServer.xml
+msgid "Use AMD FidelityFX Super Resolution 2.2 upscaling for the viewport's 3D buffer. The amount of scaling can be set using [member Viewport.scaling_3d_scale]. Values less than [code]1.0[/code] will result in the viewport being upscaled using FSR2. Values greater than [code]1.0[/code] are not supported and bilinear downsampling will be used instead. A value of [code]1.0[/code] will use FSR2 at native resolution as a TAA solution."
+msgstr "Az AMD FidelityFX Super Resolution 2.2 eljárást használja a nézetablak 3D-s pufferének felskálázásához. A méretarányt a [member Viewport.scaling_3d_scale] tulajdonság adja meg. [code]1.0[/code] alatti értéknél az FSR2 skálázza fel a képet. [code]1.0[/code] fölött a renderelő bilineáris leskálázást használ. A [code]1.0[/code] értéknél az FSR2 natív felbontáson, időbeli élsimításként működik."
+
+#. RenderingServer.VIEWPORT_SCALING_3D_MODE_MAX
+#: doc/classes/RenderingServer.xml
+msgid "Represents the size of the [enum ViewportScaling3DMode] enum."
+msgstr "A [enum ViewportScaling3DMode] felsorolás mérete."
+
+#. RenderingServer.VIEWPORT_UPDATE_DISABLED
+#: doc/classes/RenderingServer.xml
+msgid "Do not update the viewport's render target."
+msgstr "A nézetablak renderelési célja nem frissül."
+
+#. RenderingServer.VIEWPORT_UPDATE_ONCE
+#: doc/classes/RenderingServer.xml
+msgid "Update the viewport's render target once, then switch to [constant VIEWPORT_UPDATE_DISABLED]."
+msgstr "Egyszer frissíti a nézetablak renderelési célját, majd [constant VIEWPORT_UPDATE_DISABLED] módra vált."
+
+#. RenderingServer.VIEWPORT_UPDATE_WHEN_VISIBLE
+#: doc/classes/RenderingServer.xml
+msgid "Update the viewport's render target only when it is visible. This is the default value."
+msgstr "A nézetablak renderelési célja csak akkor frissül, amikor látható. Ez az alapértelmezett beállítás."
+
+#. RenderingServer.VIEWPORT_UPDATE_WHEN_PARENT_VISIBLE
+#: doc/classes/RenderingServer.xml
+msgid "Update the viewport's render target only when its parent is visible."
+msgstr "A nézetablak renderelési célja csak akkor frissül, amikor a szülője látható."
+
+#. RenderingServer.VIEWPORT_UPDATE_ALWAYS
+#: doc/classes/RenderingServer.xml
+msgid "Always update the viewport's render target."
+msgstr "Mindig frissíti a nézetablak renderelési célját."
+
+#. RenderingServer.VIEWPORT_CLEAR_ALWAYS
+#: doc/classes/RenderingServer.xml
+msgid "Always clear the viewport's render target before drawing."
+msgstr "Minden rajzolás előtt törli a nézetablak renderelési célját."
+
+#. RenderingServer.VIEWPORT_CLEAR_NEVER
+#: doc/classes/RenderingServer.xml
+msgid "Never clear the viewport's render target."
+msgstr "A nézetablak renderelési célját nem törli."
+
+#. RenderingServer.VIEWPORT_CLEAR_ONLY_NEXT_FRAME
+#: doc/classes/RenderingServer.xml
+msgid "Clear the viewport's render target on the next frame, then switch to [constant VIEWPORT_CLEAR_NEVER]."
+msgstr "A következő képkockán törli a nézetablak renderelési célját, majd [constant VIEWPORT_CLEAR_NEVER] módra vált."
+
+#. RenderingServer.VIEWPORT_ENVIRONMENT_DISABLED
+#: doc/classes/RenderingServer.xml
+msgid "Disable rendering of 3D environment over 2D canvas."
+msgstr "Kikapcsolja a 3D-s környezet renderelését a 2D-s vászon fölött."
+
+#. RenderingServer.VIEWPORT_ENVIRONMENT_ENABLED
+#: doc/classes/RenderingServer.xml
+msgid "Enable rendering of 3D environment over 2D canvas."
+msgstr "Bekapcsolja a 3D-s környezet renderelését a 2D-s vászon fölött."
+
+#. RenderingServer.VIEWPORT_ENVIRONMENT_INHERIT
+#: doc/classes/RenderingServer.xml
+msgid "Inherit enable/disable value from parent. If the topmost parent is also set to [constant VIEWPORT_ENVIRONMENT_INHERIT], then this has the same behavior as [constant VIEWPORT_ENVIRONMENT_ENABLED]."
+msgstr "A környezet megjelenítését a szülő beállításából örökli. Ha a legfelső szülő beállítása szintén [constant VIEWPORT_ENVIRONMENT_INHERIT], az eredmény megegyezik a [constant VIEWPORT_ENVIRONMENT_ENABLED] viselkedésével."
+
+#. RenderingServer.VIEWPORT_ENVIRONMENT_MAX
+#: doc/classes/RenderingServer.xml
+msgid "Represents the size of the [enum ViewportEnvironmentMode] enum."
+msgstr "A [enum ViewportEnvironmentMode] felsorolás mérete."
+
+#. RenderingServer.VIEWPORT_MSAA_DISABLED
+#: doc/classes/RenderingServer.xml
+msgid "Multisample antialiasing for 3D is disabled. This is the default value, and also the fastest setting."
+msgstr "A többmintavételes élsimítás ki van kapcsolva 3D-ben. Ez az alapértelmezett és a leggyorsabb beállítás."
+
+#. RenderingServer.VIEWPORT_MSAA_2X
+#: doc/classes/RenderingServer.xml
+msgid "Multisample antialiasing uses 2 samples per pixel for 3D. This has a moderate impact on performance."
+msgstr "A többmintavételes élsimítás 3D-ben képpontonként 2 mintát használ. Ez mérsékelt teljesítményköltséggel jár."
+
+#. RenderingServer.VIEWPORT_MSAA_4X
+#: doc/classes/RenderingServer.xml
+msgid "Multisample antialiasing uses 4 samples per pixel for 3D. This has a high impact on performance."
+msgstr "A többmintavételes élsimítás 3D-ben képpontonként 4 mintát használ. Ez jelentős teljesítményköltséggel jár."
+
+#. RenderingServer.VIEWPORT_MSAA_8X
+#: doc/classes/RenderingServer.xml
+msgid "Multisample antialiasing uses 8 samples per pixel for 3D. This has a very high impact on performance. Likely unsupported on low-end and older hardware."
+msgstr "A többmintavételes élsimítás 3D-ben képpontonként 8 mintát használ. Ez nagyon jelentős teljesítményköltséggel jár. A régebbi vagy alacsonyabb teljesítményű eszközök valószínűleg nem támogatják."
+
+#. RenderingServer.VIEWPORT_MSAA_MAX
+#: doc/classes/RenderingServer.xml
+msgid "Represents the size of the [enum ViewportMSAA] enum."
+msgstr "A [enum ViewportMSAA] felsorolás mérete."
+
+#. RenderingServer.VIEWPORT_SCREEN_SPACE_AA_FXAA
+#: doc/classes/RenderingServer.xml
+msgid "Use fast approximate antialiasing. FXAA is a popular screen-space antialiasing method, which is fast but will make the image look blurry, especially at lower resolutions. It can still work relatively well at large resolutions such as 1440p and 4K."
+msgstr "Gyors közelítő élsimítást (FXAA) használ. Ez a képernyőtérbeli eljárás gyors, de elmoshatja a képet, különösen kisebb felbontáson. Nagyobb felbontáson, például 1440p vagy 4K mellett, viszonylag jó eredményt adhat."
+
+#. RenderingServer.VIEWPORT_SCREEN_SPACE_AA_SMAA
+#: doc/classes/RenderingServer.xml
+msgid "Use subpixel morphological antialiasing. SMAA may produce clearer results than FXAA, but at a slightly higher performance cost."
+msgstr "Szubpixeles morfológiai élsimítást (SMAA) használ. Valamivel nagyobb teljesítményköltség mellett élesebb képet adhat az FXAA-nál."
+
+#. RenderingServer.VIEWPORT_SCREEN_SPACE_AA_MAX
+#: doc/classes/RenderingServer.xml
+msgid "Represents the size of the [enum ViewportScreenSpaceAA] enum."
+msgstr "A [enum ViewportScreenSpaceAA] felsorolás mérete."
+
+#. RenderingServer.VIEWPORT_RENDER_INFO_OBJECTS_IN_FRAME
+#: doc/classes/RenderingServer.xml
+msgid "Number of objects drawn in a single frame."
+msgstr "Az egy képkockában kirajzolt objektumok száma."
+
+#. RenderingServer.VIEWPORT_RENDER_INFO_PRIMITIVES_IN_FRAME
+#: doc/classes/RenderingServer.xml
+msgid "Number of points, lines, or triangles drawn in a single frame."
+msgstr "Az egy képkockában kirajzolt pontok, vonalak vagy háromszögek száma."
+
+#. RenderingServer.VIEWPORT_RENDER_INFO_DRAW_CALLS_IN_FRAME
+#: doc/classes/RenderingServer.xml
+msgid "Number of draw calls during this frame."
+msgstr "Az adott képkockában végrehajtott rajzolási hívások száma."
+
+#. RenderingServer.VIEWPORT_RENDER_INFO_MAX
+#: doc/classes/RenderingServer.xml
+msgid "Represents the size of the [enum ViewportRenderInfo] enum."
+msgstr "A [enum ViewportRenderInfo] felsorolás mérete."
+
+#. RenderingServer.CANVAS_TEXTURE_CHANNEL_DIFFUSE
+#: doc/classes/RenderingServer.xml
+msgid "Diffuse canvas texture ([member CanvasTexture.diffuse_texture])."
+msgstr "A vászon alapszínét adó diffúz textúra ([member CanvasTexture.diffuse_texture])."
+
+#. RenderingServer.CANVAS_TEXTURE_CHANNEL_NORMAL
+#: doc/classes/RenderingServer.xml
+msgid "Normal map canvas texture ([member CanvasTexture.normal_texture])."
+msgstr "A vászon normáltérkép-textúrája ([member CanvasTexture.normal_texture])."
+
+#. RenderingServer.CANVAS_TEXTURE_CHANNEL_SPECULAR
+#: doc/classes/RenderingServer.xml
+msgid "Specular map canvas texture ([member CanvasTexture.specular_texture])."
+msgstr "A vászon tükrös visszaverődését szabályozó textúra ([member CanvasTexture.specular_texture])."
+
+#. RenderingServer.CANVAS_ITEM_TEXTURE_FILTER_DEFAULT
+#: doc/classes/RenderingServer.xml
+msgid "Uses the default filter mode for this [Viewport]."
+msgstr "Az adott [Viewport] alapértelmezett textúraszűrési módját használja."
+
+#. RenderingServer.CANVAS_ITEM_TEXTURE_FILTER_MAX
+#: doc/classes/RenderingServer.xml
+msgid "Max value for [enum CanvasItemTextureFilter] enum."
+msgstr "A [enum CanvasItemTextureFilter] felsorolás felső határát jelöli."
+
+#. RenderingServer.CANVAS_ITEM_TEXTURE_REPEAT_DEFAULT
+#: doc/classes/RenderingServer.xml
+msgid "Uses the default repeat mode for this [Viewport]."
+msgstr "Az adott [Viewport] alapértelmezett textúraismétlési módját használja."
+
+#. RenderingServer.CANVAS_ITEM_TEXTURE_REPEAT_DISABLED
+#: doc/classes/RenderingServer.xml
+msgid "Disables textures repeating. Instead, when reading UVs outside the 0-1 range, the value will be clamped to the edge of the texture, resulting in a stretched out look at the borders of the texture."
+msgstr "Kikapcsolja a textúraismétlést. A 0 és 1 közötti UV-tartományon kívül a renderelő a textúra széléről vesz mintát, így a szélső képpontok elnyújtva jelenhetnek meg."
+
+#. RenderingServer.CANVAS_ITEM_TEXTURE_REPEAT_MAX
+#: doc/classes/RenderingServer.xml
+msgid "Max value for [enum CanvasItemTextureRepeat] enum."
+msgstr "A [enum CanvasItemTextureRepeat] felsorolás felső határát jelöli."
+
+#. RenderingServer.CANVAS_GROUP_MODE_DISABLED
+#: doc/classes/RenderingServer.xml
+msgid "Child draws over parent and is not clipped."
+msgstr "A gyerekelem vágás nélkül, a szülőelem fölött jelenik meg."
+
+#. RenderingServer.CANVAS_GROUP_MODE_CLIP_ONLY
+#: doc/classes/RenderingServer.xml
+msgid "Parent is used for the purposes of clipping only. Child is clipped to the parent's visible area, parent is not drawn."
+msgstr "A szülőelem csak a vágás határát adja meg. A gyerekelem a szülő látható területén belül jelenik meg, a szülőt a renderelő kihagyja."
+
+#. RenderingServer.CANVAS_GROUP_MODE_CLIP_AND_DRAW
+#: doc/classes/RenderingServer.xml
+msgid "Parent is used for clipping child, but parent is also drawn underneath child as normal before clipping child to its visible area."
+msgstr "A renderelő kirajzolja a szülőelemet, majd fölé rajzolja a gyerekelemet, a szülő látható területére vágva."
+
+#. RenderingServer.CANVAS_LIGHT_FILTER_NONE
+#: doc/classes/RenderingServer.xml
+msgid "Do not apply a filter to canvas light shadows."
+msgstr "A vászonfény árnyékát szűrés nélkül jeleníti meg."
+
+#. RenderingServer.CANVAS_LIGHT_FILTER_PCF5
+#: doc/classes/RenderingServer.xml
+msgid "Use PCF5 filtering to filter canvas light shadows."
+msgstr "PCF5 szűrést alkalmaz a vászonfény árnyékára."
+
+#. RenderingServer.CANVAS_LIGHT_FILTER_PCF13
+#: doc/classes/RenderingServer.xml
+msgid "Use PCF13 filtering to filter canvas light shadows."
+msgstr "PCF13 szűrést alkalmaz a vászonfény árnyékára."
+
+#. RenderingServer.CANVAS_LIGHT_FILTER_MAX
+#: doc/classes/RenderingServer.xml
+msgid "Max value of the [enum CanvasLightShadowFilter] enum."
+msgstr "A [enum CanvasLightShadowFilter] felsorolás felső határát jelöli."
+
+#. RenderingServer.CANVAS_OCCLUDER_POLYGON_CULL_DISABLED
+#: doc/classes/RenderingServer.xml
+msgid "Culling of the canvas occluder is disabled."
+msgstr "A vászon fénykitakarójánál ki van kapcsolva az oldal szerinti kiszűrés."
+
+#. RenderingServer.CANVAS_OCCLUDER_POLYGON_CULL_CLOCKWISE
+#: doc/classes/RenderingServer.xml
+msgid "Culling of the canvas occluder is clockwise."
+msgstr "Az óramutató járásával megegyező körüljárás szerint szűri ki a vászon fénykitakaróját."
+
+#. RenderingServer.CANVAS_OCCLUDER_POLYGON_CULL_COUNTER_CLOCKWISE
+#: doc/classes/RenderingServer.xml
+msgid "Culling of the canvas occluder is counterclockwise."
+msgstr "Az óramutató járásával ellentétes körüljárás szerint szűri ki a vászon fénykitakaróját."
+
+#. RenderingServer.LIGHT_DIRECTIONAL
+#: doc/classes/RenderingServer.xml
+msgid "Directional (sun/moon) light (see [DirectionalLight3D])."
+msgstr "Irányfény, például napfény vagy holdfény. Lásd a [DirectionalLight3D] osztályt."
+
+#. RenderingServer.LIGHT_OMNI
+#: doc/classes/RenderingServer.xml
+msgid "Omni light (see [OmniLight3D])."
+msgstr "Minden irányba sugárzó pontfény. Lásd az [OmniLight3D] osztályt."
+
+#. RenderingServer.LIGHT_SPOT
+#: doc/classes/RenderingServer.xml
+msgid "Spot light (see [SpotLight3D])."
+msgstr "Spotfény. Lásd a [SpotLight3D] osztályt."
+
+#. RenderingServer.LIGHT_AREA
+#: doc/classes/RenderingServer.xml
+msgid "Area light (see [AreaLight3D])."
+msgstr "Területi fény. Lásd az [AreaLight3D] osztályt."
+
+#. RenderingServer.LIGHT_PARAM_ENERGY
+#: doc/classes/RenderingServer.xml
+msgid "The light's energy multiplier."
+msgstr "A fény energiájának szorzója."
+
+#. RenderingServer.LIGHT_PARAM_INDIRECT_ENERGY
+#: doc/classes/RenderingServer.xml
+msgid "The light's indirect energy multiplier (final indirect energy is [constant LIGHT_PARAM_ENERGY] * [constant LIGHT_PARAM_INDIRECT_ENERGY])."
+msgstr "A közvetett megvilágítás energiaszorzója. A közvetett fény végső energiája a [constant LIGHT_PARAM_ENERGY] és a [constant LIGHT_PARAM_INDIRECT_ENERGY] szorzata."
+
+#. RenderingServer.LIGHT_PARAM_VOLUMETRIC_FOG_ENERGY
+#: doc/classes/RenderingServer.xml
+msgid "The light's volumetric fog energy multiplier (final volumetric fog energy is [constant LIGHT_PARAM_ENERGY] * [constant LIGHT_PARAM_VOLUMETRIC_FOG_ENERGY])."
+msgstr "A térfogati ködre ható fény energiaszorzója. A ködre ható végső energia a [constant LIGHT_PARAM_ENERGY] és a [constant LIGHT_PARAM_VOLUMETRIC_FOG_ENERGY] szorzata."
+
+#. RenderingServer.LIGHT_PARAM_SPECULAR
+#: doc/classes/RenderingServer.xml
+msgid "The light's influence on specularity."
+msgstr "A fény hatása a tükrös visszaverődés erősségére."
+
+#. RenderingServer.LIGHT_PARAM_RANGE
+#: doc/classes/RenderingServer.xml
+msgid "The light's range."
+msgstr "A fény hatótávolsága."
+
+#. RenderingServer.LIGHT_PARAM_SIZE
+#: doc/classes/RenderingServer.xml
+msgid "The size of the light when using spot light or omni light. The angular size of the light when using directional light."
+msgstr "Spotfénynél és minden irányba sugárzó pontfénynél a fényforrás mérete. Irányfénynél a fényforrás szögmérete."
+
+#. RenderingServer.LIGHT_PARAM_ATTENUATION
+#: doc/classes/RenderingServer.xml
+msgid "The light's attenuation."
+msgstr "A fény csillapítása."
+
+#. RenderingServer.LIGHT_PARAM_SPOT_ANGLE
+#: doc/classes/RenderingServer.xml
+msgid "The spotlight's angle."
+msgstr "A spotfény szöge."
+
+#. RenderingServer.LIGHT_PARAM_SPOT_ATTENUATION
+#: doc/classes/RenderingServer.xml
+msgid "The spotlight's attenuation."
+msgstr "A spotfény szög szerinti csillapítása."
+
+#. RenderingServer.LIGHT_PARAM_SHADOW_FADE_START
+#: doc/classes/RenderingServer.xml
+msgid "Proportion of shadow max distance where the shadow will start to fade out."
+msgstr "A maximális árnyéktávolság azon hányada, ahol az árnyék halványulni kezd."
+
+#. RenderingServer.LIGHT_PARAM_SHADOW_NORMAL_BIAS
+#: doc/classes/RenderingServer.xml
+msgid "Normal bias used to offset shadow lookup by object normal. Can be used to fix self-shadowing artifacts."
+msgstr "A felület normálvektora mentén eltolja az árnyékmintavétel helyét. Ezzel csökkenthetők az önárnyékolási hibák."
+
+#. RenderingServer.LIGHT_PARAM_SHADOW_BIAS
+#: doc/classes/RenderingServer.xml
+msgid "Bias for the shadow lookup to fix self-shadowing artifacts."
+msgstr "Az árnyékmintavétel eltolása, amely csökkentheti az önárnyékolási hibákat."
+
+#. RenderingServer.LIGHT_PARAM_SHADOW_OPACITY
+#: doc/classes/RenderingServer.xml
+msgid "The light's shadow opacity. Values lower than [code]1.0[/code] make the light appear through shadows. This can be used to fake global illumination at a low performance cost."
+msgstr "A fény által vetett árnyék fedettsége. [code]1.0[/code] alatti értéknél az árnyékon át is érvényesül a fény. Ezzel kis teljesítményköltséggel utánozható a globális megvilágítás hatása."
+
+#. RenderingServer.LIGHT_PARAM_SHADOW_BLUR
+#: doc/classes/RenderingServer.xml
+msgid "Blurs the edges of the shadow. Can be used to hide pixel artifacts in low resolution shadow maps. A high value can make shadows appear grainy and can cause other unwanted artifacts. Try to keep as near default as possible."
+msgstr "Elmosódottabbá teszi az árnyék széleit, így elfedheti a kis felbontású árnyéktérképek képponthibáit. A túl nagy érték szemcsés árnyékot és más képhibákat okozhat. Érdemes az alapérték közelében maradni."
+
+#. RenderingServer.LIGHT_PARAM_INTENSITY
+#: doc/classes/RenderingServer.xml
+msgid "Constant representing the intensity of the light, measured in Lumens when dealing with a [SpotLight3D] or [OmniLight3D], or measured in Lux with a [DirectionalLight3D]. Only used when [member ProjectSettings.rendering/lights_and_shadows/use_physical_light_units] is [code]true[/code]."
+msgstr "A fény intenzitása. A [SpotLight3D] és az [OmniLight3D] esetén lumenben, a [DirectionalLight3D] esetén luxban értendő. Csak akkor használatos, ha a [member ProjectSettings.rendering/lights_and_shadows/use_physical_light_units] értéke [code]true[/code]."
+
+#. RenderingServer.LIGHT_PARAM_MAX
+#: doc/classes/RenderingServer.xml
+msgid "Represents the size of the [enum LightParam] enum."
+msgstr "A [enum LightParam] felsorolás mérete."
+
+#. RenderingServer.LIGHT_OMNI_SHADOW_DUAL_PARABOLOID
+#: doc/classes/RenderingServer.xml
+msgid "Use a dual paraboloid shadow map for omni lights."
+msgstr "Kettős paraboloid árnyéktérképet használ a minden irányba sugárzó pontfényekhez."
+
+#. RenderingServer.LIGHT_OMNI_SHADOW_CUBE
+#: doc/classes/RenderingServer.xml
+msgid "Use a cubemap shadow map for omni lights. Slower but better quality than dual paraboloid."
+msgstr "Kockatérképes árnyéktérképet használ a minden irányba sugárzó pontfényekhez. Lassabb a kettős paraboloidnál, de jobb minőségű árnyékot ad."
+
+#. RenderingServer.LIGHT_DIRECTIONAL_SHADOW_ORTHOGONAL
+#: doc/classes/RenderingServer.xml
+msgid "Use orthogonal shadow projection for directional light."
+msgstr "Az irányfény árnyékait ortografikus vetítéssel számítja ki."
+
+#. RenderingServer.LIGHT_DIRECTIONAL_SHADOW_PARALLEL_2_SPLITS
+#: doc/classes/RenderingServer.xml
+msgid "Use 2 splits for shadow projection when using directional light."
+msgstr "Az irányfény árnyékait 2 kaszkádra osztva vetíti."
+
+#. RenderingServer.LIGHT_DIRECTIONAL_SHADOW_PARALLEL_4_SPLITS
+#: doc/classes/RenderingServer.xml
+msgid "Use 4 splits for shadow projection when using directional light."
+msgstr "Az irányfény árnyékait 4 kaszkádra osztva vetíti."
+
+#. RenderingServer.LIGHT_DIRECTIONAL_SKY_MODE_LIGHT_AND_SKY
+#: doc/classes/RenderingServer.xml
+msgid "Use DirectionalLight3D in both sky rendering and scene lighting."
+msgstr "A DirectionalLight3D az égbolt renderelésére és a jelenet megvilágítására is hat."
+
+#. RenderingServer.LIGHT_DIRECTIONAL_SKY_MODE_LIGHT_ONLY
+#: doc/classes/RenderingServer.xml
+msgid "Only use DirectionalLight3D in scene lighting."
+msgstr "A DirectionalLight3D csak a jelenet megvilágítására hat."
+
+#. RenderingServer.LIGHT_DIRECTIONAL_SKY_MODE_SKY_ONLY
+#: doc/classes/RenderingServer.xml
+msgid "Only use DirectionalLight3D in sky rendering."
+msgstr "A DirectionalLight3D csak az égbolt renderelésére hat."
+
+#. RenderingServer.ENV_BG_CLEAR_COLOR
+#: doc/classes/RenderingServer.xml
+msgid "Use the clear color as background."
+msgstr "A törlési színt használja háttérként."
+
+#. RenderingServer.ENV_BG_COLOR
+#: doc/classes/RenderingServer.xml
+msgid "Use a specified color as the background."
+msgstr "A megadott színt használja háttérként."
+
+#. RenderingServer.ENV_BG_SKY
+#: doc/classes/RenderingServer.xml
+msgid "Use a sky resource for the background."
+msgstr "Égbolt-erőforrást használ háttérként."
+
+#. RenderingServer.ENV_BG_CANVAS
+#: doc/classes/RenderingServer.xml
+msgid "Use a specified canvas layer as the background. This can be useful for instantiating a 2D scene in a 3D world."
+msgstr "A megadott vászonréteget használja háttérként. Így például 2D-s jelenetet helyezhetsz egy 3D-s világba."
+
+#. RenderingServer.ENV_BG_KEEP
+#: doc/classes/RenderingServer.xml
+msgid "Do not clear the background, use whatever was rendered last frame as the background."
+msgstr "A háttér törlését kihagyja, és az előző képkocka kirajzolt képét használja háttérként."
+
+#. RenderingServer.ENV_BG_CAMERA_FEED
+#: doc/classes/RenderingServer.xml
+msgid "Displays a camera feed in the background."
+msgstr "Élő kameraképet jelenít meg a háttérben."
+
+#. RenderingServer.ENV_BG_MAX
+#: doc/classes/RenderingServer.xml
+msgid "Represents the size of the [enum EnvironmentBG] enum."
+msgstr "A [enum EnvironmentBG] felsorolás mérete."
+
+#. RenderingServer.ENV_AMBIENT_SOURCE_BG
+#: doc/classes/RenderingServer.xml
+msgid "Gather ambient light from whichever source is specified as the background."
+msgstr "A környezeti fényt a háttérként kiválasztott forrásból veszi."
+
+#. RenderingServer.ENV_AMBIENT_SOURCE_DISABLED
+#: doc/classes/RenderingServer.xml
+msgid "Disable ambient light."
+msgstr "Kikapcsolja a környezeti megvilágítást."
+
+#. RenderingServer.ENV_AMBIENT_SOURCE_COLOR
+#: doc/classes/RenderingServer.xml
+msgid "Specify a specific [Color] for ambient light."
+msgstr "A megadott [Color] értéket használja a környezeti megvilágításhoz."
+
+#. RenderingServer.ENV_AMBIENT_SOURCE_SKY
+#: doc/classes/RenderingServer.xml
+msgid "Gather ambient light from the [Sky] regardless of what the background is."
+msgstr "A háttér beállításától függetlenül a [Sky] erőforrásból veszi a környezeti fényt."
+
+#. RenderingServer.ENV_REFLECTION_SOURCE_BG
+#: doc/classes/RenderingServer.xml
+msgid "Use the background for reflections."
+msgstr "A hátteret használja a tükröződések forrásaként."
+
+#. RenderingServer.ENV_REFLECTION_SOURCE_DISABLED
+#: doc/classes/RenderingServer.xml
+msgid "Disable reflections."
+msgstr "Kikapcsolja a tükröződéseket."
+
+#. RenderingServer.ENV_REFLECTION_SOURCE_SKY
+#: doc/classes/RenderingServer.xml
+msgid "Use the [Sky] for reflections regardless of what the background is."
+msgstr "A háttér beállításától függetlenül a [Sky] erőforrást használja a tükröződésekhez."
+
+#. RenderingServer.ENV_FOG_MODE_EXPONENTIAL
+#: doc/classes/RenderingServer.xml
+msgid "Use a physically-based fog model defined primarily by fog density."
+msgstr "Fizikai alapú ködmodellt használ, amelyet elsősorban a ködsűrűség határoz meg."
+
+#. RenderingServer.ENV_FOG_MODE_DEPTH
+#: doc/classes/RenderingServer.xml
+msgid "Use a simple fog model defined by start and end positions and a custom curve. While not physically accurate, this model can be useful when you need more artistic control."
+msgstr "Egyszerű ködmodellt használ, két határponttal és egyéni görbével. Akkor hasznos, ha a fizikai pontosság helyett a köd megjelenését szeretnéd közvetlenül szabályozni."
+
+#. RenderingServer.SHADOW_CASTING_SETTING_OFF
+#: doc/classes/RenderingServer.xml
+msgid "Disable shadows from this instance."
+msgstr "Kikapcsolja a példány árnyékvetését."
+
+#. RenderingServer.SHADOW_CASTING_SETTING_ON
+#: doc/classes/RenderingServer.xml
+msgid "Cast shadows from this instance."
+msgstr "A példány árnyékot vet."
+
+#. RenderingServer.SHADOW_CASTING_SETTING_DOUBLE_SIDED
+#: doc/classes/RenderingServer.xml
+msgid "Disable backface culling when rendering the shadow of the object. This is slightly slower but may result in more correct shadows."
+msgstr "A példány árnyékának renderelésekor a hátsó lapokat is figyelembe veszi. Ez valamivel lassabb, de pontosabb árnyékot eredményezhet."
+
+#. RenderingServer.SHADOW_CASTING_SETTING_SHADOWS_ONLY
+#: doc/classes/RenderingServer.xml
+msgid "Only render the shadows from the object. The object itself will not be drawn."
+msgstr "Csak az objektum árnyékát rajzolja ki. Maga az objektum nem látható."
+
+#. RenderingServer.ENV_TONE_MAPPER_LINEAR
+#: doc/classes/RenderingServer.xml
+msgid "Does not modify color data, resulting in a linear tonemapping curve which unnaturally clips bright values, causing bright lighting to look blown out. The simplest and fastest tonemapper."
+msgstr "Lineáris tónusleképezést használ, ezért a színadatok nem változnak. A világos értékek levágása miatt az erős megvilágítás túlexponáltnak látszhat. Ez a legegyszerűbb és leggyorsabb tónusleképezési mód."
+
+#. RenderingServer.ENV_TONE_MAPPER_AGX
+#: doc/classes/RenderingServer.xml
+msgid "Uses an adjustable film-like tonemapping curve and desaturates bright values for a more realistic appearance. Better than other tonemappers at maintaining the hue of colors as they become brighter. The slowest tonemapping option."
+msgstr "Állítható, filmszerű tónusgörbét használ, és csökkenti a világos színek telítettségét. A színek világosodásakor a többi módnál jobban megőrzi az árnyalatukat. Ez a leglassabb tónusleképezési mód."
