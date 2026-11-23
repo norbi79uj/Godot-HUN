@@ -51960,3 +51960,503 @@ msgstr "Lineáris tónusleképezést használ, ezért a színadatok nem változn
 #: doc/classes/RenderingServer.xml
 msgid "Uses an adjustable film-like tonemapping curve and desaturates bright values for a more realistic appearance. Better than other tonemappers at maintaining the hue of colors as they become brighter. The slowest tonemapping option."
 msgstr "Állítható, filmszerű tónusgörbét használ, és csökkenti a világos színek telítettségét. A színek világosodásakor a többi módnál jobban megőrzi az árnyalatukat. Ez a leglassabb tónusleképezési mód."
+
+#. RenderingServer.VIEWPORT_SDF_OVERSIZE_120_PERCENT
+#: doc/classes/RenderingServer.xml
+msgid "2D signed distance field covers 20% of the viewport's size outside the viewport on each side (top, right, bottom, left)."
+msgstr "A 2D-s előjeles távolságmező mind a négy oldalon a nézetablak méretének 20%-ával nyúlik túl a nézetablakon."
+
+#. RenderingServer.VIEWPORT_SDF_OVERSIZE_150_PERCENT
+#: doc/classes/RenderingServer.xml
+msgid "2D signed distance field covers 50% of the viewport's size outside the viewport on each side (top, right, bottom, left)."
+msgstr "A 2D-s előjeles távolságmező mind a négy oldalon a nézetablak méretének 50%-ával nyúlik túl a nézetablakon."
+
+#. RenderingServer.VIEWPORT_SDF_OVERSIZE_200_PERCENT
+#: doc/classes/RenderingServer.xml
+msgid "2D signed distance field covers 100% of the viewport's size outside the viewport on each side (top, right, bottom, left). This has the highest GPU requirements."
+msgstr "A 2D-s előjeles távolságmező mind a négy oldalon a nézetablak méretének 100%-ával nyúlik túl a nézetablakon. Ez igényli a legtöbb GPU-erőforrást."
+
+#. RenderingServer.VIEWPORT_SDF_SCALE_100_PERCENT
+#: doc/classes/RenderingServer.xml
+msgid "Full resolution 2D signed distance field scale. This has the highest GPU requirements."
+msgstr "A 2D-s előjeles távolságmező teljes felbontású. Ez igényli a legtöbb GPU-erőforrást."
+
+#. RenderingServer.VIEWPORT_SDF_SCALE_50_PERCENT
+#: doc/classes/RenderingServer.xml
+msgid "Half resolution 2D signed distance field scale on each axis (25% of the viewport pixel count)."
+msgstr "A 2D-s előjeles távolságmező felbontása tengelyenként feleződik, így a mező képpontjainak száma a nézetablak képpontszámának 25%-a."
+
+#. RenderingServer.VIEWPORT_SDF_SCALE_25_PERCENT
+#: doc/classes/RenderingServer.xml
+msgid "Quarter resolution 2D signed distance field scale on each axis (6.25% of the viewport pixel count). This has the lowest GPU requirements."
+msgstr "A 2D-s előjeles távolságmező felbontása tengelyenként negyedére csökken, így a mező képpontjainak száma a nézetablak képpontszámának 6,25%-a. Ez igényli a legkevesebb GPU-erőforrást."
+
+#. RenderingServer.VIEWPORT_OCCLUSION_BUILD_QUALITY_LOW
+#: doc/classes/RenderingServer.xml
+msgid "Low occlusion culling BVH build quality (as defined by Embree). Results in the lowest CPU usage, but least effective culling."
+msgstr "Alacsony minőségben építi fel a takarásalapú láthatósági szűréshez használt BVH-t az Embree beállítása szerint. A CPU terhelése így a legkisebb, de a szűrés kevésbé hatékony."
+
+#. RenderingServer.VIEWPORT_OCCLUSION_BUILD_QUALITY_MEDIUM
+#: doc/classes/RenderingServer.xml
+msgid "Medium occlusion culling BVH build quality (as defined by Embree)."
+msgstr "Közepes minőségben építi fel a takarásalapú láthatósági szűréshez használt BVH-t az Embree beállítása szerint."
+
+#. RenderingServer.VIEWPORT_OCCLUSION_BUILD_QUALITY_HIGH
+#: doc/classes/RenderingServer.xml
+msgid "High occlusion culling BVH build quality (as defined by Embree). Results in the highest CPU usage, but most effective culling."
+msgstr "Magas minőségben építi fel a takarásalapú láthatósági szűréshez használt BVH-t az Embree beállítása szerint. A CPU terhelése így a legnagyobb, a szűrés pedig a leghatékonyabb."
+
+#. RenderingServer.VIEWPORT_VRS_DISABLED
+#: doc/classes/RenderingServer.xml
+msgid "Variable rate shading is disabled."
+msgstr "A változó árnyalási ráta ki van kapcsolva."
+
+#. RenderingServer.VIEWPORT_VRS_TEXTURE
+#: doc/classes/RenderingServer.xml
+msgid "Variable rate shading uses a texture. Note, for stereoscopic use a texture atlas with a texture for each view."
+msgstr "A változó árnyalási rátát egy textúra határozza meg. Sztereó rendereléshez olyan textúraatlaszt használj, amely minden nézethez tartalmaz egy textúrát."
+
+#. RenderingServer.VIEWPORT_VRS_XR
+#: doc/classes/RenderingServer.xml
+msgid "Variable rate shading texture is supplied by the primary [XRInterface]. Note that this may override the update mode."
+msgstr "A változó árnyalási rátához használt textúrát az elsődleges [XRInterface] adja. Ez felülírhatja a frissítési módot."
+
+#. RenderingServer.VIEWPORT_VRS_UPDATE_MAX
+#: doc/classes/RenderingServer.xml
+msgid "Represents the size of the [enum ViewportVRSUpdateMode] enum."
+msgstr "A [enum ViewportVRSUpdateMode] felsorolás mérete."
+
+#. RenderingServer.ENV_SSR_ROUGHNESS_QUALITY_DISABLED
+#: doc/classes/RenderingServer.xml
+msgid "Lowest quality of roughness filter for screen-space reflections. Rough materials will not have blurrier screen-space reflections compared to smooth (non-rough) materials. This is the fastest option."
+msgstr "A képernyőtérbeli tükröződések érdesség szerinti szűrésének legalacsonyabb minősége. Az érdes felületek tükröződése ugyanolyan éles marad, mint a sima felületeké. Ez a leggyorsabb beállítás."
+
+#. RenderingServer.ENV_SSR_ROUGHNESS_QUALITY_LOW
+#: doc/classes/RenderingServer.xml
+msgid "Low quality of roughness filter for screen-space reflections."
+msgstr "A képernyőtérbeli tükröződések érdesség szerinti szűrésének alacsony minősége."
+
+#. RenderingServer.ENV_SSR_ROUGHNESS_QUALITY_MEDIUM
+#: doc/classes/RenderingServer.xml
+msgid "Medium quality of roughness filter for screen-space reflections."
+msgstr "A képernyőtérbeli tükröződések érdesség szerinti szűrésének közepes minősége."
+
+#. RenderingServer.ENV_SSR_ROUGHNESS_QUALITY_HIGH
+#: doc/classes/RenderingServer.xml
+msgid "High quality of roughness filter for screen-space reflections. This is the slowest option."
+msgstr "A képernyőtérbeli tükröződések érdesség szerinti szűrésének magas minősége. Ez a leglassabb beállítás."
+
+#. RenderingServer.ENV_SSAO_QUALITY_VERY_LOW
+#: doc/classes/RenderingServer.xml
+msgid "Lowest quality of screen-space ambient occlusion."
+msgstr "A képernyőtérbeli környezeti takarás legalacsonyabb minősége."
+
+#. RenderingServer.ENV_SSAO_QUALITY_LOW
+#: doc/classes/RenderingServer.xml
+msgid "Low quality screen-space ambient occlusion."
+msgstr "A képernyőtérbeli környezeti takarás alacsony minősége."
+
+#. RenderingServer.ENV_SSAO_QUALITY_MEDIUM
+#: doc/classes/RenderingServer.xml
+msgid "Medium quality screen-space ambient occlusion."
+msgstr "A képernyőtérbeli környezeti takarás közepes minősége."
+
+#. RenderingServer.ENV_SSAO_QUALITY_HIGH
+#: doc/classes/RenderingServer.xml
+msgid "High quality screen-space ambient occlusion."
+msgstr "A képernyőtérbeli környezeti takarás magas minősége."
+
+#. RenderingServer.ENV_SSAO_QUALITY_ULTRA
+#: doc/classes/RenderingServer.xml
+msgid "Highest quality screen-space ambient occlusion. Uses the adaptive target setting which can be dynamically adjusted to smoothly balance performance and visual quality."
+msgstr "A képernyőtérbeli környezeti takarás legmagasabb minősége. Az adaptív célérték futás közben is módosítható, így fokozatosan hangolható a teljesítmény és a képminőség egyensúlya."
+
+#. RenderingServer.ENV_SSIL_QUALITY_VERY_LOW
+#: doc/classes/RenderingServer.xml
+msgid "Lowest quality of screen-space indirect lighting."
+msgstr "A képernyőtérbeli közvetett megvilágítás legalacsonyabb minősége."
+
+#. RenderingServer.ENV_SSIL_QUALITY_LOW
+#: doc/classes/RenderingServer.xml
+msgid "Low quality screen-space indirect lighting."
+msgstr "A képernyőtérbeli közvetett megvilágítás alacsony minősége."
+
+#. RenderingServer.ENV_SSIL_QUALITY_HIGH
+#: doc/classes/RenderingServer.xml
+msgid "High quality screen-space indirect lighting."
+msgstr "A képernyőtérbeli közvetett megvilágítás magas minősége."
+
+#. RenderingServer.ENV_SSIL_QUALITY_ULTRA
+#: doc/classes/RenderingServer.xml
+msgid "Highest quality screen-space indirect lighting. Uses the adaptive target setting which can be dynamically adjusted to smoothly balance performance and visual quality."
+msgstr "A képernyőtérbeli közvetett megvilágítás legmagasabb minősége. Az adaptív célérték futás közben is módosítható, így fokozatosan hangolható a teljesítmény és a képminőség egyensúlya."
+
+#. RenderingServer.ENV_SDFGI_Y_SCALE_50_PERCENT
+#: doc/classes/RenderingServer.xml
+msgid "Use 50% scale for SDFGI on the Y (vertical) axis. SDFGI cells will be twice as short as they are wide. This allows providing increased GI detail and reduced light leaking with thin floors and ceilings. This is usually the best choice for scenes that don't feature much verticality."
+msgstr "Az SDFGI függőleges méretaránya az Y tengelyen 50%. A cellák fele olyan magasak, mint amilyen szélesek. Így részletesebb lehet a globális megvilágítás, és vékony padlókon vagy mennyezeteken kevesebb fény szivároghat át. Általában kis magasságkülönbségű jelenetekhez érdemes választani."
+
+#. RenderingServer.ENV_SDFGI_Y_SCALE_75_PERCENT
+#: doc/classes/RenderingServer.xml
+msgid "Use 75% scale for SDFGI on the Y (vertical) axis. This is a balance between the 50% and 100% SDFGI Y scales."
+msgstr "Az SDFGI függőleges méretaránya az Y tengelyen 75%. Ez köztes érték az 50%-os és a 100%-os függőleges méretarány között."
+
+#. RenderingServer.ENV_SDFGI_Y_SCALE_100_PERCENT
+#: doc/classes/RenderingServer.xml
+msgid "Use 100% scale for SDFGI on the Y (vertical) axis. SDFGI cells will be as tall as they are wide. This is usually the best choice for highly vertical scenes. The downside is that light leaking may become more noticeable with thin floors and ceilings."
+msgstr "Az SDFGI függőleges méretaránya az Y tengelyen 100%. A cellák ugyanolyan magasak, mint amilyen szélesek. Ez általában nagy magasságkülönbségű jelenetekhez illik. Vékony padlókon vagy mennyezeteken azonban feltűnőbb lehet az átszivárgó fény."
+
+#. RenderingServer.ENV_SDFGI_RAY_COUNT_4
+#: doc/classes/RenderingServer.xml
+msgid "Throw 4 rays per frame when converging SDFGI. This has the lowest GPU requirements, but creates the most noisy result."
+msgstr "Az SDFGI képkockánként 4 sugarat használ a megvilágítás finomításához. Ez terheli a legkevésbé a GPU-t, de a kép ennél a beállításnál a legzajosabb."
+
+#. RenderingServer.ENV_SDFGI_RAY_COUNT_8
+#: doc/classes/RenderingServer.xml
+msgid "Throw 8 rays per frame when converging SDFGI."
+msgstr "Az SDFGI képkockánként 8 sugarat használ a megvilágítás finomításához."
+
+#. RenderingServer.ENV_SDFGI_RAY_COUNT_16
+#: doc/classes/RenderingServer.xml
+msgid "Throw 16 rays per frame when converging SDFGI."
+msgstr "Az SDFGI képkockánként 16 sugarat használ a megvilágítás finomításához."
+
+#. RenderingServer.ENV_SDFGI_RAY_COUNT_32
+#: doc/classes/RenderingServer.xml
+msgid "Throw 32 rays per frame when converging SDFGI."
+msgstr "Az SDFGI képkockánként 32 sugarat használ a megvilágítás finomításához."
+
+#. RenderingServer.ENV_SDFGI_RAY_COUNT_64
+#: doc/classes/RenderingServer.xml
+msgid "Throw 64 rays per frame when converging SDFGI."
+msgstr "Az SDFGI képkockánként 64 sugarat használ a megvilágítás finomításához."
+
+#. RenderingServer.ENV_SDFGI_RAY_COUNT_96
+#: doc/classes/RenderingServer.xml
+msgid "Throw 96 rays per frame when converging SDFGI. This has high GPU requirements."
+msgstr "Az SDFGI képkockánként 96 sugarat használ a megvilágítás finomításához. Ez jelentősen terheli a GPU-t."
+
+#. RenderingServer.ENV_SDFGI_RAY_COUNT_128
+#: doc/classes/RenderingServer.xml
+msgid "Throw 128 rays per frame when converging SDFGI. This has very high GPU requirements, but creates the least noisy result."
+msgstr "Az SDFGI képkockánként 128 sugarat használ a megvilágítás finomításához. Ez nagyon megterheli a GPU-t, de így a legkevésbé zajos a kép."
+
+#. RenderingServer.ENV_SDFGI_RAY_COUNT_MAX
+#: doc/classes/RenderingServer.xml
+msgid "Represents the size of the [enum EnvironmentSDFGIRayCount] enum."
+msgstr "A [enum EnvironmentSDFGIRayCount] felsorolás mérete."
+
+#. RenderingServer.ENV_SDFGI_CONVERGE_IN_5_FRAMES
+#: doc/classes/RenderingServer.xml
+msgid "Converge SDFGI over 5 frames. This is the most responsive, but creates the most noisy result with a given ray count."
+msgstr "Az SDFGI 5 képkocka alatt áll be. Adott sugárszám mellett ez reagál a leggyorsabban a változásokra, de a kép ennél a beállításnál a legzajosabb."
+
+#. RenderingServer.ENV_SDFGI_CONVERGE_IN_10_FRAMES
+#: doc/classes/RenderingServer.xml
+msgid "Configure SDFGI to fully converge over 10 frames."
+msgstr "Az SDFGI 10 képkocka alatt áll be."
+
+#. RenderingServer.ENV_SDFGI_CONVERGE_IN_15_FRAMES
+#: doc/classes/RenderingServer.xml
+msgid "Configure SDFGI to fully converge over 15 frames."
+msgstr "Az SDFGI 15 képkocka alatt áll be."
+
+#. RenderingServer.ENV_SDFGI_CONVERGE_IN_20_FRAMES
+#: doc/classes/RenderingServer.xml
+msgid "Configure SDFGI to fully converge over 20 frames."
+msgstr "Az SDFGI 20 képkocka alatt áll be."
+
+#. RenderingServer.ENV_SDFGI_CONVERGE_IN_25_FRAMES
+#: doc/classes/RenderingServer.xml
+msgid "Configure SDFGI to fully converge over 25 frames."
+msgstr "Az SDFGI 25 képkocka alatt áll be."
+
+#. RenderingServer.ENV_SDFGI_CONVERGE_IN_30_FRAMES
+#: doc/classes/RenderingServer.xml
+msgid "Configure SDFGI to fully converge over 30 frames. This is the least responsive, but creates the least noisy result with a given ray count."
+msgstr "Az SDFGI 30 képkocka alatt áll be. Adott sugárszám mellett ez reagál a leglassabban a változásokra, de így a legkevésbé zajos a kép."
+
+#. RenderingServer.ENV_SDFGI_CONVERGE_MAX
+#: doc/classes/RenderingServer.xml
+msgid "Represents the size of the [enum EnvironmentSDFGIFramesToConverge] enum."
+msgstr "A [enum EnvironmentSDFGIFramesToConverge] felsorolás mérete."
+
+#. RenderingServer.ENV_SDFGI_UPDATE_LIGHT_IN_1_FRAME
+#: doc/classes/RenderingServer.xml
+msgid "Update indirect light from dynamic lights in SDFGI over 1 frame. This is the most responsive, but has the highest GPU requirements."
+msgstr "Az SDFGI 1 képkocka alatt frissíti a dinamikus fényforrások közvetett megvilágítását. Ez a leggyorsabban reagáló beállítás, de a GPU-t is ez terheli a legjobban."
+
+#. RenderingServer.ENV_SDFGI_UPDATE_LIGHT_IN_2_FRAMES
+#: doc/classes/RenderingServer.xml
+msgid "Update indirect light from dynamic lights in SDFGI over 2 frames."
+msgstr "Az SDFGI 2 képkocka alatt frissíti a dinamikus fényforrások közvetett megvilágítását."
+
+#. RenderingServer.ENV_SDFGI_UPDATE_LIGHT_IN_4_FRAMES
+#: doc/classes/RenderingServer.xml
+msgid "Update indirect light from dynamic lights in SDFGI over 4 frames."
+msgstr "Az SDFGI 4 képkocka alatt frissíti a dinamikus fényforrások közvetett megvilágítását."
+
+#. RenderingServer.ENV_SDFGI_UPDATE_LIGHT_IN_8_FRAMES
+#: doc/classes/RenderingServer.xml
+msgid "Update indirect light from dynamic lights in SDFGI over 8 frames."
+msgstr "Az SDFGI 8 képkocka alatt frissíti a dinamikus fényforrások közvetett megvilágítását."
+
+#. RenderingServer.ENV_SDFGI_UPDATE_LIGHT_IN_16_FRAMES
+#: doc/classes/RenderingServer.xml
+msgid "Update indirect light from dynamic lights in SDFGI over 16 frames. This is the least responsive, but has the lowest GPU requirements."
+msgstr "Az SDFGI 16 képkocka alatt frissíti a dinamikus fényforrások közvetett megvilágítását. Ez a leglassabban reagáló beállítás, de a GPU-t is ez terheli a legkevésbé."
+
+#. RenderingServer.ENV_SDFGI_UPDATE_LIGHT_MAX
+#: doc/classes/RenderingServer.xml
+msgid "Represents the size of the [enum EnvironmentSDFGIFramesToUpdateLight] enum."
+msgstr "A [enum EnvironmentSDFGIFramesToUpdateLight] felsorolás mérete."
+
+#. RenderingServer.TEXTURE_TYPE_2D
+#: doc/classes/RenderingServer.xml
+msgid "2D texture."
+msgstr "2D-s textúra."
+
+#. RenderingServer.TEXTURE_TYPE_LAYERED
+#: doc/classes/RenderingServer.xml
+msgid "Layered texture."
+msgstr "Réteges textúra."
+
+#. RenderingServer.TEXTURE_TYPE_3D
+#: doc/classes/RenderingServer.xml
+msgid "3D texture."
+msgstr "3D-s textúra."
+
+#. RenderingServer.TEXTURE_LAYERED_2D_ARRAY
+#: doc/classes/RenderingServer.xml
+msgid "Array of 2-dimensional textures (see [Texture2DArray])."
+msgstr "Kétdimenziós textúrák tömbje. Lásd a [Texture2DArray] osztályt."
+
+#. RenderingServer.TEXTURE_LAYERED_CUBEMAP
+#: doc/classes/RenderingServer.xml
+msgid "Cubemap texture (see [Cubemap])."
+msgstr "Kockatérkép-textúra. Lásd a [Cubemap] osztályt."
+
+#. RenderingServer.TEXTURE_LAYERED_CUBEMAP_ARRAY
+#: doc/classes/RenderingServer.xml
+msgid "Array of cubemap textures (see [CubemapArray])."
+msgstr "Kockatérkép-textúrák tömbje. Lásd a [CubemapArray] osztályt."
+
+#. RenderingServer.TEXTURE_DRAWABLE_FORMAT_RGBA8
+#: doc/classes/RenderingServer.xml
+msgid "OpenGL texture format RGBA with four components, each with a bitdepth of 8."
+msgstr "Négycsatornás OpenGL RGBA textúraformátum, csatornánként 8 bit mélységgel."
+
+#. RenderingServer.TEXTURE_DRAWABLE_FORMAT_RGBAH
+#: doc/classes/RenderingServer.xml
+msgid "OpenGL texture format GL_RGBA16F where there are four components, each a 16-bit \"half-precision\" floating-point value."
+msgstr "OpenGL GL_RGBA16F textúraformátum. Mind a négy csatorna 16 bites, félpontosságú lebegőpontos értéket tárol."
+
+#. RenderingServer.TEXTURE_DRAWABLE_FORMAT_RGBAF
+#: doc/classes/RenderingServer.xml
+msgid "OpenGL texture format GL_RGBA32F where there are four components, each a 32-bit floating-point value."
+msgstr "OpenGL GL_RGBA32F textúraformátum. Mind a négy csatorna 32 bites lebegőpontos értéket tárol."
+
+#. RenderingServer.LIGHT_PROJECTOR_FILTER_NEAREST
+#: doc/classes/RenderingServer.xml
+msgid "Nearest-neighbor filter for light projectors (use for pixel art light projectors). No mipmaps are used for rendering, which means light projectors at a distance will look sharp but grainy. This has roughly the same performance cost as using mipmaps."
+msgstr "A fényvetítő a legközelebbi texelt mintavételezi. Pixelgrafikához ajánlott. Mipmapszintek nélkül a távoli vetített fény éles, de szemcsés lehet. A teljesítményköltség nagyjából megegyezik a mipmapszinteket használó szűrésével."
+
+#. RenderingServer.LIGHT_PROJECTOR_FILTER_LINEAR
+#: doc/classes/RenderingServer.xml
+msgid "Linear filter for light projectors (use for non-pixel art light projectors). No mipmaps are used for rendering, which means light projectors at a distance will look smooth but blurry. This has roughly the same performance cost as using mipmaps."
+msgstr "A fényvetítő lineáris szűrést használ. Folytonos tónusú grafikához ajánlott. Mipmapszintek nélkül a távoli vetített fény sima, de elmosódott lehet. A teljesítményköltség nagyjából megegyezik a mipmapszinteket használó szűrésével."
+
+#. RenderingServer.LIGHT_PROJECTOR_FILTER_NEAREST_MIPMAPS
+#: doc/classes/RenderingServer.xml
+msgid "Nearest-neighbor filter for light projectors (use for pixel art light projectors). Isotropic mipmaps are used for rendering, which means light projectors at a distance will look smooth but blurry. This has roughly the same performance cost as not using mipmaps."
+msgstr "A fényvetítő a legközelebbi texelt mintavételezi, izotrop mipmapszintekkel. Pixelgrafikához ajánlott. Távolról a vetített fény sima, de elmosódott lehet. A teljesítményköltség nagyjából megegyezik a mipmapszintek nélküli szűrésével."
+
+#. RenderingServer.LIGHT_PROJECTOR_FILTER_LINEAR_MIPMAPS
+#: doc/classes/RenderingServer.xml
+msgid "Linear filter for light projectors (use for non-pixel art light projectors). Isotropic mipmaps are used for rendering, which means light projectors at a distance will look smooth but blurry. This has roughly the same performance cost as not using mipmaps."
+msgstr "A fényvetítő lineáris szűrést használ, izotrop mipmapszintekkel. Folytonos tónusú grafikához ajánlott. Távolról a vetített fény sima, de elmosódott lehet. A teljesítményköltség nagyjából megegyezik a mipmapszintek nélküli szűrésével."
+
+#. RenderingServer.LIGHT_PROJECTOR_FILTER_NEAREST_MIPMAPS_ANISOTROPIC
+#: doc/classes/RenderingServer.xml
+msgid "Nearest-neighbor filter for light projectors (use for pixel art light projectors). Anisotropic mipmaps are used for rendering, which means light projectors at a distance will look smooth and sharp when viewed from oblique angles. This looks better compared to isotropic mipmaps, but is slower. The level of anisotropic filtering is defined by [member ProjectSettings.rendering/textures/default_filters/anisotropic_filtering_level]."
+msgstr "A fényvetítő a legközelebbi texelt mintavételezi, anizotrop mipmapszintekkel. Pixelgrafikához ajánlott. A távoli vetített fény ferde szögből is sima és éles marad. Ez jobb képet ad az izotrop szűrésnél, de lassabb. Az anizotrop szűrés szintjét a [member ProjectSettings.rendering/textures/default_filters/anisotropic_filtering_level] beállítás határozza meg."
+
+#. RenderingServer.LIGHT_PROJECTOR_FILTER_LINEAR_MIPMAPS_ANISOTROPIC
+#: doc/classes/RenderingServer.xml
+msgid "Linear filter for light projectors (use for non-pixel art light projectors). Anisotropic mipmaps are used for rendering, which means light projectors at a distance will look smooth and sharp when viewed from oblique angles. This looks better compared to isotropic mipmaps, but is slower. The level of anisotropic filtering is defined by [member ProjectSettings.rendering/textures/default_filters/anisotropic_filtering_level]."
+msgstr "A fényvetítő lineáris szűrést használ, anizotrop mipmapszintekkel. Folytonos tónusú grafikához ajánlott. A távoli vetített fény ferde szögből is sima és éles marad. Ez jobb képet ad az izotrop szűrésnél, de lassabb. Az anizotrop szűrés szintjét a [member ProjectSettings.rendering/textures/default_filters/anisotropic_filtering_level] beállítás határozza meg."
+
+#. RenderingServer.SHADOW_QUALITY_SOFT_VERY_LOW
+#: doc/classes/RenderingServer.xml
+msgid "Very low shadow filtering quality (faster). When using this quality setting, [member Light3D.shadow_blur] is automatically multiplied by 0.75× to avoid introducing too much noise. This division only applies to lights whose [member Light3D.light_size] or [member Light3D.light_angular_distance] is [code]0.0[/code])."
+msgstr "Nagyon alacsony minőségű, gyorsabb árnyékszűrés. A túlzott zaj megelőzésére a renderelő a [member Light3D.shadow_blur] értékét automatikusan 0,75-tel szorozza. A szorzó csak azokra a fényforrásokra vonatkozik, amelyeknél a [member Light3D.light_size] vagy a [member Light3D.light_angular_distance] értéke [code]0.0[/code]."
+
+#. RenderingServer.SHADOW_QUALITY_SOFT_LOW
+#: doc/classes/RenderingServer.xml
+msgid "Low shadow filtering quality (fast)."
+msgstr "Alacsony minőségű, gyors árnyékszűrés."
+
+#. RenderingServer.SHADOW_QUALITY_SOFT_MEDIUM
+#: doc/classes/RenderingServer.xml
+msgid "Medium low shadow filtering quality (average)."
+msgstr "Közepes minőségű árnyékszűrés, átlagos feldolgozási sebességgel."
+
+#. RenderingServer.SHADOW_QUALITY_SOFT_HIGH
+#: doc/classes/RenderingServer.xml
+msgid "High low shadow filtering quality (slow). When using this quality setting, [member Light3D.shadow_blur] is automatically multiplied by 1.5× to better make use of the high sample count. This increased blur also improves the stability of dynamic object shadows. This multiplier only applies to lights whose [member Light3D.light_size] or [member Light3D.light_angular_distance] is [code]0.0[/code])."
+msgstr "Magas minőségű, lassú árnyékszűrés. A több minta jobb kihasználásához a renderelő a [member Light3D.shadow_blur] értékét automatikusan 1,5-tel szorozza. Az erősebb elmosás stabilabbá teszi a mozgó objektumok árnyékát. A szorzó csak azokra a fényforrásokra vonatkozik, amelyeknél a [member Light3D.light_size] vagy a [member Light3D.light_angular_distance] értéke [code]0.0[/code]."
+
+#. RenderingServer.SHADOW_QUALITY_SOFT_ULTRA
+#: doc/classes/RenderingServer.xml
+msgid "Highest low shadow filtering quality (slowest). When using this quality setting, [member Light3D.shadow_blur] is automatically multiplied by 2× to better make use of the high sample count. This increased blur also improves the stability of dynamic object shadows. This multiplier only applies to lights whose [member Light3D.light_size] or [member Light3D.light_angular_distance] is [code]0.0[/code])."
+msgstr "A legjobb minőségű, leglassabb árnyékszűrés. A több minta jobb kihasználásához a renderelő a [member Light3D.shadow_blur] értékét automatikusan 2-vel szorozza. Az erősebb elmosás stabilabbá teszi a mozgó objektumok árnyékát. A szorzó csak azokra a fényforrásokra vonatkozik, amelyeknél a [member Light3D.light_size] vagy a [member Light3D.light_angular_distance] értéke [code]0.0[/code]."
+
+#. RenderingServer.SHADOW_QUALITY_MAX
+#: doc/classes/RenderingServer.xml
+msgid "Represents the size of the [enum ShadowQuality] enum."
+msgstr "A [enum ShadowQuality] felsorolás mérete."
+
+#. RenderingServer.REFLECTION_PROBE_UPDATE_ONCE
+#: doc/classes/RenderingServer.xml
+msgid "Reflection probe will update reflections once and then stop."
+msgstr "A tükröződési szonda egyszer frissíti a tükröződéseket."
+
+#. RenderingServer.REFLECTION_PROBE_UPDATE_ALWAYS
+#: doc/classes/RenderingServer.xml
+msgid "Reflection probe will update each frame. This mode is necessary to capture moving objects."
+msgstr "A tükröződési szonda minden képkockán frissül. A mozgó objektumok követéséhez erre a módra van szükség."
+
+#. RenderingServer.REFLECTION_PROBE_AMBIENT_DISABLED
+#: doc/classes/RenderingServer.xml
+msgid "Do not apply any ambient lighting inside the reflection probe's box defined by its size."
+msgstr "A tükröződési szonda mérete által meghatározott dobozon belül nincs környezeti megvilágítás."
+
+#. RenderingServer.REFLECTION_PROBE_AMBIENT_ENVIRONMENT
+#: doc/classes/RenderingServer.xml
+msgid "Apply automatically-sourced environment lighting inside the reflection probe's box defined by its size."
+msgstr "A tükröződési szonda mérete által meghatározott dobozon belül a rendszer automatikusan választ forrást a környezeti megvilágításhoz."
+
+#. RenderingServer.REFLECTION_PROBE_AMBIENT_COLOR
+#: doc/classes/RenderingServer.xml
+msgid "Apply custom ambient lighting inside the reflection probe's box defined by its size. See [method reflection_probe_set_ambient_color] and [method reflection_probe_set_ambient_energy]."
+msgstr "A tükröződési szonda mérete által meghatározott dobozon belül egyéni környezeti megvilágítást használ. Lásd a [method reflection_probe_set_ambient_color] és a [method reflection_probe_set_ambient_energy] metódust."
+
+#. RenderingServer.DECAL_TEXTURE_ALBEDO
+#: doc/classes/RenderingServer.xml
+msgid "Albedo texture slot in a decal ([member Decal.texture_albedo])."
+msgstr "A vetített textúra albedócsatornájának helye ([member Decal.texture_albedo])."
+
+#. RenderingServer.DECAL_TEXTURE_NORMAL
+#: doc/classes/RenderingServer.xml
+msgid "Normal map texture slot in a decal ([member Decal.texture_normal])."
+msgstr "A vetített textúra normáltérképének helye ([member Decal.texture_normal])."
+
+#. RenderingServer.DECAL_TEXTURE_ORM
+#: doc/classes/RenderingServer.xml
+msgid "Occlusion/Roughness/Metallic texture slot in a decal ([member Decal.texture_orm])."
+msgstr "A vetített textúra takarási, érdességi és fémességi adatait tartalmazó textúra helye ([member Decal.texture_orm])."
+
+#. RenderingServer.DECAL_TEXTURE_EMISSION
+#: doc/classes/RenderingServer.xml
+msgid "Emission texture slot in a decal ([member Decal.texture_emission])."
+msgstr "A vetített textúra fénykibocsátási csatornájának helye ([member Decal.texture_emission])."
+
+#. RenderingServer.DECAL_TEXTURE_MAX
+#: doc/classes/RenderingServer.xml
+msgid "Represents the size of the [enum DecalTexture] enum."
+msgstr "A [enum DecalTexture] felsorolás mérete."
+
+#. RenderingServer.DECAL_FILTER_NEAREST
+#: doc/classes/RenderingServer.xml
+msgid "Nearest-neighbor filter for decals (use for pixel art decals). No mipmaps are used for rendering, which means decals at a distance will look sharp but grainy. This has roughly the same performance cost as using mipmaps."
+msgstr "A vetített textúra a legközelebbi texelt mintavételezi. Pixelgrafikához ajánlott. Mipmapszintek nélkül a távoli vetítés éles, de szemcsés lehet. A teljesítményköltség nagyjából megegyezik a mipmapszinteket használó szűrésével."
+
+#. RenderingServer.DECAL_FILTER_LINEAR
+#: doc/classes/RenderingServer.xml
+msgid "Linear filter for decals (use for non-pixel art decals). No mipmaps are used for rendering, which means decals at a distance will look smooth but blurry. This has roughly the same performance cost as using mipmaps."
+msgstr "A vetített textúra lineáris szűrést használ. Folytonos tónusú grafikához ajánlott. Mipmapszintek nélkül a távoli vetítés sima, de elmosódott lehet. A teljesítményköltség nagyjából megegyezik a mipmapszinteket használó szűrésével."
+
+#. RenderingServer.DECAL_FILTER_NEAREST_MIPMAPS
+#: doc/classes/RenderingServer.xml
+msgid "Nearest-neighbor filter for decals (use for pixel art decals). Isotropic mipmaps are used for rendering, which means decals at a distance will look smooth but blurry. This has roughly the same performance cost as not using mipmaps."
+msgstr "A vetített textúra a legközelebbi texelt mintavételezi, izotrop mipmapszintekkel. Pixelgrafikához ajánlott. Távolról a vetítés sima, de elmosódott lehet. A teljesítményköltség nagyjából megegyezik a mipmapszintek nélküli szűrésével."
+
+#. RenderingServer.DECAL_FILTER_LINEAR_MIPMAPS
+#: doc/classes/RenderingServer.xml
+msgid "Linear filter for decals (use for non-pixel art decals). Isotropic mipmaps are used for rendering, which means decals at a distance will look smooth but blurry. This has roughly the same performance cost as not using mipmaps."
+msgstr "A vetített textúra lineáris szűrést használ, izotrop mipmapszintekkel. Folytonos tónusú grafikához ajánlott. Távolról a vetítés sima, de elmosódott lehet. A teljesítményköltség nagyjából megegyezik a mipmapszintek nélküli szűrésével."
+
+#. RenderingServer.DECAL_FILTER_NEAREST_MIPMAPS_ANISOTROPIC
+#: doc/classes/RenderingServer.xml
+msgid "Nearest-neighbor filter for decals (use for pixel art decals). Anisotropic mipmaps are used for rendering, which means decals at a distance will look smooth and sharp when viewed from oblique angles. This looks better compared to isotropic mipmaps, but is slower. The level of anisotropic filtering is defined by [member ProjectSettings.rendering/textures/default_filters/anisotropic_filtering_level]."
+msgstr "A vetített textúra a legközelebbi texelt mintavételezi, anizotrop mipmapszintekkel. Pixelgrafikához ajánlott. A távoli vetítés ferde szögből is sima és éles marad. Ez jobb képet ad az izotrop szűrésnél, de lassabb. Az anizotrop szűrés szintjét a [member ProjectSettings.rendering/textures/default_filters/anisotropic_filtering_level] beállítás határozza meg."
+
+#. RenderingServer.DECAL_FILTER_LINEAR_MIPMAPS_ANISOTROPIC
+#: doc/classes/RenderingServer.xml
+msgid "Linear filter for decals (use for non-pixel art decals). Anisotropic mipmaps are used for rendering, which means decals at a distance will look smooth and sharp when viewed from oblique angles. This looks better compared to isotropic mipmaps, but is slower. The level of anisotropic filtering is defined by [member ProjectSettings.rendering/textures/default_filters/anisotropic_filtering_level]."
+msgstr "A vetített textúra lineáris szűrést használ, anizotrop mipmapszintekkel. Folytonos tónusú grafikához ajánlott. A távoli vetítés ferde szögből is sima és éles marad. Ez jobb képet ad az izotrop szűrésnél, de lassabb. Az anizotrop szűrés szintjét a [member ProjectSettings.rendering/textures/default_filters/anisotropic_filtering_level] beállítás határozza meg."
+
+#. RenderingServer.VOXEL_GI_QUALITY_LOW
+#: doc/classes/RenderingServer.xml
+msgid "Low [VoxelGI] rendering quality using 4 cones."
+msgstr "Alacsony [VoxelGI] renderelési minőség, 4 mintavételi kúppal."
+
+#. RenderingServer.VOXEL_GI_QUALITY_HIGH
+#: doc/classes/RenderingServer.xml
+msgid "High [VoxelGI] rendering quality using 6 cones."
+msgstr "Magas [VoxelGI] renderelési minőség, 6 mintavételi kúppal."
+
+#. RenderingServer.PARTICLES_COLLISION_HEIGHTFIELD_RESOLUTION_256
+#: doc/classes/RenderingServer.xml
+msgid "256×256 heightfield resolution for [GPUParticlesCollisionHeightField3D]."
+msgstr "256×256-os magasságmező-felbontás a [GPUParticlesCollisionHeightField3D] számára."
+
+#. RenderingServer.PARTICLES_COLLISION_HEIGHTFIELD_RESOLUTION_512
+#: doc/classes/RenderingServer.xml
+msgid "512×512 heightfield resolution for [GPUParticlesCollisionHeightField3D]."
+msgstr "512×512-es magasságmező-felbontás a [GPUParticlesCollisionHeightField3D] számára."
+
+#. RenderingServer.PARTICLES_COLLISION_HEIGHTFIELD_RESOLUTION_1024
+#: doc/classes/RenderingServer.xml
+msgid "1024×1024 heightfield resolution for [GPUParticlesCollisionHeightField3D]."
+msgstr "1024×1024-es magasságmező-felbontás a [GPUParticlesCollisionHeightField3D] számára."
+
+#. RenderingServer.PARTICLES_COLLISION_HEIGHTFIELD_RESOLUTION_2048
+#: doc/classes/RenderingServer.xml
+msgid "2048×2048 heightfield resolution for [GPUParticlesCollisionHeightField3D]."
+msgstr "2048×2048-as magasságmező-felbontás a [GPUParticlesCollisionHeightField3D] számára."
+
+#. RenderingServer.PARTICLES_COLLISION_HEIGHTFIELD_RESOLUTION_4096
+#: doc/classes/RenderingServer.xml
+msgid "4096×4096 heightfield resolution for [GPUParticlesCollisionHeightField3D]."
+msgstr "4096×4096-os magasságmező-felbontás a [GPUParticlesCollisionHeightField3D] számára."
+
+#. RenderingServer.PARTICLES_COLLISION_HEIGHTFIELD_RESOLUTION_8192
+#: doc/classes/RenderingServer.xml
+msgid "8192×8192 heightfield resolution for [GPUParticlesCollisionHeightField3D]."
+msgstr "8192×8192-es magasságmező-felbontás a [GPUParticlesCollisionHeightField3D] számára."
+
+#. RenderingServer.PARTICLES_COLLISION_HEIGHTFIELD_RESOLUTION_MAX
+#: doc/classes/RenderingServer.xml
+msgid "Represents the size of the [enum ParticlesCollisionHeightfieldResolution] enum."
+msgstr "A [enum ParticlesCollisionHeightfieldResolution] felsorolás mérete."
+
+#. RenderingServer.SKY_MODE_AUTOMATIC
+#: doc/classes/RenderingServer.xml
+msgid "Automatically selects the appropriate process mode based on your sky shader. If your shader uses [code]TIME[/code] or [code]POSITION[/code], this will use [constant SKY_MODE_REALTIME]. If your shader uses any of the [code]LIGHT_*[/code] variables or any custom uniforms, this uses [constant SKY_MODE_INCREMENTAL]. Otherwise, this defaults to [constant SKY_MODE_QUALITY]."
+msgstr "Az égbolt shaderének használata alapján automatikusan választ feldolgozási módot. Ha a shader [code]TIME[/code] vagy [code]POSITION[/code] változót használ, a mód [constant SKY_MODE_REALTIME]. Ha bármelyik [code]LIGHT_*[/code] változót vagy egyéni uniformot használja, a mód [constant SKY_MODE_INCREMENTAL]. Egyébként az alapértelmezett mód a [constant SKY_MODE_QUALITY]."
+
+#. RenderingServer.SKY_MODE_QUALITY
+#: doc/classes/RenderingServer.xml
+msgid "Uses high quality importance sampling to process the radiance map. In general, this results in much higher quality than [constant SKY_MODE_REALTIME] but takes much longer to generate. This should not be used if you plan on changing the sky at runtime. If you are finding that the reflection is not blurry enough and is showing sparkles or fireflies, try increasing [member ProjectSettings.rendering/reflections/sky_reflections/ggx_samples]."
+msgstr "A sugárzási térképet jó minőségű fontosság szerinti mintavétellel dolgozza fel. Általában sokkal jobb eredményt ad, mint a [constant SKY_MODE_REALTIME], de a térkép elkészítése jóval hosszabb ideig tart. Akkor érdemes választani, ha az égbolt futás közben állandó. Ha a tükröződés túl éles vagy szikrázó pontok jelennek meg rajta, próbáld növelni a [member ProjectSettings.rendering/reflections/sky_reflections/ggx_samples] értékét."
+
+#. RenderingServer.SKY_MODE_INCREMENTAL
+#: doc/classes/RenderingServer.xml
+msgid "Uses the same high quality importance sampling to process the radiance map as [constant SKY_MODE_QUALITY], but updates over several frames. The number of frames is determined by [member ProjectSettings.rendering/reflections/sky_reflections/roughness_layers]. Use this when you need highest quality radiance maps, but have a sky that updates slowly."
+msgstr "A sugárzási térképhez ugyanazt a jó minőségű fontosság szerinti mintavételt használja, mint a [constant SKY_MODE_QUALITY], de a frissítést több képkockára osztja. A képkockák számát a [member ProjectSettings.rendering/reflections/sky_reflections/roughness_layers] határozza meg. Akkor válaszd, ha kiváló minőségű sugárzási térképre van szükséged, és az égbolt lassan változik."
+
+#. RenderingServer.SKY_MODE_REALTIME
+#: doc/classes/RenderingServer.xml
+msgid "Uses the fast filtering algorithm to process the radiance map. In general this results in lower quality, but substantially faster run times. If you need better quality, but still need to update the sky every frame, consider turning on [member ProjectSettings.rendering/reflections/sky_reflections/fast_filter_high_quality].\n[b]Note:[/b] The fast filtering algorithm is limited to 256×256 cubemaps, so [method sky_set_radiance_size] must be set to [code]256[/code]. Otherwise, a warning is printed and the overridden radiance size is ignored."
+msgstr "Gyors szűrőalgoritmussal dolgozza fel a sugárzási térképet. Ez általában gyengébb képminőséget ad, de jóval gyorsabb. Ha jobb minőségre van szükséged, miközben az égboltot minden képkockán frissíted, érdemes bekapcsolni a [member ProjectSettings.rendering/reflections/sky_reflections/fast_filter_high_quality] beállítást.\n[b]Megjegyzés:[/b] A gyors szűrés csak 256×256-os kockatérképeket támogat, ezért a [method sky_set_radiance_size] metódussal [code]256[/code] értéket kell beállítani. Eltérő értéknél a motor figyelmeztetést ad, és figyelmen kívül hagyja a megadott méretet."
