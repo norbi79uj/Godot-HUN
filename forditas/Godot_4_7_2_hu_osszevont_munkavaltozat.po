@@ -52460,3 +52460,508 @@ msgstr "A sugárzási térképhez ugyanazt a jó minőségű fontosság szerinti
 #: doc/classes/RenderingServer.xml
 msgid "Uses the fast filtering algorithm to process the radiance map. In general this results in lower quality, but substantially faster run times. If you need better quality, but still need to update the sky every frame, consider turning on [member ProjectSettings.rendering/reflections/sky_reflections/fast_filter_high_quality].\n[b]Note:[/b] The fast filtering algorithm is limited to 256×256 cubemaps, so [method sky_set_radiance_size] must be set to [code]256[/code]. Otherwise, a warning is printed and the overridden radiance size is ignored."
 msgstr "Gyors szűrőalgoritmussal dolgozza fel a sugárzási térképet. Ez általában gyengébb képminőséget ad, de jóval gyorsabb. Ha jobb minőségre van szükséged, miközben az égboltot minden képkockán frissíted, érdemes bekapcsolni a [member ProjectSettings.rendering/reflections/sky_reflections/fast_filter_high_quality] beállítást.\n[b]Megjegyzés:[/b] A gyors szűrés csak 256×256-os kockatérképeket támogat, ezért a [method sky_set_radiance_size] metódussal [code]256[/code] értéket kell beállítani. Eltérő értéknél a motor figyelmeztetést ad, és figyelmen kívül hagyja a megadott méretet."
+
+#. Environment.brief
+#: doc/classes/Environment.xml
+msgid "Resource for environment nodes (like [WorldEnvironment]) that define multiple rendering options."
+msgstr "A [WorldEnvironment] és más környezeti csomópontok renderelési beállításait tároló erőforrás."
+
+#. Environment.get_glow_level
+#: doc/classes/Environment.xml
+msgid "Returns the intensity of the glow level [param idx]."
+msgstr "A [param idx] indexű ragyogási szint intenzitását adja vissza."
+
+#. Environment.set_glow_level
+#: doc/classes/Environment.xml
+msgid "Sets the intensity of the glow level [param idx]. A value above [code]0.0[/code] enables the level. Each level relies on the previous level. This means that enabling higher glow levels will slow down the glow effect rendering, even if previous levels aren't enabled."
+msgstr "Beállítja a [param idx] indexű ragyogási szint intenzitását. A [code]0.0[/code] fölötti érték engedélyezi a szintet. Minden szint az előzőre épül. Ezért a magasabb szintek akkor is lassítják a ragyogás renderelését, ha az alacsonyabb szintek ki vannak kapcsolva."
+
+#. Environment.adjustment_brightness
+#: doc/classes/Environment.xml
+msgid "Applies a simple brightness adjustment to the rendered image after tonemaping. To adjust scene brightness use [member tonemap_exposure] instead, which is applied before tonemapping and thus less prone to issues with bright colors. Effective only if [member adjustment_enabled] is [code]true[/code]."
+msgstr "A tónusleképezés után módosítja a kirajzolt kép fényerejét. A jelenet fényerejét a tónusleképezés előtt ható [member tonemap_exposure] tulajdonsággal érdemes beállítani, mert így ritkábban torzulnak a világos színek. Csak akkor hat, ha az [member adjustment_enabled] értéke [code]true[/code]."
+
+#. Environment.adjustment_enabled
+#: doc/classes/Environment.xml
+msgid "If [code]true[/code], enables the [code]adjustment_*[/code] properties provided by this resource. If [code]false[/code], modifications to the [code]adjustment_*[/code] properties will have no effect on the rendered scene."
+msgstr "Ha az értéke [code]true[/code], az erőforrás [code]adjustment_*[/code] tulajdonságai módosítják a képet. Ha az értéke [code]false[/code], a [code]adjustment_*[/code] tulajdonságok módosítása nem hat a kirajzolt jelenetre."
+
+#. Environment.adjustment_saturation
+#: doc/classes/Environment.xml
+msgid "Applies a simple saturation adjustment to the rendered image after tonemaping. When [member adjustment_saturation] is set to [code]0.0[/code], the rendered image will be fully converted to a grayscale image. Effective only if [member adjustment_enabled] is [code]true[/code]."
+msgstr "A tónusleképezés után módosítja a kirajzolt kép színtelítettségét. Ha az [member adjustment_saturation] értéke [code]0.0[/code], a kép teljesen szürkeárnyalatossá válik. Csak akkor hat, ha az [member adjustment_enabled] értéke [code]true[/code]."
+
+#. Environment.ambient_light_color
+#: doc/classes/Environment.xml
+msgid "The ambient light's [Color]. Only effective if [member ambient_light_sky_contribution] is lower than [code]1.0[/code] (exclusive)."
+msgstr "A környezeti fény [Color] értéke. Csak akkor hat, ha az [member ambient_light_sky_contribution] értéke kisebb mint [code]1.0[/code]."
+
+#. Environment.ambient_light_energy
+#: doc/classes/Environment.xml
+msgid "The ambient light's energy. The higher the value, the stronger the light. Only effective if [member ambient_light_sky_contribution] is lower than [code]1.0[/code] (exclusive)."
+msgstr "A környezeti fény energiája. Nagyobb érték erősebb fényt ad. Csak akkor hat, ha az [member ambient_light_sky_contribution] értéke kisebb mint [code]1.0[/code]."
+
+#. Environment.ambient_light_source
+#: doc/classes/Environment.xml
+msgid "The ambient light source to use for rendering materials and global illumination."
+msgstr "Az anyagok rendereléséhez és a globális megvilágításhoz használt környezetifény-forrás."
+
+#. Environment.background_camera_feed_id
+#: doc/classes/Environment.xml
+msgid "The ID of the camera feed to show in the background."
+msgstr "A háttérben megjelenítendő élő kamerakép azonosítója."
+
+#. Environment.background_canvas_max_layer
+#: doc/classes/Environment.xml
+msgid "The maximum layer ID to display. Only effective when using the [constant BG_CANVAS] background mode."
+msgstr "A megjelenítendő legfelső vászonréteg azonosítója. Csak a [constant BG_CANVAS] háttérmódban hat."
+
+#. Environment.background_color
+#: doc/classes/Environment.xml
+msgid "The [Color] displayed for clear areas of the scene. Only effective when using the [constant BG_COLOR] background mode."
+msgstr "A jelenet üres területein látható [Color] érték. Csak a [constant BG_COLOR] háttérmódban hat."
+
+#. Environment.background_energy_multiplier
+#: doc/classes/Environment.xml
+msgid "Multiplier for background energy. Increase to make background brighter, decrease to make background dimmer."
+msgstr "A háttér energiájának szorzója. Nagyobb értéknél a háttér világosabb, kisebbnél sötétebb."
+
+#. Environment.background_intensity
+#: doc/classes/Environment.xml
+msgid "Luminance of background measured in nits (candela per square meter). Only used when [member ProjectSettings.rendering/lights_and_shadows/use_physical_light_units] is enabled. The default value is roughly equivalent to the sky at midday."
+msgstr "A háttér fénysűrűsége nitben, vagyis négyzetméterenkénti kandelában. Csak bekapcsolt [member ProjectSettings.rendering/lights_and_shadows/use_physical_light_units] beállítás mellett használatos. Az alapérték nagyjából a déli égbolt fénysűrűségének felel meg."
+
+#. Environment.background_mode
+#: doc/classes/Environment.xml
+msgid "The background mode."
+msgstr "A háttér megjelenítési módja."
+
+#. Environment.fog_depth_begin
+#: doc/classes/Environment.xml
+msgid "The fog's depth starting distance from the camera. Only available when [member fog_mode] is set to [constant FOG_MODE_DEPTH]."
+msgstr "A kamerától mért távolság, ahol a mélységi köd elkezdődik. Csak akkor érhető el, ha a [member fog_mode] értéke [constant FOG_MODE_DEPTH]."
+
+#. Environment.fog_depth_curve
+#: doc/classes/Environment.xml
+msgid "The fog depth's intensity curve. A number of presets are available in the Inspector by right-clicking the curve. Only available when [member fog_mode] is set to [constant FOG_MODE_DEPTH]."
+msgstr "A mélységi köd intenzitásgörbéje. Az Inspector panelen a görbére jobb gombbal kattintva választhatsz az előbeállítások közül. Csak akkor érhető el, ha a [member fog_mode] értéke [constant FOG_MODE_DEPTH]."
+
+#. Environment.fog_depth_end
+#: doc/classes/Environment.xml
+msgid "The fog's depth end distance from the camera. If this value is set to [code]0[/code], it will be equal to the current camera's [member Camera3D.far] value. Only available when [member fog_mode] is set to [constant FOG_MODE_DEPTH]."
+msgstr "A kamerától mért távolság, ahol a mélységi köd eléri a végértékét. [code]0[/code] esetén az aktív kamera [member Camera3D.far] értékét használja. Csak akkor érhető el, ha a [member fog_mode] értéke [constant FOG_MODE_DEPTH]."
+
+#. Environment.fog_enabled
+#: doc/classes/Environment.xml
+msgid "If [code]true[/code], fog effects are enabled."
+msgstr "Ha az értéke [code]true[/code], a ködhatások be vannak kapcsolva."
+
+#. Environment.fog_height
+#: doc/classes/Environment.xml
+msgid "The height at which the height fog effect begins."
+msgstr "Az a magasság, ahol a magasságfüggő köd hatása elkezdődik."
+
+#. Environment.fog_height_density
+#: doc/classes/Environment.xml
+msgid "The density used to increase fog as height decreases. To make fog increase as height increases, use a negative value."
+msgstr "Megadja, milyen gyorsan sűrűsödjön a köd a magasság csökkenésével. Negatív értéknél a köd felfelé sűrűsödik."
+
+#. Environment.fog_light_color
+#: doc/classes/Environment.xml
+msgid "The fog's color."
+msgstr "A köd színe."
+
+#. Environment.fog_light_energy
+#: doc/classes/Environment.xml
+msgid "The fog's brightness. Higher values result in brighter fog."
+msgstr "A köd fényereje. Nagyobb értéknél világosabb a köd."
+
+#. Environment.fog_mode
+#: doc/classes/Environment.xml
+msgid "The fog mode."
+msgstr "A köd számítási módja."
+
+#. Environment.fog_sun_scatter
+#: doc/classes/Environment.xml
+msgid "If set above [code]0.0[/code], renders the scene's directional light(s) in the fog color depending on the view angle. This can be used to give the impression that the sun is \"piercing\" through the fog."
+msgstr "Ha az értéke nagyobb mint [code]0.0[/code], a jelenet irányfényei a nézési szögtől függően befolyásolják a köd színét. Így úgy tűnhet, mintha a nap áttörne a ködön."
+
+#. Environment.glow_bloom
+#: doc/classes/Environment.xml
+msgid "The bloom's intensity. If set to a value higher than [code]0[/code], this will make glow visible in areas darker than the [member glow_hdr_threshold]."
+msgstr "A fényudvar intenzitása. [code]0[/code] fölötti értéknél a ragyogás a [member glow_hdr_threshold] küszöbnél sötétebb területeken is láthatóvá válik."
+
+#. Environment.glow_hdr_luminance_cap
+#: doc/classes/Environment.xml
+msgid "The higher threshold of the HDR glow. Areas brighter than this threshold will be clamped for the purposes of the glow effect."
+msgstr "A HDR-ragyogás felső fényességi határa. A ragyogás számítása ennél a határnál korlátozza a fényesebb területek értékeit."
+
+#. Environment.glow_hdr_scale
+#: doc/classes/Environment.xml
+msgid "Smooths the transition between values that are below and above [member glow_hdr_threshold] by reducing the amount of glow generated by values that are close to [member glow_hdr_threshold]. Values above [code]glow_hdr_threshold + glow_hdr_scale[/code] will not have glow reduced in this way."
+msgstr "Elsimítja az átmenetet a [member glow_hdr_threshold] alatti és fölötti értékek között azzal, hogy csökkenti a [member glow_hdr_threshold] küszöbhöz közeli értékek ragyogását. A [code]glow_hdr_threshold + glow_hdr_scale[/code] fölött ez a csökkentés már nem érvényesül."
+
+#. Environment.glow_intensity
+#: doc/classes/Environment.xml
+msgid "The overall brightness multiplier that is applied to the glow effect just before it is blended with the scene. When using the Mobile rendering method (which only supports a lower dynamic range up to [code]2.0[/code]), this should be increased to [code]1.5[/code] to compensate."
+msgstr "A ragyogás teljes fényerejének szorzója, amelyet a jelenettel való összekeverés előtt alkalmaz a renderelő. A Mobile renderelési mód körülbelül [code]2.0[/code] értékig támogatja a dinamikatartományt. Ennek ellensúlyozására érdemes a szorzót [code]1.5[/code]-re növelni."
+
+#. Environment.reflected_light_source
+#: doc/classes/Environment.xml
+msgid "The reflected (specular) light source."
+msgstr "A tükrös visszaverődéshez használt fényforrás."
+
+#. Environment.sdfgi_cascade0_distance
+#: doc/classes/Environment.xml
+msgid "[b]Note:[/b] This property is linked to [member sdfgi_min_cell_size] and [member sdfgi_max_distance]. Changing its value will automatically change those properties as well."
+msgstr "[b]Megjegyzés:[/b] Ez a tulajdonság összefügg a [member sdfgi_min_cell_size] és a [member sdfgi_max_distance] értékével. A módosítása ezeket is automatikusan megváltoztatja."
+
+#. Environment.sdfgi_cascades
+#: doc/classes/Environment.xml
+msgid "The number of cascades to use for SDFGI (between 1 and 8). A higher number of cascades allows displaying SDFGI further away while preserving detail up close, at the cost of performance. When using SDFGI on small-scale levels, [member sdfgi_cascades] can often be decreased between [code]1[/code] and [code]4[/code] to improve performance."
+msgstr "Az SDFGI-kaszkádok száma 1 és 8 között. Több kaszkáddal messzebbre ér a megvilágítás, miközben közelről részletes marad, de többe kerül a számítása. Kis pályákon a teljesítmény javításához gyakran elegendő a [member sdfgi_cascades] értékét [code]1[/code] és [code]4[/code] közé állítani."
+
+#. Environment.sdfgi_energy
+#: doc/classes/Environment.xml
+msgid "The energy multiplier to use for SDFGI. Higher values will result in brighter indirect lighting and reflections. See also [member sdfgi_bounce_feedback]."
+msgstr "Az SDFGI energiaszorzója. Nagyobb értéknél világosabb a közvetett megvilágítás és a tükröződés. Lásd még a [member sdfgi_bounce_feedback] tulajdonságot."
+
+#. Environment.sdfgi_normal_bias
+#: doc/classes/Environment.xml
+msgid "The normal bias to use for SDFGI probes. Increasing this value can reduce visible streaking artifacts on sloped surfaces, at the cost of increased light leaking."
+msgstr "Az SDFGI-szondák normálirányú eltolása. Növelése csökkentheti a lejtős felületek csíkozódását, de erősítheti a fény átszivárgását."
+
+#. Environment.sdfgi_probe_bias
+#: doc/classes/Environment.xml
+msgid "The constant bias to use for SDFGI probes. Increasing this value can reduce visible streaking artifacts on sloped surfaces, at the cost of increased light leaking."
+msgstr "Az SDFGI-szondák állandó eltolása. Növelése csökkentheti a lejtős felületek csíkozódását, de erősítheti a fény átszivárgását."
+
+#. Environment.sdfgi_read_sky_light
+#: doc/classes/Environment.xml
+msgid "If [code]true[/code], SDFGI takes the environment lighting into account. This should be set to [code]false[/code] for interior scenes."
+msgstr "Ha az értéke [code]true[/code], az SDFGI a környezeti megvilágítást is figyelembe veszi. Belső terekhez érdemes [code]false[/code] értékre állítani."
+
+#. Environment.sdfgi_use_occlusion
+#: doc/classes/Environment.xml
+msgid "If [code]true[/code], SDFGI uses an occlusion detection approach to reduce light leaking. Occlusion may however introduce dark blotches in certain spots, which may be undesired in mostly outdoor scenes. [member sdfgi_use_occlusion] has a performance impact and should only be enabled when needed."
+msgstr "Ha az értéke [code]true[/code], az SDFGI takarásvizsgálattal csökkenti a fény átszivárgását. Ez helyenként sötét foltokat okozhat, ami főként kültéri jeleneteknél lehet zavaró. A [member sdfgi_use_occlusion] növeli a számítási költséget, ezért csak szükség esetén érdemes bekapcsolni."
+
+#. Environment.sdfgi_y_scale
+#: doc/classes/Environment.xml
+msgid "The Y scale to use for SDFGI cells. Lower values will result in SDFGI cells being packed together more closely on the Y axis. This is used to balance between quality and covering a lot of vertical ground. [member sdfgi_y_scale] should be set depending on how vertical your scene is (and how fast your camera may move on the Y axis)."
+msgstr "Az SDFGI-cellák méretaránya az Y tengelyen. Kisebb értéknél a cellák függőlegesen sűrűbben helyezkednek el, így részletesebb a megvilágítás, de kisebb magasságtartományt fed le. A [member sdfgi_y_scale] értékét a jelenet magasságkülönbségei és a kamera függőleges mozgási sebessége alapján állítsd be."
+
+#. Environment.sky
+#: doc/classes/Environment.xml
+msgid "The [Sky] resource used for this [Environment]."
+msgstr "Az ehhez az [Environment] erőforráshoz használt [Sky] erőforrás."
+
+#. Environment.sky_custom_fov
+#: doc/classes/Environment.xml
+msgid "If set to a value greater than [code]0.0[/code], overrides the field of view to use for sky rendering. If set to [code]0.0[/code], the same FOV as the current [Camera3D] is used for sky rendering."
+msgstr "A [code]0.0[/code] fölötti érték felülírja az égbolt rendereléséhez használt látómezőt. [code]0.0[/code] esetén az aktív [Camera3D] látómezeje érvényes."
+
+#. Environment.sky_rotation
+#: doc/classes/Environment.xml
+msgid "The rotation to use for sky rendering."
+msgstr "Az égbolt rendereléséhez használt elforgatás."
+
+#. Environment.ssao_ao_channel_affect
+#: doc/classes/Environment.xml
+msgid "The screen-space ambient occlusion intensity on materials that have an AO texture defined. Values higher than [code]0[/code] will make the SSAO effect visible in areas darkened by AO textures."
+msgstr "A képernyőtérbeli környezeti takarás erőssége AO-textúrát használó anyagokon. [code]0[/code] fölötti értéknél az SSAO az AO-textúra által sötétített területeken is látható."
+
+#. Environment.ssao_detail
+#: doc/classes/Environment.xml
+msgid "Sets the strength of the additional level of detail for the screen-space ambient occlusion effect. A high value makes the detail pass more prominent, but it may contribute to aliasing in your final image."
+msgstr "A képernyőtérbeli környezeti takarás részleteit kiemelő réteg erőssége. Nagyobb értéknél jobban látszanak a részletek, de a végső képen recésedés jelentkezhet."
+
+#. Environment.ssao_horizon
+#: doc/classes/Environment.xml
+msgid "The threshold for considering whether a given point on a surface is occluded or not represented as an angle from the horizon mapped into the [code]0.0-1.0[/code] range. A value of [code]1.0[/code] results in no occlusion."
+msgstr "Az a küszöb, amely alapján egy felületi pont takartnak számít. A küszöb a horizonttól mért szöget a [code]0.0-1.0[/code] tartományban fejezi ki. [code]1.0[/code] esetén a takarás hatása eltűnik."
+
+#. Environment.ssao_intensity
+#: doc/classes/Environment.xml
+msgid "The primary screen-space ambient occlusion intensity. Acts as a multiplier for the screen-space ambient occlusion effect. A higher value results in darker occlusion."
+msgstr "A képernyőtérbeli környezeti takarás fő intenzitásszorzója. Nagyobb értéknél sötétebbek a takart területek."
+
+#. Environment.ssao_light_affect
+#: doc/classes/Environment.xml
+msgid "The screen-space ambient occlusion intensity in direct light. In real life, ambient occlusion only applies to indirect light, which means its effects can't be seen in direct light. Values higher than [code]0[/code] will make the SSAO effect visible in direct light."
+msgstr "A képernyőtérbeli környezeti takarás erőssége a közvetlen fényben. Fizikailag a környezeti takarás a közvetett fényt érinti. A [code]0[/code] fölötti értékkel az SSAO a közvetlen fényben is láthatóvá tehető."
+
+#. Environment.ssao_power
+#: doc/classes/Environment.xml
+msgid "The distribution of occlusion. A higher value results in darker occlusion, similar to [member ssao_intensity], but with a sharper falloff."
+msgstr "A takarás eloszlása. Nagyobb értéknél a takarás erősebb, akárcsak a [member ssao_intensity] növelésekor, de a hatás gyorsabban gyengül a távolsággal."
+
+#. Environment.ssao_radius
+#: doc/classes/Environment.xml
+msgid "The distance at which objects can occlude each other when calculating screen-space ambient occlusion. Higher values will result in occlusion over a greater distance at the cost of performance and quality."
+msgstr "Az a távolság, amelyen belül az objektumok takarhatják egymást a képernyőtérbeli környezeti takarás számításakor. Nagyobb értékkel távolabbra ér a hatás, de csökkenhet a teljesítmény és a képminőség."
+
+#. Environment.ssao_sharpness
+#: doc/classes/Environment.xml
+msgid "The amount that the screen-space ambient occlusion effect is allowed to blur over the edges of objects. Setting too high will result in aliasing around the edges of objects. Setting too low will make object edges appear blurry."
+msgstr "Megadja, mennyire mosódhat át a képernyőtérbeli környezeti takarás az objektumok szélein. Túl nagy értéknél a szélek recések, túl kicsinél elmosódottak lehetnek."
+
+#. Environment.ssil_intensity
+#: doc/classes/Environment.xml
+msgid "The brightness multiplier for the screen-space indirect lighting effect. A higher value will result in brighter light."
+msgstr "A képernyőtérbeli közvetett megvilágítás fényerőszorzója. Nagyobb értéknél világosabb a közvetett fény."
+
+#. Environment.ssil_radius
+#: doc/classes/Environment.xml
+msgid "The distance that bounced lighting can travel when using the screen space indirect lighting effect. A larger value will result in light bouncing further in a scene, but may result in under-sampling artifacts which look like long spikes surrounding light sources."
+msgstr "Megadja, meddig terjedhet a visszavert fény a képernyőtérbeli közvetett megvilágítás számításakor. Nagyobb értéknél messzebbre jut a fény, de a ritka mintavételezés miatt hosszú tüskék jelenhetnek meg a fényforrások körül."
+
+#. Environment.ssil_sharpness
+#: doc/classes/Environment.xml
+msgid "The amount that the screen-space indirect lighting effect is allowed to blur over the edges of objects. Setting too high will result in aliasing around the edges of objects. Setting too low will make object edges appear blurry."
+msgstr "Megadja, mennyire mosódhat át a képernyőtérbeli közvetett megvilágítás az objektumok szélein. Túl nagy értéknél a szélek recések, túl kicsinél elmosódottak lehetnek."
+
+#. Environment.ssr_depth_tolerance
+#: doc/classes/Environment.xml
+msgid "The depth tolerance for screen-space reflections."
+msgstr "A képernyőtérbeli tükröződések számításánál megengedett mélységeltérés."
+
+#. Environment.ssr_fade_in
+#: doc/classes/Environment.xml
+msgid "The fade-in distance for screen-space reflections. Affects the area from the reflected material to the screen-space reflection. Only positive values are valid (negative values will be clamped to [code]0.0[/code])."
+msgstr "A képernyőtérbeli tükröződés fokozatos megjelenésének távolsága. A tükröző anyagtól a képernyőtérbeli tükröződésig tartó szakaszra hat. Csak pozitív érték adható meg. A negatív értékeket [code]0.0[/code] értékre állítja."
+
+#. Environment.ssr_fade_out
+#: doc/classes/Environment.xml
+msgid "The fade-out distance for screen-space reflections. Affects the area from the screen-space reflection to the \"global\" reflection. Only positive values are valid (negative values will be clamped to [code]0.0[/code])."
+msgstr "A képernyőtérbeli tükröződés elhalványulásának távolsága. A képernyőtérbeli és a globális tükröződés közötti átmenetre hat. Csak pozitív érték adható meg. A negatív értékeket [code]0.0[/code] értékre állítja."
+
+#. Environment.ssr_max_steps
+#: doc/classes/Environment.xml
+msgid "The maximum number of steps for screen-space reflections. Higher values are slower."
+msgstr "A képernyőtérbeli tükröződések számítási lépéseinek felső határa. Nagyobb értéknél lassabb a számítás."
+
+#. Environment.tonemap_agx_contrast
+#: doc/classes/Environment.xml
+msgid "Increasing [member tonemap_agx_contrast] will make dark values darker and bright values brighter. Produces a higher quality result than [member adjustment_contrast] without any additional performance cost, but is only available when using the [constant TONE_MAPPER_AGX] tonemapper."
+msgstr "A [member tonemap_agx_contrast] növelésével a sötét részek sötétebbé, a világosak világosabbá válnak. Az [member adjustment_contrast] beállításnál jobb minőségű eredményt ad további teljesítményköltség nélkül. Csak a [constant TONE_MAPPER_AGX] tónusleképezővel használható."
+
+#. Environment.volumetric_fog_albedo
+#: doc/classes/Environment.xml
+msgid "The [Color] of the volumetric fog when interacting with lights. Mist and fog have an albedo close to [code]Color(1, 1, 1, 1)[/code] while smoke has a darker albedo."
+msgstr "A fényforrások által megvilágított térfogati köd [Color] értéke. A pára és a köd albedója közel áll a [code]Color(1, 1, 1, 1)[/code] értékhez. A füst albedója ennél sötétebb."
+
+#. Environment.volumetric_fog_detail_spread
+#: doc/classes/Environment.xml
+msgid "The distribution of size down the length of the froxel buffer. A higher value compresses the froxels closer to the camera and places more detail closer to the camera."
+msgstr "Megadja, hogyan változzon a térfogati ködpuffer celláinak mérete a távolsággal. Nagyobb értéknél a cellák sűrűbben helyezkednek el a kamera közelében, ahol így több részlet látható."
+
+#. Environment.volumetric_fog_emission
+#: doc/classes/Environment.xml
+msgid "The emitted light from the volumetric fog. Even with emission, volumetric fog will not cast light onto other surfaces. Emission is useful to establish an ambient color. As the volumetric fog effect uses single-scattering only, fog tends to need a little bit of emission to soften the harsh shadows."
+msgstr "A térfogati köd saját kibocsátott fénye. Ez a fény nem világítja meg a környező felületeket, de alapszínt adhat a ködnek. Mivel a térfogati köd csak egyszeres szórást számít, kevés saját fény segíthet tompítani a kemény árnyékokat."
+
+#. Environment.volumetric_fog_emission_energy
+#: doc/classes/Environment.xml
+msgid "The brightness of the emitted light from the volumetric fog."
+msgstr "A térfogati köd által kibocsátott fény erőssége."
+
+#. Environment.volumetric_fog_length
+#: doc/classes/Environment.xml
+msgid "The distance over which the volumetric fog is computed. Increase to compute fog over a greater range, decrease to add more detail when a long range is not needed. For best quality fog, keep this as low as possible. See also [member ProjectSettings.rendering/environment/volumetric_fog/volume_depth]."
+msgstr "Az a távolság, ameddig a renderelő kiszámítja a térfogati ködöt. Nagyobb értéknél messzebbre ér a hatás, kisebb értéknél több részletet kap a közelebbi köd. A legjobb minőséghez a szükséges legkisebb értéket használd. Lásd még a [member ProjectSettings.rendering/environment/volumetric_fog/volume_depth] beállítást."
+
+#. Environment.volumetric_fog_temporal_reprojection_amount
+#: doc/classes/Environment.xml
+msgid "The amount by which to blend the last frame with the current frame. A higher number results in smoother volumetric fog, but makes \"ghosting\" much worse. A lower value reduces ghosting but can result in the per-frame temporal jitter becoming visible."
+msgstr "Megadja, mennyire keveredjen az előző képkocka a jelenlegivel. Nagyobb értéknél egyenletesebb a térfogati köd, de erősebb a szellemkép. Kisebb értéknél gyengébb a szellemkép, viszont láthatóvá válhat a képkockánkénti mintavételi vibrálás."
+
+#. Environment.BG_CLEAR_COLOR
+#: doc/classes/Environment.xml
+msgid "Clears the background using the clear color defined in [member ProjectSettings.rendering/environment/defaults/default_clear_color]."
+msgstr "A [member ProjectSettings.rendering/environment/defaults/default_clear_color] beállításban megadott törlési színnel törli a hátteret."
+
+#. Environment.BG_COLOR
+#: doc/classes/Environment.xml
+msgid "Clears the background using a custom clear color."
+msgstr "Egyéni törlési színnel törli a hátteret."
+
+#. BaseMaterial3D.description
+#: doc/classes/BaseMaterial3D.xml
+msgid "This class serves as a default material with a wide variety of rendering features and properties without the need to write shader code. See the tutorial below for details."
+msgstr "Általános célú 3D-s alapanyag, amely számos renderelési beállítást kínál saját shaderkód írása nélkül. A részleteket az alábbi útmutató ismerteti."
+
+#. BaseMaterial3D.set_feature
+#: doc/classes/BaseMaterial3D.xml
+msgid "If [param enable] is [code]true[/code], enables the specified [param feature]. Many features that are available in [BaseMaterial3D] need to be enabled before use. This way, the cost for using the feature is only incurred when specified. Features can also be enabled by setting their corresponding property to [code]true[/code]."
+msgstr "Ha az [param enable] értéke [code]true[/code], bekapcsolja a megadott [param feature] funkciót. A [BaseMaterial3D] számos funkcióját használat előtt külön engedélyezni kell, így csak a ténylegesen használt funkciók növelik a renderelési költséget. Funkciót a hozzá tartozó tulajdonság [code]true[/code] értékre állításával is bekapcsolhatsz."
+
+#. BaseMaterial3D.alpha_scissor_threshold
+#: doc/classes/BaseMaterial3D.xml
+msgid "Threshold at which the alpha scissor will discard values. Higher values will result in more pixels being discarded. If the material becomes too opaque at a distance, try increasing [member alpha_scissor_threshold]. If the material disappears at a distance, try decreasing [member alpha_scissor_threshold]."
+msgstr "Az alfa alapú kivágás küszöbértéke. Nagyobb értéknél a renderelő több képpontot dob el. Ha az anyag távolról túl átlátszatlan, növeld az [member alpha_scissor_threshold] értékét. Ha az anyag távolról eltűnik, csökkentsd az [member alpha_scissor_threshold] értékét."
+
+#. BaseMaterial3D.ao_light_affect
+#: doc/classes/BaseMaterial3D.xml
+msgid "Amount that ambient occlusion affects lighting from lights. If [code]0[/code], ambient occlusion only affects ambient light. If [code]1[/code], ambient occlusion affects lights just as much as it affects ambient light. This can be used to impact the strength of the ambient occlusion effect, but typically looks unrealistic."
+msgstr "Megadja, mennyire befolyásolja a környezeti takarás a fényforrások megvilágítását. [code]0[/code] esetén csak a környezeti fényre hat. [code]1[/code] esetén a fényforrások megvilágítására ugyanúgy hat, mint a környezeti fényre. Ezzel erősíthető a takarási hatás, bár az eredmény gyakran természetellenes."
+
+#. BaseMaterial3D.cull_mode
+#: doc/classes/BaseMaterial3D.xml
+msgid "Determines which side of the triangle to cull depending on whether the triangle faces towards or away from the camera."
+msgstr "Megadja, a háromszög melyik oldalát hagyja ki a renderelő attól függően, hogy az a kamera felé néz-e."
+
+#. BaseMaterial3D.detail_enabled
+#: doc/classes/BaseMaterial3D.xml
+msgid "If [code]true[/code], enables the detail overlay. Detail is a second texture that gets mixed over the surface of the object based on [member detail_mask] and [member detail_albedo]'s alpha channel. This can be used to add variation to objects, or to blend between two different albedo/normal textures."
+msgstr "Ha az értéke [code]true[/code], bekapcsolja a részlettextúrát. Ez az objektum felületére kevert második textúra. A keverés a [member detail_mask] értékétől és a [member detail_albedo] alfa-csatornájától függ. Így változatosabbá teheted a felületet, vagy átmenetet hozhatsz létre különböző albedó- és normáltextúrák között."
+
+#. BaseMaterial3D.emission_enabled
+#: doc/classes/BaseMaterial3D.xml
+msgid "If [code]true[/code], the body emits light. Emitting light makes the object appear brighter. The object can also cast light on other objects if a [VoxelGI], SDFGI, or [LightmapGI] is used and this object is used in baked lighting."
+msgstr "Ha az értéke [code]true[/code], az anyag fényt bocsát ki, így az objektum világosabbnak látszik. [VoxelGI], SDFGI vagy [LightmapGI] használatakor az objektum más felületeket is megvilágíthat, ha részt vesz a beégetett megvilágítás számításában."
+
+#. BaseMaterial3D.emission_intensity
+#: doc/classes/BaseMaterial3D.xml
+msgid "Luminance of emitted light, measured in nits (candela per square meter). Only available when [member ProjectSettings.rendering/lights_and_shadows/use_physical_light_units] is enabled. The default is roughly equivalent to an indoor lightbulb."
+msgstr "A kibocsátott fény fénysűrűsége nitben, vagyis négyzetméterenkénti kandelában. Csak a [member ProjectSettings.rendering/lights_and_shadows/use_physical_light_units] engedélyezésekor érhető el. Az alapérték nagyjából egy beltéri villanykörte fénysűrűségének felel meg."
+
+#. BaseMaterial3D.heightmap_deep_parallax
+#: doc/classes/BaseMaterial3D.xml
+msgid "If [code]true[/code], uses parallax occlusion mapping to represent depth in the material instead of simple offset mapping (see [member heightmap_enabled]). This results in a more convincing depth effect, but is much more expensive on the GPU. Only enable this on materials where it makes a significant visual difference."
+msgstr "Ha az értéke [code]true[/code], az egyszerű textúraeltolás helyett takarást is figyelembe vevő parallaxleképezés ad mélységet az anyagnak. Lásd a [member heightmap_enabled] tulajdonságot. A mélységhatás meggyőzőbb, de a számítás lényegesen jobban terheli a GPU-t. Olyan anyagoknál érdemes bekapcsolni, ahol látványos a különbség."
+
+#. BaseMaterial3D.heightmap_flip_binormal
+#: doc/classes/BaseMaterial3D.xml
+msgid "If [code]true[/code], flips the mesh's binormal vectors when interpreting the height map. If the heightmap effect looks strange when the camera moves (even with a reasonable [member heightmap_scale]), try setting this to [code]true[/code]."
+msgstr "Ha az értéke [code]true[/code], a renderelő megfordítja a háló binormális vektorait a magasságtérkép értelmezésekor. Ha a hatás kameramozgás közben megfelelő [member heightmap_scale] érték mellett is furcsán viselkedik, próbáld ki a [code]true[/code] beállítást."
+
+#. BaseMaterial3D.metallic_texture_channel
+#: doc/classes/BaseMaterial3D.xml
+msgid "Specifies the channel of the [member metallic_texture] in which the metallic information is stored. This is useful when you store the information for multiple effects in a single texture. For example if you stored metallic in the red channel, roughness in the blue, and ambient occlusion in the green you could reduce the number of textures you use."
+msgstr "Megadja, hogy a [member metallic_texture] textúra melyik csatornája tárolja a fémességet. Ezzel több hatás adatait egyetlen textúrában tárolhatod. Ha például a fémesség a vörös, az érdesség a kék, a környezeti takarás pedig a zöld csatornába kerül, kevesebb textúrára lesz szükség."
+
+#. BaseMaterial3D.no_depth_test
+#. Label3D.no_depth_test
+#. SpriteBase3D.no_depth_test
+#: doc/classes/BaseMaterial3D.xml doc/classes/Label3D.xml doc/classes/SpriteBase3D.xml
+msgid "If [code]true[/code], depth testing is disabled and the object will be drawn in render order."
+msgstr "Ha az értéke [code]true[/code], a mélységvizsgálat kikapcsol, és a renderelő a rajzolási sorrend alapján jeleníti meg az objektumot."
+
+#. BaseMaterial3D.shading_mode
+#: doc/classes/BaseMaterial3D.xml
+msgid "Sets whether the shading takes place, per-pixel, per-vertex or unshaded. Per-vertex lighting is faster, making it the best choice for mobile applications, however it looks considerably worse than per-pixel. Unshaded rendering is the fastest, but disables all interactions with lights."
+msgstr "Megadja, hogy az árnyalás képpontonként, csúcsonként történjen, vagy teljesen ki legyen kapcsolva. A csúcsonkénti megvilágítás gyorsabb, így mobileszközökön előnyösebb lehet, de a képpontonkénti árnyalás látványosabb eredményt ad. A kikapcsolt árnyalás a leggyorsabb, ekkor az anyag nem reagál a fényforrásokra."
+
+#. BaseMaterial3D.TEXTURE_MAX
+#: doc/classes/BaseMaterial3D.xml
+msgid "Represents the size of the [enum TextureParam] enum."
+msgstr "A [enum TextureParam] felsorolás mérete."
+
+#. BaseMaterial3D.TEXTURE_FILTER_NEAREST_WITH_MIPMAPS
+#: doc/classes/BaseMaterial3D.xml
+msgid "The texture filter reads from the nearest pixel and blends between the nearest 2 mipmaps (or uses the nearest mipmap if [member ProjectSettings.rendering/textures/default_filters/use_nearest_mipmap_filter] is [code]true[/code]). This makes the texture look pixelated from up close, and smooth from a distance."
+msgstr "A szűrő a legközelebbi texelből vesz mintát, és a 2 legközelebbi mipmapszint között kever. Ha a [member ProjectSettings.rendering/textures/default_filters/use_nearest_mipmap_filter] értéke [code]true[/code], csak a legközelebbi mipmapszintet használja. A textúra közelről képpontos, távolról simább hatású."
+
+#. BaseMaterial3D.TEXTURE_FILTER_LINEAR_WITH_MIPMAPS
+#: doc/classes/BaseMaterial3D.xml
+msgid "The texture filter blends between the nearest 4 pixels and between the nearest 2 mipmaps (or uses the nearest mipmap if [member ProjectSettings.rendering/textures/default_filters/use_nearest_mipmap_filter] is [code]true[/code]). This makes the texture look smooth from up close, and smooth from a distance."
+msgstr "A szűrő a 4 legközelebbi texel és a 2 legközelebbi mipmapszint között kever. Ha a [member ProjectSettings.rendering/textures/default_filters/use_nearest_mipmap_filter] értéke [code]true[/code], csak a legközelebbi mipmapszintet használja. A textúra közelről és távolról is sima marad."
+
+#. BaseMaterial3D.TRANSPARENCY_ALPHA_SCISSOR
+#: doc/classes/BaseMaterial3D.xml
+msgid "The material will cut off all values below a threshold, the rest will remain opaque. The opaque portions will be rendered in the depth prepass. This is faster to render than alpha blending, but slower than opaque rendering. This also supports casting shadows."
+msgstr "Az anyag eldobja a küszöb alatti alfaértékeket. A többi felületrész átlátszatlan marad, és a mélységi előmenetben is megjelenik. Az alfakivágás gyorsabb az alfa szerinti keverésnél, de lassabb az átlátszatlan renderelésnél. Az anyag árnyékot is vethet."
+
+#. BaseMaterial3D.TRANSPARENCY_ALPHA_HASH
+#: doc/classes/BaseMaterial3D.xml
+msgid "The material will cut off all values below a spatially-deterministic threshold, the rest will remain opaque. This is faster to render than alpha blending, but slower than opaque rendering. This also supports casting shadows. Alpha hashing is suited for hair rendering."
+msgstr "Az anyag a felület helyétől függő, egyértelmű küszöb alatti alfaértékeket eldobja. A többi felületrész átlátszatlan marad. Ez gyorsabb az alfa szerinti keverésnél, de lassabb az átlátszatlan renderelésnél. Az anyag árnyékot is vethet. Az alfa-hash eljárás haj rendereléséhez is alkalmas."
+
+#. BaseMaterial3D.TRANSPARENCY_ALPHA_DEPTH_PRE_PASS
+#: doc/classes/BaseMaterial3D.xml
+msgid "The material will use the texture's alpha value for transparency, but will discard fragments with an alpha of less than 0.99 during the depth prepass and fragments with an alpha less than 0.1 during the shadow pass. This also supports casting shadows."
+msgstr "Az anyag a textúra alfaértékével szabályozza az átlátszóságot. A mélységi előmenetben a 0,99-nél, az árnyékmenetben a 0,1-nél kisebb alfaértékű fragmentumokat eldobja. Az anyag árnyékot is vethet."
+
+#. BaseMaterial3D.TRANSPARENCY_MAX
+#: doc/classes/BaseMaterial3D.xml
+msgid "Represents the size of the [enum Transparency] enum."
+msgstr "A [enum Transparency] felsorolás mérete."
+
+#. BaseMaterial3D.SHADING_MODE_UNSHADED
+#: doc/classes/BaseMaterial3D.xml
+msgid "The object will not receive shadows. This is the fastest to render, but it disables all interactions with lights."
+msgstr "Az objektumra nem vetül árnyék. Ez a leggyorsabb árnyalási mód, és az objektum nem reagál a fényforrásokra."
+
+#. BaseMaterial3D.SHADING_MODE_MAX
+#: doc/classes/BaseMaterial3D.xml
+msgid "Represents the size of the [enum ShadingMode] enum."
+msgstr "A [enum ShadingMode] felsorolás mérete."
+
+#. BaseMaterial3D.FEATURE_MAX
+#. EditorFeatureProfile.FEATURE_MAX
+#: doc/classes/BaseMaterial3D.xml doc/classes/EditorFeatureProfile.xml
+msgid "Represents the size of the [enum Feature] enum."
+msgstr "A [enum Feature] felsorolás mérete."
+
+#. BaseMaterial3D.FLAG_DISABLE_DEPTH_TEST
+#: doc/classes/BaseMaterial3D.xml
+msgid "Disables the depth test, so this object is drawn on top of all others drawn before it. This puts the object in the transparent draw pass where it is sorted based on distance to camera. Objects drawn after it in the draw order may cover it. This also disables writing to depth."
+msgstr "Kikapcsolja a mélységvizsgálatot, így az objektum a korábban kirajzolt objektumok fölé kerül. A renderelő az átlátszó elemek menetében, a kamerától mért távolság szerint rendezi. A később kirajzolt objektumok eltakarhatják. A mélységpufferbe írást is kikapcsolja."
+
+#. BaseMaterial3D.FLAG_BILLBOARD_KEEP_SCALE
+#: doc/classes/BaseMaterial3D.xml
+msgid "Shader will keep the scale set for the mesh. Otherwise the scale is lost when billboarding. Only applies when [member billboard_mode] is [constant BILLBOARD_ENABLED]."
+msgstr "A shader a kamerához igazítás közben is megtartja a háló méretezését. A beállítás nélkül ez a méretezés elvész. Csak akkor érvényes, ha a [member billboard_mode] értéke [constant BILLBOARD_ENABLED]."
+
+#. BaseMaterial3D.FLAG_UV1_USE_TRIPLANAR
+#. BaseMaterial3D.FLAG_UV1_USE_WORLD_TRIPLANAR
+#: doc/classes/BaseMaterial3D.xml
+msgid "Use triplanar texture lookup for all texture lookups that would normally use [code]UV[/code]."
+msgstr "Háromsíkú textúramintavételt használ minden olyan mintavételnél, amely egyébként a [code]UV[/code] koordinátákat használná."
+
+#. BaseMaterial3D.FLAG_UV2_USE_TRIPLANAR
+#. BaseMaterial3D.FLAG_UV2_USE_WORLD_TRIPLANAR
+#: doc/classes/BaseMaterial3D.xml
+msgid "Use triplanar texture lookup for all texture lookups that would normally use [code]UV2[/code]."
+msgstr "Háromsíkú textúramintavételt használ minden olyan mintavételnél, amely egyébként a [code]UV2[/code] koordinátákat használná."
+
+#. BaseMaterial3D.FLAG_AO_ON_UV2
+#: doc/classes/BaseMaterial3D.xml
+msgid "Use [code]UV2[/code] coordinates to look up from the [member ao_texture]."
+msgstr "A [member ao_texture] mintavételezéséhez a [code]UV2[/code] koordinátákat használja."
+
+#. BaseMaterial3D.FLAG_EMISSION_ON_UV2
+#: doc/classes/BaseMaterial3D.xml
+msgid "Use [code]UV2[/code] coordinates to look up from the [member emission_texture]."
+msgstr "A [member emission_texture] mintavételezéséhez a [code]UV2[/code] koordinátákat használja."
+
+#. BaseMaterial3D.FLAG_ALBEDO_TEXTURE_FORCE_SRGB
+#: doc/classes/BaseMaterial3D.xml
+msgid "Forces the shader to convert albedo from nonlinear sRGB encoding to linear encoding. See also [member albedo_texture_force_srgb]."
+msgstr "A shader a nemlineáris sRGB-kódolású albedót lineáris értékekké alakítja. Lásd még az [member albedo_texture_force_srgb] tulajdonságot."
+
+#. BaseMaterial3D.FLAG_SUBSURFACE_MODE_SKIN
+#: doc/classes/BaseMaterial3D.xml
+msgid "Enables the skin mode for subsurface scattering which is used to improve the look of subsurface scattering when used for human skin."
+msgstr "Bekapcsolja a felszín alatti szórás bőrhöz igazított módját, amely emberi bőrön valósághűbb eredményt ad."
+
+#. BaseMaterial3D.FLAG_PARTICLE_TRAILS_MODE
+#: doc/classes/BaseMaterial3D.xml
+msgid "Enables parts of the shader required for [GPUParticles3D] trails to function. This also requires using a mesh with appropriate skinning, such as [RibbonTrailMesh] or [TubeTrailMesh]. Enabling this feature outside of materials used in [GPUParticles3D] meshes will break material rendering."
+msgstr "Bekapcsolja a shader [GPUParticles3D] részecskenyomaihoz szükséges részeit. Ehhez megfelelő csontozású háló, például [RibbonTrailMesh] vagy [TubeTrailMesh] is szükséges. Ha olyan anyagban engedélyezed, amelyet nem [GPUParticles3D] háló használ, az anyag hibásan jelenik meg."
+
+#. BaseMaterial3D.FLAG_MAX
+#: doc/classes/BaseMaterial3D.xml
+msgid "Represents the size of the [enum Flags] enum."
+msgstr "A [enum Flags] felsorolás mérete."
+
+#. BaseMaterial3D.DIFFUSE_TOON
+#: doc/classes/BaseMaterial3D.xml
+msgid "Uses a hard cut for lighting, with smoothing affected by roughness."
+msgstr "Éles határt használ a világos és árnyékos részek között. A határ simasága az érdességtől függ."
+
+#. BaseMaterial3D.STENCIL_MODE_CUSTOM
+#: doc/classes/BaseMaterial3D.xml
+msgid "Enables stencil operations without a preset."
+msgstr "Előbeállítás nélkül engedélyezi a sablonműveleteket."
