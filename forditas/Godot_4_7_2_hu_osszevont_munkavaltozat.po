@@ -60942,3 +60942,403 @@ msgstr "A stílusdoboz háttérszíne."
 #: doc/classes/StyleBoxFlat.xml
 msgid "If [code]true[/code], the border will fade into the background color."
 msgstr "Ha az érték [code]true[/code], a keret színe fokozatosan beleolvad a háttérszínbe."
+
+#: doc/classes/StyleBox.xml
+msgid "Virtual method to be implemented by the user. Returns a custom minimum size that the stylebox must respect when drawing. By default [method get_minimum_size] only takes content margins into account. This method can be overridden to add another size restriction. A combination of the default behavior and the output of this method will be used, to account for both sizes."
+msgstr "A felhasználó által megvalósítható virtuális metódus. Egyéni minimális méretet ad vissza, amelyet a stílusdoboz kirajzolásakor figyelembe kell venni. A [method get_minimum_size] alapértelmezés szerint csak a tartalommargókat veszi figyelembe. A virtuális metódus felülírásával további méretkorlátot adhatsz meg. A végső méret meghatározásakor a motor mindkét korlátot figyelembe veszi."
+
+#: doc/classes/StyleBox.xml
+msgid "Returns the default margin of the specified [enum Side]."
+msgstr "Visszaadja a megadott [enum Side] oldal alapértelmezett margóját."
+
+#: doc/classes/StyleBox.xml
+msgid "Returns the [CanvasItem] that handles its [constant CanvasItem.NOTIFICATION_DRAW] or [method CanvasItem._draw] callback at this moment."
+msgstr "Visszaadja azt a [CanvasItem] elemet, amely éppen a saját [constant CanvasItem.NOTIFICATION_DRAW] értesítését vagy [method CanvasItem._draw] visszahívását kezeli."
+
+#: doc/classes/StyleBox.xml
+msgid "Returns the content margin offset for the specified [enum Side].\nPositive values reduce size inwards, unlike [Control]'s margin values."
+msgstr "Visszaadja a megadott [enum Side] oldal tartalommargójának eltolását.\nA [Control] margóitól eltérően a pozitív értékek befelé csökkentik a rendelkezésre álló méretet."
+
+#: doc/classes/StyleBox.xml
+msgid "Returns the minimum size that this stylebox can be shrunk to."
+msgstr "Visszaadja azt a legkisebb méretet, amelyre a stílusdoboz összenyomható."
+
+#: doc/classes/StyleBox.xml
+msgid "Sets the default value of the specified [enum Side] to [param offset] pixels."
+msgstr "A megadott [enum Side] oldal alapértelmezett margóját [param offset] képpontra állítja."
+
+#: doc/classes/StyleBox.xml
+msgid "Sets the default margin to [param offset] pixels for all sides."
+msgstr "Minden oldalon [param offset] képpontra állítja az alapértelmezett margót."
+
+#: doc/classes/StyleBox.xml
+msgid "Test a position in a rectangle, return whether it passes the mask test."
+msgstr "Ellenőrzi, hogy a téglalaphoz megadott pozíció átmegy-e a maszkellenőrzésen, és visszaadja az eredményt."
+
+#: doc/classes/StyleBoxFlat.xml
+msgid "A customizable [StyleBox] that doesn't use a texture."
+msgstr "Textúra nélkül testre szabható [StyleBox]."
+
+#: doc/classes/StyleBoxFlat.xml
+msgid "By configuring various properties of this style box, you can achieve many common looks without the need of a texture. This includes optionally rounded borders, antialiasing, shadows, and skew.\nSetting corner radius to high values is allowed. As soon as corners overlap, the stylebox will switch to a relative system:\n[codeblock lang=text]\nheight = 30\ncorner_radius_top_left = 50\ncorner_radius_bottom_left = 100\n[/codeblock]\nThe relative system now would take the 1:2 ratio of the two left corners to calculate the actual corner width. Both corners added will [b]never[/b] be more than the height. Result:\n[codeblock lang=text]\ncorner_radius_top_left: 10\ncorner_radius_bottom_left: 20\n[/codeblock]"
+msgstr "A stílusdoboz tulajdonságaival sokféle gyakori megjelenést alakíthatsz ki textúra nélkül. Beállíthatsz például lekerekített keretet, élsimítást, árnyékot és nyírást.\nNagy saroksugár is megadható. Ha a sarkok átfednék egymást, a stílusdoboz arányosan csökkenti a sugarakat.\n[codeblock lang=text]\nheight = 30\ncorner_radius_top_left = 50\ncorner_radius_bottom_left = 100\n[/codeblock]\nEbben a példában a két bal oldali sarok tényleges méretét az 1:2 arány határozza meg. A két sarok méretének összege [b]soha[/b] nem haladja meg a magasságot. Az eredmény a következő.\n[codeblock lang=text]\ncorner_radius_top_left: 10\ncorner_radius_bottom_left: 20\n[/codeblock]"
+
+#: doc/classes/StyleBoxFlat.xml
+msgid "Returns the specified [enum Side]'s border width."
+msgstr "Visszaadja a megadott [enum Side] oldal keretvastagságát."
+
+#: doc/classes/StyleBoxFlat.xml
+msgid "Returns the smallest border width out of all four borders."
+msgstr "Visszaadja a négy oldal közül a legkisebb keretvastagságot."
+
+#: doc/classes/StyleBoxFlat.xml
+msgid "Returns the given [param corner]'s radius."
+msgstr "Visszaadja a megadott [param corner] sarok sugarát."
+
+#: doc/classes/StyleBoxFlat.xml
+msgid "Returns the size of the specified [enum Side]'s expand margin."
+msgstr "Visszaadja a megadott [enum Side] oldal külső margójának méretét."
+
+#: doc/classes/StyleBoxFlat.xml
+msgid "Sets the specified [enum Side]'s border width to [param width] pixels."
+msgstr "A megadott [enum Side] oldal keretvastagságát [param width] képpontra állítja."
+
+#: doc/classes/StyleBoxFlat.xml
+msgid "Sets the border width to [param width] pixels for all sides."
+msgstr "Minden oldalon [param width] képpontra állítja a keret vastagságát."
+
+#: doc/classes/StyleBoxFlat.xml
+msgid "Sets the corner radius to [param radius] pixels for the given [param corner]."
+msgstr "A megadott [param corner] sarok sugarát [param radius] képpontra állítja."
+
+#: doc/classes/StyleBoxFlat.xml
+msgid "Sets the corner radius to [param radius] pixels for all corners."
+msgstr "Minden sarok sugarát [param radius] képpontra állítja."
+
+#: doc/classes/StyleBoxFlat.xml doc/classes/StyleBoxTexture.xml
+msgid "Sets the expand margin to [param size] pixels for the specified [enum Side]."
+msgstr "A megadott [enum Side] oldal külső margóját [param size] képpontra állítja."
+
+#: doc/classes/StyleBoxFlat.xml doc/classes/StyleBoxTexture.xml
+msgid "Sets the expand margin to [param size] pixels for all sides."
+msgstr "Minden oldalon [param size] képpontra állítja a külső margót."
+
+#: doc/classes/StyleBoxFlat.xml
+msgid "Antialiasing draws a small ring around the edges, which fades to transparency. As a result, edges look much smoother. This is only noticeable when using rounded corners or [member skew].\n[b]Note:[/b] When using beveled corners with 45-degree angles ([member corner_detail] = 1), it is recommended to set [member anti_aliasing] to [code]false[/code] to ensure crisp visuals and avoid possible visual glitches."
+msgstr "Az élsimítás az élek köré vékony, fokozatosan átlátszóvá váló sávot rajzol. Ettől az élek simábbnak látszanak. A hatás lekerekített sarkoknál vagy a [member skew] használatakor észrevehető.\n[b]Megjegyzés:[/b] 45 fokban levágott sarkoknál ([member corner_detail] = 1) ajánlott az [member anti_aliasing] értékét [code]false[/code] értékre állítani. Így az élek élesek maradnak, és elkerülhetők az esetleges képhibák."
+
+#: doc/classes/StyleBoxFlat.xml
+msgid "This changes the size of the antialiasing effect. [code]1.0[/code] is recommended for an optimal result at 100% scale, identical to how rounded rectangles are rendered in web browsers and most vector drawing software.\n[b]Note:[/b] Higher values may produce a blur effect but can also create undesired artifacts on small boxes with large-radius corners."
+msgstr "Az élsimítási sáv méretét szabályozza. 100%-os méretezésnél az ajánlott érték [code]1.0[/code]. Ez a böngészőkben és a legtöbb vektoros rajzprogramban használt lekerekített téglalapokhoz hasonló megjelenést ad.\n[b]Megjegyzés:[/b] Nagyobb értékek elmoshatják az éleket, kis méretű, nagy saroksugarú dobozoknál pedig képhibákat okozhatnak."
+
+#: doc/classes/StyleBoxFlat.xml
+msgid "Sets the color of the border."
+msgstr "Beállítja a keret színét."
+
+#: doc/classes/StyleBoxFlat.xml
+msgid "Border width for the bottom border."
+msgstr "Az alsó keret vastagsága."
+
+#: doc/classes/StyleBoxFlat.xml
+msgid "Border width for the left border."
+msgstr "A bal oldali keret vastagsága."
+
+#: doc/classes/StyleBoxFlat.xml
+msgid "Border width for the right border."
+msgstr "A jobb oldali keret vastagsága."
+
+#: doc/classes/StyleBoxFlat.xml
+msgid "Border width for the top border."
+msgstr "A felső keret vastagsága."
+
+#: doc/classes/StyleBoxFlat.xml
+msgid "This sets the number of vertices used for each corner. Higher values result in rounder corners but take more processing power to compute. When choosing a value, you should take the corner radius ([method set_corner_radius_all]) into account.\nFor corner radii less than 10, [code]4[/code] or [code]5[/code] should be enough. For corner radii less than 30, values between [code]8[/code] and [code]12[/code] should be enough.\nA corner detail of [code]1[/code] will result in chamfered corners instead of rounded corners, which is useful for some artistic effects."
+msgstr "A sarkonként használt csúcspontok számát állítja be. Nagyobb értékkel kerekebbek lesznek a sarkok, de több számítást igényelnek. Az érték kiválasztásakor vedd figyelembe a saroksugarat is. Lásd a [method set_corner_radius_all] metódust.\n10 képpont alatti saroksugárhoz általában elég a [code]4[/code] vagy az [code]5[/code]. 30 képpont alatti sugárhoz a [code]8[/code] és [code]12[/code] közötti érték rendszerint elegendő.\nAz [code]1[/code] érték lekerekítés helyett levágott sarkokat eredményez, ami egyes grafikai hatásokhoz jól használható."
+
+#: doc/classes/StyleBoxFlat.xml
+msgid "The bottom-left corner's radius. If [code]0[/code], the corner is not rounded."
+msgstr "A bal alsó sarok sugara. [code]0[/code] értéknél a sarok szögletes marad."
+
+#: doc/classes/StyleBoxFlat.xml
+msgid "The bottom-right corner's radius. If [code]0[/code], the corner is not rounded."
+msgstr "A jobb alsó sarok sugara. [code]0[/code] értéknél a sarok szögletes marad."
+
+#: doc/classes/StyleBoxFlat.xml
+msgid "The top-left corner's radius. If [code]0[/code], the corner is not rounded."
+msgstr "A bal felső sarok sugara. [code]0[/code] értéknél a sarok szögletes marad."
+
+#: doc/classes/StyleBoxFlat.xml
+msgid "The top-right corner's radius. If [code]0[/code], the corner is not rounded."
+msgstr "A jobb felső sarok sugara. [code]0[/code] értéknél a sarok szögletes marad."
+
+#: doc/classes/StyleBoxFlat.xml
+msgid "Toggles drawing of the inner part of the stylebox."
+msgstr "Be- vagy kikapcsolja a stílusdoboz belsejének kirajzolását."
+
+#: doc/classes/StyleBoxFlat.xml
+msgid "Expands the stylebox outside of the control rect on the bottom edge. Useful in combination with [member border_width_bottom] to draw a border outside the control rect.\n[b]Note:[/b] Unlike [member StyleBox.content_margin_bottom], [member expand_margin_bottom] does [i]not[/i] affect the size of the clickable area for [Control]s. This can negatively impact usability if used wrong, as the user may try to click an area of the StyleBox that cannot actually receive clicks."
+msgstr "A vezérlő téglalapjának alsó széle alá terjeszti ki a stílusdobozt. A [member border_width_bottom] tulajdonsággal együtt a vezérlő téglalapján kívülre rajzolható az alsó keret.\n[b]Megjegyzés:[/b] A [member StyleBox.content_margin_bottom] tulajdonságtól eltérően a [member expand_margin_bottom] [i]nem[/i] módosítja a [Control] elemek kattintható területének méretét. Ez ronthatja a használhatóságot, ha a felhasználó a StyleBox olyan részére próbál kattintani, amely nem fogad kattintásokat."
+
+#: doc/classes/StyleBoxFlat.xml
+msgid "Expands the stylebox outside of the control rect on the left edge. Useful in combination with [member border_width_left] to draw a border outside the control rect.\n[b]Note:[/b] Unlike [member StyleBox.content_margin_left], [member expand_margin_left] does [i]not[/i] affect the size of the clickable area for [Control]s. This can negatively impact usability if used wrong, as the user may try to click an area of the StyleBox that cannot actually receive clicks."
+msgstr "A vezérlő téglalapjának bal szélétől balra terjeszti ki a stílusdobozt. A [member border_width_left] tulajdonsággal együtt a vezérlő téglalapján kívülre rajzolható a bal oldali keret.\n[b]Megjegyzés:[/b] A [member StyleBox.content_margin_left] tulajdonságtól eltérően a [member expand_margin_left] [i]nem[/i] módosítja a [Control] elemek kattintható területének méretét. Ez ronthatja a használhatóságot, ha a felhasználó a StyleBox olyan részére próbál kattintani, amely nem fogad kattintásokat."
+
+#: doc/classes/StyleBoxFlat.xml
+msgid "Expands the stylebox outside of the control rect on the right edge. Useful in combination with [member border_width_right] to draw a border outside the control rect.\n[b]Note:[/b] Unlike [member StyleBox.content_margin_right], [member expand_margin_right] does [i]not[/i] affect the size of the clickable area for [Control]s. This can negatively impact usability if used wrong, as the user may try to click an area of the StyleBox that cannot actually receive clicks."
+msgstr "A vezérlő téglalapjának jobb szélén túlra terjeszti ki a stílusdobozt. A [member border_width_right] tulajdonsággal együtt a vezérlő téglalapján kívülre rajzolható a jobb oldali keret.\n[b]Megjegyzés:[/b] A [member StyleBox.content_margin_right] tulajdonságtól eltérően a [member expand_margin_right] [i]nem[/i] módosítja a [Control] elemek kattintható területének méretét. Ez ronthatja a használhatóságot, ha a felhasználó a StyleBox olyan részére próbál kattintani, amely nem fogad kattintásokat."
+
+#: doc/classes/StyleBoxFlat.xml
+msgid "Expands the stylebox outside of the control rect on the top edge. Useful in combination with [member border_width_top] to draw a border outside the control rect.\n[b]Note:[/b] Unlike [member StyleBox.content_margin_top], [member expand_margin_top] does [i]not[/i] affect the size of the clickable area for [Control]s. This can negatively impact usability if used wrong, as the user may try to click an area of the StyleBox that cannot actually receive clicks."
+msgstr "A vezérlő téglalapjának felső széle fölé terjeszti ki a stílusdobozt. A [member border_width_top] tulajdonsággal együtt a vezérlő téglalapján kívülre rajzolható a felső keret.\n[b]Megjegyzés:[/b] A [member StyleBox.content_margin_top] tulajdonságtól eltérően a [member expand_margin_top] [i]nem[/i] módosítja a [Control] elemek kattintható területének méretét. Ez ronthatja a használhatóságot, ha a felhasználó a StyleBox olyan részére próbál kattintani, amely nem fogad kattintásokat."
+
+#: doc/classes/StyleBoxFlat.xml
+msgid "The color of the shadow. This has no effect if [member shadow_size] is lower than 1."
+msgstr "Az árnyék színe. Ha a [member shadow_size] értéke 1 alatti, ennek a beállításnak nincs hatása."
+
+#: doc/classes/StyleBoxFlat.xml
+msgid "The shadow offset in pixels. Adjusts the position of the shadow relatively to the stylebox."
+msgstr "Az árnyék eltolása képpontban. Az árnyék helyzetét a stílusdobozhoz képest állítja be."
+
+#: doc/classes/StyleBoxFlat.xml
+msgid "The shadow size in pixels."
+msgstr "Az árnyék mérete képpontban."
+
+#: doc/classes/StyleBoxFlat.xml
+msgid "If set to a non-zero value on either axis, [member skew] distorts the StyleBox horizontally and/or vertically. This can be used for \"futuristic\"-style UIs. Positive values skew the StyleBox towards the right (X axis) and upwards (Y axis), while negative values skew the StyleBox towards the left (X axis) and downwards (Y axis).\n[b]Note:[/b] To ensure text does not touch the StyleBox's edges, consider increasing the [StyleBox]'s content margin (see [member StyleBox.content_margin_bottom]). It is preferable to increase the content margin instead of the expand margin (see [member expand_margin_bottom]), as increasing the expand margin does not increase the size of the clickable area for [Control]s."
+msgstr "Ha valamelyik tengelyen nem nulla az értéke, a [member skew] vízszintesen, függőlegesen vagy mindkét irányban nyírja a StyleBox alakját. Ezzel például futurisztikus felületi elemeket készíthetsz. Pozitív értéknél a nyírás az X tengelyen jobbra, az Y tengelyen felfelé, negatív értéknél balra, illetve lefelé dől.\n[b]Megjegyzés:[/b] Ha a szöveg hozzáérne a StyleBox széléhez, növeld a [StyleBox] tartalommargóját. Lásd a [member StyleBox.content_margin_bottom] tulajdonságot. Erre a célra célszerű a tartalommargót növelni a külső margó helyett (lásd [member expand_margin_bottom]), mert a külső margó növelése nem tágítja a [Control] elemek kattintható területét."
+
+#: doc/classes/StyleBoxTexture.xml
+msgid "A texture-based nine-patch [StyleBox]."
+msgstr "Textúrát használó, kilencrészes [StyleBox]."
+
+#: doc/classes/StyleBoxTexture.xml
+msgid "A texture-based nine-patch [StyleBox], in a way similar to [NinePatchRect]. This stylebox performs a 3×3 scaling of a texture, where only the center cell is fully stretched. This makes it possible to design bordered styles regardless of the stylebox's size."
+msgstr "Textúrát használó, kilencrészes [StyleBox], a [NinePatchRect] működéséhez hasonlóan. A stílusdoboz 3×3 részre osztja a textúrát, és csak a középső részt nyújtja mindkét irányban. Így olyan keretes stílust készíthetsz, amely bármilyen méretű stílusdobozhoz használható."
+
+#: doc/classes/StyleBoxTexture.xml
+msgid "Returns the expand margin size of the specified [enum Side]."
+msgstr "Visszaadja a megadott [enum Side] oldal külső margójának méretét."
+
+#: doc/classes/StyleBoxTexture.xml
+msgid "Returns the margin size of the specified [enum Side]."
+msgstr "Visszaadja a megadott [enum Side] oldal textúramargójának méretét."
+
+#: doc/classes/StyleBoxTexture.xml
+msgid "Sets the margin to [param size] pixels for the specified [enum Side]."
+msgstr "A megadott [enum Side] oldal textúramargóját [param size] képpontra állítja."
+
+#: doc/classes/StyleBoxTexture.xml
+msgid "Sets the margin to [param size] pixels for all sides."
+msgstr "Minden oldalon [param size] képpontra állítja a textúramargót."
+
+#: doc/classes/StyleBoxTexture.xml
+msgid "Controls how the stylebox's texture will be stretched or tiled horizontally."
+msgstr "Meghatározza, hogyan nyúlik vagy ismétlődik vízszintesen a stílusdoboz textúrája."
+
+#: doc/classes/StyleBoxTexture.xml
+msgid "Controls how the stylebox's texture will be stretched or tiled vertically."
+msgstr "Meghatározza, hogyan nyúlik vagy ismétlődik függőlegesen a stílusdoboz textúrája."
+
+#: doc/classes/StyleBoxTexture.xml
+msgid "If [code]true[/code], the nine-patch texture's center tile will be drawn."
+msgstr "Ha az érték [code]true[/code], a kilencrészes textúra középső része is megjelenik."
+
+#: doc/classes/StyleBoxTexture.xml
+msgid "Expands the bottom margin of this style box when drawing, causing it to be drawn larger than requested."
+msgstr "Kirajzoláskor megnöveli a stílusdoboz alsó margóját, így a doboz a kért méretnél nagyobb területet foglal el."
+
+#: doc/classes/StyleBoxTexture.xml
+msgid "Expands the left margin of this style box when drawing, causing it to be drawn larger than requested."
+msgstr "Kirajzoláskor megnöveli a stílusdoboz bal oldali margóját, így a doboz a kért méretnél nagyobb területet foglal el."
+
+#: doc/classes/StyleBoxTexture.xml
+msgid "Expands the right margin of this style box when drawing, causing it to be drawn larger than requested."
+msgstr "Kirajzoláskor megnöveli a stílusdoboz jobb oldali margóját, így a doboz a kért méretnél nagyobb területet foglal el."
+
+#: doc/classes/StyleBoxTexture.xml
+msgid "Expands the top margin of this style box when drawing, causing it to be drawn larger than requested."
+msgstr "Kirajzoláskor megnöveli a stílusdoboz felső margóját, így a doboz a kért méretnél nagyobb területet foglal el."
+
+#: doc/classes/StyleBoxTexture.xml
+msgid "Modulates the color of the texture when this style box is drawn."
+msgstr "A stílusdoboz kirajzolásakor módosítja a textúra színét."
+
+#: doc/classes/StyleBoxTexture.xml
+msgid "The region to use from the [member texture].\nThis is equivalent to first wrapping the [member texture] in an [AtlasTexture] with the same region.\nIf empty ([code]Rect2(0, 0, 0, 0)[/code]), the whole [member texture] is used."
+msgstr "A [member texture] felhasználandó területe.\nUgyanazt az eredményt adja, mintha a [member texture] textúrából ugyanazt a területet választanád ki egy [AtlasTexture] erőforrással.\nÜres terület ([code]Rect2(0, 0, 0, 0)[/code]) esetén a teljes [member texture] használatban van."
+
+#: doc/classes/StyleBoxTexture.xml
+msgid "The texture to use when drawing this style box."
+msgstr "A stílusdoboz kirajzolásához használt textúra."
+
+#: doc/classes/StyleBoxTexture.xml
+msgid "Increases the bottom margin of the 3×3 texture box.\nA higher value means more of the source texture is considered to be part of the bottom border of the 3×3 box.\nThis is also the value used as fallback for [member StyleBox.content_margin_bottom] if it is negative."
+msgstr "Megnöveli a 3×3 részre osztott textúra alsó margóját.\nNagyobb értéknél a forrástextúra nagyobb része kerül az alsó keretbe.\nHa a [member StyleBox.content_margin_bottom] negatív, a motor helyette ezt az értéket használja."
+
+#: doc/classes/StyleBoxTexture.xml
+msgid "Increases the left margin of the 3×3 texture box.\nA higher value means more of the source texture is considered to be part of the left border of the 3×3 box.\nThis is also the value used as fallback for [member StyleBox.content_margin_left] if it is negative."
+msgstr "Megnöveli a 3×3 részre osztott textúra bal oldali margóját.\nNagyobb értéknél a forrástextúra nagyobb része kerül a bal oldali keretbe.\nHa a [member StyleBox.content_margin_left] negatív, a motor helyette ezt az értéket használja."
+
+#: doc/classes/StyleBoxTexture.xml
+msgid "Increases the right margin of the 3×3 texture box.\nA higher value means more of the source texture is considered to be part of the right border of the 3×3 box.\nThis is also the value used as fallback for [member StyleBox.content_margin_right] if it is negative."
+msgstr "Megnöveli a 3×3 részre osztott textúra jobb oldali margóját.\nNagyobb értéknél a forrástextúra nagyobb része kerül a jobb oldali keretbe.\nHa a [member StyleBox.content_margin_right] negatív, a motor helyette ezt az értéket használja."
+
+#: doc/classes/StyleBoxTexture.xml
+msgid "Increases the top margin of the 3×3 texture box.\nA higher value means more of the source texture is considered to be part of the top border of the 3×3 box.\nThis is also the value used as fallback for [member StyleBox.content_margin_top] if it is negative."
+msgstr "Megnöveli a 3×3 részre osztott textúra felső margóját.\nNagyobb értéknél a forrástextúra nagyobb része kerül a felső keretbe.\nHa a [member StyleBox.content_margin_top] negatív, a motor helyette ezt az értéket használja."
+
+#: doc/classes/StyleBoxTexture.xml
+msgid "Stretch the stylebox's texture. This results in visible distortion unless the texture size matches the stylebox's size perfectly."
+msgstr "A stílusdoboz méretére nyújtja a textúrát. Ha a textúra és a stílusdoboz mérete eltér, a nyújtás látható torzulást okoz."
+
+#: doc/classes/StyleBoxTexture.xml
+msgid "Repeats the stylebox's texture to match the stylebox's size according to the nine-patch system."
+msgstr "A kilencrészes elrendezés szerint ismétli a stílusdoboz textúráját, hogy kitöltse a rendelkezésre álló helyet."
+
+#: doc/classes/StyleBoxTexture.xml
+msgid "Repeats the stylebox's texture to match the stylebox's size according to the nine-patch system. Unlike [constant AXIS_STRETCH_MODE_TILE], the texture may be slightly stretched to make the nine-patch texture tile seamlessly."
+msgstr "A kilencrészes elrendezés szerint ismétli a stílusdoboz textúráját, hogy kitöltse a rendelkezésre álló helyet. A [constant AXIS_STRETCH_MODE_TILE] módtól eltérően kissé meg is nyújthatja a textúrát, hogy az ismétlődés folytonos legyen."
+
+#: doc/classes/NinePatchRect.xml
+msgid "Emitted when the node's texture changes."
+msgstr "Akkor bocsátja ki, amikor megváltozik a csomópont textúrája."
+
+#: doc/classes/NinePatchRect.xml
+msgid "Stretches the center texture across the NinePatchRect. This may cause the texture to be distorted."
+msgstr "A NinePatchRect teljes középső területére nyújtja a középső textúrarészt. Ettől a textúra torzulhat."
+
+#: doc/classes/NinePatchRect.xml
+msgid "Repeats the center texture across the NinePatchRect. This won't cause any visible distortion. The texture must be seamless for this to work without displaying artifacts between edges."
+msgstr "A NinePatchRect középső területén torzítás nélkül ismétli a középső textúrarészt. Az ismétlődő részek szélein csak akkor kerülhetők el a képhibák, ha a textúra varratmentes."
+
+#: doc/classes/NinePatchRect.xml
+msgid "Repeats the center texture across the NinePatchRect, but will also stretch the texture to make sure each tile is visible in full. This may cause the texture to be distorted, but less than [constant AXIS_STRETCH_MODE_STRETCH]. The texture must be seamless for this to work without displaying artifacts between edges."
+msgstr "A NinePatchRect középső területén ismétli a középső textúrarészt, és úgy nyújtja, hogy minden ismétlődés teljes egészében látható legyen. Ez torzíthatja a textúrát, de kevésbé, mint a [constant AXIS_STRETCH_MODE_STRETCH] mód. Az ismétlődő részek szélein csak akkor kerülhetők el a képhibák, ha a textúra varratmentes."
+
+#: doc/classes/Control.xml
+msgid "Creates a local override for a theme [Color] with the specified [param name]. Local overrides always take precedence when fetching theme items for the control. An override can be removed with [method remove_theme_color_override].\nSee also [method get_theme_color].\n[b]Example:[/b] Override a [Label]'s color and reset it later:\n[codeblocks]\n[gdscript]\n# Given the child Label node \"MyLabel\", override its font color with a custom value.\n$MyLabel.add_theme_color_override(\"font_color\", Color(1, 0.5, 0))\n# Reset the font color of the child label.\n$MyLabel.remove_theme_color_override(\"font_color\")\n# Alternatively it can be overridden with the default value from the Label type.\n$MyLabel.add_theme_color_override(\"font_color\", get_theme_color(\"font_color\", \"Label\"))\n[/gdscript]\n[csharp]\n// Given the child Label node \"MyLabel\", override its font color with a custom value.\nGetNode<Label>(\"MyLabel\").AddThemeColorOverride(\"font_color\", new Color(1, 0.5f, 0));\n// Reset the font color of the child label.\nGetNode<Label>(\"MyLabel\").RemoveThemeColorOverride(\"font_color\");\n// Alternatively it can be overridden with the default value from the Label type.\nGetNode<Label>(\"MyLabel\").AddThemeColorOverride(\"font_color\", GetThemeColor(\"font_color\", \"Label\"));\n[/csharp]\n[/codeblocks]"
+msgstr "Helyben felülbírálja a téma megadott [param name] nevű [Color] elemét. A vezérlő témaelemeinek lekérésekor a helyi felülbírálás mindig elsőbbséget élvez. A felülbírálás a [method remove_theme_color_override] metódussal távolítható el.\nLásd még a [method get_theme_color] metódust.\n[b]Példa:[/b] Egy [Label] színének felülbírálása, majd visszaállítása.\n[codeblocks]\n[gdscript]\n# Given the child Label node \"MyLabel\", override its font color with a custom value.\n$MyLabel.add_theme_color_override(\"font_color\", Color(1, 0.5, 0))\n# Reset the font color of the child label.\n$MyLabel.remove_theme_color_override(\"font_color\")\n# Alternatively it can be overridden with the default value from the Label type.\n$MyLabel.add_theme_color_override(\"font_color\", get_theme_color(\"font_color\", \"Label\"))\n[/gdscript]\n[csharp]\n// Given the child Label node \"MyLabel\", override its font color with a custom value.\nGetNode<Label>(\"MyLabel\").AddThemeColorOverride(\"font_color\", new Color(1, 0.5f, 0));\n// Reset the font color of the child label.\nGetNode<Label>(\"MyLabel\").RemoveThemeColorOverride(\"font_color\");\n// Alternatively it can be overridden with the default value from the Label type.\nGetNode<Label>(\"MyLabel\").AddThemeColorOverride(\"font_color\", GetThemeColor(\"font_color\", \"Label\"));\n[/csharp]\n[/codeblocks]"
+
+#: doc/classes/Control.xml
+msgid "Creates a local override for a theme constant with the specified [param name]. Local overrides always take precedence when fetching theme items for the control. An override can be removed with [method remove_theme_constant_override].\nSee also [method get_theme_constant]."
+msgstr "Helyben felülbírálja a téma megadott [param name] nevű konstansát. A vezérlő témaelemeinek lekérésekor a helyi felülbírálás mindig elsőbbséget élvez. A felülbírálás a [method remove_theme_constant_override] metódussal távolítható el.\nLásd még a [method get_theme_constant] metódust."
+
+#: doc/classes/Control.xml
+msgid "Creates a local override for a theme [Font] with the specified [param name]. Local overrides always take precedence when fetching theme items for the control. An override can be removed with [method remove_theme_font_override].\nSee also [method get_theme_font]."
+msgstr "Helyben felülbírálja a téma megadott [param name] nevű [Font] elemét. A vezérlő témaelemeinek lekérésekor a helyi felülbírálás mindig elsőbbséget élvez. A felülbírálás a [method remove_theme_font_override] metódussal távolítható el.\nLásd még a [method get_theme_font] metódust."
+
+#: doc/classes/Control.xml
+msgid "Creates a local override for a theme font size with the specified [param name]. Local overrides always take precedence when fetching theme items for the control. An override can be removed with [method remove_theme_font_size_override].\nSee also [method get_theme_font_size]."
+msgstr "Helyben felülbírálja a téma megadott [param name] nevű betűméretét. A vezérlő témaelemeinek lekérésekor a helyi felülbírálás mindig elsőbbséget élvez. A felülbírálás a [method remove_theme_font_size_override] metódussal távolítható el.\nLásd még a [method get_theme_font_size] metódust."
+
+#: doc/classes/Control.xml
+msgid "Creates a local override for a theme icon with the specified [param name]. Local overrides always take precedence when fetching theme items for the control. An override can be removed with [method remove_theme_icon_override].\nSee also [method get_theme_icon]."
+msgstr "Helyben felülbírálja a téma megadott [param name] nevű ikonját. A vezérlő témaelemeinek lekérésekor a helyi felülbírálás mindig elsőbbséget élvez. A felülbírálás a [method remove_theme_icon_override] metódussal távolítható el.\nLásd még a [method get_theme_icon] metódust."
+
+#: doc/classes/Control.xml
+msgid "Creates a local override for a theme [StyleBox] with the specified [param name]. Local overrides always take precedence when fetching theme items for the control. An override can be removed with [method remove_theme_stylebox_override].\nSee also [method get_theme_stylebox].\n[b]Example:[/b] Modify a property in a [StyleBox] by duplicating it:\n[codeblocks]\n[gdscript]\n# The snippet below assumes the child node \"MyButton\" has a StyleBoxFlat assigned.\n# Resources are shared across instances, so we need to duplicate it\n# to avoid modifying the appearance of all other buttons.\nvar new_stylebox_normal = $MyButton.get_theme_stylebox(\"normal\").duplicate()\nnew_stylebox_normal.border_width_top = 3\nnew_stylebox_normal.border_color = Color(0, 1, 0.5)\n$MyButton.add_theme_stylebox_override(\"normal\", new_stylebox_normal)\n# Remove the stylebox override.\n$MyButton.remove_theme_stylebox_override(\"normal\")\n[/gdscript]\n[csharp]\n// The snippet below assumes the child node \"MyButton\" has a StyleBoxFlat assigned.\n// Resources are shared across instances, so we need to duplicate it\n// to avoid modifying the appearance of all other buttons.\nStyleBoxFlat newStyleboxNormal = GetNode<Button>(\"MyButton\").GetThemeStylebox(\"normal\").Duplicate() as StyleBoxFlat;\nnewStyleboxNormal.BorderWidthTop = 3;\nnewStyleboxNormal.BorderColor = new Color(0, 1, 0.5f);\nGetNode<Button>(\"MyButton\").AddThemeStyleboxOverride(\"normal\", newStyleboxNormal);\n// Remove the stylebox override.\nGetNode<Button>(\"MyButton\").RemoveThemeStyleboxOverride(\"normal\");\n[/csharp]\n[/codeblocks]"
+msgstr "Helyben felülbírálja a téma megadott [param name] nevű [StyleBox] elemét. A vezérlő témaelemeinek lekérésekor a helyi felülbírálás mindig elsőbbséget élvez. A felülbírálás a [method remove_theme_stylebox_override] metódussal távolítható el.\nLásd még a [method get_theme_stylebox] metódust.\n[b]Példa:[/b] Egy [StyleBox] tulajdonságának módosítása az erőforrás másolatán.\n[codeblocks]\n[gdscript]\n# The snippet below assumes the child node \"MyButton\" has a StyleBoxFlat assigned.\n# Resources are shared across instances, so we need to duplicate it\n# to avoid modifying the appearance of all other buttons.\nvar new_stylebox_normal = $MyButton.get_theme_stylebox(\"normal\").duplicate()\nnew_stylebox_normal.border_width_top = 3\nnew_stylebox_normal.border_color = Color(0, 1, 0.5)\n$MyButton.add_theme_stylebox_override(\"normal\", new_stylebox_normal)\n# Remove the stylebox override.\n$MyButton.remove_theme_stylebox_override(\"normal\")\n[/gdscript]\n[csharp]\n// The snippet below assumes the child node \"MyButton\" has a StyleBoxFlat assigned.\n// Resources are shared across instances, so we need to duplicate it\n// to avoid modifying the appearance of all other buttons.\nStyleBoxFlat newStyleboxNormal = GetNode<Button>(\"MyButton\").GetThemeStylebox(\"normal\").Duplicate() as StyleBoxFlat;\nnewStyleboxNormal.BorderWidthTop = 3;\nnewStyleboxNormal.BorderColor = new Color(0, 1, 0.5f);\nGetNode<Button>(\"MyButton\").AddThemeStyleboxOverride(\"normal\", newStyleboxNormal);\n// Remove the stylebox override.\nGetNode<Button>(\"MyButton\").RemoveThemeStyleboxOverride(\"normal\");\n[/csharp]\n[/codeblocks]"
+
+#: doc/classes/Control.xml
+msgid "Prevents [code]*_theme_*_override[/code] methods from emitting [constant NOTIFICATION_THEME_CHANGED] until [method end_bulk_theme_override] is called."
+msgstr "Felfüggeszti a [code]*_theme_*_override[/code] metódusok által küldött [constant NOTIFICATION_THEME_CHANGED] értesítéseket a [method end_bulk_theme_override] meghívásáig."
+
+#: doc/classes/Control.xml
+msgid "Ends a bulk theme override update. See [method begin_bulk_theme_override]."
+msgstr "Lezárja a témafelülbírálások csoportos frissítését. Lásd a [method begin_bulk_theme_override] metódust."
+
+#: doc/classes/Control.xml
+msgid "Returns a [Color] from the first matching [Theme] in the tree if that [Theme] has a color item with the specified [param name] and [param theme_type]. If [param theme_type] is omitted the class name of the current control is used as the type, or [member theme_type_variation] if it is defined. If the type is a class name its parent classes are also checked, in order of inheritance. If the type is a variation its base types are checked, in order of dependency, then the control's class name and its parent classes are checked.\nFor the current control its local overrides are considered first (see [method add_theme_color_override]), then its assigned [member theme]. After the current control, each parent control and its assigned [member theme] are considered; controls without a [member theme] assigned are skipped. If no matching [Theme] is found in the tree, the custom project [Theme] (see [member ProjectSettings.gui/theme/custom]) and the default [Theme] are used (see [ThemeDB]).\n[codeblocks]\n[gdscript]\nfunc _ready():\n\t# Get the font color defined for the current Control's class, if it exists.\n\tmodulate = get_theme_color(\"font_color\")\n\t# Get the font color defined for the Button class.\n\tmodulate = get_theme_color(\"font_color\", \"Button\")\n[/gdscript]\n[csharp]\npublic override void _Ready()\n{\n\t// Get the font color defined for the current Control's class, if it exists.\n\tModulate = GetThemeColor(\"font_color\");\n\t// Get the font color defined for the Button class.\n\tModulate = GetThemeColor(\"font_color\", \"Button\");\n}\n[/csharp]\n[/codeblocks]"
+msgstr "Az első megfelelő [Theme] erőforrásból adja vissza a megadott [param name] és [param theme_type] szerinti [Color] elemet, ha a [Theme] tartalmazza. A [param theme_type] elhagyásakor az aktuális vezérlő osztályneve a típus, illetve a [member theme_type_variation], ha meg van adva. Ha a típus osztálynév, a keresés az ősosztályokat is ellenőrzi az öröklés sorrendjében. Ha a típus egy változat, előbb a változat alaptípusait ellenőrzi a függőségi sorrend szerint, majd a vezérlő osztályát és az ősosztályait.\nA keresés az aktuális vezérlő helyi felülbírálásaival kezdődik (lásd a [method add_theme_color_override] metódust), majd a hozzá rendelt [member theme] következik. Ezután a keresés a szülő vezérlőkön halad a gyökér felé, és mindegyiknél ellenőrzi a hozzá rendelt [member theme] értékét. A [member theme] nélküli vezérlőket kihagyja. Ha a fában egyetlen [Theme] sem felel meg, a projekt egyéni [Theme] erőforrásában (lásd a [member ProjectSettings.gui/theme/custom] beállítást), majd az alapértelmezett [Theme] erőforrásban keres. Lásd a [ThemeDB] osztályt.\n[codeblocks]\n[gdscript]\nfunc _ready():\n\t# Get the font color defined for the current Control's class, if it exists.\n\tmodulate = get_theme_color(\"font_color\")\n\t# Get the font color defined for the Button class.\n\tmodulate = get_theme_color(\"font_color\", \"Button\")\n[/gdscript]\n[csharp]\npublic override void _Ready()\n{\n\t// Get the font color defined for the current Control's class, if it exists.\n\tModulate = GetThemeColor(\"font_color\");\n\t// Get the font color defined for the Button class.\n\tModulate = GetThemeColor(\"font_color\", \"Button\");\n}\n[/csharp]\n[/codeblocks]"
+
+#: doc/classes/Control.xml
+msgid "Returns a constant from the first matching [Theme] in the tree if that [Theme] has a constant item with the specified [param name] and [param theme_type].\nSee [method get_theme_color] for details."
+msgstr "Az első megfelelő [Theme] erőforrásból adja vissza a megadott [param name] és [param theme_type] szerinti konstanst, ha a [Theme] tartalmazza.\nA keresés részleteit lásd a [method get_theme_color] metódusnál."
+
+#: doc/classes/Control.xml
+msgid "Returns the default base scale value from the first matching [Theme] in the tree if that [Theme] has a valid [member Theme.default_base_scale] value.\nSee [method get_theme_color] for details."
+msgstr "A fában talált első megfelelő [Theme] erőforrásból adja vissza az alapértelmezett méretezési szorzót, ha az adott [Theme] érvényes [member Theme.default_base_scale] értéket tartalmaz.\nA keresés részleteit lásd a [method get_theme_color] metódusnál."
+
+#: doc/classes/Control.xml
+msgid "Returns the default font from the first matching [Theme] in the tree if that [Theme] has a valid [member Theme.default_font] value.\nSee [method get_theme_color] for details."
+msgstr "A fában talált első megfelelő [Theme] erőforrásból adja vissza az alapértelmezett betűtípust, ha az adott [Theme] érvényes [member Theme.default_font] értéket tartalmaz.\nA keresés részleteit lásd a [method get_theme_color] metódusnál."
+
+#: doc/classes/Control.xml
+msgid "Returns the default font size value from the first matching [Theme] in the tree if that [Theme] has a valid [member Theme.default_font_size] value.\nSee [method get_theme_color] for details."
+msgstr "A fában talált első megfelelő [Theme] erőforrásból adja vissza az alapértelmezett betűméretet, ha az adott [Theme] érvényes [member Theme.default_font_size] értéket tartalmaz.\nA keresés részleteit lásd a [method get_theme_color] metódusnál."
+
+#: doc/classes/Control.xml
+msgid "Returns a [Font] from the first matching [Theme] in the tree if that [Theme] has a font item with the specified [param name] and [param theme_type].\nSee [method get_theme_color] for details."
+msgstr "Az első megfelelő [Theme] erőforrásból adja vissza a megadott [param name] és [param theme_type] szerinti [Font] elemet, ha a [Theme] tartalmazza.\nA keresés részleteit lásd a [method get_theme_color] metódusnál."
+
+#: doc/classes/Control.xml
+msgid "Returns a font size from the first matching [Theme] in the tree if that [Theme] has a font size item with the specified [param name] and [param theme_type].\nSee [method get_theme_color] for details."
+msgstr "Az első megfelelő [Theme] erőforrásból adja vissza a megadott [param name] és [param theme_type] szerinti betűméretet, ha a [Theme] tartalmazza.\nA keresés részleteit lásd a [method get_theme_color] metódusnál."
+
+#: doc/classes/Control.xml
+msgid "Returns an icon from the first matching [Theme] in the tree if that [Theme] has an icon item with the specified [param name] and [param theme_type].\nSee [method get_theme_color] for details."
+msgstr "Az első megfelelő [Theme] erőforrásból adja vissza a megadott [param name] és [param theme_type] szerinti ikont, ha a [Theme] tartalmazza.\nA keresés részleteit lásd a [method get_theme_color] metódusnál."
+
+#: doc/classes/Control.xml
+msgid "Returns a [StyleBox] from the first matching [Theme] in the tree if that [Theme] has a stylebox item with the specified [param name] and [param theme_type].\nSee [method get_theme_color] for details."
+msgstr "Az első megfelelő [Theme] erőforrásból adja vissza a megadott [param name] és [param theme_type] szerinti [StyleBox] elemet, ha a [Theme] tartalmazza.\nA keresés részleteit lásd a [method get_theme_color] metódusnál."
+
+#: doc/classes/Control.xml
+msgid "Returns [code]true[/code] if there is a matching [Theme] in the tree that has a color item with the specified [param name] and [param theme_type].\nSee [method get_theme_color] for details."
+msgstr "[code]true[/code] értéket ad vissza, ha van a fában olyan [Theme], amely tartalmazza a megadott [param name] és [param theme_type] szerinti színt.\nA keresés részleteit lásd a [method get_theme_color] metódusnál."
+
+#: doc/classes/Control.xml
+msgid "Returns [code]true[/code] if there is a local override for a theme [Color] with the specified [param name] in this [Control] node.\nSee [method add_theme_color_override]."
+msgstr "[code]true[/code] értéket ad vissza, ha ez a [Control] csomópont helyben felülbírálja a téma megadott [param name] nevű [Color] elemét.\nLásd az [method add_theme_color_override] metódust."
+
+#: doc/classes/Control.xml
+msgid "Returns [code]true[/code] if there is a matching [Theme] in the tree that has a constant item with the specified [param name] and [param theme_type].\nSee [method get_theme_color] for details."
+msgstr "[code]true[/code] értéket ad vissza, ha van a fában olyan [Theme], amely tartalmazza a megadott [param name] és [param theme_type] szerinti konstanst.\nA keresés részleteit lásd a [method get_theme_color] metódusnál."
+
+#: doc/classes/Control.xml
+msgid "Returns [code]true[/code] if there is a local override for a theme constant with the specified [param name] in this [Control] node.\nSee [method add_theme_constant_override]."
+msgstr "[code]true[/code] értéket ad vissza, ha ez a [Control] csomópont helyben felülbírálja a téma megadott [param name] nevű konstansát.\nLásd az [method add_theme_constant_override] metódust."
+
+#: doc/classes/Control.xml
+msgid "Returns [code]true[/code] if there is a matching [Theme] in the tree that has a font item with the specified [param name] and [param theme_type].\nSee [method get_theme_color] for details."
+msgstr "[code]true[/code] értéket ad vissza, ha van a fában olyan [Theme], amely tartalmazza a megadott [param name] és [param theme_type] szerinti betűtípust.\nA keresés részleteit lásd a [method get_theme_color] metódusnál."
+
+#: doc/classes/Control.xml
+msgid "Returns [code]true[/code] if there is a local override for a theme [Font] with the specified [param name] in this [Control] node.\nSee [method add_theme_font_override]."
+msgstr "[code]true[/code] értéket ad vissza, ha ez a [Control] csomópont helyben felülbírálja a téma megadott [param name] nevű [Font] elemét.\nLásd az [method add_theme_font_override] metódust."
+
+#: doc/classes/Control.xml
+msgid "Returns [code]true[/code] if there is a matching [Theme] in the tree that has a font size item with the specified [param name] and [param theme_type].\nSee [method get_theme_color] for details."
+msgstr "[code]true[/code] értéket ad vissza, ha van a fában olyan [Theme], amely tartalmazza a megadott [param name] és [param theme_type] szerinti betűméretet.\nA keresés részleteit lásd a [method get_theme_color] metódusnál."
+
+#: doc/classes/Control.xml
+msgid "Returns [code]true[/code] if there is a local override for a theme font size with the specified [param name] in this [Control] node.\nSee [method add_theme_font_size_override]."
+msgstr "[code]true[/code] értéket ad vissza, ha ez a [Control] csomópont helyben felülbírálja a téma megadott [param name] nevű betűméretét.\nLásd az [method add_theme_font_size_override] metódust."
+
+#: doc/classes/Control.xml
+msgid "Returns [code]true[/code] if there is a matching [Theme] in the tree that has an icon item with the specified [param name] and [param theme_type].\nSee [method get_theme_color] for details."
+msgstr "[code]true[/code] értéket ad vissza, ha van a fában olyan [Theme], amely tartalmazza a megadott [param name] és [param theme_type] szerinti ikont.\nA keresés részleteit lásd a [method get_theme_color] metódusnál."
+
+#: doc/classes/Control.xml
+msgid "Returns [code]true[/code] if there is a local override for a theme icon with the specified [param name] in this [Control] node.\nSee [method add_theme_icon_override]."
+msgstr "[code]true[/code] értéket ad vissza, ha ez a [Control] csomópont helyben felülbírálja a téma megadott [param name] nevű ikonját.\nLásd az [method add_theme_icon_override] metódust."
+
+#: doc/classes/Control.xml
+msgid "Returns [code]true[/code] if there is a matching [Theme] in the tree that has a stylebox item with the specified [param name] and [param theme_type].\nSee [method get_theme_color] for details."
+msgstr "[code]true[/code] értéket ad vissza, ha van a fában olyan [Theme], amely tartalmazza a megadott [param name] és [param theme_type] szerinti stílusdobozt.\nA keresés részleteit lásd a [method get_theme_color] metódusnál."
+
+#: doc/classes/Control.xml
+msgid "Returns [code]true[/code] if there is a local override for a theme [StyleBox] with the specified [param name] in this [Control] node.\nSee [method add_theme_stylebox_override]."
+msgstr "[code]true[/code] értéket ad vissza, ha ez a [Control] csomópont helyben felülbírálja a téma megadott [param name] nevű [StyleBox] elemét.\nLásd az [method add_theme_stylebox_override] metódust."
+
+#: doc/classes/Control.xml
+msgid "Removes a local override for a theme [Color] with the specified [param name] previously added by [method add_theme_color_override] or via the Inspector dock."
+msgstr "Eltávolítja a téma megadott [param name] nevű [Color] elemének helyi felülbírálását, amelyet korábban az [method add_theme_color_override] metódussal vagy az Inspector panelen állítottál be."
+
+#: doc/classes/Control.xml
+msgid "Removes a local override for a theme constant with the specified [param name] previously added by [method add_theme_constant_override] or via the Inspector dock."
+msgstr "Eltávolítja a téma megadott [param name] nevű konstansának helyi felülbírálását, amelyet korábban az [method add_theme_constant_override] metódussal vagy az Inspector panelen állítottál be."
+
+#: doc/classes/Control.xml
+msgid "Removes a local override for a theme [Font] with the specified [param name] previously added by [method add_theme_font_override] or via the Inspector dock."
+msgstr "Eltávolítja a téma megadott [param name] nevű [Font] elemének helyi felülbírálását, amelyet korábban az [method add_theme_font_override] metódussal vagy az Inspector panelen állítottál be."
