@@ -59538,3 +59538,507 @@ msgstr "Ha az érték [code]true[/code], a főablak kis méretre állító gombj
 #: doc/classes/ProjectSettings.xml
 msgid "Main window mode. See [enum DisplayServer.WindowMode] for possible values and how each mode behaves.\n[b]Note:[/b] Game embedding is available only in the \"Windowed\" mode."
 msgstr "A főablak megjelenítési módja. Az elérhető módokat és viselkedésüket a [enum DisplayServer.WindowMode] ismerteti.\n[b]Megjegyzés:[/b] A játék beágyazása csak ablakos módban érhető el."
+
+#. CanvasItem.show
+#: doc/classes/CanvasItem.xml
+msgid "Show the [CanvasItem] if it's currently hidden. This is equivalent to setting [member visible] to [code]true[/code].\n[b]Note:[/b] For controls that inherit [Popup], the correct way to make them visible is to call one of the multiple [code]popup*()[/code] functions instead."
+msgstr "Megjeleníti a [CanvasItem] elemet, ha az éppen rejtve van. Ugyanazt eredményezi, mint a [member visible] beállítása [code]true[/code] értékre.\n[b]Megjegyzés:[/b] A [Popup] osztályból származó vezérlők megjelenítéséhez a [code]popup*()[/code] metódusok valamelyikét használd."
+
+#. CanvasItem.self_modulate
+#: doc/classes/CanvasItem.xml
+msgid "The color applied to this [CanvasItem]. This property does [b]not[/b] affect child [CanvasItem]s, unlike [member modulate] which affects both the node itself and its children.\n[b]Note:[/b] Internal children are also not affected by this property (see the [code]include_internal[/code] parameter in [method Node.add_child]). For built-in nodes this includes sliders in [ColorPicker], and the tab bar in [TabContainer]."
+msgstr "A [CanvasItem] saját színe. Ez a tulajdonság a [CanvasItem] gyerekeire [b]nem hat[/b]. A [member modulate] a csomópontot és annak gyerekeit is színezi.\n[b]Megjegyzés:[/b] A belső gyerekcsomópontokra ez a tulajdonság szintén nem hat. Lásd a [method Node.add_child] metódus [code]include_internal[/code] paraméterét. A beépített csomópontoknál ilyenek például a [ColorPicker] csúszkái és a [TabContainer] fülsávja."
+
+#. CanvasItem.visible
+#: doc/classes/CanvasItem.xml
+msgid "If [code]true[/code], this [CanvasItem] may be drawn. Whether this [CanvasItem] is actually drawn depends on the visibility of all of its [CanvasItem] ancestors. In other words: this [CanvasItem] will be drawn when [method is_visible_in_tree] returns [code]true[/code] and all [CanvasItem] ancestors share at least one [member visibility_layer] with this [CanvasItem].\n[b]Note:[/b] For controls that inherit [Popup], the correct way to make them visible is to call one of the multiple [code]popup*()[/code] functions instead."
+msgstr "Ha az érték [code]true[/code], a [CanvasItem] kirajzolható. A [CanvasItem] tényleges megjelenése az összes [CanvasItem] ős láthatóságától függ. A motor akkor rajzolja ki a [CanvasItem] csomópontot, ha az [method is_visible_in_tree] értéke [code]true[/code], és minden [CanvasItem] őse legalább egy közös [member visibility_layer] rétegen van ezzel a [CanvasItem] elemmel.\n[b]Megjegyzés:[/b] A [Popup] osztályból származó vezérlők megjelenítéséhez a [code]popup*()[/code] metódusok valamelyikét használd."
+
+#. RenderingServer.VIEWPORT_DEBUG_DRAW_VOXEL_GI_ALBEDO
+#. Viewport.DEBUG_DRAW_VOXEL_GI_ALBEDO
+#: doc/classes/RenderingServer.xml doc/classes/Viewport.xml
+msgid "Objects are displayed with only the albedo value from [VoxelGI]s. Requires at least one visible [VoxelGI] node that has been baked to have a visible effect.\n[b]Note:[/b] Only supported when using the Forward+ rendering method."
+msgstr "Az objektumok csak a [VoxelGI] albedóértékeivel jelennek meg. A hatás akkor látható, ha legalább egy látható [VoxelGI] csomópont adatait már kisütötted.\n[b]Megjegyzés:[/b] Csak a Forward+ renderelési mód támogatja."
+
+#. RenderingServer.VIEWPORT_DEBUG_DRAW_VOXEL_GI_LIGHTING
+#. Viewport.DEBUG_DRAW_VOXEL_GI_LIGHTING
+#: doc/classes/RenderingServer.xml doc/classes/Viewport.xml
+msgid "Objects are displayed with only the lighting value from [VoxelGI]s. Requires at least one visible [VoxelGI] node that has been baked to have a visible effect.\n[b]Note:[/b] Only supported when using the Forward+ rendering method."
+msgstr "Az objektumok csak a [VoxelGI] megvilágítási értékeivel jelennek meg. A hatás akkor látható, ha legalább egy látható [VoxelGI] csomópont adatait már kisütötted.\n[b]Megjegyzés:[/b] Csak a Forward+ renderelési mód támogatja."
+
+#. RenderingServer.VIEWPORT_DEBUG_DRAW_VOXEL_GI_EMISSION
+#. Viewport.DEBUG_DRAW_VOXEL_GI_EMISSION
+#: doc/classes/RenderingServer.xml doc/classes/Viewport.xml
+msgid "Objects are displayed with only the emission color from [VoxelGI]s. Requires at least one visible [VoxelGI] node that has been baked to have a visible effect.\n[b]Note:[/b] Only supported when using the Forward+ rendering method."
+msgstr "Az objektumok csak a [VoxelGI] fénykibocsátási színeivel jelennek meg. A hatás akkor látható, ha legalább egy látható [VoxelGI] csomópont adatait már kisütötted.\n[b]Megjegyzés:[/b] Csak a Forward+ renderelési mód támogatja."
+
+#. RenderingServer.VIEWPORT_DEBUG_DRAW_PSSM_SPLITS
+#. Viewport.DEBUG_DRAW_PSSM_SPLITS
+#: doc/classes/RenderingServer.xml doc/classes/Viewport.xml
+msgid "Colors each PSSM split for the [DirectionalLight3D]s in the scene a different color so you can see where the splits are. In order (from closest to furthest from the camera), they are colored red, green, blue, and yellow.\n[b]Note:[/b] When using this debug draw mode, custom shaders are ignored since all materials in the scene temporarily use a debug material. This means the result from custom shader functions (such as vertex displacement) won't be visible anymore when using this debug draw mode.\n[b]Note:[/b] Only supported when using the Forward+ or Mobile rendering methods."
+msgstr "A jelenet [DirectionalLight3D] fényforrásainál minden PSSM-árnyéktartományt külön színnel jelöl, így láthatók a tartományhatárok. A kamerától kifelé haladva a színek sorrendje piros, zöld, kék és sárga.\n[b]Megjegyzés:[/b] Ebben a hibakeresési nézetben a jelenet összes anyagát ideiglenesen hibakeresési anyag helyettesíti. Az egyéni shaderek hatása, például a csúcspontok eltolása, ilyenkor nem látszik.\n[b]Megjegyzés:[/b] Csak a Forward+ és a Mobile renderelési mód támogatja."
+
+#. Viewport.brief
+#: doc/classes/Viewport.xml
+msgid "Abstract base class for viewports. Encapsulates drawing and interaction with a game world."
+msgstr "A nézetablakok absztrakt alaposztálya. A játékvilág kirajzolását és a vele való interakciót fogja össze."
+
+#. Viewport.get_camera_2d
+#: doc/classes/Viewport.xml
+msgid "Returns the currently active 2D camera. Returns [code]null[/code] if there are no active cameras.\n[b]Note:[/b] If called while the [i]Camera Override[/i] system is active in editor, this will return the internally managed override camera. It is therefore advised to avoid caching the return value, or to check that the cached value is still a valid instance and is the current camera before use. See [method @GlobalScope.is_instance_valid] and [method Camera2D.is_current]."
+msgstr "Visszaadja az aktuális 2D-s kamerát. Ha nincs aktív kamera, [code]null[/code] értéket ad.\n[b]Megjegyzés:[/b] Ha a szerkesztőben aktív a [i]kamera felülbírálása[/i], a metódus a szerkesztő által kezelt helyettesítő kamerát adja vissza. Ezért érdemes minden alkalommal lekérni az értéket. Ha mégis eltárolod, használat előtt ellenőrizd, hogy a példány még érvényes és továbbra is az aktuális kamera. Lásd a [method @GlobalScope.is_instance_valid] és a [method Camera2D.is_current] metódust."
+
+#. Viewport.get_camera_3d
+#: doc/classes/Viewport.xml
+msgid "Returns the currently active 3D camera. Returns [code]null[/code] if there are no active cameras.\n[b]Note:[/b] If called while the [i]Camera Override[/i] system is active in editor, this will return the internally managed override camera. It is therefore advised to avoid caching the return value, or to check that the cached value is a valid instance and is the current camera before use. See [method @GlobalScope.is_instance_valid] and [member Camera3D.current]."
+msgstr "Visszaadja az aktuális 3D-s kamerát. Ha nincs aktív kamera, [code]null[/code] értéket ad.\n[b]Megjegyzés:[/b] Ha a szerkesztőben aktív a [i]kamera felülbírálása[/i], a metódus a szerkesztő által kezelt helyettesítő kamerát adja vissza. Ezért érdemes minden alkalommal lekérni az értéket. Ha mégis eltárolod, használat előtt ellenőrizd, hogy a példány még érvényes és továbbra is az aktuális kamera. Lásd a [method @GlobalScope.is_instance_valid] metódust és a [member Camera3D.current] tulajdonságot."
+
+#. Viewport.get_visible_rect
+#: doc/classes/Viewport.xml
+msgid "Returns the visible rectangle in global screen coordinates."
+msgstr "Visszaadja a látható téglalapot globális képernyő-koordinátákban."
+
+#. Viewport.gui_get_hovered_control
+#: doc/classes/Viewport.xml
+msgid "Returns the [Control] that the mouse is currently hovering over in this viewport. If no [Control] has the cursor, returns [code]null[/code].\nTypically the leaf [Control] node or deepest level of the subtree which claims hover. This is very useful when used together with [method Node.is_ancestor_of] to find if the mouse is within a control tree."
+msgstr "Visszaadja a nézetablak azon [Control] elemét, amely fölött éppen az egérmutató áll. Ha a mutató egyik [Control] elem fölött sincs, [code]null[/code] értéket ad.\nEz rendszerint a legmélyebben elhelyezkedő [Control] csomópont, amely érzékeli az egérmutatót. A [method Node.is_ancestor_of] metódussal együtt ellenőrizhető, hogy az egérmutató egy adott vezérlő részfáján belül van-e."
+
+#. Viewport.gui_is_dragging
+#: doc/classes/Viewport.xml
+msgid "Returns [code]true[/code] if a drag operation is currently ongoing and where the drop action could happen in this viewport.\nAlternative to [constant Node.NOTIFICATION_DRAG_BEGIN] and [constant Node.NOTIFICATION_DRAG_END] when you prefer polling the value."
+msgstr "[code]true[/code] értéket ad, ha húzás van folyamatban, és a húzott elem ebben a nézetablakban ejthető el.\nA [constant Node.NOTIFICATION_DRAG_BEGIN] és a [constant Node.NOTIFICATION_DRAG_END] értesítések helyett használható, ha közvetlenül szeretnéd lekérdezni az állapotot."
+
+#. Viewport.is_input_handled
+#: doc/classes/Viewport.xml
+msgid "Returns whether the current [InputEvent] has been handled. Input events are not handled until [method set_input_as_handled] has been called during the lifetime of an [InputEvent].\nThis is usually done as part of input handling methods like [method Node._input], [method Control._gui_input] or others, as well as in corresponding signal handlers.\nIf [member handle_input_locally] is set to [code]false[/code], this method will try finding the first parent viewport that is set to handle input locally, and return its value for [method is_input_handled] instead."
+msgstr "Jelzi, hogy feldolgozták-e az aktuális [InputEvent] eseményt. Egy [InputEvent] addig feldolgozatlannak számít, amíg a kezelése során meg nem hívják a [method set_input_as_handled] metódust.\nEz jellemzően a [method Node._input] vagy a [method Control._gui_input] bemenetkezelő metódusban, illetve egy kapcsolódó jelkezelőben történik.\nHa a [member handle_input_locally] értéke [code]false[/code], a metódus a legközelebbi, bemenetet helyben kezelő szülő nézetablak [method is_input_handled] értékét adja vissza."
+
+#. Viewport.notify_mouse_entered
+#: doc/classes/Viewport.xml
+msgid "Inform the Viewport that the mouse has entered its area. Use this function before sending an [InputEventMouseButton] or [InputEventMouseMotion] to the [Viewport] with [method Viewport.push_input]. See also [method notify_mouse_exited].\n[b]Note:[/b] In most cases, it is not necessary to call this function because [SubViewport] nodes that are children of [SubViewportContainer] are notified automatically. This is only necessary when interacting with viewports in non-default ways, for example as textures in [TextureRect] or with an [Area3D] that forwards input events."
+msgstr "Jelzi a nézetablaknak, hogy az egérmutató belépett a területére. Hívd meg, mielőtt [InputEventMouseButton] vagy [InputEventMouseMotion] eseményt küldesz a [Viewport] nézetablaknak a [method Viewport.push_input] metódussal. Lásd még a [method notify_mouse_exited] metódust.\n[b]Megjegyzés:[/b] Erre általában nincs szükség, mert a [SubViewportContainer] gyerekeként szereplő [SubViewport] automatikusan értesítést kap. Akkor használd, ha a nézetablakot például [TextureRect] textúrájaként jeleníted meg, vagy egy [Area3D] továbbítja neki a bemeneti eseményeket."
+
+#. Viewport.notify_mouse_exited
+#: doc/classes/Viewport.xml
+msgid "Inform the Viewport that the mouse has left its area. Use this function when the node that displays the viewport notices the mouse has left the area of the displayed viewport. See also [method notify_mouse_entered].\n[b]Note:[/b] In most cases, it is not necessary to call this function because [SubViewport] nodes that are children of [SubViewportContainer] are notified automatically. This is only necessary when interacting with viewports in non-default ways, for example as textures in [TextureRect] or with an [Area3D] that forwards input events."
+msgstr "Jelzi a nézetablaknak, hogy az egérmutató elhagyta a területét. Akkor hívd meg, amikor a nézetablakot megjelenítő csomópont észleli, hogy a mutató elhagyta a megjelenített területet. Lásd még a [method notify_mouse_entered] metódust.\n[b]Megjegyzés:[/b] Erre általában nincs szükség, mert a [SubViewportContainer] gyerekeként szereplő [SubViewport] automatikusan értesítést kap. Akkor használd, ha a nézetablakot például [TextureRect] textúrájaként jeleníted meg, vagy egy [Area3D] továbbítja neki a bemeneti eseményeket."
+
+#. Viewport.set_positional_shadow_atlas_quadrant_subdiv
+#: doc/classes/Viewport.xml
+msgid "Sets the number of subdivisions to use in the specified quadrant. A higher number of subdivisions allows you to have more shadows in the scene at once, but reduces the quality of the shadows. A good practice is to have quadrants with a varying number of subdivisions and to have as few subdivisions as possible."
+msgstr "Beállítja, hány részre oszoljon az árnyékatlasz megadott negyede. Több rész esetén egyszerre több árnyék fér a jelenetbe, de romlik a minőségük. Érdemes negyedenként eltérő felosztást választani, mindenhol a szükséges legkisebb értékkel."
+
+#. Viewport.update_mouse_cursor_state
+#: doc/classes/Viewport.xml
+msgid "Force instantly updating the display based on the current mouse cursor position. This includes updating the mouse cursor shape and sending necessary [signal Control.mouse_entered], [signal CollisionObject2D.mouse_entered], [signal CollisionObject3D.mouse_entered] and [signal Window.mouse_entered] signals and their respective [code]mouse_exited[/code] counterparts."
+msgstr "Azonnal frissíti a megjelenítést az egérmutató aktuális helyzete alapján. Frissíti a mutató alakját, és szükség szerint kibocsátja a [signal Control.mouse_entered], a [signal CollisionObject2D.mouse_entered], a [signal CollisionObject3D.mouse_entered] és a [signal Window.mouse_entered] jelet, valamint a megfelelő [code]mouse_exited[/code] jeleket."
+
+#. Viewport.warp_mouse
+#: doc/classes/Viewport.xml
+msgid "Moves the mouse pointer to the specified position in this [Viewport] using the coordinate system of this [Viewport].\n[b]Note:[/b] [method warp_mouse] is only supported on Windows, macOS and Linux. It has no effect on Android, iOS and Web."
+msgstr "Az egérmutatót a [Viewport] megadott pontjára mozgatja, a [Viewport] saját koordinátarendszerében.\n[b]Megjegyzés:[/b] A [method warp_mouse] csak Windowson, macOS-en és Linuxon támogatott. Androidon, iOS-en és weben nincs hatása."
+
+#. Viewport.canvas_cull_mask
+#: doc/classes/Viewport.xml
+msgid "The rendering layers in which this [Viewport] renders [CanvasItem] nodes.\n[b]Note:[/b] A [CanvasItem] does not inherit its parents' visibility layers. See [member CanvasItem.visibility_layer]'s description for details."
+msgstr "Azok a renderelési rétegek, amelyeken a [Viewport] kirajzolja a [CanvasItem] csomópontokat.\n[b]Megjegyzés:[/b] A [CanvasItem] láthatósági rétegei nem öröklődnek a szülőktől. A részleteket lásd a [member CanvasItem.visibility_layer] leírásában."
+
+#. Viewport.debug_draw
+#: doc/classes/Viewport.xml
+msgid "The overlay mode for test rendered geometry in debug purposes."
+msgstr "A hibakereséshez használt geometriai nézet megjelenítési módja."
+
+#. Viewport.fsr_sharpness
+#: doc/classes/Viewport.xml
+msgid "Determines how sharp the upscaled image will be when using the FSR upscaling mode. Sharpness halves with every whole number. Values go from 0.0 (sharpest) to 2.0. Values above 2.0 won't make a visible difference.\nTo control this property on the root viewport, set the [member ProjectSettings.rendering/scaling_3d/fsr_sharpness] project setting."
+msgstr "Az FSR-rel felskálázott kép élessége. Minden egész egységnyi növelés az élességet a felére csökkenti. A tartomány 0,0-tól (a legélesebb beállítástól) 2,0-ig terjed. A 2,0 feletti értékeknek nincs látható hatása.\nA gyökérnézetablaknál ezt a [member ProjectSettings.rendering/scaling_3d/fsr_sharpness] projektbeállítással állíthatod be."
+
+#. Viewport.global_canvas_transform
+#: doc/classes/Viewport.xml
+msgid "The global canvas transform of the viewport. The canvas transform is relative to this."
+msgstr "A nézetablak globális vászontranszformációja. A vászon saját transzformációja ehhez képest értendő."
+
+#. Viewport.gui_embed_subwindows
+#: doc/classes/Viewport.xml
+msgid "If [code]true[/code], sub-windows (popups and dialogs) will be embedded inside application window as control-like nodes. If [code]false[/code], they will appear as separate windows handled by the operating system."
+msgstr "Ha az érték [code]true[/code], a felugró ablakok és a párbeszédablakok a program ablakába ágyazott, vezérlőkhöz hasonló csomópontokként jelennek meg. Ha az érték [code]false[/code], külön ablakokként jelennek meg, és az operációs rendszer kezeli őket."
+
+#. Viewport.handle_input_locally
+#: doc/classes/Viewport.xml
+msgid "If [code]true[/code], this viewport will mark incoming input events as handled by itself. If [code]false[/code], this is instead done by the first parent viewport that is set to handle input locally.\nA [SubViewportContainer] will automatically set this property to [code]false[/code] for the [Viewport] contained inside of it.\nSee also [method set_input_as_handled] and [method is_input_handled]."
+msgstr "Ha az érték [code]true[/code], ez a nézetablak maga jelöli feldolgozottként a beérkező bemeneti eseményeket. Ha az érték [code]false[/code], ezt a legközelebbi, bemenetet helyben kezelő szülő nézetablak végzi.\nA [SubViewportContainer] automatikusan [code]false[/code] értékre állítja ezt a tulajdonságot a benne lévő [Viewport] nézetablakon.\nLásd még a [method set_input_as_handled] és a [method is_input_handled] metódust."
+
+#. Viewport.msaa_2d
+#: doc/classes/Viewport.xml
+msgid "The multisample antialiasing mode for 2D/Canvas rendering. A higher number results in smoother edges at the cost of significantly worse performance. A value of [constant Viewport.MSAA_2X] or [constant Viewport.MSAA_4X] is best unless targeting very high-end systems. This has no effect on shader-induced aliasing or texture aliasing.\nSee also [member ProjectSettings.rendering/anti_aliasing/quality/msaa_2d] and [method RenderingServer.viewport_set_msaa_2d]."
+msgstr "A 2D-s vászon rendereléséhez használt többmintás élsimítási mód. Több mintával simábbak az élek, de jelentősen nő a számítási igény. Hacsak nem kifejezetten nagy teljesítményű gépekre fejlesztesz, a [constant Viewport.MSAA_2X] vagy a [constant Viewport.MSAA_4X] a célszerű választás. A shaderekből vagy a textúrákból eredő recézettséget ez a mód nem simítja.\nLásd még a [member ProjectSettings.rendering/anti_aliasing/quality/msaa_2d] beállítást és a [method RenderingServer.viewport_set_msaa_2d] metódust."
+
+#. Viewport.msaa_3d
+#: doc/classes/Viewport.xml
+msgid "The multisample antialiasing mode for 3D rendering. A higher number results in smoother edges at the cost of significantly worse performance. A value of [constant Viewport.MSAA_2X] or [constant Viewport.MSAA_4X] is best unless targeting very high-end systems. See also bilinear scaling 3D [member scaling_3d_mode] for supersampling, which provides higher quality but is much more expensive. This has no effect on shader-induced aliasing or texture aliasing.\nSee also [member ProjectSettings.rendering/anti_aliasing/quality/msaa_3d] and [method RenderingServer.viewport_set_msaa_3d]."
+msgstr "A 3D-s rendereléshez használt többmintás élsimítási mód. Több mintával simábbak az élek, de jelentősen nő a számítási igény. Hacsak nem kifejezetten nagy teljesítményű gépekre fejlesztesz, a [constant Viewport.MSAA_2X] vagy a [constant Viewport.MSAA_4X] a célszerű választás. A [member scaling_3d_mode] bilineáris 3D-s skálázása nagyobb felbontáson jobb minőségű túlmintavételezést ad, jóval nagyobb számítási költséggel. A shaderekből vagy a textúrákból eredő recézettséget az MSAA nem simítja.\nLásd még a [member ProjectSettings.rendering/anti_aliasing/quality/msaa_3d] beállítást és a [method RenderingServer.viewport_set_msaa_3d] metódust."
+
+#. Viewport.oversampling
+#: doc/classes/Viewport.xml
+msgid "If [code]true[/code] and one of the following conditions are true: [member SubViewport.size_2d_override_stretch] and [member SubViewport.size_2d_override] are set, [member Window.content_scale_factor] is set and scaling is enabled, [member oversampling_override] is set, font and [DPITexture] oversampling are enabled."
+msgstr "Ha az érték [code]true[/code], a betűk és a [DPITexture] textúrák túlmintavételezése akkor működik, ha teljesül legalább az egyik feltétel: a [member SubViewport.size_2d_override_stretch] és a [member SubViewport.size_2d_override] is be van állítva, vagy megadtad a [member Window.content_scale_factor] értékét és engedélyezted a skálázást, vagy megadtad a [member oversampling_override] értékét."
+
+#. Viewport.oversampling_override
+#: doc/classes/Viewport.xml
+msgid "If greater than zero, this value is used as the font oversampling factor, otherwise oversampling is equal to viewport scale."
+msgstr "Pozitív értéknél ez a betűk túlmintavételezési szorzója. Egyébként a túlmintavételezés a nézetablak skálázási szorzóját követi."
+
+#. Viewport.physics_object_picking
+#: doc/classes/Viewport.xml
+msgid "If [code]true[/code], the objects rendered by viewport become subjects of mouse picking process.\n[b]Note:[/b] The number of simultaneously pickable objects is limited to 64 and they are selected in a non-deterministic order, which can be different in each picking process."
+msgstr "Ha az érték [code]true[/code], a nézetablakban kirajzolt objektumok egérrel kijelölhetők.\n[b]Megjegyzés:[/b] Egyszerre legfeljebb 64 objektum választható ki. A kiválasztás sorrendje nem meghatározott, és alkalmanként eltérhet."
+
+#. Viewport.physics_object_picking_first_only
+#: doc/classes/Viewport.xml
+msgid "If [code]true[/code], the input_event signal will only be sent to one physics object in the mouse picking process. If you want to get the top object only, you must also enable [member physics_object_picking_sort].\nIf [code]false[/code], an input_event signal will be sent to all physics objects in the mouse picking process.\nThis applies to 2D CanvasItem object picking only."
+msgstr "Ha az érték [code]true[/code], az input_event jel az egérrel kiválasztott fizikai objektumok közül csak egyhez jut el. Ha csak a legfelül lévő objektumot szeretnéd megkapni, kapcsold be a [member physics_object_picking_sort] beállítást is.\nHa az érték [code]false[/code], az input_event jelet az összes kiválasztott fizikai objektum megkapja.\nEz csak a 2D-s CanvasItem objektumok egérrel történő kiválasztására vonatkozik."
+
+#. Viewport.physics_object_picking_sort
+#: doc/classes/Viewport.xml
+msgid "If [code]true[/code], objects receive mouse picking events sorted primarily by their [member CanvasItem.z_index] and secondarily by their position in the scene tree. If [code]false[/code], the order is undetermined.\n[b]Note:[/b] This setting is disabled by default because of its potential expensive computational cost.\n[b]Note:[/b] Sorting happens after selecting the pickable objects. Because of the limitation of 64 simultaneously pickable objects, it is not guaranteed that the object with the highest [member CanvasItem.z_index] receives the picking event."
+msgstr "Ha az érték [code]true[/code], a motor az egérrel kiválasztott objektumokat először a [member CanvasItem.z_index] értékük, majd a jelenetfában elfoglalt helyük szerint rendezi, és ebben a sorrendben küldi el az eseményt. Ha az érték [code]false[/code], a sorrend nincs meghatározva.\n[b]Megjegyzés:[/b] A beállítás alapértelmezés szerint ki van kapcsolva, mert a rendezés számításigényes lehet.\n[b]Megjegyzés:[/b] A rendezés a kiválasztás után történik. Mivel egyszerre legfeljebb 64 objektum választható ki, előfordulhat, hogy a legnagyobb [member CanvasItem.z_index] értékű objektum nem kap eseményt."
+
+#. Viewport.positional_shadow_atlas_size
+#: doc/classes/Viewport.xml
+msgid "The shadow atlas' resolution (used for omni and spot lights). The value is rounded up to the nearest power of 2.\n[b]Note:[/b] If this is set to [code]0[/code], no positional shadows will be visible at all. This can improve performance significantly on low-end systems by reducing both the CPU and GPU load (as fewer draw calls are needed to draw the scene without shadows)."
+msgstr "A pontfények és spotlámpák árnyékatlaszának felbontása. A motor felfelé kerekíti az értéket a legközelebbi kettőhatványra.\n[b]Megjegyzés:[/b] A [code]0[/code] érték kikapcsolja e fényforrások árnyékait. Ez gyengébb gépeken jelentősen javíthatja a teljesítményt, mert árnyékok nélkül kevesebb rajzolási hívás terheli a CPU-t és a GPU-t."
+
+#. Viewport.scaling_3d_mode
+#: doc/classes/Viewport.xml
+msgid "Sets scaling 3D mode. Bilinear scaling renders at different resolution to either undersample or supersample the viewport. FidelityFX Super Resolution 1.0, abbreviated to FSR, is an upscaling technology that produces high quality images at fast framerates by using a spatially aware upscaling algorithm. FSR is slightly more expensive than bilinear, but it produces significantly higher image quality. FSR should be used where possible.\nTo control this property on the root viewport, set the [member ProjectSettings.rendering/scaling_3d/mode] project setting."
+msgstr "A 3D-s skálázás módja. A bilineáris skálázás a nézetablakénál kisebb vagy nagyobb felbontáson renderel, így alul- vagy túlmintavételez. A FidelityFX Super Resolution 1.0 (FSR) térbeli információt használ a felskálázáshoz, ezért magas képkockasebesség mellett is jó minőségű képet ad. Az FSR valamivel számításigényesebb a bilineáris skálázásnál, de lényegesen jobb képminőséget ad. Ha elérhető, érdemes ezt választani.\nA gyökérnézetablaknál a [member ProjectSettings.rendering/scaling_3d/mode] projektbeállítással választhatsz módot."
+
+#. Viewport.screen_space_aa
+#: doc/classes/Viewport.xml
+msgid "Sets the screen-space antialiasing method used. Screen-space antialiasing works by selectively blurring edges in a post-process shader. It differs from MSAA which takes multiple coverage samples while rendering objects. Screen-space AA methods are typically faster than MSAA and will smooth out specular aliasing, but tend to make scenes appear blurry.\nSee also [member ProjectSettings.rendering/anti_aliasing/quality/screen_space_aa] and [method RenderingServer.viewport_set_screen_space_aa]."
+msgstr "Beállítja a képernyőtérbeli élsimítási módszert. Ez a módszer utófeldolgozó shaderrel enyhén elmossa a kiválasztott éleket. Az MSAA ezzel szemben már az objektumok renderelésekor több lefedettségi mintát vesz. A képernyőtérbeli élsimítás többnyire gyorsabb az MSAA-nál, és kisimítja a tükröződő csúcsfények recéit is, de a kép összességében lágyabbnak tűnhet.\nLásd még a [member ProjectSettings.rendering/anti_aliasing/quality/screen_space_aa] beállítást és a [method RenderingServer.viewport_set_screen_space_aa] metódust."
+
+#. Viewport.snap_2d_transforms_to_pixel
+#: doc/classes/Viewport.xml
+msgid "If [code]true[/code], [CanvasItem] nodes will internally snap to full pixels. Their position can still be sub-pixel, but the decimals will not have effect. This can lead to a crisper appearance at the cost of less smooth movement, especially when [Camera2D] smoothing is enabled."
+msgstr "Ha az érték [code]true[/code], a motor rendereléskor egész képpontokhoz igazítja a [CanvasItem] csomópontokat. A pozíció továbbra is lehet törtszám, de a tört része nem befolyásolja a kirajzolást. Ettől a kép élesebb lehet, a mozgás viszont darabosabbá válhat, különösen a [Camera2D] mozgássimítása mellett."
+
+#. Viewport.snap_2d_vertices_to_pixel
+#: doc/classes/Viewport.xml
+msgid "If [code]true[/code], vertices of [CanvasItem] nodes will snap to full pixels. Only affects the final vertex positions, not the transforms. This can lead to a crisper appearance at the cost of less smooth movement, especially when [Camera2D] smoothing is enabled."
+msgstr "Ha az érték [code]true[/code], a motor egész képpontokhoz igazítja a [CanvasItem] csomópontok csúcspontjait. Csak a kirajzolt csúcspontok végső pozíciója változik, a transzformációk értéke megmarad. Ettől a kép élesebb lehet, a mozgás viszont darabosabbá válhat, különösen a [Camera2D] mozgássimítása mellett."
+
+#. Viewport.transparent_bg
+#: doc/classes/Viewport.xml
+msgid "If [code]true[/code], the viewport should render its background as transparent.\n[b]Note:[/b] Due to technical limitations, certain rendering features are disabled when a viewport has a transparent background. This currently applies to screen-space reflections, subsurface scattering, and depth of field."
+msgstr "Ha az érték [code]true[/code], a nézetablak háttere átlátszóként jelenik meg.\n[b]Megjegyzés:[/b] Műszaki korlátok miatt átlátszó háttérnél egyes renderelési funkciók kikapcsolnak. Jelenleg ez a képernyőtérbeli tükröződést, a felszín alatti fényszóródást és a mélységélességet érinti."
+
+#. Viewport.use_taa
+#: doc/classes/Viewport.xml
+msgid "Enables temporal antialiasing for this viewport. TAA works by jittering the camera and accumulating the images of the last rendered frames, motion vector rendering is used to account for camera and object motion.\n[b]Note:[/b] The implementation is not complete yet, some visual instances such as particles and skinned meshes may show artifacts.\nSee also [member ProjectSettings.rendering/anti_aliasing/quality/use_taa] and [method RenderingServer.viewport_set_use_taa]."
+msgstr "Bekapcsolja az időbeli élsimítást (TAA) a nézetablakban. A TAA képkockánként kissé eltolja a kamera vetítését, és összesíti a legutóbb renderelt képeket. A kamera és az objektumok mozgását mozgásvektorok segítségével veszi figyelembe.\n[b]Megjegyzés:[/b] A megvalósítás még hiányos. Egyes látványelemeknél, például részecskéknél és csontvázzal deformált hálóknál képhibák jelentkezhetnek.\nLásd még a [member ProjectSettings.rendering/anti_aliasing/quality/use_taa] beállítást és a [method RenderingServer.viewport_set_use_taa] metódust."
+
+#. Viewport.vrs_update_mode
+#: doc/classes/Viewport.xml
+msgid "Sets the update mode for Variable Rate Shading (VRS) for the viewport. VRS requires the input texture to be converted to the format usable by the VRS method supported by the hardware. The update mode defines how often this happens. If the GPU does not support VRS, or VRS is not enabled, this property is ignored."
+msgstr "A nézetablak változó mintavételi sűrűségű árnyalásának (VRS) frissítési módja. A VRS a bemeneti textúrát olyan formátumba alakítja, amelyet a hardver VRS-eljárása kezelni tud. A frissítési mód adja meg, milyen gyakran történik ez az átalakítás. Ha a GPU nem támogatja a VRS-t, vagy a VRS ki van kapcsolva, a motor figyelmen kívül hagyja ezt a tulajdonságot."
+
+#. Viewport.SHADOW_ATLAS_QUADRANT_SUBDIV_256
+#: doc/classes/Viewport.xml
+msgid "This quadrant will be split 256 ways and used by up to 256 shadow maps. Unless the [member positional_shadow_atlas_size] is very high, the shadows in this quadrant will be very low resolution."
+msgstr "Az árnyékatlasz negyede 256 részre oszlik, így legfeljebb 256 árnyéktérkép használhatja. Az ebbe a negyedbe kerülő árnyékok felbontása igen alacsony, hacsak a [member positional_shadow_atlas_size] értéke nem kiugróan magas."
+
+#. Viewport.SHADOW_ATLAS_QUADRANT_SUBDIV_1024
+#: doc/classes/Viewport.xml
+msgid "This quadrant will be split 1024 ways and used by up to 1024 shadow maps. Unless the [member positional_shadow_atlas_size] is very high, the shadows in this quadrant will be very low resolution."
+msgstr "Az árnyékatlasz negyede 1024 részre oszlik, így legfeljebb 1024 árnyéktérkép használhatja. Az ebbe a negyedbe kerülő árnyékok felbontása igen alacsony, hacsak a [member positional_shadow_atlas_size] értéke nem kiugróan magas."
+
+#. Viewport.SHADOW_ATLAS_QUADRANT_SUBDIV_MAX
+#: doc/classes/Viewport.xml
+msgid "Represents the size of the [enum PositionalShadowAtlasQuadrantSubdiv] enum."
+msgstr "A [enum PositionalShadowAtlasQuadrantSubdiv] felsorolás méretét jelöli."
+
+#. Viewport.SCALING_3D_MODE_BILINEAR
+#: doc/classes/Viewport.xml
+msgid "Use bilinear scaling for the viewport's 3D buffer. The amount of scaling can be set using [member scaling_3d_scale]. Values less than [code]1.0[/code] will result in undersampling while values greater than [code]1.0[/code] will result in supersampling. A value of [code]1.0[/code] disables scaling."
+msgstr "Bilineáris skálázást használ a nézetablak 3D-s pufferéhez. A szorzót a [member scaling_3d_scale] adja meg. A [code]1.0[/code] alatti érték alulmintavételezést, a [code]1.0[/code] feletti érték túlmintavételezést eredményez. A [code]1.0[/code] érték kikapcsolja a skálázást."
+
+#. Viewport.SCALING_3D_MODE_FSR
+#: doc/classes/Viewport.xml
+msgid "Use AMD FidelityFX Super Resolution 1.0 upscaling for the viewport's 3D buffer. The amount of scaling can be set using [member scaling_3d_scale]. Values less than [code]1.0[/code] will result in the viewport being upscaled using FSR. Values greater than [code]1.0[/code] are not supported and bilinear downsampling will be used instead. A value of [code]1.0[/code] disables scaling."
+msgstr "Az AMD FidelityFX Super Resolution 1.0 eljárással skálázza fel a nézetablak 3D-s pufferét. A szorzót a [member scaling_3d_scale] adja meg. A [code]1.0[/code] alatti értéknél a motor FSR-rel skálázza fel a képet. A [code]1.0[/code] feletti értékeknél az FSR helyett bilineáris lekicsinyítés történik. A [code]1.0[/code] érték kikapcsolja a skálázást."
+
+#. Viewport.SCALING_3D_MODE_MAX
+#: doc/classes/Viewport.xml
+msgid "Represents the size of the [enum Scaling3DMode] enum."
+msgstr "A [enum Scaling3DMode] felsorolás méretét jelöli."
+
+#. Viewport.MSAA_8X
+#: doc/classes/Viewport.xml
+msgid "Use 8× Multisample Antialiasing. This has a very high performance cost. The difference between 4× and 8× MSAA may not always be visible in real gameplay conditions. Likely unsupported on low-end and older hardware."
+msgstr "Nyolcszoros (8×) többmintás élsimítást használ. Ennek igen nagy a számítási költsége. Tényleges játék közben a 4× és a 8× MSAA közötti különbség nem mindig észrevehető. A gyengébb és régebbi hardverek valószínűleg nem támogatják."
+
+#. Viewport.MSAA_MAX
+#: doc/classes/Viewport.xml
+msgid "Represents the size of the [enum MSAA] enum."
+msgstr "A [enum MSAA] felsorolás méretét jelöli."
+
+#. Viewport.ANISOTROPY_MAX
+#: doc/classes/Viewport.xml
+msgid "Represents the size of the [enum AnisotropicFiltering] enum."
+msgstr "A [enum AnisotropicFiltering] felsorolás méretét jelöli."
+
+#. Viewport.SCREEN_SPACE_AA_MAX
+#: doc/classes/Viewport.xml
+msgid "Represents the size of the [enum ScreenSpaceAA] enum."
+msgstr "A [enum ScreenSpaceAA] felsorolás méretét jelöli."
+
+#. Viewport.RENDER_INFO_MAX
+#: doc/classes/Viewport.xml
+msgid "Represents the size of the [enum RenderInfo] enum."
+msgstr "A [enum RenderInfo] felsorolás méretét jelöli."
+
+#. Viewport.RENDER_INFO_TYPE_MAX
+#: doc/classes/Viewport.xml
+msgid "Represents the size of the [enum RenderInfoType] enum."
+msgstr "A [enum RenderInfoType] felsorolás méretét jelöli."
+
+#. Viewport.DEBUG_DRAW_DISABLED
+#: doc/classes/Viewport.xml
+msgid "Objects are displayed normally."
+msgstr "Az objektumok a szokásos módon jelennek meg."
+
+#. Viewport.DEBUG_DRAW_LIGHTING
+#: doc/classes/Viewport.xml
+msgid "Objects are displayed without textures and only with lighting information.\n[b]Note:[/b] When using this debug draw mode, custom shaders are ignored since all materials in the scene temporarily use a debug material. This means the result from custom shader functions (such as vertex displacement) won't be visible anymore when using this debug draw mode."
+msgstr "Az objektumok textúrái eltűnnek, és csak a megvilágításuk látszik.\n[b]Megjegyzés:[/b] Ebben a hibakeresési nézetben a jelenet összes anyagát ideiglenesen hibakeresési anyag helyettesíti. Az egyéni shaderek hatása, például a csúcspontok eltolása, ilyenkor nem látszik."
+
+#. Viewport.DEBUG_DRAW_OVERDRAW
+#: doc/classes/Viewport.xml
+msgid "Objects are displayed semi-transparent with additive blending so you can see where they are drawing over top of one another. A higher overdraw means you are wasting performance on drawing pixels that are being hidden behind others.\n[b]Note:[/b] When using this debug draw mode, custom shaders are ignored since all materials in the scene temporarily use a debug material. This means the result from custom shader functions (such as vertex displacement) won't be visible anymore when using this debug draw mode."
+msgstr "Az objektumok félig átlátszóan, összeadó keveréssel jelennek meg, így látható, hol takarják egymást. Az erős átfedés azt jelzi, hogy a motor sok olyan képpontot is kirajzol, amelyet később más objektumok eltakarhatnak.\n[b]Megjegyzés:[/b] Ebben a hibakeresési nézetben a jelenet összes anyagát ideiglenesen hibakeresési anyag helyettesíti. Az egyéni shaderek hatása, például a csúcspontok eltolása, ilyenkor nem látszik."
+
+#. Viewport.DEBUG_DRAW_WIREFRAME
+#: doc/classes/Viewport.xml
+msgid "Objects are displayed as wireframe models.\n[b]Note:[/b] [method RenderingServer.set_debug_generate_wireframes] must be called before loading any meshes for wireframes to be visible when using the Compatibility renderer.\n[b]Note:[/b] In the Compatibility renderer, backfaces are always visible when using wireframe rendering. In the Forward+ and Mobile renderers, wireframes follow the material's backface culling properties instead."
+msgstr "Az objektumok drótvázként jelennek meg.\n[b]Megjegyzés:[/b] A Compatibility renderelő használatakor a [method RenderingServer.set_debug_generate_wireframes] metódust még a hálók betöltése előtt meg kell hívni, hogy a drótvázak megjelenjenek.\n[b]Megjegyzés:[/b] A Compatibility renderelő drótváznézetében a hátoldalak mindig látszanak. A Forward+ és a Mobile renderelő az anyag hátoldal-eldobási beállításait követi."
+
+#. Viewport.DEBUG_DRAW_NORMAL_BUFFER
+#: doc/classes/Viewport.xml
+msgid "Objects are displayed without lighting information and their textures replaced by normal mapping.\n[b]Note:[/b] Only supported when using the Forward+ rendering method."
+msgstr "Az objektumok megvilágítás nélkül jelennek meg, textúráik helyén a felületi normálok látszanak.\n[b]Megjegyzés:[/b] Csak a Forward+ renderelési mód támogatja."
+
+#. Viewport.DEBUG_DRAW_SSAO
+#: doc/classes/Viewport.xml
+msgid "Draws the screen-space ambient occlusion texture instead of the scene so that you can clearly see how it is affecting objects. In order for this display mode to work, you must have [member Environment.ssao_enabled] set in your [WorldEnvironment].\n[b]Note:[/b] Only supported when using the Forward+ rendering method."
+msgstr "A jelenet helyén a képernyőtérbeli környezeti takarás textúráját jeleníti meg, így jól látható annak hatása az objektumokra. Ehhez a [WorldEnvironment] környezetében be kell kapcsolni az [member Environment.ssao_enabled] tulajdonságot.\n[b]Megjegyzés:[/b] Csak a Forward+ renderelési mód támogatja."
+
+#. Viewport.DEBUG_DRAW_SSIL
+#: doc/classes/Viewport.xml
+msgid "Draws the screen-space indirect lighting texture instead of the scene so that you can clearly see how it is affecting objects. In order for this display mode to work, you must have [member Environment.ssil_enabled] set in your [WorldEnvironment].\n[b]Note:[/b] Only supported when using the Forward+ rendering method."
+msgstr "A jelenet helyén a képernyőtérbeli közvetett megvilágítás textúráját jeleníti meg, így jól látható annak hatása az objektumokra. Ehhez a [WorldEnvironment] környezetében be kell kapcsolni az [member Environment.ssil_enabled] tulajdonságot.\n[b]Megjegyzés:[/b] Csak a Forward+ renderelési mód támogatja."
+
+#. Viewport.DEBUG_DRAW_SDFGI
+#: doc/classes/Viewport.xml
+msgid "Draws the cascades used to render signed distance field global illumination (SDFGI).\nDoes nothing if the current environment's [member Environment.sdfgi_enabled] is [code]false[/code].\n[b]Note:[/b] Only supported when using the Forward+ rendering method."
+msgstr "Kirajzolja az előjeles távolságmezőn alapuló globális megvilágításhoz (SDFGI) használt kaszkádokat.\nHa az aktuális környezet [member Environment.sdfgi_enabled] tulajdonsága [code]false[/code], nincs hatása.\n[b]Megjegyzés:[/b] Csak a Forward+ renderelési mód támogatja."
+
+#. Viewport.DEBUG_DRAW_SDFGI_PROBES
+#: doc/classes/Viewport.xml
+msgid "Draws the probes used for signed distance field global illumination (SDFGI).\nWhen in the editor, left-clicking a probe will display additional bright dots that show its occlusion information. A white dot means the light is not occluded at all at the dot's position, while a red dot means the light is fully occluded. Intermediate values are possible.\nDoes nothing if the current environment's [member Environment.sdfgi_enabled] is [code]false[/code].\n[b]Note:[/b] Only supported when using the Forward+ rendering method."
+msgstr "Kirajzolja az előjeles távolságmezőn alapuló globális megvilágítás (SDFGI) mintavételi pontjait.\nA szerkesztőben egy mintavételi pontra bal egérgombbal kattintva további világos pontok jelzik a fény takarását. Fehér pontnál a fény akadálytalanul eljut az adott helyre, piros pontnál teljesen takarva van. Köztes értékek is előfordulhatnak.\nHa az aktuális környezet [member Environment.sdfgi_enabled] tulajdonsága [code]false[/code], nincs hatása.\n[b]Megjegyzés:[/b] Csak a Forward+ renderelési mód támogatja."
+
+#. Viewport.DEBUG_DRAW_GI_BUFFER
+#: doc/classes/Viewport.xml
+msgid "Draws the buffer used for global illumination from [VoxelGI] or SDFGI. Requires [VoxelGI] (at least one visible baked VoxelGI node) or SDFGI ([member Environment.sdfgi_enabled]) to be enabled to have a visible effect.\n[b]Note:[/b] Only supported when using the Forward+ rendering method."
+msgstr "Kirajzolja a [VoxelGI] vagy az SDFGI globális megvilágítási pufferét. A hatás akkor látható, ha aktív a [VoxelGI] (legalább egy látható, kisütött VoxelGI csomóponttal) vagy az SDFGI ([member Environment.sdfgi_enabled]).\n[b]Megjegyzés:[/b] Csak a Forward+ renderelési mód támogatja."
+
+#. Viewport.DEBUG_DRAW_INTERNAL_BUFFER
+#: doc/classes/Viewport.xml
+msgid "Draws the internal resolution buffer of the scene in linear colorspace before tonemapping or post-processing is applied.\n[b]Note:[/b] Only supported when using the Forward+ or Mobile rendering methods."
+msgstr "A jelenet belső felbontású pufferét jeleníti meg lineáris színtérben, a tónusleképezés és az utófeldolgozás előtt.\n[b]Megjegyzés:[/b] Csak a Forward+ és a Mobile renderelési mód támogatja."
+
+#. Viewport.DEFAULT_CANVAS_ITEM_TEXTURE_FILTER_MAX
+#: doc/classes/Viewport.xml
+msgid "Represents the size of the [enum DefaultCanvasItemTextureFilter] enum."
+msgstr "A [enum DefaultCanvasItemTextureFilter] felsorolás méretét jelöli."
+
+#. Viewport.DEFAULT_CANVAS_ITEM_TEXTURE_REPEAT_MAX
+#: doc/classes/Viewport.xml
+msgid "Represents the size of the [enum DefaultCanvasItemTextureRepeat] enum."
+msgstr "A [enum DefaultCanvasItemTextureRepeat] felsorolás méretét jelöli."
+
+#. Viewport.SDF_OVERSIZE_120_PERCENT
+#: doc/classes/Viewport.xml
+msgid "The signed distance field is expanded to cover 20% of the viewport's size around the borders."
+msgstr "Az előjeles távolságmező a nézetablak szélein túlra is kiterjed. A teljes mérete a nézetablakénál 20%-kal nagyobb."
+
+#. Viewport.SDF_OVERSIZE_150_PERCENT
+#: doc/classes/Viewport.xml
+msgid "The signed distance field is expanded to cover 50% of the viewport's size around the borders."
+msgstr "Az előjeles távolságmező a nézetablak szélein túlra is kiterjed. A teljes mérete a nézetablakénál 50%-kal nagyobb."
+
+#. Viewport.SDF_OVERSIZE_200_PERCENT
+#: doc/classes/Viewport.xml
+msgid "The signed distance field is expanded to cover 100% (double) of the viewport's size around the borders."
+msgstr "Az előjeles távolságmező a nézetablak szélein túlra is kiterjed. A teljes mérete a nézetablakénál 100%-kal nagyobb, így kétszeres méretű."
+
+#. Viewport.SDF_OVERSIZE_MAX
+#: doc/classes/Viewport.xml
+msgid "Represents the size of the [enum SDFOversize] enum."
+msgstr "A [enum SDFOversize] felsorolás méretét jelöli."
+
+#. Viewport.SDF_SCALE_MAX
+#: doc/classes/Viewport.xml
+msgid "Represents the size of the [enum SDFScale] enum."
+msgstr "A [enum SDFScale] felsorolás méretét jelöli."
+
+#. Viewport.VRS_DISABLED
+#: doc/classes/Viewport.xml
+msgid "Variable Rate Shading is disabled."
+msgstr "A változó mintavételi sűrűségű árnyalás (VRS) ki van kapcsolva."
+
+#. Viewport.VRS_UPDATE_MAX
+#: doc/classes/Viewport.xml
+msgid "Represents the size of the [enum VRSUpdateMode] enum."
+msgstr "A [enum VRSUpdateMode] felsorolás méretét jelöli."
+
+#. ProjectSettings.display/display_server/driver
+#: doc/classes/ProjectSettings.xml
+msgid "Sets the driver to be used by the display server. This property can not be edited directly, instead, set the driver using the platform-specific overrides."
+msgstr "A megjelenítőkiszolgáló illesztőprogramja. Az illesztőprogramot a platformhoz tartozó felülbírálási beállítással választhatod ki."
+
+#. ProjectSettings.display/display_server/driver.android
+#: doc/classes/ProjectSettings.xml
+msgid "Android override for [member display/display_server/driver]."
+msgstr "A [member display/display_server/driver] beállítás felülbírálása Androidon."
+
+#. ProjectSettings.display/display_server/driver.ios
+#: doc/classes/ProjectSettings.xml
+msgid "iOS override for [member display/display_server/driver]."
+msgstr "A [member display/display_server/driver] beállítás felülbírálása iOS-en."
+
+#. ProjectSettings.display/display_server/driver.linuxbsd
+#: doc/classes/ProjectSettings.xml
+msgid "LinuxBSD override for [member display/display_server/driver]."
+msgstr "A [member display/display_server/driver] beállítás felülbírálása Linuxon és BSD-n."
+
+#. ProjectSettings.display/display_server/driver.macos
+#: doc/classes/ProjectSettings.xml
+msgid "MacOS override for [member display/display_server/driver]."
+msgstr "A [member display/display_server/driver] beállítás felülbírálása macOS-en."
+
+#. ProjectSettings.display/display_server/driver.visionos
+#: doc/classes/ProjectSettings.xml
+msgid "visionOS override for [member display/display_server/driver]."
+msgstr "A [member display/display_server/driver] beállítás felülbírálása visionOS-en."
+
+#. ProjectSettings.display/display_server/driver.windows
+#: doc/classes/ProjectSettings.xml
+msgid "Windows override for [member display/display_server/driver]."
+msgstr "A [member display/display_server/driver] beállítás felülbírálása Windowson."
+
+#. ProjectSettings.display/window/size/no_focus
+#: doc/classes/ProjectSettings.xml
+msgid "Main window can't be focused. No-focus window will ignore all input, except mouse clicks."
+msgstr "A főablak nem kaphat fókuszt. Ilyenkor csak az egérkattintásokra reagál."
+
+#. ProjectSettings.display/window/size/resizable
+#: doc/classes/ProjectSettings.xml
+msgid "If [code]true[/code], allows the window to be resizable by default.\n[b]Note:[/b] This property is only read when the project starts. To change whether the window is resizable at runtime, set [member Window.unresizable] instead on the root Window, which can be retrieved using [code]get_viewport().get_window()[/code]. [member Window.unresizable] takes the opposite value of this setting.\n[b]Note:[/b] Certain window managers can be configured to ignore the non-resizable status of a window. Do not rely on this setting as a guarantee that the window will [i]never[/i] be resizable.\n[b]Note:[/b] This setting is ignored on iOS."
+msgstr "Ha az érték [code]true[/code], az ablak alapértelmezés szerint átméretezhető.\n[b]Megjegyzés:[/b] A motor csak a projekt indításakor olvassa be ezt a beállítást. Futás közben a gyökérablak [member Window.unresizable] tulajdonságával vezérelheted az átméretezést. A gyökérablakot a [code]get_viewport().get_window()[/code] hívással kapod meg. A [member Window.unresizable] értéke ennek a beállításnak a fordítottja.\n[b]Megjegyzés:[/b] Egyes ablakkezelők beállíthatók úgy, hogy figyelmen kívül hagyják az átméretezés tiltását. Ezért ez a beállítás nem garantálja, hogy az ablakot [i]soha[/i] ne lehessen átméretezni.\n[b]Megjegyzés:[/b] iOS-en a motor figyelmen kívül hagyja ezt a beállítást."
+
+#. ProjectSettings.display/window/size/sharp_corners
+#: doc/classes/ProjectSettings.xml
+msgid "If [code]true[/code], the main window uses sharp corners by default.\n[b]Note:[/b] This property is implemented only on Windows (11)."
+msgstr "Ha az érték [code]true[/code], a főablak alapértelmezés szerint szögletes sarkokkal jelenik meg.\n[b]Megjegyzés:[/b] Ez a tulajdonság csak Windows 11-en érhető el."
+
+#. ProjectSettings.display/window/size/viewport_height
+#: doc/classes/ProjectSettings.xml
+msgid "Sets the game's main viewport height. On desktop platforms, this is also the initial window height, represented by an indigo-colored rectangle in the 2D editor. Stretch mode settings also use this as a reference when using the [code]canvas_items[/code] or [code]viewport[/code] stretch modes. See also [member display/window/size/viewport_width], [member display/window/size/window_width_override] and [member display/window/size/window_height_override]."
+msgstr "A játék fő nézetablakának magassága. Asztali platformokon ez egyben az ablak kezdeti magassága is, amelyet a 2D-s szerkesztő indigókék téglalappal jelöl. A [code]canvas_items[/code] és a [code]viewport[/code] nyújtási mód is ezt a magasságot veszi alapul. Lásd még a [member display/window/size/viewport_width], a [member display/window/size/window_width_override] és a [member display/window/size/window_height_override] beállítást."
+
+#. ProjectSettings.display/window/size/viewport_width
+#: doc/classes/ProjectSettings.xml
+msgid "Sets the game's main viewport width. On desktop platforms, this is also the initial window width, represented by an indigo-colored rectangle in the 2D editor. Stretch mode settings also use this as a reference when using the [code]canvas_items[/code] or [code]viewport[/code] stretch modes. See also [member display/window/size/viewport_height], [member display/window/size/window_width_override] and [member display/window/size/window_height_override]."
+msgstr "A játék fő nézetablakának szélessége. Asztali platformokon ez egyben az ablak kezdeti szélessége is, amelyet a 2D-s szerkesztő indigókék téglalappal jelöl. A [code]canvas_items[/code] és a [code]viewport[/code] nyújtási mód is ezt a szélességet veszi alapul. Lásd még a [member display/window/size/viewport_height], a [member display/window/size/window_width_override] és a [member display/window/size/window_height_override] beállítást."
+
+#. ProjectSettings.display/window/size/window_height_override
+#: doc/classes/ProjectSettings.xml
+msgid "On desktop platforms, overrides the game's initial window height. See also [member display/window/size/window_width_override], [member display/window/size/viewport_width] and [member display/window/size/viewport_height].\n[b]Note:[/b] By default, or when set to [code]0[/code], the initial window height is the [member display/window/size/viewport_height]. This setting is ignored on iOS, Android, and Web."
+msgstr "Asztali platformokon felülbírálja a játék ablakának kezdeti magasságát. Lásd még a [member display/window/size/window_width_override], a [member display/window/size/viewport_width] és a [member display/window/size/viewport_height] beállítást.\n[b]Megjegyzés:[/b] Alapértelmezés szerint, illetve [code]0[/code] értéknél a kezdeti ablakmagasságot a [member display/window/size/viewport_height] adja meg. iOS-en, Androidon és weben a motor figyelmen kívül hagyja ezt a beállítást."
+
+#. ProjectSettings.display/window/size/window_width_override
+#: doc/classes/ProjectSettings.xml
+msgid "On desktop platforms, overrides the game's initial window width. See also [member display/window/size/window_height_override], [member display/window/size/viewport_width] and [member display/window/size/viewport_height].\n[b]Note:[/b] By default, or when set to [code]0[/code], the initial window width is the [member display/window/size/viewport_width]. This setting is ignored on iOS, Android, and Web."
+msgstr "Asztali platformokon felülbírálja a játék ablakának kezdeti szélességét. Lásd még a [member display/window/size/window_height_override], a [member display/window/size/viewport_width] és a [member display/window/size/viewport_height] beállítást.\n[b]Megjegyzés:[/b] Alapértelmezés szerint, illetve [code]0[/code] értéknél a kezdeti ablakszélességet a [member display/window/size/viewport_width] adja meg. iOS-en, Androidon és weben a motor figyelmen kívül hagyja ezt a beállítást."
+
+#. ProjectSettings.display/window/stretch/scale
+#: doc/classes/ProjectSettings.xml
+msgid "The scale factor multiplier to use for 2D elements. This multiplies the final scale factor determined by [member display/window/stretch/mode]. If using the [b]Disabled[/b] stretch mode, this scale factor is applied as-is. This can be adjusted to make the UI easier to read on certain displays."
+msgstr "A 2D-s elemek skálázási szorzója. Ezzel szorozza meg a motor a [member display/window/stretch/mode] által meghatározott méretarányt. A [b]Letiltva[/b] nyújtási módban közvetlenül ez az érték lesz a méretarány. Ezzel bizonyos kijelzőkön olvashatóbbá teheted a felületet."
+
+#. ProjectSettings.display/window/subwindows/embed_subwindows
+#: doc/classes/ProjectSettings.xml
+msgid "If [code]true[/code], subwindows are embedded in the main window (this is also called single-window mode). Single-window mode can be faster as it does not need to create a separate window for every popup and tooltip, which can be a slow operation depending on the operating system and rendering method in use.\nIf [code]false[/code], subwindows are created as separate windows (this is also called multi-window mode). This allows them to be moved outside the main window and use native operating system window decorations.\nThis is equivalent to [member EditorSettings.interface/editor/display/single_window_mode] in the editor."
+msgstr "Ha az érték [code]true[/code], az alablakok a főablakba ágyazva jelennek meg (egyablakos mód). Ez gyorsabb lehet, mert a motornak nem kell minden felugró elemhez és eszköztipphez külön ablakot létrehoznia. Az ilyen ablakok létrehozása az operációs rendszertől és a renderelési módtól függően lassú lehet.\nHa az érték [code]false[/code], az alablakok külön ablakban jelennek meg (többablakos mód). Kimozgathatók a főablak területéről, és az operációs rendszer saját ablakkeretét használják.\nA szerkesztőben ennek az [member EditorSettings.interface/editor/display/single_window_mode] beállítás felel meg."
+
+#. DisplayServer.get_accent_color
+#: doc/classes/DisplayServer.xml
+msgid "Returns OS theme accent color. Returns [code]Color(0, 0, 0, 0)[/code], if accent color is unknown.\n[b]Note:[/b] This method is implemented on macOS, Windows, Android, and Linux (X11/Wayland)."
+msgstr "Visszaadja az operációs rendszer témájának kiemelőszínét. Ha a szín ismeretlen, [code]Color(0, 0, 0, 0)[/code] értéket ad.\n[b]Megjegyzés:[/b] A metódus macOS-en, Windowson, Androidon, valamint Linuxon (X11 és Wayland alatt) érhető el."
+
+#. DisplayServer.get_base_color
+#: doc/classes/DisplayServer.xml
+msgid "Returns the OS theme base color (default control background). Returns [code]Color(0, 0, 0, 0)[/code] if the base color is unknown.\n[b]Note:[/b] This method is implemented on macOS, Windows, and Android."
+msgstr "Visszaadja az operációs rendszer témájának alapszínét, vagyis a vezérlők alapértelmezett háttérszínét. Ha a szín ismeretlen, [code]Color(0, 0, 0, 0)[/code] értéket ad.\n[b]Megjegyzés:[/b] A metódus macOS-en, Windowson és Androidon érhető el."
+
+#. DisplayServer.get_display_cutouts
+#: doc/classes/DisplayServer.xml
+msgid "Returns an [Array] of [Rect2], each of which is the bounding rectangle for a display cutout or notch. These are non-functional areas on edge-to-edge screens used by cameras and sensors. Returns an empty array if the device does not have cutouts. See also [method get_display_safe_area].\n[b]Note:[/b] Currently only implemented on Android. Other platforms will return an empty array even if they do have display cutouts or notches."
+msgstr "Egy [Array] tömböt ad vissza. A tömb minden [Rect2] eleme egy kijelzőkivágás vagy bemetszés határoló téglalapja. Ezek a készülék előlapját kitöltő kijelzők megjelenítésre nem használható részei, ahová például kamerák és érzékelők kerülnek. Kivágás nélküli eszközön üres tömböt ad vissza. Lásd még a [method get_display_safe_area] metódust.\n[b]Megjegyzés:[/b] Jelenleg csak Androidon érhető el. Más platformokon üres tömböt ad vissza akkor is, ha a kijelzőn van kivágás vagy bemetszés."
+
+#. DisplayServer.get_display_safe_area
+#: doc/classes/DisplayServer.xml
+msgid "Returns the unobscured area of the display where interactive controls should be rendered. See also [method get_display_cutouts].\n[b]Note:[/b] Currently only implemented on Android and iOS. On other platforms, [code]screen_get_usable_rect(SCREEN_OF_MAIN_WINDOW)[/code] will be returned as a fallback. See also [method screen_get_usable_rect]."
+msgstr "Visszaadja a kijelző takarástól mentes területét, ahová az interaktív vezérlőket érdemes kirajzolni. Lásd még a [method get_display_cutouts] metódust.\n[b]Megjegyzés:[/b] Jelenleg csak Androidon és iOS-en érhető el. Más platformokon a [code]screen_get_usable_rect(SCREEN_OF_MAIN_WINDOW)[/code] eredményét adja vissza. Lásd még a [method screen_get_usable_rect] metódust."
+
+#. DisplayServer.get_keyboard_focus_screen
+#: doc/classes/DisplayServer.xml
+msgid "Returns the index of the screen containing the window with the keyboard focus, or the primary screen if there's no focused window.\n[b]Note:[/b] This method is implemented on Linux/X11, macOS, and Windows. On other platforms, this method always returns the primary screen."
+msgstr "Visszaadja annak a kijelzőnek az indexét, amelyen a billentyűzetfókusszal rendelkező ablak van. Ha egyik ablak sincs fókuszban, az elsődleges kijelző indexét adja.\n[b]Megjegyzés:[/b] A metódus Linuxon X11 alatt, macOS-en és Windowson érhető el. Más platformokon mindig az elsődleges kijelzőt adja vissza."
+
+#. DisplayServer.get_name
+#: doc/classes/DisplayServer.xml
+msgid "Returns the name of the [DisplayServer] currently in use. Most operating systems only have a single [DisplayServer], but Linux has access to more than one [DisplayServer] (currently X11 and Wayland).\nThe names of built-in display servers are [code]Windows[/code], [code]macOS[/code], [code]X11[/code] (Linux), [code]Wayland[/code] (Linux), [code]Android[/code], [code]iOS[/code], [code]web[/code] (HTML5), and [code]headless[/code] (when started with the [code]--headless[/code] [url=$DOCS_URL/tutorials/editor/command_line_tutorial.html]command line argument[/url])."
+msgstr "Visszaadja az aktuális [DisplayServer] nevét. A legtöbb operációs rendszeren egyetlen [DisplayServer] érhető el. Linuxon több [DisplayServer] közül lehet választani, jelenleg az X11 és a Wayland érhető el.\nA beépített megjelenítőkiszolgálók neve [code]Windows[/code], [code]macOS[/code], [code]X11[/code] (Linux), [code]Wayland[/code] (Linux), [code]Android[/code], [code]iOS[/code], [code]web[/code] (HTML5) és [code]headless[/code] (a [code]--headless[/code] [url=$DOCS_URL/tutorials/editor/command_line_tutorial.html]parancssori argumentummal[/url] indítva)."
+
+#. DisplayServer.get_primary_screen
+#: doc/classes/DisplayServer.xml
+msgid "Returns the index of the primary screen.\n[b]Note:[/b] This method is implemented on Linux/X11, macOS, and Windows. On other platforms, this method always returns [code]0[/code]."
+msgstr "Visszaadja az elsődleges kijelző indexét.\n[b]Megjegyzés:[/b] A metódus Linuxon X11 alatt, macOS-en és Windowson érhető el. Más platformokon mindig [code]0[/code] értéket ad vissza."
+
+#. DisplayServer.get_screen_count
+#: doc/classes/DisplayServer.xml
+msgid "Returns the number of displays available.\n[b]Note:[/b] This method is implemented on Linux (X11 and Wayland), macOS, and Windows. On other platforms, this method always returns [code]1[/code]."
+msgstr "Visszaadja az elérhető kijelzők számát.\n[b]Megjegyzés:[/b] A metódus Linuxon (X11 és Wayland alatt), macOS-en és Windowson érhető el. Más platformokon mindig [code]1[/code] értéket ad vissza."
+
+#. DisplayServer.get_screen_from_rect
+#: doc/classes/DisplayServer.xml
+msgid "Returns the index of the screen that overlaps the most with the given rectangle. Returns [constant INVALID_SCREEN] if the rectangle doesn't overlap with any screen or has no area."
+msgstr "Annak a kijelzőnek az indexét adja vissza, amelyet a megadott téglalap a legnagyobb területen fed. Ha a téglalap egyik kijelzőt sem fedi, vagy nulla a területe, a visszatérési érték [constant INVALID_SCREEN]."
+
+#. DisplayServer.get_window_at_screen_position
+#: doc/classes/DisplayServer.xml
+msgid "Returns the ID of the window at the specified screen [param position] (in pixels). On multi-monitor setups, the screen position is relative to the virtual desktop area. On multi-monitor setups with different screen resolutions or orientations, the origin may be located outside any display like this:\n[codeblock lang=text]\n* (0, 0)        +-------+\n                |       |\n+-------------+ |       |\n|             | |       |\n|             | |       |\n+-------------+ +-------+\n[/codeblock]"
+msgstr "Visszaadja a megadott képernyőpozíción ([param position], képpontban) található ablak azonosítóját. Többmonitoros elrendezésben a pozíció a virtuális asztalhoz viszonyítva értendő. Ha a kijelzők felbontása vagy tájolása eltér, az origó akár az összes kijelzőn kívülre is eshet, ahogy az ábra mutatja.\n[codeblock lang=text]\n* (0, 0)        +-------+\n                |       |\n+-------------+ |       |\n|             | |       |\n|             | |       |\n+-------------+ +-------+\n[/codeblock]"
+
+#. DisplayServer.get_window_list
+#: doc/classes/DisplayServer.xml
+msgid "Returns the list of Godot window IDs belonging to this process.\n[b]Note:[/b] Native dialogs are not included in this list."
+msgstr "Visszaadja az ehhez a folyamathoz tartozó Godot-ablakok azonosítóit.\n[b]Megjegyzés:[/b] A rendszer saját párbeszédablakai nem szerepelnek a listában."
+
+#. DisplayServer.get_swap_cancel_ok
+#: doc/classes/DisplayServer.xml
+msgid "Returns [code]true[/code] if positions of [b]OK[/b] and [b]Cancel[/b] buttons are swapped in dialogs. This is enabled by default on Windows to follow interface conventions, and be toggled by changing [member ProjectSettings.gui/common/swap_cancel_ok].\n[b]Note:[/b] This doesn't affect native dialogs such as the ones spawned by [method DisplayServer.dialog_show]."
+msgstr "[code]true[/code] értéket ad, ha a párbeszédablakokban az [b]OK[/b] és a [b]Mégse[/b] gomb helye fel van cserélve. Windowson a felületi szokások miatt ez alapértelmezés szerint be van kapcsolva. A [member ProjectSettings.gui/common/swap_cancel_ok] beállítással módosítható.\n[b]Megjegyzés:[/b] Ez nem érinti a rendszer saját párbeszédablakait, például a [method DisplayServer.dialog_show] metódussal megnyitottakat."
