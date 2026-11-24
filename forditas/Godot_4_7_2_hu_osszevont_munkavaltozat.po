@@ -60042,3 +60042,403 @@ msgstr "Visszaadja az ehhez a folyamathoz tartozó Godot-ablakok azonosítóit.\
 #: doc/classes/DisplayServer.xml
 msgid "Returns [code]true[/code] if positions of [b]OK[/b] and [b]Cancel[/b] buttons are swapped in dialogs. This is enabled by default on Windows to follow interface conventions, and be toggled by changing [member ProjectSettings.gui/common/swap_cancel_ok].\n[b]Note:[/b] This doesn't affect native dialogs such as the ones spawned by [method DisplayServer.dialog_show]."
 msgstr "[code]true[/code] értéket ad, ha a párbeszédablakokban az [b]OK[/b] és a [b]Mégse[/b] gomb helye fel van cserélve. Windowson a felületi szokások miatt ez alapértelmezés szerint be van kapcsolva. A [member ProjectSettings.gui/common/swap_cancel_ok] beállítással módosítható.\n[b]Megjegyzés:[/b] Ez nem érinti a rendszer saját párbeszédablakait, például a [method DisplayServer.dialog_show] metódussal megnyitottakat."
+
+#: doc/classes/Container.xml
+msgid "Base class for all GUI containers."
+msgstr "Az összes felületi tároló alaposztálya."
+
+#: doc/classes/Container.xml
+msgid "Base class for all GUI containers. A [Container] automatically arranges its child controls in a certain way. This class can be inherited to make custom container types."
+msgstr "Az összes felületi tároló alaposztálya. A [Container] az elrendezési szabályai szerint automatikusan elhelyezi a gyermekvezérlőit. Ebből az osztályból saját tárolótípusokat származtathatsz."
+
+#: doc/classes/Container.xml
+msgid "Implement to return a list of allowed horizontal [enum Control.SizeFlags] for child nodes. This doesn't technically prevent the usages of any other size flags, if your implementation requires that. This only limits the options available to the user in the Inspector dock.\n[b]Note:[/b] Having no size flags is equal to having [constant Control.SIZE_SHRINK_BEGIN]. As such, this value is always implicitly allowed."
+msgstr "A metódus adja vissza a gyermekcsomópontoknál engedélyezett vízszintes [enum Control.SizeFlags] jelzők listáját. A lista csak az Inspector panelen választható lehetőségeket korlátozza. A saját megvalósításod szükség esetén más méretezési jelzőket is használhat.\n[b]Megjegyzés:[/b] Ha nincs beállítva méretezési jelző, az a [constant Control.SIZE_SHRINK_BEGIN] beállításával egyenértékű. Ez az érték ezért külön megadás nélkül is engedélyezett."
+
+#: doc/classes/Container.xml
+msgid "Implement to return a list of allowed vertical [enum Control.SizeFlags] for child nodes. This doesn't technically prevent the usages of any other size flags, if your implementation requires that. This only limits the options available to the user in the Inspector dock.\n[b]Note:[/b] Having no size flags is equal to having [constant Control.SIZE_SHRINK_BEGIN]. As such, this value is always implicitly allowed."
+msgstr "A metódus adja vissza a gyermekcsomópontoknál engedélyezett függőleges [enum Control.SizeFlags] jelzők listáját. A lista csak az Inspector panelen választható lehetőségeket korlátozza. A saját megvalósításod szükség esetén más méretezési jelzőket is használhat.\n[b]Megjegyzés:[/b] Ha nincs beállítva méretezési jelző, az a [constant Control.SIZE_SHRINK_BEGIN] beállításával egyenértékű. Ez az érték ezért külön megadás nélkül is engedélyezett."
+
+#: doc/classes/Container.xml
+msgid "Fit a child control in a given rect. This is mainly a helper for creating custom container classes."
+msgstr "A megadott téglalaphoz igazítja a gyermekvezérlőt. Elsősorban saját tárolóosztályok megvalósításához használható."
+
+#: doc/classes/Container.xml
+msgid "Queue resort of the contained children. This is called automatically anyway, but can be called upon request."
+msgstr "Ütemezi a gyermekek újbóli elrendezését. A tároló ezt automatikusan is meghívja, de szükség esetén külön is meghívhatod."
+
+#: doc/classes/Container.xml
+msgid "If [code]true[/code], this container is marked as a region for accessibility. Use [member Control.accessibility_name] to give the region a descriptive name. Screen readers can navigate between regions using landmark navigation."
+msgstr "Ha az érték [code]true[/code], a tároló akadálymentesítési régióként jelenik meg. Adj a régiónak beszédes nevet a [member Control.accessibility_name] tulajdonsággal. A képernyőolvasók a régiók között a tájékozódási pontok alapján tudnak léptetni."
+
+#: doc/classes/Container.xml
+msgid "Emitted when children are going to be sorted."
+msgstr "A gyermekek elrendezésének megkezdése előtt bocsátja ki."
+
+#: doc/classes/Container.xml
+msgid "Emitted when sorting the children is needed."
+msgstr "Akkor bocsátja ki, amikor el kell rendezni a gyermekeket."
+
+#: doc/classes/Container.xml
+msgid "Notification just before children are going to be sorted, in case there's something to process beforehand."
+msgstr "Közvetlenül a gyermekek elrendezése előtt küldött értesítés. Az elrendezést megelőző feladatokat itt végezheted el."
+
+#: doc/classes/Container.xml
+msgid "Notification for when sorting the children, it must be obeyed immediately."
+msgstr "A gyermekek elrendezésére felszólító értesítés. Az elrendezést azonnal végre kell hajtani."
+
+#: doc/classes/BoxContainer.xml doc/classes/FlowContainer.xml
+msgid "The child controls will be arranged at the beginning of the container, i.e. top if orientation is vertical, left if orientation is horizontal (right for RTL layout)."
+msgstr "A gyermekvezérlőket a tároló elejéhez igazítja. Függőleges elrendezésben ez a felső, vízszintesben a bal oldali szél, jobbról balra haladó elrendezésben pedig a jobb oldali."
+
+#: doc/classes/BoxContainer.xml doc/classes/FlowContainer.xml
+msgid "The child controls will be centered in the container."
+msgstr "A gyermekvezérlőket a tároló közepéhez igazítja."
+
+#: doc/classes/BoxContainer.xml doc/classes/FlowContainer.xml
+msgid "The child controls will be arranged at the end of the container, i.e. bottom if orientation is vertical, right if orientation is horizontal (left for RTL layout)."
+msgstr "A gyermekvezérlőket a tároló végéhez igazítja. Függőleges elrendezésben ez az alsó, vízszintesben a jobb oldali szél, jobbról balra haladó elrendezésben pedig a bal oldali."
+
+#: doc/classes/FlowContainer.xml
+msgid "The last partially filled row or column will wrap aligned to the previous row or column in accordance with [member alignment]."
+msgstr "Az utolsó, részben kitöltött sor vagy oszlop az előző sorhoz vagy oszlophoz igazodik az [member alignment] szerint."
+
+#: doc/classes/FlowContainer.xml
+msgid "The last partially filled row or column will wrap aligned to the beginning of the previous row or column."
+msgstr "Az utolsó, részben kitöltött sor vagy oszlop az előző sor vagy oszlop elejéhez igazodik."
+
+#: doc/classes/FlowContainer.xml
+msgid "The last partially filled row or column will wrap aligned to the center of the previous row or column."
+msgstr "Az utolsó, részben kitöltött sor vagy oszlop az előző sor vagy oszlop közepéhez igazodik."
+
+#: doc/classes/FlowContainer.xml
+msgid "The last partially filled row or column will wrap aligned to the end of the previous row or column."
+msgstr "Az utolsó, részben kitöltött sor vagy oszlop az előző sor vagy oszlop végéhez igazodik."
+
+#: doc/classes/AspectRatioContainer.xml
+msgid "The height of child controls is automatically adjusted based on the width of the container."
+msgstr "A tároló szélessége automatikusan meghatározza a gyermekvezérlők magasságát."
+
+#: doc/classes/AspectRatioContainer.xml
+msgid "The width of child controls is automatically adjusted based on the height of the container."
+msgstr "A tároló magassága automatikusan meghatározza a gyermekvezérlők szélességét."
+
+#: doc/classes/AspectRatioContainer.xml
+msgid "The bounding rectangle of child controls is automatically adjusted to fit inside the container while keeping the aspect ratio."
+msgstr "A gyermekvezérlők befoglaló téglalapja a képarány megtartásával automatikusan akkorára igazodik, hogy beleférjen a tárolóba."
+
+#: doc/classes/AspectRatioContainer.xml
+msgid "The width and height of child controls is automatically adjusted to make their bounding rectangle cover the entire area of the container while keeping the aspect ratio.\nWhen the bounding rectangle of child controls exceed the container's size and [member Control.clip_contents] is enabled, this allows to show only the container's area restricted by its own bounding rectangle."
+msgstr "A gyermekvezérlők szélessége és magassága a képarány megtartásával automatikusan úgy változik, hogy befoglaló téglalapjuk lefedje a tároló teljes területét.\nHa a gyermekvezérlők befoglaló téglalapja túlnyúlik a tárolón, a [member Control.clip_contents] bekapcsolásával csak a tároló saját befoglaló téglalapján belüli rész jelenik meg."
+
+#: doc/classes/AspectRatioContainer.xml
+msgid "Aligns child controls with the beginning (left or top) of the container."
+msgstr "A gyermekvezérlőket a tároló elejéhez, vagyis a bal vagy a felső széléhez igazítja."
+
+#: doc/classes/AspectRatioContainer.xml
+msgid "Aligns child controls with the center of the container."
+msgstr "A gyermekvezérlőket a tároló közepéhez igazítja."
+
+#: doc/classes/AspectRatioContainer.xml
+msgid "Aligns child controls with the end (right or bottom) of the container."
+msgstr "A gyermekvezérlőket a tároló végéhez, vagyis a jobb vagy az alsó széléhez igazítja."
+
+#: doc/classes/SplitContainer.xml
+msgid "Emitted when the user ends dragging."
+msgstr "Akkor bocsátja ki, amikor a felhasználó befejezi a húzást."
+
+#: doc/classes/SplitContainer.xml
+msgid "Emitted when the user starts dragging."
+msgstr "Akkor bocsátja ki, amikor a felhasználó elkezdi a húzást."
+
+#: doc/classes/SplitContainer.xml
+msgid "Emitted when any dragger is dragged by user."
+msgstr "Akkor bocsátja ki, amikor a felhasználó bármelyik fogantyút húzza."
+
+#: doc/classes/SplitContainer.xml
+msgid "The split dragger icon is always visible when [theme_item autohide] is [code]false[/code], otherwise visible only when the cursor hovers it.\nThe size of the grabber icon determines the minimum [theme_item separation].\nThe dragger icon is automatically hidden if the length of the grabber icon is longer than the split bar."
+msgstr "Az elválasztó fogantyújának ikonja mindig látható, ha a [theme_item autohide] értéke [code]false[/code]. Egyébként csak akkor látható, amikor az egérmutató fölé kerül.\nA fogantyú ikonjának mérete határozza meg a [theme_item separation] legkisebb értékét.\nAz ikon automatikusan eltűnik, ha hosszabb az elválasztósávnál."
+
+#: doc/classes/SplitContainer.xml
+msgid "The split dragger icon is never visible regardless of the value of [theme_item autohide].\nThe size of the grabber icon determines the minimum [theme_item separation]."
+msgstr "Az elválasztó fogantyújának ikonja a [theme_item autohide] értékétől függetlenül rejtve marad.\nA fogantyú ikonjának mérete határozza meg a [theme_item separation] legkisebb értékét."
+
+#: doc/classes/SplitContainer.xml
+msgid "The split dragger icon is not visible, and the split bar is collapsed to zero thickness."
+msgstr "Az elválasztó fogantyújának ikonja rejtve van, az elválasztósáv vastagsága pedig nulla."
+
+#: doc/classes/ScrollContainer.xml
+msgid "The current horizontal scroll value.\n[b]Note:[/b] If you are setting this value in the [method Node._ready] function or earlier, it needs to be wrapped with [method Object.set_deferred], since scroll bar's [member Range.max_value] is not initialized yet.\n[codeblock]\nfunc _ready():\n\tset_deferred(\"scroll_horizontal\", 600)\n[/codeblock]"
+msgstr "A vízszintes görgetés aktuális értéke.\n[b]Megjegyzés:[/b] Ha a [method Node._ready] metódusban vagy korábban állítod be az értéket, az értékadást a [method Object.set_deferred] hívással kell késleltetni. A görgetősáv [member Range.max_value] tulajdonsága ekkor még nem kapta meg a kezdeti értékét.\n[codeblock]\nfunc _ready():\n\tset_deferred(\"scroll_horizontal\", 600)\n[/codeblock]"
+
+#: doc/classes/ScrollContainer.xml
+msgid "The current vertical scroll value.\n[b]Note:[/b] Setting it early needs to be deferred, just like in [member scroll_horizontal].\n[codeblock]\nfunc _ready():\n\tset_deferred(\"scroll_vertical\", 600)\n[/codeblock]"
+msgstr "A függőleges görgetés aktuális értéke.\n[b]Megjegyzés:[/b] A korai értékadást a [member scroll_horizontal] tulajdonsághoz hasonlóan késleltetni kell.\n[codeblock]\nfunc _ready():\n\tset_deferred(\"scroll_vertical\", 600)\n[/codeblock]"
+
+#: doc/classes/ScrollContainer.xml
+msgid "Emitted when scrolling stops when dragging the scrollable area [i]with a touch event[/i]. This signal is [i]not[/i] emitted when scrolling by dragging the scrollbar, scrolling with the mouse wheel or scrolling with keyboard/gamepad events.\n[b]Note:[/b] This signal is only emitted on Android or iOS, or on desktop/web platforms when [member ProjectSettings.input_devices/pointing/emulate_touch_from_mouse] is enabled."
+msgstr "Akkor bocsátja ki, amikor a görgethető terület [i]érintéssel[/i] történő húzása után leáll a görgetés. A görgetősáv húzásakor, egérgörgős görgetéskor, illetve billentyűzet vagy játékvezérlő használatakor [i]nem[/i] bocsátja ki.\n[b]Megjegyzés:[/b] A jel Androidon és iOS-en érhető el, valamint asztali és webes platformokon, ha engedélyezve van a [member ProjectSettings.input_devices/pointing/emulate_touch_from_mouse] beállítás."
+
+#: doc/classes/ScrollContainer.xml
+msgid "Emitted when scrolling starts when dragging the scrollable area [i]with a touch event[/i]. This signal is [i]not[/i] emitted when scrolling by dragging the scrollbar, scrolling with the mouse wheel or scrolling with keyboard/gamepad events.\n[b]Note:[/b] This signal is only emitted on Android or iOS, or on desktop/web platforms when [member ProjectSettings.input_devices/pointing/emulate_touch_from_mouse] is enabled."
+msgstr "Akkor bocsátja ki, amikor a görgethető terület [i]érintéssel[/i] történő húzásakor elindul a görgetés. A görgetősáv húzásakor, egérgörgős görgetéskor, illetve billentyűzet vagy játékvezérlő használatakor [i]nem[/i] bocsátja ki.\n[b]Megjegyzés:[/b] A jel Androidon és iOS-en érhető el, valamint asztali és webes platformokon, ha engedélyezve van a [member ProjectSettings.input_devices/pointing/emulate_touch_from_mouse] beállítás."
+
+#: doc/classes/ScrollContainer.xml
+msgid "Scrolling disabled, scrollbar will be invisible."
+msgstr "A görgetés ki van kapcsolva, a görgetősáv rejtve van."
+
+#: doc/classes/ScrollContainer.xml
+msgid "Scrolling enabled, scrollbar will be visible only if necessary, i.e. container's content is bigger than the container."
+msgstr "A görgetés engedélyezve van. A görgetősáv csak akkor jelenik meg, ha a tartalom túlnyúlik a tárolón."
+
+#: doc/classes/ScrollContainer.xml
+msgid "Scrolling enabled, scrollbar will be always visible."
+msgstr "A görgetés engedélyezve van, a görgetősáv mindig látható."
+
+#: doc/classes/ScrollContainer.xml
+msgid "Scrolling enabled, scrollbar will be hidden."
+msgstr "A görgetés engedélyezve van, a görgetősáv rejtve marad."
+
+#: doc/classes/ScrollContainer.xml
+msgid "Combines [constant SCROLL_MODE_AUTO] and [constant SCROLL_MODE_SHOW_ALWAYS]. The scrollbar is only visible if necessary, but the content size is adjusted as if it was always visible. It's useful for ensuring that content size stays the same regardless if the scrollbar is visible."
+msgstr "A [constant SCROLL_MODE_AUTO] és a [constant SCROLL_MODE_SHOW_ALWAYS] viselkedését ötvözi. A görgetősáv csak akkor jelenik meg, ha szükség van rá, de a tároló mindig fenntartja a helyét. Így a tartalom számára rendelkezésre álló terület a sáv megjelenésekor is ugyanakkora marad."
+
+#: doc/classes/ScrollContainer.xml
+msgid "Behaves like [constant SCROLL_MODE_AUTO], but makes the [ScrollContainer] report a minimum size based on its content (limited by [member Control.custom_maximum_size] when set on the corresponding axis). This allows it to grow first and only start scrolling once constrained."
+msgstr "A [constant SCROLL_MODE_AUTO] módhoz hasonlóan működik, de a [ScrollContainer] a tartalma alapján adja meg a minimális méretét. Ha az adott tengelyen be van állítva a [member Control.custom_maximum_size], az korlátozza ezt a méretet. Így a tároló először növekedhet, és csak akkor válik görgethetővé, amikor már nem fér el nagyobb méretben."
+
+#: doc/classes/ScrollContainer.xml
+msgid "Scroll hints will be shown at the top and bottom (if vertical), or left and right (if horizontal)."
+msgstr "A görgetést jelző elemek függőleges irányban felül és alul, vízszintes irányban bal és jobb oldalon jelennek meg."
+
+#: doc/classes/ScrollContainer.xml
+msgid "Scroll hints will be shown at the top (if vertical), or the left (if horizontal)."
+msgstr "A görgetést jelző elem függőleges irányban felül, vízszintes irányban bal oldalon jelenik meg."
+
+#: doc/classes/ScrollContainer.xml
+msgid "Scroll hints will be shown at the bottom (if horizontal), or the right (if horizontal)."
+msgstr "A görgetést jelző elem függőleges irányban alul, vízszintes irányban jobb oldalon jelenik meg."
+
+#: doc/classes/TabBar.xml
+msgid "Emitted when a tab's close button is pressed or, if [member close_with_middle_mouse] is [code]true[/code], when middle-clicking on a tab.\n[b]Note:[/b] Tabs are not removed automatically; this behavior needs to be coded manually. For example:\n[codeblocks]\n[gdscript]\n$TabBar.tab_close_pressed.connect($TabBar.remove_tab)\n[/gdscript]\n[csharp]\nGetNode<TabBar>(\"TabBar\").TabClosePressed += GetNode<TabBar>(\"TabBar\").RemoveTab;\n[/csharp]\n[/codeblocks]"
+msgstr "Akkor bocsátja ki, amikor megnyomják egy fül bezárógombját. Ha a [member close_with_middle_mouse] értéke [code]true[/code], a fülre középső egérgombbal kattintva is kibocsátja.\n[b]Megjegyzés:[/b] A fülek eltávolítását külön kell megvalósítani a kódban. Az alábbi példa ezt mutatja.\n[codeblocks]\n[gdscript]\n$TabBar.tab_close_pressed.connect($TabBar.remove_tab)\n[/gdscript]\n[csharp]\nGetNode<TabBar>(\"TabBar\").TabClosePressed += GetNode<TabBar>(\"TabBar\").RemoveTab;\n[/csharp]\n[/codeblocks]"
+
+#: doc/classes/GraphElement.xml
+msgid "A container that represents a basic element that can be placed inside a [GraphEdit] control."
+msgstr "Tároló, amely egy [GraphEdit] vezérlőbe helyezhető alapelemet képvisel."
+
+#: doc/classes/GraphElement.xml
+msgid "[GraphElement] allows to create custom elements for a [GraphEdit] graph. By default such elements can be selected, resized, and repositioned, but they cannot be connected. For a graph element that allows for connections see [GraphNode]."
+msgstr "A [GraphElement] segítségével egyéni elemeket hozhatsz létre egy [GraphEdit] gráfhoz. Ezek az elemek alapból kijelölhetők, átméretezhetők és áthelyezhetők, de nem kapcsolhatók össze. Összekapcsolható gráfelemhez használd a [GraphNode] osztályt."
+
+#: doc/classes/GraphElement.xml
+msgid "If [code]true[/code], the user can drag the GraphElement."
+msgstr "Ha az érték [code]true[/code], a felhasználó húzással mozgathatja a GraphElement elemet."
+
+#: doc/classes/GraphElement.xml
+msgid "The offset of the GraphElement, relative to the scroll offset of the [GraphEdit]."
+msgstr "A GraphElement helyzeteltolása a [GraphEdit] görgetési eltolásához képest."
+
+#: doc/classes/GraphElement.xml
+msgid "If [code]true[/code], the user can resize the GraphElement.\n[b]Note:[/b] Dragging the handle will only emit the [signal resize_request] and [signal resize_end] signals, the GraphElement needs to be resized manually."
+msgstr "Ha az érték [code]true[/code], a felhasználó átméretezheti a GraphElement elemet.\n[b]Megjegyzés:[/b] A fogantyú húzása csak a [signal resize_request] és a [signal resize_end] jelet bocsátja ki. A GraphElement tényleges átméretezéséről külön kell gondoskodni."
+
+#: doc/classes/GraphElement.xml
+msgid "If [code]true[/code], [PopupMenu]s that are descendants of the GraphElement are scaled with the [GraphEdit] zoom."
+msgstr "Ha az érték [code]true[/code], a GraphElement leszármazott [PopupMenu] elemei a [GraphEdit] nagyításával együtt méreteződnek."
+
+#: doc/classes/GraphElement.xml
+msgid "If [code]true[/code], the user can select the GraphElement."
+msgstr "Ha az érték [code]true[/code], a felhasználó kijelölheti a GraphElement elemet."
+
+#: doc/classes/GraphElement.xml
+msgid "If [code]true[/code], the GraphElement is selected."
+msgstr "Ha az érték [code]true[/code], a GraphElement elem ki van jelölve."
+
+#: doc/classes/GraphElement.xml
+msgid "Emitted when removing the GraphElement is requested."
+msgstr "Akkor bocsátja ki, amikor a GraphElement eltávolítását kérik."
+
+#: doc/classes/GraphElement.xml
+msgid "Emitted when the GraphElement is dragged."
+msgstr "Akkor bocsátja ki, amikor a GraphElement elemet húzzák."
+
+#: doc/classes/GraphElement.xml
+msgid "Emitted when the GraphElement is deselected."
+msgstr "Akkor bocsátja ki, amikor megszűnik a GraphElement kijelölése."
+
+#: doc/classes/GraphElement.xml
+msgid "Emitted when the GraphElement is selected."
+msgstr "Akkor bocsátja ki, amikor kijelölik a GraphElement elemet."
+
+#: doc/classes/GraphElement.xml
+msgid "Emitted when the GraphElement is moved."
+msgstr "Akkor bocsátja ki, amikor elmozdul a GraphElement."
+
+#: doc/classes/GraphElement.xml
+msgid "Emitted when displaying the GraphElement over other ones is requested. Happens on focusing (clicking into) the GraphElement."
+msgstr "Akkor bocsátja ki, amikor a GraphElement elemet a többi elé kell hozni. Ez akkor történik, amikor az elemre kattintva fókuszt kap."
+
+#: doc/classes/GraphElement.xml
+msgid "Emitted when releasing the mouse button after dragging the resizer handle (see [member resizable])."
+msgstr "Akkor bocsátja ki, amikor az átméretező fogantyú húzása után felengedik az egérgombot. Lásd a [member resizable] tulajdonságot."
+
+#: doc/classes/GraphElement.xml
+msgid "Emitted when resizing the GraphElement is requested. Happens on dragging the resizer handle (see [member resizable])."
+msgstr "Akkor bocsátja ki, amikor az elem átméretezését kérik, vagyis amikor az átméretező fogantyút húzzák. Lásd a [member resizable] tulajdonságot."
+
+#: doc/classes/GraphElement.xml
+msgid "The icon used for the resizer, visible when [member resizable] is enabled."
+msgstr "Az átméretező fogantyú ikonja. Akkor látható, ha a [member resizable] engedélyezve van."
+
+#: doc/classes/GraphFrame.xml
+msgid "GraphFrame is a special [GraphElement] that can be used to organize other [GraphElement]s inside a [GraphEdit]."
+msgstr "A GraphFrame olyan [GraphElement], amellyel egy [GraphEdit] vezérlőn belül más [GraphElement] elemeket csoportosíthatsz."
+
+#: doc/classes/GraphFrame.xml
+msgid "GraphFrame is a special [GraphElement] to which other [GraphElement]s can be attached. It can be configured to automatically resize to enclose all attached [GraphElement]s. If the frame is moved, all the attached [GraphElement]s inside it will be moved as well.\nA GraphFrame is always kept behind the connection layer and other [GraphElement]s inside a [GraphEdit]."
+msgstr "A GraphFrame olyan [GraphElement], amelyhez más [GraphElement] elemeket lehet csatolni. Beállítható, hogy automatikusan átméretezze magát, és minden csatolt [GraphElement] elem elférjen benne. Ha elmozdítod a keretet, a benne lévő összes csatolt [GraphElement] vele együtt mozdul.\nA GraphFrame a kapcsolatok rétege és a [GraphEdit] többi [GraphElement] eleme mögött marad."
+
+#: doc/classes/GraphFrame.xml
+msgid "Returns the [HBoxContainer] used for the title bar, only containing a [Label] for displaying the title by default.\nThis can be used to add custom controls to the title bar such as option or close buttons."
+msgstr "Visszaadja a címsor [HBoxContainer] tárolóját. Ez alapból csak a címet megjelenítő [Label] vezérlőt tartalmazza.\nA tárolóhoz saját címsori vezérlőket, például beállítás- vagy bezárógombot adhatsz."
+
+#: doc/classes/GraphFrame.xml
+msgid "If [code]true[/code], the frame's rect will be adjusted automatically to enclose all attached [GraphElement]s."
+msgstr "Ha az érték [code]true[/code], a keret téglalapja automatikusan igazodik úgy, hogy minden csatolt [GraphElement] elemet körülöleljen."
+
+#: doc/classes/GraphFrame.xml
+msgid "The margin around the attached nodes that is used to calculate the size of the frame when [member autoshrink_enabled] is [code]true[/code]."
+msgstr "A csatolt csomópontok körül hagyott margó, amely beleszámít a keret méretébe, ha a [member autoshrink_enabled] értéke [code]true[/code]."
+
+#: doc/classes/GraphFrame.xml
+msgid "The margin inside the frame that can be used to drag the frame."
+msgstr "A kereten belüli margó, amelynél fogva a keret húzható."
+
+#: doc/classes/GraphFrame.xml
+msgid "The color of the frame when [member tint_color_enabled] is [code]true[/code]."
+msgstr "A keret színe, ha a [member tint_color_enabled] értéke [code]true[/code]."
+
+#: doc/classes/GraphFrame.xml
+msgid "If [code]true[/code], the tint color will be used to tint the frame."
+msgstr "Ha az érték [code]true[/code], a színezéshez megadott szín árnyalja a keretet."
+
+#: doc/classes/GraphFrame.xml
+msgid "Title of the frame."
+msgstr "A keret címe."
+
+#: doc/classes/GraphFrame.xml
+msgid "Emitted when [member autoshrink_enabled] or [member autoshrink_margin] changes."
+msgstr "Akkor bocsátja ki, amikor megváltozik az [member autoshrink_enabled] vagy az [member autoshrink_margin] értéke."
+
+#: doc/classes/GraphFrame.xml doc/classes/GraphNode.xml
+msgid "The color modulation applied to the resizer icon."
+msgstr "Az átméretező fogantyú ikonjának színmódosítása."
+
+#: doc/classes/GraphFrame.xml
+msgid "The default [StyleBox] used for the background of the [GraphFrame]."
+msgstr "A [GraphFrame] hátteréhez használt alapértelmezett [StyleBox]."
+
+#: doc/classes/GraphFrame.xml
+msgid "The [StyleBox] used for the background of the [GraphFrame] when it is selected."
+msgstr "A kijelölt [GraphFrame] hátteréhez használt [StyleBox]."
+
+#: doc/classes/GraphFrame.xml
+msgid "The [StyleBox] used for the title bar of the [GraphFrame]."
+msgstr "A [GraphFrame] címsorához használt [StyleBox]."
+
+#: doc/classes/GraphFrame.xml
+msgid "The [StyleBox] used for the title bar of the [GraphFrame] when it is selected."
+msgstr "A kijelölt [GraphFrame] címsorához használt [StyleBox]."
+
+#: doc/classes/GraphNode.xml
+msgid "A container with connection ports, representing a node in a [GraphEdit]."
+msgstr "Csatlakozóportokkal ellátott tároló, amely egy [GraphEdit] csomópontját képviseli."
+
+#: doc/classes/GraphNode.xml
+msgid "[GraphNode] allows to create nodes for a [GraphEdit] graph with customizable content based on its child controls. [GraphNode] is derived from [Container] and it is responsible for placing its children on screen. This works similar to [VBoxContainer]. Children, in turn, provide [GraphNode] with so-called slots, each of which can have a connection port on either side.\nEach [GraphNode] slot is defined by its index and can provide the node with up to two ports: one on the left, and one on the right. By convention the left port is also referred to as the [b]input port[/b] and the right port is referred to as the [b]output port[/b]. Each port can be enabled and configured individually, using different type and color. The type is an arbitrary value that you can define using your own considerations. The parent [GraphEdit] will receive this information on each connect and disconnect request.\nSlots can be configured in the Inspector dock once you add at least one child [Control]. The properties are grouped by each slot's index in the \"Slot\" section.\n[b]Note:[/b] While GraphNode is set up using slots and slot indices, connections are made between the ports which are enabled. Because of that [GraphEdit] uses the port's index and not the slot's index. You can use [method get_input_port_slot] and [method get_output_port_slot] to get the slot index from the port index."
+msgstr "A [GraphNode] segítségével olyan csomópontokat hozhatsz létre egy [GraphEdit] gráfhoz, amelyek tartalmát a gyermekvezérlőikkel alakíthatod ki. A [GraphNode] a [Container] leszármazottja, és a [VBoxContainer] működéséhez hasonlóan elrendezi a gyermekeit a képernyőn. Minden gyermek egy-egy csatlakozóhelyet ad a [GraphNode] csomópontnak. Egy csatlakozóhely mindkét oldalán lehet egy port.\nA [GraphNode] minden csatlakozóhelyét az indexe azonosítja. Egy csatlakozóhelyhez legfeljebb két port tartozhat, egy bal és egy jobb oldali. A bal oldalit szokás [b]bemeneti portnak[/b], a jobb oldalit [b]kimeneti portnak[/b] nevezni. Mindegyik port külön engedélyezhető, és külön típust és színt kaphat. A típus tetszőleges, a saját szabályaid szerint megadott érték. A szülő [GraphEdit] minden összekapcsolási és szétkapcsolási kérésnél megkapja ezeket az adatokat.\nLegalább egy [Control] gyermek hozzáadása után a csatlakozóhelyeket az Inspector panelen állíthatod be. A „Slot” szakaszban a tulajdonságok a csatlakozóhelyek indexe szerint vannak csoportosítva.\n[b]Megjegyzés:[/b] A GraphNode beállításához a csatlakozóhelyek és azok indexei kellenek. A kapcsolatok az engedélyezett portok között jönnek létre, ezért a [GraphEdit] a port indexét használja. A port indexéből a [method get_input_port_slot] vagy a [method get_output_port_slot] metódussal kérheted le a csatlakozóhely indexét."
+
+#: doc/classes/GraphNode.xml
+msgid "Disables all slots of the GraphNode. This will remove all input/output ports from the GraphNode."
+msgstr "Letiltja a GraphNode összes csatlakozóhelyét, ezzel eltávolítva a GraphNode összes bemeneti és kimeneti portját."
+
+#: doc/classes/GraphNode.xml
+msgid "Disables the slot with the given [param slot_index]. This will remove the corresponding input and output port from the GraphNode."
+msgstr "Letiltja a megadott [param slot_index] indexű csatlakozóhelyet, ezzel eltávolítva a hozzá tartozó bemeneti és kimeneti portot a GraphNode elemről."
+
+#: doc/classes/GraphNode.xml
+msgid "Returns the [Color] of the input port with the given [param port_idx]."
+msgstr "Visszaadja a megadott [param port_idx] indexű bemeneti port [Color] színét."
+
+#: doc/classes/GraphNode.xml
+msgid "Returns the number of slots with an enabled input port."
+msgstr "Visszaadja az engedélyezett bemeneti porttal rendelkező csatlakozóhelyek számát."
+
+#: doc/classes/GraphNode.xml
+msgid "Returns the position of the input port with the given [param port_idx]."
+msgstr "Visszaadja a megadott [param port_idx] indexű bemeneti port helyzetét."
+
+#: doc/classes/GraphNode.xml
+msgid "Returns the corresponding slot index of the input port with the given [param port_idx]."
+msgstr "Visszaadja a megadott [param port_idx] indexű bemeneti porthoz tartozó csatlakozóhely indexét."
+
+#: doc/classes/GraphNode.xml
+msgid "Returns the type of the input port with the given [param port_idx]."
+msgstr "Visszaadja a megadott [param port_idx] indexű bemeneti port típusát."
+
+#: doc/classes/GraphNode.xml
+msgid "Returns the [Color] of the output port with the given [param port_idx]."
+msgstr "Visszaadja a megadott [param port_idx] indexű kimeneti port [Color] színét."
+
+#: doc/classes/GraphNode.xml
+msgid "Returns the number of slots with an enabled output port."
+msgstr "Visszaadja az engedélyezett kimeneti porttal rendelkező csatlakozóhelyek számát."
+
+#: doc/classes/GraphNode.xml
+msgid "Returns the position of the output port with the given [param port_idx]."
+msgstr "Visszaadja a megadott [param port_idx] indexű kimeneti port helyzetét."
+
+#: doc/classes/GraphNode.xml
+msgid "Returns the corresponding slot index of the output port with the given [param port_idx]."
+msgstr "Visszaadja a megadott [param port_idx] indexű kimeneti porthoz tartozó csatlakozóhely indexét."
+
+#: doc/classes/GraphNode.xml
+msgid "Returns the type of the output port with the given [param port_idx]."
+msgstr "Visszaadja a megadott [param port_idx] indexű kimeneti port típusát."
+
+#: doc/classes/GraphNode.xml
+msgid "Returns the left (input) [Color] of the slot with the given [param slot_index]."
+msgstr "Visszaadja a megadott [param slot_index] indexű csatlakozóhely bal oldali (bemeneti) [Color] színét."
+
+#: doc/classes/GraphNode.xml
+msgid "Returns the right (output) [Color] of the slot with the given [param slot_index]."
+msgstr "Visszaadja a megadott [param slot_index] indexű csatlakozóhely jobb oldali (kimeneti) [Color] színét."
+
+#: doc/classes/GraphNode.xml
+msgid "Returns the left (input) custom [Texture2D] of the slot with the given [param slot_index]."
+msgstr "Visszaadja a megadott [param slot_index] indexű csatlakozóhely bal oldali (bemeneti) egyéni ikonját [Texture2D] értékként."
+
+#: doc/classes/GraphNode.xml
+msgid "Returns the right (output) custom [Texture2D] of the slot with the given [param slot_index]."
+msgstr "Visszaadja a megadott [param slot_index] indexű csatlakozóhely jobb oldali (kimeneti) egyéni ikonját [Texture2D] értékként."
+
+#: doc/classes/GraphNode.xml
+msgid "Returns the left (input) metadata of the slot with the given [param slot_index]."
+msgstr "Visszaadja a megadott [param slot_index] indexű csatlakozóhely bal oldali (bemeneti) metaadatait."
+
+#: doc/classes/GraphNode.xml
+msgid "Returns the right (output) metadata of the slot with the given [param slot_index]."
+msgstr "Visszaadja a megadott [param slot_index] indexű csatlakozóhely jobb oldali (kimeneti) metaadatait."
+
+#: doc/classes/GraphNode.xml
+msgid "Returns the left (input) type of the slot with the given [param slot_index]."
+msgstr "Visszaadja a megadott [param slot_index] indexű csatlakozóhely bal oldali (bemeneti) típusát."
+
+#: doc/classes/GraphNode.xml
+msgid "Returns the right (output) type of the slot with the given [param slot_index]."
+msgstr "Visszaadja a megadott [param slot_index] indexű csatlakozóhely jobb oldali (kimeneti) típusát."
+
+#: doc/classes/GraphNode.xml
+msgid "Returns the [HBoxContainer] used for the title bar, only containing a [Label] for displaying the title by default. This can be used to add custom controls to the title bar such as option or close buttons."
+msgstr "Visszaadja a címsor [HBoxContainer] tárolóját, amely alapból csak a címet megjelenítő [Label] vezérlőt tartalmazza. Hozzáadhatsz saját címsori vezérlőket, például beállítás- vagy bezárógombot."
