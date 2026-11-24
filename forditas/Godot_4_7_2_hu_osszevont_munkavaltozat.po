@@ -58820,7 +58820,7 @@ msgstr "A [member rendering/environment/glow/upscale_mode] kisebb teljesítmény
 #. ProjectSettings.rendering/environment/screen_space_reflection/half_size
 #: doc/classes/ProjectSettings.xml
 msgid "If [code]true[/code], screen-space reflections will be rendered at half size and then upscaled before being added to the scene. This is faster but may look pixelated or cause flickering. If [code]false[/code], screen-space reflections will be rendered at full size."
-msgstr "Ha az érték [code]true[/code], a motor fél felbontásban számítja ki a képernyőtérbeli tükröződéseket, majd a jelenethez adás előtt felnagyítja őket. Ez gyorsabb, de képpontosságot vagy villódzást okozhat. [code]false[/code] értéknél a tükröződések teljes felbontásban készülnek."
+msgstr "Ha az érték [code]true[/code], a motor fél felbontásban számítja ki a képernyőtérbeli tükröződéseket, majd a jelenethez adás előtt felnagyítja őket. Ez gyorsabb, de pixelesedést vagy villódzást okozhat. [code]false[/code] értéknél a tükröződések teljes felbontásban készülnek."
 
 #. ProjectSettings.rendering/environment/ssao/adaptive_target
 #: doc/classes/ProjectSettings.xml
@@ -58935,7 +58935,7 @@ msgstr "16 bitet használ az irányított fény árnyékmélység-térképéhez.
 #. ProjectSettings.rendering/lights_and_shadows/directional_shadow/size
 #: doc/classes/ProjectSettings.xml
 msgid "The directional shadow's size in pixels. Higher values will result in sharper shadows, at the cost of performance. The value is rounded up to the nearest power of 2."
-msgstr "Az irányított fény árnyéktérképének mérete képpontban. Nagyobb értéknél élesebbek az árnyékok, de lassabb a megjelenítés. A motor az értéket felfelé kerekíti kettő legközelebbi hatványára."
+msgstr "Az irányított fény árnyéktérképének mérete képpontban. Nagyobb értéknél élesebbek az árnyékok, de lassabb a megjelenítés. A motor az értéket felfelé kerekíti a legközelebbi kettőhatványra."
 
 #. ProjectSettings.rendering/lights_and_shadows/directional_shadow/size.mobile
 #: doc/classes/ProjectSettings.xml
