@@ -58032,3 +58032,505 @@ msgstr "A példány láthatósági tartományának határán fokozatosan megjele
 #: doc/classes/ImporterMesh.xml
 msgid "Merges multiple [ImporterMesh]es into a single [ImporterMesh]. Each input mesh is transformed by the corresponding [Transform3D] in the [param relative_transforms] array, which must be the same size as [param importer_meshes]. Negative scales are supported, and the winding order in the mesh data will be corrected to account for this.\nIf [param deduplicate_surfaces] is [code]true[/code] and multiple meshes have surfaces with the same names and formats, the surfaces will be merged together when the meshes are merged, and will use the material from the first matching surface. This is useful for reducing the number of surfaces in the resulting mesh, and avoids duplicating materials. Surfaces with bone weights will never be deduplicated. If [param deduplicate_surfaces] is [code]false[/code], the surfaces will always be kept separate, and will be given unique names.\n[b]Warning:[/b] Blend shapes and LODs are not supported and will be discarded. Do not use this function to discard blend shapes and LODs, as support for these may be added in the future."
 msgstr "Több [ImporterMesh] hálót egyetlen [ImporterMesh] hálóvá egyesít. A bemeneti hálókra a [param relative_transforms] tömb megfelelő [Transform3D] transzformációját alkalmazza. A tömb hossza egyezzen meg a [param importer_meshes] tömb hosszával. A negatív méretezést is kezeli, és ennek megfelelően korrigálja a háló csúcssorrendjét.\nHa a [param deduplicate_surfaces] értéke [code]true[/code], az azonos nevű és formátumú felületeket egyesíti, és az első egyező felület anyagát használja. Így az eredmény kevesebb felületből állhat, és kevesebb anyag ismétlődhet. A csontsúlyokat tartalmazó felületek mindig külön maradnak. Ha a [param deduplicate_surfaces] értéke [code]false[/code], minden felület külön marad, és egyedi nevet kap.\n[b]Figyelmeztetés:[/b] A művelet jelenleg eldobja a keverési alakzatokat és a részletességi szinteket. Eltávolításukra ne használd ezt a metódust, mert a későbbi verziók megtarthatják őket."
+
+#. Decal.brief
+#: doc/classes/Decal.xml
+msgid "Node that projects a texture onto a [MeshInstance3D]."
+msgstr "Textúrát vetít egy [MeshInstance3D] felületére."
+
+#. Decal.lower_fade
+#: doc/classes/Decal.xml
+msgid "Sets the curve over which the decal will fade as the surface gets further from the center of the [AABB]. Only positive values are valid (negative values will be clamped to [code]0.0[/code]). See also [member upper_fade]."
+msgstr "Az elhalványulási görbét szabályozza, ahogy a felület lefelé távolodik az [AABB] középpontjától. Negatív értéknél a motor [code]0.0[/code]-t használ. Lásd még a [member upper_fade] tulajdonságot."
+
+#. Decal.normal_fade
+#: doc/classes/Decal.xml
+msgid "Fades the Decal if the angle between the Decal's [AABB] and the target surface becomes too large. A value of [code]0[/code] projects the Decal regardless of angle, a value of [code]1[/code] limits the Decal to surfaces that are nearly perpendicular.\n[b]Note:[/b] Setting [member normal_fade] to a value greater than [code]0.0[/code] has a small performance cost due to the added normal angle computations."
+msgstr "Fokozatosan elhalványítja a vetített textúrát, ha a célfelület túlságosan elfordul a Decal [AABB] dobozának vetítési irányához képest. A [code]0[/code] értéknél a Decal szögtől függetlenül vetít. [code]1[/code] értéknél csak a vetítési irányra közel merőleges felületeken látszik.\n[b]Megjegyzés:[/b] Ha a [member normal_fade] nagyobb [code]0.0[/code]-nál, a normálvektorok szögének kiszámítása kissé növeli a számításigényt."
+
+#. Decal.size
+#: doc/classes/Decal.xml
+msgid "Sets the size of the [AABB] used by the decal. All dimensions must be set to a value greater than zero (they will be clamped to [code]0.001[/code] if this is not the case). The AABB goes from [code]-size/2[/code] to [code]size/2[/code].\n[b]Note:[/b] To improve culling efficiency of \"hard surface\" decals, set their [member upper_fade] and [member lower_fade] to [code]0.0[/code] and set the Y component of the [member size] as low as possible. This will reduce the decals' AABB size without affecting their appearance."
+msgstr "A vetített textúra [AABB] dobozának mérete. Mindegyik méretnek nullánál nagyobbnak kell lennie. Az érvénytelen értékeket a motor [code]0.001[/code]-re korlátozza. A doboz a helyi koordináta-rendszerben [code]-size/2[/code] és [code]size/2[/code] között helyezkedik el.\n[b]Megjegyzés:[/b] A kemény felületre vetített textúrák hatékonyabb kiszűréséhez állítsd az [member upper_fade] és a [member lower_fade] értékét [code]0.0[/code]-ra, a [member size] Y komponensét pedig a lehető legkisebbre. Így kisebb lesz a vetítés befoglaló doboza anélkül, hogy a megjelenése megváltozna."
+
+#. Decal.texture_albedo
+#: doc/classes/Decal.xml
+msgid "[Texture2D] with the base [Color] of the Decal. Either this or the [member texture_emission] must be set for the Decal to be visible. Use the alpha channel like a mask to smoothly blend the edges of the decal with the underlying object.\n[b]Note:[/b] Unlike [BaseMaterial3D] whose filter mode can be adjusted on a per-material basis, the filter mode for [Decal] textures is set globally with [member ProjectSettings.rendering/textures/decals/filter]."
+msgstr "A vetített textúra alapvető [Color] színét megadó [Texture2D]. A vetítés akkor látható, ha ez vagy a [member texture_emission] be van állítva. Az alfa-csatorna maszkként használható, hogy a vetítés szélei fokozatosan simuljanak az alatta lévő felületbe.\n[b]Megjegyzés:[/b] A [BaseMaterial3D] szűrési módja anyagonként állítható. A [Decal] textúrák szűrését a [member ProjectSettings.rendering/textures/decals/filter] globális beállítás szabályozza."
+
+#. Decal.texture_emission
+#: doc/classes/Decal.xml
+msgid "[Texture2D] with the emission [Color] of the Decal. Either this or the [member texture_albedo] must be set for the Decal to be visible. Use the alpha channel like a mask to smoothly blend the edges of the decal with the underlying object.\n[b]Note:[/b] Unlike [BaseMaterial3D] whose filter mode can be adjusted on a per-material basis, the filter mode for [Decal] textures is set globally with [member ProjectSettings.rendering/textures/decals/filter]."
+msgstr "A vetített textúra által kibocsátott fény [Color] színét megadó [Texture2D]. A vetítés akkor látható, ha ez vagy a [member texture_albedo] be van állítva. Az alfa-csatorna maszkként használható, hogy a vetítés szélei fokozatosan simuljanak az alatta lévő felületbe.\n[b]Megjegyzés:[/b] A [BaseMaterial3D] szűrési módja anyagonként állítható. A [Decal] textúrák szűrését a [member ProjectSettings.rendering/textures/decals/filter] globális beállítás szabályozza."
+
+#. Decal.upper_fade
+#: doc/classes/Decal.xml
+msgid "Sets the curve over which the decal will fade as the surface gets further from the center of the [AABB]. Only positive values are valid (negative values will be clamped to [code]0.0[/code]). See also [member lower_fade]."
+msgstr "Az elhalványulási görbét szabályozza, ahogy a felület felfelé távolodik az [AABB] középpontjától. Negatív értéknél a motor [code]0.0[/code]-t használ. Lásd még a [member lower_fade] tulajdonságot."
+
+#. Decal.TEXTURE_MAX
+#: doc/classes/Decal.xml
+msgid "Max size of [enum DecalTexture] enum."
+msgstr "A [enum DecalTexture] felsorolás méretét jelöli."
+
+#. DirectionalLight3D.sky_mode
+#: doc/classes/DirectionalLight3D.xml
+msgid "Whether this [DirectionalLight3D] is visible in the sky, in the scene, or both in the sky and in the scene."
+msgstr "Azt szabályozza, hogy a [DirectionalLight3D] az égbolton, a jelenetben vagy mindkettőben megjelenjen."
+
+#. Light3D.light_angular_distance
+#: doc/classes/Light3D.xml
+msgid "The light's angular size in degrees. Increasing this will make shadows softer at greater distances (also called percentage-closer soft shadows, or PCSS). Only available for [DirectionalLight3D]s. For reference, the Sun from the Earth is approximately [code]0.5[/code]. Increasing this value above [code]0.0[/code] for lights with shadows enabled will have a noticeable performance cost due to PCSS.\n[b]Note:[/b] [member light_angular_distance] is not affected by [member Node3D.scale] (the light's scale or its parent's scale).\n[b]Note:[/b] PCSS for directional lights is only supported in the Forward+ rendering method, not Mobile or Compatibility."
+msgstr "A fényforrás látszó szögmérete fokban. Nagyobb értéknél az árnyékok távolabb lágyabbak lesznek. Ez a százalékos közelebbi lágy árnyékolás (PCSS). A beállítás csak [DirectionalLight3D] fényekhez érhető el. A Nap látszó szögmérete a Földről körülbelül [code]0.5[/code] fok. Árnyékvetésnél a [code]0.0[/code] fölötti érték a PCSS miatt észrevehetően növeli a számításigényt.\n[b]Megjegyzés:[/b] A [member light_angular_distance] értékét nem befolyásolja a fény vagy a szülőcsomópont [member Node3D.scale] méretezése.\n[b]Megjegyzés:[/b] Irányított fényeknél a PCSS csak a Forward+ renderelési módban támogatott. Mobile és Kompatibilitás módban nem használható."
+
+#. Light3D.light_projector
+#: doc/classes/Light3D.xml
+msgid "[Texture2D] projected by light. [member shadow_enabled] must be on for the projector to work. Light projectors make the light appear as if it is shining through a colored but transparent object, almost like light shining through stained-glass.\n[b]Note:[/b] Unlike [BaseMaterial3D] whose filter mode can be adjusted on a per-material basis, the filter mode for light projector textures is set globally with [member ProjectSettings.rendering/textures/light_projectors/filter].\n[b]Note:[/b] Light projector textures are only supported in the Forward+ and Mobile rendering methods, not Compatibility."
+msgstr "A fény által vetített [Texture2D]. A vetítéshez engedélyezni kell a [member shadow_enabled] beállítást. A textúra olyan hatást kelt, mintha a fény színes, átlátszó tárgyon, például festett üvegen haladna át.\n[b]Megjegyzés:[/b] A [BaseMaterial3D] szűrése anyagonként állítható. A fény által vetített textúrák szűrését a [member ProjectSettings.rendering/textures/light_projectors/filter] globális beállítás szabályozza.\n[b]Megjegyzés:[/b] A fényvetítés textúrái Forward+ és Mobile módban támogatottak. Kompatibilitás módban nem használhatók."
+
+#. Light3D.light_volumetric_fog_energy
+#: doc/classes/Light3D.xml
+msgid "Secondary multiplier multiplied with [member light_energy] then used with the [Environment]'s volumetric fog (if enabled). If set to [code]0.0[/code], computing volumetric fog will be skipped for this light, which can improve performance for large amounts of lights when volumetric fog is enabled.\n[b]Note:[/b] To prevent short-lived dynamic light effects from poorly interacting with volumetric fog, lights used in those effects should have [member light_volumetric_fog_energy] set to [code]0.0[/code] unless [member Environment.volumetric_fog_temporal_reprojection_enabled] is disabled (or unless the reprojection amount is significantly lowered)."
+msgstr "A [member light_energy] értékével összeszorzott másodlagos szorzó, amely az [Environment] térfogati ködében érvényesül, ha a köd aktív. Ha az érték [code]0.0[/code], a motor kihagyja ezt a fényt a köd kiszámításakor. Aktív térfogati köd és sok fény esetén ez javíthatja a teljesítményt.\n[b]Megjegyzés:[/b] Rövid ideig tartó dinamikus fényhatásoknál állítsd a [member light_volumetric_fog_energy] értékét [code]0.0[/code]-ra a ködben megmaradó nyomok elkerüléséhez. Erre nincs szükség, ha a [member Environment.volumetric_fog_temporal_reprojection_enabled] ki van kapcsolva, vagy az újravetítés súlya jóval kisebb."
+
+#. Light3D.BAKE_DISABLED
+#: doc/classes/Light3D.xml
+msgid "Light is ignored when baking. This is the fastest mode, but the light will not be taken into account when baking global illumination. This mode should generally be used for dynamic lights that change quickly, as the effect of global illumination is less noticeable on those lights.\n[b]Note:[/b] Hiding a light does [i]not[/i] affect baking [LightmapGI]. Hiding a light will still affect baking [VoxelGI] and SDFGI (see [member Environment.sdfgi_enabled])."
+msgstr "A motor a sütéskor figyelmen kívül hagyja a fényt. Ez a leggyorsabb mód. A fény nem járul hozzá a sütött globális megvilágításhoz. Általában gyorsan változó dinamikus fényekhez érdemes használni, mert ezeknél a globális megvilágítás kevésbé feltűnő.\n[b]Megjegyzés:[/b] A fény elrejtése [i]nem[/i] befolyásolja a [LightmapGI] sütését. A [VoxelGI] és az SDFGI sütésénél, illetve frissítésénél viszont számít, hogy látható-e a fény (lásd [member Environment.sdfgi_enabled])."
+
+#. LightmapProbe.brief
+#: doc/classes/LightmapProbe.xml
+msgid "Represents a single manually placed probe for dynamic object lighting with [LightmapGI]."
+msgstr "Egy kézzel elhelyezett fénypróba, amely a [LightmapGI] segítségével megvilágítja a dinamikus objektumokat."
+
+#. ReflectionProbe.ambient_color
+#: doc/classes/ReflectionProbe.xml
+msgid "The custom ambient color to use within the [ReflectionProbe]'s box defined by its [member size]. Only effective if [member ambient_mode] is [constant AMBIENT_COLOR]."
+msgstr "A [ReflectionProbe] [member size] értéke által meghatározott dobozon belül használt egyéni környezeti szín. Csak akkor hat, ha az [member ambient_mode] értéke [constant AMBIENT_COLOR]."
+
+#. ReflectionProbe.ambient_color_energy
+#: doc/classes/ReflectionProbe.xml
+msgid "The custom ambient color energy to use within the [ReflectionProbe]'s box defined by its [member size]. Only effective if [member ambient_mode] is [constant AMBIENT_COLOR]."
+msgstr "A [ReflectionProbe] [member size] értéke által meghatározott dobozon belül használt egyéni környezeti szín energiaszintje. Csak akkor hat, ha az [member ambient_mode] értéke [constant AMBIENT_COLOR]."
+
+#. ReflectionProbe.ambient_mode
+#: doc/classes/ReflectionProbe.xml
+msgid "The ambient color to use within the [ReflectionProbe]'s box defined by its [member size]. The ambient color will smoothly blend with other [ReflectionProbe]s and the rest of the scene (outside the [ReflectionProbe]'s box defined by its [member size])."
+msgstr "A [ReflectionProbe] [member size] értéke által meghatározott dobozon belül használt környezeti szín módja. A szín fokozatosan keveredik más [ReflectionProbe] próbák színével és a [ReflectionProbe] [member size] által meghatározott dobozán kívüli jelenet színével."
+
+#. ReflectionProbe.blend_distance
+#: doc/classes/ReflectionProbe.xml
+msgid "Defines the distance in meters over which a probe blends into the scene."
+msgstr "A távolság méterben, amelyen belül a próba hatása fokozatosan beleolvad a jelenetbe."
+
+#. ReflectionProbe.box_projection
+#: doc/classes/ReflectionProbe.xml
+msgid "If [code]true[/code], enables box projection. This makes reflections look more correct in rectangle-shaped rooms by offsetting the reflection center depending on the camera's location.\n[b]Note:[/b] To better fit rectangle-shaped rooms that are not aligned to the grid, you can rotate the [ReflectionProbe] node."
+msgstr "Ha az érték [code]true[/code], bekapcsolja a dobozvetítést. Téglalap alaprajzú helyiségekben pontosabb tükröződést ad, mert a kamera helyzetétől függően eltolja a tükröződés középpontját.\n[b]Megjegyzés:[/b] Ha a helyiség falai nem igazodnak a rácshoz, a [ReflectionProbe] elforgatható, hogy jobban illeszkedjen hozzájuk."
+
+#. ReflectionProbe.cull_mask
+#: doc/classes/ReflectionProbe.xml
+msgid "Sets the cull mask which determines what objects are drawn by this probe. Every [VisualInstance3D] with a layer included in this cull mask will be rendered by the probe. It is best to only include large objects which are likely to take up a lot of space in the reflection in order to save on rendering cost.\nThis can also be used to prevent an object from reflecting upon itself (for instance, a [ReflectionProbe] centered on a vehicle)."
+msgstr "A maszk meghatározza, mely objektumokat rajzolja ki a próba. Minden olyan [VisualInstance3D] megjelenik, amelynek valamelyik rétege szerepel a maszkban. A kisebb számítási igényhez célszerű csak azokat a nagy objektumokat bevonni, amelyek a tükröződés számottevő részét adják.\nA maszkkal az is megakadályozható, hogy egy objektum saját magát tükrözze, például ha a [ReflectionProbe] egy jármű közepén van."
+
+#. ReflectionProbe.enable_shadows
+#: doc/classes/ReflectionProbe.xml
+msgid "If [code]true[/code], computes shadows in the reflection probe. This makes the reflection probe slower to render; you may want to disable this if using the [constant UPDATE_ALWAYS] [member update_mode]."
+msgstr "Ha az érték [code]true[/code], a próba az árnyékokat is kiszámítja. Ez lassítja a megjelenítést. Ha az [member update_mode] értéke [constant UPDATE_ALWAYS], érdemes lehet kikapcsolni."
+
+#. ReflectionProbe.intensity
+#: doc/classes/ReflectionProbe.xml
+msgid "Defines the reflection intensity. Intensity modulates the strength of the reflection."
+msgstr "A tükröződés erősségét szabályozza."
+
+#. ReflectionProbe.interior
+#: doc/classes/ReflectionProbe.xml
+msgid "If [code]true[/code], reflections will ignore sky contribution."
+msgstr "Ha az érték [code]true[/code], az égbolt nem járul hozzá a tükröződésekhez."
+
+#. ReflectionProbe.max_distance
+#: doc/classes/ReflectionProbe.xml
+msgid "The maximum distance away from the [ReflectionProbe] an object can be before it is culled. Decrease this to improve performance, especially when using the [constant UPDATE_ALWAYS] [member update_mode].\n[b]Note:[/b] The maximum reflection distance is always at least equal to the probe's extents. This means that decreasing [member max_distance] will not always cull objects from reflections, especially if the reflection probe's box defined by its [member size] is already large."
+msgstr "A [ReflectionProbe] és a még kirajzolt objektum közötti legnagyobb távolság. Alacsonyabb értékkel javítható a teljesítmény, különösen [constant UPDATE_ALWAYS] [member update_mode] mellett.\n[b]Megjegyzés:[/b] A legnagyobb tükrözési távolság legalább a próba kiterjedéséig ér. A [member max_distance] csökkentése ezért nem mindig zár ki objektumokat a tükröződésből, különösen akkor, ha a próba [member size] által meghatározott doboza eleve nagy."
+
+#. ReflectionProbe.mesh_lod_threshold
+#: doc/classes/ReflectionProbe.xml
+msgid "The automatic LOD bias to use for meshes rendered within the [ReflectionProbe] (this is analog to [member Viewport.mesh_lod_threshold]). Higher values will use less detailed versions of meshes that have LOD variations generated. If set to [code]0.0[/code], automatic LOD is disabled. Increase [member mesh_lod_threshold] to improve performance at the cost of geometry detail, especially when using the [constant UPDATE_ALWAYS] [member update_mode].\n[b]Note:[/b] [member mesh_lod_threshold] does not affect [GeometryInstance3D] visibility ranges (also known as \"manual\" LOD or hierarchical LOD)."
+msgstr "A [ReflectionProbe] által kirajzolt hálók automatikus részletességváltásának küszöbe. A [member Viewport.mesh_lod_threshold] beállításhoz hasonlóan működik. Nagyobb értéknél a motor kevésbé részletes változatokat választ azoknál a hálóknál, amelyekhez ilyenek készültek. A [code]0.0[/code] érték kikapcsolja az automatikus részletességváltást. Nagyobb [member mesh_lod_threshold] érték javíthatja a teljesítményt a geometria részletességének rovására, különösen [constant UPDATE_ALWAYS] [member update_mode] mellett.\n[b]Megjegyzés:[/b] A [member mesh_lod_threshold] nem módosítja a [GeometryInstance3D] láthatósági tartományait, amelyekkel a kézi vagy hierarchikus részletességváltás szabályozható."
+
+#. ReflectionProbe.origin_offset
+#: doc/classes/ReflectionProbe.xml
+msgid "Sets the origin offset to be used when this [ReflectionProbe] is in [member box_projection] mode. This can be set to a non-zero value to ensure a reflection fits a rectangle-shaped room, while reducing the number of objects that \"get in the way\" of the reflection."
+msgstr "A [ReflectionProbe] origójának eltolása [member box_projection] módban. Nem nulla értékkel a tükröződés jobban illeszthető egy téglalap alaprajzú helyiséghez, és kevesebb közbenső objektum takarhat bele."
+
+#. ReflectionProbe.reflection_mask
+#: doc/classes/ReflectionProbe.xml
+msgid "Sets the reflection mask which determines what objects have reflections applied from this probe. Every [VisualInstance3D] with a layer included in this reflection mask will have reflections applied from this probe. See also [member cull_mask], which can be used to exclude objects from appearing in the reflection while still making them affected by the [ReflectionProbe]."
+msgstr "A tükrözési maszk szabályozza, mely objektumok felületén érvényesül a próba tükröződése. A hatás minden olyan [VisualInstance3D] felületén megjelenik, amelynek valamelyik rétege szerepel a maszkban. A [member cull_mask] külön szabályozza, mely objektumok látszanak a tükröződésben. Így egy objektum akkor is megkaphatja a [ReflectionProbe] tükröződését, ha maga nem jelenik meg benne."
+
+#. ReflectionProbe.size
+#: doc/classes/ReflectionProbe.xml
+msgid "The size of the reflection probe. The larger the size, the more space covered by the probe, which will lower the perceived resolution. It is best to keep the size only as large as you need it.\n[b]Note:[/b] To better fit areas that are not aligned to the grid, you can rotate the [ReflectionProbe] node."
+msgstr "A tükröződési próba mérete. Nagyobb próba nagyobb teret fed le, ezért a tükröződés felbontása kisebbnek tűnhet. Csak akkora méretet használj, amekkorára szükség van.\n[b]Megjegyzés:[/b] A rácshoz nem igazodó területekhez a [ReflectionProbe] elforgatható."
+
+#. ReflectionProbe.update_mode
+#: doc/classes/ReflectionProbe.xml
+msgid "Sets how frequently the [ReflectionProbe] is updated. Can be [constant UPDATE_ONCE] or [constant UPDATE_ALWAYS]."
+msgstr "A [ReflectionProbe] frissítési gyakorisága. Értéke [constant UPDATE_ONCE] vagy [constant UPDATE_ALWAYS] lehet."
+
+#. ReflectionProbe.UPDATE_ONCE
+#: doc/classes/ReflectionProbe.xml
+msgid "Update the probe once on the next frame (recommended for most objects). The corresponding radiance map will be generated over the following six frames. This takes more time to update than [constant UPDATE_ALWAYS], but it has a lower performance cost and can result in higher-quality reflections. The ReflectionProbe is updated when its transform changes, but not when nearby geometry changes. You can force a [ReflectionProbe] update by moving the [ReflectionProbe] slightly in any direction."
+msgstr "A következő képkockától egyszer frissíti a próbát. A legtöbb objektumhoz ez az ajánlott mód. A hozzá tartozó sugárzási térkép a következő hat képkocka alatt készül el. A frissítés hosszabb ideig tart, mint [constant UPDATE_ALWAYS] módban, de kevésbé terheli a renderelőt, és jobb minőségű tükröződést adhat. A ReflectionProbe akkor frissül, ha változik a transzformációja. A közeli geometria változása nem indít frissítést. A [ReflectionProbe] frissítését a [ReflectionProbe] kis elmozdításával kényszerítheted ki."
+
+#. ReflectionProbe.UPDATE_ALWAYS
+#: doc/classes/ReflectionProbe.xml
+msgid "Update the probe every frame. This provides better results for fast-moving dynamic objects (such as cars). However, it has a significant performance cost. Due to the cost, it's recommended to only use one ReflectionProbe with [constant UPDATE_ALWAYS] at most per scene. For all other use cases, use [constant UPDATE_ONCE]."
+msgstr "Minden képkockában frissíti a próbát. Gyorsan mozgó dinamikus objektumoknál, például autóknál jobb eredményt ad, de jelentősen növeli a számításigényt. Jelenetenként ezért legfeljebb egy ReflectionProbe használjon [constant UPDATE_ALWAYS] módot. A többihez válaszd az [constant UPDATE_ONCE] módot."
+
+#. ReflectionProbe.AMBIENT_DISABLED
+#: doc/classes/ReflectionProbe.xml
+msgid "Do not apply any ambient lighting inside the [ReflectionProbe]'s box defined by its [member size]."
+msgstr "A [ReflectionProbe] [member size] által meghatározott dobozán belül kikapcsolja a környezeti megvilágítást."
+
+#. ReflectionProbe.AMBIENT_ENVIRONMENT
+#: doc/classes/ReflectionProbe.xml
+msgid "Apply automatically-sourced environment lighting inside the [ReflectionProbe]'s box defined by its [member size]."
+msgstr "A [ReflectionProbe] [member size] által meghatározott dobozán belül automatikusan a környezetből vett megvilágítást használja."
+
+#. ReflectionProbe.AMBIENT_COLOR
+#: doc/classes/ReflectionProbe.xml
+msgid "Apply custom ambient lighting inside the [ReflectionProbe]'s box defined by its [member size]. See [member ambient_color] and [member ambient_color_energy]."
+msgstr "A [ReflectionProbe] [member size] által meghatározott dobozán belül egyéni környezeti megvilágítást használ. Lásd az [member ambient_color] és az [member ambient_color_energy] tulajdonságot."
+
+#. VoxelGI.brief
+#: doc/classes/VoxelGI.xml
+msgid "Real-time global illumination (GI) probe."
+msgstr "Valós idejű globális megvilágítási próba."
+
+#. VisualShader.add_varying
+#: modules/visual_shader/doc_classes/VisualShader.xml
+msgid "Adds a new varying value node to the shader."
+msgstr "Új változót ad az árnyaló szakaszai közötti adatátadáshoz."
+
+#. VisualShader.get_node_connections
+#: modules/visual_shader/doc_classes/VisualShader.xml
+msgid "Returns the list of connected nodes with the specified type."
+msgstr "A megadott árnyalószakasz csomópontkapcsolatainak listáját adja vissza."
+
+#. VisualShader.remove_varying
+#: modules/visual_shader/doc_classes/VisualShader.xml
+msgid "Removes a varying value node with the given [param name]. Prints an error if a node with this name is not found."
+msgstr "Eltávolítja a [param name] nevű, árnyalószakaszok közötti adatátadásra használt változót. Ha nincs ilyen nevű változó, hibát jelez."
+
+#. VisualShaderNodeCompare.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeCompare.xml
+msgid "Compares [code]a[/code] and [code]b[/code] of [member type] by [member function]. Returns a boolean scalar. Translates to [code]if[/code] instruction in shader code."
+msgstr "A [member function] által megadott művelettel összehasonlítja a [member type] szerinti típusú [code]a[/code] és [code]b[/code] értéket. Az eredmény egyetlen logikai érték. Az árnyalókódban [code]if[/code] utasítássá alakul."
+
+#. VisualShaderNodeCompare.condition
+#: modules/visual_shader/doc_classes/VisualShaderNodeCompare.xml
+msgid "Extra condition which is applied if [member type] is set to [constant CTYPE_VECTOR_3D]."
+msgstr "Kiegészítő feltétel, amely akkor érvényes, ha a [member type] értéke [constant CTYPE_VECTOR_3D]."
+
+#. VisualShaderNodeDistanceFade.description
+#: modules/visual_shader/doc_classes/VisualShaderNodeDistanceFade.xml
+msgid "The distance fade effect fades out each pixel based on its distance to another object."
+msgstr "A távolsági halványítás képpontonként, a másik objektumtól mért távolság alapján csökkenti a láthatóságot."
+
+#. VisualShaderNodeGroupBase.get_inputs
+#: modules/visual_shader/doc_classes/VisualShaderNodeGroupBase.xml
+msgid "Returns a [String] description of the input ports as a colon-separated list using the format [code]id,type,name;[/code] (see [method add_input_port])."
+msgstr "A bemeneti portok leírását [String] szövegként adja vissza. A bejegyzéseket pontosvessző választja el, az egyes bejegyzések alakja [code]id,type,name;[/code] (lásd [method add_input_port])."
+
+#. VisualShaderNodeGroupBase.get_outputs
+#: modules/visual_shader/doc_classes/VisualShaderNodeGroupBase.xml
+msgid "Returns a [String] description of the output ports as a colon-separated list using the format [code]id,type,name;[/code] (see [method add_output_port])."
+msgstr "A kimeneti portok leírását [String] szövegként adja vissza. A bejegyzéseket pontosvessző választja el, az egyes bejegyzések alakja [code]id,type,name;[/code] (lásd [method add_output_port])."
+
+#. VisualShaderNodeGroupBase.set_inputs
+#: modules/visual_shader/doc_classes/VisualShaderNodeGroupBase.xml
+msgid "Defines all input ports using a [String] formatted as a colon-separated list: [code]id,type,name;[/code] (see [method add_input_port])."
+msgstr "Az összes bemeneti portot egy [String] szövegben adja meg. A bejegyzéseket pontosvessző választja el, az egyes bejegyzések alakja [code]id,type,name;[/code] (lásd [method add_input_port])."
+
+#. VisualShaderNodeGroupBase.set_outputs
+#: modules/visual_shader/doc_classes/VisualShaderNodeGroupBase.xml
+msgid "Defines all output ports using a [String] formatted as a colon-separated list: [code]id,type,name;[/code] (see [method add_output_port])."
+msgstr "Az összes kimeneti portot egy [String] szövegben adja meg. A bejegyzéseket pontosvessző választja el, az egyes bejegyzések alakja [code]id,type,name;[/code] (lásd [method add_output_port])."
+
+#. VisualShaderNodeMix.OP_TYPE_VECTOR_4D_SCALAR
+#. VisualShaderNodeSmoothStep.OP_TYPE_VECTOR_4D_SCALAR
+#. VisualShaderNodeStep.OP_TYPE_VECTOR_4D_SCALAR
+#: modules/visual_shader/doc_classes/VisualShaderNodeMix.xml modules/visual_shader/doc_classes/VisualShaderNodeSmoothStep.xml modules/visual_shader/doc_classes/VisualShaderNodeStep.xml
+msgid "The [code]a[/code] and [code]b[/code] ports use a 4D vector type. The [code]weight[/code] port uses a scalar type."
+msgstr "Az [code]a[/code] és a [code]b[/code] port 4D-s vektort, a [code]weight[/code] port skalárértéket használ."
+
+#. VisualShaderNodeVarying.varying_type
+#: modules/visual_shader/doc_classes/VisualShaderNodeVarying.xml
+msgid "Type of the variable. Determines where the variable can be accessed."
+msgstr "A változó típusa. Meghatározza, hogy a változó az árnyaló mely részeiben érhető el."
+
+#. VisualShaderNodeVectorCompose.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorCompose.xml
+msgid "Composes a [Vector2], [Vector3] or 4D vector (represented as a [Quaternion]) from scalars within the visual shader graph."
+msgstr "Skalárértékekből [Vector2] vagy [Vector3] vektort, illetve [Quaternion] formájú 4D-s vektort állít össze a vizuális árnyaló gráfjában."
+
+#. VisualShaderNodeVectorDecompose.brief
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorDecompose.xml
+msgid "Decomposes a [Vector2], [Vector3] or 4D vector (represented as a [Quaternion]) into scalars within the visual shader graph."
+msgstr "Egy [Vector2] vagy [Vector3] vektort, illetve [Quaternion] formájú 4D-s vektort skalárértékekre bont a vizuális árnyaló gráfjában."
+
+#. VisualShaderNodeVectorOp.OP_ATAN2
+#: modules/visual_shader/doc_classes/VisualShaderNodeVectorOp.xml
+msgid "Returns the arc-tangent of the parameters."
+msgstr "A megadott paraméterekből számított arkusztangenst adja vissza."
+
+#. Environment.adjustment_color_correction
+#: doc/classes/Environment.xml
+msgid "The [Texture2D] or [Texture3D] lookup table (LUT) to use for the built-in post-process color grading. Can use a [GradientTexture1D] for a 1-dimensional LUT, or a [Texture3D] for a more complex LUT. Effective only if [member adjustment_enabled] is [code]true[/code].\n[b]Note:[/b] Color correction does not currently support HDR output due to only supporting values in the SDR (0.0 to 1.0) range."
+msgstr "A beépített utófeldolgozó színkorrekcióhoz használt [Texture2D] vagy [Texture3D] keresőtábla (LUT). Egydimenziós táblához [GradientTexture1D], összetettebb korrekcióhoz [Texture3D] használható. Csak akkor érvényesül, ha az [member adjustment_enabled] értéke [code]true[/code].\n[b]Megjegyzés:[/b] A színkorrekció jelenleg csak a 0,0 és 1,0 közötti SDR-tartományt kezeli, ezért HDR-kimenetnél nem támogatott."
+
+#. Environment.adjustment_contrast
+#: doc/classes/Environment.xml
+msgid "Increasing [member adjustment_contrast] will make dark values darker and bright values brighter. This simple adjustment is applied to the rendered image after tonemaping. When set to a value greater than [code]1.0[/code], [member adjustment_contrast] is prone to clipping colors that become too bright or too dark. Effective only if [member adjustment_enabled] is [code]true[/code]."
+msgstr "Az [member adjustment_contrast] növelésével a sötét értékek sötétebbek, a világosak világosabbak lesznek. A módosítás a tónusleképezés után érvényesül. [code]1.0[/code] fölött az [member adjustment_contrast] könnyen levághatja a túl világos vagy túl sötét színértékeket. Csak akkor hat, ha az [member adjustment_enabled] értéke [code]true[/code]."
+
+#. Environment.ambient_light_sky_contribution
+#: doc/classes/Environment.xml
+msgid "Defines the amount of light that the sky brings on the scene. A value of [code]0.0[/code] means that the sky's light emission has no effect on the scene illumination, thus all ambient illumination is provided by the ambient light. On the contrary, a value of [code]1.0[/code] means that [i]all[/i] the light that affects the scene is provided by the sky, thus the ambient light parameter has no effect on the scene.\n[b]Note:[/b] [member ambient_light_sky_contribution] is internally clamped between [code]0.0[/code] and [code]1.0[/code] (inclusive)."
+msgstr "Az égbolt hozzájárulása a jelenet környezeti megvilágításához. [code]0.0[/code] értéknél az égbolt fénykibocsátása nem számít, és az összes környezeti fényt a környezeti fény beállítása adja. [code]1.0[/code] értéknél [i]az összes környezeti fény[/i] az égboltból jön, és a környezeti fény beállítása hatástalan.\n[b]Megjegyzés:[/b] Az [member ambient_light_sky_contribution] értékét a motor [code]0.0[/code] és [code]1.0[/code] közé korlátozza, a határokat is beleértve."
+
+#. Environment.fog_sky_affect
+#: doc/classes/Environment.xml
+msgid "The factor to use when affecting the sky with non-volumetric fog. [code]1.0[/code] means that fog can fully obscure the sky. Lower values reduce the impact of fog on sky rendering, with [code]0.0[/code] not affecting sky rendering at all.\n[b]Note:[/b] [member fog_sky_affect] has no visual effect if [member fog_aerial_perspective] is [code]1.0[/code]."
+msgstr "Megadja, mennyire hasson az égboltra a nem térfogati köd. [code]1.0[/code] értéknél a köd teljesen el is takarhatja az eget. Kisebb értéknél gyengébb a hatás, [code]0.0[/code] értéknél pedig a köd egyáltalán nem befolyásolja az égboltot.\n[b]Megjegyzés:[/b] Az [member fog_sky_affect] hatása nem látható, ha a [member fog_aerial_perspective] értéke [code]1.0[/code]."
+
+#. Environment.glow_blend_mode
+#: doc/classes/Environment.xml
+msgid "The glow blending mode.\n[b]Note:[/b] The Compatibility renderer always uses [constant GLOW_BLEND_MODE_SCREEN] and [member glow_blend_mode] will have no effect."
+msgstr "A ragyogás keverési módja.\n[b]Megjegyzés:[/b] A Kompatibilitás mód mindig [constant GLOW_BLEND_MODE_SCREEN] keverést használ. Ilyenkor az [member glow_blend_mode] beállítás hatástalan."
+
+#. Environment.glow_hdr_threshold
+#: doc/classes/Environment.xml
+msgid "The lower threshold of the HDR glow. When using the Mobile rendering method (which only supports a lower dynamic range up to [code]2.0[/code]), this may need to be below [code]1.0[/code] for glow to be visible. A value of [code]0.9[/code] works well in this case. This value also needs to be decreased below [code]1.0[/code] when using glow in 2D, as 2D rendering is performed in SDR."
+msgstr "A HDR-ragyogás alsó küszöbértéke. A Mobile renderelő kisebb, legfeljebb [code]2.0[/code]-ig terjedő dinamikatartománya miatt a ragyogás láthatóságához szükség lehet [code]1.0[/code] alatti értékre. Ilyenkor jól használható a [code]0.9[/code]. A 2D-s megjelenítés SDR-tartományban történik, ezért ott szintén [code]1.0[/code] alatti küszöbérték kell."
+
+#. Environment.glow_levels/1
+#: doc/classes/Environment.xml
+msgid "The intensity of the 1st level of glow. This is the most \"local\" level (least blurry).\n[b]Note:[/b] [member glow_levels/1] has no effect when using the Compatibility rendering method, due to this rendering method using a simpler glow implementation optimized for low-end devices."
+msgstr "A ragyogás első szintjének intenzitása. Ez a legszűkebb területre ható, legkevésbé elmosódott szint.\n[b]Megjegyzés:[/b] A Kompatibilitás módban az [member glow_levels/1] hatástalan, mert a renderelő kisebb teljesítményű eszközökre optimalizált, egyszerűbb ragyogást használ."
+
+#. Environment.glow_levels/2
+#: doc/classes/Environment.xml
+msgid "The intensity of the 2nd level of glow.\n[b]Note:[/b] [member glow_levels/2] has no effect when using the Compatibility rendering method, due to this rendering method using a simpler glow implementation optimized for low-end devices."
+msgstr "A ragyogás második szintjének intenzitása.\n[b]Megjegyzés:[/b] A Kompatibilitás módban az [member glow_levels/2] hatástalan, mert a renderelő kisebb teljesítményű eszközökre optimalizált, egyszerűbb ragyogást használ."
+
+#. Environment.glow_levels/3
+#: doc/classes/Environment.xml
+msgid "The intensity of the 3rd level of glow.\n[b]Note:[/b] [member glow_levels/3] has no effect when using the Compatibility rendering method, due to this rendering method using a simpler glow implementation optimized for low-end devices."
+msgstr "A ragyogás harmadik szintjének intenzitása.\n[b]Megjegyzés:[/b] A Kompatibilitás módban az [member glow_levels/3] hatástalan, mert a renderelő kisebb teljesítményű eszközökre optimalizált, egyszerűbb ragyogást használ."
+
+#. Environment.glow_levels/4
+#: doc/classes/Environment.xml
+msgid "The intensity of the 4th level of glow.\n[b]Note:[/b] [member glow_levels/4] has no effect when using the Compatibility rendering method, due to this rendering method using a simpler glow implementation optimized for low-end devices."
+msgstr "A ragyogás negyedik szintjének intenzitása.\n[b]Megjegyzés:[/b] A Kompatibilitás módban az [member glow_levels/4] hatástalan, mert a renderelő kisebb teljesítményű eszközökre optimalizált, egyszerűbb ragyogást használ."
+
+#. Environment.glow_levels/5
+#: doc/classes/Environment.xml
+msgid "The intensity of the 5th level of glow.\n[b]Note:[/b] [member glow_levels/5] has no effect when using the Compatibility rendering method, due to this rendering method using a simpler glow implementation optimized for low-end devices."
+msgstr "A ragyogás ötödik szintjének intenzitása.\n[b]Megjegyzés:[/b] A Kompatibilitás módban az [member glow_levels/5] hatástalan, mert a renderelő kisebb teljesítményű eszközökre optimalizált, egyszerűbb ragyogást használ."
+
+#. Environment.glow_levels/6
+#: doc/classes/Environment.xml
+msgid "The intensity of the 6th level of glow.\n[b]Note:[/b] [member glow_levels/6] has no effect when using the Compatibility rendering method, due to this rendering method using a simpler glow implementation optimized for low-end devices."
+msgstr "A ragyogás hatodik szintjének intenzitása.\n[b]Megjegyzés:[/b] A Kompatibilitás módban az [member glow_levels/6] hatástalan, mert a renderelő kisebb teljesítményű eszközökre optimalizált, egyszerűbb ragyogást használ."
+
+#. Environment.glow_levels/7
+#: doc/classes/Environment.xml
+msgid "The intensity of the 7th level of glow. This is the most \"global\" level (blurriest).\n[b]Note:[/b] [member glow_levels/7] has no effect when using the Compatibility rendering method, due to this rendering method using a simpler glow implementation optimized for low-end devices."
+msgstr "A ragyogás hetedik szintjének intenzitása. Ez a legszélesebb területre ható, leginkább elmosódott szint.\n[b]Megjegyzés:[/b] A Kompatibilitás módban az [member glow_levels/7] hatástalan, mert a renderelő kisebb teljesítményű eszközökre optimalizált, egyszerűbb ragyogást használ."
+
+#. LightmapGI.bounce_indirect_energy
+#: doc/classes/LightmapGI.xml
+msgid "The energy multiplier for each bounce. Higher values will make indirect lighting brighter. A value of [code]1.0[/code] represents physically accurate behavior, but higher values can be used to make indirect lighting propagate more visibly when using a low number of bounces. This can be used to speed up bake times by lowering the number of [member bounces] then increasing [member bounce_indirect_energy].\n[b]Note:[/b] [member bounce_indirect_energy] only has an effect if [member bounces] is set to a value greater than or equal to [code]1[/code]."
+msgstr "Az egyes fényvisszaverődések energiaszorzója. Nagyobb értéknél a közvetett megvilágítás erősebb. A [code]1.0[/code] fizikailag pontos viselkedést ad, magasabb értékkel viszont kevés visszaverődés mellett is jobban láthatóvá tehető a közvetett fény terjedése. A sütés gyorsításához csökkentheted a [member bounces] értékét, és növelheted a [member bounce_indirect_energy] szorzót.\n[b]Megjegyzés:[/b] A [member bounce_indirect_energy] csak akkor hat, ha a [member bounces] legalább [code]1[/code]."
+
+#. LightmapGI.generate_probes_subdiv
+#: doc/classes/LightmapGI.xml
+msgid "The level of subdivision to use when automatically generating [LightmapProbe]s for dynamic object lighting. Higher values result in more accurate indirect lighting on dynamic objects, at the cost of longer bake times and larger file sizes.\n[b]Note:[/b] Automatically generated [LightmapProbe]s are not visible as nodes in the Scene tree dock, and cannot be modified this way after they are generated.\n[b]Note:[/b] Regardless of [member generate_probes_subdiv], direct lighting on dynamic objects is always applied using [Light3D] nodes in real-time."
+msgstr "A dinamikus objektumokat megvilágító [LightmapProbe] próbák automatikus előállításához használt felosztás mértéke. Nagyobb értéknél pontosabb a dinamikus objektumok közvetett megvilágítása, viszont tovább tart a sütés és nő a fájlméret.\n[b]Megjegyzés:[/b] Az automatikusan létrehozott [LightmapProbe] próbák nem jelennek meg csomópontként a jelenetfa paneljén, így ott utólag nem szerkeszthetők.\n[b]Megjegyzés:[/b] A [member generate_probes_subdiv] értékétől függetlenül a [Light3D] csomópontok valós időben biztosítják a dinamikus objektumok közvetlen megvilágítását."
+
+#. LightmapGI.quality
+#: doc/classes/LightmapGI.xml
+msgid "The quality preset to use when baking lightmaps. This affects bake times, but output file sizes remain mostly identical across quality levels.\nTo further speed up bake times, decrease [member bounces], disable [member use_denoiser] and/or decrease [member texel_scale].\nTo further increase quality, enable [member supersampling] and/or increase [member texel_scale]."
+msgstr "A fénytérképek sütésének minőségi beállítása. Befolyásolja a sütés idejét, a fájlméret viszont a különböző szinteken nagyjából azonos marad.\nA sütés gyorsításához csökkentsd a [member bounces] vagy a [member texel_scale] értékét, illetve kapcsold ki a [member use_denoiser] beállítást.\nA minőség javításához kapcsold be a [member supersampling] funkciót vagy növeld a [member texel_scale] értékét."
+
+#. LightmapGI.supersampling
+#: doc/classes/LightmapGI.xml
+msgid "If [code]true[/code], lightmaps are baked with the texel scale multiplied with [member supersampling_factor] and downsampled before saving the lightmap (so the effective texel density is identical to having supersampling disabled).\nSupersampling provides increased lightmap quality with less noise, smoother shadows and better shadowing of small-scale features in objects. However, it may result in significantly increased bake times and memory usage while baking lightmaps. Padding is automatically adjusted to avoid increasing light leaking."
+msgstr "Ha az érték [code]true[/code], a motor a [member supersampling_factor] értékével felszorzott texelsűrűséggel süti ki a fénytérképet, majd mentés előtt visszaméretezi. A végeredmény texelsűrűsége így ugyanakkora, mint túlmintavételezés nélkül.\nA túlmintavételezés kevésbé zajos fénytérképet, egyenletesebb árnyékokat és a finom részleteknél pontosabb árnyékolást ad. Cserébe jelentősen nőhet a sütési idő és a sütés memóriaigénye. A motor automatikusan módosítja a peremtávolságokat, hogy a fény átszivárgása ne erősödjön."
+
+#. LightmapGI.supersampling_factor
+#: doc/classes/LightmapGI.xml
+msgid "The factor by which the texel density is multiplied for supersampling. For best results, use an integer value. While fractional values are allowed, they can result in increased light leaking and a blurry lightmap.\nHigher values may result in better quality, but also increase bake times and memory usage while baking.\nSee [member supersampling] for more information."
+msgstr "A túlmintavételezés texelsűrűségi szorzója. A legjobb eredményhez egész számot használj. Tört érték is megadható, de erősebb fényátszivárgást és elmosódott fénytérképet okozhat.\nNagyobb értékkel javulhat a minőség, viszont nőhet a sütési idő és a memóriaigény.\nLásd még a [member supersampling] tulajdonságot."
+
+#. LightmapGI.texel_scale
+#: doc/classes/LightmapGI.xml
+msgid "Scales the lightmap texel density of all meshes for the current bake. This is a multiplier that builds upon the existing lightmap texel size defined in each imported 3D scene, along with the per-mesh density multiplier (which is designed to be used when the same mesh is used at different scales). Lower values will result in faster bake times.\nFor example, doubling [member texel_scale] doubles the lightmap texture resolution for all objects [i]on each axis[/i], so it will [i]quadruple[/i] the texel count."
+msgstr "Az aktuális sütésnél az összes háló fénytérképi texelsűrűségét méretezi. A szorzó az importált 3D-s jelenetek saját fénytérképi texelmérete és a hálónkénti sűrűségi szorzó mellett érvényesül. A hálónkénti szorzó akkor hasznos, ha ugyanazt a hálót többféle méretben használod. Kisebb értékkel gyorsabb a sütés.\nA [member texel_scale] megduplázása például minden objektum fénytérképi felbontását [i]mindkét tengelyen[/i] megduplázza, így [i]négyszer[/i] annyi texel keletkezik."
+
+#. LightmapGI.use_texture_for_bounces
+#: doc/classes/LightmapGI.xml
+msgid "If [code]true[/code], a texture with the lighting information will be generated to speed up the generation of indirect lighting at the cost of some accuracy. The geometry might exhibit extra light leak artifacts when using low resolution lightmaps or UVs that stretch the lightmap significantly across surfaces. Leave [member use_texture_for_bounces] at its default value of [code]true[/code] if unsure.\n[b]Note:[/b] [member use_texture_for_bounces] only has an effect if [member bounces] is set to a value greater than or equal to [code]1[/code]."
+msgstr "Ha az érték [code]true[/code], a motor a megvilágítási adatokból textúrát készít. Ez némi pontosságvesztés árán gyorsítja a közvetett megvilágítás előállítását. Kis felbontású fénytérképnél vagy azt a felületen erősen megnyújtó UV-koordinátáknál több fényátszivárgás látható. Ha bizonytalan vagy, hagyd a [member use_texture_for_bounces] értékét az alapértelmezett [code]true[/code] állapotban.\n[b]Megjegyzés:[/b] A [member use_texture_for_bounces] csak akkor hat, ha a [member bounces] legalább [code]1[/code]."
+
+#. LightmapGI.ENVIRONMENT_MODE_SCENE
+#: doc/classes/LightmapGI.xml
+msgid "Use the scene's environment lighting when baking lightmaps.\n[b]Note:[/b] If baking lightmaps in a scene with no [WorldEnvironment] node, this will act like [constant ENVIRONMENT_MODE_DISABLED]. The editor's preview sky and sun is [i]not[/i] taken into account by [LightmapGI] when baking lightmaps."
+msgstr "A jelenet környezeti megvilágítását használja a fénytérképek sütésekor.\n[b]Megjegyzés:[/b] Ha a jelenetben nincs [WorldEnvironment] csomópont, úgy működik, mint az [constant ENVIRONMENT_MODE_DISABLED] mód. A [LightmapGI] a sütéskor [i]nem[/i] veszi figyelembe a szerkesztőben megjelenő előnézeti égboltot és napfényt."
+
+#. LightmapGIData.set_uses_spherical_harmonics
+#: doc/classes/LightmapGIData.xml
+msgid "If [param uses_spherical_harmonics] is [code]true[/code], tells the engine to treat the lightmap data as if it was baked with directional information.\n[b]Note:[/b] Changing this value on already baked lightmaps will not cause them to be baked again. This means the material appearance will look incorrect until lightmaps are baked again, in which case the value set here is discarded as the entire [LightmapGIData] resource is replaced by the lightmapper."
+msgstr "Ha a [param uses_spherical_harmonics] értéke [code]true[/code], a motor úgy kezeli a fénytérképi adatokat, mintha a sütés során irányadatok is készültek volna.\n[b]Megjegyzés:[/b] A beállítás módosítása nem süti újra a kész fénytérképeket. Az anyagok megjelenése hibás lesz, amíg újra ki nem sütöd őket. Újrasütéskor a motor a teljes [LightmapGIData] erőforrást lecseréli, így az itt megadott érték elvész."
+
+#. LightmapGIData.SHADOWMASK_MODE_OVERLAY
+#: doc/classes/LightmapGIData.xml
+msgid "Shadowmasking is enabled. Directional shadows will be rendered with real-time shadows overlaid on top of the shadowmask texture. This mode makes for smoother shadow transitions when the camera moves fast, at the cost of a potential smearing effect for directional shadows that are up close (due to the real-time shadow being mixed with a low-resolution shadowmask). Objects that only have shadows baked in the shadowmask (and no real-time shadows) will keep their shadows up close."
+msgstr "Bekapcsolja az árnyékmaszkot. Az irányított fények valós idejű árnyékait a motor az árnyékmaszk textúrájára rajzolja. Gyors kameramozgáskor ettől egyenletesebbek az átmenetek. Közelről viszont az irányított árnyék elmosódhat, mert a valós idejű árnyék kis felbontású maszkkal keveredik. Azoknak az objektumoknak az árnyéka, amelyek csak a sütött maszkban szerepelnek, közelről is megmarad."
+
+#. Lightmapper.brief
+#: doc/classes/Lightmapper.xml
+msgid "Abstract class extended by lightmappers, for use in [LightmapGI]."
+msgstr "Az egyéni fénytérkép-készítők absztrakt alaposztálya. A [LightmapGI] használja."
+
+#. Lightmapper.description
+#: doc/classes/Lightmapper.xml
+msgid "This class should be extended by custom lightmapper classes. Lightmappers can then be used with [LightmapGI] to provide fast baked global illumination in 3D.\nGodot contains a built-in GPU-based lightmapper [LightmapperRD] that uses compute shaders, but custom lightmappers can be implemented by C++ modules."
+msgstr "Az egyéni fénytérkép-készítők ebből az osztályból származnak. A [LightmapGI] segítségével gyorsan előállítható velük a 3D-s sütött globális megvilágítás.\nA Godot beépített, GPU-alapú [LightmapperRD] fénytérkép-készítője számítási árnyalókat használ. Egyéni fénytérkép-készítő C++-modulban is megvalósítható."
+
+#. LightmapperRD.brief
+#: doc/classes/LightmapperRD.xml
+msgid "The built-in GPU-based lightmapper for use with [LightmapGI]."
+msgstr "A [LightmapGI] beépített, GPU-alapú fénytérkép-készítője."
+
+#. VoxelGI.debug_bake
+#: doc/classes/VoxelGI.xml
+msgid "Calls [method bake] with [code]create_visual_debug[/code] enabled."
+msgstr "Meghívja a [method bake] metódust a [code]create_visual_debug[/code] beállítás bekapcsolásával."
+
+#. VoxelGI.camera_attributes
+#: doc/classes/VoxelGI.xml
+msgid "The [CameraAttributes] resource that specifies exposure levels to bake at. Auto-exposure and non exposure properties will be ignored. Exposure settings should be used to reduce the dynamic range present when baking. If exposure is too high, the [VoxelGI] will have banding artifacts or may have over-exposure artifacts."
+msgstr "A sütés expozícióját meghatározó [CameraAttributes] erőforrás. Az automatikus expozíció és az expozícióhoz nem kapcsolódó beállítások itt hatástalanok. Az expozícióval érdemes csökkenteni a sütés során használt dinamikatartományt. Túl nagy expozíciónál a [VoxelGI] sávosodást vagy túlexponált foltokat mutathat."
+
+#. VoxelGI.data
+#: doc/classes/VoxelGI.xml
+msgid "The [VoxelGIData] resource that holds the data for this [VoxelGI]."
+msgstr "A [VoxelGI] adatait tároló [VoxelGIData] erőforrás."
+
+#. VoxelGI.size
+#: doc/classes/VoxelGI.xml
+msgid "The size of the area covered by the [VoxelGI]. This must be [code]1.0[/code] or greater on each axis.\n[b]Note:[/b] If you make the size larger without increasing the number of subdivisions with [member subdiv], the size of each cell will increase and result in less detailed lighting."
+msgstr "A [VoxelGI] által lefedett térrész mérete. Mindegyik tengelyen legalább [code]1.0[/code] legyen.\n[b]Megjegyzés:[/b] Ha növeled a méretet anélkül, hogy a [member subdiv] értékét növelnéd, nagyobb cellák és kevésbé részletes megvilágítás lesz az eredmény."
+
+#. VoxelGI.subdiv
+#: doc/classes/VoxelGI.xml
+msgid "Number of times to subdivide the grid that the [VoxelGI] operates on. A higher number results in finer detail and thus higher visual quality, while lower numbers result in better performance."
+msgstr "A [VoxelGI] által használt rács felosztásának mértéke. Nagyobb értéknél részletesebb a megvilágítás, kisebb értéknél jobb a teljesítmény."
+
+#. VoxelGI.SUBDIV_64
+#: doc/classes/VoxelGI.xml
+msgid "Use 64 subdivisions. This is the lowest quality setting, but the fastest. Use it if you can, but especially use it on lower-end hardware."
+msgstr "64 részre osztja a rácsot. Ez a leggyorsabb, de a legkevésbé részletes beállítás. Akkor használd, ha elegendő, különösen kisebb teljesítményű gépen."
+
+#. VoxelGI.SUBDIV_128
+#: doc/classes/VoxelGI.xml
+msgid "Use 128 subdivisions. This is the default quality setting."
+msgstr "128 részre osztja a rácsot. Ez az alapértelmezett minőségi beállítás."
+
+#. VoxelGI.SUBDIV_256
+#: doc/classes/VoxelGI.xml
+msgid "Use 256 subdivisions."
+msgstr "256 részre osztja a rácsot."
+
+#. VoxelGI.SUBDIV_512
+#: doc/classes/VoxelGI.xml
+msgid "Use 512 subdivisions. This is the highest quality setting, but the slowest. On lower-end hardware, this could cause the GPU to stall."
+msgstr "512 részre osztja a rácsot. Ez a legrészletesebb, egyben a leglassabb beállítás. Kisebb teljesítményű gépen megakaszthatja a GPU-t."
+
+#. VoxelGI.SUBDIV_MAX
+#: doc/classes/VoxelGI.xml
+msgid "Represents the size of the [enum Subdiv] enum."
+msgstr "Az [enum Subdiv] felsorolás méretét jelöli."
+
+#. VoxelGIData.brief
+#: doc/classes/VoxelGIData.xml
+msgid "Contains baked voxel global illumination data for use in a [VoxelGI] node."
+msgstr "A [VoxelGI] csomópont által használt, sütött voxeles globális megvilágítási adatokat tárolja."
+
+#. VoxelGIData.get_bounds
+#: doc/classes/VoxelGIData.xml
+msgid "Returns the bounds of the baked voxel data as an [AABB], which should match [member VoxelGI.size] after being baked (which only contains the size as a [Vector3]).\n[b]Note:[/b] If the size was modified without baking the VoxelGI data, then the value of [method get_bounds] and [member VoxelGI.size] will not match."
+msgstr "A sütött voxeladatok határait adja vissza [AABB] dobozként. Sütés után a doboz méretének meg kell egyeznie a [member VoxelGI.size] értékével, amely csak a méretet tárolja [Vector3] formában.\n[b]Megjegyzés:[/b] Ha a méret módosítása után nem sütsz újra, a [method get_bounds] által visszaadott doboz mérete eltérhet a [member VoxelGI.size] értékétől."
+
+#. VoxelGIData.get_data_cells
+#: doc/classes/VoxelGIData.xml
+msgid "Returns the baked cell data for this [VoxelGIData]."
+msgstr "A [VoxelGIData] sütött cellaadatait adja vissza."
+
+#. VoxelGIData.get_level_counts
+#: doc/classes/VoxelGIData.xml
+msgid "Returns the baked level counts for this [VoxelGIData]."
+msgstr "A [VoxelGIData] sütött szintjeihez tartozó elemszámokat adja vissza."
+
+#. VoxelGIData.get_octree_cells
+#: doc/classes/VoxelGIData.xml
+msgid "Returns the baked octree cell data for this [VoxelGIData]."
+msgstr "A [VoxelGIData] oktfájának sütött cellaadatait adja vissza."
+
+#. VoxelGIData.get_octree_size
+#: doc/classes/VoxelGIData.xml
+msgid "Returns the baked octree size for this [VoxelGIData], which corresponds to the number of subdivisions per axis. This can be viewed in the editor by hovering the [b]Bake VoxelGI[/b] button at the top of the 3D editor viewport when a [VoxelGI] node is selected and looking at the [b]Subdivisions[/b] field in the tooltip."
+msgstr "A [VoxelGIData] sütött oktfájának méretét adja vissza. Ez tengelyenként a felosztások számának felel meg. A szerkesztőben jelöld ki a [VoxelGI] csomópontot, majd a 3D-s nézetablak tetején vidd az egeret a [b]VoxelGI sütése[/b] gomb fölé. Az értéket az eszköztipp [b]Felosztások[/b] mezőjében találod."
+
+#. VoxelGIData.get_to_cell_xform
+#: doc/classes/VoxelGIData.xml
+msgid "Returns the baked cell transform for this [VoxelGIData]."
+msgstr "A [VoxelGIData] sütéskor kiszámított, cellakoordinátákra alakító transzformációját adja vissza."
+
+#. VoxelGIData.dynamic_range
+#: doc/classes/VoxelGIData.xml
+msgid "The dynamic range to use ([code]1.0[/code] represents a low dynamic range scene brightness). Higher values can be used to provide brighter indirect lighting, at the cost of more visible color banding in dark areas (both in indirect lighting and reflections). To avoid color banding, it's recommended to use the lowest value that does not result in visible light clipping."
+msgstr "A dinamikatartomány. A [code]1.0[/code] kis dinamikatartományú jelenetfényességnek felel meg. Nagyobb értékkel erősebb közvetett megvilágítás érhető el, de a sötét területeken feltűnőbb lehet a színsávosodás, a közvetett fényben és a tükröződésekben is. A sávosodás elkerüléséhez a legkisebb olyan értéket használd, amelynél a fényerő még nem vágódik le láthatóan."
+
+#. VoxelGIData.energy
+#: doc/classes/VoxelGIData.xml
+msgid "The energy of the indirect lighting and reflections produced by the [VoxelGI] node. Higher values result in brighter indirect lighting. If indirect lighting looks too flat, try decreasing [member propagation] while increasing [member energy] at the same time. See also [member use_two_bounces] which influences the indirect lighting's effective brightness."
+msgstr "A [VoxelGI] által létrehozott közvetett megvilágítás és tükröződések energiája. Nagyobb értéknél világosabb a közvetett fény. Ha túl laposnak hat a megvilágítás, próbáld a [member propagation] csökkentése mellett növelni a [member energy] értékét. Lásd még a [member use_two_bounces] tulajdonságot, amely a közvetett fény tényleges erősségét is befolyásolja."
+
+#. VoxelGIData.interior
+#: doc/classes/VoxelGIData.xml
+msgid "If [code]true[/code], [Environment] lighting is ignored by the [VoxelGI] node. If [code]false[/code], [Environment] lighting is taken into account by the [VoxelGI] node. [Environment] lighting updates in real-time, which means it can be changed without having to bake the [VoxelGI] node again."
+msgstr "Ha az érték [code]true[/code], a [VoxelGI] figyelmen kívül hagyja az [Environment] megvilágítását. [code]false[/code] értéknél a [VoxelGI] figyelembe veszi az [Environment] megvilágítását. Az [Environment] megvilágítása valós időben frissül, így módosításához nem kell újra kisütni a [VoxelGI] csomópontot."
+
+#. VoxelGIData.normal_bias
+#: doc/classes/VoxelGIData.xml
+msgid "The normal bias to use for indirect lighting and reflections. Higher values reduce self-reflections visible in non-rough materials, at the cost of more visible light leaking and flatter-looking indirect lighting. See also [member bias]. To prioritize hiding self-reflections over lighting quality, set [member bias] to [code]0.0[/code] and [member normal_bias] to a value between [code]1.0[/code] and [code]2.0[/code]."
+msgstr "A közvetett megvilágításhoz és a tükröződésekhez használt, felületi normál irányába mutató eltolás. Nagyobb értékkel kevésbé látszik a sima felületek önmagukról visszavert képe, de a fény jobban átszivároghat, és laposabbnak tűnhet a közvetett megvilágítás. Lásd még a [member bias] tulajdonságot. Ha az öntükröződés elrejtése fontosabb a megvilágítás minőségénél, állítsd a [member bias] értékét [code]0.0[/code]-ra, a [member normal_bias] értékét pedig [code]1.0[/code] és [code]2.0[/code] közé."
+
+#. VoxelGIData.propagation
+#: doc/classes/VoxelGIData.xml
+msgid "The multiplier to use when light bounces off a surface. Higher values result in brighter indirect lighting. If indirect lighting looks too flat, try decreasing [member propagation] while increasing [member energy] at the same time. See also [member use_two_bounces] which influences the indirect lighting's effective brightness."
+msgstr "A szorzó minden olyan alkalommal érvényesül, amikor a fény egy felületről visszaverődik. Nagyobb értéknél világosabb a közvetett megvilágítás. Ha túl laposnak hat a megvilágítás, próbáld a [member propagation] csökkentése mellett növelni a [member energy] értékét. Lásd még a [member use_two_bounces] tulajdonságot, amely a közvetett fény tényleges erősségét is befolyásolja."
+
+#. VoxelGIData.use_two_bounces
+#: doc/classes/VoxelGIData.xml
+msgid "If [code]true[/code], performs two bounces of indirect lighting instead of one. This makes indirect lighting look more natural and brighter at a small performance cost. The second bounce is also visible in reflections. If the scene appears too bright after enabling [member use_two_bounces], adjust [member propagation] and [member energy]."
+msgstr "Ha az érték [code]true[/code], a közvetett fény egyszer helyett kétszer verődik vissza. Ettől természetesebb és világosabb lesz a közvetett megvilágítás, kissé nagyobb számítási igény mellett. A második visszaverődés a tükröződésekben is megjelenik. Ha a [member use_two_bounces] bekapcsolása után túl világos a jelenet, módosítsd a [member propagation] és a [member energy] értékét."
+
+#. WorldEnvironment.description
+#: doc/classes/WorldEnvironment.xml
+msgid "The [WorldEnvironment] node is used to configure the default [Environment] for the scene.\nThe parameters defined in the [WorldEnvironment] can be overridden by an [Environment] node set on the current [Camera3D]. Additionally, only one [WorldEnvironment] may be instantiated in a given scene at a time.\nThe [WorldEnvironment] allows the user to specify default lighting parameters (e.g. ambient lighting), various post-processing effects (e.g. SSAO, DOF, Tonemapping), and how to draw the background (e.g. solid color, skybox). Usually, these are added in order to improve the realism/color balance of the scene."
+msgstr "A [WorldEnvironment] csomópont a jelenet alapértelmezett [Environment] erőforrását állítja be.\nA [WorldEnvironment] beállításait az aktuális [Camera3D] csomóponton megadott [Environment] felülírhatja. Egy jelenetben egyszerre csak egy [WorldEnvironment] lehet.\nA [WorldEnvironment] segítségével beállítható az alapértelmezett megvilágítás, például a környezeti fény, valamint az utófeldolgozás, például az SSAO, a mélységélesség és a tónusleképezés. A háttér megjelenítése is itt adható meg, például egyszínű háttérként vagy égboltként. Ezekkel élethűbbé tehető a jelenet, és kiegyensúlyozhatók a színei."
