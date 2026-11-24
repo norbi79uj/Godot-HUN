@@ -57523,3 +57523,512 @@ msgstr "A PathFollow3D bármelyik tengely körül elfordulhat."
 #: doc/classes/PathFollow3D.xml
 msgid "Uses the up vector information in a [Curve3D] to enforce orientation. This rotation mode requires the [Path3D]'s [member Curve3D.up_vector_enabled] property to be set to [code]true[/code]."
 msgstr "A [Curve3D] felfelé mutató vektora alapján tájolja a csomópontot. Ehhez a [Path3D] görbéjének [member Curve3D.up_vector_enabled] tulajdonságát [code]true[/code] értékre kell állítani."
+
+#. SurfaceTool.description
+#: doc/classes/SurfaceTool.xml
+msgid "The [SurfaceTool] is used to construct a [Mesh] by specifying vertex attributes individually. It can be used to construct a [Mesh] from a script. All properties except indices need to be added before calling [method add_vertex]. For example, to add vertex colors and UVs:\n[codeblocks]\n[gdscript]\nvar st = SurfaceTool.new()\nst.begin(Mesh.PRIMITIVE_TRIANGLES)\nst.set_color(Color(1, 0, 0))\nst.set_uv(Vector2(0, 0))\nst.add_vertex(Vector3(0, 0, 0))\n[/gdscript]\n[csharp]\nvar st = new SurfaceTool();\nst.Begin(Mesh.PrimitiveType.Triangles);\nst.SetColor(new Color(1, 0, 0));\nst.SetUV(new Vector2(0, 0));\nst.AddVertex(new Vector3(0, 0, 0));\n[/csharp]\n[/codeblocks]\nThe above [SurfaceTool] now contains one vertex of a triangle which has a UV coordinate and a specified [Color]. If another vertex were added without calling [method set_uv] or [method set_color], then the last values would be used.\nVertex attributes must be passed [b]before[/b] calling [method add_vertex]. Failure to do so will result in an error when committing the vertex information to a mesh.\nAdditionally, the attributes used before the first vertex is added determine the format of the mesh. For example, if you only add UVs to the first vertex, you cannot add color to any of the subsequent vertices.\nSee also [ArrayMesh], [ImmediateMesh] and [MeshDataTool] for procedural geometry generation.\n[b]Note:[/b] Godot uses clockwise [url=https://learnopengl.com/Advanced-OpenGL/Face-culling]winding order[/url] for front faces of triangle primitive modes."
+msgstr "A [SurfaceTool] segítségével egyenként megadhatod a csúcspontok attribútumait, és ezekből [Mesh] hálót építhetsz. Így szkriptből is létrehozhatsz [Mesh] hálókat. Az indexek kivételével minden attribútumot a [method add_vertex] meghívása előtt kell beállítani. Így adhatsz meg például csúcsszínt és UV-koordinátát:\n[codeblocks]\n[gdscript]\nvar st = SurfaceTool.new()\nst.begin(Mesh.PRIMITIVE_TRIANGLES)\nst.set_color(Color(1, 0, 0))\nst.set_uv(Vector2(0, 0))\nst.add_vertex(Vector3(0, 0, 0))\n[/gdscript]\n[csharp]\nvar st = new SurfaceTool();\nst.Begin(Mesh.PrimitiveType.Triangles);\nst.SetColor(new Color(1, 0, 0));\nst.SetUV(new Vector2(0, 0));\nst.AddVertex(new Vector3(0, 0, 0));\n[/csharp]\n[/codeblocks]\nA fenti [SurfaceTool] egy háromszög egyetlen csúcspontját tartalmazza, a hozzá tartozó UV-koordinátával és a megadott [Color] színnel. Ha a [method set_uv] vagy a [method set_color] újbóli meghívása nélkül adsz hozzá új csúcspontot, az előző értékek maradnak érvényben.\nA csúcspont attribútumait a [method add_vertex] hívása [b]előtt[/b] add meg. Különben a csúcsadatok hálóba írásakor hiba történik.\nAz első csúcspont előtt beállított attribútumok határozzák meg a háló formátumát. Ha például az első csúcsponthoz csak UV-koordinátát adsz meg, a későbbiekhez már nem adhatsz meg színt.\nA programból előállított geometriához lásd még az [ArrayMesh], az [ImmediateMesh] és a [MeshDataTool] osztályt.\n[b]Megjegyzés:[/b] A Godot az óramutató járásával megegyező [url=https://learnopengl.com/Advanced-OpenGL/Face-culling]csúcssorrendet[/url] használja a háromszög alakú primitívek elülső oldalán."
+
+#. SurfaceTool.commit
+#: doc/classes/SurfaceTool.xml
+msgid "Returns a constructed [ArrayMesh] from current information passed in. If an existing [ArrayMesh] is passed in as an argument, will add an extra surface to the existing [ArrayMesh].\nThe [param flags] argument can be the bitwise OR of [constant Mesh.ARRAY_FLAG_USE_DYNAMIC_UPDATE], [constant Mesh.ARRAY_FLAG_USE_8_BONE_WEIGHTS], or [constant Mesh.ARRAY_FLAG_USES_EMPTY_VERTEX_ARRAY]."
+msgstr "Az eddig megadott adatokból létrehozott [ArrayMesh] hálót adja vissza. Ha már létező [ArrayMesh] hálót adsz át neki, új felületet ad hozzá ehhez az [ArrayMesh] hálóhoz.\nA [param flags] argumentumban a [constant Mesh.ARRAY_FLAG_USE_DYNAMIC_UPDATE], a [constant Mesh.ARRAY_FLAG_USE_8_BONE_WEIGHTS] és a [constant Mesh.ARRAY_FLAG_USES_EMPTY_VERTEX_ARRAY] jelzők bitenkénti VAGY művelettel kombinálhatók."
+
+#. SurfaceTool.create_from_arrays
+#: doc/classes/SurfaceTool.xml
+msgid "Creates this SurfaceTool from existing vertex arrays such as returned by [method commit_to_arrays], [method Mesh.surface_get_arrays], [method Mesh.surface_get_blend_shape_arrays], [method ImporterMesh.get_surface_arrays], and [method ImporterMesh.get_surface_blend_shape_arrays]. [param primitive_type] controls the type of mesh data, defaulting to [constant Mesh.PRIMITIVE_TRIANGLES]."
+msgstr "Meglévő csúcsadattömbökből állítja össze ezt a SurfaceTool példányt. Ilyen tömböt ad vissza például a [method commit_to_arrays], a [method Mesh.surface_get_arrays], a [method Mesh.surface_get_blend_shape_arrays], a [method ImporterMesh.get_surface_arrays] és a [method ImporterMesh.get_surface_blend_shape_arrays]. A [param primitive_type] határozza meg a háló primitívjeinek típusát. Alapértéke [constant Mesh.PRIMITIVE_TRIANGLES]."
+
+#. SurfaceTool.generate_lod
+#: doc/classes/SurfaceTool.xml
+msgid "Generates an LOD for a given [param nd_threshold] in linear units (square root of quadric error metric), using at most [param target_index_count] indices."
+msgstr "Csökkentett részletességű hálót (LOD) készít legfeljebb [param target_index_count] index felhasználásával. A [param nd_threshold] lineáris egységekben értendő, a kvadratikus hibamérték négyzetgyökeként."
+
+#. SurfaceTool.generate_normals
+#: doc/classes/SurfaceTool.xml
+msgid "Generates normals from vertices so you do not have to do it manually. If [param flip] is [code]true[/code], the resulting normals will be inverted. [method generate_normals] should be called [i]after[/i] generating geometry and [i]before[/i] committing the mesh using [method commit] or [method commit_to_arrays]. For correct display of normal-mapped surfaces, you will also have to generate tangents using [method generate_tangents].\n[b]Note:[/b] [method generate_normals] only works if the primitive type is set to [constant Mesh.PRIMITIVE_TRIANGLES].\n[b]Note:[/b] [method generate_normals] takes smooth groups into account. To generate smooth normals, set the smooth group to a value greater than or equal to [code]0[/code] using [method set_smooth_group] or leave the smooth group at the default of [code]0[/code]. To generate flat normals, set the smooth group to [code]-1[/code] using [method set_smooth_group] prior to adding vertices."
+msgstr "A csúcspontok alapján kiszámítja a normálvektorokat. Ha a [param flip] értéke [code]true[/code], megfordítja az irányukat. A [method generate_normals] hívása a geometria létrehozása [i]után[/i], és a háló [method commit] vagy [method commit_to_arrays] metódussal történő kiírása [i]előtt[/i] történjen. Normáltérképpel ellátott felületek helyes megjelenítéséhez a [method generate_tangents] metódussal érintővektorokat is létre kell hozni.\n[b]Megjegyzés:[/b] A [method generate_normals] csak [constant Mesh.PRIMITIVE_TRIANGLES] primitívtípus esetén működik.\n[b]Megjegyzés:[/b] A [method generate_normals] figyelembe veszi a simítási csoportokat. Sima átmenethez állíts be [code]0[/code] vagy annál nagyobb csoportértéket a [method set_smooth_group] metódussal, vagy hagyd meg az alapértelmezett [code]0[/code] értéket. Laponként egységes normálokhoz a csúcspontok hozzáadása előtt állíts be [code]-1[/code] értéket a [method set_smooth_group] metódussal."
+
+#. SurfaceTool.get_custom_format
+#: doc/classes/SurfaceTool.xml
+msgid "Returns the format for custom [param channel_index] (currently up to 4). Returns [constant CUSTOM_MAX] if this custom channel is unused."
+msgstr "A [param channel_index] indexű egyéni csatorna formátumát adja vissza. Jelenleg legfeljebb négy csatorna használható. Ha a csatorna használaton kívül van, az eredmény [constant CUSTOM_MAX]."
+
+#. SurfaceTool.set_color
+#: doc/classes/SurfaceTool.xml
+msgid "Specifies a [Color] to use for the [i]next[/i] vertex. If every vertex needs to have this information set and you fail to submit it for the first vertex, this information may not be used at all.\n[b]Note:[/b] The material must have [member BaseMaterial3D.vertex_color_use_as_albedo] enabled for the vertex color to be visible."
+msgstr "A [i]következő[/i] csúcsponthoz tartozó [Color] színt adja meg. Ha minden csúcshoz színt szeretnél rendelni, az elsőnél is állítsd be. Különben a háló egyáltalán nem feltétlenül használja a csúcsszíneket.\n[b]Megjegyzés:[/b] A csúcsszín megjelenítéséhez az anyag [member BaseMaterial3D.vertex_color_use_as_albedo] beállítását engedélyezni kell."
+
+#. SurfaceTool.set_tangent
+#: doc/classes/SurfaceTool.xml
+msgid "Specifies a tangent to use for the [i]next[/i] vertex. If every vertex needs to have this information set and you fail to submit it for the first vertex, this information may not be used at all.\n[b]Note:[/b] Even though [param tangent] is a [Plane], it does not directly represent the tangent plane. Its [member Plane.x], [member Plane.y], and [member Plane.z] represent the tangent vector and [member Plane.d] should be either [code]-1[/code] or [code]1[/code]. See also [constant Mesh.ARRAY_TANGENT]."
+msgstr "A [i]következő[/i] csúcspont érintővektorát adja meg. Ha minden csúcsponthoz érintőt szeretnél rendelni, az elsőnél is add meg. Különben a háló egyáltalán nem feltétlenül használja az érintőadatokat.\n[b]Megjegyzés:[/b] Bár a [param tangent] típusa [Plane], közvetlenül nem az érintősíkot adja meg. A [member Plane.x], a [member Plane.y] és a [member Plane.z] az érintővektor komponensei. A [member Plane.d] értéke [code]-1[/code] vagy [code]1[/code] legyen. Lásd még a [constant Mesh.ARRAY_TANGENT] állandót."
+
+#. ArrayMesh.description
+#: doc/classes/ArrayMesh.xml
+msgid "The [ArrayMesh] is used to construct a [Mesh] by specifying the attributes as arrays.\nThe most basic example is the creation of a single triangle:\n[codeblocks]\n[gdscript]\nvar vertices = PackedVector3Array()\nvertices.push_back(Vector3(0, 1, 0))\nvertices.push_back(Vector3(1, 0, 0))\nvertices.push_back(Vector3(0, 0, 1))\n\n# Initialize the ArrayMesh.\nvar arr_mesh = ArrayMesh.new()\nvar arrays = []\narrays.resize(Mesh.ARRAY_MAX)\narrays[Mesh.ARRAY_VERTEX] = vertices\n\n# Create the Mesh.\narr_mesh.add_surface_from_arrays(Mesh.PRIMITIVE_TRIANGLES, arrays)\nvar m = MeshInstance3D.new()\nm.mesh = arr_mesh\n[/gdscript]\n[csharp]\nVector3[] vertices =\n[\n\tnew Vector3(0, 1, 0),\n\tnew Vector3(1, 0, 0),\n\tnew Vector3(0, 0, 1),\n];\n\n// Initialize the ArrayMesh.\nvar arrMesh = new ArrayMesh();\nGodot.Collections.Array arrays = [];\narrays.Resize((int)Mesh.ArrayType.Max);\narrays[(int)Mesh.ArrayType.Vertex] = vertices;\n\n// Create the Mesh.\narrMesh.AddSurfaceFromArrays(Mesh.PrimitiveType.Triangles, arrays);\nvar m = new MeshInstance3D();\nm.Mesh = arrMesh;\n[/csharp]\n[/codeblocks]\nThe [MeshInstance3D] is ready to be added to the [SceneTree] to be shown.\nSee also [ImmediateMesh], [MeshDataTool] and [SurfaceTool] for procedural geometry generation.\n[b]Note:[/b] Godot uses clockwise [url=https://learnopengl.com/Advanced-OpenGL/Face-culling]winding order[/url] for front faces of triangle primitive modes."
+msgstr "Az [ArrayMesh] tömbökben megadott attribútumokból épít [Mesh] hálót.\nA legegyszerűbb példa egyetlen háromszög létrehozása:\n[codeblocks]\n[gdscript]\nvar vertices = PackedVector3Array()\nvertices.push_back(Vector3(0, 1, 0))\nvertices.push_back(Vector3(1, 0, 0))\nvertices.push_back(Vector3(0, 0, 1))\n\n# Initialize the ArrayMesh.\nvar arr_mesh = ArrayMesh.new()\nvar arrays = []\narrays.resize(Mesh.ARRAY_MAX)\narrays[Mesh.ARRAY_VERTEX] = vertices\n\n# Create the Mesh.\narr_mesh.add_surface_from_arrays(Mesh.PRIMITIVE_TRIANGLES, arrays)\nvar m = MeshInstance3D.new()\nm.mesh = arr_mesh\n[/gdscript]\n[csharp]\nVector3[] vertices =\n[\n\tnew Vector3(0, 1, 0),\n\tnew Vector3(1, 0, 0),\n\tnew Vector3(0, 0, 1),\n];\n\n// Initialize the ArrayMesh.\nvar arrMesh = new ArrayMesh();\nGodot.Collections.Array arrays = [];\narrays.Resize((int)Mesh.ArrayType.Max);\narrays[(int)Mesh.ArrayType.Vertex] = vertices;\n\n// Create the Mesh.\narrMesh.AddSurfaceFromArrays(Mesh.PrimitiveType.Triangles, arrays);\nvar m = new MeshInstance3D();\nm.Mesh = arrMesh;\n[/csharp]\n[/codeblocks]\nA [MeshInstance3D] megjelenítéséhez add hozzá a csomópontot a [SceneTree] fához.\nA programból előállított geometriához lásd még az [ImmediateMesh], a [MeshDataTool] és a [SurfaceTool] osztályt.\n[b]Megjegyzés:[/b] A Godot az óramutató járásával megegyező [url=https://learnopengl.com/Advanced-OpenGL/Face-culling]csúcssorrendet[/url] használja a háromszög alakú primitívek elülső oldalán."
+
+#. ArrayMesh.add_surface_from_arrays
+#. ImporterMesh.add_surface
+#: doc/classes/ArrayMesh.xml doc/classes/ImporterMesh.xml
+msgid "Creates a new surface. [method Mesh.get_surface_count] will become the [code]surf_idx[/code] for this new surface.\nSurfaces are created to be rendered using a [param primitive], which may be any of the values defined in [enum Mesh.PrimitiveType].\nThe [param arrays] argument is an array of arrays. Each of the [constant Mesh.ARRAY_MAX] elements contains an array with some of the mesh data for this surface as described by the corresponding member of [enum Mesh.ArrayType] or [code]null[/code] if it is not used by the surface. For example, [code]arrays[0][/code] is the array of vertices. That first vertex sub-array is always required; the others are optional. Adding an index array puts this surface into \"index mode\" where the vertex and other arrays become the sources of data and the index array defines the vertex order. All sub-arrays must have the same length as the vertex array (or be an exact multiple of the vertex array's length, when multiple elements of a sub-array correspond to a single vertex) or be empty, except for [constant Mesh.ARRAY_INDEX] if it is used.\nThe [param blend_shapes] argument is an array of vertex data for each blend shape. Each element is an array of the same structure as [param arrays], but [constant Mesh.ARRAY_VERTEX], [constant Mesh.ARRAY_NORMAL], and [constant Mesh.ARRAY_TANGENT] are set if and only if they are set in [param arrays] and all other entries are [code]null[/code].\nThe [param lods] argument is a dictionary with [float] keys and [PackedInt32Array] values. Each entry in the dictionary represents an LOD level of the surface, where the value is the [constant Mesh.ARRAY_INDEX] array to use for the LOD level and the key is roughly proportional to the distance at which the LOD stats being used. I.e., increasing the key of an LOD also increases the distance that the objects has to be from the camera before the LOD is used.\nThe [param flags] argument is the bitwise OR of, as required: One value of [enum Mesh.ArrayCustomFormat] left shifted by [code]ARRAY_FORMAT_CUSTOMn_SHIFT[/code] for each custom channel in use, [constant Mesh.ARRAY_FLAG_USE_DYNAMIC_UPDATE], [constant Mesh.ARRAY_FLAG_USE_8_BONE_WEIGHTS], or [constant Mesh.ARRAY_FLAG_USES_EMPTY_VERTEX_ARRAY].\n[b]Note:[/b] When using indices, it is recommended to only use points, lines, or triangles."
+msgstr "Új felületet hoz létre. Az új felület [code]surf_idx[/code] indexe a [method Mesh.get_surface_count] hívásakor a hozzáadás előtt kapott érték lesz.\nA megjelenítéshez használt [param primitive] típus az [enum Mesh.PrimitiveType] felsorolás egyik értéke.\nA [param arrays] tömbökből álló tömb. A [constant Mesh.ARRAY_MAX] elem mindegyike az [enum Mesh.ArrayType] megfelelő tagja szerinti felületadatokat tartalmazza, vagy [code]null[/code], ha a felület nem használja az adott adatfajtát. Az [code]arrays[0][/code] például a csúcspontok tömbje. Ez az első altömb kötelező, a többi opcionális. Indextömb hozzáadásakor a felület indexelt módba kerül. A csúcs- és attribútumtömbök adják az adatokat, az indextömb pedig a csúcsok sorrendjét határozza meg. Az altömbök legyenek üresek, vagy egyezzen a hosszuk a csúcstömb hosszával. Ha egy csúcshoz több elem tartozik, az altömb hossza a csúcstömb hosszának egész számú többszöröse legyen. A [constant Mesh.ARRAY_INDEX] tömbre ez a szabály nem vonatkozik.\nA [param blend_shapes] tömb minden keverési alakzathoz külön csúcsadatot tartalmaz. Az elemek felépítése megegyezik a [param arrays] felépítésével. A [constant Mesh.ARRAY_VERTEX], a [constant Mesh.ARRAY_NORMAL] és a [constant Mesh.ARRAY_TANGENT] elemet pontosan akkor kell megadni, ha a [param arrays] is tartalmazza. Minden más elem [code]null[/code].\nA [param lods] [float] kulcsokat és [PackedInt32Array] értékeket tartalmazó szótár. Minden bejegyzés a felület egy részletességi szintjét adja meg. Az érték az adott szint [constant Mesh.ARRAY_INDEX] tömbje. A kulcs nagyjából arányos azzal a távolsággal, amelytől a szint használatba lép. Nagyobb kulcs esetén az objektumnak távolabb kell lennie a kamerától a váltáshoz.\nA [param flags] argumentumban bitenkénti VAGY művelettel kombinálhatók a szükséges jelzők. Minden használt egyéni csatornához az [enum Mesh.ArrayCustomFormat] egyik értékét kell balra tolni az [code]ARRAY_FORMAT_CUSTOMn_SHIFT[/code] értékével. Ezek mellett megadható a [constant Mesh.ARRAY_FLAG_USE_DYNAMIC_UPDATE], a [constant Mesh.ARRAY_FLAG_USE_8_BONE_WEIGHTS] és a [constant Mesh.ARRAY_FLAG_USES_EMPTY_VERTEX_ARRAY].\n[b]Megjegyzés:[/b] Indexek használatakor célszerű pontokra, vonalakra vagy háromszögekre korlátozni a primitíveket."
+
+#. ArrayMesh.shadow_mesh
+#: doc/classes/ArrayMesh.xml
+msgid "An optional mesh which can be used for rendering shadows and the depth prepass. Can be used to increase performance by supplying a mesh with fused vertices and only vertex position data (without normals, UVs, colors, etc.).\n[b]Note:[/b] This mesh must have exactly the same vertex positions as the source mesh (including the source mesh's LODs, if present). If vertex positions differ, then the mesh will not draw correctly."
+msgstr "Opcionális háló az árnyékokhoz és az előzetes mélységrajzoláshoz. Javíthatja a teljesítményt, ha összevont csúcspontokkal csak a csúcsok helyzetét tartalmazza. A normálok, UV-koordináták, színek és egyéb attribútumok elhagyhatók.\n[b]Megjegyzés:[/b] A csúcspontok helyzetének pontosan egyeznie kell a forrásháló csúcspontjaival, beleértve annak részletességi szintjeit is, ha vannak. Eltérés esetén a háló hibásan jelenik meg."
+
+#. ImmediateMesh.description
+#: doc/classes/ImmediateMesh.xml
+msgid "A mesh type optimized for creating geometry manually, similar to OpenGL 1.x immediate mode.\nHere's a sample on how to generate a triangular face:\n[codeblocks]\n[gdscript]\nvar mesh = ImmediateMesh.new()\nmesh.surface_begin(Mesh.PRIMITIVE_TRIANGLES)\nmesh.surface_add_vertex(Vector3.LEFT)\nmesh.surface_add_vertex(Vector3.FORWARD)\nmesh.surface_add_vertex(Vector3.ZERO)\nmesh.surface_end()\n[/gdscript]\n[csharp]\nvar mesh = new ImmediateMesh();\nmesh.SurfaceBegin(Mesh.PrimitiveType.Triangles);\nmesh.SurfaceAddVertex(Vector3.Left);\nmesh.SurfaceAddVertex(Vector3.Forward);\nmesh.SurfaceAddVertex(Vector3.Zero);\nmesh.SurfaceEnd();\n[/csharp]\n[/codeblocks]\n[b]Note:[/b] Generating complex geometries with [ImmediateMesh] is highly inefficient. Instead, it is designed to generate simple geometry that changes often."
+msgstr "Kézzel összeállított geometriához optimalizált hálótípus, az OpenGL 1.x közvetlen módjához hasonlóan.\nA példa egy háromszöglapot hoz létre:\n[codeblocks]\n[gdscript]\nvar mesh = ImmediateMesh.new()\nmesh.surface_begin(Mesh.PRIMITIVE_TRIANGLES)\nmesh.surface_add_vertex(Vector3.LEFT)\nmesh.surface_add_vertex(Vector3.FORWARD)\nmesh.surface_add_vertex(Vector3.ZERO)\nmesh.surface_end()\n[/gdscript]\n[csharp]\nvar mesh = new ImmediateMesh();\nmesh.SurfaceBegin(Mesh.PrimitiveType.Triangles);\nmesh.SurfaceAddVertex(Vector3.Left);\nmesh.SurfaceAddVertex(Vector3.Forward);\nmesh.SurfaceAddVertex(Vector3.Zero);\nmesh.SurfaceEnd();\n[/csharp]\n[/codeblocks]\n[b]Megjegyzés:[/b] Az [ImmediateMesh] használata összetett geometriához nagyon lassú lehet. Egyszerű, gyakran változó geometriához készült."
+
+#. ImmediateMesh.surface_set_tangent
+#: doc/classes/ImmediateMesh.xml
+msgid "Set the tangent attribute that will be pushed with the next vertex.\n[b]Note:[/b] Even though [param tangent] is a [Plane], it does not directly represent the tangent plane. Its [member Plane.x], [member Plane.y], and [member Plane.z] represent the tangent vector and [member Plane.d] should be either [code]-1[/code] or [code]1[/code]. See also [constant Mesh.ARRAY_TANGENT]."
+msgstr "Beállítja a következő csúcsponttal együtt eltárolt érintővektort.\n[b]Megjegyzés:[/b] Bár a [param tangent] típusa [Plane], közvetlenül nem az érintősíkot adja meg. A [member Plane.x], a [member Plane.y] és a [member Plane.z] az érintővektor komponensei. A [member Plane.d] értéke [code]-1[/code] vagy [code]1[/code] legyen. Lásd még a [constant Mesh.ARRAY_TANGENT] állandót."
+
+#. BoxMesh.description
+#: doc/classes/BoxMesh.xml
+msgid "Generate an axis-aligned box [PrimitiveMesh].\nThe box's UV layout is arranged in a 3×2 layout that allows texturing each face individually. To apply the same texture on all faces, change the material's UV property to [code]Vector3(3, 2, 1)[/code]. This is equivalent to adding [code]UV *= vec2(3.0, 2.0)[/code] in a vertex shader.\n[b]Note:[/b] When using a large textured [BoxMesh] (e.g. as a floor), you may stumble upon UV jittering issues depending on the camera angle. To solve this, increase [member subdivide_depth], [member subdivide_height] and [member subdivide_width] until you no longer notice UV jittering."
+msgstr "A koordinátatengelyekhez igazodó téglatestet hoz létre [PrimitiveMesh] hálóként.\nA téglatest UV-kiosztása 3×2-es rácsot alkot, így mindegyik lap külön textúrázható. Ha minden lapra ugyanazt a textúrát szeretnéd, állítsd az anyag UV-méretezését [code]Vector3(3, 2, 1)[/code] értékre. Ennek felel meg a csúcsárnyalóban az [code]UV *= vec2(3.0, 2.0)[/code] művelet.\n[b]Megjegyzés:[/b] Nagy, textúrázott [BoxMesh] esetén, például padlóként használva, bizonyos kameraállásokból az UV-koordináták remegése látható lehet. Növeld a [member subdivide_depth], a [member subdivide_height] és a [member subdivide_width] értékét, amíg a remegés meg nem szűnik."
+
+#. SphereMesh.is_hemisphere
+#: doc/classes/SphereMesh.xml
+msgid "If [code]true[/code], a hemisphere is created rather than a full sphere.\n[b]Note:[/b] To get a regular hemisphere, the height and radius of the sphere must be equal."
+msgstr "Ha az érték [code]true[/code], teljes gömb helyett annak felső fele jön létre.\n[b]Megjegyzés:[/b] Szabályos félgömbhöz a magasság és a sugár legyen egyenlő."
+
+#. CylinderMesh.cap_bottom
+#: doc/classes/CylinderMesh.xml
+msgid "If [code]true[/code], generates a cap at the bottom of the cylinder. This can be set to [code]false[/code] to speed up generation and rendering when the cap is never seen by the camera. See also [member bottom_radius].\n[b]Note:[/b] If [member bottom_radius] is [code]0.0[/code], cap generation is always skipped even if [member cap_bottom] is [code]true[/code]."
+msgstr "Ha az érték [code]true[/code], a henger alul zárólapot kap. Ha a zárólap soha nem látható a kamerából, [code]false[/code] értékkel gyorsítható az előállítás és a megjelenítés. Lásd még a [member bottom_radius] tulajdonságot.\n[b]Megjegyzés:[/b] Ha a [member bottom_radius] értéke [code]0.0[/code], a motor akkor is kihagyja az alsó zárólapot, ha a [member cap_bottom] értéke [code]true[/code]."
+
+#. CylinderMesh.cap_top
+#: doc/classes/CylinderMesh.xml
+msgid "If [code]true[/code], generates a cap at the top of the cylinder. This can be set to [code]false[/code] to speed up generation and rendering when the cap is never seen by the camera. See also [member top_radius].\n[b]Note:[/b] If [member top_radius] is [code]0.0[/code], cap generation is always skipped even if [member cap_top] is [code]true[/code]."
+msgstr "Ha az érték [code]true[/code], a henger felül zárólapot kap. Ha a zárólap soha nem látható a kamerából, [code]false[/code] értékkel gyorsítható az előállítás és a megjelenítés. Lásd még a [member top_radius] tulajdonságot.\n[b]Megjegyzés:[/b] Ha a [member top_radius] értéke [code]0.0[/code], a motor akkor is kihagyja a felső zárólapot, ha a [member cap_top] értéke [code]true[/code]."
+
+#. CylinderMesh.rings
+#: doc/classes/CylinderMesh.xml
+msgid "Number of edge rings along the height of the cylinder. Changing [member rings] does not have any visual impact unless a shader or procedural mesh tool is used to alter the vertex data. Higher values result in more subdivisions, which can be used to create smoother-looking effects with shaders or procedural mesh tools (at the cost of performance). When not altering the vertex data using a shader or procedural mesh tool, [member rings] should be kept to its default value."
+msgstr "A henger magassága mentén futó élgyűrűk száma. A [member rings] változtatása csak akkor látható, ha árnyalóval vagy geometriai eszközzel módosítod a csúcsadatokat. Nagyobb értékkel több felosztás jön létre, így az árnyalóval vagy geometriai eszközzel készített hatás simább lehet, nagyobb számítási igény mellett. Ha nem módosítod így a csúcsadatokat, hagyd meg a [member rings] alapértékét."
+
+#. QuadMesh.description
+#: doc/classes/QuadMesh.xml
+msgid "Class representing a square [PrimitiveMesh]. This flat mesh does not have a thickness. By default, this mesh is aligned on the X and Y axes; this rotation is more suited for use with billboarded materials. A [QuadMesh] is equivalent to a [PlaneMesh] except its default [member PlaneMesh.orientation] is [constant PlaneMesh.FACE_Z]."
+msgstr "Sík, vastagság nélküli, alapértelmezés szerint négyzet alakú [PrimitiveMesh] háló. Az X és Y tengely síkjában helyezkedik el, így jól használható kamerával szembeforduló anyagokhoz. A [QuadMesh] megegyezik a [PlaneMesh] hálóval, azzal a különbséggel, hogy a [member PlaneMesh.orientation] alapértéke [constant PlaneMesh.FACE_Z]."
+
+#. PointMesh.brief
+#: doc/classes/PointMesh.xml
+msgid "Mesh with a single point primitive."
+msgstr "Egyetlen pontprimitívből álló háló."
+
+#. PointMesh.description
+#: doc/classes/PointMesh.xml
+msgid "A [PointMesh] is a primitive mesh composed of a single point. Instead of relying on triangles, points are rendered as a single rectangle on the screen with a constant size. They are intended to be used with particle systems, but can also be used as a cheap way to render billboarded sprites (for example in a point cloud).\nIn order to be displayed, point meshes must be used with a material that has a point size. The point size can be accessed in a shader with the [code]POINT_SIZE[/code] built-in, or in a [BaseMaterial3D] by setting the [member BaseMaterial3D.use_point_size] and [member BaseMaterial3D.point_size] properties.\n[b]Note:[/b] When using point meshes, properties that normally affect vertices will be ignored, including [member BaseMaterial3D.billboard_mode], [member BaseMaterial3D.grow], and [member BaseMaterial3D.cull_mode]."
+msgstr "A [PointMesh] egyetlen pontból álló primitív háló. A pont háromszögek helyett rögzített méretű téglalapként jelenik meg a képernyőn. Elsősorban részecskerendszerekhez készült, de a kamerával szembeforduló sprite-ok olcsó megjelenítésére is használható, például pontfelhőben.\nA háló megjelenítéséhez olyan anyagra van szükség, amely megadja a pontméretet. Árnyalóban a [code]POINT_SIZE[/code] beépített változóval, [BaseMaterial3D] anyagnál a [member BaseMaterial3D.use_point_size] és a [member BaseMaterial3D.point_size] tulajdonsággal állítható be.\n[b]Megjegyzés:[/b] A pontháló figyelmen kívül hagyja a csúcspontokra általában ható beállításokat, köztük a [member BaseMaterial3D.billboard_mode], a [member BaseMaterial3D.grow] és a [member BaseMaterial3D.cull_mode] tulajdonságot."
+
+#. TextMesh.description
+#: doc/classes/TextMesh.xml
+msgid "Generate a [PrimitiveMesh] from the text.\nTextMesh can be generated only when using dynamic fonts with vector glyph contours. Bitmap fonts (including bitmap data in the TrueType/OpenType containers, like color emoji fonts) are not supported.\nThe UV layout is arranged in 4 horizontal strips, top to bottom: 40% of the height for the front face, 40% for the back face, 10% for the outer edges and 10% for the inner edges."
+msgstr "Szövegből készít [PrimitiveMesh] hálót.\nTextMesh csak olyan dinamikus betűkészlettel hozható létre, amely vektoros betűkörvonalakat tartalmaz. A bittérképes betűkészletek használata nem támogatott. Ez a TrueType vagy OpenType tárolók bittérképes adataira, például egyes színes emodzsi-betűkészletekre is vonatkozik.\nAz UV-kiosztás négy vízszintes sávból áll. Fentről lefelé a magasság 40%-a az elülső lap, 40%-a a hátlap, 10%-a a külső élek és 10%-a a belső élek számára van fenntartva."
+
+#. TextMesh.font_size
+#: doc/classes/TextMesh.xml
+msgid "Font size of the [TextMesh]'s text. This property works in tandem with [member pixel_size]. Higher values will result in a more detailed font, regardless of [member curve_step] and [member pixel_size]. Consider keeping this value below 63 (inclusive) for good performance, and adjust [member pixel_size] as needed to enlarge text.\n[b]Note:[/b] Changing this property will regenerate the mesh, which is a slow operation, especially with large font sizes and long texts. To change the text's size in real-time efficiently, change the node's [member Node3D.scale] instead."
+msgstr "A [TextMesh] szövegének betűmérete. A [member pixel_size] tulajdonsággal együtt határozza meg a méretet. Nagyobb érték esetén részletesebbek a betűalakok, a [member curve_step] és a [member pixel_size] értékétől függetlenül. A jó teljesítmény érdekében érdemes legfeljebb 63-as értéket használni, és szükség esetén a [member pixel_size] növelésével nagyítani a szöveget.\n[b]Megjegyzés:[/b] A tulajdonság módosítása újra előállítja a hálót. Ez különösen nagy betűméretnél és hosszú szövegnél lassú. Futás közbeni átméretezéshez hatékonyabb a hálót megjelenítő csomópont [member Node3D.scale] értékét módosítani."
+
+#. TextMesh.pixel_size
+#: doc/classes/TextMesh.xml
+msgid "The size of one pixel's width on the text to scale it in 3D. This property works in tandem with [member font_size].\n[b]Note:[/b] Changing this property will regenerate the mesh, which is a slow operation, especially with large font sizes and long texts. To change the text's size in real-time efficiently, change the node's [member Node3D.scale] instead."
+msgstr "A szöveg egy képpontjának szélessége 3D-s egységben. A [member font_size] tulajdonsággal együtt határozza meg a szöveg méretét.\n[b]Megjegyzés:[/b] A tulajdonság módosítása újra előállítja a hálót. Ez különösen nagy betűméretnél és hosszú szövegnél lassú. Futás közbeni átméretezéshez hatékonyabb a hálót megjelenítő csomópont [member Node3D.scale] értékét módosítani."
+
+#. Mesh.description
+#: doc/classes/Mesh.xml
+msgid "Mesh is a type of [Resource] that contains vertex array-based geometry, divided in [i]surfaces[/i]. Each surface contains a completely separate array and a material used to draw it. Design wise, a mesh with multiple surfaces is preferred to a single surface, because objects created in 3D editing software commonly contain multiple materials. The maximum number of surfaces per mesh is [constant RenderingServer.MAX_MESH_SURFACES]."
+msgstr "A Mesh olyan [Resource] erőforrás, amely csúcsadattömbökből álló geometriát tárol, [i]felületekre[/i] bontva. Minden felület saját tömbbel és a megjelenítéséhez használt anyaggal rendelkezik. A több felületből álló háló azért előnyös, mert a 3D-s szerkesztőprogramokban készített objektumok általában több anyagot használnak. Egy háló felületeinek megengedett legnagyobb száma [constant RenderingServer.MAX_MESH_SURFACES]."
+
+#. Mesh.create_convex_shape
+#: doc/classes/Mesh.xml
+msgid "Calculate a [ConvexPolygonShape3D] from the mesh.\nIf [param clean] is [code]true[/code] (default), duplicate and interior vertices are removed automatically. You can set it to [code]false[/code] to make the process faster if not needed.\nIf [param simplify] is [code]true[/code], the geometry can be further simplified to reduce the number of vertices. Disabled by default."
+msgstr "A hálóból [ConvexPolygonShape3D] ütközőalakzatot számít ki.\nHa a [param clean] értéke [code]true[/code] (ez az alapérték), eltávolítja a megkettőzött és a belső csúcspontokat. Ha nincs erre szükség, [code]false[/code] értékkel gyorsítható a művelet.\nHa a [param simplify] értéke [code]true[/code], a motor tovább egyszerűsíti a geometriát a csúcspontok számának csökkentéséhez. Ez alapértelmezésben ki van kapcsolva."
+
+#. Mesh.get_surface_count
+#: doc/classes/Mesh.xml
+msgid "Returns the number of surfaces that the [Mesh] holds. This is equivalent to [method MeshInstance3D.get_surface_override_material_count]."
+msgstr "A [Mesh] felületeinek számát adja vissza. Ezzel egyenértékű a [method MeshInstance3D.get_surface_override_material_count] hívása."
+
+#. Mesh.surface_get_material
+#: doc/classes/Mesh.xml
+msgid "Returns a [Material] in a given surface. Surface is rendered using this material.\n[b]Note:[/b] This returns the material within the [Mesh] resource, not the [Material] associated to the [MeshInstance3D]'s Surface Material Override properties. To get the [Material] associated to the [MeshInstance3D]'s Surface Material Override properties, use [method MeshInstance3D.get_surface_override_material] instead."
+msgstr "A megadott felület megjelenítéséhez használt [Material] anyagot adja vissza.\n[b]Megjegyzés:[/b] Az eredmény a [Mesh] erőforrás saját anyaga. A [MeshInstance3D] példány felületéhez külön [Material] anyag rendelhető. Az adott [MeshInstance3D] felülíró [Material] anyagát a [method MeshInstance3D.get_surface_override_material] metódussal kérheted le."
+
+#. Mesh.surface_set_material
+#: doc/classes/Mesh.xml
+msgid "Sets a [Material] for a given surface. Surface will be rendered using this material.\n[b]Note:[/b] This assigns the material within the [Mesh] resource, not the [Material] associated to the [MeshInstance3D]'s Surface Material Override properties. To set the [Material] associated to the [MeshInstance3D]'s Surface Material Override properties, use [method MeshInstance3D.set_surface_override_material] instead."
+msgstr "Beállítja a megadott felület megjelenítéséhez használt [Material] anyagot.\n[b]Megjegyzés:[/b] A beállítás a [Mesh] erőforrás saját anyagát módosítja. A [MeshInstance3D] felületéhez példányonként külön [Material] anyag rendelhető. Az adott [MeshInstance3D] felülíró [Material] anyagát a [method MeshInstance3D.set_surface_override_material] metódussal állíthatod be."
+
+#. Mesh.ARRAY_NORMAL
+#: doc/classes/Mesh.xml
+msgid "[PackedVector3Array] of vertex normals.\n[b]Note:[/b] The array has to consist of normal vectors, otherwise they will be normalized by the engine, potentially causing visual discrepancies."
+msgstr "A csúcspontok normálvektorait tartalmazó [PackedVector3Array] tömb.\n[b]Megjegyzés:[/b] A tömb egységnyi hosszúságú vektorokat tartalmazzon. A motor a többi vektort normalizálja, ami látható eltérést okozhat."
+
+#. Mesh.ARRAY_CUSTOM0
+#: doc/classes/Mesh.xml
+msgid "Contains custom color channel 0. [PackedByteArray] if [code](format >> Mesh.ARRAY_FORMAT_CUSTOM0_SHIFT) & Mesh.ARRAY_FORMAT_CUSTOM_MASK[/code] is [constant ARRAY_CUSTOM_RGBA8_UNORM], [constant ARRAY_CUSTOM_RGBA8_SNORM], [constant ARRAY_CUSTOM_RG_HALF], or [constant ARRAY_CUSTOM_RGBA_HALF]. [PackedFloat32Array] otherwise."
+msgstr "A 0. egyéni színcsatorna. [PackedByteArray], ha a [code](format >> Mesh.ARRAY_FORMAT_CUSTOM0_SHIFT) & Mesh.ARRAY_FORMAT_CUSTOM_MASK[/code] értéke [constant ARRAY_CUSTOM_RGBA8_UNORM], [constant ARRAY_CUSTOM_RGBA8_SNORM], [constant ARRAY_CUSTOM_RG_HALF] vagy [constant ARRAY_CUSTOM_RGBA_HALF]. Egyébként [PackedFloat32Array]."
+
+#. Mesh.ARRAY_CUSTOM1
+#: doc/classes/Mesh.xml
+msgid "Contains custom color channel 1. [PackedByteArray] if [code](format >> Mesh.ARRAY_FORMAT_CUSTOM1_SHIFT) & Mesh.ARRAY_FORMAT_CUSTOM_MASK[/code] is [constant ARRAY_CUSTOM_RGBA8_UNORM], [constant ARRAY_CUSTOM_RGBA8_SNORM], [constant ARRAY_CUSTOM_RG_HALF], or [constant ARRAY_CUSTOM_RGBA_HALF]. [PackedFloat32Array] otherwise."
+msgstr "Az 1. egyéni színcsatorna. [PackedByteArray], ha a [code](format >> Mesh.ARRAY_FORMAT_CUSTOM1_SHIFT) & Mesh.ARRAY_FORMAT_CUSTOM_MASK[/code] értéke [constant ARRAY_CUSTOM_RGBA8_UNORM], [constant ARRAY_CUSTOM_RGBA8_SNORM], [constant ARRAY_CUSTOM_RG_HALF] vagy [constant ARRAY_CUSTOM_RGBA_HALF]. Egyébként [PackedFloat32Array]."
+
+#. Mesh.ARRAY_CUSTOM2
+#: doc/classes/Mesh.xml
+msgid "Contains custom color channel 2. [PackedByteArray] if [code](format >> Mesh.ARRAY_FORMAT_CUSTOM2_SHIFT) & Mesh.ARRAY_FORMAT_CUSTOM_MASK[/code] is [constant ARRAY_CUSTOM_RGBA8_UNORM], [constant ARRAY_CUSTOM_RGBA8_SNORM], [constant ARRAY_CUSTOM_RG_HALF], or [constant ARRAY_CUSTOM_RGBA_HALF]. [PackedFloat32Array] otherwise."
+msgstr "A 2. egyéni színcsatorna. [PackedByteArray], ha a [code](format >> Mesh.ARRAY_FORMAT_CUSTOM2_SHIFT) & Mesh.ARRAY_FORMAT_CUSTOM_MASK[/code] értéke [constant ARRAY_CUSTOM_RGBA8_UNORM], [constant ARRAY_CUSTOM_RGBA8_SNORM], [constant ARRAY_CUSTOM_RG_HALF] vagy [constant ARRAY_CUSTOM_RGBA_HALF]. Egyébként [PackedFloat32Array]."
+
+#. Mesh.ARRAY_CUSTOM3
+#: doc/classes/Mesh.xml
+msgid "Contains custom color channel 3. [PackedByteArray] if [code](format >> Mesh.ARRAY_FORMAT_CUSTOM3_SHIFT) & Mesh.ARRAY_FORMAT_CUSTOM_MASK[/code] is [constant ARRAY_CUSTOM_RGBA8_UNORM], [constant ARRAY_CUSTOM_RGBA8_SNORM], [constant ARRAY_CUSTOM_RG_HALF], or [constant ARRAY_CUSTOM_RGBA_HALF]. [PackedFloat32Array] otherwise."
+msgstr "A 3. egyéni színcsatorna. [PackedByteArray], ha a [code](format >> Mesh.ARRAY_FORMAT_CUSTOM3_SHIFT) & Mesh.ARRAY_FORMAT_CUSTOM_MASK[/code] értéke [constant ARRAY_CUSTOM_RGBA8_UNORM], [constant ARRAY_CUSTOM_RGBA8_SNORM], [constant ARRAY_CUSTOM_RG_HALF] vagy [constant ARRAY_CUSTOM_RGBA_HALF]. Egyébként [PackedFloat32Array]."
+
+#. Mesh.ARRAY_WEIGHTS
+#: doc/classes/Mesh.xml
+msgid "[PackedFloat32Array] or [PackedFloat64Array] of bone weights in the range [code]0.0[/code] to [code]1.0[/code] (inclusive). Contains either 4 or 8 numbers per vertex depending on the presence of the [constant ARRAY_FLAG_USE_8_BONE_WEIGHTS] flag."
+msgstr "A csontsúlyokat [code]0.0[/code] és [code]1.0[/code] között, a határokat is beleértve, [PackedFloat32Array] vagy [PackedFloat64Array] tömbben tárolja. A [constant ARRAY_FLAG_USE_8_BONE_WEIGHTS] jelzőtől függően csúcspontonként 4 vagy 8 számot tartalmaz."
+
+#. Mesh.ARRAY_CUSTOM_RG_HALF
+#: doc/classes/Mesh.xml
+msgid "Indicates this custom channel contains half precision float colors, encoded as [PackedByteArray]. Only red and green channels are used."
+msgstr "Azt jelzi, hogy az egyéni csatorna fél pontosságú lebegőpontos színértékeket tartalmaz, [PackedByteArray] formában tárolva. Csak a vörös és a zöld csatornát használja."
+
+#. Mesh.ARRAY_FORMAT_VERTEX
+#: doc/classes/Mesh.xml
+msgid "Mesh array contains vertices. All meshes require a vertex array so this should always be present."
+msgstr "A háló tömbje csúcspontokat tartalmaz. Minden hálóhoz szükséges egy csúcstömb, ezért ennek a jelzőnek mindig szerepelnie kell."
+
+#. Mesh.ARRAY_FORMAT_CUSTOM0
+#: doc/classes/Mesh.xml
+msgid "Mesh array contains custom channel index 0."
+msgstr "A háló tömbje a 0. egyéni csatornát tartalmazza."
+
+#. Mesh.ARRAY_FORMAT_CUSTOM1
+#: doc/classes/Mesh.xml
+msgid "Mesh array contains custom channel index 1."
+msgstr "A háló tömbje az 1. egyéni csatornát tartalmazza."
+
+#. Mesh.ARRAY_FORMAT_CUSTOM2
+#: doc/classes/Mesh.xml
+msgid "Mesh array contains custom channel index 2."
+msgstr "A háló tömbje a 2. egyéni csatornát tartalmazza."
+
+#. Mesh.ARRAY_FORMAT_CUSTOM3
+#: doc/classes/Mesh.xml
+msgid "Mesh array contains custom channel index 3."
+msgstr "A háló tömbje a 3. egyéni csatornát tartalmazza."
+
+#. RenderingServer.ARRAY_FORMAT_CUSTOM_BASE
+#. Mesh.ARRAY_FORMAT_CUSTOM_BASE
+#: doc/classes/RenderingServer.xml doc/classes/Mesh.xml
+msgid "Shift of first custom channel."
+msgstr "Az első egyéni csatorna formátumának biteltolása."
+
+#. RenderingServer.ARRAY_FORMAT_CUSTOM_BITS
+#. Mesh.ARRAY_FORMAT_CUSTOM_BITS
+#: doc/classes/RenderingServer.xml doc/classes/Mesh.xml
+msgid "Number of format bits per custom channel. See [enum ArrayCustomFormat]."
+msgstr "Az egyéni csatornák formátumát tároló bitek száma csatornánként. Lásd az [enum ArrayCustomFormat] felsorolást."
+
+#. RenderingServer.ARRAY_FORMAT_CUSTOM0_SHIFT
+#. Mesh.ARRAY_FORMAT_CUSTOM0_SHIFT
+#: doc/classes/RenderingServer.xml doc/classes/Mesh.xml
+msgid "Amount to shift [enum ArrayCustomFormat] for custom channel index 0."
+msgstr "Az [enum ArrayCustomFormat] értékének biteltolása a 0. egyéni csatornához."
+
+#. RenderingServer.ARRAY_FORMAT_CUSTOM1_SHIFT
+#. Mesh.ARRAY_FORMAT_CUSTOM1_SHIFT
+#: doc/classes/RenderingServer.xml doc/classes/Mesh.xml
+msgid "Amount to shift [enum ArrayCustomFormat] for custom channel index 1."
+msgstr "Az [enum ArrayCustomFormat] értékének biteltolása az 1. egyéni csatornához."
+
+#. RenderingServer.ARRAY_FORMAT_CUSTOM2_SHIFT
+#. Mesh.ARRAY_FORMAT_CUSTOM2_SHIFT
+#: doc/classes/RenderingServer.xml doc/classes/Mesh.xml
+msgid "Amount to shift [enum ArrayCustomFormat] for custom channel index 2."
+msgstr "Az [enum ArrayCustomFormat] értékének biteltolása a 2. egyéni csatornához."
+
+#. RenderingServer.ARRAY_FORMAT_CUSTOM3_SHIFT
+#. Mesh.ARRAY_FORMAT_CUSTOM3_SHIFT
+#: doc/classes/RenderingServer.xml doc/classes/Mesh.xml
+msgid "Amount to shift [enum ArrayCustomFormat] for custom channel index 3."
+msgstr "Az [enum ArrayCustomFormat] értékének biteltolása a 3. egyéni csatornához."
+
+#. RenderingServer.ARRAY_FORMAT_CUSTOM_MASK
+#. Mesh.ARRAY_FORMAT_CUSTOM_MASK
+#: doc/classes/RenderingServer.xml doc/classes/Mesh.xml
+msgid "Mask of custom format bits per custom channel. Must be shifted by one of the SHIFT constants. See [enum ArrayCustomFormat]."
+msgstr "Az egyéni csatornák formátumbitjeinek csatornánkénti maszkja. A megfelelő SHIFT állandó értékével kell eltolni. Lásd az [enum ArrayCustomFormat] felsorolást."
+
+#. ImporterMesh.generate_lods
+#: doc/classes/ImporterMesh.xml
+msgid "Generates all lods for this ImporterMesh.\n[param normal_merge_angle] is in degrees and used in the same way as the importer settings in [code]lods[/code].\n[param normal_split_angle] is not used and only remains for compatibility with older versions of the API.\nThe number of generated lods can be accessed using [method get_surface_lod_count], and each LOD is available in [method get_surface_lod_size] and [method get_surface_lod_indices].\n[param bone_transform_array] is an [Array] which can be either empty or contain [Transform3D]s which, for each of the mesh's bone IDs, will apply mesh skinning when generating the LOD mesh variations. This is usually used to account for discrepancies in scale between the mesh itself and its skinning data."
+msgstr "Létrehozza az ImporterMesh összes részletességi szintjét.\nA [param normal_merge_angle] fokban értendő, és a [code]lods[/code] importálási beállításainál megadott értékkel azonos módon érvényesül.\nA [param normal_split_angle] már nincs használatban. A korábbi API-verziókkal való kompatibilitás miatt érhető el.\nAz elkészült szintek száma a [method get_surface_lod_count] metódussal kérdezhető le. Egy adott szint méretét és indexeit a [method get_surface_lod_size] és a [method get_surface_lod_indices] adja vissza.\nA [param bone_transform_array] üres [Array] lehet, vagy csontazonosítónként egy [Transform3D] transzformációt tartalmazhat. A motor ezekkel a szintek létrehozásakor alkalmazza a csontvázvezérelt alakváltoztatást. Ez általában a háló és a deformációs adatok eltérő méretarányának kiegyenlítésére szolgál."
+
+#. ImporterMesh.get_surface_lod_size
+#: doc/classes/ImporterMesh.xml
+msgid "Returns the screen ratio which activates a lod for a surface."
+msgstr "Azt a képernyőmérethez viszonyított arányt adja vissza, amelynél a felület részletességi szintje használatba lép."
+
+#. RenderingServer.ARRAY_COMPRESS_FLAGS_BASE
+#. Mesh.ARRAY_COMPRESS_FLAGS_BASE
+#: doc/classes/RenderingServer.xml doc/classes/Mesh.xml
+msgid "Shift of first compress flag. Compress flags should be passed to [method ArrayMesh.add_surface_from_arrays] and [method SurfaceTool.commit]."
+msgstr "Az első tömörítési jelző biteltolása. A tömörítési jelzőket az [method ArrayMesh.add_surface_from_arrays] és a [method SurfaceTool.commit] metódusnak kell átadni."
+
+#. Mesh.ARRAY_FLAG_USE_8_BONE_WEIGHTS
+#: doc/classes/Mesh.xml
+msgid "Flag used to mark that the mesh contains up to 8 bone influences per vertex. This flag indicates that [constant ARRAY_BONES] and [constant ARRAY_WEIGHTS] elements will have double length."
+msgstr "Azt jelzi, hogy a háló csúcspontonként legfeljebb 8 csont hatását tárolja. A jelző használatakor az [constant ARRAY_BONES] és az [constant ARRAY_WEIGHTS] tömb kétszer olyan hosszú."
+
+#. MultiMesh.set_buffer_interpolated
+#: doc/classes/MultiMesh.xml
+msgid "An alternative to setting the [member buffer] property, which can be used with [i]physics interpolation[/i]. This method takes two arrays, and can set the data for the current and previous tick in one go. The renderer will automatically interpolate the data at each frame.\nThis is useful for situations where the order of instances may change from physics tick to tick, such as particle systems.\nWhen the order of instances is coherent, the simpler alternative of setting [member buffer] can still be used with interpolation."
+msgstr "A [member buffer] beállításának alternatívája, amely [i]fizikai interpolációval[/i] is használható. Két tömböt fogad, és egyszerre állítja be a jelenlegi és az előző fizikai lépés adatait. A renderelő minden képkockában automatikusan interpolál az adatok között.\nHasznos, ha a példányok sorrendje fizikai lépésenként megváltozhat, például részecskerendszereknél.\nHa a példányok sorrendje állandó, interpoláció mellett is elég a [member buffer] egyszerű beállítása."
+
+#. MultiMesh.set_instance_color
+#: doc/classes/MultiMesh.xml
+msgid "Sets the color of a specific instance by [i]multiplying[/i] the mesh's existing vertex colors. This allows for different color tinting per instance.\n[b]Note:[/b] Each component is stored in 32 bits in the Forward+ and Mobile rendering methods, but is packed into 16 bits in the Compatibility rendering method.\nFor the color to take effect, ensure that [member use_colors] is [code]true[/code] on the [MultiMesh] and [member BaseMaterial3D.vertex_color_use_as_albedo] is [code]true[/code] on the material. If you intend to set an absolute color instead of tinting, make sure the material's albedo color is set to pure white ([code]Color(1, 1, 1)[/code])."
+msgstr "A megadott példány színét úgy állítja be, hogy [i]megszorozza[/i] a háló meglévő csúcsszíneit. Így a példányok eltérő árnyalatot kaphatnak.\n[b]Megjegyzés:[/b] A Forward+ és Mobile renderelés komponensenként 32 biten tárolja az értékeket. A Kompatibilitás módban ezek 16 bitre vannak tömörítve.\nAhhoz, hogy a szín látható legyen, a [MultiMesh] [member use_colors] értéke legyen [code]true[/code], és az anyag [member BaseMaterial3D.vertex_color_use_as_albedo] értéke is legyen [code]true[/code]. Ha színezés helyett pontos színt szeretnél megadni, az anyag alapszíne legyen tiszta fehér ([code]Color(1, 1, 1)[/code])."
+
+#. MultiMesh.set_instance_custom_data
+#: doc/classes/MultiMesh.xml
+msgid "Sets custom data for a specific instance. [param custom_data] is a [Color] type only to contain 4 floating-point numbers.\n[b]Note:[/b] Each number is stored in 32 bits in the Forward+ and Mobile rendering methods, but is packed into 16 bits in the Compatibility rendering method.\nFor the custom data to be used, ensure that [member use_custom_data] is [code]true[/code].\nThis custom instance data has to be manually accessed in your custom shader using [code]INSTANCE_CUSTOM[/code]."
+msgstr "Egyéni adatokat állít be a megadott példányhoz. A [param custom_data] azért [Color] típusú, hogy négy lebegőpontos számot lehessen átadni.\n[b]Megjegyzés:[/b] A Forward+ és Mobile renderelés számonként 32 biten tárolja az értékeket. A Kompatibilitás módban ezek 16 bitre vannak tömörítve.\nAz egyéni adatok használatához a [member use_custom_data] értéke legyen [code]true[/code].\nAz adatokat az egyéni árnyalóban az [code]INSTANCE_CUSTOM[/code] beépített változóval olvashatod ki."
+
+#. MultiMesh.physics_interpolation_quality
+#: doc/classes/MultiMesh.xml
+msgid "Choose whether to use an interpolation method that favors speed or quality.\nWhen using low physics tick rates (typically below 20) or high rates of object rotation, you may get better results from the high quality setting.\n[b]Note:[/b] Fast quality does not equate to low quality. Except in the special cases mentioned above, the quality should be comparable to high quality."
+msgstr "Megadja, hogy az interpoláció a sebességet vagy a minőséget részesítse előnyben.\nRitka fizikai frissítésnél, jellemzően másodpercenként 20 lépés alatt, vagy gyorsan forgó objektumoknál a jobb minőségű mód jobb eredményt adhat.\n[b]Megjegyzés:[/b] A gyors mód a fenti különleges eseteken kívül hasonló minőségű eredményt adhat."
+
+#. MultiMeshInstance2D.description
+#: doc/classes/MultiMeshInstance2D.xml
+msgid "[MultiMeshInstance2D] is a specialized node to instance a [MultiMesh] resource in 2D. This can be faster to render compared to displaying many [Sprite2D] nodes with large transparent areas, especially if the nodes take up a lot of space on screen at high viewport resolutions. This is because using a mesh designed to fit the sprites' opaque areas will reduce GPU fill rate utilization (at the cost of increased vertex processing utilization).\nUsage is the same as [MultiMeshInstance3D]."
+msgstr "A [MultiMeshInstance2D] a [MultiMesh] példányainak 2D-s megjelenítésére szolgál. Gyorsabb lehet, mint sok, nagy átlátszó területű [Sprite2D] kirajzolása, különösen akkor, ha nagy felbontású nézetablakban a csomópontok a képernyő jelentős részét elfoglalják. Ha a háló a sprite-ok átlátszatlan részeit követi, a GPU-nak kevesebb képpontot kell feldolgoznia, cserébe több csúcspontot számol ki.\nHasználata megegyezik a [MultiMeshInstance3D] csomópontéval."
+
+#. MeshLibrary.find_item_by_name
+#: doc/classes/MeshLibrary.xml
+msgid "Returns the first item with the given name, or [code]-1[/code] if no item is found."
+msgstr "A megadott nevű első elem azonosítóját adja vissza, vagy [code]-1[/code] értéket, ha nincs ilyen elem."
+
+#. MeshInstance3D.bake_mesh_from_current_blend_shape_mix
+#: doc/classes/MeshInstance3D.xml
+msgid "Takes a snapshot from the current [ArrayMesh] with all blend shapes applied according to their current weights and bakes it to the provided [param existing] mesh. If no [param existing] mesh is provided a new [ArrayMesh] is created, baked and returned. Mesh surface materials are not copied.\n[b]Performance:[/b] [Mesh] data needs to be received from the GPU, stalling the [RenderingServer] in the process."
+msgstr "Pillanatképet készít az aktuális [ArrayMesh] hálóról, az összes keverési alakzatot az aktuális súlyokkal alkalmazva. Az eredményt a [param existing] hálóba süti. Ha a [param existing] nincs megadva, létrehoz és visszaad egy új [ArrayMesh] hálót. A felületek anyagait nem másolja át.\n[b]Teljesítmény:[/b] A [Mesh] adatait vissza kell olvasni a GPU-ról, ami megakasztja a [RenderingServer] működését."
+
+#. MeshInstance3D.bake_mesh_from_current_skeleton_pose
+#: doc/classes/MeshInstance3D.xml
+msgid "Takes a snapshot of the current animated skeleton pose of the skinned mesh and bakes it to the provided [param existing] mesh. If no [param existing] mesh is provided a new [ArrayMesh] is created, baked, and returned. Requires a skeleton with a registered skin to work. Blendshapes are ignored. Mesh surface materials are not copied.\n[b]Performance:[/b] [Mesh] data needs to be retrieved from the GPU, stalling the [RenderingServer] in the process."
+msgstr "Pillanatképet készít a csontvázhoz kötött háló aktuális animált pózáról, és a [param existing] hálóba süti. Ha a [param existing] nincs megadva, létrehoz és visszaad egy új [ArrayMesh] hálót. A művelethez regisztrált deformációs kötésekkel rendelkező csontváz szükséges. A keverési alakzatokat figyelmen kívül hagyja, a felületek anyagait pedig nem másolja át.\n[b]Teljesítmény:[/b] A [Mesh] adatait vissza kell olvasni a GPU-ról, ami megakasztja a [RenderingServer] működését."
+
+#. MeshInstance3D.create_convex_collision
+#: doc/classes/MeshInstance3D.xml
+msgid "This helper creates a [StaticBody3D] child node with a [ConvexPolygonShape3D] collision shape calculated from the mesh geometry. It's mainly used for testing.\nIf [param clean] is [code]true[/code] (default), duplicate and interior vertices are removed automatically. You can set it to [code]false[/code] to make the process faster if not needed.\nIf [param simplify] is [code]true[/code], the geometry can be further simplified to reduce the number of vertices. Disabled by default."
+msgstr "A segédmetódus egy [StaticBody3D] gyermekcsomópontot hoz létre a háló geometriájából számított [ConvexPolygonShape3D] ütközőalakkal. Elsősorban tesztelésre szolgál.\nHa a [param clean] értéke [code]true[/code] (ez az alapérték), eltávolítja a megkettőzött és a belső csúcspontokat. Ha nincs erre szükség, [code]false[/code] értékkel gyorsítható a művelet.\nHa a [param simplify] értéke [code]true[/code], tovább egyszerűsíti a geometriát a csúcspontok számának csökkentéséhez. Ez alapértelmezésben ki van kapcsolva."
+
+#. MeshInstance3D.get_active_material
+#: doc/classes/MeshInstance3D.xml
+msgid "Returns the [Material] that will be used by the [Mesh] when drawing. This can return the [member GeometryInstance3D.material_override], the surface override [Material] defined in this [MeshInstance3D], or the surface [Material] defined in the [member mesh]. For example, if [member GeometryInstance3D.material_override] is used, all surfaces will return the override material.\nReturns [code]null[/code] if no material is active, including when [member mesh] is [code]null[/code]."
+msgstr "A [Mesh] megjelenítéséhez ténylegesen használt [Material] anyagot adja vissza. Ez lehet a [member GeometryInstance3D.material_override], a [MeshInstance3D] példányon beállított felületfelülíró [Material], vagy a [member mesh] erőforrás felületéhez rendelt [Material]. Ha például a [member GeometryInstance3D.material_override] be van állítva, minden felülethez a felülíró anyagot adja vissza.\nHa nincs aktív anyag, az eredmény [code]null[/code]. Ez akkor is így van, ha a [member mesh] értéke [code]null[/code]."
+
+#. MeshInstance3D.get_surface_override_material
+#: doc/classes/MeshInstance3D.xml
+msgid "Returns the override [Material] for the specified [param surface] of the [Mesh] resource. See also [method get_surface_override_material_count].\n[b]Note:[/b] This returns the [Material] associated to the [MeshInstance3D]'s Surface Material Override properties, not the material within the [Mesh] resource. To get the material within the [Mesh] resource, use [method Mesh.surface_get_material] instead."
+msgstr "A [Mesh] erőforrás megadott [param surface] felületének felülíró [Material] anyagát adja vissza. Lásd még a [method get_surface_override_material_count] metódust.\n[b]Megjegyzés:[/b] Az eredmény a [MeshInstance3D] példányon az adott [Mesh] felületéhez beállított felülíró [Material]. A [Mesh] erőforrás saját anyagát a [method Mesh.surface_get_material] metódussal kérheted le."
+
+#. MeshInstance3D.get_surface_override_material_count
+#: doc/classes/MeshInstance3D.xml
+msgid "Returns the number of surface override materials. This is equivalent to [method Mesh.get_surface_count]. See also [method get_surface_override_material]."
+msgstr "A felületfelülíró anyaghelyek számát adja vissza. Ez megegyezik a [method Mesh.get_surface_count] eredményével. Lásd még a [method get_surface_override_material] metódust."
+
+#. MeshInstance3D.set_surface_override_material
+#: doc/classes/MeshInstance3D.xml
+msgid "Sets the override [param material] for the specified [param surface] of the [Mesh] resource. This material is associated with this [MeshInstance3D] rather than with [member mesh].\n[b]Note:[/b] This assigns the [Material] associated to the [MeshInstance3D]'s Surface Material Override properties, not the material within the [Mesh] resource. To set the material within the [Mesh] resource, use [method Mesh.surface_set_material] instead."
+msgstr "Beállítja a [Mesh] erőforrás megadott [param surface] felületéhez a felülíró [param material] anyagot. Az anyag ehhez a [MeshInstance3D] példányhoz tartozik, a [member mesh] erőforrástól függetlenül.\n[b]Megjegyzés:[/b] A metódus a [MeshInstance3D] példányon az adott [Mesh] felülethez beállított [Material] anyagot módosítja. A [Mesh] erőforrás saját anyagát a [method Mesh.surface_set_material] metódussal állíthatod be."
+
+#. MeshInstance2D.description
+#: doc/classes/MeshInstance2D.xml
+msgid "Node used for displaying a [Mesh] in 2D. This can be faster to render compared to displaying a [Sprite2D] node with large transparent areas, especially if the node takes up a lot of space on screen at high viewport resolutions. This is because using a mesh designed to fit the sprite's opaque areas will reduce GPU fill rate utilization (at the cost of increased vertex processing utilization).\nWhen a [Mesh] has to be instantiated more than thousands of times close to each other, consider using a [MultiMesh] in a [MultiMeshInstance2D] instead.\nA [MeshInstance2D] can be created from an existing [Sprite2D] via a tool in the editor toolbar. Select the [Sprite2D] node, then choose [b]Sprite2D > Convert to MeshInstance2D[/b] at the top of the 2D editor viewport."
+msgstr "[Mesh] háló 2D-s megjelenítésére szolgáló csomópont. Gyorsabb lehet, mint egy nagy átlátszó területű [Sprite2D] kirajzolása, különösen akkor, ha nagy felbontású nézetablakban a csomópont a képernyő nagy részét elfoglalja. Ha a háló a sprite átlátszatlan részeit követi, a GPU-nak kevesebb képpontot, cserébe több csúcspontot kell feldolgoznia.\nHa egymáshoz közel több ezer példányra van szükség egy [Mesh] hálóból, érdemes [MultiMesh] erőforrást használni [MultiMeshInstance2D] csomóponttal.\nA szerkesztő eszköztárával meglévő [Sprite2D] csomópontból is létrehozható [MeshInstance2D]. Jelöld ki a [Sprite2D] csomópontot, majd válaszd a 2D-s nézetablak tetején a [b]Sprite2D > Átalakítás MeshInstance2D-vé[/b] menüpontot."
+
+#. GeometryInstance3D.brief
+#: doc/classes/GeometryInstance3D.xml
+msgid "Base node for geometry-based visual instances."
+msgstr "Geometriát megjelenítő példányok alaposztálya."
+
+#. GeometryInstance3D.description
+#: doc/classes/GeometryInstance3D.xml
+msgid "Base node for geometry-based visual instances. Shares some common functionality like visibility and custom materials."
+msgstr "Geometriát megjelenítő példányok alaposztálya. Közös funkciókat biztosít például a láthatóság és az egyéni anyagok beállításához."
+
+#. GeometryInstance3D.set_instance_shader_parameter
+#: doc/classes/GeometryInstance3D.xml
+msgid "Set the value of a shader uniform for this instance only ([url=$DOCS_URL/tutorials/shaders/shader_reference/shading_language.html#per-instance-uniforms]per-instance uniform[/url]). See also [method ShaderMaterial.set_shader_parameter] to assign a uniform on all instances using the same [ShaderMaterial].\n[b]Note:[/b] For a shader uniform to be assignable on a per-instance basis, it [i]must[/i] be defined with [code]instance uniform ...[/code] rather than [code]uniform ...[/code] in the shader code.\n[b]Note:[/b] [param name] is case-sensitive and must match the name of the uniform in the code exactly (not the capitalized name in the inspector).\n[b]Note:[/b] Per-instance shader uniforms are only available in Spatial and CanvasItem shaders, but not for Fog, Sky, or Particles shaders."
+msgstr "Csak ennél a példánynál állítja be az árnyaló uniform változóját ([url=$DOCS_URL/tutorials/shaders/shader_reference/shading_language.html#per-instance-uniforms]példányonkénti uniform[/url]). Ha ugyanazt az értéket az adott [ShaderMaterial] anyagot használó összes példányra alkalmaznád, használd a [method ShaderMaterial.set_shader_parameter] metódust.\n[b]Megjegyzés:[/b] A példányonkénti beállításhoz az árnyalókódban a változót [i]kötelező[/i] [code]instance uniform ...[/code] alakban deklarálni a [code]uniform ...[/code] helyett.\n[b]Megjegyzés:[/b] A [param name] kis- és nagybetűérzékeny. Pontosan az árnyalókódban szereplő nevet add meg, az ellenőrzőben megjelenő formától függetlenül.\n[b]Megjegyzés:[/b] A példányonkénti uniformok a Spatial és CanvasItem árnyalókban használhatók. A Fog, Sky és Particles árnyalókban nem érhetők el."
+
+#. GeometryInstance3D.cast_shadow
+#: doc/classes/GeometryInstance3D.xml
+msgid "The mode used to cast shadows from this instance."
+msgstr "A példány árnyékvetési módja."
+
+#. GeometryInstance3D.custom_aabb
+#: doc/classes/GeometryInstance3D.xml
+msgid "Overrides the bounding box of this node with a custom one. This can be used to avoid the expensive [AABB] recalculation that happens when a skeleton is used with a [MeshInstance3D] or to have precise control over the [MeshInstance3D]'s bounding box. To use the default AABB, set value to an [AABB] with all fields set to [code]0.0[/code]. To avoid frustum culling, set [member custom_aabb] to a very large AABB that covers your entire game world such as [code]AABB(-10000, -10000, -10000, 20000, 20000, 20000)[/code]. To disable all forms of culling (including occlusion and layer culling), call [method RenderingServer.instance_set_ignore_culling] on the [GeometryInstance3D]'s [RID]."
+msgstr "Egyéni befoglaló dobozzal írja felül a csomópont dobozát. Ezzel elkerülheted az [AABB] költséges újraszámítását, amikor egy [MeshInstance3D] csontvázat használ, vagy pontosan szabályozhatod a [MeshInstance3D] befoglaló dobozát. Az alapértelmezett dobozhoz állíts be olyan [AABB] értéket, amelynek minden mezője [code]0.0[/code]. A látógúlán alapuló kiszűrés elkerüléséhez a [member custom_aabb] terjedjen ki az egész játékvilágra, például [code]AABB(-10000, -10000, -10000, 20000, 20000, 20000)[/code]. Minden kiszűrés, köztük a takaráson és rétegeken alapuló kiszűrés kikapcsolásához hívd meg a [method RenderingServer.instance_set_ignore_culling] metódust a [GeometryInstance3D] [RID] azonosítójával."
+
+#. GeometryInstance3D.extra_cull_margin
+#: doc/classes/GeometryInstance3D.xml
+msgid "The extra distance added to the GeometryInstance3D's bounding box ([AABB]) to increase its cull box."
+msgstr "Ennyivel növeli meg minden irányban a GeometryInstance3D láthatósági vizsgálathoz használt befoglaló dobozát ([AABB])."
+
+#. GeometryInstance3D.gi_lightmap_scale
+#: doc/classes/GeometryInstance3D.xml
+msgid "The texel density to use for lightmapping in [LightmapGI]."
+msgstr "A [LightmapGI] fénytérképeihez használt texelsűrűség."
+
+#. GeometryInstance3D.gi_lightmap_texel_scale
+#: doc/classes/GeometryInstance3D.xml
+msgid "The texel density to use for lightmapping in [LightmapGI]. Greater scale values provide higher resolution in the lightmap, which can result in sharper shadows for lights that have both direct and indirect light baked. However, greater scale values will also increase the space taken by the mesh in the lightmap texture, which increases the memory, storage, and bake time requirements. When using a single mesh at different scales, consider adjusting this value to keep the lightmap texel density consistent across meshes.\nFor example, doubling [member gi_lightmap_texel_scale] doubles the lightmap texture resolution for this object [i]on each axis[/i], so it will [i]quadruple[/i] the texel count."
+msgstr "A [LightmapGI] fénytérképeihez használt texelsűrűség. Nagyobb értéknél a fénytérkép felbontása nagyobb. Ez élesebb árnyékokat adhat, ha a közvetlen és a közvetett világítás is a fénytérképre kerül. A háló ilyenkor nagyobb területet foglal el a fénytérkép textúráján, így nő a memória- és tárhelyigény, valamint a sütési idő. Ha ugyanazt a hálót többféle méretben használod, ezzel a beállítással egyenlítheted ki a texelsűrűséget.\nA [member gi_lightmap_texel_scale] megduplázása például [i]mindkét tengelyen[/i] kétszeresére növeli az objektum fénytérképi felbontását, így [i]négyszer[/i] annyi texelt használ."
+
+#. GeometryInstance3D.gi_mode
+#: doc/classes/GeometryInstance3D.xml
+msgid "The global illumination mode to use for the whole geometry. To avoid inconsistent results, use a mode that matches the purpose of the mesh during gameplay (static/dynamic).\n[b]Note:[/b] Lights' bake mode will also affect the global illumination rendering. See [member Light3D.light_bake_mode]."
+msgstr "A teljes geometriára alkalmazott globális megvilágítási mód. Az egységes eredményhez válassz a háló játékbeli szerepéhez illő módot attól függően, hogy statikus vagy dinamikus objektumról van szó.\n[b]Megjegyzés:[/b] A fények sütési módja is befolyásolja a globális megvilágítást. Lásd a [member Light3D.light_bake_mode] tulajdonságot."
+
+#. GeometryInstance3D.ignore_occlusion_culling
+#: doc/classes/GeometryInstance3D.xml
+msgid "If [code]true[/code], disables occlusion culling for this instance. Useful for gizmos that must be rendered even when occlusion culling is in use.\n[b]Note:[/b] [member ignore_occlusion_culling] does not affect frustum culling (which is what happens when an object is not visible given the camera's angle). To avoid frustum culling, set [member custom_aabb] to a very large AABB that covers your entire game world such as [code]AABB(-10000, -10000, -10000, 20000, 20000, 20000)[/code]."
+msgstr "Ha az érték [code]true[/code], a takarás alapján történő kiszűrés kikapcsol ennél a példánynál. Hasznos olyan segédábráknál, amelyeknek takarásban is meg kell jelenniük.\n[b]Megjegyzés:[/b] Az [member ignore_occlusion_culling] nincs hatással a látógúlán alapuló kiszűrésre, amikor a kamera látószögén kívül esik az objektum. Ennek elkerülésére a [member custom_aabb] fedje le az egész játékvilágot, például [code]AABB(-10000, -10000, -10000, 20000, 20000, 20000)[/code] értékkel."
+
+#. GeometryInstance3D.lod_bias
+#: doc/classes/GeometryInstance3D.xml
+msgid "Changes how quickly the mesh transitions to a lower level of detail. A value of 0 will force the mesh to its lowest level of detail, a value of 1 will use the default settings, and larger values will keep the mesh in a higher level of detail at farther distances.\nUseful for testing level of detail transitions in the editor."
+msgstr "Azt szabályozza, milyen hamar vált a háló kevésbé részletes szintre. A 0 érték a legkevésbé részletes szintet kényszeríti ki. Az 1 érték az alapbeállítást használja, a nagyobb értékeknél pedig távolabbról is részletesebb marad a háló.\nA részletességi szintek közötti váltások szerkesztőbeli kipróbálásához hasznos."
+
+#. GeometryInstance3D.material_overlay
+#: doc/classes/GeometryInstance3D.xml
+msgid "The material overlay for the whole geometry.\nIf a material is assigned to this property, it will be rendered on top of any other active material for all the surfaces."
+msgstr "A teljes geometriára rárajzolt anyag.\nA hozzárendelt anyag minden felületen a többi aktív anyag fölött jelenik meg."
+
+#. GeometryInstance3D.material_override
+#: doc/classes/GeometryInstance3D.xml
+msgid "The material override for the whole geometry.\nIf a material is assigned to this property, it will be used instead of any material set in any material slot of the mesh."
+msgstr "A teljes geometria anyagának felülírására szolgál.\nA hozzárendelt anyag a háló összes anyaghelyén beállított anyag helyett érvényesül."
+
+#. GeometryInstance3D.visibility_range_begin
+#: doc/classes/GeometryInstance3D.xml
+msgid "Starting distance from which the GeometryInstance3D will be visible, taking [member visibility_range_begin_margin] into account as well. The default value of 0 is used to disable the range check."
+msgstr "Az a legkisebb távolság, amelytől a GeometryInstance3D láthatóvá válik, a [member visibility_range_begin_margin] értékét is figyelembe véve. Az alapértelmezett 0 értéknél nincs alsó távolsághatár."
+
+#. GeometryInstance3D.visibility_range_begin_margin
+#: doc/classes/GeometryInstance3D.xml
+msgid "Margin for the [member visibility_range_begin] threshold. The GeometryInstance3D will only change its visibility state when it goes over or under the [member visibility_range_begin] threshold by this amount.\nIf [member visibility_range_fade_mode] is [constant VISIBILITY_RANGE_FADE_DISABLED], this acts as a hysteresis distance. If [member visibility_range_fade_mode] is [constant VISIBILITY_RANGE_FADE_SELF] or [constant VISIBILITY_RANGE_FADE_DEPENDENCIES], this acts as a fade transition distance and must be set to a value greater than [code]0.0[/code] for the effect to be noticeable."
+msgstr "A [member visibility_range_begin] küszöb körüli ráhagyás. A GeometryInstance3D láthatósága csak akkor változik, ha a távolság legalább ennyivel meghaladja a [member visibility_range_begin] küszöböt, vagy ennyivel alá esik.\nHa a [member visibility_range_fade_mode] értéke [constant VISIBILITY_RANGE_FADE_DISABLED], ez a távolság a határ körüli oda-vissza kapcsolgatást akadályozza meg (hiszterézis). A [member visibility_range_fade_mode] [constant VISIBILITY_RANGE_FADE_SELF] vagy [constant VISIBILITY_RANGE_FADE_DEPENDENCIES] értékénél az átmenet szélességét adja meg. Látható átmenethez az érték legyen nagyobb [code]0.0[/code]-nál."
+
+#. GeometryInstance3D.visibility_range_end
+#: doc/classes/GeometryInstance3D.xml
+msgid "Distance from which the GeometryInstance3D will be hidden, taking [member visibility_range_end_margin] into account as well. The default value of 0 is used to disable the range check."
+msgstr "Az a távolság, amelytől a GeometryInstance3D eltűnik, a [member visibility_range_end_margin] értékét is figyelembe véve. Az alapértelmezett 0 értéknél nincs felső távolsághatár."
+
+#. GeometryInstance3D.visibility_range_end_margin
+#: doc/classes/GeometryInstance3D.xml
+msgid "Margin for the [member visibility_range_end] threshold. The GeometryInstance3D will only change its visibility state when it goes over or under the [member visibility_range_end] threshold by this amount.\nIf [member visibility_range_fade_mode] is [constant VISIBILITY_RANGE_FADE_DISABLED], this acts as a hysteresis distance. If [member visibility_range_fade_mode] is [constant VISIBILITY_RANGE_FADE_SELF] or [constant VISIBILITY_RANGE_FADE_DEPENDENCIES], this acts as a fade transition distance and must be set to a value greater than [code]0.0[/code] for the effect to be noticeable."
+msgstr "A [member visibility_range_end] küszöb körüli ráhagyás. A GeometryInstance3D láthatósága csak akkor változik, ha a távolság legalább ennyivel meghaladja a [member visibility_range_end] küszöböt, vagy ennyivel alá esik.\nHa a [member visibility_range_fade_mode] értéke [constant VISIBILITY_RANGE_FADE_DISABLED], ez a távolság a határ körüli oda-vissza kapcsolgatást akadályozza meg (hiszterézis). A [member visibility_range_fade_mode] [constant VISIBILITY_RANGE_FADE_SELF] vagy [constant VISIBILITY_RANGE_FADE_DEPENDENCIES] értékénél az átmenet szélességét adja meg. Látható átmenethez az érték legyen nagyobb [code]0.0[/code]-nál."
+
+#. GeometryInstance3D.visibility_range_fade_mode
+#: doc/classes/GeometryInstance3D.xml
+msgid "Controls which instances will be faded when approaching the limits of the visibility range."
+msgstr "Megadja, mely példányok jelenjenek meg vagy tűnjenek el fokozatosan a láthatósági határok közelében."
+
+#. GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+#: doc/classes/GeometryInstance3D.xml
+msgid "Will not cast any shadows. Use this to improve performance for small geometry that is unlikely to cast noticeable shadows (such as debris)."
+msgstr "A geometria nem vet árnyékot. Olyan kis objektumoknál javíthatja a teljesítményt, amelyek árnyéka alig látható, például törmeléknél."
+
+#. GeometryInstance3D.SHADOW_CASTING_SETTING_ON
+#: doc/classes/GeometryInstance3D.xml
+msgid "Will cast shadows from all visible faces in the GeometryInstance3D.\nWill take culling into account, so faces not being rendered will not be taken into account when shadow casting."
+msgstr "A GeometryInstance3D minden látható lapja árnyékot vet.\nFigyelembe veszi a lapok kiszűrését, így a ki nem rajzolt lapok nem vetnek árnyékot."
+
+#. GeometryInstance3D.SHADOW_CASTING_SETTING_DOUBLE_SIDED
+#: doc/classes/GeometryInstance3D.xml
+msgid "Will cast shadows from all visible faces in the GeometryInstance3D.\nWill not take culling into account, so all faces will be taken into account when shadow casting."
+msgstr "A GeometryInstance3D lapjai mindkét oldalról árnyékot vetnek.\nAz árnyékvetés nem veszi figyelembe a lapok kiszűrését, így minden lap részt vesz benne."
+
+#. GeometryInstance3D.SHADOW_CASTING_SETTING_SHADOWS_ONLY
+#: doc/classes/GeometryInstance3D.xml
+msgid "Will only show the shadows casted from this object.\nIn other words, the actual mesh will not be visible, only the shadows casted from the mesh will be."
+msgstr "Csak az objektum által vetett árnyékok jelennek meg.\nMaga a háló láthatatlan marad, miközben továbbra is árnyékot vet."
+
+#. GeometryInstance3D.GI_MODE_DISABLED
+#: doc/classes/GeometryInstance3D.xml
+msgid "Disabled global illumination mode. Use for dynamic objects that do not contribute to global illumination (such as characters). When using [VoxelGI] and SDFGI, the geometry will [i]receive[/i] indirect lighting and reflections but the geometry will not be considered in GI baking."
+msgstr "Kikapcsolja a geometria hozzájárulását a globális megvilágításhoz. Olyan dinamikus objektumokhoz használható, amelyeknek nem kell hozzájárulniuk, például karakterekhez. [VoxelGI] és SDFGI mellett a geometria [i]kap[/i] közvetett megvilágítást és tükröződéseket, de a globális megvilágítás sütése kihagyja."
+
+#. GeometryInstance3D.GI_MODE_STATIC
+#: doc/classes/GeometryInstance3D.xml
+msgid "Baked global illumination mode. Use for static objects that contribute to global illumination (such as level geometry). This GI mode is effective when using [VoxelGI], SDFGI and [LightmapGI]."
+msgstr "Sütött globális megvilágítás. Olyan statikus objektumokhoz használható, amelyek hozzájárulnak a globális megvilágításhoz, például a pálya geometriájához. A mód [VoxelGI], SDFGI és [LightmapGI] esetén hatásos."
+
+#. GeometryInstance3D.GI_MODE_DYNAMIC
+#: doc/classes/GeometryInstance3D.xml
+msgid "Dynamic global illumination mode. Use for dynamic objects that contribute to global illumination. This GI mode is only effective when using [VoxelGI], but it has a higher performance impact than [constant GI_MODE_STATIC]. When using other GI methods, this will act the same as [constant GI_MODE_DISABLED]. When using [LightmapGI], the object will receive indirect lighting using lightmap probes instead of using the baked lightmap texture."
+msgstr "Dinamikus globális megvilágítás a közvetett fényhez hozzájáruló mozgó objektumokhoz. Csak [VoxelGI] mellett működik, és számításigényesebb a [constant GI_MODE_STATIC] módnál. Más globális megvilágítási eljárásoknál a [constant GI_MODE_DISABLED] módhoz hasonlóan működik. [LightmapGI] mellett az objektum a sütött fénytérkép-textúra helyett fénypróbákból kap közvetett megvilágítást."
+
+#. GeometryInstance3D.LIGHTMAP_SCALE_1X
+#: doc/classes/GeometryInstance3D.xml
+msgid "The standard texel density for lightmapping with [LightmapGI]."
+msgstr "A [LightmapGI] fénytérképeihez használt alapértelmezett texelsűrűség."
+
+#. GeometryInstance3D.LIGHTMAP_SCALE_2X
+#: doc/classes/GeometryInstance3D.xml
+msgid "Multiplies texel density by 2× for lightmapping with [LightmapGI]. To ensure consistency in texel density, use this when scaling a mesh by a factor between 1.5 and 3.0."
+msgstr "A [LightmapGI] fénytérképeihez kétszeres texelsűrűséget használ. Az egyenletes sűrűséghez akkor válaszd, ha egy hálót 1,5–3,0-szorosára méretezel."
+
+#. GeometryInstance3D.LIGHTMAP_SCALE_4X
+#: doc/classes/GeometryInstance3D.xml
+msgid "Multiplies texel density by 4× for lightmapping with [LightmapGI]. To ensure consistency in texel density, use this when scaling a mesh by a factor between 3.0 and 6.0."
+msgstr "A [LightmapGI] fénytérképeihez négyszeres texelsűrűséget használ. Az egyenletes sűrűséghez akkor válaszd, ha egy hálót 3,0–6,0-szorosára méretezel."
+
+#. GeometryInstance3D.LIGHTMAP_SCALE_8X
+#: doc/classes/GeometryInstance3D.xml
+msgid "Multiplies texel density by 8× for lightmapping with [LightmapGI]. To ensure consistency in texel density, use this when scaling a mesh by a factor greater than 6.0."
+msgstr "A [LightmapGI] fénytérképeihez nyolcszoros texelsűrűséget használ. Az egyenletes sűrűséghez akkor válaszd, ha egy hálót több mint 6,0-szorosára méretezel."
+
+#. GeometryInstance3D.LIGHTMAP_SCALE_MAX
+#: doc/classes/GeometryInstance3D.xml
+msgid "Represents the size of the [enum LightmapScale] enum."
+msgstr "A [enum LightmapScale] felsorolás méretét jelöli."
+
+#. GeometryInstance3D.VISIBILITY_RANGE_FADE_DISABLED
+#: doc/classes/GeometryInstance3D.xml
+msgid "Will not fade itself nor its visibility dependencies, hysteresis will be used instead. This is the fastest approach to manual LOD, but it can result in noticeable LOD transitions depending on how the LOD meshes are authored. See [member visibility_range_begin] and [member Node3D.visibility_parent] for more information."
+msgstr "Sem a példány, sem a hozzá kapcsolt példányok láthatósága nem változik fokozatosan. A váltásnál hiszterézis akadályozza meg a küszöb körüli oda-vissza kapcsolást. A kézzel beállított részletességi szintekhez ez a leggyorsabb mód, de a hálók kialakításától függően a váltás feltűnő lehet. Lásd még a [member visibility_range_begin] és a [member Node3D.visibility_parent] tulajdonságot."
+
+#. GeometryInstance3D.VISIBILITY_RANGE_FADE_SELF
+#: doc/classes/GeometryInstance3D.xml
+msgid "Will fade-out itself when reaching the limits of its own visibility range. This is slower than [constant VISIBILITY_RANGE_FADE_DISABLED], but it can provide smoother transitions. The fading range is determined by [member visibility_range_begin_margin] and [member visibility_range_end_margin].\n[b]Note:[/b] Only supported when using the Forward+ rendering method. When using the Mobile or Compatibility rendering method, this mode acts like [constant VISIBILITY_RANGE_FADE_DISABLED] but with hysteresis disabled."
+msgstr "A példány fokozatosan eltűnik saját láthatósági tartományának határán. Ez lassabb a [constant VISIBILITY_RANGE_FADE_DISABLED] módnál, de egyenletesebb átmenetet adhat. Az átmenet szélességét a [member visibility_range_begin_margin] és a [member visibility_range_end_margin] adja meg.\n[b]Megjegyzés:[/b] Csak a Forward+ renderelési módban támogatott. Mobile vagy Kompatibilitás módban a [constant VISIBILITY_RANGE_FADE_DISABLED] módhoz hasonlóan működik, kikapcsolt hiszterézissel."
+
+#. GeometryInstance3D.VISIBILITY_RANGE_FADE_DEPENDENCIES
+#: doc/classes/GeometryInstance3D.xml
+msgid "Will fade-in its visibility dependencies (see [member Node3D.visibility_parent]) when reaching the limits of its own visibility range. This is slower than [constant VISIBILITY_RANGE_FADE_DISABLED], but it can provide smoother transitions. The fading range is determined by [member visibility_range_begin_margin] and [member visibility_range_end_margin].\n[b]Note:[/b] Only supported when using the Forward+ rendering method. When using the Mobile or Compatibility rendering method, this mode acts like [constant VISIBILITY_RANGE_FADE_DISABLED] but with hysteresis disabled."
+msgstr "A példány láthatósági tartományának határán fokozatosan megjeleníti a hozzá kapcsolt példányokat (lásd [member Node3D.visibility_parent]). Ez lassabb a [constant VISIBILITY_RANGE_FADE_DISABLED] módnál, de egyenletesebb átmenetet adhat. Az átmenet szélességét a [member visibility_range_begin_margin] és a [member visibility_range_end_margin] adja meg.\n[b]Megjegyzés:[/b] Csak a Forward+ renderelési módban támogatott. Mobile vagy Kompatibilitás módban a [constant VISIBILITY_RANGE_FADE_DISABLED] módhoz hasonlóan működik, kikapcsolt hiszterézissel."
+
+#. ImporterMesh.merge_importer_meshes
+#: doc/classes/ImporterMesh.xml
+msgid "Merges multiple [ImporterMesh]es into a single [ImporterMesh]. Each input mesh is transformed by the corresponding [Transform3D] in the [param relative_transforms] array, which must be the same size as [param importer_meshes]. Negative scales are supported, and the winding order in the mesh data will be corrected to account for this.\nIf [param deduplicate_surfaces] is [code]true[/code] and multiple meshes have surfaces with the same names and formats, the surfaces will be merged together when the meshes are merged, and will use the material from the first matching surface. This is useful for reducing the number of surfaces in the resulting mesh, and avoids duplicating materials. Surfaces with bone weights will never be deduplicated. If [param deduplicate_surfaces] is [code]false[/code], the surfaces will always be kept separate, and will be given unique names.\n[b]Warning:[/b] Blend shapes and LODs are not supported and will be discarded. Do not use this function to discard blend shapes and LODs, as support for these may be added in the future."
+msgstr "Több [ImporterMesh] hálót egyetlen [ImporterMesh] hálóvá egyesít. A bemeneti hálókra a [param relative_transforms] tömb megfelelő [Transform3D] transzformációját alkalmazza. A tömb hossza egyezzen meg a [param importer_meshes] tömb hosszával. A negatív méretezést is kezeli, és ennek megfelelően korrigálja a háló csúcssorrendjét.\nHa a [param deduplicate_surfaces] értéke [code]true[/code], az azonos nevű és formátumú felületeket egyesíti, és az első egyező felület anyagát használja. Így az eredmény kevesebb felületből állhat, és kevesebb anyag ismétlődhet. A csontsúlyokat tartalmazó felületek mindig külön maradnak. Ha a [param deduplicate_surfaces] értéke [code]false[/code], minden felület külön marad, és egyedi nevet kap.\n[b]Figyelmeztetés:[/b] A művelet jelenleg eldobja a keverési alakzatokat és a részletességi szinteket. Eltávolításukra ne használd ezt a metódust, mert a későbbi verziók megtarthatják őket."
