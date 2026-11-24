@@ -60442,3 +60442,403 @@ msgstr "Visszaadja a megadott [param slot_index] indexű csatlakozóhely jobb ol
 #: doc/classes/GraphNode.xml
 msgid "Returns the [HBoxContainer] used for the title bar, only containing a [Label] for displaying the title by default. This can be used to add custom controls to the title bar such as option or close buttons."
 msgstr "Visszaadja a címsor [HBoxContainer] tárolóját, amely alapból csak a címet megjelenítő [Label] vezérlőt tartalmazza. Hozzáadhatsz saját címsori vezérlőket, például beállítás- vagy bezárógombot."
+
+#: doc/classes/GraphNode.xml
+msgid "Returns [code]true[/code] if the background [StyleBox] of the slot with the given [param slot_index] is drawn."
+msgstr "[code]true[/code] értéket ad vissza, ha a megadott [param slot_index] indexű csatlakozóhely [StyleBox] háttere megjelenik."
+
+#: doc/classes/GraphNode.xml
+msgid "Returns [code]true[/code] if left (input) side of the slot with the given [param slot_index] is enabled."
+msgstr "[code]true[/code] értéket ad vissza, ha a megadott [param slot_index] indexű csatlakozóhely bal oldala (a bemenet) engedélyezve van."
+
+#: doc/classes/GraphNode.xml
+msgid "Returns [code]true[/code] if right (output) side of the slot with the given [param slot_index] is enabled."
+msgstr "[code]true[/code] értéket ad vissza, ha a megadott [param slot_index] indexű csatlakozóhely jobb oldala (a kimenet) engedélyezve van."
+
+#: doc/classes/GraphNode.xml
+msgid "Sets properties of the slot with the given [param slot_index].\nIf [param enable_left_port]/[param enable_right_port] is [code]true[/code], a port will appear and the slot will be able to be connected from this side.\nWith [param type_left]/[param type_right] an arbitrary type can be assigned to each port. Two ports can be connected if they share the same type, or if the connection between their types is allowed in the parent [GraphEdit] (see [method GraphEdit.add_valid_connection_type]). Keep in mind that the [GraphEdit] has the final say in accepting the connection. Type compatibility simply allows the [signal GraphEdit.connection_request] signal to be emitted.\nPorts can be further customized using [param color_left]/[param color_right] and [param custom_icon_left]/[param custom_icon_right]. The color parameter adds a tint to the icon. The custom icon can be used to override the default port dot.\nAdditionally, [param draw_stylebox] can be used to enable or disable drawing of the background stylebox for each slot. See [theme_item slot].\nIndividual properties can also be set using one of the [code]set_slot_*[/code] methods.\n[b]Note:[/b] This method only sets properties of the slot. To create the slot itself, add a [Control]-derived child to the GraphNode."
+msgstr "Beállítja a megadott [param slot_index] indexű csatlakozóhely tulajdonságait.\nHa az [param enable_left_port] vagy az [param enable_right_port] értéke [code]true[/code], a megfelelő oldalon megjelenik egy port, és a csatlakozóhely azon az oldalon beköthető.\nA [param type_left] és a [param type_right] segítségével tetszőleges típust rendelhetsz a portokhoz. Két port akkor köthető össze, ha típusuk azonos, vagy ha a szülő [GraphEdit] engedélyezi a két típus összekapcsolását. Lásd a [method GraphEdit.add_valid_connection_type] metódust. A kapcsolódás elfogadásáról végső soron a [GraphEdit] dönt. A típusok kompatibilitása azt teszi lehetővé, hogy a [signal GraphEdit.connection_request] jel kibocsátható legyen.\nA portokat a [param color_left] és a [param color_right] színparaméterrel, illetve a [param custom_icon_left] és a [param custom_icon_right] ikonparaméterrel szabhatod testre. A színparaméter megszínezi az ikont. Egyéni ikonnal helyettesítheted a port alapértelmezett pontját.\nA [param draw_stylebox] paraméterrel csatlakozóhelyenként be- vagy kikapcsolhatod a háttérként szolgáló stylebox kirajzolását. Lásd a [theme_item slot] témaelemet.\nAz egyes tulajdonságokat külön is beállíthatod a [code]set_slot_*[/code] metódusokkal.\n[b]Megjegyzés:[/b] A metódus a csatlakozóhely tulajdonságait állítja be. Magát a csatlakozóhelyet úgy hozhatod létre, hogy egy [Control]-ból származó gyermeket adsz a GraphNode elemhez."
+
+#: doc/classes/GraphNode.xml
+msgid "Sets the [Color] of the left (input) side of the slot with the given [param slot_index] to [param color]."
+msgstr "A [param color] értékére állítja a megadott [param slot_index] indexű csatlakozóhely bal oldali (bemeneti) [Color] színét."
+
+#: doc/classes/GraphNode.xml
+msgid "Sets the [Color] of the right (output) side of the slot with the given [param slot_index] to [param color]."
+msgstr "A [param color] értékére állítja a megadott [param slot_index] indexű csatlakozóhely jobb oldali (kimeneti) [Color] színét."
+
+#: doc/classes/GraphNode.xml
+msgid "Sets the custom [Texture2D] of the left (input) side of the slot with the given [param slot_index] to [param custom_icon]."
+msgstr "A [param custom_icon] értékére állítja a megadott [param slot_index] indexű csatlakozóhely bal oldali (bemeneti) egyéni [Texture2D] ikonját."
+
+#: doc/classes/GraphNode.xml
+msgid "Sets the custom [Texture2D] of the right (output) side of the slot with the given [param slot_index] to [param custom_icon]."
+msgstr "A [param custom_icon] értékére állítja a megadott [param slot_index] indexű csatlakozóhely jobb oldali (kimeneti) egyéni [Texture2D] ikonját."
+
+#: doc/classes/GraphNode.xml
+msgid "Toggles the background [StyleBox] of the slot with the given [param slot_index]."
+msgstr "Be- vagy kikapcsolja a megadott [param slot_index] indexű csatlakozóhely [StyleBox] hátterét."
+
+#: doc/classes/GraphNode.xml
+msgid "Toggles the left (input) side of the slot with the given [param slot_index]. If [param enable] is [code]true[/code], a port will appear on the left side and the slot will be able to be connected from this side."
+msgstr "Be- vagy kikapcsolja a megadott [param slot_index] indexű csatlakozóhely bal oldalát (a bemenetet). Ha az [param enable] értéke [code]true[/code], bal oldalon megjelenik egy port, és a csatlakozóhely erről az oldalról beköthető."
+
+#: doc/classes/GraphNode.xml
+msgid "Toggles the right (output) side of the slot with the given [param slot_index]. If [param enable] is [code]true[/code], a port will appear on the right side and the slot will be able to be connected from this side."
+msgstr "Be- vagy kikapcsolja a megadott [param slot_index] indexű csatlakozóhely jobb oldalát (a kimenetet). Ha az [param enable] értéke [code]true[/code], jobb oldalon megjelenik egy port, és a csatlakozóhely erről az oldalról beköthető."
+
+#: doc/classes/GraphNode.xml
+msgid "Sets the custom metadata for the left (input) side of the slot with the given [param slot_index] to [param value]."
+msgstr "A [param value] értékére állítja a megadott [param slot_index] indexű csatlakozóhely bal oldali (bemeneti) egyéni metaadatait."
+
+#: doc/classes/GraphNode.xml
+msgid "Sets the custom metadata for the right (output) side of the slot with the given [param slot_index] to [param value]."
+msgstr "A [param value] értékére állítja a megadott [param slot_index] indexű csatlakozóhely jobb oldali (kimeneti) egyéni metaadatait."
+
+#: doc/classes/GraphNode.xml
+msgid "Sets the left (input) type of the slot with the given [param slot_index] to [param type]. If the value is negative, all connections will be disallowed to be created via user inputs."
+msgstr "A [param type] értékére állítja a megadott [param slot_index] indexű csatlakozóhely bal oldali (bemeneti) típusát. Negatív értéknél a felhasználó a felületen ezen a porton nem hozhat létre kapcsolatot."
+
+#: doc/classes/GraphNode.xml
+msgid "Sets the right (output) type of the slot with the given [param slot_index] to [param type]. If the value is negative, all connections will be disallowed to be created via user inputs."
+msgstr "A [param type] értékére állítja a megadott [param slot_index] indexű csatlakozóhely jobb oldali (kimeneti) típusát. Negatív értéknél a felhasználó a felületen ezen a porton nem hozhat létre kapcsolatot."
+
+#: doc/classes/GraphNode.xml
+msgid "If [code]true[/code], you can connect ports with different types, even if the connection was not explicitly allowed in the parent [GraphEdit]."
+msgstr "Ha az érték [code]true[/code], eltérő típusú portokat akkor is összeköthetsz, ha a szülő [GraphEdit] nem engedélyezi kifejezetten az adott típuspárt."
+
+#: doc/classes/GraphNode.xml
+msgid "Determines how connection slots can be focused.\n- If set to [constant Control.FOCUS_CLICK], connections can only be made with the mouse.\n- If set to [constant Control.FOCUS_ALL], slots can also be focused using the [member ProjectSettings.input/ui_up] and [member ProjectSettings.input/ui_down] and connected using [member ProjectSettings.input/ui_left] and [member ProjectSettings.input/ui_right] input actions.\n- If set to [constant Control.FOCUS_ACCESSIBILITY], slot input actions are only enabled when the screen reader is active."
+msgstr "Meghatározza, hogyan kaphatnak fókuszt a csatlakozóhelyek.\n- [constant Control.FOCUS_CLICK] értéknél csak egérrel lehet kapcsolatot létrehozni.\n- [constant Control.FOCUS_ALL] értéknél a csatlakozóhelyek között a [member ProjectSettings.input/ui_up] és a [member ProjectSettings.input/ui_down] művelettel is lehet lépkedni, kapcsolatot pedig a [member ProjectSettings.input/ui_left] és a [member ProjectSettings.input/ui_right] művelettel is létre lehet hozni.\n- [constant Control.FOCUS_ACCESSIBILITY] értéknél a csatlakozóhelyek bemeneti műveletei csak aktív képernyőolvasó mellett érhetők el."
+
+#: doc/classes/GraphNode.xml
+msgid "The text displayed in the GraphNode's title bar."
+msgstr "A GraphNode címsorában megjelenő szöveg."
+
+#: doc/classes/GraphNode.xml
+msgid "Emitted when any slot's size might have changed."
+msgstr "Akkor bocsátja ki, amikor valamelyik csatlakozóhely mérete megváltozhatott."
+
+#: doc/classes/GraphNode.xml
+msgid "Emitted when any GraphNode's slot is updated."
+msgstr "Akkor bocsátja ki, amikor a GraphNode valamelyik csatlakozóhelye frissül."
+
+#: doc/classes/GraphNode.xml
+msgid "Horizontal offset for the ports."
+msgstr "A portok vízszintes eltolása."
+
+#: doc/classes/GraphNode.xml
+msgid "The vertical distance between ports."
+msgstr "A portok közötti függőleges távolság."
+
+#: doc/classes/GraphNode.xml
+msgid "The icon used for representing ports."
+msgstr "A portokat jelölő ikon."
+
+#: doc/classes/GraphNode.xml
+msgid "The default background for the slot area of the [GraphNode]."
+msgstr "A [GraphNode] csatlakozóhelyeinek területén használt alapértelmezett háttér."
+
+#: doc/classes/GraphNode.xml
+msgid "[StyleBox] used when the [GraphNode] is focused (when used with assistive apps)."
+msgstr "A fókuszban lévő [GraphNode] [StyleBox] eleme kisegítő alkalmazások használatakor."
+
+#: doc/classes/GraphNode.xml
+msgid "The [StyleBox] used for the slot area when selected."
+msgstr "A kijelölt csomópont csatlakozóhelyeinek területén használt [StyleBox]."
+
+#: doc/classes/GraphNode.xml
+msgid "The [StyleBox] used for each slot of the [GraphNode]."
+msgstr "A [GraphNode] egyes csatlakozóhelyeihez használt [StyleBox]."
+
+#: doc/classes/GraphNode.xml
+msgid "[StyleBox] used when the slot is focused (when used with assistive apps)."
+msgstr "A fókuszban lévő csatlakozóhely [StyleBox] eleme kisegítő alkalmazások használatakor."
+
+#: doc/classes/GraphNode.xml
+msgid "The [StyleBox] used for the title bar of the [GraphNode]."
+msgstr "A [GraphNode] címsorához használt [StyleBox]."
+
+#: doc/classes/GraphNode.xml
+msgid "The [StyleBox] used for the title bar of the [GraphNode] when it is selected."
+msgstr "A kijelölt [GraphNode] címsorához használt [StyleBox]."
+
+#: doc/classes/GraphEdit.xml
+msgid "An editor for graph-like structures, using [GraphNode]s."
+msgstr "[GraphNode] elemekre épülő szerkesztő gráfszerű struktúrákhoz."
+
+#: doc/classes/GraphEdit.xml
+msgid "[GraphEdit] provides tools for creation, manipulation, and display of various graphs. Its main purpose in the engine is to power the visual programming systems, such as visual shaders, but it is also available for use in user projects.\n[GraphEdit] by itself is only an empty container, representing an infinite grid where [GraphNode]s can be placed. Each [GraphNode] represents a node in the graph, a single unit of data in the connected scheme. [GraphEdit], in turn, helps to control various interactions with nodes and between nodes. When the user attempts to connect, disconnect, or delete a [GraphNode], a signal is emitted in the [GraphEdit], but no action is taken by default. It is the responsibility of the programmer utilizing this control to implement the necessary logic to determine how each request should be handled.\n[b]Performance:[/b] It is greatly advised to enable low-processor usage mode (see [member OS.low_processor_usage_mode]) when using GraphEdits.\n[b]Note:[/b] Keep in mind that [method Node.get_children] will also return the connection layer node named [code]_connection_layer[/code] due to technical limitations. This behavior may change in future releases."
+msgstr "A [GraphEdit] különféle gráfok létrehozásához, módosításához és megjelenítéséhez ad eszközöket. A motorban elsősorban a vizuális programozási rendszerekhez, például a vizuális shaderekhez használatos, de a saját projektjeidben is használhatod.\nA [GraphEdit] önmagában egy üres tároló, amely végtelen rácsot jelenít meg. Erre helyezheted a [GraphNode] elemeket. Minden [GraphNode] a gráf egy csomópontját, vagyis az összekapcsolt szerkezet egy adategységét képviseli. A [GraphEdit] a csomópontokkal és a csomópontok közötti kapcsolatokkal végzett műveleteket segít kezelni. Amikor a felhasználó megpróbál egy [GraphNode] elemet összekötni egy másikkal, megszüntetni egy kapcsolatát vagy törölni az elemet, a [GraphEdit] jelet bocsát ki. A művelet végrehajtásához meg kell írnod a kérést kezelő programlogikát.\n[b]Teljesítmény:[/b] GraphEdit elemek használatakor erősen ajánlott bekapcsolni az alacsony processzorhasználatú módot. Lásd az [member OS.low_processor_usage_mode] tulajdonságot.\n[b]Megjegyzés:[/b] Műszaki okokból a [method Node.get_children] a kapcsolatok [code]_connection_layer[/code] nevű rétegcsomópontját is visszaadja. Ez későbbi kiadásokban változhat."
+
+#: doc/classes/GraphEdit.xml
+msgid "Virtual method which can be overridden to customize how connections are drawn."
+msgstr "Virtuális metódus, amelynek felülírásával testre szabhatod a kapcsolatok kirajzolását."
+
+#: doc/classes/GraphEdit.xml
+msgid "This virtual method can be used to insert additional error detection while the user is dragging a connection over a valid port.\nReturn [code]true[/code] if the connection is indeed valid or return [code]false[/code] if the connection is impossible. If the connection is impossible, no snapping to the port and thus no connection request to that port will happen.\nIn this example a connection to same node is suppressed:\n[codeblocks]\n[gdscript]\nfunc _is_node_hover_valid(from, from_port, to, to_port):\n\treturn from != to\n[/gdscript]\n[csharp]\npublic override bool _IsNodeHoverValid(StringName fromNode, int fromPort, StringName toNode, int toPort)\n{\n\treturn fromNode != toNode;\n}\n[/csharp]\n[/codeblocks]"
+msgstr "Ezzel a virtuális metódussal további ellenőrzéseket végezhetsz, miközben a felhasználó egy érvényes port fölé húzza a kapcsolatot.\nAdj vissza [code]true[/code] értéket, ha a kapcsolat valóban érvényes, vagy [code]false[/code] értéket, ha a kapcsolat nem hozható létre. Ha a kapcsolat nem lehetséges, a vonal nem igazodik a porthoz, és a portra vonatkozó kapcsolódási kérés sem érkezik.\nA példa megakadályozza, hogy egy csomópont önmagával kapcsolódjon össze.\n[codeblocks]\n[gdscript]\nfunc _is_node_hover_valid(from, from_port, to, to_port):\n\treturn from != to\n[/gdscript]\n[csharp]\npublic override bool _IsNodeHoverValid(StringName fromNode, int fromPort, StringName toNode, int toPort)\n{\n\treturn fromNode != toNode;\n}\n[/csharp]\n[/codeblocks]"
+
+#: doc/classes/GraphEdit.xml
+msgid "Allows the connection between two different port types. The port type is defined individually for the left and the right port of each slot with the [method GraphNode.set_slot] method.\nSee also [method is_valid_connection_type] and [method remove_valid_connection_type]."
+msgstr "Engedélyezi két eltérő típusú port összekapcsolását. A csatlakozóhelyek bal és jobb portjának típusa külön állítható be a [method GraphNode.set_slot] metódussal.\nLásd még az [method is_valid_connection_type] és a [method remove_valid_connection_type] metódust."
+
+#: doc/classes/GraphEdit.xml
+msgid "Rearranges selected nodes in a layout with minimum crossings between connections and uniform horizontal and vertical gap between nodes."
+msgstr "Úgy rendezi át a kijelölt csomópontokat, hogy a kapcsolatok a lehető legkevesebb helyen keresztezzék egymást, a csomópontok közötti vízszintes és függőleges térköz pedig egyenletes legyen."
+
+#: doc/classes/GraphEdit.xml
+msgid "Attaches the [param element] [GraphElement] to the [param frame] [GraphFrame]."
+msgstr "A [param frame] nevű [GraphFrame] kerethez csatolja a [param element] nevű [GraphElement] elemet."
+
+#: doc/classes/GraphEdit.xml
+msgid "Removes all connections between nodes."
+msgstr "Eltávolítja a csomópontok közötti összes kapcsolatot."
+
+#: doc/classes/GraphEdit.xml
+msgid "Create a connection between the [param from_port] of the [param from_node] [GraphNode] and the [param to_port] of the [param to_node] [GraphNode]. If the connection already exists, no connection is created.\nConnections with [param keep_alive] set to [code]false[/code] may be deleted automatically if invalid during a redraw."
+msgstr "Összeköti a [param from_node] [GraphNode] [param from_port] portját a [param to_node] [GraphNode] [param to_port] portjával. Ha ilyen kapcsolat már létezik, további kapcsolat nem jön létre.\nA [code]false[/code] értékű [param keep_alive] paraméterrel létrehozott kapcsolatot a motor újrarajzoláskor automatikusan törölheti, ha érvénytelen."
+
+#: doc/classes/GraphEdit.xml
+msgid "Detaches the [param element] [GraphElement] from the [GraphFrame] it is currently attached to."
+msgstr "Leválasztja a [param element] nevű [GraphElement] elemet arról a [GraphFrame] keretről, amelyhez jelenleg csatolva van."
+
+#: doc/classes/GraphEdit.xml
+msgid "Removes the connection between the [param from_port] of the [param from_node] [GraphNode] and the [param to_port] of the [param to_node] [GraphNode]. If the connection does not exist, no connection is removed."
+msgstr "Megszünteti a [param from_node] [GraphNode] [param from_port] portja és a [param to_node] [GraphNode] [param to_port] portja közötti kapcsolatot. Ha ilyen kapcsolat nincs, nem változik semmi."
+
+#: doc/classes/GraphEdit.xml
+msgid "Ends the creation of the current connection. In other words, if you are dragging a connection you can use this method to abort the process and remove the line that followed your cursor.\nThis is best used together with [signal connection_drag_started] and [signal connection_drag_ended] to add custom behavior like node addition through shortcuts.\n[b]Note:[/b] This method suppresses any other connection request signals apart from [signal connection_drag_ended]."
+msgstr "Megszakítja az éppen létrehozott kapcsolatot. Ha épp húzol egy kapcsolatot, a metódussal megszakíthatod a műveletet, és eltüntetheted az egérmutatót követő vonalat.\nA [signal connection_drag_started] és a [signal connection_drag_ended] jellel együtt egyéni működést valósíthatsz meg, például gyorsbillentyűvel hozhatsz létre csomópontot.\n[b]Megjegyzés:[/b] A metódus a [signal connection_drag_ended] kivételével elnyomja a többi kapcsolódási kérés jelét."
+
+#: doc/classes/GraphEdit.xml
+msgid "Returns an array of node names that are attached to the [GraphFrame] with the given name."
+msgstr "Tömbben adja vissza a megadott nevű [GraphFrame] kerethez csatolt csomópontok nevét."
+
+#: doc/classes/GraphEdit.xml
+msgid "Returns the closest connection to the given point in screen space. If no connection is found within [param max_distance] pixels, an empty [Dictionary] is returned.\nA connection is represented as a [Dictionary] in the form of:\n[codeblock]\n{\n\tfrom_node: StringName,\n\tfrom_port: int,\n\tto_node: StringName,\n\tto_port: int,\n\tkeep_alive: bool\n}\n[/codeblock]\nFor example, getting a connection at a given mouse position can be achieved like this:\n[codeblocks]\n[gdscript]\nvar connection = get_closest_connection_at_point(mouse_event.get_position())\n[/gdscript]\n[/codeblocks]"
+msgstr "A képernyőtérben megadott ponthoz legközelebbi kapcsolatot adja vissza. Ha [param max_distance] képponton belül nincs kapcsolat, üres [Dictionary] az eredmény.\nA kapcsolatot a következő szerkezetű [Dictionary] írja le.\n[codeblock]\n{\n\tfrom_node: StringName,\n\tfrom_port: int,\n\tto_node: StringName,\n\tto_port: int,\n\tkeep_alive: bool\n}\n[/codeblock]\nPélda az egérmutató helyéhez tartozó kapcsolat lekérdezésére.\n[codeblocks]\n[gdscript]\nvar connection = get_closest_connection_at_point(mouse_event.get_position())\n[/gdscript]\n[/codeblocks]"
+
+#: doc/classes/GraphEdit.xml
+msgid "Returns the number of connections from [param from_port] of [param from_node]."
+msgstr "Visszaadja a [param from_node] csomópont [param from_port] portjából induló kapcsolatok számát."
+
+#: doc/classes/GraphEdit.xml
+msgid "Returns the points which would make up a connection between [param from_node] and [param to_node]."
+msgstr "Visszaadja azokat a pontokat, amelyek a [param from_node] és a [param to_node] közötti kapcsolat vonalát alkotnák."
+
+#: doc/classes/GraphEdit.xml
+msgid "Returns an [Array] containing a list of all connections for [param node].\nA connection is represented as a [Dictionary] in the form of:\n[codeblock]\n{\n\tfrom_node: StringName,\n\tfrom_port: int,\n\tto_node: StringName,\n\tto_port: int,\n\tkeep_alive: bool\n}\n[/codeblock]\n[b]Example:[/b] Get all connections on a specific port:\n[codeblock]\nfunc get_connection_list_from_port(node, port):\n\tvar connections = get_connection_list_from_node(node)\n\tvar result = []\n\tfor connection in connections:\n\t\tvar dict = {}\n\t\tif connection[\"from_node\"] == node and connection[\"from_port\"] == port:\n\t\t\tdict[\"node\"] = connection[\"to_node\"]\n\t\t\tdict[\"port\"] = connection[\"to_port\"]\n\t\t\tdict[\"type\"] = \"left\"\n\t\t\tresult.push_back(dict)\n\t\telif connection[\"to_node\"] == node and connection[\"to_port\"] == port:\n\t\t\tdict[\"node\"] = connection[\"from_node\"]\n\t\t\tdict[\"port\"] = connection[\"from_port\"]\n\t\t\tdict[\"type\"] = \"right\"\n\t\t\tresult.push_back(dict)\n\treturn result\n[/codeblock]"
+msgstr "[Array] tömbben adja vissza a [param node] csomópont összes kapcsolatát.\nA kapcsolatot a következő szerkezetű [Dictionary] írja le.\n[codeblock]\n{\n\tfrom_node: StringName,\n\tfrom_port: int,\n\tto_node: StringName,\n\tto_port: int,\n\tkeep_alive: bool\n}\n[/codeblock]\n[b]Példa:[/b] Egy adott port összes kapcsolatának lekérdezése.\n[codeblock]\nfunc get_connection_list_from_port(node, port):\n\tvar connections = get_connection_list_from_node(node)\n\tvar result = []\n\tfor connection in connections:\n\t\tvar dict = {}\n\t\tif connection[\"from_node\"] == node and connection[\"from_port\"] == port:\n\t\t\tdict[\"node\"] = connection[\"to_node\"]\n\t\t\tdict[\"port\"] = connection[\"to_port\"]\n\t\t\tdict[\"type\"] = \"left\"\n\t\t\tresult.push_back(dict)\n\t\telif connection[\"to_node\"] == node and connection[\"to_port\"] == port:\n\t\t\tdict[\"node\"] = connection[\"from_node\"]\n\t\t\tdict[\"port\"] = connection[\"from_port\"]\n\t\t\tdict[\"type\"] = \"right\"\n\t\t\tresult.push_back(dict)\n\treturn result\n[/codeblock]"
+
+#: doc/classes/GraphEdit.xml
+msgid "Returns an [Array] containing the list of connections that intersect with the given [Rect2].\nA connection is represented as a [Dictionary] in the form of:\n[codeblock]\n{\n\tfrom_node: StringName,\n\tfrom_port: int,\n\tto_node: StringName,\n\tto_port: int,\n\tkeep_alive: bool\n}\n[/codeblock]"
+msgstr "[Array] tömbben adja vissza azokat a kapcsolatokat, amelyek metszik a megadott [Rect2] téglalapot.\nA kapcsolatot a következő szerkezetű [Dictionary] írja le.\n[codeblock]\n{\n\tfrom_node: StringName,\n\tfrom_port: int,\n\tto_node: StringName,\n\tto_port: int,\n\tkeep_alive: bool\n}\n[/codeblock]"
+
+#: doc/classes/GraphEdit.xml
+msgid "Returns the [GraphFrame] that contains the [GraphElement] with the given name."
+msgstr "Visszaadja azt a [GraphFrame] keretet, amelyben a megadott nevű [GraphElement] elem található."
+
+#: doc/classes/GraphEdit.xml
+msgid "Gets the [HBoxContainer] that contains the zooming and grid snap controls in the top left of the graph. You can use this method to reposition the toolbar or to add your own custom controls to it.\n[b]Warning:[/b] This is a required internal node, removing and freeing it may cause a crash. If you wish to hide it or any of its children, use their [member CanvasItem.visible] property."
+msgstr "Visszaadja a gráf bal felső sarkában található [HBoxContainer] tárolót, amely a nagyítás és a rácshoz igazítás vezérlőit tartalmazza. A metódussal áthelyezheted az eszköztárat vagy saját vezérlőket adhatsz hozzá.\n[b]Figyelem:[/b] Ez egy szükséges belső csomópont. Eltávolítása és felszabadítása összeomlást okozhat. A csomópontot és gyermekeit a saját [member CanvasItem.visible] tulajdonságukkal rejtheted el."
+
+#: doc/classes/GraphEdit.xml
+msgid "Returns [code]true[/code] if the [param from_port] of the [param from_node] [GraphNode] is connected to the [param to_port] of the [param to_node] [GraphNode]."
+msgstr "[code]true[/code] értéket ad vissza, ha a [param from_node] [GraphNode] [param from_port] portja össze van kötve a [param to_node] [GraphNode] [param to_port] portjával."
+
+#: doc/classes/GraphEdit.xml
+msgid "Returns whether it's possible to make a connection between two different port types. The port type is defined individually for the left and the right port of each slot with the [method GraphNode.set_slot] method.\nSee also [method add_valid_connection_type] and [method remove_valid_connection_type]."
+msgstr "Megadja, hogy összekapcsolható-e két különböző típusú port. A csatlakozóhelyek bal és jobb portjának típusa külön állítható be a [method GraphNode.set_slot] metódussal.\nLásd még az [method add_valid_connection_type] és a [method remove_valid_connection_type] metódust."
+
+#: doc/classes/GraphEdit.xml
+msgid "Disallows the connection between two different port types previously allowed by [method add_valid_connection_type]. The port type is defined individually for the left and the right port of each slot with the [method GraphNode.set_slot] method.\nSee also [method is_valid_connection_type]."
+msgstr "Letiltja két eltérő típusú port összekapcsolását, amelyet korábban az [method add_valid_connection_type] metódussal engedélyeztél. A csatlakozóhelyek bal és jobb portjának típusa külön állítható be a [method GraphNode.set_slot] metódussal.\nLásd még az [method is_valid_connection_type] metódust."
+
+#: doc/classes/GraphEdit.xml
+msgid "Sets the coloration of the connection between [param from_node]'s [param from_port] and [param to_node]'s [param to_port] with the color provided in the [theme_item activity] theme property. The color is linearly interpolated between the connection color and the activity color using [param amount] as weight."
+msgstr "A [theme_item activity] témaszínnel színezi a [param from_node] [param from_port] portja és a [param to_node] [param to_port] portja közötti kapcsolatot. A kapcsolat eredeti színe és az aktivitást jelző szín között lineárisan interpolál, a [param amount] értékét használva súlyként."
+
+#: doc/classes/GraphEdit.xml
+msgid "Sets the specified [param node] as the one selected."
+msgstr "Kijelöli a megadott [param node] csomópontot."
+
+#: doc/classes/GraphEdit.xml
+msgid "If [code]true[/code], the lines between nodes will use antialiasing."
+msgstr "Ha az érték [code]true[/code], a csomópontokat összekötő vonalak élsimítással jelennek meg."
+
+#: doc/classes/GraphEdit.xml
+msgid "The curvature of the lines between the nodes. 0 results in straight lines."
+msgstr "A csomópontokat összekötő vonalak görbülete. A 0 érték egyenes vonalakat eredményez."
+
+#: doc/classes/GraphEdit.xml
+msgid "The thickness of the lines between the nodes."
+msgstr "A csomópontokat összekötő vonalak vastagsága."
+
+#: doc/classes/GraphEdit.xml
+msgid "The connections between [GraphNode]s.\nA connection is represented as a [Dictionary] in the form of:\n[codeblock]\n{\n\tfrom_node: StringName,\n\tfrom_port: int,\n\tto_node: StringName,\n\tto_port: int,\n\tkeep_alive: bool\n}\n[/codeblock]\nConnections with [code]keep_alive[/code] set to [code]false[/code] may be deleted automatically if invalid during a redraw."
+msgstr "A [GraphNode] elemek közötti kapcsolatok.\nA kapcsolatot a következő szerkezetű [Dictionary] írja le.\n[codeblock]\n{\n\tfrom_node: StringName,\n\tfrom_port: int,\n\tto_node: StringName,\n\tto_port: int,\n\tkeep_alive: bool\n}\n[/codeblock]\nA [code]false[/code] értékű [code]keep_alive[/code] beállítással rendelkező kapcsolatot a motor újrarajzoláskor automatikusan törölheti, ha érvénytelen."
+
+#: doc/classes/GraphEdit.xml
+msgid "The pattern used for drawing the grid."
+msgstr "A rács megjelenítéséhez használt minta."
+
+#: doc/classes/GraphEdit.xml
+msgid "If [code]true[/code], the minimap is visible."
+msgstr "Ha az érték [code]true[/code], a minitérkép látható."
+
+#: doc/classes/GraphEdit.xml
+msgid "The opacity of the minimap rectangle."
+msgstr "A minitérkép téglalapjának átlátszatlansága."
+
+#: doc/classes/GraphEdit.xml
+msgid "The size of the minimap rectangle. The map itself is based on the size of the grid area and is scaled to fit this rectangle."
+msgstr "A minitérkép téglalapjának mérete. A térkép a rácsterület méretéből indul ki, majd úgy méreteződik, hogy beleférjen ebbe a téglalapba."
+
+#: doc/classes/GraphEdit.xml
+msgid "Defines the control scheme for panning with mouse wheel."
+msgstr "Meghatározza, hogyan mozgatható a nézet az egérgörgővel."
+
+#: doc/classes/GraphEdit.xml
+msgid "The scroll offset."
+msgstr "A görgetés eltolása."
+
+#: doc/classes/GraphEdit.xml
+msgid "If [code]true[/code], the button to automatically arrange graph nodes is visible."
+msgstr "Ha az érték [code]true[/code], megjelenik a gráfcsomópontok automatikus elrendezésére szolgáló gomb."
+
+#: doc/classes/GraphEdit.xml
+msgid "If [code]true[/code], the grid is visible."
+msgstr "Ha az érték [code]true[/code], a rács látható."
+
+#: doc/classes/GraphEdit.xml
+msgid "If [code]true[/code], buttons that allow to configure grid and snapping options are visible."
+msgstr "Ha az érték [code]true[/code], megjelennek a rács és a rácshoz igazítás beállítására szolgáló gombok."
+
+#: doc/classes/GraphEdit.xml
+msgid "If [code]true[/code], the menu toolbar is visible."
+msgstr "Ha az érték [code]true[/code], a menü eszköztára látható."
+
+#: doc/classes/GraphEdit.xml
+msgid "If [code]true[/code], the button to toggle the minimap is visible."
+msgstr "Ha az érték [code]true[/code], megjelenik a minitérképet ki- és bekapcsoló gomb."
+
+#: doc/classes/GraphEdit.xml
+msgid "If [code]true[/code], buttons that allow to change and reset the zoom level are visible."
+msgstr "Ha az érték [code]true[/code], megjelennek a nagyítás módosítására és visszaállítására szolgáló gombok."
+
+#: doc/classes/GraphEdit.xml
+msgid "If [code]true[/code], the label with the current zoom level is visible. The zoom level is displayed in percents."
+msgstr "Ha az érték [code]true[/code], megjelenik az aktuális nagyítást jelző felirat. A nagyítás százalékban jelenik meg."
+
+#: doc/classes/GraphEdit.xml
+msgid "The snapping distance in pixels, also determines the grid line distance."
+msgstr "A rácshoz igazítás távolsága képpontban. Ez az érték a rácsvonalak közötti távolságot is meghatározza."
+
+#: doc/classes/GraphEdit.xml
+msgid "If [code]true[/code], enables snapping."
+msgstr "Ha az érték [code]true[/code], a rácshoz igazítás engedélyezve van."
+
+#: doc/classes/GraphEdit.xml
+msgid "[Dictionary] of human-readable port type names."
+msgstr "[Dictionary], amely a porttípusok olvasható megnevezéseit tartalmazza."
+
+#: doc/classes/GraphEdit.xml
+msgid "The current zoom value."
+msgstr "Az aktuális nagyítási érték."
+
+#: doc/classes/GraphEdit.xml
+msgid "The upper zoom limit."
+msgstr "A nagyítás felső határa."
+
+#: doc/classes/GraphEdit.xml
+msgid "The lower zoom limit."
+msgstr "A nagyítás alsó határa."
+
+#: doc/classes/GraphEdit.xml
+msgid "The step of each zoom level."
+msgstr "A nagyítási szintek lépésköze."
+
+#: doc/classes/GraphEdit.xml
+msgid "Emitted at the beginning of a [GraphElement]'s movement."
+msgstr "Akkor bocsátja ki, amikor megkezdődik egy [GraphElement] mozgatása."
+
+#: doc/classes/GraphEdit.xml
+msgid "Emitted at the end of a connection drag."
+msgstr "A kapcsolat húzásának végén bocsátja ki."
+
+#: doc/classes/GraphEdit.xml
+msgid "Emitted at the beginning of a connection drag."
+msgstr "A kapcsolat húzásának kezdetén bocsátja ki."
+
+#: doc/classes/GraphEdit.xml
+msgid "Emitted when user drags a connection from an input port into the empty space of the graph."
+msgstr "Akkor bocsátja ki, amikor a felhasználó egy bemeneti portról a gráf üres területére húz egy kapcsolatot."
+
+#: doc/classes/GraphEdit.xml
+msgid "Emitted to the GraphEdit when the connection between the [param from_port] of the [param from_node] [GraphNode] and the [param to_port] of the [param to_node] [GraphNode] is attempted to be created."
+msgstr "A jel akkor érkezik a GraphEdithez, amikor megpróbálják összekötni a [param from_node] [GraphNode] [param from_port] portját a [param to_node] [GraphNode] [param to_port] portjával."
+
+#: doc/classes/GraphEdit.xml
+msgid "Emitted when user drags a connection from an output port into the empty space of the graph."
+msgstr "Akkor bocsátja ki, amikor a felhasználó egy kimeneti portról a gráf üres területére húz egy kapcsolatot."
+
+#: doc/classes/GraphEdit.xml
+msgid "Emitted when this [GraphEdit] captures a [code]ui_copy[/code] action ([kbd]Ctrl + C[/kbd] by default). In general, this signal indicates that the selected [GraphElement]s should be copied."
+msgstr "Akkor bocsátja ki, amikor a [GraphEdit] érzékeli a [code]ui_copy[/code] műveletet (alapból [kbd]Ctrl + C[/kbd]). A jel rendszerint a kijelölt [GraphElement] elemek másolását kéri."
+
+#: doc/classes/GraphEdit.xml
+msgid "Emitted when this [GraphEdit] captures a [code]ui_cut[/code] action ([kbd]Ctrl + X[/kbd] by default). In general, this signal indicates that the selected [GraphElement]s should be cut."
+msgstr "Akkor bocsátja ki, amikor a [GraphEdit] érzékeli a [code]ui_cut[/code] műveletet (alapból [kbd]Ctrl + X[/kbd]). A jel rendszerint a kijelölt [GraphElement] elemek kivágását kéri."
+
+#: doc/classes/GraphEdit.xml
+msgid "Emitted when this [GraphEdit] captures a [code]ui_graph_delete[/code] action ([kbd]Delete[/kbd] by default).\n[param nodes] is an array of node names that should be removed. These usually include all selected nodes."
+msgstr "Akkor bocsátja ki, amikor a [GraphEdit] érzékeli a [code]ui_graph_delete[/code] műveletet (alapból [kbd]Delete[/kbd]).\nA [param nodes] tömb az eltávolítandó csomópontok nevét tartalmazza. Ez általában az összes kijelölt csomópontot magában foglalja."
+
+#: doc/classes/GraphEdit.xml
+msgid "Emitted to the GraphEdit when the connection between [param from_port] of [param from_node] [GraphNode] and [param to_port] of [param to_node] [GraphNode] is attempted to be removed."
+msgstr "A jel akkor érkezik a GraphEdithez, amikor megpróbálják megszüntetni a [param from_node] [GraphNode] [param from_port] portja és a [param to_node] [GraphNode] [param to_port] portja közötti kapcsolatot."
+
+#: doc/classes/GraphEdit.xml
+msgid "Emitted when this [GraphEdit] captures a [code]ui_graph_duplicate[/code] action ([kbd]Ctrl + D[/kbd] by default). In general, this signal indicates that the selected [GraphElement]s should be duplicated."
+msgstr "Akkor bocsátja ki, amikor a [GraphEdit] érzékeli a [code]ui_graph_duplicate[/code] műveletet (alapból [kbd]Ctrl + D[/kbd]). A jel rendszerint a kijelölt [GraphElement] elemek megkettőzését kéri."
+
+#: doc/classes/GraphEdit.xml
+msgid "Emitted at the end of a [GraphElement]'s movement."
+msgstr "Akkor bocsátja ki, amikor befejeződik egy [GraphElement] mozgatása."
+
+#: doc/classes/GraphEdit.xml
+msgid "Emitted when the [GraphFrame] [param frame] is resized to [param new_rect]."
+msgstr "Akkor bocsátja ki, amikor a [param frame] [GraphFrame] keretet a [param new_rect] téglalapra méretezik át."
+
+#: doc/classes/GraphEdit.xml
+msgid "Emitted when one or more [GraphElement]s are dropped onto the [GraphFrame] named [param frame], when they were not previously attached to any other one.\n[param elements] is an array of [GraphElement]s to be attached."
+msgstr "Akkor bocsátja ki, amikor egy vagy több, más kerethez még nem csatolt [GraphElement] elemet a [param frame] nevű [GraphFrame] keretre ejtenek.\nA [param elements] tömb a csatolandó [GraphElement] elemeket tartalmazza."
+
+#: doc/classes/GraphEdit.xml
+msgid "Emitted when the given [GraphElement] node is deselected."
+msgstr "Akkor bocsátja ki, amikor megszűnik a megadott [GraphElement] csomópont kijelölése."
+
+#: doc/classes/GraphEdit.xml
+msgid "Emitted when the given [GraphElement] node is selected."
+msgstr "Akkor bocsátja ki, amikor kijelölik a megadott [GraphElement] csomópontot."
+
+#: doc/classes/GraphEdit.xml
+msgid "Emitted when this [GraphEdit] captures a [code]ui_paste[/code] action ([kbd]Ctrl + V[/kbd] by default). In general, this signal indicates that previously copied [GraphElement]s should be pasted."
+msgstr "Akkor bocsátja ki, amikor a [GraphEdit] érzékeli a [code]ui_paste[/code] műveletet (alapból [kbd]Ctrl + V[/kbd]). A jel rendszerint a korábban másolt [GraphElement] elemek beillesztését kéri."
+
+#: doc/classes/GraphEdit.xml
+msgid "Emitted when a popup is requested. Happens on right-clicking in the GraphEdit. [param at_position] is the position of the mouse pointer when the signal is sent."
+msgstr "Akkor bocsátja ki, amikor a felhasználó jobb egérgombbal kattint a GraphEdit területén, és ezzel felugró ablakot kér. Az [param at_position] az egérmutató helye a jel kibocsátásakor."
+
+#: doc/classes/GraphEdit.xml
+msgid "Emitted when the scroll offset is changed by the user. It will not be emitted when changed in code."
+msgstr "Akkor bocsátja ki, amikor a felhasználó módosítja a görgetési eltolást. A kódból végzett módosítás nem bocsát ki jelet."
+
+#: doc/classes/GraphEdit.xml
+msgid "[kbd]Mouse Wheel[/kbd] will zoom, [kbd]Ctrl + Mouse Wheel[/kbd] will move the view."
+msgstr "A [kbd]Mouse Wheel[/kbd] a nagyítást módosítja, a [kbd]Ctrl + Mouse Wheel[/kbd] a nézetet mozgatja."
+
+#: doc/classes/GraphEdit.xml
+msgid "[kbd]Mouse Wheel[/kbd] will move the view, [kbd]Ctrl + Mouse Wheel[/kbd] will zoom."
+msgstr "A [kbd]Mouse Wheel[/kbd] a nézetet mozgatja, a [kbd]Ctrl + Mouse Wheel[/kbd] a nagyítást módosítja."
