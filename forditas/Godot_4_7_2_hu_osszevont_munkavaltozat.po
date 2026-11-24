@@ -59337,7 +59337,7 @@ msgstr "Az egy készletben helyet kapó leírók száma. A Godot Vulkan-háttér
 #. RenderingServer.viewport_set_fsr_sharpness
 #: doc/classes/ProjectSettings.xml doc/classes/RenderingServer.xml
 msgid "Determines how sharp the upscaled image will be when using the FSR upscaling mode. Sharpness halves with every whole number. Values go from 0.0 (sharpest) to 2.0. Values above 2.0 won't make a visible difference."
-msgstr "Az FSR-rel felskálázott kép élességét szabja meg. Minden egész egységnyi növeléssel az élesség a felére csökken. A tartomány 0,0-tól (a legélesebb beállítástól) 2,0-ig terjed. A 2,0 feletti értékek már nem okoznak látható változást."
+msgstr "Az FSR-rel felskálázott kép élességét szabja meg. Minden egész egységnyi növeléssel az élesség a felére csökken. A tartomány 0.0-tól (a legélesebb beállítástól) 2.0-ig terjed. A 2.0 feletti értékek már nem okoznak látható változást."
 
 #. ProjectSettings.rendering/scaling_3d/mode.ios
 #: doc/classes/ProjectSettings.xml
@@ -59412,7 +59412,7 @@ msgstr "Az [OmniLight3D] és [SpotLight3D] fények vetített textúráinak szűr
 #. ProjectSettings.rendering/textures/lossless_compression/force_png
 #: doc/classes/ProjectSettings.xml
 msgid "If [code]true[/code], the texture importer will import lossless textures using the PNG format. Otherwise, it will default to using WebP."
-msgstr "Ha az érték [code]true[/code], a textúraimportáló PNG formátumban menti a veszteségmentes textúrákat. Egyébként az alapértelmezett WebP formátumot használja."
+msgstr "Ha az érték [code]true[/code], a textúraimportáló a veszteségmentes textúrák importálásához PNG-formátumot használ. Egyébként az alapértelmezett WebP-formátumot használja."
 
 #. ProjectSettings.rendering/textures/vram_compression/cache_gpu_compressor
 #: doc/classes/ProjectSettings.xml
@@ -59651,7 +59651,7 @@ msgstr "A hibakereséshez használt geometriai nézet megjelenítési módja."
 #. Viewport.fsr_sharpness
 #: doc/classes/Viewport.xml
 msgid "Determines how sharp the upscaled image will be when using the FSR upscaling mode. Sharpness halves with every whole number. Values go from 0.0 (sharpest) to 2.0. Values above 2.0 won't make a visible difference.\nTo control this property on the root viewport, set the [member ProjectSettings.rendering/scaling_3d/fsr_sharpness] project setting."
-msgstr "Az FSR-rel felskálázott kép élessége. Minden egész egységnyi növelés az élességet a felére csökkenti. A tartomány 0,0-tól (a legélesebb beállítástól) 2,0-ig terjed. A 2,0 feletti értékeknek nincs látható hatása.\nA gyökérnézetablaknál ezt a [member ProjectSettings.rendering/scaling_3d/fsr_sharpness] projektbeállítással állíthatod be."
+msgstr "Az FSR-rel felskálázott kép élessége. Minden egész egységnyi növelés az élességet a felére csökkenti. A tartomány 0.0-tól (a legélesebb beállítástól) 2.0-ig terjed. A 2.0 feletti értékeknek nincs látható hatása.\nA gyökérnézetablaknál ezt a [member ProjectSettings.rendering/scaling_3d/fsr_sharpness] projektbeállítással állíthatod be."
 
 #. Viewport.global_canvas_transform
 #: doc/classes/Viewport.xml
