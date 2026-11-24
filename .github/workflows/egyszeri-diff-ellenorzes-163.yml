@@ -1,0 +1,21 @@
+name: Egyszeri Git diff ellenőrzés az F1-súgóhoz
+on:
+  push:
+    branches:
+      - 'i18n/f1-mesh-geometry-materials-20261124'
+    paths:
+      - '.github/workflows/egyszeri-diff-ellenorzes-163.yml'
+permissions:
+  contents: read
+jobs:
+  diff:
+    name: Fordítási diff ellenőrzése
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Git diff szóköz- és ütközésellenőrzése
+        run: git diff --check '5ef2fd70c4d93daae6fe7a06460f9080fd255330' 'a814509fe228761fa516759796e63501b85a8275'
