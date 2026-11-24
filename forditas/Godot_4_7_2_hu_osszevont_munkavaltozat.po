@@ -57022,3 +57022,504 @@ msgstr "Ha a [param enabled] értéke [code]true[/code], a módosító Euler-sz�
 #: doc/classes/AimModifier3D.xml
 msgid "If sets [param enabled] to [code]true[/code], it provides rotation by two axes. It is enabled only if [method is_using_euler] is [code]true[/code]."
 msgstr "Ha a [param enabled] értéke [code]true[/code], a módosító két tengely körül forgat. Ez csak akkor érvényesül, ha az [method is_using_euler] eredménye [code]true[/code]."
+
+#. AStar3D.brief
+#: doc/classes/AStar3D.xml
+msgid "An implementation of A* for finding the shortest path between two vertices on a connected graph in 3D space."
+msgstr "Az A* algoritmus megvalósítása két csúcs közötti legrövidebb út keresésére összefüggő, 3D-s gráfban."
+
+#. AStar3D._compute_cost
+#: doc/classes/AStar3D.xml
+msgid "Called when computing the cost between two connected points.\nNote that this function is hidden in the default [AStar3D] class."
+msgstr "Akkor hívódik meg, amikor az algoritmus két összekötött pont közötti áthaladás költségét számítja ki.\nAz alapértelmezett [AStar3D] osztályban ez a függvény rejtett."
+
+#. AStar3D._estimate_cost
+#: doc/classes/AStar3D.xml
+msgid "Called when estimating the cost between a point and the path's ending point.\nNote that this function is hidden in the default [AStar3D] class."
+msgstr "Akkor hívódik meg, amikor az algoritmus megbecsüli az adott pont és az útvonal végpontja közötti költséget.\nAz alapértelmezett [AStar3D] osztályban ez a függvény rejtett."
+
+#. AStar3D._filter_neighbor
+#: doc/classes/AStar3D.xml
+msgid "Called when neighboring point enters processing and if [member neighbor_filter_enabled] is [code]true[/code]. If [code]true[/code] is returned the point will not be processed.\nNote that this function is hidden in the default [AStar3D] class."
+msgstr "A szomszédos pont vizsgálatakor hívódik meg, ha a [member neighbor_filter_enabled] értéke [code]true[/code]. Ha a metódus [code]true[/code] értékkel tér vissza, az algoritmus kihagyja a pontot.\nAz alapértelmezett [AStar3D] osztályban ez a függvény rejtett."
+
+#. AStar3D.add_point
+#: doc/classes/AStar3D.xml
+msgid "Adds a new point at the given position with the given identifier. The [param id] must be 0 or larger, and the [param weight_scale] must be 0.0 or greater.\nThe [param weight_scale] is multiplied by the result of [method _compute_cost] when determining the overall cost of traveling across a segment from a neighboring point to this point. Thus, all else being equal, the algorithm prefers points with lower [param weight_scale]s to form a path.\n[codeblocks]\n[gdscript]\nvar astar = AStar3D.new()\nastar.add_point(1, Vector3(1, 0, 0), 4) # Adds the point (1, 0, 0) with weight_scale 4 and id 1\n[/gdscript]\n[csharp]\nvar astar = new AStar3D();\nastar.AddPoint(1, new Vector3(1, 0, 0), 4); // Adds the point (1, 0, 0) with weight_scale 4 and id 1\n[/csharp]\n[/codeblocks]\nIf there already exists a point for the given [param id], its position and weight scale are updated to the given values."
+msgstr "Hozzáad egy pontot a megadott helyen, a megadott azonosítóval. Az [param id] értéke legalább 0, a [param weight_scale] értéke legalább 0,0 legyen.\nAz algoritmus a [param weight_scale] értékével szorozza meg a [method _compute_cost] eredményét, amikor azt számítja ki, mennyibe kerül a szomszédos pontból ezen a szakaszon át ide eljutni. Egyébként azonos feltételek mellett ezért előnyben részesíti az alacsonyabb [param weight_scale] értékű pontokat.\n[codeblocks]\n[gdscript]\nvar astar = AStar3D.new()\nastar.add_point(1, Vector3(1, 0, 0), 4) # Adds the point (1, 0, 0) with weight_scale 4 and id 1\n[/gdscript]\n[csharp]\nvar astar = new AStar3D();\nastar.AddPoint(1, new Vector3(1, 0, 0), 4); // Adds the point (1, 0, 0) with weight_scale 4 and id 1\n[/csharp]\n[/codeblocks]\nHa már van ilyen [param id] azonosítójú pont, frissíti annak helyét és költségszorzóját."
+
+#. AStar3D.are_points_connected
+#: doc/classes/AStar3D.xml
+msgid "Returns whether the two given points are directly connected by a segment. If [param bidirectional] is [code]false[/code], returns whether movement from [param id] to [param to_id] is possible through this segment."
+msgstr "Azt adja vissza, hogy a két megadott pontot közvetlenül összeköti-e egy szakasz. Ha a [param bidirectional] értéke [code]false[/code], azt vizsgálja, hogy a szakasz bejárható-e az [param id] ponttól a [param to_id] pont felé."
+
+#. AStar3D.connect_points
+#: doc/classes/AStar3D.xml
+msgid "Creates a segment between the given points. If [param bidirectional] is [code]false[/code], only movement from [param id] to [param to_id] is allowed, not the reverse direction.\n[codeblocks]\n[gdscript]\nvar astar = AStar3D.new()\nastar.add_point(1, Vector3(1, 1, 0))\nastar.add_point(2, Vector3(0, 5, 0))\nastar.connect_points(1, 2, false)\n[/gdscript]\n[csharp]\nvar astar = new AStar3D();\nastar.AddPoint(1, new Vector3(1, 1, 0));\nastar.AddPoint(2, new Vector3(0, 5, 0));\nastar.ConnectPoints(1, 2, false);\n[/csharp]\n[/codeblocks]"
+msgstr "Összeköti a megadott pontokat egy szakasszal. Ha a [param bidirectional] értéke [code]false[/code], a szakasz csak az [param id] ponttól a [param to_id] pont felé járható be.\n[codeblocks]\n[gdscript]\nvar astar = AStar3D.new()\nastar.add_point(1, Vector3(1, 1, 0))\nastar.add_point(2, Vector3(0, 5, 0))\nastar.connect_points(1, 2, false)\n[/gdscript]\n[csharp]\nvar astar = new AStar3D();\nastar.AddPoint(1, new Vector3(1, 1, 0));\nastar.AddPoint(2, new Vector3(0, 5, 0));\nastar.ConnectPoints(1, 2, false);\n[/csharp]\n[/codeblocks]"
+
+#. AStar3D.get_closest_position_in_segment
+#: doc/classes/AStar3D.xml
+msgid "Returns the closest position to [param to_position] that resides inside a segment between two connected points.\n[codeblocks]\n[gdscript]\nvar astar = AStar3D.new()\nastar.add_point(1, Vector3(0, 0, 0))\nastar.add_point(2, Vector3(0, 5, 0))\nastar.connect_points(1, 2)\nvar res = astar.get_closest_position_in_segment(Vector3(3, 3, 0)) # Returns (0, 3, 0)\n[/gdscript]\n[csharp]\nvar astar = new AStar3D();\nastar.AddPoint(1, new Vector3(0, 0, 0));\nastar.AddPoint(2, new Vector3(0, 5, 0));\nastar.ConnectPoints(1, 2);\nVector3 res = astar.GetClosestPositionInSegment(new Vector3(3, 3, 0)); // Returns (0, 3, 0)\n[/csharp]\n[/codeblocks]\nThe result is in the segment that goes from [code]y = 0[/code] to [code]y = 5[/code]. It's the closest position in the segment to the given point."
+msgstr "A [param to_position] helyhez legközelebb eső pontot adja vissza a gráf összekötött pontjai közötti szakaszokról.\n[codeblocks]\n[gdscript]\nvar astar = AStar3D.new()\nastar.add_point(1, Vector3(0, 0, 0))\nastar.add_point(2, Vector3(0, 5, 0))\nastar.connect_points(1, 2)\nvar res = astar.get_closest_position_in_segment(Vector3(3, 3, 0)) # Returns (0, 3, 0)\n[/gdscript]\n[csharp]\nvar astar = new AStar3D();\nastar.AddPoint(1, new Vector3(0, 0, 0));\nastar.AddPoint(2, new Vector3(0, 5, 0));\nastar.ConnectPoints(1, 2);\nVector3 res = astar.GetClosestPositionInSegment(new Vector3(3, 3, 0)); // Returns (0, 3, 0)\n[/csharp]\n[/codeblocks]\nAz eredmény a [code]y = 0[/code] és [code]y = 5[/code] közötti szakasz azon pontja, amely a legközelebb van a megadott helyhez."
+
+#. AStar3D.get_id_path
+#: doc/classes/AStar3D.xml
+msgid "Returns an array with the IDs of the points that form the path found by AStar3D between the given points. The array is ordered from the starting point to the ending point of the path.\nIf [param from_id] point is disabled, returns an empty array (even if [code]from_id == to_id[/code]).\nIf [param from_id] point is not disabled, there is no valid path to the target, and [param allow_partial_path] is [code]true[/code], returns a path to the point closest to the target that can be reached.\n[b]Note:[/b] When [param allow_partial_path] is [code]true[/code] and [param to_id] is disabled the search may take an unusually long time to finish.\n[codeblocks]\n[gdscript]\nvar astar = AStar3D.new()\nastar.add_point(1, Vector3(0, 0, 0))\nastar.add_point(2, Vector3(0, 1, 0), 1) # Default weight is 1\nastar.add_point(3, Vector3(1, 1, 0))\nastar.add_point(4, Vector3(2, 0, 0))\n\nastar.connect_points(1, 2, false)\nastar.connect_points(2, 3, false)\nastar.connect_points(4, 3, false)\nastar.connect_points(1, 4, false)\n\nvar res = astar.get_id_path(1, 3) # Returns [1, 2, 3]\n[/gdscript]\n[csharp]\nvar astar = new AStar3D();\nastar.AddPoint(1, new Vector3(0, 0, 0));\nastar.AddPoint(2, new Vector3(0, 1, 0), 1); // Default weight is 1\nastar.AddPoint(3, new Vector3(1, 1, 0));\nastar.AddPoint(4, new Vector3(2, 0, 0));\nastar.ConnectPoints(1, 2, false);\nastar.ConnectPoints(2, 3, false);\nastar.ConnectPoints(4, 3, false);\nastar.ConnectPoints(1, 4, false);\nlong[] res = astar.GetIdPath(1, 3); // Returns [1, 2, 3]\n[/csharp]\n[/codeblocks]\nIf you change the 2nd point's weight to 3, then the result will be [code][1, 4, 3][/code] instead, because now even though the distance is longer, it's \"easier\" to get through point 4 than through point 2."
+msgstr "Az AStar3D által a két megadott pont között talált útvonal pontazonosítóit adja vissza tömbben, az indulási ponttól a végpontig.\nHa a [param from_id] pont le van tiltva, üres tömböt ad vissza akkor is, ha [code]from_id == to_id[/code].\nHa a [param from_id] pont használható, de a cél nem érhető el, és a [param allow_partial_path] értéke [code]true[/code], a célhoz legközelebbi elérhető pontig ad vissza útvonalat.\n[b]Megjegyzés:[/b] Ha a [param allow_partial_path] értéke [code]true[/code], és a [param to_id] pont le van tiltva, a keresés a szokásosnál jóval tovább tarthat.\n[codeblocks]\n[gdscript]\nvar astar = AStar3D.new()\nastar.add_point(1, Vector3(0, 0, 0))\nastar.add_point(2, Vector3(0, 1, 0), 1) # Default weight is 1\nastar.add_point(3, Vector3(1, 1, 0))\nastar.add_point(4, Vector3(2, 0, 0))\n\nastar.connect_points(1, 2, false)\nastar.connect_points(2, 3, false)\nastar.connect_points(4, 3, false)\nastar.connect_points(1, 4, false)\n\nvar res = astar.get_id_path(1, 3) # Returns [1, 2, 3]\n[/gdscript]\n[csharp]\nvar astar = new AStar3D();\nastar.AddPoint(1, new Vector3(0, 0, 0));\nastar.AddPoint(2, new Vector3(0, 1, 0), 1); // Default weight is 1\nastar.AddPoint(3, new Vector3(1, 1, 0));\nastar.AddPoint(4, new Vector3(2, 0, 0));\nastar.ConnectPoints(1, 2, false);\nastar.ConnectPoints(2, 3, false);\nastar.ConnectPoints(4, 3, false);\nastar.ConnectPoints(1, 4, false);\nlong[] res = astar.GetIdPath(1, 3); // Returns [1, 2, 3]\n[/csharp]\n[/codeblocks]\nHa a 2-es pont súlyát 3-ra állítod, az eredmény [code][1, 4, 3][/code] lesz. Bár ez az út hosszabb, a 4-es ponton átmenni kisebb költséggel jár, mint a 2-es ponton."
+
+#. AStar3D.get_point_connections
+#: doc/classes/AStar3D.xml
+msgid "Returns an array with the IDs of the points that form the connection with the given point.\n[codeblocks]\n[gdscript]\nvar astar = AStar3D.new()\nastar.add_point(1, Vector3(0, 0, 0))\nastar.add_point(2, Vector3(0, 1, 0))\nastar.add_point(3, Vector3(1, 1, 0))\nastar.add_point(4, Vector3(2, 0, 0))\n\nastar.connect_points(1, 2, true)\nastar.connect_points(1, 3, true)\n\nvar neighbors = astar.get_point_connections(1) # Returns [2, 3]\n[/gdscript]\n[csharp]\nvar astar = new AStar3D();\nastar.AddPoint(1, new Vector3(0, 0, 0));\nastar.AddPoint(2, new Vector3(0, 1, 0));\nastar.AddPoint(3, new Vector3(1, 1, 0));\nastar.AddPoint(4, new Vector3(2, 0, 0));\nastar.ConnectPoints(1, 2, true);\nastar.ConnectPoints(1, 3, true);\n\nlong[] neighbors = astar.GetPointConnections(1); // Returns [2, 3]\n[/csharp]\n[/codeblocks]"
+msgstr "Tömbben adja vissza a megadott pontból közvetlenül elérhető pontok azonosítóit.\n[codeblocks]\n[gdscript]\nvar astar = AStar3D.new()\nastar.add_point(1, Vector3(0, 0, 0))\nastar.add_point(2, Vector3(0, 1, 0))\nastar.add_point(3, Vector3(1, 1, 0))\nastar.add_point(4, Vector3(2, 0, 0))\n\nastar.connect_points(1, 2, true)\nastar.connect_points(1, 3, true)\n\nvar neighbors = astar.get_point_connections(1) # Returns [2, 3]\n[/gdscript]\n[csharp]\nvar astar = new AStar3D();\nastar.AddPoint(1, new Vector3(0, 0, 0));\nastar.AddPoint(2, new Vector3(0, 1, 0));\nastar.AddPoint(3, new Vector3(1, 1, 0));\nastar.AddPoint(4, new Vector3(2, 0, 0));\nastar.ConnectPoints(1, 2, true);\nastar.ConnectPoints(1, 3, true);\n\nlong[] neighbors = astar.GetPointConnections(1); // Returns [2, 3]\n[/csharp]\n[/codeblocks]"
+
+#. AStar3D.get_point_path
+#: doc/classes/AStar3D.xml
+msgid "Returns an array with the points that are in the path found by AStar3D between the given points. The array is ordered from the starting point to the ending point of the path.\nIf [param from_id] point is disabled, returns an empty array (even if [code]from_id == to_id[/code]).\nIf [param from_id] point is not disabled, there is no valid path to the target, and [param allow_partial_path] is [code]true[/code], returns a path to the point closest to the target that can be reached.\n[b]Note:[/b] This method is not thread-safe; it can only be used from a single [Thread] at a given time. Consider using [Mutex] to ensure exclusive access to one thread to avoid race conditions.\nAdditionally, when [param allow_partial_path] is [code]true[/code] and [param to_id] is disabled the search may take an unusually long time to finish."
+msgstr "Az AStar3D által a két megadott pont között talált útvonal pontjait adja vissza tömbben, az indulási ponttól a végpontig.\nHa a [param from_id] pont le van tiltva, üres tömböt ad vissza akkor is, ha [code]from_id == to_id[/code].\nHa a [param from_id] pont használható, de a cél nem érhető el, és a [param allow_partial_path] értéke [code]true[/code], a célhoz legközelebbi elérhető pontig ad vissza útvonalat.\n[b]Megjegyzés:[/b] Ez a metódus nem szálbiztos. Egyidejűleg csak egyetlen [Thread] hívhatja. A versenyhelyzetek elkerülésére [Mutex] segítségével biztosíthatod a kizárólagos hozzáférést.\nHa a [param allow_partial_path] értéke [code]true[/code], és a [param to_id] pont le van tiltva, a keresés a szokásosnál jóval tovább tarthat."
+
+#. NavigationLink3D.brief
+#: doc/classes/NavigationLink3D.xml
+msgid "A link between two positions on [NavigationRegion3D]s that agents can be routed through."
+msgstr "Egy vagy két [NavigationRegion3D] terület két pozícióját összekötő kapcsolat, amelyen az ügynökök útvonala áthaladhat."
+
+#. NavigationLink3D.description
+#: doc/classes/NavigationLink3D.xml
+msgid "A link between two positions on [NavigationRegion3D]s that agents can be routed through. These positions can be on the same [NavigationRegion3D] or on two different ones. Links are useful to express navigation methods other than traveling along the surface of the navigation mesh, such as ziplines, teleporters, or gaps that can be jumped across."
+msgstr "Két pozíciót köt össze [NavigationRegion3D] területeken, így az ügynökök útvonala áthaladhat rajta. A két hely lehet ugyanazon a [NavigationRegion3D] területen vagy két külön területen. A kapcsolat a navigációs háló felszínén kívüli mozgást jelöli, például kötélpályát, teleportálást vagy átugorható szakadékot."
+
+#. NavigationLink3D.get_rid
+#: doc/classes/NavigationLink3D.xml
+msgid "Returns the [RID] of this link on the [NavigationServer3D]."
+msgstr "A kapcsolat [NavigationServer3D] által használt [RID] azonosítóját adja vissza."
+
+#. NavigationLink3D.set_navigation_map
+#: doc/classes/NavigationLink3D.xml
+msgid "Sets the [RID] of the navigation map this link should use. By default the link will automatically join the [World3D] default navigation map so this function is only required to override the default map."
+msgstr "Beállítja a kapcsolat navigációs térképének [RID] azonosítóját. A kapcsolat automatikusan csatlakozik a [World3D] alapértelmezett navigációs térképéhez. Ezt a metódust akkor használd, ha más térképet szeretnél megadni."
+
+#. NavigationLink3D.enabled
+#: doc/classes/NavigationLink3D.xml
+msgid "Whether this link is currently active. If [code]false[/code], [method NavigationServer3D.map_get_path] will ignore this link."
+msgstr "A kapcsolat aktív állapotát szabályozza. Ha az érték [code]false[/code], a [method NavigationServer3D.map_get_path] figyelmen kívül hagyja ezt a kapcsolatot."
+
+#. NavigationLink3D.end_position
+#: doc/classes/NavigationLink3D.xml
+msgid "Ending position of the link.\nThis position will search out the nearest polygon in the navigation mesh to attach to.\nThe distance the link will search is controlled by [method NavigationServer3D.map_set_link_connection_radius]."
+msgstr "A kapcsolat végpontja.\nA végpont a navigációs háló legközelebbi sokszögéhez próbál csatlakozni.\nA keresési távolságot a [method NavigationServer3D.map_set_link_connection_radius] metódussal állíthatod be."
+
+#. NavigationLink3D.navigation_layers
+#: doc/classes/NavigationLink3D.xml
+msgid "A bitfield determining all navigation layers the link belongs to. These navigation layers will be checked when requesting a path with [method NavigationServer3D.map_get_path]."
+msgstr "Bitmező, amely megadja, mely navigációs rétegekhez tartozik a kapcsolat. A [method NavigationServer3D.map_get_path] az útvonal lekérésekor figyelembe veszi ezeket a rétegeket."
+
+#. NavigationLink3D.start_position
+#: doc/classes/NavigationLink3D.xml
+msgid "Starting position of the link.\nThis position will search out the nearest polygon in the navigation mesh to attach to.\nThe distance the link will search is controlled by [method NavigationServer3D.map_set_link_connection_radius]."
+msgstr "A kapcsolat kezdőpontja.\nA kezdőpont a navigációs háló legközelebbi sokszögéhez próbál csatlakozni.\nA keresési távolságot a [method NavigationServer3D.map_set_link_connection_radius] metódussal állíthatod be."
+
+#. NavigationMesh.brief
+#: doc/classes/NavigationMesh.xml
+msgid "A navigation mesh that defines traversable areas and obstacles."
+msgstr "A bejárható területeket és akadályokat meghatározó navigációs háló."
+
+#. NavigationMesh.description
+#: doc/classes/NavigationMesh.xml
+msgid "A navigation mesh is a collection of polygons that define which areas of an environment are traversable to aid agents in pathfinding through complicated spaces."
+msgstr "A navigációs háló sokszögekből áll, amelyek megadják a környezet bejárható részeit. Ennek segítségével az ügynökök összetett terepen is útvonalat találhatnak."
+
+#. NavigationMesh.clear_polygons
+#: doc/classes/NavigationMesh.xml
+msgid "Clears the array of polygons, but it doesn't clear the array of vertices."
+msgstr "Kiüríti a sokszögek tömbjét. A csúcspontok tömbje megmarad."
+
+#. NavigationMesh.create_from_mesh
+#: doc/classes/NavigationMesh.xml
+msgid "Initializes the navigation mesh by setting the vertices and indices according to a [Mesh].\n[b]Note:[/b] The given [param mesh] must be of type [constant Mesh.PRIMITIVE_TRIANGLES] and have an index array."
+msgstr "Egy [Mesh] alapján állítja be a navigációs háló csúcspontjait és indexeit.\n[b]Megjegyzés:[/b] A megadott [param mesh] típusa legyen [constant Mesh.PRIMITIVE_TRIANGLES], és tartalmazzon indextömböt."
+
+#. NavigationMesh.get_collision_mask_value
+#: doc/classes/NavigationMesh.xml
+msgid "Returns whether or not the specified layer of the [member geometry_collision_mask] is enabled, given a [param layer_number] between 1 and 32."
+msgstr "Azt adja vissza, hogy a [member geometry_collision_mask] megadott rétege engedélyezett-e. A [param layer_number] értéke 1 és 32 közötti."
+
+#. NavigationMesh.get_polygon_count
+#: doc/classes/NavigationMesh.xml
+msgid "Returns the number of polygons in the navigation mesh."
+msgstr "A navigációs háló sokszögeinek számát adja vissza."
+
+#. NavigationMesh.get_vertices
+#: doc/classes/NavigationMesh.xml
+msgid "Returns a [PackedVector3Array] containing all the vertices being used to create the polygons."
+msgstr "[PackedVector3Array] tömbben adja vissza a sokszögekhez használt összes csúcspontot."
+
+#. NavigationMesh.set_collision_mask_value
+#: doc/classes/NavigationMesh.xml
+msgid "Based on [param value], enables or disables the specified layer in the [member geometry_collision_mask], given a [param layer_number] between 1 and 32."
+msgstr "A [param value] alapján engedélyezi vagy letiltja a [member geometry_collision_mask] megadott rétegét. A [param layer_number] értéke 1 és 32 közötti."
+
+#. NavigationMesh.agent_height
+#: doc/classes/NavigationMesh.xml
+msgid "The minimum floor to ceiling height that will still allow the floor area to be considered walkable.\n[b]Note:[/b] While baking, this value will be rounded up to the nearest multiple of [member cell_height]."
+msgstr "A padló és a mennyezet közötti legkisebb szabad magasság, amelynél a padló még bejárhatónak számít.\n[b]Megjegyzés:[/b] A háló előállításakor az értéket a [member cell_height] legközelebbi megfelelő többszörösére kerekíti felfelé a motor."
+
+#. NavigationMesh.agent_max_slope
+#: doc/classes/NavigationMesh.xml
+msgid "The maximum slope that is considered walkable, in degrees."
+msgstr "A még bejárhatónak tekintett lejtő legnagyobb dőlésszöge fokban."
+
+#. NavigationMesh.agent_radius
+#: doc/classes/NavigationMesh.xml
+msgid "The distance to erode/shrink the walkable area of the heightfield away from obstructions.\n[b]Note:[/b] While baking, this value will be rounded up to the nearest multiple of [member cell_size].\n[b]Note:[/b] The radius must be equal or higher than [code]0.0[/code]. If the radius is [code]0.0[/code], it won't be possible to fix invalid outline overlaps and other precision errors during the baking process. As a result, some obstacles may be excluded incorrectly from the final navigation mesh, or may delete the navigation mesh's polygons."
+msgstr "Ennyivel szűkíti a motor a magasságmező bejárható tartományát az akadályok körül.\n[b]Megjegyzés:[/b] A háló előállításakor a motor felfelé kerekíti az értéket a [member cell_size] megfelelő többszörösére.\n[b]Megjegyzés:[/b] A sugár legalább [code]0.0[/code] legyen. Ha [code]0.0[/code], a háló előállításakor nem javíthatók a körvonalak hibás átfedései és más pontossági hibák. Emiatt egyes akadályok tévesen kimaradhatnak a kész hálóból, vagy eltüntethetik annak sokszögeit."
+
+#. NavigationMesh.border_size
+#: doc/classes/NavigationMesh.xml
+msgid "The size of the non-navigable border around the bake bounding area.\nIn conjunction with the [member filter_baking_aabb] and a [member edge_max_error] value at [code]1.0[/code] or below the border size can be used to bake tile aligned navigation meshes without the tile edges being shrunk by [member agent_radius].\n[b]Note:[/b] If this value is not [code]0.0[/code], it will be rounded up to the nearest multiple of [member cell_size] during baking."
+msgstr "A háló előállítására kijelölt terület körüli, be nem járható perem vastagsága.\nHa megadod a [member filter_baking_aabb] értékét, és az [member edge_max_error] legfeljebb [code]1.0[/code], a peremmel csempékhez igazodó navigációs hálót hozhatsz létre. Így a [member agent_radius] nem húzza beljebb a csempe határán fekvő hálóéleket.\n[b]Megjegyzés:[/b] Ha az érték eltér a [code]0.0[/code]-tól, a motor felfelé kerekíti a [member cell_size] megfelelő többszörösére."
+
+#. NavigationMesh.cell_height
+#: doc/classes/NavigationMesh.xml
+msgid "The cell height used to rasterize the navigation mesh vertices on the Y axis. Must match with the cell height on the navigation map."
+msgstr "A navigációs háló csúcspontjainak Y tengely menti rácsra vetítéséhez használt cellamagasság. Egyeznie kell a navigációs térkép cellamagasságával."
+
+#. NavigationMesh.cell_size
+#: doc/classes/NavigationMesh.xml
+msgid "The cell size used to rasterize the navigation mesh vertices on the XZ plane. Must match with the cell size on the navigation map."
+msgstr "A navigációs háló csúcspontjainak XZ síkbeli rácsra vetítéséhez használt cellaméret. Egyeznie kell a navigációs térkép cellaméretével."
+
+#. NavigationMesh.detail_sample_distance
+#: doc/classes/NavigationMesh.xml
+msgid "The sampling distance to use when generating the detail mesh, in cell unit."
+msgstr "A részletháló előállításához használt mintavételi távolság cellákban mérve."
+
+#. NavigationMesh.detail_sample_max_error
+#: doc/classes/NavigationMesh.xml
+msgid "The maximum distance the detail mesh surface should deviate from heightfield, in cell unit."
+msgstr "A részletháló felszíne legfeljebb ennyivel térhet el a magasságmezőtől, cellákban mérve."
+
+#. NavigationMesh.edge_max_error
+#: doc/classes/NavigationMesh.xml
+msgid "The maximum distance a simplified contour's border edges should deviate the original raw contour."
+msgstr "Egy egyszerűsített körvonal határélei legfeljebb ennyivel térhetnek el az eredeti körvonaltól."
+
+#. GridMap.get_used_cells_by_item
+#: modules/gridmap/doc_classes/GridMap.xml
+msgid "Returns an array of all cells with the given item index specified in [param item]."
+msgstr "A [param item] indexű elemet tartalmazó összes cellát visszaadja egy tömbben."
+
+#. NavigationMesh.filter_baking_aabb
+#: doc/classes/NavigationMesh.xml
+msgid "If the baking [AABB] has a volume the navigation mesh baking will be restricted to its enclosing area."
+msgstr "Ha az előállításhoz megadott [AABB] térfogata nagyobb nullánál, a motor csak a befoglalt térrészben hoz létre navigációs hálót."
+
+#. NavigationMesh.filter_baking_aabb_offset
+#: doc/classes/NavigationMesh.xml
+msgid "The position offset applied to the [member filter_baking_aabb] [AABB]."
+msgstr "A [member filter_baking_aabb] által megadott [AABB] helyzetének eltolása."
+
+#. NavigationMesh.filter_ledge_spans
+#: doc/classes/NavigationMesh.xml
+msgid "If [code]true[/code], marks spans that are ledges as non-walkable."
+msgstr "Ha az érték [code]true[/code], a peremeken fekvő magasságmező-szakaszokat be nem járhatónak jelöli."
+
+#. NavigationMesh.filter_low_hanging_obstacles
+#: doc/classes/NavigationMesh.xml
+msgid "If [code]true[/code], marks non-walkable spans as walkable if their maximum is within [member agent_max_climb] of a walkable neighbor."
+msgstr "Ha az érték [code]true[/code], egy egyébként be nem járható szakasz járhatóvá válik, ha a felső határa legfeljebb [member agent_max_climb] távolságra van az ugyanabban az oszlopban közvetlenül alatta lévő, bejárható szakasz felső határától."
+
+#. NavigationMesh.filter_walkable_low_height_spans
+#: doc/classes/NavigationMesh.xml
+msgid "If [code]true[/code], marks walkable spans as not walkable if the clearance above the span is less than [member agent_height]."
+msgstr "Ha az érték [code]true[/code], a motor be nem járhatónak jelöli azokat a szakaszokat, amelyek felett a szabad magasság kisebb a [member agent_height] értékénél."
+
+#. NavigationMesh.geometry_collision_mask
+#: doc/classes/NavigationMesh.xml
+msgid "The physics layers to scan for static colliders.\nOnly used when [member geometry_parsed_geometry_type] is [constant PARSED_GEOMETRY_STATIC_COLLIDERS] or [constant PARSED_GEOMETRY_BOTH]."
+msgstr "A fizikai rétegek, amelyeken a motor statikus ütközőtesteket keres.\nCsak akkor használja, ha a [member geometry_parsed_geometry_type] értéke [constant PARSED_GEOMETRY_STATIC_COLLIDERS] vagy [constant PARSED_GEOMETRY_BOTH]."
+
+#. NavigationMesh.geometry_source_group_name
+#: doc/classes/NavigationMesh.xml
+msgid "The name of the group to scan for geometry.\nOnly used when [member geometry_source_geometry_mode] is [constant SOURCE_GEOMETRY_GROUPS_WITH_CHILDREN] or [constant SOURCE_GEOMETRY_GROUPS_EXPLICIT]."
+msgstr "A csoport neve, amelyben a motor forrásgeometriát keres.\nCsak akkor használja, ha a [member geometry_source_geometry_mode] értéke [constant SOURCE_GEOMETRY_GROUPS_WITH_CHILDREN] vagy [constant SOURCE_GEOMETRY_GROUPS_EXPLICIT]."
+
+#. NavigationMesh.region_merge_size
+#: doc/classes/NavigationMesh.xml
+msgid "Any regions with a size smaller than this will be merged with larger regions if possible.\n[b]Note:[/b] This value will be squared to calculate the number of cells. For example, a value of 20 will set the number of cells to 400."
+msgstr "A motor lehetőség szerint nagyobb régiókba olvasztja az ennél kisebb régiókat.\n[b]Megjegyzés:[/b] A motor az érték négyzetéből számítja ki a cellák számát. A 20-as érték például 400 cellának felel meg."
+
+#. NavigationMesh.region_min_size
+#: doc/classes/NavigationMesh.xml
+msgid "The minimum size of a region for it to be created.\n[b]Note:[/b] This value will be squared to calculate the minimum number of cells allowed to form isolated island areas. For example, a value of 8 will set the number of cells to 64."
+msgstr "A régió létrehozásához szükséges legkisebb méret.\n[b]Megjegyzés:[/b] A motor az érték négyzetéből határozza meg, hány cellából állhat egy önálló sziget. A 8-as érték például legalább 64 cellát jelent."
+
+#. NavigationMesh.vertices_per_polygon
+#: doc/classes/NavigationMesh.xml
+msgid "The maximum number of vertices allowed for polygons generated during the contour to polygon conversion process."
+msgstr "A körvonalakból létrehozott sokszögek csúcspontjainak megengedett legnagyobb száma."
+
+#. NavigationMesh.SAMPLE_PARTITION_WATERSHED
+#: doc/classes/NavigationMesh.xml
+msgid "Watershed partitioning. Generally the best choice if you precompute the navigation mesh, use this if you have large open areas."
+msgstr "Vízválasztó alapú felosztás. Előre kiszámított navigációs hálóhoz általában ez a legjobb választás, különösen nagy, nyílt területeken."
+
+#. NavigationMesh.SAMPLE_PARTITION_MONOTONE
+#: doc/classes/NavigationMesh.xml
+msgid "Monotone partitioning. Use this if you want fast navigation mesh generation."
+msgstr "Monoton felosztás. Akkor válaszd, ha a navigációs hálót gyorsan kell előállítani."
+
+#. NavigationMesh.SAMPLE_PARTITION_LAYERS
+#: doc/classes/NavigationMesh.xml
+msgid "Layer partitioning. Good choice to use for tiled navigation mesh with medium and small sized tiles."
+msgstr "Réteges felosztás. Kis és közepes méretű csempékből álló navigációs hálóhoz alkalmas."
+
+#. NavigationMesh.PARSED_GEOMETRY_MESH_INSTANCES
+#: doc/classes/NavigationMesh.xml
+msgid "Parses mesh instances as geometry. This includes [MeshInstance3D], [CSGShape3D], and [GridMap] nodes."
+msgstr "A hálópéldányokat geometriai forrásként dolgozza fel. Ide tartoznak a [MeshInstance3D], a [CSGShape3D] és a [GridMap] csomópontok."
+
+#. NavigationMesh.PARSED_GEOMETRY_STATIC_COLLIDERS
+#: doc/classes/NavigationMesh.xml
+msgid "Parses [StaticBody3D] colliders as geometry. The collider should be in any of the layers specified by [member geometry_collision_mask]."
+msgstr "A [StaticBody3D] csomópontok ütközőalakzatait használja forrásgeometriaként. Az ütközőtestnek a [member geometry_collision_mask] által kijelölt rétegek valamelyikéhez kell tartoznia."
+
+#. NavigationMesh.SOURCE_GEOMETRY_GROUPS_WITH_CHILDREN
+#: doc/classes/NavigationMesh.xml
+msgid "Scans nodes in a group and their child nodes recursively for geometry. The group is specified by [member geometry_source_group_name]."
+msgstr "A [member geometry_source_group_name] által megadott csoport csomópontjaiban és minden leszármazottjukban keres forrásgeometriát."
+
+#. NavigationMesh.SOURCE_GEOMETRY_GROUPS_EXPLICIT
+#: doc/classes/NavigationMesh.xml
+msgid "Uses nodes in a group for geometry. The group is specified by [member geometry_source_group_name]."
+msgstr "A [member geometry_source_group_name] által megadott csoport tagjaiból gyűjti a forrásgeometriát."
+
+#. NavigationMeshGenerator.brief
+#: doc/classes/NavigationMeshGenerator.xml
+msgid "Helper class for creating and clearing navigation meshes."
+msgstr "Segédosztály navigációs hálók létrehozására és kiürítésére."
+
+#. GridMap.get_navigation_map
+#: modules/gridmap/doc_classes/GridMap.xml
+msgid "Returns the [RID] of the navigation map this GridMap node uses for its cell baked navigation meshes.\nThis function returns always the map set on the GridMap node and not the map on the NavigationServer. If the map is changed directly with the NavigationServer API the GridMap node will not be aware of the map change."
+msgstr "Annak a navigációs térképnek a [RID] azonosítóját adja vissza, amelyet a GridMap a cellák navigációs hálóihoz használ.\nMindig a GridMap csomóponton beállított térképet adja vissza. Ha a térképet közvetlenül a NavigationServer API-jával módosítod, a GridMap erről nem értesül."
+
+#. NavigationMeshGenerator.bake
+#: doc/classes/NavigationMeshGenerator.xml
+msgid "Bakes the [param navigation_mesh] with source geometry collected starting from the [param root_node]."
+msgstr "A [param root_node] csomóponttól kiindulva összegyűjti a forrásgeometriát, majd abból kisüti a [param navigation_mesh] navigációs hálót."
+
+#. NavigationMeshGenerator.clear
+#: doc/classes/NavigationMeshGenerator.xml
+msgid "Removes all polygons and vertices from the provided [param navigation_mesh] resource."
+msgstr "Eltávolítja az összes sokszöget és csúcspontot a megadott [param navigation_mesh] erőforrásból."
+
+#. NavigationMeshSourceGeometryData2D.append_obstruction_outlines
+#: doc/classes/NavigationMeshSourceGeometryData2D.xml
+msgid "Appends another array of [param obstruction_outlines] at the end of the existing obstruction outlines array."
+msgstr "A megadott [param obstruction_outlines] akadálykörvonalakat a meglévő tömb végéhez fűzi."
+
+#. NavigationMeshSourceGeometryData2D.append_traversable_outlines
+#: doc/classes/NavigationMeshSourceGeometryData2D.xml
+msgid "Appends another array of [param traversable_outlines] at the end of the existing traversable outlines array."
+msgstr "A megadott [param traversable_outlines] bejárható körvonalakat a meglévő tömb végéhez fűzi."
+
+#. NavigationMeshSourceGeometryData2D.get_projected_obstructions
+#: doc/classes/NavigationMeshSourceGeometryData2D.xml
+msgid "Returns the projected obstructions as an [Array] of dictionaries. Each [Dictionary] contains the following entries:\n- [code]vertices[/code] - A [PackedFloat32Array] that defines the outline points of the projected shape.\n- [code]carve[/code] - A [bool] that defines how the projected shape affects the navigation mesh baking. If [code]true[/code] the projected shape will not be affected by addition offsets, e.g. agent radius."
+msgstr "A vetített akadályokat szótárakból álló [Array] tömbként adja vissza. Minden [Dictionary] szótár az alábbi bejegyzéseket tartalmazza:\n- [code]vertices[/code] – [PackedFloat32Array], amely a vetített alakzat körvonalának pontjait adja meg.\n- [code]carve[/code] – [bool] érték, amely meghatározza, hogyan hat az alakzat a navigációs háló sütésére. Ha [code]true[/code], az alakzat körvonalát nem módosítják további eltolások, például az ügynök sugara."
+
+#. NavigationMeshSourceGeometryData2D.has_data
+#. NavigationMeshSourceGeometryData3D.has_data
+#: doc/classes/NavigationMeshSourceGeometryData2D.xml doc/classes/NavigationMeshSourceGeometryData3D.xml
+msgid "Returns [code]true[/code] when parsed source geometry data exists."
+msgstr "[code]true[/code] értéket ad vissza, ha van feldolgozott forrásgeometria."
+
+#. NavigationMeshSourceGeometryData2D.set_projected_obstructions
+#: doc/classes/NavigationMeshSourceGeometryData2D.xml
+msgid "Sets the projected obstructions with an Array of Dictionaries with the following key value pairs:\n[codeblocks]\n[gdscript]\n\"vertices\" : PackedFloat32Array\n\"carve\" : bool\n[/gdscript]\n[/codeblocks]"
+msgstr "Beállítja a vetített akadályokat. A bemenet szótárakból álló tömb, az alábbi kulcsokkal és értéktípusokkal.\n[codeblocks]\n[gdscript]\n\"vertices\" : PackedFloat32Array\n\"carve\" : bool\n[/gdscript]\n[/codeblocks]"
+
+#. NavigationMeshSourceGeometryData3D.add_faces
+#: doc/classes/NavigationMeshSourceGeometryData3D.xml
+msgid "Adds an array of vertex positions to the geometry data for navigation mesh baking to form triangulated faces. For each face the array must have three vertex positions in clockwise winding order. Since [NavigationMesh] resources have no transform, all vertex positions need to be offset by the node's transform using [param xform]."
+msgstr "A navigációs háló sütéséhez használt geometriához csúcspontok tömbjét adja hozzá. Minden háromszöglaphoz három csúcspontot kell megadni az óramutató járásával megegyező sorrendben. A [NavigationMesh] erőforrásnak nincs saját transzformációja, ezért a csomópont transzformációját a [param xform] paraméterben add meg. A motor ezt alkalmazza a csúcspontokra."
+
+#. NavigationMeshSourceGeometryData3D.add_mesh
+#: doc/classes/NavigationMeshSourceGeometryData3D.xml
+msgid "Adds the geometry data of a [Mesh] resource to the navigation mesh baking data. The mesh must have valid triangulated mesh data to be considered. Since [NavigationMesh] resources have no transform, all vertex positions need to be offset by the node's transform using [param xform]."
+msgstr "Egy [Mesh] erőforrás geometriáját adja hozzá a navigációs háló sütéséhez használt adatokhoz. Csak az érvényes háromszögháló dolgozható fel. A [NavigationMesh] erőforrásnak nincs saját transzformációja, ezért a csomópont transzformációját a [param xform] paraméterben add meg. A motor ezt alkalmazza a csúcspontokra."
+
+#. NavigationMeshSourceGeometryData3D.add_mesh_array
+#: doc/classes/NavigationMeshSourceGeometryData3D.xml
+msgid "Adds an [Array] the size of [constant Mesh.ARRAY_MAX] and with vertices at index [constant Mesh.ARRAY_VERTEX] and indices at index [constant Mesh.ARRAY_INDEX] to the navigation mesh baking data. The array must have valid triangulated mesh data to be considered. Since [NavigationMesh] resources have no transform, all vertex positions need to be offset by the node's transform using [param xform]."
+msgstr "[constant Mesh.ARRAY_MAX] méretű [Array] tömböt ad hozzá a navigációs háló sütéséhez használt adatokhoz. A csúcspontok a [constant Mesh.ARRAY_VERTEX], az indexek a [constant Mesh.ARRAY_INDEX] helyre kerülnek. Csak érvényes háromszögháló dolgozható fel. A [NavigationMesh] erőforrásnak nincs saját transzformációja, ezért a csomópont transzformációját a [param xform] paraméterben add meg. A motor ezt alkalmazza a csúcspontokra."
+
+#. NavigationMeshSourceGeometryData3D.add_projected_obstruction
+#: doc/classes/NavigationMeshSourceGeometryData3D.xml
+msgid "Adds a projected obstruction shape to the source geometry. The [param vertices] are considered projected on an xz-axes plane, placed at the global y-axis [param elevation] and extruded by [param height]. If [param carve] is [code]true[/code] the carved shape will not be affected by additional offsets (e.g. agent radius) of the navigation mesh baking process."
+msgstr "Vetített akadályalakzatot ad a forrásgeometriához. A motor a [param vertices] csúcspontokat az XZ síkra vetítve értelmezi. Az alakzat a globális Y tengelyen a [param elevation] magasságra kerül, ahonnan [param height] értékkel nyúlik ki. Ha a [param carve] értéke [code]true[/code], a kivágott alakzatra nem hatnak a háló sütésekor alkalmazott további eltolások, például az ügynök sugara."
+
+#. NavigationMeshSourceGeometryData3D.append_arrays
+#: doc/classes/NavigationMeshSourceGeometryData3D.xml
+msgid "Appends arrays of [param vertices] and [param indices] at the end of the existing arrays. Adds the existing index as an offset to the appended indices."
+msgstr "A [param vertices] csúcspontokat és a [param indices] indexeket a meglévő tömbök végéhez fűzi. Az új indexeket a már tárolt csúcspontok számával tolja el."
+
+#. NavigationMeshSourceGeometryData3D.get_indices
+#: doc/classes/NavigationMeshSourceGeometryData3D.xml
+msgid "Returns the parsed source geometry data indices array."
+msgstr "A feldolgozott forrásgeometria indextömbjét adja vissza."
+
+#. NavigationMeshSourceGeometryData3D.get_projected_obstructions
+#: doc/classes/NavigationMeshSourceGeometryData3D.xml
+msgid "Returns the projected obstructions as an [Array] of dictionaries. Each [Dictionary] contains the following entries:\n- [code]vertices[/code] - A [PackedFloat32Array] that defines the outline points of the projected shape.\n- [code]elevation[/code] - A [float] that defines the projected shape placement on the y-axis.\n- [code]height[/code] - A [float] that defines how much the projected shape is extruded along the y-axis.\n- [code]carve[/code] - A [bool] that defines how the obstacle affects the navigation mesh baking. If [code]true[/code] the projected shape will not be affected by addition offsets, e.g. agent radius."
+msgstr "A vetített akadályokat szótárakból álló [Array] tömbként adja vissza. Minden [Dictionary] szótár az alábbi bejegyzéseket tartalmazza:\n- [code]vertices[/code] – [PackedFloat32Array], amely a vetített alakzat körvonalának pontjait adja meg.\n- [code]elevation[/code] – [float] érték, amely a vetített alakzat helyzetét adja meg az Y tengelyen.\n- [code]height[/code] – [float] érték, amely megadja, mennyire nyúlik ki a vetített alakzat az Y tengely mentén.\n- [code]carve[/code] – [bool] érték, amely meghatározza, hogyan hat az akadály a navigációs háló sütésére. Ha [code]true[/code], a kivágott alakzatot nem módosítják további eltolások, például az ügynök sugara."
+
+#. NavigationMeshSourceGeometryData3D.get_vertices
+#: doc/classes/NavigationMeshSourceGeometryData3D.xml
+msgid "Returns the parsed source geometry data vertices array."
+msgstr "A feldolgozott forrásgeometria csúcsponttömbjét adja vissza."
+
+#. NavigationMeshSourceGeometryData3D.merge
+#: doc/classes/NavigationMeshSourceGeometryData3D.xml
+msgid "Adds the geometry data of another [NavigationMeshSourceGeometryData3D] to the navigation mesh baking data."
+msgstr "Egy másik [NavigationMeshSourceGeometryData3D] erőforrás geometriáját hozzáadja a navigációs háló sütéséhez használt adatokhoz."
+
+#. NavigationMeshSourceGeometryData3D.set_indices
+#: doc/classes/NavigationMeshSourceGeometryData3D.xml
+msgid "Sets the parsed source geometry data indices. The indices need to be matched with appropriated vertices.\n[b]Warning:[/b] Inappropriate data can crash the baking process of the involved third-party libraries."
+msgstr "Beállítja a feldolgozott forrásgeometria indexeit. Az indexeknek a megfelelő csúcspontokra kell mutatniuk.\n[b]Figyelmeztetés:[/b] Az érvénytelen adatok összeomlást okozhatnak a sütéshez használt külső függvénykönyvtárakban."
+
+#. NavigationMeshSourceGeometryData3D.set_projected_obstructions
+#: doc/classes/NavigationMeshSourceGeometryData3D.xml
+msgid "Sets the projected obstructions with an Array of Dictionaries with the following key value pairs:\n[codeblocks]\n[gdscript]\n\"vertices\" : PackedFloat32Array\n\"elevation\" : float\n\"height\" : float\n\"carve\" : bool\n[/gdscript]\n[/codeblocks]"
+msgstr "Beállítja a vetített akadályokat. A bemenet szótárakból álló tömb, az alábbi kulcsokkal és értéktípusokkal.\n[codeblocks]\n[gdscript]\n\"vertices\" : PackedFloat32Array\n\"elevation\" : float\n\"height\" : float\n\"carve\" : bool\n[/gdscript]\n[/codeblocks]"
+
+#. NavigationMeshSourceGeometryData3D.set_vertices
+#: doc/classes/NavigationMeshSourceGeometryData3D.xml
+msgid "Sets the parsed source geometry data vertices. The vertices need to be matched with appropriated indices.\n[b]Warning:[/b] Inappropriate data can crash the baking process of the involved third-party libraries."
+msgstr "Beállítja a feldolgozott forrásgeometria csúcspontjait. A csúcspontoknak és az indexeknek egymáshoz kell tartozniuk.\n[b]Figyelmeztetés:[/b] Az érvénytelen adatok összeomlást okozhatnak a sütéshez használt külső függvénykönyvtárakban."
+
+#. NavigationServer3D.agent_set_use_3d_avoidance
+#: doc/classes/NavigationServer3D.xml
+msgid "Sets if the agent uses the 2D avoidance or the 3D avoidance while avoidance is enabled.\nIf [code]true[/code] the agent calculates avoidance velocities in 3D for the xyz-axis, e.g. for games that take place in air, underwater or space. The 3D using agent only avoids other 3D avoidance using agent's. The 3D using agent only reacts to radius based avoidance obstacles. The 3D using agent ignores any vertices based obstacles. The 3D using agent only avoids other 3D using agent's.\nIf [code]false[/code] the agent calculates avoidance velocities in 2D along the xz-axis ignoring the y-axis. The 2D using agent only avoids other 2D avoidance using agent's. The 2D using agent reacts to radius avoidance obstacles. The 2D using agent reacts to vertices based avoidance obstacles. The 2D using agent only avoids other 2D using agent's. 2D using agents will ignore other 2D using agents or obstacles that are below their current position or above their current position including the agents height in 2D avoidance."
+msgstr "Az elkerülés engedélyezésekor ezzel választható ki, hogy az ügynök 2D-ben vagy 3D-ben számoljon.\nHa az érték [code]true[/code], az ügynök az X, Y és Z tengelyen is számít elkerülési sebességet. Ez például levegőben, víz alatt vagy az űrben játszódó játékoknál hasznos. Csak a többi 3D-s elkerülést használó ügynököt kerüli el. A sugárral meghatározott akadályokra reagál, a csúcspontokkal megadott akadályokat figyelmen kívül hagyja.\nHa az érték [code]false[/code], az ügynök az XZ síkban számít elkerülési sebességet, az Y tengely menti sebesség figyelembevétele nélkül. Csak a többi 2D-s elkerülést használó ügynököt kerüli el, és mind a sugárral, mind a csúcspontokkal meghatározott akadályokra reagál. Az ügynökök és akadályok magassági tartományának át kell fednie az ügynökét ahhoz, hogy az elkerülés figyelembe vegye őket."
+
+#. NavigationServer3DManager.brief
+#: doc/classes/NavigationServer3DManager.xml
+msgid "A singleton for managing [NavigationServer3D] implementations."
+msgstr "Egyetlen példányban működő kezelő a [NavigationServer3D] megvalósításaihoz."
+
+#. NavigationServer3DManager.description
+#: doc/classes/NavigationServer3DManager.xml
+msgid "[NavigationServer3DManager] is the API for registering [NavigationServer3D] implementations and setting the default implementation.\n[b]Note:[/b] It is not possible to switch servers at runtime. This class is only used on startup at the server initialization level."
+msgstr "A [NavigationServer3DManager] API-ja a [NavigationServer3D] megvalósításainak regisztrálására és az alapértelmezett megvalósítás kiválasztására szolgál.\n[b]Megjegyzés:[/b] Futás közben nem lehet kiszolgálót váltani. Az osztályt a motor csak induláskor, a kiszolgálók inicializálásához használja."
+
+#. NavigationServer3DManager.register_server
+#: doc/classes/NavigationServer3DManager.xml
+msgid "Registers a [NavigationServer3D] implementation by passing a [param name] and a [Callable] that returns a [NavigationServer3D] object."
+msgstr "Regisztrál egy [NavigationServer3D] megvalósítást a megadott [param name] névvel és egy olyan [Callable] hívható objektummal, amely [NavigationServer3D] példányt ad vissza."
+
+#. NavigationServer3DManager.set_default_server
+#: doc/classes/NavigationServer3DManager.xml
+msgid "Sets the default [NavigationServer3D] implementation to the one identified by [param name], if [param priority] is greater than the priority of the current default implementation."
+msgstr "A [param name] nevű [NavigationServer3D] megvalósítást teszi alapértelmezetté, ha a [param priority] értéke nagyobb a jelenlegi alapértelmezett kiszolgáló prioritásánál."
+
+#. Path3D.brief
+#: doc/classes/Path3D.xml
+msgid "Contains a [Curve3D] path for [PathFollow3D] nodes to follow."
+msgstr "[Curve3D] útvonalat tárol, amelyet [PathFollow3D] csomópontok követhetnek."
+
+#. Path3D.description
+#: doc/classes/Path3D.xml
+msgid "Can have [PathFollow3D] child nodes moving along the [Curve3D]. See [PathFollow3D] for more information on the usage.\nNote that the path is considered as relative to the moved nodes (children of [PathFollow3D]). As such, the curve should usually start with a zero vector [code](0, 0, 0)[/code]."
+msgstr "Az útvonalhoz [PathFollow3D] gyermekcsomópontokat adhatsz, amelyek a [Curve3D] mentén mozognak. A használat részleteit lásd a [PathFollow3D] leírásában.\nA [PathFollow3D] gyermekei együtt mozognak az útvonalkövetővel. A görbét ezért általában a [code](0, 0, 0)[/code] helyi origóból érdemes indítani."
+
+#. Path3D.curve_changed
+#: doc/classes/Path3D.xml
+msgid "Emitted when the [member curve] changes."
+msgstr "Akkor jelez, amikor a [member curve] megváltozik."
+
+#. Path3D.debug_color_changed
+#: doc/classes/Path3D.xml
+msgid "Emitted when the [member debug_custom_color] changes."
+msgstr "Akkor jelez, amikor a [member debug_custom_color] megváltozik."
+
+#. Path3D.curve
+#: doc/classes/Path3D.xml
+msgid "A [Curve3D] describing the path."
+msgstr "Az útvonalat leíró [Curve3D] görbe."
+
+#. Path3D.debug_custom_color
+#: doc/classes/Path3D.xml
+msgid "The custom color used to draw the path in the editor. If set to [constant Color.BLACK] (as by default), the color set in [member ProjectSettings.debug/shapes/paths/geometry_color] is used."
+msgstr "A szerkesztőben kirajzolt útvonal egyéni színe. Ha az érték [constant Color.BLACK], ami az alapértelmezés, a motor a [member ProjectSettings.debug/shapes/paths/geometry_color] beállítás színét használja."
+
+#. PathFollow3D.brief
+#: doc/classes/PathFollow3D.xml
+msgid "Point sampler for a [Path3D]."
+msgstr "Egy [Path3D] útvonal pontjainak mintavételezésére szolgáló csomópont."
+
+#. PathFollow3D.description
+#: doc/classes/PathFollow3D.xml
+msgid "This node takes its parent [Path3D], and returns the coordinates of a point within it, given a distance from the first vertex.\nIt is useful for making other nodes follow a path, without coding the movement pattern. For that, the nodes must be children of this node. The descendant nodes will then move accordingly when setting the [member progress] in this node."
+msgstr "A szülő [Path3D] útvonalán meghatározza az első csúcsponttól megadott távolságra lévő pont koordinátáit.\nA csomópont segítségével anélkül mozgathatsz más csomópontokat az útvonalon, hogy a mozgást kódban kellene megadnod. Helyezd őket az útvonalkövető alá. A leszármazottak a [member progress] értékének módosításakor vele együtt mozognak."
+
+#. PathFollow3D.correct_posture
+#: doc/classes/PathFollow3D.xml
+msgid "Correct the [param transform]. [param rotation_mode] implicitly specifies how posture (forward, up and sideway direction) is calculated."
+msgstr "Korrigálja a [param transform] transzformáció tájolását. A [param rotation_mode] beállítás határozza meg, hogyan számítja ki az előre, a felfelé és az oldalra mutató irányt."
+
+#. PathFollow3D.cubic_interp
+#: doc/classes/PathFollow3D.xml
+msgid "If [code]true[/code], the position between two cached points is interpolated cubically, and linearly otherwise.\nThe points along the [Curve3D] of the [Path3D] are precomputed before use, for faster calculations. The point at the requested offset is then calculated interpolating between two adjacent cached points. This may present a problem if the curve makes sharp turns, as the cached points may not follow the curve closely enough.\nThere are two answers to this problem: either increase the number of cached points and increase memory consumption, or make a cubic interpolation between two points at the cost of (slightly) slower calculations."
+msgstr "Ha az érték [code]true[/code], két gyorsítótárazott pont között köbös interpolációval határozza meg a pozíciót. Máskülönben lineáris interpolációt használ.\nA gyorsabb számításhoz a [Path3D] [Curve3D] görbéjének pontjait a motor előre kiszámítja. A kért távolsághoz tartozó pontot két szomszédos tárolt pontból interpolálja. Éles kanyaroknál gondot okozhat, ha a tárolt pontok nem követik elég pontosan a görbét.\nIlyenkor több pontot tárolhatsz a nagyobb memóriaigény árán, vagy választhatsz köbös interpolációt, amely valamivel lassabb."
+
+#. PathFollow3D.progress
+#: doc/classes/PathFollow3D.xml
+msgid "The distance from the first vertex, measured in 3D units along the path. Changing this value sets this node's position to a point within the path."
+msgstr "Az útvonal első csúcspontjától az útvonal mentén mért távolság 3D-s egységekben. Az érték módosításakor a csomópont az útvonal megfelelő pontjára kerül."
+
+#. PathFollow3D.progress_ratio
+#: doc/classes/PathFollow3D.xml
+msgid "The distance from the first vertex, considering 0.0 as the first vertex and 1.0 as the last. This is just another way of expressing the progress within the path, as the progress supplied is multiplied internally by the path's length.\nIt can be set or get only if the [PathFollow3D] is the child of a [Path3D] which is part of the scene tree, and that this [Path3D] has a [Curve3D] with a non-zero length. Otherwise, trying to set this field will print an error, and getting this field will return [code]0.0[/code]."
+msgstr "Az útvonalon megtett távolság aránya, ahol 0,0 az első csúcspontot, 1,0 az utolsót jelenti. A motor az arányt megszorozza az útvonal hosszával, így kapja meg a megtett távolságot.\nCsak akkor állítható be és olvasható ki, ha a [PathFollow3D] egy jelenetfában lévő [Path3D] gyermeke, és a [Path3D] nem nulla hosszúságú [Curve3D] görbét tartalmaz. Egyébként a beállítás hibát jelez, a lekérdezés pedig [code]0.0[/code] értéket ad vissza."
+
+#. PathFollow3D.rotation_mode
+#: doc/classes/PathFollow3D.xml
+msgid "Allows or forbids rotation on one or more axes, depending on the [enum RotationMode] constants being used."
+msgstr "Az [enum RotationMode] felsorolás értéke határozza meg, mely tengelyek körül fordulhat el a csomópont."
+
+#. PathFollow3D.tilt_enabled
+#: doc/classes/PathFollow3D.xml
+msgid "If [code]true[/code], the tilt property of [Curve3D] takes effect."
+msgstr "Ha az érték [code]true[/code], a motor figyelembe veszi a [Curve3D] görbe bedöntését."
+
+#. PathFollow3D.use_model_front
+#: doc/classes/PathFollow3D.xml
+msgid "If [code]true[/code], the node moves on the travel path with orienting the +Z axis as forward. See also [constant Vector3.FORWARD] and [constant Vector3.MODEL_FRONT]."
+msgstr "Ha az érték [code]true[/code], a csomópont úgy követi az útvonalat, hogy a +Z tengelye mutat előre. Lásd még a [constant Vector3.FORWARD] és a [constant Vector3.MODEL_FRONT] állandót."
+
+#. PathFollow3D.ROTATION_NONE
+#: doc/classes/PathFollow3D.xml
+msgid "Forbids the PathFollow3D to rotate."
+msgstr "A PathFollow3D egyetlen tengely körül sem fordul el."
+
+#. PathFollow3D.ROTATION_Y
+#: doc/classes/PathFollow3D.xml
+msgid "Allows the PathFollow3D to rotate in the Y axis only."
+msgstr "A PathFollow3D csak az Y tengely körül fordulhat el."
+
+#. PathFollow3D.ROTATION_XY
+#: doc/classes/PathFollow3D.xml
+msgid "Allows the PathFollow3D to rotate in both the X, and Y axes."
+msgstr "A PathFollow3D az X és az Y tengely körül fordulhat el."
+
+#. PathFollow3D.ROTATION_XYZ
+#: doc/classes/PathFollow3D.xml
+msgid "Allows the PathFollow3D to rotate in any axis."
+msgstr "A PathFollow3D bármelyik tengely körül elfordulhat."
+
+#. PathFollow3D.ROTATION_ORIENTED
+#: doc/classes/PathFollow3D.xml
+msgid "Uses the up vector information in a [Curve3D] to enforce orientation. This rotation mode requires the [Path3D]'s [member Curve3D.up_vector_enabled] property to be set to [code]true[/code]."
+msgstr "A [Curve3D] felfelé mutató vektora alapján tájolja a csomópontot. Ehhez a [Path3D] görbéjének [member Curve3D.up_vector_enabled] tulajdonságát [code]true[/code] értékre kell állítani."
