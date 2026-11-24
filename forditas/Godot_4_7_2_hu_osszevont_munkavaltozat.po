@@ -58534,3 +58534,505 @@ msgstr "Ha az érték [code]true[/code], a közvetett fény egyszer helyett két
 #: doc/classes/WorldEnvironment.xml
 msgid "The [WorldEnvironment] node is used to configure the default [Environment] for the scene.\nThe parameters defined in the [WorldEnvironment] can be overridden by an [Environment] node set on the current [Camera3D]. Additionally, only one [WorldEnvironment] may be instantiated in a given scene at a time.\nThe [WorldEnvironment] allows the user to specify default lighting parameters (e.g. ambient lighting), various post-processing effects (e.g. SSAO, DOF, Tonemapping), and how to draw the background (e.g. solid color, skybox). Usually, these are added in order to improve the realism/color balance of the scene."
 msgstr "A [WorldEnvironment] csomópont a jelenet alapértelmezett [Environment] erőforrását állítja be.\nA [WorldEnvironment] beállításait az aktuális [Camera3D] csomóponton megadott [Environment] felülírhatja. Egy jelenetben egyszerre csak egy [WorldEnvironment] lehet.\nA [WorldEnvironment] segítségével beállítható az alapértelmezett megvilágítás, például a környezeti fény, valamint az utófeldolgozás, például az SSAO, a mélységélesség és a tónusleképezés. A háttér megjelenítése is itt adható meg, például egyszínű háttérként vagy égboltként. Ezekkel élethűbbé tehető a jelenet, és kiegyensúlyozhatók a színei."
+
+#. Camera3D.project_local_ray_normal
+#: doc/classes/Camera3D.xml
+msgid "Returns a normal vector from the screen point location directed along the camera. Orthogonal cameras are normalized. Perspective cameras account for perspective, screen width/height, etc."
+msgstr "A megadott képernyőpontból indított sugár irányvektorát adja vissza a kamera helyi koordináta-rendszerében. Ortogonális vetítésnél a vektor normalizált. Perspektivikus vetítésnél a számítás többek között a perspektívát és a képernyő méreteit is figyelembe veszi."
+
+#. Camera3D.doppler_tracking
+#: doc/classes/Camera3D.xml
+msgid "If not [constant DOPPLER_TRACKING_DISABLED], this camera will simulate the [url=https://en.wikipedia.org/wiki/Doppler_effect]Doppler effect[/url] for objects changed in particular [code]_process[/code] methods.\n[b]Note:[/b] The Doppler effect will only be heard on [AudioStreamPlayer3D]s if [member AudioStreamPlayer3D.doppler_tracking] is not set to [constant AudioStreamPlayer3D.DOPPLER_TRACKING_DISABLED]."
+msgstr "Ha az érték eltér a [constant DOPPLER_TRACKING_DISABLED] állandótól, a kamera a kiválasztott feldolgozási ciklushoz tartozó [code]_process[/code] metódusokban mozgatott objektumoknál szimulálja a [url=https://en.wikipedia.org/wiki/Doppler_effect]Doppler-effektust[/url].\n[b]Megjegyzés:[/b] A hatás csak olyan [AudioStreamPlayer3D] csomópontnál hallható, amelynél az [member AudioStreamPlayer3D.doppler_tracking] értéke eltér a [constant AudioStreamPlayer3D.DOPPLER_TRACKING_DISABLED] állandótól."
+
+#. Camera3D.size
+#: doc/classes/Camera3D.xml
+msgid "The camera's size in meters measured as the diameter of the width or height, depending on [member keep_aspect]. Only applicable in orthogonal and frustum modes."
+msgstr "A vetített nézet teljes szélessége vagy magassága méterben, a [member keep_aspect] értékétől függően. Csak ortogonális és látógúla-vetítésnél használható."
+
+#. Camera3D.KEEP_WIDTH
+#: doc/classes/Camera3D.xml
+msgid "Preserves the horizontal aspect ratio; also known as Vert- scaling. This is usually the best option for projects running in portrait mode, as taller aspect ratios will benefit from a wider vertical FOV."
+msgstr "A vízszintes látószöget tartja állandóan. Ezt Vert− méretezésnek is nevezik. Álló tájolású projektekhez általában ez a megfelelő választás, mert a magasabb nézetablak nagyobb függőleges látószöget ad."
+
+#. Camera3D.KEEP_HEIGHT
+#: doc/classes/Camera3D.xml
+msgid "Preserves the vertical aspect ratio; also known as Hor+ scaling. This is usually the best option for projects running in landscape mode, as wider aspect ratios will automatically benefit from a wider horizontal FOV."
+msgstr "A függőleges látószöget tartja állandóan. Ezt Hor+ méretezésnek is nevezik. Fekvő tájolású projektekhez általában ez a megfelelő választás, mert a szélesebb nézetablak nagyobb vízszintes látószöget ad."
+
+#. CameraAttributesPractical.dof_blur_near_transition
+#: doc/classes/CameraAttributesPractical.xml
+msgid "When positive, distance over which blur effect will scale from 0 to [member dof_blur_amount], ending at [member dof_blur_near_distance]. When negative, uses physically-based scaling so depth of field effect will scale from 0 at [member dof_blur_near_distance] and will increase in a physically accurate way as objects get closer to the [Camera3D]."
+msgstr "Pozitív értéknél az átmenet hossza. A kamera felé haladva az elmosás az [member dof_blur_near_distance] távolságnál indul nulláról, és az átmenet végére eléri a [member dof_blur_amount] erősséget. Negatív értéknél a motor fizikai alapú számítást használ. Az elmosás az [member dof_blur_near_distance] távolságnál még nulla, majd az objektumok [Camera3D] kamerához közeledésével erősödik."
+
+#. ProjectSettings.rendering/lightmapping/primitive_meshes/texel_size
+#: doc/classes/ProjectSettings.xml
+msgid "The texel_size that is used to calculate the [member Mesh.lightmap_size_hint] on [PrimitiveMesh] resources if [member PrimitiveMesh.add_uv2] is enabled."
+msgstr "Az a texelméret, amelyből a motor a [PrimitiveMesh] erőforrás [member Mesh.lightmap_size_hint] értékét számítja, ha a [member PrimitiveMesh.add_uv2] be van kapcsolva."
+
+#. CompositorEffect.access_resolved_color
+#: doc/classes/CompositorEffect.xml
+msgid "If [code]true[/code] and MSAA is enabled, this will trigger a color buffer resolve before the effect is run.\n[b]Note:[/b] In [method _render_callback], to access the resolved buffer use:\n[codeblock]\nvar render_scene_buffers = render_data.get_render_scene_buffers()\nvar color_buffer = render_scene_buffers.get_texture(\"render_buffers\", \"color\")\n[/codeblock]"
+msgstr "Ha az érték [code]true[/code] és az MSAA aktív, a motor az effektus futtatása előtt feloldja a többmintás színpuffert.\n[b]Megjegyzés:[/b] A feloldott puffert a [method _render_callback] metódusban így érheted el:\n[codeblock]\nvar render_scene_buffers = render_data.get_render_scene_buffers()\nvar color_buffer = render_scene_buffers.get_texture(\"render_buffers\", \"color\")\n[/codeblock]"
+
+#. CompositorEffect.access_resolved_depth
+#: doc/classes/CompositorEffect.xml
+msgid "If [code]true[/code] and MSAA is enabled, this will trigger a depth buffer resolve before the effect is run.\n[b]Note:[/b] In [method _render_callback], to access the resolved buffer use:\n[codeblock]\nvar render_scene_buffers = render_data.get_render_scene_buffers()\nvar depth_buffer = render_scene_buffers.get_texture(\"render_buffers\", \"depth\")\n[/codeblock]"
+msgstr "Ha az érték [code]true[/code] és az MSAA aktív, a motor az effektus futtatása előtt feloldja a többmintás mélységpuffert.\n[b]Megjegyzés:[/b] A feloldott puffert a [method _render_callback] metódusban így érheted el:\n[codeblock]\nvar render_scene_buffers = render_data.get_render_scene_buffers()\nvar depth_buffer = render_scene_buffers.get_texture(\"render_buffers\", \"depth\")\n[/codeblock]"
+
+#. CompositorEffect.needs_motion_vectors
+#: doc/classes/CompositorEffect.xml
+msgid "If [code]true[/code] this triggers motion vectors being calculated during the opaque render state.\n[b]Note:[/b] In [method _render_callback], to access the motion vector buffer use:\n[codeblock]\nvar render_scene_buffers = render_data.get_render_scene_buffers()\nvar motion_buffer = render_scene_buffers.get_velocity_texture()\n[/codeblock]"
+msgstr "Ha az érték [code]true[/code], a motor az átlátszatlan felületek renderelésekor mozgásvektorokat is számít.\n[b]Megjegyzés:[/b] A mozgásvektorok pufferét a [method _render_callback] metódusban így érheted el:\n[codeblock]\nvar render_scene_buffers = render_data.get_render_scene_buffers()\nvar motion_buffer = render_scene_buffers.get_velocity_texture()\n[/codeblock]"
+
+#. Environment.description
+#: doc/classes/Environment.xml
+msgid "Resource for environment nodes (like [WorldEnvironment]) that define multiple environment operations (such as background [Sky] or [Color], ambient light, fog, depth-of-field...). These parameters affect the final render of the scene. The order of these operations is:\n- Depth of Field Blur\n- Auto Exposure\n- Glow\n- Tonemap\n- Adjustments"
+msgstr "Olyan környezeti csomópontok erőforrása, mint a [WorldEnvironment]. Megjelenítési beállításokat tartalmaz, például az égboltot ([Sky]), a háttérszínt ([Color]), a környezeti fényt, a ködöt és a mélységélességet. A beállítások a jelenet végső képét alakítják. A műveletek sorrendje az alábbi.\n- Mélységélességi elmosás\n- Automatikus expozíció\n- Ragyogás\n- Tónusleképezés\n- Képbeállítások"
+
+#. Environment.fog_density
+#: doc/classes/Environment.xml
+msgid "The fog density to be used. This is demonstrated in different ways depending on the [member fog_mode] mode chosen:\n[b]Exponential Fog Mode:[/b] Higher values result in denser fog. The fog rendering is exponential like in real life.\n[b]Depth Fog mode:[/b] The maximum intensity of the deep fog, effect will appear in the distance (relative to the camera). At [code]1.0[/code] the fog will fully obscure the scene, at [code]0.0[/code] the fog will not be visible."
+msgstr "A köd sűrűsége. A hatás a [member fog_mode] értékétől függ.\n[b]Exponenciális köd:[/b] Nagyobb értéknél sűrűbb a köd. A köd hatása a valósághoz hasonlóan exponenciálisan változik.\n[b]Mélységi köd:[/b] A kamerától távol megjelenő köd legnagyobb intenzitása. [code]1.0[/code] értéknél teljesen eltakarja a jelenetet, [code]0.0[/code] értéknél nem látható."
+
+#. Environment.glow_map_strength
+#: doc/classes/Environment.xml
+msgid "How strong of an influence the [member glow_map] should have on the overall glow effect. A strength of [code]0.0[/code] means the glow map has no influence, while a strength of [code]1.0[/code] means the glow map has full influence.\n[b]Note:[/b] If the glow map has black areas, a value of [code]1.0[/code] can also turn off the glow effect entirely in specific areas of the screen.\n[b]Note:[/b] [member glow_map_strength] has no effect when using the Compatibility rendering method, due to this rendering method using a simpler glow implementation optimized for low-end devices."
+msgstr "A [member glow_map] hozzájárulása a ragyogáshoz. [code]0.0[/code] értéknél a térképnek nincs hatása, [code]1.0[/code] értéknél teljes mértékben érvényesül.\n[b]Megjegyzés:[/b] Ha a térkép fekete területeket tartalmaz, [code]1.0[/code] értéknél a képernyő megfelelő részein teljesen eltűnhet a ragyogás.\n[b]Megjegyzés:[/b] Kompatibilitás módban a [member glow_map_strength] hatástalan, mert a renderelő kisebb teljesítményű eszközökre optimalizált, egyszerűbb ragyogást használ."
+
+#. Environment.glow_mix
+#: doc/classes/Environment.xml
+msgid "When using the [constant GLOW_BLEND_MODE_MIX] [member glow_blend_mode], this controls how much the source image is blended with the glow layer. A value of [code]0.0[/code] makes the glow rendering invisible, while a value of [code]1.0[/code] is equivalent to [constant GLOW_BLEND_MODE_REPLACE].\n[b]Note:[/b] [member glow_mix] has no effect when using the Compatibility rendering method, due to this rendering method using a simpler glow implementation optimized for low-end devices."
+msgstr "[constant GLOW_BLEND_MODE_MIX] [member glow_blend_mode] esetén a jelenet és a ragyogási réteg keverési aránya. [code]0.0[/code] értéknél nem látható ragyogás, [code]1.0[/code] értéknél az eredmény megegyezik a [constant GLOW_BLEND_MODE_REPLACE] módéval.\n[b]Megjegyzés:[/b] Kompatibilitás módban a [member glow_mix] hatástalan, mert a renderelő kisebb teljesítményű eszközökre optimalizált, egyszerűbb ragyogást használ."
+
+#. Environment.glow_normalized
+#: doc/classes/Environment.xml
+msgid "If [code]true[/code], glow levels will be normalized so that summed together their intensities equal [code]1.0[/code].\n[b]Note:[/b] [member glow_normalized] has no effect when using the Compatibility rendering method, due to this rendering method using a simpler glow implementation optimized for low-end devices."
+msgstr "Ha az érték [code]true[/code], a motor úgy normalizálja a ragyogási szinteket, hogy intenzitásuk összege [code]1.0[/code] legyen.\n[b]Megjegyzés:[/b] Kompatibilitás módban a [member glow_normalized] hatástalan, mert a renderelő kisebb teljesítményű eszközökre optimalizált, egyszerűbb ragyogást használ."
+
+#. Environment.glow_strength
+#: doc/classes/Environment.xml
+msgid "The strength that is used when blurring across the screen to generate the glow effect. This affects the distance and intensity of the blur. When using the Mobile rendering method, this should be increased to compensate for the lower dynamic range.\n[b]Note:[/b] [member glow_strength] has no effect when using the Compatibility rendering method, due to this rendering method using a simpler glow implementation optimized for low-end devices."
+msgstr "A ragyogás létrehozásához használt elmosás erőssége. Az elmosás kiterjedését és intenzitását is befolyásolja. Mobile renderelésnél érdemes növelni az értéket a szűkebb dinamikatartomány ellensúlyozására.\n[b]Megjegyzés:[/b] Kompatibilitás módban a [member glow_strength] hatástalan, mert a renderelő kisebb teljesítményű eszközökre optimalizált, egyszerűbb ragyogást használ."
+
+#. Environment.sdfgi_bounce_feedback
+#: doc/classes/Environment.xml
+msgid "The energy multiplier applied to light every time it bounces from a surface when using SDFGI. Values greater than [code]0.0[/code] will simulate multiple bounces, resulting in a more realistic appearance. Increasing [member sdfgi_bounce_feedback] generally has no performance impact. See also [member sdfgi_energy].\n[b]Note:[/b] Values greater than [code]0.5[/code] can cause infinite feedback loops and should be avoided in scenes with bright materials.\n[b]Note:[/b] If [member sdfgi_bounce_feedback] is [code]0.0[/code], indirect lighting will not be represented in reflections as light will only bounce one time."
+msgstr "Az a szorzó, amelyet az SDFGI minden felületi fényvisszaverődéskor alkalmaz az energiára. A [code]0.0[/code] fölötti érték többszörös visszaverődést szimulál, ami valósághűbb képet ad. A [member sdfgi_bounce_feedback] növelése általában nem rontja a teljesítményt. Lásd még a [member sdfgi_energy] tulajdonságot.\n[b]Megjegyzés:[/b] A [code]0.5[/code] fölötti értékek végtelen visszacsatolást okozhatnak, ezért világos anyagoknál kerülendők.\n[b]Megjegyzés:[/b] Ha a [member sdfgi_bounce_feedback] értéke [code]0.0[/code], a fény csak egyszer verődik vissza. Emiatt a közvetett megvilágítás nem jelenik meg a tükröződésekben."
+
+#. Environment.sdfgi_max_distance
+#: doc/classes/Environment.xml
+msgid "The maximum distance at which SDFGI is visible. Beyond this distance, environment lighting or other sources of GI such as [ReflectionProbe] will be used as a fallback.\n[b]Note:[/b] This property is linked to [member sdfgi_min_cell_size] and [member sdfgi_cascade0_distance]. Changing its value will automatically change those properties as well."
+msgstr "Az a legnagyobb távolság, ameddig az SDFGI látható. Ezen túl a motor a környezeti megvilágítást vagy más globális megvilágítási forrást használ, például [ReflectionProbe] próbát.\n[b]Megjegyzés:[/b] A tulajdonság összefügg az [member sdfgi_min_cell_size] és az [member sdfgi_cascade0_distance] értékével. A módosítása ezeket is automatikusan átállítja."
+
+#. Environment.sdfgi_min_cell_size
+#: doc/classes/Environment.xml
+msgid "The cell size to use for the closest SDFGI cascade (in 3D units). Lower values allow SDFGI to be more precise up close, at the cost of making SDFGI updates more demanding. This can cause stuttering when the camera moves fast. Higher values allow SDFGI to cover more ground, while also reducing the performance impact of SDFGI updates.\n[b]Note:[/b] This property is linked to [member sdfgi_max_distance] and [member sdfgi_cascade0_distance]. Changing its value will automatically change those properties as well."
+msgstr "A legközelebbi SDFGI-tartomány cellamérete 3D-s egységekben. Kisebb értékkel pontosabb a közeli megvilágítás, de számításigényesebb a frissítés, ami gyors kameramozgásnál akadozást okozhat. Nagyobb értékkel az SDFGI messzebbre ér, és a frissítése kevésbé terheli a gépet.\n[b]Megjegyzés:[/b] A tulajdonság összefügg az [member sdfgi_max_distance] és az [member sdfgi_cascade0_distance] értékével. A módosítása ezeket is automatikusan átállítja."
+
+#. Environment.ssao_enabled
+#: doc/classes/Environment.xml
+msgid "If [code]true[/code], the screen-space ambient occlusion effect is enabled. This darkens objects' corners and cavities to simulate ambient light not reaching the entire object as in real life. This works well for small, dynamic objects, but baked lighting or ambient occlusion textures will do a better job at displaying ambient occlusion on large static objects. Godot uses a form of SSAO called Adaptive Screen Space Ambient Occlusion which is itself a form of Horizon Based Ambient Occlusion.\n[b]Note:[/b] SSAO is only supported in the Forward+ and Compatibility rendering methods, not Mobile."
+msgstr "Ha az érték [code]true[/code], bekapcsolja a képernyőtérbeli környezeti takarást (SSAO). Elsötétíti a sarkokat és mélyedéseket, így utánozza, hogy a környezeti fény ezekhez a részekhez kevésbé jut el. Kis, mozgó objektumoknál jól működik, nagy statikus objektumoknál pontosabb a sütött megvilágítás vagy a környezeti takarást tároló textúra. A Godot az adaptív képernyőtérbeli környezeti takarást használja, amely a horizonton alapuló eljárás egyik változata.\n[b]Megjegyzés:[/b] Az SSAO Forward+ és Kompatibilitás módban támogatott. Mobile módban nem érhető el."
+
+#. Environment.ssil_enabled
+#: doc/classes/Environment.xml
+msgid "If [code]true[/code], the screen-space indirect lighting effect is enabled. Screen space indirect lighting is a form of indirect lighting that allows diffuse light to bounce between nearby objects. Screen-space indirect lighting works very similarly to screen-space ambient occlusion, in that it only affects a limited range. It is intended to be used along with a form of proper global illumination like SDFGI or [VoxelGI]. Screen-space indirect lighting is not affected by individual light's [member Light3D.light_indirect_energy].\n[b]Note:[/b] SSIL is only supported in the Forward+ rendering method, not Mobile or Compatibility."
+msgstr "Ha az érték [code]true[/code], bekapcsolja a képernyőtérbeli közvetett megvilágítást (SSIL). Így a szórt fény visszaverődhet a közeli objektumok között. A képernyőtérbeli környezeti takaráshoz hasonlóan a hatás csak korlátozott tartományra terjed ki. Olyan globális megvilágítás kiegészítésére szolgál, mint az SDFGI vagy a [VoxelGI]. Az egyes fények [member Light3D.light_indirect_energy] beállítása az SSIL-re nincs hatással.\n[b]Megjegyzés:[/b] Az SSIL csak Forward+ módban támogatott. Mobile és Kompatibilitás módban nem érhető el."
+
+#. Environment.ssil_normal_rejection
+#: doc/classes/Environment.xml
+msgid "Amount of normal rejection used when calculating screen-space indirect lighting. Normal rejection uses the normal of a given sample point to reject samples that are facing away from the current pixel. Normal rejection is necessary to avoid light leaking when only one side of an object is illuminated. However, normal rejection can be disabled if light leaking is desirable, such as when the scene mostly contains emissive objects that emit light from faces that cannot be seen from the camera."
+msgstr "A normálvektorok alapján történő mintakizárás mértéke a képernyőtérbeli közvetett megvilágítás számításakor. A motor a mintapont normálvektora alapján kizárhatja az aktuális képponttól elfelé néző mintákat. Ezzel megelőzhető a fény átszivárgása, ha egy objektumnak csak az egyik oldala kap megvilágítást. A szűrés kikapcsolható, ha a fényátszivárgás kívánatos, például amikor a jelenetben főként olyan fénykibocsátó objektumok vannak, amelyeknek a világító lapjai a kamerából nem láthatók."
+
+#. Environment.ssr_enabled
+#: doc/classes/Environment.xml
+msgid "If [code]true[/code], screen-space reflections are enabled. Screen-space reflections are more accurate than reflections from [VoxelGI]s or [ReflectionProbe]s, but are slower and can't reflect surfaces occluded by others.\n[b]Note:[/b] SSR is only supported in the Forward+ rendering method, not Mobile or Compatibility.\n[b]Note:[/b] SSR is not supported on viewports that have a transparent background (where [member Viewport.transparent_bg] is [code]true[/code])."
+msgstr "Ha az érték [code]true[/code], bekapcsolja a képernyőtérbeli tükröződéseket (SSR). Ezek pontosabbak a [VoxelGI] vagy a [ReflectionProbe] által adott tükröződéseknél, de lassabbak, és a takarásban lévő felületeket nem tudják tükrözni.\n[b]Megjegyzés:[/b] Az SSR csak Forward+ módban támogatott. Mobile és Kompatibilitás módban nem érhető el.\n[b]Megjegyzés:[/b] Az SSR nem működik átlátszó hátterű nézetablakban, ahol a [member Viewport.transparent_bg] értéke [code]true[/code]."
+
+#. Environment.tonemap_exposure
+#: doc/classes/Environment.xml
+msgid "Adjusts the brightness of values before they are provided to the tonemapper. Higher [member tonemap_exposure] values result in a brighter image. See also [member tonemap_white].\n[b]Note:[/b] Values provided to the tonemapper will also be multiplied by [code]2.0[/code] and [code]1.8[/code] for [constant TONE_MAPPER_FILMIC] and [constant TONE_MAPPER_ACES] respectively to produce a similar apparent brightness as [constant TONE_MAPPER_LINEAR]."
+msgstr "A tónusleképezés előtti fényerőt szabályozza. Nagyobb [member tonemap_exposure] értéknél világosabb a kép. Lásd még a [member tonemap_white] tulajdonságot.\n[b]Megjegyzés:[/b] A tónusleképezőnek átadott értékeket a motor [constant TONE_MAPPER_FILMIC] módban még [code]2.0[/code]-val, [constant TONE_MAPPER_ACES] módban [code]1.8[/code]-cal is megszorozza, hogy a látszó fényerő hasonló legyen a [constant TONE_MAPPER_LINEAR] módéhoz."
+
+#. Environment.volumetric_fog_ambient_inject
+#: doc/classes/Environment.xml
+msgid "Scales the strength of ambient light used in the volumetric fog. A value of [code]0.0[/code] means that ambient light will not impact the volumetric fog. [member volumetric_fog_ambient_inject] has a small performance cost when set above [code]0.0[/code].\n[b]Note:[/b] This has no visible effect if [member volumetric_fog_density] is [code]0.0[/code] or if [member volumetric_fog_albedo] is a fully black color."
+msgstr "A térfogati ködben érvényesülő környezeti fény szorzója. [code]0.0[/code] értéknél a környezeti fény nincs hatással a ködre. A [member volumetric_fog_ambient_inject] [code]0.0[/code] fölött kissé növeli a számításigényt.\n[b]Megjegyzés:[/b] Nem látható a hatás, ha a [member volumetric_fog_density] értéke [code]0.0[/code], vagy a [member volumetric_fog_albedo] teljesen fekete."
+
+#. Environment.volumetric_fog_anisotropy
+#: doc/classes/Environment.xml
+msgid "The direction of scattered light as it goes through the volumetric fog. A value close to [code]1.0[/code] means almost all light is scattered forward. A value close to [code]0.0[/code] means light is scattered equally in all directions. A value close to [code]-1.0[/code] means light is scattered mostly backward. Fog and mist scatter light slightly forward, while smoke scatters light equally in all directions."
+msgstr "A térfogati ködben szóródó fény irányeloszlása. [code]1.0[/code] közelében szinte az összes fény előrefelé szóródik. [code]0.0[/code] közelében a szórás minden irányban egyforma. [code]-1.0[/code] közelében a fény főként visszafelé szóródik. A köd és a pára kissé előrefelé, a füst minden irányba egyformán szórja a fényt."
+
+#. Environment.volumetric_fog_enabled
+#: doc/classes/Environment.xml
+msgid "Enables the volumetric fog effect. Volumetric fog uses a screen-aligned froxel buffer to calculate accurate volumetric scattering in the short to medium range. Volumetric fog interacts with [FogVolume]s and lights to calculate localized and global fog. Volumetric fog uses a PBR single-scattering model based on extinction, scattering, and emission which it exposes to users as density, albedo, and emission.\n[b]Note:[/b] Volumetric fog is only supported in the Forward+ rendering method, not Mobile or Compatibility."
+msgstr "Bekapcsolja a térfogati ködöt. A képernyőhöz igazított térfogati cellapuffer segítségével rövid és közepes távolságon pontosan kiszámítja a fényszórást. A [FogVolume] térfogatokkal és a fényekkel együtt helyi és globális ködöt számít. A fizikai alapú modell egyszeres szórást használ, és a fénycsillapítást, szórást és kibocsátást a sűrűség, az albedó és a fénykibocsátás beállításaival teszi állíthatóvá.\n[b]Megjegyzés:[/b] A térfogati köd csak Forward+ módban támogatott. Mobile és Kompatibilitás módban nem érhető el."
+
+#. Environment.volumetric_fog_sky_affect
+#: doc/classes/Environment.xml
+msgid "The factor to use when affecting the sky with volumetric fog. [code]1.0[/code] means that volumetric fog can fully obscure the sky. Lower values reduce the impact of volumetric fog on sky rendering, with [code]0.0[/code] not affecting sky rendering at all.\n[b]Note:[/b] [member volumetric_fog_sky_affect] also affects [FogVolume]s, even if [member volumetric_fog_density] is [code]0.0[/code]. If you notice [FogVolume]s are disappearing when looking towards the sky, set [member volumetric_fog_sky_affect] to [code]1.0[/code]."
+msgstr "A térfogati köd hatása az égboltra. [code]1.0[/code] értéknél a köd teljesen eltakarhatja az eget. Kisebb értéknél a hatás gyengébb, [code]0.0[/code] értéknél a köd nem befolyásolja az égboltot.\n[b]Megjegyzés:[/b] A [member volumetric_fog_sky_affect] a [FogVolume] térfogatokat akkor is érinti, ha a [member volumetric_fog_density] értéke [code]0.0[/code]. Ha az égbolt felé nézve eltűnnek a [FogVolume] térfogatok, állítsd a [member volumetric_fog_sky_affect] értékét [code]1.0[/code]-ra."
+
+#. Environment.volumetric_fog_temporal_reprojection_enabled
+#: doc/classes/Environment.xml
+msgid "Enables temporal reprojection in the volumetric fog. Temporal reprojection blends the current frame's volumetric fog with the last frame's volumetric fog to smooth out jagged edges. The performance cost is minimal; however, it leads to moving [FogVolume]s and [Light3D]s \"ghosting\" and leaving a trail behind them. When temporal reprojection is enabled, try to avoid moving [FogVolume]s or [Light3D]s too fast. Short-lived dynamic lighting effects should have [member Light3D.light_volumetric_fog_energy] set to [code]0.0[/code] to avoid ghosting."
+msgstr "Bekapcsolja az időbeli újravetítést a térfogati ködhöz. Az újravetítés az aktuális és az előző képkocka ködét keveri össze, hogy elsimítsa a recés széleket. A számítási többlet kicsi, de mozgó [FogVolume] és [Light3D] csomópontoknál szellemkép és látható csóva keletkezhet. Bekapcsolt újravetítésnél kerüld a [FogVolume] és [Light3D] csomópontok túl gyors mozgatását. Rövid életű dinamikus fényeknél állítsd a [member Light3D.light_volumetric_fog_energy] értékét [code]0.0[/code]-ra a szellemkép elkerüléséhez."
+
+#. Environment.BG_SKY
+#: doc/classes/Environment.xml
+msgid "Displays a user-defined sky in the background."
+msgstr "Egyénileg megadott égboltot jelenít meg háttérként."
+
+#. Environment.BG_CANVAS
+#: doc/classes/Environment.xml
+msgid "Displays a [CanvasLayer] in the background."
+msgstr "Egy [CanvasLayer] réteget jelenít meg háttérként."
+
+#. Environment.BG_KEEP
+#: doc/classes/Environment.xml
+msgid "Keeps on screen every pixel drawn in the background. This is the fastest background mode, but it can only be safely used in fully-interior scenes (no visible sky or sky reflections). If enabled in a scene where the background is visible, \"ghost trail\" artifacts will be visible when moving the camera."
+msgstr "A háttérben kirajzolt képpontok a képernyőn maradnak. Ez a leggyorsabb háttérmód, de csak teljesen zárt jelenetekhez használható biztonságosan, ahol sem az égbolt, sem annak tükröződése nem látható. Látható háttérnél a kamera mozgatása szellemképes csíkokat hagyhat."
+
+#. Environment.BG_MAX
+#: doc/classes/Environment.xml
+msgid "Represents the size of the [enum BGMode] enum."
+msgstr "A [enum BGMode] felsorolás méretét jelöli."
+
+#. Environment.AMBIENT_SOURCE_DISABLED
+#: doc/classes/Environment.xml
+msgid "Disable ambient light. This provides a slight performance boost over [constant AMBIENT_SOURCE_SKY]."
+msgstr "Kikapcsolja a környezeti megvilágítást. Ez valamivel gyorsabb a [constant AMBIENT_SOURCE_SKY] módnál."
+
+#. Environment.AMBIENT_SOURCE_COLOR
+#: doc/classes/Environment.xml
+msgid "Specify a specific [Color] for ambient light. This provides a slight performance boost over [constant AMBIENT_SOURCE_SKY]."
+msgstr "Megadott [Color] színt használ a környezeti megvilágításhoz. Ez valamivel gyorsabb a [constant AMBIENT_SOURCE_SKY] módnál."
+
+#. Environment.REFLECTION_SOURCE_DISABLED
+#: doc/classes/Environment.xml
+msgid "Disable reflections. This provides a slight performance boost over other options."
+msgstr "Kikapcsolja a tükröződéseket. Ez a többi beállításhoz képest kis teljesítménynyereséget ad."
+
+#. Environment.TONE_MAPPER_REINHARDT
+#: doc/classes/Environment.xml
+msgid "A simple tonemapping curve that rolls off bright values to prevent clipping. This results in an image that can appear dull and low contrast. Slower than [constant TONE_MAPPER_LINEAR].\n[b]Note:[/b] When [member tonemap_white] is left at the default value of [code]1.0[/code], [constant TONE_MAPPER_REINHARDT] produces an identical image to [constant TONE_MAPPER_LINEAR]."
+msgstr "Egyszerű tónusleképezési görbe. A világos értékeket fokozatosan visszafogja, hogy elkerülje a levágást. A kép ettől tompábbnak, kevésbé kontrasztosnak tűnhet. Lassabb, mint a [constant TONE_MAPPER_LINEAR] mód.\n[b]Megjegyzés:[/b] Ha a [member tonemap_white] az alapértelmezett [code]1.0[/code] értéken marad, a [constant TONE_MAPPER_REINHARDT] és a [constant TONE_MAPPER_LINEAR] ugyanazt a képet adja."
+
+#. Environment.TONE_MAPPER_FILMIC
+#: doc/classes/Environment.xml
+msgid "Uses a film-like tonemapping curve to prevent clipping of bright values and provide better contrast than [constant TONE_MAPPER_REINHARDT]. Slightly slower than [constant TONE_MAPPER_REINHARDT].\n[b]Note:[/b] This tonemapper does not support HDR output because it produces output in the SDR range. It is recommended to use a different tonemapper when rendering to an HDR screen."
+msgstr "Filmszerű tónusgörbével fogja vissza a világos értékeket, így elkerüli a levágást, és jobb kontrasztot ad a [constant TONE_MAPPER_REINHARDT] módnál. Valamivel lassabb a [constant TONE_MAPPER_REINHARDT] módnál.\n[b]Megjegyzés:[/b] Ez a mód SDR-tartományú kimenetet állít elő, ezért HDR-kimenethez másik tónusleképezőt érdemes választani."
+
+#. Environment.TONE_MAPPER_ACES
+#: doc/classes/Environment.xml
+msgid "Uses a high-contrast film-like tonemapping curve and desaturates bright values for a more realistic appearance. Slightly slower than [constant TONE_MAPPER_FILMIC].\n[b]Note:[/b] This tonemapping operator is called \"ACES Fitted\" in Godot 3.x.\n[b]Note:[/b] This tonemapper does not support HDR output because it produces output in the SDR range. It is recommended to use a different tonemapper when rendering to an HDR screen."
+msgstr "Nagy kontrasztú, filmszerű tónusgörbét használ, és csökkenti a világos értékek telítettségét a valósághűbb képért. Valamivel lassabb a [constant TONE_MAPPER_FILMIC] módnál.\n[b]Megjegyzés:[/b] A Godot 3.x ezt a módot „ACES Fitted” néven jelöli.\n[b]Megjegyzés:[/b] Ez a mód SDR-tartományú kimenetet állít elő, ezért HDR-kimenethez másik tónusleképezőt érdemes választani."
+
+#. Environment.GLOW_BLEND_MODE_ADDITIVE
+#. RenderingServer.ENV_GLOW_BLEND_MODE_ADDITIVE
+#: doc/classes/Environment.xml doc/classes/RenderingServer.xml
+msgid "Adds the glow effect to the scene."
+msgstr "Hozzáadja a ragyogás értékét a jelenet képéhez."
+
+#. Environment.GLOW_BLEND_MODE_SCREEN
+#: doc/classes/Environment.xml
+msgid "Adds the glow effect to the scene after modifying the glow influence based on the scene value; dark values will be highly influenced by glow and bright values will not be influenced by glow. This approach avoids bright values becoming overly bright from the glow effect. [member tonemap_white] is used to determine the maximum scene value where the glow should have no influence. When [member tonemap_mode] is set to [constant TONE_MAPPER_LINEAR] and [member Viewport.use_hdr_2d] is [code]true[/code], the parent window's [method Window.get_output_max_linear_value] will be used as the maximum scene value."
+msgstr "Úgy adja hozzá a ragyogást a jelenethez, hogy a képpontok fényességéhez igazítja a hatását. A sötét képpontokon erős a hatás, a világosakon nincs. Így a világos részek nem égnek ki a ragyogás miatt. Az a legnagyobb fényességi érték, amelynél a ragyogás már nem hat, a [member tonemap_white] beállításból adódik. Ha a [member tonemap_mode] értéke [constant TONE_MAPPER_LINEAR], és a [member Viewport.use_hdr_2d] értéke [code]true[/code], a motor a szülőablak [method Window.get_output_max_linear_value] metódusának eredményét használja felső határként."
+
+#. Environment.GLOW_BLEND_MODE_REPLACE
+#. RenderingServer.ENV_GLOW_BLEND_MODE_REPLACE
+#: doc/classes/Environment.xml doc/classes/RenderingServer.xml
+msgid "Replaces all pixels' color by the glow effect. This can be used to simulate a full-screen blur effect by tweaking the glow parameters to match the original image's brightness or to preview glow configuration in the editor."
+msgstr "Minden képpont színét a ragyogás eredményével helyettesíti. Ha a ragyogás fényességét az eredeti képéhez igazítod, teljes képernyős elmosást utánozhatsz vele. A szerkesztőben a ragyogási beállítások előnézetéhez is használható."
+
+#. Environment.GLOW_BLEND_MODE_MIX
+#: doc/classes/Environment.xml
+msgid "Mixes the glow image with the scene image. Best used with [member glow_bloom] to avoid darkening the scene."
+msgstr "A ragyogás képét a jelenet képével keveri. A jelenet elsötétedésének elkerüléséhez a [member glow_bloom] tulajdonsággal együtt érdemes használni."
+
+#. ProceduralSkyMaterial.sky_cover
+#: doc/classes/ProceduralSkyMaterial.xml
+msgid "The sky cover texture to use. This texture must use an equirectangular projection (similar to [PanoramaSkyMaterial]). The texture's colors will be [i]added[/i] to the existing sky color, and will be multiplied by [member sky_energy_multiplier] and [member sky_cover_modulate]. This is mainly suited to displaying stars at night, but it can also be used to display clouds at day or night (with a non-physically-accurate look)."
+msgstr "Az égboltra helyezett fedőtextúra. A [PanoramaSkyMaterial] textúrájához hasonlóan egyenlő távolságú hengervetületet kell használnia. A motor a textúra színeit a [member sky_energy_multiplier] és a [member sky_cover_modulate] értékével szorozza, majd [i]hozzáadja[/i] az égbolt meglévő színéhez. Elsősorban éjszakai csillagokhoz alkalmas. Nappali vagy éjszakai felhőkhöz is használható, bár a látvány ilyenkor fizikailag pontatlan lehet."
+
+#. ProceduralSkyMaterial.sun_angle_max
+#: doc/classes/ProceduralSkyMaterial.xml
+msgid "Distance from center of sun where it fades out completely."
+msgstr "A Nap középpontjától mért szögtávolság, amelynél a Nap fénye teljesen elhalványul."
+
+#. Sky.PROCESS_MODE_QUALITY
+#: doc/classes/Sky.xml
+msgid "Uses high quality importance sampling to process the radiance map. In general, this results in much higher quality than [constant PROCESS_MODE_REALTIME] but takes much longer to generate. This should not be used if you plan on changing the sky at runtime. If you are finding that the reflection is not blurry enough and is showing sparkles or fireflies, try increasing [member ProjectSettings.rendering/reflections/sky_reflections/ggx_samples]."
+msgstr "Nagy minőségű fontosságalapú mintavételezéssel dolgozza fel a sugárzási térképet. Általában sokkal jobb minőségű eredményt ad a [constant PROCESS_MODE_REALTIME] módnál, de a számítás jóval tovább tart. Akkor használd, ha az égbolt futás közben nem változik. Ha túl éles a tükröződés és fényes, villódzó pontok jelennek meg, próbáld növelni a [member ProjectSettings.rendering/reflections/sky_reflections/ggx_samples] értékét."
+
+#. Sky.PROCESS_MODE_INCREMENTAL
+#: doc/classes/Sky.xml
+msgid "Uses the same high quality importance sampling to process the radiance map as [constant PROCESS_MODE_QUALITY], but updates over several frames. The number of frames is determined by [member ProjectSettings.rendering/reflections/sky_reflections/roughness_layers]. Use this when you need highest quality radiance maps, but have a sky that updates slowly."
+msgstr "Ugyanazt a nagy minőségű fontosságalapú mintavételezést használja a sugárzási térképhez, mint a [constant PROCESS_MODE_QUALITY], de több képkockára osztja el a frissítést. A képkockák számát a [member ProjectSettings.rendering/reflections/sky_reflections/roughness_layers] határozza meg. Akkor használd, ha a legjobb minőségű sugárzási térképre van szükséged, és az égbolt lassan változik."
+
+#. ProjectSettings.rendering/environment/defaults/default_clear_color
+#: doc/classes/ProjectSettings.xml
+msgid "Default background clear color. Overridable per [Viewport] using its [Environment]. See [member Environment.background_mode] and [member Environment.background_color] in particular. To change this default color programmatically, use [method RenderingServer.set_default_clear_color]."
+msgstr "A háttér törléséhez használt alapértelmezett szín. Nézetablakonként felülírható az adott [Viewport] [Environment] erőforrásával, különösen az [member Environment.background_mode] és az [member Environment.background_color] tulajdonságokkal. Kódból a [method RenderingServer.set_default_clear_color] metódussal állítható be."
+
+#. ProjectSettings.rendering/environment/defaults/default_environment
+#: doc/classes/ProjectSettings.xml
+msgid "[Environment] that will be used as a fallback environment in case a scene does not specify its own environment. The default environment is loaded in at scene load time regardless of whether you have set an environment or not. If you do not rely on the fallback environment, you do not need to set this property."
+msgstr "A tartalék [Environment], amelyet a motor akkor használ, ha a jelenethez nincs saját környezet rendelve. Az alapértelmezett környezet a jelenet betöltésekor akkor is betöltődik, ha a jelenetnek van saját környezete. Ha nincs szükséged tartalék környezetre, ezt a tulajdonságot üresen hagyhatod."
+
+#. ProjectSettings.rendering/environment/fog/use_legacy_blending
+#: doc/classes/ProjectSettings.xml
+msgid "Enables legacy fog blending behavior from version 4.5 and earlier. This is intended for users who are developing on pre-4.6 versions and want to upgrade to 4.6 with the smallest possible change to their visuals."
+msgstr "Bekapcsolja a 4.5-ös és korábbi verziók ködkeverését. Akkor használható, ha 4.6 előtti verzióról váltasz 4.6-ra, és a lehető legkisebb változást szeretnéd a megjelenésben."
+
+#. ProjectSettings.rendering/anti_aliasing/quality/smaa_edge_detection_threshold
+#: doc/classes/ProjectSettings.xml
+msgid "Sets the sensitivity to edges when using SMAA for antialiasing. Lower values will catch more edges, at a potentially higher performance cost.\n[b]Note:[/b] This property is only read when the project starts. There is currently no way to change this setting at run-time."
+msgstr "Az SMAA élsimítás élérzékelésének érzékenysége. Kisebb értéknél több élt érzékel, de nőhet a számításigény.\n[b]Megjegyzés:[/b] A motor csak a projekt indulásakor olvassa be ezt a beállítást. Futás közben jelenleg nem módosítható."
+
+#. ProjectSettings.rendering/camera/depth_of_field/depth_of_field_bokeh_quality
+#: doc/classes/ProjectSettings.xml
+msgid "Sets the quality of the depth of field effect. Higher quality takes more samples, which is slower but looks smoother."
+msgstr "A mélységélességi hatás minősége. Jobb minőségnél a motor több mintát vesz, ezért lassabb a számítás, de egyenletesebb az elmosás."
+
+#. ProjectSettings.rendering/camera/depth_of_field/depth_of_field_bokeh_shape
+#: doc/classes/ProjectSettings.xml
+msgid "Sets the depth of field shape. Can be Box, Hexagon, or Circle. Box is the fastest. Circle is the most realistic, but also the most expensive to compute."
+msgstr "A mélységélességi elmosás alakja. Négyzet, hatszög vagy kör választható. A négyzet a leggyorsabb. A kör adja a legvalósághűbb eredményt, de annak a legnagyobb a számításigénye."
+
+#. ProjectSettings.rendering/camera/depth_of_field/depth_of_field_use_jitter
+#: doc/classes/ProjectSettings.xml
+msgid "If [code]true[/code], jitters DOF samples to make effect slightly blurrier and hide lines created from low sample rates. This can result in a slightly grainy appearance when used with a low number of samples."
+msgstr "Ha az érték [code]true[/code], a motor kissé elmozdítja a mélységélesség mintapontjait. Ez kissé erősebb elmosást ad, és elfedi a ritka mintavételből eredő vonalakat. Kevés mintával a kép enyhén szemcséssé válhat."
+
+#. ProjectSettings.rendering/environment/glow/upscale_mode
+#: doc/classes/ProjectSettings.xml
+msgid "Sets how the glow effect is upscaled before being copied onto the screen. Linear is faster, but looks blocky. Bicubic is slower but looks smooth.\n[b]Note:[/b] [member rendering/environment/glow/upscale_mode] is only effective when using the Forward+ or Mobile rendering methods, as Compatibility uses a different glow implementation."
+msgstr "A ragyogási réteg nagyításának módja a képernyőre másolás előtt. A lineáris nagyítás gyorsabb, de szögletesebb eredményt ad. A biköbös lassabb, de simább.\n[b]Megjegyzés:[/b] A [member rendering/environment/glow/upscale_mode] csak Forward+ és Mobile módban hat. A Kompatibilitás mód másképp számítja a ragyogást."
+
+#. ProjectSettings.rendering/environment/glow/upscale_mode.mobile
+#: doc/classes/ProjectSettings.xml
+msgid "Lower-end override for [member rendering/environment/glow/upscale_mode] on mobile devices, due to performance concerns or driver support."
+msgstr "A [member rendering/environment/glow/upscale_mode] kisebb teljesítményigényű mobilos felülírása. A teljesítmény és az illesztőprogramok támogatása miatt használható."
+
+#. ProjectSettings.rendering/environment/screen_space_reflection/half_size
+#: doc/classes/ProjectSettings.xml
+msgid "If [code]true[/code], screen-space reflections will be rendered at half size and then upscaled before being added to the scene. This is faster but may look pixelated or cause flickering. If [code]false[/code], screen-space reflections will be rendered at full size."
+msgstr "Ha az érték [code]true[/code], a motor fél felbontásban számítja ki a képernyőtérbeli tükröződéseket, majd a jelenethez adás előtt felnagyítja őket. Ez gyorsabb, de pixelesedést vagy villódzást okozhat. [code]false[/code] értéknél a tükröződések teljes felbontásban készülnek."
+
+#. ProjectSettings.rendering/environment/ssao/adaptive_target
+#: doc/classes/ProjectSettings.xml
+msgid "Quality target to use when [member rendering/environment/ssao/quality] is set to [code]Ultra[/code]. A value of [code]0.0[/code] provides a quality and speed similar to [code]Medium[/code] while a value of [code]1.0[/code] provides much higher quality than any of the other settings at the cost of performance."
+msgstr "A kívánt minőség, ha a [member rendering/environment/ssao/quality] értéke [code]Ultra[/code]. [code]0.0[/code] értéknél a minőség és a sebesség a [code]Medium[/code] módéhoz hasonló. [code]1.0[/code] értéknél a képminőség jobb a többi módénál, de a számítás lassabb."
+
+#. ProjectSettings.rendering/environment/ssao/blur_passes
+#: doc/classes/ProjectSettings.xml
+msgid "Number of blur passes to use when computing screen-space ambient occlusion. A higher number will result in a smoother look, but will be slower to compute and will have less high-frequency detail."
+msgstr "A képernyőtérbeli környezeti takarás számításakor alkalmazott elmosási menetek száma. Több menet simább eredményt ad, de lassabb, és eltűnhetnek a finom részletek."
+
+#. ProjectSettings.rendering/environment/ssao/fadeout_from
+#: doc/classes/ProjectSettings.xml
+msgid "Distance at which the screen-space ambient occlusion effect starts to fade out. Use this hide ambient occlusion from far away."
+msgstr "Az a távolság, amelytől a képernyőtérbeli környezeti takarás fokozatosan halványulni kezd. Így a hatás távolról elrejthető."
+
+#. ProjectSettings.rendering/environment/ssao/fadeout_to
+#: doc/classes/ProjectSettings.xml
+msgid "Distance at which the screen-space ambient occlusion is fully faded out. Use this hide ambient occlusion from far away."
+msgstr "Az a távolság, amelytől a képernyőtérbeli környezeti takarás már teljesen eltűnik. Így a hatás távolról elrejthető."
+
+#. ProjectSettings.rendering/environment/ssao/half_size
+#: doc/classes/ProjectSettings.xml
+msgid "If [code]true[/code], screen-space ambient occlusion will be rendered at half size and then upscaled before being added to the scene. This is significantly faster but may miss small details. If [code]false[/code], screen-space ambient occlusion will be rendered at full size."
+msgstr "Ha az érték [code]true[/code], a motor fél felbontásban számítja ki a képernyőtérbeli környezeti takarást, majd a jelenethez adás előtt felnagyítja. Ez lényegesen gyorsabb, de a kisebb részletek kimaradhatnak. [code]false[/code] értéknél a hatás teljes felbontásban készül."
+
+#. ProjectSettings.rendering/environment/ssao/quality
+#: doc/classes/ProjectSettings.xml
+msgid "Sets the quality of the screen-space ambient occlusion effect. Higher values take more samples and so will result in better quality, at the cost of performance. Setting to [code]Ultra[/code] will use the [member rendering/environment/ssao/adaptive_target] setting."
+msgstr "A képernyőtérbeli környezeti takarás minősége. Nagyobb értéknél több mintából készül, így jobb a minőség, de lassabb a számítás. A [code]Ultra[/code] mód a [member rendering/environment/ssao/adaptive_target] értékét használja."
+
+#. ProjectSettings.rendering/environment/ssil/adaptive_target
+#: doc/classes/ProjectSettings.xml
+msgid "Quality target to use when [member rendering/environment/ssil/quality] is set to [code]Ultra[/code]. A value of [code]0.0[/code] provides a quality and speed similar to [code]Medium[/code] while a value of [code]1.0[/code] provides much higher quality than any of the other settings at the cost of performance. When using the adaptive target, the performance cost scales with the complexity of the scene."
+msgstr "A kívánt minőség, ha a [member rendering/environment/ssil/quality] értéke [code]Ultra[/code]. [code]0.0[/code] értéknél a minőség és a sebesség a [code]Medium[/code] módéhoz hasonló. [code]1.0[/code] értéknél a képminőség jobb a többi módénál, de a számítás lassabb. Az adaptív beállítás számításigénye a jelenet összetettségétől függ."
+
+#. ProjectSettings.rendering/environment/ssil/blur_passes
+#: doc/classes/ProjectSettings.xml
+msgid "Number of blur passes to use when computing screen-space indirect lighting. A higher number will result in a smoother look, but will be slower to compute and will have less high-frequency detail."
+msgstr "A képernyőtérbeli közvetett megvilágítás számításakor alkalmazott elmosási menetek száma. Több menet simább eredményt ad, de lassabb, és eltűnhetnek a finom részletek."
+
+#. ProjectSettings.rendering/environment/ssil/fadeout_from
+#: doc/classes/ProjectSettings.xml
+msgid "Distance at which the screen-space indirect lighting effect starts to fade out. Use this to hide screen-space indirect lighting from far away."
+msgstr "Az a távolság, amelytől a képernyőtérbeli közvetett megvilágítás fokozatosan halványulni kezd. Így a hatás távolról elrejthető."
+
+#. ProjectSettings.rendering/environment/ssil/fadeout_to
+#: doc/classes/ProjectSettings.xml
+msgid "Distance at which the screen-space indirect lighting is fully faded out. Use this to hide screen-space indirect lighting from far away."
+msgstr "Az a távolság, amelytől a képernyőtérbeli közvetett megvilágítás már teljesen eltűnik. Így a hatás távolról elrejthető."
+
+#. ProjectSettings.rendering/environment/ssil/half_size
+#: doc/classes/ProjectSettings.xml
+msgid "If [code]true[/code], screen-space indirect lighting will be rendered at half size and then upscaled before being added to the scene. This is significantly faster but may miss small details and may result in some objects appearing to glow at their edges."
+msgstr "Ha az érték [code]true[/code], a motor fél felbontásban számítja ki a képernyőtérbeli közvetett megvilágítást, majd a jelenethez adás előtt felnagyítja. Ez lényegesen gyorsabb, de apró részletek maradhatnak ki, és egyes objektumok széle fényleni látszhat."
+
+#. ProjectSettings.rendering/environment/ssil/quality
+#: doc/classes/ProjectSettings.xml
+msgid "Sets the quality of the screen-space indirect lighting effect. Higher values take more samples and so will result in better quality, at the cost of performance. Setting to [code]Ultra[/code] will use the [member rendering/environment/ssil/adaptive_target] setting."
+msgstr "A képernyőtérbeli közvetett megvilágítás minősége. Nagyobb értéknél több mintából készül, így jobb a minőség, de lassabb a számítás. A [code]Ultra[/code] mód a [member rendering/environment/ssil/adaptive_target] értékét használja."
+
+#. ProjectSettings.rendering/environment/subsurface_scattering/subsurface_scattering_depth_scale
+#: doc/classes/ProjectSettings.xml
+msgid "Scales the depth over which the subsurface scattering effect is applied. A high value may allow light to scatter into a part of the mesh or another mesh that is close in screen space but far in depth. See also [member rendering/environment/subsurface_scattering/subsurface_scattering_scale].\n[b]Note:[/b] This property is only read when the project starts. To set the subsurface scattering depth scale at runtime, call [method RenderingServer.sub_surface_scattering_set_scale] instead."
+msgstr "A felszín alatti szórás alkalmazási mélységét skálázza. Nagy értéknél a fény olyan hálórészbe vagy másik hálóba is átszóródhat, amely a képen közel van, mélységben viszont távol esik. Lásd még a [member rendering/environment/subsurface_scattering/subsurface_scattering_scale] beállítást.\n[b]Megjegyzés:[/b] A motor csak a projekt indulásakor olvassa be ezt a beállítást. Futás közben a [method RenderingServer.sub_surface_scattering_set_scale] metódussal állítható."
+
+#. ProjectSettings.rendering/environment/subsurface_scattering/subsurface_scattering_quality
+#: doc/classes/ProjectSettings.xml
+msgid "Sets the quality of the subsurface scattering effect. Higher values are slower but look nicer. This affects the rendering of materials that have [member BaseMaterial3D.subsurf_scatter_enabled] set to [code]true[/code], along with [ShaderMaterial]s that set [code]SSS_STRENGTH[/code].\n[b]Note:[/b] This property is only read when the project starts. To set the subsurface scattering quality at runtime, call [method RenderingServer.sub_surface_scattering_set_quality] instead."
+msgstr "A felszín alatti szórás minősége. Nagyobb értéknél szebb az eredmény, de lassabb a számítás. Azokra az anyagokra vonatkozik, amelyeknél a [member BaseMaterial3D.subsurf_scatter_enabled] értéke [code]true[/code], illetve azokra a [ShaderMaterial] anyagokra, amelyek beállítják az [code]SSS_STRENGTH[/code] értéket.\n[b]Megjegyzés:[/b] A motor csak a projekt indulásakor olvassa be ezt a beállítást. Futás közben a [method RenderingServer.sub_surface_scattering_set_quality] metódussal állítható."
+
+#. ProjectSettings.rendering/environment/subsurface_scattering/subsurface_scattering_scale
+#: doc/classes/ProjectSettings.xml
+msgid "Scales the distance over which samples are taken for subsurface scattering effect. Changing this does not impact performance, but higher values will result in significant artifacts as the samples will become obviously spread out. A lower value results in a smaller spread of scattered light. See also [member rendering/environment/subsurface_scattering/subsurface_scattering_depth_scale].\n[b]Note:[/b] This property is only read when the project starts. To set the subsurface scattering scale at runtime, call [method RenderingServer.sub_surface_scattering_set_scale] instead."
+msgstr "A felszín alatti szóráshoz vett minták távolságát skálázza. A teljesítményt nem befolyásolja, de túl nagy értéknél a minták láthatóan szétszóródnak, és erős képhibák jelentkeznek. Kisebb értéknél a szórt fény kevésbé terjed szét. Lásd még a [member rendering/environment/subsurface_scattering/subsurface_scattering_depth_scale] beállítást.\n[b]Megjegyzés:[/b] A motor csak a projekt indulásakor olvassa be ezt a beállítást. Futás közben a [method RenderingServer.sub_surface_scattering_set_scale] metódussal állítható."
+
+#. ProjectSettings.rendering/environment/volumetric_fog/use_filter
+#: doc/classes/ProjectSettings.xml
+msgid "Enables filtering of the volumetric fog effect prior to integration. This substantially blurs the fog which reduces fine details but also smooths out harsh edges and aliasing artifacts. Disable when more detail is required."
+msgstr "Bekapcsolja a térfogati köd szűrését az integrálás előtt. A szűrés erősen elmossa a ködöt, így csökkenti a részletességet, de elsimítja az éles határokat és a recés képhibákat. Ha több részletre van szükség, kapcsold ki."
+
+#. ProjectSettings.rendering/environment/volumetric_fog/volume_depth
+#: doc/classes/ProjectSettings.xml
+msgid "Number of slices to use along the depth of the froxel buffer for volumetric fog. A lower number will be more efficient but may result in artifacts appearing during camera movement. See also [member Environment.volumetric_fog_length]."
+msgstr "A térfogati köd cellapufferének mélységirányú szeletszáma. Kisebb értéknél gyorsabb a számítás, de kameramozgáskor képhibák jelentkezhetnek. Lásd még az [member Environment.volumetric_fog_length] tulajdonságot."
+
+#. ProjectSettings.rendering/environment/volumetric_fog/volume_size
+#: doc/classes/ProjectSettings.xml
+msgid "Base size used to determine size of froxel buffer in the camera X-axis and Y-axis. The final size is scaled by the aspect ratio of the screen, so actual values may differ from what is set. Set a larger size for more detailed fog, set a smaller size for better performance."
+msgstr "A térfogati köd cellapufferének alapmérete a kamera X és Y tengelyén. A motor a képarányhoz igazítja a tényleges méreteket, ezért eltérhetnek a megadottól. Nagyobb értéknél részletesebb a köd, kisebbnél jobb a teljesítmény."
+
+#. ProjectSettings.rendering/global_illumination/gi/use_half_resolution
+#: doc/classes/ProjectSettings.xml
+msgid "If [code]true[/code], renders [VoxelGI] and SDFGI ([member Environment.sdfgi_enabled]) buffers at halved resolution (e.g. 960×540 when the viewport size is 1920×1080). This improves performance significantly when VoxelGI or SDFGI is enabled, at the cost of artifacts that may be visible on polygon edges. The loss in quality becomes less noticeable as the viewport resolution increases. [LightmapGI] rendering is not affected by this setting.\n[b]Note:[/b] This property is only read when the project starts. To set half-resolution GI at run-time, call [method RenderingServer.gi_set_use_half_resolution] instead."
+msgstr "Ha az érték [code]true[/code], a motor fél felbontásban számítja ki a [VoxelGI] és az SDFGI ([member Environment.sdfgi_enabled]) puffereit. Például 1920×1080-as nézetablaknál a puffer 960×540-es. Így jelentősen javulhat a teljesítmény, de a sokszögek szélein képhibák jelenhetnek meg. Nagyobb nézetablak-felbontásnál kevésbé feltűnő a minőségromlás. A [LightmapGI] megjelenítésére a beállítás nincs hatással.\n[b]Megjegyzés:[/b] A motor csak a projekt indulásakor olvassa be ezt a beállítást. Futás közben a [method RenderingServer.gi_set_use_half_resolution] metódussal állítható."
+
+#. ProjectSettings.rendering/global_illumination/sdfgi/probe_ray_count
+#: doc/classes/ProjectSettings.xml
+msgid "The number of rays to throw per frame when computing signed distance field global illumination. Higher values lead to a less noisy result, at the cost of performance. See also [member rendering/global_illumination/sdfgi/frames_to_converge] and [member rendering/global_illumination/sdfgi/frames_to_update_lights].\n[b]Note:[/b] This property is only read when the project starts. To control SDFGI quality at runtime, call [method RenderingServer.environment_set_sdfgi_ray_count] instead."
+msgstr "Az előjeles távolságmezőn alapuló globális megvilágítás képkockánkénti sugárszáma. Nagyobb értéknél kevésbé zajos a kép, de lassabb a számítás. Lásd még a [member rendering/global_illumination/sdfgi/frames_to_converge] és a [member rendering/global_illumination/sdfgi/frames_to_update_lights] beállítást.\n[b]Megjegyzés:[/b] A motor csak a projekt indulásakor olvassa be ezt a beállítást. Futás közben a [method RenderingServer.environment_set_sdfgi_ray_count] metódussal állítható."
+
+#. ProjectSettings.rendering/global_illumination/voxel_gi/quality
+#: doc/classes/ProjectSettings.xml
+msgid "The VoxelGI quality to use. High quality leads to more precise lighting and better reflections, but is slower to render. This setting does not affect the baked data and doesn't require baking the [VoxelGI] again to apply.\n[b]Note:[/b] This property is only read when the project starts. To control VoxelGI quality at runtime, call [method RenderingServer.voxel_gi_set_quality] instead."
+msgstr "A VoxelGI minősége. Jobb minőségnél pontosabb a megvilágítás és a tükröződés, de lassabb a megjelenítés. A sütött adatok nem változnak, ezért a beállításhoz nem kell újra kisütni a [VoxelGI] csomópontot.\n[b]Megjegyzés:[/b] A motor csak a projekt indulásakor olvassa be ezt a beállítást. Futás közben a [method RenderingServer.voxel_gi_set_quality] metódussal állítható."
+
+#. ProjectSettings.rendering/lights_and_shadows/directional_shadow/16_bits
+#: doc/classes/ProjectSettings.xml
+msgid "Use 16 bits for the directional shadow depth map. Enabling this results in shadows having less precision and may result in shadow acne, but can lead to performance improvements on some devices."
+msgstr "16 bitet használ az irányított fény árnyékmélység-térképéhez. A kisebb pontosság miatt foltosan jelenhetnek meg az árnyékok, viszont egyes eszközökön gyorsabb lehet a renderelés."
+
+#. ProjectSettings.rendering/lights_and_shadows/directional_shadow/size
+#: doc/classes/ProjectSettings.xml
+msgid "The directional shadow's size in pixels. Higher values will result in sharper shadows, at the cost of performance. The value is rounded up to the nearest power of 2."
+msgstr "Az irányított fény árnyéktérképének mérete képpontban. Nagyobb értéknél élesebbek az árnyékok, de lassabb a megjelenítés. A motor az értéket felfelé kerekíti a legközelebbi kettőhatványra."
+
+#. ProjectSettings.rendering/lights_and_shadows/directional_shadow/size.mobile
+#: doc/classes/ProjectSettings.xml
+msgid "Lower-end override for [member rendering/lights_and_shadows/directional_shadow/size] on mobile devices, due to performance concerns or driver support."
+msgstr "A [member rendering/lights_and_shadows/directional_shadow/size] kisebb teljesítményigényű mobilos felülírása. A teljesítmény és az illesztőprogramok támogatása miatt használható."
+
+#. ProjectSettings.rendering/lights_and_shadows/directional_shadow/soft_shadow_filter_quality.mobile
+#: doc/classes/ProjectSettings.xml
+msgid "Lower-end override for [member rendering/lights_and_shadows/directional_shadow/soft_shadow_filter_quality] on mobile devices, due to performance concerns or driver support."
+msgstr "A [member rendering/lights_and_shadows/directional_shadow/soft_shadow_filter_quality] kisebb teljesítményigényű mobilos felülírása. A teljesítmény és az illesztőprogramok támogatása miatt használható."
+
+#. ProjectSettings.rendering/lights_and_shadows/positional_shadow/atlas_quadrant_0_subdiv
+#: doc/classes/ProjectSettings.xml
+msgid "The subdivision amount of the first quadrant on the shadow atlas. See the [url=$DOCS_URL/tutorials/3d/lights_and_shadows.html#shadow-atlas]documentation[/url] for more information."
+msgstr "Az árnyékatlasz első negyedének felosztása. A részleteket lásd az [url=$DOCS_URL/tutorials/3d/lights_and_shadows.html#shadow-atlas]árnyékatlasz dokumentációjában[/url]."
+
+#. ProjectSettings.rendering/lights_and_shadows/positional_shadow/atlas_quadrant_1_subdiv
+#: doc/classes/ProjectSettings.xml
+msgid "The subdivision amount of the second quadrant on the shadow atlas. See the [url=$DOCS_URL/tutorials/3d/lights_and_shadows.html#shadow-atlas]documentation[/url] for more information."
+msgstr "Az árnyékatlasz második negyedének felosztása. A részleteket lásd az [url=$DOCS_URL/tutorials/3d/lights_and_shadows.html#shadow-atlas]árnyékatlasz dokumentációjában[/url]."
+
+#. ProjectSettings.rendering/lights_and_shadows/positional_shadow/atlas_quadrant_2_subdiv
+#: doc/classes/ProjectSettings.xml
+msgid "The subdivision amount of the third quadrant on the shadow atlas. See the [url=$DOCS_URL/tutorials/3d/lights_and_shadows.html#shadow-atlas]documentation[/url] for more information."
+msgstr "Az árnyékatlasz harmadik negyedének felosztása. A részleteket lásd az [url=$DOCS_URL/tutorials/3d/lights_and_shadows.html#shadow-atlas]árnyékatlasz dokumentációjában[/url]."
+
+#. ProjectSettings.rendering/lights_and_shadows/positional_shadow/atlas_quadrant_3_subdiv
+#: doc/classes/ProjectSettings.xml
+msgid "The subdivision amount of the fourth quadrant on the shadow atlas. See the [url=$DOCS_URL/tutorials/3d/lights_and_shadows.html#shadow-atlas]documentation[/url] for more information."
+msgstr "Az árnyékatlasz negyedik negyedének felosztása. A részleteket lásd az [url=$DOCS_URL/tutorials/3d/lights_and_shadows.html#shadow-atlas]árnyékatlasz dokumentációjában[/url]."
+
+#. ProjectSettings.rendering/lights_and_shadows/positional_shadow/atlas_size
+#: doc/classes/ProjectSettings.xml
+msgid "The size of the shadow atlas used for [OmniLight3D] and [SpotLight3D] nodes. See the [url=$DOCS_URL/tutorials/3d/lights_and_shadows.html#shadow-atlas]documentation[/url] for more information."
+msgstr "Az [OmniLight3D] és a [SpotLight3D] fények árnyékatlaszának mérete. A részleteket lásd az [url=$DOCS_URL/tutorials/3d/lights_and_shadows.html#shadow-atlas]árnyékatlasz dokumentációjában[/url]."
+
+#. ProjectSettings.rendering/lights_and_shadows/positional_shadow/atlas_size.mobile
+#: doc/classes/ProjectSettings.xml
+msgid "Lower-end override for [member rendering/lights_and_shadows/positional_shadow/atlas_size] on mobile devices, due to performance concerns or driver support."
+msgstr "A [member rendering/lights_and_shadows/positional_shadow/atlas_size] kisebb teljesítményigényű mobilos felülírása. A teljesítmény és az illesztőprogramok támogatása miatt használható."
+
+#. ProjectSettings.rendering/lights_and_shadows/positional_shadow/soft_shadow_filter_quality.mobile
+#: doc/classes/ProjectSettings.xml
+msgid "Lower-end override for [member rendering/lights_and_shadows/positional_shadow/soft_shadow_filter_quality] on mobile devices, due to performance concerns or driver support."
+msgstr "A [member rendering/lights_and_shadows/positional_shadow/soft_shadow_filter_quality] kisebb teljesítményigényű mobilos felülírása. A teljesítmény és az illesztőprogramok támogatása miatt használható."
+
+#. ProjectSettings.rendering/lights_and_shadows/tighter_shadow_caster_culling
+#: doc/classes/ProjectSettings.xml
+msgid "If [code]true[/code], items that cannot cast shadows into the view frustum will not be rendered into shadow maps.\nThis can increase performance."
+msgstr "Ha az érték [code]true[/code], a motor kihagyja az árnyéktérképből azokat az objektumokat, amelyek nem vethetnek árnyékot a kamera látógúlájába.\nEz javíthatja a teljesítményt."
+
+#. ProjectSettings.rendering/reflections/reflection_atlas/reflection_count
+#: doc/classes/ProjectSettings.xml
+msgid "Number of cubemaps to store in the reflection atlas. The number of [ReflectionProbe]s in a scene will be limited by this amount. A higher number requires more VRAM."
+msgstr "A tükröződési atlaszban tárolható kockatérképek száma. Ez korlátozza a jelenetben használható [ReflectionProbe] próbák számát. Nagyobb érték több videomemóriát igényel."
+
+#. ProjectSettings.rendering/reflections/reflection_atlas/reflection_size
+#: doc/classes/ProjectSettings.xml
+msgid "Size of cubemap faces for [ReflectionProbe]s. A higher number requires more VRAM and may make reflection probe updating slower."
+msgstr "A [ReflectionProbe] próbákhoz tartozó kockatérképek oldalainak mérete. Nagyobb érték több videomemóriát igényel, és lassíthatja a próbák frissítését."
+
+#. ProjectSettings.rendering/reflections/reflection_atlas/reflection_size.mobile
+#: doc/classes/ProjectSettings.xml
+msgid "Lower-end override for [member rendering/reflections/reflection_atlas/reflection_size] on mobile devices, due to performance concerns or driver support."
+msgstr "A [member rendering/reflections/reflection_atlas/reflection_size] kisebb teljesítményigényű mobilos felülírása. A teljesítmény és az illesztőprogramok támogatása miatt használható."
+
+#. ProjectSettings.rendering/reflections/sky_reflections/fast_filter_high_quality
+#: doc/classes/ProjectSettings.xml
+msgid "Use a higher quality variant of the fast filtering algorithm. Significantly slower than using default quality, but results in smoother reflections. Should only be used when the scene is especially detailed."
+msgstr "A gyors szűrési algoritmus jobb minőségű változatát használja. Érezhetően lassabb az alapértelmezett változatnál, viszont simább tükröződéseket ad. Csak különösen részletes jelenetnél érdemes bekapcsolni."
+
+#. ProjectSettings.rendering/reflections/sky_reflections/ggx_samples
+#: doc/classes/ProjectSettings.xml
+msgid "Sets the number of samples to take when using importance sampling for [Sky]s and [ReflectionProbe]s. A higher value will result in smoother, higher quality reflections, but increases time to calculate radiance maps. In general, fewer samples are needed for simpler, low dynamic range environments while more samples are needed for HDR environments and environments with a high level of detail."
+msgstr "A [Sky] égbolt és a [ReflectionProbe] próbák fontosságalapú mintavételezéséhez használt minták száma. Nagyobb érték simább, jobb minőségű tükröződést ad, de tovább tart a sugárzási térképek kiszámítása. Egyszerű, kis dinamikatartományú környezethez általában kevesebb minta elég. Nagy dinamikatartományú vagy részletes környezethez több minta szükséges."
+
+#. ProjectSettings.rendering/reflections/sky_reflections/ggx_samples.mobile
+#: doc/classes/ProjectSettings.xml
+msgid "Lower-end override for [member rendering/reflections/sky_reflections/ggx_samples] on mobile devices, due to performance concerns or driver support."
+msgstr "A [member rendering/reflections/sky_reflections/ggx_samples] kisebb teljesítményigényű mobilos felülírása. A teljesítmény és az illesztőprogramok támogatása miatt használható."
+
+#. ProjectSettings.rendering/reflections/sky_reflections/roughness_layers
+#: doc/classes/ProjectSettings.xml
+msgid "Limits the number of layers to use in radiance maps when using importance sampling. A lower number will be slightly faster and take up less VRAM."
+msgstr "A fontosságalapú mintavételezésnél a sugárzási térképeken használható rétegek számát korlátozza. Kisebb értéknél kissé gyorsabb a számítás, és kevesebb videomemória kell."
+
+#. ProjectSettings.rendering/reflections/sky_reflections/texture_array_reflections
+#: doc/classes/ProjectSettings.xml
+msgid "If [code]true[/code], uses texture arrays instead of mipmaps for reflection probes and panorama backgrounds (sky). This reduces jitter noise and upscaling artifacts on reflections, but is significantly slower to compute and uses [member rendering/reflections/sky_reflections/roughness_layers] times more memory.\n[b]Note:[/b] Texture array reflections are always disabled on macOS on Intel GPUs due to driver bugs."
+msgstr "Ha az érték [code]true[/code], a tükröződési próbákhoz és az égbolt panorámahátteréhez a motor mipmapek helyett textúratömböket használ. Így csökken a vibrálás és a felnagyításból eredő képhiba, de jóval lassabb a számítás, és [member rendering/reflections/sky_reflections/roughness_layers]-szor annyi memória kell.\n[b]Megjegyzés:[/b] macOS-en az Intel GPU-k illesztőprogram-hibái miatt a textúratömbös tükröződés mindig ki van kapcsolva."
+
+#. ProjectSettings.rendering/reflections/sky_reflections/texture_array_reflections.mobile
+#: doc/classes/ProjectSettings.xml
+msgid "Lower-end override for [member rendering/reflections/sky_reflections/texture_array_reflections] on mobile devices, due to performance concerns or driver support."
+msgstr "A [member rendering/reflections/sky_reflections/texture_array_reflections] kisebb teljesítményigényű mobilos felülírása. A teljesítmény és az illesztőprogramok támogatása miatt használható."
+
+#. ProjectSettings.rendering/reflections/specular_occlusion/enabled
+#: doc/classes/ProjectSettings.xml
+msgid "If [code]true[/code], reduces reflections based on ambient light."
+msgstr "Ha az érték [code]true[/code], a motor a környezeti fény alapján csökkenti a tükröződéseket."
