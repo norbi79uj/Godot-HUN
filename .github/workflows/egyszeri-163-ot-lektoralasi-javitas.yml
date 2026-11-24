@@ -1,0 +1,52 @@
+name: "Egyszeri 163-as otpontos lektoralas"
+on:
+  push:
+    branches:
+      - "i18n/f1-mesh-geometry-materials-20261124"
+    paths:
+      - ".github/workflows/egyszeri-163-ot-lektoralasi-javitas.yml"
+permissions:
+  contents: write
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Ot szovegpontositas es az egyszeri workflow eltavolitasa
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path("forditas/Godot_4_7_2_hu_osszevont_munkavaltozat.po")
+          s = p.read_text(encoding='utf-8')
+          original = s
+          changes = [
+              ("msgstr \"Beállítja a csavarodás előtti referenciaforgatást. Ha az [method is_twist_from_rest] értéke [code]false[/code], a módosító ehhez viszonyítva számítja ki az aktuális csontpóz csavarodását.\\nHa egy adott [SkeletonModifier3D] [signal SkeletonModifier3D.modification_processed] jelzésére hívod meg a [method set_twist_from] metódust, csak az e módosító után és a [BoneTwistDisperser3D] előtt futó módosítók csavarodása érvényesül.\"", "msgstr \"Beállítja a csavarodás előtti referenciaforgatást. Ha az [method is_twist_from_rest] értéke [code]false[/code], a módosító ehhez viszonyítva számítja ki az aktuális csontpóz csavarodását.\\nHa egy adott [SkeletonModifier3D] [signal SkeletonModifier3D.modification_processed] jelzésére hívod meg a [method set_twist_from] metódust, csak az e módosító után, de a [BoneTwistDisperser3D] előtt lefutó módosítók által létrehozott csavarodást tudod kiolvasni.\""),
+              ("msgstr \"A [LookAtModifier3D] egyszerűbb változata. A csontot a referencia felé fordítja, szöghatárok és időalapú interpoláció nélkül.\\nEuler-szögek nélkül is képes folyamatos követésre. Lásd a [method set_use_euler] metódust.\"", "msgstr \"A [LookAtModifier3D] egyszerűbb változata. A csontot a referenciacsont felé fordítja, szöghatárok és időalapú interpoláció nélkül.\\nEuler-szögek nélkül is képes folyamatos követésre. Lásd a [method set_use_euler] metódust.\""),
+              ("msgstr \"Az útvonalhoz [PathFollow3D] gyermekcsomópontokat adhatsz, amelyek a [Curve3D] mentén mozognak. A használat részleteit lásd a [PathFollow3D] leírásában.\\nA [PathFollow3D] gyermekei együtt mozognak az útvonalkövetővel. A görbét ezért általában a [code](0, 0, 0)[/code] helyi origóból érdemes indítani.\"", "msgstr \"Az útvonalhoz [PathFollow3D] gyermekcsomópontokat adhatsz, amelyek a [Curve3D] mentén mozognak. A használat részleteit lásd a [PathFollow3D] leírásában.\\nA motor az útvonalat a [PathFollow3D] alatt mozgatott csomópontokhoz viszonyítva értelmezi. Ezért a görbét általában a [code](0, 0, 0)[/code] helyi origóból érdemes indítani.\""),
+              ("msgstr \"Az útvonalon megtett távolság aránya, ahol 0,0 az első csúcspontot, 1,0 az utolsót jelenti. A motor az arányt megszorozza az útvonal hosszával, így kapja meg a megtett távolságot.\\nCsak akkor állítható be és olvasható ki, ha a [PathFollow3D] egy jelenetfában lévő [Path3D] gyermeke, és a [Path3D] nem nulla hosszúságú [Curve3D] görbét tartalmaz. Egyébként a beállítás hibát jelez, a lekérdezés pedig [code]0.0[/code] értéket ad vissza.\"", "msgstr \"Az útvonalon megtett távolság aránya, ahol a [code]0.0[/code] az első csúcspontot, a [code]1.0[/code] az utolsót jelenti. A motor az arányt megszorozza az útvonal hosszával, így kapja meg a megtett távolságot.\\nCsak akkor állítható be és olvasható ki, ha a [PathFollow3D] egy jelenetfában lévő [Path3D] gyermeke, és a [Path3D] nem nulla hosszúságú [Curve3D] görbét tartalmaz. Egyébként a beállítás hibát jelez, a lekérdezés pedig [code]0.0[/code] értéket ad vissza.\""),
+              ("msgstr \"Ha az érték [code]true[/code], a takarás alapján történő kiszűrés kikapcsol ennél a példánynál. Hasznos olyan segédábráknál, amelyeknek takarásban is meg kell jelenniük.\\n[b]Megjegyzés:[/b] Az [member ignore_occlusion_culling] nincs hatással a látógúlán alapuló kiszűrésre, amikor a kamera látószögén kívül esik az objektum. Ennek elkerülésére a [member custom_aabb] fedje le az egész játékvilágot, például [code]AABB(-10000, -10000, -10000, 20000, 20000, 20000)[/code] értékkel.\"", "msgstr \"Ha az érték [code]true[/code], a motor kikapcsolja a takarás alapján történő kiszűrést ennél a példánynál. Hasznos olyan segédábráknál, amelyeknek takarásban is meg kell jelenniük.\\n[b]Megjegyzés:[/b] Az [member ignore_occlusion_culling] nincs hatással a látógúlán alapuló kiszűrésre, amikor a kamera látószögén kívül esik az objektum. Ennek elkerülésére a [member custom_aabb] fedje le az egész játékvilágot, például [code]AABB(-10000, -10000, -10000, 20000, 20000, 20000)[/code] értékkel.\""),
+          ]
+          for old, new in changes:
+              assert s.count(old) == 1, 'Nem egyedi a forditas (megallt a javitas)'
+              s = s.replace(old, new)
+          assert s.count('\n') == original.count('\n'), 'Varatlan sorszámvaltozas'
+          assert s.count('\nmsgid ') == original.count('\nmsgid '), 'Varatlan msgid valtozas'
+          p.write_text(s, encoding='utf-8')
+          Path(".github/workflows/egyszeri-163-ot-lektoralasi-javitas.yml").unlink()
+          PY
+      - name: PO- es regresszios ellenorzes
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y gettext
+          python3 -m unittest discover -s forditas -p 'test_*.py' -v
+          python3 forditas/ellenorzes.py --require-msgfmt
+          git diff --check
+      - name: Az ot javitas roegzitese
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- "forditas/Godot_4_7_2_hu_osszevont_munkavaltozat.po" ".github/workflows/egyszeri-163-ot-lektoralasi-javitas.yml"
+          git commit -m "Godot F1: öt jóváhagyott nyelvi pontosítás a #163 PR-ben"
+          git push origin HEAD:i18n/f1-mesh-geometry-materials-20261124
