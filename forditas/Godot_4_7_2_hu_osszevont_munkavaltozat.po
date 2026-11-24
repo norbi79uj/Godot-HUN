@@ -58443,22 +58443,22 @@ msgstr "A [VoxelGI] által használt rács felosztásának mértéke. Nagyobb é
 #. VoxelGI.SUBDIV_64
 #: doc/classes/VoxelGI.xml
 msgid "Use 64 subdivisions. This is the lowest quality setting, but the fastest. Use it if you can, but especially use it on lower-end hardware."
-msgstr "64 részre osztja a rácsot. Ez a leggyorsabb, de a legkevésbé részletes beállítás. Akkor használd, ha elegendő, különösen kisebb teljesítményű gépen."
+msgstr "Tengelyenként 64 részre osztja a rácsot. Ez a leggyorsabb, de a legkevésbé részletes beállítás. Akkor használd, ha elegendő, különösen kisebb teljesítményű gépen."
 
 #. VoxelGI.SUBDIV_128
 #: doc/classes/VoxelGI.xml
 msgid "Use 128 subdivisions. This is the default quality setting."
-msgstr "128 részre osztja a rácsot. Ez az alapértelmezett minőségi beállítás."
+msgstr "Tengelyenként 128 részre osztja a rácsot. Ez az alapértelmezett minőségi beállítás."
 
 #. VoxelGI.SUBDIV_256
 #: doc/classes/VoxelGI.xml
 msgid "Use 256 subdivisions."
-msgstr "256 részre osztja a rácsot."
+msgstr "Tengelyenként 256 részre osztja a rácsot."
 
 #. VoxelGI.SUBDIV_512
 #: doc/classes/VoxelGI.xml
 msgid "Use 512 subdivisions. This is the highest quality setting, but the slowest. On lower-end hardware, this could cause the GPU to stall."
-msgstr "512 részre osztja a rácsot. Ez a legrészletesebb, egyben a leglassabb beállítás. Kisebb teljesítményű gépen megakaszthatja a GPU-t."
+msgstr "Tengelyenként 512 részre osztja a rácsot. Ez a legrészletesebb, egyben a leglassabb beállítás. Kisebb teljesítményű gépen megakaszthatja a GPU-t."
 
 #. VoxelGI.SUBDIV_MAX
 #: doc/classes/VoxelGI.xml
