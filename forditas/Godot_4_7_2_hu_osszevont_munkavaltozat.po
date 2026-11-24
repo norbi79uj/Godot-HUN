@@ -56520,3 +56520,505 @@ msgstr "Az [AnimationTree] által gyökércsontként használt csont neve. Ember
 #: doc/classes/SkeletonProfile.xml
 msgid "A bone name which will use model's height as the coefficient for normalization. For example, [SkeletonProfileHumanoid] defines it as [code]Hips[/code]."
 msgstr "Annak a csontnak a neve, amelynek a modellben elfoglalt magassági helyzetét a motor a mozgás méretarányának normalizálásához használja. A [SkeletonProfileHumanoid] például a [code]Hips[/code] csontot használja."
+
+#. BoneTwistDisperser3D.brief
+#: doc/classes/BoneTwistDisperser3D.xml
+msgid "A node that propagates and disperses the child bone's twist to the parent bones."
+msgstr "A gyermekcsont csavarodását elosztja a lánc szülőcsontjai között."
+
+#. BoneTwistDisperser3D.description
+#: doc/classes/BoneTwistDisperser3D.xml
+msgid "This [BoneTwistDisperser3D] allows for smooth twist interpolation between multiple bones by dispersing the end bone's twist to the parents. This only changes the twist without changing the global position of each joint.\nThis is useful for smoothly twisting bones in combination with [CopyTransformModifier3D] and IK.\n[b]Note:[/b] If an extracted twist is greater than 180 degrees, flipping occurs. This is similar to [ConvertTransformModifier3D].\n[b]Note:[/b] Most methods in this class take an [code]index[/code] parameter. This parameter specifies which setting list entry to return if the IK has multiple entries (e.g. [code]settings/<index>/root_bone_name[/code])."
+msgstr "A [BoneTwistDisperser3D] a végcsont csavarodását elosztja a szülőcsontok között, így az elfordulás egyenletesen osztható el több csonton. Csak a csavarodás változik, az ízületek globális helyzete megmarad.\nA [CopyTransformModifier3D] osztállyal és inverz kinematikával együtt használva folyamatos csavarodást ad a csontláncnak.\n[b]Megjegyzés:[/b] Ha a kiolvasott csavarodás meghaladja a 180 fokot, az elfordulás átfordulhat. Hasonló jelenség a [ConvertTransformModifier3D] esetén is előfordul.\n[b]Megjegyzés:[/b] A legtöbb metódus [code]index[/code] paraméterrel választ bejegyzést a listából, ha az IK-hoz több beállítás tartozik. Ilyen például a [code]settings/<index>/root_bone_name[/code]."
+
+#. BoneTwistDisperser3D.get_damping_curve
+#: doc/classes/BoneTwistDisperser3D.xml
+msgid "Returns the damping curve when [method get_disperse_mode] is [constant DISPERSE_MODE_CUSTOM]."
+msgstr "A csillapítási görbét adja vissza, ha a [method get_disperse_mode] eredménye [constant DISPERSE_MODE_CUSTOM]."
+
+#. BoneTwistDisperser3D.get_disperse_mode
+#: doc/classes/BoneTwistDisperser3D.xml
+msgid "Returns whether to use automatic amount assignment or to allow manual assignment."
+msgstr "Azt adja vissza, hogy a módosító automatikusan osztja-e el a csavarodást, vagy kézzel adhatók meg az értékek."
+
+#. BoneTwistDisperser3D.get_joint_twist_amount
+#: doc/classes/BoneTwistDisperser3D.xml
+msgid "Returns the twist amount at [param joint] in the bone chain's joint list when [method get_disperse_mode] is [constant DISPERSE_MODE_CUSTOM]."
+msgstr "A csontlánc listájában a [param joint] indexű ízület csavarodásának mértékét adja vissza, ha a [method get_disperse_mode] eredménye [constant DISPERSE_MODE_CUSTOM]."
+
+#. BoneTwistDisperser3D.get_reference_bone
+#: doc/classes/BoneTwistDisperser3D.xml
+msgid "Returns the reference bone to extract twist of the setting at [param index].\nThis bone is either the end of the chain or its parent, depending on [method is_end_bone_extended]."
+msgstr "A [param index] indexű beállítás referenciacsontját adja vissza, amelyből a módosító kiolvassa a csavarodást.\nAz [method is_end_bone_extended] eredményétől függően ez a lánc végcsontja vagy annak szülője."
+
+#. BoneTwistDisperser3D.get_reference_bone_name
+#: doc/classes/BoneTwistDisperser3D.xml
+msgid "Returns the reference bone name to extract twist of the setting at [param index].\nThis bone is either the end of the chain or its parent, depending on [method is_end_bone_extended]."
+msgstr "A [param index] indexű beállítás referenciacsontjának nevét adja vissza. Ebből a csontból olvassa ki a módosító a csavarodást.\nAz [method is_end_bone_extended] eredményétől függően ez a lánc végcsontja vagy annak szülője."
+
+#. BoneTwistDisperser3D.get_twist_from
+#: doc/classes/BoneTwistDisperser3D.xml
+msgid "Returns the rotation to an arbitrary state before twisting for the current bone pose to extract the twist when [method is_twist_from_rest] is [code]false[/code]."
+msgstr "A csavarodás előtti, egyénileg megadott referenciaforgatást adja vissza. Ha az [method is_twist_from_rest] eredménye [code]false[/code], a módosító ehhez viszonyítva határozza meg az aktuális csontpóz csavarodását."
+
+#. BoneTwistDisperser3D.get_weight_position
+#: doc/classes/BoneTwistDisperser3D.xml
+msgid "Returns the position at which to divide the segment between joints for weight assignment when [method get_disperse_mode] is [constant DISPERSE_MODE_WEIGHTED]."
+msgstr "Ha a [method get_disperse_mode] eredménye [constant DISPERSE_MODE_WEIGHTED], megadja, melyik ponton osztja ketté a módosító az ízületek közötti szakaszt a súlyok számításához."
+
+#. BoneTwistDisperser3D.is_twist_from_rest
+#: doc/classes/BoneTwistDisperser3D.xml
+msgid "Returns [code]true[/code] if extracting the twist amount from the difference between the bone rest and the current bone pose."
+msgstr "[code]true[/code] értéket ad vissza, ha a módosító a nyugalmi és az aktuális csontpóz különbségéből számítja ki a csavarodást."
+
+#. BoneTwistDisperser3D.set_damping_curve
+#: doc/classes/BoneTwistDisperser3D.xml
+msgid "Sets the damping curve when [method get_disperse_mode] is [constant DISPERSE_MODE_CUSTOM]."
+msgstr "Beállítja a használt csillapítási görbét arra az esetre, ha a [method get_disperse_mode] eredménye [constant DISPERSE_MODE_CUSTOM]."
+
+#. BoneTwistDisperser3D.set_disperse_mode
+#: doc/classes/BoneTwistDisperser3D.xml
+msgid "Sets whether to use automatic amount assignment or to allow manual assignment."
+msgstr "Beállítja, hogy a módosító automatikusan ossza-e el a csavarodást, vagy kézzel lehessen megadni az értékeket."
+
+#. BoneTwistDisperser3D.set_end_bone_name
+#: doc/classes/BoneTwistDisperser3D.xml
+msgid "Sets the end bone name of the bone chain.\n[b]Note:[/b] The end bone must be a child of the root bone."
+msgstr "Beállítja a csontlánc végcsontjának nevét.\n[b]Megjegyzés:[/b] A végcsontnak a gyökércsont alatti hierarchiába kell tartoznia."
+
+#. BoneTwistDisperser3D.set_extend_end_bone
+#: doc/classes/BoneTwistDisperser3D.xml
+msgid "If [param enabled] is [code]true[/code], the end bone is extended to have a tail.\nIf [param enabled] is [code]false[/code], [method get_reference_bone] becomes a parent of the end bone and it uses the vector to the end bone as a twist axis."
+msgstr "Ha a [param enabled] értéke [code]true[/code], a módosító meghosszabbítja a végcsontot egy végszakasszal.\nHa a [param enabled] értéke [code]false[/code], a [method get_reference_bone] a végcsont szülőjét adja vissza, és a szülőtől a végcsont felé mutató vektor lesz a csavarodás tengelye."
+
+#. BoneTwistDisperser3D.set_joint_twist_amount
+#: doc/classes/BoneTwistDisperser3D.xml
+msgid "Sets the twist amount at [param joint] in the bone chain's joint list when [method get_disperse_mode] is [constant DISPERSE_MODE_CUSTOM]."
+msgstr "A csontlánc listájában beállítja a [param joint] indexű ízület csavarodásának mértékét, ha a [method get_disperse_mode] eredménye [constant DISPERSE_MODE_CUSTOM]."
+
+#. BoneTwistDisperser3D.set_twist_from
+#: doc/classes/BoneTwistDisperser3D.xml
+msgid "Sets the rotation to an arbitrary state before twisting for the current bone pose to extract the twist when [method is_twist_from_rest] is [code]false[/code].\nIn other words, by calling [method set_twist_from] by [signal SkeletonModifier3D.modification_processed] of a specific [SkeletonModifier3D], you can extract only the twists generated by modifiers processed after that but before this [BoneTwistDisperser3D]."
+msgstr "Beállítja a csavarodás előtti referenciaforgatást. Ha az [method is_twist_from_rest] értéke [code]false[/code], a módosító ehhez viszonyítva számítja ki az aktuális csontpóz csavarodását.\nHa egy adott [SkeletonModifier3D] [signal SkeletonModifier3D.modification_processed] jelzésére hívod meg a [method set_twist_from] metódust, csak az e módosító után és a [BoneTwistDisperser3D] előtt futó módosítók csavarodása érvényesül."
+
+#. BoneTwistDisperser3D.set_twist_from_rest
+#: doc/classes/BoneTwistDisperser3D.xml
+msgid "If [param enabled] is [code]true[/code], it extracts the twist amount from the difference between the bone rest and the current bone pose.\nIf [param enabled] is [code]false[/code], it extracts the twist amount from the difference between [method get_twist_from] and the current bone pose. See also [method set_twist_from]."
+msgstr "Ha a [param enabled] értéke [code]true[/code], a módosító a nyugalmi és az aktuális csontpóz különbségéből számítja ki a csavarodást.\nHa a [param enabled] értéke [code]false[/code], a [method get_twist_from] eredményét hasonlítja össze az aktuális csontpózzal. Lásd még a [method set_twist_from] metódust."
+
+#. BoneTwistDisperser3D.set_weight_position
+#: doc/classes/BoneTwistDisperser3D.xml
+msgid "Sets the position at which to divide the segment between joints for weight assignment when [method get_disperse_mode] is [constant DISPERSE_MODE_WEIGHTED].\nFor example, when [param weight_position] is [code]0.5[/code], if two bone segments with a length of [code]1.0[/code] exist between three joints, weights are assigned to each joint from root to end at ratios of [code]0.5[/code], [code]1.0[/code], and [code]0.5[/code]. Then amounts become [code]0.25[/code], [code]0.75[/code], and [code]1.0[/code] respectively."
+msgstr "Ha a [method get_disperse_mode] eredménye [constant DISPERSE_MODE_WEIGHTED], beállítja, melyik ponton ossza ketté a módosító az ízületek közötti szakaszt a súlyok számításához.\nHa például a [param weight_position] értéke [code]0.5[/code], és három ízület között két, egyenként [code]1.0[/code] hosszú csontszakasz van, akkor a súlyok a gyökértől a végpontig rendre [code]0.5[/code], [code]1.0[/code] és [code]0.5[/code]. Az ezekből adódó csavarodási arányok rendre [code]0.25[/code], [code]0.75[/code] és [code]1.0[/code]."
+
+#. BoneTwistDisperser3D.mutable_bone_axes
+#: doc/classes/BoneTwistDisperser3D.xml
+msgid "If [code]true[/code], the solver retrieves the bone axis from the bone pose every frame.\nIf [code]false[/code], the solver retrieves the bone axis from the bone rest and caches it."
+msgstr "Ha az érték [code]true[/code], a megoldó minden képkockában az aktuális csontpózból olvassa ki a tengelyt.\nHa az érték [code]false[/code], a megoldó a nyugalmi pózból olvassa ki és gyorsítótárazza a tengelyt."
+
+#. BoneTwistDisperser3D.DISPERSE_MODE_EVEN
+#: doc/classes/BoneTwistDisperser3D.xml
+msgid "Assign amounts so that they monotonically increase from [code]0.0[/code] to [code]1.0[/code], ensuring all weights are equal. For example, with five joints, the amounts would be [code]0.2[/code], [code]0.4[/code], [code]0.6[/code], [code]0.8[/code], and [code]1.0[/code] starting from the root bone."
+msgstr "Azonos súlyt rendel az ízületekhez, így a csavarodás összesített aránya [code]0.0[/code]-tól [code]1.0[/code]-ig egyenletes lépésekben nő. Öt ízületnél például a gyökércsonttól kezdve [code]0.2[/code], [code]0.4[/code], [code]0.6[/code], [code]0.8[/code] és [code]1.0[/code] az arány."
+
+#. BoneTwistDisperser3D.DISPERSE_MODE_WEIGHTED
+#: doc/classes/BoneTwistDisperser3D.xml
+msgid "Assign amounts so that they monotonically increase from [code]0.0[/code] to [code]1.0[/code], based on the length of the bones between joint segments. See also [method set_weight_position]."
+msgstr "A csavarodás összesített aránya [code]0.0[/code]-tól [code]1.0[/code]-ig nő, az ízületek közötti csontszakaszok hossza alapján. Lásd még a [method set_weight_position] metódust."
+
+#. BoneTwistDisperser3D.DISPERSE_MODE_CUSTOM
+#: doc/classes/BoneTwistDisperser3D.xml
+msgid "You can assign arbitrary amounts to the joint list. See also [method set_joint_twist_amount].\nWhen [method is_end_bone_extended] is [code]false[/code], a child of the reference bone exists solely to determine the twist axis, so its custom amount has absolutely no effect at all."
+msgstr "A listában szereplő ízületekhez egyéni értékek rendelhetők. Lásd még a [method set_joint_twist_amount] metódust.\nHa az [method is_end_bone_extended] eredménye [code]false[/code], a referenciacsont gyermeke csak a csavarodás tengelyét jelöli ki, így a hozzá rendelt értéknek nincs hatása."
+
+#. CopyTransformModifier3D.description
+#: doc/classes/CopyTransformModifier3D.xml
+msgid "Apply the copied transform of the bone set by [method BoneConstraint3D.set_reference_bone] to the bone set by [method BoneConstraint3D.set_apply_bone] with processing it with some masks and options.\nThere are 4 ways to apply the transform, depending on the combination of [method set_relative] and [method set_additive].\n[b]Relative + Additive:[/b]\n- Extract reference pose relative to the rest and add it to the apply bone's pose.\n[b]Relative + Not Additive:[/b]\n- Extract reference pose relative to the rest and add it to the apply bone's rest.\n[b]Not Relative + Additive:[/b]\n- Extract reference pose absolutely and add it to the apply bone's pose.\n[b]Not Relative + Not Additive:[/b]\n- Extract reference pose absolutely and the apply bone's pose is replaced with it.\n[b]Note:[/b] Relative option is available only in the case [method BoneConstraint3D.get_reference_type] is [constant BoneConstraint3D.REFERENCE_TYPE_BONE]. See also [enum BoneConstraint3D.ReferenceType]."
+msgstr "A [method BoneConstraint3D.set_reference_bone] metódussal kijelölt csont transzformációját a maszkok és beállítások szerint feldolgozza, majd alkalmazza a [method BoneConstraint3D.set_apply_bone] metódussal kijelölt célcsontra.\nA [method set_relative] és a [method set_additive] beállítás kombinációja négyféle működést tesz lehetővé.\n[b]Relatív és összeadó mód[/b]\n- A referencia nyugalmi pózhoz viszonyított eltérését hozzáadja a célcsont aktuális pózához.\n[b]Csak relatív mód[/b]\n- A referencia nyugalmi pózhoz viszonyított eltérését hozzáadja a célcsont nyugalmi pózához.\n[b]Csak összeadó mód[/b]\n- A referencia teljes pózát hozzáadja a célcsont aktuális pózához.\n[b]Mindkét mód kikapcsolva[/b]\n- A referencia teljes pózával helyettesíti a célcsont pózát.\n[b]Megjegyzés:[/b] A relatív mód csak akkor használható, ha a [method BoneConstraint3D.get_reference_type] eredménye [constant BoneConstraint3D.REFERENCE_TYPE_BONE]. Lásd még az [enum BoneConstraint3D.ReferenceType] felsorolást."
+
+#. CopyTransformModifier3D.is_axis_x_enabled
+#: doc/classes/CopyTransformModifier3D.xml
+msgid "Returns [code]true[/code] if the enable flags has the flag for the X-axis in the setting at [param index]. See also [method set_axis_flags]."
+msgstr "[code]true[/code] értéket ad vissza, ha a [param index] indexű beállítás engedélyezi az X tengely másolását. Lásd még a [method set_axis_flags] metódust."
+
+#. CopyTransformModifier3D.is_axis_x_inverted
+#: doc/classes/CopyTransformModifier3D.xml
+msgid "Returns [code]true[/code] if the invert flags has the flag for the X-axis in the setting at [param index]. See also [method set_invert_flags]."
+msgstr "[code]true[/code] értéket ad vissza, ha a [param index] indexű beállítás megfordítja az X tengely hozzájárulását. Lásd még a [method set_invert_flags] metódust."
+
+#. CopyTransformModifier3D.is_axis_y_enabled
+#: doc/classes/CopyTransformModifier3D.xml
+msgid "Returns [code]true[/code] if the enable flags has the flag for the Y-axis in the setting at [param index]. See also [method set_axis_flags]."
+msgstr "[code]true[/code] értéket ad vissza, ha a [param index] indexű beállítás engedélyezi az Y tengely másolását. Lásd még a [method set_axis_flags] metódust."
+
+#. CopyTransformModifier3D.is_axis_y_inverted
+#: doc/classes/CopyTransformModifier3D.xml
+msgid "Returns [code]true[/code] if the invert flags has the flag for the Y-axis in the setting at [param index]. See also [method set_invert_flags]."
+msgstr "[code]true[/code] értéket ad vissza, ha a [param index] indexű beállítás megfordítja az Y tengely hozzájárulását. Lásd még a [method set_invert_flags] metódust."
+
+#. CopyTransformModifier3D.is_axis_z_enabled
+#: doc/classes/CopyTransformModifier3D.xml
+msgid "Returns [code]true[/code] if the enable flags has the flag for the Z-axis in the setting at [param index]. See also [method set_axis_flags]."
+msgstr "[code]true[/code] értéket ad vissza, ha a [param index] indexű beállítás engedélyezi a Z tengely másolását. Lásd még a [method set_axis_flags] metódust."
+
+#. CopyTransformModifier3D.is_axis_z_inverted
+#: doc/classes/CopyTransformModifier3D.xml
+msgid "Returns [code]true[/code] if the invert flags has the flag for the Z-axis in the setting at [param index]. See also [method set_invert_flags]."
+msgstr "[code]true[/code] értéket ad vissza, ha a [param index] indexű beállítás megfordítja a Z tengely hozzájárulását. Lásd még a [method set_invert_flags] metódust."
+
+#. CopyTransformModifier3D.set_additive
+#. ConvertTransformModifier3D.set_additive
+#: doc/classes/CopyTransformModifier3D.xml doc/classes/ConvertTransformModifier3D.xml
+msgid "Sets additive option in the setting at [param index] to [param enabled]. This mainly affects the process of applying transform to the [method BoneConstraint3D.set_apply_bone].\nIf sets [param enabled] to [code]true[/code], the processed transform is added to the pose of the current apply bone.\nIf sets [param enabled] to [code]false[/code], the pose of the current apply bone is replaced with the processed transform. However, if set [method set_relative] to [code]true[/code], the transform is relative to rest."
+msgstr "A [param index] indexű beállítás összeadó módját a [param enabled] értékre állítja. Ez főként azt szabályozza, hogyan alkalmazza a transzformációt a [method BoneConstraint3D.set_apply_bone] metódussal kijelölt csonton.\nHa a [param enabled] értéke [code]true[/code], a feldolgozott transzformáció hozzáadódik a célcsont aktuális pózához.\nHa a [param enabled] értéke [code]false[/code], a feldolgozott transzformáció felülírja a célcsont pózát. Ha a [method set_relative] beállítása [code]true[/code], a transzformáció a nyugalmi pózhoz viszonyított eltérésként érvényesül."
+
+#. CopyTransformModifier3D.set_axis_x_enabled
+#: doc/classes/CopyTransformModifier3D.xml
+msgid "If sets [param enabled] to [code]true[/code], the X-axis will be copied."
+msgstr "Ha a [param enabled] értéke [code]true[/code], a módosító másolja az X tengelyhez tartozó értéket."
+
+#. CopyTransformModifier3D.set_axis_x_inverted
+#: doc/classes/CopyTransformModifier3D.xml
+msgid "If sets [param enabled] to [code]true[/code], the X-axis will be inverted."
+msgstr "Ha a [param enabled] értéke [code]true[/code], a módosító megfordítja az X tengelyhez tartozó értéket."
+
+#. CopyTransformModifier3D.set_axis_y_enabled
+#: doc/classes/CopyTransformModifier3D.xml
+msgid "If sets [param enabled] to [code]true[/code], the Y-axis will be copied."
+msgstr "Ha a [param enabled] értéke [code]true[/code], a módosító másolja az Y tengelyhez tartozó értéket."
+
+#. CopyTransformModifier3D.set_axis_y_inverted
+#: doc/classes/CopyTransformModifier3D.xml
+msgid "If sets [param enabled] to [code]true[/code], the Y-axis will be inverted."
+msgstr "Ha a [param enabled] értéke [code]true[/code], a módosító megfordítja az Y tengelyhez tartozó értéket."
+
+#. CopyTransformModifier3D.set_axis_z_enabled
+#: doc/classes/CopyTransformModifier3D.xml
+msgid "If sets [param enabled] to [code]true[/code], the Z-axis will be copied."
+msgstr "Ha a [param enabled] értéke [code]true[/code], a módosító másolja a Z tengelyhez tartozó értéket."
+
+#. CopyTransformModifier3D.set_axis_z_inverted
+#: doc/classes/CopyTransformModifier3D.xml
+msgid "If sets [param enabled] to [code]true[/code], the Z-axis will be inverted."
+msgstr "Ha a [param enabled] értéke [code]true[/code], a módosító megfordítja a Z tengelyhez tartozó értéket."
+
+#. CopyTransformModifier3D.set_relative
+#. ConvertTransformModifier3D.set_relative
+#: doc/classes/CopyTransformModifier3D.xml doc/classes/ConvertTransformModifier3D.xml
+msgid "Sets relative option in the setting at [param index] to [param enabled].\nIf sets [param enabled] to [code]true[/code], the extracted and applying transform is relative to the rest.\nIf sets [param enabled] to [code]false[/code], the extracted transform is absolute."
+msgstr "A [param index] indexű beállítás relatív módját a [param enabled] értékre állítja.\nHa a [param enabled] értéke [code]true[/code], a módosító a nyugalmi pózhoz viszonyítva olvassa ki és alkalmazza a transzformációt.\nHa a [param enabled] értéke [code]false[/code], a módosító a teljes transzformációt olvassa ki."
+
+#. CopyTransformModifier3D.AXIS_FLAG_X
+#: doc/classes/CopyTransformModifier3D.xml
+msgid "If set, allows to process the X-axis."
+msgstr "Engedélyezi az X tengely feldolgozását."
+
+#. CopyTransformModifier3D.AXIS_FLAG_Y
+#: doc/classes/CopyTransformModifier3D.xml
+msgid "If set, allows to process the Y-axis."
+msgstr "Engedélyezi az Y tengely feldolgozását."
+
+#. CopyTransformModifier3D.AXIS_FLAG_Z
+#: doc/classes/CopyTransformModifier3D.xml
+msgid "If set, allows to process the Z-axis."
+msgstr "Engedélyezi a Z tengely feldolgozását."
+
+#. ConvertTransformModifier3D.brief
+#: doc/classes/ConvertTransformModifier3D.xml
+msgid "A [SkeletonModifier3D] that apply transform to the bone which converted from reference."
+msgstr "A referenciából származó transzformációt átalakítja és alkalmazza a célcsontra. A [SkeletonModifier3D] leszármazottja."
+
+#. ConvertTransformModifier3D.description
+#: doc/classes/ConvertTransformModifier3D.xml
+msgid "Apply the copied transform of the bone set by [method BoneConstraint3D.set_reference_bone] to the bone set by [method BoneConstraint3D.set_apply_bone] about the specific axis with remapping it with some options.\nThere are 4 ways to apply the transform, depending on the combination of [method set_relative] and [method set_additive].\n[b]Relative + Additive:[/b]\n- Extract reference pose relative to the rest and add it to the apply bone's pose.\n[b]Relative + Not Additive:[/b]\n- Extract reference pose relative to the rest and add it to the apply bone's rest.\n[b]Not Relative + Additive:[/b]\n- Extract reference pose absolutely and add it to the apply bone's pose.\n[b]Not Relative + Not Additive:[/b]\n- Extract reference pose absolutely and the apply bone's pose is replaced with it.\n[b]Note:[/b] Relative option is available only in the case [method BoneConstraint3D.get_reference_type] is [constant BoneConstraint3D.REFERENCE_TYPE_BONE]. See also [enum BoneConstraint3D.ReferenceType].\n[b]Note:[/b] If there is a rotation greater than [code]180[/code] degrees with constrained axes, flipping may occur."
+msgstr "A [method BoneConstraint3D.set_reference_bone] metódussal kijelölt csont transzformációjának adott tengelyhez tartozó értékét átszámítja, majd alkalmazza a [method BoneConstraint3D.set_apply_bone] metódussal kijelölt célcsontra.\nA [method set_relative] és a [method set_additive] beállítás kombinációja négyféle működést tesz lehetővé.\n[b]Relatív és összeadó mód[/b]\n- A referencia nyugalmi pózhoz viszonyított eltérését hozzáadja a célcsont aktuális pózához.\n[b]Csak relatív mód[/b]\n- A referencia nyugalmi pózhoz viszonyított eltérését hozzáadja a célcsont nyugalmi pózához.\n[b]Csak összeadó mód[/b]\n- A referencia teljes pózát hozzáadja a célcsont aktuális pózához.\n[b]Mindkét mód kikapcsolva[/b]\n- A referencia teljes pózával helyettesíti a célcsont pózát.\n[b]Megjegyzés:[/b] A relatív mód csak akkor használható, ha a [method BoneConstraint3D.get_reference_type] eredménye [constant BoneConstraint3D.REFERENCE_TYPE_BONE]. Lásd még az [enum BoneConstraint3D.ReferenceType] felsorolást.\n[b]Megjegyzés:[/b] A tengelyek korlátozása mellett [code]180[/code] foknál nagyobb forgatáskor az irány átfordulhat."
+
+#. ConvertTransformModifier3D.get_apply_axis
+#: doc/classes/ConvertTransformModifier3D.xml
+msgid "Returns the axis of the remapping destination transform."
+msgstr "Az átszámított érték alkalmazásához használt céltengelyt adja vissza."
+
+#. ConvertTransformModifier3D.get_apply_range_max
+#: doc/classes/ConvertTransformModifier3D.xml
+msgid "Returns the maximum value of the remapping destination range."
+msgstr "Az átszámítás céltartományának felső határát adja vissza."
+
+#. ConvertTransformModifier3D.get_apply_range_min
+#: doc/classes/ConvertTransformModifier3D.xml
+msgid "Returns the minimum value of the remapping destination range."
+msgstr "Az átszámítás céltartományának alsó határát adja vissza."
+
+#. ConvertTransformModifier3D.get_apply_transform_mode
+#: doc/classes/ConvertTransformModifier3D.xml
+msgid "Returns the operation of the remapping destination transform."
+msgstr "Az átszámítás céloldalán használt transzformációs műveletet adja vissza."
+
+#. ConvertTransformModifier3D.get_reference_axis
+#: doc/classes/ConvertTransformModifier3D.xml
+msgid "Returns the axis of the remapping source transform."
+msgstr "Azt a forrástengelyt adja vissza, amelyről a módosító az átszámítandó értéket kiolvassa."
+
+#. ConvertTransformModifier3D.get_reference_range_max
+#: doc/classes/ConvertTransformModifier3D.xml
+msgid "Returns the maximum value of the remapping source range."
+msgstr "Az átszámítás bemeneti tartományának felső határát adja vissza."
+
+#. ConvertTransformModifier3D.get_reference_range_min
+#: doc/classes/ConvertTransformModifier3D.xml
+msgid "Returns the minimum value of the remapping source range."
+msgstr "Az átszámítás bemeneti tartományának alsó határát adja vissza."
+
+#. ConvertTransformModifier3D.get_reference_transform_mode
+#: doc/classes/ConvertTransformModifier3D.xml
+msgid "Returns the operation of the remapping source transform."
+msgstr "Az átszámítás forrásoldalán használt transzformációs műveletet adja vissza."
+
+#. ConvertTransformModifier3D.set_apply_axis
+#: doc/classes/ConvertTransformModifier3D.xml
+msgid "Sets the axis of the remapping destination transform."
+msgstr "Beállítja az átszámított érték alkalmazásához használt céltengelyt."
+
+#. ConvertTransformModifier3D.set_apply_range_max
+#: doc/classes/ConvertTransformModifier3D.xml
+msgid "Sets the maximum value of the remapping destination range."
+msgstr "Beállítja az átszámítás céltartományának felső határát."
+
+#. ConvertTransformModifier3D.set_apply_range_min
+#: doc/classes/ConvertTransformModifier3D.xml
+msgid "Sets the minimum value of the remapping destination range."
+msgstr "Beállítja az átszámítás céltartományának alsó határát."
+
+#. ConvertTransformModifier3D.set_apply_transform_mode
+#: doc/classes/ConvertTransformModifier3D.xml
+msgid "Sets the operation of the remapping destination transform."
+msgstr "Beállítja az átszámítás céloldalán használt transzformációs műveletet."
+
+#. ConvertTransformModifier3D.set_reference_axis
+#: doc/classes/ConvertTransformModifier3D.xml
+msgid "Sets the axis of the remapping source transform."
+msgstr "Beállítja azt a forrástengelyt, amelyről a módosító az átszámítandó értéket kiolvassa."
+
+#. ConvertTransformModifier3D.set_reference_range_max
+#: doc/classes/ConvertTransformModifier3D.xml
+msgid "Sets the maximum value of the remapping source range."
+msgstr "Beállítja az átszámítás bemeneti tartományának felső határát."
+
+#. ConvertTransformModifier3D.set_reference_range_min
+#: doc/classes/ConvertTransformModifier3D.xml
+msgid "Sets the minimum value of the remapping source range."
+msgstr "Beállítja az átszámítás bemeneti tartományának alsó határát."
+
+#. ConvertTransformModifier3D.set_reference_transform_mode
+#: doc/classes/ConvertTransformModifier3D.xml
+msgid "Sets the operation of the remapping source transform."
+msgstr "Beállítja az átszámítás forrásoldalán használt transzformációs műveletet."
+
+#. ConvertTransformModifier3D.TRANSFORM_MODE_POSITION
+#: doc/classes/ConvertTransformModifier3D.xml
+msgid "Convert with position. Transfer the difference."
+msgstr "Pozícióértékkel számol, és az eltolás különbségét viszi át."
+
+#. ConvertTransformModifier3D.TRANSFORM_MODE_ROTATION
+#: doc/classes/ConvertTransformModifier3D.xml
+msgid "Convert with rotation. The angle is the roll for the specified axis."
+msgstr "Forgatásértékkel számol. A szög a megadott tengely körüli elfordulást jelenti."
+
+#. ConvertTransformModifier3D.TRANSFORM_MODE_SCALE
+#: doc/classes/ConvertTransformModifier3D.xml
+msgid "Convert with scale. Transfers the ratio, not the difference."
+msgstr "Méretezéssel számol. A méretarányt viszi át, így az eredmény szorzótényezőként érvényesül."
+
+#. BoneConstraint3D.REFERENCE_TYPE_NODE
+#: doc/classes/BoneConstraint3D.xml
+msgid "The reference target is a [Node3D]. In this case, the reference target spaces is model space.\nIn other words, the reference target's coordinates are treated as if it were placed directly under [Skeleton3D] which parent of the [BoneConstraint3D]."
+msgstr "A referencia egy [Node3D] csomópont. A módosító a koordinátáit a modell koordináta-rendszerében értelmezi.\nA referencia úgy viselkedik, mintha a [BoneConstraint3D] szülőjéül szolgáló [Skeleton3D] közvetlen gyermeke lenne."
+
+#. LookAtModifier3D.description
+#: doc/classes/LookAtModifier3D.xml
+msgid "This [SkeletonModifier3D] rotates a bone to look at a target. This is helpful for moving a character's head to look at the player, rotating a turret to look at a target, or any other case where you want to make a bone rotate towards something quickly and easily.\nWhen applying multiple [LookAtModifier3D]s, the [LookAtModifier3D] assigned to the parent bone must be put above the [LookAtModifier3D] assigned to the child bone in the list in order for the child bone results to be correct."
+msgstr "Ez a [SkeletonModifier3D] a cél felé fordít egy csontot. Így például egy karakter feje követheti a játékost, vagy egy lövegtorony a megadott célpont felé fordulhat.\nTöbb [LookAtModifier3D] használatakor a szülőcsonthoz rendelt [LookAtModifier3D] kerüljön a listában a gyermekcsonthoz rendelt [LookAtModifier3D] elé. Így kap helyes eredményt a gyermekcsont."
+
+#. LookAtModifier3D.is_target_within_limitation
+#: doc/classes/LookAtModifier3D.xml
+msgid "Returns whether the target is within the angle limitations. It is useful for unsetting the [member target_node] when the target is outside of the angle limitations.\n[b]Note:[/b] The value is updated after [method SkeletonModifier3D._process_modification]. To retrieve this value correctly, we recommend using the signal [signal SkeletonModifier3D.modification_processed]."
+msgstr "Azt adja vissza, hogy a cél a szöghatárokon belül van-e. Ha a cél kívülre kerül, az eredmény alapján törölheted a [member target_node] hozzárendelését.\n[b]Megjegyzés:[/b] Az érték a [method SkeletonModifier3D._process_modification] lefutása után frissül. A friss értéket a [signal SkeletonModifier3D.modification_processed] jelzésre érdemes kiolvasni."
+
+#. LookAtModifier3D.origin_offset
+#: doc/classes/LookAtModifier3D.xml
+msgid "The offset of the bone pose origin. Matching the origins by offset is useful for cases where multiple bones must always face the same direction, such as the eyes.\n[b]Note:[/b] This value indicates the local position of the object set in [member origin_from]."
+msgstr "A csontpóz origójának eltolása. Az origók összehangolása akkor hasznos, ha több csontnak, például a két szemnek mindig ugyanabba az irányba kell néznie.\n[b]Megjegyzés:[/b] Az érték a [member origin_from] által kiválasztott objektum helyi koordináta-rendszerében értendő."
+
+#. LookAtModifier3D.primary_damp_threshold
+#: doc/classes/LookAtModifier3D.xml
+msgid "The threshold to start damping for [member primary_limit_angle]. It provides non-linear (b-spline) interpolation, let it feel more resistance the more it rotate to the edge limit. This is useful for simulating the limits of human motion.\nIf [code]1.0[/code], no damping is performed. If [code]0.0[/code], damping is always performed."
+msgstr "A csillapítás kezdőpontja a [member primary_limit_angle] határhoz képest. A nemlineáris B-spline interpoláció miatt az elfordulás egyre nagyobb ellenállásba ütközik a szöghatárhoz közeledve. Ez hasznos például az emberi mozgástartomány utánzásához.\n[code]1.0[/code] esetén nincs csillapítás, [code]0.0[/code] esetén a teljes tartományban van."
+
+#. LookAtModifier3D.primary_rotation_axis
+#: doc/classes/LookAtModifier3D.xml
+msgid "The axis of the first rotation. This [SkeletonModifier3D] works by compositing the rotation by Euler angles to prevent to rotate the [member forward_axis]."
+msgstr "Az első forgatás tengelye. Ez a [SkeletonModifier3D] Euler-szögekből állítja össze a forgatást, hogy elkerülje a [member forward_axis] körüli elfordulást."
+
+#. RetargetModifier3D.description
+#: doc/classes/RetargetModifier3D.xml
+msgid "Retrieves the pose (or global pose) relative to the parent Skeleton's rest in model space and transfers it to the child Skeleton.\nThis modifier rewrites the pose of the child skeleton directly in the parent skeleton's update process. This means that it overwrites the mapped bone pose set in the normal process on the target skeleton. If you want to set the target skeleton bone pose after retargeting, you will need to add a [SkeletonModifier3D] child to the target skeleton and thereby modify the pose.\n[b]Note:[/b] When the [member use_global_pose] is enabled, even if it is an unmapped bone, it can cause visual problems because the global pose is applied ignoring the parent bone's pose [b]if it has mapped bone children[/b]. See also [member use_global_pose]."
+msgstr "A szülő csontváz nyugalmi pózához viszonyítva olvassa ki a csontpózt vagy a globális csontpózt a modell koordináta-rendszerében, és átviszi a gyermek csontvázra.\nA módosító közvetlenül a szülő csontváz frissítésekor írja át a gyermek pózát. Így felülírja a megfeleltetett csontoknak a célcsontváz normál feldolgozásakor beállított pózát. Ha az átvitel után módosítanád a célcsontváz pózát, adj hozzá egy [SkeletonModifier3D] gyermekcsomópontot, és abban állítsd be a pózt.\n[b]Megjegyzés:[/b] A [member use_global_pose] bekapcsolásakor a globális póz átvitele figyelmen kívül hagyja a szülőcsont pózát. Ez megfeleltetés nélküli csontnál is okozhat látható eltérést, [b]ha van megfeleltetett gyermekcsontja[/b]. Lásd még a [member use_global_pose] tulajdonságot."
+
+#. RetargetModifier3D.set_position_enabled
+#: doc/classes/RetargetModifier3D.xml
+msgid "Sets [constant TRANSFORM_FLAG_POSITION] into [member enable]."
+msgstr "Beállítja a [constant TRANSFORM_FLAG_POSITION] jelzőbitet a [member enable] tulajdonságban."
+
+#. RetargetModifier3D.set_rotation_enabled
+#: doc/classes/RetargetModifier3D.xml
+msgid "Sets [constant TRANSFORM_FLAG_ROTATION] into [member enable]."
+msgstr "Beállítja a [constant TRANSFORM_FLAG_ROTATION] jelzőbitet a [member enable] tulajdonságban."
+
+#. RetargetModifier3D.set_scale_enabled
+#: doc/classes/RetargetModifier3D.xml
+msgid "Sets [constant TRANSFORM_FLAG_SCALE] into [member enable]."
+msgstr "Beállítja a [constant TRANSFORM_FLAG_SCALE] jelzőbitet a [member enable] tulajdonságban."
+
+#. RetargetModifier3D.use_global_pose
+#: doc/classes/RetargetModifier3D.xml
+msgid "If [code]false[/code], in case the target skeleton has fewer bones than the source skeleton, the source bone parent's transform will be ignored.\nInstead, it is possible to retarget between models with different body shapes, and position, rotation, and scale can be retargeted separately.\nIf [code]true[/code], retargeting is performed taking into account global pose.\nIn case the target skeleton has fewer bones than the source skeleton, the source bone parent's transform is taken into account. However, bone length between skeletons must match exactly, if not, the bones will be forced to expand or shrink.\nThis is useful for using dummy bone with length [code]0[/code] to match postures when retargeting between models with different number of bones."
+msgstr "Ha az érték [code]false[/code], és a célcsontváznak kevesebb csontja van, a módosító kihagyja a forráscsont szülőjének transzformációját.\nÍgy az animáció eltérő testalkatú modellek között is átvihető, a pozíció, forgatás és méretezés pedig külön-külön is átvehető.\nHa az érték [code]true[/code], az átvitel a globális pózt veszi alapul.\nHa a célcsontváznak kevesebb csontja van, a módosító a forráscsont szülőjének transzformációját is figyelembe veszi. A két csontváz csontjainak hossza pontosan egyezzen meg, különben a csontok megnyúlhatnak vagy összemehetnek.\nEz hasznos, ha eltérő csontszámú modellek között [code]0[/code] hosszúságú segédcsontokkal hangolod össze a pózokat."
+
+#. ChainIK3D.description
+#: doc/classes/ChainIK3D.xml
+msgid "Base class of [SkeletonModifier3D] that automatically generates a joint list from the bones between the root bone and the end bone.\n[b]Note:[/b] All the methods in this class take an [code]index[/code] parameter. This parameter specifies which setting list entry to return if the IK has multiple entries (e.g. [code]settings/<index>/root_bone_name[/code])."
+msgstr "A [SkeletonModifier3D] olyan alaposztálya, amely automatikusan összeállítja az ízületek listáját a gyökércsonttól a végcsontig.\n[b]Megjegyzés:[/b] Minden metódus [code]index[/code] paramétert vár. Több IK-beállítás esetén ez jelöli ki a lista megfelelő elemét, például itt: [code]settings/<index>/root_bone_name[/code]."
+
+#. ChainIK3D.set_end_bone_name
+#: doc/classes/ChainIK3D.xml
+msgid "Sets the end bone name of the bone chain.\n[b]Note:[/b] The end bone must be the root bone or a child of the root bone. If they are the same, the tail must be extended by [method set_extend_end_bone] to modify the bone."
+msgstr "Beállítja a csontlánc végcsontjának nevét.\n[b]Megjegyzés:[/b] A végcsont lehet a gyökércsont vagy annak leszármazottja. Ha ugyanaz a csont tölti be mindkét szerepet, a [method set_extend_end_bone] metódussal meg kell hosszabbítani a lánc végét, hogy a módosító működjön."
+
+#. ChainIK3D.set_extend_end_bone
+#: doc/classes/ChainIK3D.xml
+msgid "If [param enabled] is [code]true[/code], the end bone is extended to have a tail.\nThe extended tail config is allocated to the last element in the joint list. In other words, if you set [param enabled] to [code]false[/code], the config of the last element in the joint list has no effect in the simulated result."
+msgstr "Ha a [param enabled] értéke [code]true[/code], a végcsont egy végszakasszal hosszabbodik meg.\nA végszakasz beállításai az ízületlista utolsó eleméhez tartoznak. Ha a [param enabled] értéke [code]false[/code], az utolsó elem beállításai nem befolyásolják a számított eredményt."
+
+#. IterateIK3D.brief
+#: doc/classes/IterateIK3D.xml
+msgid "A [SkeletonModifier3D] to approach the goal by repeating small rotations."
+msgstr "[SkeletonModifier3D], amely kis forgatásokat ismételve közelít a célhoz."
+
+#. IterateIK3D.description
+#: doc/classes/IterateIK3D.xml
+msgid "Base class of [SkeletonModifier3D] to approach the goal by repeating small rotations.\nEach bone chain (setting) has one effector, which is processed in order of the setting list. You can set some limitations for each joint.\n[b]Note:[/b] All the methods in this class take an [code]index[/code] parameter. This parameter specifies which setting list entry to return if the IK has multiple entries (e.g. [code]settings/<index>/target_node[/code])."
+msgstr "A [SkeletonModifier3D] olyan leszármazottainak alaposztálya, amelyek kis forgatásokat ismételve közelítenek a célhoz.\nMinden csontlánchoz, vagyis minden beállításhoz egy végponti vezérlő tartozik. A módosító ezeket a beállításlista sorrendjében dolgozza fel. Az ízületekhez külön korlátozások adhatók meg.\n[b]Megjegyzés:[/b] Minden metódus [code]index[/code] paramétert vár. Több IK-beállítás esetén ez jelöli ki a lista megfelelő elemét, például itt: [code]settings/<index>/target_node[/code]."
+
+#. IterateIK3D.get_joint_limitation
+#: doc/classes/IterateIK3D.xml
+msgid "Returns the joint limitation at [param joint] in the bone chain's joint list."
+msgstr "A csontlánc ízületlistájában a [param joint] indexhez tartozó ízület korlátozását adja vissza."
+
+#. IterateIK3D.get_joint_limitation_right_axis
+#: doc/classes/IterateIK3D.xml
+msgid "Returns the joint limitation right axis at [param joint] in the bone chain's joint list."
+msgstr "A csontlánc ízületlistájában a [param joint] indexű ízület korlátozásának jobbra mutató tengelyét adja vissza."
+
+#. IterateIK3D.get_joint_limitation_right_axis_vector
+#: doc/classes/IterateIK3D.xml
+msgid "Returns the joint limitation right axis vector at [param joint] in the bone chain's joint list.\nIf [method get_joint_limitation_right_axis] is [constant SkeletonModifier3D.SECONDARY_DIRECTION_NONE], this method returns [code]Vector3(0, 0, 0)[/code]."
+msgstr "A csontlánc ízületlistájában a [param joint] indexű ízület korlátozásának jobbra mutató tengelyvektorát adja vissza.\nHa a [method get_joint_limitation_right_axis] eredménye [constant SkeletonModifier3D.SECONDARY_DIRECTION_NONE], a visszaadott érték [code]Vector3(0, 0, 0)[/code]."
+
+#. IterateIK3D.get_joint_rotation_axis_vector
+#: doc/classes/IterateIK3D.xml
+msgid "Returns the rotation axis vector for the specified joint in the bone chain. This vector represents the axis around which the joint can rotate. It is determined based on the rotation axis set for the joint.\nIf [method get_joint_rotation_axis] is [constant SkeletonModifier3D.ROTATION_AXIS_ALL], this method returns [code]Vector3(0, 0, 0)[/code]."
+msgstr "A csontlánc megadott ízületének forgástengelyét vektorként adja vissza. A vektor kijelöli, melyik tengely körül fordulhat el az ízület. A módosító az ízület beállított forgástengelyéből számítja ki.\nHa a [method get_joint_rotation_axis] eredménye [constant SkeletonModifier3D.ROTATION_AXIS_ALL], a visszaadott érték [code]Vector3(0, 0, 0)[/code]."
+
+#. IterateIK3D.set_joint_limitation
+#: doc/classes/IterateIK3D.xml
+msgid "Sets the joint limitation at [param joint] in the bone chain's joint list."
+msgstr "Beállítja a csontlánc ízületlistájában a [param joint] indexű ízület korlátozását."
+
+#. IterateIK3D.set_joint_limitation_right_axis
+#: doc/classes/IterateIK3D.xml
+msgid "Sets the joint limitation right axis at [param joint] in the bone chain's joint list."
+msgstr "Beállítja a csontlánc ízületlistájában a [param joint] indexű ízület korlátozásának jobbra mutató tengelyét."
+
+#. IterateIK3D.set_joint_limitation_right_axis_vector
+#: doc/classes/IterateIK3D.xml
+msgid "Sets the optional joint limitation right axis vector at [param joint] in the bone chain's joint list."
+msgstr "Beállítja a csontlánc ízületlistájában a [param joint] indexű ízület korlátozásának választható, jobbra mutató tengelyvektorát."
+
+#. IterateIK3D.set_joint_rotation_axis_vector
+#: doc/classes/IterateIK3D.xml
+msgid "Sets the rotation axis vector for the specified joint in the bone chain.\nThis vector is normalized by an internal process and represents the axis around which the bone chain can rotate.\nIf the vector length is [code]0[/code], it is considered synonymous with [constant SkeletonModifier3D.ROTATION_AXIS_ALL]."
+msgstr "Beállítja a csontlánc megadott ízületének forgástengely-vektorát.\nA motor egységnyi hosszúságúra alakítja a vektort. Ez határozza meg a tengelyt, amely körül a csontlánc elfordulhat.\nHa a vektor hossza [code]0[/code], a beállítás a [constant SkeletonModifier3D.ROTATION_AXIS_ALL] értéknek felel meg."
+
+#. IterateIK3D.angular_delta_limit
+#: doc/classes/IterateIK3D.xml
+msgid "The maximum amount each bone can rotate in a single iteration.\n[b]Note:[/b] This limitation is applied during each iteration. For example, if [member max_iterations] is [code]4[/code] and [member angular_delta_limit] is [code]5[/code] degrees, the maximum rotation possible in a single frame is [code]20[/code] degrees."
+msgstr "A szög, amennyivel egy csont egyetlen iteráció alatt legfeljebb elfordulhat.\n[b]Megjegyzés:[/b] A korlát minden iterációban érvényes. Ha a [member max_iterations] értéke például [code]4[/code], a [member angular_delta_limit] pedig [code]5[/code] fok, egyetlen képkockában legfeljebb [code]20[/code] foknyi elfordulás lehetséges."
+
+#. IterateIK3D.deterministic
+#: doc/classes/IterateIK3D.xml
+msgid "If [code]false[/code], the result is calculated from the previous frame's [IterateIK3D] result as the initial state.\nIf [code]true[/code], the previous frame's [IterateIK3D] result is discarded. At this point, the new result is calculated from the bone pose excluding the [IterateIK3D] as the initial state. This means the result will be always equal as long as the target position and the previous bone pose are the same. However, if [member angular_delta_limit] and [member max_iterations] are set too small, the end bone of the chain will never reach the target."
+msgstr "Ha az érték [code]false[/code], a számítás az [IterateIK3D] előző képkockában kapott eredményéből indul ki.\nHa az érték [code]true[/code], a módosító elveti az [IterateIK3D] előző képkockában kapott eredményét. A következő számítás az [IterateIK3D] hatása nélkül kapott csontpózból indul ki. Azonos célpozíció és kiinduló csontpóz mellett így mindig ugyanaz az eredmény. Ha azonban az [member angular_delta_limit] és a [member max_iterations] túl kicsi, előfordulhat, hogy a végcsont sosem éri el a célt."
+
+#. IterateIK3D.max_iterations
+#: doc/classes/IterateIK3D.xml
+msgid "The number of iteration loops used by the IK solver to produce more accurate results."
+msgstr "A megoldó iterációinak száma. Több iterációval pontosabb eredmény érhető el."
+
+#. IterateIK3D.min_distance
+#: doc/classes/IterateIK3D.xml
+msgid "The minimum distance between the end bone and the target. If the distance is below this value, the IK solver stops any further iterations."
+msgstr "A végcsont és a cél közötti távolsághatár. Ennél kisebb távolságnál az inverz kinematikai megoldó leállítja az iterációt."
+
+#. AimModifier3D.brief
+#: doc/classes/AimModifier3D.xml
+msgid "The [AimModifier3D] rotates a bone to look at a reference bone."
+msgstr "Az [AimModifier3D] a referenciacsont felé fordítja a csontot."
+
+#. AimModifier3D.description
+#: doc/classes/AimModifier3D.xml
+msgid "This is a simple version of [LookAtModifier3D] that only allows bone to the reference without advanced options such as angle limitation or time-based interpolation.\nThe feature is simplified, but instead it is implemented with smooth tracking without euler, see [method set_use_euler]."
+msgstr "A [LookAtModifier3D] egyszerűbb változata. A csontot a referencia felé fordítja, szöghatárok és időalapú interpoláció nélkül.\nEuler-szögek nélkül is képes folyamatos követésre. Lásd a [method set_use_euler] metódust."
+
+#. AimModifier3D.get_forward_axis
+#: doc/classes/AimModifier3D.xml
+msgid "Returns the forward axis of the bone."
+msgstr "A csont előre mutató tengelyét adja vissza."
+
+#. AimModifier3D.get_primary_rotation_axis
+#: doc/classes/AimModifier3D.xml
+msgid "Returns the axis of the first rotation. It is enabled only if [method is_using_euler] is [code]true[/code]."
+msgstr "Az első forgatás tengelyét adja vissza. Ez csak akkor érvényesül, ha az [method is_using_euler] eredménye [code]true[/code]."
+
+#. AimModifier3D.is_using_euler
+#: doc/classes/AimModifier3D.xml
+msgid "Returns [code]true[/code] if it provides rotation with using euler."
+msgstr "[code]true[/code] értéket ad vissza, ha a módosító Euler-szögekkel számítja ki a forgatást."
+
+#. AimModifier3D.is_using_secondary_rotation
+#: doc/classes/AimModifier3D.xml
+msgid "Returns [code]true[/code] if it provides rotation by two axes. It is enabled only if [method is_using_euler] is [code]true[/code]."
+msgstr "[code]true[/code] értéket ad vissza, ha a módosító két tengely körül forgat. Ez csak akkor érvényesül, ha az [method is_using_euler] eredménye [code]true[/code]."
+
+#. AimModifier3D.set_forward_axis
+#: doc/classes/AimModifier3D.xml
+msgid "Sets the forward axis of the bone."
+msgstr "Beállítja a csont előre mutató tengelyét."
+
+#. AimModifier3D.set_primary_rotation_axis
+#: doc/classes/AimModifier3D.xml
+msgid "Sets the axis of the first rotation. It is enabled only if [method is_using_euler] is [code]true[/code]."
+msgstr "Beállítja az első forgatás tengelyét. Ez csak akkor érvényesül, ha az [method is_using_euler] eredménye [code]true[/code]."
+
+#. AimModifier3D.set_relative
+#: doc/classes/AimModifier3D.xml
+msgid "Sets relative option in the setting at [param index] to [param enabled].\nIf sets [param enabled] to [code]true[/code], the rotation is applied relative to the pose.\nIf sets [param enabled] to [code]false[/code], the rotation is applied relative to the rest. It means to replace the current pose with the [AimModifier3D]'s result."
+msgstr "A [param index] indexű beállítás relatív módját a [param enabled] értékre állítja.\nHa a [param enabled] értéke [code]true[/code], a forgatást az aktuális pózhoz viszonyítva alkalmazza.\nHa a [param enabled] értéke [code]false[/code], a forgatást a nyugalmi pózhoz viszonyítva alkalmazza. Ilyenkor az [AimModifier3D] eredménye felülírja az aktuális pózt."
+
+#. AimModifier3D.set_use_euler
+#: doc/classes/AimModifier3D.xml
+msgid "If sets [param enabled] to [code]true[/code], it provides rotation with using euler.\nIf sets [param enabled] to [code]false[/code], it provides rotation with using rotation by arc generated from the forward axis vector and the vector toward the reference."
+msgstr "Ha a [param enabled] értéke [code]true[/code], a módosító Euler-szögekkel számítja ki a forgatást.\nHa a [param enabled] értéke [code]false[/code], az előre mutató tengely és a referencia felé mutató vektor közötti ív alapján számítja ki a forgatást."
+
+#. AimModifier3D.set_use_secondary_rotation
+#: doc/classes/AimModifier3D.xml
+msgid "If sets [param enabled] to [code]true[/code], it provides rotation by two axes. It is enabled only if [method is_using_euler] is [code]true[/code]."
+msgstr "Ha a [param enabled] értéke [code]true[/code], a módosító két tengely körül forgat. Ez csak akkor érvényesül, ha az [method is_using_euler] eredménye [code]true[/code]."
