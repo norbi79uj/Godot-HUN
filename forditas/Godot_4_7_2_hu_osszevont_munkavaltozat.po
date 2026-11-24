@@ -61342,3 +61342,403 @@ msgstr "Eltávolítja a téma megadott [param name] nevű konstansának helyi fe
 #: doc/classes/Control.xml
 msgid "Removes a local override for a theme [Font] with the specified [param name] previously added by [method add_theme_font_override] or via the Inspector dock."
 msgstr "Eltávolítja a téma megadott [param name] nevű [Font] elemének helyi felülbírálását, amelyet korábban az [method add_theme_font_override] metódussal vagy az Inspector panelen állítottál be."
+
+#: doc/classes/Control.xml
+msgid "Return the description of the keyboard shortcuts and other contextual help for this control."
+msgstr "Visszaadja a vezérlő gyorsbillentyűinek leírását és az egyéb, helyzethez illő súgószöveget."
+
+#: doc/classes/Control.xml
+msgid "Godot calls this method to test if [param data] from a control's [method _get_drag_data] can be dropped at [param at_position]. [param at_position] is local to this control.\nThis method should only be used to test the data. Process the data in [method _drop_data].\n[b]Note:[/b] If the drag was initiated by a keyboard shortcut or [method accessibility_drag], [param at_position] is set to [constant Vector2.INF], and the currently selected item/text position should be used as the drop position.\n[codeblocks]\n[gdscript]\nfunc _can_drop_data(position, data):\n\t# Check position if it is relevant to you\n\t# Otherwise, just check data\n\treturn typeof(data) == TYPE_DICTIONARY and data.has(\"expected\")\n[/gdscript]\n[csharp]\npublic override bool _CanDropData(Vector2 atPosition, Variant data)\n{\n\t// Check position if it is relevant to you\n\t// Otherwise, just check data\n\treturn data.VariantType == Variant.Type.Dictionary && data.AsGodotDictionary().ContainsKey(\"expected\");\n}\n[/csharp]\n[/codeblocks]"
+msgstr "A Godot ezzel ellenőrzi, hogy egy vezérlő [method _get_drag_data] metódusából származó [param data] adat elengedhető-e a megadott [param at_position] helyen. Az [param at_position] koordinátái ehhez a vezérlőhöz viszonyítva értendők.\nEbben a metódusban csak ellenőrizd az adatot. A feldolgozást a [method _drop_data] metódusban végezd.\n[b]Megjegyzés:[/b] Ha a húzást gyorsbillentyű vagy a [method accessibility_drag] indította, az [param at_position] értéke [constant Vector2.INF]. Ilyenkor az aktuálisan kijelölt elem vagy szöveg helyét használd az elengedés helyeként.\n[codeblocks]\n[gdscript]\nfunc _can_drop_data(position, data):\n\t# Check position if it is relevant to you\n\t# Otherwise, just check data\n\treturn typeof(data) == TYPE_DICTIONARY and data.has(\"expected\")\n[/gdscript]\n[csharp]\npublic override bool _CanDropData(Vector2 atPosition, Variant data)\n{\n\t// Check position if it is relevant to you\n\t// Otherwise, just check data\n\treturn data.VariantType == Variant.Type.Dictionary && data.AsGodotDictionary().ContainsKey(\"expected\");\n}\n[/csharp]\n[/codeblocks]"
+
+#: doc/classes/Control.xml
+msgid "Godot calls this method to pass you the [param data] from a control's [method _get_drag_data] result. Godot first calls [method _can_drop_data] to test if [param data] is allowed to drop at [param at_position] where [param at_position] is local to this control.\n[b]Note:[/b] If the drag was initiated by a keyboard shortcut or [method accessibility_drag], [param at_position] is set to [constant Vector2.INF], and the currently selected item/text position should be used as the drop position.\n[codeblocks]\n[gdscript]\nfunc _can_drop_data(position, data):\n\treturn typeof(data) == TYPE_DICTIONARY and data.has(\"color\")\n\nfunc _drop_data(position, data):\n\tvar color = data[\"color\"]\n[/gdscript]\n[csharp]\npublic override bool _CanDropData(Vector2 atPosition, Variant data)\n{\n\treturn data.VariantType == Variant.Type.Dictionary && data.AsGodotDictionary().ContainsKey(\"color\");\n}\n\npublic override void _DropData(Vector2 atPosition, Variant data)\n{\n\tColor color = data.AsGodotDictionary()[\"color\"].AsColor();\n}\n[/csharp]\n[/codeblocks]"
+msgstr "A Godot ezen a metóduson keresztül adja át egy vezérlő [method _get_drag_data] metódusából származó [param data] adatot. Előbb meghívja a [method _can_drop_data] metódust annak ellenőrzésére, hogy a [param data] adat elengedhető-e a megadott [param at_position] helyen. Az [param at_position] koordinátái ehhez a vezérlőhöz viszonyítva értendők.\n[b]Megjegyzés:[/b] Ha a húzást gyorsbillentyű vagy a [method accessibility_drag] indította, az [param at_position] értéke [constant Vector2.INF]. Ilyenkor az aktuálisan kijelölt elem vagy szöveg helyét használd az elengedés helyeként.\n[codeblocks]\n[gdscript]\nfunc _can_drop_data(position, data):\n\treturn typeof(data) == TYPE_DICTIONARY and data.has(\"color\")\n\nfunc _drop_data(position, data):\n\tvar color = data[\"color\"]\n[/gdscript]\n[csharp]\npublic override bool _CanDropData(Vector2 atPosition, Variant data)\n{\n\treturn data.VariantType == Variant.Type.Dictionary && data.AsGodotDictionary().ContainsKey(\"color\");\n}\n\npublic override void _DropData(Vector2 atPosition, Variant data)\n{\n\tColor color = data.AsGodotDictionary()[\"color\"].AsColor();\n}\n[/csharp]\n[/codeblocks]"
+
+#: doc/classes/Control.xml
+msgid "Override this method to return a human-readable description of the position of the child [param node] in the custom container, added to the [member accessibility_name]."
+msgstr "Írd felül ezt a metódust, hogy olvasható leírást adj a [param node] gyermek egyéni tárolón belüli helyéről. A leírás hozzáadódik az [member accessibility_name] értékéhez."
+
+#: doc/classes/Control.xml
+msgid "Virtual method to be implemented by the user. Returns the cursor shape for the position [param at_position] in the control's local coordinates, which will typically be used while hovering over this control. See [method get_cursor_shape].\nIf not overridden, defaults to [member mouse_default_cursor_shape]."
+msgstr "A felhasználó által megvalósítható virtuális metódus. Megadja, milyen alakú legyen az egérmutató a vezérlő helyi koordinátarendszerében megadott [param at_position] ponton. Ezt a motor általában akkor használja, amikor az egérmutató a vezérlő fölött van. Lásd a [method get_cursor_shape] metódust.\nFelülírás hiányában a [member mouse_default_cursor_shape] értékét adja."
+
+#: doc/classes/Control.xml
+msgid "Godot calls this method to get data that can be dragged and dropped onto controls that expect drop data. Returns [code]null[/code] if there is no data to drag. Controls that want to receive drop data should implement [method _can_drop_data] and [method _drop_data]. [param at_position] is local to this control. Drag may be forced with [method force_drag].\nA preview that will follow the mouse that should represent the data can be set with [method set_drag_preview]. A good time to set the preview is in this method.\n[b]Note:[/b] If the drag was initiated by a keyboard shortcut or [method accessibility_drag], [param at_position] is set to [constant Vector2.INF], and the currently selected item/text position should be used as the drag position.\n[codeblocks]\n[gdscript]\nfunc _get_drag_data(position):\n\tvar mydata = make_data() # This is your custom method generating the drag data.\n\tset_drag_preview(make_preview(mydata)) # This is your custom method generating the preview of the drag data.\n\treturn mydata\n[/gdscript]\n[csharp]\npublic override Variant _GetDragData(Vector2 atPosition)\n{\n\tvar myData = MakeData(); // This is your custom method generating the drag data.\n\tSetDragPreview(MakePreview(myData)); // This is your custom method generating the preview of the drag data.\n\treturn myData;\n}\n[/csharp]\n[/codeblocks]"
+msgstr "A Godot ezzel a metódussal kéri le a húzható és megfelelő vezérlőkön elengedhető adatot. Ha nincs húzható adat, [code]null[/code] értéket ad vissza. A fogadó vezérlőknek meg kell valósítaniuk a [method _can_drop_data] és a [method _drop_data] metódust. Az [param at_position] értéke a vezérlő helyi koordinátarendszerében értendő. A húzást a [method force_drag] metódussal közvetlenül is elindíthatod.\nA [method set_drag_preview] metódussal megadhatod az adatot ábrázoló, egérmutatót követő előnézetet. Ezt célszerű itt megtenni.\n[b]Megjegyzés:[/b] Ha a húzást gyorsbillentyű vagy a [method accessibility_drag] indította, az [param at_position] értéke [constant Vector2.INF]. Ilyenkor az aktuálisan kijelölt elem vagy szöveg helyét használd a húzás kiindulópontjaként.\n[codeblocks]\n[gdscript]\nfunc _get_drag_data(position):\n\tvar mydata = make_data() # This is your custom method generating the drag data.\n\tset_drag_preview(make_preview(mydata)) # This is your custom method generating the preview of the drag data.\n\treturn mydata\n[/gdscript]\n[csharp]\npublic override Variant _GetDragData(Vector2 atPosition)\n{\n\tvar myData = MakeData(); // This is your custom method generating the drag data.\n\tSetDragPreview(MakePreview(myData)); // This is your custom method generating the preview of the drag data.\n\treturn myData;\n}\n[/csharp]\n[/codeblocks]"
+
+#: doc/classes/Control.xml
+msgid "Virtual method to be implemented by the user. Returns the minimum size for this control. Alternative to [member custom_minimum_size] for controlling minimum size via code. The actual minimum size will be the max value of these two (in each axis separately).\nIf not overridden, defaults to [constant Vector2.ZERO].\n[b]Note:[/b] This method will not be called when the script is attached to a [Control] node that already overrides its minimum size (e.g. [Label], [Button], [PanelContainer] etc.). It can only be used with most basic GUI nodes, like [Control], [Container], [Panel] etc."
+msgstr "A felhasználó által megvalósítható virtuális metódus, amely megadja a vezérlő minimális méretét. Az [member custom_minimum_size] mellett ezzel is szabályozható kódból a minimális méret. A tényleges minimális méret tengelyenként a két érték közül a nagyobbik.\nFelülírás hiányában az alapérték [constant Vector2.ZERO].\n[b]Megjegyzés:[/b] A motor nem hívja meg ezt a metódust, ha a szkript olyan [Control] csomóponthoz tartozik, amely maga határozza meg a minimális méretét, például [Label], [Button] vagy [PanelContainer]. A metódus a legtöbb egyszerű felületi csomóponton használható, például [Control], [Container] vagy [Panel] esetén."
+
+#: doc/classes/Control.xml
+msgid "Virtual method to be implemented by the user. Returns the tooltip text for the position [param at_position] in the control's local coordinates, which will typically appear when the cursor is resting over this control. See [method get_tooltip].\n[b]Note:[/b] If this method returns an empty [String] and [method _make_custom_tooltip] is not overridden, no tooltip is displayed."
+msgstr "A felhasználó által megvalósítható virtuális metódus. Visszaadja a vezérlő helyi koordinátarendszerében megadott [param at_position] ponthoz tartozó eszköztipp szövegét. Az eszköztipp jellemzően akkor jelenik meg, amikor az egérmutató a vezérlő fölött mozdulatlan marad. Lásd a [method get_tooltip] metódust.\n[b]Megjegyzés:[/b] Ha a metódus üres [String] értéket ad, és a [method _make_custom_tooltip] nincs felülírva, nem jelenik meg eszköztipp."
+
+#: doc/classes/Control.xml
+msgid "Return the auto-translation mode at the given [param at_position]. If not implemented, the [member tooltip_auto_translate_mode] property will be used instead."
+msgstr "Megadja az automatikus fordítás módját a megadott [param at_position] helyen. Ha a metódus nincs megvalósítva, a [member tooltip_auto_translate_mode] tulajdonság érvényes."
+
+#: doc/classes/Control.xml
+msgid "Virtual method to be implemented by the user. Returns whether the given [param point] is inside this control.\nIf not overridden, default behavior is checking if the point is within the control's Rect.\n[b]Note:[/b] If you want to check if a point is inside the control, you can use [code]Rect2(Vector2.ZERO, size).has_point(point)[/code]."
+msgstr "A felhasználó által megvalósítható virtuális metódus. Megadja, hogy a [param point] pont a vezérlőn belül van-e.\nFelülírás hiányában azt ellenőrzi, hogy a pont a vezérlő téglalapján belül van-e.\n[b]Megjegyzés:[/b] Ha ellenőrizni szeretnéd, hogy egy pont a vezérlőn belül van-e, használd a [code]Rect2(Vector2.ZERO, size).has_point(point)[/code] kifejezést."
+
+#: doc/classes/Control.xml
+msgid "User defined BiDi algorithm override function.\nReturns an [Array] of [Vector3i] text ranges and text base directions, in the left-to-right order. Ranges should cover full source [param text] without overlaps. BiDi algorithm will be used on each range separately."
+msgstr "A kétirányú (BiDi) szövegelrendezési algoritmust felülbíráló, felhasználói függvény.\nBalról jobbra haladó sorrendben adja vissza a szövegtartományokat és azok alapirányait tartalmazó [Vector3i] értékekből álló [Array] tömböt. A tartományoknak átfedés nélkül le kell fedniük a teljes [param text] forrásszöveget. A motor minden tartományra külön alkalmazza a BiDi algoritmust."
+
+#: doc/classes/Control.xml
+msgid "Marks an input event as handled. Once you accept an input event, it stops propagating, even to nodes listening to [method Node._unhandled_input] or [method Node._unhandled_key_input].\n[b]Note:[/b] This does not affect the methods in [Input], only the way events are propagated."
+msgstr "Kezeltként jelöli a bemeneti eseményt. Az esemény ekkor már azokhoz a csomópontokhoz sem jut el, amelyek a [method Node._unhandled_input] vagy a [method Node._unhandled_key_input] metódussal figyelik a bemenetet.\n[b]Megjegyzés:[/b] Ez csak az események továbbítását érinti, az [Input] metódusainak működését nem."
+
+#: doc/classes/Control.xml
+msgid "Starts drag-and-drop operation without using a mouse."
+msgstr "Egér nélkül indít húzási és elengedési műveletet."
+
+#: doc/classes/Control.xml
+msgid "Ends drag-and-drop operation without using a mouse."
+msgstr "Egér nélkül fejezi be a húzási és elengedési műveletet."
+
+#: doc/classes/Control.xml
+msgid "Finds the next (below in the tree) [Control] that can receive the focus."
+msgstr "Megkeresi a fastruktúrában következő, fókuszt fogadni képes [Control] elemet."
+
+#: doc/classes/Control.xml
+msgid "Finds the previous (above in the tree) [Control] that can receive the focus."
+msgstr "Megkeresi a fastruktúrában előző, fókuszt fogadni képes [Control] elemet."
+
+#: doc/classes/Control.xml
+msgid "Finds the next [Control] that can receive the focus on the specified [enum Side].\n[b]Note:[/b] This is different from [method get_focus_neighbor], which returns the path of a specified focus neighbor."
+msgstr "Megkeresi a megadott [enum Side] irányban következő, fókuszt fogadni képes [Control] elemet.\n[b]Megjegyzés:[/b] A [method get_focus_neighbor] ezzel szemben a beállított fókuszszomszéd elérési útját adja vissza."
+
+#: doc/classes/Control.xml
+msgid "Forces drag and bypasses [method _get_drag_data] and [method set_drag_preview] by passing [param data] and [param preview]. Drag will start even if the mouse is neither over nor pressed on this control.\nThe methods [method _can_drop_data] and [method _drop_data] must be implemented on controls that want to receive drop data."
+msgstr "A megadott [param data] és [param preview] értékkel elindítja a húzást, megkerülve a [method _get_drag_data] és a [method set_drag_preview] metódust. A húzás akkor is elindul, ha az egérmutató nincs a vezérlő fölött, és egérgomb sincs lenyomva rajta.\nA fogadó vezérlőknek meg kell valósítaniuk a [method _can_drop_data] és a [method _drop_data] metódust."
+
+#: doc/classes/Control.xml
+msgid "Returns the anchor for the specified [enum Side]. A getter method for [member anchor_bottom], [member anchor_left], [member anchor_right] and [member anchor_top]."
+msgstr "Visszaadja a megadott [enum Side] oldal horgonyát. Az [member anchor_bottom], az [member anchor_left], az [member anchor_right] és az [member anchor_top] tulajdonságok lekérdező metódusa."
+
+#: doc/classes/Control.xml
+msgid "Returns [member offset_left] and [member offset_top]. See also [member position]."
+msgstr "Visszaadja az [member offset_left] és az [member offset_top] értékét. Lásd még a [member position] tulajdonságot."
+
+#: doc/classes/Control.xml
+msgid "Returns the bound value of [method get_combined_minimum_size] by [method get_combined_maximum_size].\nThis value is the true minimum size of the container, as the maximum size has priority over the minimum size.\nFor example, if the combined minimum size is (100, 100) and the combined maximum size is (50, 150), the bound minimum size will be (50, 100)."
+msgstr "A [method get_combined_maximum_size] értékével korlátozott [method get_combined_minimum_size] értéket adja vissza.\nEz a tároló tényleges minimális mérete, mert a maximális méret elsőbbséget élvez a minimálissal szemben.\nPéldául (100, 100) összesített minimális és (50, 150) összesített maximális méret mellett a korlátozott minimális méret (50, 100)."
+
+#: doc/classes/Control.xml
+msgid "Returns the combined maximum size from [member custom_maximum_size] and [method get_maximum_size], as well as the [member custom_maximum_size] of this node's parent if it is a Control node with [member propagate_maximum_size] set to [code]true[/code]."
+msgstr "Visszaadja az [member custom_maximum_size] és a [method get_maximum_size] alapján számított maximális méretet. Ha a szülő Control típusú, és azon a [member propagate_maximum_size] értéke [code]true[/code], a szülő [member custom_maximum_size] tulajdonságát is figyelembe veszi."
+
+#: doc/classes/Control.xml
+msgid "Returns the combined minimum size from [member custom_minimum_size] and [method get_minimum_size]."
+msgstr "Visszaadja a [member custom_minimum_size] és a [method get_minimum_size] alapján számított minimális méretet."
+
+#: doc/classes/Control.xml
+msgid "Returns the combined value of [member pivot_offset] and [member pivot_offset_ratio], in pixels. The ratio is multiplied by the control's size."
+msgstr "Képpontban adja vissza a [member pivot_offset] és a [member pivot_offset_ratio] együttes eltolását. Az arányt a vezérlő méretével szorozza meg."
+
+#: doc/classes/Control.xml
+msgid "Returns the mouse cursor shape for this control when hovered over [param at_position] in local coordinates. For most controls, this is the same as [member mouse_default_cursor_shape], but some built-in controls implement more complex logic.\nYou can override [method _get_cursor_shape] to implement custom behavior for this method."
+msgstr "Visszaadja a vezérlő helyi koordinátarendszerében megadott [param at_position] ponton megjelenő egérmutató alakját. A legtöbb vezérlőnél ez megegyezik a [member mouse_default_cursor_shape] értékével, de egyes beépített vezérlők összetettebb szabályokat használnak.\nA [method _get_cursor_shape] felülírásával saját szabályt adhatsz meg."
+
+#: doc/classes/Control.xml
+msgid "Returns [member offset_right] and [member offset_bottom]."
+msgstr "Visszaadja az [member offset_right] és az [member offset_bottom] értékét."
+
+#: doc/classes/Control.xml
+msgid "Returns the [member focus_mode], but takes the [member focus_behavior_recursive] into account. If [member focus_behavior_recursive] is set to [constant FOCUS_BEHAVIOR_DISABLED], or it is set to [constant FOCUS_BEHAVIOR_INHERITED] and its ancestor is set to [constant FOCUS_BEHAVIOR_DISABLED], then this returns [constant FOCUS_NONE]."
+msgstr "A [member focus_mode] értékét adja vissza a [member focus_behavior_recursive] figyelembevételével. Az eredmény [constant FOCUS_NONE], ha a [member focus_behavior_recursive] értéke [constant FOCUS_BEHAVIOR_DISABLED], vagy ha [constant FOCUS_BEHAVIOR_INHERITED] értékű, és az örökölt beállítás [constant FOCUS_BEHAVIOR_DISABLED]."
+
+#: doc/classes/Control.xml
+msgid "Returns the focus neighbor for the specified [enum Side]. A getter method for [member focus_neighbor_bottom], [member focus_neighbor_left], [member focus_neighbor_right] and [member focus_neighbor_top].\n[b]Note:[/b] To find the next [Control] on the specific [enum Side], even if a neighbor is not assigned, use [method find_valid_focus_neighbor]."
+msgstr "Visszaadja a megadott [enum Side] irányban beállított fókuszszomszédot. A [member focus_neighbor_bottom], a [member focus_neighbor_left], a [member focus_neighbor_right] és a [member focus_neighbor_top] tulajdonságok lekérdező metódusa.\n[b]Megjegyzés:[/b] A [method find_valid_focus_neighbor] akkor is megkeresi a megadott [enum Side] irányban következő [Control] elemet, ha nincs beállítva szomszéd."
+
+#: doc/classes/Control.xml
+msgid "Returns the position and size of the control relative to the containing canvas. See [member global_position] and [member size].\n[b]Note:[/b] If the node itself or any parent [CanvasItem] between the node and the canvas have a non default rotation or skew, the resulting size is likely not meaningful.\n[b]Note:[/b] Setting [member Viewport.gui_snap_controls_to_pixels] to [code]true[/code] can lead to rounding inaccuracies between the displayed control and the returned [Rect2]."
+msgstr "Visszaadja a vezérlő helyzetét és méretét a vászonhoz viszonyítva. Lásd a [member global_position] és a [member size] tulajdonságot.\n[b]Megjegyzés:[/b] Ha a csomópontnak vagy a vászon felé vezető úton valamelyik szülő [CanvasItem] elemének elforgatása vagy nyírása eltér az alapértelmezettől, a kapott méret valószínűleg nem használható.\n[b]Megjegyzés:[/b] Ha a [member Viewport.gui_snap_controls_to_pixels] értéke [code]true[/code], kerekítési eltérés lehet a megjelenő vezérlő és a visszaadott [Rect2] között."
+
+#: doc/classes/Control.xml
+msgid "Returns the maximum size for this control. See [member custom_maximum_size]."
+msgstr "Visszaadja a vezérlő maximális méretét. Lásd az [member custom_maximum_size] tulajdonságot."
+
+#: doc/classes/Control.xml
+msgid "Returns the minimum size for this control. See [member custom_minimum_size]."
+msgstr "Visszaadja a vezérlő minimális méretét. Lásd a [member custom_minimum_size] tulajdonságot."
+
+#: doc/classes/Control.xml
+msgid "Returns the [member mouse_filter], but takes the [member mouse_behavior_recursive] into account. If [member mouse_behavior_recursive] is set to [constant MOUSE_BEHAVIOR_DISABLED], or it is set to [constant MOUSE_BEHAVIOR_INHERITED] and its ancestor is set to [constant MOUSE_BEHAVIOR_DISABLED], then this returns [constant MOUSE_FILTER_IGNORE]."
+msgstr "A [member mouse_filter] értékét adja vissza a [member mouse_behavior_recursive] figyelembevételével. Az eredmény [constant MOUSE_FILTER_IGNORE], ha a [member mouse_behavior_recursive] értéke [constant MOUSE_BEHAVIOR_DISABLED], vagy ha [constant MOUSE_BEHAVIOR_INHERITED] értékű, és az örökölt beállítás [constant MOUSE_BEHAVIOR_DISABLED]."
+
+#: doc/classes/Control.xml
+msgid "Returns the offset for the specified [enum Side]. A getter method for [member offset_bottom], [member offset_left], [member offset_right] and [member offset_top]."
+msgstr "Visszaadja a megadott [enum Side] oldal eltolását. Az [member offset_bottom], az [member offset_left], az [member offset_right] és az [member offset_top] tulajdonságok lekérdező metódusa."
+
+#: doc/classes/Control.xml
+msgid "Returns the parent control node."
+msgstr "Visszaadja a szülő vezérlőcsomópontot."
+
+#: doc/classes/Control.xml
+msgid "Returns the position and size of the control in the coordinate system of the containing node. See [member position], [member scale] and [member size].\n[b]Note:[/b] If [member rotation] is not the default rotation, the resulting size is not meaningful.\n[b]Note:[/b] Setting [member Viewport.gui_snap_controls_to_pixels] to [code]true[/code] can lead to rounding inaccuracies between the displayed control and the returned [Rect2]."
+msgstr "Visszaadja a vezérlő helyzetét és méretét az őt tartalmazó csomópont koordinátarendszerében. Lásd a [member position], a [member scale] és a [member size] tulajdonságot.\n[b]Megjegyzés:[/b] Ha a [member rotation] eltér az alapértelmezett értéktől, a kapott méret nem használható.\n[b]Megjegyzés:[/b] Ha a [member Viewport.gui_snap_controls_to_pixels] értéke [code]true[/code], kerekítési eltérés lehet a megjelenő vezérlő és a visszaadott [Rect2] között."
+
+#: doc/classes/Control.xml
+msgid "Returns the position of this [Control] in global screen coordinates (i.e. taking window position into account). Mostly useful for editor plugins.\nEquivalent to [code]get_screen_transform().origin[/code] (see [method CanvasItem.get_screen_transform]).\n[b]Example:[/b] Show a popup at the mouse position:\n[codeblock]\npopup_menu.position = get_screen_position() + get_screen_transform().basis_xform(get_local_mouse_position())\n\n# The above code is equivalent to:\npopup_menu.position = get_screen_transform() * get_local_mouse_position()\n\npopup_menu.reset_size()\npopup_menu.popup()\n[/codeblock]"
+msgstr "Visszaadja a [Control] helyzetét globális képernyő-koordinátákban, az ablak helyzetét is figyelembe véve. Főként szerkesztőbővítményeknél használható.\nA [code]get_screen_transform().origin[/code] kifejezéssel egyenértékű. Lásd a [method CanvasItem.get_screen_transform] metódust.\n[b]Példa:[/b] Felugró menü megjelenítése az egérmutatónál.\n[codeblock]\npopup_menu.position = get_screen_position() + get_screen_transform().basis_xform(get_local_mouse_position())\n\n# The above code is equivalent to:\npopup_menu.position = get_screen_transform() * get_local_mouse_position()\n\npopup_menu.reset_size()\npopup_menu.popup()\n[/codeblock]"
+
+#: doc/classes/Control.xml
+msgid "Returns the tooltip text for the position [param at_position] in the control's local coordinates, which will typically appear when the cursor is resting over this control. By default, it returns [member tooltip_text].\nYou can override [method _get_tooltip] to implement custom behavior for this method.\n[b]Note:[/b] If this method returns an empty [String] and [method _make_custom_tooltip] is not overridden, no tooltip is displayed."
+msgstr "Visszaadja a vezérlő helyi koordinátarendszerében megadott [param at_position] ponthoz tartozó eszköztipp szövegét. Az eszköztipp jellemzően akkor jelenik meg, amikor az egérmutató a vezérlő fölött mozdulatlan marad. Alapértelmezés szerint a [member tooltip_text] értékét adja vissza.\nA [method _get_tooltip] felülírásával saját működést adhatsz meg.\n[b]Megjegyzés:[/b] Ha a metódus üres [String] értéket ad, és a [method _make_custom_tooltip] nincs felülírva, nem jelenik meg eszköztipp."
+
+#: doc/classes/Control.xml
+msgid "Steal the focus from another control and become the focused control (see [member focus_mode]).\nIf [param hide_focus] is [code]true[/code], the control will not visually show its focused state. Has no effect for [LineEdit] and [TextEdit] when [member ProjectSettings.gui/common/show_focus_state_on_pointer_event] is set to [code]Text Input Controls[/code], or for any control when it is set to [code]Always[/code].\n[b]Note:[/b] Using this method together with [method Callable.call_deferred] makes it more reliable, especially when called inside [method Node._ready]."
+msgstr "Átveszi a fókuszt egy másik vezérlőtől. Lásd a [member focus_mode] tulajdonságot.\nHa a [param hide_focus] értéke [code]true[/code], a vezérlőn nem látszik a fókuszjelzés. A paraméter hatástalan [LineEdit] és [TextEdit] esetén, ha a [member ProjectSettings.gui/common/show_focus_state_on_pointer_event] értéke [code]Text Input Controls[/code], illetve minden vezérlőnél, ha az érték [code]Always[/code].\n[b]Megjegyzés:[/b] A [method Callable.call_deferred] segítségével késleltetett hívás megbízhatóbb, különösen a [method Node._ready] metódusból."
+
+#: doc/classes/Control.xml
+msgid "Returns [code]true[/code] if this is the current focused control. See [member focus_mode].\nIf [param ignore_hidden_focus] is [code]true[/code], controls that have their focus hidden will always return [code]false[/code]. Hidden focus happens automatically when controls gain focus via mouse input, or manually using [method grab_focus] with [code]hide_focus[/code] set to [code]true[/code]."
+msgstr "[code]true[/code] értéket ad vissza, ha jelenleg ez a vezérlő van fókuszban. Lásd a [member focus_mode] tulajdonságot.\nHa az [param ignore_hidden_focus] értéke [code]true[/code], rejtett fókusz esetén mindig [code]false[/code] az eredmény. A fókusz automatikusan elrejthető, amikor a vezérlő egérrel kap fókuszt, illetve kézzel a [method grab_focus] metódussal, [code]true[/code] értékű [code]hide_focus[/code] paraméterrel."
+
+#: doc/classes/Control.xml
+msgid "Returns [code]true[/code] if a drag operation is successful. Alternative to [method Viewport.gui_is_drag_successful].\nBest used with [constant Node.NOTIFICATION_DRAG_END]."
+msgstr "[code]true[/code] értéket ad vissza, ha a húzási művelet sikeres volt. A [method Viewport.gui_is_drag_successful] helyett is használható.\nElsősorban a [constant Node.NOTIFICATION_DRAG_END] értesítés kezelésekor érdemes hívni."
+
+#: doc/classes/Control.xml
+msgid "Returns [code]true[/code] if the layout is right-to-left. See also [member layout_direction]."
+msgstr "[code]true[/code] értéket ad vissza, ha az elrendezés jobbról balra halad. Lásd még a [member layout_direction] tulajdonságot."
+
+#: doc/classes/Control.xml
+msgid "Removes a local override for a theme font size with the specified [param name] previously added by [method add_theme_font_size_override] or via the Inspector dock."
+msgstr "Eltávolítja a téma megadott [param name] nevű betűméretének helyi felülbírálását, amelyet korábban az [method add_theme_font_size_override] metódussal vagy az Inspector panelen állítottál be."
+
+#: doc/classes/Control.xml
+msgid "Removes a local override for a theme icon with the specified [param name] previously added by [method add_theme_icon_override] or via the Inspector dock."
+msgstr "Eltávolítja a téma megadott [param name] nevű ikonjának helyi felülbírálását, amelyet korábban az [method add_theme_icon_override] metódussal vagy az Inspector panelen állítottál be."
+
+#: doc/classes/Control.xml
+msgid "Removes a local override for a theme [StyleBox] with the specified [param name] previously added by [method add_theme_stylebox_override] or via the Inspector dock."
+msgstr "Eltávolítja a téma megadott [param name] nevű [StyleBox] elemének helyi felülbírálását, amelyet korábban az [method add_theme_stylebox_override] metódussal vagy az Inspector panelen állítottál be."
+
+#: doc/classes/Control.xml
+msgid "Sets the anchor for the specified [enum Side] to [param anchor]. A setter method for [member anchor_bottom], [member anchor_left], [member anchor_right] and [member anchor_top].\nIf [param keep_offset] is [code]true[/code], offsets aren't updated after this operation.\nIf [param push_opposite_anchor] is [code]true[/code] and the opposite anchor overlaps this anchor, the opposite one will have its value overridden. For example, when setting left anchor to 1 and the right anchor has value of 0.5, the right anchor will also get value of 1. If [param push_opposite_anchor] was [code]false[/code], the left anchor would get value 0.5."
+msgstr "A megadott [enum Side] oldal horgonyát a [param anchor] értékére állítja. Az [member anchor_bottom], az [member anchor_left], az [member anchor_right] és az [member anchor_top] tulajdonságok beállító metódusa.\nHa a [param keep_offset] értéke [code]true[/code], a művelet után az eltolások változatlanok maradnak.\nHa a [param push_opposite_anchor] értéke [code]true[/code], és a két szemközti horgony sorrendje felcserélődne, a metódus a szemközti horgonyt is átállítja. Például ha a bal horgonyt 1-re állítod, miközben a jobb horgony 0.5, a jobb is 1 lesz. Ha a [param push_opposite_anchor] értéke [code]false[/code], a bal horgony kap 0.5 értéket."
+
+#: doc/classes/Control.xml
+msgid "Works the same as [method set_anchor], but instead of [code]keep_offset[/code] argument and automatic update of offset, it allows to set the offset yourself (see [method set_offset])."
+msgstr "A [method set_anchor] metódushoz hasonlóan működik. A [code]keep_offset[/code] paraméter és az eltolás automatikus frissítése helyett itt te adhatod meg az eltolást. Lásd a [method set_offset] metódust."
+
+#: doc/classes/Control.xml
+msgid "Controls layout direction and text writing direction. Right-to-left layouts are necessary for certain languages (e.g. Arabic and Hebrew). See also [method is_layout_rtl]."
+msgstr "Az elrendezés és a szövegírás irányát szabályozza. Egyes nyelvekhez, például az arabhoz és a héberhez jobbról balra haladó elrendezés szükséges. Lásd még az [method is_layout_rtl] metódust."
+
+#: doc/classes/Control.xml
+msgid "Sets the anchors to a [param preset] from [enum Control.LayoutPreset] enum. This is the code equivalent to using the Layout menu in the 2D editor.\nIf [param keep_offsets] is [code]true[/code], control's position will also be updated."
+msgstr "A [param preset] értékének megfelelően állítja be a horgonyokat az [enum Control.LayoutPreset] felsorolásból. A metódus a 2D-s szerkesztő Elrendezés menüjének felel meg.\nHa a [param keep_offsets] értéke [code]true[/code], a vezérlő helyzete is frissül."
+
+#: doc/classes/Control.xml
+msgid "The [Node] which must be a parent of the focused [Control] for the shortcut to be activated. If [code]null[/code], the shortcut can be activated when any control is focused (a global shortcut). This allows shortcuts to be accepted only when the user has a certain area of the GUI focused."
+msgstr "Az a [Node], amelynek a fókuszban lévő [Control] szülőjének kell lennie ahhoz, hogy a gyorsbillentyű működjön. [code]null[/code] értéknél a gyorsbillentyű bármely fókuszban lévő vezérlő mellett működik, vagyis globális gyorsbillentyűként viselkedik. Így a gyorsbillentyű működése a felület egy adott, fókuszban lévő részére korlátozható."
+
+#: doc/classes/Control.xml
+msgid "The name of a theme type variation used by this [Control] to look up its own theme items. When empty, the class name of the node is used (e.g. [code skip-lint]Button[/code] for the [Button] control), as well as the class names of all parent classes (in order of inheritance).\nWhen set, this property gives the highest priority to the type of the specified name. This type can in turn extend another type, forming a dependency chain. See [method Theme.set_type_variation]. If the theme item cannot be found using this type or its base types, lookup falls back on the class names.\n[b]Note:[/b] To look up [Control]'s own items use various [code]get_theme_*[/code] methods without specifying [code]theme_type[/code].\n[b]Note:[/b] Theme items are looked for in the tree order, from branch to root, where each [Control] node is checked for its [member theme] property. The earliest match against any type/class name is returned. The project-level Theme and the default Theme are checked last."
+msgstr "Annak a tématípus-változatnak a neve, amelyet a [Control] a saját témaelemei kereséséhez használ. Üres értéknél a motor a csomópont osztálynevét használja (például [code skip-lint]Button[/code] a [Button] vezérlőnél), valamint az ősosztályok nevét az öröklés sorrendjében.\nHa megadsz egy nevet, a keresésben a megadott típusé lesz a legnagyobb elsőbbség. Ez a típus másik típusra épülhet, így függőségi lánc jöhet létre. Lásd a [method Theme.set_type_variation] metódust. Ha a témaelem a megadott típusban és annak alaptípusaiban sem található, a motor az osztálynevek szerint folytatja a keresést.\n[b]Megjegyzés:[/b] A [Control] saját témaelemeit a [code]get_theme_*[/code] metódusokkal keresheted meg a [code]theme_type[/code] argumentum megadása nélkül.\n[b]Megjegyzés:[/b] A motor a jelenetfa ágától a gyökérig haladva keresi a témaelemeket, és minden [Control] csomópontnál ellenőrzi a [member theme] tulajdonságot. Az első megfelelő típus- vagy osztálynévhez tartozó találatot adja vissza. A projekt témáját és az alapértelmezett témát utoljára ellenőrzi."
+
+#: doc/classes/Control.xml
+msgid "Sets both anchor preset and offset preset. See [method set_anchors_preset] and [method set_offsets_preset]."
+msgstr "Beállítja a horgonyokat és az eltolásokat a megadott készlet szerint. Lásd a [method set_anchors_preset] és a [method set_offsets_preset] metódust."
+
+#: doc/classes/Control.xml
+msgid "Sets [member offset_left] and [member offset_top] at the same time. Equivalent of changing [member position]."
+msgstr "Egyszerre állítja be az [member offset_left] és az [member offset_top] értékét. Egyenértékű a [member position] módosításával."
+
+#: doc/classes/Control.xml
+msgid "Sets the given callables to be used instead of the control's own drag-and-drop virtual methods. If a callable is empty, its respective virtual method is used as normal.\nThe arguments for each callable should be exactly the same as their respective virtual methods, which would be:\n- [param drag_func] corresponds to [method _get_drag_data] and requires a [Vector2];\n- [param can_drop_func] corresponds to [method _can_drop_data] and requires both a [Vector2] and a [Variant];\n- [param drop_func] corresponds to [method _drop_data] and requires both a [Vector2] and a [Variant]."
+msgstr "A megadott hívható objektumokat használja a vezérlő saját virtuális húzás- és elengedéskezelő metódusai helyett. Ha valamelyik hívható objektum üres, az adott virtuális metódus működése változatlan.\nA hívható objektumok argumentumai egyezzenek meg a hozzájuk tartozó virtuális metódus argumentumaival:\n- A [param drag_func] a [method _get_drag_data] megfelelője, egy [Vector2] argumentumot vár.\n- A [param can_drop_func] a [method _can_drop_data] megfelelője, egy [Vector2] és egy [Variant] argumentumot vár.\n- A [param drop_func] a [method _drop_data] megfelelője, egy [Vector2] és egy [Variant] argumentumot vár."
+
+#: doc/classes/Control.xml
+msgid "Shows the given control at the mouse pointer. A good time to call this method is in [method _get_drag_data]. The control must not be in the scene tree. You should not free the control, and you should not keep a reference to the control beyond the duration of the drag. It will be deleted automatically after the drag has ended.\n[codeblocks]\n[gdscript]\n@export var color = Color(1, 0, 0, 1)\n\nfunc _get_drag_data(position):\n\t# Use a control that is not in the tree\n\tvar cpb = ColorPickerButton.new()\n\tcpb.color = color\n\tcpb.size = Vector2(50, 50)\n\tset_drag_preview(cpb)\n\treturn color\n[/gdscript]\n[csharp]\n[Export]\nprivate Color _color = new Color(1, 0, 0, 1);\n\npublic override Variant _GetDragData(Vector2 atPosition)\n{\n\t// Use a control that is not in the tree\n\tvar cpb = new ColorPickerButton();\n\tcpb.Color = _color;\n\tcpb.Size = new Vector2(50, 50);\n\tSetDragPreview(cpb);\n\treturn _color;\n}\n[/csharp]\n[/codeblocks]"
+msgstr "A megadott vezérlőt az egérmutatónál jeleníti meg. Célszerű a [method _get_drag_data] metódusból meghívni. A vezérlő még nem lehet a jelenetfában. A húzás végeztével a motor automatikusan törli, ezért ne szabadítsd fel, és a húzás után ne tarts meg rá hivatkozást.\n[codeblocks]\n[gdscript]\n@export var color = Color(1, 0, 0, 1)\n\nfunc _get_drag_data(position):\n\t# Use a control that is not in the tree\n\tvar cpb = ColorPickerButton.new()\n\tcpb.color = color\n\tcpb.size = Vector2(50, 50)\n\tset_drag_preview(cpb)\n\treturn color\n[/gdscript]\n[csharp]\n[Export]\nprivate Color _color = new Color(1, 0, 0, 1);\n\npublic override Variant _GetDragData(Vector2 atPosition)\n{\n\t// Use a control that is not in the tree\n\tvar cpb = new ColorPickerButton();\n\tcpb.Color = _color;\n\tcpb.Size = new Vector2(50, 50);\n\tSetDragPreview(cpb);\n\treturn _color;\n}\n[/csharp]\n[/codeblocks]"
+
+#: doc/classes/Control.xml
+msgid "Sets [member offset_right] and [member offset_bottom] at the same time."
+msgstr "Egyszerre állítja be az [member offset_right] és az [member offset_bottom] értékét."
+
+#: doc/classes/Control.xml
+msgid "Sets the focus neighbor for the specified [enum Side] to the [Control] at [param neighbor] node path. A setter method for [member focus_neighbor_bottom], [member focus_neighbor_left], [member focus_neighbor_right] and [member focus_neighbor_top]."
+msgstr "A megadott [enum Side] irány fókuszszomszédjának a [param neighbor] csomópontútvonalon található [Control] elemet állítja be. A [member focus_neighbor_bottom], a [member focus_neighbor_left], a [member focus_neighbor_right] és a [member focus_neighbor_top] tulajdonságok beállító metódusa."
+
+#: doc/classes/Control.xml
+msgid "Sets the [member global_position] to given [param position].\nIf [param keep_offsets] is [code]true[/code], control's anchors will be updated instead of offsets."
+msgstr "A [member global_position] értékét a megadott [param position] értékre állítja.\nHa a [param keep_offsets] értéke [code]true[/code], az eltolások helyett a vezérlő horgonyai változnak."
+
+#: doc/classes/Control.xml
+msgid "Sets the offset for the specified [enum Side] to [param offset]. A setter method for [member offset_bottom], [member offset_left], [member offset_right] and [member offset_top]."
+msgstr "A megadott [enum Side] oldal eltolását a [param offset] értékre állítja. Az [member offset_bottom], az [member offset_left], az [member offset_right] és az [member offset_top] tulajdonságok beállító metódusa."
+
+#: doc/classes/Control.xml
+msgid "Sets the offsets to a [param preset] from [enum Control.LayoutPreset] enum. This is the code equivalent to using the Layout menu in the 2D editor.\nUse parameter [param resize_mode] with constants from [enum Control.LayoutPresetMode] to better determine the resulting size of the [Control]. Constant size will be ignored if used with presets that change size, e.g. [constant PRESET_LEFT_WIDE].\nUse parameter [param margin] to determine the gap between the [Control] and the edges."
+msgstr "A [param preset] értékének megfelelően állítja be az eltolásokat az [enum Control.LayoutPreset] felsorolásból. A metódus a 2D-s szerkesztő Elrendezés menüjének felel meg.\nA [param resize_mode] paraméterrel és az [enum Control.LayoutPresetMode] felsorolás konstansaival szabályozhatod a [Control] végső méretét. A méretet megváltoztató készletek, például a [constant PRESET_LEFT_WIDE], figyelmen kívül hagyják a változatlan méret beállítását.\nA [param margin] paraméter a [Control] és a szélek közötti távolságot adja meg."
+
+#: doc/classes/Control.xml
+msgid "Sets the [member position] to given [param position].\nIf [param keep_offsets] is [code]true[/code], control's anchors will be updated instead of offsets."
+msgstr "A [member position] értékét a megadott [param position] értékre állítja.\nHa a [param keep_offsets] értéke [code]true[/code], az eltolások helyett a vezérlő horgonyai változnak."
+
+#: doc/classes/Control.xml
+msgid "Sets the size (see [member size]).\nIf [param keep_offsets] is [code]true[/code], control's anchors will be updated instead of offsets."
+msgstr "Beállítja a méretet. Lásd a [member size] tulajdonságot.\nHa a [param keep_offsets] értéke [code]true[/code], az eltolások helyett a vezérlő horgonyai változnak."
+
+#: doc/classes/Control.xml
+msgid "Invalidates the maximum size cache in this node and in parent nodes up to top level. Intended to be used with [method get_maximum_size] when the return value is changed. Setting [member custom_maximum_size] directly calls this method automatically.\n[b]Note:[/b] Calling this method also calls [method update_minimum_size] since the combined minimum size may be affected by the maximum size change."
+msgstr "Érvényteleníti a maximális méret gyorsítótárát ennél a csomópontnál és a szülőknél egészen a legfelső szintig. Akkor használd, amikor a [method get_maximum_size] visszatérési értéke megváltozik. A [member custom_maximum_size] közvetlen beállítása automatikusan meghívja ezt a metódust.\n[b]Megjegyzés:[/b] Meghívja a [method update_minimum_size] metódust is, mert a maximális méret változása hatással lehet az összesített minimális méretre."
+
+#: doc/classes/Control.xml
+msgid "Invalidates the minimum size cache in this node and in parent nodes up to top level. Intended to be used with [method get_minimum_size] when the return value is changed. Setting [member custom_minimum_size] directly calls this method automatically."
+msgstr "Érvényteleníti a minimális méret gyorsítótárát ennél a csomópontnál és a szülőknél egészen a legfelső szintig. Akkor használd, amikor a [method get_minimum_size] visszatérési értéke megváltozik. A [member custom_minimum_size] közvetlen beállítása automatikusan meghívja ezt a metódust."
+
+#: doc/classes/Control.xml
+msgid "Moves the mouse cursor to [param position], relative to [member position] of this [Control].\n[b]Note:[/b] [method warp_mouse] is only supported on Windows, macOS and Linux. It has no effect on Android, iOS and Web."
+msgstr "Az egérmutatót a [param position] pontra mozgatja, e [Control] [member position] értékéhez viszonyítva.\n[b]Megjegyzés:[/b] A [method warp_mouse] csak Windowson, macOS-en és Linuxon támogatott. Androidon, iOS-en és weben nincs hatása."
+
+#: doc/classes/Control.xml
+msgid "The paths to the nodes which are controlled by this node."
+msgstr "Az e csomópont által vezérelt csomópontok elérési útjai."
+
+#: doc/classes/Control.xml
+msgid "The paths to the nodes which are describing this node."
+msgstr "Az e csomópontot leíró csomópontok elérési útjai."
+
+#: doc/classes/Control.xml
+msgid "The human-readable node description that is reported to assistive apps."
+msgstr "A csomópont olvasható leírása, amelyet a motor átad a kisegítő alkalmazásoknak."
+
+#: doc/classes/Control.xml
+msgid "The paths to the nodes which this node flows into."
+msgstr "Az akadálymentesítési olvasási sorrendben e csomópont után következő csomópontok elérési útjai."
+
+#: doc/classes/Control.xml
+msgid "The paths to the nodes which label this node."
+msgstr "Az e csomópontot feliratozó csomópontok elérési útjai."
+
+#: doc/classes/Control.xml
+msgid "The mode with which a live region updates. A live region is a [Node] that is updated as a result of an external event when the user's focus may be elsewhere."
+msgstr "Az élő régió frissítési módja. Az élő régió olyan [Node], amely külső esemény hatására frissülhet akkor is, ha a felhasználó fókusza máshol van."
+
+#: doc/classes/Control.xml
+msgid "The human-readable node name that is reported to assistive apps."
+msgstr "A csomópont olvasható neve, amelyet a motor átad a kisegítő alkalmazásoknak."
+
+#: doc/classes/Control.xml
+msgid "Anchors the bottom edge of the node to the origin, the center, or the end of its parent control. It changes how the bottom offset updates when the node moves or changes size. You can use one of the [enum Anchor] constants for convenience."
+msgstr "A csomópont alsó szélét a szülővezérlő origójához, közepéhez vagy végéhez horgonyozza. Meghatározza, hogyan változik az alsó eltolás, amikor a csomópont elmozdul vagy átméreteződik. A beállításhoz használhatod az [enum Anchor] konstansait."
+
+#: doc/classes/Control.xml
+msgid "Anchors the left edge of the node to the origin, the center or the end of its parent control. It changes how the left offset updates when the node moves or changes size. You can use one of the [enum Anchor] constants for convenience."
+msgstr "A csomópont bal szélét a szülővezérlő origójához, közepéhez vagy végéhez horgonyozza. Meghatározza, hogyan változik a bal oldali eltolás, amikor a csomópont elmozdul vagy átméreteződik. A beállításhoz használhatod az [enum Anchor] konstansait."
+
+#: doc/classes/Control.xml
+msgid "Anchors the right edge of the node to the origin, the center or the end of its parent control. It changes how the right offset updates when the node moves or changes size. You can use one of the [enum Anchor] constants for convenience."
+msgstr "A csomópont jobb szélét a szülővezérlő origójához, közepéhez vagy végéhez horgonyozza. Meghatározza, hogyan változik a jobb oldali eltolás, amikor a csomópont elmozdul vagy átméreteződik. A beállításhoz használhatod az [enum Anchor] konstansait."
+
+#: doc/classes/Control.xml
+msgid "Anchors the top edge of the node to the origin, the center or the end of its parent control. It changes how the top offset updates when the node moves or changes size. You can use one of the [enum Anchor] constants for convenience."
+msgstr "A csomópont felső szélét a szülővezérlő origójához, közepéhez vagy végéhez horgonyozza. Meghatározza, hogyan változik a felső eltolás, amikor a csomópont elmozdul vagy átméreteződik. A beállításhoz használhatod az [enum Anchor] konstansait."
+
+#: doc/classes/Control.xml
+msgid "Toggles if any text should automatically change to its translated version depending on the current locale."
+msgstr "Beállítja, hogy a szövegek automatikusan az aktuális területi beállítás szerinti fordításra váltsanak-e."
+
+#: doc/classes/Control.xml
+msgid "Enables whether rendering of [CanvasItem] based children should be clipped to this control's rectangle. If [code]true[/code], parts of a child which would be visibly outside of this control's rectangle will not be rendered and won't receive input."
+msgstr "Meghatározza, hogy a [CanvasItem] alapú gyermekek megjelenítése a vezérlő téglalapjára legyen-e korlátozva. Ha az érték [code]true[/code], a gyermek túlnyúló részei nem jelennek meg, és nem fogadnak bemeneti eseményeket."
+
+#: doc/classes/Control.xml
+msgid "Determines which controls can be focused together with [member focus_mode]. See [method get_focus_mode_with_override]. Since the default behavior is [constant FOCUS_BEHAVIOR_INHERITED], this can be used to prevent all children controls from getting focused."
+msgstr "A [member focus_mode] tulajdonsággal együtt meghatározza, mely vezérlők kaphatnak fókuszt. Lásd a [method get_focus_mode_with_override] metódust. Az alapértelmezett mód [constant FOCUS_BEHAVIOR_INHERITED], így ezzel a beállítással az összes gyermekvezérlőnél letiltható a fókusz fogadása."
+
+#: doc/classes/Control.xml
+msgid "Tells Godot which node it should give focus to if the user presses [kbd]Tab[/kbd] on a keyboard by default. You can change the key by editing the [member ProjectSettings.input/ui_focus_next] input action.\nIf this property is not set, Godot will select a \"best guess\" based on surrounding nodes in the scene tree."
+msgstr "Megadja, melyik csomópont kapja a fókuszt, amikor a felhasználó megnyomja az alapértelmezett [kbd]Tab[/kbd] billentyűt. A billentyűt a [member ProjectSettings.input/ui_focus_next] bemeneti művelet szerkesztésével változtathatod meg.\nHa a tulajdonság nincs megadva, a Godot a jelenetfában környező csomópontok alapján választ."
+
+#: doc/classes/Control.xml
+msgid "Tells Godot which node it should give focus to if the user presses [kbd]Shift + Tab[/kbd] on a keyboard by default. You can change the key by editing the [member ProjectSettings.input/ui_focus_prev] input action.\nIf this property is not set, Godot will select a \"best guess\" based on surrounding nodes in the scene tree."
+msgstr "Megadja, melyik csomópont kapja a fókuszt, amikor a felhasználó megnyomja az alapértelmezett [kbd]Shift + Tab[/kbd] billentyűkombinációt. A kombinációt a [member ProjectSettings.input/ui_focus_prev] bemeneti művelet szerkesztésével változtathatod meg.\nHa a tulajdonság nincs megadva, a Godot a jelenetfában környező csomópontok alapján választ."
+
+#: doc/classes/Control.xml
+msgid "The node's global position, relative to the world (usually to the [CanvasLayer])."
+msgstr "A csomópont globális pozíciója a világkoordinátákban, általában a [CanvasLayer] réteghez viszonyítva."
+
+#: doc/classes/Control.xml
+msgid "Controls the direction on the horizontal axis in which the control should grow if its horizontal minimum size is changed to be greater than its current size, as the control always has to be at least the minimum size."
+msgstr "Meghatározza, melyik irányban nő vízszintesen a vezérlő, ha a minimális szélessége meghaladja az aktuális szélességét. A vezérlő nem lehet kisebb a minimális méreténél."
+
+#: doc/classes/Control.xml
+msgid "Controls the direction on the vertical axis in which the control should grow if its vertical minimum size is changed to be greater than its current size, as the control always has to be at least the minimum size."
+msgstr "Meghatározza, melyik irányban nő függőlegesen a vezérlő, ha a minimális magassága meghaladja az aktuális magasságát. A vezérlő nem lehet kisebb a minimális méreténél."
+
+#: doc/classes/Control.xml
+msgid "If [code]true[/code], automatically converts code line numbers, list indices, [SpinBox] and [ProgressBar] values from the Western Arabic (0..9) to the numeral systems used in current locale.\n[b]Note:[/b] Numbers within the text are not automatically converted, it can be done manually, using [method TextServer.format_number]."
+msgstr "Ha az érték [code]true[/code], a kódsorok sorszámait, a listaindexeket, valamint a [SpinBox] és a [ProgressBar] értékeit a nyugati arab számjegyekről (0–9) az aktuális területi beállítás szerinti számjegyekre alakítja.\n[b]Megjegyzés:[/b] A szövegben szereplő számokat a motor nem alakítja át automatikusan. Ezt a [method TextServer.format_number] metódussal végezheted el."
+
+#: doc/classes/Control.xml
+msgid "Determines which controls can receive mouse input together with [member mouse_filter]. See [method get_mouse_filter_with_override]. Since the default behavior is [constant MOUSE_BEHAVIOR_INHERITED], this can be used to prevent all children controls from receiving mouse input."
+msgstr "A [member mouse_filter] tulajdonsággal együtt meghatározza, mely vezérlők fogadhatnak egérbemenetet. Lásd a [method get_mouse_filter_with_override] metódust. Az alapértelmezett mód [constant MOUSE_BEHAVIOR_INHERITED], így ezzel a beállítással az összes gyermekvezérlőnél letiltható az egérbemenet fogadása."
+
+#: doc/classes/Control.xml
+msgid "The default cursor shape for this control. Useful for Godot plugins and applications or games that use the system's mouse cursors.\n[b]Note:[/b] On Linux, shapes may vary depending on the cursor theme of the system."
+msgstr "A vezérlő alapértelmezett egérmutató-alakja. Olyan Godot-bővítményekhez, programokhoz vagy játékokhoz használható, amelyek a rendszer egérmutatóit használják.\n[b]Megjegyzés:[/b] Linuxon az alakok a rendszer egérmutatótémájától függően eltérhetnek."
+
+#: doc/classes/Control.xml
+msgid "Distance between the node's bottom edge and its parent control, based on [member anchor_bottom].\nOffsets are often controlled by one or multiple parent [Container] nodes, so you should not modify them manually if your node is a direct child of a [Container]. Offsets update automatically when you move or resize the node."
+msgstr "A csomópont alsó széle és a szülővezérlő közötti távolság, az [member anchor_bottom] alapján.\nAz eltolásokat gyakran egy vagy több szülő [Container] kezeli. Ezért ha a csomópont közvetlenül egy [Container] gyermeke, ne állítsd az eltolásokat kézzel. A csomópont mozgatásakor és átméretezésekor az eltolások automatikusan frissülnek."
+
+#: doc/classes/Control.xml
+msgid "Distance between the node's left edge and its parent control, based on [member anchor_left].\nOffsets are often controlled by one or multiple parent [Container] nodes, so you should not modify them manually if your node is a direct child of a [Container]. Offsets update automatically when you move or resize the node."
+msgstr "A csomópont bal széle és a szülővezérlő közötti távolság, az [member anchor_left] alapján.\nAz eltolásokat gyakran egy vagy több szülő [Container] kezeli. Ezért ha a csomópont közvetlenül egy [Container] gyermeke, ne állítsd az eltolásokat kézzel. A csomópont mozgatásakor és átméretezésekor az eltolások automatikusan frissülnek."
+
+#: doc/classes/Control.xml
+msgid "Distance between the node's right edge and its parent control, based on [member anchor_right].\nOffsets are often controlled by one or multiple parent [Container] nodes, so you should not modify them manually if your node is a direct child of a [Container]. Offsets update automatically when you move or resize the node."
+msgstr "A csomópont jobb széle és a szülővezérlő közötti távolság, az [member anchor_right] alapján.\nAz eltolásokat gyakran egy vagy több szülő [Container] kezeli. Ezért ha a csomópont közvetlenül egy [Container] gyermeke, ne állítsd az eltolásokat kézzel. A csomópont mozgatásakor és átméretezésekor az eltolások automatikusan frissülnek."
+
+#: doc/classes/Control.xml
+msgid "Distance between the node's top edge and its parent control, based on [member anchor_top].\nOffsets are often controlled by one or multiple parent [Container] nodes, so you should not modify them manually if your node is a direct child of a [Container]. Offsets update automatically when you move or resize the node."
+msgstr "A csomópont felső széle és a szülővezérlő közötti távolság, az [member anchor_top] alapján.\nAz eltolásokat gyakran egy vagy több szülő [Container] kezeli. Ezért ha a csomópont közvetlenül egy [Container] gyermeke, ne állítsd az eltolásokat kézzel. A csomópont mozgatásakor és átméretezésekor az eltolások automatikusan frissülnek."
+
+#: doc/classes/Control.xml
+msgid "If [code]true[/code], applies all offset transform properties. Otherwise, no offset transform is applied and the properties have no effect."
+msgstr "Ha az érték [code]true[/code], a motor alkalmazza az összes eltolási transzformációs tulajdonságot. Egyébként a transzformáció kimarad, és ezeknek a tulajdonságoknak nincs hatásuk."
+
+#: doc/classes/Control.xml
+msgid "Pivot used by [member offset_transform_rotation] and [member offset_transform_scale] in absolute units.\nThe final pivot position is the combined value of this property and [member offset_transform_pivot_ratio].\nHas no effect unless [member offset_transform_enabled] is [code]true[/code]."
+msgstr "Az [member offset_transform_rotation] és az [member offset_transform_scale] középpontja abszolút egységekben.\nA középpont végső helyzetét ez a tulajdonság és az [member offset_transform_pivot_ratio] együttesen adja meg.\nCsak akkor van hatása, ha az [member offset_transform_enabled] értéke [code]true[/code]."
+
+#: doc/classes/Control.xml
+msgid "Position offset in absolute units. The final offset is the combined value of this property and [member offset_transform_position_ratio].\nHas no effect unless [member offset_transform_enabled] is [code]true[/code]."
+msgstr "A helyzet eltolása abszolút egységekben. A végső eltolást ez a tulajdonság és az [member offset_transform_position_ratio] együttesen adja meg.\nCsak akkor van hatása, ha az [member offset_transform_enabled] értéke [code]true[/code]."
+
+#: doc/classes/Control.xml
+msgid "Rotation offset. The rotation pivot is defined by [member offset_transform_pivot] and [member offset_transform_pivot_ratio].\nHas no effect unless [member offset_transform_enabled] is [code]true[/code]."
+msgstr "Az elforgatás eltolása. A forgás középpontját az [member offset_transform_pivot] és az [member offset_transform_pivot_ratio] határozza meg.\nCsak akkor van hatása, ha az [member offset_transform_enabled] értéke [code]true[/code]."
+
+#: doc/classes/Control.xml
+msgid "Scale offset. The scale pivot is defined by [member offset_transform_pivot] and [member offset_transform_pivot_ratio].\nHas no effect unless [member offset_transform_enabled] is [code]true[/code]."
+msgstr "A méretezés eltolása. A méretezés középpontját az [member offset_transform_pivot] és az [member offset_transform_pivot_ratio] határozza meg.\nCsak akkor van hatása, ha az [member offset_transform_enabled] értéke [code]true[/code]."
+
+#: doc/classes/Control.xml
+msgid "The node's position, relative to its containing node. It corresponds to the rectangle's top-left corner. The property is not affected by [member pivot_offset]."
+msgstr "A csomópont helyzete az őt tartalmazó csomóponthoz viszonyítva. A téglalap bal felső sarkának felel meg. A [member pivot_offset] nem befolyásolja."
+
+#: doc/classes/Control.xml
+msgid "If [code]true[/code], this Control's children will use the value returned by [method get_combined_maximum_size] in their own size calculations."
+msgstr "Ha az érték [code]true[/code], a Control gyermekei a [method get_combined_maximum_size] által visszaadott értéket használják a saját méretük kiszámításakor."
+
+#: doc/classes/Control.xml
+msgid "The node's rotation around its pivot, in radians. See [member pivot_offset] to change the pivot's position.\n[b]Note:[/b] This property is edited in the inspector in degrees. If you want to use degrees in a script, use [member rotation_degrees]."
+msgstr "A csomópont forgása a forgásközéppont körül, radiánban. A középpont helyét a [member pivot_offset] tulajdonsággal változtathatod meg.\n[b]Megjegyzés:[/b] Az Inspector panelen fokban szerkeszthető. Ha szkriptből is fokban szeretnéd megadni, használd a [member rotation_degrees] tulajdonságot."
+
+#: doc/classes/Control.xml
+msgid "Helper property to access [member rotation] in degrees instead of radians."
+msgstr "Segédtulajdonság, amellyel a [member rotation] értékét radián helyett fokban érheted el."
+
+#: doc/classes/Control.xml
+msgid "The size of the node's bounding rectangle, in the node's coordinate system. [Container] nodes update this property automatically."
+msgstr "A csomópont befoglaló téglalapjának mérete a csomópont saját koordinátarendszerében. A [Container] csomópontok automatikusan frissítik ezt a tulajdonságot."
