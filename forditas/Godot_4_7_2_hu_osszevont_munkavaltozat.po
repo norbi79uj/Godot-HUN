@@ -59036,3 +59036,505 @@ msgstr "A [member rendering/reflections/sky_reflections/texture_array_reflection
 #: doc/classes/ProjectSettings.xml
 msgid "If [code]true[/code], reduces reflections based on ambient light."
 msgstr "Ha az érték [code]true[/code], a motor a környezeti fény alapján csökkenti a tükröződéseket."
+
+#. ProjectSettings.rendering/2d/batching/item_buffer_size
+#: doc/classes/ProjectSettings.xml
+msgid "Maximum number of canvas item commands that can be batched into a single draw call."
+msgstr "Az egyetlen rajzolási hívásba összevonható vászonelem-parancsok legnagyobb száma."
+
+#. ProjectSettings.rendering/2d/batching/uniform_set_cache_size
+#: doc/classes/ProjectSettings.xml
+msgid "Maximum number of uniform sets that will be cached by the 2D renderer when batching draw calls.\n[b]Note:[/b] Increasing this value can improve performance if the project renders many unique sprite textures every frame."
+msgstr "A 2D-s renderelő legfeljebb ennyi uniformkészletet tárol a gyorsítótárban a rajzolási hívások összevonásakor.\n[b]Megjegyzés:[/b] Nagyobb érték javíthatja a teljesítményt, ha a projekt képkockánként sok különböző sprite-textúrát jelenít meg."
+
+#. ProjectSettings.rendering/2d/sdf/scale
+#: doc/classes/ProjectSettings.xml
+msgid "The resolution scale to use for the 2D signed distance field. Higher values lead to a more precise and more stable signed distance field as the camera moves, at the cost of performance. The default value (50%) renders at half the resolution of the viewport size on each axis, which means the SDF is generated with 25% of the viewport's pixel count.\n[b]Note:[/b] This property is only read when the project starts. To change the 2D SDF resolution scale at runtime, use [method RenderingServer.viewport_set_sdf_oversize_and_scale] instead."
+msgstr "A 2D-s előjeles távolságmező felbontási szorzója. Nagyobb értékkel pontosabb és kameramozgás közben stabilabb a távolságmező, viszont több számításra van szükség. Az alapértelmezett 50%-nál a felbontás mindkét tengelyen fele a nézetablakénak, így az SDF a nézetablak képpontjainak 25%-ával készül.\n[b]Megjegyzés:[/b] A motor csak a projekt indításakor olvassa be ezt a beállítást. A 2D-s SDF felbontási szorzóját futás közben a [method RenderingServer.viewport_set_sdf_oversize_and_scale] metódussal módosíthatod."
+
+#. ProjectSettings.rendering/2d/shadow_atlas/size
+#: doc/classes/ProjectSettings.xml
+msgid "The size of the 2D shadow atlas in pixels. Higher values result in more precise [Light2D] shadows, at the cost of performance and video memory usage. The specified value is rounded up to the nearest power of 2.\n[b]Note:[/b] This property is only read when the project starts. To change the 2D shadow atlas size at runtime, use [method RenderingServer.canvas_set_shadow_texture_size] instead."
+msgstr "A 2D-s árnyékatlasz mérete képpontban. Nagyobb értékkel pontosabbak a [Light2D] árnyékai, viszont nő a számítási és a videomemória-igény. A motor felfelé kerekíti az értéket a legközelebbi kettőhatványra.\n[b]Megjegyzés:[/b] A motor csak a projekt indításakor olvassa be ezt a beállítást. A 2D-s árnyékatlasz méretét futás közben a [method RenderingServer.canvas_set_shadow_texture_size] metódussal módosíthatod."
+
+#. ProjectSettings.rendering/anti_aliasing/screen_space_roughness_limiter/amount
+#. ProjectSettings.rendering/anti_aliasing/screen_space_roughness_limiter/limit
+#: doc/classes/ProjectSettings.xml
+msgid "[b]Note:[/b] This property is only read when the project starts. To control the screen-space roughness limiter at runtime, call [method RenderingServer.screen_space_roughness_limiter_set_active] instead."
+msgstr "[b]Megjegyzés:[/b] A motor csak a projekt indításakor olvassa be ezt a beállítást. A képernyőtérbeli érdességkorlátozót futás közben a [method RenderingServer.screen_space_roughness_limiter_set_active] metódussal vezérelheted."
+
+#. ProjectSettings.rendering/driver/depth_prepass/disable_for_vendors
+#: doc/classes/ProjectSettings.xml
+msgid "Disables [member rendering/driver/depth_prepass/enable] conditionally for certain vendors. By default, disables the depth prepass for mobile devices as mobile devices do not benefit from the depth prepass due to their unique architecture."
+msgstr "Bizonyos gyártók eszközein feltételesen kikapcsolja a [member rendering/driver/depth_prepass/enable] beállítást. Mobil eszközökön alapértelmezés szerint kikapcsolja a mélységi előmenetet, mert az eszközök felépítése miatt ez a lépés ott nem jár előnnyel."
+
+#. ProjectSettings.rendering/driver/threads/thread_model
+#: doc/classes/ProjectSettings.xml
+msgid "The thread model to use for rendering. Rendering on a thread may improve performance, but synchronizing to the main thread can cause a bit more jitter."
+msgstr "A renderelés szálkezelési módja. A külön szálon futó renderelés javíthatja a teljesítményt, de a főszállal való szinkronizálás miatt kissé egyenetlenebbé válhat a képkockák ütemezése."
+
+#. ProjectSettings.rendering/gl_compatibility/driver.android
+#: doc/classes/ProjectSettings.xml
+msgid "Android override for [member rendering/gl_compatibility/driver].\nOnly one option is supported:\n- [code]opengl3[/code], OpenGL ES 3.0 from native drivers."
+msgstr "A [member rendering/gl_compatibility/driver] beállítás felülbírálása Androidon.\nEgyetlen lehetőség érhető el:\n- [code]opengl3[/code], a natív illesztőprogram OpenGL ES 3.0 támogatásával."
+
+#. ProjectSettings.rendering/gl_compatibility/driver.ios
+#: doc/classes/ProjectSettings.xml
+msgid "iOS override for [member rendering/gl_compatibility/driver].\nOnly one option is supported:\n- [code]opengl3[/code], OpenGL ES 3.0 from native drivers."
+msgstr "A [member rendering/gl_compatibility/driver] beállítás felülbírálása iOS-en.\nEgyetlen lehetőség érhető el:\n- [code]opengl3[/code], a natív illesztőprogram OpenGL ES 3.0 támogatásával."
+
+#. ProjectSettings.rendering/gl_compatibility/driver.linuxbsd
+#: doc/classes/ProjectSettings.xml
+msgid "LinuxBSD override for [member rendering/gl_compatibility/driver].\nTwo options are supported:\n- [code]opengl3[/code] (default), OpenGL 3.3 from native drivers.\n- [code]opengl3_es[/code], OpenGL ES 3.0 from native drivers. If [member rendering/gl_compatibility/fallback_to_gles] is enabled, this is used as a fallback if OpenGL 3.3 is not supported."
+msgstr "A [member rendering/gl_compatibility/driver] beállítás felülbírálása Linuxon és BSD-n.\nKét lehetőség érhető el:\n- [code]opengl3[/code] (alapértelmezett), a natív illesztőprogram OpenGL 3.3 támogatásával.\n- [code]opengl3_es[/code], a natív illesztőprogram OpenGL ES 3.0 támogatásával. Ha a [member rendering/gl_compatibility/fallback_to_gles] be van kapcsolva, a motor erre vált, ha az OpenGL 3.3 nem érhető el."
+
+#. ProjectSettings.rendering/gl_compatibility/driver.macos
+#: doc/classes/ProjectSettings.xml
+msgid "macOS override for [member rendering/gl_compatibility/driver].\nTwo options are supported:\n- [code]opengl3[/code] (default), OpenGL 3.3 from native drivers. If [member rendering/gl_compatibility/fallback_to_native] is enabled, this is used as a fallback if ANGLE is configured as the preferred driver but not supported.\n- [code]opengl3_angle[/code], OpenGL ES 3.0 using the ANGLE compatibility layer over native OpenGL drivers. If [member rendering/gl_compatibility/fallback_to_angle] is enabled, this is used as a fallback if OpenGL 3.3 is not supported."
+msgstr "A [member rendering/gl_compatibility/driver] beállítás felülbírálása macOS-en.\nKét lehetőség érhető el:\n- [code]opengl3[/code] (alapértelmezett), a natív illesztőprogram OpenGL 3.3 támogatásával. Ha a [member rendering/gl_compatibility/fallback_to_native] be van kapcsolva, a motor erre vált, ha az elsődlegesként megadott ANGLE nem támogatott.\n- [code]opengl3_angle[/code], OpenGL ES 3.0 a natív OpenGL-illesztőprogramokra épülő ANGLE kompatibilitási rétegen keresztül. Ha a [member rendering/gl_compatibility/fallback_to_angle] be van kapcsolva, a motor erre vált, ha az OpenGL 3.3 nem támogatott."
+
+#. ProjectSettings.rendering/gl_compatibility/driver.web
+#: doc/classes/ProjectSettings.xml
+msgid "Web override for [member rendering/gl_compatibility/driver].\nOnly one option is supported:\n- [code]opengl3[/code], WebGL 2.0. The underlying native API depends on the target OS, browser, and browser configuration."
+msgstr "A [member rendering/gl_compatibility/driver] beállítás felülbírálása webes exportnál.\nEgyetlen lehetőség érhető el:\n- [code]opengl3[/code], vagyis WebGL 2.0. Az alatta működő natív API a célplatform operációs rendszerétől, a böngészőtől és annak beállításaitól függ."
+
+#. ProjectSettings.rendering/gl_compatibility/fallback_to_angle
+#: doc/classes/ProjectSettings.xml
+msgid "If [code]true[/code], the Compatibility renderer will fall back to ANGLE if native OpenGL is not supported or the device is listed in [member rendering/gl_compatibility/force_angle_on_devices].\n[b]Note:[/b] This setting is implemented only on Windows."
+msgstr "Ha az érték [code]true[/code], a Compatibility renderelő ANGLE-re vált, ha a natív OpenGL nem támogatott, vagy az eszköz szerepel a [member rendering/gl_compatibility/force_angle_on_devices] listájában.\n[b]Megjegyzés:[/b] Ez a beállítás csak Windowson érhető el."
+
+#. ProjectSettings.rendering/gl_compatibility/fallback_to_gles
+#: doc/classes/ProjectSettings.xml
+msgid "If [code]true[/code], the Compatibility renderer will fall back to OpenGLES if desktop OpenGL is not supported.\n[b]Note:[/b] This setting is implemented only on Linux/X11."
+msgstr "Ha az érték [code]true[/code], a Compatibility renderelő OpenGL ES-re vált, ha az asztali OpenGL nem támogatott.\n[b]Megjegyzés:[/b] Ez a beállítás csak Linuxon, X11 alatt érhető el."
+
+#. ProjectSettings.rendering/gl_compatibility/fallback_to_native
+#: doc/classes/ProjectSettings.xml
+msgid "If [code]true[/code], the Compatibility renderer will fall back to native OpenGL if ANGLE is not supported, or ANGLE dynamic libraries aren't found.\n[b]Note:[/b] This setting is implemented on macOS and Windows."
+msgstr "Ha az érték [code]true[/code], a Compatibility renderelő a natív OpenGL-re vált, ha az ANGLE nem támogatott, vagy nem találhatók a dinamikus programkönyvtárai.\n[b]Megjegyzés:[/b] Ez a beállítás macOS-en és Windowson érhető el."
+
+#. ProjectSettings.rendering/gl_compatibility/force_angle_on_devices
+#: doc/classes/ProjectSettings.xml
+msgid "An [Array] of devices which should always use the ANGLE renderer.\nEach entry is a [Dictionary] with the following keys: [code]vendor[/code] and [code]name[/code]. [code]name[/code] can be set to [code]*[/code] to add all devices with the specified [code]vendor[/code].\n[b]Note:[/b] This setting is implemented only on Windows."
+msgstr "Azoknak az eszközöknek a [Array] tömbje, amelyeken mindig az ANGLE renderelőt kell használni.\nMinden bejegyzés egy [Dictionary] a [code]vendor[/code] és a [code]name[/code] kulccsal. Ha a [code]name[/code] értéke [code]*[/code], a megadott [code]vendor[/code] összes eszköze bekerül a listába.\n[b]Megjegyzés:[/b] Ez a beállítás csak Windowson érhető el."
+
+#. ProjectSettings.rendering/gl_compatibility/item_buffer_size
+#: doc/classes/ProjectSettings.xml
+msgid "Maximum number of canvas items commands that can be drawn in a single viewport update. If more render commands are issued they will be ignored. Decreasing this limit may improve performance on bandwidth limited devices. Increase this limit if you find that not all objects are being drawn in a frame."
+msgstr "Egyetlen nézetablak-frissítés során legfeljebb ennyi vászonelem-parancsot hajt végre a renderelő. Az ezen felül kiadott rajzolási parancsokat figyelmen kívül hagyja. A határ csökkentése javíthatja a teljesítményt a kis sávszélességű eszközökön. Növeld az értéket, ha egy képkockán belül egyes objektumok nem jelennek meg."
+
+#. ProjectSettings.rendering/gl_compatibility/nvidia_disable_threaded_optimization
+#: doc/classes/ProjectSettings.xml
+msgid "If [code]true[/code], disables the threaded optimization feature from the NVIDIA drivers, which are known to cause stuttering in most OpenGL applications.\n[b]Note:[/b] This setting only works on Windows, as threaded optimization is disabled by default on other platforms."
+msgstr "Ha az érték [code]true[/code], kikapcsolja az NVIDIA-illesztőprogram szálkezelési optimalizálását, amely a legtöbb OpenGL-alkalmazásban akadozást okozhat.\n[b]Megjegyzés:[/b] Ez a beállítás csak Windowson hatásos. A többi platformon az optimalizálás alapból ki van kapcsolva."
+
+#. ProjectSettings.rendering/lightmapping/bake_performance/max_rays_per_pass
+#: doc/classes/ProjectSettings.xml
+msgid "The maximum number of rays that can be thrown per pass when baking lightmaps with [LightmapGI]. Depending on the scene, adjusting this value may result in higher GPU utilization when baking lightmaps, leading to faster bake times.\n[b]Note:[/b] Using a value that is too high for your system can cause crashes due to the GPU being unresponsive for long periods of time, and the graphics driver being reset by the OS."
+msgstr "A [LightmapGI] fénytérképsütésekor egy menetben indítható sugarak legnagyobb száma. A jelenettől függően az érték módosítása javíthatja a GPU kihasználtságát és gyorsíthatja a sütést.\n[b]Megjegyzés:[/b] Ha az érték túl magas a rendszeredhez, a GPU hosszú ideig nem válaszolhat. Az operációs rendszer ilyenkor alaphelyzetbe állíthatja a grafikus illesztőprogramot, ami összeomlást okozhat."
+
+#. ProjectSettings.rendering/lightmapping/bake_performance/max_rays_per_probe_pass
+#: doc/classes/ProjectSettings.xml
+msgid "The maximum number of rays that can be thrown per pass when baking dynamic object lighting in [LightmapProbe]s with [LightmapGI]. Depending on the scene, adjusting this value may result in higher GPU utilization when baking lightmaps, leading to faster bake times.\n[b]Note:[/b] Using a value that is too high for your system can cause crashes due to the GPU being unresponsive for long periods of time, and the graphics driver being reset by the OS."
+msgstr "A [LightmapGI] egy menetben legfeljebb ennyi sugarat indíthat, amikor dinamikus objektumok megvilágítását süti ki a [LightmapProbe] próbákba. A jelenettől függően az érték módosítása javíthatja a GPU kihasználtságát és gyorsíthatja a sütést.\n[b]Megjegyzés:[/b] Ha az érték túl magas a rendszeredhez, a GPU hosszú ideig nem válaszolhat. Az operációs rendszer ilyenkor alaphelyzetbe állíthatja a grafikus illesztőprogramot, ami összeomlást okozhat."
+
+#. ProjectSettings.rendering/lightmapping/bake_performance/max_transparency_rays
+#: doc/classes/ProjectSettings.xml
+msgid "The maximum number of retry rays that can be thrown per pass when hitting a transparent surface when baking lightmaps with [LightmapGI]. Depending on the scene, reducing this value may lead to faster bake times.\n[b]Note:[/b] Using a value that is too high for your system can cause crashes due to the GPU being unresponsive for long periods of time, and the graphics driver being reset by the OS."
+msgstr "Ha a [LightmapGI] fénytérképsütés közben átlátszó felületet talál el, egy menetben legfeljebb ennyi újabb sugarat indíthat. A jelenettől függően az érték csökkentése gyorsíthatja a sütést.\n[b]Megjegyzés:[/b] Ha az érték túl magas a rendszeredhez, a GPU hosszú ideig nem válaszolhat. Az operációs rendszer ilyenkor alaphelyzetbe állíthatja a grafikus illesztőprogramot, ami összeomlást okozhat."
+
+#. ProjectSettings.rendering/lightmapping/bake_performance/region_size
+#: doc/classes/ProjectSettings.xml
+msgid "The region size to use when baking lightmaps with [LightmapGI]. The specified value is rounded up to the nearest power of 2.\n[b]Note:[/b] Using a value that is too high for your system can cause crashes due to the GPU being unresponsive for long periods of time, and the graphics driver being reset by the OS."
+msgstr "A [LightmapGI] fénytérképsütésekor használt régió mérete. A motor felfelé kerekíti a megadott értéket a legközelebbi kettőhatványra.\n[b]Megjegyzés:[/b] Ha az érték túl magas a rendszeredhez, a GPU hosszú ideig nem válaszolhat. Az operációs rendszer ilyenkor alaphelyzetbe állíthatja a grafikus illesztőprogramot, ami összeomlást okozhat."
+
+#. ProjectSettings.rendering/lightmapping/bake_quality/high_quality_probe_ray_count
+#: doc/classes/ProjectSettings.xml
+msgid "The number of rays to use for baking dynamic object lighting in [LightmapProbe]s when [member LightmapGI.quality] is [constant LightmapGI.BAKE_QUALITY_HIGH]."
+msgstr "Ennyi sugarat használ a motor a dinamikus objektumok megvilágításának [LightmapProbe] próbákba sütéséhez, ha a [member LightmapGI.quality] értéke [constant LightmapGI.BAKE_QUALITY_HIGH]."
+
+#. ProjectSettings.rendering/lightmapping/bake_quality/high_quality_ray_count
+#: doc/classes/ProjectSettings.xml
+msgid "The number of rays to use for baking lightmaps with [LightmapGI] when [member LightmapGI.quality] is [constant LightmapGI.BAKE_QUALITY_HIGH]."
+msgstr "Ennyi sugarat használ a [LightmapGI] a fénytérképek sütéséhez, ha a [member LightmapGI.quality] értéke [constant LightmapGI.BAKE_QUALITY_HIGH]."
+
+#. ProjectSettings.rendering/lightmapping/bake_quality/low_quality_probe_ray_count
+#: doc/classes/ProjectSettings.xml
+msgid "The number of rays to use for baking dynamic object lighting in [LightmapProbe]s when [member LightmapGI.quality] is [constant LightmapGI.BAKE_QUALITY_LOW]."
+msgstr "Ennyi sugarat használ a motor a dinamikus objektumok megvilágításának [LightmapProbe] próbákba sütéséhez, ha a [member LightmapGI.quality] értéke [constant LightmapGI.BAKE_QUALITY_LOW]."
+
+#. ProjectSettings.rendering/lightmapping/bake_quality/low_quality_ray_count
+#: doc/classes/ProjectSettings.xml
+msgid "The number of rays to use for baking lightmaps with [LightmapGI] when [member LightmapGI.quality] is [constant LightmapGI.BAKE_QUALITY_LOW]."
+msgstr "Ennyi sugarat használ a [LightmapGI] a fénytérképek sütéséhez, ha a [member LightmapGI.quality] értéke [constant LightmapGI.BAKE_QUALITY_LOW]."
+
+#. ProjectSettings.rendering/lightmapping/bake_quality/medium_quality_probe_ray_count
+#: doc/classes/ProjectSettings.xml
+msgid "The number of rays to use for baking dynamic object lighting in [LightmapProbe]s when [member LightmapGI.quality] is [constant LightmapGI.BAKE_QUALITY_MEDIUM]."
+msgstr "Ennyi sugarat használ a motor a dinamikus objektumok megvilágításának [LightmapProbe] próbákba sütéséhez, ha a [member LightmapGI.quality] értéke [constant LightmapGI.BAKE_QUALITY_MEDIUM]."
+
+#. ProjectSettings.rendering/lightmapping/bake_quality/medium_quality_ray_count
+#: doc/classes/ProjectSettings.xml
+msgid "The number of rays to use for baking lightmaps with [LightmapGI] when [member LightmapGI.quality] is [constant LightmapGI.BAKE_QUALITY_MEDIUM]."
+msgstr "Ennyi sugarat használ a [LightmapGI] a fénytérképek sütéséhez, ha a [member LightmapGI.quality] értéke [constant LightmapGI.BAKE_QUALITY_MEDIUM]."
+
+#. ProjectSettings.rendering/lightmapping/bake_quality/ultra_quality_probe_ray_count
+#: doc/classes/ProjectSettings.xml
+msgid "The number of rays to use for baking dynamic object lighting in [LightmapProbe]s when [member LightmapGI.quality] is [constant LightmapGI.BAKE_QUALITY_ULTRA]."
+msgstr "Ennyi sugarat használ a motor a dinamikus objektumok megvilágításának [LightmapProbe] próbákba sütéséhez, ha a [member LightmapGI.quality] értéke [constant LightmapGI.BAKE_QUALITY_ULTRA]."
+
+#. ProjectSettings.rendering/lightmapping/bake_quality/ultra_quality_ray_count
+#: doc/classes/ProjectSettings.xml
+msgid "The number of rays to use for baking lightmaps with [LightmapGI] when [member LightmapGI.quality] is [constant LightmapGI.BAKE_QUALITY_ULTRA]."
+msgstr "Ennyi sugarat használ a [LightmapGI] a fénytérképek sütéséhez, ha a [member LightmapGI.quality] értéke [constant LightmapGI.BAKE_QUALITY_ULTRA]."
+
+#. ProjectSettings.rendering/lightmapping/lightmap_gi/use_bicubic_filter
+#: doc/classes/ProjectSettings.xml
+msgid "If [code]true[/code], applies a bicubic filter during lightmap sampling. This makes lightmaps look much smoother, at a moderate performance cost.\n[b]Note:[/b] The bicubic filter exaggerates the 'bleeding' effect that occurs when a lightmap's resolution is low enough."
+msgstr "Ha az érték [code]true[/code], a motor bikubikus szűrőt alkalmaz a fénytérkép mintavételezésekor. Ettől simább lesz a megvilágítás, mérsékelt teljesítménycsökkenés árán.\n[b]Megjegyzés:[/b] Kis felbontású fénytérképeknél a bikubikus szűrő felerősíti a fényátszivárgást."
+
+#. ProjectSettings.rendering/limits/global_shader_variables/buffer_size
+#: doc/classes/ProjectSettings.xml
+msgid "The maximum number of uniforms that can be used by the global shader uniform buffer. Each item takes up one slot. In other words, a single uniform float and a uniform vec4 will take the same amount of space in the buffer.\n[b]Note:[/b] When using the Compatibility renderer, most mobile devices (and all web exports) will be limited to a maximum size of 1024 due to hardware constraints."
+msgstr "A globális shader-uniformpufferbe helyezhető uniformváltozók legnagyobb száma. Egy változó egy helyet foglal, így egy float és egy vec4 méretű uniformváltozó ugyanannyi helyet használ a pufferben.\n[b]Megjegyzés:[/b] A Compatibility renderelő használatakor hardveres korlátok miatt a legtöbb mobil eszközön és minden webes exportban legfeljebb 1024 hely érhető el."
+
+#. ProjectSettings.rendering/limits/opengl/max_lights_per_object
+#: doc/classes/ProjectSettings.xml
+msgid "Max number of omnilights and spotlights renderable per object. At the default value of 8, this means that each surface can be affected by up to 8 omnilights and 8 spotlights. This is further limited by hardware support and [member rendering/limits/opengl/max_renderable_lights]. Setting this low will slightly reduce memory usage, may decrease shader compile times, and may result in faster rendering on low-end, mobile, or web devices.\n[b]Note:[/b] This setting is only effective when using the Compatibility rendering method, not Forward+ and Mobile."
+msgstr "Az objektumonként kirajzolható pontfények és spotlámpák legnagyobb száma. Az alapértelmezett 8 esetén egy felületre legfeljebb 8 pontfény és 8 spotlámpa hathat. A hardver és a [member rendering/limits/opengl/max_renderable_lights] ezt tovább korlátozhatja. Kisebb értékkel némileg csökkenhet a memóriaigény és a shaderfordítás ideje, valamint gyorsulhat a renderelés gyengébb vagy mobil eszközökön, illetve weben.\n[b]Megjegyzés:[/b] A beállítás csak a Compatibility renderelési módban hatásos. A Forward+ és a Mobile mód figyelmen kívül hagyja."
+
+#. ProjectSettings.rendering/limits/opengl/max_renderable_elements
+#: doc/classes/ProjectSettings.xml
+msgid "Max number of elements renderable in a frame. If more elements than this are visible per frame, they will not be drawn. Keep in mind elements refer to mesh surfaces and not meshes themselves. Setting this low will slightly reduce memory usage and may decrease shader compile times, particularly on web. For most uses, the default value is suitable, but consider lowering as much as possible on web export.\n[b]Note:[/b] This setting is only effective when using the Compatibility rendering method, not Forward+ and Mobile."
+msgstr "Egy képkockán belül legfeljebb ennyi elem rajzolható ki. Ha ennél több látható elem van, a többletet a motor kihagyja. Itt egy elem a háló egy felülete, így egy háló több elemnek is számíthat. Kisebb értékkel némileg csökken a memóriaigény, és különösen weben lerövidülhet a shaderfordítás. A legtöbb esetben megfelel az alapérték, webes exporthoz azonban érdemes a szükséges minimumra csökkenteni.\n[b]Megjegyzés:[/b] A beállítás csak a Compatibility renderelési módban hatásos. A Forward+ és a Mobile mód figyelmen kívül hagyja."
+
+#. ProjectSettings.rendering/limits/opengl/max_renderable_lights
+#: doc/classes/ProjectSettings.xml
+msgid "Max number of positional lights renderable in a frame. If more lights than this number are used, they will be ignored. Setting this low will slightly reduce memory usage and may decrease shader compile times, particularly on web. For most uses, the default value is suitable, but consider lowering as much as possible on web export.\n[b]Note:[/b] This setting is only effective when using the Compatibility rendering method, not Forward+ and Mobile."
+msgstr "Egy képkockán belül kirajzolható, pozícióval rendelkező fények legnagyobb száma. A motor az e fölötti fényeket figyelmen kívül hagyja. Kisebb értékkel némileg csökken a memóriaigény, és különösen weben lerövidülhet a shaderfordítás. A legtöbb esetben megfelel az alapérték, webes exporthoz azonban érdemes a szükséges minimumra csökkenteni.\n[b]Megjegyzés:[/b] A beállítás csak a Compatibility renderelési módban hatásos. A Forward+ és a Mobile mód figyelmen kívül hagyja."
+
+#. ProjectSettings.rendering/limits/spatial_indexer/threaded_cull_minimum_instances
+#: doc/classes/ProjectSettings.xml
+msgid "The minimum number of instances that must be present in a scene to enable culling computations on multiple threads. If a scene has fewer instances than this number, culling is done on a single thread."
+msgstr "A jelenetben legalább ennyi példánynak kell lennie ahhoz, hogy a motor több szálon számítsa ki, mely elemek hagyhatók ki a renderelésből. Kevesebb példánynál a számítás egyetlen szálon fut."
+
+#. ProjectSettings.rendering/occlusion_culling/bvh_build_quality
+#: doc/classes/ProjectSettings.xml
+msgid "The [url=https://en.wikipedia.org/wiki/Bounding_volume_hierarchy]Bounding Volume Hierarchy[/url] quality to use when rendering the occlusion culling buffer. Higher values will result in more accurate occlusion culling, at the cost of higher CPU usage. See also [member rendering/occlusion_culling/occlusion_rays_per_thread].\n[b]Note:[/b] This property is only read when the project starts. To adjust the BVH build quality at runtime, use [method RenderingServer.viewport_set_occlusion_culling_build_quality]."
+msgstr "A takarási vizsgálat pufferének előállításához használt [url=https://en.wikipedia.org/wiki/Bounding_volume_hierarchy]határolótérfogat-hierarchia[/url] (BVH) minősége. Nagyobb értékkel pontosabb a takarási vizsgálat, de nő a processzorterhelés. Lásd még a [member rendering/occlusion_culling/occlusion_rays_per_thread] beállítást.\n[b]Megjegyzés:[/b] A motor csak a projekt indításakor olvassa be ezt a beállítást. A BVH felépítési minőségét futás közben a [method RenderingServer.viewport_set_occlusion_culling_build_quality] metódussal állíthatod."
+
+#. ProjectSettings.rendering/occlusion_culling/jitter_projection
+#: doc/classes/ProjectSettings.xml
+msgid "If [code]true[/code], the projection used for rendering the occlusion buffer will be jittered. This can help prevent objects being incorrectly culled when visible through small gaps."
+msgstr "Ha az érték [code]true[/code], a motor kismértékben eltolja a takarási puffer előállításához használt vetítést. Ezzel elkerülhető, hogy a kis réseken át látható objektumok tévesen kimaradjanak a renderelésből."
+
+#. ProjectSettings.rendering/renderer/rendering_method.mobile
+#: doc/classes/ProjectSettings.xml
+msgid "Override for [member rendering/renderer/rendering_method] on mobile devices."
+msgstr "A [member rendering/renderer/rendering_method] beállítás felülbírálása mobil eszközökön."
+
+#. ProjectSettings.rendering/renderer/rendering_method.web
+#: doc/classes/ProjectSettings.xml
+msgid "Override for [member rendering/renderer/rendering_method] on web."
+msgstr "A [member rendering/renderer/rendering_method] beállítás felülbírálása webes exportnál."
+
+#. ProjectSettings.rendering/rendering_device/d3d12/agility_sdk_version
+#: doc/classes/ProjectSettings.xml
+msgid "Version code of the [url=https://devblogs.microsoft.com/directx/directx12agility/]Direct3D 12 Agility SDK[/url] to use ([code]D3D12SDKVersion[/code]). This must match the [i]minor[/i] version that is installed next to the editor binary and in the export templates directory for the current editor version. For example, if you have [code]1.618.5[/code] installed, you need to input [code]618[/code] here."
+msgstr "A használandó [url=https://devblogs.microsoft.com/directx/directx12agility/]Direct3D 12 Agility SDK[/url] verziókódja ([code]D3D12SDKVersion[/code]). A kódnak egyeznie kell a szerkesztő futtatható állománya mellett és az adott szerkesztőverzió exportsablonjainak könyvtárában telepített SDK [i]alverziószámával[/i]. Ha például a telepített verzió [code]1.618.5[/code], ide [code]618[/code] kerül."
+
+#. ProjectSettings.rendering/rendering_device/d3d12/max_resource_descriptors
+#: doc/classes/ProjectSettings.xml
+msgid "The number of entries in the resource descriptor heap the Direct3D 12 rendering driver uses for most rendering operations.\nDepending on the complexity of scenes, this value may be lowered or may need to be raised."
+msgstr "A Direct3D 12 illesztőprogram által a legtöbb renderelési művelethez használt erőforrásleíró-tár bejegyzéseinek száma.\nA jelenetek összetettségétől függően kisebb érték is elég lehet, vagy szükség lehet az érték növelésére."
+
+#. ProjectSettings.rendering/rendering_device/d3d12/max_sampler_descriptors
+#: doc/classes/ProjectSettings.xml
+msgid "The number of entries in the sampler descriptor heap the Direct3D 12 rendering driver uses for most rendering operations.\nDepending on the complexity of scenes, this value may be lowered or may need to be raised."
+msgstr "A Direct3D 12 illesztőprogram által a legtöbb renderelési művelethez használt mintavételezőleíró-tár bejegyzéseinek száma.\nA jelenetek összetettségétől függően kisebb érték is elég lehet, vagy szükség lehet az érték növelésére."
+
+#. ProjectSettings.rendering/rendering_device/driver.android
+#: doc/classes/ProjectSettings.xml
+msgid "Android override for [member rendering/rendering_device/driver].\nOnly one option is supported:\n- [code]vulkan[/code], Vulkan from native drivers.\n[b]Note:[/b] If Vulkan was disabled at compile time, there is no alternative RenderingDevice driver."
+msgstr "A [member rendering/rendering_device/driver] beállítás felülbírálása Androidon.\nEgyetlen lehetőség érhető el:\n- [code]vulkan[/code], a natív Vulkan-illesztőprogram.\n[b]Megjegyzés:[/b] Ha a motor fordításakor kikapcsolták a Vulkan-támogatást, a RenderingDevice-hoz nincs másik használható illesztőprogram."
+
+#. ProjectSettings.rendering/rendering_device/driver.ios
+#: doc/classes/ProjectSettings.xml
+msgid "iOS override for [member rendering/rendering_device/driver].\nTwo options are supported:\n- [code]metal[/code] (default), Metal from native drivers.\n- [code]vulkan[/code], Vulkan over Metal via MoltenVK."
+msgstr "A [member rendering/rendering_device/driver] beállítás felülbírálása iOS-en.\nKét lehetőség érhető el:\n- [code]metal[/code] (alapértelmezett), a natív Metal-illesztőprogram.\n- [code]vulkan[/code], Metalra épülő Vulkan a MoltenVK közvetítésével."
+
+#. ProjectSettings.rendering/rendering_device/driver.linuxbsd
+#: doc/classes/ProjectSettings.xml
+msgid "LinuxBSD override for [member rendering/rendering_device/driver].\nOnly one option is supported:\n- [code]vulkan[/code], Vulkan from native drivers.\n[b]Note:[/b] If Vulkan was disabled at compile time, there is no alternative RenderingDevice driver."
+msgstr "A [member rendering/rendering_device/driver] beállítás felülbírálása Linuxon és BSD-n.\nEgyetlen lehetőség érhető el:\n- [code]vulkan[/code], a natív Vulkan-illesztőprogram.\n[b]Megjegyzés:[/b] Ha a motor fordításakor kikapcsolták a Vulkan-támogatást, a RenderingDevice-hoz nincs másik használható illesztőprogram."
+
+#. ProjectSettings.rendering/rendering_device/driver.macos
+#: doc/classes/ProjectSettings.xml
+msgid "macOS override for [member rendering/rendering_device/driver].\nTwo options are supported:\n- [code]metal[/code] (default), Metal from native drivers, only supported on Apple Silicon Macs. On Intel Macs, it will automatically fall back to [code]vulkan[/code] as Metal support is not implemented.\n- [code]vulkan[/code], Vulkan over Metal via MoltenVK, supported on both Apple Silicon and Intel Macs."
+msgstr "A [member rendering/rendering_device/driver] beállítás felülbírálása macOS-en.\nKét lehetőség érhető el:\n- [code]metal[/code] (alapértelmezett), a natív Metal-illesztőprogram. Csak Apple Silicon processzoros Maceken támogatott. Intel processzoros Macen a motor automatikusan [code]vulkan[/code] módra vált, mert ott nincs Metal-támogatás.\n- [code]vulkan[/code], Metalra épülő Vulkan a MoltenVK közvetítésével. Apple Silicon és Intel processzoros Maceken is támogatott."
+
+#. ProjectSettings.rendering/rendering_device/driver.visionos
+#: doc/classes/ProjectSettings.xml
+msgid "visionOS override for [member rendering/rendering_device/driver].\nOnly one option is supported:\n- [code]metal[/code] (default), Metal from native drivers."
+msgstr "A [member rendering/rendering_device/driver] beállítás felülbírálása visionOS-en.\nEgyetlen lehetőség érhető el:\n- [code]metal[/code] (alapértelmezett), a natív Metal-illesztőprogram."
+
+#. ProjectSettings.rendering/rendering_device/fallback_to_d3d12
+#: doc/classes/ProjectSettings.xml
+msgid "If [code]true[/code], the Forward+ renderer will fall back to Direct3D 12 if Vulkan is not supported. The fallback is always attempted regardless of this setting if Vulkan driver support was disabled at compile time.\n[b]Note:[/b] This setting is implemented only on Windows."
+msgstr "Ha az érték [code]true[/code], a Forward+ renderelő Direct3D 12-re vált, ha a Vulkan nem támogatott. Ha a Vulkan-illesztőprogram támogatását a motor fordításakor kikapcsolták, a motor ettől a beállítástól függetlenül megpróbál átváltani.\n[b]Megjegyzés:[/b] Ez a beállítás csak Windowson érhető el."
+
+#. ProjectSettings.rendering/rendering_device/fallback_to_opengl3
+#: doc/classes/ProjectSettings.xml
+msgid "If [code]true[/code], the Forward+ renderer will fall back to OpenGL 3 if Direct3D 12, Metal, and Vulkan are not supported.\n[b]Note:[/b] This setting is implemented on Windows, Android, macOS, iOS, and Linux/X11."
+msgstr "Ha az érték [code]true[/code], a Forward+ renderelő OpenGL 3-ra vált, ha a Direct3D 12, a Metal és a Vulkan egyike sem támogatott.\n[b]Megjegyzés:[/b] Ez a beállítás Windowson, Androidon, macOS-en, iOS-en és Linuxon X11 alatt érhető el."
+
+#. ProjectSettings.rendering/rendering_device/fallback_to_vulkan
+#: doc/classes/ProjectSettings.xml
+msgid "If [code]true[/code], the Forward+ renderer will fall back to Vulkan if Direct3D 12 (on Windows) or Metal (on macOS x86_64) are not supported. The fallback is always attempted regardless of this setting if Direct3D 12 (Windows) or Metal (macOS) driver support was disabled at compile time.\n[b]Note:[/b] This setting is implemented on Windows and macOS."
+msgstr "Ha az érték [code]true[/code], a Forward+ renderelő Vulkanra vált, ha Windowson a Direct3D 12 vagy x86_64-es macOS-en a Metal nem támogatott. Ha a motor fordításakor kikapcsolták a Direct3D 12 (Windows) vagy a Metal (macOS) illesztőprogram támogatását, a motor ettől a beállítástól függetlenül megpróbál átváltani.\n[b]Megjegyzés:[/b] Ez a beállítás Windowson és macOS-en érhető el."
+
+#. ProjectSettings.rendering/rendering_device/pipeline_cache/enable
+#: doc/classes/ProjectSettings.xml
+msgid "Enable the pipeline cache that is saved to disk if the graphics API supports it.\n[b]Note:[/b] This property is unable to control the pipeline caching the GPU driver itself does. Only turn this off along with deleting the contents of the driver's cache if you wish to simulate the experience a user will get when starting the game for the first time."
+msgstr "Bekapcsolja a lemezre mentett renderelési futószalag-gyorsítótárat, amennyiben a grafikus API támogatja.\n[b]Megjegyzés:[/b] A GPU-illesztőprogram saját futószalag-gyorsítótárát ez a beállítás nem vezérli. Ha azt szeretnéd kipróbálni, mit tapasztal a játékos az első indításkor, kapcsold ki ezt a beállítást, és töröld az illesztőprogram gyorsítótárának tartalmát is."
+
+#. ProjectSettings.rendering/rendering_device/pipeline_cache/save_chunk_size_mb
+#: doc/classes/ProjectSettings.xml
+msgid "Determines at which interval pipeline cache is saved to disk. The lower the value, the more often it is saved."
+msgstr "Meghatározza, milyen gyakran menti a motor lemezre a renderelési futószalag gyorsítótárát. Minél kisebb az érték, annál gyakoribb a mentés."
+
+#. ProjectSettings.rendering/rendering_device/staging_buffer/block_size_kb
+#: doc/classes/ProjectSettings.xml
+msgid "The size of a block allocated in the staging buffers. Staging buffers are the intermediate resources the engine uses to upload or download data to the GPU. This setting determines the max amount of data that can be transferred in a copy operation. Increasing this will result in faster data transfers at the cost of extra memory.\n[b]Note:[/b] This property is only read when the project starts. There is currently no way to change this value at run-time."
+msgstr "A GPU és a motor közötti adatátvitelhez használt átmeneti pufferekben lefoglalt blokkok mérete. Ez szabja meg az egy másolási művelettel átvihető adatmennyiség felső határát. Nagyobb értékkel gyorsabb az adatátvitel, de több memória kell hozzá.\n[b]Megjegyzés:[/b] A motor csak a projekt indításakor olvassa be ezt a beállítást. Az érték jelenleg nem módosítható futás közben."
+
+#. ProjectSettings.rendering/rendering_device/staging_buffer/max_size_mb
+#: doc/classes/ProjectSettings.xml
+msgid "The maximum amount of memory allowed to be used by staging buffers. If the amount of data being uploaded or downloaded exceeds this amount, the GPU will stall and wait for previous frames to finish.\n[b]Note:[/b] This property is only read when the project starts. There is currently no way to change this value at run-time."
+msgstr "Az átmeneti pufferek által összesen használható memória felső határa. Ha a fel- vagy letöltendő adatok mérete meghaladja ezt a határt, a GPU várakozik, amíg az előző képkockák feldolgozása befejeződik.\n[b]Megjegyzés:[/b] A motor csak a projekt indításakor olvassa be ezt a beállítást. Az érték jelenleg nem módosítható futás közben."
+
+#. ProjectSettings.rendering/rendering_device/staging_buffer/texture_download_region_size_px
+#: doc/classes/ProjectSettings.xml
+msgid "The region size in pixels used to download texture data from the GPU when using methods like [method RenderingDevice.texture_get_data_async].\n[b]Note:[/b] This property's upper limit is controlled by [member rendering/rendering_device/staging_buffer/block_size_kb] and whether it's possible to allocate a single block of texture data with this region size in the format that is requested.\n[b]Note:[/b] This property is only read when the project starts. There is currently no way to change this value at run-time."
+msgstr "A GPU-ról letöltött textúrarész mérete képpontban, például a [method RenderingDevice.texture_get_data_async] metódus használatakor.\n[b]Megjegyzés:[/b] A felső határt a [member rendering/rendering_device/staging_buffer/block_size_kb] értéke és az szabja meg, hogy a kért formátumú, ekkora textúrarész elfér-e egyetlen adatblokkban.\n[b]Megjegyzés:[/b] A motor csak a projekt indításakor olvassa be ezt a beállítást. Az érték jelenleg nem módosítható futás közben."
+
+#. ProjectSettings.rendering/rendering_device/staging_buffer/texture_upload_region_size_px
+#: doc/classes/ProjectSettings.xml
+msgid "The region size in pixels used to upload texture data from the GPU when using methods like [method RenderingDevice.texture_update].\n[b]Note:[/b] This property's upper limit is controlled by [member rendering/rendering_device/staging_buffer/block_size_kb] and whether it's possible to allocate a single block of texture data with this region size in the format that is requested.\n[b]Note:[/b] This property is only read when the project starts. There is currently no way to change this value at run-time."
+msgstr "A GPU-ra feltöltött textúrarész mérete képpontban, például a [method RenderingDevice.texture_update] metódus használatakor.\n[b]Megjegyzés:[/b] A felső határt a [member rendering/rendering_device/staging_buffer/block_size_kb] értéke és az szabja meg, hogy a kért formátumú, ekkora textúrarész elfér-e egyetlen adatblokkban.\n[b]Megjegyzés:[/b] A motor csak a projekt indításakor olvassa be ezt a beállítást. Az érték jelenleg nem módosítható futás közben."
+
+#. ProjectSettings.rendering/rendering_device/vsync/frame_queue_size
+#: doc/classes/ProjectSettings.xml
+msgid "The number of frames to track on the CPU side before stalling to wait for the GPU.\nTry the [url=https://darksylinc.github.io/vsync_simulator/]V-Sync Simulator[/url], an interactive interface that simulates presentation to better understand how it is affected by different variables under various conditions.\n[b]Note:[/b] This property is only read when the project starts. There is currently no way to change this value at run-time."
+msgstr "A CPU ennyi feldolgozás alatt álló képkockát tarthat nyilván, mielőtt várnia kell a GPU-ra.\nA [url=https://darksylinc.github.io/vsync_simulator/]V-Sync Simulator[/url] interaktívan szemlélteti, hogyan hatnak a különböző változók a képkockák időzítésére és megjelenítésére.\n[b]Megjegyzés:[/b] A motor csak a projekt indításakor olvassa be ezt a beállítást. Az érték jelenleg nem módosítható futás közben."
+
+#. ProjectSettings.rendering/rendering_device/vulkan/max_descriptors_per_pool
+#: doc/classes/ProjectSettings.xml
+msgid "The number of descriptors per pool. Godot's Vulkan backend uses linear pools for descriptors that will be created and destroyed within a single frame. Instead of destroying every single descriptor every frame, they all can be destroyed at once by resetting the pool they belong to.\nA larger number is more efficient up to a limit, after that it will only waste RAM (maximum efficiency is achieved when there is no more than 1 pool per frame). A small number could end up with one pool per descriptor, which negatively impacts performance.\n[b]Note:[/b] Changing this property requires a restart to take effect."
+msgstr "Az egy készletben helyet kapó leírók száma. A Godot Vulkan-háttérrendszere lineáris készleteket használ az egy képkockán belül létrehozott és felszabadított leírókhoz. Így a leírókat elég egyszerre felszabadítani a készlet alaphelyzetbe állításával, és nem kell egyenként törölni őket minden képkocka végén.\nA nagyobb érték egy határig hatékonyabb, azon túl csak memóriát pazarol. Akkor a leghatékonyabb, ha képkockánként legfeljebb egy készletre van szükség. Túl kis értéknél akár minden leíró külön készletbe kerülhet, ami rontja a teljesítményt.\n[b]Megjegyzés:[/b] A módosítás újraindítás után lép életbe."
+
+#. ProjectSettings.rendering/scaling_3d/fsr_sharpness
+#. RenderingServer.viewport_set_fsr_sharpness
+#: doc/classes/ProjectSettings.xml doc/classes/RenderingServer.xml
+msgid "Determines how sharp the upscaled image will be when using the FSR upscaling mode. Sharpness halves with every whole number. Values go from 0.0 (sharpest) to 2.0. Values above 2.0 won't make a visible difference."
+msgstr "Az FSR-rel felskálázott kép élességét szabja meg. Minden egész egységnyi növeléssel az élesség a felére csökken. A tartomány 0,0-tól (a legélesebb beállítástól) 2,0-ig terjed. A 2,0 feletti értékek már nem okoznak látható változást."
+
+#. ProjectSettings.rendering/scaling_3d/mode.ios
+#: doc/classes/ProjectSettings.xml
+msgid "iOS override for [member rendering/scaling_3d/mode]. This allows selecting the MetalFX spatial and MetalFX temporal scaling modes, which are exclusive to platforms where the Metal rendering driver is used."
+msgstr "A [member rendering/scaling_3d/mode] beállítás felülbírálása iOS-en. Itt a MetalFX térbeli és időbeli skálázása is választható. Ezek a módok csak a Metal renderelő illesztőprogramot használó platformokon érhetők el."
+
+#. ProjectSettings.rendering/scaling_3d/mode.macos
+#: doc/classes/ProjectSettings.xml
+msgid "macOS override for [member rendering/scaling_3d/mode]. This allows selecting the MetalFX spatial and MetalFX temporal scaling modes, which are exclusive to platforms where the Metal rendering driver is used."
+msgstr "A [member rendering/scaling_3d/mode] beállítás felülbírálása macOS-en. Itt a MetalFX térbeli és időbeli skálázása is választható. Ezek a módok csak a Metal renderelő illesztőprogramot használó platformokon érhetők el."
+
+#. ProjectSettings.rendering/shader_compiler/shader_cache/enabled
+#: doc/classes/ProjectSettings.xml
+msgid "Enable the shader cache, which stores compiled shaders to disk to prevent stuttering from shader compilation the next time the shader is needed."
+msgstr "Bekapcsolja a shadergyorsítótárat, amely lemezre menti a lefordított shadereket. Így a következő használatkor nem kell őket újra lefordítani, és elkerülhető az ebből eredő akadozás."
+
+#. ProjectSettings.rendering/shading/overrides/force_lambert_over_burley
+#: doc/classes/ProjectSettings.xml
+msgid "If [code]true[/code], uses faster but lower-quality Lambert material lighting model instead of Burley."
+msgstr "Ha az érték [code]true[/code], a motor a Burley-modell helyett a gyorsabb, de gyengébb minőségű Lambert-modellt használja az anyagok megvilágításához."
+
+#. ProjectSettings.rendering/shading/overrides/force_lambert_over_burley.mobile
+#: doc/classes/ProjectSettings.xml
+msgid "Lower-end override for [member rendering/shading/overrides/force_lambert_over_burley] on mobile devices, due to performance concerns or driver support."
+msgstr "A [member rendering/shading/overrides/force_lambert_over_burley] felülbírálása kisebb teljesítményű mobil eszközökön, a teljesítmény vagy az illesztőprogram támogatása miatt."
+
+#. ProjectSettings.rendering/shading/overrides/force_vertex_shading
+#: doc/classes/ProjectSettings.xml
+msgid "If [code]true[/code], forces vertex shading for all rendering. This can increase performance a lot, but also reduces quality immensely. Can be used to optimize performance on low-end mobile devices."
+msgstr "Ha az érték [code]true[/code], a motor minden renderelésnél csúcspontonként számítja az árnyalást. Ez jelentősen javíthatja a teljesítményt, de erősen rontja a képminőséget. Gyengébb mobileszközökön használható a renderelés gyorsítására."
+
+#. ProjectSettings.rendering/textures/basis_universal/rdo_dict_size
+#: doc/classes/ProjectSettings.xml
+msgid "The dictionary size for Rate-Distortion Optimization (RDO) when importing textures as Basis Universal and when RDO is enabled, ranging from [code]64[/code] to [code]65536[/code]. Higher values reduce the file sizes further, but make encoding times significantly longer."
+msgstr "A bitráta és a torzítás optimalizálásához (RDO) használt szótár mérete, ha a textúrákat Basis Universal formátumban importálod, és az RDO be van kapcsolva. Az érték [code]64[/code] és [code]65536[/code] közé eshet. Nagyobb értékkel tovább csökken a fájlméret, viszont jelentősen megnő a kódolási idő."
+
+#. ProjectSettings.rendering/textures/basis_universal/zstd_supercompression
+#: doc/classes/ProjectSettings.xml
+msgid "If [code]true[/code], enables Zstandard supercompression to reduce file size when importing textures as Basis Universal.\n[b]Note:[/b] Basis Universal textures need to be compressed to gain the benefit of smaller file sizes, otherwise they are as large as VRAM-compressed textures."
+msgstr "Ha az érték [code]true[/code], a Basis Universal formátumú textúrák importálásakor a Zstandard utótömörítés csökkenti a fájlméretet.\n[b]Megjegyzés:[/b] A Basis Universal textúrák csak utótömörítéssel lesznek kisebbek. Utótömörítés nélkül akkorák, mint a VRAM-tömörített textúrák."
+
+#. ProjectSettings.rendering/textures/basis_universal/zstd_supercompression_level
+#: doc/classes/ProjectSettings.xml
+msgid "Specify the compression level for Basis Universal Zstandard supercompression, ranging from [code]1[/code] to [code]22[/code]."
+msgstr "A Basis Universal formátumnál használt Zstandard utótömörítés szintje. Az értéke [code]1[/code] és [code]22[/code] közé eshet."
+
+#. ProjectSettings.rendering/textures/canvas_textures/default_texture_filter
+#: doc/classes/ProjectSettings.xml
+msgid "The default texture filtering mode to use for [CanvasItem]s built-in texture. In shaders, this texture is accessed as [code]TEXTURE[/code].\n[b]Note:[/b] For pixel art aesthetics, see also [member rendering/2d/snap/snap_2d_vertices_to_pixel] and [member rendering/2d/snap/snap_2d_transforms_to_pixel]."
+msgstr "A [CanvasItem] elemek beépített textúrájának alapértelmezett szűrési módja. A shaderekben ez a textúra a [code]TEXTURE[/code] változóval érhető el.\n[b]Megjegyzés:[/b] Pixelgrafikához lásd még a [member rendering/2d/snap/snap_2d_vertices_to_pixel] és a [member rendering/2d/snap/snap_2d_transforms_to_pixel] beállítást."
+
+#. ProjectSettings.rendering/textures/canvas_textures/default_texture_repeat
+#: doc/classes/ProjectSettings.xml
+msgid "The default texture repeating mode to use for [CanvasItem]s built-in texture. In shaders, this texture is accessed as [code]TEXTURE[/code]."
+msgstr "A [CanvasItem] elemek beépített textúrájának alapértelmezett ismétlési módja. A shaderekben ez a textúra a [code]TEXTURE[/code] változóval érhető el."
+
+#. ProjectSettings.rendering/textures/decals/filter
+#: doc/classes/ProjectSettings.xml
+msgid "The filtering quality to use for [Decal] nodes. When using one of the anisotropic filtering modes, the anisotropic filtering level is controlled by [member rendering/textures/default_filters/anisotropic_filtering_level]."
+msgstr "A [Decal] csomópontok textúraszűrésének minősége. Anizotrop szűrési mód használatakor a szűrés szintjét a [member rendering/textures/default_filters/anisotropic_filtering_level] szabja meg."
+
+#. ProjectSettings.rendering/textures/default_filters/use_nearest_mipmap_filter
+#: doc/classes/ProjectSettings.xml
+msgid "If [code]true[/code], uses nearest-neighbor mipmap filtering when using mipmaps (also called \"bilinear filtering\"), which will result in visible seams appearing between mipmap stages. This may increase performance in mobile as less memory bandwidth is used. If [code]false[/code], linear mipmap filtering (also called \"trilinear filtering\") is used.\n[b]Note:[/b] This property is only read when the project starts. There is currently no way to change this setting at run-time."
+msgstr "Ha az érték [code]true[/code], a motor mindig a legközelebbi mipmap-szintből mintavételez (bilineáris szűrés). A mipmap-szintek határa így láthatóvá válhat. A kisebb memória-sávszélességigény miatt ez javíthatja a teljesítményt mobil eszközökön. Ha az érték [code]false[/code], a motor a két szomszédos mipmap-szint között is interpolál (trilineáris szűrés).\n[b]Megjegyzés:[/b] A motor csak a projekt indításakor olvassa be ezt a beállítást. Az érték jelenleg nem módosítható futás közben."
+
+#. ProjectSettings.rendering/textures/light_projectors/filter
+#: doc/classes/ProjectSettings.xml
+msgid "The filtering quality to use for [OmniLight3D] and [SpotLight3D] projectors. When using one of the anisotropic filtering modes, the anisotropic filtering level is controlled by [member rendering/textures/default_filters/anisotropic_filtering_level]."
+msgstr "Az [OmniLight3D] és [SpotLight3D] fények vetített textúráinak szűrési minősége. Anizotrop szűrési mód használatakor a szűrés szintjét a [member rendering/textures/default_filters/anisotropic_filtering_level] szabja meg."
+
+#. ProjectSettings.rendering/textures/lossless_compression/force_png
+#: doc/classes/ProjectSettings.xml
+msgid "If [code]true[/code], the texture importer will import lossless textures using the PNG format. Otherwise, it will default to using WebP."
+msgstr "Ha az érték [code]true[/code], a textúraimportáló PNG formátumban menti a veszteségmentes textúrákat. Egyébként az alapértelmezett WebP formátumot használja."
+
+#. ProjectSettings.rendering/textures/vram_compression/cache_gpu_compressor
+#: doc/classes/ProjectSettings.xml
+msgid "If [code]true[/code], the GPU texture compressor will cache the local RenderingDevice and its resources (shaders and pipelines), making subsequent imports faster at the cost of increased memory usage."
+msgstr "Ha az érték [code]true[/code], a GPU-val működő textúratömörítő gyorsítótárban tartja a helyi RenderingDevice példányt és az erőforrásait (a shadereket és a renderelési futószalagokat). Ettől a későbbi importálások gyorsabbak lesznek, de nő a memóriahasználat."
+
+#. ProjectSettings.rendering/textures/vram_compression/compress_with_gpu
+#: doc/classes/ProjectSettings.xml
+msgid "If [code]true[/code], the texture importer will utilize the GPU for compressing textures, improving the import time of large images.\n[b]Note:[/b] This only functions on a device which supports either Vulkan, Direct3D 12, or Metal as a rendering driver.\n[b]Note:[/b] Currently this only affects certain compressed formats (BC1, BC3, BC4, BC5, and BC6), all of which are exclusive to desktop platforms and consoles."
+msgstr "Ha az érték [code]true[/code], a textúraimportáló a GPU-val tömöríti a textúrákat, így gyorsabban importálhatók a nagy képek.\n[b]Megjegyzés:[/b] Ehhez Vulkan, Direct3D 12 vagy Metal renderelő illesztőprogramot támogató eszköz szükséges.\n[b]Megjegyzés:[/b] Jelenleg csak bizonyos tömörített formátumokra (BC1, BC3, BC4, BC5 és BC6) vonatkozik, amelyek kizárólag asztali platformokon és konzolokon érhetők el."
+
+#. ProjectSettings.rendering/textures/webp_compression/compression_method
+#: doc/classes/ProjectSettings.xml
+msgid "The default compression method for WebP. Affects both lossy and lossless WebP. A higher value results in smaller files at the cost of compression speed. Decompression speed is mostly unaffected by the compression method. Supported values are 0 to 6. Note that compression methods above 4 are very slow and offer very little savings."
+msgstr "A WebP alapértelmezett tömörítési módja. A veszteséges és a veszteségmentes WebP-fájlokra egyaránt vonatkozik. Nagyobb értékkel kisebb fájl keletkezik, de lassabb a tömörítés. A kitömörítés sebessége alig függ a választott módtól. A megengedett értékek 0-tól 6-ig terjednek. A 4 feletti módok nagyon lassúak, és alig csökkentik tovább a fájlméretet."
+
+#. ProjectSettings.rendering/textures/webp_compression/lossless_compression_factor
+#: doc/classes/ProjectSettings.xml
+msgid "The default compression factor for lossless WebP. Decompression speed is mostly unaffected by the compression factor. Supported values are 0 to 100."
+msgstr "A veszteségmentes WebP alapértelmezett tömörítési tényezője. A kitömörítés sebessége alig függ ettől az értéktől. A megengedett értékek 0-tól 100-ig terjednek."
+
+#. ProjectSettings.rendering/viewport/transparent_background
+#: doc/classes/ProjectSettings.xml
+msgid "If [code]true[/code], enables [member Viewport.transparent_bg] on the root viewport. This allows per-pixel transparency to be effective after also enabling [member display/window/size/transparent] and [member display/window/per_pixel_transparency/allowed]."
+msgstr "Ha az érték [code]true[/code], bekapcsolja a gyökérnézetablakon a [member Viewport.transparent_bg] tulajdonságot. A képpontonkénti átlátszóság akkor működik, ha a [member display/window/size/transparent] és a [member display/window/per_pixel_transparency/allowed] beállítás is be van kapcsolva."
+
+#. ProjectSettings.rendering/vrs/mode
+#: doc/classes/ProjectSettings.xml
+msgid "Set the default Variable Rate Shading (VRS) mode for the main viewport. See [member Viewport.vrs_mode] to change this at runtime, and [enum Viewport.VRSMode] for possible values."
+msgstr "A fő nézetablak alapértelmezett változó mintavételi sűrűségű árnyalási módja (VRS). Futás közben a [member Viewport.vrs_mode] tulajdonsággal módosítható. A választható értékeket az [enum Viewport.VRSMode] sorolja fel."
+
+#. ProjectSettings.display/mouse_cursor/custom_image
+#: doc/classes/ProjectSettings.xml
+msgid "Custom image for the mouse cursor (limited to 256×256)."
+msgstr "Egyéni egérmutatókép, legfeljebb 256×256 képpont méretben."
+
+#. ProjectSettings.display/mouse_cursor/custom_image_hotspot
+#: doc/classes/ProjectSettings.xml
+msgid "Hotspot for the custom mouse cursor image."
+msgstr "Az egyéni egérmutatókép aktív pontja, amely az egér tényleges helyére esik."
+
+#. ProjectSettings.display/mouse_cursor/tooltip_position_offset
+#: doc/classes/ProjectSettings.xml
+msgid "Position offset for tooltips, relative to the mouse cursor's hotspot."
+msgstr "Az eszköztippek helyzetének eltolása az egérmutató aktív pontjához képest."
+
+#. ProjectSettings.display/window/dpi/allow_hidpi
+#: doc/classes/ProjectSettings.xml
+msgid "If [code]true[/code], allows HiDPI display on Windows, macOS, Android, iOS and Web. If [code]false[/code], the platform's low-DPI fallback will be used on HiDPI displays, which causes the window to be displayed in a blurry or pixelated manner (and can cause various window management bugs). Therefore, it is recommended to make your project scale to [url=$DOCS_URL/tutorials/rendering/multiple_resolutions.html]multiple resolutions[/url] instead of disabling this setting.\n[b]Note:[/b] This setting has no effect on Linux as DPI-awareness fallbacks are not supported there."
+msgstr "Ha az érték [code]true[/code], engedélyezi a nagy képpontsűrűségű (HiDPI) megjelenítést Windowson, macOS-en, Androidon, iOS-en és weben. Ha az érték [code]false[/code], HiDPI-kijelzőn a platform kis képpontsűrűséghez készült tartalékmódja lép életbe. Emiatt az ablak életlen vagy pixeles lehet, és ablakkezelési hibák is felléphetnek. A beállítás kikapcsolása helyett ezért érdemes a projektet [url=$DOCS_URL/tutorials/rendering/multiple_resolutions.html]több felbontáshoz[/url] igazítani.\n[b]Megjegyzés:[/b] Linuxon ennek a beállításnak nincs hatása, mert a rendszer nem támogatja ezeket a DPI-tartalékmódokat."
+
+#. ProjectSettings.display/window/frame_pacing/android/enable_frame_pacing
+#: doc/classes/ProjectSettings.xml
+msgid "Enable Swappy for stable frame pacing on Android. Highly recommended.\n[b]Note:[/b] This option will be forced off when using OpenXR."
+msgstr "Bekapcsolja a Swappy használatát az egyenletes képkocka-ütemezéshez Androidon. Erősen ajánlott.\n[b]Megjegyzés:[/b] Az OpenXR használatakor a motor automatikusan kikapcsolja ezt a beállítást."
+
+#. ProjectSettings.display/window/handheld/orientation
+#: doc/classes/ProjectSettings.xml
+msgid "The default screen orientation to use on mobile devices. See [enum DisplayServer.ScreenOrientation] for possible values.\n[b]Note:[/b] When set to a portrait orientation, this project setting does not flip the project resolution's width and height automatically. Instead, you have to set [member display/window/size/viewport_width] and [member display/window/size/viewport_height] accordingly."
+msgstr "A mobileszközök alapértelmezett képernyőtájolása. A választható értékeket az [enum DisplayServer.ScreenOrientation] sorolja fel.\n[b]Megjegyzés:[/b] Álló tájolás kiválasztásakor a motor nem cseréli fel automatikusan a projektfelbontás szélességét és magasságát. A megfelelő méreteket a [member display/window/size/viewport_width] és a [member display/window/size/viewport_height] beállításban kell megadnod."
+
+#. ProjectSettings.display/window/hdr/request_hdr_output
+#: doc/classes/ProjectSettings.xml
+msgid "If [code]true[/code], HDR output is requested for the main window and the editor. The main window and editor will automatically switch between HDR and SDR if it is moved between screens, screen capabilities change, or system settings are modified. This will internally force [member Viewport.use_hdr_2d] to be enabled on the main [Viewport]. All other [SubViewport] of the [Window] must have their [member Viewport.use_hdr_2d] property enabled to produce HDR output.\n[b]Note:[/b] This property is only read when the project starts. To change this property at runtime, set [member Window.hdr_output_requested]."
+msgstr "Ha az érték [code]true[/code], a főablak és a szerkesztő HDR-kimenetet kér. A főablak és a szerkesztő automatikusan vált HDR és SDR között, ha másik kijelzőre kerül, megváltoznak a kijelző képességei vagy módosulnak a rendszerbeállítások. Ez bekapcsolja a [member Viewport.use_hdr_2d] tulajdonságot a fő [Viewport] számára. A [Window] többi [SubViewport] nézetablakán külön be kell kapcsolni a [member Viewport.use_hdr_2d] tulajdonságot a HDR-kimenethez.\n[b]Megjegyzés:[/b] A motor csak a projekt indításakor olvassa be ezt a beállítást. Futás közben a [member Window.hdr_output_requested] tulajdonsággal kérhetsz HDR-kimenetet."
+
+#. ProjectSettings.display/window/ios/allow_high_refresh_rate
+#: doc/classes/ProjectSettings.xml
+msgid "If [code]true[/code], iOS devices that support high refresh rate/\"ProMotion\" will be allowed to render at up to 120 frames per second."
+msgstr "Ha az érték [code]true[/code], a nagy képfrissítést (ProMotiont) támogató iOS-eszközök másodpercenként akár 120 képkockát is renderelhetnek."
+
+#. ProjectSettings.display/window/ios/hide_home_indicator
+#: doc/classes/ProjectSettings.xml
+msgid "If [code]true[/code], the home indicator is hidden automatically. This only affects iOS devices without a physical home button."
+msgstr "Ha az érték [code]true[/code], az iOS automatikusan elrejti a kezdőképernyőre visszalépés jelzőjét. Ez csak a fizikai főgomb nélküli iOS-eszközöket érinti."
+
+#. ProjectSettings.display/window/ios/hide_status_bar
+#: doc/classes/ProjectSettings.xml
+msgid "If [code]true[/code], the status bar is hidden while the app is running."
+msgstr "Ha az érték [code]true[/code], az iOS elrejti az állapotsort az alkalmazás futása alatt."
+
+#. ProjectSettings.display/window/ios/suppress_ui_gesture
+#: doc/classes/ProjectSettings.xml
+msgid "If [code]true[/code], it will require two swipes to access iOS UI that uses gestures.\n[b]Note:[/b] This setting has no effect on the home indicator if [code]hide_home_indicator[/code] is [code]true[/code]."
+msgstr "Ha az érték [code]true[/code], két húzó mozdulat szükséges az iOS gesztussal elérhető kezelőfelületeinek megnyitásához.\n[b]Megjegyzés:[/b] Ez a beállítás nem hat a kezdőképernyőre visszalépés jelzőjére, ha a [code]hide_home_indicator[/code] értéke [code]true[/code]."
+
+#. ProjectSettings.display/window/per_pixel_transparency/allowed
+#: doc/classes/ProjectSettings.xml
+msgid "If [code]true[/code], allows per-pixel transparency for the window background. This affects performance, so leave it on [code]false[/code] unless you need it. See also [member display/window/size/transparent] and [member rendering/viewport/transparent_background]."
+msgstr "Ha az érték [code]true[/code], az ablak háttere képpontonként átlátszó lehet. Ez hatással van a teljesítményre, ezért csak akkor térj el a [code]false[/code] értéktől, ha szükséged van rá. Lásd még a [member display/window/size/transparent] és a [member rendering/viewport/transparent_background] beállítást."
+
+#. ProjectSettings.display/window/size/always_on_top
+#: doc/classes/ProjectSettings.xml
+msgid "Forces the main window to be always on top.\n[b]Note:[/b] This setting is ignored on iOS, Android, and Web."
+msgstr "A főablak mindig a többi ablak fölött marad.\n[b]Megjegyzés:[/b] iOS-en, Androidon és weben a motor figyelmen kívül hagyja ezt a beállítást."
+
+#. ProjectSettings.display/window/size/borderless
+#: doc/classes/ProjectSettings.xml
+msgid "Forces the main window to be borderless.\n[b]Note:[/b] This setting is ignored on iOS, Android, and Web."
+msgstr "A főablak keret nélkül jelenik meg.\n[b]Megjegyzés:[/b] iOS-en, Androidon és weben a motor figyelmen kívül hagyja ezt a beállítást."
+
+#. ProjectSettings.display/window/size/extend_to_title
+#: doc/classes/ProjectSettings.xml
+msgid "Main window content is expanded to the full size of the window. Unlike a borderless window, the frame is left intact and can be used to resize the window, and the title bar is transparent, but has minimize/maximize/close buttons.\n[b]Note:[/b] This setting is implemented only on macOS."
+msgstr "A főablak tartalma az ablak teljes felületét kitölti. Az ablakkeret továbbra is látszik és használható átméretezésre. A címsor átlátszó, de a kis méretre állítás, a teljes méretre állítás és a bezárás gombja továbbra is elérhető.\n[b]Megjegyzés:[/b] Ez a beállítás csak macOS-en érhető el."
+
+#. ProjectSettings.display/window/size/initial_position
+#: doc/classes/ProjectSettings.xml
+msgid "Main window initial position (in virtual desktop coordinates), this setting is used only if [member display/window/size/initial_position_type] is set to \"Absolute\" ([code]0[/code]).\n[b]Note:[/b] This setting only affects the exported project, or when the project is run from the command line. In the editor, the value of [member EditorSettings.run/window_placement/rect_custom_position] is used instead."
+msgstr "A főablak kezdeti pozíciója a virtuális asztal koordinátái szerint. Csak akkor érvényesül, ha a [member display/window/size/initial_position_type] beállítás értéke „Abszolút” ([code]0[/code]).\n[b]Megjegyzés:[/b] Ez a beállítás az exportált, illetve a parancssorból indított projektet érinti. A szerkesztő az [member EditorSettings.run/window_placement/rect_custom_position] értékét használja."
+
+#. ProjectSettings.display/window/size/maximize_disabled
+#: doc/classes/ProjectSettings.xml
+msgid "If [code]true[/code], the main window's maximize button is disabled."
+msgstr "Ha az érték [code]true[/code], a főablak teljes méretre állító gombja le van tiltva."
+
+#. ProjectSettings.display/window/size/minimize_disabled
+#: doc/classes/ProjectSettings.xml
+msgid "If [code]true[/code], the main window's minimize button is disabled."
+msgstr "Ha az érték [code]true[/code], a főablak kis méretre állító gombja le van tiltva."
+
+#. ProjectSettings.display/window/size/mode
+#: doc/classes/ProjectSettings.xml
+msgid "Main window mode. See [enum DisplayServer.WindowMode] for possible values and how each mode behaves.\n[b]Note:[/b] Game embedding is available only in the \"Windowed\" mode."
+msgstr "A főablak megjelenítési módja. Az elérhető módokat és viselkedésüket a [enum DisplayServer.WindowMode] ismerteti.\n[b]Megjegyzés:[/b] A játék beágyazása csak ablakos módban érhető el."
