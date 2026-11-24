@@ -1,0 +1,57 @@
+name: "Egyszeri #167 három lektorálási pontosítás"
+on:
+  push:
+    branches:
+      - "i18n/f1-viewport-display-server-20261124"
+    paths:
+      - ".github/workflows/egyszeri-167-harom-lektoralasi-javitas.yml"
+permissions:
+  contents: write
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Három pontos magyar msgstr-javítás
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import subprocess
+          po = Path("forditas/Godot_4_7_2_hu_osszevont_munkavaltozat.po")
+          workflow = Path(".github/workflows/egyszeri-167-harom-lektoralasi-javitas.yml")
+          s = po.read_text(encoding='utf-8')
+          old_text = s
+          sha = subprocess.check_output(['git', 'hash-object', str(po)], text=True).strip()
+          assert sha == '2b676b5980ba4a7faaca3e8a3717ebc5424a6c1b', 'Nem a jovahagyott PO-verzio'
+          replacements = [
+              ("msgstr \"Az FSR-rel felskálázott kép élességét szabja meg. Minden egész egységnyi növeléssel az élesség a felére csökken. A tartomány 0,0-tól (a legélesebb beállítástól) 2,0-ig terjed. A 2,0 feletti értékek már nem okoznak látható változást.\"", "msgstr \"Az FSR-rel felskálázott kép élességét szabja meg. Minden egész egységnyi növeléssel az élesség a felére csökken. A tartomány 0.0-tól (a legélesebb beállítástól) 2.0-ig terjed. A 2.0 feletti értékek már nem okoznak látható változást.\""),
+              ("msgstr \"Ha az érték [code]true[/code], a textúraimportáló PNG formátumban menti a veszteségmentes textúrákat. Egyébként az alapértelmezett WebP formátumot használja.\"", "msgstr \"Ha az érték [code]true[/code], a textúraimportáló a veszteségmentes textúrák importálásához PNG-formátumot használ. Egyébként az alapértelmezett WebP-formátumot használja.\""),
+              ("msgstr \"Az FSR-rel felskálázott kép élessége. Minden egész egységnyi növelés az élességet a felére csökkenti. A tartomány 0,0-tól (a legélesebb beállítástól) 2,0-ig terjed. A 2,0 feletti értékeknek nincs látható hatása.\\nA gyökérnézetablaknál ezt a [member ProjectSettings.rendering/scaling_3d/fsr_sharpness] projektbeállítással állíthatod be.\"", "msgstr \"Az FSR-rel felskálázott kép élessége. Minden egész egységnyi növelés az élességet a felére csökkenti. A tartomány 0.0-tól (a legélesebb beállítástól) 2.0-ig terjed. A 2.0 feletti értékeknek nincs látható hatása.\\nA gyökérnézetablaknál ezt a [member ProjectSettings.rendering/scaling_3d/fsr_sharpness] projektbeállítással állíthatod be.\""),
+          ]
+          for old, new in replacements:
+              assert s.count(old) == 1, 'A régi fordítás nem egyedi vagy nem található'
+              s = s.replace(old, new)
+          assert old_text.count('\nmsgid ') == s.count('\nmsgid '), 'Angol kulcsok módosultak'
+          assert old_text.count('\n') == s.count('\n'), 'Eltérő sorszám'
+          assert len(replacements) == 3
+          po.write_text(s, encoding='utf-8')
+          workflow.unlink()
+          PY
+      - name: Regressziós, PO-, gettext- és diffellenőrzés
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y gettext
+          python3 -m unittest discover -s forditas -p 'test_*.py' -v
+          python3 forditas/ellenorzes.py --require-msgfmt
+          git diff --check
+          test "$(git diff --numstat -- forditas/Godot_4_7_2_hu_osszevont_munkavaltozat.po)" = "$(printf '3\t3\tforditas/Godot_4_7_2_hu_osszevont_munkavaltozat.po')"
+      - name: Ellenőrzött javítások commitolása
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- "forditas/Godot_4_7_2_hu_osszevont_munkavaltozat.po" ".github/workflows/egyszeri-167-harom-lektoralasi-javitas.yml"
+          git commit -m "Godot F1: három jóváhagyott lektorálási javítás a #167 PR-ben"
+          git push origin HEAD:i18n/f1-viewport-display-server-20261124
+
