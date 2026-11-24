@@ -60842,3 +60842,103 @@ msgstr "A [kbd]Mouse Wheel[/kbd] a nagyítást módosítja, a [kbd]Ctrl + Mouse 
 #: doc/classes/GraphEdit.xml
 msgid "[kbd]Mouse Wheel[/kbd] will move the view, [kbd]Ctrl + Mouse Wheel[/kbd] will zoom."
 msgstr "A [kbd]Mouse Wheel[/kbd] a nézetet mozgatja, a [kbd]Ctrl + Mouse Wheel[/kbd] a nagyítást módosítja."
+
+#: doc/classes/GraphEdit.xml
+msgid "Draw the grid using solid lines."
+msgstr "A rácsot folytonos vonalakkal rajzolja ki."
+
+#: doc/classes/GraphEdit.xml
+msgid "Draw the grid using dots."
+msgstr "A rácsot pontokkal rajzolja ki."
+
+#: doc/classes/GraphEdit.xml
+msgid "Color the connection line is interpolated to based on the activity value of a connection (see [method set_connection_activity])."
+msgstr "A célszín, amely felé a kapcsolat vonalának színe az aktivitás értékétől függően eltolódik. Lásd a [method set_connection_activity] metódust."
+
+#: doc/classes/GraphEdit.xml
+msgid "Color which is blended with the connection line when the mouse is hovering over it."
+msgstr "Ezt a színt keveri a kapcsolat vonalának színéhez, amikor az egérmutató a vonal fölött van."
+
+#: doc/classes/GraphEdit.xml
+msgid "Color of the rim around each connection line used for making intersecting lines more distinguishable."
+msgstr "A kapcsolatvonalakat szegélyező körvonal színe. Segít megkülönböztetni az egymást keresztező vonalakat."
+
+#: doc/classes/GraphEdit.xml
+msgid "Color which is blended with the connection line when the currently dragged connection is hovering over a valid target port."
+msgstr "Ezt a színt keveri a húzott kapcsolat vonalának színéhez, amikor a kapcsolat végpontja érvényes célport fölött van."
+
+#: doc/classes/GraphEdit.xml
+msgid "Color of major grid lines/dots."
+msgstr "A fő rácsvonalak vagy rácspontok színe."
+
+#: doc/classes/GraphEdit.xml
+msgid "Color of minor grid lines/dots."
+msgstr "A köztes rácsvonalak vagy rácspontok színe."
+
+#: doc/classes/GraphEdit.xml
+msgid "The fill color of the selection rectangle."
+msgstr "A kijelölő téglalap kitöltőszíne."
+
+#: doc/classes/GraphEdit.xml
+msgid "The outline color of the selection rectangle."
+msgstr "A kijelölő téglalap körvonalának színe."
+
+#: doc/classes/GraphEdit.xml
+msgid "Widens the line of a connection when the mouse is hovering over it by a percentage factor. A value of [code]0[/code] disables the highlight. A value of [code]100[/code] doubles the line width."
+msgstr "A megadott százalékkal vastagítja a kapcsolat vonalát, amikor az egérmutató fölötte van. A [code]0[/code] érték kikapcsolja a kiemelést, a [code]100[/code] pedig megduplázza a vonal vastagságát."
+
+#: doc/classes/GraphEdit.xml
+msgid "The horizontal range within which a port can be grabbed (inner side)."
+msgstr "Az a vízszintes távolság a porttól a csomópont belseje felé, amelyen belül a port megfogható."
+
+#: doc/classes/GraphEdit.xml
+msgid "The horizontal range within which a port can be grabbed (outer side)."
+msgstr "Az a vízszintes távolság a porttól a csomóponton kívülre, amelyen belül a port megfogható."
+
+#: doc/classes/GraphEdit.xml
+msgid "The icon for the grid toggle button."
+msgstr "A rács láthatóságát kapcsoló gomb ikonja."
+
+#: doc/classes/GraphEdit.xml
+msgid "The icon for the layout button for auto-arranging the graph."
+msgstr "A gráf automatikus elrendezésére szolgáló gomb ikonja."
+
+#: doc/classes/GraphEdit.xml
+msgid "The icon for the minimap toggle button."
+msgstr "A minitérképet ki- és bekapcsoló gomb ikonja."
+
+#: doc/classes/GraphEdit.xml
+msgid "The icon for the snapping toggle button."
+msgstr "A rácshoz igazítást ki- és bekapcsoló gomb ikonja."
+
+#: doc/classes/GraphEdit.xml
+msgid "The icon for the zoom in button."
+msgstr "A nagyítás növelésére szolgáló gomb ikonja."
+
+#: doc/classes/GraphEdit.xml
+msgid "The icon for the zoom out button."
+msgstr "A nagyítás csökkentésére szolgáló gomb ikonja."
+
+#: doc/classes/GraphEdit.xml
+msgid "The icon for the zoom reset button."
+msgstr "A nagyítást alaphelyzetbe állító gomb ikonja."
+
+#: doc/classes/GraphEdit.xml
+msgid "The background drawn under the grid."
+msgstr "A rács mögött kirajzolt háttér."
+
+#: doc/classes/GraphEdit.xml
+msgid "[StyleBox] used when the [GraphEdit] is focused (when used with assistive apps)."
+msgstr "A fókuszban lévő [GraphEdit] [StyleBox] eleme kisegítő alkalmazások használatakor."
+
+#: doc/classes/StyleBox.xml
+msgid "Draws this stylebox using a canvas item identified by the given [RID].\nThe [RID] value can either be the result of [method CanvasItem.get_canvas_item] called on an existing [CanvasItem]-derived node, or directly from creating a canvas item in the [RenderingServer] with [method RenderingServer.canvas_item_create]."
+msgstr "A megadott [RID] azonosítójú vászonelemre rajzolja ki ezt a stílusdobozt.\nA [RID] értékét lekérheted egy meglévő, [CanvasItem] osztályból származó csomópont [method CanvasItem.get_canvas_item] metódusával. Közvetlenül is létrehozhatsz vászonelemet a [RenderingServer] [method RenderingServer.canvas_item_create] metódusával."
+
+#: doc/classes/StyleBoxFlat.xml
+msgid "The background color of the stylebox."
+msgstr "A stílusdoboz háttérszíne."
+
+#: doc/classes/StyleBoxFlat.xml
+msgid "If [code]true[/code], the border will fade into the background color."
+msgstr "Ha az érték [code]true[/code], a keret színe fokozatosan beleolvad a háttérszínbe."
