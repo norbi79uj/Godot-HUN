@@ -63342,3 +63342,403 @@ msgstr "A megadott méretre állítja a textúrát."
 #: doc/classes/ImageTexture.xml
 msgid "Replaces the texture's data with a new [Image].\n[b]Note:[/b] The texture has to be created using [method create_from_image] or initialized first with the [method set_image] method before it can be updated. The new image dimensions, format, and mipmaps configuration should match the existing texture's image configuration.\nUse this method over [method set_image] if you need to update the texture frequently, which is faster than allocating additional memory for a new texture each time."
 msgstr "A textúra adatait egy új [Image] adataira cseréli.\n[b]Megjegyzés:[/b] Frissítés előtt a textúrát a [method create_from_image] metódussal létre kell hozni, vagy a [method set_image] metódussal inicializálni kell. Az új kép méretének, formátumának és mipmap-beállításainak egyezniük kell a meglévő textúra képének beállításaival.\nGyakori frissítéshez ezt a metódust használd a [method set_image] helyett. Gyorsabb, mert nem kell minden alkalommal új memóriát lefoglalni a textúrához."
+
+#: doc/classes/AtlasTexture.xml
+msgid "A texture that crops out part of another Texture2D."
+msgstr "Olyan textúra, amely egy másik Texture2D egy részét vágja ki."
+
+#: doc/classes/AtlasTexture.xml
+msgid "[Texture2D] resource that draws only part of its [member atlas] texture, as defined by the [member region]. An additional [member margin] can also be set, which is useful for small adjustments.\nMultiple [AtlasTexture] resources can be cropped from the same [member atlas]. Packing many smaller textures into a singular large texture helps to optimize video memory costs and render calls.\n[b]Note:[/b] [AtlasTexture] cannot be used in an [AnimatedTexture], and will not tile properly in nodes such as [TextureRect] or [Sprite2D]. To tile an [AtlasTexture], modify its [member region] instead."
+msgstr "[Texture2D] erőforrás, amely az [member atlas] textúrából csak a [member region] által kijelölt részt rajzolja ki. Kisebb igazításokhoz a [member margin] is beállítható.\nUgyanabból az [member atlas] textúrából több [AtlasTexture] erőforrás is kivágható. Ha sok kisebb textúra egyetlen nagy textúrában kap helyet, csökkenthető a videomemória-igény és a rajzolási hívások száma.\n[b]Megjegyzés:[/b] Az [AtlasTexture] nem használható [AnimatedTexture] erőforrásban, és az olyan csomópontokban sem ismétlődik megfelelően, mint a [TextureRect] vagy a [Sprite2D]. Az [AtlasTexture] ismétléséhez a [member region] tulajdonságát módosítsd."
+
+#: doc/classes/AtlasTexture.xml
+msgid "The texture that contains the atlas. Can be any type inheriting from [Texture2D], including another [AtlasTexture]."
+msgstr "Az atlaszt tartalmazó textúra. Bármely, a [Texture2D] osztályból származó típus lehet, akár egy másik [AtlasTexture] is."
+
+#: doc/classes/AtlasTexture.xml
+msgid "If [code]true[/code], the area outside of the [member region] is clipped to avoid bleeding of the surrounding texture pixels."
+msgstr "Ha [code]true[/code], a [member region] területén kívüli képpontokat levágja, így a környező textúraképpontok színe nem szivárog át a széleken."
+
+#: doc/classes/AtlasTexture.xml
+msgid "The region used to draw the [member atlas]. If either dimension of the region's size is [code]0[/code], the value from [member atlas] size will be used for that axis instead.\n[b]Note:[/b] The image size is always an integer, so the actual region size is rounded down."
+msgstr "Az [member atlas] kirajzolásakor felhasznált terület. Ha a terület valamelyik mérete [code]0[/code], azon a tengelyen az [member atlas] megfelelő mérete érvényesül.\n[b]Megjegyzés:[/b] A képméret mindig egész szám, ezért a terület tényleges mérete lefelé kerekítődik."
+
+#: doc/classes/GradientTexture2D.xml
+msgid "The colors are linearly interpolated in a straight line."
+msgstr "A színek egy egyenes mentén, lineárisan interpolálódnak."
+
+#: doc/classes/GradientTexture2D.xml
+msgid "The colors are linearly interpolated in a circular pattern."
+msgstr "A színek kör alakú mintázatban, lineárisan interpolálódnak."
+
+#: doc/classes/GradientTexture2D.xml
+msgid "The colors are linearly interpolated in a square pattern."
+msgstr "A színek négyzet alakú mintázatban, lineárisan interpolálódnak."
+
+#: doc/classes/GradientTexture2D.xml
+msgid "The colors are linearly interpolated in a cone pattern."
+msgstr "A színek kúp alakú mintázatban, lineárisan interpolálódnak."
+
+#: doc/classes/GradientTexture2D.xml
+msgid "The gradient fill is restricted to the range defined by [member fill_from] to [member fill_to] offsets."
+msgstr "A színátmenetes kitöltés a [member fill_from] és a [member fill_to] által meghatározott tartományra korlátozódik."
+
+#: doc/classes/GradientTexture2D.xml
+msgid "The texture is filled starting from [member fill_from] to [member fill_to] offsets, repeating the same pattern in both directions."
+msgstr "A textúrát a [member fill_from] és a [member fill_to] által megadott pontok közötti minta tölti ki, mindkét irányban ismétlődve."
+
+#: doc/classes/GradientTexture2D.xml
+msgid "The texture is filled starting from [member fill_from] to [member fill_to] offsets, mirroring the pattern in both directions."
+msgstr "A textúrát a [member fill_from] és a [member fill_to] által megadott pontok közötti minta tölti ki, mindkét irányban tükrözve ismételve a mintát."
+
+#: doc/classes/DPITexture.xml
+msgid "An automatically scalable [Texture2D] based on an SVG image."
+msgstr "SVG-képen alapuló, automatikusan méretezhető [Texture2D]."
+
+#: doc/classes/DPITexture.xml
+msgid "An automatically scalable [Texture2D] based on an SVG image. [DPITexture]s are used to automatically re-rasterize icons and other texture based UI theme elements to match viewport scale and font oversampling. See also [member ProjectSettings.display/window/stretch/mode] (\"canvas_items\" mode) and [member Viewport.oversampling_override]."
+msgstr "SVG-képen alapuló, automatikusan méretezhető [Texture2D]. A [DPITexture] erőforrások az ikonokat és a téma más, textúrára épülő felületi elemeit automatikusan újraraszterezik a nézetablak méretezéséhez és a betűtípusok túlmintavételezéséhez igazodva. Lásd még a [member ProjectSettings.display/window/stretch/mode] beállítást („canvas_items” mód) és a [member Viewport.oversampling_override] tulajdonságot."
+
+#: doc/classes/DPITexture.xml
+msgid "Creates a new [DPITexture] and initializes it by allocating and setting the SVG data to [param source]."
+msgstr "Új [DPITexture] erőforrást hoz létre, és a [param source] paraméterből beállítja az SVG-adatokat."
+
+#: doc/classes/DPITexture.xml
+msgid "Returns the [RID] of the texture rasterized to match the oversampling of the currently drawn canvas item."
+msgstr "Az éppen kirajzolt vászonelem túlmintavételezéséhez igazítva raszterezett textúra [RID] azonosítóját adja vissza."
+
+#: doc/classes/DPITexture.xml
+msgid "Returns this SVG texture's source code."
+msgstr "Visszaadja az SVG-textúra forráskódját."
+
+#: doc/classes/DPITexture.xml
+msgid "Sets this SVG texture's source code."
+msgstr "Beállítja az SVG-textúra forráskódját."
+
+#: doc/classes/DPITexture.xml
+msgid "Texture scale. [code]1.0[/code] is the original SVG size. Higher values result in a larger image."
+msgstr "A textúra méretaránya. Az [code]1.0[/code] az eredeti SVG-méretnek felel meg. Nagyobb érték nagyobb képet eredményez."
+
+#: doc/classes/DPITexture.xml
+msgid "If set, remaps texture colors according to [Color]-[Color] map."
+msgstr "Ha meg van adva, a [Color]–[Color] leképezés alapján helyettesíti a textúra színeit."
+
+#: doc/classes/DPITexture.xml
+msgid "If [code]true[/code], puts pixels of the same surrounding color in transition from transparent to opaque areas. For textures displayed with bilinear filtering, this helps to reduce the outline effect when exporting images from an image editor."
+msgstr "Ha [code]true[/code], az átlátszó és az átlátszatlan részek határán a környező színt adja a képpontoknak. Bilineáris szűréssel megjelenített textúráknál ez csökkenti a képszerkesztőből exportált képek körvonalhatását."
+
+#: doc/classes/DPITexture.xml
+msgid "An alternative to fixing darkened borders with [member fix_alpha_border] is to use premultiplied alpha. By enabling this option, the texture will be converted to this format. A premultiplied alpha texture requires specific materials to be displayed correctly:\n- In 2D, a [CanvasItemMaterial] will need to be created and configured to use the [constant CanvasItemMaterial.BLEND_MODE_PREMULT_ALPHA] blend mode on [CanvasItem]s that use this texture. In custom [code]canvas_item[/code] shaders, [code]render_mode blend_premul_alpha;[/code] should be used.\n- In 3D, a [BaseMaterial3D] will need to be created and configured to use the [constant BaseMaterial3D.BLEND_MODE_PREMULT_ALPHA] blend mode on materials that use this texture. In custom [code]spatial[/code] shaders, [code]render_mode blend_premul_alpha;[/code] should be used."
+msgstr "A sötét szélek [member fix_alpha_border] tulajdonsággal történő javítása helyett előszorzott alfa is használható. A beállítás bekapcsolásakor a textúra erre a formátumra alakul át. Az előszorzott alfájú textúra helyes megjelenítéséhez megfelelően beállított anyagokra van szükség:\n- 2D-ben hozz létre egy [CanvasItemMaterial] anyagot, és a textúrát használó [CanvasItem] csomópontokon állítsd be a [constant CanvasItemMaterial.BLEND_MODE_PREMULT_ALPHA] keverési módot. Egyéni [code]canvas_item[/code] árnyalóban a [code]render_mode blend_premul_alpha;[/code] utasítást használd.\n- 3D-ben hozz létre egy [BaseMaterial3D] anyagot, és állítsd be rajta a [constant BaseMaterial3D.BLEND_MODE_PREMULT_ALPHA] keverési módot. Egyéni [code]spatial[/code] árnyalóban a [code]render_mode blend_premul_alpha;[/code] utasítást használd."
+
+#: doc/classes/DPITexture.xml
+msgid "Overrides texture saturation."
+msgstr "Felülírja a textúra színtelítettségét."
+
+#: doc/classes/ResourceImporterTexture.xml
+msgid "Imports an image for use in 2D or 3D rendering."
+msgstr "Képet importál a 2D vagy 3D rendereléshez."
+
+#: doc/classes/ResourceImporterTexture.xml
+msgid "This importer imports [CompressedTexture2D] resources. If you need to process the image in scripts in a more convenient way, use [ResourceImporterImage] instead. See also [ResourceImporterLayeredTexture]."
+msgstr "Ez az importáló [CompressedTexture2D] erőforrásokat hoz létre. Ha a képet kényelmesebben szeretnéd feldolgozni szkriptből, használd a [ResourceImporterImage] importálót. Lásd még: [ResourceImporterLayeredTexture]."
+
+#: doc/classes/ResourceImporterTexture.xml
+msgid "Controls how color channels should be used in the imported texture.\n[b]sRGB Friendly:[/b] Prevents the R and RG color formats from being used, as they do not support nonlinear sRGB encoding.\n[b]Optimized:[/b] Allows the RG color format to be used if the texture does not use the blue channel. This reduces memory usage if the texture's blue channel can be discarded (all pixels must have a blue value of [code]0[/code])."
+msgstr "Szabályozza, hogy az importált textúra hogyan használja a színcsatornákat.\n[b]sRGB Friendly:[/b] Kizárja az R és RG színformátumokat, mert azok nem támogatják a nemlineáris sRGB-kódolást.\n[b]Optimized:[/b] Engedélyezi az RG színformátumot, ha a textúra nem használja a kék csatornát. Ez csökkenti a memóriahasználatot, ha a kék csatorna elhagyható, vagyis minden képpont kék értéke [code]0[/code]."
+
+#: doc/classes/ResourceImporterTexture.xml doc/classes/ResourceImporterLayeredTexture.xml
+msgid "The quality to use when using the [b]Lossy[/b] compression mode. Higher values result in better quality, at the cost of larger file sizes. Lossy quality does not affect memory usage of the imported texture, only its file size on disk."
+msgstr "A [b]Lossy[/b] tömörítési mód minősége. A nagyobb érték jobb minőséget és nagyobb fájlméretet eredményez. Ez a beállítás csak az importált textúra lemezen elfoglalt méretét befolyásolja, a memóriahasználatát nem."
+
+#: doc/classes/ResourceImporterTexture.xml doc/classes/ResourceImporterLayeredTexture.xml
+msgid "The compression mode to use. Each compression mode provides a different tradeoff:\n[b]Lossless[/b]: Original quality, high memory usage, high size on disk, fast import.\n[b]Lossy:[/b] Reduced quality, high memory usage, low size on disk, fast import.\n[b]VRAM Compressed:[/b] Reduced quality, low memory usage, low size on disk, slowest import. Only use for textures in 3D scenes, not for 2D elements.\n[b]VRAM Uncompressed:[/b] Original quality, high memory usage, highest size on disk, fastest import.\n[b]Basis Universal:[/b] Reduced quality, low memory usage, lowest size on disk, slow import. Only use for textures in 3D scenes, not for 2D elements.\nSee [url=$DOCS_URL/tutorials/assets_pipeline/importing_images.html#compress-mode]Compress mode[/url] in the manual for more details."
+msgstr "A használandó tömörítési mód. Az egyes módok eltérő egyensúlyt kínálnak a minőség, a méret és az importálási idő között:\n[b]Lossless[/b]: Eredeti minőség, nagy memóriahasználat, nagy lemezméret, gyors importálás.\n[b]Lossy:[/b] Kisebb minőség, nagy memóriahasználat, kis lemezméret, gyors importálás.\n[b]VRAM Compressed:[/b] Kisebb minőség, kis memóriahasználat és lemezméret, a leglassabb importálás. Csak 3D jelenetek textúráihoz használd, 2D elemekhez ne.\n[b]VRAM Uncompressed:[/b] Eredeti minőség, nagy memóriahasználat, a legnagyobb lemezméret és a leggyorsabb importálás.\n[b]Basis Universal:[/b] Kisebb minőség, kis memóriahasználat, a legkisebb lemezméret és lassú importálás. Csak 3D jelenetek textúráihoz használd, 2D elemekhez ne.\nTovábbi részletek a kézikönyv [url=$DOCS_URL/tutorials/assets_pipeline/importing_images.html#compress-mode]Tömörítési mód[/url] szakaszában találhatók."
+
+#: doc/classes/ResourceImporterTexture.xml doc/classes/ResourceImporterLayeredTexture.xml
+msgid "If greater than or equal to [code]0.01[/code], enables Rate-Distortion Optimization (RDO) to reduce file size. Higher values result in smaller file sizes but lower quality.\n[b]Note:[/b] Enabling RDO makes encoding times significantly longer, especially when the image is large.\nSee also [member ProjectSettings.rendering/textures/basis_universal/rdo_dict_size] and [member ProjectSettings.rendering/textures/basis_universal/zstd_supercompression_level] if you want to reduce the file size further."
+msgstr "Ha az érték legalább [code]0.01[/code], a fájlméret csökkentéséhez bekapcsolja a bitráta és a torzítás közötti optimalizálást (RDO). A nagyobb érték kisebb fájlt, de rosszabb minőséget eredményez.\n[b]Megjegyzés:[/b] Az RDO jelentősen növeli a kódolási időt, különösen nagy képek esetén.\nA fájlméret további csökkentéséhez lásd még a [member ProjectSettings.rendering/textures/basis_universal/rdo_dict_size] és a [member ProjectSettings.rendering/textures/basis_universal/zstd_supercompression_level] beállítást."
+
+#: doc/classes/ResourceImporterTexture.xml doc/classes/ResourceImporterLayeredTexture.xml
+msgid "The UASTC encoding level. Higher values result in better quality but make encoding times longer."
+msgstr "Az UASTC kódolási szintje. A nagyobb érték jobb minőséget ad, de hosszabb kódolási idővel jár."
+
+#: doc/classes/ResourceImporterTexture.xml
+msgid "This changes the [member compress/mode] option that is used when a texture is detected as being used in 3D.\nChanging this import option only has an effect if a texture is detected as being used in 3D. Changing this to [b]Disabled[/b] then reimporting will not change the existing compress mode on a texture (if it's detected to be used in 3D), but choosing [b]VRAM Compressed[/b] or [b]Basis Universal[/b] will."
+msgstr "Meghatározza, hogy milyen értékre álljon a [member compress/mode] beállítás, amikor a Godot azt észleli, hogy a textúrát 3D-ben használják.\nA beállítás módosítása csak akkor hat, ha a Godot 3D-s használatot észlel. Ha a [b]Disabled[/b] értéket választod és újraimportálod a textúrát, a meglévő tömörítési mód megmarad. A [b]VRAM Compressed[/b] vagy a [b]Basis Universal[/b] kiválasztása ilyenkor módosítja a tömörítési módot."
+
+#: doc/classes/ResourceImporterTexture.xml
+msgid "If [code]true[/code], converts the imported image's colors to match [member EditorSettings.interface/theme/icon_and_font_color]. This assumes the image uses the exact same colors as [url=$DOCS_URL/engine_details/editor/creating_icons.html]Godot's own color palette for editor icons[/url], with the source file designed for a dark editor theme. This should be enabled for editor plugin icons and custom class icons, but should be left disabled otherwise.\n[b]Note:[/b] Only available for SVG images."
+msgstr "Ha [code]true[/code], az importált kép színeit az [member EditorSettings.interface/theme/icon_and_font_color] beállításhoz igazítja. Ehhez a forrásfájlt sötét szerkesztőtémához kell megtervezni, és pontosan ugyanazokat a színeket kell használnia, mint a [url=$DOCS_URL/engine_details/editor/creating_icons.html]Godot szerkesztőikonjainak palettája[/url]. Szerkesztőbővítmények és egyéni osztályok ikonjainál ajánlott bekapcsolni. Egyéb képeknél hagyd kikapcsolva.\n[b]Megjegyzés:[/b] Csak SVG-képekhez érhető el."
+
+#: doc/classes/ResourceImporterTexture.xml
+msgid "If [code]true[/code], scales the imported image to match [member EditorSettings.interface/editor/appearance/custom_display_scale]. This should be enabled for editor plugin icons and custom class icons, but should be left disabled otherwise.\n[b]Note:[/b] Only available for SVG images."
+msgstr "Ha [code]true[/code], az importált képet az [member EditorSettings.interface/editor/appearance/custom_display_scale] beállításhoz méretezi. Szerkesztőbővítmények és egyéni osztályok ikonjainál ajánlott bekapcsolni. Egyéb képeknél hagyd kikapcsolva.\n[b]Megjegyzés:[/b] Csak SVG-képekhez érhető el."
+
+#: doc/classes/ResourceImporterTexture.xml
+msgid "If [code]true[/code], smaller versions of the texture are generated on import. For example, a 64×64 texture will generate 6 mipmaps (32×32, 16×16, 8×8, 4×4, 2×2, 1×1). This has several benefits:\n- Textures will not become grainy in the distance (in 3D), or if scaled down due to [Camera2D] zoom or [CanvasItem] scale (in 2D).\n- Performance will improve if the texture is displayed in the distance, since sampling smaller versions of the original texture is faster and requires less memory bandwidth.\nThe downside of mipmaps is that they increase memory usage by roughly 33%.\nIt's recommended to enable mipmaps in 3D. However, in 2D, this should only be enabled if your project visibly benefits from having mipmaps enabled. If the camera never zooms out significantly, there won't be a benefit to enabling mipmaps but memory usage will increase."
+msgstr "Ha [code]true[/code], importáláskor elkészülnek a textúra kisebb változatai. Egy 64×64 képpontos textúrához például 6 mipmap-szint készül (32×32, 16×16, 8×8, 4×4, 2×2, 1×1). Ennek több előnye van:\n- A textúrák nem lesznek szemcsések a távolban (3D-ben), illetve akkor sem, ha a [Camera2D] kicsinyítése vagy a [CanvasItem] méretezése miatt kisebb méretben jelennek meg (2D-ben).\n- A távoli textúrák megjelenítése gyorsul, mert a kisebb változatok mintavételezése gyorsabb, és kisebb memória-sávszélességet igényel.\nA mipmap-szintek hátránya, hogy körülbelül 33%-kal növelik a memóriahasználatot.\n3D-ben ajánlott bekapcsolni a mipmap-szintek létrehozását. 2D-ben csak akkor érdemes, ha a különbség látható a projektben. Ha a kamera soha nem kicsinyít számottevően, a mipmap-szintek nem hoznak előnyt, viszont növelik a memóriahasználatot."
+
+#: doc/classes/ResourceImporterTexture.xml doc/classes/ResourceImporterLayeredTexture.xml
+msgid "Unimplemented. This currently has no effect when changed."
+msgstr "Nincs megvalósítva. A módosításának jelenleg nincs hatása."
+
+#: doc/classes/ResourceImporterTexture.xml
+msgid "If [code]true[/code], puts pixels of the same surrounding color in transition from transparent to opaque areas. For textures displayed with bilinear filtering, this helps to reduce the outline effect when exporting images from an image editor.\nIt's recommended to leave this enabled (as it is by default), unless this causes issues for a particular image."
+msgstr "Ha [code]true[/code], az átlátszó és az átlátszatlan részek határán a környező színt adja a képpontoknak. Bilineáris szűréssel megjelenített textúráknál ez csökkenti a képszerkesztőből exportált képek körvonalhatását.\nÉrdemes az alapértelmezés szerint bekapcsolt állapotban hagyni, kivéve, ha egy adott képnél problémát okoz."
+
+#: doc/classes/ResourceImporterTexture.xml
+msgid "Some HDR images you can find online may be broken and contain data that is encoded using the nonlinear sRGB transfer function (instead of using linear encoding). It is advised not to use those files. If you absolutely have to, enabling [member process/hdr_as_srgb] will make them look correct.\n[b]Warning:[/b] Enabling [member process/hdr_as_srgb] on well-formatted HDR images will cause the resulting image to look too dark, so leave this on [code]false[/code] if unsure."
+msgstr "Egyes hibás HDR-képek a lineáris kódolás helyett a nemlineáris sRGB átviteli függvénnyel kódolt adatokat tartalmaznak. Érdemes kerülni ezeket a fájlokat. Ha mégis szükséged van rájuk, a [member process/hdr_as_srgb] bekapcsolásával helyesen jeleníthetők meg.\n[b]Figyelmeztetés:[/b] Ha jól kódolt HDR-képeknél kapcsolod be a [member process/hdr_as_srgb] beállítást, a kapott kép túl sötét lesz. Ha bizonytalan vagy, hagyd [code]false[/code] értéken."
+
+#: doc/classes/ResourceImporterTexture.xml
+msgid "If [code]true[/code], convert the normal map from Y- (DirectX-style) to Y+ (OpenGL-style) by inverting its green color channel. This is the normal map convention expected by Godot.\nMore information about normal maps (including a coordinate order table for popular engines) can be found [url=http://wiki.polycount.com/wiki/Normal_Map_Technical_Details]here[/url]."
+msgstr "Ha [code]true[/code], a zöld színcsatorna invertálásával Y− (DirectX-stílusú) normáltérképről Y+ (OpenGL-stílusú) normáltérképre vált. A Godot ez utóbbi konvenciót használja.\nA normáltérképekről további információ [url=http://wiki.polycount.com/wiki/Normal_Map_Technical_Details]itt[/url] található, a népszerű motorok koordinátasorrendjét bemutató táblázattal együtt."
+
+#: doc/classes/ResourceImporterTexture.xml
+msgid "An alternative to fixing darkened borders with [member process/fix_alpha_border] is to use premultiplied alpha. By enabling this option, the texture will be converted to this format. A premultiplied alpha texture requires specific materials to be displayed correctly:\n- In 2D, a [CanvasItemMaterial] will need to be created and configured to use the [constant CanvasItemMaterial.BLEND_MODE_PREMULT_ALPHA] blend mode on [CanvasItem]s that use this texture. In custom [code]canvas_item[/code] shaders, [code]render_mode blend_premul_alpha;[/code] should be used.\n- In 3D, a [BaseMaterial3D] will need to be created and configured to use the [constant BaseMaterial3D.BLEND_MODE_PREMULT_ALPHA] blend mode on materials that use this texture. In custom [code]spatial[/code] shaders, [code]render_mode blend_premul_alpha;[/code] should be used."
+msgstr "A sötét szélek [member process/fix_alpha_border] tulajdonsággal történő javítása helyett előszorzott alfa is használható. A beállítás bekapcsolásakor a textúra erre a formátumra alakul át. Az előszorzott alfájú textúra helyes megjelenítéséhez megfelelően beállított anyagokra van szükség:\n- 2D-ben hozz létre egy [CanvasItemMaterial] anyagot, és a textúrát használó [CanvasItem] csomópontokon állítsd be a [constant CanvasItemMaterial.BLEND_MODE_PREMULT_ALPHA] keverési módot. Egyéni [code]canvas_item[/code] árnyalóban a [code]render_mode blend_premul_alpha;[/code] utasítást használd.\n- 3D-ben hozz létre egy [BaseMaterial3D] anyagot, és állítsd be rajta a [constant BaseMaterial3D.BLEND_MODE_PREMULT_ALPHA] keverési módot. Egyéni [code]spatial[/code] árnyalóban a [code]render_mode blend_premul_alpha;[/code] utasítást használd."
+
+#: doc/classes/ResourceImporterTexture.xml
+msgid "If set to a value greater than [code]0[/code], the size of the texture is limited on import to a value smaller than or equal to the value specified here. For non-square textures, the size limit affects the longer dimension, with the shorter dimension scaled to preserve aspect ratio. Resizing is performed using cubic interpolation.\nThis can be used to reduce memory usage without affecting the source images, or avoid issues with textures not displaying on mobile/web platforms (as these usually can't display textures larger than 4096×4096).\n[b]Note:[/b] Even if this is set to [code]0[/code], import size is limited to the following dimensions for technical reasons. Depending on [member compress/mode], textures will be downsampled on import if necessary:\n- [b]Lossy:[/b] 16383 pixels width or height, whichever is larger;\n- [b]Basis Universal:[/b] 16384 pixels width or height, whichever is larger;\n- [b]All other modes:[/b] 32768 pixels width or height, whichever is larger."
+msgstr "Ha az érték nagyobb, mint [code]0[/code], az importált textúra mérete nem haladhatja meg a megadott értéket. A korlát a nem négyzet alakú textúra hosszabb oldalára vonatkozik, a rövidebb oldal a képarány megtartásával méreteződik. Az átméretezés köbös interpolációval történik.\nÍgy az eredeti képek módosítása nélkül csökkenthető a memóriahasználat. Elkerülhetők azok a megjelenítési hibák is mobilon vagy weben, amelyeket a 4096×4096 képpontnál nagyobb textúrák okozhatnak.\n[b]Megjegyzés:[/b] Technikai okokból az importméret akkor is korlátozott, ha az érték [code]0[/code]. A [member compress/mode] beállítástól függően az importáló szükség esetén az alábbi méretre kicsinyíti a textúrát:\n- [b]Lossy:[/b] 16383 képpont a hosszabb oldalon.\n- [b]Basis Universal:[/b] 16384 képpont a hosszabb oldalon.\n- [b]All other modes:[/b] 32768 képpont a hosszabb oldalon."
+
+#: doc/classes/ResourceImporterTexture.xml
+msgid "The color channel to consider as a roughness map in this texture. Only effective if [member roughness/src_normal] is not empty."
+msgstr "A textúra érdességi térképként használandó színcsatornája. Csak akkor hat, ha a [member roughness/src_normal] értéke ki van töltve."
+
+#: doc/classes/ResourceImporterTexture.xml
+msgid "The path to the texture to consider as a normal map for roughness filtering on import. Specifying this can help decrease specular aliasing slightly in 3D.\nRoughness filtering on import is only used in 3D rendering, not 2D."
+msgstr "Az importáláskori érdességszűréshez normáltérképként használandó textúra elérési útja. A megadásával 3D-ben mérsékelhető a tükröződés recéződése.\nAz importáláskori érdességszűrés csak a 3D renderelésben használatos."
+
+#: doc/classes/ResourceImporterTexture.xml
+msgid "The scale the SVG should be rendered at, with [code]1.0[/code] being the original design size. Higher values result in a larger image. Note that unlike font oversampling, this affects the size the SVG is rendered at in 2D. See also [member editor/scale_with_editor_scale].\n[b]Note:[/b] Only available for SVG images."
+msgstr "Az SVG renderelési méretaránya. Az [code]1.0[/code] az eredeti tervezési méretnek felel meg. A nagyobb érték nagyobb képet eredményez. A betűtípusok túlmintavételezésével ellentétben ez a 2D-ben kirajzolt SVG méretét is módosítja. Lásd még: [member editor/scale_with_editor_scale].\n[b]Megjegyzés:[/b] Csak SVG-képekhez érhető el."
+
+#: doc/classes/ResourceImporterLayeredTexture.xml
+msgid "Imports a 3-dimensional texture ([Texture3D]), a [Texture2DArray], a [Cubemap] or a [CubemapArray]."
+msgstr "Háromdimenziós textúrát ([Texture3D]), [Texture2DArray], [Cubemap] vagy [CubemapArray] erőforrást importál."
+
+#: doc/classes/ResourceImporterLayeredTexture.xml
+msgid "Controls how the cubemap's texture is internally laid out. When using high-resolution cubemaps, [b]2×3[/b] and [b]3×2[/b] are less prone to exceeding hardware texture size limits compared to [b]1×6[/b] and [b]6×1[/b]."
+msgstr "A kockatérkép lapjainak elrendezését szabályozza a textúrában. Nagy felbontású kockatérképnél a [b]2×3[/b] és a [b]3×2[/b] elrendezés kisebb eséllyel lépi túl a hardver textúraméret-korlátait, mint az [b]1×6[/b] vagy a [b]6×1[/b] elrendezés."
+
+#: doc/classes/ResourceImporterTextureAtlas.xml
+msgid "Path to the atlas spritesheet. This [i]must[/i] be set to valid path to a PNG image. Otherwise, the atlas will fail to import."
+msgstr "Az atlasz sprite-lapjának elérési útja. [i]Kötelező[/i] érvényes PNG-útvonalat megadni, különben az atlasz importálása meghiúsul."
+
+#: doc/classes/ResourceImporterTextureAtlas.xml
+msgid "If [code]true[/code], trims the region to exclude fully transparent pixels using a clipping rectangle (which is never rotated). This can be used to save memory. See also [member crop_to_region].\n[b]Note:[/b] Only effective if [member import_mode] is [b]Region[/b]."
+msgstr "Ha [code]true[/code], egy elforgatás nélküli vágótéglalappal levágja a terület teljesen átlátszó részeit. Ez csökkentheti a memóriahasználatot. Lásd még: [member crop_to_region].\n[b]Megjegyzés:[/b] Csak akkor hat, ha az [member import_mode] értéke [b]Region[/b]."
+
+#: doc/classes/ResourceImporterTexture.xml
+msgid "If [code]true[/code], clamps exposure in the imported high dynamic range images using a smart clamping formula (without introducing [i]visible[/i] clipping).\nSome HDR panorama images you can find online may contain extremely bright pixels, due to being taken from real life sources without any clipping.\nWhile these HDR panorama images are accurate to real life, this can cause the radiance map generated by Godot to contain sparkles when used as a background sky. This can be seen in material reflections (even on rough materials in extreme cases). Enabling [member process/hdr_clamp_exposure] can resolve this."
+msgstr "Ha [code]true[/code], úgy korlátozza az importált nagy dinamikatartományú képek expozícióját, hogy az ne okozzon [i]látható[/i] levágást.\nEgyes HDR-panorámaképek rendkívül fényes képpontokat tartalmazhatnak, mert valós jelenetekből, a fényesség levágása nélkül készültek.\nBár ezek a képek hűen adják vissza az eredeti jelenetet, háttérégboltként használva csillogó pontokat okozhatnak a Godot által előállított sugársűrűség-térképen. Ez látható az anyagok tükröződésében, szélsőséges esetben még érdes anyagokon is. A [member process/hdr_clamp_exposure] bekapcsolása megoldhatja a problémát."
+
+#: doc/classes/ResourceImporterLayeredTexture.xml
+msgid "If [code]true[/code], smaller versions of the texture are generated on import. For example, a 64×64 texture will generate 6 mipmaps (32×32, 16×16, 8×8, 4×4, 2×2, 1×1). This has several benefits:\n- Textures will not become grainy in the distance (in 3D), or if scaled down due to [Camera2D] zoom or [CanvasItem] scale (in 2D).\n- Performance will improve if the texture is displayed in the distance, since sampling smaller versions of the original texture is faster and requires less memory bandwidth.\nThe downside of mipmaps is that they increase memory usage by roughly 33% (for [Texture2DArray], [Cubemap] and [CubemapArray]) or 14% (for [Texture3D]).\nIt's recommended to enable mipmaps in 3D. However, in 2D, this should only be enabled if your project visibly benefits from having mipmaps enabled. If the camera never zooms out significantly, there won't be a benefit to enabling mipmaps but memory usage will increase."
+msgstr "Ha [code]true[/code], importáláskor elkészülnek a textúra kisebb változatai. Egy 64×64 képpontos textúrához például 6 mipmap-szint készül (32×32, 16×16, 8×8, 4×4, 2×2, 1×1). Ennek több előnye van:\n- A textúrák nem lesznek szemcsések a távolban (3D-ben), illetve akkor sem, ha a [Camera2D] kicsinyítése vagy a [CanvasItem] méretezése miatt kisebb méretben jelennek meg (2D-ben).\n- A távoli textúrák megjelenítése gyorsul, mert a kisebb változatok mintavételezése gyorsabb, és kisebb memória-sávszélességet igényel.\nA mipmap-szintek hátránya, hogy körülbelül 33%-kal növelik a memóriahasználatot a [Texture2DArray], [Cubemap] és [CubemapArray] esetében, a [Texture3D] esetében pedig 14%-kal.\n3D-ben ajánlott bekapcsolni a mipmap-szintek létrehozását. 2D-ben csak akkor érdemes, ha a különbség látható a projektben. Ha a kamera soha nem kicsinyít számottevően, a mipmap-szintek nem hoznak előnyt, viszont növelik a memóriahasználatot."
+
+#: doc/classes/TextureRect.xml
+msgid "The height of the texture will be ignored. Minimum width will be equal to the current height. Useful for horizontal layouts, e.g. inside [HBoxContainer]."
+msgstr "A textúra magasságát figyelmen kívül hagyja. A legkisebb szélesség a csomópont aktuális magasságával egyezik meg. Vízszintes elrendezéseknél hasznos, például [HBoxContainer] csomópontban."
+
+#: doc/classes/PortableCompressedTexture2D.xml
+msgid "This class allows storing compressed textures as self contained (not imported) resources.\nFor 2D usage (compressed on disk, uncompressed on VRAM), the lossy and lossless modes are recommended. For 3D usage (compressed on VRAM) it depends on the target platform.\nIf you intend to only use desktop, S3TC or BPTC are recommended. For only mobile, ETC2 is recommended.\nFor portable, self contained 3D textures that work on both desktop and mobile, Basis Universal is recommended (although it has a small quality cost and longer compression time as a tradeoff).\nThis resource is intended to be created from code."
+msgstr "Ez az osztály a tömörített textúrák önálló erőforrásként, importálás nélkül történő tárolását teszi lehetővé.\n2D-s használatra a veszteséges vagy a veszteségmentes mód ajánlott. Ilyenkor a textúra a lemezen tömörített, a videomemóriában tömörítetlen. 3D-s használatnál, ahol a textúra a videomemóriában is tömörített, a célplatformtól függ a választás.\nHa csak asztali gépre fejlesztesz, az S3TC vagy a BPTC ajánlott. Kizárólag mobilra az ETC2 ajánlott.\nAsztali gépen és mobilon egyaránt használható, önálló 3D-s textúrákhoz a Basis Universal ajánlott. Ezzel kismértékű minőségromlás és hosszabb tömörítési idő jár.\nEzt az erőforrást kódból érdemes létrehozni."
+
+#: doc/classes/PortableCompressedTexture2D.xml
+msgid "Initializes the compressed texture from a base image. The compression mode must be provided.\n[param normal_map] is recommended to ensure optimum quality if this image will be used as a normal map.\nIf lossy compression is requested, the quality setting can optionally be provided. This maps to Lossy WebP compression quality."
+msgstr "Egy alapképből inicializálja a tömörített textúrát. A tömörítési módot kötelező megadni.\nA [param normal_map] megadása az optimális minőség érdekében ajánlott, ha a képet normáltérképként használod.\nVeszteséges tömörítés esetén a minőség opcionálisan megadható. Az érték a veszteséges WebP tömörítési minőségét adja meg."
+
+#: doc/classes/ImageTextureLayered.xml
+msgid "Creates an [ImageTextureLayered] from an array of [Image]s. See [method Image.create] for the expected data format. The first image decides the width, height, image format and mipmapping setting. The other images [i]must[/i] have the same width, height, image format and mipmapping setting.\nEach [Image] represents one [code]layer[/code].\n[codeblock]\n# Fill in an array of Images with different colors.\nvar images = []\nconst LAYERS = 6\nfor i in LAYERS:\n\tvar image = Image.create_empty(128, 128, false, Image.FORMAT_RGB8)\n\tif i % 3 == 0:\n\t\timage.fill(Color.RED)\n\telif i % 3 == 1:\n\t\timage.fill(Color.GREEN)\n\telse:\n\t\timage.fill(Color.BLUE)\n\timages.push_back(image)\n\n# Create and save a 2D texture array. The array of images must have at least 1 Image.\nvar texture_2d_array = Texture2DArray.new()\ntexture_2d_array.create_from_images(images)\nResourceSaver.save(texture_2d_array, \"res://texture_2d_array.res\", ResourceSaver.FLAG_COMPRESS)\n\n# Create and save a cubemap. The array of images must have exactly 6 Images.\n# The cubemap's images are specified in this order: X+, X-, Y+, Y-, Z+, Z-\n# (in Godot's coordinate system, so Y+ is \"up\" and Z- is \"forward\").\nvar cubemap = Cubemap.new()\ncubemap.create_from_images(images)\nResourceSaver.save(cubemap, \"res://cubemap.res\", ResourceSaver.FLAG_COMPRESS)\n\n# Create and save a cubemap array. The array of images must have a multiple of 6 Images.\n# Each cubemap's images are specified in this order: X+, X-, Y+, Y-, Z+, Z-\n# (in Godot's coordinate system, so Y+ is \"up\" and Z- is \"forward\").\nvar cubemap_array = CubemapArray.new()\ncubemap_array.create_from_images(images)\nResourceSaver.save(cubemap_array, \"res://cubemap_array.res\", ResourceSaver.FLAG_COMPRESS)\n[/codeblock]"
+msgstr "[ImageTextureLayered] erőforrást hoz létre [Image] erőforrások tömbjéből. Az elvárt adatformátumhoz lásd a [method Image.create] metódust. Az első kép határozza meg a szélességet, a magasságot, a képformátumot és a mipmap-beállítást. A többi kép méretének, képformátumának és mipmap-beállításának [i]egyeznie kell[/i] az első képével.\nMinden [Image] egy [code]layer[/code] rétegnek felel meg.\n[codeblock]\n# Fill in an array of Images with different colors.\nvar images = []\nconst LAYERS = 6\nfor i in LAYERS:\n\tvar image = Image.create_empty(128, 128, false, Image.FORMAT_RGB8)\n\tif i % 3 == 0:\n\t\timage.fill(Color.RED)\n\telif i % 3 == 1:\n\t\timage.fill(Color.GREEN)\n\telse:\n\t\timage.fill(Color.BLUE)\n\timages.push_back(image)\n\n# Create and save a 2D texture array. The array of images must have at least 1 Image.\nvar texture_2d_array = Texture2DArray.new()\ntexture_2d_array.create_from_images(images)\nResourceSaver.save(texture_2d_array, \"res://texture_2d_array.res\", ResourceSaver.FLAG_COMPRESS)\n\n# Create and save a cubemap. The array of images must have exactly 6 Images.\n# The cubemap's images are specified in this order: X+, X-, Y+, Y-, Z+, Z-\n# (in Godot's coordinate system, so Y+ is \"up\" and Z- is \"forward\").\nvar cubemap = Cubemap.new()\ncubemap.create_from_images(images)\nResourceSaver.save(cubemap, \"res://cubemap.res\", ResourceSaver.FLAG_COMPRESS)\n\n# Create and save a cubemap array. The array of images must have a multiple of 6 Images.\n# Each cubemap's images are specified in this order: X+, X-, Y+, Y-, Z+, Z-\n# (in Godot's coordinate system, so Y+ is \"up\" and Z- is \"forward\").\nvar cubemap_array = CubemapArray.new()\ncubemap_array.create_from_images(images)\nResourceSaver.save(cubemap_array, \"res://cubemap_array.res\", ResourceSaver.FLAG_COMPRESS)\n[/codeblock]"
+
+#: doc/classes/CompressedTexture2DArray.xml
+msgid "Array of 2-dimensional textures, optionally compressed."
+msgstr "Kétdimenziós textúrák tömbje, opcionális tömörítéssel."
+
+#: doc/classes/Cubemap.xml
+msgid "A cubemap is made of 6 textures organized in layers. They are typically used for faking reflections in 3D rendering (see [ReflectionProbe]). It can be used to make an object look as if it's reflecting its surroundings. This usually delivers much better performance than other reflection methods.\nThis resource is typically used as a uniform in custom shaders. Few core Godot methods make use of [Cubemap] resources.\nTo create such a texture file yourself, reimport your image files using the Godot Editor import presets. To create a Cubemap from code, use [method ImageTextureLayered.create_from_images] on an instance of the Cubemap class.\nThe expected image order is X+, X-, Y+, Y-, Z+, Z- (in Godot's coordinate system, so Y+ is \"up\" and Z- is \"forward\"). You can use one of the following templates as a base:\n- [url=https://raw.githubusercontent.com/godotengine/godot-docs/master/tutorials/assets_pipeline/img/cubemap_template_2x3.webp]2×3 cubemap template (default layout option)[/url]\n- [url=https://raw.githubusercontent.com/godotengine/godot-docs/master/tutorials/assets_pipeline/img/cubemap_template_3x2.webp]3×2 cubemap template[/url]\n- [url=https://raw.githubusercontent.com/godotengine/godot-docs/master/tutorials/assets_pipeline/img/cubemap_template_1x6.webp]1×6 cubemap template[/url]\n- [url=https://raw.githubusercontent.com/godotengine/godot-docs/master/tutorials/assets_pipeline/img/cubemap_template_6x1.webp]6×1 cubemap template[/url]\n[b]Note:[/b] Godot doesn't support using cubemaps in a [PanoramaSkyMaterial]. To use a cubemap as a skybox, convert the default [PanoramaSkyMaterial] to a [ShaderMaterial] using the [b]Convert to ShaderMaterial[/b] resource dropdown option, then replace its code with the following:\n[codeblock lang=text]\nshader_type sky;\n\nuniform samplerCube source_panorama : filter_linear, source_color, hint_default_black;\nuniform float exposure : hint_range(0, 128) = 1.0;\n\nvoid sky() {\n\t// If importing a cubemap from another engine, you may need to flip one of the `EYEDIR` components below\n\t// by replacing it with `-EYEDIR`.\n\tvec3 eyedir = vec3(EYEDIR.x, EYEDIR.y, EYEDIR.z);\n\tCOLOR = texture(source_panorama, eyedir).rgb * exposure;\n}\n[/codeblock]\nAfter replacing the shader code and saving, specify the imported Cubemap resource in the Shader Parameters section of the ShaderMaterial in the inspector.\nAlternatively, you can use [url=https://danilw.github.io/GLSL-howto/cubemap_to_panorama_js/cubemap_to_panorama.html]this tool[/url] to convert a cubemap to an equirectangular sky map and use [PanoramaSkyMaterial] as usual."
+msgstr "A kockatérkép 6, rétegekbe rendezett textúrából áll. Jellemzően visszaverődések közelítésére használják 3D renderelésben (lásd a [ReflectionProbe] osztályt). Segítségével úgy jeleníthető meg egy tárgy, mintha visszatükrözné a környezetét. Ez általában sokkal gyorsabb más tükröződési eljárásoknál.\nEz az erőforrás jellemzően uniform változóként szerepel egyéni árnyalókban. A Godot beépített metódusai közül kevés használ [Cubemap] erőforrást.\nIlyen textúrafájl létrehozásához importáld újra a képfájlokat a Godot szerkesztő importálási előbeállításaival. Ha kódból hoznál létre kockatérképet, hívd meg az [method ImageTextureLayered.create_from_images] metódust a Cubemap osztály egyik példányán.\nA képek elvárt sorrendje X+, X−, Y+, Y−, Z+, Z− a Godot koordinátarendszerében, ahol Y+ a felfelé, Z− az előre irány. Kiindulásként az alábbi sablonok használhatók:\n- [url=https://raw.githubusercontent.com/godotengine/godot-docs/master/tutorials/assets_pipeline/img/cubemap_template_2x3.webp]2×3-as kockatérképsablon (alapértelmezett elrendezés)[/url]\n- [url=https://raw.githubusercontent.com/godotengine/godot-docs/master/tutorials/assets_pipeline/img/cubemap_template_3x2.webp]3×2-es kockatérképsablon[/url]\n- [url=https://raw.githubusercontent.com/godotengine/godot-docs/master/tutorials/assets_pipeline/img/cubemap_template_1x6.webp]1×6-os kockatérképsablon[/url]\n- [url=https://raw.githubusercontent.com/godotengine/godot-docs/master/tutorials/assets_pipeline/img/cubemap_template_6x1.webp]6×1-es kockatérképsablon[/url]\n[b]Megjegyzés:[/b] A Godot a [PanoramaSkyMaterial] anyagban nem támogatja a kockatérképeket. A kockatérkép égboltként való használatához az erőforrás lenyíló menüjének [b]Convert to ShaderMaterial[/b] parancsával alakítsd át az alapértelmezett [PanoramaSkyMaterial] anyagot [ShaderMaterial] anyaggá, majd cseréld le a kódját az alábbira:\n[codeblock lang=text]\nshader_type sky;\n\nuniform samplerCube source_panorama : filter_linear, source_color, hint_default_black;\nuniform float exposure : hint_range(0, 128) = 1.0;\n\nvoid sky() {\n\t// If importing a cubemap from another engine, you may need to flip one of the `EYEDIR` components below\n\t// by replacing it with `-EYEDIR`.\n\tvec3 eyedir = vec3(EYEDIR.x, EYEDIR.y, EYEDIR.z);\n\tCOLOR = texture(source_panorama, eyedir).rgb * exposure;\n}\n[/codeblock]\nAz árnyalókód lecserélése és mentése után add meg az importált Cubemap erőforrást a ShaderMaterial Árnyalóparaméterek szakaszában, a tulajdonságfelügyelőben.\nA kockatérképet [url=https://danilw.github.io/GLSL-howto/cubemap_to_panorama_js/cubemap_to_panorama.html]ezzel az eszközzel[/url] egyenlő távolságú hengervetületű égboltképpé is alakíthatod, és a szokásos módon használhatod a [PanoramaSkyMaterial] anyagot."
+
+#: doc/classes/Texture2DArrayRD.xml
+msgid "Texture Array for 2D that is bound to a texture created on the [RenderingDevice]."
+msgstr "A [RenderingDevice] eszközön létrehozott textúrához kötött kétdimenziós textúratömb."
+
+#: doc/classes/Texture2DArrayRD.xml
+msgid "This texture array class allows you to use a 2D array texture created directly on the [RenderingDevice] as a texture for materials, meshes, etc.\n[b]Note:[/b] [Texture2DArrayRD] is intended for low-level usage with [RenderingDevice]. For most use cases, use [Texture2DArray] instead."
+msgstr "Ezzel az osztállyal a közvetlenül a [RenderingDevice] eszközön létrehozott 2D textúratömb anyagok, hálók és más erőforrások textúrájaként használható.\n[b]Megjegyzés:[/b] A [Texture2DArrayRD] a [RenderingDevice] eszközzel végzett alacsony szintű műveletekhez készült. A legtöbb feladathoz a [Texture2DArray] használható."
+
+#: doc/classes/PlaceholderTextureLayered.xml doc/classes/PlaceholderTexture2DArray.xml
+msgid "Placeholder class for a 2-dimensional texture array."
+msgstr "Kétdimenziós textúratömb helyőrzőosztálya."
+
+#: doc/classes/PlaceholderTextureLayered.xml
+msgid "This class is used when loading a project that uses a [TextureLayered] subclass in 2 conditions:\n- When running the project exported in dedicated server mode, only the texture's dimensions are kept (as they may be relied upon for gameplay purposes or positioning of other elements). This allows reducing the exported PCK's size significantly.\n- When this subclass is missing due to using a different engine version or build (e.g. modules disabled).\n[b]Note:[/b] This is not intended to be used as an actual texture for rendering. It is not guaranteed to work like one in shaders or materials (for example when calculating UV)."
+msgstr "Ez az osztály a [TextureLayered] egy származtatott osztályát használó projekt betöltésekor két esetben lép működésbe:\n- Ha a projektet dedikált kiszolgáló módban exportálták, csak a textúra méretei maradnak meg, mert a játékmenet vagy más elemek elhelyezése függhet tőlük. Így az exportált PCK mérete jelentősen csökkenthető.\n- Ha a származtatott osztály eltérő motorverzió vagy összeállítás miatt hiányzik, például letiltott modulok esetén.\n[b]Megjegyzés:[/b] Ez az erőforrás nem renderelésre szánt textúra. Árnyalókban vagy anyagokban eltérhet a textúrák viselkedésétől, például az UV-koordináták számításakor."
+
+#: doc/classes/PlaceholderTextureLayered.xml
+msgid "The number of layers in the texture array."
+msgstr "A textúratömb rétegeinek száma."
+
+#: doc/classes/PlaceholderTextureLayered.xml
+msgid "The size of each texture layer (in pixels)."
+msgstr "Az egyes textúrarétegek mérete képpontban."
+
+#: doc/classes/PlaceholderTexture3D.xml
+msgid "Placeholder class for a 3-dimensional texture."
+msgstr "Háromdimenziós textúra helyőrzőosztálya."
+
+#: doc/classes/PlaceholderTexture3D.xml
+msgid "This class is used when loading a project that uses a [Texture3D] subclass in 2 conditions:\n- When running the project exported in dedicated server mode, only the texture's dimensions are kept (as they may be relied upon for gameplay purposes or positioning of other elements). This allows reducing the exported PCK's size significantly.\n- When this subclass is missing due to using a different engine version or build (e.g. modules disabled).\n[b]Note:[/b] This is not intended to be used as an actual texture for rendering. It is not guaranteed to work like one in shaders or materials (for example when calculating UV)."
+msgstr "Ez az osztály a [Texture3D] egy származtatott osztályát használó projekt betöltésekor két esetben lép működésbe:\n- Ha a projektet dedikált kiszolgáló módban exportálták, csak a textúra méretei maradnak meg, mert a játékmenet vagy más elemek elhelyezése függhet tőlük. Így az exportált PCK mérete jelentősen csökkenthető.\n- Ha a származtatott osztály eltérő motorverzió vagy összeállítás miatt hiányzik, például letiltott modulok esetén.\n[b]Megjegyzés:[/b] Ez az erőforrás nem renderelésre szánt textúra. Árnyalókban vagy anyagokban eltérhet a textúrák viselkedésétől, például az UV-koordináták számításakor."
+
+#: doc/classes/ImageFormatLoader.xml
+msgid "Base class to add support for specific image formats."
+msgstr "Alaposztály adott képformátumok támogatásának hozzáadásához."
+
+#: doc/classes/ImageFormatLoader.xml
+msgid "Default loading behavior. No processing is applied to the image."
+msgstr "Alapértelmezett betöltési viselkedés. A betöltő nem végez további feldolgozást a képen."
+
+#: doc/classes/ImageFormatLoader.xml
+msgid "If set, the image is converted from sRGB to linear encoding."
+msgstr "Ha be van állítva, a kép sRGB-kódolásról lineáris kódolásra alakul át."
+
+#: doc/classes/ImageFormatLoader.xml
+msgid "If set, a predefined color map is applied to the image. Used when [member ResourceImporterTexture.editor/convert_colors_with_editor_theme] is [code]true[/code]."
+msgstr "Ha be van állítva, előre meghatározott színleképezést alkalmaz a képre. Akkor használatos, ha a [member ResourceImporterTexture.editor/convert_colors_with_editor_theme] értéke [code]true[/code]."
+
+#: doc/classes/ImageFormatLoaderExtension.xml
+msgid "The engine supports multiple image formats out of the box (PNG, SVG, JPEG, WebP to name a few), but you can choose to implement support for additional image formats by extending this class.\nBe sure to respect the documented return types and values. You should create an instance of it, and call [method add_format_loader] to register that loader during the initialization phase."
+msgstr "A motor beépítetten több képformátumot támogat (például PNG, SVG, JPEG és WebP). Ebből az osztályból származtatva további képformátumok támogatása valósítható meg.\nTartsd be a dokumentációban megadott visszatérési típusokat és értékeket. Hozz létre egy példányt a származtatott osztályból, és az inicializálási szakaszban hívd meg az [method add_format_loader] metódust a betöltő regisztrálásához."
+
+#: doc/classes/ResourceImporterTextureAtlas.xml
+msgid "[b]Region:[/b] Imports the atlas in an [AtlasTexture] resource, which is rendered as a rectangle. This is fast to render, but transparent areas still have to be rendered if they can't be trimmed effectively by [member trim_alpha_border_from_region]. This can reduce performance when rendering large sprites on screen.\n[b]Mesh:[/b] Imports the atlas as an [ArrayMesh] resource, keeping the original bitmap visible (but rendered as a polygon). This can be used to reduce fill rate when rendering large transparent sprites, at the cost of slower rendering if there are little to no transparent areas in the sprite."
+msgstr "[b]Region:[/b] Téglalapként renderelt [AtlasTexture] erőforrásba importálja az atlaszt. A téglalap gyorsan renderelhető, de az átlátszó részeket is fel kell dolgozni, ha a [member trim_alpha_border_from_region] nem tudja megfelelően levágni őket. Ez ronthatja a teljesítményt nagy méretű sprite-ok megjelenítésekor.\n[b]Mesh:[/b] Az atlaszt [ArrayMesh] erőforrásba importálja. Az eredeti raszterkép továbbra is látható, de sokszögként renderelődik. Ez csökkentheti a képpontok kitöltésének terhelését nagy, átlátszó területeket tartalmazó sprite-ok kirajzolásakor. Kevés átlátszó részt tartalmazó vagy teljesen átlátszatlan sprite esetén a renderelés lassabb lehet."
+
+#: doc/classes/ResourceImporterBitMap.xml
+msgid "Imports a [BitMap] resource (2D array of boolean values)."
+msgstr "[BitMap] erőforrást importál, amely logikai értékek kétdimenziós tömbje."
+
+#: doc/classes/ResourceImporterBitMap.xml
+msgid "[BitMap] resources are typically used as click masks in [TextureButton] and [TouchScreenButton]."
+msgstr "A [BitMap] erőforrások jellemzően kattintási maszkként szolgálnak a [TextureButton] és a [TouchScreenButton] csomópontokban."
+
+#: doc/classes/ResourceImporterBitMap.xml
+msgid "The data source to use for generating the bitmap.\n[b]Black & White:[/b] Pixels whose HSV value is greater than the [member threshold] will be considered as \"enabled\" (bit is [code]true[/code]). If the pixel is lower than or equal to the threshold, it will be considered as \"disabled\" (bit is [code]false[/code]).\n[b]Alpha:[/b] Pixels whose alpha value is greater than the [member threshold] will be considered as \"enabled\" (bit is [code]true[/code]). If the pixel is lower than or equal to the threshold, it will be considered as \"disabled\" (bit is [code]false[/code])."
+msgstr "A bitmaszk létrehozásához használt adatforrás.\n[b]Black & White:[/b] A képpont aktívnak számít (a bit értéke [code]true[/code]), ha a képpont HSV-értéke (V) nagyobb a [member threshold] küszöbértéknél. Ha kisebb vagy egyenlő a küszöbértékkel, a képpont inaktívnak számít (a bit értéke [code]false[/code]).\n[b]Alpha:[/b] A képpont aktívnak számít (a bit értéke [code]true[/code]), ha az alfaértéke nagyobb a [member threshold] küszöbértéknél. Ha kisebb vagy egyenlő a küszöbértékkel, a képpont inaktívnak számít (a bit értéke [code]false[/code])."
+
+#: doc/classes/ResourceImporterBitMap.xml
+msgid "The threshold to use to determine which bits should be considered enabled or disabled. See also [member create_from]."
+msgstr "A bitek aktív vagy inaktív állapotát meghatározó küszöbérték. Lásd még a [member create_from] tulajdonságot."
+
+#: doc/classes/BitMap.xml
+msgid "Boolean matrix."
+msgstr "Logikai mátrix."
+
+#: doc/classes/BitMap.xml
+msgid "A two-dimensional array of boolean values, can be used to efficiently store a binary matrix (every matrix element takes only one bit) and query the values using natural cartesian coordinates."
+msgstr "Logikai értékek kétdimenziós tömbje. Bináris mátrixok hatékony tárolására használható, mivel minden elem csak egy bitet foglal. Az értékek derékszögű koordinátákkal kérdezhetők le."
+
+#: doc/classes/BitMap.xml
+msgid "Returns an image of the same size as the bitmap and with an [enum Image.Format] of type [constant Image.FORMAT_L8]. [code]true[/code] bits of the bitmap are being converted into white pixels, and [code]false[/code] bits into black."
+msgstr "A bitmátrixszal azonos méretű képet ad vissza, amelynek [enum Image.Format] értéke [constant Image.FORMAT_L8]. A [code]true[/code] értékű bitekből fehér, a [code]false[/code] értékű bitekből fekete képpontok lesznek."
+
+#: doc/classes/BitMap.xml
+msgid "Creates a bitmap with the specified size, filled with [code]false[/code]."
+msgstr "A megadott méretű bitmátrixot hoz létre, [code]false[/code] értékekkel feltöltve."
+
+#: doc/classes/BitMap.xml
+msgid "Creates a bitmap that matches the given image dimensions, every element of the bitmap is set to [code]false[/code] if the alpha value of the image at that position is equal to [param threshold] or less, and [code]true[/code] in other case."
+msgstr "A megadott kép méretével megegyező bitmátrixot hoz létre. Egy elem értéke [code]false[/code], ha a kép adott helyén az alfaérték legfeljebb [param threshold], egyébként [code]true[/code]."
+
+#: doc/classes/BitMap.xml
+msgid "Returns bitmap's value at the specified position."
+msgstr "Visszaadja a bitmátrix megadott helyén tárolt értéket."
+
+#: doc/classes/BitMap.xml
+msgid "Returns bitmap's dimensions."
+msgstr "Visszaadja a bitmátrix méreteit."
+
+#: doc/classes/BitMap.xml
+msgid "Returns the number of bitmap elements that are set to [code]true[/code]."
+msgstr "Visszaadja a bitmátrix [code]true[/code] értékű elemeinek számát."
+
+#: doc/classes/BitMap.xml
+msgid "Applies morphological dilation or erosion to the bitmap. If [param pixels] is positive, dilation is applied to the bitmap. If [param pixels] is negative, erosion is applied to the bitmap. [param rect] defines the area where the morphological operation is applied. Pixels located outside the [param rect] are unaffected by [method grow_mask]."
+msgstr "Morfológiai tágítást vagy eróziót alkalmaz a bitmátrixra. Pozitív [param pixels] esetén tágít, negatív [param pixels] esetén erodál. A [param rect] adja meg a művelet területét. A [param rect] területén kívüli képpontokat a [method grow_mask] érintetlenül hagyja."
+
+#: doc/classes/BitMap.xml
+msgid "Creates an [Array] of polygons covering a rectangular portion of the bitmap. It uses a marching squares algorithm, followed by Ramer-Douglas-Peucker (RDP) reduction of the number of vertices. Each polygon is described as a [PackedVector2Array] of its vertices.\nTo get polygons covering the whole bitmap, pass:\n[codeblock]\nRect2(Vector2(), get_size())\n[/codeblock]\n[param epsilon] is passed to RDP to control how accurately the polygons cover the bitmap: a lower [param epsilon] corresponds to more points in the polygons."
+msgstr "A bitmátrix egy téglalap alakú részét lefedő sokszögekből álló [Array] tömböt hoz létre. A marching squares algoritmust használja, majd a Ramer–Douglas–Peucker-algoritmussal (RDP) csökkenti a csúcsok számát. Minden sokszöget a csúcsait tároló [PackedVector2Array] ír le.\nA teljes bitmátrixot lefedő sokszögekhez ezt add át:\n[codeblock]\nRect2(Vector2(), get_size())\n[/codeblock]\nA [param epsilon] értékét az RDP-algoritmus használja a lefedés pontosságának szabályozásához. Kisebb [param epsilon] esetén a sokszögek több pontból állnak."
+
+#: doc/classes/BitMap.xml
+msgid "Sets the bitmap's element at the specified position, to the specified value."
+msgstr "Beállítja a bitmátrix megadott helyén lévő elem értékét."
+
+#: doc/classes/BitMap.xml
+msgid "Sets a rectangular portion of the bitmap to the specified value."
+msgstr "A bitmátrix egy téglalap alakú részének elemeit a megadott értékre állítja."
+
+#: doc/classes/Sprite2D.xml
+msgid "Returns a [Rect2] representing the Sprite2D's boundary in local coordinates.\n[b]Example:[/b] Detect if the Sprite2D was clicked:\n[codeblocks]\n[gdscript]\nfunc _input(event):\n\tif event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:\n\t\tif get_rect().has_point(to_local(event.position)):\n\t\t\tprint(\"A click!\")\n[/gdscript]\n[csharp]\npublic override void _Input(InputEvent @event)\n{\n\tif (@event is InputEventMouseButton inputEventMouse)\n\t{\n\t\tif (inputEventMouse.Pressed && inputEventMouse.ButtonIndex == MouseButton.Left)\n\t\t{\n\t\t\tif (GetRect().HasPoint(ToLocal(inputEventMouse.Position)))\n\t\t\t{\n\t\t\t\tGD.Print(\"A click!\");\n\t\t\t}\n\t\t}\n\t}\n}\n[/csharp]\n[/codeblocks]"
+msgstr "Egy [Rect2] értéket ad vissza, amely a Sprite2D befoglaló téglalapját adja meg helyi koordinátákban.\n[b]Példa:[/b] Így ellenőrizhető, hogy a Sprite2D-re kattintottak-e:\n[codeblocks]\n[gdscript]\nfunc _input(event):\n\tif event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:\n\t\tif get_rect().has_point(to_local(event.position)):\n\t\t\tprint(\"A click!\")\n[/gdscript]\n[csharp]\npublic override void _Input(InputEvent @event)\n{\n\tif (@event is InputEventMouseButton inputEventMouse)\n\t{\n\t\tif (inputEventMouse.Pressed && inputEventMouse.ButtonIndex == MouseButton.Left)\n\t\t{\n\t\t\tif (GetRect().HasPoint(ToLocal(inputEventMouse.Position)))\n\t\t\t{\n\t\t\t\tGD.Print(\"A click!\");\n\t\t\t}\n\t\t}\n\t}\n}\n[/csharp]\n[/codeblocks]"
+
+#: doc/classes/AnimatedSprite2D.xml
+msgid "Emitted when [member animation] changes."
+msgstr "Akkor váltódik ki, amikor az [member animation] megváltozik."
+
+#: doc/classes/AnimatedSprite2D.xml
+msgid "Emitted when the animation reaches the end, or the start if it is played in reverse. When the animation finishes, it pauses the playback.\n[b]Note:[/b] This signal is not emitted if an animation is looping."
+msgstr "Akkor váltódik ki, amikor az animáció eléri a végét, fordított lejátszásnál pedig az elejét. Az animáció befejezésekor a lejátszás szünetel.\n[b]Megjegyzés:[/b] Ismétlődő animációnál a jelzés nem váltódik ki."
+
+#: doc/classes/AnimatedSprite2D.xml
+msgid "Emitted when the animation loops."
+msgstr "Akkor váltódik ki, amikor az animáció ismétlődik."
+
+#: doc/classes/AnimatedSprite2D.xml
+msgid "Emitted when [member frame] changes."
+msgstr "Akkor váltódik ki, amikor a [member frame] megváltozik."
+
+#: doc/classes/AnimatedSprite2D.xml
+msgid "Emitted when [member sprite_frames] changes."
+msgstr "Akkor váltódik ki, amikor a [member sprite_frames] megváltozik."
+
+#: doc/classes/SpriteFrames.xml
+msgid "Returns the loop mode for the [param anim] animation."
+msgstr "Visszaadja a [param anim] animáció ismétlési módját."
+
+#: doc/classes/SpriteFrames.xml
+msgid "Sets the [param loop_mode] for the [param anim] animation."
+msgstr "A [param anim] animáció ismétlési módját a [param loop_mode] értékére állítja."
+
+#: doc/classes/SpriteFrames.xml
+msgid "The animation plays once and stops when it reaches the end, or the start if played in reverse."
+msgstr "Az animáció egyszer játszódik le, majd a végén megáll. Fordított lejátszáskor az elején áll meg."
+
+#: doc/classes/SpriteFrames.xml
+msgid "The animation restarts from the beginning when it reaches the end, or from the end if played in reverse, repeating continuously."
+msgstr "A végére érve az animáció az elejéről indul újra, fordított lejátszáskor pedig az elejére érve a végéről. A lejátszás folyamatosan ismétlődik."
+
+#: doc/classes/SpriteFrames.xml
+msgid "The animation alternates direction each time it reaches the end or start, playing forward and then in reverse repeatedly.\n[b]Note:[/b] Both [AnimatedSprite2D] and [AnimatedSprite3D] play the first/last frame for its duration only once at each end of the animation loop (instead of twice, once per forward/backward animation direction)."
+msgstr "Az animáció minden alkalommal irányt vált, amikor eléri a végét vagy az elejét. Felváltva játszódik le előre és visszafelé.\n[b]Megjegyzés:[/b] Az [AnimatedSprite2D] és az [AnimatedSprite3D] is az animáció két fordulópontján egyszer jeleníti meg az első, illetve az utolsó képkockát a hozzá tartozó időtartamig, vagyis a képkocka időtartama az irányváltáskor nem duplázódik meg."
+
+#: doc/classes/TextureRect.xml
+msgid "The minimum size will be equal to texture size, i.e. [TextureRect] can't be smaller than the texture."
+msgstr "A legkisebb méret megegyezik a textúra méretével, így a [TextureRect] nem lehet kisebb a textúránál."
+
+#: doc/classes/TextureRect.xml
+msgid "The size of the texture won't be considered for minimum size calculation, so the [TextureRect] can be shrunk down past the texture size."
+msgstr "A legkisebb méret számításakor a textúra méretét figyelmen kívül hagyja, ezért a [TextureRect] a textúránál kisebbre is méretezhető."
+
+#: doc/classes/TextureRect.xml
+msgid "Tile inside the node's bounding rectangle.\n[b]Note:[/b] [constant STRETCH_TILE] mode is not supported for [member texture] set to an [AtlasTexture] with non-zero [member AtlasTexture.margin]."
+msgstr "Ismételve tölti ki a csomópont befoglaló téglalapját.\n[b]Megjegyzés:[/b] A [constant STRETCH_TILE] mód nem használható, ha a [member texture] olyan [AtlasTexture] erőforrás, amelynek a [member AtlasTexture.margin] értéke nem nulla."
+
+#: doc/classes/TileSetAtlasSource.xml
+msgid "If [member use_texture_padding] is [code]false[/code], returns [member texture]. Otherwise, returns an internal [ImageTexture] created that includes the padding."
+msgstr "Ha a [member use_texture_padding] értéke [code]false[/code], visszaadja a [member texture] értékét. Egyébként olyan belső [ImageTexture] erőforrást ad vissza, amely a hozzáadott szegélyt is tartalmazza."
