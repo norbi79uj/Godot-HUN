@@ -61915,6 +61915,10 @@ msgstr "A színminta hozzáadására szolgáló gomb ikonja."
 msgid "The texture for the arrow grabber."
 msgstr "A nyíl alakú csúszkafogantyú textúrája."
 
+#: doc/classes/ColorPicker.xml
+msgid "The icon for the button that copies the color in text format to the clipboard."
+msgstr "A színt szöveges formában a vágólapra másoló gomb ikonja."
+
 #: doc/classes/ColorPickerButton.xml
 msgid "A button that brings up a [ColorPicker] when pressed."
 msgstr "Megnyomásakor megnyit egy [ColorPicker] vezérlőt."
@@ -61926,10 +61930,6 @@ msgstr "Egy [ColorPicker] vezérlőt tesz elérhetővé egy gombbal. A gomb megn
 #: doc/classes/ColorPickerButton.xml
 msgid "Returns the [ColorPicker] that this node toggles.\n[b]Warning:[/b] This is a required internal node, removing and freeing it may cause a crash. If you wish to hide it or any of its children, use their [member CanvasItem.visible] property."
 msgstr "Visszaadja a csomópont által megjelenített és elrejtett [ColorPicker] vezérlőt.\n[b]Figyelem:[/b] Ez egy szükséges belső csomópont. Eltávolítása és felszabadítása összeomlást okozhat. A csomópontot és gyermekeit a saját [member CanvasItem.visible] tulajdonságukkal rejtheted el."
-
-#: doc/classes/ColorPickerButton.xml
-msgid "Returns the control's [PopupPanel] which allows you to connect to popup signals. This allows you to handle events when the ColorPicker is shown or hidden.\n[b]Warning:[/b] This is a required internal node, removing and freeing it may cause a crash. If you wish to hide it or any of its children, use their [member Window.visible] property."
-msgstr "Visszaadja a vezérlő [PopupPanel] elemét, amelynek jeleihez az eseménykezelőidet csatlakoztathatod. Így kezelheted a ColorPicker megjelenítését és elrejtését.\n[b]Figyelem:[/b] Ez egy szükséges belső csomópont. Eltávolítása és felszabadítása összeomlást okozhat. A csomópontot vagy gyermekeit a [member Window.visible] tulajdonsággal rejtheted el."
 
 #: doc/classes/ColorPickerButton.xml
 msgid "If [code]true[/code], the alpha channel in the displayed [ColorPicker] will be visible."
