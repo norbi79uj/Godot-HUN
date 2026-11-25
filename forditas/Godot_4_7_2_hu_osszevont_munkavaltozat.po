@@ -62942,3 +62942,403 @@ msgstr "A körvonalrétegek száma."
 #: doc/classes/LabelSettings.xml
 msgid "The color of the outline at [code]index[/code].\n[b]Note:[/b] [code]index[/code] is a value in the [code]0 .. stacked_outline_count - 1[/code] range."
 msgstr "A [code]index[/code] helyen lévő körvonal színe.\n[b]Megjegyzés:[/b] Az [code]index[/code] értéke a [code]0 .. stacked_outline_count - 1[/code] tartományba esik."
+
+#: doc/classes/LabelSettings.xml
+msgid "The size of the outline at [code]index[/code].\n[b]Note:[/b] [code]index[/code] is a value in the [code]0 .. stacked_outline_count - 1[/code] range."
+msgstr "A [code]index[/code] helyen lévő körvonal vastagsága.\n[b]Megjegyzés:[/b] Az [code]index[/code] értéke a [code]0 .. stacked_outline_count - 1[/code] tartományba esik."
+
+#: doc/classes/LabelSettings.xml
+msgid "The number of stacked shadows."
+msgstr "Az árnyékrétegek száma."
+
+#: doc/classes/LabelSettings.xml
+msgid "The color of the shadow at [code]index[/code].\n[b]Note:[/b] [code]index[/code] is a value in the [code]0 .. stacked_shadow_count - 1[/code] range."
+msgstr "A [code]index[/code] helyen lévő árnyék színe.\n[b]Megjegyzés:[/b] Az [code]index[/code] értéke a [code]0 .. stacked_shadow_count - 1[/code] tartományba esik."
+
+#: doc/classes/LabelSettings.xml
+msgid "The offset of the shadow at [code]index[/code].\n[b]Note:[/b] [code]index[/code] is a value in the [code]0 .. stacked_shadow_count - 1[/code] range."
+msgstr "A [code]index[/code] helyen lévő árnyék eltolása.\n[b]Megjegyzés:[/b] Az [code]index[/code] értéke a [code]0 .. stacked_shadow_count - 1[/code] tartományba esik."
+
+#: doc/classes/LabelSettings.xml
+msgid "The size of the shadow outline at [code]index[/code].\n[b]Note:[/b] [code]index[/code] is a value in the [code]0 .. stacked_shadow_count - 1[/code] range."
+msgstr "A [code]index[/code] helyen lévő árnyék körvonalának vastagsága.\n[b]Megjegyzés:[/b] Az [code]index[/code] értéke a [code]0 .. stacked_shadow_count - 1[/code] tartományba esik."
+
+#: doc/classes/TextureButton.xml
+msgid "Texture-based button. Supports Pressed, Hover, Disabled and Focused states."
+msgstr "Textúraalapú gomb. Külön megjelenést támogat lenyomott, egérmutató alatti, letiltott és fókuszált állapotban."
+
+#: doc/classes/TextureButton.xml
+msgid "[TextureButton] has the same functionality as [Button], except it uses sprites instead of Godot's [Theme] resource. It is faster to create, but it doesn't support localization like more complex [Control]s.\nSee also [BaseButton] which contains common properties and methods associated with this node.\n[b]Note:[/b] Setting a texture for the \"normal\" state ([member texture_normal]) is recommended. If [member texture_normal] is not set, the [TextureButton] will still receive input events and be clickable, but the user will not be able to see it unless they activate another one of its states with a texture assigned (e.g., hover over it to show [member texture_hover])."
+msgstr "A [TextureButton] a [Button] működését kínálja, de a Godot [Theme] erőforrása helyett képeket használ. Gyorsabban létrehozható, viszont nem támogatja úgy a lokalizálást, mint az összetettebb [Control] elemek.\nA csomópont közös tulajdonságait és metódusait lásd a [BaseButton] osztálynál.\n[b]Megjegyzés:[/b] Érdemes textúrát megadni az alapállapothoz ([member texture_normal]). Ha a [member texture_normal] nincs megadva, a [TextureButton] továbbra is fogad bemeneti eseményeket és kattintható, de csak akkor válik láthatóvá, ha olyan állapotba kerül, amelyhez megadtál textúrát. Például az egérmutató fölé mozgatásakor megjelenhet a [member texture_hover]."
+
+#: doc/classes/TextureButton.xml
+msgid "If [code]true[/code], the size of the texture won't be considered for minimum size calculation, so the [TextureButton] can be shrunk down past the texture size."
+msgstr "Ha az érték [code]true[/code], a minimális méret kiszámításakor a motor figyelmen kívül hagyja a textúra méretét. Így a [TextureButton] a textúránál kisebbre is összenyomható."
+
+#: doc/classes/TextureButton.xml
+msgid "Controls the texture's behavior when you resize the node's bounding rectangle. See the [enum StretchMode] constants for available options."
+msgstr "Meghatározza, hogyan viselkedik a textúra a csomópont befoglaló téglalapjának átméretezésekor. A választható módokat az [enum StretchMode] konstansai adják meg."
+
+#: doc/classes/TextureButton.xml
+msgid "Pure black and white [BitMap] image to use for click detection. On the mask, white pixels represent the button's clickable area. Use it to create buttons with curved shapes."
+msgstr "Kizárólag fekete és fehér képpontokat tartalmazó [BitMap] a kattintások érzékeléséhez. A maszk fehér képpontjai a gomb kattintható területét jelölik. Így ívelt alakú gombokat is készíthetsz."
+
+#: doc/classes/TextureButton.xml
+msgid "Texture to display when the node is disabled. See [member BaseButton.disabled]. If not assigned, the [TextureButton] displays [member texture_normal] instead."
+msgstr "A csomópont letiltott állapotában megjelenő textúra. Lásd a [member BaseButton.disabled] tulajdonságot. Ha nincs megadva, a [TextureButton] a [member texture_normal] textúrát jeleníti meg."
+
+#: doc/classes/TextureButton.xml
+msgid "Texture to [i]overlay on the base texture[/i] when the node has mouse or keyboard focus. Because [member texture_focused] is displayed on top of the base texture, a partially transparent texture should be used to ensure the base texture remains visible. A texture that represents an outline or an underline works well for this purpose. To disable the focus visual effect, assign a fully transparent texture of any size. Note that disabling the focus visual effect will harm keyboard/controller navigation usability, so this is not recommended for accessibility reasons."
+msgstr "Az [i]alaptextúrára rajzolt[/i] textúra, amikor a csomópont egérrel vagy billentyűzettel kapott fókuszban van. A [member texture_focused] az alaptextúra fölött jelenik meg, ezért használj részben átlátszó textúrát, hogy az alaptextúra látható maradjon. Erre jól használható egy körvonalat vagy aláhúzást ábrázoló textúra. A fókuszjelzés kikapcsolásához adj meg egy tetszőleges méretű, teljesen átlátszó textúrát. Ez megnehezíti a billentyűzetes és a játékvezérlős navigációt, ezért akadálymentesítési okból nem ajánlott."
+
+#: doc/classes/TextureButton.xml
+msgid "Texture to display when the mouse hovers over the node. If not assigned, the [TextureButton] displays [member texture_normal] instead when hovered over."
+msgstr "A csomópont fölött lévő egérmutató esetén megjelenő textúra. Ha nincs megadva, a [TextureButton] ilyenkor a [member texture_normal] textúrát jeleníti meg."
+
+#: doc/classes/TextureButton.xml
+msgid "Texture to display by default, when the node is [b]not[/b] in the disabled, hover or pressed state. This texture is still displayed in the focused state, with [member texture_focused] drawn on top."
+msgstr "Az alapértelmezés szerint megjelenő textúra, amikor a csomópont [b]nincs[/b] letiltva, lenyomva vagy az egérmutató alatt. Fókuszált állapotban is ez látható, rárajzolva a [member texture_focused] textúrával."
+
+#: doc/classes/TextureButton.xml
+msgid "Scale to fit the node's bounding rectangle."
+msgstr "A csomópont befoglaló téglalapjának méretére nyújtja a textúrát."
+
+#: doc/classes/TextureButton.xml
+msgid "Tile inside the node's bounding rectangle."
+msgstr "A csomópont befoglaló téglalapján belül ismétli a textúrát."
+
+#: doc/classes/TextureButton.xml
+msgid "The texture keeps its original size and stays in the bounding rectangle's top-left corner."
+msgstr "A textúra megtartja eredeti méretét, és a befoglaló téglalap bal felső sarkában marad."
+
+#: doc/classes/TextureButton.xml
+msgid "The texture keeps its original size and stays centered in the node's bounding rectangle."
+msgstr "A textúra megtartja eredeti méretét, és a befoglaló téglalap közepén marad."
+
+#: doc/classes/TextureButton.xml
+msgid "Scale the texture to fit the node's bounding rectangle, but maintain the texture's aspect ratio."
+msgstr "A textúrát úgy méretezi, hogy a képarány megtartásával beleférjen a csomópont befoglaló téglalapjába."
+
+#: doc/classes/TextureButton.xml
+msgid "Scale the texture to fit the node's bounding rectangle, center it, and maintain its aspect ratio."
+msgstr "A textúrát úgy méretezi és középre igazítja, hogy a képarány megtartásával beleférjen a csomópont befoglaló téglalapjába."
+
+#: doc/classes/TreeItem.xml
+msgid "Returns the color of the button with ID [param id] in column [param column]. If the specified button does not exist, returns [constant Color.BLACK]."
+msgstr "Visszaadja a [param column] oszlopban lévő, [param id] azonosítójú gomb színét. Ha ilyen gomb nincs, [constant Color.BLACK] az eredmény."
+
+#: doc/classes/TreeItem.xml
+msgid "Returns the given column's icon [Texture2D]. Error if no icon is set."
+msgstr "Visszaadja a megadott oszlop ikonját [Texture2D] formájában. Ha nincs beállítva ikon, hibát jelez."
+
+#: doc/classes/TreeItem.xml
+msgid "Returns the node's order in the tree. For example, if called on the first child item the position is [code]0[/code]."
+msgstr "Visszaadja az elem fán belüli sorszámát. Az első gyermekelemnél például az eredmény [code]0[/code]."
+
+#: doc/classes/TreeItem.xml
+msgid "If [code]true[/code], folding is disabled for this TreeItem."
+msgstr "Ha az érték [code]true[/code], a TreeItem nem csukható össze."
+
+#: doc/classes/CanvasItem.xml
+msgid "Returns the internal canvas item [RID] used by the [RenderingServer] for this node."
+msgstr "Visszaadja a csomópont belső vászonelemének [RID] azonosítóját, amelyet a [RenderingServer] használ."
+
+#: doc/classes/CanvasItem.xml
+msgid "Returns the [CanvasLayer] that contains this node, or [code]null[/code] if the node is not in any [CanvasLayer]."
+msgstr "Visszaadja a csomópontot tartalmazó [CanvasLayer] réteget. Ha a csomópont egyetlen [CanvasLayer] réteghez sem tartozik, [code]null[/code] az eredmény."
+
+#: doc/classes/CanvasItem.xml
+msgid "Returns the transform of this node, converted from its registered canvas's coordinate system to its viewport's coordinate system. See also [method Node.get_viewport]."
+msgstr "Visszaadja azt a transzformációt, amely a csomóponthoz rendelt vászon koordinátáit a nézetablak koordinátarendszerébe viszi át. Lásd még a [method Node.get_viewport] metódust."
+
+#: doc/classes/CanvasItem.xml
+msgid "Returns the mouse's position in this [CanvasItem] using the local coordinate system of this [CanvasItem]."
+msgstr "Visszaadja az egérmutató helyét ebben a [CanvasItem] elemben, a [CanvasItem] helyi koordinátarendszerében."
+
+#: doc/classes/CanvasItem.xml
+msgid "Returns the transform matrix of this [CanvasItem]."
+msgstr "Visszaadja e [CanvasItem] transzformációs mátrixát."
+
+#: doc/classes/CanvasItem.xml
+msgid "Returns this node's viewport boundaries as a [Rect2]. See also [method Node.get_viewport]."
+msgstr "[Rect2] értékként adja vissza a csomópont nézetablakának határait. Lásd még a [method Node.get_viewport] metódust."
+
+#: doc/classes/CanvasItem.xml
+msgid "Returns [code]true[/code] if the layer at the given index is set in [member visibility_layer]."
+msgstr "[code]true[/code] értéket ad vissza, ha a megadott indexű réteg be van állítva a [member visibility_layer] tulajdonságban."
+
+#: doc/classes/CanvasItem.xml
+msgid "Hide the [CanvasItem] if it's currently visible. This is equivalent to setting [member visible] to [code]false[/code]."
+msgstr "Elrejti a [CanvasItem] elemet, ha látható. Ez egyenértékű a [member visible] tulajdonság [code]false[/code] értékre állításával."
+
+#: doc/classes/CanvasItem.xml
+msgid "Returns a copy of the given [param event] with its coordinates converted from global space to this [CanvasItem]'s local space. If not possible, returns the same [InputEvent] unchanged."
+msgstr "A megadott [param event] esemény másolatát adja vissza úgy, hogy a koordinátákat globális térből a [CanvasItem] helyi terébe alakítja. Ha ez nem lehetséges, ugyanazt az [InputEvent] eseményt adja vissza változatlanul."
+
+#: doc/classes/CanvasItem.xml
+msgid "Moves this node below its siblings, usually causing the node to draw on top of its siblings. Does nothing if this node does not have a parent. See also [method Node.move_child]."
+msgstr "A csomópontot a testvérei után helyezi a jelenetfában, így általában azok fölé rajzolódik. Szülőcsomópont hiányában a metódusnak nincs hatása. Lásd még a [method Node.move_child] metódust."
+
+#: doc/classes/CanvasItem.xml
+msgid "Set/clear individual bits on the rendering visibility layer. This simplifies editing this [CanvasItem]'s visibility layer."
+msgstr "Beállítja vagy törli a megjelenítési láthatósági réteg egyes bitjeit. Így egyszerűbben módosítható a [CanvasItem] láthatósági rétege."
+
+#: doc/classes/CanvasItem.xml
+msgid "The rendering layers in which this [CanvasItem] responds to [Light2D] nodes."
+msgstr "Azok a megjelenítési rétegek, amelyeken e [CanvasItem] elemre hatnak a [Light2D] csomópontok."
+
+#: doc/classes/CanvasItem.xml
+msgid "The material applied to this [CanvasItem]."
+msgstr "A [CanvasItem] elemre alkalmazott anyag."
+
+#: doc/classes/CanvasItem.xml
+msgid "The color applied to this [CanvasItem]. This property does affect child [CanvasItem]s, unlike [member self_modulate] which only affects the node itself."
+msgstr "A [CanvasItem] elemre alkalmazott szín. Ez a tulajdonság a gyermek [CanvasItem] elemekre is hat, míg a [member self_modulate] csak magára a csomópontra."
+
+#: doc/classes/Image.xml
+msgid "Native image datatype. Contains image data which can be converted to an [ImageTexture] and provides commonly used [i]image processing[/i] methods. The maximum width and height for an [Image] are [constant MAX_WIDTH] and [constant MAX_HEIGHT].\nAn [Image] cannot be assigned to a texture property of an object directly (such as [member Sprite2D.texture]), and has to be converted manually to an [ImageTexture] first.\n[b]Note:[/b] Methods that modify the image data cannot be used on VRAM-compressed images. Use [method decompress] to convert the image to an uncompressed format first.\n[b]Note:[/b] The maximum image size is 16384×16384 pixels due to graphics hardware limitations. Larger images may fail to import."
+msgstr "Natív képadattípus. A képadatok [ImageTexture] erőforrássá alakíthatók, és az osztály gyakori [i]képfeldolgozási[/i] metódusokat kínál. Egy [Image] legnagyobb szélessége [constant MAX_WIDTH], legnagyobb magassága [constant MAX_HEIGHT].\nAz [Image] közvetlenül nem rendelhető hozzá egy objektum textúratulajdonságához, például a [member Sprite2D.texture] tulajdonsághoz. Előbb kézzel kell [ImageTexture] erőforrássá alakítani.\n[b]Megjegyzés:[/b] A képadatokat módosító metódusok nem használhatók VRAM-tömörített képeken. A képet előbb a [method decompress] metódussal alakítsd tömörítetlen formátumra.\n[b]Megjegyzés:[/b] A grafikus hardver korlátai miatt a legnagyobb képméret 16384×16384 képpont. Ennél nagyobb képek importálása meghiúsulhat."
+
+#: doc/classes/Image.xml
+msgid "Alpha-blends [param src_rect] from [param src] image to this image using [param mask] image at coordinates [param dst], clipped accordingly to both image bounds. Alpha channels are required for both [param src] and [param mask]. [param dst] pixels and [param src] pixels will blend if the corresponding mask pixel's alpha value is not 0. This image and [param src] image [b]must[/b] have the same format. [param src] image and [param mask] image [b]must[/b] have the same size (width and height) but they can have different formats. [param src_rect] with non-positive size is treated as empty."
+msgstr "Alfa alapján összekeveri a [param src] kép [param src_rect] területét ezzel a képpel, a [param mask] maszkképet használva a [param dst] helyen. A műveletet mindkét kép határaihoz vágja. A [param src] és a [param mask] képen is kell alfacsatorna. A [param dst] és a [param src] képpontjait akkor keveri össze, ha a maszk megfelelő képpontjának alfaértéke nem nulla. Ennek a képnek és a [param src] képnek [b]azonos formátumúnak kell lennie[/b]. A [param src] és a [param mask] kép szélességének és magasságának [b]egyeznie kell[/b], de a formátumuk eltérhet. Ha a [param src_rect] mérete valamelyik tengelyen nulla vagy negatív, a terület üresnek számít."
+
+#: doc/classes/Image.xml
+msgid "Copies [param src_rect] from [param src] image to this image at coordinates [param dst], clipped accordingly to both image bounds. This image and [param src] image [b]must[/b] have the same format. [param src_rect] with non-positive size is treated as empty.\n[b]Note:[/b] The alpha channel data in [param src] will overwrite the corresponding data in this image at the target position. To blend alpha channels, use [method blend_rect] instead."
+msgstr "A [param src] kép [param src_rect] területét ebbe a képbe másolja a [param dst] helyre. A műveletet mindkét kép határaihoz vágja. Ennek a képnek és a [param src] képnek [b]azonos formátumúnak kell lennie[/b]. Ha a [param src_rect] mérete valamelyik tengelyen nulla vagy negatív, a terület üresnek számít.\n[b]Megjegyzés:[/b] A [param src] alfacsatornája felülírja a célhely megfelelő adatait ezen a képen. Az alfacsatornák keveréséhez használd a [method blend_rect] metódust."
+
+#: doc/classes/Image.xml
+msgid "Blits [param src_rect] area from [param src] image to this image at the coordinates given by [param dst], clipped accordingly to both image bounds. [param src] pixel is copied onto [param dst] if the corresponding [param mask] pixel's alpha value is not 0. This image and [param src] image [b]must[/b] have the same format. [param src] image and [param mask] image [b]must[/b] have the same size (width and height) but they can have different formats. [param src_rect] with non-positive size is treated as empty."
+msgstr "A [param src] kép [param src_rect] területét ebbe a képbe másolja a [param dst] helyre. A műveletet mindkét kép határaihoz vágja. A [param src] képpontját akkor másolja a [param dst] helyre, ha a [param mask] megfelelő képpontjának alfaértéke nem nulla. Ennek a képnek és a [param src] képnek [b]azonos formátumúnak kell lennie[/b]. A [param src] és a [param mask] kép szélességének és magasságának [b]egyeznie kell[/b], de a formátumuk eltérhet. Ha a [param src_rect] mérete valamelyik tengelyen nulla vagy negatív, a terület üresnek számít."
+
+#: doc/classes/Image.xml
+msgid "Compresses the image with a VRAM-compressed format to use less memory. Can not directly access pixel data while the image is compressed. Returns error if the chosen compression mode is not available.\nThe [param source] parameter helps to pick the best compression method for DXT and ETC2 formats. It is ignored for ASTC compression.\nThe [param astc_format] parameter is only taken into account when using ASTC compression; it is ignored for all other formats.\n[b]Note:[/b] [method compress] is only supported in editor builds. When run in an exported project, this method always returns [constant ERR_UNAVAILABLE]."
+msgstr "VRAM-tömörített formátumba alakítja a képet, hogy kevesebb memóriát foglaljon. A tömörített kép képpontadatai közvetlenül nem érhetők el. Ha a kiválasztott tömörítési mód nem érhető el, hibát ad vissza.\nA [param source] segít kiválasztani a DXT és ETC2 formátumhoz megfelelő tömörítési eljárást. ASTC tömörítésnél a motor figyelmen kívül hagyja.\nA [param astc_format] csak ASTC tömörítésnél számít. A többi formátumnál a motor figyelmen kívül hagyja.\n[b]Megjegyzés:[/b] A [method compress] csak a szerkesztőt tartalmazó összeállításokban támogatott. Exportált projektben mindig [constant ERR_UNAVAILABLE] értéket ad vissza."
+
+#: doc/classes/Image.xml
+msgid "Compresses the image with a VRAM-compressed format to use less memory. Can not directly access pixel data while the image is compressed. Returns error if the chosen compression mode is not available.\nThis is an alternative to [method compress] that lets the user supply the channels used in order for the compressor to pick the best DXT and ETC2 formats. For other formats (non DXT or ETC2), this argument is ignored.\nThe [param astc_format] parameter is only taken into account when using ASTC compression; it is ignored for all other formats.\n[b]Note:[/b] [method compress_from_channels] is only supported in editor builds. When run in an exported project, this method always returns [constant ERR_UNAVAILABLE]."
+msgstr "VRAM-tömörített formátumba alakítja a képet, hogy kevesebb memóriát foglaljon. A tömörített kép képpontadatai közvetlenül nem érhetők el. Ha a kiválasztott tömörítési mód nem érhető el, hibát ad vissza.\nA [method compress] helyett használható, ha meg szeretnéd adni a használt csatornákat, hogy a tömörítő kiválaszthassa a megfelelő DXT vagy ETC2 formátumot. Más formátumoknál a motor figyelmen kívül hagyja ezt az argumentumot.\nA [param astc_format] csak ASTC tömörítésnél számít. A többi formátumnál a motor figyelmen kívül hagyja.\n[b]Megjegyzés:[/b] A [method compress_from_channels] csak a szerkesztőt tartalmazó összeállításokban támogatott. Exportált projektben mindig [constant ERR_UNAVAILABLE] értéket ad vissza."
+
+#: doc/classes/Image.xml
+msgid "Decompresses the image if it is VRAM-compressed in a supported format. This increases memory utilization, but allows modifying the image. Returns [constant OK] if the format is supported, otherwise [constant ERR_UNAVAILABLE]. All VRAM-compressed formats supported by Godot can be decompressed with this method, except [constant FORMAT_ETC2_R11S], [constant FORMAT_ETC2_RG11S], and [constant FORMAT_ETC2_RGB8A1]."
+msgstr "Kitömöríti a képet, ha támogatott VRAM-tömörített formátumban van. Ettől nő a memóriaigény, de a kép módosíthatóvá válik. Támogatott formátumnál [constant OK], egyébként [constant ERR_UNAVAILABLE] értéket ad vissza. A Godot által támogatott összes VRAM-tömörített formátum kitömöríthető ezzel a metódussal, kivéve a [constant FORMAT_ETC2_R11S], a [constant FORMAT_ETC2_RG11S] és a [constant FORMAT_ETC2_RGB8A1] formátumot."
+
+#: doc/classes/Image.xml
+msgid "Generates mipmaps for the image. Mipmaps are precalculated lower-resolution copies of the image that are automatically used if the image needs to be scaled down when rendered. They help improve image quality and performance when rendering. This method returns an error if the image is compressed, in a custom format, or if the image's width/height is [code]0[/code]. Enabling [param renormalize] when generating mipmaps for normal map textures will make sure all resulting vector values are normalized.\nIt is possible to check if the image has mipmaps by calling [method has_mipmaps] or [method get_mipmap_count]. Calling [method generate_mipmaps] on an image that already has mipmaps will replace existing mipmaps in the image."
+msgstr "Mipmap-szinteket hoz létre a képhez. Ezek előre kiszámított, kisebb felbontású másolatok, amelyeket a motor automatikusan használ, ha a képet kisebb méretben kell megjeleníteni. Javíthatják a megjelenítés minőségét és teljesítményét. A metódus hibát ad vissza, ha a kép tömörített, egyéni formátumú, vagy szélessége vagy magassága [code]0[/code]. Normáltérképek mipmap-szintjeinek előállításakor a [param renormalize] engedélyezésével a kapott vektorok normalizálhatók.\nA [method has_mipmaps] vagy a [method get_mipmap_count] metódussal ellenőrizheted, hogy a képhez tartoznak-e mipmap-szintek. Ha igen, a [method generate_mipmaps] hívása lecseréli őket."
+
+#: doc/classes/Image.xml
+msgid "Returns the offset where the image's mipmap with index [param mipmap] is stored in the [member data] dictionary."
+msgstr "Visszaadja azt az eltolást, amelyen a kép [param mipmap] indexű mipmap-szintje a [member data] szótárban található."
+
+#: doc/classes/Image.xml
+msgid "Loads an image from file [param path]. See [url=$DOCS_URL/tutorials/assets_pipeline/importing_images.html#supported-image-formats]Supported image formats[/url] for a list of supported image formats and limitations.\n[b]Warning:[/b] This method should only be used in the editor or in cases when you need to load external images at run-time, such as images located at the [code]user://[/code] directory, and may not work in exported projects.\nSee also [ImageTexture] description for usage examples."
+msgstr "Betölti a képet a [param path] fájlból. A formátumok és korlátozások felsorolását lásd itt: [url=$DOCS_URL/tutorials/assets_pipeline/importing_images.html#supported-image-formats]Támogatott képformátumok[/url].\n[b]Figyelem:[/b] Ezt a metódust csak a szerkesztőben vagy futás közben külső képek, például a [code]user://[/code] mappában lévő fájlok betöltésére használd. Exportált projektekben előfordulhat, hogy nem működik.\nHasználati példákért lásd az [ImageTexture] leírását is."
+
+#: doc/classes/Image.xml
+msgid "Loads an image from the binary contents of a BMP file.\n[b]Note:[/b] Godot's BMP module doesn't support 16-bit per pixel images. Only 1-bit, 4-bit, 8-bit, 24-bit, and 32-bit per pixel images are supported.\n[b]Note:[/b] This method is only available in engine builds with the BMP module enabled. By default, the BMP module is enabled, but it can be disabled at build-time using the [code]module_bmp_enabled=no[/code] SCons option."
+msgstr "Betölti a képet egy BMP-fájl bináris tartalmából.\n[b]Megjegyzés:[/b] A Godot BMP-modulja nem támogatja a képpontonként 16 bites képeket. Csak a képpontonként 1, 4, 8, 24 vagy 32 bites képek támogatottak.\n[b]Megjegyzés:[/b] A metódus csak bekapcsolt BMP-modullal készült motor-összeállításokban érhető el. A modul alapértelmezés szerint be van kapcsolva, de fordításkor a [code]module_bmp_enabled=no[/code] SCons-beállítással kikapcsolható."
+
+#: doc/classes/Image.xml
+msgid "Loads an image from the binary contents of a [url=https://github.com/KhronosGroup/KTX-Software]KTX[/url] file. Unlike most image formats, KTX can store VRAM-compressed data and embed mipmaps.\n[b]Note:[/b] Godot's libktx implementation only supports 2D images. Cubemaps, texture arrays, and de-padding are not supported.\n[b]Note:[/b] This method is only available in engine builds with the KTX module enabled. By default, the KTX module is enabled, but it can be disabled at build-time using the [code]module_ktx_enabled=no[/code] SCons option."
+msgstr "Betölti a képet egy [url=https://github.com/KhronosGroup/KTX-Software]KTX[/url] fájl bináris tartalmából. A legtöbb képformátumtól eltérően a KTX VRAM-tömörített adatokat és beágyazott mipmap-szinteket is tárolhat.\n[b]Megjegyzés:[/b] A Godot libktx-megvalósítása csak 2D-s képeket támogat. A kockatérképek, a textúratömbök és a kitöltő bájtok eltávolítása nem támogatott.\n[b]Megjegyzés:[/b] A metódus csak bekapcsolt KTX-modullal készült motor-összeállításokban érhető el. A modul alapértelmezés szerint be van kapcsolva, de fordításkor a [code]module_ktx_enabled=no[/code] SCons-beállítással kikapcsolható."
+
+#: doc/classes/TreeItem.xml
+msgid "Moves this TreeItem right before the given [param item].\n[b]Note:[/b] You can't move to the root or move the root."
+msgstr "Közvetlenül a megadott [param item] elem elé mozgatja ezt a TreeItem elemet.\n[b]Megjegyzés:[/b] Az elemet nem mozgathatod a gyökér elé, és a gyökérelem sem mozgatható."
+
+#: doc/classes/Image.xml
+msgid "Loads an image from the UTF-8 binary contents of an [b]uncompressed[/b] SVG file ([b].svg[/b]).\n[b]Note:[/b] Beware when using compressed SVG files (like [b].svgz[/b]), they need to be [code]decompressed[/code] before loading.\n[b]Note:[/b] This method is only available in engine builds with the SVG module enabled. By default, the SVG module is enabled, but it can be disabled at build-time using the [code]module_svg_enabled=no[/code] SCons option."
+msgstr "Betölti a képet egy [b]tömörítetlen[/b] SVG-fájl ([b].svg[/b]) UTF-8 kódolású bináris tartalmából.\n[b]Megjegyzés:[/b] A tömörített SVG-fájlokat, például a [b].svgz[/b] fájlokat, betöltés előtt ki kell tömöríteni ([code]decompressed[/code]).\n[b]Megjegyzés:[/b] A metódus csak bekapcsolt SVG-modullal készült motor-összeállításokban érhető el. A modul alapértelmezés szerint be van kapcsolva, de fordításkor a [code]module_svg_enabled=no[/code] SCons-beállítással kikapcsolható."
+
+#: doc/classes/Image.xml
+msgid "Loads an image from the string contents of an SVG file ([b].svg[/b]).\n[b]Note:[/b] This method is only available in engine builds with the SVG module enabled. By default, the SVG module is enabled, but it can be disabled at build-time using the [code]module_svg_enabled=no[/code] SCons option."
+msgstr "Betölti a képet egy SVG-fájl ([b].svg[/b]) szöveges tartalmából.\n[b]Megjegyzés:[/b] A metódus csak bekapcsolt SVG-modullal készült motor-összeállításokban érhető el. A modul alapértelmezés szerint be van kapcsolva, de fordításkor a [code]module_svg_enabled=no[/code] SCons-beállítással kikapcsolható."
+
+#: doc/classes/Image.xml
+msgid "Converts the image's data to represent coordinates on a 3D plane. This is used when the image represents a normal map. A normal map can add lots of detail to a 3D surface without increasing the polygon count."
+msgstr "Átalakítja a képadatokat úgy, hogy egy háromdimenziós sík koordinátáit ábrázolják. Akkor használható, ha a kép normáltérkép. A normáltérkép a sokszögek számának növelése nélkül részletgazdagabbá tehet egy 3D-s felületet."
+
+#: doc/classes/Image.xml
+msgid "Resizes the image to the given [param width] and [param height]. New pixels are calculated using the [param interpolation] mode defined via [enum Interpolation] constants.\n[b]Note:[/b] If the image's format is [constant FORMAT_RGBA4444], [constant FORMAT_RGB565], or [constant FORMAT_RGBE9995], it will be temporarily converted to either [constant FORMAT_RGBA8] or [constant FORMAT_RGBAH]. This can affect the quality of the resized image."
+msgstr "A megadott [param width] szélességre és [param height] magasságra méretezi át a képet. Az új képpontokat az [enum Interpolation] konstansai közül választott [param interpolation] móddal számítja ki.\n[b]Megjegyzés:[/b] A [constant FORMAT_RGBA4444], [constant FORMAT_RGB565] és [constant FORMAT_RGBE9995] formátumú képeket átmenetileg [constant FORMAT_RGBA8] vagy [constant FORMAT_RGBAH] formátumba alakítja. Ez befolyásolhatja az átméretezett kép minőségét."
+
+#: doc/classes/Image.xml
+msgid "Rotates the image in the specified [param direction] by [code]90[/code] degrees. The width and height of the image must be greater than [code]1[/code]. If the width and height are not equal, the image will be resized."
+msgstr "A megadott [param direction] irányban [code]90[/code] fokkal elforgatja a képet. A kép szélességének és magasságának [code]1[/code] képpontnál nagyobbnak kell lennie. Ha a szélesség és a magasság eltér, a kép mérete az elforgatással megváltozik."
+
+#: doc/classes/Image.xml
+msgid "Rotates the image by [code]180[/code] degrees. The width and height of the image must be greater than [code]1[/code]."
+msgstr "[code]180[/code] fokkal elforgatja a képet. A kép szélességének és magasságának [code]1[/code] képpontnál nagyobbnak kell lennie."
+
+#: doc/classes/Image.xml
+msgid "Saves the image as a DDS (DirectDraw Surface) file to [param path]. DDS is a container format that can store textures in various compression formats, such as DXT1, DXT5, or BC7. This function will return [constant ERR_UNAVAILABLE] if Godot was compiled without the DDS module.\n[b]Note:[/b] The DDS module may be disabled in certain builds, which means [method save_dds] will return [constant ERR_UNAVAILABLE] when it is called from an exported project."
+msgstr "DDS (DirectDraw Surface) fájlba menti a képet a [param path] útvonalon. A DDS olyan tárolóformátum, amely többféle tömörítéssel, például DXT1, DXT5 vagy BC7 formátumban tárolhat textúrákat. Ha a Godot DDS-modul nélkül készült, a függvény [constant ERR_UNAVAILABLE] értéket ad vissza.\n[b]Megjegyzés:[/b] Egyes összeállításokban a DDS-modul ki lehet kapcsolva. Ilyen exportált projektben a [method save_dds] hívása [constant ERR_UNAVAILABLE] értéket ad vissza."
+
+#: doc/classes/Image.xml
+msgid "Saves the image as a DDS (DirectDraw Surface) file to a byte array. DDS is a container format that can store textures in various compression formats, such as DXT1, DXT5, or BC7. This function will return an empty byte array if Godot was compiled without the DDS module.\n[b]Note:[/b] The DDS module may be disabled in certain builds, which means [method save_dds_to_buffer] will return an empty byte array when it is called from an exported project."
+msgstr "DDS (DirectDraw Surface) formátumban bájttömbbe menti a képet. A DDS olyan tárolóformátum, amely többféle tömörítéssel, például DXT1, DXT5 vagy BC7 formátumban tárolhat textúrákat. Ha a Godot DDS-modul nélkül készült, a függvény üres bájttömböt ad vissza.\n[b]Megjegyzés:[/b] Egyes összeállításokban a DDS-modul ki lehet kapcsolva. Ilyen exportált projektben a [method save_dds_to_buffer] hívása üres bájttömböt ad vissza."
+
+#: doc/classes/Image.xml
+msgid "Saves the image as an EXR file to [param path]. If [param grayscale] is [code]true[/code] and the image has only one channel, it will be saved explicitly as monochrome rather than one red channel. Set [param color_image] to [code]true[/code] when saving a color image, such as a screenshot. Negative values will be included when [param color_image] is [code]false[/code], which may be useful for saving raw floating point data such as a lightmap that includes negative light information. Color component values in the resulting EXR file will not exceed [param max_linear_value] if [param max_linear_value] is not negative. This function will return [constant ERR_UNAVAILABLE] if Godot was compiled without the TinyEXR module.\nWhen saving screenshots of a project that uses HDR output, use [method Window.get_output_max_linear_value] for [param max_linear_value]."
+msgstr "EXR-fájlba menti a képet a [param path] útvonalon. Ha a [param grayscale] értéke [code]true[/code], és a képnek csak egy csatornája van, a kép szürkeárnyalatosként kerül a fájlba egyetlen vörös csatorna helyett. Színes kép, például képernyőkép mentésekor a [param color_image] értékét állítsd [code]true[/code] értékre. Ha a [param color_image] értéke [code]false[/code], a fájl a negatív értékeket is tárolja. Ez nyers lebegőpontos adatok, például negatív megvilágítási értékeket is tartalmazó fénytérkép mentéséhez hasznos. Ha a [param max_linear_value] nem negatív, az EXR-fájlban a színkomponensek legfeljebb a [param max_linear_value] értékét vehetik fel. Ha a Godot TinyEXR-modul nélkül készült, a függvény [constant ERR_UNAVAILABLE] értéket ad vissza.\nHDR-kimenetet használó projekt képernyőképeinél a [method Window.get_output_max_linear_value] visszatérési értékét add meg a [param max_linear_value] paraméternek."
+
+#: doc/classes/Image.xml
+msgid "Saves the image as an EXR file to a byte array. If [param grayscale] is [code]true[/code] and the image has only one channel, it will be saved explicitly as monochrome rather than one red channel. Set [param color_image] to [code]true[/code] when saving a color image, such as a screenshot. Negative values will be included when [param color_image] is [code]false[/code], which may be useful for saving raw floating point data such as a lightmap that includes negative light information. Color component values in the resulting EXR file will not exceed [param max_linear_value] if [param max_linear_value] is not negative. This function will return an empty byte array if Godot was compiled without the TinyEXR module.\nWhen saving screenshots of a project that uses HDR output, use [method Window.get_output_max_linear_value] for [param max_linear_value]."
+msgstr "EXR-formátumban bájttömbbe menti a képet. Ha a [param grayscale] értéke [code]true[/code], és a képnek csak egy csatornája van, a kép szürkeárnyalatosként kerül a kimenetbe egyetlen vörös csatorna helyett. Színes kép, például képernyőkép mentésekor a [param color_image] értékét állítsd [code]true[/code] értékre. Ha a [param color_image] értéke [code]false[/code], a kimenet a negatív értékeket is tárolja. Ez nyers lebegőpontos adatok, például negatív megvilágítási értékeket is tartalmazó fénytérkép mentéséhez hasznos. Ha a [param max_linear_value] nem negatív, az EXR-adatokban a színkomponensek legfeljebb a [param max_linear_value] értékét vehetik fel. Ha a Godot TinyEXR-modul nélkül készült, a függvény üres bájttömböt ad vissza.\nHDR-kimenetet használó projekt képernyőképeinél a [method Window.get_output_max_linear_value] visszatérési értékét add meg a [param max_linear_value] paraméternek."
+
+#: doc/classes/Image.xml
+msgid "Saves the image as a JPEG file to [param path] with the specified [param quality] between [code]0.01[/code] and [code]1.0[/code] (inclusive). Higher [param quality] values result in better-looking output at the cost of larger file sizes. Recommended [param quality] values are between [code]0.75[/code] and [code]0.90[/code]. Even at quality [code]1.00[/code], JPEG compression remains lossy.\n[b]Note:[/b] JPEG does not save an alpha channel. If the [Image] contains an alpha channel, the image will still be saved, but the resulting JPEG file won't contain the alpha channel."
+msgstr "JPEG-fájlba menti a képet a [param path] útvonalon. A [param quality] értéke [code]0.01[/code] és [code]1.0[/code] közé eshet, a határértékekkel együtt. Nagyobb [param quality] értéknél jobb lesz a képminőség, de nő a fájlméret. Az ajánlott [param quality] [code]0.75[/code] és [code]0.90[/code] közé esik. A JPEG-tömörítés [code]1.00[/code] minőségnél is veszteséges.\n[b]Megjegyzés:[/b] A JPEG nem tárol alfacsatornát. Ha az [Image] tartalmaz alfacsatornát, a kép menthető, de a JPEG-fájlba az alfacsatorna nem kerül bele."
+
+#: doc/classes/Image.xml
+msgid "Saves the image as a JPEG file to a byte array with the specified [param quality] between [code]0.01[/code] and [code]1.0[/code] (inclusive). Higher [param quality] values result in better-looking output at the cost of larger byte array sizes (and therefore memory usage). Recommended [param quality] values are between [code]0.75[/code] and [code]0.90[/code]. Even at quality [code]1.00[/code], JPEG compression remains lossy.\n[b]Note:[/b] JPEG does not save an alpha channel. If the [Image] contains an alpha channel, the image will still be saved, but the resulting byte array won't contain the alpha channel."
+msgstr "JPEG-formátumban bájttömbbe menti a képet. A [param quality] értéke [code]0.01[/code] és [code]1.0[/code] közé eshet, a határértékekkel együtt. Nagyobb [param quality] értéknél jobb lesz a képminőség, de a nagyobb bájttömb több memóriát foglal. Az ajánlott [param quality] [code]0.75[/code] és [code]0.90[/code] közé esik. A JPEG-tömörítés [code]1.00[/code] minőségnél is veszteséges.\n[b]Megjegyzés:[/b] A JPEG nem tárol alfacsatornát. Ha az [Image] tartalmaz alfacsatornát, a kép menthető, de a bájttömbbe az alfacsatorna nem kerül bele."
+
+#: doc/classes/Image.xml
+msgid "Saves the image as a WebP (Web Picture) file to the file at [param path]. By default it will save lossless. If [param lossy] is [code]true[/code], the image will be saved lossy, using the [param quality] setting between [code]0.0[/code] and [code]1.0[/code] (inclusive). Lossless WebP offers more efficient compression than PNG.\n[b]Note:[/b] The WebP format is limited to a size of 16383×16383 pixels, while PNG can save larger images."
+msgstr "WebP-fájlba menti a képet a [param path] útvonalon. Alapértelmezés szerint a tömörítés veszteségmentes. Ha a [param lossy] értéke [code]true[/code], veszteséges tömörítést használ a [param quality] beállítással, amely [code]0.0[/code] és [code]1.0[/code] közé eshet, a határértékekkel együtt. A veszteségmentes WebP hatékonyabban tömörít a PNG-nél.\n[b]Megjegyzés:[/b] A WebP formátum legfeljebb 16383×16383 képpontos képet tárolhat. A PNG ennél nagyobb képek mentésére is alkalmas."
+
+#: doc/classes/Image.xml
+msgid "Saves the image as a WebP (Web Picture) file to a byte array. By default it will save lossless. If [param lossy] is [code]true[/code], the image will be saved lossy, using the [param quality] setting between [code]0.0[/code] and [code]1.0[/code] (inclusive). Lossless WebP offers more efficient compression than PNG.\n[b]Note:[/b] The WebP format is limited to a size of 16383×16383 pixels, while PNG can save larger images."
+msgstr "WebP-formátumban bájttömbbe menti a képet. Alapértelmezés szerint a tömörítés veszteségmentes. Ha a [param lossy] értéke [code]true[/code], veszteséges tömörítést használ a [param quality] beállítással, amely [code]0.0[/code] és [code]1.0[/code] közé eshet, a határértékekkel együtt. A veszteségmentes WebP hatékonyabban tömörít a PNG-nél.\n[b]Megjegyzés:[/b] A WebP formátum legfeljebb 16383×16383 képpontos képet tárolhat. A PNG ennél nagyobb képek mentésére is alkalmas."
+
+#: doc/classes/Image.xml
+msgid "Sets the [Color] of the pixel at [code](x, y)[/code] to [param color].\n[codeblocks]\n[gdscript]\nvar img_width = 10\nvar img_height = 5\nvar img = Image.create(img_width, img_height, false, Image.FORMAT_RGBA8)\n\nimg.set_pixel(1, 2, Color.RED) # Sets the color at (1, 2) to red.\n[/gdscript]\n[csharp]\nint imgWidth = 10;\nint imgHeight = 5;\nvar img = Image.Create(imgWidth, imgHeight, false, Image.Format.Rgba8);\n\nimg.SetPixel(1, 2, Colors.Red); // Sets the color at (1, 2) to red.\n[/csharp]\n[/codeblocks]\nThis is the same as [method set_pixelv], but with a two integer arguments instead of a [Vector2i] argument.\n[b]Note:[/b] Depending on the image's format, the color set here may be clamped or lose precision. Do not assume the color returned by [method get_pixel] to be identical to the one set here; any comparisons will likely need to use an approximation like [method Color.is_equal_approx].\n[b]Note:[/b] On grayscale image formats, only the red channel of [param color] is used (and alpha if relevant). The green and blue channels are ignored."
+msgstr "A [code](x, y)[/code] helyen lévő képpont [Color] színét a [param color] értékre állítja.\n[codeblocks]\n[gdscript]\nvar img_width = 10\nvar img_height = 5\nvar img = Image.create(img_width, img_height, false, Image.FORMAT_RGBA8)\n\nimg.set_pixel(1, 2, Color.RED) # Sets the color at (1, 2) to red.\n[/gdscript]\n[csharp]\nint imgWidth = 10;\nint imgHeight = 5;\nvar img = Image.Create(imgWidth, imgHeight, false, Image.Format.Rgba8);\n\nimg.SetPixel(1, 2, Colors.Red); // Sets the color at (1, 2) to red.\n[/csharp]\n[/codeblocks]\nA [method set_pixelv] metódussal egyenértékű, de [Vector2i] argumentum helyett két egész számot vár.\n[b]Megjegyzés:[/b] A kép formátumától függően a beállított szín a megengedett tartományra korlátozódhat vagy veszíthet a pontosságából. A [method get_pixel] értéke eltérhet az itt beállított értéktől, ezért összehasonlításhoz célszerű közelítő ellenőrzést használni, például a [method Color.is_equal_approx] metódust.\n[b]Megjegyzés:[/b] Szürkeárnyalatos képformátumoknál a metódus csak a [param color] vörös csatornáját használja, és szükség esetén az alfát. A zöld és a kék csatornát figyelmen kívül hagyja."
+
+#: doc/classes/Image.xml
+msgid "Sets the [Color] of the pixel at [param point] to [param color].\n[codeblocks]\n[gdscript]\nvar img_width = 10\nvar img_height = 5\nvar img = Image.create(img_width, img_height, false, Image.FORMAT_RGBA8)\n\nimg.set_pixelv(Vector2i(1, 2), Color.RED) # Sets the color at (1, 2) to red.\n[/gdscript]\n[csharp]\nint imgWidth = 10;\nint imgHeight = 5;\nvar img = Image.Create(imgWidth, imgHeight, false, Image.Format.Rgba8);\n\nimg.SetPixelv(new Vector2I(1, 2), Colors.Red); // Sets the color at (1, 2) to red.\n[/csharp]\n[/codeblocks]\nThis is the same as [method set_pixel], but with a [Vector2i] argument instead of two integer arguments.\n[b]Note:[/b] Depending on the image's format, the color set here may be clamped or lose precision. Do not assume the color returned by [method get_pixelv] to be identical to the one set here; any comparisons will likely need to use an approximation like [method Color.is_equal_approx].\n[b]Note:[/b] On grayscale image formats, only the red channel of [param color] is used (and alpha if relevant). The green and blue channels are ignored."
+msgstr "A [param point] helyen lévő képpont [Color] színét a [param color] értékre állítja.\n[codeblocks]\n[gdscript]\nvar img_width = 10\nvar img_height = 5\nvar img = Image.create(img_width, img_height, false, Image.FORMAT_RGBA8)\n\nimg.set_pixelv(Vector2i(1, 2), Color.RED) # Sets the color at (1, 2) to red.\n[/gdscript]\n[csharp]\nint imgWidth = 10;\nint imgHeight = 5;\nvar img = Image.Create(imgWidth, imgHeight, false, Image.Format.Rgba8);\n\nimg.SetPixelv(new Vector2I(1, 2), Colors.Red); // Sets the color at (1, 2) to red.\n[/csharp]\n[/codeblocks]\nA [method set_pixel] metódussal egyenértékű, de két egész szám helyett egy [Vector2i] argumentumot vár.\n[b]Megjegyzés:[/b] A kép formátumától függően a beállított szín a megengedett tartományra korlátozódhat vagy veszíthet a pontosságából. A [method get_pixelv] értéke eltérhet az itt beállított értéktől, ezért összehasonlításhoz célszerű közelítő ellenőrzést használni, például a [method Color.is_equal_approx] metódust.\n[b]Megjegyzés:[/b] Szürkeárnyalatos képformátumoknál a metódus csak a [param color] vörös csatornáját használja, és szükség esetén az alfát. A zöld és a kék csatornát figyelmen kívül hagyja."
+
+#: doc/classes/Image.xml
+msgid "Converts the raw data from nonlinear sRGB encoding to linear encoding using a lookup table. Only works on images with [constant FORMAT_RGB8] or [constant FORMAT_RGBA8] formats.\n[b]Note:[/b] The 8-bit formats required by this method are not suitable for storing linearly encoded values; a significant amount of color information will be lost in darker values. To maintain image quality, this method should not be used."
+msgstr "Egy keresőtáblázattal nemlineáris sRGB-kódolásról lineáris kódolásra alakítja át a nyers adatokat. Csak [constant FORMAT_RGB8] vagy [constant FORMAT_RGBA8] formátumú képeken működik.\n[b]Megjegyzés:[/b] A metódushoz szükséges 8 bites formátumok nem alkalmasak lineáris értékek tárolására. A sötétebb tartományban jelentős színinformáció vész el. Ha meg szeretnéd őrizni a kép minőségét, kerüld ezt a metódust."
+
+#: doc/classes/Image.xml
+msgid "Texture format with a single 8-bit depth representing luminance."
+msgstr "A világosságot egyetlen 8 bites komponensben tároló textúraformátum."
+
+#: doc/classes/Image.xml
+msgid "The [url=https://en.wikipedia.org/wiki/S3_Texture_Compression]S3TC[/url] texture format that uses Block Compression 2, and color data is interpreted as not having been premultiplied by alpha. Well suited for images with sharp alpha transitions between translucent and opaque areas.\n[b]Note:[/b] When creating an [ImageTexture], a nonlinear sRGB to linear encoding conversion is performed."
+msgstr "A 2-es blokktömörítést használó [url=https://en.wikipedia.org/wiki/S3_Texture_Compression]S3TC[/url] textúraformátum. A színadatokat a formátum úgy értelmezi, hogy nincsenek előre megszorozva az alfával. Jól használható olyan képekhez, ahol éles az átmenet az áttetsző és az átlátszatlan területek között.\n[b]Megjegyzés:[/b] [ImageTexture] létrehozásakor a motor nemlineáris sRGB-kódolásról lineáris kódolásra vált."
+
+#: doc/classes/Image.xml
+msgid "The [url=https://en.wikipedia.org/wiki/S3_Texture_Compression]S3TC[/url] texture format also known as Block Compression 3 or BC3 that contains 64 bits of alpha channel data followed by 64 bits of DXT1-encoded color data. Color data is not premultiplied by alpha, same as DXT3. DXT5 generally produces superior results for transparent gradients compared to DXT3.\n[b]Note:[/b] When creating an [ImageTexture], a nonlinear sRGB to linear encoding conversion is performed."
+msgstr "A [url=https://en.wikipedia.org/wiki/S3_Texture_Compression]S3TC[/url] textúraformátum 3-as blokktömörítéssel (BC3). 64 bitnyi alfacsatorna-adatot tartalmaz, amelyet 64 bitnyi DXT1-kódolású színadat követ. A DXT3-hoz hasonlóan a színadatok nincsenek előre megszorozva az alfával. A DXT5 általában jobb minőséget ad az átlátszósági átmeneteknél, mint a DXT3.\n[b]Megjegyzés:[/b] [ImageTexture] létrehozásakor a motor nemlineáris sRGB-kódolásról lineáris kódolásra vált."
+
+#: doc/classes/Image.xml
+msgid "[url=https://en.wikipedia.org/wiki/Ericsson_Texture_Compression#ETC2_and_EAC]Ericsson Texture Compression format 2[/url] ([code]RGB8[/code] variant), which is a follow-up of ETC1 and compresses RGB888 data.\n[b]Note:[/b] When creating an [ImageTexture], a nonlinear sRGB to linear encoding conversion is performed."
+msgstr "[url=https://en.wikipedia.org/wiki/Ericsson_Texture_Compression#ETC2_and_EAC]Ericsson Texture Compression 2[/url] formátum ([code]RGB8[/code] változat). Az ETC1 utódja, és RGB888 adatokat tömörít.\n[b]Megjegyzés:[/b] [ImageTexture] létrehozásakor a motor nemlineáris sRGB-kódolásról lineáris kódolásra vált."
+
+#: doc/classes/Image.xml
+msgid "[url=https://en.wikipedia.org/wiki/Ericsson_Texture_Compression#ETC2_and_EAC]Ericsson Texture Compression format 2[/url] ([code]RGBA8[/code]variant), which compresses RGBA8888 data with full alpha support.\n[b]Note:[/b] When creating an [ImageTexture], a nonlinear sRGB to linear encoding conversion is performed."
+msgstr "[url=https://en.wikipedia.org/wiki/Ericsson_Texture_Compression#ETC2_and_EAC]Ericsson Texture Compression 2[/url] formátum ([code]RGBA8[/code] változat). Teljes alfacsatorna-támogatással tömöríti az RGBA8888 adatokat.\n[b]Megjegyzés:[/b] [ImageTexture] létrehozásakor a motor nemlineáris sRGB-kódolásról lineáris kódolásra vált."
+
+#: doc/classes/Image.xml
+msgid "[url=https://en.wikipedia.org/wiki/Ericsson_Texture_Compression#ETC2_and_EAC]Ericsson Texture Compression format 2[/url] ([code]RGB8_PUNCHTHROUGH_ALPHA1[/code] variant), which compresses RGBA data to make alpha either fully transparent or fully opaque.\n[b]Note:[/b] When creating an [ImageTexture], a nonlinear sRGB to linear encoding conversion is performed."
+msgstr "[url=https://en.wikipedia.org/wiki/Ericsson_Texture_Compression#ETC2_and_EAC]Ericsson Texture Compression 2[/url] formátum ([code]RGB8_PUNCHTHROUGH_ALPHA1[/code] változat). Az RGBA-adatokat úgy tömöríti, hogy minden képpont vagy teljesen átlátszó, vagy teljesen átlátszatlan legyen.\n[b]Megjegyzés:[/b] [ImageTexture] létrehozásakor a motor nemlineáris sRGB-kódolásról lineáris kódolásra vált."
+
+#: doc/classes/Image.xml
+msgid "[url=https://en.wikipedia.org/wiki/Ericsson_Texture_Compression#ETC2_and_EAC]Ericsson Texture Compression format 2[/url] ([code]RGBA8[/code] variant), which compresses RA data and interprets it as two channels (red and green). See also [constant FORMAT_ETC2_RGBA8]."
+msgstr "[url=https://en.wikipedia.org/wiki/Ericsson_Texture_Compression#ETC2_and_EAC]Ericsson Texture Compression 2[/url] formátum ([code]RGBA8[/code] változat). Az RA-adatokat tömöríti, majd két csatornaként, vörösként és zöldként értelmezi őket. Lásd még a [constant FORMAT_ETC2_RGBA8] konstanst."
+
+#: doc/classes/Image.xml
+msgid "The [url=https://en.wikipedia.org/wiki/S3_Texture_Compression]S3TC[/url] texture format also known as Block Compression 3 or BC3, which compresses RA data and interprets it as two channels (red and green). See also [constant FORMAT_DXT5]."
+msgstr "A [url=https://en.wikipedia.org/wiki/S3_Texture_Compression]S3TC[/url] textúraformátum 3-as blokktömörítéssel (BC3). Az RA-adatokat tömöríti, majd két csatornaként, vörösként és zöldként értelmezi őket. Lásd még a [constant FORMAT_DXT5] konstanst."
+
+#: doc/classes/Image.xml
+msgid "OpenGL texture format [code]GL_R16[/code] where there's one component, a 16-bit unsigned normalized integer value. Since the value is normalized, each component is clamped between [code]0.0[/code] and [code]1.0[/code] (inclusive).\n[b]Note:[/b] Due to limited hardware support, it is mainly recommended to be used on desktop or console devices. It may be unsupported on mobile or web, and will consequently be converted to [constant FORMAT_RF]."
+msgstr "[code]GL_R16[/code] OpenGL-textúraformátum egy komponenssel, amely 16 bites, előjel nélküli, normalizált egész érték. A normalizálás miatt a komponens a [code]0.0[/code] és [code]1.0[/code] közötti zárt tartományra korlátozódik.\n[b]Megjegyzés:[/b] A korlátozott hardvertámogatás miatt főként asztali gépen és konzolon ajánlott. Mobilon vagy weben előfordulhat, hogy nem támogatott. Ilyenkor a motor [constant FORMAT_RF] formátumba alakítja."
+
+#: doc/classes/Image.xml
+msgid "OpenGL texture format [code]GL_RG16[/code] where there are two components, each a 16-bit unsigned normalized integer value. Since the value is normalized, each component is clamped between [code]0.0[/code] and [code]1.0[/code] (inclusive).\n[b]Note:[/b] Due to limited hardware support, it is mainly recommended to be used on desktop or console devices. It may be unsupported on mobile or web, and will consequently be converted to [constant FORMAT_RGF]."
+msgstr "[code]GL_RG16[/code] OpenGL-textúraformátum két komponenssel, amelyek egyenként 16 bites, előjel nélküli, normalizált egész értékek. A normalizálás miatt minden komponens a [code]0.0[/code] és [code]1.0[/code] közötti zárt tartományra korlátozódik.\n[b]Megjegyzés:[/b] A korlátozott hardvertámogatás miatt főként asztali gépen és konzolon ajánlott. Mobilon vagy weben előfordulhat, hogy nem támogatott. Ilyenkor a motor [constant FORMAT_RGF] formátumba alakítja."
+
+#: doc/classes/Image.xml
+msgid "OpenGL texture format [code]GL_RGB16[/code] where there are three components, each a 16-bit unsigned normalized integer value. Since the value is normalized, each component is clamped between [code]0.0[/code] and [code]1.0[/code] (inclusive).\n[b]Note:[/b] Due to limited hardware support, it is mainly recommended to be used on desktop or console devices. It may be unsupported on mobile or web, and will consequently be converted to [constant FORMAT_RGBF]."
+msgstr "[code]GL_RGB16[/code] OpenGL-textúraformátum három komponenssel, amelyek egyenként 16 bites, előjel nélküli, normalizált egész értékek. A normalizálás miatt minden komponens a [code]0.0[/code] és [code]1.0[/code] közötti zárt tartományra korlátozódik.\n[b]Megjegyzés:[/b] A korlátozott hardvertámogatás miatt főként asztali gépen és konzolon ajánlott. Mobilon vagy weben előfordulhat, hogy nem támogatott. Ilyenkor a motor [constant FORMAT_RGBF] formátumba alakítja."
+
+#: doc/classes/Image.xml
+msgid "OpenGL texture format [code]GL_RGBA16[/code] where there are four components, each a 16-bit unsigned normalized integer value. Since the value is normalized, each component is clamped between [code]0.0[/code] and [code]1.0[/code] (inclusive).\n[b]Note:[/b] Due to limited hardware support, it is mainly recommended to be used on desktop or console devices. It may be unsupported on mobile or web, and will consequently be converted to [constant FORMAT_RGBAF]."
+msgstr "[code]GL_RGBA16[/code] OpenGL-textúraformátum négy komponenssel, amelyek egyenként 16 bites, előjel nélküli, normalizált egész értékek. A normalizálás miatt minden komponens a [code]0.0[/code] és [code]1.0[/code] közötti zárt tartományra korlátozódik.\n[b]Megjegyzés:[/b] A korlátozott hardvertámogatás miatt főként asztali gépen és konzolon ajánlott. Mobilon vagy weben előfordulhat, hogy nem támogatott. Ilyenkor a motor [constant FORMAT_RGBAF] formátumba alakítja."
+
+#: doc/classes/Image.xml
+msgid "OpenGL texture format [code]GL_R16UI[/code] where there's one component, a 16-bit unsigned integer value. Each component is clamped between [code]0[/code] and [code]65535[/code] (inclusive).\n[b]Note:[/b] When used in a shader, the texture requires usage of [code]usampler[/code] samplers. Additionally, it only supports nearest-neighbor filtering under the Compatibility renderer.\n[b]Note:[/b] When sampling using [method Image.get_pixel], returned [Color]s have to be divided by [code]65535[/code] to get the correct color value."
+msgstr "[code]GL_R16UI[/code] OpenGL-textúraformátum egy 16 bites, előjel nélküli egész komponenssel. A komponens a [code]0[/code] és [code]65535[/code] közötti zárt tartományra korlátozódik.\n[b]Megjegyzés:[/b] Árnyalóprogramban a textúrához [code]usampler[/code] mintavételező szükséges. A Compatibility renderelő csak a legközelebbi szomszéd szerinti szűrést támogatja ennél a formátumnál.\n[b]Megjegyzés:[/b] A [method Image.get_pixel] metódussal végzett mintavételkor a visszaadott [Color] értékeket el kell osztani [code]65535[/code] értékével a helyes színértékhez."
+
+#: doc/classes/Image.xml
+msgid "OpenGL texture format [code]GL_RG16UI[/code] where there are two components, each a 16-bit unsigned integer value. Each component is clamped between [code]0[/code] and [code]65535[/code] (inclusive).\n[b]Note:[/b] When used in a shader, the texture requires usage of [code]usampler[/code] samplers. Additionally, it only supports nearest-neighbor filtering under the Compatibility renderer.\n[b]Note:[/b] When sampling using [method Image.get_pixel], returned [Color]s have to be divided by [code]65535[/code] to get the correct color value."
+msgstr "[code]GL_RG16UI[/code] OpenGL-textúraformátum két 16 bites, előjel nélküli egész komponenssel. Minden komponens a [code]0[/code] és [code]65535[/code] közötti zárt tartományra korlátozódik.\n[b]Megjegyzés:[/b] Árnyalóprogramban a textúrához [code]usampler[/code] mintavételező szükséges. A Compatibility renderelő csak a legközelebbi szomszéd szerinti szűrést támogatja ennél a formátumnál.\n[b]Megjegyzés:[/b] A [method Image.get_pixel] metódussal végzett mintavételkor a visszaadott [Color] értékeket el kell osztani [code]65535[/code] értékével a helyes színértékhez."
+
+#: doc/classes/Image.xml
+msgid "OpenGL texture format [code]GL_RGB16UI[/code] where there are three components, each a 16-bit unsigned integer value. Each component is clamped between [code]0[/code] and [code]65535[/code] (inclusive).\n[b]Note:[/b] When used in a shader, the texture requires usage of [code]usampler[/code] samplers. Additionally, it only supports nearest-neighbor filtering under the Compatibility renderer.\n[b]Note:[/b] When sampling using [method Image.get_pixel], returned [Color]s have to be divided by [code]65535[/code] to get the correct color value."
+msgstr "[code]GL_RGB16UI[/code] OpenGL-textúraformátum három 16 bites, előjel nélküli egész komponenssel. Minden komponens a [code]0[/code] és [code]65535[/code] közötti zárt tartományra korlátozódik.\n[b]Megjegyzés:[/b] Árnyalóprogramban a textúrához [code]usampler[/code] mintavételező szükséges. A Compatibility renderelő csak a legközelebbi szomszéd szerinti szűrést támogatja ennél a formátumnál.\n[b]Megjegyzés:[/b] A [method Image.get_pixel] metódussal végzett mintavételkor a visszaadott [Color] értékeket el kell osztani [code]65535[/code] értékével a helyes színértékhez."
+
+#: doc/classes/Image.xml
+msgid "OpenGL texture format [code]GL_RGBA16UI[/code] where there are four components, each a 16-bit unsigned integer value. Each component is clamped between [code]0[/code] and [code]65535[/code] (inclusive).\n[b]Note:[/b] When used in a shader, the texture requires usage of [code]usampler[/code] samplers. Additionally, it only supports nearest-neighbor filtering under the Compatibility renderer.\n[b]Note:[/b] When sampling using [method Image.get_pixel], returned [Color]s have to be divided by [code]65535[/code] to get the correct color value."
+msgstr "[code]GL_RGBA16UI[/code] OpenGL-textúraformátum négy 16 bites, előjel nélküli egész komponenssel. Minden komponens a [code]0[/code] és [code]65535[/code] közötti zárt tartományra korlátozódik.\n[b]Megjegyzés:[/b] Árnyalóprogramban a textúrához [code]usampler[/code] mintavételező szükséges. A Compatibility renderelő csak a legközelebbi szomszéd szerinti szűrést támogatja ennél a formátumnál.\n[b]Megjegyzés:[/b] A [method Image.get_pixel] metódussal végzett mintavételkor a visszaadott [Color] értékeket el kell osztani [code]65535[/code] értékével a helyes színértékhez."
+
+#: doc/classes/Image.xml
+msgid "Represents the size of the [enum Format] enum."
+msgstr "A [enum Format] felsorolás méretét jelöli."
+
+#: doc/classes/Image.xml
+msgid "Use S3TC compression."
+msgstr "S3TC-tömörítést használ."
+
+#: doc/classes/Image.xml
+msgid "Use ETC compression."
+msgstr "ETC-tömörítést használ."
+
+#: doc/classes/Image.xml
+msgid "Use ETC2 compression."
+msgstr "ETC2-tömörítést használ."
+
+#: doc/classes/Image.xml
+msgid "Use BPTC compression."
+msgstr "BPTC-tömörítést használ."
+
+#: doc/classes/Image.xml
+msgid "Use ASTC compression."
+msgstr "ASTC-tömörítést használ."
+
+#: doc/classes/Image.xml
+msgid "Represents the size of the [enum CompressMode] enum."
+msgstr "A [enum CompressMode] felsorolás méretét jelöli."
+
+#: doc/classes/Image.xml
+msgid "Source texture (before compression) is a regular texture. Default for all textures."
+msgstr "A forrástextúra tömörítés előtt hagyományos textúra. Ez minden textúra alapértelmezett beállítása."
+
+#: doc/classes/Image.xml
+msgid "Hint to indicate that the high quality 4×4 ASTC compression format should be used."
+msgstr "Jelzés a jobb minőségű, 4×4-es ASTC-tömörítés használatához."
+
+#: doc/classes/Image.xml
+msgid "Hint to indicate that the low quality 8×8 ASTC compression format should be used."
+msgstr "Jelzés a gyengébb minőségű, 8×8-as ASTC-tömörítés használatához."
+
+#: doc/classes/ImageTexture.xml
+msgid "A [Texture2D] based on an [Image]."
+msgstr "[Image] képadatokon alapuló [Texture2D]."
+
+#: doc/classes/ImageTexture.xml
+msgid "A [Texture2D] based on an [Image]. For an image to be displayed, an [ImageTexture] has to be created from it using the [method create_from_image] method:\n[codeblock]\nvar image = Image.load_from_file(\"res://icon.svg\")\nvar texture = ImageTexture.create_from_image(image)\n$Sprite2D.texture = texture\n[/codeblock]\nThis way, textures can be created at run-time by loading images both from within the editor and externally.\n[b]Warning:[/b] Prefer to load imported textures with [method @GDScript.load] over loading them from within the filesystem dynamically with [method Image.load], as it may not work in exported projects:\n[codeblock]\nvar texture = load(\"res://icon.svg\")\n$Sprite2D.texture = texture\n[/codeblock]\nThis is because images have to be imported as a [CompressedTexture2D] first to be loaded with [method @GDScript.load]. If you'd still like to load an image file just like any other [Resource], import it as an [Image] resource instead, and then load it normally using the [method @GDScript.load] method.\n[b]Note:[/b] The image can be retrieved from an imported texture using the [method Texture2D.get_image] method, which returns a copy of the image:\n[codeblock]\nvar texture = load(\"res://icon.svg\")\nvar image = texture.get_image()\n[/codeblock]\nAn [ImageTexture] is not meant to be operated from within the editor interface directly, and is mostly useful for rendering images on screen dynamically via code. If you need to generate images procedurally from within the editor, consider saving and importing images as custom texture resources implementing a new [EditorImportPlugin].\n[b]Note:[/b] The maximum texture size is 16384×16384 pixels due to graphics hardware limitations."
+msgstr "[Image] képadatokon alapuló [Texture2D]. A kép megjelenítéséhez a [method create_from_image] metódussal készíts belőle [ImageTexture] erőforrást.\n[codeblock]\nvar image = Image.load_from_file(\"res://icon.svg\")\nvar texture = ImageTexture.create_from_image(image)\n$Sprite2D.texture = texture\n[/codeblock]\nÍgy futás közben a szerkesztőből származó és a külső képfájlokból is készíthetsz textúrát.\n[b]Figyelem:[/b] Az importált textúrákat célszerű a [method @GDScript.load] metódussal betölteni. A fájlrendszerből történő dinamikus betöltés a [method Image.load] metódussal exportált projektben meghiúsulhat.\n[codeblock]\nvar texture = load(\"res://icon.svg\")\n$Sprite2D.texture = texture\n[/codeblock]\nA [method @GDScript.load] használatához a képeket előbb [CompressedTexture2D] erőforrásként kell importálni. Ha egy képfájlt más [Resource] erőforrásokhoz hasonlóan szeretnél betölteni, importáld [Image] erőforrásként, majd töltsd be a szokásos módon a [method @GDScript.load] metódussal.\n[b]Megjegyzés:[/b] Az importált textúra képét a [method Texture2D.get_image] metódussal kérheted le, amely másolatot ad vissza.\n[codeblock]\nvar texture = load(\"res://icon.svg\")\nvar image = texture.get_image()\n[/codeblock]\nAz [ImageTexture] elsősorban képek kódból történő, dinamikus megjelenítésére szolgál. Ha a szerkesztőben szeretnél képeket eljárásból előállítani, a mentésükhöz és importálásukhoz készíthetsz egyéni textúra-erőforrást egy új [EditorImportPlugin] megvalósításával.\n[b]Megjegyzés:[/b] A grafikus hardver korlátai miatt a legnagyobb textúraméret 16384×16384 képpont."
+
+#: doc/classes/ImageTexture.xml
+msgid "Creates a new [ImageTexture] and initializes it by allocating and setting the data from an [Image]."
+msgstr "Létrehoz egy új [ImageTexture] erőforrást, lefoglalja a szükséges memóriát, majd feltölti az [Image] adataival."
+
+#: doc/classes/ImageTexture.xml
+msgid "Replaces the texture's data with a new [Image]. This will re-allocate new memory for the texture.\nIf you want to update the image, but don't need to change its parameters (format, size), use [method update] instead for better performance."
+msgstr "A textúra adatait egy új [Image] adataira cseréli. A művelet újra lefoglalja a textúra memóriáját.\nHa csak a képadatokat frissíted, és a formátumot vagy a méretet nem kell megváltoztatni, jobb teljesítményért használd az [method update] metódust."
+
+#: doc/classes/ImageTexture.xml
+msgid "Resizes the texture to the specified dimensions."
+msgstr "A megadott méretre állítja a textúrát."
+
+#: doc/classes/ImageTexture.xml
+msgid "Replaces the texture's data with a new [Image].\n[b]Note:[/b] The texture has to be created using [method create_from_image] or initialized first with the [method set_image] method before it can be updated. The new image dimensions, format, and mipmaps configuration should match the existing texture's image configuration.\nUse this method over [method set_image] if you need to update the texture frequently, which is faster than allocating additional memory for a new texture each time."
+msgstr "A textúra adatait egy új [Image] adataira cseréli.\n[b]Megjegyzés:[/b] Frissítés előtt a textúrát a [method create_from_image] metódussal létre kell hozni, vagy a [method set_image] metódussal inicializálni kell. Az új kép méretének, formátumának és mipmap-beállításainak egyezniük kell a meglévő textúra képének beállításaival.\nGyakori frissítéshez ezt a metódust használd a [method set_image] helyett. Gyorsabb, mert nem kell minden alkalommal új memóriát lefoglalni a textúrához."
