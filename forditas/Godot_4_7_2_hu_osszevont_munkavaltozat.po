@@ -62742,3 +62742,203 @@ msgstr "Úgy görgeti a nézetet, hogy a [param line] legyen a legfelső sor."
 #: doc/classes/RichTextLabel.xml
 msgid "Scrolls the window's top line to match first line of the [param paragraph]."
 msgstr "Úgy görgeti a nézetet, hogy a [param paragraph] bekezdés első sora kerüljön legfelül."
+
+#: doc/classes/RichTextLabel.xml
+msgid "Scrolls to the beginning of the current selection."
+msgstr "Az aktuális kijelölés elejére görget."
+
+#: doc/classes/RichTextLabel.xml
+msgid "Select all the text.\nIf [member selection_enabled] is [code]false[/code], no selection will occur."
+msgstr "Kijelöli a teljes szöveget.\nHa a [member selection_enabled] értéke [code]false[/code], a metódus nem jelöl ki semmit."
+
+#: doc/classes/RichTextLabel.xml
+msgid "Sets color of a table cell border."
+msgstr "Beállítja a táblázatcella keretének színét."
+
+#: doc/classes/RichTextLabel.xml
+msgid "Sets inner padding of a table cell."
+msgstr "Beállítja a táblázatcella belső margóját."
+
+#: doc/classes/RichTextLabel.xml
+msgid "Sets color of a table cell. Separate colors for alternating rows can be specified."
+msgstr "Beállítja a táblázatcella háttérszínét. A váltakozó sorokhoz külön színek adhatók meg."
+
+#: doc/classes/RichTextLabel.xml
+msgid "Sets minimum and maximum size overrides for a table cell."
+msgstr "Felülbírálja a táblázatcella minimális és maximális méretét."
+
+#: doc/classes/RichTextLabel.xml
+msgid "Sets table column name for assistive apps."
+msgstr "Beállítja a táblázatoszlop nevét a kisegítő alkalmazások számára."
+
+#: doc/classes/RichTextLabel.xml
+msgid "Updates the existing images with the key [param key]. Only properties specified by [param mask] bits are updated. See [method add_image]."
+msgstr "Frissíti a [param key] kulcshoz tartozó meglévő képeket. Csak a [param mask] megfelelő bitjeivel megjelölt tulajdonságok frissülnek. Lásd az [method add_image] metódust."
+
+#: doc/classes/RichTextLabel.xml
+msgid "If [code]true[/code], the label uses BBCode formatting.\n[b]Note:[/b] This only affects the contents of [member text], not the tag stack."
+msgstr "Ha az érték [code]true[/code], a címke BBCode-formázást használ.\n[b]Megjegyzés:[/b] Ez csak a [member text] tartalmára vonatkozik, a címkeveremre nincs hatása."
+
+#: doc/classes/RichTextLabel.xml
+msgid "The currently installed custom effects. This is an array of [RichTextEffect]s.\nTo add a custom effect, it's more convenient to use [method install_effect]."
+msgstr "A jelenleg telepített egyéni effektusok [RichTextEffect] elemekből álló tömbje.\nEgyéni effektust kényelmesebben az [method install_effect] metódussal adhatsz hozzá."
+
+#: doc/classes/RichTextLabel.xml
+msgid "If [code]true[/code], the label underlines meta tags such as [code skip-lint][url]{text}[/url][/code]. These tags can call a function when clicked if [signal meta_clicked] is connected to a function."
+msgstr "Ha az érték [code]true[/code], a címke aláhúzza a metacímkéket, például a [code skip-lint][url]{text}[/url][/code] címkét. Ha a [signal meta_clicked] jel egy függvényhez van kapcsolva, a címkére kattintás meghívhatja a függvényt."
+
+#: doc/classes/RichTextLabel.xml
+msgid "The delay after which the loading progress bar is displayed, in milliseconds. Set to [code]-1[/code] to disable progress bar entirely.\n[b]Note:[/b] Progress bar is displayed only if [member threaded] is enabled."
+msgstr "A betöltési folyamatjelző megjelenéséig eltelt idő ezredmásodpercben. [code]-1[/code] értékkel teljesen kikapcsolható a folyamatjelző.\n[b]Megjegyzés:[/b] A folyamatjelző csak akkor jelenik meg, ha a [member threaded] engedélyezve van."
+
+#: doc/classes/RichTextLabel.xml
+msgid "If [code]true[/code], the scrollbar is visible. Setting this to [code]false[/code] does not block scrolling completely. See [method scroll_to_line]."
+msgstr "Ha az érték [code]true[/code], a görgetősáv látható. A [code]false[/code] érték a görgetést nem tiltja le teljesen. Lásd a [method scroll_to_line] metódust."
+
+#: doc/classes/RichTextLabel.xml
+msgid "If [code]true[/code], the window scrolls down to display new content automatically."
+msgstr "Ha az érték [code]true[/code], a nézet automatikusan lefelé görget, hogy megjelenítse az új tartalmat."
+
+#: doc/classes/RichTextLabel.xml
+msgid "If [code]true[/code], the window scrolls to display the last visible line when [member visible_characters] or [member visible_ratio] is changed."
+msgstr "Ha az érték [code]true[/code], a nézet az utolsó látható sorhoz görget, amikor megváltozik a [member visible_characters] vagy a [member visible_ratio] értéke."
+
+#: doc/classes/RichTextLabel.xml
+msgid "If [code]true[/code], the label allows text selection."
+msgstr "Ha az érték [code]true[/code], a címke szövege kijelölhető."
+
+#: doc/classes/RichTextLabel.xml
+msgid "The number of spaces associated with a single tab length. Does not affect [code]\\t[/code] in text tags, only indent tags."
+msgstr "Egy tabulátornyi behúzás szélessége szóközökben megadva. Ez csak a behúzáscímkékre vonatkozik. A szövegcímkékben lévő [code]\\t[/code] karakterekre nincs hatása."
+
+#: doc/classes/RichTextLabel.xml
+msgid "If [code]true[/code], text processing is done in a background thread."
+msgstr "Ha az érték [code]true[/code], a motor háttérszálon dolgozza fel a szöveget."
+
+#: doc/classes/RichTextLabel.xml
+msgid "Triggered when the document is fully loaded.\n[b]Note:[/b] This can happen before the text is processed for drawing. Scrolling values may not be valid until the document is drawn for the first time after this signal."
+msgstr "Akkor bocsátja ki, amikor a dokumentum teljesen betöltődött.\n[b]Megjegyzés:[/b] Ez megtörténhet, mielőtt a motor előkészíti a szöveget a kirajzoláshoz. A görgetési értékek a jel után következő első kirajzolásig pontatlanok lehetnek."
+
+#: doc/classes/RichTextLabel.xml
+msgid "Triggers when the mouse exits a meta tag."
+msgstr "Akkor bocsátja ki, amikor az egérmutató elhagy egy metacímkét."
+
+#: doc/classes/RichTextLabel.xml
+msgid "Triggers when the mouse enters a meta tag."
+msgstr "Akkor bocsátja ki, amikor az egérmutató egy metacímke fölé kerül."
+
+#: doc/classes/LabelSettings.xml
+msgid "Provides common settings to customize the text in a [Label]."
+msgstr "Gyakori beállítások a [Label] szövegének testreszabásához."
+
+#: doc/classes/LabelSettings.xml
+msgid "[LabelSettings] is a resource that provides common settings to customize the text in a [Label]. It will take priority over the properties defined in [member Control.theme]. The resource can be shared between multiple labels and changed on the fly, so it's convenient and flexible way to setup text style."
+msgstr "A [LabelSettings] a [Label] szövegének testreszabásához kínál gyakori beállításokat. Az erőforrás elsőbbséget élvez a [member Control.theme] tulajdonságban megadott beállításokkal szemben. Több címke is használhatja ugyanazt az erőforrást, amely futás közben is módosítható, így a szöveg megjelenése könnyen beállítható."
+
+#: doc/classes/LabelSettings.xml
+msgid "Adds a new stacked outline to the label at the given [param index]. If [param index] is [code]-1[/code], the new stacked outline will be added at the end of the list."
+msgstr "Új körvonalréteget ad a címkéhez a megadott [param index] helyen. Ha a [param index] értéke [code]-1[/code], az új réteg a lista végére kerül."
+
+#: doc/classes/LabelSettings.xml
+msgid "Adds a new stacked shadow to the label at the given [param index]. If [param index] is [code]-1[/code], the new stacked shadow will be added at the end of the list."
+msgstr "Új árnyékréteget ad a címkéhez a megadott [param index] helyen. Ha a [param index] értéke [code]-1[/code], az új réteg a lista végére kerül."
+
+#: doc/classes/LabelSettings.xml
+msgid "Returns the color of the stacked outline at [param index]."
+msgstr "Visszaadja a [param index] helyen lévő körvonalréteg színét."
+
+#: doc/classes/LabelSettings.xml
+msgid "Returns the size of the stacked outline at [param index]."
+msgstr "Visszaadja a [param index] helyen lévő körvonalréteg vastagságát."
+
+#: doc/classes/LabelSettings.xml
+msgid "Returns the color of the stacked shadow at [param index]."
+msgstr "Visszaadja a [param index] helyen lévő árnyékréteg színét."
+
+#: doc/classes/LabelSettings.xml
+msgid "Returns the offset of the stacked shadow at [param index]."
+msgstr "Visszaadja a [param index] helyen lévő árnyékréteg eltolását."
+
+#: doc/classes/LabelSettings.xml
+msgid "Returns the outline size of the stacked shadow at [param index]."
+msgstr "Visszaadja a [param index] helyen lévő árnyékréteg körvonalának vastagságát."
+
+#: doc/classes/LabelSettings.xml
+msgid "Moves the stacked outline at index [param from_index] to the given position [param to_position] in the array."
+msgstr "A [param from_index] helyen lévő körvonalréteget a tömb megadott [param to_position] helyére mozgatja."
+
+#: doc/classes/LabelSettings.xml
+msgid "Moves the stacked shadow at index [param from_index] to the given position [param to_position] in the array."
+msgstr "A [param from_index] helyen lévő árnyékréteget a tömb megadott [param to_position] helyére mozgatja."
+
+#: doc/classes/LabelSettings.xml
+msgid "Removes the stacked outline at index [param index]."
+msgstr "Eltávolítja a [param index] helyen lévő körvonalréteget."
+
+#: doc/classes/LabelSettings.xml
+msgid "Removes the stacked shadow at index [param index]."
+msgstr "Eltávolítja a [param index] helyen lévő árnyékréteget."
+
+#: doc/classes/LabelSettings.xml
+msgid "Sets the color of the stacked outline identified by the given [param index] to [param color]."
+msgstr "A megadott [param index] helyen lévő körvonalréteg színét a [param color] értékére állítja."
+
+#: doc/classes/LabelSettings.xml
+msgid "Sets the size of the stacked outline identified by the given [param index] to [param size]."
+msgstr "A megadott [param index] helyen lévő körvonalréteg vastagságát a [param size] értékére állítja."
+
+#: doc/classes/LabelSettings.xml
+msgid "Sets the color of the stacked shadow identified by the given [param index] to [param color]."
+msgstr "A megadott [param index] helyen lévő árnyékréteg színét a [param color] értékére állítja."
+
+#: doc/classes/LabelSettings.xml
+msgid "Sets the offset of the stacked shadow identified by the given [param index] to [param offset]."
+msgstr "A megadott [param index] helyen lévő árnyékréteg eltolását a [param offset] értékére állítja."
+
+#: doc/classes/LabelSettings.xml
+msgid "Sets the outline size of the stacked shadow identified by the given [param index] to [param size]."
+msgstr "A megadott [param index] helyen lévő árnyékréteg körvonalának vastagságát a [param size] értékére állítja."
+
+#: doc/classes/LabelSettings.xml
+msgid "[Font] used for the text."
+msgstr "A szöveghez használt [Font]."
+
+#: doc/classes/LabelSettings.xml
+msgid "Color of the text."
+msgstr "A szöveg színe."
+
+#: doc/classes/LabelSettings.xml
+msgid "Size of the text."
+msgstr "A szöveg betűmérete."
+
+#: doc/classes/LabelSettings.xml
+msgid "The color of the outline."
+msgstr "A körvonal színe."
+
+#: doc/classes/LabelSettings.xml
+msgid "Text outline size."
+msgstr "A szövegkörvonal vastagsága."
+
+#: doc/classes/LabelSettings.xml
+msgid "Vertical space between paragraphs. Added on top of [member line_spacing]."
+msgstr "A bekezdések közötti függőleges térköz. Hozzáadódik a [member line_spacing] értékéhez."
+
+#: doc/classes/LabelSettings.xml
+msgid "Color of the shadow effect. If alpha is [code]0[/code], no shadow will be drawn."
+msgstr "Az árnyék színe. [code]0[/code] alfaértéknél a motor nem rajzol árnyékot."
+
+#: doc/classes/LabelSettings.xml
+msgid "Offset of the shadow effect, in pixels."
+msgstr "Az árnyék eltolása képpontban."
+
+#: doc/classes/LabelSettings.xml
+msgid "Size of the shadow effect."
+msgstr "Az árnyék mérete."
+
+#: doc/classes/LabelSettings.xml
+msgid "The number of stacked outlines."
+msgstr "A körvonalrétegek száma."
+
+#: doc/classes/LabelSettings.xml
+msgid "The color of the outline at [code]index[/code].\n[b]Note:[/b] [code]index[/code] is a value in the [code]0 .. stacked_outline_count - 1[/code] range."
+msgstr "A [code]index[/code] helyen lévő körvonal színe.\n[b]Megjegyzés:[/b] Az [code]index[/code] értéke a [code]0 .. stacked_outline_count - 1[/code] tartományba esik."
