@@ -62142,3 +62142,403 @@ msgstr "Ha az érték [code]true[/code], és az aktuális [DisplayServer] támog
 #: doc/classes/FileDialog.xml
 msgid "Emitted when the user selects a directory."
 msgstr "Akkor bocsátja ki, amikor a felhasználó kiválaszt egy mappát."
+
+#: doc/classes/FileDialog.xml
+msgid "Emitted when the user selects a file by double-clicking it or pressing the [b]OK[/b] button."
+msgstr "Akkor bocsátja ki, amikor a felhasználó dupla kattintással vagy az [b]OK[/b] gomb megnyomásával kiválaszt egy fájlt."
+
+#: doc/classes/FileDialog.xml
+msgid "Emitted when the filter for file names changes."
+msgstr "Akkor bocsátja ki, amikor megváltozik a fájlnévszűrő."
+
+#: doc/classes/FileDialog.xml
+msgid "Emitted when the user selects multiple files."
+msgstr "Akkor bocsátja ki, amikor a felhasználó több fájlt választ ki."
+
+#: doc/classes/FileDialog.xml
+msgid "The dialog allows selecting one, and only one file."
+msgstr "A párbeszédablakban pontosan egy fájl választható ki."
+
+#: doc/classes/FileDialog.xml
+msgid "The dialog allows selecting multiple files."
+msgstr "A párbeszédablakban több fájl is kiválasztható."
+
+#: doc/classes/FileDialog.xml
+msgid "The dialog only allows selecting a directory, disallowing the selection of any file."
+msgstr "A párbeszédablakban csak mappa választható ki. Fájl kiválasztása nem engedélyezett."
+
+#: doc/classes/FileDialog.xml
+msgid "The dialog allows selecting one file or directory."
+msgstr "A párbeszédablakban egy fájl vagy egy mappa választható ki."
+
+#: doc/classes/FileDialog.xml
+msgid "The dialog only allows accessing files under the [Resource] path ([code]res://[/code])."
+msgstr "A párbeszédablak csak a [Resource] erőforrások útvonala ([code]res://[/code]) alatt lévő fájlokhoz fér hozzá."
+
+#: doc/classes/FileDialog.xml
+msgid "The dialog only allows accessing files under user data path ([code]user://[/code])."
+msgstr "A párbeszédablak csak a felhasználói adatok útvonala ([code]user://[/code]) alatt lévő fájlokhoz fér hozzá."
+
+#: doc/classes/FileDialog.xml
+msgid "The dialog allows accessing files on the whole file system."
+msgstr "A párbeszédablak a teljes fájlrendszerben elérheti a fájlokat."
+
+#: doc/classes/FileDialog.xml
+msgid "The dialog displays files as a grid of thumbnails. Use [theme_item thumbnail_size] to adjust their size."
+msgstr "A párbeszédablak előnézeti képekből álló rácsban jeleníti meg a fájlokat. A képek mérete a [theme_item thumbnail_size] témaelemmel állítható."
+
+#: doc/classes/FileDialog.xml
+msgid "The dialog displays files as a list of filenames."
+msgstr "A párbeszédablak a fájlneveket listában jeleníti meg."
+
+#: doc/classes/FileDialog.xml
+msgid "If enabled, shows the button for creating new directories (when using [constant FILE_MODE_OPEN_DIR], [constant FILE_MODE_OPEN_ANY], or [constant FILE_MODE_SAVE_FILE]).\nEquivalent to [member folder_creation_enabled]."
+msgstr "Ha engedélyezve van, az új mappa létrehozására szolgáló gomb látható [constant FILE_MODE_OPEN_DIR], [constant FILE_MODE_OPEN_ANY] és [constant FILE_MODE_SAVE_FILE] módban.\nMegfelel a [member folder_creation_enabled] tulajdonságnak."
+
+#: doc/classes/FileDialog.xml
+msgid "If enabled, shows the toggle file filter button.\nEquivalent to [member file_filter_toggle_enabled]."
+msgstr "Ha engedélyezve van, megjelenik a fájlszűrőt kapcsoló gomb.\nMegfelel a [member file_filter_toggle_enabled] tulajdonságnak."
+
+#: doc/classes/FileDialog.xml
+msgid "If enabled, shows the file sorting options button.\nEquivalent to [member file_sort_options_enabled]."
+msgstr "Ha engedélyezve van, megjelenik a fájlok rendezési beállításait megnyitó gomb.\nMegfelel a [member file_sort_options_enabled] tulajdonságnak."
+
+#: doc/classes/FileDialog.xml
+msgid "If enabled, shows the toggle favorite button and favorite list on the left side of the dialog.\nEquivalent to [member favorites_enabled]."
+msgstr "Ha engedélyezve van, a kedvencek gombja és a kedvencek listája megjelenik a párbeszédablak bal oldalán.\nMegfelel a [member favorites_enabled] tulajdonságnak."
+
+#: doc/classes/FileDialog.xml
+msgid "If enabled, shows the recent directories list on the left side of the dialog.\nEquivalent to [member recent_list_enabled]."
+msgstr "Ha engedélyezve van, a párbeszédablak bal oldalán megjelenik a legutóbb használt mappák listája.\nMegfelel a [member recent_list_enabled] tulajdonságnak."
+
+#: doc/classes/FileDialog.xml
+msgid "If enabled, shows the layout switch buttons (list/thumbnails).\nEquivalent to [member layout_toggle_enabled]."
+msgstr "Ha engedélyezve van, megjelennek a listanézet és az előnézeti nézet között váltó gombok.\nMegfelel a [member layout_toggle_enabled] tulajdonságnak."
+
+#: doc/classes/FileDialog.xml
+msgid "If enabled, the [FileDialog] will warn the user before overwriting files in save mode.\nEquivalent to [member overwrite_warning_enabled]."
+msgstr "Ha engedélyezve van, a [FileDialog] mentési módban figyelmeztet, mielőtt felülírna egy fájlt.\nMegfelel a [member overwrite_warning_enabled] tulajdonságnak."
+
+#: doc/classes/FileDialog.xml
+msgid "If enabled, the context menu will show the \"Delete\" option, which allows moving files and folders to trash.\nEquivalent to [member deleting_enabled]."
+msgstr "Ha engedélyezve van, a helyi menüben megjelenik a Törlés lehetőség, amellyel fájlok és mappák helyezhetők a kukába.\nMegfelel a [member deleting_enabled] tulajdonságnak."
+
+#: doc/classes/FileDialog.xml
+msgid "The color tint for disabled files (when the [FileDialog] is used in open folder mode)."
+msgstr "A letiltott fájlok színárnyalata, amikor a [FileDialog] mappaválasztó módban működik."
+
+#: doc/classes/FileDialog.xml
+msgid "The color modulation applied to the file icon."
+msgstr "A fájlikon színének módosításához használt szín."
+
+#: doc/classes/FileDialog.xml
+msgid "The color modulation applied to the folder icon."
+msgstr "A mappaikon színének módosításához használt szín."
+
+#: doc/classes/FileDialog.xml
+msgid "The size of thumbnail icons when [constant DISPLAY_THUMBNAILS] is enabled."
+msgstr "Az előnézeti ikonok mérete [constant DISPLAY_THUMBNAILS] módban."
+
+#: doc/classes/FileDialog.xml
+msgid "Custom icon for the back arrow."
+msgstr "A vissza nyíl egyéni ikonja."
+
+#: doc/classes/FileDialog.xml
+msgid "Custom icon for the create folder button."
+msgstr "A mappa létrehozására szolgáló gomb egyéni ikonja."
+
+#: doc/classes/FileDialog.xml
+msgid "Custom icon for favorite folder button."
+msgstr "A mappát kedvencként megjelölő gomb egyéni ikonja."
+
+#: doc/classes/FileDialog.xml
+msgid "Custom icon for button to move down a favorite entry."
+msgstr "A kedvenc mappát lejjebb mozgató gomb egyéni ikonja."
+
+#: doc/classes/FileDialog.xml
+msgid "Custom icon for button to move up a favorite entry."
+msgstr "A kedvenc mappát feljebb mozgató gomb egyéni ikonja."
+
+#: doc/classes/FileDialog.xml
+msgid "Custom icon for files."
+msgstr "A fájlok egyéni ikonja."
+
+#: doc/classes/FileDialog.xml
+msgid "Icon for files when in thumbnail mode."
+msgstr "A fájlok ikonja előnézeti nézetben."
+
+#: doc/classes/FileDialog.xml
+msgid "Custom icon for folders."
+msgstr "A mappák egyéni ikonja."
+
+#: doc/classes/FileDialog.xml
+msgid "Icon for folders when in thumbnail mode."
+msgstr "A mappák ikonja előnézeti nézetben."
+
+#: doc/classes/FileDialog.xml
+msgid "Custom icon for the forward arrow."
+msgstr "Az előre nyíl egyéni ikonja."
+
+#: doc/classes/FileDialog.xml
+msgid "Icon for the button that enables list mode."
+msgstr "A listanézetet bekapcsoló gomb ikonja."
+
+#: doc/classes/FileDialog.xml
+msgid "Icon for the \"Copy Path\" context menu option."
+msgstr "Az Elérési út másolása menüpont ikonja."
+
+#: doc/classes/FileDialog.xml
+msgid "Icon for the \"Delete\" context menu option."
+msgstr "A Törlés menüpont ikonja."
+
+#: doc/classes/FileDialog.xml
+msgid "Icon for the \"New Folder...\" context menu option. Usually it should be the same as [theme_item create_folder]; leave it empty if you want the context menu to show no icons."
+msgstr "Az Új mappa… menüpont ikonja. Általában a [theme_item create_folder] ikonnal egyezik. Hagyd üresen, ha a menüpontnál nem szeretnél ikont megjeleníteni."
+
+#: doc/classes/FileDialog.xml
+msgid "Icon for the \"Show Package Contents\" context menu option. The option only appears for macOS bundles."
+msgstr "A Csomag tartalmának megjelenítése menüpont ikonja. Ez a lehetőség csak macOS-es csomagoknál jelenik meg."
+
+#: doc/classes/FileDialog.xml
+msgid "Icon for the \"Refresh\" context menu option. Usually it should be the same as [theme_item reload]; leave it empty if you want the context menu to show no icons."
+msgstr "A Frissítés menüpont ikonja. Általában a [theme_item reload] ikonnal egyezik. Hagyd üresen, ha a menüpontnál nem szeretnél ikont megjeleníteni."
+
+#: doc/classes/FileDialog.xml
+msgid "Icon for the \"Show in File Manager\" context menu option."
+msgstr "A Megjelenítés a fájlkezelőben menüpont ikonja."
+
+#: doc/classes/FileDialog.xml
+msgid "Custom icon for the parent folder arrow."
+msgstr "A szülőmappába lépésre szolgáló nyíl egyéni ikonja."
+
+#: doc/classes/FileDialog.xml
+msgid "Custom icon for the reload button."
+msgstr "A frissítés gomb egyéni ikonja."
+
+#: doc/classes/FileDialog.xml
+msgid "Custom icon for the sorting options menu."
+msgstr "A rendezési beállítások menüjének egyéni ikonja."
+
+#: doc/classes/FileDialog.xml
+msgid "Icon for the button that enables thumbnail mode."
+msgstr "Az előnézeti nézetet bekapcsoló gomb ikonja."
+
+#: doc/classes/FileDialog.xml
+msgid "Custom icon for the toggle button for the filter for file names."
+msgstr "A fájlnévszűrőt kapcsoló gomb egyéni ikonja."
+
+#: doc/classes/FileDialog.xml
+msgid "Custom icon for the toggle hidden button."
+msgstr "A rejtett fájlok láthatóságát kapcsoló gomb egyéni ikonja."
+
+#: doc/classes/Popup.xml
+msgid "Base class for contextual windows and panels with fixed position."
+msgstr "Rögzített helyzetű helyi ablakok és panelek alaposztálya."
+
+#: doc/classes/Popup.xml
+msgid "Emitted when the popup is hidden."
+msgstr "Akkor bocsátja ki, amikor a felugró ablak eltűnik."
+
+#: doc/classes/PopupPanel.xml
+msgid "A popup with a panel background."
+msgstr "Felugró ablak panelháttérrel."
+
+#: doc/classes/AcceptDialog.xml
+msgid "A base dialog used for user notification."
+msgstr "A felhasználó értesítésére szolgáló párbeszédablak-alaposztály."
+
+#: doc/classes/AcceptDialog.xml
+msgid "The default use of [AcceptDialog] is to allow it to only be accepted or closed, with the same result. However, the [signal confirmed] and [signal canceled] signals allow to make the two actions different, and the [method add_button] method allows to add custom buttons and actions.\n[b]Note:[/b] [AcceptDialog] is invisible by default. To make it visible, call one of the [code]popup_*[/code] methods from [Window] on the node, such as [method Window.popup_centered_clamped]."
+msgstr "Az [AcceptDialog] alapértelmezés szerint elfogadható vagy bezárható, és mindkét művelet ugyanazzal az eredménnyel jár. A [signal confirmed] és a [signal canceled] jellel eltérően kezelheted a két műveletet. A [method add_button] metódussal saját gombokat és műveleteket adhatsz hozzá.\n[b]Megjegyzés:[/b] Az [AcceptDialog] alapértelmezés szerint rejtett. A megjelenítéséhez hívd meg rajta a [Window] valamelyik [code]popup_*[/code] metódusát, például a [method Window.popup_centered_clamped] metódust."
+
+#: doc/classes/AcceptDialog.xml
+msgid "Adds a button with label [param text] and a custom [param action] to the dialog and returns the created button.\nIf [param action] is not empty, pressing the button will emit the [signal custom_action] signal with the specified action string.\nIf [code]true[/code], [param right] will place the button to the right of any sibling buttons.\nYou can use [method remove_button] method to remove a button created with this method from the dialog."
+msgstr "A megadott [param text] feliratú és [param action] műveletű gombot ad a párbeszédablakhoz, majd visszaadja a létrehozott gombot.\nHa a [param action] nem üres, a gomb megnyomásakor a párbeszédablak kibocsátja a [signal custom_action] jelet a megadott műveletnévvel.\nHa a [param right] értéke [code]true[/code], a gomb a többi gombtól jobbra kerül.\nAz így létrehozott gombot a [method remove_button] metódussal távolíthatod el."
+
+#: doc/classes/AcceptDialog.xml
+msgid "Adds a button with label [param name] and a cancel action to the dialog and returns the created button.\nYou can use [method remove_button] method to remove a button created with this method from the dialog."
+msgstr "A megadott [param name] feliratú, megszakítási műveletet végző gombot ad a párbeszédablakhoz, majd visszaadja a létrehozott gombot.\nAz így létrehozott gombot a [method remove_button] metódussal távolíthatod el."
+
+#: doc/classes/AcceptDialog.xml
+msgid "Returns the label used for built-in text.\n[b]Warning:[/b] This is a required internal node, removing and freeing it may cause a crash. If you wish to hide it or any of its children, use their [member CanvasItem.visible] property."
+msgstr "Visszaadja a párbeszédablak beépített szövegét megjelenítő címkét.\n[b]Figyelem:[/b] Ez egy szükséges belső csomópont. Eltávolítása és felszabadítása összeomlást okozhat. A csomópont vagy gyermekei a saját [member CanvasItem.visible] tulajdonságukkal rejthetők el."
+
+#: doc/classes/AcceptDialog.xml
+msgid "Returns the OK [Button] instance.\n[b]Warning:[/b] This is a required internal node, removing and freeing it may cause a crash. If you wish to hide it or any of its children, use their [member CanvasItem.visible] property."
+msgstr "Visszaadja az OK gomb [Button] példányát.\n[b]Figyelem:[/b] Ez egy szükséges belső csomópont. Eltávolítása és felszabadítása összeomlást okozhat. A csomópont vagy gyermekei a saját [member CanvasItem.visible] tulajdonságukkal rejthetők el."
+
+#: doc/classes/AcceptDialog.xml
+msgid "Registers a [LineEdit] in the dialog. When the enter key is pressed, the dialog will be accepted."
+msgstr "Regisztrál egy [LineEdit] mezőt a párbeszédablakban. Ha ebben a mezőben Entert nyomnak, a párbeszédablak elfogadottnak számít."
+
+#: doc/classes/AcceptDialog.xml
+msgid "Removes the [param button] from the dialog. Does NOT free the [param button]. The [param button] must be a [Button] added with [method add_button] or [method add_cancel_button] method. After removal, pressing the [param button] will no longer emit this dialog's [signal custom_action] or [signal canceled] signals."
+msgstr "Eltávolítja a [param button] gombot a párbeszédablakból. A [param button] példányát a metódus nem szabadítja fel. A [param button] olyan [Button] legyen, amelyet az [method add_button] vagy az [method add_cancel_button] metódussal adtál hozzá. Az eltávolított [param button] megnyomásakor a párbeszédablak már nem bocsát ki [signal custom_action] vagy [signal canceled] jelet."
+
+#: doc/classes/AcceptDialog.xml
+msgid "Sets autowrapping for the text in the dialog."
+msgstr "Beállítja a párbeszédablak szövegének automatikus sortörését."
+
+#: doc/classes/AcceptDialog.xml
+msgid "If [code]true[/code], the dialog will be hidden when the [code]ui_close_dialog[/code] action is pressed (by default, this action is bound to [kbd]Escape[/kbd], or [kbd]Cmd + W[/kbd] on macOS)."
+msgstr "Ha az érték [code]true[/code], a párbeszédablak eltűnik a [code]ui_close_dialog[/code] művelet aktiválásakor. A művelet alapértelmezett gyorsbillentyűje [kbd]Escape[/kbd], macOS-en pedig [kbd]Cmd + W[/kbd]."
+
+#: doc/classes/AcceptDialog.xml
+msgid "If [code]true[/code], the dialog is hidden when the OK button is pressed. You can set it to [code]false[/code] if you want to do e.g. input validation when receiving the [signal confirmed] signal, and handle hiding the dialog in your own logic.\n[b]Note:[/b] Some nodes derived from this class can have a different default value, and potentially their own built-in logic overriding this setting. For example [FileDialog] defaults to [code]false[/code], and has its own input validation code that is called when you press OK, which eventually hides the dialog if the input is valid. As such, this property can't be used in [FileDialog] to disable hiding the dialog when pressing OK."
+msgstr "Ha az érték [code]true[/code], a párbeszédablak eltűnik az OK gomb megnyomásakor. Állítsd [code]false[/code] értékre, ha például a [signal confirmed] jel fogadásakor ellenőrizni szeretnéd a bemenetet, és saját kóddal szeretnéd kezelni az ablak elrejtését.\n[b]Megjegyzés:[/b] Egyes leszármazott osztályokban az alapértelmezett érték eltérhet, és saját beépített logikájuk felülbírálhatja ezt a beállítást. A [FileDialog] alapértelmezett értéke például [code]false[/code]. Az OK gomb megnyomásakor saját bemenetellenőrzést végez, és érvényes bemenet esetén elrejti a párbeszédablakot. Ezért a [FileDialog] esetén ezzel a tulajdonsággal nem akadályozható meg, hogy az ablak az OK gomb megnyomásakor eltűnjön."
+
+#: doc/classes/AcceptDialog.xml
+msgid "The text displayed by the dialog."
+msgstr "A párbeszédablakban megjelenő szöveg."
+
+#: doc/classes/AcceptDialog.xml
+msgid "The text displayed by the OK button (see [method get_ok_button]). If empty, a default text will be used."
+msgstr "Az OK gomb felirata. Lásd a [method get_ok_button] metódust. Üres értéknél az alapértelmezett felirat jelenik meg."
+
+#: doc/classes/AcceptDialog.xml
+msgid "Emitted when the dialog is closed or the button created with [method add_cancel_button] is pressed."
+msgstr "Akkor bocsátja ki, amikor a párbeszédablak bezárul, vagy amikor megnyomják az [method add_cancel_button] metódussal létrehozott gombot."
+
+#: doc/classes/AcceptDialog.xml
+msgid "Emitted when the dialog is accepted, i.e. the OK button is pressed."
+msgstr "Akkor bocsátja ki, amikor a felhasználó az OK gombbal elfogadja a párbeszédablakot."
+
+#: doc/classes/AcceptDialog.xml
+msgid "Emitted when a custom button with an action is pressed. See [method add_button]."
+msgstr "Akkor bocsátja ki, amikor megnyomnak egy művelethez rendelt egyéni gombot. Lásd az [method add_button] metódust."
+
+#: doc/classes/AcceptDialog.xml
+msgid "The minimum height of each button in the bottom row (such as OK/Cancel) in pixels. This can be increased to make buttons with short texts easier to click/tap."
+msgstr "Az alsó sorban lévő gombok, például az OK és a Mégse minimális magassága képpontban. Nagyobb értéknél könnyebb a rövid feliratú gombokra kattintani vagy koppintani."
+
+#: doc/classes/AcceptDialog.xml
+msgid "The minimum width of each button in the bottom row (such as OK/Cancel) in pixels. This can be increased to make buttons with short texts easier to click/tap."
+msgstr "Az alsó sorban lévő gombok, például az OK és a Mégse minimális szélessége képpontban. Nagyobb értéknél könnyebb a rövid feliratú gombokra kattintani vagy koppintani."
+
+#: doc/classes/AcceptDialog.xml
+msgid "The size of the vertical space between the dialog's content and the button row."
+msgstr "A párbeszédablak tartalma és a gombsor közötti függőleges távolság."
+
+#: doc/classes/AcceptDialog.xml
+msgid "The panel that fills the background of the window."
+msgstr "Az ablak hátterét kitöltő panel."
+
+#: doc/classes/ConfirmationDialog.xml
+msgid "A dialog used for confirmation of actions."
+msgstr "Párbeszédablak műveletek megerősítéséhez."
+
+#: doc/classes/ConfirmationDialog.xml
+msgid "A dialog used for confirmation of actions. This window is similar to [AcceptDialog], but pressing its Cancel button can have a different outcome from pressing the OK button. The order of the two buttons varies depending on the host OS.\nTo get cancel action, you can use:\n[codeblocks]\n[gdscript]\nget_cancel_button().pressed.connect(_on_canceled)\n[/gdscript]\n[csharp]\nGetCancelButton().Pressed += OnCanceled;\n[/csharp]\n[/codeblocks]\n[b]Note:[/b] [AcceptDialog] is invisible by default. To make it visible, call one of the [code]popup_*[/code] methods from [Window] on the node, such as [method Window.popup_centered_clamped]."
+msgstr "Párbeszédablak műveletek megerősítéséhez. Az ablak hasonlít az [AcceptDialog] ablakhoz, de a Mégse és az OK gomb megnyomása eltérő eredménnyel járhat. A két gomb sorrendje az operációs rendszertől függ.\nA megszakítás műveletét például így kezelheted.\n[codeblocks]\n[gdscript]\nget_cancel_button().pressed.connect(_on_canceled)\n[/gdscript]\n[csharp]\nGetCancelButton().Pressed += OnCanceled;\n[/csharp]\n[/codeblocks]\n[b]Megjegyzés:[/b] Az [AcceptDialog] alapértelmezés szerint rejtett. A megjelenítéséhez hívd meg rajta a [Window] valamelyik [code]popup_*[/code] metódusát, például a [method Window.popup_centered_clamped] metódust."
+
+#: doc/classes/ConfirmationDialog.xml
+msgid "Returns the cancel button.\n[b]Warning:[/b] This is a required internal node, removing and freeing it may cause a crash. If you wish to hide it or any of its children, use their [member CanvasItem.visible] property."
+msgstr "Visszaadja a Mégse gombot.\n[b]Figyelem:[/b] Ez egy szükséges belső csomópont. Eltávolítása és felszabadítása összeomlást okozhat. A csomópont vagy gyermekei a saját [member CanvasItem.visible] tulajdonságukkal rejthetők el."
+
+#: doc/classes/ConfirmationDialog.xml
+msgid "The text displayed by the cancel button (see [method get_cancel_button])."
+msgstr "A Mégse gomb felirata. Lásd a [method get_cancel_button] metódust."
+
+#: doc/classes/ColorPicker.xml
+msgid "Custom texture for the hue selection slider on the right."
+msgstr "A jobb oldali színárnyalat-választó csúszka egyéni textúrája."
+
+#: doc/classes/ColorPicker.xml
+msgid "The icon for the button that switches color text to hexadecimal."
+msgstr "A szín szöveges alakját hexadecimális formára váltó gomb ikonja."
+
+#: doc/classes/ColorPicker.xml
+msgid "The icon for color preset drop down menu when expanded."
+msgstr "A színminták lenyíló menüjének ikonja lenyitott állapotban."
+
+#: doc/classes/ColorPicker.xml
+msgid "The icon for color preset drop down menu when folded."
+msgstr "A színminták lenyíló menüjének ikonja összecsukott állapotban."
+
+#: doc/classes/ColorPicker.xml
+msgid "The icon for color preset option menu."
+msgstr "A színminták beállítási menüjének ikonja."
+
+#: doc/classes/ColorPicker.xml
+msgid "The indicator used to signalize that the color value is outside the 0-1 range."
+msgstr "Jelzőikon arra az esetre, ha a szín értéke kívül esik a 0–1 tartományon."
+
+#: doc/classes/ColorPicker.xml
+msgid "The image displayed over the color box/circle (depending on the [member picker_shape]), marking the currently selected color."
+msgstr "A színmező vagy színkör fölött megjelenő kép, amely az aktuális színt jelöli. Az alakzatot a [member picker_shape] határozza meg."
+
+#: doc/classes/ColorPicker.xml
+msgid "The fill image displayed behind the picker cursor."
+msgstr "A színválasztó jelölője mögött megjelenő kitöltőkép."
+
+#: doc/classes/ColorPicker.xml
+msgid "Background panel for the color preview box (visible when the color is translucent)."
+msgstr "A színelőnézeti mező háttere. Akkor látszik, amikor a szín részben átlátszó."
+
+#: doc/classes/ColorPicker.xml
+msgid "The icon for the revert button (visible on the middle of the \"old\" color when it differs from the currently selected color). This icon is modulated with a dark color if the \"old\" color is bright enough, so the icon should be bright to ensure visibility in both scenarios."
+msgstr "A visszaállító gomb ikonja, amely az előző szín közepén jelenik meg, ha az eltér az aktuális színtől. Ha az előző szín elég világos, a színválasztó sötét színnel árnyalja az ikont. Érdemes világos ikont használni, hogy mindkét esetben látható maradjon."
+
+#: doc/classes/ColorPicker.xml
+msgid "The icon for the screen color picker button."
+msgstr "A képernyőről színt mintavevő gomb ikonja."
+
+#: doc/classes/ColorPicker.xml
+msgid "The icon for circular picker shapes."
+msgstr "A kör alakú színválasztó nézetek ikonja."
+
+#: doc/classes/ColorPicker.xml
+msgid "The icon for rectangular picker shapes."
+msgstr "A téglalap alakú színválasztó nézetek ikonja."
+
+#: doc/classes/ColorPicker.xml
+msgid "The icon for rectangular wheel picker shapes."
+msgstr "A téglalapot színkerékkel együtt megjelenítő nézetek ikonja."
+
+#: doc/classes/ColorPicker.xml
+msgid "The [StyleBox] used when the circle-shaped part of the picker is focused. Displayed [i]over[/i] the picker shape, so a partially transparent [StyleBox] should be used to ensure the picker shape remains visible. A [StyleBox] that represents an outline or an underline works well for this purpose. To disable the focus visual effect, assign a [StyleBoxEmpty] resource. Note that disabling the focus visual effect will harm keyboard/controller navigation usability, so this is not recommended for accessibility reasons."
+msgstr "A színválasztó kör alakú részének fókuszjelzéséhez használt [StyleBox]. Az alakzat [i]fölött[/i] jelenik meg, ezért részben átlátszó [StyleBox] használata célszerű, hogy az alakzat látható maradjon. Erre jól használható egy körvonalat vagy aláhúzást megjelenítő [StyleBox]. A fókuszjelzés kikapcsolásához rendelj hozzá [StyleBoxEmpty] erőforrást. Ez megnehezíti a billentyűzetes és a játékvezérlős navigációt, ezért akadálymentesítési okból nem ajánlott."
+
+#: doc/classes/ColorPicker.xml
+msgid "The [StyleBox] used when the rectangle-shaped part of the picker is focused. Displayed [i]over[/i] the picker shape, so a partially transparent [StyleBox] should be used to ensure the picker shape remains visible. A [StyleBox] that represents an outline or an underline works well for this purpose. To disable the focus visual effect, assign a [StyleBoxEmpty] resource. Note that disabling the focus visual effect will harm keyboard/controller navigation usability, so this is not recommended for accessibility reasons."
+msgstr "A színválasztó téglalap alakú részének fókuszjelzéséhez használt [StyleBox]. Az alakzat [i]fölött[/i] jelenik meg, ezért részben átlátszó [StyleBox] használata célszerű, hogy az alakzat látható maradjon. Erre jól használható egy körvonalat vagy aláhúzást megjelenítő [StyleBox]. A fókuszjelzés kikapcsolásához rendelj hozzá [StyleBoxEmpty] erőforrást. Ez megnehezíti a billentyűzetes és a játékvezérlős navigációt, ezért akadálymentesítési okból nem ajánlott."
+
+#: doc/classes/ColorPicker.xml
+msgid "The [StyleBox] used for the old color sample part when it is focused. Displayed [i]over[/i] the sample, so a partially transparent [StyleBox] should be used to ensure the picker shape remains visible. A [StyleBox] that represents an outline or an underline works well for this purpose. To disable the focus visual effect, assign a [StyleBoxEmpty] resource. Note that disabling the focus visual effect will harm keyboard/controller navigation usability, so this is not recommended for accessibility reasons."
+msgstr "Az előző szín mintájának fókuszjelzéséhez használt [StyleBox]. A minta [i]fölött[/i] jelenik meg, ezért részben átlátszó [StyleBox] használata célszerű, hogy a színválasztó alakzata látható maradjon. Erre jól használható egy körvonalat vagy aláhúzást megjelenítő [StyleBox]. A fókuszjelzés kikapcsolásához rendelj hozzá [StyleBoxEmpty] erőforrást. Ez megnehezíti a billentyűzetes és a játékvezérlős navigációt, ezért akadálymentesítési okból nem ajánlott."
+
+#: doc/classes/ColorPickerButton.xml
+msgid "Emitted when the [ColorPicker] is closed."
+msgstr "Akkor bocsátja ki, amikor a [ColorPicker] bezárul."
+
+#: doc/classes/ColorPickerButton.xml
+msgid "The background of the color preview rect on the button."
+msgstr "A gombon lévő színelőnézeti téglalap háttere."
+
+#: doc/classes/Popup.xml
+msgid "[Popup] is a base class for contextual windows and panels with fixed position. It's a modal by default (see [member Window.popup_window]) and provides methods for implementing custom popup behavior.\n[b]Note:[/b] [Popup] is invisible by default. To make it visible, call one of the [code]popup_*[/code] methods from [Window] on the node, such as [method Window.popup_centered_clamped]."
+msgstr "A [Popup] a rögzített helyzetű helyi ablakok és panelek alaposztálya. Alapértelmezés szerint modális (lásd a [member Window.popup_window] tulajdonságot), és metódusokat biztosít a felugró ablak egyéni működésének megvalósításához.\n[b]Megjegyzés:[/b] A [Popup] alapértelmezés szerint rejtett. A megjelenítéséhez hívd meg rajta a [Window] valamelyik [code]popup_*[/code] metódusát, például a [method Window.popup_centered_clamped] metódust."
+
+#: doc/classes/PopupPanel.xml
+msgid "A popup with a configurable panel background. Any child controls added to this node will be stretched to fit the panel's size (similar to how [PanelContainer] works). If you are making windows, see [Window]."
+msgstr "Felugró ablak testre szabható panelháttérrel. A hozzáadott gyermekvezérlők a panel méretéhez igazodnak, hasonlóan a [PanelContainer] működéséhez. Ablakok készítéséhez lásd a [Window] osztályt."
+
+#: doc/classes/Control.xml
+msgid "Sent when the mouse cursor enters the control's (or any child control's) visible area, that is not occluded behind other Controls or Windows, provided its [member mouse_filter] lets the event reach it and regardless if it's currently focused or not.\n[b]Note:[/b] [member CanvasItem.z_index] doesn't affect which Control receives the notification.\nSee also [constant NOTIFICATION_MOUSE_ENTER_SELF]."
+msgstr "Akkor érkezik, amikor az egérmutató belép a vezérlő vagy valamely gyermekvezérlő látható, más vezérlő vagy ablak által nem takart területére. Ehhez a [member mouse_filter] beállításnak át kell engednie az eseményt. A fókusz állapota nem számít.\n[b]Megjegyzés:[/b] A [member CanvasItem.z_index] nem befolyásolja, melyik Control kapja az értesítést.\nLásd még a [constant NOTIFICATION_MOUSE_ENTER_SELF] értesítést."
+
+#: doc/classes/Control.xml
+msgid "Sent when the mouse cursor leaves the control's (and all child control's) visible area, that is not occluded behind other Controls or Windows, provided its [member mouse_filter] lets the event reach it and regardless if it's currently focused or not.\n[b]Note:[/b] [member CanvasItem.z_index] doesn't affect which Control receives the notification.\nSee also [constant NOTIFICATION_MOUSE_EXIT_SELF]."
+msgstr "Akkor érkezik, amikor az egérmutató elhagyja a vezérlő és összes gyermekvezérlője látható, más vezérlő vagy ablak által nem takart területét. Ehhez a [member mouse_filter] beállításnak át kell engednie az eseményt. A fókusz állapota nem számít.\n[b]Megjegyzés:[/b] A [member CanvasItem.z_index] nem befolyásolja, melyik Control kapja az értesítést.\nLásd még a [constant NOTIFICATION_MOUSE_EXIT_SELF] értesítést."
+
+#: doc/classes/Control.xml
+msgid "Sent when the mouse cursor enters the control's visible area, that is not occluded behind other Controls or Windows, provided its [member mouse_filter] lets the event reach it and regardless if it's currently focused or not.\n[b]Note:[/b] [member CanvasItem.z_index] doesn't affect which Control receives the notification.\nSee also [constant NOTIFICATION_MOUSE_ENTER]."
+msgstr "Akkor érkezik, amikor az egérmutató belép magának a vezérlőnek a látható, más vezérlő vagy ablak által nem takart területére. Ehhez a [member mouse_filter] beállításnak át kell engednie az eseményt. A fókusz állapota nem számít.\n[b]Megjegyzés:[/b] A [member CanvasItem.z_index] nem befolyásolja, melyik Control kapja az értesítést.\nLásd még a [constant NOTIFICATION_MOUSE_ENTER] értesítést."
+
+#: doc/classes/Control.xml
+msgid "Sent when the mouse cursor leaves the control's visible area, that is not occluded behind other Controls or Windows, provided its [member mouse_filter] lets the event reach it and regardless if it's currently focused or not.\n[b]Note:[/b] [member CanvasItem.z_index] doesn't affect which Control receives the notification.\nSee also [constant NOTIFICATION_MOUSE_EXIT]."
+msgstr "Akkor érkezik, amikor az egérmutató elhagyja magának a vezérlőnek a látható, más vezérlő vagy ablak által nem takart területét. Ehhez a [member mouse_filter] beállításnak át kell engednie az eseményt. A fókusz állapota nem számít.\n[b]Megjegyzés:[/b] A [member CanvasItem.z_index] nem befolyásolja, melyik Control kapja az értesítést.\nLásd még a [constant NOTIFICATION_MOUSE_EXIT] értesítést."
+
+#: doc/classes/Control.xml
+msgid "Sent when the node needs to refresh its theme items. This happens in one of the following cases:\n- The [member theme] property is changed on this node or any of its ancestors.\n- The [member theme_type_variation] property is changed on this node.\n- One of the node's theme property overrides is changed.\n- The node enters the scene tree.\n[b]Note:[/b] As an optimization, this notification won't be sent from changes that occur while this node is outside of the scene tree. Instead, all of the theme item updates can be applied at once when the node enters the scene tree.\n[b]Note:[/b] This notification is received alongside [constant Node.NOTIFICATION_ENTER_TREE], so if you are instantiating a scene, the child nodes will not be initialized yet. You can use it to setup theming for this node, child nodes created from script, or if you want to access child nodes added in the editor, make sure the node is ready using [method Node.is_node_ready].\n[codeblock]\nfunc _notification(what):\n\tif what == NOTIFICATION_THEME_CHANGED:\n\t\tif not is_node_ready():\n\t\t\tawait ready # Wait until ready signal.\n\t\t$Label.add_theme_color_override(\"font_color\", Color.YELLOW)\n[/codeblock]"
+msgstr "Akkor érkezik, amikor a csomópontnak frissítenie kell a témaelemeit. Ez az alábbi esetekben történik:\n- Megváltozik a [member theme] tulajdonság a csomóponton vagy valamelyik ősén.\n- Megváltozik a csomópont [member theme_type_variation] tulajdonsága.\n- Megváltozik a csomópont egyik témafelülbírálása.\n- A csomópont bekerül a jelenetfába.\n[b]Megjegyzés:[/b] A teljesítmény érdekében a motor nem küldi el az értesítést a jelenetfán kívüli változtatásokhoz. A csomópont jelenetfába kerülésekor a témaelemek egyszerre frissíthetők.\n[b]Megjegyzés:[/b] Ez az értesítés a [constant Node.NOTIFICATION_ENTER_TREE] értesítéssel együtt érkezik, ezért jelenet példányosításakor a gyermekcsomópontok még nem állnak készen. Ilyenkor beállíthatod a csomópont vagy a szkriptből létrehozott gyermekek témáját. A szerkesztőben hozzáadott gyermekek elérése előtt a [method Node.is_node_ready] metódussal ellenőrizd, hogy a csomópont készen áll-e.\n[codeblock]\nfunc _notification(what):\n\tif what == NOTIFICATION_THEME_CHANGED:\n\t\tif not is_node_ready():\n\t\t\tawait ready # Wait until ready signal.\n\t\t$Label.add_theme_color_override(\"font_color\", Color.YELLOW)\n[/codeblock]"
