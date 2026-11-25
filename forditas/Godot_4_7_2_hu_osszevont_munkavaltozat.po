@@ -62142,3 +62142,203 @@ msgstr "Ha az érték [code]true[/code], és az aktuális [DisplayServer] támog
 #: doc/classes/FileDialog.xml
 msgid "Emitted when the user selects a directory."
 msgstr "Akkor bocsátja ki, amikor a felhasználó kiválaszt egy mappát."
+
+#: doc/classes/FileDialog.xml
+msgid "Emitted when the user selects a file by double-clicking it or pressing the [b]OK[/b] button."
+msgstr "Akkor bocsátja ki, amikor a felhasználó dupla kattintással vagy az [b]OK[/b] gomb megnyomásával kiválaszt egy fájlt."
+
+#: doc/classes/FileDialog.xml
+msgid "Emitted when the filter for file names changes."
+msgstr "Akkor bocsátja ki, amikor megváltozik a fájlnévszűrő."
+
+#: doc/classes/FileDialog.xml
+msgid "Emitted when the user selects multiple files."
+msgstr "Akkor bocsátja ki, amikor a felhasználó több fájlt választ ki."
+
+#: doc/classes/FileDialog.xml
+msgid "The dialog allows selecting one, and only one file."
+msgstr "A párbeszédablakban pontosan egy fájl választható ki."
+
+#: doc/classes/FileDialog.xml
+msgid "The dialog allows selecting multiple files."
+msgstr "A párbeszédablakban több fájl is kiválasztható."
+
+#: doc/classes/FileDialog.xml
+msgid "The dialog only allows selecting a directory, disallowing the selection of any file."
+msgstr "A párbeszédablakban csak mappa választható ki. Fájl kiválasztása nem engedélyezett."
+
+#: doc/classes/FileDialog.xml
+msgid "The dialog allows selecting one file or directory."
+msgstr "A párbeszédablakban egy fájl vagy egy mappa választható ki."
+
+#: doc/classes/FileDialog.xml
+msgid "The dialog only allows accessing files under the [Resource] path ([code]res://[/code])."
+msgstr "A párbeszédablak csak a [Resource] erőforrások útvonala ([code]res://[/code]) alatt lévő fájlokhoz fér hozzá."
+
+#: doc/classes/FileDialog.xml
+msgid "The dialog only allows accessing files under user data path ([code]user://[/code])."
+msgstr "A párbeszédablak csak a felhasználói adatok útvonala ([code]user://[/code]) alatt lévő fájlokhoz fér hozzá."
+
+#: doc/classes/FileDialog.xml
+msgid "The dialog allows accessing files on the whole file system."
+msgstr "A párbeszédablak a teljes fájlrendszerben elérheti a fájlokat."
+
+#: doc/classes/FileDialog.xml
+msgid "The dialog displays files as a grid of thumbnails. Use [theme_item thumbnail_size] to adjust their size."
+msgstr "A párbeszédablak előnézeti képekből álló rácsban jeleníti meg a fájlokat. A képek mérete a [theme_item thumbnail_size] témaelemmel állítható."
+
+#: doc/classes/FileDialog.xml
+msgid "The dialog displays files as a list of filenames."
+msgstr "A párbeszédablak a fájlneveket listában jeleníti meg."
+
+#: doc/classes/FileDialog.xml
+msgid "If enabled, shows the button for creating new directories (when using [constant FILE_MODE_OPEN_DIR], [constant FILE_MODE_OPEN_ANY], or [constant FILE_MODE_SAVE_FILE]).\nEquivalent to [member folder_creation_enabled]."
+msgstr "Ha engedélyezve van, az új mappa létrehozására szolgáló gomb látható [constant FILE_MODE_OPEN_DIR], [constant FILE_MODE_OPEN_ANY] és [constant FILE_MODE_SAVE_FILE] módban.\nMegfelel a [member folder_creation_enabled] tulajdonságnak."
+
+#: doc/classes/FileDialog.xml
+msgid "If enabled, shows the toggle file filter button.\nEquivalent to [member file_filter_toggle_enabled]."
+msgstr "Ha engedélyezve van, megjelenik a fájlszűrőt kapcsoló gomb.\nMegfelel a [member file_filter_toggle_enabled] tulajdonságnak."
+
+#: doc/classes/FileDialog.xml
+msgid "If enabled, shows the file sorting options button.\nEquivalent to [member file_sort_options_enabled]."
+msgstr "Ha engedélyezve van, megjelenik a fájlok rendezési beállításait megnyitó gomb.\nMegfelel a [member file_sort_options_enabled] tulajdonságnak."
+
+#: doc/classes/FileDialog.xml
+msgid "If enabled, shows the toggle favorite button and favorite list on the left side of the dialog.\nEquivalent to [member favorites_enabled]."
+msgstr "Ha engedélyezve van, a kedvencek gombja és a kedvencek listája megjelenik a párbeszédablak bal oldalán.\nMegfelel a [member favorites_enabled] tulajdonságnak."
+
+#: doc/classes/FileDialog.xml
+msgid "If enabled, shows the recent directories list on the left side of the dialog.\nEquivalent to [member recent_list_enabled]."
+msgstr "Ha engedélyezve van, a párbeszédablak bal oldalán megjelenik a legutóbb használt mappák listája.\nMegfelel a [member recent_list_enabled] tulajdonságnak."
+
+#: doc/classes/FileDialog.xml
+msgid "If enabled, shows the layout switch buttons (list/thumbnails).\nEquivalent to [member layout_toggle_enabled]."
+msgstr "Ha engedélyezve van, megjelennek a listanézet és az előnézeti nézet között váltó gombok.\nMegfelel a [member layout_toggle_enabled] tulajdonságnak."
+
+#: doc/classes/FileDialog.xml
+msgid "If enabled, the [FileDialog] will warn the user before overwriting files in save mode.\nEquivalent to [member overwrite_warning_enabled]."
+msgstr "Ha engedélyezve van, a [FileDialog] mentési módban figyelmeztet, mielőtt felülírna egy fájlt.\nMegfelel a [member overwrite_warning_enabled] tulajdonságnak."
+
+#: doc/classes/FileDialog.xml
+msgid "If enabled, the context menu will show the \"Delete\" option, which allows moving files and folders to trash.\nEquivalent to [member deleting_enabled]."
+msgstr "Ha engedélyezve van, a helyi menüben megjelenik a Törlés lehetőség, amellyel fájlok és mappák helyezhetők a kukába.\nMegfelel a [member deleting_enabled] tulajdonságnak."
+
+#: doc/classes/FileDialog.xml
+msgid "The color tint for disabled files (when the [FileDialog] is used in open folder mode)."
+msgstr "A letiltott fájlok színárnyalata, amikor a [FileDialog] mappaválasztó módban működik."
+
+#: doc/classes/FileDialog.xml
+msgid "The color modulation applied to the file icon."
+msgstr "A fájlikon színének módosításához használt szín."
+
+#: doc/classes/FileDialog.xml
+msgid "The color modulation applied to the folder icon."
+msgstr "A mappaikon színének módosításához használt szín."
+
+#: doc/classes/FileDialog.xml
+msgid "The size of thumbnail icons when [constant DISPLAY_THUMBNAILS] is enabled."
+msgstr "Az előnézeti ikonok mérete [constant DISPLAY_THUMBNAILS] módban."
+
+#: doc/classes/FileDialog.xml
+msgid "Custom icon for the back arrow."
+msgstr "A vissza nyíl egyéni ikonja."
+
+#: doc/classes/FileDialog.xml
+msgid "Custom icon for the create folder button."
+msgstr "A mappa létrehozására szolgáló gomb egyéni ikonja."
+
+#: doc/classes/FileDialog.xml
+msgid "Custom icon for favorite folder button."
+msgstr "A mappát kedvencként megjelölő gomb egyéni ikonja."
+
+#: doc/classes/FileDialog.xml
+msgid "Custom icon for button to move down a favorite entry."
+msgstr "A kedvenc mappát lejjebb mozgató gomb egyéni ikonja."
+
+#: doc/classes/FileDialog.xml
+msgid "Custom icon for button to move up a favorite entry."
+msgstr "A kedvenc mappát feljebb mozgató gomb egyéni ikonja."
+
+#: doc/classes/FileDialog.xml
+msgid "Custom icon for files."
+msgstr "A fájlok egyéni ikonja."
+
+#: doc/classes/FileDialog.xml
+msgid "Icon for files when in thumbnail mode."
+msgstr "A fájlok ikonja előnézeti nézetben."
+
+#: doc/classes/FileDialog.xml
+msgid "Custom icon for folders."
+msgstr "A mappák egyéni ikonja."
+
+#: doc/classes/FileDialog.xml
+msgid "Icon for folders when in thumbnail mode."
+msgstr "A mappák ikonja előnézeti nézetben."
+
+#: doc/classes/FileDialog.xml
+msgid "Custom icon for the forward arrow."
+msgstr "Az előre nyíl egyéni ikonja."
+
+#: doc/classes/FileDialog.xml
+msgid "Icon for the button that enables list mode."
+msgstr "A listanézetet bekapcsoló gomb ikonja."
+
+#: doc/classes/FileDialog.xml
+msgid "Icon for the \"Copy Path\" context menu option."
+msgstr "Az Elérési út másolása menüpont ikonja."
+
+#: doc/classes/FileDialog.xml
+msgid "Icon for the \"Delete\" context menu option."
+msgstr "A Törlés menüpont ikonja."
+
+#: doc/classes/FileDialog.xml
+msgid "Icon for the \"New Folder...\" context menu option. Usually it should be the same as [theme_item create_folder]; leave it empty if you want the context menu to show no icons."
+msgstr "Az Új mappa… menüpont ikonja. Általában a [theme_item create_folder] ikonnal egyezik. Hagyd üresen, ha a menüpontnál nem szeretnél ikont megjeleníteni."
+
+#: doc/classes/FileDialog.xml
+msgid "Icon for the \"Show Package Contents\" context menu option. The option only appears for macOS bundles."
+msgstr "A Csomag tartalmának megjelenítése menüpont ikonja. Ez a lehetőség csak macOS-es csomagoknál jelenik meg."
+
+#: doc/classes/FileDialog.xml
+msgid "Icon for the \"Refresh\" context menu option. Usually it should be the same as [theme_item reload]; leave it empty if you want the context menu to show no icons."
+msgstr "A Frissítés menüpont ikonja. Általában a [theme_item reload] ikonnal egyezik. Hagyd üresen, ha a menüpontnál nem szeretnél ikont megjeleníteni."
+
+#: doc/classes/FileDialog.xml
+msgid "Icon for the \"Show in File Manager\" context menu option."
+msgstr "A Megjelenítés a fájlkezelőben menüpont ikonja."
+
+#: doc/classes/FileDialog.xml
+msgid "Custom icon for the parent folder arrow."
+msgstr "A szülőmappába lépésre szolgáló nyíl egyéni ikonja."
+
+#: doc/classes/FileDialog.xml
+msgid "Custom icon for the reload button."
+msgstr "A frissítés gomb egyéni ikonja."
+
+#: doc/classes/FileDialog.xml
+msgid "Custom icon for the sorting options menu."
+msgstr "A rendezési beállítások menüjének egyéni ikonja."
+
+#: doc/classes/FileDialog.xml
+msgid "Icon for the button that enables thumbnail mode."
+msgstr "Az előnézeti nézetet bekapcsoló gomb ikonja."
+
+#: doc/classes/FileDialog.xml
+msgid "Custom icon for the toggle button for the filter for file names."
+msgstr "A fájlnévszűrőt kapcsoló gomb egyéni ikonja."
+
+#: doc/classes/FileDialog.xml
+msgid "Custom icon for the toggle hidden button."
+msgstr "A rejtett fájlok láthatóságát kapcsoló gomb egyéni ikonja."
+
+#: doc/classes/Popup.xml
+msgid "Base class for contextual windows and panels with fixed position."
+msgstr "Rögzített helyzetű helyi ablakok és panelek alaposztálya."
+
+#: doc/classes/Popup.xml
+msgid "Emitted when the popup is hidden."
+msgstr "Akkor bocsátja ki, amikor a felugró ablak eltűnik."
+
+#: doc/classes/PopupPanel.xml
+msgid "A popup with a panel background."
+msgstr "Felugró ablak panelháttérrel."
