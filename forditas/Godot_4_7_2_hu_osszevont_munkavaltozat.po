@@ -61742,3 +61742,203 @@ msgstr "Segédtulajdonság, amellyel a [member rotation] értékét radián hely
 #: doc/classes/Control.xml
 msgid "The size of the node's bounding rectangle, in the node's coordinate system. [Container] nodes update this property automatically."
 msgstr "A csomópont befoglaló téglalapjának mérete a csomópont saját koordinátarendszerében. A [Container] csomópontok automatikusan frissítik ezt a tulajdonságot."
+
+#: doc/classes/ColorPicker.xml
+msgid "A widget that provides an interface for selecting or modifying a color."
+msgstr "Vezérlő szín kiválasztásához vagy módosításához."
+
+#: doc/classes/ColorPicker.xml
+msgid "A widget that provides an interface for selecting or modifying a color. It can optionally provide functionalities like a color sampler (eyedropper), color modes, and presets.\n[b]Note:[/b] This control is the color picker widget itself. You can use a [ColorPickerButton] instead if you need a button that brings up a [ColorPicker] in a popup."
+msgstr "Vezérlő szín kiválasztásához vagy módosításához. Igény szerint pipettát, színmódokat és színmintákat is megjeleníthet.\n[b]Megjegyzés:[/b] Ez maga a színválasztó vezérlő. Ha olyan gombra van szükséged, amely felugró ablakban nyitja meg a [ColorPicker] vezérlőt, használj [ColorPickerButton] elemet."
+
+#: doc/classes/ColorPicker.xml
+msgid "Adds the given color to a list of color presets. The presets are displayed in the color picker and the user will be able to select them.\n[b]Note:[/b] The presets list is only for [i]this[/i] color picker."
+msgstr "Hozzáadja a megadott színt a színminták listájához. A minták megjelennek a színválasztóban, és a felhasználó kiválaszthatja őket.\n[b]Megjegyzés:[/b] A minták listája csak [i]ehhez[/i] a színválasztóhoz tartozik."
+
+#: doc/classes/ColorPicker.xml
+msgid "Adds the given color to a list of color recent presets so that it can be picked later. Recent presets are the colors that were picked recently, a new preset is automatically created and added to recent presets when you pick a new color.\n[b]Note:[/b] The recent presets list is only for [i]this[/i] color picker."
+msgstr "Hozzáadja a megadott színt a legutóbbi színek listájához, hogy később újra kiválasztható legyen. A lista a nemrég kiválasztott színeket tartalmazza. Új szín választásakor a színválasztó automatikusan hozzáad egy új mintát.\n[b]Megjegyzés:[/b] A legutóbbi színek listája csak [i]ehhez[/i] a színválasztóhoz tartozik."
+
+#: doc/classes/ColorPicker.xml
+msgid "Removes the given color from the list of color presets of this color picker."
+msgstr "Eltávolítja a megadott színt a színválasztó színmintáinak listájából."
+
+#: doc/classes/ColorPicker.xml
+msgid "Removes the given color from the list of color recent presets of this color picker."
+msgstr "Eltávolítja a megadott színt a színválasztó legutóbbi színeinek listájából."
+
+#: doc/classes/ColorPicker.xml
+msgid "Returns the list of colors in the presets of the color picker."
+msgstr "Visszaadja a színválasztó mentett színmintáinak színeit."
+
+#: doc/classes/ColorPicker.xml
+msgid "Returns the list of colors in the recent presets of the color picker."
+msgstr "Visszaadja a színválasztó legutóbbi színeinek listáját."
+
+#: doc/classes/ColorPicker.xml
+msgid "If [code]true[/code], it's possible to add presets under Swatches. If [code]false[/code], the button to add presets is disabled."
+msgstr "Ha az érték [code]true[/code], a Színminták részen új minták adhatók hozzá. Ha az érték [code]false[/code], a hozzáadás gomb le van tiltva."
+
+#: doc/classes/ColorPicker.xml doc/classes/ColorPickerButton.xml
+msgid "The currently selected color."
+msgstr "Az aktuálisan kiválasztott szín."
+
+#: doc/classes/ColorPicker.xml
+msgid "The currently selected color mode."
+msgstr "Az aktuálisan kiválasztott színmód."
+
+#: doc/classes/ColorPicker.xml
+msgid "If [code]true[/code], the color mode buttons are visible."
+msgstr "Ha az érték [code]true[/code], a színmódok gombjai láthatók."
+
+#: doc/classes/ColorPicker.xml
+msgid "If [code]true[/code], the color will apply only after the user releases the mouse button, otherwise it will apply immediately even in mouse motion event (which can cause performance issues)."
+msgstr "Ha az érték [code]true[/code], a szín csak az egérgomb felengedésekor lép érvénybe. Egyébként azonnal érvénybe lép, akár az egér minden elmozdulásakor is, ami lassulást okozhat."
+
+#: doc/classes/ColorPicker.xml
+msgid "If [code]true[/code], shows an alpha channel slider (opacity)."
+msgstr "Ha az érték [code]true[/code], megjelenik az átlátszatlanságot szabályozó alfacsatorna-csúszka."
+
+#: doc/classes/ColorPicker.xml
+msgid "If [code]true[/code], shows an intensity slider. The intensity is applied as follows: convert the color to linear encoding, multiply it by [code]2 ** intensity[/code], and then convert it back to nonlinear sRGB encoding."
+msgstr "Ha az érték [code]true[/code], megjelenik az intenzitáscsúszka. A színválasztó lineáris kódolásra alakítja a színt, megszorozza [code]2 ** intensity[/code] értékével, majd visszaalakítja nemlineáris sRGB-kódolásra."
+
+#: doc/classes/ColorPicker.xml
+msgid "If [code]true[/code], the hex color code input field is visible."
+msgstr "Ha az érték [code]true[/code], látható a hexadecimális színkód beviteli mezője."
+
+#: doc/classes/ColorPicker.xml
+msgid "The shape of the color space view."
+msgstr "A színtér megjelenítésének alakja."
+
+#: doc/classes/ColorPicker.xml
+msgid "If [code]true[/code], the Swatches and Recent Colors presets are visible."
+msgstr "Ha az érték [code]true[/code], látható a Színminták és a Legutóbbi színek rész."
+
+#: doc/classes/ColorPicker.xml
+msgid "If [code]true[/code], the color sampler and color preview are visible."
+msgstr "Ha az érték [code]true[/code], a pipetta és a színelőnézet látható."
+
+#: doc/classes/ColorPicker.xml
+msgid "If [code]true[/code], the color sliders are visible."
+msgstr "Ha az érték [code]true[/code], a színcsúszkák láthatók."
+
+#: doc/classes/ColorPicker.xml
+msgid "Emitted when the color is changed."
+msgstr "Akkor bocsátja ki, amikor a szín megváltozik."
+
+#: doc/classes/ColorPicker.xml
+msgid "Emitted when a preset is added."
+msgstr "Akkor bocsátja ki, amikor hozzáadnak egy színmintát."
+
+#: doc/classes/ColorPicker.xml
+msgid "Emitted when a preset is removed."
+msgstr "Akkor bocsátja ki, amikor eltávolítanak egy színmintát."
+
+#: doc/classes/ColorPicker.xml
+msgid "Allows editing the color with Red/Green/Blue sliders in sRGB color space."
+msgstr "A szín az sRGB színtér vörös, zöld és kék csúszkáival szerkeszthető."
+
+#: doc/classes/ColorPicker.xml
+msgid "Allows editing the color with Hue/Saturation/Value sliders."
+msgstr "A szín a színárnyalat, a telítettség és az érték csúszkáival szerkeszthető."
+
+#: doc/classes/ColorPicker.xml
+msgid "Allows editing the color with Red/Green/Blue sliders in linear color space."
+msgstr "A szín a lineáris színtér vörös, zöld és kék csúszkáival szerkeszthető."
+
+#: doc/classes/ColorPicker.xml
+msgid "Allows editing the color with Hue/Saturation/Lightness sliders.\nOKHSL is a new color space similar to HSL but that better match perception by leveraging the Oklab color space which is designed to be simple to use, while doing a good job at predicting perceived lightness, chroma and hue.\n[url=https://bottosson.github.io/posts/colorpicker/]Okhsv and Okhsl color spaces[/url]"
+msgstr "A szín a színárnyalat, a telítettség és a világosság csúszkáival szerkeszthető.\nAz OKHSL a HSL-hez hasonló színtér, amely az Oklab színtérre épül, így jobban követi az emberi színérzékelést. Az Oklab egyszerűen használható, és jól közelíti az érzékelt világosságot, színdússágot és színárnyalatot.\n[url=https://bottosson.github.io/posts/colorpicker/]Az Okhsv és az Okhsl színterek[/url]"
+
+#: doc/classes/ColorPicker.xml
+msgid "HSV Color Model rectangle color space."
+msgstr "A HSV színtér téglalap alakú nézete."
+
+#: doc/classes/ColorPicker.xml
+msgid "HSV Color Model rectangle color space with a wheel."
+msgstr "A HSV színtér téglalap alakú nézete színkerékkel."
+
+#: doc/classes/ColorPicker.xml
+msgid "HSV Color Model circle color space. Use Saturation as a radius."
+msgstr "A HSV színtér kör alakú nézete. A sugár a telítettséget adja meg."
+
+#: doc/classes/ColorPicker.xml
+msgid "HSL OK Color Model circle color space."
+msgstr "Az OKHSL színtér kör alakú nézete."
+
+#: doc/classes/ColorPicker.xml
+msgid "The color space shape and the shape select button are hidden. Can't be selected from the shapes popup."
+msgstr "A színtér alakzata és az alakválasztó gomb rejtve marad. Ez a mód az alakválasztó menüből nem választható ki."
+
+#: doc/classes/ColorPicker.xml
+msgid "OKHSL Color Model rectangle with constant lightness."
+msgstr "Az OKHSL színtér téglalap alakú nézete állandó világosság mellett."
+
+#: doc/classes/ColorPicker.xml
+msgid "OKHSL Color Model rectangle with constant saturation."
+msgstr "Az OKHSL színtér téglalap alakú nézete állandó telítettség mellett."
+
+#: doc/classes/ColorPicker.xml
+msgid "Color of rectangle or circle drawn when a picker shape part is focused but not editable via keyboard or joypad. Displayed [i]over[/i] the picker shape, so a partially transparent color should be used to ensure the picker shape remains visible."
+msgstr "Akkor kirajzolt téglalap vagy kör színe, amikor a színválasztó egyik része fókuszban van, de billentyűzettel vagy játékvezérlővel nem szerkeszthető. A jelölés a színválasztó alakzata [i]fölött[/i] jelenik meg, ezért érdemes részben átlátszó színt használni, hogy az alakzat látható maradjon."
+
+#: doc/classes/ColorPicker.xml
+msgid "Overrides the [theme_item Slider.center_grabber] theme property of the sliders."
+msgstr "Felülbírálja a csúszkák [theme_item Slider.center_grabber] tématulajdonságát."
+
+#: doc/classes/ColorPicker.xml
+msgid "The width of the hue selection slider."
+msgstr "A színárnyalat-választó csúszka szélessége."
+
+#: doc/classes/ColorPicker.xml
+msgid "The minimum width of the color labels next to sliders."
+msgstr "A csúszkák melletti színfeliratok minimális szélessége."
+
+#: doc/classes/ColorPicker.xml
+msgid "The margin around the [ColorPicker]."
+msgstr "A [ColorPicker] körüli margó."
+
+#: doc/classes/ColorPicker.xml
+msgid "The height of the saturation-value selection box."
+msgstr "A telítettség és az érték kiválasztására szolgáló mező magassága."
+
+#: doc/classes/ColorPicker.xml
+msgid "The width of the saturation-value selection box."
+msgstr "A telítettség és az érték kiválasztására szolgáló mező szélessége."
+
+#: doc/classes/ColorPicker.xml
+msgid "The icon for the \"Add Preset\" button."
+msgstr "A színminta hozzáadására szolgáló gomb ikonja."
+
+#: doc/classes/ColorPicker.xml
+msgid "The texture for the arrow grabber."
+msgstr "A nyíl alakú csúszkafogantyú textúrája."
+
+#: doc/classes/ColorPickerButton.xml
+msgid "A button that brings up a [ColorPicker] when pressed."
+msgstr "Megnyomásakor megnyit egy [ColorPicker] vezérlőt."
+
+#: doc/classes/ColorPickerButton.xml
+msgid "Encapsulates a [ColorPicker], making it accessible by pressing a button. Pressing the button will toggle the [ColorPicker]'s visibility.\nSee also [BaseButton] which contains common properties and methods associated with this node.\n[b]Note:[/b] By default, the button may not be wide enough for the color preview swatch to be visible. Make sure to set [member Control.custom_minimum_size] to a big enough value to give the button enough space."
+msgstr "Egy [ColorPicker] vezérlőt tesz elérhetővé egy gombbal. A gomb megnyomása váltja a [ColorPicker] láthatóságát.\nA csomópont közös tulajdonságait és metódusait lásd a [BaseButton] osztálynál.\n[b]Megjegyzés:[/b] Előfordulhat, hogy a gomb alapértelmezésben túl keskeny a színminta megjelenítéséhez. A [member Control.custom_minimum_size] értékével adj a gombnak elegendő helyet."
+
+#: doc/classes/ColorPickerButton.xml
+msgid "Returns the [ColorPicker] that this node toggles.\n[b]Warning:[/b] This is a required internal node, removing and freeing it may cause a crash. If you wish to hide it or any of its children, use their [member CanvasItem.visible] property."
+msgstr "Visszaadja a csomópont által megjelenített és elrejtett [ColorPicker] vezérlőt.\n[b]Figyelem:[/b] Ez egy szükséges belső csomópont. Eltávolítása és felszabadítása összeomlást okozhat. A csomópontot és gyermekeit a saját [member CanvasItem.visible] tulajdonságukkal rejtheted el."
+
+#: doc/classes/ColorPickerButton.xml
+msgid "Returns the control's [PopupPanel] which allows you to connect to popup signals. This allows you to handle events when the ColorPicker is shown or hidden.\n[b]Warning:[/b] This is a required internal node, removing and freeing it may cause a crash. If you wish to hide it or any of its children, use their [member Window.visible] property."
+msgstr "Visszaadja a vezérlő [PopupPanel] elemét, amelynek jeleihez az eseménykezelőidet csatlakoztathatod. Így kezelheted a ColorPicker megjelenítését és elrejtését.\n[b]Figyelem:[/b] Ez egy szükséges belső csomópont. Eltávolítása és felszabadítása összeomlást okozhat. A csomópontot vagy gyermekeit a [member Window.visible] tulajdonsággal rejtheted el."
+
+#: doc/classes/ColorPickerButton.xml
+msgid "If [code]true[/code], the alpha channel in the displayed [ColorPicker] will be visible."
+msgstr "Ha az érték [code]true[/code], a megjelenített [ColorPicker] alfacsatornája látható."
+
+#: doc/classes/ColorPickerButton.xml
+msgid "If [code]true[/code], the intensity slider in the displayed [ColorPicker] will be visible."
+msgstr "Ha az érték [code]true[/code], a megjelenített [ColorPicker] intenzitáscsúszkája látható."
+
+#: doc/classes/ColorPickerButton.xml
+msgid "Emitted when the color changes."
+msgstr "Akkor bocsátja ki, amikor a szín megváltozik."
