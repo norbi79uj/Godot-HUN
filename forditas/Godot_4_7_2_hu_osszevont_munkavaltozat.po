@@ -63342,3 +63342,203 @@ msgstr "A megadott méretre állítja a textúrát."
 #: doc/classes/ImageTexture.xml
 msgid "Replaces the texture's data with a new [Image].\n[b]Note:[/b] The texture has to be created using [method create_from_image] or initialized first with the [method set_image] method before it can be updated. The new image dimensions, format, and mipmaps configuration should match the existing texture's image configuration.\nUse this method over [method set_image] if you need to update the texture frequently, which is faster than allocating additional memory for a new texture each time."
 msgstr "A textúra adatait egy új [Image] adataira cseréli.\n[b]Megjegyzés:[/b] Frissítés előtt a textúrát a [method create_from_image] metódussal létre kell hozni, vagy a [method set_image] metódussal inicializálni kell. Az új kép méretének, formátumának és mipmap-beállításainak egyezniük kell a meglévő textúra képének beállításaival.\nGyakori frissítéshez ezt a metódust használd a [method set_image] helyett. Gyorsabb, mert nem kell minden alkalommal új memóriát lefoglalni a textúrához."
+
+#: doc/classes/AtlasTexture.xml
+msgid "A texture that crops out part of another Texture2D."
+msgstr "Olyan textúra, amely egy másik Texture2D egy részét vágja ki."
+
+#: doc/classes/AtlasTexture.xml
+msgid "[Texture2D] resource that draws only part of its [member atlas] texture, as defined by the [member region]. An additional [member margin] can also be set, which is useful for small adjustments.\nMultiple [AtlasTexture] resources can be cropped from the same [member atlas]. Packing many smaller textures into a singular large texture helps to optimize video memory costs and render calls.\n[b]Note:[/b] [AtlasTexture] cannot be used in an [AnimatedTexture], and will not tile properly in nodes such as [TextureRect] or [Sprite2D]. To tile an [AtlasTexture], modify its [member region] instead."
+msgstr "[Texture2D] erőforrás, amely az [member atlas] textúrából csak a [member region] által kijelölt részt rajzolja ki. Kisebb igazításokhoz a [member margin] is beállítható.\nUgyanabból az [member atlas] textúrából több [AtlasTexture] erőforrás is kivágható. Ha sok kisebb textúra egyetlen nagy textúrában kap helyet, csökkenthető a videomemória-igény és a rajzolási hívások száma.\n[b]Megjegyzés:[/b] Az [AtlasTexture] nem használható [AnimatedTexture] erőforrásban, és az olyan csomópontokban sem ismétlődik megfelelően, mint a [TextureRect] vagy a [Sprite2D]. Az [AtlasTexture] ismétléséhez a [member region] tulajdonságát módosítsd."
+
+#: doc/classes/AtlasTexture.xml
+msgid "The texture that contains the atlas. Can be any type inheriting from [Texture2D], including another [AtlasTexture]."
+msgstr "Az atlaszt tartalmazó textúra. Bármely, a [Texture2D] osztályból származó típus lehet, akár egy másik [AtlasTexture] is."
+
+#: doc/classes/AtlasTexture.xml
+msgid "If [code]true[/code], the area outside of the [member region] is clipped to avoid bleeding of the surrounding texture pixels."
+msgstr "Ha [code]true[/code], a [member region] területén kívüli képpontokat levágja, így a környező textúraképpontok színe nem szivárog át a széleken."
+
+#: doc/classes/AtlasTexture.xml
+msgid "The region used to draw the [member atlas]. If either dimension of the region's size is [code]0[/code], the value from [member atlas] size will be used for that axis instead.\n[b]Note:[/b] The image size is always an integer, so the actual region size is rounded down."
+msgstr "Az [member atlas] kirajzolásakor felhasznált terület. Ha a terület valamelyik mérete [code]0[/code], azon a tengelyen az [member atlas] megfelelő mérete érvényesül.\n[b]Megjegyzés:[/b] A képméret mindig egész szám, ezért a terület tényleges mérete lefelé kerekítődik."
+
+#: doc/classes/GradientTexture2D.xml
+msgid "The colors are linearly interpolated in a straight line."
+msgstr "A színek egy egyenes mentén, lineárisan interpolálódnak."
+
+#: doc/classes/GradientTexture2D.xml
+msgid "The colors are linearly interpolated in a circular pattern."
+msgstr "A színek kör alakú mintázatban, lineárisan interpolálódnak."
+
+#: doc/classes/GradientTexture2D.xml
+msgid "The colors are linearly interpolated in a square pattern."
+msgstr "A színek négyzet alakú mintázatban, lineárisan interpolálódnak."
+
+#: doc/classes/GradientTexture2D.xml
+msgid "The colors are linearly interpolated in a cone pattern."
+msgstr "A színek kúp alakú mintázatban, lineárisan interpolálódnak."
+
+#: doc/classes/GradientTexture2D.xml
+msgid "The gradient fill is restricted to the range defined by [member fill_from] to [member fill_to] offsets."
+msgstr "A színátmenetes kitöltés a [member fill_from] és a [member fill_to] által meghatározott tartományra korlátozódik."
+
+#: doc/classes/GradientTexture2D.xml
+msgid "The texture is filled starting from [member fill_from] to [member fill_to] offsets, repeating the same pattern in both directions."
+msgstr "A textúrát a [member fill_from] és a [member fill_to] által megadott pontok közötti minta tölti ki, mindkét irányban ismétlődve."
+
+#: doc/classes/GradientTexture2D.xml
+msgid "The texture is filled starting from [member fill_from] to [member fill_to] offsets, mirroring the pattern in both directions."
+msgstr "A textúrát a [member fill_from] és a [member fill_to] által megadott pontok közötti minta tölti ki, mindkét irányban tükrözve ismételve a mintát."
+
+#: doc/classes/DPITexture.xml
+msgid "An automatically scalable [Texture2D] based on an SVG image."
+msgstr "SVG-képen alapuló, automatikusan méretezhető [Texture2D]."
+
+#: doc/classes/DPITexture.xml
+msgid "An automatically scalable [Texture2D] based on an SVG image. [DPITexture]s are used to automatically re-rasterize icons and other texture based UI theme elements to match viewport scale and font oversampling. See also [member ProjectSettings.display/window/stretch/mode] (\"canvas_items\" mode) and [member Viewport.oversampling_override]."
+msgstr "SVG-képen alapuló, automatikusan méretezhető [Texture2D]. A [DPITexture] erőforrások az ikonokat és a téma más, textúrára épülő felületi elemeit automatikusan újraraszterezik a nézetablak méretezéséhez és a betűtípusok túlmintavételezéséhez igazodva. Lásd még a [member ProjectSettings.display/window/stretch/mode] beállítást („canvas_items” mód) és a [member Viewport.oversampling_override] tulajdonságot."
+
+#: doc/classes/DPITexture.xml
+msgid "Creates a new [DPITexture] and initializes it by allocating and setting the SVG data to [param source]."
+msgstr "Új [DPITexture] erőforrást hoz létre, és a [param source] paraméterből beállítja az SVG-adatokat."
+
+#: doc/classes/DPITexture.xml
+msgid "Returns the [RID] of the texture rasterized to match the oversampling of the currently drawn canvas item."
+msgstr "Az éppen kirajzolt vászonelem túlmintavételezéséhez igazítva raszterezett textúra [RID] azonosítóját adja vissza."
+
+#: doc/classes/DPITexture.xml
+msgid "Returns this SVG texture's source code."
+msgstr "Visszaadja az SVG-textúra forráskódját."
+
+#: doc/classes/DPITexture.xml
+msgid "Sets this SVG texture's source code."
+msgstr "Beállítja az SVG-textúra forráskódját."
+
+#: doc/classes/DPITexture.xml
+msgid "Texture scale. [code]1.0[/code] is the original SVG size. Higher values result in a larger image."
+msgstr "A textúra méretaránya. Az [code]1.0[/code] az eredeti SVG-méretnek felel meg. Nagyobb érték nagyobb képet eredményez."
+
+#: doc/classes/DPITexture.xml
+msgid "If set, remaps texture colors according to [Color]-[Color] map."
+msgstr "Ha meg van adva, a [Color]–[Color] leképezés alapján helyettesíti a textúra színeit."
+
+#: doc/classes/DPITexture.xml
+msgid "If [code]true[/code], puts pixels of the same surrounding color in transition from transparent to opaque areas. For textures displayed with bilinear filtering, this helps to reduce the outline effect when exporting images from an image editor."
+msgstr "Ha [code]true[/code], az átlátszó és az átlátszatlan részek határán a környező színt adja a képpontoknak. Bilineáris szűréssel megjelenített textúráknál ez csökkenti a képszerkesztőből exportált képek körvonalhatását."
+
+#: doc/classes/DPITexture.xml
+msgid "An alternative to fixing darkened borders with [member fix_alpha_border] is to use premultiplied alpha. By enabling this option, the texture will be converted to this format. A premultiplied alpha texture requires specific materials to be displayed correctly:\n- In 2D, a [CanvasItemMaterial] will need to be created and configured to use the [constant CanvasItemMaterial.BLEND_MODE_PREMULT_ALPHA] blend mode on [CanvasItem]s that use this texture. In custom [code]canvas_item[/code] shaders, [code]render_mode blend_premul_alpha;[/code] should be used.\n- In 3D, a [BaseMaterial3D] will need to be created and configured to use the [constant BaseMaterial3D.BLEND_MODE_PREMULT_ALPHA] blend mode on materials that use this texture. In custom [code]spatial[/code] shaders, [code]render_mode blend_premul_alpha;[/code] should be used."
+msgstr "A sötét szélek [member fix_alpha_border] tulajdonsággal történő javítása helyett előszorzott alfa is használható. A beállítás bekapcsolásakor a textúra erre a formátumra alakul át. Az előszorzott alfájú textúra helyes megjelenítéséhez megfelelően beállított anyagokra van szükség:\n- 2D-ben hozz létre egy [CanvasItemMaterial] anyagot, és a textúrát használó [CanvasItem] csomópontokon állítsd be a [constant CanvasItemMaterial.BLEND_MODE_PREMULT_ALPHA] keverési módot. Egyéni [code]canvas_item[/code] árnyalóban a [code]render_mode blend_premul_alpha;[/code] utasítást használd.\n- 3D-ben hozz létre egy [BaseMaterial3D] anyagot, és állítsd be rajta a [constant BaseMaterial3D.BLEND_MODE_PREMULT_ALPHA] keverési módot. Egyéni [code]spatial[/code] árnyalóban a [code]render_mode blend_premul_alpha;[/code] utasítást használd."
+
+#: doc/classes/DPITexture.xml
+msgid "Overrides texture saturation."
+msgstr "Felülírja a textúra színtelítettségét."
+
+#: doc/classes/ResourceImporterTexture.xml
+msgid "Imports an image for use in 2D or 3D rendering."
+msgstr "Képet importál a 2D vagy 3D rendereléshez."
+
+#: doc/classes/ResourceImporterTexture.xml
+msgid "This importer imports [CompressedTexture2D] resources. If you need to process the image in scripts in a more convenient way, use [ResourceImporterImage] instead. See also [ResourceImporterLayeredTexture]."
+msgstr "Ez az importáló [CompressedTexture2D] erőforrásokat hoz létre. Ha a képet kényelmesebben szeretnéd feldolgozni szkriptből, használd a [ResourceImporterImage] importálót. Lásd még: [ResourceImporterLayeredTexture]."
+
+#: doc/classes/ResourceImporterTexture.xml
+msgid "Controls how color channels should be used in the imported texture.\n[b]sRGB Friendly:[/b] Prevents the R and RG color formats from being used, as they do not support nonlinear sRGB encoding.\n[b]Optimized:[/b] Allows the RG color format to be used if the texture does not use the blue channel. This reduces memory usage if the texture's blue channel can be discarded (all pixels must have a blue value of [code]0[/code])."
+msgstr "Szabályozza, hogy az importált textúra hogyan használja a színcsatornákat.\n[b]sRGB Friendly:[/b] Kizárja az R és RG színformátumokat, mert azok nem támogatják a nemlineáris sRGB-kódolást.\n[b]Optimized:[/b] Engedélyezi az RG színformátumot, ha a textúra nem használja a kék csatornát. Ez csökkenti a memóriahasználatot, ha a kék csatorna elhagyható, vagyis minden képpont kék értéke [code]0[/code]."
+
+#: doc/classes/ResourceImporterTexture.xml doc/classes/ResourceImporterLayeredTexture.xml
+msgid "The quality to use when using the [b]Lossy[/b] compression mode. Higher values result in better quality, at the cost of larger file sizes. Lossy quality does not affect memory usage of the imported texture, only its file size on disk."
+msgstr "A [b]Lossy[/b] tömörítési mód minősége. A nagyobb érték jobb minőséget és nagyobb fájlméretet eredményez. Ez a beállítás csak az importált textúra lemezen elfoglalt méretét befolyásolja, a memóriahasználatát nem."
+
+#: doc/classes/ResourceImporterTexture.xml doc/classes/ResourceImporterLayeredTexture.xml
+msgid "The compression mode to use. Each compression mode provides a different tradeoff:\n[b]Lossless[/b]: Original quality, high memory usage, high size on disk, fast import.\n[b]Lossy:[/b] Reduced quality, high memory usage, low size on disk, fast import.\n[b]VRAM Compressed:[/b] Reduced quality, low memory usage, low size on disk, slowest import. Only use for textures in 3D scenes, not for 2D elements.\n[b]VRAM Uncompressed:[/b] Original quality, high memory usage, highest size on disk, fastest import.\n[b]Basis Universal:[/b] Reduced quality, low memory usage, lowest size on disk, slow import. Only use for textures in 3D scenes, not for 2D elements.\nSee [url=$DOCS_URL/tutorials/assets_pipeline/importing_images.html#compress-mode]Compress mode[/url] in the manual for more details."
+msgstr "A használandó tömörítési mód. Az egyes módok eltérő egyensúlyt kínálnak a minőség, a méret és az importálási idő között:\n[b]Lossless[/b]: Eredeti minőség, nagy memóriahasználat, nagy lemezméret, gyors importálás.\n[b]Lossy:[/b] Kisebb minőség, nagy memóriahasználat, kis lemezméret, gyors importálás.\n[b]VRAM Compressed:[/b] Kisebb minőség, kis memóriahasználat és lemezméret, a leglassabb importálás. Csak 3D jelenetek textúráihoz használd, 2D elemekhez ne.\n[b]VRAM Uncompressed:[/b] Eredeti minőség, nagy memóriahasználat, a legnagyobb lemezméret és a leggyorsabb importálás.\n[b]Basis Universal:[/b] Kisebb minőség, kis memóriahasználat, a legkisebb lemezméret és lassú importálás. Csak 3D jelenetek textúráihoz használd, 2D elemekhez ne.\nTovábbi részletek a kézikönyv [url=$DOCS_URL/tutorials/assets_pipeline/importing_images.html#compress-mode]Tömörítési mód[/url] szakaszában találhatók."
+
+#: doc/classes/ResourceImporterTexture.xml doc/classes/ResourceImporterLayeredTexture.xml
+msgid "If greater than or equal to [code]0.01[/code], enables Rate-Distortion Optimization (RDO) to reduce file size. Higher values result in smaller file sizes but lower quality.\n[b]Note:[/b] Enabling RDO makes encoding times significantly longer, especially when the image is large.\nSee also [member ProjectSettings.rendering/textures/basis_universal/rdo_dict_size] and [member ProjectSettings.rendering/textures/basis_universal/zstd_supercompression_level] if you want to reduce the file size further."
+msgstr "Ha az érték legalább [code]0.01[/code], a fájlméret csökkentéséhez bekapcsolja a bitráta és a torzítás közötti optimalizálást (RDO). A nagyobb érték kisebb fájlt, de rosszabb minőséget eredményez.\n[b]Megjegyzés:[/b] Az RDO jelentősen növeli a kódolási időt, különösen nagy képek esetén.\nA fájlméret további csökkentéséhez lásd még a [member ProjectSettings.rendering/textures/basis_universal/rdo_dict_size] és a [member ProjectSettings.rendering/textures/basis_universal/zstd_supercompression_level] beállítást."
+
+#: doc/classes/ResourceImporterTexture.xml doc/classes/ResourceImporterLayeredTexture.xml
+msgid "The UASTC encoding level. Higher values result in better quality but make encoding times longer."
+msgstr "Az UASTC kódolási szintje. A nagyobb érték jobb minőséget ad, de hosszabb kódolási idővel jár."
+
+#: doc/classes/ResourceImporterTexture.xml
+msgid "This changes the [member compress/mode] option that is used when a texture is detected as being used in 3D.\nChanging this import option only has an effect if a texture is detected as being used in 3D. Changing this to [b]Disabled[/b] then reimporting will not change the existing compress mode on a texture (if it's detected to be used in 3D), but choosing [b]VRAM Compressed[/b] or [b]Basis Universal[/b] will."
+msgstr "Meghatározza, hogy milyen értékre álljon a [member compress/mode] beállítás, amikor a Godot azt észleli, hogy a textúrát 3D-ben használják.\nA beállítás módosítása csak akkor hat, ha a Godot 3D-s használatot észlel. Ha a [b]Disabled[/b] értéket választod és újraimportálod a textúrát, a meglévő tömörítési mód megmarad. A [b]VRAM Compressed[/b] vagy a [b]Basis Universal[/b] kiválasztása ilyenkor módosítja a tömörítési módot."
+
+#: doc/classes/ResourceImporterTexture.xml
+msgid "If [code]true[/code], converts the imported image's colors to match [member EditorSettings.interface/theme/icon_and_font_color]. This assumes the image uses the exact same colors as [url=$DOCS_URL/engine_details/editor/creating_icons.html]Godot's own color palette for editor icons[/url], with the source file designed for a dark editor theme. This should be enabled for editor plugin icons and custom class icons, but should be left disabled otherwise.\n[b]Note:[/b] Only available for SVG images."
+msgstr "Ha [code]true[/code], az importált kép színeit az [member EditorSettings.interface/theme/icon_and_font_color] beállításhoz igazítja. Ehhez a forrásfájlt sötét szerkesztőtémához kell megtervezni, és pontosan ugyanazokat a színeket kell használnia, mint a [url=$DOCS_URL/engine_details/editor/creating_icons.html]Godot szerkesztőikonjainak palettája[/url]. Szerkesztőbővítmények és egyéni osztályok ikonjainál ajánlott bekapcsolni. Egyéb képeknél hagyd kikapcsolva.\n[b]Megjegyzés:[/b] Csak SVG-képekhez érhető el."
+
+#: doc/classes/ResourceImporterTexture.xml
+msgid "If [code]true[/code], scales the imported image to match [member EditorSettings.interface/editor/appearance/custom_display_scale]. This should be enabled for editor plugin icons and custom class icons, but should be left disabled otherwise.\n[b]Note:[/b] Only available for SVG images."
+msgstr "Ha [code]true[/code], az importált képet az [member EditorSettings.interface/editor/appearance/custom_display_scale] beállításhoz méretezi. Szerkesztőbővítmények és egyéni osztályok ikonjainál ajánlott bekapcsolni. Egyéb képeknél hagyd kikapcsolva.\n[b]Megjegyzés:[/b] Csak SVG-képekhez érhető el."
+
+#: doc/classes/ResourceImporterTexture.xml
+msgid "If [code]true[/code], smaller versions of the texture are generated on import. For example, a 64×64 texture will generate 6 mipmaps (32×32, 16×16, 8×8, 4×4, 2×2, 1×1). This has several benefits:\n- Textures will not become grainy in the distance (in 3D), or if scaled down due to [Camera2D] zoom or [CanvasItem] scale (in 2D).\n- Performance will improve if the texture is displayed in the distance, since sampling smaller versions of the original texture is faster and requires less memory bandwidth.\nThe downside of mipmaps is that they increase memory usage by roughly 33%.\nIt's recommended to enable mipmaps in 3D. However, in 2D, this should only be enabled if your project visibly benefits from having mipmaps enabled. If the camera never zooms out significantly, there won't be a benefit to enabling mipmaps but memory usage will increase."
+msgstr "Ha [code]true[/code], importáláskor elkészülnek a textúra kisebb változatai. Egy 64×64 képpontos textúrához például 6 mipmap-szint készül (32×32, 16×16, 8×8, 4×4, 2×2, 1×1). Ennek több előnye van:\n- A textúrák nem lesznek szemcsések a távolban (3D-ben), illetve akkor sem, ha a [Camera2D] kicsinyítése vagy a [CanvasItem] méretezése miatt kisebb méretben jelennek meg (2D-ben).\n- A távoli textúrák megjelenítése gyorsul, mert a kisebb változatok mintavételezése gyorsabb, és kisebb memória-sávszélességet igényel.\nA mipmap-szintek hátránya, hogy körülbelül 33%-kal növelik a memóriahasználatot.\n3D-ben ajánlott bekapcsolni a mipmap-szintek létrehozását. 2D-ben csak akkor érdemes, ha a különbség látható a projektben. Ha a kamera soha nem kicsinyít számottevően, a mipmap-szintek nem hoznak előnyt, viszont növelik a memóriahasználatot."
+
+#: doc/classes/ResourceImporterTexture.xml doc/classes/ResourceImporterLayeredTexture.xml
+msgid "Unimplemented. This currently has no effect when changed."
+msgstr "Nincs megvalósítva. A módosításának jelenleg nincs hatása."
+
+#: doc/classes/ResourceImporterTexture.xml
+msgid "If [code]true[/code], puts pixels of the same surrounding color in transition from transparent to opaque areas. For textures displayed with bilinear filtering, this helps to reduce the outline effect when exporting images from an image editor.\nIt's recommended to leave this enabled (as it is by default), unless this causes issues for a particular image."
+msgstr "Ha [code]true[/code], az átlátszó és az átlátszatlan részek határán a környező színt adja a képpontoknak. Bilineáris szűréssel megjelenített textúráknál ez csökkenti a képszerkesztőből exportált képek körvonalhatását.\nÉrdemes az alapértelmezés szerint bekapcsolt állapotban hagyni, kivéve, ha egy adott képnél problémát okoz."
+
+#: doc/classes/ResourceImporterTexture.xml
+msgid "Some HDR images you can find online may be broken and contain data that is encoded using the nonlinear sRGB transfer function (instead of using linear encoding). It is advised not to use those files. If you absolutely have to, enabling [member process/hdr_as_srgb] will make them look correct.\n[b]Warning:[/b] Enabling [member process/hdr_as_srgb] on well-formatted HDR images will cause the resulting image to look too dark, so leave this on [code]false[/code] if unsure."
+msgstr "Egyes hibás HDR-képek a lineáris kódolás helyett a nemlineáris sRGB átviteli függvénnyel kódolt adatokat tartalmaznak. Érdemes kerülni ezeket a fájlokat. Ha mégis szükséged van rájuk, a [member process/hdr_as_srgb] bekapcsolásával helyesen jeleníthetők meg.\n[b]Figyelmeztetés:[/b] Ha jól kódolt HDR-képeknél kapcsolod be a [member process/hdr_as_srgb] beállítást, a kapott kép túl sötét lesz. Ha bizonytalan vagy, hagyd [code]false[/code] értéken."
+
+#: doc/classes/ResourceImporterTexture.xml
+msgid "If [code]true[/code], convert the normal map from Y- (DirectX-style) to Y+ (OpenGL-style) by inverting its green color channel. This is the normal map convention expected by Godot.\nMore information about normal maps (including a coordinate order table for popular engines) can be found [url=http://wiki.polycount.com/wiki/Normal_Map_Technical_Details]here[/url]."
+msgstr "Ha [code]true[/code], a zöld színcsatorna invertálásával Y− (DirectX-stílusú) normáltérképről Y+ (OpenGL-stílusú) normáltérképre vált. A Godot ez utóbbi konvenciót használja.\nA normáltérképekről további információ [url=http://wiki.polycount.com/wiki/Normal_Map_Technical_Details]itt[/url] található, a népszerű motorok koordinátasorrendjét bemutató táblázattal együtt."
+
+#: doc/classes/ResourceImporterTexture.xml
+msgid "An alternative to fixing darkened borders with [member process/fix_alpha_border] is to use premultiplied alpha. By enabling this option, the texture will be converted to this format. A premultiplied alpha texture requires specific materials to be displayed correctly:\n- In 2D, a [CanvasItemMaterial] will need to be created and configured to use the [constant CanvasItemMaterial.BLEND_MODE_PREMULT_ALPHA] blend mode on [CanvasItem]s that use this texture. In custom [code]canvas_item[/code] shaders, [code]render_mode blend_premul_alpha;[/code] should be used.\n- In 3D, a [BaseMaterial3D] will need to be created and configured to use the [constant BaseMaterial3D.BLEND_MODE_PREMULT_ALPHA] blend mode on materials that use this texture. In custom [code]spatial[/code] shaders, [code]render_mode blend_premul_alpha;[/code] should be used."
+msgstr "A sötét szélek [member process/fix_alpha_border] tulajdonsággal történő javítása helyett előszorzott alfa is használható. A beállítás bekapcsolásakor a textúra erre a formátumra alakul át. Az előszorzott alfájú textúra helyes megjelenítéséhez megfelelően beállított anyagokra van szükség:\n- 2D-ben hozz létre egy [CanvasItemMaterial] anyagot, és a textúrát használó [CanvasItem] csomópontokon állítsd be a [constant CanvasItemMaterial.BLEND_MODE_PREMULT_ALPHA] keverési módot. Egyéni [code]canvas_item[/code] árnyalóban a [code]render_mode blend_premul_alpha;[/code] utasítást használd.\n- 3D-ben hozz létre egy [BaseMaterial3D] anyagot, és állítsd be rajta a [constant BaseMaterial3D.BLEND_MODE_PREMULT_ALPHA] keverési módot. Egyéni [code]spatial[/code] árnyalóban a [code]render_mode blend_premul_alpha;[/code] utasítást használd."
+
+#: doc/classes/ResourceImporterTexture.xml
+msgid "If set to a value greater than [code]0[/code], the size of the texture is limited on import to a value smaller than or equal to the value specified here. For non-square textures, the size limit affects the longer dimension, with the shorter dimension scaled to preserve aspect ratio. Resizing is performed using cubic interpolation.\nThis can be used to reduce memory usage without affecting the source images, or avoid issues with textures not displaying on mobile/web platforms (as these usually can't display textures larger than 4096×4096).\n[b]Note:[/b] Even if this is set to [code]0[/code], import size is limited to the following dimensions for technical reasons. Depending on [member compress/mode], textures will be downsampled on import if necessary:\n- [b]Lossy:[/b] 16383 pixels width or height, whichever is larger;\n- [b]Basis Universal:[/b] 16384 pixels width or height, whichever is larger;\n- [b]All other modes:[/b] 32768 pixels width or height, whichever is larger."
+msgstr "Ha az érték nagyobb, mint [code]0[/code], az importált textúra mérete nem haladhatja meg a megadott értéket. A korlát a nem négyzet alakú textúra hosszabb oldalára vonatkozik, a rövidebb oldal a képarány megtartásával méreteződik. Az átméretezés köbös interpolációval történik.\nÍgy az eredeti képek módosítása nélkül csökkenthető a memóriahasználat. Elkerülhetők azok a megjelenítési hibák is mobilon vagy weben, amelyeket a 4096×4096 képpontnál nagyobb textúrák okozhatnak.\n[b]Megjegyzés:[/b] Technikai okokból az importméret akkor is korlátozott, ha az érték [code]0[/code]. A [member compress/mode] beállítástól függően az importáló szükség esetén az alábbi méretre kicsinyíti a textúrát:\n- [b]Lossy:[/b] 16383 képpont a hosszabb oldalon.\n- [b]Basis Universal:[/b] 16384 képpont a hosszabb oldalon.\n- [b]All other modes:[/b] 32768 képpont a hosszabb oldalon."
+
+#: doc/classes/ResourceImporterTexture.xml
+msgid "The color channel to consider as a roughness map in this texture. Only effective if [member roughness/src_normal] is not empty."
+msgstr "A textúra érdességi térképként használandó színcsatornája. Csak akkor hat, ha a [member roughness/src_normal] értéke ki van töltve."
+
+#: doc/classes/ResourceImporterTexture.xml
+msgid "The path to the texture to consider as a normal map for roughness filtering on import. Specifying this can help decrease specular aliasing slightly in 3D.\nRoughness filtering on import is only used in 3D rendering, not 2D."
+msgstr "Az importáláskori érdességszűréshez normáltérképként használandó textúra elérési útja. A megadásával 3D-ben mérsékelhető a tükröződés recéződése.\nAz importáláskori érdességszűrés csak a 3D renderelésben használatos."
+
+#: doc/classes/ResourceImporterTexture.xml
+msgid "The scale the SVG should be rendered at, with [code]1.0[/code] being the original design size. Higher values result in a larger image. Note that unlike font oversampling, this affects the size the SVG is rendered at in 2D. See also [member editor/scale_with_editor_scale].\n[b]Note:[/b] Only available for SVG images."
+msgstr "Az SVG renderelési méretaránya. Az [code]1.0[/code] az eredeti tervezési méretnek felel meg. A nagyobb érték nagyobb képet eredményez. A betűtípusok túlmintavételezésével ellentétben ez a 2D-ben kirajzolt SVG méretét is módosítja. Lásd még: [member editor/scale_with_editor_scale].\n[b]Megjegyzés:[/b] Csak SVG-képekhez érhető el."
+
+#: doc/classes/ResourceImporterLayeredTexture.xml
+msgid "Imports a 3-dimensional texture ([Texture3D]), a [Texture2DArray], a [Cubemap] or a [CubemapArray]."
+msgstr "Háromdimenziós textúrát ([Texture3D]), [Texture2DArray], [Cubemap] vagy [CubemapArray] erőforrást importál."
+
+#: doc/classes/ResourceImporterLayeredTexture.xml
+msgid "Controls how the cubemap's texture is internally laid out. When using high-resolution cubemaps, [b]2×3[/b] and [b]3×2[/b] are less prone to exceeding hardware texture size limits compared to [b]1×6[/b] and [b]6×1[/b]."
+msgstr "A kockatérkép lapjainak elrendezését szabályozza a textúrában. Nagy felbontású kockatérképnél a [b]2×3[/b] és a [b]3×2[/b] elrendezés kisebb eséllyel lépi túl a hardver textúraméret-korlátait, mint az [b]1×6[/b] vagy a [b]6×1[/b] elrendezés."
+
+#: doc/classes/ResourceImporterTextureAtlas.xml
+msgid "Path to the atlas spritesheet. This [i]must[/i] be set to valid path to a PNG image. Otherwise, the atlas will fail to import."
+msgstr "Az atlasz sprite-lapjának elérési útja. [i]Kötelező[/i] érvényes PNG-útvonalat megadni, különben az atlasz importálása meghiúsul."
+
+#: doc/classes/ResourceImporterTextureAtlas.xml
+msgid "If [code]true[/code], trims the region to exclude fully transparent pixels using a clipping rectangle (which is never rotated). This can be used to save memory. See also [member crop_to_region].\n[b]Note:[/b] Only effective if [member import_mode] is [b]Region[/b]."
+msgstr "Ha [code]true[/code], egy elforgatás nélküli vágótéglalappal levágja a terület teljesen átlátszó részeit. Ez csökkentheti a memóriahasználatot. Lásd még: [member crop_to_region].\n[b]Megjegyzés:[/b] Csak akkor hat, ha az [member import_mode] értéke [b]Region[/b]."
+
+#: doc/classes/ResourceImporterTexture.xml
+msgid "If [code]true[/code], clamps exposure in the imported high dynamic range images using a smart clamping formula (without introducing [i]visible[/i] clipping).\nSome HDR panorama images you can find online may contain extremely bright pixels, due to being taken from real life sources without any clipping.\nWhile these HDR panorama images are accurate to real life, this can cause the radiance map generated by Godot to contain sparkles when used as a background sky. This can be seen in material reflections (even on rough materials in extreme cases). Enabling [member process/hdr_clamp_exposure] can resolve this."
+msgstr "Ha [code]true[/code], úgy korlátozza az importált nagy dinamikatartományú képek expozícióját, hogy az ne okozzon [i]látható[/i] levágást.\nEgyes HDR-panorámaképek rendkívül fényes képpontokat tartalmazhatnak, mert valós jelenetekből, a fényesség levágása nélkül készültek.\nBár ezek a képek hűen adják vissza az eredeti jelenetet, háttérégboltként használva csillogó pontokat okozhatnak a Godot által előállított sugársűrűség-térképen. Ez látható az anyagok tükröződésében, szélsőséges esetben még érdes anyagokon is. A [member process/hdr_clamp_exposure] bekapcsolása megoldhatja a problémát."
+
+#: doc/classes/ResourceImporterLayeredTexture.xml
+msgid "If [code]true[/code], smaller versions of the texture are generated on import. For example, a 64×64 texture will generate 6 mipmaps (32×32, 16×16, 8×8, 4×4, 2×2, 1×1). This has several benefits:\n- Textures will not become grainy in the distance (in 3D), or if scaled down due to [Camera2D] zoom or [CanvasItem] scale (in 2D).\n- Performance will improve if the texture is displayed in the distance, since sampling smaller versions of the original texture is faster and requires less memory bandwidth.\nThe downside of mipmaps is that they increase memory usage by roughly 33% (for [Texture2DArray], [Cubemap] and [CubemapArray]) or 14% (for [Texture3D]).\nIt's recommended to enable mipmaps in 3D. However, in 2D, this should only be enabled if your project visibly benefits from having mipmaps enabled. If the camera never zooms out significantly, there won't be a benefit to enabling mipmaps but memory usage will increase."
+msgstr "Ha [code]true[/code], importáláskor elkészülnek a textúra kisebb változatai. Egy 64×64 képpontos textúrához például 6 mipmap-szint készül (32×32, 16×16, 8×8, 4×4, 2×2, 1×1). Ennek több előnye van:\n- A textúrák nem lesznek szemcsések a távolban (3D-ben), illetve akkor sem, ha a [Camera2D] kicsinyítése vagy a [CanvasItem] méretezése miatt kisebb méretben jelennek meg (2D-ben).\n- A távoli textúrák megjelenítése gyorsul, mert a kisebb változatok mintavételezése gyorsabb, és kisebb memória-sávszélességet igényel.\nA mipmap-szintek hátránya, hogy körülbelül 33%-kal növelik a memóriahasználatot a [Texture2DArray], [Cubemap] és [CubemapArray] esetében, a [Texture3D] esetében pedig 14%-kal.\n3D-ben ajánlott bekapcsolni a mipmap-szintek létrehozását. 2D-ben csak akkor érdemes, ha a különbség látható a projektben. Ha a kamera soha nem kicsinyít számottevően, a mipmap-szintek nem hoznak előnyt, viszont növelik a memóriahasználatot."
+
+#: doc/classes/TextureRect.xml
+msgid "The height of the texture will be ignored. Minimum width will be equal to the current height. Useful for horizontal layouts, e.g. inside [HBoxContainer]."
+msgstr "A textúra magasságát figyelmen kívül hagyja. A legkisebb szélesség a csomópont aktuális magasságával egyezik meg. Vízszintes elrendezéseknél hasznos, például [HBoxContainer] csomópontban."
