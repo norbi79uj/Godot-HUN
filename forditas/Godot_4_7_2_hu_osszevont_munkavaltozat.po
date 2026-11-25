@@ -61942,3 +61942,203 @@ msgstr "Ha az érték [code]true[/code], a megjelenített [ColorPicker] intenzit
 #: doc/classes/ColorPickerButton.xml
 msgid "Emitted when the color changes."
 msgstr "Akkor bocsátja ki, amikor a szín megváltozik."
+
+#: doc/classes/FileDialog.xml
+msgid "A dialog for selecting files or directories in the filesystem."
+msgstr "Párbeszédablak a fájlrendszerben lévő fájlok vagy mappák kiválasztásához."
+
+#: doc/classes/FileDialog.xml
+msgid "[FileDialog] is a preset dialog used to choose files and directories in the filesystem. It supports filter masks. [FileDialog] automatically sets its window title according to the [member file_mode]. If you want to use a custom title, disable this by setting [member mode_overrides_title] to [code]false[/code].\n[b]Note:[/b] [FileDialog] is invisible by default. To make it visible, call one of the [code]popup_*[/code] methods from [Window] on the node, such as [method Window.popup_centered_clamped]."
+msgstr "A [FileDialog] kész párbeszédablak a fájlrendszerben lévő fájlok és mappák kiválasztásához. Szűrőmintákat is támogat. A [FileDialog] a [member file_mode] alapján automatikusan beállítja az ablak címét. Egyéni cím használatához állítsd a [member mode_overrides_title] értékét [code]false[/code] értékre.\n[b]Megjegyzés:[/b] A [FileDialog] alapértelmezés szerint rejtve van. A megjelenítéséhez hívd meg rajta a [Window] valamelyik [code]popup_*[/code] metódusát, például a [method Window.popup_centered_clamped] metódust."
+
+#: doc/classes/FileDialog.xml
+msgid "Adds a comma-separated file extension [param filter] and comma-separated MIME type [param mime_type] option to the [FileDialog] with an optional [param description], which restricts what files can be picked.\nA [param filter] should be of the form [code]\"filename.extension\"[/code], where filename and extension can be [code]*[/code] to match any string. Filters starting with [code].[/code] (i.e. empty filenames) are not allowed.\nFor example, a [param filter] of [code]\"*.png, *.jpg\"[/code], a [param mime_type] of [code]image/png, image/jpeg[/code], and a [param description] of [code]\"Images\"[/code] results in filter text \"Images (*.png, *.jpg)\".\n[b]Note:[/b] Embedded file dialogs and Windows file dialogs support only file extensions, while Android, Linux, and macOS file dialogs also support MIME types."
+msgstr "Vesszővel elválasztott fájlkiterjesztéseket ([param filter]) és MIME-típusokat ([param mime_type]) tartalmazó szűrőt ad a [FileDialog] ablakhoz, igény szerint [param description] leírással. A szűrő korlátozza a kiválasztható fájlokat.\nA [param filter] formátuma [code]\"filename.extension\"[/code]. A név vagy a kiterjesztés helyén a [code]*[/code] tetszőleges karakterláncra illeszkedik. A [code].[/code] karakterrel kezdődő, vagyis üres fájlnevű szűrők nem használhatók.\nHa például a [param filter] értéke [code]\"*.png, *.jpg\"[/code], a [param mime_type] értéke [code]image/png, image/jpeg[/code], a [param description] értéke pedig [code]\"Images\"[/code], a szűrő felirata „Images (*.png, *.jpg)” lesz.\n[b]Megjegyzés:[/b] A beágyazott és a Windows-fájlválasztók csak a fájlkiterjesztéseket támogatják. Androidon, Linuxon és macOS-en a MIME-típusok is használhatók."
+
+#: doc/classes/FileDialog.xml
+msgid "Adds an additional [OptionButton] to the file dialog. If [param values] is empty, a [CheckBox] is added instead.\n[param default_value_index] should be an index of the value in the [param values]. If [param values] is empty it should be either [code]1[/code] (checked), or [code]0[/code] (unchecked)."
+msgstr "Új [OptionButton] vezérlőt ad a fájlválasztóhoz. Ha a [param values] üres, helyette [CheckBox] jelenik meg.\nA [param default_value_index] a [param values] tömb egyik elemének indexe legyen. Ha a [param values] üres, [code]1[/code] jelenti a bejelölt, [code]0[/code] pedig az üres állapotot."
+
+#: doc/classes/FileDialog.xml
+msgid "Clear the filter for file names."
+msgstr "Törli a fájlnevek szűrőjét."
+
+#: doc/classes/FileDialog.xml
+msgid "Clear all the added filters in the dialog."
+msgstr "Törli a párbeszédablakhoz hozzáadott összes szűrőt."
+
+#: doc/classes/FileDialog.xml
+msgid "Clear all currently selected items in the dialog."
+msgstr "Megszünteti a párbeszédablak összes aktuális kijelölését."
+
+#: doc/classes/FileDialog.xml
+msgid "Returns the list of favorite directories, which is shared by all [FileDialog] nodes. Useful to store the list of favorites between project sessions. This method can be called only from the main thread."
+msgstr "Visszaadja a kedvenc mappák listáját, amelyet az összes [FileDialog] csomópont közösen használ. Így a kedvencek megőrizhetők a projekt két futtatása között. A metódus csak a fő szálról hívható."
+
+#: doc/classes/FileDialog.xml
+msgid "Returns the LineEdit for the selected file.\n[b]Warning:[/b] This is a required internal node, removing and freeing it may cause a crash. If you wish to hide it or any of its children, use their [member CanvasItem.visible] property."
+msgstr "Visszaadja a kiválasztott fájlhoz tartozó LineEdit mezőt.\n[b]Figyelem:[/b] Ez egy szükséges belső csomópont. Eltávolítása és felszabadítása összeomlást okozhat. A csomópont vagy gyermekei a saját [member CanvasItem.visible] tulajdonságukkal rejthetők el."
+
+#: doc/classes/FileDialog.xml
+msgid "Returns the default value index of the [OptionButton] or [CheckBox] with index [param option]."
+msgstr "Visszaadja a [param option] indexű [OptionButton] vagy [CheckBox] alapértelmezett értékének indexét."
+
+#: doc/classes/FileDialog.xml
+msgid "Returns the name of the [OptionButton] or [CheckBox] with index [param option]."
+msgstr "Visszaadja a [param option] indexű [OptionButton] vagy [CheckBox] nevét."
+
+#: doc/classes/FileDialog.xml
+msgid "Returns an array of values of the [OptionButton] with index [param option]."
+msgstr "Tömbben adja vissza a [param option] indexű [OptionButton] értékeit."
+
+#: doc/classes/FileDialog.xml
+msgid "Returns the list of recent directories, which is shared by all [FileDialog] nodes. Useful to store the list of recents between project sessions. This method can be called only from the main thread."
+msgstr "Visszaadja a legutóbb használt mappák listáját, amelyet az összes [FileDialog] csomópont közösen használ. Így a lista megőrizhető a projekt két futtatása között. A metódus csak a fő szálról hívható."
+
+#: doc/classes/FileDialog.xml
+msgid "Returns a [Dictionary] with the selected values of the additional [OptionButton]s and/or [CheckBox]es. [Dictionary] keys are names and values are selected value indices."
+msgstr "[Dictionary] értékben adja vissza a további [OptionButton] és [CheckBox] vezérlők kiválasztott értékeit. A [Dictionary] kulcsai a nevek, az értékek a kiválasztott értékek indexei."
+
+#: doc/classes/FileDialog.xml
+msgid "Returns the vertical box container of the dialog, custom controls can be added to it.\n[b]Warning:[/b] This is a required internal node, removing and freeing it may cause a crash. If you wish to hide it or any of its children, use their [member CanvasItem.visible] property.\n[b]Note:[/b] Changes to this node are ignored by native file dialogs, use [method add_option] to add custom elements to the dialog instead."
+msgstr "Visszaadja a párbeszédablak függőleges tárolóját, amelyhez egyéni vezérlők adhatók.\n[b]Figyelem:[/b] Ez egy szükséges belső csomópont. Eltávolítása és felszabadítása összeomlást okozhat. A csomópont vagy gyermekei a saját [member CanvasItem.visible] tulajdonságukkal rejthetők el.\n[b]Megjegyzés:[/b] A natív fájlválasztók figyelmen kívül hagyják a csomópont módosításait. Egyéni elemeket a [method add_option] metódussal adhatsz hozzá."
+
+#: doc/classes/FileDialog.xml
+msgid "Invalidates and updates this dialog's content list.\n[b]Note:[/b] This method does nothing on native file dialogs."
+msgstr "Érvényteleníti és frissíti a párbeszédablak tartalomlistáját.\n[b]Megjegyzés:[/b] Natív fájlválasztóknál nincs hatása."
+
+#: doc/classes/FileDialog.xml
+msgid "Returns [code]true[/code] if the provided [param flag] is enabled."
+msgstr "[code]true[/code] értéket ad vissza, ha a megadott [param flag] be van kapcsolva."
+
+#: doc/classes/FileDialog.xml
+msgid "Shows the [FileDialog] using the default size and position for file dialogs, and selects the file name if there is a current file."
+msgstr "A fájlválasztók alapértelmezett méretével és helyén jeleníti meg a [FileDialog] ablakot. Ha van aktuális fájl, kijelöli a fájlnevet."
+
+#: doc/classes/FileDialog.xml
+msgid "Sets the specified customization [param flag], allowing to customize the features available in this [FileDialog]."
+msgstr "Beállítja a megadott [param flag] jelzőt, amellyel testre szabhatod az adott [FileDialog] elérhető funkcióit."
+
+#: doc/classes/FileDialog.xml
+msgid "Sets the list of favorite directories, which is shared by all [FileDialog] nodes. Useful to restore the list of favorites saved with [method get_favorite_list]. This method can be called only from the main thread.\n[b]Note:[/b] [FileDialog] will update its internal [ItemList] of favorites when its visibility changes. Be sure to call this method earlier if you want your changes to have effect."
+msgstr "Beállítja a kedvenc mappák listáját, amelyet az összes [FileDialog] csomópont közösen használ. Így visszaállítható a [method get_favorite_list] metódussal mentett lista. A metódus csak a fő szálról hívható.\n[b]Megjegyzés:[/b] A [FileDialog] akkor frissíti a kedvenceket tartalmazó belső [ItemList] vezérlőt, amikor változik a láthatósága. A módosítás érvényesítéséhez hívd meg a metódust a láthatóság változása előtt."
+
+#: doc/classes/FileDialog.xml
+msgid "Sets the callback used by the [FileDialog] nodes to get a file icon, when [constant DISPLAY_LIST] mode is used. The callback should take a single [String] argument (file path), and return a [Texture2D]. If an invalid texture is returned, the [theme_item file] icon will be used instead."
+msgstr "Beállítja azt a visszahívást, amellyel a [FileDialog] csomópontok lekérik a fájlikont [constant DISPLAY_LIST] módban. A visszahívás egy [String] argumentumot vár, a fájl elérési útját, és egy [Texture2D] értéket ad vissza. Érvénytelen textúra esetén a [theme_item file] ikon jelenik meg."
+
+#: doc/classes/FileDialog.xml
+msgid "Sets the callback used by the [FileDialog] nodes to get a file icon, when [constant DISPLAY_THUMBNAILS] mode is used. The callback should take a single [String] argument (file path), and return a [Texture2D]. If an invalid texture is returned, the [theme_item file_thumbnail] icon will be used instead.\nThumbnails are usually more complex and may take a while to load. To avoid stalling the application, you can use [ImageTexture] to asynchronously create the thumbnail.\n[codeblock]\nfunc _ready():\n\tFileDialog.set_get_thumbnail_callback(thumbnail_method)\n\nfunc thumbnail_method(path):\n\tvar image_texture = ImageTexture.new()\n\tmake_thumbnail_async(path, image_texture)\n\treturn image_texture\n\nfunc make_thumbnail_async(path, image_texture):\n\tvar thumbnail_texture = await generate_thumbnail(path) # Some method that generates a thumbnail.\n\timage_texture.set_image(thumbnail_texture.get_image())\n[/codeblock]"
+msgstr "Beállítja azt a visszahívást, amellyel a [FileDialog] csomópontok lekérik a fájl előnézetét [constant DISPLAY_THUMBNAILS] módban. A visszahívás egy [String] argumentumot vár, a fájl elérési útját, és egy [Texture2D] értéket ad vissza. Érvénytelen textúra esetén a [theme_item file_thumbnail] ikon jelenik meg.\nAz előnézetek általában összetettebbek, így a betöltésük tovább tarthat. Az alkalmazás megakadását elkerülheted, ha az előnézetet aszinkron módon készíted el egy [ImageTexture] segítségével.\n[codeblock]\nfunc _ready():\n\tFileDialog.set_get_thumbnail_callback(thumbnail_method)\n\nfunc thumbnail_method(path):\n\tvar image_texture = ImageTexture.new()\n\tmake_thumbnail_async(path, image_texture)\n\treturn image_texture\n\nfunc make_thumbnail_async(path, image_texture):\n\tvar thumbnail_texture = await generate_thumbnail(path) # Some method that generates a thumbnail.\n\timage_texture.set_image(thumbnail_texture.get_image())\n[/codeblock]"
+
+#: doc/classes/FileDialog.xml
+msgid "Sets the default value index of the [OptionButton] or [CheckBox] with index [param option]."
+msgstr "Beállítja a [param option] indexű [OptionButton] vagy [CheckBox] alapértelmezett értékének indexét."
+
+#: doc/classes/FileDialog.xml
+msgid "Sets the name of the [OptionButton] or [CheckBox] with index [param option]."
+msgstr "Beállítja a [param option] indexű [OptionButton] vagy [CheckBox] nevét."
+
+#: doc/classes/FileDialog.xml
+msgid "Sets the option values of the [OptionButton] with index [param option]."
+msgstr "Beállítja a [param option] indexű [OptionButton] választható értékeit."
+
+#: doc/classes/FileDialog.xml
+msgid "The file system access scope.\n[b]Warning:[/b] In Web builds, FileDialog cannot access the host file system. In sandboxed Linux and macOS environments, [member use_native_dialog] is automatically used to allow limited access to host file system."
+msgstr "A fájlrendszerhez való hozzáférés hatóköre.\n[b]Figyelem:[/b] Webes kiadásokban a FileDialog nem fér hozzá a futtató eszköz fájlrendszeréhez. Elkülönített Linux- és macOS-környezetekben a [member use_native_dialog] automatikusan érvénybe lép, hogy korlátozott hozzáférést biztosítson a futtató eszköz fájlrendszeréhez."
+
+#: doc/classes/FileDialog.xml
+msgid "The current working directory of the file dialog.\n[b]Note:[/b] For native file dialogs, this property is only treated as a hint and may not be respected by specific OS implementations."
+msgstr "A fájlválasztó aktuális munkamappája.\n[b]Megjegyzés:[/b] A natív fájlválasztók ezt csak javaslatként kezelik. Előfordulhat, hogy egy adott operációs rendszer figyelmen kívül hagyja."
+
+#: doc/classes/FileDialog.xml
+msgid "The currently selected file of the file dialog."
+msgstr "A fájlválasztóban aktuálisan kiválasztott fájl."
+
+#: doc/classes/FileDialog.xml
+msgid "The currently selected file path of the file dialog."
+msgstr "A fájlválasztóban aktuálisan kiválasztott fájl elérési útja."
+
+#: doc/classes/FileDialog.xml
+msgid "If [code]true[/code], the context menu will show the \"Delete\" option, which allows moving files and folders to trash."
+msgstr "Ha az érték [code]true[/code], a helyi menüben megjelenik a Törlés lehetőség, amellyel fájlok és mappák helyezhetők a kukába."
+
+#: doc/classes/FileDialog.xml
+msgid "Display mode of the dialog's file list."
+msgstr "A párbeszédablak fájllistájának megjelenítési módja."
+
+#: doc/classes/FileDialog.xml
+msgid "If [code]true[/code], shows the toggle favorite button and favorite list on the left side of the dialog."
+msgstr "Ha az érték [code]true[/code], látható a kedvencekhez adás és onnan eltávolítás gombja, valamint a kedvencek listája a párbeszédablak bal oldalán."
+
+#: doc/classes/FileDialog.xml
+msgid "If [code]true[/code], shows the toggle file filter button."
+msgstr "Ha az érték [code]true[/code], megjelenik a fájlszűrőt kapcsoló gomb."
+
+#: doc/classes/FileDialog.xml
+msgid "The dialog's open or save mode, which affects the selection behavior."
+msgstr "A párbeszédablak megnyitási vagy mentési módja. Ez határozza meg a kiválasztás működését."
+
+#: doc/classes/FileDialog.xml
+msgid "If [code]true[/code], shows the file sorting options button."
+msgstr "Ha az érték [code]true[/code], megjelenik a fájlok rendezési beállításait megnyitó gomb."
+
+#: doc/classes/FileDialog.xml
+msgid "The filter for file names (case-insensitive). When set to a non-empty string, only files that contains the substring will be shown. [member filename_filter] can be edited by the user with the filter button at the top of the file dialog.\nSee also [member filters], which should be used to restrict the file types that can be selected instead of [member filename_filter] which is meant to be set by the user."
+msgstr "Fájlnévszűrő, amely figyelmen kívül hagyja a kis- és nagybetűk közti különbséget. Nem üres értéknél csak azok a fájlok jelennek meg, amelyek nevében szerepel a megadott részlet. A [member filename_filter] a fájlválasztó tetején lévő szűrőgombbal szerkeszthető.\nA kiválasztható fájltípusokat a [member filters] tulajdonsággal korlátozd. A [member filename_filter] értékét a felhasználó adhatja meg."
+
+#: doc/classes/FileDialog.xml
+msgid "If [code]true[/code], shows the button for creating new directories (when using [constant FILE_MODE_OPEN_DIR], [constant FILE_MODE_OPEN_ANY], or [constant FILE_MODE_SAVE_FILE]), and the context menu will have the \"New Folder...\" option."
+msgstr "Ha az érték [code]true[/code], megjelenik az új mappa létrehozására szolgáló gomb [constant FILE_MODE_OPEN_DIR], [constant FILE_MODE_OPEN_ANY] és [constant FILE_MODE_SAVE_FILE] módban. A helyi menüben is megjelenik az Új mappa… lehetőség."
+
+#: doc/classes/FileDialog.xml
+msgid "If [code]true[/code], shows the toggle hidden files button."
+msgstr "Ha az érték [code]true[/code], megjelenik a rejtett fájlok láthatóságát kapcsoló gomb."
+
+#: doc/classes/FileDialog.xml
+msgid "If [code]true[/code], shows the layout switch buttons (list/thumbnails)."
+msgstr "Ha az érték [code]true[/code], megjelennek a listanézet és az előnézeti nézet között váltó gombok."
+
+#: doc/classes/FileDialog.xml
+msgid "If [code]true[/code], changing the [member file_mode] property will set the window title accordingly (e.g. setting [member file_mode] to [constant FILE_MODE_OPEN_FILE] will change the window title to \"Open a File\")."
+msgstr "Ha az érték [code]true[/code], a [member file_mode] módosítása az ablak címét is az adott módhoz igazítja. Például a [member file_mode] értékét [constant FILE_MODE_OPEN_FILE] módra állítva az ablak címe „Fájl megnyitása” lesz."
+
+#: doc/classes/FileDialog.xml
+msgid "The number of additional [OptionButton]s and [CheckBox]es in the dialog."
+msgstr "A párbeszédablakhoz hozzáadott [OptionButton] és [CheckBox] vezérlők száma."
+
+#: doc/classes/FileDialog.xml
+msgid "The default value for the option at [code]index[/code].\n[b]Note:[/b] [code]index[/code] is a value in the [code]0 .. option_count - 1[/code] range."
+msgstr "A [code]index[/code] helyen lévő beállítás alapértelmezett értéke.\n[b]Megjegyzés:[/b] Az [code]index[/code] értéke a [code]0 .. option_count - 1[/code] tartományba esik."
+
+#: doc/classes/FileDialog.xml
+msgid "The name of the option at [code]index[/code].\n[b]Note:[/b] [code]index[/code] is a value in the [code]0 .. option_count - 1[/code] range."
+msgstr "A [code]index[/code] helyen lévő beállítás neve.\n[b]Megjegyzés:[/b] Az [code]index[/code] értéke a [code]0 .. option_count - 1[/code] tartományba esik."
+
+#: doc/classes/FileDialog.xml
+msgid "The list of values for the option at [code]index[/code].\n[b]Note:[/b] [code]index[/code] is a value in the [code]0 .. option_count - 1[/code] range."
+msgstr "A [code]index[/code] helyen lévő beállítás választható értékeinek listája.\n[b]Megjegyzés:[/b] Az [code]index[/code] értéke a [code]0 .. option_count - 1[/code] tartományba esik."
+
+#: doc/classes/FileDialog.xml
+msgid "If [code]true[/code], the [FileDialog] will warn the user before overwriting files in save mode."
+msgstr "Ha az érték [code]true[/code], a [FileDialog] mentési módban figyelmeztet, mielőtt felülírna egy fájlt."
+
+#: doc/classes/FileDialog.xml
+msgid "If [code]true[/code], shows the recent directories list on the left side of the dialog."
+msgstr "Ha az érték [code]true[/code], a párbeszédablak bal oldalán megjelenik a legutóbb használt mappák listája."
+
+#: doc/classes/FileDialog.xml
+msgid "If non-empty, the given sub-folder will be \"root\" of this [FileDialog], i.e. user won't be able to go to its parent directory.\n[b]Note:[/b] This property is ignored by native file dialogs."
+msgstr "Ha az érték nem üres, a megadott almappa lesz a [FileDialog] gyökérmappája. A felhasználó onnan nem léphet a szülőmappába.\n[b]Megjegyzés:[/b] A natív fájlválasztók figyelmen kívül hagyják ezt a tulajdonságot."
+
+#: doc/classes/FileDialog.xml
+msgid "If [code]true[/code], the dialog will show hidden files.\n[b]Note:[/b] This property is ignored by native file dialogs on Android and Linux."
+msgstr "Ha az érték [code]true[/code], a párbeszédablak megjeleníti a rejtett fájlokat.\n[b]Megjegyzés:[/b] Az androidos és linuxos natív fájlválasztók figyelmen kívül hagyják ezt a tulajdonságot."
+
+#: doc/classes/FileDialog.xml
+msgid "If [code]true[/code], and if supported by the current [DisplayServer], OS native dialog will be used instead of custom one.\n[b]Note:[/b] On Android, it is only supported when using [constant ACCESS_FILESYSTEM]. For access mode [constant ACCESS_RESOURCES] and [constant ACCESS_USERDATA], the system will fall back to custom FileDialog.\n[b]Note:[/b] On Linux and macOS, sandboxed apps always use native dialogs to access the host file system.\n[b]Note:[/b] On macOS, sandboxed apps will save security-scoped bookmarks to retain access to the opened folders across multiple sessions. Use [method OS.get_granted_permissions] to get a list of saved bookmarks.\n[b]Note:[/b] Native dialogs are isolated from the base process, file dialog properties can't be modified once the dialog is shown.\n[b]Note:[/b] This property is ignored in [EditorFileDialog]."
+msgstr "Ha az érték [code]true[/code], és az aktuális [DisplayServer] támogatja, a Godot saját párbeszédablaka helyett az operációs rendszer natív fájlválasztója nyílik meg.\n[b]Megjegyzés:[/b] Androidon ez csak [constant ACCESS_FILESYSTEM] módban támogatott. [constant ACCESS_RESOURCES] és [constant ACCESS_USERDATA] módban a Godot saját FileDialog ablakát használja.\n[b]Megjegyzés:[/b] Linuxon és macOS-en az elkülönített alkalmazások mindig natív fájlválasztót használnak a futtató eszköz fájlrendszerének eléréséhez.\n[b]Megjegyzés:[/b] macOS-en az elkülönített alkalmazások a hozzáférési jogosultságot megőrző könyvjelzőket mentenek, így a megnyitott mappák több futtatás között is hozzáférhetők maradnak. A mentett könyvjelzők listáját a [method OS.get_granted_permissions] metódussal kérheted le.\n[b]Megjegyzés:[/b] A natív fájlválasztó elkülönül az alkalmazás folyamatától. A megjelenítése után a tulajdonságai már nem módosíthatók.\n[b]Megjegyzés:[/b] Az [EditorFileDialog] figyelmen kívül hagyja ezt a tulajdonságot."
+
+#: doc/classes/FileDialog.xml
+msgid "Emitted when the user selects a directory."
+msgstr "Akkor bocsátja ki, amikor a felhasználó kiválaszt egy mappát."
