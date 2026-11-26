@@ -63942,3 +63942,203 @@ msgstr "A cella függőleges tükrözésének jelzőbitje. A használatához lá
 #: doc/classes/TileSetAtlasSource.xml
 msgid "Represents cell's transposed flag. See [constant TRANSFORM_FLIP_H] for usage."
 msgstr "A cella tengelycseréjének jelzőbitje. A használatához lásd a [constant TRANSFORM_FLIP_H] állandót."
+
+#: doc/classes/CameraTexture.xml
+msgid "Texture provided by a [CameraFeed]."
+msgstr "Egy [CameraFeed] által szolgáltatott textúra."
+
+#: doc/classes/CameraTexture.xml
+msgid "This texture gives access to the camera texture provided by a [CameraFeed].\n[b]Note:[/b] Many cameras supply YCbCr images which need to be converted in a shader."
+msgstr "Hozzáférést ad egy [CameraFeed] által szolgáltatott kameratextúrához.\n[b]Megjegyzés:[/b] Sok kamera YCbCr-képeket ad, amelyeket árnyalóban kell átalakítani."
+
+#: doc/classes/CameraTexture.xml
+msgid "The ID of the [CameraFeed] for which we want to display the image."
+msgstr "Annak a [CameraFeed] forrásnak az azonosítója, amelynek a képét meg szeretnéd jeleníteni."
+
+#: doc/classes/CameraTexture.xml
+msgid "Convenience property that gives access to the active property of the [CameraFeed]."
+msgstr "Közvetlen hozzáférést biztosít a [CameraFeed] aktív állapotához."
+
+#: doc/classes/CameraTexture.xml
+msgid "Which image within the [CameraFeed] we want access to, important if the camera image is split in a Y and CbCr component."
+msgstr "Megadja, hogy a [CameraFeed] melyik képéhez szeretnél hozzáférni. Ez akkor fontos, ha a kamerakép külön Y és CbCr összetevőből áll."
+
+#: doc/classes/CameraFeed.xml
+msgid "A camera feed gives you access to a single physical camera attached to your device."
+msgstr "A kameraforrás az eszközhöz csatlakoztatott egyik fizikai kamerához ad hozzáférést."
+
+#: doc/classes/CameraFeed.xml
+msgid "Called when the camera feed is activated."
+msgstr "A kameraforrás aktiválásakor hívódik meg."
+
+#: doc/classes/CameraFeed.xml
+msgid "Called when the camera feed is deactivated."
+msgstr "A kameraforrás kikapcsolásakor hívódik meg."
+
+#: doc/classes/CameraFeed.xml
+msgid "Override this method to define supported formats of the camera feed."
+msgstr "A kameraforrás által támogatott formátumok megadásához írd felül ezt a metódust."
+
+#: doc/classes/CameraFeed.xml
+msgid "Override this method to set the format of the camera feed."
+msgstr "A kameraforrás formátumának beállításához írd felül ezt a metódust."
+
+#: doc/classes/CameraFeed.xml
+msgid "Returns feed image data type."
+msgstr "Visszaadja a kameraforrás képének adattípusát."
+
+#: doc/classes/CameraFeed.xml
+msgid "Returns the unique ID for this feed."
+msgstr "Visszaadja a kameraforrás egyedi azonosítóját."
+
+#: doc/classes/CameraFeed.xml
+msgid "Returns the camera's name."
+msgstr "Visszaadja a kamera nevét."
+
+#: doc/classes/CameraFeed.xml
+msgid "Returns the position of camera on the device."
+msgstr "Visszaadja, hol helyezkedik el a kamera az eszközön."
+
+#: doc/classes/CameraFeed.xml
+msgid "Returns the texture backend ID (usable by some external libraries that need a handle to a texture to write data)."
+msgstr "Visszaadja a textúra renderelési háttérrendszerbeli azonosítóját. Egyes külső könyvtárak ezzel az azonosítóval férhetnek hozzá a textúrához, hogy közvetlenül beleírjanak."
+
+#: doc/classes/CameraFeed.xml
+msgid "Sets the feed as external feed provided by another library."
+msgstr "A kameraforrást egy másik könyvtár által szolgáltatott külső forrásként állítja be."
+
+#: doc/classes/CameraFeed.xml
+msgid "Sets the camera's name."
+msgstr "Beállítja a kamera nevét."
+
+#: doc/classes/CameraFeed.xml
+msgid "Sets the position of this camera."
+msgstr "Beállítja ennek a kamerának az elhelyezkedését."
+
+#: doc/classes/CameraFeed.xml
+msgid "Sets RGB image for this feed."
+msgstr "Beállítja a kameraforrás RGB-képét."
+
+#: doc/classes/CameraFeed.xml
+msgid "Sets YCbCr image for this feed."
+msgstr "Beállítja a kameraforrás YCbCr-képét."
+
+#: doc/classes/CameraFeed.xml
+msgid "Sets Y and CbCr images for this feed."
+msgstr "Beállítja a kameraforrás Y és CbCr összetevőinek képét."
+
+#: doc/classes/CameraFeed.xml
+msgid "If [code]true[/code], the feed is active."
+msgstr "Ha [code]true[/code], a kameraforrás aktív."
+
+#: doc/classes/CameraFeed.xml
+msgid "The transform applied to the camera's image."
+msgstr "A kameraképre alkalmazott transzformáció."
+
+#: doc/classes/CameraFeed.xml
+msgid "Formats supported by the feed. Each entry is a [Dictionary] describing format parameters."
+msgstr "A kameraforrás által támogatott formátumok. Minden bejegyzés egy [Dictionary] szótár, amely a formátum paramétereit írja le."
+
+#: doc/classes/CameraFeed.xml
+msgid "Emitted when the format has changed."
+msgstr "A formátum megváltozásakor váltódik ki."
+
+#: doc/classes/CameraFeed.xml
+msgid "Emitted when a new frame is available."
+msgstr "Új képkocka érkezésekor váltódik ki."
+
+#: doc/classes/CameraFeed.xml
+msgid "No image set for the feed."
+msgstr "A kameraforráshoz nincs kép beállítva."
+
+#: doc/classes/CameraFeed.xml
+msgid "Feed supplies RGB images."
+msgstr "A kameraforrás RGB-képeket szolgáltat."
+
+#: doc/classes/CameraFeed.xml
+msgid "Feed supplies YCbCr images that need to be converted to RGB."
+msgstr "A kameraforrás YCbCr-képeket szolgáltat, amelyeket RGB-re kell átalakítani."
+
+#: doc/classes/CameraFeed.xml
+msgid "Feed supplies separate Y and CbCr images that need to be combined and converted to RGB."
+msgstr "A kameraforrás külön Y és CbCr képeket szolgáltat. Ezeket egyesíteni kell, majd RGB-re kell átalakítani."
+
+#: doc/classes/CameraFeed.xml
+msgid "Feed supplies external image."
+msgstr "A kameraforrás külső képet szolgáltat."
+
+#: doc/classes/CameraFeed.xml
+msgid "Unspecified position."
+msgstr "A kamera elhelyezkedése nincs megadva."
+
+#: doc/classes/CameraFeed.xml
+msgid "Camera is mounted at the front of the device."
+msgstr "A kamera az eszköz elülső oldalán található."
+
+#: doc/classes/CameraFeed.xml
+msgid "Camera is mounted at the back of the device."
+msgstr "A kamera az eszköz hátoldalán található."
+
+#: doc/classes/CameraServer.xml
+msgid "Server keeping track of different cameras accessible in Godot."
+msgstr "A Godot számára elérhető kamerákat nyilvántartó kiszolgáló."
+
+#: doc/classes/CameraServer.xml
+msgid "Adds the camera [param feed] to the camera server."
+msgstr "Hozzáadja a [param feed] kameraforrást a kamerakiszolgálóhoz."
+
+#: doc/classes/CameraServer.xml
+msgid "Returns an array of [CameraFeed]s."
+msgstr "[CameraFeed] forrásokból álló tömböt ad vissza."
+
+#: doc/classes/CameraServer.xml
+msgid "Returns the [CameraFeed] corresponding to the camera with the given [param index]."
+msgstr "Visszaadja a megadott [param index] indexű kamerához tartozó [CameraFeed] forrást."
+
+#: doc/classes/CameraServer.xml
+msgid "Returns the number of [CameraFeed]s registered."
+msgstr "Visszaadja a regisztrált [CameraFeed] források számát."
+
+#: doc/classes/CameraServer.xml
+msgid "Removes the specified camera [param feed]."
+msgstr "Eltávolítja a megadott [param feed] kameraforrást."
+
+#: doc/classes/CameraServer.xml
+msgid "If [code]true[/code], the server is actively monitoring available camera feeds.\nThis has a performance cost, so only set it to [code]true[/code] when you're actively accessing the camera.\n[b]Note:[/b] After setting it to [code]true[/code], you can receive updated camera feeds through the [signal camera_feeds_updated] signal.\n[codeblocks]\n[gdscript]\nfunc _ready():\n\tCameraServer.camera_feeds_updated.connect(_on_camera_feeds_updated)\n\tCameraServer.monitoring_feeds = true\n\nfunc _on_camera_feeds_updated():\n\tvar feeds = CameraServer.feeds()\n[/gdscript]\n[csharp]\npublic override void _Ready()\n{\n\tCameraServer.CameraFeedsUpdated += OnCameraFeedsUpdated;\n\tCameraServer.MonitoringFeeds = true;\n}\n\nvoid OnCameraFeedsUpdated()\n{\n\tvar feeds = CameraServer.Feeds();\n}\n[/csharp]\n[/codeblocks]"
+msgstr "Ha [code]true[/code], a kiszolgáló aktívan figyeli az elérhető kameraforrásokat.\nA figyelés erőforrást igényel, ezért csak akkor állítsd [code]true[/code] értékre, amikor használod a kamerát.\n[b]Megjegyzés:[/b] Miután [code]true[/code] értékre állítottad, a [signal camera_feeds_updated] jelzésen keresztül értesülhetsz a kameraforrások változásáról.\n[codeblocks]\n[gdscript]\nfunc _ready():\n\tCameraServer.camera_feeds_updated.connect(_on_camera_feeds_updated)\n\tCameraServer.monitoring_feeds = true\n\nfunc _on_camera_feeds_updated():\n\tvar feeds = CameraServer.feeds()\n[/gdscript]\n[csharp]\npublic override void _Ready()\n{\n\tCameraServer.CameraFeedsUpdated += OnCameraFeedsUpdated;\n\tCameraServer.MonitoringFeeds = true;\n}\n\nvoid OnCameraFeedsUpdated()\n{\n\tvar feeds = CameraServer.Feeds();\n}\n[/csharp]\n[/codeblocks]"
+
+#: doc/classes/CameraServer.xml
+msgid "Emitted when a [CameraFeed] is added (e.g. a webcam is plugged in)."
+msgstr "Akkor váltódik ki, amikor új [CameraFeed] forrás jelenik meg, például egy webkamera csatlakoztatásakor."
+
+#: doc/classes/CameraServer.xml
+msgid "Emitted when a [CameraFeed] is removed (e.g. a webcam is unplugged)."
+msgstr "Akkor váltódik ki, amikor egy [CameraFeed] forrás eltűnik, például egy webkamera leválasztásakor."
+
+#: doc/classes/CameraServer.xml
+msgid "Emitted when camera feeds are updated."
+msgstr "A kameraforrások frissülésekor váltódik ki."
+
+#: doc/classes/CameraServer.xml
+msgid "The RGBA camera image."
+msgstr "Az RGBA formátumú kamerakép."
+
+#: doc/classes/CameraServer.xml
+msgid "The [url=https://en.wikipedia.org/wiki/YCbCr]YCbCr[/url] camera image."
+msgstr "A [url=https://en.wikipedia.org/wiki/YCbCr]YCbCr[/url] formátumú kamerakép."
+
+#: doc/classes/CameraServer.xml
+msgid "The Y component camera image."
+msgstr "A kamerakép Y összetevőjét tartalmazó kép."
+
+#: doc/classes/CameraServer.xml
+msgid "The CbCr component camera image."
+msgstr "A kamerakép CbCr összetevőjét tartalmazó kép."
+
+#: doc/classes/ExternalTexture.xml
+msgid "Texture which displays the content of an external buffer."
+msgstr "Külső puffer tartalmát megjelenítő textúra."
+
+#: doc/classes/ExternalTexture.xml
+msgid "External texture size."
+msgstr "A külső textúra mérete."
