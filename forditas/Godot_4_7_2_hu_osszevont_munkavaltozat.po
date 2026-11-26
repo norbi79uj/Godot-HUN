@@ -65442,3 +65442,203 @@ msgstr "Visszaadja a megadott alakzattulajdonos shape_id azonosítójú [Shape2D
 #: doc/classes/TextureButton.xml
 msgid "Texture to display on mouse down over the node, if the node has keyboard focus and the player presses the Enter key or if the player presses the [member BaseButton.shortcut] key. If not assigned, the [TextureButton] displays [member texture_hover] instead when pressed."
 msgstr "A lenyomott állapotban megjelenő textúra. A gombot engedélyezett egérgombbal, billentyűzetfókusz esetén az ui_accept művelettel, illetve a [member BaseButton.shortcut] gyorsbillentyűvel lehet lenyomni. Ha nincs megadva lenyomott textúra, a [TextureButton] a [member texture_hover] textúrát használja. Ennek hiányában a normál textúra jelenik meg."
+
+#: doc/classes/XRInterface.xml
+msgid "Base class for an XR interface implementation."
+msgstr "Az XR-interfészek megvalósításának alaposztálya."
+
+#: doc/classes/XRInterface.xml
+msgid "This class needs to be implemented to make an AR or VR platform available to Godot and these should be implemented as C++ modules or GDExtension modules. Part of the interface is exposed to GDScript so you can detect, enable and configure an AR or VR platform.\nInterfaces should be written in such a way that simply enabling them will give us a working setup. You can query the available interfaces through [XRServer]."
+msgstr "Ezt az osztályt kell megvalósítani ahhoz, hogy egy AR- vagy VR-platform elérhető legyen a Godotban. A megvalósítás C++-modul vagy GDExtension-modul lehet. Az interfész egy része GDScriptből is elérhető, így az AR- vagy VR-platform felismerhető, engedélyezhető és beállítható.\nAz interfészt úgy kell megvalósítani, hogy az engedélyezése önmagában működő beállítást eredményezzen. Az elérhető interfészek az [XRServer] segítségével kérdezhetők le."
+
+#: doc/classes/XRInterface.xml
+msgid "If this is an AR interface that requires displaying a camera feed as the background, this method returns the feed ID in the [CameraServer] for this interface."
+msgstr "Ha az AR-interfésznek háttérként kell megjelenítenie a kamera képét, ez a metódus az interfészhez tartozó kamerakép [CameraServer] szerinti azonosítóját adja vissza."
+
+#: doc/classes/XRInterface.xml
+msgid "Returns a combination of [enum Capabilities] flags providing information about the capabilities of this interface."
+msgstr "Az interfész képességeit leíró [enum Capabilities] jelzők kombinációját adja vissza."
+
+#: doc/classes/XRInterface.xml
+msgid "Returns the name of this interface ([code]\"OpenXR\"[/code], [code]\"OpenVR\"[/code], [code]\"OpenHMD\"[/code], [code]\"ARKit\"[/code], etc.)."
+msgstr "Visszaadja az interfész nevét (például [code]\"OpenXR\"[/code], [code]\"OpenVR\"[/code], [code]\"OpenHMD\"[/code] vagy [code]\"ARKit\"[/code])."
+
+#: doc/classes/XRInterface.xml
+msgid "Returns an array of vectors that represent the physical play area mapped to the virtual space around the [XROrigin3D] point. The points form a convex polygon that can be used to react to or visualize the play area. This returns an empty array if this feature is not supported or if the information is not yet available."
+msgstr "Vektortömbként adja vissza a fizikai játéktér pontjait, az [XROrigin3D] körüli virtuális térbe leképezve. A pontok konvex sokszöget alkotnak, amellyel megjeleníthető a játéktér, vagy reagálni lehet a határára. Üres tömböt ad vissza, ha a funkció nem támogatott, vagy az adatok még nem érhetők el."
+
+#: doc/classes/XRInterface.xml
+msgid "Returns the projection matrix for a view/eye."
+msgstr "Visszaadja az adott nézethez vagy szemhez tartozó vetítési mátrixot."
+
+#: doc/classes/XRInterface.xml
+msgid "Returns the resolution at which we should render our intermediate results before things like lens distortion are applied by the VR platform."
+msgstr "Visszaadja a köztes renderelés felbontását, amelyet a VR-platform optikai korrekciója és egyéb utófeldolgozása előtt kell használni."
+
+#: doc/classes/XRInterface.xml
+msgid "Returns the an array of supported environment blend modes, see [enum XRInterface.EnvironmentBlendMode]."
+msgstr "Tömbben adja vissza a támogatott környezetkeverési módokat. Lásd az [enum XRInterface.EnvironmentBlendMode] felsorolást."
+
+#: doc/classes/XRInterface.xml
+msgid "Returns a [Dictionary] with extra system info. Interfaces are expected to return [code]XRRuntimeName[/code] and [code]XRRuntimeVersion[/code] providing info about the used XR runtime. Additional entries may be provided specific to an interface.\n[b]Note:[/b]This information may only be available after [method initialize] was successfully called."
+msgstr "További rendszeradatokat ad vissza egy [Dictionary] formájában. Az interfésznek az XR-futtatókörnyezet nevét és verzióját a [code]XRRuntimeName[/code] és a [code]XRRuntimeVersion[/code] kulcs alatt kell megadnia. Az interfész további, saját bejegyzéseket is megadhat.\n[b]Megjegyzés:[/b] Ezek az adatok esetenként csak az [method initialize] sikeres meghívása után érhetők el."
+
+#: doc/classes/XRInterface.xml
+msgid "If supported, returns the status of our tracking. This will allow you to provide feedback to the user whether there are issues with positional tracking."
+msgstr "Ha az interfész támogatja, visszaadja a követés állapotát. Ezzel jelezhetők a felhasználónak a helyzetkövetés problémái."
+
+#: doc/classes/XRInterface.xml
+msgid "Returns the transform for a view/eye.\n[param view] is the view/eye index.\n[param cam_transform] is the transform that maps device coordinates to scene coordinates, typically the [member Node3D.global_transform] of the current XROrigin3D."
+msgstr "Visszaadja az adott nézethez vagy szemhez tartozó transzformációt.\nA [param view] a nézet vagy szem indexe.\nA [param cam_transform] az eszköz koordinátáit a jelenet koordinátáira leképező transzformáció. Ez általában az aktuális XROrigin3D [member Node3D.global_transform] értéke."
+
+#: doc/classes/XRInterface.xml
+msgid "Returns the number of views that need to be rendered for this device. 1 for Monoscopic, 2 for Stereoscopic."
+msgstr "Visszaadja az eszközhöz renderelendő nézetek számát. Monoszkopikus megjelenítésnél 1, sztereoszkopikus megjelenítésnél 2."
+
+#: doc/classes/XRInterface.xml
+msgid "Returns [code]true[/code] if this interface has been initialized."
+msgstr "[code]true[/code] értéket ad vissza, ha az interfész inicializálva van."
+
+#: doc/classes/XRInterface.xml
+msgid "Returns [code]true[/code] if passthrough is enabled."
+msgstr "[code]true[/code] értéket ad vissza, ha a valós környezet megjelenítése engedélyezve van."
+
+#: doc/classes/XRInterface.xml
+msgid "Returns [code]true[/code] if this interface supports passthrough."
+msgstr "[code]true[/code] értéket ad vissza, ha az interfész támogatja a valós környezet megjelenítését."
+
+#: doc/classes/XRInterface.xml
+msgid "Sets the active play area mode, will return [code]false[/code] if the mode can't be used with this interface.\n[b]Note:[/b] Changing this after the interface has already been initialized can be jarring for the player, so it's recommended to recenter on the HMD with [method XRServer.center_on_hmd] (if switching to [constant XRInterface.XR_PLAY_AREA_STAGE]) or make the switch during a scene change."
+msgstr "Beállítja a játéktér aktív üzemmódját. [code]false[/code] értéket ad vissza, ha az üzemmód ezzel az interfésszel nem használható.\n[b]Megjegyzés:[/b] Az inicializálás utáni váltás zavaró lehet a játékosnak. A [constant XRInterface.XR_PLAY_AREA_STAGE] módra váltáskor ajánlott az [method XRServer.center_on_hmd] metódussal a fejszett helyzetéhez igazítani a középpontot, vagy a váltást jelenetváltáskor elvégezni."
+
+#: doc/classes/XRInterface.xml
+msgid "Starts passthrough, will return [code]false[/code] if passthrough couldn't be started.\n[b]Note:[/b] The viewport used for XR must have a transparent background, otherwise passthrough may not properly render."
+msgstr "Elindítja a valós környezet megjelenítését. [code]false[/code] értéket ad vissza, ha az indítás sikertelen.\n[b]Megjegyzés:[/b] Az XR-hez használt nézetablak hátterének átlátszónak kell lennie, különben a valós környezet képe hibásan jelenhet meg."
+
+#: doc/classes/XRInterface.xml
+msgid "Stops passthrough."
+msgstr "Leállítja a valós környezet megjelenítését."
+
+#: doc/classes/XRInterface.xml
+msgid "Call this to find out if a given play area mode is supported by this interface."
+msgstr "Megadja, hogy az interfész támogatja-e a megadott játéktérmódot."
+
+#: doc/classes/XRInterface.xml
+msgid "Triggers a haptic pulse on a device associated with this interface.\n[param action_name] is the name of the action for this pulse.\n[param tracker_name] is optional and can be used to direct the pulse to a specific device provided that device is bound to this haptic.\n[param frequency] is the frequency of the pulse, set to [code]0.0[/code] to have the system use a default frequency.\n[param amplitude] is the amplitude of the pulse between [code]0.0[/code] and [code]1.0[/code].\n[param duration_sec] is the duration of the pulse in seconds.\n[param delay_sec] is a delay in seconds before the pulse is given."
+msgstr "Haptikus impulzust indít az interfészhez kapcsolódó eszközön.\nAz [param action_name] az impulzushoz tartozó művelet neve.\nA [param tracker_name] megadása opcionális. Egy adott eszközre irányítja az impulzust, ha az eszköz hozzá van rendelve ehhez a haptikus művelethez.\nA [param frequency] az impulzus frekvenciája. A [code]0.0[/code] a rendszer alapértelmezett frekvenciáját használja.\nAz [param amplitude] az impulzus amplitúdója [code]0.0[/code] és [code]1.0[/code] között.\nA [param duration_sec] az impulzus időtartama másodpercben.\nA [param delay_sec] az impulzus indítása előtti késleltetés másodpercben."
+
+#: doc/classes/XRInterface.xml
+msgid "Turns the interface off."
+msgstr "Kikapcsolja az interfészt."
+
+#: doc/classes/XRInterface.xml
+msgid "On an AR interface, [code]true[/code] if anchor detection is enabled."
+msgstr "AR-interfésznél [code]true[/code], ha a térbeli horgonyok észlelése engedélyezve van."
+
+#: doc/classes/XRInterface.xml
+msgid "Specify how XR should blend in the environment. This is specific to certain AR and passthrough devices where camera images are blended in by the XR compositor."
+msgstr "Megadja, hogyan keverje az XR a virtuális képet a valós környezet képével. Ez bizonyos AR-eszközökre és a valós környezetet megjelenítő eszközökre vonatkozik, amelyeknél az XR-kompozitor keveri bele a kamera képét."
+
+#: doc/classes/XRInterface.xml
+msgid "[code]true[/code] if this is the primary interface."
+msgstr "[code]true[/code], ha ez az elsődleges interfész."
+
+#: doc/classes/XRInterface.xml
+msgid "The play area mode for this interface."
+msgstr "Az interfész játéktérmódja."
+
+#: doc/classes/XRInterface.xml
+msgid "Emitted when the play area is changed. This can be a result of the player resetting the boundary or entering a new play area, the player changing the play area mode, the world scale changing or the player resetting their headset orientation."
+msgstr "Akkor váltódik ki, amikor megváltozik a játéktér. Ezt kiválthatja, ha a játékos visszaállítja a határt, új játéktérre lép, játéktérmódot vált vagy visszaállítja a fejszett tájolását. A világ léptékének változása is kiválthatja."
+
+#: doc/classes/XRInterface.xml
+msgid "No XR capabilities."
+msgstr "Nincsenek XR-képességek."
+
+#: doc/classes/XRInterface.xml
+msgid "This interface can work with normal rendering output (non-HMD based AR)."
+msgstr "Az interfész a normál renderelési kimenetet is használhatja, például fejszett nélküli AR esetén."
+
+#: doc/classes/XRInterface.xml
+msgid "This interface supports stereoscopic rendering."
+msgstr "Az interfész támogatja a sztereoszkopikus renderelést."
+
+#: doc/classes/XRInterface.xml
+msgid "This interface supports quad rendering (not yet supported by Godot)."
+msgstr "Az interfész támogatja a négynézetes renderelést. A Godot ezt még nem támogatja."
+
+#: doc/classes/XRInterface.xml
+msgid "This interface supports VR."
+msgstr "Az interfész támogatja a virtuális valóságot."
+
+#: doc/classes/XRInterface.xml
+msgid "This interface supports AR (video background and real world tracking)."
+msgstr "Az interfész támogatja a kiterjesztett valóságot, videóháttérrel és valós térbeli követéssel."
+
+#: doc/classes/XRInterface.xml
+msgid "This interface outputs to an external device. If the main viewport is used, the on screen output is an unmodified buffer of either the left or right eye (stretched if the viewport size is not changed to the same aspect ratio of [method get_render_target_size]). Using a separate viewport node frees up the main viewport for other purposes."
+msgstr "Az interfész külső eszközre küldi a képet. A fő nézetablak használatakor a képernyőn a bal vagy a jobb szem változatlan képpuffere jelenik meg. Ha a nézetablak képaránya eltér az [method get_render_target_size] által megadott képaránytól, a kép megnyúlik. Külön nézetablak használatával a fő nézetablak más célokra használható."
+
+#: doc/classes/XRInterface.xml
+msgid "Tracking is behaving as expected."
+msgstr "A követés a vártnak megfelelően működik."
+
+#: doc/classes/XRInterface.xml
+msgid "Tracking is hindered by excessive motion (the player is moving faster than tracking can keep up)."
+msgstr "A túlzott mozgás akadályozza a követést, mert a játékos gyorsabban mozog, mint ahogy a rendszer követni tudja."
+
+#: doc/classes/XRInterface.xml
+msgid "Tracking is hindered by insufficient features, it's too dark (for camera-based tracking), player is blocked, etc."
+msgstr "A követéshez kevés az érzékelhető támpont. Kamerás követésnél például túl sötét lehet, vagy valami eltakarhatja a játékost."
+
+#: doc/classes/XRInterface.xml
+msgid "We don't know the status of the tracking or this interface does not provide feedback."
+msgstr "A követés állapota ismeretlen, vagy az interfész nem ad róla visszajelzést."
+
+#: doc/classes/XRInterface.xml
+msgid "Tracking is not functional (camera not plugged in or obscured, lighthouses turned off, etc.)."
+msgstr "A követés nem működik. Például nincs csatlakoztatva a kamera, valami eltakarja, vagy ki vannak kapcsolva a bázisállomások."
+
+#: doc/classes/XRInterface.xml
+msgid "Play area mode not set or not available."
+msgstr "A játéktérmód nincs beállítva, vagy nem érhető el."
+
+#: doc/classes/XRInterface.xml
+msgid "Play area only supports orientation tracking, no positional tracking, area will center around player."
+msgstr "A játéktér csak a tájolás követését támogatja. A játékos helyzetét nem követi, és a játéktér középpontja a játékoshoz igazodik."
+
+#: doc/classes/XRInterface.xml
+msgid "Player is in seated position, limited positional tracking, fixed guardian around player."
+msgstr "A játékos ülő helyzetben van. A helyzetkövetés korlátozott, és a játékost rögzített biztonsági határ veszi körül."
+
+#: doc/classes/XRInterface.xml
+msgid "Player is free to move around, full positional tracking."
+msgstr "A játékos szabadon mozoghat, teljes helyzetkövetéssel."
+
+#: doc/classes/XRInterface.xml
+msgid "Same as [constant XR_PLAY_AREA_ROOMSCALE] but origin point is fixed to the center of the physical space. In this mode, system-level recentering may be disabled, requiring the use of [method XRServer.center_on_hmd]."
+msgstr "A [constant XR_PLAY_AREA_ROOMSCALE] módhoz hasonló, de az origó a fizikai tér közepén van rögzítve. Ebben a módban a rendszer saját középre igazítása le lehet tiltva. Ilyenkor az [method XRServer.center_on_hmd] metódust kell használni."
+
+#: doc/classes/XRInterface.xml
+msgid "Custom play area set by a GDExtension."
+msgstr "GDExtension által beállított egyéni játéktér."
+
+#: doc/classes/XRInterface.xml
+msgid "Opaque blend mode. This is typically used for VR devices."
+msgstr "Átlátszatlan keverési mód, amelyet általában VR-eszközök használnak."
+
+#: doc/classes/XRInterface.xml
+msgid "Additive blend mode. This is typically used for AR devices or VR devices with passthrough."
+msgstr "Additív keverési mód, amelyet általában AR-eszközök vagy a valós környezetet megjelenítő VR-eszközök használnak."
+
+#: doc/classes/XRInterface.xml
+msgid "Alpha blend mode. This is typically used for AR or VR devices with passthrough capabilities. The alpha channel controls how much of the passthrough is visible. Alpha of 0.0 means the passthrough is visible and this pixel works in ADDITIVE mode. Alpha of 1.0 means that the passthrough is not visible and this pixel works in OPAQUE mode."
+msgstr "Alfaalapú keverési mód, amelyet általában AR-eszközök vagy a valós környezetet megjelenítő VR-eszközök használnak. Az alfacsatorna szabályozza, mennyi látszik a valós környezet képéből. 0,0 alfaértéknél látszik a valós környezet, és a képpont additív módban keveredik. 1,0 alfaértéknél a valós környezet nem látszik, és a képpont átlátszatlan módban jelenik meg."
+
+#: doc/classes/XRInterface.xml
+msgid "The texture format is the same as returned by [method XRVRS.make_vrs_texture]."
+msgstr "A textúra formátuma megegyezik az [method XRVRS.make_vrs_texture] által visszaadott formátummal."
+
+#: doc/classes/XRInterface.xml
+msgid "The texture format is the same as expected by the Vulkan [code]VK_KHR_fragment_shading_rate[/code] extension."
+msgstr "A textúra formátuma megfelel a Vulkan [code]VK_KHR_fragment_shading_rate[/code] bővítménye által elvárt formátumnak."
