@@ -64994,3 +64994,203 @@ msgstr "A rejtett fájlok megjelenítésére szolgáló kapcsoló láthatóság�
 #: doc/classes/ColorPickerButton.xml
 msgid "Emitted when the [ColorPicker] is created (the button is pressed for the first time)."
 msgstr "A belső [ColorPicker] létrehozásakor váltódik ki. A létrehozást a gomb első megnyomása, illetve a get_picker vagy a get_popup első meghívása is kiválthatja."
+
+#: doc/classes/EditorInterface.xml
+msgid "Godot editor's interface."
+msgstr "A Godot szerkesztőjének felülete."
+
+#: doc/classes/EditorInterface.xml
+msgid "[EditorInterface] gives you control over Godot editor's window. It allows customizing the window, saving and (re-)loading scenes, rendering mesh previews, inspecting and editing resources and objects, and provides access to [EditorSettings], [EditorFileSystem], [EditorResourcePreview], [ScriptEditor], the editor viewport, and information about scenes.\n[b]Note:[/b] This class shouldn't be instantiated directly. Instead, access the singleton directly by its name.\n[codeblocks]\n[gdscript]\nvar editor_settings = EditorInterface.get_editor_settings()\n[/gdscript]\n[csharp]\n// In C# you can access it via the static Singleton property.\nEditorSettings settings = EditorInterface.Singleton.GetEditorSettings();\n[/csharp]\n[/codeblocks]"
+msgstr "Az [EditorInterface] hozzáférést ad a Godot szerkesztőablakához. Testreszabhatod az ablakot, mentheted, betöltheted vagy újratöltheted a jeleneteket, hálóelőnézeteket készíthetsz, valamint erőforrásokat és objektumokat vizsgálhatsz vagy szerkeszthetsz. Elérhető rajta az [EditorSettings], az [EditorFileSystem], az [EditorResourcePreview], a [ScriptEditor], a szerkesztő nézetablaka és a jelenetek adatai.\n[b]Megjegyzés:[/b] Az osztály egyetlen példánya közvetlenül, név szerint érhető el.\n[codeblocks]\n[gdscript]\nvar editor_settings = EditorInterface.get_editor_settings()\n[/gdscript]\n[csharp]\n// In C# you can access it via the static Singleton property.\nEditorSettings settings = EditorInterface.Singleton.GetEditorSettings();\n[/csharp]\n[/codeblocks]"
+
+#: doc/classes/EditorInterface.xml doc/classes/EditorScript.xml
+msgid "Makes [param node] root of the currently opened scene. Only works if the scene is empty. If the [param node] is a scene instance, an inheriting scene will be created."
+msgstr "A [param node] csomópontot az aktív jelenet gyökerévé teszi. Csak üres jelenetben működik. Ha a [param node] jelenetpéldány, a szerkesztő örökölt jelenetet hoz létre."
+
+#: doc/classes/EditorInterface.xml
+msgid "Closes the currently active scene, discarding any pending changes in the process. Returns [constant OK] on success or [constant ERR_DOES_NOT_EXIST] if there is no scene to close."
+msgstr "Bezárja az aktív jelenetet, és elveti a mentetlen módosításokat. Siker esetén [constant OK], bezárható jelenet hiányában [constant ERR_DOES_NOT_EXIST] értéket ad vissza."
+
+#: doc/classes/EditorInterface.xml
+msgid "Edits the given [Node]. The node will be also selected if it's inside the scene tree."
+msgstr "Szerkesztésre megnyitja a megadott [Node] csomópontot. Ha a csomópont a jelenetfában van, ki is jelöli."
+
+#: doc/classes/EditorInterface.xml
+msgid "Edits the given [Resource]. If the resource is a [Script] you can also edit it with [method edit_script] to specify the line and column position."
+msgstr "Szerkesztésre megnyitja a megadott [Resource] erőforrást. [Script] esetén az [method edit_script] metódussal a sor és az oszlop is megadható."
+
+#: doc/classes/EditorInterface.xml
+msgid "Edits the given [Script]. The line and column on which to open the script can also be specified. The script will be open with the user-configured editor for the script's language which may be an external editor."
+msgstr "Szerkesztésre megnyitja a megadott [Script] erőforrást. A megnyitás helye sorral és oszloppal is megadható. A szkript nyelvéhez beállított szerkesztőt használja, amely külső program is lehet."
+
+#: doc/classes/EditorInterface.xml
+msgid "Returns the main container of Godot editor's window. For example, you can use it to retrieve the size of the container and place your controls accordingly.\n[b]Warning:[/b] Removing and freeing this node will render the editor useless and may cause a crash."
+msgstr "Visszaadja a Godot szerkesztőablakának fő konténerét. Ebből például lekérheted a konténer méretét, és ahhoz igazíthatod a vezérlők elhelyezését.\n[b]Figyelmeztetés:[/b] A csomópont eltávolítása és felszabadítása használhatatlanná teszi a szerkesztőt, és összeomlást okozhat."
+
+#: doc/classes/EditorInterface.xml
+msgid "Returns the editor's [EditorCommandPalette] instance.\n[b]Warning:[/b] Removing and freeing this node will render a part of the editor useless and may cause a crash."
+msgstr "Visszaadja a szerkesztő [EditorCommandPalette] példányát.\n[b]Figyelmeztetés:[/b] A csomópont eltávolítása és felszabadítása használhatatlanná teheti a szerkesztő egy részét, és összeomlást okozhat."
+
+#: doc/classes/EditorInterface.xml
+msgid "Returns the current directory being viewed in the [FileSystemDock]. If a file is selected, its base directory will be returned using [method String.get_base_dir] instead."
+msgstr "Visszaadja a [FileSystemDock] felületen éppen megjelenített könyvtárat. Ha egy fájl van kijelölve, annak befoglaló könyvtárát adja vissza a [method String.get_base_dir] alapján."
+
+#: doc/classes/EditorInterface.xml
+msgid "Returns the name of the currently activated feature profile. If the default profile is currently active, an empty string is returned instead.\nIn order to get a reference to the [EditorFeatureProfile], you must load the feature profile using [method EditorFeatureProfile.load_from_file].\n[b]Note:[/b] Feature profiles created via the user interface are loaded from the [code]feature_profiles[/code] directory, as a file with the [code].profile[/code] extension. The editor configuration folder can be found by using [method EditorPaths.get_config_dir]."
+msgstr "Visszaadja az aktív funkcióprofil nevét. Az alapértelmezett profilnál üres karakterláncot ad.\nAz [EditorFeatureProfile] példányának eléréséhez töltsd be a profilt az [method EditorFeatureProfile.load_from_file] metódussal.\n[b]Megjegyzés:[/b] A felületen létrehozott profilokat a szerkesztő a [code]feature_profiles[/code] könyvtárból, [code].profile[/code] kiterjesztésű fájlból tölti be. A szerkesztő konfigurációs könyvtára az [method EditorPaths.get_config_dir] metódussal kérhető le."
+
+#: doc/classes/EditorInterface.xml
+msgid "Returns the current path being viewed in the [FileSystemDock]."
+msgstr "A [FileSystemDock] felületen éppen megjelenített elérési utat adja vissza."
+
+#: doc/classes/EditorInterface.xml
+msgid "Returns the edited (current) scene's root [Node]."
+msgstr "Visszaadja az éppen szerkesztett jelenet gyökér [Node] csomópontját."
+
+#: doc/classes/EditorInterface.xml
+msgid "Returns the language currently used for the editor interface."
+msgstr "Visszaadja a szerkesztőfelület aktuális nyelvét."
+
+#: doc/classes/EditorInterface.xml
+msgid "Returns the editor control responsible for main screen plugins and tools. Use it with plugins that implement [method EditorPlugin._has_main_screen].\n[b]Note:[/b] This node is a [VBoxContainer], which means that if you add a [Control] child to it, you need to set the child's [member Control.size_flags_vertical] to [constant Control.SIZE_EXPAND_FILL] to make it use the full available space.\n[b]Warning:[/b] Removing and freeing this node will render a part of the editor useless and may cause a crash."
+msgstr "Visszaadja a fő munkaterület bővítményeit és eszközeit befogadó szerkesztővezérlőt. Azokhoz a bővítményekhez használd, amelyek megvalósítják az [method EditorPlugin._has_main_screen] metódust.\n[b]Megjegyzés:[/b] Ez a csomópont [VBoxContainer]. Ha [Control] gyermeket adsz hozzá, a teljes rendelkezésre álló hely kihasználásához állítsd a gyermek [member Control.size_flags_vertical] értékét [constant Control.SIZE_EXPAND_FILL] módra.\n[b]Figyelmeztetés:[/b] A csomópont eltávolítása és felszabadítása használhatatlanná teheti a szerkesztő egy részét, és összeomlást okozhat."
+
+#: doc/classes/EditorInterface.xml
+msgid "Returns the [EditorPaths] singleton."
+msgstr "Visszaadja az [EditorPaths] egyetlen példányát."
+
+#: doc/classes/EditorInterface.xml
+msgid "Returns the actual scale of the editor UI ([code]1.0[/code] being 100% scale). This can be used to adjust position and dimensions of the UI added by plugins.\n[b]Note:[/b] This value is set via the [member EditorSettings.interface/editor/appearance/display_scale] and [member EditorSettings.interface/editor/appearance/custom_display_scale] settings. The editor must be restarted for changes to be properly applied."
+msgstr "Visszaadja a szerkesztőfelület tényleges méretarányát. Az [code]1.0[/code] érték 100%-os méretet jelent. Ezzel igazíthatók a bővítmény által hozzáadott felületi elemek pozíciói és méretei.\n[b]Megjegyzés:[/b] Az értéket az [member EditorSettings.interface/editor/appearance/display_scale] és az [member EditorSettings.interface/editor/appearance/custom_display_scale] beállítás adja meg. A változások megfelelő alkalmazásához újra kell indítani a szerkesztőt."
+
+#: doc/classes/EditorInterface.xml
+msgid "Returns the editor's [EditorSettings] instance."
+msgstr "Visszaadja a szerkesztő [EditorSettings] példányát."
+
+#: doc/classes/EditorInterface.xml
+msgid "Returns the editor's [Theme].\n[b]Note:[/b] When creating custom editor UI, prefer accessing theme items directly from your GUI nodes using the [code]get_theme_*[/code] methods."
+msgstr "Visszaadja a szerkesztő [Theme] erőforrását.\n[b]Megjegyzés:[/b] Egyéni szerkesztőfelület készítésekor a témaelemeket célszerű közvetlenül a felületi csomópontokon lekérni a [code]get_theme_*[/code] metódusokkal."
+
+#: doc/classes/EditorInterface.xml
+msgid "Returns the editor's [EditorToaster]."
+msgstr "Visszaadja a szerkesztő [EditorToaster] értesítéskezelőjét."
+
+#: doc/classes/EditorInterface.xml
+msgid "Returns the editor's [EditorUndoRedoManager]."
+msgstr "Visszaadja a szerkesztő [EditorUndoRedoManager] példányát."
+
+#: doc/classes/EditorInterface.xml
+msgid "Returns the 2D editor [SubViewport]. It does not have a camera. Instead, the view transforms are done directly and can be accessed with [member Viewport.global_canvas_transform]."
+msgstr "Visszaadja a 2D szerkesztő [SubViewport] nézetablakát. Ehhez nem tartozik kamera. A nézet transzformációját a szerkesztő közvetlenül alkalmazza. A transzformáció a [member Viewport.global_canvas_transform] tulajdonsággal érhető el."
+
+#: doc/classes/EditorInterface.xml
+msgid "Returns the specified 3D editor [SubViewport], from [code]0[/code] to [code]3[/code]. The viewport can be used to access the active editor cameras with [method Viewport.get_camera_3d]."
+msgstr "Visszaadja a megadott 3D szerkesztőnézet [SubViewport] nézetablakát. Az index [code]0[/code] és [code]3[/code] közé eshet. Az aktív szerkesztőkamerák a nézetablak [method Viewport.get_camera_3d] metódusával érhetők el."
+
+#: doc/classes/EditorInterface.xml
+msgid "Returns the editor's [FileSystemDock] instance.\n[b]Warning:[/b] Removing and freeing this node will render a part of the editor useless and may cause a crash."
+msgstr "Visszaadja a szerkesztő [FileSystemDock] példányát.\n[b]Figyelmeztetés:[/b] A csomópont eltávolítása és felszabadítása használhatatlanná teheti a szerkesztő egy részét, és összeomlást okozhat."
+
+#: doc/classes/EditorInterface.xml
+msgid "Returns the editor's [EditorInspector] instance.\n[b]Warning:[/b] Removing and freeing this node will render a part of the editor useless and may cause a crash."
+msgstr "Visszaadja a szerkesztő [EditorInspector] példányát.\n[b]Figyelmeztetés:[/b] A csomópont eltávolítása és felszabadítása használhatatlanná teheti a szerkesztő egy részét, és összeomlást okozhat."
+
+#: doc/classes/EditorInterface.xml
+msgid "Returns an array with references to the root nodes of the currently opened scenes."
+msgstr "A megnyitott jelenetek gyökércsomópontjaira mutató hivatkozások tömbjét adja vissza."
+
+#: doc/classes/EditorInterface.xml
+msgid "Returns an array with the file paths of the currently opened scenes."
+msgstr "Tömbben adja vissza az éppen megnyitott jelenetek fájlútvonalait."
+
+#: doc/classes/EditorInterface.xml
+msgid "Returns the editor's [EditorFileSystem] instance."
+msgstr "Visszaadja a szerkesztő [EditorFileSystem] példányát."
+
+#: doc/classes/EditorInterface.xml
+msgid "Returns the editor's [EditorResourcePreview] instance."
+msgstr "Visszaadja a szerkesztő [EditorResourcePreview] példányát."
+
+#: doc/classes/EditorInterface.xml
+msgid "Returns the editor's [ScriptEditor] instance.\n[b]Warning:[/b] Removing and freeing this node will render a part of the editor useless and may cause a crash."
+msgstr "Visszaadja a szerkesztő [ScriptEditor] példányát.\n[b]Figyelmeztetés:[/b] A csomópont eltávolítása és felszabadítása használhatatlanná teheti a szerkesztő egy részét, és összeomlást okozhat."
+
+#: doc/classes/EditorInterface.xml
+msgid "Returns an array containing the paths of the currently selected files (and directories) in the [FileSystemDock]."
+msgstr "Tömbben adja vissza a [FileSystemDock] felületen éppen kijelölt fájlok és könyvtárak elérési útvonalait."
+
+#: doc/classes/EditorInterface.xml
+msgid "Returns the editor's [EditorSelection] instance."
+msgstr "Visszaadja a szerkesztő [EditorSelection] példányát."
+
+#: doc/classes/EditorInterface.xml
+msgid "Returns an array of file paths of currently unsaved scenes."
+msgstr "Tömbben adja vissza a mentetlen jelenetek fájlútvonalait."
+
+#: doc/classes/EditorInterface.xml
+msgid "Shows the given property on the given [param object] in the editor's Inspector dock. If [param inspector_only] is [code]true[/code], plugins will not attempt to edit [param object]."
+msgstr "Megjeleníti a megadott [param object] kiválasztott tulajdonságát a szerkesztő Tulajdonságok dokkjában. Ha a [param inspector_only] értéke [code]true[/code], a bővítmények nem próbálják meg szerkeszteni a [param object] objektumot."
+
+#: doc/classes/EditorInterface.xml
+msgid "Returns [code]true[/code] if multiple window support is enabled in the editor. Multiple window support is enabled if [i]all[/i] of these statements are true:\n- [member EditorSettings.interface/multi_window/enable] is [code]true[/code].\n- [member EditorSettings.interface/editor/display/single_window_mode] is [code]false[/code].\n- [member Viewport.gui_embed_subwindows] is [code]false[/code]. This is forced to [code]true[/code] on platforms that don't support multiple windows such as Web, or when the [code]--single-window[/code] [url=$DOCS_URL/tutorials/editor/command_line_tutorial.html]command line argument[/url] is used."
+msgstr "[code]true[/code] értéket ad vissza, ha a szerkesztő többablakos módja engedélyezett. Ehhez az alábbi feltételek [i]mindegyikének[/i] teljesülnie kell:\n- Az [member EditorSettings.interface/multi_window/enable] értéke [code]true[/code].\n- Az [member EditorSettings.interface/editor/display/single_window_mode] értéke [code]false[/code].\n- A [member Viewport.gui_embed_subwindows] értéke [code]false[/code]. Ez az érték kényszerítetten [code]true[/code] a több ablakot nem támogató platformokon, például weben, és a [code]--single-window[/code] [url=$DOCS_URL/tutorials/editor/command_line_tutorial.html]parancssori kapcsoló[/url] használatakor."
+
+#: doc/classes/EditorInterface.xml
+msgid "Returns [code]true[/code] if the object has been marked as edited through [method set_object_edited]."
+msgstr "[code]true[/code] értéket ad vissza, ha az objektumot a [method set_object_edited] metódussal szerkesztettként jelölték meg."
+
+#: doc/classes/EditorInterface.xml
+msgid "Returns [code]true[/code] if a scene is currently being played, [code]false[/code] otherwise. Paused scenes are considered as being played."
+msgstr "[code]true[/code] értéket ad vissza, ha éppen fut egy jelenet, egyébként [code]false[/code] értéket. A szüneteltetett jelenet futónak számít."
+
+#: doc/classes/EditorInterface.xml
+msgid "Returns [code]true[/code] if the specified [param plugin] is enabled. The plugin name is the same as its directory name."
+msgstr "[code]true[/code] értéket ad vissza, ha a megadott [param plugin] bővítmény engedélyezve van. A bővítmény neve megegyezik a könyvtára nevével."
+
+#: doc/classes/EditorInterface.xml
+msgid "Returns mesh previews rendered at the given size as an [Array] of [Texture2D]s."
+msgstr "A megadott méretben készült hálóelőnézeteket adja vissza [Texture2D] elemeket tartalmazó [Array] tömbben."
+
+#: doc/classes/EditorInterface.xml
+msgid "Marks the current scene tab as unsaved."
+msgstr "Az aktív jelenetlapot mentetlenként jelöli meg."
+
+#: doc/classes/EditorInterface.xml
+msgid "Opens the scene at the given path. If [param set_inherited] is [code]true[/code], creates a new inherited scene."
+msgstr "Megnyitja a megadott elérési úton lévő jelenetet. Ha a [param set_inherited] értéke [code]true[/code], új örökölt jelenetet hoz létre."
+
+#: doc/classes/EditorInterface.xml
+msgid "Plays the currently active scene."
+msgstr "Futtatja az aktív jelenetet."
+
+#: doc/classes/EditorInterface.xml
+msgid "Plays the scene specified by its filepath."
+msgstr "Futtatja a megadott fájlútvonalon lévő jelenetet."
+
+#: doc/classes/EditorInterface.xml
+msgid "Plays the main scene."
+msgstr "Futtatja a főjelenetet."
+
+#: doc/classes/EditorInterface.xml
+msgid "Pops up the [param dialog] in the editor UI with [method Window.popup_exclusive]. The dialog must have no current parent, otherwise the method fails.\nSee also [method Window.set_unparent_when_invisible]."
+msgstr "A [method Window.popup_exclusive] metódussal felugró ablakként nyitja meg a [param dialog] párbeszédablakot a szerkesztőben. A művelethez a párbeszédablaknak szülő nélkülinek kell lennie.\nLásd még a [method Window.set_unparent_when_invisible] metódust."
+
+#: doc/classes/EditorInterface.xml
+msgid "Pops up the [param dialog] in the editor UI with [method Window.popup_exclusive_centered]. The dialog must have no current parent, otherwise the method fails.\nSee also [method Window.set_unparent_when_invisible]."
+msgstr "A [method Window.popup_exclusive_centered] metódussal középre helyezett felugró ablakként nyitja meg a [param dialog] párbeszédablakot a szerkesztőben. A művelethez a párbeszédablaknak szülő nélkülinek kell lennie.\nLásd még a [method Window.set_unparent_when_invisible] metódust."
+
+#: doc/classes/EditorInterface.xml
+msgid "Pops up the [param dialog] in the editor UI with [method Window.popup_exclusive_centered_clamped]. The dialog must have no current parent, otherwise the method fails.\nSee also [method Window.set_unparent_when_invisible]."
+msgstr "A [method Window.popup_exclusive_centered_clamped] metódussal középre helyezett, korlátozott méretű felugró ablakként nyitja meg a [param dialog] párbeszédablakot a szerkesztőben. A művelethez a párbeszédablaknak szülő nélkülinek kell lennie.\nLásd még a [method Window.set_unparent_when_invisible] metódust."
+
+#: doc/classes/EditorInterface.xml
+msgid "Pops up the [param dialog] in the editor UI with [method Window.popup_exclusive_centered_ratio]. The dialog must have no current parent, otherwise the method fails.\nSee also [method Window.set_unparent_when_invisible]."
+msgstr "A [method Window.popup_exclusive_centered_ratio] metódussal középre helyezett, arányosan méretezett felugró ablakként nyitja meg a [param dialog] párbeszédablakot a szerkesztőben. A művelethez a párbeszédablaknak szülő nélkülinek kell lennie.\nLásd még a [method Window.set_unparent_when_invisible] metódust."
+
+#: doc/classes/EditorInterface.xml
+msgid "Reloads the scene at the given path. Fails if the scene is not open."
+msgstr "Újratölti a megadott elérési úton lévő jelenetet. A művelet meghiúsul, ha a jelenet nincs megnyitva."
+
+#: doc/classes/EditorInterface.xml
+msgid "Saves all opened scenes in the editor."
+msgstr "Menti a szerkesztőben megnyitott összes jelenetet."
