@@ -63742,3 +63742,203 @@ msgstr "Ismételve tölti ki a csomópont befoglaló téglalapját.\n[b]Megjegyz
 #: doc/classes/TileSetAtlasSource.xml
 msgid "If [member use_texture_padding] is [code]false[/code], returns [member texture]. Otherwise, returns an internal [ImageTexture] created that includes the padding."
 msgstr "Ha a [member use_texture_padding] értéke [code]false[/code], visszaadja a [member texture] értékét. Egyébként olyan belső [ImageTexture] erőforrást ad vissza, amely a hozzáadott szegélyt is tartalmazza."
+
+#: doc/classes/TextureRect.xml
+msgid "Same as [constant EXPAND_FIT_WIDTH], but keeps texture's aspect ratio."
+msgstr "Az [constant EXPAND_FIT_WIDTH] módhoz hasonló, a textúra képarányának megőrzésével."
+
+#: doc/classes/TextureRect.xml
+msgid "The width of the texture will be ignored. Minimum height will be equal to the current width. Useful for vertical layouts, e.g. inside [VBoxContainer]."
+msgstr "A textúra szélességét figyelmen kívül hagyja. A legkisebb magasság a csomópont aktuális szélességével egyezik meg. Függőleges elrendezéseknél hasznos, például [VBoxContainer] csomópontban."
+
+#: doc/classes/TextureRect.xml
+msgid "Same as [constant EXPAND_FIT_HEIGHT], but keeps texture's aspect ratio."
+msgstr "Az [constant EXPAND_FIT_HEIGHT] módhoz hasonló, a textúra képarányának megőrzésével."
+
+#: doc/classes/TextureRect.xml
+msgid "Scale the texture to fit the node's bounding rectangle, center it and maintain its aspect ratio."
+msgstr "A textúrát a csomópont befoglaló téglalapjába illeszti, középre igazítja, és megtartja a képarányát."
+
+#: doc/classes/TextureProgressBar.xml
+msgid "Texture-based progress bar. Useful for loading screens and life or stamina bars."
+msgstr "Textúrákra épülő folyamatjelző. Hasznos betöltőképernyőkhöz, élet- vagy állóképességjelzőkhöz."
+
+#: doc/classes/TextureProgressBar.xml
+msgid "TextureProgressBar works like [ProgressBar], but uses up to 3 textures instead of Godot's [Theme] resource. It can be used to create horizontal, vertical and radial progress bars."
+msgstr "A TextureProgressBar úgy működik, mint a [ProgressBar], de a Godot [Theme] erőforrása helyett legfeljebb három textúrát használ. Vízszintes, függőleges és sugárirányú folyamatjelző hozható létre vele."
+
+#: doc/classes/TextureProgressBar.xml
+msgid "Returns the stretch margin with the specified index. See [member stretch_margin_bottom] and related properties."
+msgstr "Visszaadja a megadott indexű nyújtási margót. Lásd a [member stretch_margin_bottom] és a kapcsolódó tulajdonságokat."
+
+#: doc/classes/TextureProgressBar.xml
+msgid "Sets the stretch margin with the specified index. See [member stretch_margin_bottom] and related properties."
+msgstr "Beállítja a megadott indexű nyújtási margót. Lásd a [member stretch_margin_bottom] és a kapcsolódó tulajdonságokat."
+
+#: doc/classes/TextureProgressBar.xml
+msgid "Offsets [member texture_progress] if [member fill_mode] is [constant FILL_CLOCKWISE], [constant FILL_COUNTER_CLOCKWISE], or [constant FILL_CLOCKWISE_AND_COUNTER_CLOCKWISE].\n[b]Note:[/b] The effective radial center always stays within the [member texture_progress] bounds. If you need to move it outside the texture's bounds, modify the [member texture_progress] to contain additional empty space where needed."
+msgstr "Eltolja a [member texture_progress] középpontját, ha a [member fill_mode] értéke [constant FILL_CLOCKWISE], [constant FILL_COUNTER_CLOCKWISE] vagy [constant FILL_CLOCKWISE_AND_COUNTER_CLOCKWISE].\n[b]Megjegyzés:[/b] A tényleges kitöltési középpont mindig a [member texture_progress] határain belül marad. Ha a textúra eredeti határain kívülre szeretnéd helyezni, bővítsd a [member texture_progress] textúrát üres területtel a szükséges irányban."
+
+#: doc/classes/TextureProgressBar.xml
+msgid "Upper limit for the fill of [member texture_progress] if [member fill_mode] is [constant FILL_CLOCKWISE], [constant FILL_COUNTER_CLOCKWISE], or [constant FILL_CLOCKWISE_AND_COUNTER_CLOCKWISE]. When the node's [code]value[/code] is equal to its [code]max_value[/code], the texture fills up to this angle.\nSee [member Range.value], [member Range.max_value]."
+msgstr "A [member texture_progress] kitöltési szögének felső határa, ha a [member fill_mode] értéke [constant FILL_CLOCKWISE], [constant FILL_COUNTER_CLOCKWISE] vagy [constant FILL_CLOCKWISE_AND_COUNTER_CLOCKWISE]. Amikor a csomópont [code]value[/code] értéke eléri a [code]max_value[/code] értéket, a kitöltés eléri ezt a szöget.\nLásd a [member Range.value] és a [member Range.max_value] tulajdonságot."
+
+#: doc/classes/TextureProgressBar.xml
+msgid "Starting angle for the fill of [member texture_progress] if [member fill_mode] is [constant FILL_CLOCKWISE], [constant FILL_COUNTER_CLOCKWISE], or [constant FILL_CLOCKWISE_AND_COUNTER_CLOCKWISE]. When the node's [code]value[/code] is equal to its [code]min_value[/code], the texture doesn't show up at all. When the [code]value[/code] increases, the texture fills and tends towards [member radial_fill_degrees].\n[b]Note:[/b] [member radial_initial_angle] is wrapped between [code]0[/code] and [code]360[/code] degrees (inclusive)."
+msgstr "A [member texture_progress] kitöltésének kezdőszöge, ha a [member fill_mode] értéke [constant FILL_CLOCKWISE], [constant FILL_COUNTER_CLOCKWISE] vagy [constant FILL_CLOCKWISE_AND_COUNTER_CLOCKWISE]. Amikor a csomópont [code]value[/code] értéke megegyezik a [code]min_value[/code] értékkel, a textúra egyáltalán nem látszik. A [code]value[/code] növekedésével a kitöltés szögtartománya a [member radial_fill_degrees] értékhez közelít.\n[b]Megjegyzés:[/b] A [member radial_initial_angle] értéke körbefordul a [code]0[/code] és [code]360[/code] fok közötti tartományban, a két határértéket is beleértve."
+
+#: doc/classes/TextureProgressBar.xml
+msgid "The height of the 9-patch's bottom row. A margin of 16 means the 9-slice's bottom corners and side will have a height of 16 pixels. You can set all 4 margin values individually to create panels with non-uniform borders. Only effective if [member nine_patch_stretch] is [code]true[/code]."
+msgstr "A kilencrészes felosztás alsó sorának magassága. A 16-os margó azt jelenti, hogy az alsó sarkok és az alsó szél 16 képpont magasak. Mind a négy margó külön beállítható, így különböző vastagságú keretek hozhatók létre. Csak akkor hat, ha a [member nine_patch_stretch] értéke [code]true[/code]."
+
+#: doc/classes/TextureProgressBar.xml
+msgid "The width of the 9-patch's left column. Only effective if [member nine_patch_stretch] is [code]true[/code]."
+msgstr "A kilencrészes felosztás bal oszlopának szélessége. Csak akkor hat, ha a [member nine_patch_stretch] értéke [code]true[/code]."
+
+#: doc/classes/TextureProgressBar.xml
+msgid "The width of the 9-patch's right column. Only effective if [member nine_patch_stretch] is [code]true[/code]."
+msgstr "A kilencrészes felosztás jobb oszlopának szélessége. Csak akkor hat, ha a [member nine_patch_stretch] értéke [code]true[/code]."
+
+#: doc/classes/TextureProgressBar.xml
+msgid "The height of the 9-patch's top row. Only effective if [member nine_patch_stretch] is [code]true[/code]."
+msgstr "A kilencrészes felosztás felső sorának magassága. Csak akkor hat, ha a [member nine_patch_stretch] értéke [code]true[/code]."
+
+#: doc/classes/TextureProgressBar.xml
+msgid "[Texture2D] that draws over the progress bar. Use it to add highlights or an upper-frame that hides part of [member texture_progress]."
+msgstr "A folyamatjelző elé rajzolt [Texture2D]. Kiemeléseket vagy olyan előtérkeretet adhatsz vele hozzá, amely eltakarja a [member texture_progress] egy részét."
+
+#: doc/classes/TextureProgressBar.xml
+msgid "The offset of [member texture_progress]. Useful for [member texture_over] and [member texture_under] with fancy borders, to avoid transparent margins in your progress texture."
+msgstr "A [member texture_progress] eltolása. Díszes keretű [member texture_over] és [member texture_under] használatakor hasznos, mert a kitöltő textúrában így elhagyhatók az átlátszó margók."
+
+#: doc/classes/TextureProgressBar.xml
+msgid "[Texture2D] that draws under the progress bar. The bar's background."
+msgstr "A folyamatjelző mögé rajzolt [Texture2D]. Ez adja a folyamatjelző hátterét."
+
+#: doc/classes/TextureProgressBar.xml
+msgid "Multiplies the color of the bar's [member texture_over] texture. The effect is similar to [member CanvasItem.modulate], except it only affects this specific texture instead of the entire node."
+msgstr "Megszorozza a folyamatjelző [member texture_over] textúrájának színét. A hatás hasonló a [member CanvasItem.modulate] tulajdonságéhoz, de csak erre a textúrára vonatkozik."
+
+#: doc/classes/TextureProgressBar.xml
+msgid "Multiplies the color of the bar's [member texture_progress] texture."
+msgstr "Megszorozza a folyamatjelző [member texture_progress] textúrájának színét."
+
+#: doc/classes/TextureProgressBar.xml
+msgid "Multiplies the color of the bar's [member texture_under] texture."
+msgstr "Megszorozza a folyamatjelző [member texture_under] textúrájának színét."
+
+#: doc/classes/TextureProgressBar.xml
+msgid "The [member texture_progress] fills from left to right."
+msgstr "A [member texture_progress] balról jobbra töltődik ki."
+
+#: doc/classes/TextureProgressBar.xml
+msgid "The [member texture_progress] fills from right to left."
+msgstr "A [member texture_progress] jobbról balra töltődik ki."
+
+#: doc/classes/TextureProgressBar.xml
+msgid "The [member texture_progress] fills from top to bottom."
+msgstr "A [member texture_progress] felülről lefelé töltődik ki."
+
+#: doc/classes/TextureProgressBar.xml
+msgid "The [member texture_progress] fills from bottom to top."
+msgstr "A [member texture_progress] alulról felfelé töltődik ki."
+
+#: doc/classes/TextureProgressBar.xml
+msgid "Turns the node into a radial bar. The [member texture_progress] fills clockwise. See [member radial_center_offset], [member radial_initial_angle] and [member radial_fill_degrees] to control the way the bar fills up."
+msgstr "Sugárirányú folyamatjelzővé alakítja a csomópontot. A [member texture_progress] az óramutató járásával megegyező irányban töltődik ki. A kitöltést a [member radial_center_offset], a [member radial_initial_angle] és a [member radial_fill_degrees] tulajdonsággal szabályozhatod."
+
+#: doc/classes/TextureProgressBar.xml
+msgid "Turns the node into a radial bar. The [member texture_progress] fills counterclockwise. See [member radial_center_offset], [member radial_initial_angle] and [member radial_fill_degrees] to control the way the bar fills up."
+msgstr "Sugárirányú folyamatjelzővé alakítja a csomópontot. A [member texture_progress] az óramutató járásával ellentétes irányban töltődik ki. A kitöltést a [member radial_center_offset], a [member radial_initial_angle] és a [member radial_fill_degrees] tulajdonsággal szabályozhatod."
+
+#: doc/classes/TextureProgressBar.xml
+msgid "The [member texture_progress] fills from the center, expanding both towards the left and the right."
+msgstr "A [member texture_progress] középről kiindulva balra és jobbra is kitöltődik."
+
+#: doc/classes/TextureProgressBar.xml
+msgid "The [member texture_progress] fills from the center, expanding both towards the top and the bottom."
+msgstr "A [member texture_progress] középről kiindulva felfelé és lefelé is kitöltődik."
+
+#: doc/classes/TextureProgressBar.xml
+msgid "Turns the node into a radial bar. The [member texture_progress] fills radially from the center, expanding both clockwise and counterclockwise. See [member radial_center_offset], [member radial_initial_angle] and [member radial_fill_degrees] to control the way the bar fills up."
+msgstr "Sugárirányú folyamatjelzővé alakítja a csomópontot. A [member texture_progress] középről kiindulva az óramutató járásával megegyező és azzal ellentétes irányban is kitöltődik. A kitöltést a [member radial_center_offset], a [member radial_initial_angle] és a [member radial_fill_degrees] tulajdonsággal szabályozhatod."
+
+#: doc/classes/TileSetAtlasSource.xml
+msgid "An atlas is a grid of tiles laid out on a texture. Each tile in the grid must be exposed using [method create_tile]. Those tiles are then indexed using their coordinates in the grid.\nEach tile can also have a size in the grid coordinates, making it more or less cells in the atlas.\nAlternatives version of a tile can be created using [method create_alternative_tile], which are then indexed using an alternative ID. The main tile (the one in the grid), is accessed with an alternative ID equal to 0.\nEach tile alternate has a set of properties that is defined by the source's [TileSet] layers. Those properties are stored in a TileData object that can be accessed and modified using [method get_tile_data].\nAs TileData properties are stored directly in the TileSetAtlasSource resource, their properties might also be set using [code]TileSetAtlasSource.set(\"<coords_x>:<coords_y>/<alternative_id>/<tile_data_property>\")[/code]."
+msgstr "Az atlasz egy textúrán elrendezett csempék rácsa. A rács minden használni kívánt csempéjét a [method create_tile] metódussal kell létrehozni. Ezután a csempék a rácskoordinátáik alapján érhetők el.\nMinden csempének megadható a mérete rácsegységben, így különböző számú cellát foglalhat el az atlaszban.\nA [method create_alternative_tile] metódussal csempeváltozatok hozhatók létre. Ezek a változatazonosítójuk alapján érhetők el. A rácsban lévő alapcsempe változatazonosítója 0.\nMinden csempeváltozatnak saját tulajdonságai vannak, amelyeket a forrás [TileSet] rétegei határoznak meg. A tulajdonságokat egy TileData objektum tárolja. Ez a [method get_tile_data] metódussal érhető el és módosítható.\nA TileData tulajdonságait közvetlenül a TileSetAtlasSource erőforrás tárolja, így a [code]TileSetAtlasSource.set(\"<coords_x>:<coords_y>/<alternative_id>/<tile_data_property>\")[/code] hívással is beállíthatók."
+
+#: doc/classes/TileSetAtlasSource.xml
+msgid "Returns the alternative ID a following call to [method create_alternative_tile] would return."
+msgstr "Azt a változatazonosítót adja vissza, amelyet a [method create_alternative_tile] következő hívása adna vissza."
+
+#: doc/classes/TileSetAtlasSource.xml
+msgid "Returns the region of the tile at coordinates [param atlas_coords] for the given [param frame] inside the texture returned by [method get_runtime_texture].\n[b]Note:[/b] If [member use_texture_padding] is [code]false[/code], returns the same as [method get_tile_texture_region]."
+msgstr "Visszaadja az [param atlas_coords] koordinátájú csempe megadott [param frame] képkockájának területét a [method get_runtime_texture] által visszaadott textúrán belül.\n[b]Megjegyzés:[/b] Ha a [member use_texture_padding] értéke [code]false[/code], az eredmény megegyezik a [method get_tile_texture_region] eredményével."
+
+#: doc/classes/TileSetAtlasSource.xml
+msgid "Returns how many columns the tile at [param atlas_coords] has in its animation layout."
+msgstr "Visszaadja, hány oszlopban vannak elrendezve az [param atlas_coords] koordinátájú csempe animációjának képkockái."
+
+#: doc/classes/TileSetAtlasSource.xml
+msgid "Returns the animation frame duration of frame [param frame_index] for the tile at coordinates [param atlas_coords]."
+msgstr "Visszaadja az [param atlas_coords] koordinátájú csempe [param frame_index] indexű animációs képkockájának időtartamát."
+
+#: doc/classes/TileSetAtlasSource.xml
+msgid "Returns the tile animation mode of the tile at [param atlas_coords]. See also [method set_tile_animation_mode]."
+msgstr "Visszaadja az [param atlas_coords] koordinátájú csempe animációs módját. Lásd még a [method set_tile_animation_mode] metódust."
+
+#: doc/classes/TileSetAtlasSource.xml
+msgid "Returns the separation (as in the atlas grid) between each frame of an animated tile at coordinates [param atlas_coords]."
+msgstr "Visszaadja az [param atlas_coords] koordinátájú animált csempe képkockái közötti távolságot az atlasz rácsában."
+
+#: doc/classes/TileSetAtlasSource.xml
+msgid "If there is a tile covering the [param atlas_coords] coordinates, returns the top-left coordinates of the tile (thus its coordinate ID). Returns [code]Vector2i(-1, -1)[/code] otherwise."
+msgstr "Ha egy csempe lefedi az [param atlas_coords] koordinátákat, visszaadja a csempe bal felső sarkának koordinátáit, vagyis a csempe koordináta-azonosítóját. Egyébként az eredmény [code]Vector2i(-1, -1)[/code]."
+
+#: doc/classes/TileSetAtlasSource.xml
+msgid "Returns the size of the tile (in the grid coordinates system) at coordinates [param atlas_coords]."
+msgstr "Visszaadja az [param atlas_coords] koordinátájú csempe méretét az atlasz rácsegységeiben."
+
+#: doc/classes/TileSetAtlasSource.xml
+msgid "Move the tile and its alternatives at the [param atlas_coords] coordinates to the [param new_atlas_coords] coordinates with the [param new_size] size. This functions will fail if a tile is already present in the given area.\nIf [param new_atlas_coords] is [code]Vector2i(-1, -1)[/code], keeps the tile's coordinates. If [param new_size] is [code]Vector2i(-1, -1)[/code], keeps the tile's size.\nTo avoid an error, first check if a move is possible using [method has_room_for_tile]."
+msgstr "Az [param atlas_coords] koordinátájú csempét és változatait a [param new_atlas_coords] helyre mozgatja, [param new_size] méretre állítva. A művelet meghiúsul, ha a megadott területen már van másik csempe.\nHa a [param new_atlas_coords] értéke [code]Vector2i(-1, -1)[/code], a csempe koordinátái megmaradnak. Ha a [param new_size] értéke [code]Vector2i(-1, -1)[/code], a csempe mérete megmarad.\nA hiba elkerülésére először a [method has_room_for_tile] metódussal ellenőrizd, hogy elvégezhető-e a mozgatás."
+
+#: doc/classes/TileSetAtlasSource.xml
+msgid "Sets the number of columns in the animation layout of the tile at coordinates [param atlas_coords]. If set to 0, then the different frames of the animation are laid out as a single horizontal line in the atlas."
+msgstr "Beállítja az [param atlas_coords] koordinátájú csempe animációs képkockáinak oszlopszámát. Ha az érték 0, a képkockák egyetlen vízszintes sorban helyezkednek el az atlaszban."
+
+#: doc/classes/TileSetAtlasSource.xml
+msgid "Sets the animation frame [param duration] of frame [param frame_index] for the tile at coordinates [param atlas_coords]."
+msgstr "Az [param atlas_coords] koordinátájú csempe [param frame_index] indexű animációs képkockájának időtartamát a [param duration] értékére állítja."
+
+#: doc/classes/TileSetAtlasSource.xml
+msgid "Sets how many animation frames the tile at coordinates [param atlas_coords] has."
+msgstr "Beállítja az [param atlas_coords] koordinátájú csempe animációs képkockáinak számát."
+
+#: doc/classes/TileSetAtlasSource.xml
+msgid "Sets the tile animation mode of the tile at [param atlas_coords] to [param mode]. See also [method get_tile_animation_mode]."
+msgstr "Az [param atlas_coords] koordinátájú csempe animációs módját a [param mode] értékére állítja. Lásd még a [method get_tile_animation_mode] metódust."
+
+#: doc/classes/TileSetAtlasSource.xml
+msgid "Sets the margin (in grid tiles) between each tile in the animation layout of the tile at coordinates [param atlas_coords] has."
+msgstr "Beállítja az [param atlas_coords] koordinátájú csempe animációs képkockái közötti távolságot, a rács celláiban megadva."
+
+#: doc/classes/TileSetAtlasSource.xml
+msgid "Tile animations start at same time, looking identical."
+msgstr "A csempeanimációk egyszerre indulnak, ezért azonosnak látszanak."
+
+#: doc/classes/TileSetAtlasSource.xml
+msgid "Tile animations start at random times, looking varied."
+msgstr "A csempeanimációk véletlenszerű időpontokban indulnak, így változatosabbnak látszanak."
+
+#: doc/classes/TileSetAtlasSource.xml
+msgid "Represents the size of the [enum TileAnimationMode] enum."
+msgstr "A [enum TileAnimationMode] felsorolás méretét jelöli."
+
+#: doc/classes/TileSetAtlasSource.xml
+msgid "Represents cell's vertical flip flag. See [constant TRANSFORM_FLIP_H] for usage."
+msgstr "A cella függőleges tükrözésének jelzőbitje. A használatához lásd a [constant TRANSFORM_FLIP_H] állandót."
+
+#: doc/classes/TileSetAtlasSource.xml
+msgid "Represents cell's transposed flag. See [constant TRANSFORM_FLIP_H] for usage."
+msgstr "A cella tengelycseréjének jelzőbitje. A használatához lásd a [constant TRANSFORM_FLIP_H] állandót."
