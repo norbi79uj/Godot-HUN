@@ -64142,3 +64142,203 @@ msgstr "Külső puffer tartalmát megjelenítő textúra."
 #: doc/classes/ExternalTexture.xml
 msgid "External texture size."
 msgstr "A külső textúra mérete."
+
+#: doc/classes/TileMapLayer.xml
+msgid "Returns the [TileData] object associated with the given cell, or [code]null[/code] if the cell does not exist or is not a [TileSetAtlasSource].\n[codeblock]\nfunc get_clicked_tile_power():\n\tvar clicked_cell = tile_map_layer.local_to_map(tile_map_layer.get_local_mouse_position())\n\tvar data = tile_map_layer.get_cell_tile_data(clicked_cell)\n\tif data:\n\t\treturn data.get_custom_data(\"power\")\n\telse:\n\t\treturn 0\n[/codeblock]"
+msgstr "Visszaadja a megadott cellához tartozó [TileData] objektumot. Ha a cella nem létezik, vagy a csempéje nem [TileSetAtlasSource] forrásból származik, az eredmény [code]null[/code].\n[codeblock]\nfunc get_clicked_tile_power():\n\tvar clicked_cell = tile_map_layer.local_to_map(tile_map_layer.get_local_mouse_position())\n\tvar data = tile_map_layer.get_cell_tile_data(clicked_cell)\n\tif data:\n\t\treturn data.get_custom_data(\"power\")\n\telse:\n\t\treturn 0\n[/codeblock]"
+
+#: doc/classes/TileSet.xml
+msgid "Rectangular tile shape."
+msgstr "Téglalap alakú csempe."
+
+#: doc/classes/TileSet.xml
+msgid "Diamond tile shape (for isometric look).\n[b]Note:[/b] Isometric [TileSet] works best if all sibling [TileMapLayer]s and their parent inheriting from [Node2D] have Y-sort enabled."
+msgstr "Rombusz alakú csempe az izometrikus megjelenítéshez.\n[b]Megjegyzés:[/b] Az izometrikus [TileSet] akkor működik a legjobban, ha az összes testvér [TileMapLayer] csomóponton és a közös, [Node2D] típusú szülőjükön be van kapcsolva az Y szerinti rendezés."
+
+#: doc/classes/TileSet.xml
+msgid "Rectangular tile shape with one row/column out of two offset by half a tile."
+msgstr "Téglalap alakú csempe. Minden második sor vagy oszlop fél csempével el van tolva."
+
+#: doc/classes/TileSet.xml
+msgid "Hexagonal tile shape."
+msgstr "Hatszög alakú csempe."
+
+#: doc/classes/TileSet.xml
+msgid "Tile coordinates layout where both axis stay consistent with their respective local horizontal and vertical axis."
+msgstr "Olyan csempekoordináta-elrendezés, amelyben a két tengely a neki megfelelő helyi vízszintes, illetve függőleges tengely irányát követi."
+
+#: doc/classes/TileSet.xml
+msgid "Same as [constant TILE_LAYOUT_STACKED], but the first half-offset is negative instead of positive."
+msgstr "A [constant TILE_LAYOUT_STACKED] elrendezéshez hasonló, de az első félcsempés eltolás negatív irányú."
+
+#: doc/classes/TileSet.xml
+msgid "Tile coordinates layout where the horizontal axis stay horizontal, and the vertical one goes down-right."
+msgstr "Olyan csempekoordináta-elrendezés, amelyben a vízszintes tengely vízszintes marad, a függőleges tengely pedig jobbra lefelé halad."
+
+#: doc/classes/TileSet.xml
+msgid "Tile coordinates layout where the vertical axis stay vertical, and the horizontal one goes down-right."
+msgstr "Olyan csempekoordináta-elrendezés, amelyben a függőleges tengely függőleges marad, a vízszintes tengely pedig jobbra lefelé halad."
+
+#: doc/classes/TileSet.xml
+msgid "Tile coordinates layout where the horizontal axis goes up-right, and the vertical one goes down-right."
+msgstr "Olyan csempekoordináta-elrendezés, amelyben a vízszintes tengely jobbra felfelé, a függőleges tengely jobbra lefelé halad."
+
+#: doc/classes/TileSet.xml
+msgid "Tile coordinates layout where the horizontal axis goes down-right, and the vertical one goes down-left."
+msgstr "Olyan csempekoordináta-elrendezés, amelyben a vízszintes tengely jobbra lefelé, a függőleges tengely balra lefelé halad."
+
+#: doc/classes/TileSet.xml
+msgid "Horizontal half-offset."
+msgstr "Vízszintes félcsempés eltolás."
+
+#: doc/classes/TileSet.xml
+msgid "Vertical half-offset."
+msgstr "Függőleges félcsempés eltolás."
+
+#: doc/classes/TileSet.xml
+msgid "Neighbor on the right side."
+msgstr "A jobb oldali szomszéd."
+
+#: doc/classes/TileSet.xml
+msgid "Neighbor in the right corner."
+msgstr "A jobb saroknál lévő szomszéd."
+
+#: doc/classes/TileSet.xml
+msgid "Neighbor on the bottom right side."
+msgstr "A jobb alsó oldalnál lévő szomszéd."
+
+#: doc/classes/TileSet.xml
+msgid "Neighbor in the bottom right corner."
+msgstr "A jobb alsó saroknál lévő szomszéd."
+
+#: doc/classes/TileSet.xml
+msgid "Neighbor on the bottom side."
+msgstr "Az alsó oldalnál lévő szomszéd."
+
+#: doc/classes/TileSet.xml
+msgid "Neighbor in the bottom corner."
+msgstr "Az alsó saroknál lévő szomszéd."
+
+#: doc/classes/TileSet.xml
+msgid "Neighbor on the bottom left side."
+msgstr "A bal alsó oldalnál lévő szomszéd."
+
+#: doc/classes/TileSet.xml
+msgid "Neighbor in the bottom left corner."
+msgstr "A bal alsó saroknál lévő szomszéd."
+
+#: doc/classes/TileSet.xml
+msgid "Neighbor on the left side."
+msgstr "A bal oldali szomszéd."
+
+#: doc/classes/TileSet.xml
+msgid "Neighbor in the left corner."
+msgstr "A bal saroknál lévő szomszéd."
+
+#: doc/classes/TileSet.xml
+msgid "Neighbor on the top left side."
+msgstr "A bal felső oldalnál lévő szomszéd."
+
+#: doc/classes/TileSet.xml
+msgid "Neighbor in the top left corner."
+msgstr "A bal felső saroknál lévő szomszéd."
+
+#: doc/classes/TileSet.xml
+msgid "Neighbor on the top side."
+msgstr "A felső oldalnál lévő szomszéd."
+
+#: doc/classes/TileSet.xml
+msgid "Neighbor in the top corner."
+msgstr "A felső saroknál lévő szomszéd."
+
+#: doc/classes/TileSet.xml
+msgid "Neighbor on the top right side."
+msgstr "A jobb felső oldalnál lévő szomszéd."
+
+#: doc/classes/TileSet.xml
+msgid "Neighbor in the top right corner."
+msgstr "A jobb felső saroknál lévő szomszéd."
+
+#: doc/classes/TileSet.xml
+msgid "Requires both corners and side to match with neighboring tiles' terrains."
+msgstr "A sarkok és az oldalak tereptípusának is illeszkednie kell a szomszédos csempékéhez."
+
+#: doc/classes/TileSet.xml
+msgid "Requires corners to match with neighboring tiles' terrains."
+msgstr "A sarkok tereptípusának illeszkednie kell a szomszédos csempékéhez."
+
+#: doc/classes/TileSet.xml
+msgid "Requires sides to match with neighboring tiles' terrains."
+msgstr "Az oldalak tereptípusának illeszkednie kell a szomszédos csempékéhez."
+
+#: doc/classes/TileSetSource.xml
+msgid "Exposes a set of tiles for a [TileSet] resource."
+msgstr "Csempéket tesz elérhetővé egy [TileSet] erőforrás számára."
+
+#: doc/classes/TileSetSource.xml
+msgid "Exposes a set of tiles for a [TileSet] resource.\nTiles in a source are indexed with two IDs, coordinates ID (of type Vector2i) and an alternative ID (of type int), named according to their use in the [TileSetAtlasSource] class.\nDepending on the TileSet source type, those IDs might have restrictions on their values, this is why the base [TileSetSource] class only exposes getters for them.\nYou can iterate over all tiles exposed by a TileSetSource by first iterating over coordinates IDs using [method get_tiles_count] and [method get_tile_id], then over alternative IDs using [method get_alternative_tiles_count] and [method get_alternative_tile_id].\n[b]Warning:[/b] [TileSetSource] can only be added to one TileSet at the same time. Calling [method TileSet.add_source] on a second [TileSet] will remove the source from the first one."
+msgstr "Csempéket tesz elérhetővé egy [TileSet] erőforrás számára.\nA forráson belüli csempék két azonosítóval érhetők el. A koordináta-azonosító Vector2i, a változatazonosító int típusú. Az elnevezés a [TileSetAtlasSource] osztályban betöltött szerepükből ered.\nA forrás típusától függően az azonosítók értékei korlátozottak lehetnek, ezért a [TileSetSource] alaposztály csak lekérdező metódusokat biztosít hozzájuk.\nA TileSetSource összes csempéjének bejárásához először a koordináta-azonosítókon menj végig a [method get_tiles_count] és a [method get_tile_id] metódussal, majd a változatazonosítókon a [method get_alternative_tiles_count] és a [method get_alternative_tile_id] metódussal.\n[b]Figyelmeztetés:[/b] Egy [TileSetSource] egyszerre csak egy csempekészlethez tartozhat. Ha a [method TileSet.add_source] metódust egy másik [TileSet] erőforráson hívod meg ugyanazzal a forrással, a forrás kikerül az első csempekészletből."
+
+#: doc/classes/TileSetSource.xml
+msgid "Returns the alternative ID for the tile with coordinates ID [param atlas_coords] at index [param index]."
+msgstr "Visszaadja az [param atlas_coords] koordináta-azonosítójú csempe [param index] indexű változatának azonosítóját."
+
+#: doc/classes/TileSetSource.xml
+msgid "Returns the tile coordinates ID of the tile with index [param index]."
+msgstr "Visszaadja a megadott [param index] indexű csempe koordináta-azonosítóját."
+
+#: doc/classes/TileSetSource.xml
+msgid "Returns if the base tile at coordinates [param atlas_coords] has an alternative with ID [param alternative_tile]."
+msgstr "Megadja, hogy az [param atlas_coords] koordinátájú alapcsempének van-e [param alternative_tile] azonosítójú változata."
+
+#: doc/classes/AnimatedTexture.xml
+msgid "Proxy texture for simple frame-based animations."
+msgstr "Helyettesítő textúra egyszerű, képkockákból álló animációkhoz."
+
+#: doc/classes/AnimatedTexture.xml
+msgid "Returns the given [param frame]'s duration, in seconds."
+msgstr "Visszaadja a megadott [param frame] képkocka időtartamát másodpercben."
+
+#: doc/classes/AnimatedTexture.xml
+msgid "Returns the given frame's [Texture2D]."
+msgstr "Visszaadja a megadott képkocka [Texture2D] textúráját."
+
+#: doc/classes/AnimatedTexture.xml
+msgid "Assigns a [Texture2D] to the given frame. Frame IDs start at 0, so the first frame has ID 0, and the last frame of the animation has ID [member frames] - 1.\nYou can define any number of textures up to [constant MAX_FRAMES], but keep in mind that only frames from 0 to [member frames] - 1 will be part of the animation."
+msgstr "[Texture2D] textúrát rendel a megadott képkockához. A képkockák azonosítói nullától indulnak, így az első azonosítója 0, az animáció utolsó képkockájáé pedig [member frames] − 1.\nLegfeljebb [constant MAX_FRAMES] textúra adható meg. Az animáció csak a 0 és [member frames] − 1 közötti képkockákat játssza le."
+
+#: doc/classes/AnimatedTexture.xml
+msgid "Sets the currently visible frame of the texture. Setting this frame while playing resets the current frame time, so the newly selected frame plays for its whole configured frame duration."
+msgstr "Beállítja a textúra éppen látható képkockáját. Ha lejátszás közben állítod be, a képkocka időmérése újraindul, így az újonnan kiválasztott képkocka a teljes beállított időtartamig látszik."
+
+#: doc/classes/AnimatedTexture.xml
+msgid "Number of frames to use in the animation. While you can create the frames independently with [method set_frame_texture], you need to set this value for the animation to take new frames into account. The maximum number of frames is [constant MAX_FRAMES]."
+msgstr "Az animációban használt képkockák száma. A képkockák külön létrehozhatók a [method set_frame_texture] metódussal. Az értéket akkor kell beállítanod, ha azt szeretnéd, hogy az animáció az új képkockákat is lejátssza. A képkockák maximális száma [constant MAX_FRAMES]."
+
+#: doc/classes/AnimatedTexture.xml
+msgid "If [code]true[/code], the animation will only play once and will not loop back to the first frame after reaching the end. Note that reaching the end will not set [member pause] to [code]true[/code]."
+msgstr "Ha [code]true[/code], az animáció csak egyszer játszódik le, és a végére érve nem ugrik vissza az első képkockára. A lejátszás befejezésekor a [member pause] nem vált [code]true[/code] értékre."
+
+#: doc/classes/AnimatedTexture.xml
+msgid "The animation speed is multiplied by this value. If set to a negative value, the animation is played in reverse."
+msgstr "A lejátszási sebesség szorzója. Negatív értéknél az animáció visszafelé játszódik le."
+
+#: doc/classes/AnimatedTexture.xml
+msgid "The maximum number of frames supported by [AnimatedTexture]. If you need more frames in your animation, use [AnimationPlayer] or [AnimatedSprite2D]."
+msgstr "Az [AnimatedTexture] által támogatott képkockák maximális száma. Ha több képkockára van szükséged, használj [AnimationPlayer] vagy [AnimatedSprite2D] csomópontot."
+
+#: doc/classes/ResourceImporterImage.xml
+msgid "Imports an image for use in scripting, with no rendering capabilities."
+msgstr "Képet importál szkriptbeli feldolgozáshoz, közvetlen megjelenítési lehetőség nélkül."
+
+#: doc/classes/ResourceImporterImage.xml
+msgid "This importer imports [Image] resources, as opposed to [CompressedTexture2D]. If you need to render the image in 2D or 3D, use [ResourceImporterTexture] instead."
+msgstr "Ez az importáló [Image] erőforrásokat hoz létre [CompressedTexture2D] helyett. Ha a képet 2D-ben vagy 3D-ben szeretnéd megjeleníteni, a [ResourceImporterTexture] importálót használd."
+
+#: doc/classes/ResourceImporterSVG.xml
+msgid "Imports an SVG file as an automatically scalable texture for use in UI elements and 2D rendering."
+msgstr "Az SVG-fájlt automatikusan méretezhető textúraként importálja, felületi elemekhez és 2D megjelenítéshez."
+
+#: doc/classes/ResourceImporterSVG.xml
+msgid "This importer imports [DPITexture] resources. See also [ResourceImporterTexture] and [ResourceImporterImage]."
+msgstr "Ez az importáló [DPITexture] erőforrásokat hoz létre. Lásd még a [ResourceImporterTexture] és a [ResourceImporterImage] importálót."
