@@ -64542,3 +64542,203 @@ msgstr "A [TileMap] által használt [TileSet] erőforrás. Ez tárolja az össz
 #: doc/classes/TileMap.xml
 msgid "Emitted when the [TileSet] of this TileMap changes."
 msgstr "Akkor váltódik ki, amikor a TileMap [TileSet] erőforrása megváltozik."
+
+#: doc/classes/CanvasLayer.xml
+msgid "Returns the RID of the canvas used by this layer."
+msgstr "Visszaadja a réteg által használt vászon RID azonosítóját."
+
+#: doc/classes/CanvasLayer.xml
+msgid "Returns the transform from the [CanvasLayer]s coordinate system to the [Viewport]s coordinate system."
+msgstr "Visszaadja a [CanvasLayer] koordinátarendszeréből a [Viewport] koordinátarendszerébe képező transzformációt."
+
+#: doc/classes/CanvasLayer.xml
+msgid "Hides any [CanvasItem] under this [CanvasLayer]. This is equivalent to setting [member visible] to [code]false[/code]."
+msgstr "Elrejti az összes [CanvasItem] csomópontot ezen a [CanvasLayer] rétegen. Egyenértékű a [member visible] [code]false[/code] értékre állításával."
+
+#: doc/classes/CanvasLayer.xml
+msgid "Shows any [CanvasItem] under this [CanvasLayer]. This is equivalent to setting [member visible] to [code]true[/code]."
+msgstr "Megjeleníti az összes [CanvasItem] csomópontot ezen a [CanvasLayer] rétegen. Egyenértékű a [member visible] [code]true[/code] értékre állításával."
+
+#: doc/classes/CanvasLayer.xml
+msgid "The custom [Viewport] node assigned to the [CanvasLayer]. If [code]null[/code], uses the default viewport instead."
+msgstr "A [CanvasLayer] réteghez rendelt egyéni [Viewport] csomópont. [code]null[/code] értéknél az alapértelmezett nézetablakot használja."
+
+#: doc/classes/CanvasLayer.xml
+msgid "If enabled, the [CanvasLayer] maintains its position in world space. If disabled, the [CanvasLayer] stays in a fixed position on the screen.\nTogether with [member follow_viewport_scale], this can be used for a pseudo-3D effect."
+msgstr "Bekapcsolva a [CanvasLayer] a világ koordinátarendszerében tartja meg a helyét. Kikapcsolva a [CanvasLayer] a képernyőn marad rögzített helyen.\nA [member follow_viewport_scale] beállítással együtt ál-3D hatás hozható létre."
+
+#: doc/classes/CanvasLayer.xml
+msgid "Scales the layer when using [member follow_viewport_enabled]. Layers moving into the foreground should have increasing scales, while layers moving into the background should have decreasing scales."
+msgstr "A réteg méretarányát állítja be a [member follow_viewport_enabled] használatakor. A közelebbi rétegekhez nagyobb, a távolabbiakhoz kisebb méretarányt érdemes megadni."
+
+#: doc/classes/CanvasLayer.xml
+msgid "The layer's base offset."
+msgstr "A réteg alapeltolása."
+
+#: doc/classes/CanvasLayer.xml
+msgid "The layer's rotation in radians."
+msgstr "A réteg elforgatása radiánban."
+
+#: doc/classes/CanvasLayer.xml
+msgid "The layer's scale."
+msgstr "A réteg méretaránya."
+
+#: doc/classes/CanvasLayer.xml
+msgid "The layer's transform."
+msgstr "A réteg transzformációja."
+
+#: doc/classes/CanvasLayer.xml
+msgid "If [code]false[/code], any [CanvasItem] under this [CanvasLayer] will be hidden.\nUnlike [member CanvasItem.visible], visibility of a [CanvasLayer] isn't propagated to underlying layers."
+msgstr "Ha [code]false[/code], az összes [CanvasItem] csomópont rejtve lesz ezen a [CanvasLayer] rétegen.\nA [member CanvasItem.visible] tulajdonsággal ellentétben egy [CanvasLayer] láthatósága nem terjed át az alatta lévő rétegekre."
+
+#: doc/classes/CanvasLayer.xml
+msgid "Emitted when visibility of the layer is changed. See [member visible]."
+msgstr "A réteg láthatóságának megváltozásakor váltódik ki. Lásd a [member visible] tulajdonságot."
+
+#: doc/classes/Line2D.xml
+msgid "Makes the polyline's joints pointy, connecting the sides of the two segments by extending them until they intersect. If the rotation of a joint is too big (based on [member sharp_limit]), the joint falls back to [constant LINE_JOINT_BEVEL] to prevent very long miters."
+msgstr "Hegyesre alakítja a törtvonal illesztéseit úgy, hogy a két szakasz széleit a metszéspontjukig meghosszabbítja. Ha az irányváltás a [member sharp_limit] határa alapján túl nagy, az illesztés a [constant LINE_JOINT_BEVEL] módra vált, hogy elkerülje a túl hosszú csúcsokat."
+
+#: doc/classes/Line2D.xml
+msgid "Makes the polyline's joints bevelled/chamfered, connecting the sides of the two segments with a simple line."
+msgstr "Levágja a törtvonal illesztéseinek sarkát. A két szakasz széleit egyenes vonallal köti össze."
+
+#: doc/classes/Line2D.xml
+msgid "Makes the polyline's joints rounded, connecting the sides of the two segments with an arc. The detail of this arc depends on [member round_precision]."
+msgstr "Lekerekíti a törtvonal illesztéseit. A két szakasz széleit ívvel köti össze. Az ív részletessége a [member round_precision] értékétől függ."
+
+#: doc/classes/Line2D.xml
+msgid "Draws no line cap."
+msgstr "Nem rajzol vonalvéget."
+
+#: doc/classes/Line2D.xml
+msgid "Draws the line cap as a box, slightly extending the first/last segment."
+msgstr "Téglalap alakú vonalvéget rajzol, amely kissé meghosszabbítja az első vagy az utolsó szakaszt."
+
+#: doc/classes/Line2D.xml
+msgid "Draws the line cap as a semicircle attached to the first/last segment."
+msgstr "Az első vagy az utolsó szakaszhoz illesztett félkör alakú vonalvéget rajzol."
+
+#: doc/classes/Line2D.xml
+msgid "Takes the left pixels of the texture and renders them over the whole polyline."
+msgstr "A textúra bal széléről veszi a képpontokat, és azokkal rajzolja ki a teljes törtvonalat."
+
+#: doc/classes/Line2D.xml
+msgid "Tiles the texture over the polyline. [member CanvasItem.texture_repeat] of the [Line2D] node must be [constant CanvasItem.TEXTURE_REPEAT_ENABLED] or [constant CanvasItem.TEXTURE_REPEAT_MIRROR] for it to work properly."
+msgstr "Ismétli a textúrát a törtvonal mentén. A helyes működéshez a [Line2D] csomópont [member CanvasItem.texture_repeat] értéke [constant CanvasItem.TEXTURE_REPEAT_ENABLED] vagy [constant CanvasItem.TEXTURE_REPEAT_MIRROR] legyen."
+
+#: doc/classes/Line2D.xml
+msgid "Stretches the texture across the polyline. [member CanvasItem.texture_repeat] of the [Line2D] node must be [constant CanvasItem.TEXTURE_REPEAT_DISABLED] for best results."
+msgstr "A törtvonal teljes hosszára nyújtja a textúrát. A legjobb eredményhez a [Line2D] csomópont [member CanvasItem.texture_repeat] értéke [constant CanvasItem.TEXTURE_REPEAT_DISABLED] legyen."
+
+#: doc/classes/ParallaxBackground.xml
+msgid "The base position offset for all [ParallaxLayer] children."
+msgstr "Az összes [ParallaxLayer] gyermekcsomópont alapeltolása."
+
+#: doc/classes/ParallaxBackground.xml
+msgid "The base motion scale for all [ParallaxLayer] children."
+msgstr "Az összes [ParallaxLayer] gyermekcsomópont alapvető mozgásszorzója."
+
+#: doc/classes/ParallaxBackground.xml
+msgid "If [code]true[/code], elements in [ParallaxLayer] child aren't affected by the zoom level of the camera."
+msgstr "Ha [code]true[/code], a kamera nagyítása nem befolyásolja a [ParallaxLayer] gyermekcsomópontok elemeit."
+
+#: doc/classes/ParallaxBackground.xml
+msgid "Top-left limits for scrolling to begin. If the camera is outside of this limit, the background will stop scrolling. Must be lower than [member scroll_limit_end] to work."
+msgstr "A görgetés bal felső határa. Ha a kamera ezen a határon kívülre kerül, a háttér görgetése megáll. A működéshez az értéknek kisebbnek kell lennie, mint a [member scroll_limit_end]."
+
+#: doc/classes/ParallaxBackground.xml
+msgid "Bottom-right limits for scrolling to end. If the camera is outside of this limit, the background will stop scrolling. Must be higher than [member scroll_limit_begin] to work."
+msgstr "A görgetés jobb alsó határa. Ha a kamera ezen a határon kívülre kerül, a háttér görgetése megáll. A működéshez az értéknek nagyobbnak kell lennie, mint a [member scroll_limit_begin]."
+
+#: doc/classes/ParallaxBackground.xml
+msgid "The ParallaxBackground's scroll value. Calculated automatically when using a [Camera2D], but can be used to manually manage scrolling when no camera is present."
+msgstr "A ParallaxBackground görgetési értéke. [Camera2D] használatakor automatikusan számítódik, kamera nélkül pedig ezzel kézzel vezérelhető a görgetés."
+
+#: doc/classes/ParallaxLayer.xml
+msgid "A parallax scrolling layer to be used with [ParallaxBackground]."
+msgstr "Parallaxis szerint görgethető réteg a [ParallaxBackground] csomóponthoz."
+
+#: doc/classes/ParallaxLayer.xml
+msgid "The ParallaxLayer's offset relative to the parent ParallaxBackground's [member ParallaxBackground.scroll_offset]."
+msgstr "A ParallaxLayer eltolása a szülő ParallaxBackground [member ParallaxBackground.scroll_offset] értékéhez képest."
+
+#: doc/classes/ParallaxLayer.xml
+msgid "Multiplies the ParallaxLayer's motion. If an axis is set to [code]0[/code], it will not scroll."
+msgstr "A ParallaxLayer mozgásának szorzója. Ha az egyik tengelyen [code]0[/code], azon a tengelyen a réteg nem görgetődik."
+
+#: doc/classes/SubViewportContainer.xml
+msgid "A container used for displaying the contents of a [SubViewport]."
+msgstr "Egy [SubViewport] tartalmát megjelenítő konténer."
+
+#: doc/classes/SubViewportContainer.xml
+msgid "Virtual method to be implemented by the user. If it returns [code]true[/code], the [param event] is propagated to [SubViewport] children. Propagation doesn't happen if it returns [code]false[/code]. If the function is not implemented, all events are propagated to SubViewports."
+msgstr "Felülírható virtuális metódus. Ha [code]true[/code] értéket ad vissza, az [param event] esemény továbbjut a [SubViewport] gyermekcsomópontokhoz. [code]false[/code] esetén az esemény nem jut tovább. Ha a metódus nincs megvalósítva, minden esemény továbbjut a SubViewport csomópontokhoz."
+
+#: doc/classes/SubViewportContainer.xml
+msgid "Configure, if either the [SubViewportContainer] or alternatively the [Control] nodes of its [SubViewport] children should be available as targets of mouse-related functionalities, like identifying the drop target in drag-and-drop operations or cursor shape of hovered [Control] node.\nIf [code]false[/code], the [Control] nodes inside its [SubViewport] children are considered as targets.\nIf [code]true[/code], the [SubViewportContainer] itself will be considered as a target."
+msgstr "Megadja, hogy a [SubViewportContainer] vagy a [SubViewport] gyermekcsomópontjaiban lévő [Control] csomópontok legyenek az egérműveletek célpontjai. Ilyen például a fogd és vidd művelet célpontjának vagy az egér alatti [Control] kurzoralakjának meghatározása.\n[code]false[/code] esetén a [SubViewport] gyermekcsomópontokon belüli [Control] csomópontok a célpontok.\n[code]true[/code] esetén maga a [SubViewportContainer] a célpont."
+
+#: doc/classes/SubViewportContainer.xml
+msgid "If [code]true[/code], the sub-viewport will be automatically resized to the control's size.\n[b]Note:[/b] If [code]true[/code], this will prohibit changing [member SubViewport.size] of its children manually."
+msgstr "Ha [code]true[/code], az alnézetablak automatikusan a vezérlő méretéhez igazodik.\n[b]Megjegyzés:[/b] [code]true[/code] esetén a gyermekcsomópontok [member SubViewport.size] tulajdonsága nem módosítható kézzel."
+
+#: doc/classes/SubViewportContainer.xml
+msgid "Divides the sub-viewport's effective resolution by this value while preserving its scale. This can be used to speed up rendering.\nFor example, a 1280×720 sub-viewport with [member stretch_shrink] set to [code]2[/code] will be rendered at 640×360 while occupying the same size in the container.\n[b]Note:[/b] [member stretch] must be [code]true[/code] for this property to work."
+msgstr "A megadott értékkel osztja az alnézetablak tényleges felbontását, miközben a megjelenítési méretét megtartja. Ezzel gyorsítható a renderelés.\nHa például egy 1280×720-as alnézetablak [member stretch_shrink] értéke [code]2[/code], akkor 640×360 képpontban renderelődik, de ugyanakkora helyet foglal a konténerben.\n[b]Megjegyzés:[/b] A tulajdonság működéséhez a [member stretch] értéke legyen [code]true[/code]."
+
+#: doc/classes/Camera2D.xml
+msgid "Aligns the camera to the tracked node.\n[b]Note:[/b] Calling [method force_update_scroll] after this method is not required."
+msgstr "A követett csomóponthoz igazítja a kamerát.\n[b]Megjegyzés:[/b] A metódus után nem kell meghívni a [method force_update_scroll] metódust."
+
+#: doc/classes/Camera2D.xml
+msgid "Forces the camera to update scroll immediately."
+msgstr "A kamera görgetésének azonnali frissítését kényszeríti ki."
+
+#: doc/classes/Camera2D.xml
+msgid "Returns the specified [enum Side]'s margin. See also [member drag_bottom_margin], [member drag_top_margin], [member drag_left_margin], and [member drag_right_margin]."
+msgstr "Visszaadja a megadott [enum Side] oldal húzási margóját. Lásd még a [member drag_bottom_margin], a [member drag_top_margin], a [member drag_left_margin] és a [member drag_right_margin] tulajdonságot."
+
+#: doc/classes/Camera2D.xml
+msgid "Returns the camera limit for the specified [enum Side]. See also [member limit_bottom], [member limit_top], [member limit_left], and [member limit_right]."
+msgstr "Visszaadja a kamera határát a megadott [enum Side] oldalon. Lásd még a [member limit_bottom], a [member limit_top], a [member limit_left] és a [member limit_right] tulajdonságot."
+
+#: doc/classes/Camera2D.xml
+msgid "Returns the current screen rotation from this camera's point of view.\n[b]Note:[/b] The screen rotation can be different from [member Node2D.global_rotation] if the camera is rotating smoothly due to [member rotation_smoothing_enabled]."
+msgstr "Visszaadja a képernyő aktuális elforgatását a kamera nézőpontjából.\n[b]Megjegyzés:[/b] A képernyő elforgatása eltérhet a [member Node2D.global_rotation] értékétől, ha a [member rotation_smoothing_enabled] miatt a kamera forgatása simított."
+
+#: doc/classes/Camera2D.xml
+msgid "Returns [code]true[/code] if this [Camera2D] is the active camera (see [method Viewport.get_camera_2d])."
+msgstr "[code]true[/code] értéket ad vissza, ha ez a [Camera2D] az aktív kamera. Lásd a [method Viewport.get_camera_2d] metódust."
+
+#: doc/classes/Camera2D.xml
+msgid "Sets the specified [enum Side]'s margin. See also [member drag_bottom_margin], [member drag_top_margin], [member drag_left_margin], and [member drag_right_margin]."
+msgstr "Beállítja a megadott [enum Side] oldal húzási margóját. Lásd még a [member drag_bottom_margin], a [member drag_top_margin], a [member drag_left_margin] és a [member drag_right_margin] tulajdonságot."
+
+#: doc/classes/Camera2D.xml
+msgid "Sets the camera limit for the specified [enum Side]. See also [member limit_bottom], [member limit_top], [member limit_left], and [member limit_right]."
+msgstr "Beállítja a kamera határát a megadott [enum Side] oldalon. Lásd még a [member limit_bottom], a [member limit_top], a [member limit_left] és a [member limit_right] tulajdonságot."
+
+#: doc/classes/Camera2D.xml
+msgid "If [code]true[/code], draws the camera's drag margin rectangle in the editor."
+msgstr "Ha [code]true[/code], kirajzolja a kamera húzási margóinak téglalapját a szerkesztőben."
+
+#: doc/classes/Camera2D.xml
+msgid "The camera's process callback."
+msgstr "A kamera feldolgozási visszahívásának módja."
+
+#: doc/classes/VisibleOnScreenNotifier2D.xml
+msgid "Emitted when the VisibleOnScreenNotifier2D enters the screen."
+msgstr "Akkor váltódik ki, amikor a VisibleOnScreenNotifier2D a képernyőre kerül."
+
+#: doc/classes/VisibleOnScreenNotifier2D.xml
+msgid "Emitted when the VisibleOnScreenNotifier2D exits the screen."
+msgstr "Akkor váltódik ki, amikor a VisibleOnScreenNotifier2D elhagyja a képernyőt."
+
+#: doc/classes/VisibleOnScreenEnabler2D.xml
+msgid "Corresponds to [constant Node.PROCESS_MODE_INHERIT]."
+msgstr "A [constant Node.PROCESS_MODE_INHERIT] módnak felel meg."
+
+#: doc/classes/VisibleOnScreenEnabler2D.xml
+msgid "Corresponds to [constant Node.PROCESS_MODE_ALWAYS]."
+msgstr "A [constant Node.PROCESS_MODE_ALWAYS] módnak felel meg."
