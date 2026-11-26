@@ -64542,3 +64542,403 @@ msgstr "A [TileMap] által használt [TileSet] erőforrás. Ez tárolja az össz
 #: doc/classes/TileMap.xml
 msgid "Emitted when the [TileSet] of this TileMap changes."
 msgstr "Akkor váltódik ki, amikor a TileMap [TileSet] erőforrása megváltozik."
+
+#: doc/classes/CanvasLayer.xml
+msgid "Returns the RID of the canvas used by this layer."
+msgstr "Visszaadja a réteg által használt vászon RID azonosítóját."
+
+#: doc/classes/CanvasLayer.xml
+msgid "Returns the transform from the [CanvasLayer]s coordinate system to the [Viewport]s coordinate system."
+msgstr "Visszaadja a [CanvasLayer] koordinátarendszeréből a [Viewport] koordinátarendszerébe képező transzformációt."
+
+#: doc/classes/CanvasLayer.xml
+msgid "Hides any [CanvasItem] under this [CanvasLayer]. This is equivalent to setting [member visible] to [code]false[/code]."
+msgstr "Elrejti az összes [CanvasItem] csomópontot ezen a [CanvasLayer] rétegen. Egyenértékű a [member visible] [code]false[/code] értékre állításával."
+
+#: doc/classes/CanvasLayer.xml
+msgid "Shows any [CanvasItem] under this [CanvasLayer]. This is equivalent to setting [member visible] to [code]true[/code]."
+msgstr "Megjeleníti az összes [CanvasItem] csomópontot ezen a [CanvasLayer] rétegen. Egyenértékű a [member visible] [code]true[/code] értékre állításával."
+
+#: doc/classes/CanvasLayer.xml
+msgid "The custom [Viewport] node assigned to the [CanvasLayer]. If [code]null[/code], uses the default viewport instead."
+msgstr "A [CanvasLayer] réteghez rendelt egyéni [Viewport] csomópont. [code]null[/code] értéknél az alapértelmezett nézetablakot használja."
+
+#: doc/classes/CanvasLayer.xml
+msgid "If enabled, the [CanvasLayer] maintains its position in world space. If disabled, the [CanvasLayer] stays in a fixed position on the screen.\nTogether with [member follow_viewport_scale], this can be used for a pseudo-3D effect."
+msgstr "Bekapcsolva a [CanvasLayer] a világ koordinátarendszerében tartja meg a helyét. Kikapcsolva a [CanvasLayer] a képernyőn marad rögzített helyen.\nA [member follow_viewport_scale] beállítással együtt ál-3D hatás hozható létre."
+
+#: doc/classes/CanvasLayer.xml
+msgid "Scales the layer when using [member follow_viewport_enabled]. Layers moving into the foreground should have increasing scales, while layers moving into the background should have decreasing scales."
+msgstr "A réteg méretarányát állítja be a [member follow_viewport_enabled] használatakor. A közelebbi rétegekhez nagyobb, a távolabbiakhoz kisebb méretarányt érdemes megadni."
+
+#: doc/classes/CanvasLayer.xml
+msgid "The layer's base offset."
+msgstr "A réteg alapeltolása."
+
+#: doc/classes/CanvasLayer.xml
+msgid "The layer's rotation in radians."
+msgstr "A réteg elforgatása radiánban."
+
+#: doc/classes/CanvasLayer.xml
+msgid "The layer's scale."
+msgstr "A réteg méretaránya."
+
+#: doc/classes/CanvasLayer.xml
+msgid "The layer's transform."
+msgstr "A réteg transzformációja."
+
+#: doc/classes/CanvasLayer.xml
+msgid "If [code]false[/code], any [CanvasItem] under this [CanvasLayer] will be hidden.\nUnlike [member CanvasItem.visible], visibility of a [CanvasLayer] isn't propagated to underlying layers."
+msgstr "Ha [code]false[/code], az összes [CanvasItem] csomópont rejtve lesz ezen a [CanvasLayer] rétegen.\nA [member CanvasItem.visible] tulajdonsággal ellentétben egy [CanvasLayer] láthatósága nem terjed át az alatta lévő rétegekre."
+
+#: doc/classes/CanvasLayer.xml
+msgid "Emitted when visibility of the layer is changed. See [member visible]."
+msgstr "A réteg láthatóságának megváltozásakor váltódik ki. Lásd a [member visible] tulajdonságot."
+
+#: doc/classes/Line2D.xml
+msgid "Makes the polyline's joints pointy, connecting the sides of the two segments by extending them until they intersect. If the rotation of a joint is too big (based on [member sharp_limit]), the joint falls back to [constant LINE_JOINT_BEVEL] to prevent very long miters."
+msgstr "Hegyesre alakítja a törtvonal illesztéseit úgy, hogy a két szakasz széleit a metszéspontjukig meghosszabbítja. Ha az irányváltás a [member sharp_limit] határa alapján túl nagy, az illesztés a [constant LINE_JOINT_BEVEL] módra vált, hogy elkerülje a túl hosszú csúcsokat."
+
+#: doc/classes/Line2D.xml
+msgid "Makes the polyline's joints bevelled/chamfered, connecting the sides of the two segments with a simple line."
+msgstr "Levágja a törtvonal illesztéseinek sarkát. A két szakasz széleit egyenes vonallal köti össze."
+
+#: doc/classes/Line2D.xml
+msgid "Makes the polyline's joints rounded, connecting the sides of the two segments with an arc. The detail of this arc depends on [member round_precision]."
+msgstr "Lekerekíti a törtvonal illesztéseit. A két szakasz széleit ívvel köti össze. Az ív részletessége a [member round_precision] értékétől függ."
+
+#: doc/classes/Line2D.xml
+msgid "Draws no line cap."
+msgstr "Nem rajzol vonalvéget."
+
+#: doc/classes/Line2D.xml
+msgid "Draws the line cap as a box, slightly extending the first/last segment."
+msgstr "Téglalap alakú vonalvéget rajzol, amely kissé meghosszabbítja az első vagy az utolsó szakaszt."
+
+#: doc/classes/Line2D.xml
+msgid "Draws the line cap as a semicircle attached to the first/last segment."
+msgstr "Az első vagy az utolsó szakaszhoz illesztett félkör alakú vonalvéget rajzol."
+
+#: doc/classes/Line2D.xml
+msgid "Takes the left pixels of the texture and renders them over the whole polyline."
+msgstr "A textúra bal széléről veszi a képpontokat, és azokkal rajzolja ki a teljes törtvonalat."
+
+#: doc/classes/Line2D.xml
+msgid "Tiles the texture over the polyline. [member CanvasItem.texture_repeat] of the [Line2D] node must be [constant CanvasItem.TEXTURE_REPEAT_ENABLED] or [constant CanvasItem.TEXTURE_REPEAT_MIRROR] for it to work properly."
+msgstr "Ismétli a textúrát a törtvonal mentén. A helyes működéshez a [Line2D] csomópont [member CanvasItem.texture_repeat] értéke [constant CanvasItem.TEXTURE_REPEAT_ENABLED] vagy [constant CanvasItem.TEXTURE_REPEAT_MIRROR] legyen."
+
+#: doc/classes/Line2D.xml
+msgid "Stretches the texture across the polyline. [member CanvasItem.texture_repeat] of the [Line2D] node must be [constant CanvasItem.TEXTURE_REPEAT_DISABLED] for best results."
+msgstr "A törtvonal teljes hosszára nyújtja a textúrát. A legjobb eredményhez a [Line2D] csomópont [member CanvasItem.texture_repeat] értéke [constant CanvasItem.TEXTURE_REPEAT_DISABLED] legyen."
+
+#: doc/classes/ParallaxBackground.xml
+msgid "The base position offset for all [ParallaxLayer] children."
+msgstr "Az összes [ParallaxLayer] gyermekcsomópont alapeltolása."
+
+#: doc/classes/ParallaxBackground.xml
+msgid "The base motion scale for all [ParallaxLayer] children."
+msgstr "Az összes [ParallaxLayer] gyermekcsomópont alapvető mozgásszorzója."
+
+#: doc/classes/ParallaxBackground.xml
+msgid "If [code]true[/code], elements in [ParallaxLayer] child aren't affected by the zoom level of the camera."
+msgstr "Ha [code]true[/code], a kamera nagyítása nem befolyásolja a [ParallaxLayer] gyermekcsomópontok elemeit."
+
+#: doc/classes/ParallaxBackground.xml
+msgid "Top-left limits for scrolling to begin. If the camera is outside of this limit, the background will stop scrolling. Must be lower than [member scroll_limit_end] to work."
+msgstr "A görgetés bal felső határa. Ha a kamera ezen a határon kívülre kerül, a háttér görgetése megáll. A működéshez az értéknek kisebbnek kell lennie, mint a [member scroll_limit_end]."
+
+#: doc/classes/ParallaxBackground.xml
+msgid "Bottom-right limits for scrolling to end. If the camera is outside of this limit, the background will stop scrolling. Must be higher than [member scroll_limit_begin] to work."
+msgstr "A görgetés jobb alsó határa. Ha a kamera ezen a határon kívülre kerül, a háttér görgetése megáll. A működéshez az értéknek nagyobbnak kell lennie, mint a [member scroll_limit_begin]."
+
+#: doc/classes/ParallaxBackground.xml
+msgid "The ParallaxBackground's scroll value. Calculated automatically when using a [Camera2D], but can be used to manually manage scrolling when no camera is present."
+msgstr "A ParallaxBackground görgetési értéke. [Camera2D] használatakor automatikusan számítódik, kamera nélkül pedig ezzel kézzel vezérelhető a görgetés."
+
+#: doc/classes/ParallaxLayer.xml
+msgid "A parallax scrolling layer to be used with [ParallaxBackground]."
+msgstr "Parallaxis szerint görgethető réteg a [ParallaxBackground] csomóponthoz."
+
+#: doc/classes/ParallaxLayer.xml
+msgid "The ParallaxLayer's offset relative to the parent ParallaxBackground's [member ParallaxBackground.scroll_offset]."
+msgstr "A ParallaxLayer eltolása a szülő ParallaxBackground [member ParallaxBackground.scroll_offset] értékéhez képest."
+
+#: doc/classes/ParallaxLayer.xml
+msgid "Multiplies the ParallaxLayer's motion. If an axis is set to [code]0[/code], it will not scroll."
+msgstr "A ParallaxLayer mozgásának szorzója. Ha az egyik tengelyen [code]0[/code], azon a tengelyen a réteg nem görgetődik."
+
+#: doc/classes/SubViewportContainer.xml
+msgid "A container used for displaying the contents of a [SubViewport]."
+msgstr "Egy [SubViewport] tartalmát megjelenítő konténer."
+
+#: doc/classes/SubViewportContainer.xml
+msgid "Virtual method to be implemented by the user. If it returns [code]true[/code], the [param event] is propagated to [SubViewport] children. Propagation doesn't happen if it returns [code]false[/code]. If the function is not implemented, all events are propagated to SubViewports."
+msgstr "Felülírható virtuális metódus. Ha [code]true[/code] értéket ad vissza, az [param event] esemény továbbjut a [SubViewport] gyermekcsomópontokhoz. [code]false[/code] esetén az esemény nem jut tovább. Ha a metódus nincs megvalósítva, minden esemény továbbjut a SubViewport csomópontokhoz."
+
+#: doc/classes/SubViewportContainer.xml
+msgid "Configure, if either the [SubViewportContainer] or alternatively the [Control] nodes of its [SubViewport] children should be available as targets of mouse-related functionalities, like identifying the drop target in drag-and-drop operations or cursor shape of hovered [Control] node.\nIf [code]false[/code], the [Control] nodes inside its [SubViewport] children are considered as targets.\nIf [code]true[/code], the [SubViewportContainer] itself will be considered as a target."
+msgstr "Megadja, hogy a [SubViewportContainer] vagy a [SubViewport] gyermekcsomópontjaiban lévő [Control] csomópontok legyenek az egérműveletek célpontjai. Ilyen például a fogd és vidd művelet célpontjának vagy az egér alatti [Control] kurzoralakjának meghatározása.\n[code]false[/code] esetén a [SubViewport] gyermekcsomópontokon belüli [Control] csomópontok a célpontok.\n[code]true[/code] esetén maga a [SubViewportContainer] a célpont."
+
+#: doc/classes/SubViewportContainer.xml
+msgid "If [code]true[/code], the sub-viewport will be automatically resized to the control's size.\n[b]Note:[/b] If [code]true[/code], this will prohibit changing [member SubViewport.size] of its children manually."
+msgstr "Ha [code]true[/code], az alnézetablak automatikusan a vezérlő méretéhez igazodik.\n[b]Megjegyzés:[/b] [code]true[/code] esetén a gyermekcsomópontok [member SubViewport.size] tulajdonsága nem módosítható kézzel."
+
+#: doc/classes/SubViewportContainer.xml
+msgid "Divides the sub-viewport's effective resolution by this value while preserving its scale. This can be used to speed up rendering.\nFor example, a 1280×720 sub-viewport with [member stretch_shrink] set to [code]2[/code] will be rendered at 640×360 while occupying the same size in the container.\n[b]Note:[/b] [member stretch] must be [code]true[/code] for this property to work."
+msgstr "A megadott értékkel osztja az alnézetablak tényleges felbontását, miközben a megjelenítési méretét megtartja. Ezzel gyorsítható a renderelés.\nHa például egy 1280×720-as alnézetablak [member stretch_shrink] értéke [code]2[/code], akkor 640×360 képpontban renderelődik, de ugyanakkora helyet foglal a konténerben.\n[b]Megjegyzés:[/b] A tulajdonság működéséhez a [member stretch] értéke legyen [code]true[/code]."
+
+#: doc/classes/Camera2D.xml
+msgid "Aligns the camera to the tracked node.\n[b]Note:[/b] Calling [method force_update_scroll] after this method is not required."
+msgstr "A követett csomóponthoz igazítja a kamerát.\n[b]Megjegyzés:[/b] A metódus után nem kell meghívni a [method force_update_scroll] metódust."
+
+#: doc/classes/Camera2D.xml
+msgid "Forces the camera to update scroll immediately."
+msgstr "A kamera görgetésének azonnali frissítését kényszeríti ki."
+
+#: doc/classes/Camera2D.xml
+msgid "Returns the specified [enum Side]'s margin. See also [member drag_bottom_margin], [member drag_top_margin], [member drag_left_margin], and [member drag_right_margin]."
+msgstr "Visszaadja a megadott [enum Side] oldal húzási margóját. Lásd még a [member drag_bottom_margin], a [member drag_top_margin], a [member drag_left_margin] és a [member drag_right_margin] tulajdonságot."
+
+#: doc/classes/Camera2D.xml
+msgid "Returns the camera limit for the specified [enum Side]. See also [member limit_bottom], [member limit_top], [member limit_left], and [member limit_right]."
+msgstr "Visszaadja a kamera határát a megadott [enum Side] oldalon. Lásd még a [member limit_bottom], a [member limit_top], a [member limit_left] és a [member limit_right] tulajdonságot."
+
+#: doc/classes/Camera2D.xml
+msgid "Returns the current screen rotation from this camera's point of view.\n[b]Note:[/b] The screen rotation can be different from [member Node2D.global_rotation] if the camera is rotating smoothly due to [member rotation_smoothing_enabled]."
+msgstr "Visszaadja a képernyő aktuális elforgatását a kamera nézőpontjából.\n[b]Megjegyzés:[/b] A képernyő elforgatása eltérhet a [member Node2D.global_rotation] értékétől, ha a [member rotation_smoothing_enabled] miatt a kamera forgatása simított."
+
+#: doc/classes/Camera2D.xml
+msgid "Returns [code]true[/code] if this [Camera2D] is the active camera (see [method Viewport.get_camera_2d])."
+msgstr "[code]true[/code] értéket ad vissza, ha ez a [Camera2D] az aktív kamera. Lásd a [method Viewport.get_camera_2d] metódust."
+
+#: doc/classes/Camera2D.xml
+msgid "Sets the specified [enum Side]'s margin. See also [member drag_bottom_margin], [member drag_top_margin], [member drag_left_margin], and [member drag_right_margin]."
+msgstr "Beállítja a megadott [enum Side] oldal húzási margóját. Lásd még a [member drag_bottom_margin], a [member drag_top_margin], a [member drag_left_margin] és a [member drag_right_margin] tulajdonságot."
+
+#: doc/classes/Camera2D.xml
+msgid "Sets the camera limit for the specified [enum Side]. See also [member limit_bottom], [member limit_top], [member limit_left], and [member limit_right]."
+msgstr "Beállítja a kamera határát a megadott [enum Side] oldalon. Lásd még a [member limit_bottom], a [member limit_top], a [member limit_left] és a [member limit_right] tulajdonságot."
+
+#: doc/classes/Camera2D.xml
+msgid "If [code]true[/code], draws the camera's drag margin rectangle in the editor."
+msgstr "Ha [code]true[/code], kirajzolja a kamera húzási margóinak téglalapját a szerkesztőben."
+
+#: doc/classes/Camera2D.xml
+msgid "The camera's process callback."
+msgstr "A kamera feldolgozási visszahívásának módja."
+
+#: doc/classes/VisibleOnScreenNotifier2D.xml
+msgid "Emitted when the VisibleOnScreenNotifier2D enters the screen."
+msgstr "Akkor váltódik ki, amikor a VisibleOnScreenNotifier2D a képernyőre kerül."
+
+#: doc/classes/VisibleOnScreenNotifier2D.xml
+msgid "Emitted when the VisibleOnScreenNotifier2D exits the screen."
+msgstr "Akkor váltódik ki, amikor a VisibleOnScreenNotifier2D elhagyja a képernyőt."
+
+#: doc/classes/VisibleOnScreenEnabler2D.xml
+msgid "Corresponds to [constant Node.PROCESS_MODE_INHERIT]."
+msgstr "A [constant Node.PROCESS_MODE_INHERIT] módnak felel meg."
+
+#: doc/classes/VisibleOnScreenEnabler2D.xml
+msgid "Corresponds to [constant Node.PROCESS_MODE_ALWAYS]."
+msgstr "A [constant Node.PROCESS_MODE_ALWAYS] módnak felel meg."
+
+#: doc/classes/AnimatedTexture.xml
+msgid "Sets the duration of any given [param frame]. The final duration is affected by the [member speed_scale]. If set to [code]0[/code], the frame is skipped during playback."
+msgstr "Beállítja a megadott [param frame] képkocka időtartamát. A tényleges időtartamot a [member speed_scale] is befolyásolja. [code]0[/code] értéknél lejátszáskor kimarad a képkocka."
+
+#: doc/classes/Curve2D.xml
+msgid "Returns the position between the vertex [param idx] and the vertex [code]idx + 1[/code], where [param t] controls if the point is the first vertex ([code]t = 0.0[/code]), the last vertex ([code]t = 1.0[/code]), or in between. Values of [param t] outside the range ([code]0.0 <= t <= 1.0[/code]) give strange, but predictable results.\nIf [param idx] is out of bounds it is truncated to the first or last vertex, and [param t] is ignored. If the curve has no points, the function sends an error to the console, and returns [code](0, 0)[/code]."
+msgstr "Visszaadja az [param idx] és az [code]idx + 1[/code] indexű görbepont közötti pozíciót. A [param t] választja ki az első pontot ([code]t = 0.0[/code]), az utolsó pontot ([code]t = 1.0[/code]) vagy a köztük lévő helyet. A tartományon ([code]0.0 <= t <= 1.0[/code]) kívüli [param t] érték szokatlan, de kiszámítható eredményt ad.\nHa az [param idx] a tartományon kívül van, az eredmény az első vagy utolsó görbepont lesz, a [param t] értékétől függetlenül. Ha a görbének nincs pontja, a függvény hibát ír a konzolra, és [code](0, 0)[/code] értéket ad vissza."
+
+#: doc/classes/ParallaxLayer.xml
+msgid "A ParallaxLayer must be the child of a [ParallaxBackground] node. Each ParallaxLayer can be set to move at different speeds relative to the camera movement or the [member ParallaxBackground.scroll_offset] value.\nThis node's children will be affected by its scroll offset.\n[b]Note:[/b] Any changes to this node's position and scale made after it enters the scene will be ignored."
+msgstr "A ParallaxLayer egy [ParallaxBackground] csomópont gyermeke kell legyen. Minden ParallaxLayer mozgási sebessége külön állítható a kamera mozgásához vagy a [member ParallaxBackground.scroll_offset] értékéhez viszonyítva.\nA csomópont görgetési eltolása a gyermekcsomópontjaira is hat.\n[b]Megjegyzés:[/b] A csomópont pozíciójának és méretarányának a jelenetbe lépés után végzett módosításait a motor figyelmen kívül hagyja."
+
+#: doc/classes/Viewport.xml
+msgid "A [Viewport] creates a different view into the screen, or a sub-view inside another viewport. Child 2D nodes will display on it, and child Camera3D 3D nodes will render on it too.\nOptionally, a viewport can have its own 2D or 3D world, so it doesn't share what it draws with other viewports.\nViewports can also choose to be audio listeners, so they generate positional audio depending on a 2D or 3D camera child of it.\nAlso, viewports can be assigned to different screens in case the devices have multiple screens.\nFinally, viewports can also behave as render targets, in which case they will not be visible unless the associated texture is used to draw."
+msgstr "A [Viewport] önálló nézetet jelenít meg a képernyőn, vagy egy másik nézetablakon belüli nézetet hoz létre. A 2D gyermekcsomópontok ezen jelennek meg, és a Camera3D gyermekcsomópontok is ebbe renderelnek.\nA nézetablaknak saját 2D vagy 3D világa is lehet. Ilyenkor a kirajzolt tartalma elkülönül a többi nézetablakétól.\nA nézetablak hanghallgatóként is működhet, ilyenkor a 2D vagy 3D kameragyermek alapján számítja ki a térbeli hangot.\nTöbb képernyős eszközön a nézetablakok különböző képernyőkhöz rendelhetők.\nA nézetablak renderelési célként is működhet. Ilyenkor akkor látható, ha a hozzá tartozó textúrát kirajzolod."
+
+#: doc/classes/Viewport.xml
+msgid "Returns the automatically computed 2D stretch transform, taking the [Viewport]'s stretch settings into account. The final value is multiplied by [member Window.content_scale_factor], but only for the root viewport. If this method is called on a [SubViewport] (e.g., in a scene tree with [SubViewportContainer] and [SubViewport]), the scale factor of the root window will not be applied. Using [method Transform2D.get_scale] on the returned value, this can be used to compensate for scaling when zooming a [Camera2D] node, or to scale down a [TextureRect] to be pixel-perfect regardless of the automatically computed scale factor.\n[b]Note:[/b] Due to how pixel scaling works, the returned transform's X and Y scale may differ slightly, even when [member Window.content_scale_aspect] is set to a mode that preserves the pixels' aspect ratio. If [member Window.content_scale_aspect] is [constant Window.CONTENT_SCALE_ASPECT_IGNORE], the X and Y scale may differ [i]significantly[/i]."
+msgstr "Visszaadja a [Viewport] nyújtási beállításaiból automatikusan kiszámított 2D nyújtási transzformációt. A gyökérnézetablaknál az eredmény a [member Window.content_scale_factor] értékével is megszorzódik. [SubViewport] esetén a gyökérablak méretaránya kimarad, például [SubViewportContainer] és [SubViewport] csomópontokat tartalmazó jelenetfában. A visszaadott értéken a [method Transform2D.get_scale] metódussal lekérheted a méretarányt. Így [Camera2D] nagyításakor ellensúlyozhatod a méretezést, vagy úgy kicsinyítheted a [TextureRect] csomópontot, hogy az automatikus méretezéstől függetlenül képpontpontosan jelenjen meg.\n[b]Megjegyzés:[/b] A képpontok méretezése miatt az X és Y méretarány kissé eltérhet akkor is, ha a [member Window.content_scale_aspect] beállítás megőrzi a képpontok oldalarányát. Ha a [member Window.content_scale_aspect] értéke [constant Window.CONTENT_SCALE_ASPECT_IGNORE], a két érték [i]jelentősen[/i] is eltérhet."
+
+#: doc/classes/Viewport.xml
+msgid "Returns the viewport's texture.\n[b]Note:[/b] When trying to store the current texture (e.g. in a file), it might be completely black or outdated if used too early, especially when used in e.g. [method Node._ready]. To make sure the texture you get is correct, you can await [signal RenderingServer.frame_post_draw] signal.\n[codeblocks]\n[gdscript]\nfunc _ready():\n    await RenderingServer.frame_post_draw\n    $Viewport.get_texture().get_image().save_png(\"user://Screenshot.png\")\n[/gdscript]\n[csharp]\npublic async override void _Ready()\n{\n    await ToSignal(RenderingServer.Singleton, RenderingServer.SignalName.FramePostDraw);\n    var viewport = GetNode<Viewport>(\"Viewport\");\n    viewport.GetTexture().GetImage().SavePng(\"user://Screenshot.png\");\n}\n[/csharp]\n[/codeblocks]\n[b]Note:[/b] When [member use_hdr_2d] is [code]true[/code] the returned texture will be an HDR image using linear encoding."
+msgstr "Visszaadja a nézetablak textúráját.\n[b]Megjegyzés:[/b] Ha túl korán próbálod eltárolni az aktuális textúrát, például egy fájlba a [method Node._ready] metódusban, előfordulhat, hogy a kép teljesen fekete vagy még egy korábbi állapotot mutat. A helyes textúra lekéréséhez várd meg a [signal RenderingServer.frame_post_draw] jelzést.\n[codeblocks]\n[gdscript]\nfunc _ready():\n    await RenderingServer.frame_post_draw\n    $Viewport.get_texture().get_image().save_png(\"user://Screenshot.png\")\n[/gdscript]\n[csharp]\npublic async override void _Ready()\n{\n    await ToSignal(RenderingServer.Singleton, RenderingServer.SignalName.FramePostDraw);\n    var viewport = GetNode<Viewport>(\"Viewport\");\n    viewport.GetTexture().GetImage().SavePng(\"user://Screenshot.png\");\n}\n[/csharp]\n[/codeblocks]\n[b]Megjegyzés:[/b] Ha a [member use_hdr_2d] értéke [code]true[/code], a visszaadott textúra lineáris kódolású HDR-kép."
+
+#: doc/classes/Viewport.xml
+msgid "Triggers the given [param event] in this [Viewport]. This can be used to pass an [InputEvent] between viewports, or to locally apply inputs that were sent over the network or saved to a file.\nIf [param in_local_coords] is [code]false[/code], the event's position is in the embedder's coordinates and will be converted to viewport coordinates. If [param in_local_coords] is [code]true[/code], the event's position is in viewport coordinates.\nWhile this method serves a similar purpose as [method Input.parse_input_event], it does not remap the specified [param event] based on project settings like [member ProjectSettings.input_devices/pointing/emulate_touch_from_mouse].\nCalling this method will propagate calls to child nodes for following methods in the given order:\n- [method Node._input]\n- [method Control._gui_input] for [Control] nodes\n- [method Node._shortcut_input]\n- [method Node._unhandled_key_input]\n- [method Node._unhandled_input]\nIf an earlier method marks the input as handled via [method set_input_as_handled], any later method in this list will not be called.\nIf none of the methods handle the event and [member physics_object_picking] is [code]true[/code], the event is used for physics object picking."
+msgstr "Kiváltja a megadott [param event] eseményt ebben a [Viewport] nézetablakban. Így [InputEvent] eseményt adhatsz át nézetablakok között, vagy helyben alkalmazhatsz hálózaton érkezett vagy fájlba mentett bemenetet.\nHa az [param in_local_coords] értéke [code]false[/code], az esemény pozíciója a beágyazó koordinátarendszerében értendő, és a motor a nézetablak koordinátáira alakítja át. Ha az [param in_local_coords] értéke [code]true[/code], a pozíció már a nézetablak koordinátarendszerében van megadva.\nA metódus célja hasonló az [method Input.parse_input_event] metóduséhoz, de a megadott [param event] eseményt nem alakítja át az olyan projektbeállítások szerint, mint a [member ProjectSettings.input_devices/pointing/emulate_touch_from_mouse].\nA metódus a következő sorrendben továbbítja a hívásokat a gyermekcsomópontoknak:\n- [method Node._input]\n- [method Control._gui_input] a [Control] csomópontoknál\n- [method Node._shortcut_input]\n- [method Node._unhandled_key_input]\n- [method Node._unhandled_input]\nHa egy korábbi metódus a [method set_input_as_handled] hívásával feldolgozottként jelöli a bemenetet, a felsorolásban utána következő metódusok nem futnak le.\nHa egyik metódus sem kezeli az eseményt, és a [member physics_object_picking] értéke [code]true[/code], a motor az eseményt fizikai objektumok kijelölésére használja."
+
+#: doc/classes/Viewport.xml
+msgid "Triggers the given [param event] in this [Viewport]. This can be used to pass an [InputEvent] between viewports, or to locally apply inputs that were sent over the network or saved to a file.\nIf [param in_local_coords] is [code]false[/code], the event's position is in the embedder's coordinates and will be converted to viewport coordinates. If [param in_local_coords] is [code]true[/code], the event's position is in viewport coordinates.\nCalling this method will propagate calls to child nodes for following methods in the given order:\n- [method Node._shortcut_input]\n- [method Node._unhandled_key_input]\n- [method Node._unhandled_input]\nIf an earlier method marks the input as handled via [method set_input_as_handled], any later method in this list will not be called.\nIf none of the methods handle the event and [member physics_object_picking] is [code]true[/code], the event is used for physics object picking.\n[b]Note:[/b] This method doesn't propagate input events to embedded [Window]s or [SubViewport]s."
+msgstr "Kiváltja a megadott [param event] eseményt ebben a [Viewport] nézetablakban. Így [InputEvent] eseményt adhatsz át nézetablakok között, vagy helyben alkalmazhatsz hálózaton érkezett vagy fájlba mentett bemenetet.\nHa az [param in_local_coords] értéke [code]false[/code], az esemény pozíciója a beágyazó koordinátarendszerében értendő, és a motor a nézetablak koordinátáira alakítja át. Ha az [param in_local_coords] értéke [code]true[/code], a pozíció már a nézetablak koordinátarendszerében van megadva.\nA metódus a következő sorrendben továbbítja a hívásokat a gyermekcsomópontoknak:\n- [method Node._shortcut_input]\n- [method Node._unhandled_key_input]\n- [method Node._unhandled_input]\nHa egy korábbi metódus a [method set_input_as_handled] hívásával feldolgozottként jelöli a bemenetet, a felsorolásban utána következő metódusok nem futnak le.\nHa egyik metódus sem kezeli az eseményt, és a [member physics_object_picking] értéke [code]true[/code], a motor az eseményt fizikai objektumok kijelölésére használja.\n[b]Megjegyzés:[/b] A metódus nem továbbítja a bemeneti eseményeket a beágyazott [Window] és [SubViewport] csomópontoknak."
+
+#: doc/classes/Viewport.xml
+msgid "Sets the maximum number of samples to take when using anisotropic filtering on textures (as a power of two). A higher sample count will result in sharper textures at oblique angles, but is more expensive to compute. A value of [code]0[/code] forcibly disables anisotropic filtering, even on materials where it is enabled.\nThe anisotropic filtering level also affects decals and light projectors if they are configured to use anisotropic filtering. See [member ProjectSettings.rendering/textures/decals/filter] and [member ProjectSettings.rendering/textures/light_projectors/filter].\n[b]Note:[/b] In 3D, for this setting to have an effect, set [member BaseMaterial3D.texture_filter] to [constant BaseMaterial3D.TEXTURE_FILTER_LINEAR_WITH_MIPMAPS_ANISOTROPIC] or [constant BaseMaterial3D.TEXTURE_FILTER_NEAREST_WITH_MIPMAPS_ANISOTROPIC] on materials.\n[b]Note:[/b] In 2D, for this setting to have an effect, set [member CanvasItem.texture_filter] to [constant CanvasItem.TEXTURE_FILTER_LINEAR_WITH_MIPMAPS_ANISOTROPIC] or [constant CanvasItem.TEXTURE_FILTER_NEAREST_WITH_MIPMAPS_ANISOTROPIC] on the [CanvasItem] node displaying the texture (or in [CanvasTexture]). However, anisotropic filtering is rarely useful in 2D, so only enable it for textures in 2D if it makes a meaningful visual difference."
+msgstr "Beállítja a textúrák anizotropikus szűrésénél vehető minták maximális számát, kettőhatványként. Több minta élesebb textúrát eredményez lapos betekintési szögnél, de nagyobb a számítási költsége. A [code]0[/code] érték azokon az anyagokon is kikapcsolja az anizotropikus szűrést, ahol az engedélyezve van.\nA szűrés szintje a matricákra és a fényvetítők textúráira is hat, ha anizotropikus szűrésre vannak állítva. Lásd a [member ProjectSettings.rendering/textures/decals/filter] és a [member ProjectSettings.rendering/textures/light_projectors/filter] beállítást.\n[b]Megjegyzés:[/b] 3D-ben a beállítás akkor hat, ha az anyag [member BaseMaterial3D.texture_filter] értéke [constant BaseMaterial3D.TEXTURE_FILTER_LINEAR_WITH_MIPMAPS_ANISOTROPIC] vagy [constant BaseMaterial3D.TEXTURE_FILTER_NEAREST_WITH_MIPMAPS_ANISOTROPIC].\n[b]Megjegyzés:[/b] 2D-ben a beállítás akkor hat, ha a textúrát megjelenítő [CanvasItem] csomópont [member CanvasItem.texture_filter] értéke [constant CanvasItem.TEXTURE_FILTER_LINEAR_WITH_MIPMAPS_ANISOTROPIC] vagy [constant CanvasItem.TEXTURE_FILTER_NEAREST_WITH_MIPMAPS_ANISOTROPIC]. A szűrés a [CanvasTexture] erőforrásban is beállítható. 2D-ben ez ritkán hasznos, ezért akkor engedélyezd, ha látható javulást eredményez."
+
+#: doc/classes/Viewport.xml
+msgid "The automatic LOD bias to use for meshes rendered within the [Viewport] (this is analogous to [member ReflectionProbe.mesh_lod_threshold]). Higher values will use less detailed versions of meshes that have LOD variations generated. If set to [code]0.0[/code], automatic LOD is disabled. Increase [member mesh_lod_threshold] to improve performance at the cost of geometry detail.\nTo control this property on the root viewport, set the [member ProjectSettings.rendering/mesh_lod/lod_change/threshold_pixels] project setting.\n[b]Note:[/b] Depending on the mesh's attributes (vertex colors, blend shapes, ...), a mesh may have fewer levels of LOD generated to avoid visible distortion of the mesh once it is affected by vertex colors or blend shapes. Meshes with a very low vertex count will also not have any LODs generated, which means this setting will not affect them at all. In general, this setting makes the largest impact on static meshes with a high vertex count.\n[b]Note:[/b] [member mesh_lod_threshold] does not affect [GeometryInstance3D] visibility ranges (also known as \"manual\" LOD or hierarchical LOD)."
+msgstr "A [Viewport] nézetablakban megjelenített hálók automatikus LOD-váltási küszöbe, a [member ReflectionProbe.mesh_lod_threshold] tulajdonsághoz hasonlóan. Nagyobb értéknél a motor a rendelkezésre álló kevésbé részletes hálóváltozatokat használja. A [code]0.0[/code] érték kikapcsolja az automatikus LOD-váltást. A [member mesh_lod_threshold] növelése javíthatja a teljesítményt a geometriai részletesség rovására.\nA gyökérnézetablak tulajdonságát a [member ProjectSettings.rendering/mesh_lod/lod_change/threshold_pixels] projektbeállítással szabályozhatod.\n[b]Megjegyzés:[/b] A háló tulajdonságaitól, például a csúcsszínektől vagy a keverési alakzatoktól függően kevesebb LOD-szint készülhet, hogy a részletcsökkentés ne torzítsa láthatóan a hálót. Nagyon kevés csúcs esetén egyáltalán nem készül LOD-szint, ezért a beállításnak sincs hatása. A beállítás általában a sok csúcsból álló statikus hálókra hat a leginkább.\n[b]Megjegyzés:[/b] A [member mesh_lod_threshold] nem módosítja a [GeometryInstance3D] láthatósági tartományait, amelyeket kézi vagy hierarchikus LOD-nak is neveznek."
+
+#: doc/classes/Viewport.xml
+msgid "Controls how much of the original viewport's size should be covered by the 2D signed distance field. This SDF can be sampled in [CanvasItem] shaders and is also used for [GPUParticles2D] collision. Higher values allow portions of occluders located outside the viewport to still be taken into account in the generated signed distance field, at the cost of performance. If you notice particles falling through [LightOccluder2D]s as the occluders leave the viewport, increase this setting.\nThe percentage is added on each axis and on both sides. For example, with the default [constant SDF_OVERSIZE_120_PERCENT], the signed distance field will cover 20% of the viewport's size outside the viewport on each side (top, right, bottom, left)."
+msgstr "Szabályozza, hogy a 2D előjeles távolságmező az eredeti nézetablak méretéhez képest mekkora területet fedjen le. A mező [CanvasItem] árnyalókból mintavételezhető, és a [GPUParticles2D] ütközéseihez is használatos. Nagyobb értéknél a nézetablakon kívüli fénykitakarók egyes részei is bekerülhetnek a távolságmezőbe, a teljesítmény rovására. Ha a részecskék átesnek a [LightOccluder2D] csomópontokon, amikor azok elhagyják a nézetablakot, növeld ezt az értéket.\nA százalék mindkét tengely mindkét oldalára hozzáadódik. Az alapértelmezett [constant SDF_OVERSIZE_120_PERCENT] esetén a távolságmező a nézetablak méretének 20%-ával nyúlik túl mind a négy oldalon: felül, jobbra, alul és balra."
+
+#: doc/classes/Viewport.xml
+msgid "Affects the final texture sharpness by reading from a lower or higher mipmap (also called \"texture LOD bias\"). Negative values make mipmapped textures sharper but grainier when viewed at a distance, while positive values make mipmapped textures blurrier (even when up close).\nEnabling temporal antialiasing ([member use_taa]) will automatically apply a [code]-0.5[/code] offset to this value, while enabling FXAA ([member screen_space_aa]) will automatically apply a [code]-0.25[/code] offset to this value. If both TAA and FXAA are enabled at the same time, an offset of [code]-0.75[/code] is applied to this value.\nTo control this property on the root viewport, set the [member ProjectSettings.rendering/textures/default_filters/texture_mipmap_bias] project setting.\n[b]Note:[/b] If [member scaling_3d_scale] is lower than [code]1.0[/code] (exclusive), [member texture_mipmap_bias] is used to adjust the automatic mipmap bias which is calculated internally based on the scale factor. The formula for this is [code]log2(scaling_3d_scale) + mipmap_bias[/code].\n[b]Note:[/b] This property is only supported in the Forward+ and Mobile renderers, not Compatibility. In Compatibility, this property is always treated as if it was set to [code]0.0[/code]."
+msgstr "Módosítja a textúra végső élességét azzal, hogy alacsonyabb vagy magasabb mipmap-szintről mintavételez. Ezt textúra-LOD-eltolásnak is nevezik. A negatív értékek távolról élesebbé, de szemcsésebbé teszik a mipmap-szintekkel rendelkező textúrákat. A pozitív értékek közelről is elmosottabb képet adnak.\nAz időbeli élsimítás ([member use_taa]) bekapcsolása automatikusan [code]-0.5[/code] eltolást alkalmaz, míg az FXAA ([member screen_space_aa]) [code]-0.25[/code] eltolást. Mindkettő bekapcsolásakor az eltolás [code]-0.75[/code].\nA gyökérnézetablak tulajdonságát a [member ProjectSettings.rendering/textures/default_filters/texture_mipmap_bias] projektbeállítással szabályozhatod.\n[b]Megjegyzés:[/b] Ha a [member scaling_3d_scale] kisebb, mint [code]1.0[/code], a [member texture_mipmap_bias] módosítja a méretarányból belsőleg kiszámított automatikus mipmap-eltolást. A képlet [code]log2(scaling_3d_scale) + mipmap_bias[/code].\n[b]Megjegyzés:[/b] Ez a tulajdonság a Forward+ és a Mobile renderelőben támogatott. A Compatibility renderelő mindig úgy kezeli, mintha [code]0.0[/code] lenne az értéke."
+
+#: doc/classes/Viewport.xml
+msgid "If [code]true[/code], [OccluderInstance3D] nodes will be usable for occlusion culling in 3D for this viewport. For the root viewport, [member ProjectSettings.rendering/occlusion_culling/use_occlusion_culling] must be set to [code]true[/code] instead.\n[b]Note:[/b] Enabling occlusion culling has a cost on the CPU. Only enable occlusion culling if you actually plan to use it, and think whether your scene can actually benefit from occlusion culling. Large, open scenes with few or no objects blocking the view will generally not benefit much from occlusion culling. Large open scenes generally benefit more from mesh LOD and visibility ranges ([member GeometryInstance3D.visibility_range_begin] and [member GeometryInstance3D.visibility_range_end]) compared to occlusion culling.\n[b]Note:[/b] Due to memory constraints, occlusion culling is not supported by default in Web export templates. It can be enabled by compiling custom Web export templates with [code]module_raycast_enabled=yes[/code]."
+msgstr "Ha [code]true[/code], ebben a nézetablakban az [OccluderInstance3D] csomópontok használhatók a takarásban lévő objektumok 3D-s kiszűrésére. A gyökérnézetablakhoz a [member ProjectSettings.rendering/occlusion_culling/use_occlusion_culling] projektbeállítást kell [code]true[/code] értékre állítani.\n[b]Megjegyzés:[/b] A takarásalapú kiszűrés CPU-időt igényel, ezért akkor kapcsold be, ha a jelenet várhatóan profitál belőle. Nagy nyílt jelenetekben, ahol kevés objektum takarja a kilátást, általában kevés előnnyel jár. Ilyen jelenetekben a hálók LOD-szintjei és láthatósági tartományai ([member GeometryInstance3D.visibility_range_begin] és [member GeometryInstance3D.visibility_range_end]) általában többet javítanak a teljesítményen.\n[b]Megjegyzés:[/b] A memóriaigény miatt a webes exportsablonok alapértelmezésben nem támogatják a takarásalapú kiszűrést. Egyéni webes exportsablon fordításakor a [code]module_raycast_enabled=yes[/code] kapcsolóval engedélyezhető."
+
+#: doc/classes/Viewport.xml
+msgid "Texture to use when [member vrs_mode] is set to [constant Viewport.VRS_TEXTURE].\nThe texture [i]must[/i] use a lossless compression format so that colors can be matched precisely. The following VRS densities are mapped to various colors, with brighter colors representing a lower level of shading precision:\n[codeblock lang=text]\n- 1×1 = rgb(0, 0, 0)     - #000000\n- 1×2 = rgb(0, 85, 0)    - #005500\n- 2×1 = rgb(85, 0, 0)    - #550000\n- 2×2 = rgb(85, 85, 0)   - #555500\n- 2×4 = rgb(85, 170, 0)  - #55aa00\n- 4×2 = rgb(170, 85, 0)  - #aa5500\n- 4×4 = rgb(170, 170, 0) - #aaaa00\n- 4×8 = rgb(170, 255, 0) - #aaff00 - Not supported on most hardware\n- 8×4 = rgb(255, 170, 0) - #ffaa00 - Not supported on most hardware\n- 8×8 = rgb(255, 255, 0) - #ffff00 - Not supported on most hardware\n[/codeblock]"
+msgstr "Akkor használt textúra, ha a [member vrs_mode] értéke [constant Viewport.VRS_TEXTURE].\nA textúra [i]kizárólag[/i] veszteségmentes tömörítést használhat, hogy a színek pontosan megfeleltethetők legyenek. Az alábbi színek jelölik a VRS mintavételi sűrűségeit. A világosabb színek kisebb árnyalási pontosságot jelentenek:\n[codeblock lang=text]\n- 1×1 = rgb(0, 0, 0)     - #000000\n- 1×2 = rgb(0, 85, 0)    - #005500\n- 2×1 = rgb(85, 0, 0)    - #550000\n- 2×2 = rgb(85, 85, 0)   - #555500\n- 2×4 = rgb(85, 170, 0)  - #55aa00\n- 4×2 = rgb(170, 85, 0)  - #aa5500\n- 4×4 = rgb(170, 170, 0) - #aaaa00\n- 4×8 = rgb(170, 255, 0) - #aaff00 - Not supported on most hardware\n- 8×4 = rgb(255, 170, 0) - #ffaa00 - Not supported on most hardware\n- 8×8 = rgb(255, 255, 0) - #ffff00 - Not supported on most hardware\n[/codeblock]"
+
+#: doc/classes/Viewport.xml
+msgid "Use nearest-neighbor filtering for the viewport's 3D buffer. This looks crisper than [constant SCALING_3D_MODE_BILINEAR] and has no additional rendering cost. The amount of scaling can be set using [member scaling_3d_scale]. Values greater than [code]1.0[/code] are not supported and bilinear downsampling will be used instead. A value of [code]1.0[/code] disables scaling.\n[b]Note:[/b] When using the [b]Nearest[/b] scaling mode, to avoid uneven pixel scaling, it's highly recommended to use a value equal to an integer divisor with a dividend of [code]1[/code]. For example, it's best to use a scale of [code]0.5[/code] (1/2), [code]0.3333[/code] (1/3), [code]0.25[/code] (1/4), [code]0.2[/code] (1/5), and so on."
+msgstr "Legközelebbi szomszéd szerinti szűrést használ a nézetablak 3D pufferéhez. Ez élesebb képet ad, mint a [constant SCALING_3D_MODE_BILINEAR], többlet renderelési költség nélkül. A méretezés mértéke a [member scaling_3d_scale] tulajdonsággal állítható. Az [code]1.0[/code] feletti értékek helyett a motor bilineáris kicsinyítést használ. Az [code]1.0[/code] érték kikapcsolja az átméretezést.\n[b]Megjegyzés:[/b] A [b]Nearest[/b] méretezési módnál az egyenetlen képpontméretezés elkerülése érdekében olyan törtet érdemes megadni, amelynek számlálója [code]1[/code], nevezője pedig egész szám. Például [code]0.5[/code] (1/2), [code]0.3333[/code] (1/3), [code]0.25[/code] (1/4), [code]0.2[/code] (1/5), és így tovább."
+
+#: doc/classes/ResourceImporterSVG.xml
+msgid "If [code]true[/code], uses lossless compression for the SVG source."
+msgstr "Ha [code]true[/code], veszteségmentesen tömöríti az SVG-forrást."
+
+#: doc/classes/DrawableTexture2D.xml
+msgid "A 2D texture that supports drawing to itself via Blit calls."
+msgstr "2D textúra, amelyre blit műveletekkel lehet rajzolni."
+
+#: doc/classes/DrawableTexture2D.xml
+msgid "Draws to given [param rect] on this texture by copying from the given [param source]. A [param modulate] color can be passed in for the shader to use, but defaults to White. The [param mipmap] value can specify a draw to a lower mipmap level. The [param material] parameter can take a ShaderMaterial with a TextureBlit Shader for custom drawing behavior."
+msgstr "A megadott [param source] textúráról másol az itteni [param rect] területre. Az árnyaló számára [param modulate] szín is megadható, alapértelmezés szerint ez fehér. A [param mipmap] alacsonyabb mipmap-szintre irányíthatja a rajzolást. A [param material] paraméterrel TextureBlit árnyalót tartalmazó ShaderMaterial adható meg egyéni rajzolási viselkedéshez."
+
+#: doc/classes/DrawableTexture2D.xml
+msgid "Re-calculates the mipmaps for this texture on demand."
+msgstr "Kérésre újraszámítja ennek a textúrának a mipmap-szintjeit."
+
+#: doc/classes/DrawableTexture2D.xml
+msgid "Returns [code]true[/code] if mipmaps are set to be used on this DrawableTexture."
+msgstr "[code]true[/code] értéket ad vissza, ha ez a DrawableTexture mipmap-szintek használatára van beállítva."
+
+#: doc/classes/DrawableTexture2D.xml
+msgid "Sets the format of this DrawableTexture."
+msgstr "Beállítja ennek a DrawableTexture textúrának a formátumát."
+
+#: doc/classes/DrawableTexture2D.xml
+msgid "Sets if mipmaps should be used on this DrawableTexture."
+msgstr "Beállítja, hogy ez a DrawableTexture használjon-e mipmap-szinteket."
+
+#: doc/classes/Camera2D.xml
+msgid "Camera node for 2D scenes. It forces the screen (current layer) to scroll following this node. This makes it easier (and faster) to program scrollable scenes than manually changing the position of [CanvasItem]-based nodes.\nCameras register themselves in the nearest [Viewport] node (when ascending the tree). Only one camera can be active per viewport. If no viewport is available ascending the tree, the camera will register in the global viewport.\nThis node is intended to be a simple helper to get things going quickly, but more functionality may be desired to change how the camera works. To make your own custom camera node, inherit it from [Node2D] and change the transform of the canvas by setting [member Viewport.canvas_transform] in [Viewport] (you can obtain the current [Viewport] by using [method Node.get_viewport]).\nNote that the [Camera2D] node's [member Node2D.global_position] doesn't represent the actual position of the screen, which may differ due to applied smoothing or limits. You can use [method get_screen_center_position] to get the real position. Same for the node's [member Node2D.global_rotation] which may be different due to applied rotation smoothing. You can use [method get_screen_rotation] to get the current rotation of the screen."
+msgstr "Kameracsomópont 2D jelenetekhez. A képernyő aktuális rétege a csomópont mozgását követve görgetődik. A görgethető jelenetek így könnyebben és hatékonyabban megvalósíthatók, mint a [CanvasItem] alapú csomópontok kézi mozgatásával.\nA kamera a jelenetfában felfelé haladva a legközelebbi [Viewport] csomópontnál regisztrálja magát. Nézetablakonként egyetlen kamera lehet aktív. Ha felfelé haladva nincs nézetablak, a kamera a globális nézetablakhoz kerül.\nEz a csomópont egyszerű kiindulópont a gyors beállításhoz. Ha eltérő kameraműködésre van szükséged, saját kameracsomópontot készíthetsz a [Node2D] osztályból származtatva, és a vászon transzformációját a [Viewport] [member Viewport.canvas_transform] tulajdonságán állíthatod be. Az aktuális [Viewport] a [method Node.get_viewport] metódussal kérhető le.\nA [Camera2D] csomópont [member Node2D.global_position] értéke eltérhet a képernyő tényleges helyzetétől, például a simítás vagy a határok miatt. A tényleges helyzet a [method get_screen_center_position] metódussal kérhető le. A [member Node2D.global_rotation] értékére ugyanez igaz a forgatás simításakor. A képernyő aktuális elforgatása a [method get_screen_rotation] metódussal kérhető le."
+
+#: doc/classes/Camera2D.xml
+msgid "Returns this camera's target position, in global coordinates.\n[b]Note:[/b] The returned value is not the same as [member Node2D.global_position], as it is affected by the drag properties. It is also not the same as the current position if [member position_smoothing_enabled] is [code]true[/code] (see [method get_screen_center_position])."
+msgstr "Visszaadja a kamera célpozícióját globális koordinátákban.\n[b]Megjegyzés:[/b] Az eredmény eltérhet a [member Node2D.global_position] értékétől a húzási beállítások miatt. Ha a [member position_smoothing_enabled] értéke [code]true[/code], a célpozíció a kamera aktuális helyzetétől is eltérhet. Lásd a [method get_screen_center_position] metódust."
+
+#: doc/classes/VisibleOnScreenEnabler2D.xml
+msgid "Corresponds to [constant Node.PROCESS_MODE_WHEN_PAUSED]."
+msgstr "A [constant Node.PROCESS_MODE_WHEN_PAUSED] módnak felel meg."
+
+#: doc/classes/ReferenceRect.xml
+msgid "A rectangular box for designing UIs."
+msgstr "Téglalap alakú keret felületek tervezéséhez."
+
+#: doc/classes/ReferenceRect.xml
+msgid "A rectangular box that displays only a colored border around its rectangle (see [method Control.get_rect]). It can be used to visualize the extents of a [Control] node, for testing purposes."
+msgstr "Téglalap alakú keret, amely csak egy színes körvonalat jelenít meg a téglalap körül. Lásd a [method Control.get_rect] metódust. Teszteléshez egy [Control] csomópont határai tehetők láthatóvá vele."
+
+#: doc/classes/ReferenceRect.xml
+msgid "Sets the border color of the [ReferenceRect]."
+msgstr "Beállítja a [ReferenceRect] keretének színét."
+
+#: doc/classes/ReferenceRect.xml
+msgid "Sets the border width of the [ReferenceRect]. The border grows both inwards and outwards with respect to the rectangle box."
+msgstr "Beállítja a [ReferenceRect] keretének vastagságát. A keret a téglalaphoz képest befelé és kifelé is vastagszik."
+
+#: doc/classes/ReferenceRect.xml
+msgid "If [code]true[/code], the [ReferenceRect] will only be visible while in editor. Otherwise, [ReferenceRect] will be visible in the running project."
+msgstr "Ha [code]true[/code], a [ReferenceRect] csak a szerkesztőben látható. Egyébként a [ReferenceRect] a futó projektben is megjelenik."
+
+#: doc/classes/Control.xml
+msgid "Resets the size to [method get_combined_minimum_size]. This is equivalent to calling [code]set_size(Vector2())[/code] (or any size below the minimum)."
+msgstr "Visszaállítja a méretet a [method get_combined_minimum_size] értékére. Ez egyenértékű a [code]set_size(Vector2())[/code] hívásával vagy bármely, a minimumnál kisebb méret megadásával."
+
+#: doc/classes/Control.xml
+msgid "The default tooltip text. The tooltip appears when the user's mouse cursor stays idle over this control for a few moments, provided that the [member mouse_filter] property is not [constant MOUSE_FILTER_IGNORE]. The time required for the tooltip to appear can be changed with the [member ProjectSettings.gui/timers/tooltip_delay_sec] setting.\nThis string is the default return value of [method get_tooltip]. Override [method _get_tooltip] to generate tooltip text dynamically. Override [method _make_custom_tooltip] to customize the tooltip interface and behavior.\nThe tooltip popup will use either a default implementation, or a custom one that you can provide by overriding [method _make_custom_tooltip]. The default tooltip includes a [PopupPanel] and [Label] whose theme properties can be customized using [Theme] methods with the [code]\"TooltipPanel\"[/code] and [code]\"TooltipLabel\"[/code] respectively. For example:\n[codeblocks]\n[gdscript]\nvar style_box = StyleBoxFlat.new()\nstyle_box.set_bg_color(Color(1, 1, 0))\nstyle_box.set_border_width_all(2)\n# We assume here that the `theme` property has been assigned a custom Theme beforehand.\ntheme.set_stylebox(\"panel\", \"TooltipPanel\", style_box)\ntheme.set_color(\"font_color\", \"TooltipLabel\", Color(0, 1, 1))\n[/gdscript]\n[csharp]\nvar styleBox = new StyleBoxFlat();\nstyleBox.SetBgColor(new Color(1, 1, 0));\nstyleBox.SetBorderWidthAll(2);\n// We assume here that the `Theme` property has been assigned a custom Theme beforehand.\nTheme.SetStyleBox(\"panel\", \"TooltipPanel\", styleBox);\nTheme.SetColor(\"font_color\", \"TooltipLabel\", new Color(0, 1, 1));\n[/csharp]\n[/codeblocks]"
+msgstr "Az alapértelmezett eszköztipp szövege. Az eszköztipp akkor jelenik meg, ha az egérmutató egy rövid ideig mozdulatlanul áll a vezérlő fölött, és a [member mouse_filter] értéke nem [constant MOUSE_FILTER_IGNORE]. A megjelenés késleltetése a [member ProjectSettings.gui/timers/tooltip_delay_sec] beállítással módosítható.\nA [method get_tooltip] alapértelmezésben ezt a szöveget adja vissza. Dinamikus szöveghez írd felül a [method _get_tooltip] metódust. Az eszköztipp megjelenését és viselkedését a [method _make_custom_tooltip] felülírásával szabhatod testre.\nAz eszköztipp felugró ablaka az alapértelmezett megvalósítást vagy a [method _make_custom_tooltip] felülírásával megadott egyéni megvalósítást használja. Az alapértelmezett eszköztipp egy [PopupPanel] és egy [Label] csomópontot tartalmaz. Tématulajdonságaik a [Theme] metódusaival állíthatók be, rendre a [code]\"TooltipPanel\"[/code] és a [code]\"TooltipLabel\"[/code] név alatt. Például:\n[codeblocks]\n[gdscript]\nvar style_box = StyleBoxFlat.new()\nstyle_box.set_bg_color(Color(1, 1, 0))\nstyle_box.set_border_width_all(2)\n# We assume here that the `theme` property has been assigned a custom Theme beforehand.\ntheme.set_stylebox(\"panel\", \"TooltipPanel\", style_box)\ntheme.set_color(\"font_color\", \"TooltipLabel\", Color(0, 1, 1))\n[/gdscript]\n[csharp]\nvar styleBox = new StyleBoxFlat();\nstyleBox.SetBgColor(new Color(1, 1, 0));\nstyleBox.SetBorderWidthAll(2);\n// We assume here that the `Theme` property has been assigned a custom Theme beforehand.\nTheme.SetStyleBox(\"panel\", \"TooltipPanel\", styleBox);\nTheme.SetColor(\"font_color\", \"TooltipLabel\", new Color(0, 1, 1));\n[/csharp]\n[/codeblocks]"
+
+#: doc/classes/FileDialog.xml
+msgid "The available file type filters. Each filter string in the array should be formatted like this: [code]*.png,*.jpg,*.jpeg;Image Files;image/png,image/jpeg[/code]. The description text of the filter is optional and can be omitted. Both file extensions and MIME type should be always set.\n[b]Note:[/b] Embedded file dialogs and Windows file dialogs support only file extensions, while Android, Linux, and macOS file dialogs also support MIME types."
+msgstr "A választható fájltípusszűrők. A tömb minden szűrőszövegének formátuma ilyen legyen: [code]*.png,*.jpg,*.jpeg;Image Files;image/png,image/jpeg[/code]. A szűrő leírása elhagyható. A fájlkiterjesztéseket és a MIME-típust is mindig add meg.\n[b]Megjegyzés:[/b] A beágyazott és a Windows fájlválasztói csak a fájlkiterjesztéseket támogatják. Az Android, Linux és macOS fájlválasztói a MIME-típusokat is kezelik."
+
+#: doc/classes/FileDialog.xml
+msgid "The dialog will warn when a file exists."
+msgstr "A párbeszédablak figyelmeztet, ha a fájl már létezik."
+
+#: doc/classes/ColorPickerButton.xml
+msgid "Returns the control's [PopupPanel] which allows you to connect to popup signals. This allows you to handle events when the ColorPicker is shown or hidden.\n[b]Warning:[/b] This is a required internal node, removing and freeing it may cause a crash. If you wish to hide it or any of its children, use their [member Window.visible] property."
+msgstr "Visszaadja a vezérlő [PopupPanel] csomópontját, amelynek jelzéseire feliratkozhatsz. Így kezelheted például a ColorPicker megjelenését és elrejtését.\n[b]Figyelmeztetés:[/b] Ez egy szükséges belső csomópont. Eltávolítása és felszabadítása összeomlást okozhat. Az elrejtéséhez vagy bármely gyermekének elrejtéséhez használd a [member Window.visible] tulajdonságot."
+
+#: doc/classes/CollisionObject2D.xml
+msgid "Returns the [code]one_way_collision_direction[/code] of the shape owner identified by the given [param owner_id]."
+msgstr "Visszaadja a megadott [param owner_id] azonosítójú alakzattulajdonos [code]one_way_collision_direction[/code] értékét."
+
+#: doc/classes/Area2D.xml
+msgid "Override mode for angular damping calculations within this area."
+msgstr "A forgási csillapítás számításának felülbírálási módja ezen a területen belül."
+
+#: doc/classes/Area2D.xml
+msgid "Override mode for linear damping calculations within this area."
+msgstr "A lineáris csillapítás számításának felülbírálási módja ezen a területen belül."
+
+#: doc/classes/CollisionObject2D.xml
+msgid "Returns the shape owner's [Transform2D]."
+msgstr "Visszaadja az alakzattulajdonos [Transform2D] transzformációját."
+
+#: doc/classes/CollisionShape2D.xml
+msgid "The collision shape color that is displayed in the editor, or in the running project if [b]Debug > Visible Collision Shapes[/b] is checked at the top of the editor.\n[b]Note:[/b] The default value is [member ProjectSettings.debug/shapes/collision/shape_color]. The [code]Color(0, 0, 0, 0)[/code] value documented here is a placeholder, and not the actual default debug color."
+msgstr "Az ütközési alakzat színe a szerkesztőben. A futó projektben akkor jelenik meg, ha a szerkesztő tetején be van kapcsolva a [b]Hibakeresés > Látható ütközési alakzatok[/b] lehetőség.\n[b]Megjegyzés:[/b] Az alapértelmezett színt a [member ProjectSettings.debug/shapes/collision/shape_color] beállítás adja meg. Az itt dokumentált [code]Color(0, 0, 0, 0)[/code] helyőrző, a tényleges alapértelmezett hibakeresési szín ettől eltér."
+
+#: doc/classes/GeometryInstance3D.xml
+msgid "The transparency applied to the whole geometry (as a multiplier of the materials' existing transparency). [code]0.0[/code] is fully opaque, while [code]1.0[/code] is fully transparent. Values greater than [code]0.0[/code] (exclusive) will force the geometry's materials to go through the transparent pipeline, which is slower to render and can exhibit rendering issues due to incorrect transparency sorting. However, unlike using a transparent material, setting [member transparency] to a value greater than [code]0.0[/code] (exclusive) will [i]not[/i] disable shadow rendering.\nIn spatial shaders, [code]1.0 - transparency[/code] is set as the default value of the [code]ALPHA[/code] built-in.\n[b]Note:[/b] [member transparency] is clamped between [code]0.0[/code] and [code]1.0[/code], so this property cannot be used to make transparent materials more opaque than they originally are.\n[b]Note:[/b] Only supported when using the Forward+ rendering method. When using the Mobile or Compatibility rendering method, [member transparency] is ignored and is considered as always being [code]0.0[/code]."
+msgstr "A teljes geometriára alkalmazott átlátszóság, az anyagok meglévő átlátszóságának szorzójaként. A [code]0.0[/code] teljesen átlátszatlan, az [code]1.0[/code] teljesen átlátszó. A [code]0.0[/code] fölötti értékek a geometria anyagait az átlátszó renderelési folyamatba irányítják. Ez lassabb, és az átlátszó felületek helytelen sorrendje megjelenítési hibát okozhat. Az átlátszó anyagoktól eltérően a [member transparency] [code]0.0[/code] fölötti értéke [i]nem[/i] kapcsolja ki az árnyékok kirajzolását.\nA térbeli árnyalókban a [code]1.0 - transparency[/code] a beépített [code]ALPHA[/code] változó alapértelmezett értéke.\n[b]Megjegyzés:[/b] A [member transparency] a [code]0.0[/code] és [code]1.0[/code] közötti tartományra korlátozódik, ezért az átlátszó anyagokat nem teheti az eredeti állapotuknál átlátszatlanabbá.\n[b]Megjegyzés:[/b] Csak Forward+ renderelésnél támogatott. A Mobile és a Compatibility renderelő figyelmen kívül hagyja a [member transparency] tulajdonságot, és mindig [code]0.0[/code] értékkel számol."
+
+#: doc/classes/VisualInstance3D.xml
+msgid "The [VisualInstance3D] is used to connect a resource to a visual representation. All visual 3D nodes inherit from the [VisualInstance3D]. In general, you should not access the [VisualInstance3D] properties directly as they are accessed and managed by the nodes that inherit from [VisualInstance3D]. [VisualInstance3D] is the node representation of the [RenderingServer] instance."
+msgstr "A [VisualInstance3D] egy erőforrást kapcsol annak vizuális megjelenítéséhez. Minden vizuális 3D csomópont a [VisualInstance3D] osztályból származik. A [VisualInstance3D] tulajdonságait általában a [VisualInstance3D] leszármazott csomópontjai használják és kezelik, ezért ritkán van szükség közvetlen hozzáférésre. A [VisualInstance3D] a [RenderingServer] példányának csomópontként elérhető megfelelője."
+
+#: doc/classes/VisualInstance3D.xml
+msgid "Returns the [AABB] (also known as the bounding box) for this [VisualInstance3D]."
+msgstr "Visszaadja a [VisualInstance3D] tengelyekhez igazított befoglaló dobozát ([AABB])."
+
+#: doc/classes/VisualInstance3D.xml
+msgid "Returns the RID of the resource associated with this [VisualInstance3D]. For example, if the Node is a [MeshInstance3D], this will return the RID of the associated [Mesh]."
+msgstr "Visszaadja a [VisualInstance3D] csomóponthoz társított erőforrás RID azonosítóját. Ha például a csomópont [MeshInstance3D], a hozzá tartozó [Mesh] RID azonosítóját adja vissza."
+
+#: doc/classes/VisualInstance3D.xml
+msgid "Returns the RID of this instance. This RID is the same as the RID returned by [method RenderingServer.instance_create]. This RID is needed if you want to call [RenderingServer] functions directly on this [VisualInstance3D]."
+msgstr "Visszaadja a példány RID azonosítóját. Ez megegyezik a [method RenderingServer.instance_create] által visszaadott RID azonosítóval. Erre van szükség, ha [RenderingServer] függvényeket közvetlenül ezen a [VisualInstance3D] csomóponton szeretnél meghívni."
+
+#: doc/classes/VisualInstance3D.xml
+msgid "Returns whether or not the specified layer of the [member layers] is enabled, given a [param layer_number] between 1 and 20."
+msgstr "Megadja, hogy a [member layers] megadott rétege engedélyezve van-e. A [param layer_number] értéke 1 és 20 közé eshet."
+
+#: doc/classes/VisualInstance3D.xml
+msgid "Sets the resource that is instantiated by this [VisualInstance3D], which changes how the engine handles the [VisualInstance3D] under the hood. Equivalent to [method RenderingServer.instance_set_base]."
+msgstr "Beállítja a [VisualInstance3D] által példányosított erőforrást. Ezzel megváltozik, hogyan kezeli a motor belsőleg a [VisualInstance3D] csomópontot. Egyenértékű a [method RenderingServer.instance_set_base] metódussal."
+
+#: doc/classes/VisualInstance3D.xml
+msgid "Based on [param value], enables or disables the specified layer in the [member layers], given a [param layer_number] between 1 and 20."
+msgstr "A [param value] alapján engedélyezi vagy letiltja a [member layers] megadott rétegét. A [param layer_number] értéke 1 és 20 közé eshet."
+
+#: doc/classes/VisualInstance3D.xml
+msgid "The render layer(s) this [VisualInstance3D] is drawn on.\nThis object will only be visible for [Camera3D]s whose cull mask includes any of the render layers this [VisualInstance3D] is set to.\nFor [Light3D]s, this can be used to control which [VisualInstance3D]s are affected by a specific light. For [GPUParticles3D], this can be used to control which particles are effected by a specific attractor. For [Decal]s, this can be used to control which [VisualInstance3D]s are affected by a specific decal.\nTo adjust [member layers] more easily using a script, use [method get_layer_mask_value] and [method set_layer_mask_value].\n[b]Note:[/b] [VoxelGI], SDFGI and [LightmapGI] will always take all layers into account to determine what contributes to global illumination. If this is an issue, set [member GeometryInstance3D.gi_mode] to [constant GeometryInstance3D.GI_MODE_DISABLED] for meshes and [member Light3D.light_bake_mode] to [constant Light3D.BAKE_DISABLED] for lights to exclude them from global illumination."
+msgstr "A renderelési rétegek, amelyeken a [VisualInstance3D] megjelenik.\nAz objektum azokból a [Camera3D] kamerákból látható, amelyek láthatósági maszkja a [VisualInstance3D] legalább egyik renderelési rétegét tartalmazza.\nA [Light3D] csomópontoknál ezzel választható ki, melyik [VisualInstance3D] csomópontokra hasson egy adott fény. A [GPUParticles3D] esetén meghatározható, mely részecskékre hasson egy vonzómező. A [Decal] esetén kiválasztható, hogy egy matrica mely [VisualInstance3D] csomópontokra kerüljön.\nA [member layers] szkriptből könnyebben kezelhető a [method get_layer_mask_value] és a [method set_layer_mask_value] metódussal.\n[b]Megjegyzés:[/b] A [VoxelGI], az SDFGI és a [LightmapGI] a globális megvilágítás számításakor minden réteget figyelembe vesz. Hálók kizárásához állítsd a [member GeometryInstance3D.gi_mode] értékét [constant GeometryInstance3D.GI_MODE_DISABLED] módra. Fények kizárásához a [member Light3D.light_bake_mode] értéke legyen [constant Light3D.BAKE_DISABLED]."
+
+#: doc/classes/VisualInstance3D.xml
+msgid "If [code]true[/code], the object is sorted based on the [AABB] center. The object will be sorted based on the global position otherwise.\nThe [AABB] center based sorting is generally more accurate for 3D models. The position based sorting instead allows to better control the drawing order when working with [GPUParticles3D] and [CPUParticles3D]."
+msgstr "Ha [code]true[/code], az objektum rendezési helyét az [AABB] közepe adja. Egyébként globális pozíciója alapján rendeződik.\n3D modelleknél az [AABB] közepe általában pontosabb sorrendet ad. Pozícióalapú rendezésnél viszont jobban szabályozható a kirajzolási sorrend [GPUParticles3D] és [CPUParticles3D] használatakor."
