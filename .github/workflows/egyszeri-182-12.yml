@@ -28,7 +28,7 @@ jobs:
               assert block.startswith("#: ")
               msgid = block.split("\nmsgid ", 1)[1].split("\nmsgstr ", 1)[0]
               assert "\nmsgid " + msgid + "\n" not in old, "Ismételt angol bejegyzés"
-          p.write_text(old + "\n" + addition, encoding="utf-8")
+          p.write_text(old + "\n" + addition.rstrip("\n") + "\n", encoding="utf-8")
           PY
       - name: Ellenőrzés
         run: |
