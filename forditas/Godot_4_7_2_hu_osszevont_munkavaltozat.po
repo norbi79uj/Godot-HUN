@@ -66742,3 +66742,203 @@ msgstr "Ha be van állítva, az ízület tájolási adatai közvetlen követésb
 #: modules/openxr/doc_classes/OpenXRInterface.xml
 msgid "If set, the positional data comes from tracking data, otherwise, the positional data contains predicted data."
 msgstr "Ha be van állítva, az ízület helyzetadatai közvetlen követésből származnak. Hiánya önmagában nem bizonyítja, hogy az adat előrejelzett. A pozíció érvényességét külön a POSITION_VALID jelző mutatja."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayer.xml
+msgid "If enabled, the OpenXR swapchain will be created with the [code]XR_SWAPCHAIN_CREATE_PROTECTED_CONTENT_BIT[/code] flag, which will protect its contents from CPU access.\nWhen used with an Android Surface, this may allow DRM content to be presented, and will only take effect when the Surface is first created; later changes to this property will have no effect."
+msgstr "Ha engedélyezve van, az OpenXR képcserelánca a [code]XR_SWAPCHAIN_CREATE_PROTECTED_CONTENT_BIT[/code] jelzővel jön létre, amely megakadályozza, hogy a CPU hozzáférjen a tartalmához.\nAndroid-felülettel használva ez lehetővé teheti DRM-védett tartalom megjelenítését. A beállítás a felület első létrehozásakor lép életbe, és a későbbi módosítások hatástalanok."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayer.xml
+msgid "The swizzle value for the alpha channel of the swapchain state.\n[b]Note:[/b] This property only has an effect on devices that support the OpenXR XR_FB_swapchain_update_state OpenGLES/Vulkan extensions."
+msgstr "A képcserelánc alfacsatornájához rendelt csatorna vagy állandó érték.\n[b]Megjegyzés:[/b] A beállítás csak az OpenXR XR_FB_swapchain_update_state OpenGL ES/Vulkan-bővítményeit támogató eszközökön hatásos."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayer.xml
+msgid "The swizzle value for the blue channel of the swapchain state.\n[b]Note:[/b] This property only has an effect on devices that support the OpenXR XR_FB_swapchain_update_state OpenGLES/Vulkan extensions."
+msgstr "A képcserelánc kék csatornájához rendelt csatorna vagy állandó érték.\n[b]Megjegyzés:[/b] A beállítás csak az OpenXR XR_FB_swapchain_update_state OpenGL ES/Vulkan-bővítményeit támogató eszközökön hatásos."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayer.xml
+msgid "The border color of the swapchain state that is used when the wrap mode clamps to the border.\n[b]Note:[/b] This property only has an effect on devices that support the OpenXR XR_FB_swapchain_update_state OpenGLES/Vulkan extensions."
+msgstr "A képcserelánc szegélyszíne. A textúraszegélyhez rögzítő címzési mód használja ezt a színt.\n[b]Megjegyzés:[/b] A beállítás csak az OpenXR XR_FB_swapchain_update_state OpenGL ES/Vulkan-bővítményeit támogató eszközökön hatásos."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayer.xml
+msgid "The swizzle value for the green channel of the swapchain state.\n[b]Note:[/b] This property only has an effect on devices that support the OpenXR XR_FB_swapchain_update_state OpenGLES/Vulkan extensions."
+msgstr "A képcserelánc zöld csatornájához rendelt csatorna vagy állandó érték.\n[b]Megjegyzés:[/b] A beállítás csak az OpenXR XR_FB_swapchain_update_state OpenGL ES/Vulkan-bővítményeit támogató eszközökön hatásos."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayer.xml
+msgid "The horizontal wrap mode of the swapchain state.\n[b]Note:[/b] This property only has an effect on devices that support the OpenXR XR_FB_swapchain_update_state OpenGLES/Vulkan extensions."
+msgstr "A képcserelánc textúrájának vízszintes címzési módja.\n[b]Megjegyzés:[/b] A beállítás csak az OpenXR XR_FB_swapchain_update_state OpenGL ES/Vulkan-bővítményeit támogató eszközökön hatásos."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayer.xml
+msgid "The magnification filter of the swapchain state.\n[b]Note:[/b] This property only has an effect on devices that support the OpenXR XR_FB_swapchain_update_state OpenGLES/Vulkan extensions."
+msgstr "A képcserelánc textúrájának nagyítási szűrője.\n[b]Megjegyzés:[/b] A beállítás csak az OpenXR XR_FB_swapchain_update_state OpenGL ES/Vulkan-bővítményeit támogató eszközökön hatásos."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayer.xml
+msgid "The max anisotropy of the swapchain state.\n[b]Note:[/b] This property only has an effect on devices that support the OpenXR XR_FB_swapchain_update_state OpenGLES/Vulkan extensions."
+msgstr "A képcserelánc textúraszűrésének maximális anizotrópiája.\n[b]Megjegyzés:[/b] A beállítás csak az OpenXR XR_FB_swapchain_update_state OpenGL ES/Vulkan-bővítményeit támogató eszközökön hatásos."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayer.xml
+msgid "The minification filter of the swapchain state.\n[b]Note:[/b] This property only has an effect on devices that support the OpenXR XR_FB_swapchain_update_state OpenGLES/Vulkan extensions."
+msgstr "A képcserelánc textúrájának kicsinyítési szűrője.\n[b]Megjegyzés:[/b] A beállítás csak az OpenXR XR_FB_swapchain_update_state OpenGL ES/Vulkan-bővítményeit támogató eszközökön hatásos."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayer.xml
+msgid "The mipmap mode of the swapchain state.\n[b]Note:[/b] This property only has an effect on devices that support the OpenXR XR_FB_swapchain_update_state OpenGLES/Vulkan extensions."
+msgstr "A képcserelánc textúrájának mipmap-módja.\n[b]Megjegyzés:[/b] A beállítás csak az OpenXR XR_FB_swapchain_update_state OpenGL ES/Vulkan-bővítményeit támogató eszközökön hatásos."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayer.xml
+msgid "The swizzle value for the red channel of the swapchain state.\n[b]Note:[/b] This property only has an effect on devices that support the OpenXR XR_FB_swapchain_update_state OpenGLES/Vulkan extensions."
+msgstr "A képcserelánc vörös csatornájához rendelt csatorna vagy állandó érték.\n[b]Megjegyzés:[/b] A beállítás csak az OpenXR XR_FB_swapchain_update_state OpenGL ES/Vulkan-bővítményeit támogató eszközökön hatásos."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayer.xml
+msgid "The vertical wrap mode of the swapchain state.\n[b]Note:[/b] This property only has an effect on devices that support the OpenXR XR_FB_swapchain_update_state OpenGLES/Vulkan extensions."
+msgstr "A képcserelánc textúrájának függőleges címzési módja.\n[b]Megjegyzés:[/b] A beállítás csak az OpenXR XR_FB_swapchain_update_state OpenGL ES/Vulkan-bővítményeit támogató eszközökön hatásos."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayer.xml
+msgid "If enabled, an Android surface will be created (with the dimensions from [member android_surface_size]) which will provide the 2D content for the composition layer, rather than using [member layer_viewport].\nSee [method get_android_surface] for information about how to get the surface so that your application can draw to it.\n[b]Note:[/b] This will only work in Android builds."
+msgstr "Ha engedélyezve van, a Godot az [member android_surface_size] szerinti méretben létrehoz egy Android-felületet, amely a [member layer_viewport] helyett a kompozíciós réteg 2D tartalmát szolgáltatja.\nA felületet a [method get_android_surface] metódussal kérheted le, hogy az alkalmazás rajzolhasson rá.\n[b]Megjegyzés:[/b] Csak Androidra készült buildekben működik."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayer.xml
+msgid "Perform nearest-neighbor filtering when sampling the texture."
+msgstr "A textúra mintavételezésekor a legközelebbi szomszéd szerinti szűrést használja."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayer.xml
+msgid "Perform linear filtering when sampling the texture."
+msgstr "A textúra mintavételezésekor lineáris szűrést használ."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayer.xml
+msgid "Perform cubic filtering when sampling the texture."
+msgstr "A textúra mintavételezésekor köbös szűrést használ."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayer.xml
+msgid "Use the mipmap of the nearest resolution."
+msgstr "A kívánt felbontáshoz legközelebbi mipmapszintet használja."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayer.xml
+msgid "Use linear interpolation of the two mipmaps of the nearest resolution."
+msgstr "Lineárisan interpolál a kívánt felbontáshoz legközelebbi két mipmapszint között."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayer.xml
+msgid "Clamp the texture to its specified border color."
+msgstr "A textúra határán kívül a megadott szegélyszínt használja."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayer.xml
+msgid "Clamp the texture to its edge color."
+msgstr "A textúra határán kívül a textúra peremének színét használja."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayer.xml
+msgid "Repeat the texture infinitely."
+msgstr "A textúrát korlátlanul ismétli."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayer.xml
+msgid "Repeat the texture infinitely, mirroring it on each repeat."
+msgstr "A textúrát korlátlanul ismétli, minden második ismétlésnél tükrözve."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayer.xml
+msgid "Maps a color channel to the value of the red channel."
+msgstr "A színcsatorna értékét a vörös csatornából veszi."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayer.xml
+msgid "Maps a color channel to the value of the green channel."
+msgstr "A színcsatorna értékét a zöld csatornából veszi."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayer.xml
+msgid "Maps a color channel to the value of the blue channel."
+msgstr "A színcsatorna értékét a kék csatornából veszi."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayer.xml
+msgid "Maps a color channel to the value of the alpha channel."
+msgstr "A színcsatorna értékét az alfacsatornából veszi."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayer.xml
+msgid "Maps a color channel to the value of zero."
+msgstr "A színcsatornához a nulla állandó értéket rendeli."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayer.xml
+msgid "Maps a color channel to the value of one."
+msgstr "A színcsatornához az egy állandó értéket rendeli."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayer.xml
+msgid "The layer is visible to both the left and right eyes."
+msgstr "A réteg a bal és a jobb szem számára is látható."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayer.xml
+msgid "The layer is visible only to the left eye."
+msgstr "A réteg csak a bal szem számára látható."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayer.xml
+msgid "The layer is visible only to the right eye."
+msgstr "A réteg csak a jobb szem számára látható."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayerQuad.xml
+msgid "An OpenXR composition layer that is rendered as a quad."
+msgstr "Sík négyszögként megjelenített OpenXR-kompozíciós réteg."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayerQuad.xml
+msgid "An OpenXR composition layer that allows rendering a [SubViewport] on a quad."
+msgstr "OpenXR-kompozíciós réteg, amely egy [SubViewport] képét sík négyszögön jeleníti meg."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayerQuad.xml
+msgid "The dimensions of the quad."
+msgstr "A négyszög méretei."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayerCylinder.xml
+msgid "An OpenXR composition layer that is rendered as an internal slice of a cylinder."
+msgstr "Hengerpalást belső szakaszaként megjelenített OpenXR-kompozíciós réteg."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayerCylinder.xml
+msgid "An OpenXR composition layer that allows rendering a [SubViewport] on an internal slice of a cylinder."
+msgstr "OpenXR-kompozíciós réteg, amely egy [SubViewport] képét a hengerpalást belső szakaszán jeleníti meg."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayerCylinder.xml
+msgid "The aspect ratio of the slice. Used to set the height relative to the width."
+msgstr "A palástszakasz oldalaránya. A szélességhez viszonyított magasságot határozza meg."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayerCylinder.xml
+msgid "The central angle of the cylinder. Used to set the width."
+msgstr "A hengerpalást középponti szöge. A palástszakasz szélességét határozza meg."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayerCylinder.xml
+msgid "The number of segments to use in the fallback mesh."
+msgstr "A helyettesítő háló szegmenseinek száma."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayerEquirect.xml
+msgid "An OpenXR composition layer that is rendered as an internal slice of a sphere."
+msgstr "Gömbfelület belső szakaszaként megjelenített OpenXR-kompozíciós réteg."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayerEquirect.xml
+msgid "An OpenXR composition layer that allows rendering a [SubViewport] on an internal slice of a sphere."
+msgstr "OpenXR-kompozíciós réteg, amely egy [SubViewport] képét a gömbfelület belső szakaszán jeleníti meg."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayerEquirect.xml
+msgid "The central horizontal angle of the sphere. Used to set the width."
+msgstr "A gömbfelület vízszintes középponti szöge. A szakasz szélességét határozza meg."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayerEquirect.xml
+msgid "The lower vertical angle of the sphere. Used (together with [member upper_vertical_angle]) to set the height."
+msgstr "A gömbfelület alsó függőleges szöge. Az [member upper_vertical_angle] értékével együtt a szakasz magasságát határozza meg."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayerEquirect.xml
+msgid "The radius of the sphere."
+msgstr "A gömb sugara."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayerEquirect.xml
+msgid "The upper vertical angle of the sphere. Used (together with [member lower_vertical_angle]) to set the height."
+msgstr "A gömbfelület felső függőleges szöge. A [member lower_vertical_angle] értékével együtt a szakasz magasságát határozza meg."
+
+#: modules/openxr/doc_classes/OpenXRVisibilityMask.xml
+msgid "Draws a stereo correct visibility mask."
+msgstr "Mindkét szemhez a megfelelő láthatósági maszkot rajzolja ki."
+
+#: doc/classes/XRHandModifier3D.xml
+msgid "A node for driving hand meshes from [XRHandTracker] data."
+msgstr "A kézhálót [XRHandTracker] adatok alapján mozgató csomópont."
+
+#: doc/classes/XRHandModifier3D.xml
+msgid "Specifies the type of updates to perform on the bones."
+msgstr "Megadja, milyen módon frissüljenek a csontok."
+
+#: doc/classes/XRHandModifier3D.xml
+msgid "The name of the [XRHandTracker] registered with [XRServer] to obtain the hand tracking data from."
+msgstr "A kézkövetési adatokat szolgáltató, az [XRServer] kiszolgálónál regisztrált [XRHandTracker] neve."
+
+#: doc/classes/XRHandModifier3D.xml
+msgid "The skeleton's bones are fully updated (both position and rotation) to match the tracked bones."
+msgstr "A csontváz csontjainak helyzete és forgatása egyaránt a követett csontokhoz igazodik."
