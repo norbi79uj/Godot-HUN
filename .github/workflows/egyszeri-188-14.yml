@@ -1,0 +1,43 @@
+name: Egyszeri 188-as tizennégy leírás javítása
+on:
+  push:
+    branches:
+      - 'i18n/f1-pr188-kihagyott-14-javitas-20261127'
+    paths:
+      - '.github/workflows/egyszeri-188-14.yml'
+permissions:
+  contents: write
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Tizennégy új PO-bejegyzés hozzáadása
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path("forditas/Godot_4_7_2_hu_osszevont_munkavaltozat.po")
+          addition = json.loads(r'''"#: modules/openxr/doc_classes/OpenXRInterface.xml\nmsgid \"If handtracking is enabled, returns the angular velocity of a joint ([param joint]) of a hand ([param hand]) as provided by OpenXR. This is relative to [XROrigin3D]!\"\nmsgstr \"Ha a kézkövetés engedélyezett, visszaadja a [param hand] kéz [param joint] ízületének OpenXR által jelentett szögsebességét. Az adat az OpenXR követési referenciatérében értendő; nem a [XROrigin3D] világtranszformációjával átalakított érték.\"\n\n#: modules/openxr/doc_classes/OpenXRInterface.xml\nmsgid \"If handtracking is enabled, returns the linear velocity of a joint ([param joint]) of a hand ([param hand]) as provided by OpenXR. This is relative to [XROrigin3D] without worldscale applied!\"\nmsgstr \"Ha a kézkövetés engedélyezett, visszaadja a [param hand] kéz [param joint] ízületének OpenXR által jelentett lineáris sebességét. Az adat az OpenXR követési referenciatérében értendő; a [XROrigin3D] világtranszformációját és a világ léptékét a lekérdezés nem alkalmazza.\"\n\n#: modules/openxr/doc_classes/OpenXRInterface.xml\nmsgid \"If handtracking is enabled, returns the position of a joint ([param joint]) of a hand ([param hand]) as provided by OpenXR. This is relative to [XROrigin3D] without worldscale applied!\"\nmsgstr \"Ha a kézkövetés engedélyezett, visszaadja a [param hand] kéz [param joint] ízületének OpenXR által jelentett helyzetét. Az adat az OpenXR követési referenciatérében értendő; a [XROrigin3D] világtranszformációját és a világ léptékét a lekérdezés nem alkalmazza.\"\n\n#: modules/openxr/doc_classes/OpenXRInterface.xml\nmsgid \"Returns [code]true[/code] if system has detected the presence of a user in the XR experience.\"\nmsgstr \"[code]true[/code] értéket ad vissza, ha a rendszer a felhasználó XR-beli jelenlétét érzékeli. Ha a jelenlétérzékelési bővítmény nem támogatott, szintén igaz értéket ad vissza; ez ilyenkor nem tényleges érzékelési eredmény.\"\n\n#: modules/openxr/doc_classes/OpenXRInterface.xml\nmsgid \"Informs the user queued a recenter of the player position.\"\nmsgstr \"A referenciatér változásának feldolgozása és a követési adatok frissítése után váltódik ki. Nem feltétlenül a felhasználó által kezdeményezett középre igazítást jelzi.\"\n\n#: modules/openxr/doc_classes/OpenXRInterface.xml\nmsgid \"The state of the session is unknown, we haven't tried setting up OpenXR yet.\"\nmsgstr \"A munkamenet állapota ismeretlen. Ez a Godot tartalékértéke is lehet, amikor még nem inicializálták az OpenXR-t, vagy az OpenXR API nem érhető el.\"\n\n#: modules/openxr/doc_classes/OpenXRInterface.xml\nmsgid \"The initial state after the OpenXR session is created or after the session is destroyed.\"\nmsgstr \"A már létrehozott, de tétlen OpenXR-munkamenet állapota. A munkamenet létrehozása után és a futó munkamenet xrEndSession hívással történő befejezése után is előfordulhat; nem jelenti, hogy a munkamenet megsemmisült.\"\n\n#: modules/openxr/doc_classes/OpenXRInterface.xml\nmsgid \"The application has synched its frame loop with the runtime but we're not rendering anything. [signal session_synchronized] is emitted when we change to this state.\"\nmsgstr \"Az alkalmazás képkockaciklusa szinkronban van az XR-futtatókörnyezettel. A ciklus tovább fut, és a shouldRender jelzi, kell-e képet renderelni. Ebbe az állapotba lépve kiváltódik a [signal session_synchronized] jelzés.\"\n\n#: modules/openxr/doc_classes/OpenXRInterface.xml\nmsgid \"The application has synched its frame loop with the runtime and we're rendering output to the user, however we receive no user input. [signal session_visible] is emitted when we change to this state.\\n[b]Note:[/b] This is the current state just before we get the focused state, whenever the user opens a system menu, switches to another application, or takes off their headset.\"\nmsgstr \"Az alkalmazás képkockaciklusa szinkronban van az XR-futtatókörnyezettel, a munkamenet képe látható, de az alkalmazás nem rendelkezik XR-bemeneti fókusszal. Ebbe az állapotba lépve kiváltódik a [signal session_visible] jelzés.\\n[b]Megjegyzés:[/b] Ez a fókuszált állapot előtt, rendszermenü megnyitásakor vagy alkalmazásváltáskor is előfordulhat. A fejszett levétele nem feltétlenül okoz látható állapotot; a futtatókörnyezet a munkamenet leállítását is kezdeményezheti.\"\n\n#: modules/openxr/doc_classes/OpenXRInterface.xml\nmsgid \"Maximum value for the hand enum.\"\nmsgstr \"A kéz felsorolás végjelzője; a 2-es érték nem érvényes kézazonosító. A használható értékeket a bal és jobb kéz jelzői adják.\"\n\n#: modules/openxr/doc_classes/OpenXRInterface.xml\nmsgid \"Maximum value for the motion range enum.\"\nmsgstr \"A kéz mozgástartományát leíró felsorolás végjelzője; a 2-es érték nem választható mozgástartomány. A használható módok az akadálytalan és a vezérlőhöz igazodó mozgás.\"\n\n#: modules/openxr/doc_classes/OpenXRInterface.xml\nmsgid \"The source of hand tracking is unobstructed, this means that an accurate method of hand tracking is used, e.g. optical hand tracking, data gloves, etc.\"\nmsgstr \"A kézkövetési adatok akadálytalan forrásból származnak, például optikai kézkövetésből vagy adatkesztyűből. Ez az adatforrás típusát azonosítja; önmagában nem garantálja a mérések pontosságát vagy érvényességét.\"\n\n#: modules/openxr/doc_classes/OpenXRInterface.xml\nmsgid \"If set, the orientation data comes from tracking data, otherwise, the orientation data contains predicted data.\"\nmsgstr \"Ha be van állítva, az ízület tájolási adatai közvetlen követésből származnak. Hiánya önmagában nem bizonyítja, hogy az adat előrejelzett. A tájolás érvényességét külön az ORIENTATION_VALID jelző mutatja.\"\n\n#: modules/openxr/doc_classes/OpenXRInterface.xml\nmsgid \"If set, the positional data comes from tracking data, otherwise, the positional data contains predicted data.\"\nmsgstr \"Ha be van állítva, az ízület helyzetadatai közvetlen követésből származnak. Hiánya önmagában nem bizonyítja, hogy az adat előrejelzett. A pozíció érvényességét külön a POSITION_VALID jelző mutatja.\"\n\n"''')
+          old = p.read_text(encoding="utf-8")
+          assert old.endswith("\n")
+          assert addition.count("\nmsgid ") == 14
+          for block in addition.strip().split("\n\n"):
+              msgid = block.split("\nmsgid ", 1)[1].split("\nmsgstr ", 1)[0]
+              assert "\nmsgid " + msgid + "\n" not in old, "Ismételt angol bejegyzés"
+          p.write_text(old + "\n" + addition.rstrip("\n") + "\n", encoding="utf-8")
+          PY
+      - name: Regressziós és gettext-ellenőrzés
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y gettext
+          python3 -m unittest discover -s forditas -p 'test_*.py' -v
+          python3 forditas/ellenorzes.py --require-msgfmt
+          git diff --check
+      - name: Javítás rögzítése és az egyszeri workflow eltávolítása
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add forditas/Godot_4_7_2_hu_osszevont_munkavaltozat.po
+          git rm .github/workflows/egyszeri-188-14.yml
+          git commit -m "Godot F1: tizennégy kihagyott OpenXR leírás pontosítása"
+          git push
