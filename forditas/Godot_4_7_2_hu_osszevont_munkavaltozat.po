@@ -66942,3 +66942,203 @@ msgstr "A kézkövetési adatokat szolgáltató, az [XRServer] kiszolgálónál 
 #: doc/classes/XRHandModifier3D.xml
 msgid "The skeleton's bones are fully updated (both position and rotation) to match the tracked bones."
 msgstr "A csontváz csontjainak helyzete és forgatása egyaránt a követett csontokhoz igazodik."
+
+#: doc/classes/XRHandModifier3D.xml
+msgid "This node uses hand tracking data from an [XRHandTracker] to pose the skeleton of a hand mesh.\nPositioning of hands is performed by creating an [XRNode3D] ancestor of the hand mesh driven by the same [XRHandTracker].\nThe hand tracking position-data is scaled by [member Skeleton3D.motion_scale] when applied to the skeleton, which can be used to adjust the tracked hand to match the scale of the hand model."
+msgstr "Ez a csomópont egy [XRHandTracker] kézkövetési adatai alapján állítja be a kézháló csontvázának pózát.\nA kéz elhelyezéséhez a kézháló egyik őseként hozz létre egy [XRNode3D] csomópontot, és rendeld hozzá ugyanazt a [XRHandTracker] követőt.\nA csontváz beállításakor a helyzetadatokat a [member Skeleton3D.motion_scale] értékével szorozza meg. Így a követett kéz léptéke hozzáigazítható a kézmodellhez."
+
+#: doc/classes/XRHandModifier3D.xml
+msgid "The skeleton's bones are only rotated to align with the tracked bones, preserving bone length."
+msgstr "A csontváz csontjai csak elfordulnak a követett csontokhoz igazodva. A csontok hossza megmarad."
+
+#: doc/classes/XRHandModifier3D.xml
+msgid "Represents the size of the [enum BoneUpdate] enum."
+msgstr "A [enum BoneUpdate] felsorolás méretét jelöli."
+
+#: doc/classes/XRHandTracker.xml
+msgid "A tracked hand in XR."
+msgstr "Egy XR-ben követett kéz."
+
+#: doc/classes/XRHandTracker.xml
+msgid "A hand tracking system will create an instance of this object and add it to the [XRServer]. This tracking system will then obtain skeleton data, convert it to the Godot Humanoid hand skeleton and store this data on the [XRHandTracker] object.\nUse [XRHandModifier3D] to animate a hand mesh using hand tracking data."
+msgstr "A kézkövető rendszer létrehoz egy ilyen objektumot, és regisztrálja az [XRServer] kiszolgálónál. Ezután lekéri a csontváz adatait, átalakítja őket a Godot humanoid kézcsontvázának megfelelő formára, és az [XRHandTracker] objektumban tárolja őket.\nAz [XRHandModifier3D] a kézkövetési adatok alapján animálja a kézhálót."
+
+#: doc/classes/XRHandTracker.xml
+msgid "Returns the angular velocity for the given hand joint."
+msgstr "Visszaadja a megadott kézízület szögsebességét."
+
+#: doc/classes/XRHandTracker.xml
+msgid "Returns flags about the validity of the tracking data for the given hand joint."
+msgstr "Visszaadja a megadott kézízület követési adatainak érvényességét leíró bitjelzőket."
+
+#: doc/classes/XRHandTracker.xml
+msgid "Returns the linear velocity for the given hand joint."
+msgstr "Visszaadja a megadott kézízület lineáris sebességét."
+
+#: doc/classes/XRHandTracker.xml
+msgid "Returns the radius of the given hand joint."
+msgstr "Visszaadja a megadott kézízület sugarát."
+
+#: doc/classes/XRHandTracker.xml
+msgid "Returns the transform for the given hand joint."
+msgstr "Visszaadja a megadott kézízület transzformációját."
+
+#: doc/classes/XRHandTracker.xml
+msgid "Sets the angular velocity for the given hand joint."
+msgstr "Beállítja a megadott kézízület szögsebességét."
+
+#: doc/classes/XRHandTracker.xml
+msgid "Sets flags about the validity of the tracking data for the given hand joint."
+msgstr "Beállítja a megadott kézízület követési adatainak érvényességét leíró bitjelzőket."
+
+#: doc/classes/XRHandTracker.xml
+msgid "Sets the linear velocity for the given hand joint."
+msgstr "Beállítja a megadott kézízület lineáris sebességét."
+
+#: doc/classes/XRHandTracker.xml
+msgid "Sets the radius of the given hand joint."
+msgstr "Beállítja a megadott kézízület sugarát."
+
+#: doc/classes/XRHandTracker.xml
+msgid "Sets the transform for the given hand joint."
+msgstr "Beállítja a megadott kézízület transzformációját."
+
+#: doc/classes/XRHandTracker.xml
+msgid "The source of the hand tracking data."
+msgstr "A kézkövetési adatok forrása."
+
+#: doc/classes/XRHandTracker.xml
+msgid "If [code]true[/code], the hand tracking data is valid."
+msgstr "[code]true[/code] érték esetén a kézkövetési adatok érvényesek."
+
+#: doc/classes/XRHandTracker.xml
+msgid "The source of hand tracking data is unknown."
+msgstr "A kézkövetési adatok forrása ismeretlen."
+
+#: doc/classes/XRHandTracker.xml
+msgid "The source of hand tracking data is a controller, meaning that joint positions are inferred from controller inputs."
+msgstr "A kézkövetési adatok forrása egy vezérlő. Az ízületek helyzetét a rendszer a vezérlő bemenetei alapján becsüli."
+
+#: doc/classes/XRHandTracker.xml
+msgid "No hand tracking data is tracked, this either means the hand is obscured, the controller is turned off, or tracking is not supported for the current input type."
+msgstr "Nincs kézkövetési adat. Ennek oka lehet, hogy a kéz takarásban van, a vezérlő ki van kapcsolva, vagy az aktuális bemenettípushoz nem érhető el követés."
+
+#: doc/classes/XRHandTracker.xml
+msgid "Represents the size of the [enum HandTrackingSource] enum."
+msgstr "A [enum HandTrackingSource] felsorolás méretét jelöli."
+
+#: doc/classes/XRHandTracker.xml
+msgid "Thumb phalanx proximal joint."
+msgstr "A hüvelykujj proximális ujjpercéhez tartozó ízület."
+
+#: doc/classes/XRHandTracker.xml
+msgid "Thumb phalanx distal joint."
+msgstr "A hüvelykujj disztális ujjpercéhez tartozó ízület."
+
+#: doc/classes/XRHandTracker.xml
+msgid "Represents the size of the [enum HandJoint] enum."
+msgstr "A [enum HandJoint] felsorolás méretét jelöli."
+
+#: doc/classes/XRHandTracker.xml
+msgid "The hand joint's orientation data is valid."
+msgstr "A kézízület tájolási adata érvényes."
+
+#: doc/classes/XRHandTracker.xml
+msgid "The hand joint's orientation is actively tracked. May not be set if tracking has been temporarily lost."
+msgstr "A rendszer aktívan követi a kézízület tájolását. A követés átmeneti elvesztésekor a bitjelző törlődhet."
+
+#: doc/classes/XRHandTracker.xml
+msgid "The hand joint's position data is valid."
+msgstr "A kézízület helyzetadata érvényes."
+
+#: doc/classes/XRHandTracker.xml
+msgid "The hand joint's position is actively tracked. May not be set if tracking has been temporarily lost."
+msgstr "A rendszer aktívan követi a kézízület helyzetét. A követés átmeneti elvesztésekor a bitjelző törlődhet."
+
+#: doc/classes/XRHandTracker.xml
+msgid "The hand joint's linear velocity data is valid."
+msgstr "A kézízület lineáris sebességének adata érvényes."
+
+#: doc/classes/XRHandTracker.xml
+msgid "The hand joint's angular velocity data is valid."
+msgstr "A kézízület szögsebességének adata érvényes."
+
+#: doc/classes/XRBodyModifier3D.xml
+msgid "A node for driving body meshes from [XRBodyTracker] data."
+msgstr "A testhálót [XRBodyTracker] adatok alapján mozgató csomópont."
+
+#: doc/classes/XRBodyModifier3D.xml
+msgid "This node uses body tracking data from an [XRBodyTracker] to pose the skeleton of a body mesh.\nPositioning of the body is performed by creating an [XRNode3D] ancestor of the body mesh driven by the same [XRBodyTracker].\nThe body tracking position-data is scaled by [member Skeleton3D.motion_scale] when applied to the skeleton, which can be used to adjust the tracked body to match the scale of the body model."
+msgstr "Ez a csomópont egy [XRBodyTracker] testkövetési adatai alapján állítja be a testháló csontvázának pózát.\nA test elhelyezéséhez a testháló egyik őseként hozz létre egy [XRNode3D] csomópontot, és rendeld hozzá ugyanazt a [XRBodyTracker] követőt.\nA csontváz beállításakor a helyzetadatokat a [member Skeleton3D.motion_scale] értékével szorozza meg. Így a követett test léptéke hozzáigazítható a testmodellhez."
+
+#: doc/classes/XRBodyModifier3D.xml
+msgid "The name of the [XRBodyTracker] registered with [XRServer] to obtain the body tracking data from."
+msgstr "A testkövetési adatokat szolgáltató, az [XRServer] kiszolgálónál regisztrált [XRBodyTracker] neve."
+
+#: doc/classes/XRBodyModifier3D.xml
+msgid "Specifies the body parts to update."
+msgstr "Megadja, mely testrészek frissüljenek."
+
+#: doc/classes/XRBodyModifier3D.xml
+msgid "The skeleton's upper body joints are updated."
+msgstr "A csontváz felsőtestének ízületei frissülnek."
+
+#: doc/classes/XRBodyModifier3D.xml
+msgid "The skeleton's lower body joints are updated."
+msgstr "A csontváz alsótestének ízületei frissülnek."
+
+#: doc/classes/XRBodyModifier3D.xml
+msgid "The skeleton's hand joints are updated."
+msgstr "A csontváz kézízületei frissülnek."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "A tracked body in XR."
+msgstr "Egy XR-ben követett test."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "A body tracking system will create an instance of this object and add it to the [XRServer]. This tracking system will then obtain skeleton data, convert it to the Godot Humanoid skeleton and store this data on the [XRBodyTracker] object.\nUse [XRBodyModifier3D] to animate a body mesh using body tracking data."
+msgstr "A testkövető rendszer létrehoz egy ilyen objektumot, és regisztrálja az [XRServer] kiszolgálónál. Ezután lekéri a csontváz adatait, átalakítja őket a Godot humanoid csontvázának megfelelő formára, és az [XRBodyTracker] objektumban tárolja őket.\nAz [XRBodyModifier3D] a testkövetési adatok alapján animálja a testhálót."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "Returns flags about the validity of the tracking data for the given body joint."
+msgstr "Visszaadja a megadott testi ízület követési adatainak érvényességét leíró bitjelzőket."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "Returns the transform for the given body joint."
+msgstr "Visszaadja a megadott testi ízület transzformációját."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "Sets flags about the validity of the tracking data for the given body joint."
+msgstr "Beállítja a megadott testi ízület követési adatainak érvényességét leíró bitjelzőket."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "Sets the transform for the given body joint."
+msgstr "Beállítja a megadott testi ízület transzformációját."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "The type of body tracking data captured."
+msgstr "A rendelkezésre álló testkövetési adatok típusait jelző bitek."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "If [code]true[/code], the body tracking data is valid."
+msgstr "[code]true[/code] érték esetén a testkövetési adatok érvényesek."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "Upper body tracking supported."
+msgstr "A felsőtest követése támogatott."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "Lower body tracking supported."
+msgstr "Az alsótest követése támogatott."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "Hand tracking supported."
+msgstr "A kézkövetés támogatott."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "Root joint."
+msgstr "Gyökérízület."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "Hips joint."
+msgstr "Csípőízület."
