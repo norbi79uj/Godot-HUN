@@ -67350,3 +67350,203 @@ msgstr "Az orr jobb oldala fintorba rándul."
 #: doc/classes/XRFaceTracker.xml
 msgid "Left side face sneers."
 msgstr "Az orr bal oldala fintorba rándul."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Right side nose canal dilates."
+msgstr "A jobb orrnyílás kitágul."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Left side nose canal dilates."
+msgstr "A bal orrnyílás kitágul."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Right side nose canal constricts."
+msgstr "A jobb orrnyílás összeszűkül."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Left side nose canal constricts."
+msgstr "A bal orrnyílás összeszűkül."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Raises the right side cheek."
+msgstr "A jobb orca megemelkedik."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Raises the left side cheek."
+msgstr "A bal orca megemelkedik."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Puffs the right side cheek."
+msgstr "A jobb orca felfúvódik."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Puffs the left side cheek."
+msgstr "A bal orca felfúvódik."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Sucks in the right side cheek."
+msgstr "A jobb orca behúzódik."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Sucks in the left side cheek."
+msgstr "A bal orca behúzódik."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Opens jawbone."
+msgstr "Az állkapocs lenyílik."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Closes the mouth."
+msgstr "A száj összezáródik."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Pushes jawbone right."
+msgstr "Az állkapocs jobbra mozdul."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Pushes jawbone left."
+msgstr "Az állkapocs balra mozdul."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Pushes jawbone forward."
+msgstr "Az állkapocs előretolódik."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Pushes jawbone backward."
+msgstr "Az állkapocs hátrahúzódik."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Flexes jaw muscles."
+msgstr "Az állkapocs izmai megfeszülnek."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Raises the jawbone."
+msgstr "Az állkapocs megemelkedik."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Upper right lip part tucks in the mouth."
+msgstr "A felső ajak jobb oldala befelé fordul a szájba."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Upper left lip part tucks in the mouth."
+msgstr "A felső ajak bal oldala befelé fordul a szájba."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Lower right lip part tucks in the mouth."
+msgstr "Az alsó ajak jobb oldala befelé fordul a szájba."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Lower left lip part tucks in the mouth."
+msgstr "Az alsó ajak bal oldala befelé fordul a szájba."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Right lip corner folds into the mouth."
+msgstr "A jobb szájzug befelé fordul a szájba."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Left lip corner folds into the mouth."
+msgstr "A bal szájzug befelé fordul a szájba."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Upper right lip part pushes into a funnel."
+msgstr "A felső ajak jobb oldala tölcsér alakba rendeződik."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Upper left lip part pushes into a funnel."
+msgstr "A felső ajak bal oldala tölcsér alakba rendeződik."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Lower right lip part pushes into a funnel."
+msgstr "Az alsó ajak jobb oldala tölcsér alakba rendeződik."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Lower left lip part pushes into a funnel."
+msgstr "Az alsó ajak bal oldala tölcsér alakba rendeződik."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Upper right lip part pushes outwards."
+msgstr "A felső ajak jobb oldala előrecsücsörödik."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Upper left lip part pushes outwards."
+msgstr "A felső ajak bal oldala előrecsücsörödik."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "Spine joint."
+msgstr "Gerincízület."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "Chest joint."
+msgstr "Mellkasi ízület."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "Upper chest joint."
+msgstr "Felső mellkasi ízület."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "Neck joint."
+msgstr "Nyaki ízület."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "Head joint."
+msgstr "Fejízület."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "Head tip joint."
+msgstr "A fejtetőt jelölő ízületi pont."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "Left shoulder joint."
+msgstr "Bal vállízület."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "Left upper arm joint."
+msgstr "A bal felkar ízülete."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "Left lower arm joint."
+msgstr "A bal alkar ízülete."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "Right shoulder joint."
+msgstr "Jobb vállízület."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "Right upper arm joint."
+msgstr "A jobb felkar ízülete."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "Right lower arm joint."
+msgstr "A jobb alkar ízülete."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "Left upper leg joint."
+msgstr "A bal comb ízülete."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "Left lower leg joint."
+msgstr "A bal lábszár ízülete."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "Left foot joint."
+msgstr "A bal lábfej ízülete."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "Left toes joint."
+msgstr "A bal lábujjak ízülete."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "Right upper leg joint."
+msgstr "A jobb comb ízülete."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "Right lower leg joint."
+msgstr "A jobb lábszár ízülete."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "Right foot joint."
+msgstr "A jobb lábfej ízülete."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "Right toes joint."
+msgstr "A jobb lábujjak ízülete."
