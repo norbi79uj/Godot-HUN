@@ -67144,7 +67144,7 @@ msgid "Hips joint."
 msgstr "Csípőízület."
 
 #: modules/openxr/doc_classes/OpenXRVisibilityMask.xml
-msgid "The visibility mask allows us to black out the part of the render result that is invisible due to lens distortion.\n\t\tAs this is rendered first, it prevents fragments with expensive lighting calculations to be processed as they are discarded through z-checking."
+msgid "The visibility mask allows us to black out the part of the render result that is invisible due to lens distortion.\nAs this is rendered first, it prevents fragments with expensive lighting calculations to be processed as they are discarded through z-checking."
 msgstr "A láthatósági maszk segítségével elfedhetők a lencsetorzítás miatt nem látható képrészek. A csomópont az OpenXR XR_KHR_visibility_mask bővítményéből származó, rejtett területeket leíró háromszöghálót használja, ha a bővítmény elérhető; szülőjeként XRCamera3D csomópontot igényel. A maszk a nem látható képrészek feldolgozását csökkentheti a mélységvizsgálat révén, de a tényleges renderelési sorrend és a teljesítménynyereség a renderelési beállításoktól függ."
 
 #: doc/classes/XRHandTracker.xml
