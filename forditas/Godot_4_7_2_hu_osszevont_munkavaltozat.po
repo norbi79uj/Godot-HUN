@@ -66286,3 +66286,203 @@ msgstr "Létrehozza az alapértelmezett műveletkészletet és műveleteit, majd
 #: modules/openxr/doc_classes/OpenXRIPBinding.xml
 msgid "This binding resource binds an [OpenXRAction] to an input or output. As most controllers have left hand and right versions that are handled by the same interaction profile we can specify multiple bindings. For instance an action \"Fire\" could be bound to both \"/user/hand/left/input/trigger\" and \"/user/hand/right/input/trigger\". This would require two binding entries."
 msgstr "Ez az erőforrás egy [OpenXRAction] műveletet rendel bemeneti vagy kimeneti komponenshez. Mivel sok vezérlő bal és jobb kezes változata azonos interakciós profilt használ, több hozzárendelés is megadható. Például a \"Fire\" művelet a \"/user/hand/left/input/trigger/value\" és a \"/user/hand/right/input/trigger/value\" komponensútvonalhoz is hozzárendelhető. Ehhez két bejegyzés kell."
+
+#: modules/openxr/doc_classes/OpenXRHapticVibration.xml
+msgid "Vibration haptic feedback."
+msgstr "Rezgéses haptikus visszajelzés."
+
+#: modules/openxr/doc_classes/OpenXRHapticVibration.xml
+msgid "This haptic feedback resource makes it possible to define a vibration based haptic feedback pulse that can be triggered through actions in the OpenXR action map."
+msgstr "Ezzel a haptikus erőforrással rezgésimpulzust lehet meghatározni, amelyet az OpenXR-művelettérkép műveletei válthatnak ki."
+
+#: modules/openxr/doc_classes/OpenXRHapticVibration.xml
+msgid "The amplitude of the pulse between [code]0.0[/code] and [code]1.0[/code]."
+msgstr "Az impulzus amplitúdója [code]0.0[/code] és [code]1.0[/code] között."
+
+#: modules/openxr/doc_classes/OpenXRHapticVibration.xml
+msgid "The duration of the pulse in nanoseconds. Use [code]-1[/code] for a minimum duration pulse for the current XR runtime."
+msgstr "Az impulzus időtartama nanoszekundumban. A [code]-1[/code] érték az aktuális XR-futtatókörnyezet által biztosított legrövidebb impulzust kéri."
+
+#: modules/openxr/doc_classes/OpenXRHapticVibration.xml
+msgid "The frequency of the pulse in Hz. [code]0.0[/code] will let the XR runtime chose an optimal frequency for the device used."
+msgstr "Az impulzus frekvenciája Hz-ben. A [code]0.0[/code] érték megadásakor az XR-futtatókörnyezet választja ki az eszközhöz megfelelő frekvenciát."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Our OpenXR interface."
+msgstr "A Godot OpenXR-interfésze."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "The OpenXR interface allows Godot to interact with OpenXR runtimes and make it possible to create XR experiences and games.\nDue to the needs of OpenXR this interface works slightly different than other plugin based XR interfaces. It needs to be initialized when Godot starts. You need to enable OpenXR, settings for this can be found in your games project settings under the XR heading. You do need to mark a viewport for use with XR in order for Godot to know which render result should be output to the headset."
+msgstr "Az OpenXR-interfész hozzáférést biztosít a Godot számára az OpenXR-futtatókörnyezetekhez, így XR-élmények és -játékok készíthetők.\nAz OpenXR sajátosságai miatt ezt az interfészt a Godot indításakor kell inicializálni. Az OpenXR-t a projektbeállítások XR szakaszában kell engedélyezni. Az XR használatát azon a nézetablakon is engedélyezni kell, amelynek a képét a Godot az XR-fejszettre küldi."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Returns a list of action sets registered with Godot (loaded from the action map at runtime)."
+msgstr "Visszaadja a Godotnál regisztrált műveletkészletek listáját. A készletek futás közben a művelettérképből töltődnek be."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Returns a list of display refresh rates supported by the current HMD. Only returned if this feature is supported by the OpenXR runtime and after the interface has been initialized."
+msgstr "Visszaadja az aktuális XR-fejszett által támogatott képfrissítési gyakoriságok listáját. A lista az interfész inicializálása után érhető el, ha az OpenXR-futtatókörnyezet támogatja a funkciót."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "If handtracking is enabled, returns flags that inform us of the validity of the tracking data."
+msgstr "Ha a kézkövetés engedélyezve van, visszaadja a követési adatok érvényességét jelző bitjelzőket."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "If handtracking is enabled, returns the radius of a joint ([param joint]) of a hand ([param hand]) as provided by OpenXR. This is without worldscale applied!"
+msgstr "Ha a kézkövetés engedélyezve van, visszaadja a megadott [param hand] kéz [param joint] ízületének OpenXR által jelentett sugarát. Az érték a világ léptékével való igazítás nélkül értendő."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "If handtracking is enabled, returns the rotation of a joint ([param joint]) of a hand ([param hand]) as provided by OpenXR."
+msgstr "Ha a kézkövetés engedélyezve van, visszaadja a megadott [param hand] kéz [param joint] ízületének OpenXR által jelentett tájolását."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "If handtracking is enabled and hand tracking source is supported, gets the source of the hand tracking data for [param hand]."
+msgstr "Ha a kézkövetés engedélyezve van, és a futtatókörnyezet jelenti az adatok forrását, visszaadja a megadott [param hand] kéz követési adatainak forrását."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "If handtracking is enabled and motion range is supported, gets the currently configured motion range for [param hand]."
+msgstr "Ha a kézkövetés engedélyezve van, és a futtatókörnyezet támogatja a mozgástartomány beállítását, visszaadja a megadott [param hand] kézhez beállított aktuális mozgástartományt."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Returns the current state of our OpenXR session."
+msgstr "Visszaadja az OpenXR-munkamenet aktuális állapotát."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Returns [code]true[/code] if the given action set is active."
+msgstr "[code]true[/code] értéket ad vissza, ha a megadott műveletkészlet aktív."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Returns the capabilities of the eye gaze interaction extension.\n[b]Note:[/b] This only returns a valid value after OpenXR has been initialized."
+msgstr "Jelzi, hogy elérhető-e a tekintetirányra épülő interakciót biztosító bővítmény.\n[b]Megjegyzés:[/b] Az érték csak az OpenXR inicializálása után érvényes."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Returns [code]true[/code] if OpenXR's foveation extension is supported. The interface must be initialized before this returns a valid value.\n[b]Note:[/b] When using the Vulkan rendering driver, [member Viewport.vrs_mode] must be set to [constant Viewport.VRS_XR] to support foveation."
+msgstr "[code]true[/code] értéket ad vissza, ha az OpenXR támogatja a látómező közepére összpontosító renderelés (foveation) bővítményét. Az érték csak az interfész inicializálása után érvényes.\n[b]Megjegyzés:[/b] Vulkan használatakor ehhez a funkcióhoz a [member Viewport.vrs_mode] értékét a [constant Viewport.VRS_XR] állandóra kell állítani."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Returns [code]true[/code] if OpenXR's hand interaction profile is supported and enabled.\n[b]Note:[/b] This only returns a valid value after OpenXR has been initialized."
+msgstr "[code]true[/code] értéket ad vissza, ha az OpenXR kézinterakciós profilja támogatott és engedélyezett.\n[b]Megjegyzés:[/b] Az érték csak az OpenXR inicializálása után érvényes."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Returns [code]true[/code] if OpenXR's hand tracking is supported and enabled.\n[b]Note:[/b] This only returns a valid value after OpenXR has been initialized."
+msgstr "[code]true[/code] értéket ad vissza, ha az OpenXR támogatja a kézkövetést, és az engedélyezve van.\n[b]Megjegyzés:[/b] Az érték csak az OpenXR inicializálása után érvényes."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Returns [code]true[/code] if OpenXR's user presence extension is supported and enabled.\n[b]Note:[/b] This only returns a valid value after OpenXR has been initialized."
+msgstr "[code]true[/code] értéket ad vissza, ha az OpenXR jelenlétérzékelési bővítménye támogatott és engedélyezett.\n[b]Megjegyzés:[/b] Az érték csak az OpenXR inicializálása után érvényes."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Sets the given action set as active or inactive."
+msgstr "A megadott műveletkészletet aktívra vagy inaktívra állítja."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Sets the CPU performance level of the OpenXR device."
+msgstr "Beállítja az OpenXR-eszköz CPU-teljesítményszintjét."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Sets the GPU performance level of the OpenXR device."
+msgstr "Beállítja az OpenXR-eszköz GPU-teljesítményszintjét."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "If handtracking is enabled and motion range is supported, sets the currently configured motion range for [param hand] to [param motion_range]."
+msgstr "Ha a kézkövetés engedélyezve van, és a futtatókörnyezet támogatja a mozgástartomány beállítását, a megadott [param hand] kéz mozgástartományát a [param motion_range] értékére állítja."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "The display refresh rate for the current HMD. Only functional if this feature is supported by the OpenXR runtime and after the interface has been initialized."
+msgstr "Az aktuális XR-fejszett képfrissítési gyakorisága. Csak az interfész inicializálása után használható, ha az OpenXR-futtatókörnyezet támogatja a funkciót."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "If [code]true[/code], enables dynamic foveation adjustment. The interface must be initialized before this is accessible. If enabled, foveation will automatically be adjusted between low and [member foveation_level]."
+msgstr "[code]true[/code] érték esetén automatikusan változtatja a látómező közepére összpontosító renderelés erősségét. A beállítás csak az interfész inicializálása után érhető el. Engedélyezve az alacsony szint és a [member foveation_level] között változtatja az erősséget."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "The foveation level, from [code]0[/code] (off) to [code]3[/code] (high). The interface must be initialized before this is accessible."
+msgstr "A látómező közepére összpontosító renderelés erőssége, [code]0[/code] (kikapcsolva) és [code]3[/code] (magas) között. A beállítás csak az interfész inicializálása után érhető el."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "If [code]true[/code], enables subsampled images with foveation, which can provide a performance boost on Vulkan."
+msgstr "[code]true[/code] érték esetén a látómező közepére összpontosító renderelés csökkentett mintavételezésű képeket használhat. Ez javíthatja a Vulkan teljesítményét."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "The render size multiplier for the current HMD. Must be set before the interface has been initialized."
+msgstr "Az aktuális XR-fejszett renderelési felbontásának szorzója. Az interfész inicializálása előtt kell beállítani."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "The minimum radius around the focal point where full quality is guaranteed if VRS is used as a percentage of screen size.\n[b]Note:[/b] Mobile and Forward+ renderers only. Requires [member Viewport.vrs_mode] to be set to [constant Viewport.VRS_XR]."
+msgstr "A fókuszpont körüli, teljes képminőséget biztosító terület minimális sugara VRS használatakor, a képernyőméret százalékában.\n[b]Megjegyzés:[/b] Csak a Mobile és a Forward+ renderelővel használható. A [member Viewport.vrs_mode] értéke legyen [constant Viewport.VRS_XR]."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "The strength used to calculate the VRS density map. The greater this value, the more noticeable VRS is. This improves performance at the cost of quality.\n[b]Note:[/b] Mobile and Forward+ renderers only. Requires [member Viewport.vrs_mode] to be set to [constant Viewport.VRS_XR]."
+msgstr "A VRS sűrűségtérképének számításához használt erősség. Nagyobb értéknél a VRS hatása jobban látszik, és a képminőség rovására nő a teljesítmény.\n[b]Megjegyzés:[/b] Csak a Mobile és a Forward+ renderelővel használható. A [member Viewport.vrs_mode] értéke legyen [constant Viewport.VRS_XR]."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Informs the device CPU performance level has changed in the specified subdomain."
+msgstr "Akkor váltódik ki, amikor az eszköz CPU-teljesítményszintje megváltozik a megadott részterületen."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Informs the device GPU performance level has changed in the specified subdomain."
+msgstr "Akkor váltódik ki, amikor az eszköz GPU-teljesítményszintje megváltozik a megadott részterületen."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Informs our OpenXR instance is exiting."
+msgstr "Az OpenXR-példány kilépésekor váltódik ki."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "The application has entered a low and stable complexity section, during which reducing power is more important than occasional late rendering frames."
+msgstr "Az alkalmazás kis és állandó terhelésű szakaszba lépett. Ilyenkor az energiafogyasztás csökkentése fontosabb annál, hogy időnként egy képkocka késve készüljön el."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Informs the user the HMD refresh rate has changed.\n[b]Note:[/b] Only emitted if XR runtime supports the refresh rate extension."
+msgstr "Akkor váltódik ki, amikor az XR-fejszett képfrissítési gyakorisága megváltozik.\n[b]Megjegyzés:[/b] A jelzés csak akkor váltódik ki, ha az XR-futtatókörnyezet támogatja a képfrissítést kezelő bővítményt."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Informs our OpenXR session has been started."
+msgstr "Az OpenXR-munkamenet indításakor váltódik ki."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Informs our OpenXR session now has focus, for example output is sent to the HMD and we're receiving XR input."
+msgstr "Akkor váltódik ki, amikor az OpenXR-munkamenet fókuszba kerül. Ilyenkor például az XR-fejszett megkapja a képet, az alkalmazás pedig fogadja az XR-bemeneteket."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Informs our OpenXR session is in the process of being lost."
+msgstr "Akkor váltódik ki, amikor az OpenXR-munkamenet elvesztése küszöbön áll."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Informs our OpenXR session is stopping."
+msgstr "Akkor váltódik ki, amikor az OpenXR-munkamenet leállítása folyamatban van."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Informs our OpenXR session has been synchronized."
+msgstr "Akkor váltódik ki, amikor az OpenXR-munkamenet szinkronizálódott."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Informs our OpenXR session is now visible, for example output is sent to the HMD but we don't receive XR input."
+msgstr "Akkor váltódik ki, amikor az OpenXR-munkamenet láthatóvá válik. Ilyenkor például az XR-fejszett megkapja a képet, az alkalmazás viszont nem fogad XR-bemeneteket."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Signal emitted when the user presence value changes.\n[b]Note:[/b] This signal will not be emitted during application startup and application shutdown. Developers should assume user presence is gained on startup and lost on shutdown."
+msgstr "Akkor váltódik ki, amikor a felhasználó jelenlétének értéke megváltozik.\n[b]Megjegyzés:[/b] A jelzés az alkalmazás indításakor és leállításakor nem váltódik ki. Indításkor tekintsd a felhasználót jelen lévőnek, leállításkor pedig távollévőnek."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "OpenXR is ready to begin our session. [signal session_begun] is emitted when we change to this state."
+msgstr "Az OpenXR készen áll a munkamenet indítására. Ebbe az állapotba lépéskor váltódik ki a [signal session_begun] jelzés."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "The application has synched its frame loop with the runtime, we're rendering output to the user and we're receiving XR input. [signal session_focussed] is emitted when we change to this state.\n[b]Note:[/b] This is the state OpenXR will be in when the user can fully interact with your game."
+msgstr "Az alkalmazás képkockaciklusa szinkronban van a futtatókörnyezettel, képet renderel, és XR-bemeneteket fogad. Ebbe az állapotba lépéskor váltódik ki a [signal session_focussed] jelzés.\n[b]Megjegyzés:[/b] Ebben az állapotban a felhasználó teljes körűen vezérelheti a játékot."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Our session is being stopped. [signal session_stopping] is emitted when we change to this state."
+msgstr "A munkamenet leállítása folyamatban van. Ebbe az állapotba lépéskor váltódik ki a [signal session_stopping] jelzés."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "The session is about to be lost. [signal session_loss_pending] is emitted when we change to this state."
+msgstr "A munkamenet hamarosan megszűnik. Ebbe az állapotba lépéskor váltódik ki a [signal session_loss_pending] jelzés."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "The OpenXR instance is about to be destroyed and we're exiting. [signal instance_exiting] is emitted when we change to this state."
+msgstr "Az OpenXR-példány hamarosan megszűnik, a rendszer kilép. Ebbe az állapotba lépéskor váltódik ki az [signal instance_exiting] jelzés."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "The application has entered a non-XR section (head-locked / static screen), during which power savings are to be prioritized."
+msgstr "Az alkalmazás XR-en kívüli szakaszba lépett, például a fejhez rögzített vagy álló képernyőt jelenít meg. Ilyenkor az energiatakarékosság élvez elsőbbséget."
