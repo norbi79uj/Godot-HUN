@@ -65850,3 +65850,203 @@ msgstr "A kiterjesztett valóság (AR) és a virtuális valóság (VR) működé
 #: doc/classes/XRController3D.xml
 msgid "This is a helper 3D node that is linked to the tracking of controllers. It also offers several handy passthroughs to the state of buttons and such on the controllers.\nControllers are linked by their ID. You can create controller nodes before the controllers are available. If your game always uses two controllers (one for each hand), you can predefine the controllers with ID 1 and 2; they will become active as soon as the controllers are identified. If you expect additional controllers to be used, you should react to the signals and add XRController3D nodes to your scene.\nThe position of the controller node is automatically updated by the [XRServer]. This makes this node ideal to add child nodes to visualize the controller.\nThe current [XRInterface] defines the names of inputs. In the case of OpenXR, these are the names of actions in the current action set from the OpenXR action map."
 msgstr "Ez a 3D segédcsomópont a vezérlő követéséhez kapcsolódik, és közvetlen hozzáférést ad többek között a vezérlő gombjainak állapotához.\nA vezérlőhöz a tracker tulajdonságban a követő neve alapján kapcsolódik. A csomópontok már a vezérlők csatlakozása előtt is létrehozhatók. Kétkezes OpenXR-beállításnál például előre megadható egy-egy csomópont a left_hand és a right_hand követőhöz. A csomópontok akkor válnak aktívvá, amikor a hozzájuk rendelt követők regisztrálva vannak, és követhető a beállított póz. További vezérlők támogatásához figyeld a követők jelzéseit, és szükség szerint adj XRController3D csomópontokat a jelenethez.\nA vezérlőcsomópont a helyzetét az [XRServer] követési adatai alapján automatikusan frissíti. A vezérlő megjelenítésére szolgáló csomópontok ennek gyermekei lehetnek.\nA bemenetek nevét az aktuális [XRInterface] határozza meg. OpenXR esetén ezek az OpenXR-művelettérkép aktuális műveletkészletének műveletnevei."
+
+#: doc/classes/XRNode3D.xml
+msgid "A 3D node that has its position automatically updated by the [XRServer]."
+msgstr "3D csomópont, amelynek helyzetét az [XRServer] automatikusan frissíti."
+
+#: doc/classes/XRNode3D.xml
+msgid "This node can be bound to a specific pose of an [XRPositionalTracker] and will automatically have its [member Node3D.transform] updated by the [XRServer]. Nodes of this type must be added as children of the [XROrigin3D] node."
+msgstr "A csomópont egy [XRPositionalTracker] adott pózához rendelhető. A [member Node3D.transform] értékét az [XRServer] automatikusan frissíti. Az ilyen csomópontokat az [XROrigin3D] gyermekeiként kell hozzáadni."
+
+#: doc/classes/XRNode3D.xml
+msgid "Returns [code]true[/code] if the [member tracker] has current tracking data for the [member pose] being tracked."
+msgstr "[code]true[/code] értéket ad vissza, ha a [member tracker] friss követési adatokkal rendelkezik a követett [member pose] pózhoz."
+
+#: doc/classes/XRNode3D.xml
+msgid "Returns the [XRPose] containing the current state of the pose being tracked. This gives access to additional properties of this pose."
+msgstr "Visszaadja a követett póz aktuális állapotát tartalmazó [XRPose] objektumot. Így a póz további tulajdonságai is elérhetők."
+
+#: doc/classes/XRNode3D.xml
+msgid "The name of the pose we're bound to. Which poses a tracker supports is not known during design time.\nGodot defines number of standard pose names such as [code]aim[/code] and [code]grip[/code] but other may be configured within a given [XRInterface]."
+msgstr "A hozzárendelt póz neve. A követő által támogatott pózok listája csak futás közben derül ki.\nA Godot szabványos pózneveket is meghatároz, például [code]aim[/code] és [code]grip[/code]. Az adott [XRInterface] további pózokat is meghatározhat."
+
+#: doc/classes/XRNode3D.xml
+msgid "Enables showing the node when tracking starts, and hiding the node when tracking is lost."
+msgstr "Engedélyezi, hogy a csomópont a követés kezdetekor megjelenjen, a követés megszűnésekor pedig eltűnjön."
+
+#: doc/classes/XRNode3D.xml
+msgid "The name of the tracker we're bound to. Which trackers are available is not known during design time.\nGodot defines a number of standard trackers such as [code]left_hand[/code] and [code]right_hand[/code] but others may be configured within a given [XRInterface]."
+msgstr "A hozzárendelt követő neve. Az elérhető követők listája csak futás közben derül ki.\nA Godot szabványos követőneveket is meghatároz, például [code]left_hand[/code] és [code]right_hand[/code]. Az adott [XRInterface] további követőket is meghatározhat."
+
+#: doc/classes/XRNode3D.xml
+msgid "Emitted when the [member tracker] starts or stops receiving updated tracking data for the [member pose] being tracked. The [param tracking] argument indicates whether the tracker is getting updated tracking data."
+msgstr "Akkor váltódik ki, amikor a [member tracker] friss követési adatokat kezd kapni a követett [member pose] pózról, vagy megszűnik az adatok vétele. A [param tracking] argumentum jelzi, hogy érkeznek-e friss követési adatok."
+
+#: doc/classes/XROrigin3D.xml
+msgid "The origin point in AR/VR."
+msgstr "Az AR- vagy VR-tér origója."
+
+#: doc/classes/XROrigin3D.xml
+msgid "This is a special node within the AR/VR system that maps the physical location of the center of our tracking space to the virtual location within our game world.\nMultiple origin points can be added to the scene tree, but only one can used at a time. All the [XRCamera3D], [XRController3D], and [XRAnchor3D] nodes should be direct children of this node for spatial tracking to work correctly.\nIt is the position of this node that you update when your character needs to move through your game world while we're not moving in the real world. Movement in the real world is always in relation to this origin point.\nFor example, if your character is driving a car, the [XROrigin3D] node should be a child node of this car. Or, if you're implementing a teleport system to move your character, you should change the position of this node."
+msgstr "Az AR/VR-rendszer speciális csomópontja, amely a fizikai követési tér középpontját a játékvilág egy pontjára képezi le.\nA jelenetfában több origó is lehet, de egyidejűleg csak egy használható. A helyes térbeli követéshez az összes [XRCamera3D], [XRController3D] és [XRAnchor3D] csomópont ennek a csomópontnak a közvetlen gyermeke legyen.\nEnnek a csomópontnak a helyzetét kell módosítani, amikor a karakter a játékvilágban mozog, miközben a játékos a valós térben helyben marad. A valós térben végzett mozgás ehhez az origóhoz viszonyított.\nHa például a karakter autót vezet, az [XROrigin3D] az autó csomópontjának gyermeke legyen. Teleportáláskor a játékos mozgatásához ennek a csomópontnak a helyzetét kell módosítani."
+
+#: doc/classes/XROrigin3D.xml
+msgid "If [code]true[/code], this origin node is currently being used by the [XRServer]. Only one origin point can be used at a time."
+msgstr "Ha az értéke [code]true[/code], az [XRServer] jelenleg ezt az origót használja. Egyidejűleg csak egy origó lehet használatban."
+
+#: doc/classes/XROrigin3D.xml
+msgid "The scale of the game world compared to the real world. This is the same as [member XRServer.world_scale]. By default, most AR/VR platforms assume that 1 game unit corresponds to 1 real world meter."
+msgstr "A játékvilág léptéke a valós világhoz képest. Megegyezik a [member XRServer.world_scale] értékével. Alapértelmezésben a legtöbb AR- és VR-platformon 1 játékbeli egység felel meg 1 valós méternek."
+
+#: doc/classes/XRTracker.xml
+msgid "A tracked object."
+msgstr "Egy követett objektum."
+
+#: doc/classes/XRTracker.xml
+msgid "This object is the base of all XR trackers."
+msgstr "Az összes XR-követő alaposztálya."
+
+#: doc/classes/XRTracker.xml
+msgid "The description of this tracker."
+msgstr "A követő leírása."
+
+#: doc/classes/XRTracker.xml
+msgid "The unique name of this tracker. The trackers that are available differ between various XR runtimes and can often be configured by the user. Godot maintains a number of reserved names that it expects the [XRInterface] to implement if applicable:\n- [code]\"head\"[/code] identifies the [XRPositionalTracker] of the player's head\n- [code]\"left_hand\"[/code] identifies the [XRControllerTracker] in the player's left hand\n- [code]\"right_hand\"[/code] identifies the [XRControllerTracker] in the player's right hand\n- [code]\"/user/hand_tracker/left\"[/code] identifies the [XRHandTracker] for the player's left hand\n- [code]\"/user/hand_tracker/right\"[/code] identifies the [XRHandTracker] for the player's right hand\n- [code]\"/user/body_tracker\"[/code] identifies the [XRBodyTracker] for the player's body\n- [code]\"/user/face_tracker\"[/code] identifies the [XRFaceTracker] for the player's face"
+msgstr "A követő egyedi neve. Az elérhető követők XR-futtatókörnyezetenként eltérnek, és gyakran a felhasználó is beállíthatja őket. A Godot fenntart néhány nevet, amelyet az [XRInterface] a megfelelő eszközök támogatásakor használ:\n- [code]\"head\"[/code] a játékos fejéhez tartozó [XRPositionalTracker]\n- [code]\"left_hand\"[/code] a játékos bal kezében lévő vezérlő [XRControllerTracker] követője\n- [code]\"right_hand\"[/code] a játékos jobb kezében lévő vezérlő [XRControllerTracker] követője\n- [code]\"/user/hand_tracker/left\"[/code] a játékos bal kezéhez tartozó [XRHandTracker]\n- [code]\"/user/hand_tracker/right\"[/code] a játékos jobb kezéhez tartozó [XRHandTracker]\n- [code]\"/user/body_tracker\"[/code] a játékos testéhez tartozó [XRBodyTracker]\n- [code]\"/user/face_tracker\"[/code] a játékos arcához tartozó [XRFaceTracker]"
+
+#: doc/classes/XRTracker.xml
+msgid "The type of tracker."
+msgstr "A követő típusa."
+
+#: doc/classes/XRPose.xml
+msgid "This object contains all data related to a pose on a tracked object."
+msgstr "A követett objektum egy pózának teljes adatkészlete."
+
+#: doc/classes/XRPose.xml
+msgid "XR runtimes often identify multiple locations on devices such as controllers that are spatially tracked.\nOrientation, location, linear velocity and angular velocity are all provided for each pose by the XR runtime. This object contains this state of a pose."
+msgstr "Az XR-futtatókörnyezetek a térben követett eszközökön, például a vezérlőkön, gyakran több pontot is meghatároznak.\nA futtatókörnyezet minden pózhoz megadja a tájolást, a helyzetet, valamint a lineáris és szögsebességet. Az objektum egy póz ilyen állapotadatait tárolja."
+
+#: doc/classes/XRPose.xml
+msgid "Returns the [member transform] with world scale and our reference frame applied. This is the transform used to position [XRNode3D] objects."
+msgstr "A [member transform] értékét adja vissza a világ léptékével és a vonatkoztatási rendszerrel korrigálva. Ez a transzformáció határozza meg az [XRNode3D] objektumok helyzetét."
+
+#: doc/classes/XRPose.xml
+msgid "The angular velocity for this pose."
+msgstr "A póz szögsebessége."
+
+#: doc/classes/XRPose.xml
+msgid "If [code]true[/code] our tracking data is up to date. If [code]false[/code] we're no longer receiving new tracking data and our state is whatever that last valid state was."
+msgstr "Ha az értéke [code]true[/code], a követési adatok frissek. [code]false[/code] esetén már nem érkeznek új adatok, és a póz az utolsó érvényes állapotában marad."
+
+#: doc/classes/XRPose.xml
+msgid "The linear velocity of this pose."
+msgstr "A póz lineáris sebessége."
+
+#: doc/classes/XRPose.xml
+msgid "The name of this pose. Usually, this name is derived from an action map set up by the user. Godot also suggests some pose names that [XRInterface] objects are expected to implement:\n- [code]root[/code] is the root location, often used for tracked objects that do not have further nodes.\n- [code]aim[/code] is the tip of a controller with its orientation pointing outwards, often used for raycasts.\n- [code]grip[/code] is the location where the user grips the controller.\n- [code]skeleton[/code] is the root location for a hand mesh, when using hand tracking and an animated skeleton is supplied by the XR runtime."
+msgstr "A póz neve, amelyet általában a felhasználó által beállított művelettérkép határoz meg. A Godot néhány ajánlott póznevet is meghatároz az [XRInterface] objektumokhoz:\n- [code]root[/code] a követett objektum gyökérpontja. Gyakran olyan objektumokhoz használják, amelyeknek nincsenek további követett pontjaik.\n- [code]aim[/code] a vezérlő csúcsa kifelé mutató tájolással. Gyakran sugárvetéshez használják.\n- [code]grip[/code] az a pont, ahol a felhasználó megfogja a vezérlőt.\n- [code]skeleton[/code] a kézháló gyökérpontja, ha a kézkövetéshez az XR-futtatókörnyezet animált csontvázat biztosít."
+
+#: doc/classes/XRPose.xml
+msgid "The tracking confidence for this pose, provides insight on how accurate the spatial positioning of this record is."
+msgstr "A póz követésének megbízhatósága. Jelzi, mennyire pontos a térbeli helyzet meghatározása."
+
+#: doc/classes/XRPose.xml
+msgid "No tracking information is available for this pose."
+msgstr "A pózhoz nem állnak rendelkezésre követési adatok."
+
+#: doc/classes/XRPose.xml
+msgid "Tracking information may be inaccurate or estimated. For example, with inside out tracking this would indicate a controller may be (partially) obscured."
+msgstr "A követési adatok pontatlanok vagy becslésen alapulhatnak. A fejszettre épített kamerákkal végzett követésnél ez például azt jelezheti, hogy a vezérlő részben vagy teljesen takarásban van."
+
+#: doc/classes/XRPose.xml
+msgid "Tracking information is considered accurate and up to date."
+msgstr "A követési adatok pontosnak és naprakésznek tekinthetők."
+
+#: doc/classes/XRPositionalTracker.xml
+msgid "An instance of this object represents a device that is tracked, such as a controller or anchor point. HMDs aren't represented here as they are handled internally.\nAs controllers are turned on and the [XRInterface] detects them, instances of this object are automatically added to this list of active tracking objects accessible through the [XRServer].\nThe [XRNode3D] and [XRAnchor3D] both consume objects of this type and should be used in your project. The positional trackers are just under-the-hood objects that make this all work. These are mostly exposed so that GDExtension-based interfaces can interact with them."
+msgstr "Az objektum egy követett eszközt képvisel, például egy vezérlőt vagy horgonypontot. A rendszer a fejszetteket belsőleg kezeli.\nAmikor az [XRInterface] észleli a bekapcsolt vezérlőket, az objektum példányai automatikusan bekerülnek az aktív követők [XRServer] segítségével elérhető listájába.\nA projektben az [XRNode3D] és az [XRAnchor3D] csomópontok használják ezeket az objektumokat. A helyzetkövetők háttérben működő objektumok, és főként azért érhetők el, hogy a GDExtensionben megvalósított interfészek hozzáférjenek hozzájuk."
+
+#: doc/classes/XRPositionalTracker.xml
+msgid "Returns an input for this tracker. It can return a boolean, float or [Vector2] value depending on whether the input is a button, trigger or thumbstick/thumbpad."
+msgstr "Visszaadja a követő egyik bemenetének értékét. Az érték típusa a bemenettől függően logikai érték (gomb), lebegőpontos szám (elsütőbillentyű) vagy [Vector2] (analóg kar vagy érintőfelület)."
+
+#: doc/classes/XRPositionalTracker.xml
+msgid "Returns the current [XRPose] state object for the bound [param name] pose."
+msgstr "Visszaadja a hozzárendelt [param name] nevű póz aktuális [XRPose] állapotobjektumát."
+
+#: doc/classes/XRPositionalTracker.xml
+msgid "Marks this pose as invalid, we don't clear the last reported state but it allows users to decide if trackers need to be hidden if we lose tracking or just remain at their last known position."
+msgstr "Érvénytelennek jelöli a pózt, és megőrzi az utoljára jelentett állapotot. Így a projekt a követés elvesztésekor elrejtheti a követőhöz tartozó objektumot, vagy az utolsó ismert helyén hagyhatja."
+
+#: doc/classes/XRPositionalTracker.xml
+msgid "Changes the value for the given input. This method is called by an [XRInterface] implementation and should not be used directly."
+msgstr "Módosítja a megadott bemenet értékét. A metódust az [XRInterface] megvalósítása hívja meg. A projekt kódjából nem kell közvetlenül meghívni."
+
+#: doc/classes/XRPositionalTracker.xml
+msgid "Sets the transform, linear velocity, angular velocity and tracking confidence for the given pose. This method is called by an [XRInterface] implementation and should not be used directly."
+msgstr "Beállítja a póz transzformációját, lineáris sebességét, szögsebességét és a követés megbízhatóságát. A metódust az [XRInterface] megvalósítása hívja meg. A projekt kódjából nem kell közvetlenül meghívni."
+
+#: doc/classes/XRPositionalTracker.xml
+msgid "Defines which hand this tracker relates to."
+msgstr "Megadja, melyik kézhez tartozik ez a követő."
+
+#: doc/classes/XRPositionalTracker.xml
+msgid "The profile associated with this tracker, interface dependent but will indicate the type of controller being tracked."
+msgstr "A követőhöz tartozó profil. Az értéke az interfésztől függ, és a követett vezérlő típusát jelzi."
+
+#: doc/classes/XRPositionalTracker.xml
+msgid "Emitted when a button on this tracker is pressed. Note that many XR runtimes allow other inputs to be mapped to buttons."
+msgstr "A követőhöz tartozó gomb lenyomásakor váltódik ki. Számos XR-futtatókörnyezetben más bemenetek is leképezhetők gombokra."
+
+#: doc/classes/XRPositionalTracker.xml
+msgid "Emitted when a button on this tracker is released."
+msgstr "A követőhöz tartozó gomb felengedésekor váltódik ki."
+
+#: doc/classes/XRPositionalTracker.xml
+msgid "Emitted when a trigger or similar input on this tracker changes value."
+msgstr "A követő elsütőbillentyűjének vagy hasonló bemenetének értékváltozásakor váltódik ki."
+
+#: doc/classes/XRPositionalTracker.xml
+msgid "Emitted when a thumbstick or thumbpad on this tracker moves."
+msgstr "A követő analóg karjának elmozdításakor vagy az érintőfelületén végzett mozdulatkor váltódik ki."
+
+#: doc/classes/XRPositionalTracker.xml
+msgid "Emitted when the state of a pose tracked by this tracker changes."
+msgstr "Akkor váltódik ki, amikor megváltozik a követő által követett egyik póz állapota."
+
+#: doc/classes/XRPositionalTracker.xml
+msgid "Emitted when a pose tracked by this tracker stops getting updated tracking data."
+msgstr "Akkor váltódik ki, amikor a követő egyik pózához már nem érkeznek friss követési adatok."
+
+#: doc/classes/XRPositionalTracker.xml
+msgid "Emitted when the profile of our tracker changes."
+msgstr "A követő profiljának változásakor váltódik ki."
+
+#: doc/classes/XRPositionalTracker.xml
+msgid "The hand this tracker is held in is unknown or not applicable."
+msgstr "Nem ismert vagy nem értelmezhető, melyik kézhez tartozik a követő."
+
+#: doc/classes/XRPositionalTracker.xml
+msgid "This tracker is the left hand controller."
+msgstr "A követő a bal kézben tartott vezérlőhöz tartozik."
+
+#: doc/classes/XRPositionalTracker.xml
+msgid "This tracker is the right hand controller."
+msgstr "A követő a jobb kézben tartott vezérlőhöz tartozik."
+
+#: doc/classes/XRPositionalTracker.xml
+msgid "Represents the size of the [enum TrackerHand] enum."
+msgstr "A [enum TrackerHand] felsorolás méretét jelöli."
+
+#: doc/classes/XRController3D.xml
+msgid "Emitted when the interaction profile on this controller is changed."
+msgstr "A vezérlő interakciós profiljának változásakor váltódik ki."
+
+#: modules/openxr/doc_classes/OpenXRAction.xml
+msgid "An OpenXR action."
+msgstr "Egy OpenXR-művelet."
+
+#: modules/openxr/doc_classes/OpenXRAction.xml
+msgid "The type of action."
+msgstr "A művelet típusa."
