@@ -66486,3 +66486,203 @@ msgstr "Az OpenXR-példány hamarosan megszűnik, a rendszer kilép. Ebbe az ál
 #: modules/openxr/doc_classes/OpenXRInterface.xml
 msgid "The application has entered a non-XR section (head-locked / static screen), during which power savings are to be prioritized."
 msgstr "Az alkalmazás XR-en kívüli szakaszba lépett, például a fejhez rögzített vagy álló képernyőt jelenít meg. Ilyenkor az energiatakarékosság élvez elsőbbséget."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Left hand."
+msgstr "Bal kéz."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Right hand."
+msgstr "Jobb kéz."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Full hand range, if user closes their hands, we make a full fist."
+msgstr "Teljes kézmozgástartomány. Ha a felhasználó behajlítja az ujjait, a követett kéz teljesen ökölbe szorulhat."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Conform to controller, if user closes their hands, the tracked data conforms to the shape of the controller."
+msgstr "A vezérlő formájához igazodó mozgástartomány. Ha a felhasználó behajlítja az ujjait, a követett kéz a vezérlő alakját veszi körül."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "The source of hand tracking data is unknown (the extension is likely unsupported)."
+msgstr "A kézkövetési adatok forrása ismeretlen. Előfordulhat, hogy a futtatókörnyezet nem támogatja az ehhez szükséges bővítményt."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "The source of hand tracking is a controller, bone positions are inferred from controller inputs."
+msgstr "A kézkövetési adatok forrása egy vezérlő. A rendszer a vezérlő bemeneteiből következtet a csontok helyzetére."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Represents the size of the [enum HandTrackedSource] enum."
+msgstr "A [enum HandTrackedSource] felsorolás méretét jelöli."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Palm joint."
+msgstr "A tenyérhez tartozó ízület."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Wrist joint."
+msgstr "Csuklóízület."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Thumb metacarpal joint."
+msgstr "A hüvelykujj kézközépcsonti ízülete."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Thumb proximal joint."
+msgstr "A hüvelykujj proximális ízülete."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Thumb distal joint."
+msgstr "A hüvelykujj disztális ízülete."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Thumb tip joint."
+msgstr "A hüvelykujj hegyét jelölő ízületi pont."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Index finger metacarpal joint."
+msgstr "A mutatóujj kézközépcsonti ízülete."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Index finger phalanx proximal joint."
+msgstr "A mutatóujj proximális ujjpercéhez tartozó ízület."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Index finger phalanx intermediate joint."
+msgstr "A mutatóujj középső ujjpercéhez tartozó ízület."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Index finger phalanx distal joint."
+msgstr "A mutatóujj disztális ujjpercéhez tartozó ízület."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Index finger tip joint."
+msgstr "A mutatóujj hegyét jelölő ízületi pont."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Middle finger metacarpal joint."
+msgstr "A középső ujj kézközépcsonti ízülete."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Middle finger phalanx proximal joint."
+msgstr "A középső ujj proximális ujjpercéhez tartozó ízület."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Middle finger phalanx intermediate joint."
+msgstr "A középső ujj középső ujjpercéhez tartozó ízület."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Middle finger phalanx distal joint."
+msgstr "A középső ujj disztális ujjpercéhez tartozó ízület."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Middle finger tip joint."
+msgstr "A középső ujj hegyét jelölő ízületi pont."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Ring finger metacarpal joint."
+msgstr "A gyűrűsujj kézközépcsonti ízülete."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Ring finger phalanx proximal joint."
+msgstr "A gyűrűsujj proximális ujjpercéhez tartozó ízület."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Ring finger phalanx intermediate joint."
+msgstr "A gyűrűsujj középső ujjpercéhez tartozó ízület."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Ring finger phalanx distal joint."
+msgstr "A gyűrűsujj disztális ujjpercéhez tartozó ízület."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Ring finger tip joint."
+msgstr "A gyűrűsujj hegyét jelölő ízületi pont."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Pinky finger metacarpal joint."
+msgstr "A kisujj kézközépcsonti ízülete."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Pinky finger phalanx proximal joint."
+msgstr "A kisujj proximális ujjpercéhez tartozó ízület."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Pinky finger phalanx intermediate joint."
+msgstr "A kisujj középső ujjpercéhez tartozó ízület."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Pinky finger phalanx distal joint."
+msgstr "A kisujj disztális ujjpercéhez tartozó ízület."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Pinky finger tip joint."
+msgstr "A kisujj hegyét jelölő ízületi pont."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "Represents the size of the [enum HandJoints] enum."
+msgstr "A [enum HandJoints] felsorolás méretét jelöli."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "No flags are set."
+msgstr "Egyetlen bitjelző sincs beállítva."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "If set, the orientation data is valid, otherwise, the orientation data is unreliable and should not be used."
+msgstr "Ha ez a bitjelző be van állítva, a tájolási adat érvényes. A bitjelző hiányában az adat megbízhatatlan, és figyelmen kívül kell hagyni."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "If set, the positional data is valid, otherwise, the positional data is unreliable and should not be used."
+msgstr "Ha ez a bitjelző be van állítva, a helyzetadat érvényes. A bitjelző hiányában az adat megbízhatatlan, és figyelmen kívül kell hagyni."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "If set, our linear velocity data is valid, otherwise, the linear velocity data is unreliable and should not be used."
+msgstr "Ha ez a bitjelző be van állítva, a lineáris sebesség adata érvényes. A bitjelző hiányában az adat megbízhatatlan, és figyelmen kívül kell hagyni."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "If set, our angular velocity data is valid, otherwise, the angular velocity data is unreliable and should not be used."
+msgstr "Ha ez a bitjelző be van állítva, a szögsebesség adata érvényes. A bitjelző hiányában az adat megbízhatatlan, és figyelmen kívül kell hagyni."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayer.xml
+msgid "The parent class of all OpenXR composition layer nodes."
+msgstr "Az összes OpenXR-kompozíciósréteg-csomópont alaposztálya."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayer.xml
+msgid "Composition layers allow 2D viewports to be displayed inside of the headset by the XR compositor through special projections that retain their quality. This allows for rendering clear text while keeping the layer at a native resolution.\n[b]Note:[/b] If the OpenXR runtime doesn't support the given composition layer type, a fallback mesh can be generated with a [ViewportTexture], in order to emulate the composition layer."
+msgstr "A kompozíciós rétegekkel az XR-kompozitor speciális vetítéseken keresztül jeleníthet meg 2D nézetablakokat a fejszettben, megőrizve a képminőségüket. Így a szöveg éles maradhat, miközben a réteg saját felbontásán jelenik meg.\n[b]Megjegyzés:[/b] Ha az OpenXR-futtatókörnyezet nem támogatja az adott rétegtípust, a kompozíciós réteget egy [ViewportTexture] textúrával ellátott helyettesítő háló utánozhatja."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayer.xml
+msgid "Returns a [JavaObject] representing an [code]android.view.Surface[/code] if [member use_android_surface] is enabled and OpenXR has created the surface. Otherwise, this will return [code]null[/code].\n[b]Note:[/b] The surface can only be created during an active OpenXR session. So, if [member use_android_surface] is enabled outside of an OpenXR session, it won't be created until a new session fully starts."
+msgstr "Egy [code]android.view.Surface[/code] felületet képviselő [JavaObject] objektumot ad vissza, ha a [member use_android_surface] engedélyezve van és az OpenXR létrehozta a felületet. Egyébként az eredmény [code]null[/code].\n[b]Megjegyzés:[/b] A felület csak aktív OpenXR-munkamenetben hozható létre. Ha a [member use_android_surface] beállítást munkameneten kívül engedélyezed, a felület csak a következő munkamenet teljes elindulása után jön létre."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayer.xml
+msgid "Returns UV coordinates where the given ray intersects with the composition layer. [param origin] and [param direction] must be in global space.\nReturns [code]Vector2(-1.0, -1.0)[/code] if the ray doesn't intersect."
+msgstr "Azt az UV-koordinátát adja vissza, ahol a megadott sugár metszi a kompozíciós réteget. A [param origin] és a [param direction] értékét globális koordinátákban kell megadni.\nHa nincs metszéspont, az eredmény [code]Vector2(-1.0, -1.0)[/code]."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayer.xml
+msgid "Returns [code]true[/code] if the OpenXR runtime natively supports this composition layer type.\n[b]Note:[/b] This will only return an accurate result after the OpenXR session has started."
+msgstr "[code]true[/code] értéket ad vissza, ha az OpenXR-futtatókörnyezet natívan támogatja ezt a kompozíciósréteg-típust.\n[b]Megjegyzés:[/b] A visszaadott érték csak az OpenXR-munkamenet kezdete után megbízható."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayer.xml
+msgid "Enables the blending the layer using its alpha channel.\nCan be combined with [member Viewport.transparent_bg] to give the layer a transparent background."
+msgstr "Engedélyezi a réteg alfacsatorna szerinti keverését.\nA [member Viewport.transparent_bg] tulajdonsággal együtt átlátszó hátteret adhat a rétegnek."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayer.xml
+msgid "The size of the Android surface to create if [member use_android_surface] is enabled."
+msgstr "A létrehozandó Android-felület mérete, ha a [member use_android_surface] engedélyezve van."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayer.xml
+msgid "Enables a technique called \"hole punching\", which allows putting the composition layer behind the main projection layer (i.e. setting [member sort_order] to a negative value) while \"punching a hole\" through everything rendered by Godot so that the layer is still visible.\nThis can be used to create the illusion that the composition layer exists in the same 3D space as everything rendered by Godot, allowing objects to appear to pass both behind or in front of the composition layer."
+msgstr "Engedélyezi a fő vetítési réteg egy részének áttetszővé tételét (hole punching). Ezzel a kompozíciós réteg a fő vetítési réteg mögé helyezhető a [member sort_order] negatív értékével, és a Godot által renderelt képen át továbbra is látható marad.\nÍgy úgy tűnhet, mintha a kompozíciós réteg ugyanabban a 3D térben lenne, mint a Godot által renderelt objektumok, amelyek a réteg mögött és előtte is elhaladhatnak."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayer.xml
+msgid "The eye(s) the composition layer is visible to.\n[b]Note:[/b] Not all composition layer types or runtimes support restricting visibility to a single eye."
+msgstr "Megadja, hogy melyik szem számára látható a kompozíciós réteg.\n[b]Megjegyzés:[/b] Az egyik szemre korlátozott láthatóság támogatása a réteg típusától és a futtatókörnyezettől függ."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayer.xml
+msgid "The [SubViewport] to render on the composition layer."
+msgstr "A kompozíciós rétegen megjelenítendő [SubViewport]."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayer.xml
+msgid "The sort order for this composition layer. Higher numbers will be shown in front of lower numbers.\n[b]Note:[/b] This will have no effect if a fallback mesh is being used."
+msgstr "A kompozíciós réteg megjelenítési sorrendje. A nagyobb értékű rétegek a kisebb értékűek előtt jelennek meg.\n[b]Megjegyzés:[/b] Helyettesítő háló használatakor ez a beállítás hatástalan."
