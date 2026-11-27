@@ -66050,3 +66050,203 @@ msgstr "Egy OpenXR-művelet."
 #: modules/openxr/doc_classes/OpenXRAction.xml
 msgid "The type of action."
 msgstr "A művelet típusa."
+
+#: modules/openxr/doc_classes/OpenXRAction.xml
+msgid "The localized description of this action."
+msgstr "A művelet lokalizált leírása."
+
+#: modules/openxr/doc_classes/OpenXRAction.xml
+msgid "A collections of toplevel paths to which this action can be bound."
+msgstr "Azon legfelső szintű útvonalak gyűjteménye, amelyekhez a művelet hozzárendelhető."
+
+#: modules/openxr/doc_classes/OpenXRAction.xml
+msgid "This action provides a boolean value."
+msgstr "A művelet logikai értéket ad."
+
+#: modules/openxr/doc_classes/OpenXRAction.xml
+msgid "This action provides a [Vector2] value and can be bound to embedded trackpads and joysticks."
+msgstr "A művelet [Vector2] értéket ad, és beépített érintőfelületekhez vagy analóg karokhoz rendelhető."
+
+#: modules/openxr/doc_classes/OpenXRActionSet.xml
+msgid "Collection of [OpenXRAction] resources that make up an action set."
+msgstr "Egy műveletkészletet alkotó [OpenXRAction] erőforrások gyűjteménye."
+
+#: modules/openxr/doc_classes/OpenXRActionSet.xml
+msgid "Action sets in OpenXR define a collection of actions that can be activated in unison. This allows games to easily change between different states that require different inputs or need to reinterpret inputs. For instance we could have an action set that is active when a menu is open, an action set that is active when the player is freely walking around and an action set that is active when the player is controlling a vehicle.\nAction sets can contain the same action with the same name, if such action sets are active at the same time the action set with the highest priority defines which binding is active."
+msgstr "Az OpenXR műveletkészlete együtt aktiválható műveleteket fog össze. Így a játék könnyen válthat olyan állapotok között, amelyek más bemeneteket igényelnek vagy eltérően értelmezik őket. Külön készlet lehet aktív például a menü megnyitásakor, gyalogos mozgáskor vagy jármű vezetésekor.\nUgyanaz az azonos nevű művelet több műveletkészletben is szerepelhet. Ha ezek a készletek egyszerre aktívak, a legmagasabb prioritású készlet határozza meg, melyik hozzárendelés érvényesül."
+
+#: modules/openxr/doc_classes/OpenXRActionSet.xml
+msgid "Add an action to this action set."
+msgstr "Hozzáad egy műveletet a műveletkészlethez."
+
+#: modules/openxr/doc_classes/OpenXRActionSet.xml
+msgid "Retrieve the number of actions in our action set."
+msgstr "Visszaadja a műveletkészletben szereplő műveletek számát."
+
+#: modules/openxr/doc_classes/OpenXRActionSet.xml
+msgid "Remove an action from this action set."
+msgstr "Eltávolít egy műveletet a műveletkészletből."
+
+#: modules/openxr/doc_classes/OpenXRActionSet.xml
+msgid "Collection of actions for this action set."
+msgstr "A műveletkészlethez tartozó műveletek gyűjteménye."
+
+#: modules/openxr/doc_classes/OpenXRActionSet.xml
+msgid "The localized name of this action set."
+msgstr "A műveletkészlet lokalizált neve."
+
+#: modules/openxr/doc_classes/OpenXRActionSet.xml
+msgid "The priority for this action set."
+msgstr "A műveletkészlet prioritása."
+
+#: modules/openxr/doc_classes/OpenXRActionMap.xml
+msgid "Collection of [OpenXRActionSet] and [OpenXRInteractionProfile] resources for the OpenXR module."
+msgstr "Az OpenXR-modul [OpenXRActionSet] és [OpenXRInteractionProfile] erőforrásainak gyűjteménye."
+
+#: modules/openxr/doc_classes/OpenXRActionMap.xml
+msgid "Add an action set."
+msgstr "Hozzáad egy műveletkészletet."
+
+#: modules/openxr/doc_classes/OpenXRActionMap.xml
+msgid "Add an interaction profile."
+msgstr "Hozzáad egy interakciós profilt."
+
+#: modules/openxr/doc_classes/OpenXRActionMap.xml
+msgid "Retrieve an action set by name."
+msgstr "Név alapján keres és ad vissza egy műveletkészletet."
+
+#: modules/openxr/doc_classes/OpenXRActionMap.xml
+msgid "Find an interaction profile by its name (path)."
+msgstr "Név, azaz útvonal alapján keres interakciós profilt."
+
+#: modules/openxr/doc_classes/OpenXRActionMap.xml
+msgid "Retrieve the action set at this index."
+msgstr "Visszaadja az adott indexű műveletkészletet."
+
+#: modules/openxr/doc_classes/OpenXRActionMap.xml
+msgid "Retrieve the number of actions sets in our action map."
+msgstr "Visszaadja a művelettérkép műveletkészleteinek számát."
+
+#: modules/openxr/doc_classes/OpenXRActionMap.xml
+msgid "Get the interaction profile at this index."
+msgstr "Visszaadja az adott indexű interakciós profilt."
+
+#: modules/openxr/doc_classes/OpenXRActionMap.xml
+msgid "Retrieve the number of interaction profiles in our action map."
+msgstr "Visszaadja a művelettérkép interakciós profiljainak számát."
+
+#: modules/openxr/doc_classes/OpenXRActionMap.xml
+msgid "Remove an action set."
+msgstr "Eltávolít egy műveletkészletet."
+
+#: modules/openxr/doc_classes/OpenXRActionMap.xml
+msgid "Remove an interaction profile."
+msgstr "Eltávolít egy interakciós profilt."
+
+#: modules/openxr/doc_classes/OpenXRActionMap.xml
+msgid "Collection of [OpenXRActionSet]s that are part of this action map."
+msgstr "A művelettérkép [OpenXRActionSet] erőforrásainak gyűjteménye."
+
+#: modules/openxr/doc_classes/OpenXRActionMap.xml
+msgid "Collection of [OpenXRInteractionProfile]s that are part of this action map."
+msgstr "A művelettérkép [OpenXRInteractionProfile] erőforrásainak gyűjteménye."
+
+#: modules/openxr/doc_classes/OpenXRInteractionProfile.xml
+msgid "Suggested bindings object for OpenXR."
+msgstr "Az OpenXR javasolt hozzárendeléseit tároló objektum."
+
+#: modules/openxr/doc_classes/OpenXRInteractionProfile.xml
+msgid "This object stores suggested bindings for an interaction profile. Interaction profiles define the metadata for a tracked XR device such as an XR controller.\nFor more information see the [url=https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#semantic-path-interaction-profiles]interaction profiles info in the OpenXR specification[/url]."
+msgstr "Az objektum egy interakciós profil javasolt hozzárendeléseit tárolja. Az interakciós profil egy követett XR-eszköz, például egy vezérlő metaadatait határozza meg.\nTovábbi információért lásd az [url=https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#semantic-path-interaction-profiles]OpenXR-specifikáció interakciós profilokról szóló részét[/url]."
+
+#: modules/openxr/doc_classes/OpenXRInteractionProfile.xml
+msgid "Retrieve the binding at this index."
+msgstr "Visszaadja az adott indexű hozzárendelést."
+
+#: modules/openxr/doc_classes/OpenXRInteractionProfile.xml
+msgid "Get the number of bindings in this interaction profile."
+msgstr "Visszaadja az interakciós profilhoz tartozó hozzárendelések számát."
+
+#: modules/openxr/doc_classes/OpenXRInteractionProfile.xml
+msgid "Get the [OpenXRBindingModifier] at this index."
+msgstr "Visszaadja az adott indexű [OpenXRBindingModifier] objektumot."
+
+#: modules/openxr/doc_classes/OpenXRInteractionProfile.xml
+msgid "Get the number of binding modifiers in this interaction profile."
+msgstr "Visszaadja az interakciós profil hozzárendelés-módosítóinak számát."
+
+#: modules/openxr/doc_classes/OpenXRInteractionProfile.xml
+msgid "Binding modifiers for this interaction profile."
+msgstr "Az interakciós profil hozzárendelés-módosítói."
+
+#: modules/openxr/doc_classes/OpenXRInteractionProfile.xml
+msgid "Action bindings for this interaction profile."
+msgstr "Az interakciós profil művelet-hozzárendelései."
+
+#: modules/openxr/doc_classes/OpenXRInteractionProfile.xml
+msgid "The interaction profile path identifying the XR device."
+msgstr "Az XR-eszközt azonosító interakciósprofil-útvonal."
+
+#: modules/openxr/doc_classes/OpenXRInteractionProfileMetadata.xml
+msgid "Meta class registering supported devices in OpenXR."
+msgstr "Az OpenXR-ben támogatott eszközök metaadatait regisztráló osztály."
+
+#: modules/openxr/doc_classes/OpenXRInteractionProfileMetadata.xml
+msgid "This class allows OpenXR core and extensions to register metadata relating to supported interaction devices such as controllers, trackers, haptic devices, etc. It is primarily used by the action map editor and to sanitize any action map by removing extension-dependent entries when applicable."
+msgstr "Az osztály lehetővé teszi, hogy az OpenXR magja és bővítményei regisztrálják a támogatott eszközök, például vezérlők, követők és haptikus eszközök metaadatait. Főként a művelettérkép-szerkesztő használja. Szükség esetén a művelettérképből is kiszűri a nem elérhető bővítményektől függő bejegyzéseket."
+
+#: modules/openxr/doc_classes/OpenXRInteractionProfileMetadata.xml
+msgid "Registers an interaction profile using its OpenXR designation (e.g. [code]/interaction_profiles/khr/simple_controller[/code] is the profile for OpenXR's simple controller profile).\n[param display_name] is the description shown to the user. [param openxr_path] is the interaction profile path being registered. [param openxr_extension_names] optionally restricts this profile to the given extension being enabled/available. If the extension is not available, the profile and all related entries used in an action map are filtered out."
+msgstr "Regisztrál egy interakciós profilt az OpenXR-azonosítója alapján. Az OpenXR egyszerű vezérlőjének profilja például a [code]/interaction_profiles/khr/simple_controller[/code].\nA [param display_name] a felhasználónak megjelenő leírás. Az [param openxr_path] a regisztrálandó interakciós profil útvonala. Az opcionális [param openxr_extension_names] megkövetelheti, hogy a megadott bővítmény elérhető és engedélyezett legyen. Ha a bővítmény nem érhető el, a rendszer kiszűri a profilt és a hozzá tartozó bejegyzéseket a művelettérképből."
+
+#: modules/openxr/doc_classes/OpenXRInteractionProfileMetadata.xml
+msgid "Registers an input/output path for the given [param interaction_profile]. The profile should previously have been registered using [method register_interaction_profile]. [param display_name] is the description shown to the user. [param toplevel_path] specifies the bind path this input/output can be bound to (e.g. [code]/user/hand/left[/code] or [code]/user/hand/right[/code]). [param openxr_path] is the action input/output being registered (e.g. [code]/user/hand/left/input/aim/pose[/code]). [param openxr_extension_names] restricts this input/output to an enabled/available extension, this doesn't need to repeat the extension on the profile but relates to overlapping extension (e.g. [code]XR_EXT_palm_pose[/code] that introduces [code]…/input/palm_ext/pose[/code] input paths). [param action_type] defines the type of input or output provided by OpenXR."
+msgstr "Regisztrál egy bemeneti vagy kimeneti útvonalat a megadott [param interaction_profile] profilhoz. A profilt előbb a [method register_interaction_profile] metódussal kell regisztrálni. A [param display_name] a felhasználónak megjelenő leírás. A [param toplevel_path] azt a legfelső szintű hozzárendelési útvonalat adja meg, amelyhez ez a bemenet vagy kimenet társítható, például [code]/user/hand/left[/code] vagy [code]/user/hand/right[/code]. Az [param openxr_path] a regisztrálandó művelet bemenete vagy kimenete, például [code]/user/hand/left/input/aim/pose[/code]. Az [param openxr_extension_names] elérhető és engedélyezett bővítményhez kötheti a bemenetet vagy kimenetet. Elegendő a profilt kiegészítő bővítményt megadni, például a [code]XR_EXT_palm_pose[/code] bővítményt, amely a [code]…/input/palm_ext/pose[/code] bemeneti útvonalakat vezeti be. Az [param action_type] az OpenXR által szolgáltatott bemenet vagy kimenet típusa."
+
+#: modules/openxr/doc_classes/OpenXRInteractionProfileMetadata.xml
+msgid "Allows for renaming old input/output paths to new paths in order to load and process older action maps."
+msgstr "Lehetővé teszi, hogy a régi bemeneti és kimeneti útvonalak megfeleltethetők legyenek az új útvonalaknak, így a korábbi művelettérképek is betölthetők és feldolgozhatók."
+
+#: modules/openxr/doc_classes/OpenXRInteractionProfileMetadata.xml
+msgid "Allows for renaming old interaction profile paths to new paths in order to load and process older action maps."
+msgstr "Lehetővé teszi, hogy a régi interakciósprofil-útvonalak megfeleltethetők legyenek az új útvonalaknak, így a korábbi művelettérképek is betölthetők és feldolgozhatók."
+
+#: modules/openxr/doc_classes/OpenXRInteractionProfileMetadata.xml
+msgid "Registers a top level path to which profiles can be bound. For instance [code]/user/hand/left[/code] refers to the bind point for the player's left hand. Extensions can register additional top level paths, for instance a haptic vest extension might register [code]/user/body/vest[/code].\n[param display_name] is the name shown to the user. [param openxr_path] is the top level path being registered. [param openxr_extension_names] is optional and ensures the top level path is only used if the specified extension is available/enabled.\nWhen a top level path ends up being bound by OpenXR, an [XRPositionalTracker] is instantiated to manage the state of the device."
+msgstr "Regisztrál egy legfelső szintű útvonalat, amelyhez profilok rendelhetők. A [code]/user/hand/left[/code] például a játékos bal kezéhez tartozó hozzárendelési pont. A bővítmények további legfelső szintű útvonalakat regisztrálhatnak, például egy haptikus mellény bővítménye a [code]/user/body/vest[/code] útvonalat.\nA [param display_name] a felhasználónak megjelenő név. Az [param openxr_path] a regisztrálandó legfelső szintű útvonal. Az opcionális [param openxr_extension_names] biztosítja, hogy az útvonal csak akkor legyen használható, ha a megadott bővítmény elérhető és engedélyezett.\nAmikor az OpenXR hozzárendel egy ilyen útvonalat, létrejön egy [XRPositionalTracker] az eszköz állapotának kezelésére."
+
+#: modules/openxr/doc_classes/OpenXRIPBinding.xml
+msgid "Defines a binding between an [OpenXRAction] and an XR input or output."
+msgstr "Egy [OpenXRAction] és egy XR-bemenet vagy -kimenet közötti hozzárendelést határoz meg."
+
+#: modules/openxr/doc_classes/OpenXRIPBinding.xml
+msgid "Add an input/output path to this binding."
+msgstr "Bemeneti vagy kimeneti útvonalat ad a hozzárendeléshez."
+
+#: modules/openxr/doc_classes/OpenXRIPBinding.xml
+msgid "Get the number of binding modifiers for this binding."
+msgstr "Visszaadja a hozzárendeléshez tartozó módosítók számát."
+
+#: modules/openxr/doc_classes/OpenXRIPBinding.xml
+msgid "Get the number of input/output paths in this binding."
+msgstr "Visszaadja a hozzárendelés bemeneti és kimeneti útvonalainak számát."
+
+#: modules/openxr/doc_classes/OpenXRIPBinding.xml
+msgid "Returns [code]true[/code] if this input/output path is part of this binding."
+msgstr "[code]true[/code] értéket ad vissza, ha a bemeneti vagy kimeneti útvonal része a hozzárendelésnek."
+
+#: modules/openxr/doc_classes/OpenXRIPBinding.xml
+msgid "Removes this input/output path from this binding."
+msgstr "Eltávolítja a megadott bemeneti vagy kimeneti útvonalat a hozzárendelésből."
+
+#: modules/openxr/doc_classes/OpenXRIPBinding.xml
+msgid "[OpenXRAction] that is bound to [member binding_path]."
+msgstr "A [member binding_path] útvonalhoz rendelt [OpenXRAction]."
+
+#: modules/openxr/doc_classes/OpenXRIPBinding.xml
+msgid "Binding modifiers for this binding."
+msgstr "A hozzárendelés módosítói."
+
+#: modules/openxr/doc_classes/OpenXRIPBinding.xml
+msgid "Binding path that defines the input or output bound to [member action].\n[b]Note:[/b] Binding paths are suggestions, an XR runtime may choose to bind the action to a different input or output emulating this input or output."
+msgstr "Az az útvonal, amely a [member action] művelethez rendelt bemenetet vagy kimenetet határozza meg.\n[b]Megjegyzés:[/b] A hozzárendelési útvonal javaslat. Az XR-futtatókörnyezet a műveletet egy másik bemenethez vagy kimenethez is társíthatja, amely az eredeti működését utánozza."
