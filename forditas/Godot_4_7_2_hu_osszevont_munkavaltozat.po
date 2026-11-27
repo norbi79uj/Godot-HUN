@@ -67144,9 +67144,409 @@ msgid "Hips joint."
 msgstr "Csípőízület."
 
 #: modules/openxr/doc_classes/OpenXRVisibilityMask.xml
-msgid "The visibility mask allows us to black out the part of the render result that is invisible due to lens distortion.\n\t\tAs this is rendered first, it prevents fragments with expensive lighting calculations to be processed as they are discarded through z-checking."
+msgid "The visibility mask allows us to black out the part of the render result that is invisible due to lens distortion.\nAs this is rendered first, it prevents fragments with expensive lighting calculations to be processed as they are discarded through z-checking."
 msgstr "A láthatósági maszk segítségével elfedhetők a lencsetorzítás miatt nem látható képrészek. A csomópont az OpenXR XR_KHR_visibility_mask bővítményéből származó, rejtett területeket leíró háromszöghálót használja, ha a bővítmény elérhető; szülőjeként XRCamera3D csomópontot igényel. A maszk a nem látható képrészek feldolgozását csökkentheti a mélységvizsgálat révén, de a tényleges renderelési sorrend és a teljesítménynyereség a renderelési beállításoktól függ."
 
 #: doc/classes/XRHandTracker.xml
 msgid "The source of hand tracking data is unobstructed, meaning that an accurate method of hand tracking is used. These include optical hand tracking, data gloves, etc."
 msgstr "A kézkövetési adatok akadálytalan forrásból származnak, például optikai kézkövetésből vagy adatkesztyűből. Ez a felsorolási érték az adatforrás típusát jelöli; önmagában nem garantálja az ízületi adatok pontosságát vagy érvényességét. Az érvényességet külön követési jelzők mutatják."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayer.xml
+msgid "Disable mipmapping.\n[b]Note:[/b] Mipmapping can only be disabled in the Compatibility renderer."
+msgstr "Kikapcsolja a mipmapok használatát.\n[b]Megjegyzés:[/b] A mipmapok használata csak a Compatibility renderelőben kapcsolható ki."
+
+#: modules/openxr/doc_classes/OpenXRCompositionLayer.xml
+msgid "Mirror the texture once and then clamp the texture to its edge color.\n[b]Note:[/b] This wrap mode is not available in the Compatibility renderer."
+msgstr "Egyszer tükrözi a textúrát, majd a textúra peremének színét használja.\n[b]Megjegyzés:[/b] Ez a címzési mód a Compatibility renderelőben nem érhető el."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "The application has entered a high or dynamic complexity section, during which the XR Runtime strives for consistent XR compositing and frame rendering within a thermally sustainable range."
+msgstr "Az alkalmazás nagy vagy változó terhelésű szakaszba lépett. Az XR-futtatókörnyezet igyekszik egyenletesen végezni a kompozíciót és a képkockák renderelését, miközben a hőterhelést tartósan fenntartható tartományban tartja."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "The application has entered a section with very high complexity, during which the XR Runtime is allowed to step up beyond the thermally sustainable range."
+msgstr "Az alkalmazás nagyon nagy terhelésű szakaszba lépett. Az XR-futtatókörnyezet ilyenkor a hőterhelés szempontjából tartósan fenntartható szintnél nagyobb teljesítményt is igénybe vehet."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "The compositing performance within the runtime has reached a new level."
+msgstr "A futtatókörnyezet kompozíciós teljesítménye új szintet ért el."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "The application rendering performance has reached a new level."
+msgstr "Az alkalmazás renderelési teljesítménye új szintet ért el."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "The temperature of the device has reached a new level."
+msgstr "Az eszköz hőmérséklete új szintet ért el."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "The sub-domain has reached a level where no further actions other than currently applied are necessary."
+msgstr "A részterület aktuális szintjén elegendők az eddig alkalmazott intézkedések."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "The sub-domain has reached an early warning level where the application should start proactive mitigation actions."
+msgstr "A részterület korai figyelmeztetési szintet ért el. Az alkalmazásnak érdemes megelőző intézkedéseket tennie."
+
+#: modules/openxr/doc_classes/OpenXRInterface.xml
+msgid "The sub-domain has reached a critical level where the application should start drastic mitigation actions."
+msgstr "A részterület kritikus szintet ért el. Az alkalmazásnak jelentős beavatkozással kell mérsékelnie a terhelést."
+
+#: modules/openxr/doc_classes/OpenXRIPBinding.xml
+msgid "Paths that define the inputs or outputs bound on the device."
+msgstr "Az eszközön hozzárendelt bemeneteket vagy kimeneteket meghatározó útvonalak."
+
+#: modules/openxr/doc_classes/OpenXRInteractionProfileEditor.xml
+msgid "Default OpenXR interaction profile editor."
+msgstr "Az alapértelmezett OpenXR-interakciósprofil-szerkesztő."
+
+#: modules/openxr/doc_classes/OpenXRInteractionProfileEditor.xml
+msgid "This is the default OpenXR interaction profile editor that provides a generic interface for editing any interaction profile for which no custom editor has been defined."
+msgstr "Az alapértelmezett OpenXR-interakciósprofil-szerkesztő általános szerkesztőfelületet biztosít az egyéni szerkesztővel nem rendelkező interakciós profilokhoz."
+
+#: doc/classes/XRFaceModifier3D.xml
+msgid "A node for driving standard face meshes from [XRFaceTracker] weights."
+msgstr "Szabványos archálókat mozgató csomópont, amely [XRFaceTracker] súlyokat használ."
+
+#: doc/classes/XRFaceModifier3D.xml
+msgid "This node applies weights from an [XRFaceTracker] to a mesh with supporting face blend shapes.\nThe [url=https://docs.vrcft.io/docs/tutorial-avatars/tutorial-avatars-extras/unified-blendshapes]Unified Expressions[/url] blend shapes are supported, as well as ARKit and SRanipal blend shapes.\nThe node attempts to identify blend shapes based on name matching. Blend shapes should match the names listed in the [url=https://docs.vrcft.io/docs/tutorial-avatars/tutorial-avatars-extras/compatibility/overview]Unified Expressions Compatibility[/url] chart."
+msgstr "A csomópont az [XRFaceTracker] súlyait alkalmazza a hozzájuk illő arcalakváltozatokkal rendelkező hálóra.\nA [url=https://docs.vrcft.io/docs/tutorial-avatars/tutorial-avatars-extras/unified-blendshapes]Unified Expressions[/url] mellett az ARKit és az SRanipal alakváltozatait is támogatja.\nA csomópont névegyezés alapján próbálja azonosítani az alakváltozatokat. A neveket a [url=https://docs.vrcft.io/docs/tutorial-avatars/tutorial-avatars-extras/compatibility/overview]Unified Expressions kompatibilitási táblázata[/url] szerint kell megadni."
+
+#: doc/classes/XRFaceModifier3D.xml
+msgid "The [XRFaceTracker] path."
+msgstr "Az [XRFaceTracker] követő útvonala."
+
+#: doc/classes/XRFaceModifier3D.xml
+msgid "The [NodePath] of the face [MeshInstance3D]."
+msgstr "Az arcot megjelenítő [MeshInstance3D] csomópont [NodePath] útvonala."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "A tracked face."
+msgstr "Egy követett arc."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "An instance of this object represents a tracked face and its corresponding blend shapes. The blend shapes come from the [url=https://docs.vrcft.io/docs/tutorial-avatars/tutorial-avatars-extras/unified-blendshapes]Unified Expressions[/url] standard, and contain extended details and visuals for each blend shape. Additionally the [url=https://docs.vrcft.io/docs/tutorial-avatars/tutorial-avatars-extras/compatibility/overview]Tracking Standard Comparison[/url] page documents the relationship between Unified Expressions and other standards.\nAs face trackers are turned on they are registered with the [XRServer]."
+msgstr "Az objektum egy követett arcot és a hozzá tartozó alakváltozatokat képviseli. Az alakváltozatok a [url=https://docs.vrcft.io/docs/tutorial-avatars/tutorial-avatars-extras/unified-blendshapes]Unified Expressions[/url] szabványból származnak, amely mindegyikhez részletes leírást és szemléltető ábrákat ad. A [url=https://docs.vrcft.io/docs/tutorial-avatars/tutorial-avatars-extras/compatibility/overview]követési szabványokat összehasonlító oldal[/url] bemutatja a Unified Expressions és más szabványok közötti megfeleléseket.\nA bekapcsolt arckövetőket a rendszer regisztrálja az [XRServer] kiszolgálónál."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Returns the requested face blend shape weight."
+msgstr "Visszaadja a megadott arcalakváltozat súlyát."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Sets a face blend shape weight."
+msgstr "Beállítja egy arcalakváltozat súlyát."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "The array of face blend shape weights with indices corresponding to the [enum BlendShapeEntry] enum."
+msgstr "Az arcalakváltozatok súlyainak tömbje. Az indexek az [enum BlendShapeEntry] felsorolás értékeinek felelnek meg."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Right eye looks outwards."
+msgstr "A jobb szem kifelé néz."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Right eye looks inwards."
+msgstr "A jobb szem befelé néz."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Right eye looks upwards."
+msgstr "A jobb szem felfelé néz."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Right eye looks downwards."
+msgstr "A jobb szem lefelé néz."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Left eye looks outwards."
+msgstr "A bal szem kifelé néz."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Left eye looks inwards."
+msgstr "A bal szem befelé néz."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Left eye looks upwards."
+msgstr "A bal szem felfelé néz."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Left eye looks downwards."
+msgstr "A bal szem lefelé néz."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Closes the right eyelid."
+msgstr "A jobb szemhéj becsukódik."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Closes the left eyelid."
+msgstr "A bal szemhéj becsukódik."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Squeezes the right eye socket muscles."
+msgstr "A jobb szem körüli izmok összehúzódnak."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Squeezes the left eye socket muscles."
+msgstr "A bal szem körüli izmok összehúzódnak."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Right eyelid widens beyond relaxed."
+msgstr "A jobb szemrés a nyugalmi helyzethez képest tágabbra nyílik."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Left eyelid widens beyond relaxed."
+msgstr "A bal szemrés a nyugalmi helyzethez képest tágabbra nyílik."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Dilates the right eye pupil."
+msgstr "A jobb pupilla kitágul."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Dilates the left eye pupil."
+msgstr "A bal pupilla kitágul."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Constricts the right eye pupil."
+msgstr "A jobb pupilla összeszűkül."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Constricts the left eye pupil."
+msgstr "A bal pupilla összeszűkül."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Right eyebrow pinches in."
+msgstr "A jobb szemöldök az arc közepe felé húzódik."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Left eyebrow pinches in."
+msgstr "A bal szemöldök az arc közepe felé húzódik."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Outer right eyebrow pulls down."
+msgstr "A jobb szemöldök külső része lefelé húzódik."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Outer left eyebrow pulls down."
+msgstr "A bal szemöldök külső része lefelé húzódik."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Inner right eyebrow pulls up."
+msgstr "A jobb szemöldök belső része felfelé húzódik."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Inner left eyebrow pulls up."
+msgstr "A bal szemöldök belső része felfelé húzódik."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Outer right eyebrow pulls up."
+msgstr "A jobb szemöldök külső része felfelé húzódik."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Outer left eyebrow pulls up."
+msgstr "A bal szemöldök külső része felfelé húzódik."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Right side face sneers."
+msgstr "Az orr jobb oldala fintorba rándul."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Left side face sneers."
+msgstr "Az orr bal oldala fintorba rándul."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Right side nose canal dilates."
+msgstr "A jobb orrnyílás kitágul."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Left side nose canal dilates."
+msgstr "A bal orrnyílás kitágul."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Right side nose canal constricts."
+msgstr "A jobb orrnyílás összeszűkül."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Left side nose canal constricts."
+msgstr "A bal orrnyílás összeszűkül."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Raises the right side cheek."
+msgstr "A jobb orca megemelkedik."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Raises the left side cheek."
+msgstr "A bal orca megemelkedik."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Puffs the right side cheek."
+msgstr "A jobb orca felfúvódik."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Puffs the left side cheek."
+msgstr "A bal orca felfúvódik."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Sucks in the right side cheek."
+msgstr "A jobb orca behúzódik."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Sucks in the left side cheek."
+msgstr "A bal orca behúzódik."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Opens jawbone."
+msgstr "Az állkapocs lenyílik."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Closes the mouth."
+msgstr "A száj összezáródik."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Pushes jawbone right."
+msgstr "Az állkapocs jobbra mozdul."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Pushes jawbone left."
+msgstr "Az állkapocs balra mozdul."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Pushes jawbone forward."
+msgstr "Az állkapocs előretolódik."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Pushes jawbone backward."
+msgstr "Az állkapocs hátrahúzódik."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Flexes jaw muscles."
+msgstr "Az állkapocs izmai megfeszülnek."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Raises the jawbone."
+msgstr "Az állkapocs megemelkedik."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Upper right lip part tucks in the mouth."
+msgstr "A felső ajak jobb oldala befelé fordul a szájba."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Upper left lip part tucks in the mouth."
+msgstr "A felső ajak bal oldala befelé fordul a szájba."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Lower right lip part tucks in the mouth."
+msgstr "Az alsó ajak jobb oldala befelé fordul a szájba."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Lower left lip part tucks in the mouth."
+msgstr "Az alsó ajak bal oldala befelé fordul a szájba."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Right lip corner folds into the mouth."
+msgstr "A jobb szájzug befelé fordul a szájba."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Left lip corner folds into the mouth."
+msgstr "A bal szájzug befelé fordul a szájba."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Upper right lip part pushes into a funnel."
+msgstr "A felső ajak jobb oldala tölcsér alakba rendeződik."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Upper left lip part pushes into a funnel."
+msgstr "A felső ajak bal oldala tölcsér alakba rendeződik."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Lower right lip part pushes into a funnel."
+msgstr "Az alsó ajak jobb oldala tölcsér alakba rendeződik."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Lower left lip part pushes into a funnel."
+msgstr "Az alsó ajak bal oldala tölcsér alakba rendeződik."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Upper right lip part pushes outwards."
+msgstr "A felső ajak jobb oldala előrecsücsörödik."
+
+#: doc/classes/XRFaceTracker.xml
+msgid "Upper left lip part pushes outwards."
+msgstr "A felső ajak bal oldala előrecsücsörödik."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "Spine joint."
+msgstr "Gerincízület."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "Chest joint."
+msgstr "Mellkasi ízület."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "Upper chest joint."
+msgstr "Felső mellkasi ízület."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "Neck joint."
+msgstr "Nyaki ízület."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "Head joint."
+msgstr "Fejízület."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "Head tip joint."
+msgstr "A fejtetőt jelölő ízületi pont."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "Left shoulder joint."
+msgstr "Bal vállízület."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "Left upper arm joint."
+msgstr "A bal felkar ízülete."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "Left lower arm joint."
+msgstr "A bal alkar ízülete."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "Right shoulder joint."
+msgstr "Jobb vállízület."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "Right upper arm joint."
+msgstr "A jobb felkar ízülete."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "Right lower arm joint."
+msgstr "A jobb alkar ízülete."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "Left upper leg joint."
+msgstr "A bal comb ízülete."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "Left lower leg joint."
+msgstr "A bal lábszár ízülete."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "Left foot joint."
+msgstr "A bal lábfej ízülete."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "Left toes joint."
+msgstr "A bal lábujjak ízülete."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "Right upper leg joint."
+msgstr "A jobb comb ízülete."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "Right lower leg joint."
+msgstr "A jobb lábszár ízülete."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "Right foot joint."
+msgstr "A jobb lábfej ízülete."
+
+#: doc/classes/XRBodyTracker.xml
+msgid "Right toes joint."
+msgstr "A jobb lábujjak ízülete."
